@@ -1,14 +1,19 @@
 ---
+# 以下字段的取值必须与 feature-mapping.json 中的定义一致
+# ID 命名规范：英文小写 + 连字符（如 lotus-leaf, mussel-foot-adhesion）
 id: [prototype-id]
 name: [中文名称]
 category: [微生物/植物/动物/仿生材料]
 organism: [学名 (Scientific name)]
 biomimetic_dimension: [分子仿生/结构仿生/形态仿生/过程仿生/功能仿生/系统仿生]
+# features 取值必须来自 feature-mapping.json 中 feature_prototype_map 的 key
 features: [特征标签列表]
+# pollutants 取值建议参考 taxonomy/pollutants.md 的分类
 pollutants: [适用污染物类型]
 adsorption_mechanisms: [吸附机制列表]
 qmax_range: "[可选：qmax范围]"
 removal_rate: "[可选：去除率]"
+# applicability 字段用于条件预筛，是 feature-mapping.json 中 prototype_metadata 的数据来源
 applicability:
   pH_range: [min, max]
   temp_range: [min, max]

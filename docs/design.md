@@ -1,7 +1,7 @@
 # 生物原型知识库/匹配清单 — 设计文档
 
 > 隶属于专利《一种水处理仿生吸附材料开发智能体系统》
-> 日期：2026-05-26
+> 日期：2026-05-27
 
 ## 1. 背景与目标
 
@@ -20,24 +20,29 @@
 - **分层架构**：原始证据层（图片、3D文件、文献PDF）与抽象映射层（结构化描述、特征映射）分离
 - **增量建设**：一篇文献可建一个原型条目，逐步积累
 - **可扩展**：后续可在文件系统之上加向量索引做语义检索
+- **库只做匹配响应**：约束识别归前置推理模块，组合推理归下游模块
+
+### 1.4 ID 命名规范
+
+所有原型 ID 统一使用**英文小写 + 连字符**，如 `lotus-leaf`、`mussel-foot-adhesion`、`sulfate-reducing-bacteria`。
 
 ## 2. 知识库架构
 
 ### 2.1 整体方案
 
-采用**结构化文件系统**方案。每个生物原型一个Markdown文件（含YAML frontmatter），配套一个特征-原型映射表（JSON）。LLM直接读取文件完成匹配。
+采用**结构化文件系统**方案。每个生物原型一个目录（含 `prototype.md`），配套一个特征-原型映射表（JSON）。LLM直接读取文件完成匹配。
 
 ### 2.2 目录结构
 
 ```
-bio-prototype-kb/
+Biomimetic-design-library/
 ├── README.md
 ├── feature-mapping.json
 ├── prototypes/
+│   ├── lotus-leaf/
+│   │   └── prototype.md
 │   ├── mussel-foot-adhesion/
-│   │   ├── prototype.md
-│   │   ├── references.bib
-│   │   └── evidence/
+│   │   └── prototype.md
 │   └── ...
 ├── taxonomy/
 │   ├── organisms.md
@@ -47,6 +52,10 @@ bio-prototype-kb/
     └── prototype-template.md
 ```
 
+每个原型目录初期只放 `prototype.md`，后续按需扩展：
+- `evidence/`：图片、3D文件等原始证据
+- `references.bib`：参考文献
+
 ## 3. 原型文件 Schema
 
 见 `templates/prototype-template.md` 获取完整模板。
@@ -55,15 +64,52 @@ bio-prototype-kb/
 
 ## 4. 匹配机制
 
-三层匹配：条件预筛 → 加权特征匹配 → 组合推理。详见 `feature-mapping.json`。
+### 4.1 三层匹配
+
+1. **条件预筛**：根据 pH、温度、浓度等工况约束排除不适用的原型
+2. **加权特征匹配**：按 weight×匹配强度计算综合得分
+3. **组合推理**：LLM 读取 top 原型详情，提出跨原型的组合方案
+
+### 4.2 feature-mapping.json 结构
+
+四层结构，支持三层匹配：
+
+| 层级 | 字段 | 作用 |
+|------|------|------|
+| Layer 1 条件预筛 | `prototype_metadata[id].applicability` | 按 pH、温度、盐度过滤 |
+| Layer 2 污染物匹配 | `pollutant_prototype_map[污染物]` | 按污染物检索 + weight 排序 |
+| Layer 2 特征匹配 | `feature_prototype_map[特征]` | 按特征检索（无明确污染物时） |
+| Layer 3 机制解释 | `mechanism_feature_bridge` | 特征↔机理桥接 |
+
+**weight 定义**：0-1 连续值，表示该原型对某个污染物/特征的匹配强度。
+
+### 4.3 设计原则
+
+- **库只做匹配响应**：不负责推理，约束识别归前置推理模块，组合推理归下游模块
+- **推理指导可选**：如果前置模块已分析好需求，库直接做匹配；如果没有，库的机制摘要和设计提示可辅助理解
 
 ## 5. 仿生维度
 
 分子仿生、结构仿生、形态仿生、过程仿生、功能仿生、系统仿生。
 
-## 6. 分阶段实施
+## 6. 分类体系
 
-1. 专利交付（20个原型）
-2. 研究工具（50+原型）
-3. 演示与可视化
-4. 社区共建（100+原型）
+### 6.1 生物分类（taxonomy/organisms.md）
+微生物、植物、动物、仿生材料
+
+### 6.2 吸附机制分类（taxonomy/mechanisms.md）
+化学吸附、物理吸附、结构驱动、生物过程
+
+### 6.3 污染物分类（taxonomy/pollutants.md）
+重金属、有机污染物、无机非金属污染物、油类、放射性元素
+
+### 6.4 机理与材料性质的对应关系
+
+机理分类（科学视角）和材料性质分类（设计视角）是不同维度，通过 `mechanism_feature_bridge` 关联。详见 `taxonomy/mechanisms.md` 末尾的对应表。
+
+## 7. 分阶段实施
+
+1. **专利交付**（20个原型）
+2. **研究工具**（50+原型）
+3. **演示与可视化**
+4. **社区共建**（100+原型）

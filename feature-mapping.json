@@ -1,632 +1,576 @@
 {
-  "疏水性": {
-    "description": "表面接触角>90°，排斥水分子",
-    "dimension": "表面性质",
-    "prototypes": [
-      {
-        "id": "lotus-leaf",
-        "name": "荷叶表面",
-        "relevance": "微纳二级结构实现超疏水（接触角>150°），Cassie-Baxter气垫效应",
-        "match_strength": "primary"
+  "version": "1.0",
+  "description": "生物原型知识库特征-原型映射表。库只做匹配响应，不负责推理。",
+
+  "pollutant_prototype_map": {
+    "重金属": {
+      "Hg²⁺": {
+        "prototypes": [
+          {"id": "sulfate-reducing-bacteria", "weight": 0.95, "mechanism_summary": "代谢产生H₂S，与Hg²⁺形成极难溶的HgS（Ksp=10⁻⁵²）", "design_hint": "设计含-SH功能基团的吸附材料"},
+          {"id": "mussel-foot-adhesion", "weight": 0.85, "mechanism_summary": "DOPA中的邻苯二酚基团与Hg²⁺形成双齿配位键", "design_hint": "在材料表面引入邻苯二酚基团实现湿态螯合"},
+          {"id": "polydopamine-coating", "weight": 0.80, "mechanism_summary": "聚多巴胺保留邻苯二酚基团，可螯合Hg²⁺", "design_hint": "PDA涂层通用性强，可粘附在各种基材表面"},
+          {"id": "plant-tannin", "weight": 0.75, "mechanism_summary": "缩合单宁含大量邻苯二酚类似结构，可络合Hg²⁺", "design_hint": "单宁来源广泛、成本低，适合大规模应用"}
+        ]
       },
-      {
-        "id": "superhydrophobic-artificial",
-        "name": "仿荷叶超疏水表面",
-        "relevance": "人工制备的微纳二级结构，复现超疏水性能",
-        "match_strength": "primary"
+      "Cd²⁺": {
+        "prototypes": [
+          {"id": "chitosan", "weight": 0.90, "mechanism_summary": "C2位氨基和C3/C6位羟基协同配位Cd²⁺", "design_hint": "壳聚糖可直接使用或交联改性提高稳定性"},
+          {"id": "alginate", "weight": 0.85, "mechanism_summary": "羧基络合Cd²⁺，形成蛋盒结构", "design_hint": "海藻酸钠可制成微球或凝胶"},
+          {"id": "fish-scale-hydroxyapatite", "weight": 0.80, "mechanism_summary": "羟基磷灰石中的Ca²⁺可被Cd²⁺离子交换", "design_hint": "鱼鳞来源的HAP具有层次孔结构"},
+          {"id": "bone-structure", "weight": 0.75, "mechanism_summary": "骨骼羟基磷灰石的离子交换能力", "design_hint": "骨骼来源广泛，可直接碳化或酸处理"}
+        ]
       },
-      {
-        "id": "water-strider-leg",
-        "name": "水黾腿",
-        "relevance": "微米级定向刚毛+纳米沟槽，实现水上行走",
-        "match_strength": "primary"
+      "Pb²⁺": {
+        "prototypes": [
+          {"id": "mussel-foot-adhesion", "weight": 0.90, "mechanism_summary": "DOPA对Pb²⁺有强螯合能力", "design_hint": "邻苯二酚基团是Pb²⁺的高效配位点"},
+          {"id": "alginate", "weight": 0.85, "mechanism_summary": "羧基与Pb²⁺形成稳定络合物", "design_hint": "海藻酸钠凝胶对Pb²⁺选择性好"},
+          {"id": "fish-scale-hydroxyapatite", "weight": 0.90, "mechanism_summary": "Pb²⁺可替换HAP中的Ca²⁺形成更稳定的磷氯铅矿", "design_hint": "离子交换后结构稳定，不易二次释放"},
+          {"id": "oyster-shell", "weight": 0.80, "mechanism_summary": "CaCO₃与Pb²⁺进行离子交换，形成PbCO₃", "design_hint": "牡蛎壳来源丰富、成本极低"}
+        ]
       },
-      {
-        "id": "namib-beetle",
-        "name": "Namib沙漠甲虫",
-        "relevance": "亲疏水交替表面，疏水区域用于集水",
-        "match_strength": "primary"
+      "Cu²⁺": {
+        "prototypes": [
+          {"id": "chitosan", "weight": 0.85, "mechanism_summary": "氨基与Cu²⁺形成稳定配位键", "design_hint": "壳聚糖对Cu²⁺有较好的选择性"},
+          {"id": "mussel-foot-adhesion", "weight": 0.80, "mechanism_summary": "邻苯二酚螯合Cu²⁺", "design_hint": "DOPA-Cu配位常数高"},
+          {"id": "polydopamine-coating", "weight": 0.75, "mechanism_summary": "PDA涂层可螯合Cu²⁺", "design_hint": "通用涂层方案"}
+        ]
       },
-      {
-        "id": "cactus-spine",
-        "name": "仙人掌刺",
-        "relevance": "锥形结构上的梯度润湿性，驱动液滴定向移动",
-        "match_strength": "primary"
+      "Zn²⁺": {
+        "prototypes": [
+          {"id": "chitosan", "weight": 0.80, "mechanism_summary": "氨基配位Zn²⁺", "design_hint": "壳聚糖对Zn²⁺吸附容量中等"},
+          {"id": "alginate", "weight": 0.75, "mechanism_summary": "羧基络合Zn²⁺", "design_hint": "海藻酸钠凝胶可吸附Zn²⁺"}
+        ]
       },
-      {
-        "id": "mussel-foot-adhesion",
-        "name": "贻贝足丝",
-        "relevance": "DOPA的芳香环提供疏水相互作用，用于界面粘附",
-        "match_strength": "secondary"
+      "Ni²⁺": {
+        "prototypes": [
+          {"id": "chitosan", "weight": 0.80, "mechanism_summary": "氨基配位Ni²⁺", "design_hint": "壳聚糖对Ni²⁺吸附容量中等"},
+          {"id": "alginate", "weight": 0.75, "mechanism_summary": "羧基络合Ni²⁺", "design_hint": "海藻酸钠凝胶可吸附Ni²⁺"}
+        ]
       },
-      {
-        "id": "spider-silk",
-        "name": "蜘蛛丝",
-        "relevance": "蛋白质纤维表面的疏水性区域",
-        "match_strength": "secondary"
+      "Cr³⁺/Cr⁶⁺": {
+        "prototypes": [
+          {"id": "chitosan", "weight": 0.85, "mechanism_summary": "氨基在酸性条件下质子化带正电，可吸附Cr₂O₇²⁻阴离子", "design_hint": "壳聚糖对Cr(VI)的吸附机制与其他重金属不同"},
+          {"id": "iron-oxidizing-bacteria", "weight": 0.80, "mechanism_summary": "生物FeOOH可催化还原Cr(VI)为Cr(III)", "design_hint": "利用铁氧化物的氧化还原活性"},
+          {"id": "polydopamine-coating", "weight": 0.70, "mechanism_summary": "PDA的还原性可将Cr(VI)还原为Cr(III)", "design_hint": "PDA兼具吸附和还原功能"}
+        ]
+      },
+      "As³⁺/As⁵⁺": {
+        "prototypes": [
+          {"id": "iron-oxidizing-bacteria", "weight": 0.90, "mechanism_summary": "生物FeOOH对As有极强亲和力，可催化As(III)氧化为As(V)", "design_hint": "铁氧化物是除砷的经典材料"},
+          {"id": "chitosan", "weight": 0.60, "mechanism_summary": "氨基对砷酸根有一定吸附", "design_hint": "需改性提高对砷的亲和力"}
+        ]
       }
-    ]
+    },
+    "有机污染物": {
+      "染料": {
+        "阳离子染料": {
+          "prototypes": [
+            {"id": "alginate", "weight": 0.85, "mechanism_summary": "羧基带负电，静电吸附亚甲基蓝等阳离子染料", "design_hint": "海藻酸钠凝胶是去除阳离子染料的常用材料"},
+            {"id": "cellulose-nanocrystal", "weight": 0.80, "mechanism_summary": "TEMPO氧化后表面羧基带负电", "design_hint": "纤维素纳米晶可制成膜或气凝胶"},
+            {"id": "chlorella-cell-wall", "weight": 0.75, "mechanism_summary": "细胞壁多糖和蛋白质含羧基", "design_hint": "微藻来源的生物吸附剂"}
+          ]
+        },
+        "阴离子染料": {
+          "prototypes": [
+            {"id": "chitosan", "weight": 0.85, "mechanism_summary": "氨基质子化带正电，静电吸附甲基橙等阴离子染料", "design_hint": "壳聚糖是去除阴离子染料的经典材料"},
+            {"id": "chlorella-cell-wall", "weight": 0.70, "mechanism_summary": "酸性条件下细胞壁蛋白质含氨基带正电", "design_hint": "微藻吸附剂成本低"}
+          ]
+        }
+      },
+      "芳香族化合物": {
+        "prototypes": [
+          {"id": "polydopamine-coating", "weight": 0.85, "mechanism_summary": "吲哚和醌式结构的共轭体系与芳香族污染物π-π堆积", "design_hint": "PDA涂层可吸附苯酚、PAHs等"},
+          {"id": "plant-tannin", "weight": 0.80, "mechanism_summary": "多个芳香环的共轭体系与芳香族污染物π-π作用", "design_hint": "单宁基材料对芳香族污染物有选择性"},
+          {"id": "mussel-foot-adhesion", "weight": 0.75, "mechanism_summary": "DOPA的芳香环提供π-π堆积作用", "design_hint": "贻贝足丝蛋白可用于芳香族污染物吸附"}
+        ]
+      },
+      "抗生素": {
+        "prototypes": [
+          {"id": "polydopamine-coating", "weight": 0.80, "mechanism_summary": "π-π堆积和氢键协同吸附抗生素", "design_hint": "PDA涂层对多种抗生素有吸附能力"},
+          {"id": "metal-organic-framework", "weight": 0.85, "mechanism_summary": "MOF的高比表面积和可调孔径适合吸附大分子抗生素", "design_hint": "MOF孔径可精确调控以匹配抗生素分子尺寸"}
+        ]
+      }
+    },
+    "无机非金属污染物": {
+      "NH₄⁺-N": {
+        "prototypes": [
+          {"id": "chlorella-cell-wall", "weight": 0.80, "mechanism_summary": "微藻可主动摄取和富集氨氮", "design_hint": "微藻兼具吸附和生物降解功能"},
+          {"id": "mangrove-root", "weight": 0.75, "mechanism_summary": "红树林根系过滤系统可去除氨氮", "design_hint": "生态修复方案"}
+        ]
+      },
+      "NO₃⁻": {
+        "prototypes": [
+          {"id": "chitosan", "weight": 0.70, "mechanism_summary": "质子化氨基可吸附硝酸根", "design_hint": "壳聚糖对硝酸根吸附容量有限"},
+          {"id": "mangrove-root", "weight": 0.75, "mechanism_summary": "红树林根系微生物可反硝化脱氮", "design_hint": "生态修复方案"}
+        ]
+      },
+      "PO₄³⁻": {
+        "prototypes": [
+          {"id": "oyster-shell", "weight": 0.80, "mechanism_summary": "牡蛎壳可吸附磷酸盐", "design_hint": "牡蛎壳来源丰富、成本低"},
+          {"id": "iron-oxidizing-bacteria", "weight": 0.75, "mechanism_summary": "铁氧化物可吸附磷酸盐", "design_hint": "生物铁氧化物具有高比表面积"}
+        ]
+      },
+      "F⁻": {
+        "prototypes": [
+          {"id": "bone-structure", "weight": 0.80, "mechanism_summary": "羟基磷灰石可吸附氟离子", "design_hint": "骨骼来源的HAP是除氟的经典材料"},
+          {"id": "fish-scale-hydroxyapatite", "weight": 0.80, "mechanism_summary": "鱼鳞HAP可吸附氟离子", "design_hint": "鱼鳞HAP具有层次孔结构"}
+        ]
+      }
+    },
+    "油类": {
+      "prototypes": [
+        {"id": "lotus-leaf", "weight": 0.95, "mechanism_summary": "微纳二级结构实现超疏水超亲油，接触角>150°", "design_hint": "模仿荷叶微纳结构制备油水分离膜"},
+        {"id": "superhydrophobic-artificial", "weight": 0.90, "mechanism_summary": "人工制备的微纳二级结构，复现超疏水性能", "design_hint": "可规模化制备"},
+        {"id": "water-strider-leg", "weight": 0.85, "mechanism_summary": "微米级定向刚毛+纳米沟槽实现超疏水", "design_hint": "定向刚毛结构可借鉴"},
+        {"id": "cactus-spine", "weight": 0.80, "mechanism_summary": "锥形结构上的梯度润湿性驱动液滴定向移动", "design_hint": "梯度润湿性可实现油水定向分离"},
+        {"id": "pitcher-plant-slippery-surface", "weight": 0.85, "mechanism_summary": "超滑表面（SLIPS）使油滴无法附着", "design_hint": "SLIPS涂层耐久性好"},
+        {"id": "shark-skin", "weight": 0.75, "mechanism_summary": "盾鳞微沟槽结构减少油污附着", "design_hint": "鲨鱼皮微结构可制备抗污膜"}
+      ]
+    },
+    "放射性元素": {
+      "U": {
+        "prototypes": [
+          {"id": "mussel-foot-adhesion", "weight": 0.80, "mechanism_summary": "DOPA对U(VI)有螯合能力", "design_hint": "邻苯二酚基团可络合铀酰离子"},
+          {"id": "chitosan", "weight": 0.75, "mechanism_summary": "氨基和羟基可配位铀酰离子", "design_hint": "壳聚糖可改性提高对铀的选择性"}
+        ]
+      },
+      "Sr": {
+        "prototypes": [
+          {"id": "oyster-shell", "weight": 0.75, "mechanism_summary": "CaCO₃可与Sr²⁺进行离子交换", "design_hint": "牡蛎壳来源丰富"},
+          {"id": "bone-structure", "weight": 0.70, "mechanism_summary": "HAP中的Ca²⁺可被Sr²⁺替换", "design_hint": "骨骼HAP对Sr有一定选择性"}
+        ]
+      },
+      "Cs": {
+        "prototypes": [
+          {"id": "chitosan", "weight": 0.60, "mechanism_summary": "壳聚糖对Cs⁺有一定吸附", "design_hint": "需改性提高对Cs的选择性"},
+          {"id": "magnetic-bacteria", "weight": 0.65, "mechanism_summary": "磁性纳米粒子可作为Cs吸附剂载体", "design_hint": "磁性可回收"}
+        ]
+      }
+    }
   },
-  "亲水性": {
-    "description": "表面接触角<90°，亲和水分子",
-    "dimension": "表面性质",
-    "prototypes": [
-      {
-        "id": "cellulose-nanocrystal",
-        "name": "纤维素纳米晶",
-        "relevance": "表面富含羟基，强亲水性，易与水分子形成氢键",
-        "match_strength": "primary"
-      },
-      {
-        "id": "chitosan",
-        "name": "壳聚糖",
-        "relevance": "氨基和羟基提供亲水性，溶胀后形成水凝胶",
-        "match_strength": "primary"
-      }
-    ]
+
+  "feature_prototype_map": {
+    "疏水性": {
+      "dimension": "表面性质",
+      "description": "表面接触角>90°，排斥水分子",
+      "prototypes": [
+        {"id": "lotus-leaf", "weight": 1.0},
+        {"id": "superhydrophobic-artificial", "weight": 0.95},
+        {"id": "water-strider-leg", "weight": 0.95},
+        {"id": "namib-beetle", "weight": 0.90},
+        {"id": "cactus-spine", "weight": 0.85},
+        {"id": "mussel-foot-adhesion", "weight": 0.60},
+        {"id": "spider-silk", "weight": 0.55}
+      ]
+    },
+    "亲水性": {
+      "dimension": "表面性质",
+      "description": "表面接触角<90°，亲和水分子",
+      "prototypes": [
+        {"id": "cellulose-nanocrystal", "weight": 0.95},
+        {"id": "chitosan", "weight": 0.90}
+      ]
+    },
+    "正电表面": {
+      "dimension": "表面性质",
+      "description": "表面带正电荷，可通过静电作用吸附阴离子",
+      "prototypes": [
+        {"id": "chlorella-cell-wall", "weight": 0.85},
+        {"id": "chitosan", "weight": 0.90}
+      ]
+    },
+    "负电表面": {
+      "dimension": "表面性质",
+      "description": "表面带负电荷，可通过静电作用吸附阳离子",
+      "prototypes": [
+        {"id": "alginate", "weight": 0.95},
+        {"id": "cellulose-nanocrystal", "weight": 0.70}
+      ]
+    },
+    "微孔": {
+      "dimension": "结构性质",
+      "description": "孔径<2nm，适合小分子吸附，提供极高比表面积",
+      "prototypes": [
+        {"id": "metal-organic-framework", "weight": 0.95},
+        {"id": "starch-granule", "weight": 0.60}
+      ]
+    },
+    "介孔": {
+      "dimension": "结构性质",
+      "description": "孔径2-50nm，适合中等分子吸附，良好的传质性能",
+      "prototypes": [
+        {"id": "diatom-frustule", "weight": 0.95},
+        {"id": "diatom-inspired-porous", "weight": 0.90},
+        {"id": "metal-organic-framework", "weight": 0.65}
+      ]
+    },
+    "大孔": {
+      "dimension": "结构性质",
+      "description": "孔径>50nm，适合大分子和颗粒物，提供快速传质通道",
+      "prototypes": [
+        {"id": "coral-skeleton", "weight": 0.90},
+        {"id": "wood-xylem", "weight": 0.90}
+      ]
+    },
+    "层次孔": {
+      "dimension": "结构性质",
+      "description": "多级孔径共存，兼顾传质和吸附容量",
+      "prototypes": [
+        {"id": "bone-structure", "weight": 0.95},
+        {"id": "wood-xylem", "weight": 0.90},
+        {"id": "oyster-shell", "weight": 0.85},
+        {"id": "iron-oxidizing-bacteria", "weight": 0.70},
+        {"id": "metal-organic-framework", "weight": 0.60}
+      ]
+    },
+    "纤维状": {
+      "dimension": "结构性质",
+      "description": "纤维形态结构，高长径比，可形成网络",
+      "prototypes": [
+        {"id": "spider-silk", "weight": 0.95},
+        {"id": "silk-fibroin", "weight": 0.90},
+        {"id": "mycelium", "weight": 0.90},
+        {"id": "lobster-exoskeleton", "weight": 0.85},
+        {"id": "cellulose-nanocrystal", "weight": 0.65}
+      ]
+    },
+    "层状": {
+      "dimension": "结构性质",
+      "description": "层状排列结构，层间可提供吸附位点",
+      "prototypes": [
+        {"id": "scallop-shell", "weight": 0.95},
+        {"id": "oyster-shell", "weight": 0.90},
+        {"id": "silk-fibroin", "weight": 0.60}
+      ]
+    },
+    "乳突阵列": {
+      "dimension": "结构性质",
+      "description": "微米级突起阵列，增大比表面积，可实现超疏水",
+      "prototypes": [
+        {"id": "lotus-leaf", "weight": 1.0},
+        {"id": "superhydrophobic-artificial", "weight": 0.95}
+      ]
+    },
+    "网状": {
+      "dimension": "结构性质",
+      "description": "三维网状结构，提供高孔隙率和渗透性",
+      "prototypes": [
+        {"id": "mycelium", "weight": 0.90},
+        {"id": "mangrove-root", "weight": 0.85}
+      ]
+    },
+    "邻苯二酚基团": {
+      "dimension": "化学性质",
+      "description": "catechol基团，可与金属离子形成双齿配位键",
+      "prototypes": [
+        {"id": "mussel-foot-adhesion", "weight": 1.0},
+        {"id": "polydopamine-coating", "weight": 0.95},
+        {"id": "plant-tannin", "weight": 0.85}
+      ]
+    },
+    "氨基": {
+      "dimension": "化学性质",
+      "description": "-NH₂基团，可配位金属离子、参与静电吸附",
+      "prototypes": [
+        {"id": "chitosan", "weight": 1.0},
+        {"id": "chlorella-cell-wall", "weight": 0.80},
+        {"id": "mycelium", "weight": 0.70},
+        {"id": "scallop-shell", "weight": 0.50}
+      ]
+    },
+    "羧基": {
+      "dimension": "化学性质",
+      "description": "-COOH基团，可络合金属离子、提供负电荷",
+      "prototypes": [
+        {"id": "alginate", "weight": 1.0},
+        {"id": "chlorella-cell-wall", "weight": 0.60},
+        {"id": "cellulose-nanocrystal", "weight": 0.65}
+      ]
+    },
+    "巯基": {
+      "dimension": "化学性质",
+      "description": "-SH基团，对软金属离子（Hg²⁺, Cd²⁺, Pb²⁺）有极强亲和力",
+      "prototypes": [
+        {"id": "sulfate-reducing-bacteria", "weight": 1.0}
+      ]
+    },
+    "金属配位能力": {
+      "dimension": "化学性质",
+      "description": "能与金属离子形成配位键的能力",
+      "prototypes": [
+        {"id": "mussel-foot-adhesion", "weight": 1.0},
+        {"id": "polydopamine-coating", "weight": 0.95},
+        {"id": "plant-tannin", "weight": 0.90},
+        {"id": "chitosan", "weight": 0.90},
+        {"id": "alginate", "weight": 0.85},
+        {"id": "metal-organic-framework", "weight": 0.90}
+      ]
+    },
+    "π电子体系": {
+      "dimension": "化学性质",
+      "description": "芳香环或共轭体系，可通过π-π堆积吸附芳香族污染物",
+      "prototypes": [
+        {"id": "mussel-foot-adhesion", "weight": 0.90},
+        {"id": "polydopamine-coating", "weight": 0.95},
+        {"id": "plant-tannin", "weight": 0.90}
+      ]
+    },
+    "活性氧位点": {
+      "dimension": "化学性质",
+      "description": "可催化产生活性氧或进行氧化还原反应",
+      "prototypes": [
+        {"id": "iron-oxidizing-bacteria", "weight": 0.90},
+        {"id": "metal-organic-framework", "weight": 0.65}
+      ]
+    },
+    "湿态粘附": {
+      "dimension": "功能特性",
+      "description": "在潮湿环境中保持强粘附力",
+      "prototypes": [
+        {"id": "mussel-foot-adhesion", "weight": 1.0},
+        {"id": "polydopamine-coating", "weight": 0.95}
+      ]
+    },
+    "自清洁": {
+      "dimension": "功能特性",
+      "description": "通过表面结构实现自清洁功能",
+      "prototypes": [
+        {"id": "lotus-leaf", "weight": 1.0},
+        {"id": "superhydrophobic-artificial", "weight": 0.95},
+        {"id": "cactus-spine", "weight": 0.70}
+      ]
+    },
+    "催化降解": {
+      "dimension": "功能特性",
+      "description": "催化降解有机污染物",
+      "prototypes": [
+        {"id": "iron-oxidizing-bacteria", "weight": 0.90},
+        {"id": "metal-organic-framework", "weight": 0.85},
+        {"id": "magnetic-bacteria", "weight": 0.60}
+      ]
+    },
+    "离子交换": {
+      "dimension": "功能特性",
+      "description": "通过离子交换机制去除污染物",
+      "prototypes": [
+        {"id": "oyster-shell", "weight": 0.90},
+        {"id": "fish-scale-hydroxyapatite", "weight": 0.90},
+        {"id": "bone-structure", "weight": 0.85}
+      ]
+    },
+    "分子筛分": {
+      "dimension": "功能特性",
+      "description": "基于分子大小的选择性过滤",
+      "prototypes": [
+        {"id": "cell-membrane-ion-channel", "weight": 1.0},
+        {"id": "metal-organic-framework", "weight": 0.90},
+        {"id": "diatom-frustule", "weight": 0.65}
+      ]
+    },
+    "生物矿化模板": {
+      "dimension": "功能特性",
+      "description": "作为生物矿化过程的模板或仿生矿化的灵感",
+      "prototypes": [
+        {"id": "oyster-shell", "weight": 0.95},
+        {"id": "scallop-shell", "weight": 0.95},
+        {"id": "coral-skeleton", "weight": 0.90},
+        {"id": "iron-oxidizing-bacteria", "weight": 0.85}
+      ]
+    },
+    "抗生物污染": {
+      "dimension": "功能特性",
+      "description": "抵抗微生物附着和生物膜形成",
+      "prototypes": [
+        {"id": "shark-skin", "weight": 0.95},
+        {"id": "pitcher-plant-slippery-surface", "weight": 0.95}
+      ]
+    }
   },
-  "正电表面": {
-    "description": "表面带正电荷，可通过静电作用吸附阴离子",
-    "dimension": "表面性质",
-    "prototypes": [
-      {
-        "id": "chlorella-cell-wall",
-        "name": "小球藻细胞壁",
-        "relevance": "细胞壁蛋白质含氨基，在酸性条件下带正电",
-        "match_strength": "primary"
-      },
-      {
-        "id": "chitosan",
-        "name": "壳聚糖",
-        "relevance": "氨基在酸性条件下质子化带正电，可吸附阴离子污染物",
-        "match_strength": "primary"
-      }
-    ]
+
+  "prototype_metadata": {
+    "lotus-leaf": {
+      "applicability": {"pH_range": [1, 14], "temp_range": [0, 100], "salinity": "any"},
+      "features": ["疏水性", "乳突阵列", "自清洁"],
+      "biomimetic_dimension": "结构仿生"
+    },
+    "superhydrophobic-artificial": {
+      "applicability": {"pH_range": [1, 14], "temp_range": [0, 100], "salinity": "any"},
+      "features": ["疏水性", "乳突阵列", "自清洁"],
+      "biomimetic_dimension": "结构仿生"
+    },
+    "water-strider-leg": {
+      "applicability": {"pH_range": [1, 14], "temp_range": [0, 80], "salinity": "any"},
+      "features": ["疏水性"],
+      "biomimetic_dimension": "结构仿生"
+    },
+    "namib-beetle": {
+      "applicability": {"pH_range": [1, 14], "temp_range": [0, 80], "salinity": "any"},
+      "features": ["疏水性"],
+      "biomimetic_dimension": "结构仿生"
+    },
+    "cactus-spine": {
+      "applicability": {"pH_range": [1, 14], "temp_range": [0, 80], "salinity": "any"},
+      "features": ["疏水性", "自清洁"],
+      "biomimetic_dimension": "形态仿生"
+    },
+    "mussel-foot-adhesion": {
+      "applicability": {"pH_range": [3, 10], "temp_range": [0, 80], "salinity": "moderate"},
+      "features": ["疏水性", "邻苯二酚基团", "金属配位能力", "π电子体系", "湿态粘附"],
+      "biomimetic_dimension": "分子仿生"
+    },
+    "spider-silk": {
+      "applicability": {"pH_range": [4, 9], "temp_range": [0, 60], "salinity": "low"},
+      "features": ["疏水性", "纤维状"],
+      "biomimetic_dimension": "结构仿生"
+    },
+    "cellulose-nanocrystal": {
+      "applicability": {"pH_range": [2, 12], "temp_range": [0, 100], "salinity": "any"},
+      "features": ["亲水性", "负电表面", "纤维状", "羧基"],
+      "biomimetic_dimension": "分子仿生"
+    },
+    "chitosan": {
+      "applicability": {"pH_range": [3, 9], "temp_range": [0, 80], "salinity": "low_to_moderate"},
+      "features": ["亲水性", "正电表面", "氨基", "金属配位能力"],
+      "biomimetic_dimension": "分子仿生"
+    },
+    "chlorella-cell-wall": {
+      "applicability": {"pH_range": [4, 9], "temp_range": [10, 40], "salinity": "low_to_moderate"},
+      "features": ["正电表面", "氨基", "羧基"],
+      "biomimetic_dimension": "功能仿生"
+    },
+    "alginate": {
+      "applicability": {"pH_range": [3, 10], "temp_range": [0, 80], "salinity": "moderate"},
+      "features": ["负电表面", "羧基", "金属配位能力"],
+      "biomimetic_dimension": "分子仿生"
+    },
+    "metal-organic-framework": {
+      "applicability": {"pH_range": [1, 12], "temp_range": [0, 300], "salinity": "any"},
+      "features": ["微孔", "介孔", "层次孔", "金属配位能力", "活性氧位点", "催化降解", "分子筛分"],
+      "biomimetic_dimension": "结构仿生"
+    },
+    "starch-granule": {
+      "applicability": {"pH_range": [4, 10], "temp_range": [0, 80], "salinity": "low"},
+      "features": ["微孔"],
+      "biomimetic_dimension": "分子仿生"
+    },
+    "diatom-frustule": {
+      "applicability": {"pH_range": [2, 10], "temp_range": [0, 100], "salinity": "any"},
+      "features": ["介孔", "分子筛分"],
+      "biomimetic_dimension": "结构仿生"
+    },
+    "diatom-inspired-porous": {
+      "applicability": {"pH_range": [2, 10], "temp_range": [0, 100], "salinity": "any"},
+      "features": ["介孔"],
+      "biomimetic_dimension": "结构仿生"
+    },
+    "coral-skeleton": {
+      "applicability": {"pH_range": [6, 9], "temp_range": [0, 40], "salinity": "moderate"},
+      "features": ["大孔", "生物矿化模板"],
+      "biomimetic_dimension": "结构仿生"
+    },
+    "wood-xylem": {
+      "applicability": {"pH_range": [4, 9], "temp_range": [0, 60], "salinity": "low"},
+      "features": ["大孔", "层次孔"],
+      "biomimetic_dimension": "结构仿生"
+    },
+    "bone-structure": {
+      "applicability": {"pH_range": [4, 10], "temp_range": [0, 100], "salinity": "any"},
+      "features": ["层次孔", "离子交换"],
+      "biomimetic_dimension": "结构仿生"
+    },
+    "oyster-shell": {
+      "applicability": {"pH_range": [5, 10], "temp_range": [0, 80], "salinity": "moderate"},
+      "features": ["层次孔", "层状", "离子交换", "生物矿化模板"],
+      "biomimetic_dimension": "过程仿生"
+    },
+    "iron-oxidizing-bacteria": {
+      "applicability": {"pH_range": [2, 8], "temp_range": [10, 40], "salinity": "low_to_moderate"},
+      "features": ["层次孔", "活性氧位点", "催化降解", "生物矿化模板"],
+      "biomimetic_dimension": "过程仿生"
+    },
+    "silk-fibroin": {
+      "applicability": {"pH_range": [4, 9], "temp_range": [0, 60], "salinity": "low"},
+      "features": ["纤维状", "层状"],
+      "biomimetic_dimension": "结构仿生"
+    },
+    "mycelium": {
+      "applicability": {"pH_range": [3, 9], "temp_range": [10, 40], "salinity": "low"},
+      "features": ["纤维状", "网状", "氨基"],
+      "biomimetic_dimension": "结构仿生"
+    },
+    "lobster-exoskeleton": {
+      "applicability": {"pH_range": [4, 9], "temp_range": [0, 60], "salinity": "moderate"},
+      "features": ["纤维状"],
+      "biomimetic_dimension": "结构仿生"
+    },
+    "scallop-shell": {
+      "applicability": {"pH_range": [5, 10], "temp_range": [0, 80], "salinity": "moderate"},
+      "features": ["层状", "氨基", "生物矿化模板"],
+      "biomimetic_dimension": "过程仿生"
+    },
+    "sulfate-reducing-bacteria": {
+      "applicability": {"pH_range": [4, 9], "temp_range": [15, 40], "salinity": "low_to_moderate"},
+      "features": ["巯基"],
+      "biomimetic_dimension": "过程仿生"
+    },
+    "polydopamine-coating": {
+      "applicability": {"pH_range": [3, 10], "temp_range": [0, 80], "salinity": "moderate"},
+      "features": ["邻苯二酚基团", "金属配位能力", "π电子体系", "湿态粘附"],
+      "biomimetic_dimension": "分子仿生"
+    },
+    "plant-tannin": {
+      "applicability": {"pH_range": [3, 9], "temp_range": [0, 80], "salinity": "low_to_moderate"},
+      "features": ["邻苯二酚基团", "金属配位能力", "π电子体系"],
+      "biomimetic_dimension": "分子仿生"
+    },
+    "shark-skin": {
+      "applicability": {"pH_range": [1, 14], "temp_range": [0, 80], "salinity": "any"},
+      "features": ["抗生物污染"],
+      "biomimetic_dimension": "结构仿生"
+    },
+    "pitcher-plant-slippery-surface": {
+      "applicability": {"pH_range": [1, 14], "temp_range": [0, 100], "salinity": "any"},
+      "features": ["抗生物污染"],
+      "biomimetic_dimension": "结构仿生"
+    },
+    "mangrove-root": {
+      "applicability": {"pH_range": [5, 9], "temp_range": [15, 35], "salinity": "moderate"},
+      "features": ["网状"],
+      "biomimetic_dimension": "系统仿生"
+    },
+    "fish-scale-hydroxyapatite": {
+      "applicability": {"pH_range": [4, 10], "temp_range": [0, 80], "salinity": "any"},
+      "features": ["离子交换"],
+      "biomimetic_dimension": "过程仿生"
+    },
+    "cell-membrane-ion-channel": {
+      "applicability": {"pH_range": [6, 8], "temp_range": [15, 40], "salinity": "low"},
+      "features": ["分子筛分"],
+      "biomimetic_dimension": "功能仿生"
+    },
+    "magnetic-bacteria": {
+      "applicability": {"pH_range": [4, 9], "temp_range": [15, 40], "salinity": "low"},
+      "features": ["催化降解"],
+      "biomimetic_dimension": "功能仿生"
+    }
   },
-  "负电表面": {
-    "description": "表面带负电荷，可通过静电作用吸附阳离子（重金属）",
-    "dimension": "表面性质",
-    "prototypes": [
-      {
-        "id": "alginate",
-        "name": "海藻酸钠",
-        "relevance": "羧基在中性pH下电离带负电，静电吸附重金属阳离子",
-        "match_strength": "primary"
-      },
-      {
-        "id": "cellulose-nanocrystal",
-        "name": "纤维素纳米晶",
-        "relevance": "经TEMPO氧化后表面羧基带负电",
-        "match_strength": "secondary"
-      }
-    ]
-  },
-  "微孔": {
-    "description": "孔径<2nm，适合小分子吸附，提供极高比表面积",
-    "dimension": "结构性质",
-    "prototypes": [
-      {
-        "id": "MOF",
-        "name": "MOF材料",
-        "relevance": "金属-有机框架的微孔结构，孔径可精确调控至亚纳米级",
-        "match_strength": "primary"
-      },
-      {
-        "id": "starch-granule",
-        "name": "淀粉颗粒",
-        "relevance": "天然高分子的微孔网络",
-        "match_strength": "secondary"
-      }
-    ]
-  },
-  "介孔": {
-    "description": "孔径2-50nm，适合中等分子吸附，良好的传质性能",
-    "dimension": "结构性质",
-    "prototypes": [
-      {
-        "id": "diatom-frustule",
-        "name": "硅藻壳",
-        "relevance": "天然介孔二氧化硅结构，孔径20-200nm可调，比表面积高达200m²/g",
-        "match_strength": "primary"
-      },
-      {
-        "id": "diatom-inspired-porous",
-        "name": "仿硅藻多孔微球",
-        "relevance": "以硅藻壳为模板制备的介孔材料",
-        "match_strength": "primary"
-      },
-      {
-        "id": "MOF",
-        "name": "MOF材料",
-        "relevance": "部分MOF具有介孔笼结构",
-        "match_strength": "secondary"
-      }
-    ]
-  },
-  "大孔": {
-    "description": "孔径>50nm，适合大分子和颗粒物，提供快速传质通道",
-    "dimension": "结构性质",
-    "prototypes": [
-      {
-        "id": "coral-skeleton",
-        "name": "珊瑚骨架",
-        "relevance": "天然大孔碳酸钙骨架，孔隙率高达80%",
-        "match_strength": "primary"
-      },
-      {
-        "id": "wood-xylem",
-        "name": "木材维管束",
-        "relevance": "天然大孔通道网络，导管直径50-500μm",
-        "match_strength": "primary"
-      }
-    ]
-  },
-  "层次孔": {
-    "description": "多级孔径共存，兼顾传质和吸附容量",
-    "dimension": "结构性质",
-    "prototypes": [
-      {
-        "id": "bone-structure",
-        "name": "骨骼（层次孔）",
-        "relevance": "从宏观骨髓腔到纳米羟基磷灰石晶粒的多级孔结构",
-        "match_strength": "primary"
-      },
-      {
-        "id": "wood-xylem",
-        "name": "木材维管束",
-        "relevance": "导管+管胞+纹孔的多级孔道系统",
-        "match_strength": "primary"
-      },
-      {
-        "id": "oyster-shell",
-        "name": "牡蛎壳",
-        "relevance": "珍珠层的砖泥结构提供层次孔隙",
-        "match_strength": "primary"
-      },
-      {
-        "id": "iron-oxidizing-bacteria",
-        "name": "铁氧化细菌",
-        "relevance": "生物矿化FeOOH形成的层次孔结构",
-        "match_strength": "secondary"
-      },
-      {
-        "id": "MOF",
-        "name": "MOF材料",
-        "relevance": "部分MOF具有多级孔结构",
-        "match_strength": "secondary"
-      }
-    ]
-  },
-  "纤维状": {
-    "description": "纤维形态结构，高长径比，可形成网络",
-    "dimension": "结构性质",
-    "prototypes": [
-      {
-        "id": "spider-silk",
-        "name": "蜘蛛丝",
-        "relevance": "蛋白质纳米纤维，直径5-10μm，可形成高比表面积网络",
-        "match_strength": "primary"
-      },
-      {
-        "id": "silk-fibroin",
-        "name": "蚕丝蛋白",
-        "relevance": "丝素蛋白纤维，β-折叠结晶区提供结构稳定性",
-        "match_strength": "primary"
-      },
-      {
-        "id": "mycelium",
-        "name": "菌丝体",
-        "relevance": "真菌菌丝网络，直径2-10μm，天然三维纤维支架",
-        "match_strength": "primary"
-      },
-      {
-        "id": "lobster-exoskeleton",
-        "name": "龙虾外骨骼",
-        "relevance": "几丁质纳米纤维的层状排列",
-        "match_strength": "primary"
-      },
-      {
-        "id": "cellulose-nanocrystal",
-        "name": "纤维素纳米晶",
-        "relevance": "棒状纳米晶，可形成纤维网络",
-        "match_strength": "secondary"
-      }
-    ]
-  },
-  "层状": {
-    "description": "层状排列结构，层间可提供吸附位点",
-    "dimension": "结构性质",
-    "prototypes": [
-      {
-        "id": "scallop-shell",
-        "name": "扇贝壳",
-        "relevance": "珍珠层砖泥结构，文石片层厚约0.5μm，有机层厚约30nm",
-        "match_strength": "primary"
-      },
-      {
-        "id": "oyster-shell",
-        "name": "牡蛎壳",
-        "relevance": "文石/方解石层状排列",
-        "match_strength": "primary"
-      },
-      {
-        "id": "silk-fibroin",
-        "name": "蚕丝蛋白",
-        "relevance": "β-折叠片层结构",
-        "match_strength": "secondary"
-      }
-    ]
-  },
-  "乳突阵列": {
-    "description": "微米级突起阵列，增大比表面积，可实现超疏水",
-    "dimension": "结构性质",
-    "prototypes": [
-      {
-        "id": "lotus-leaf",
-        "name": "荷叶表面",
-        "relevance": "5-15μm乳突+纳米蜡质晶体的二级结构",
-        "match_strength": "primary"
-      },
-      {
-        "id": "superhydrophobic-artificial",
-        "name": "仿荷叶超疏水表面",
-        "relevance": "人工制备的乳突阵列",
-        "match_strength": "primary"
-      }
-    ]
-  },
-  "网状": {
-    "description": "三维网状结构，提供高孔隙率和渗透性",
-    "dimension": "结构性质",
-    "prototypes": [
-      {
-        "id": "mycelium",
-        "name": "菌丝体",
-        "relevance": "真菌菌丝形成的三维网状支架",
-        "match_strength": "primary"
-      },
-      {
-        "id": "mangrove-root",
-        "name": "红树林根系",
-        "relevance": "根系分叉形成的多级过滤网络",
-        "match_strength": "primary"
-      }
-    ]
-  },
-  "邻苯二酚基团": {
-    "description": "catechol基团，可与金属离子形成双齿配位键",
-    "dimension": "化学性质",
-    "prototypes": [
-      {
-        "id": "mussel-foot-adhesion",
-        "name": "贻贝足丝",
-        "relevance": "DOPA中的邻苯二酚是核心功能单元，可螯合多种金属离子",
-        "match_strength": "primary"
-      },
-      {
-        "id": "PDA-coating",
-        "name": "聚多巴胺(PDA)涂层",
-        "relevance": "多巴胺自聚合后保留邻苯二酚基团，通用粘附和螯合",
-        "match_strength": "primary"
-      },
-      {
-        "id": "plant-tannin",
-        "name": "植物单宁",
-        "relevance": "缩合单宁含大量邻苯二酚类似结构",
-        "match_strength": "primary"
-      }
-    ]
-  },
-  "氨基": {
-    "description": "-NH₂基团，可配位金属离子、参与静电吸附",
-    "dimension": "化学性质",
-    "prototypes": [
-      {
-        "id": "chitosan",
-        "name": "壳聚糖",
-        "relevance": "C2位氨基是主要的金属配位位点，也是质子化带正电的来源",
-        "match_strength": "primary"
-      },
-      {
-        "id": "chlorella-cell-wall",
-        "name": "小球藻细胞壁",
-        "relevance": "细胞壁蛋白质和多糖含氨基",
-        "match_strength": "primary"
-      },
-      {
-        "id": "mycelium",
-        "name": "菌丝体",
-        "relevance": "几丁质的N-乙酰氨基和脱乙酰后的游离氨基",
-        "match_strength": "primary"
-      },
-      {
-        "id": "scallop-shell",
-        "name": "扇贝壳",
-        "relevance": "有机基质中的蛋白质含氨基",
-        "match_strength": "secondary"
-      }
-    ]
-  },
-  "羧基": {
-    "description": "-COOH基团，可络合金属离子、提供负电荷",
-    "dimension": "化学性质",
-    "prototypes": [
-      {
-        "id": "alginate",
-        "name": "海藻酸钠",
-        "relevance": "古洛糖醛酸和甘露糖醛酸的羧基是主要配位位点",
-        "match_strength": "primary"
-      },
-      {
-        "id": "chlorella-cell-wall",
-        "name": "小球藻细胞壁",
-        "relevance": "细胞壁多糖和蛋白质含羧基",
-        "match_strength": "secondary"
-      },
-      {
-        "id": "cellulose-nanocrystal",
-        "name": "纤维素纳米晶",
-        "relevance": "TEMPO氧化后表面引入羧基",
-        "match_strength": "secondary"
-      }
-    ]
-  },
-  "巯基": {
-    "description": "-SH基团，对软金属离子（Hg²⁺, Cd²⁺, Pb²⁺）有极强亲和力",
-    "dimension": "化学性质",
-    "prototypes": [
-      {
-        "id": "SRB",
-        "name": "硫酸盐还原菌",
-        "relevance": "代谢产生的H₂S与金属离子形成极难溶的硫化物",
-        "match_strength": "primary"
-      }
-    ]
-  },
-  "金属配位能力": {
-    "description": "能与金属离子形成配位键的能力",
-    "dimension": "化学性质",
-    "prototypes": [
-      {
-        "id": "mussel-foot-adhesion",
-        "name": "贻贝足丝",
-        "relevance": "DOPA螯合Fe³⁺, Ti⁴⁺等，配位常数高达10²⁰",
-        "match_strength": "primary"
-      },
-      {
-        "id": "PDA-coating",
-        "name": "聚多巴胺(PDA)涂层",
-        "relevance": "保留邻苯二酚的金属配位能力",
-        "match_strength": "primary"
-      },
-      {
-        "id": "plant-tannin",
-        "name": "植物单宁",
-        "relevance": "多酚结构络合多种金属离子",
-        "match_strength": "primary"
-      },
-      {
-        "id": "chitosan",
-        "name": "壳聚糖",
-        "relevance": "氨基和羟基协同配位Cu²⁺, Ni²⁺, Zn²⁺等",
-        "match_strength": "primary"
-      },
-      {
-        "id": "alginate",
-        "name": "海藻酸钠",
-        "relevance": "羧基络合Ca²⁺, Pb²⁺, Cu²⁺等，形成"蛋盒"结构",
-        "match_strength": "primary"
-      },
-      {
-        "id": "MOF",
-        "name": "MOF材料",
-        "relevance": "金属节点本身提供配位位点，有机配体可进一步功能化",
-        "match_strength": "primary"
-      }
-    ]
-  },
-  "π电子体系": {
-    "description": "芳香环或共轭体系，可通过π-π堆积吸附芳香族污染物",
-    "dimension": "化学性质",
-    "prototypes": [
-      {
-        "id": "mussel-foot-adhesion",
-        "name": "贻贝足丝",
-        "relevance": "DOPA的芳香环提供π-π堆积作用",
-        "match_strength": "primary"
-      },
-      {
-        "id": "PDA-coating",
-        "name": "聚多巴胺(PDA)涂层",
-        "relevance": "吲哚和醌式结构的共轭体系",
-        "match_strength": "primary"
-      },
-      {
-        "id": "plant-tannin",
-        "name": "植物单宁",
-        "relevance": "多个芳香环的共轭体系",
-        "match_strength": "primary"
-      }
-    ]
-  },
-  "活性氧位点": {
-    "description": "可催化产生活性氧或进行氧化还原反应",
-    "dimension": "化学性质",
-    "prototypes": [
-      {
-        "id": "iron-oxidizing-bacteria",
-        "name": "铁氧化细菌",
-        "relevance": "生物矿化FeOOH表面可催化氧化As(III)为As(V)",
-        "match_strength": "primary"
-      },
-      {
-        "id": "MOF",
-        "name": "MOF材料",
-        "relevance": "部分MOF的金属节点具有类Fenton催化活性",
-        "match_strength": "secondary"
-      }
-    ]
-  },
-  "湿态粘附": {
-    "description": "在潮湿环境中保持强粘附力",
-    "dimension": "功能特性",
-    "prototypes": [
-      {
-        "id": "mussel-foot-adhesion",
-        "name": "贻贝足丝",
-        "relevance": "DOPA在潮湿环境中通过配位键和氢键实现强粘附",
-        "match_strength": "primary"
-      },
-      {
-        "id": "PDA-coating",
-        "name": "聚多巴胺(PDA)涂层",
-        "relevance": "模仿贻贝的通用湿态粘附，可粘附在几乎所有材料表面",
-        "match_strength": "primary"
-      }
-    ]
-  },
-  "自清洁": {
-    "description": "通过表面结构实现自清洁功能",
-    "dimension": "功能特性",
-    "prototypes": [
-      {
-        "id": "lotus-leaf",
-        "name": "荷叶表面",
-        "relevance": "超疏水+低粘附，水滴滚动带走灰尘",
-        "match_strength": "primary"
-      },
-      {
-        "id": "superhydrophobic-artificial",
-        "name": "仿荷叶超疏水表面",
-        "relevance": "人工复现荷叶的自清洁效应",
-        "match_strength": "primary"
-      },
-      {
-        "id": "cactus-spine",
-        "name": "仙人掌刺",
-        "relevance": "锥形结构驱动液滴定向移动，带走污染物",
-        "match_strength": "secondary"
-      }
-    ]
-  },
-  "催化降解": {
-    "description": "催化降解有机污染物",
-    "dimension": "功能特性",
-    "prototypes": [
-      {
-        "id": "iron-oxidizing-bacteria",
-        "name": "铁氧化细菌",
-        "relevance": "生物FeOOH具有类Fenton催化活性",
-        "match_strength": "primary"
-      },
-      {
-        "id": "MOF",
-        "name": "MOF材料",
-        "relevance": "可作为光催化剂或类Fenton催化剂降解有机物",
-        "match_strength": "primary"
-      },
-      {
-        "id": "magnetic-bacteria",
-        "name": "磁性细菌",
-        "relevance": "磁性纳米粒子可作为催化剂载体",
-        "match_strength": "secondary"
-      }
-    ]
-  },
-  "离子交换": {
-    "description": "通过离子交换机制去除污染物",
-    "dimension": "功能特性",
-    "prototypes": [
-      {
-        "id": "oyster-shell",
-        "name": "牡蛎壳",
-        "relevance": "CaCO₃可与重金属离子进行离子交换",
-        "match_strength": "primary"
-      },
-      {
-        "id": "fish-scale-HAP",
-        "name": "鱼鳞羟基磷灰石",
-        "relevance": "Ca₁₀(PO₄)₆(OH)₂中的Ca²⁺可被Pb²⁺, Cd²⁺等替换",
-        "match_strength": "primary"
-      },
-      {
-        "id": "bone-structure",
-        "name": "骨骼（层次孔）",
-        "relevance": "羟基磷灰石的离子交换能力",
-        "match_strength": "primary"
-      }
-    ]
-  },
-  "分子筛分": {
-    "description": "基于分子大小的选择性过滤",
-    "dimension": "功能特性",
-    "prototypes": [
-      {
-        "id": "cell-membrane-ion-channel",
-        "name": "细胞膜离子通道",
-        "relevance": "对特定离子的尺寸和电荷选择性",
-        "match_strength": "primary"
-      },
-      {
-        "id": "MOF",
-        "name": "MOF材料",
-        "relevance": "精确可调的孔径实现分子筛分",
-        "match_strength": "primary"
-      },
-      {
-        "id": "diatom-frustule",
-        "name": "硅藻壳",
-        "relevance": "均匀的介孔结构具有一定的筛分效果",
-        "match_strength": "secondary"
-      }
-    ]
-  },
-  "生物矿化模板": {
-    "description": "作为生物矿化过程的模板或仿生矿化的灵感",
-    "dimension": "功能特性",
-    "prototypes": [
-      {
-        "id": "oyster-shell",
-        "name": "牡蛎壳",
-        "relevance": "有机基质调控CaCO₃矿化的经典模型",
-        "match_strength": "primary"
-      },
-      {
-        "id": "scallop-shell",
-        "name": "扇贝壳",
-        "relevance": "珍珠层的砖泥结构是仿生矿化的标杆",
-        "match_strength": "primary"
-      },
-      {
-        "id": "coral-skeleton",
-        "name": "珊瑚骨架",
-        "relevance": "碳酸钙矿化的天然模板",
-        "match_strength": "primary"
-      },
-      {
-        "id": "iron-oxidizing-bacteria",
-        "name": "铁氧化细菌",
-        "relevance": "微生物调控铁氧化物矿化",
-        "match_strength": "primary"
-      }
-    ]
-  },
-  "抗生物污染": {
-    "description": "抵抗微生物附着和生物膜形成",
-    "dimension": "功能特性",
-    "prototypes": [
-      {
-        "id": "shark-skin",
-        "name": "鲨鱼皮微结构",
-        "relevance": "盾鳞微沟槽结构（Riblet）减少微生物附着",
-        "match_strength": "primary"
-      },
-      {
-        "id": "pitcher-plant-s lips",
-        "name": "猪笼草口缘",
-        "relevance": "超滑表面（SLIPS）使微生物无法附着",
-        "match_strength": "primary"
-      }
-    ]
+
+  "mechanism_feature_bridge": {
+    "配位螯合": ["邻苯二酚基团", "氨基", "羧基", "巯基", "金属配位能力"],
+    "静电吸附": ["正电表面", "负电表面"],
+    "π-π堆积": ["π电子体系"],
+    "氢键": ["亲水性"],
+    "离子交换": ["离子交换能力"],
+    "微孔吸附": ["微孔"],
+    "介孔吸附": ["介孔"],
+    "大孔吸附": ["大孔"],
+    "层次孔吸附": ["层次孔"],
+    "超疏水分离": ["疏水性", "乳突阵列"],
+    "超滑表面": ["抗生物污染"],
+    "分子筛分": ["分子筛分"],
+    "网络过滤": ["网状", "纤维状"],
+    "生物矿化": ["生物矿化模板"],
+    "生物沉淀": ["巯基"],
+    "催化降解": ["活性氧位点", "催化降解"]
   }
 }
