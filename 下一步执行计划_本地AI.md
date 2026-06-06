@@ -88,16 +88,33 @@
      ```
 - 验收：6/6 标准 JSON 存在，含 `standard_number`，knowledge_items 中有限值数据
 
+### 任务 3.5【待启动】清理重复 JSON + 过滤队列
+
+- 目标：清理已产出的重复 JSON，更新队列构建逻辑
+- 步骤：
+  1. 删除带 " 2.json" 后缀的重复 JSON：
+     ```bash
+     find outputs/extractions -name "* 2.json" -delete
+     ```
+  2. 更新 `multi_worker_extract.sh` 队列构建逻辑，过滤 " 2.pdf" 文件（已有，需验证生效）
+- 验收：无 " 2.json" 文件，队列中无 " 2.pdf" 文件
+
 ### 任务 4【待启动】后处理 + 合并结果
 
 - 目标：修复 JSON 结构缺陷，合并结果到统一目录
 - 步骤：
-  1. `python3 scripts/fix_structure_leakage.py` — 修复孤立对象泄漏
-  2. `python3 scripts/relabel_evidence_quality.py` — 重标质量标签
-  3. `python3 scripts/standardize_organism.py` — 标准化生物名称
-  4. `python3 scripts/merge_results.py` — 合并结果到统一目录
-  5. `python3 scripts/update_extraction_progress_doc.py` — 更新进度文档
-- 验收：所有 JSON 结构完整，manifest 文件正确反映进度
+  1. **更新 fix_structure_leakage.py**（新增 routing 嵌套清理逻辑）：
+     - 检测 routing 内部是否包含 decision_summary/knowledge_items/vector_index_records/quality_control
+     - 如有则删除（保留顶层版本）
+  2. `python3 scripts/fix_structure_leakage.py` — 修复孤立对象泄漏 + routing 嵌套重复
+  3. `python3 scripts/relabel_evidence_quality.py` — 重标质量标签（从 100% reliable 改为有区分度）
+  4. `python3 scripts/standardize_organism.py` — 标准化生物名称
+  5. `python3 scripts/merge_results.py` — 合并结果到统一目录
+  6. `python3 scripts/update_extraction_progress_doc.py` — 更新进度文档
+- 验收：
+  - 所有 JSON 结构完整（无孤儿泄漏、无 routing 嵌套）
+  - evidence 质量标签有区分度（reliable < 95%）
+  - manifest 文件正确反映进度
 
 ### 任务 5【待启动】增量推送到 Biomimetic-design-library
 
@@ -204,7 +221,8 @@ LitExtract 已经产出了 341 个精细 JSON，但这些 JSON 和 prototype.md 
 | **一：提参收尾** | 任务 1（论文 6 篇） | ~15 分钟 | API 调用时间 |
 | | 任务 2（专利 33 篇重跑） | ~1 小时 | 2 路并发 |
 | | 任务 3（标准 6 篇重跑） | ~15 分钟 | 1 路 |
-| **二：后处理** | 任务 4（脚本运行） | ~20 分钟 | 已有脚本 |
+| **二：后处理** | 任务 3.5（清理重复 JSON） | ~5 分钟 | 删除 + 验证 |
+| | 任务 4（脚本运行） | ~30 分钟 | 更新脚本 + 运行 |
 | **三：桥接管道** | 任务 6（写 3 个脚本） | ~3 小时 | 核心开发工作 |
 | **四：原型建设** | 任务 7（清理标杆） | ~30 分钟 | 用管道自动生成 |
 | | 任务 8（校验脚本） | ~1 小时 | |
@@ -212,9 +230,92 @@ LitExtract 已经产出了 341 个精细 JSON，但这些 JSON 和 prototype.md 
 | | 任务 10（批量 25 原型） | ~2 小时 | 管道批量运行 |
 | | 任务 11（核查规则） | ~1 小时 | |
 | | 任务 12（扩到 100） | ~5 小时 | 含补充文献 |
-| **总计** | | **~15 小时** | |
+| **总计** | | **~15.5 小时** | |
 
-**关键路径**：任务 1 → 任务 6（桥接管道）→ 任务 9（验证）→ 任务 10（批量）→ 任务 12（扩展）
+**关键路径**：任务 1 → 任务 3.5 → 任务 4 → 任务 6（桥接管道）→ 任务 9（验证）→ 任务 10（批量）→ 任务 12（扩展）
+
+---
+
+## 提取质量问题汇总（2026-06-06 23:30+）
+
+抽样 4 篇最新论文 JSON：Fang 2022、Ubandoa 2020、Ru 2020、曹 2024。
+
+### 问题一：当前提取使用 v1 提示词，缺少 v2 新增字段（P2，非缺陷）
+
+4 篇最新 JSON 的 schema_version 全部是 `biomimetic-v1`。v2 新增了三个字段：
+- `routing.prototype_targets`（33 个标准原型 ID 映射 + 置信度）
+- `biomimetic_metadata`（organism_scientific、biomimetic_dimension、features、applicability、engineering_constraints）
+- `biomimetic_narrative`（problem_definition、biological_solution、key_features、design_mapping、explainability_anchors）
+
+**v1 本身没有缺陷。** v1 的核心产出（knowledge_items 粒度、provenance 覆盖率、evidence 页码）质量扎实。
+
+**大部分 v2 字段可以不通过重跑获得**：
+
+| v2 字段 | 能否从 v1 数据推导 | 推导方式 |
+|---------|-------------------|---------|
+| prototype_targets | 能 | standardize_organism.py 的映射表 + v1 的 biomimetic_organism 字段 |
+| biomimetic_metadata.applicability | 能 | v1 的 knowledge_items 中 context 字段已包含 pH/温度等实验条件 |
+| biomimetic_metadata.features | 部分能 | 从 knowledge_items 的 domain_direction 和 parameter 推导 |
+| evidence 质量分级 | 能 | relabel_evidence_quality.py 后处理脚本 |
+| biomimetic_narrative（5 个叙事子节） | **不能** | 需要 LLM 从 PDF 原文综合，无法纯脚本推导 |
+
+**结论**：论文不需要用 v2 重跑。在桥接管道阶段用脚本补 prototype_targets 和 metadata，仅对标标杆原型相关的论文用 LLM 生成 biomimetic_narrative。v2 提示词用于任务 2（专利重跑）和任务 3（标准重跑）。
+
+### 问题二：context/evidence 孤儿对象泄漏（P0，已知问题）
+
+3/4 篇存在严重的结构泄漏：knowledge_items 数组中，每条正常 knowledge_item 后面紧跟其 context 子对象和 evidence 子对象，它们作为数组顶层元素出现，而不是嵌套在 item 内部。
+
+| 文件 | 正常 ki 数 | 泄漏孤儿数 | 泄漏比例 |
+|------|-----------|-----------|---------|
+| Fang 2022 | 27 | ~56 | 严重 |
+| Ubandoa 2020 | 20 | 0 | 无 |
+| Ru 2020 | 26 | ~54 | 严重 |
+| 曹 2024 | 20 | ~42 | 严重 |
+
+**修复**：运行 fix_structure_leakage.py（任务 4）
+
+### 问题三：routing 对象内部嵌套完整知识数据（P0，新发现）
+
+Ru 2020 和 曹 2024 两篇（2/4）出现新问题：routing 对象内部错误地嵌套了完整的 decision_summary、knowledge_items、vector_index_records、quality_control 四个顶层字段，导致全量数据重复。
+
+**影响**：文件体积膨胀（129KB 和 122KB，远大于正常的 45-87KB）
+
+**修复**：fix_structure_leakage.py 需要增加对 routing 内部嵌套字段的清理逻辑（任务 4）
+
+### 问题四：重复 PDF 文件未被过滤（P1）
+
+文献库中有 192 个 macOS Finder 重复文件（" 2.pdf" 后缀）。当前提取进程实际处理了其中 23 个，产出了 23 个带 " 2.json" 后缀的重复 JSON。
+
+**修复**：删除重复 JSON + 验证队列过滤（任务 3.5）
+
+### 问题五：evidence 质量标签无区分度（P2）
+
+4 篇文件的 evidence 质量全部标为 reliable（100%），没有 needs_review、suspicious 或 unavailable。
+
+**修复**：运行 relabel_evidence_quality.py（任务 4）
+
+### 问题六：verification 全部为 unverified（P2，预期行为）
+
+verification=verified 只能由第二层 agentic 核查产生，不应由提取阶段自报。此问题在任务 8（双层校验）完成后解决。
+
+### 正面发现
+
+- ref_doi 覆盖率 100%
+- source_file 覆盖率 100%
+- evidence 全部带 page 字段
+- 无可疑数值（qmax 均在合理范围内）
+- knowledge_items 粒度精细，参数级别数据提取到位
+
+### 处理优先级汇总
+
+| 优先级 | 问题 | 建议动作 | 时机 |
+|--------|------|----------|------|
+| P0 | 孤儿泄漏 | 运行 fix_structure_leakage.py | 任务 4 |
+| P0 | routing 嵌套重复 | fix_structure_leakage.py 增加 routing 清理逻辑 | 任务 4 前需更新脚本 |
+| P1 | 重复 PDF 未过滤 | 删除重复 JSON + 验证队列过滤 | 任务 3.5 |
+| P2 | v1 提示词（缺 v2 字段） | 论文不需要重跑；大部分字段可脚本推导 | 桥接管道阶段 |
+| P2 | evidence 标签无区分度 | 运行 relabel_evidence_quality.py | 任务 4 |
+| P2 | verification 全 unverified | 预期行为，任务 8 解决 | 任务 8 |
 
 ---
 
