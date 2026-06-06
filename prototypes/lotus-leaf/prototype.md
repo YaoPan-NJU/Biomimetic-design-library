@@ -3,10 +3,10 @@
 ## 元数据
 
 - **原型 ID**: lotus-leaf
-- **知识条目数**: 788
+- **知识条目数**: 820
 - **性能数据数**: 6
-- **机制描述数**: 14
-- **工程约束数**: 87
+- **机制描述数**: 17
+- **工程约束数**: 100
 
 ## 仿生元数据
 
@@ -76,9 +76,9 @@
 - **CO₂响应膜制备与机制 CO₂-responsive membrane preparation and mechanism**: PMMA-PDEAEMA共聚物通过毛细力驱动自组装策略固定于膜表面(PPFM)；CO₂/N₂刺激下胺基质子化/去质子化实现润湿性切换
   - 条件: {'material': 'PPFM(PMMA-PDEAEMA共聚物修饰)', 'method': '毛细力驱动限域自组装', 'mechanism': 'PDEAEMA段胺基在CO₂下质子化→亲水；N₂下去质子化→疏水', 'efficiency': '>99.9%', 'application': '多相乳液分离'}
   - 来源: literature: 10.1016/j.porgcoat.2024.108885
-- **Macroporous membrane pore size and mechanism**: >50
-  - 条件: {'layer': 'Macroporous', 'mechanism': 'Sieve', 'applications': 'Microfiltration and Ultrafiltration'}
-  - 来源: literature: 10.1016/j.jmrt.2021.02.068
+- **荷叶超疏水仿生机制 Lotus leaf superhydrophobic biomimetic mechanism**: 荷叶表面具有微米级沟槽和纳米级蜡管层级结构，低滚动角使水滴滚动并带走灰尘，实现自清洁效应
+  - 条件: {'biological_source': 'lotus leaf', 'mechanism': 'hierarchical roughness + wax layer', 'property': 'superhydrophobicity, self-cleaning'}
+  - 来源: literature: 10.1007/s11783-021-1515-2
 
 ## 工程约束
 
@@ -111,6 +111,7 @@
 - literature: 10.1002/smll.202204624
 - literature: 10.1007/s10853-022-07945-8
 - literature: 10.1007/s11356-022-23066-w
+- literature: 10.1007/s11783-021-1515-2
 - literature: 10.1007/s40242-021-0010-4
 - literature: 10.1016/j.desal.2023.116475
 - literature: 10.1016/j.jmrt.2021.02.068

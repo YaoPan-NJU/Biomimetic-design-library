@@ -3,10 +3,10 @@
 ## 元数据
 
 - **原型 ID**: wood-xylem
-- **知识条目数**: 18
-- **性能数据数**: 1
-- **机制描述数**: 1
-- **工程约束数**: 2
+- **知识条目数**: 42
+- **性能数据数**: 3
+- **机制描述数**: 2
+- **工程约束数**: 4
 
 ## 仿生元数据
 
@@ -41,16 +41,27 @@
 
 | 参数 | 值 | 单位 | 污染物 | 材料 | 来源 |
 |------|-----|------|--------|------|------|
+| Langmuir最大吸附容量——三种酚类 | 苯酚102.71、4-CPh 172.24、2,4-DCPh 226.55 mg/g | mg/g |  | WAS-BC | literature: 10.1038/s41598-021-82277-2 |
+| 氯取代基对吸附容量的影响——构效关系 | 2,4-DCPh(二氯) > 4-CPh(一氯) > 苯酚(无氯)；226.55 > 172.24 > 102.71 mg/g | mg/g |  |  | literature: 10.1038/s41598-021-82277-2 |
 | TCTGAs对五种重金属的Langmuir最大吸附容量 qmax | Pb(II) 571, Cu(II) 462, Zn(II) 361, Cd(II) 263, Mn(II) 208 | mg/g |  |  | literature: 10.1016/j.jhazmat.2021.125612 |
 
 ## 吸附机制
 
+- **吸附机制——分子态酚+静电排斥**: pH<pKa时分子态酚占优→利于吸附；高pH酚酸根阴离子→与负电荷WAS-BC排斥
+  - 条件: {'pH_low': 'molecular phenols dominant → higher sorption', 'pH_high': 'phenolate/dichlorophenate anions → electrostatic repulsion with negatively charged WAS-BC', 'pKa_phenol': '9.95', 'pKa_4_CPh': '9.14', 'pKa_2_4_DCPh': '7.9', 'dominant_mechanism': 'molecular state phenols + hydrophobic + π-π interactions', 'ref': '[Page 6; Fig 8]'}
+  - 来源: literature: 10.1038/s41598-021-82277-2
 - **吸附机制：氨基配位螯合**: XPS确认N 1s偏移(398.9→399.1-399.4 eV)→N孤对电子与金属离子形成配位键。O 1s也偏移→含氧官能团参与吸附。EDX mapping确认Pb/Cu/Zn/Cd均匀分布。机制：NH3+/NH2/NH-基团与重金属离子螯合/配位
   - 条件: {'XPS_N1s': 'shift from 398.9 eV to 399.1-399.4 eV upon metal loading', 'XPS_O1s': 'also shifted → oxygen groups participate', 'EDX': 'Pb, Cu, Zn, Cd uniformly distributed on TCTGAs', 'functional_groups': 'NH3+, -NH2, -NH- → borderline base → complex borderline acids (Pb²⁺, Cu²⁺, Zn²⁺)', 'meanism': 'chelating/complexation between donor N atom and metal ions', 'ref': '[Fig. 4; Section 3.3.2]'}
   - 来源: literature: 10.1016/j.jhazmat.2021.125612
 
 ## 工程约束
 
+- **pH影响——最佳pH 6.0**: pH 2-6吸附容量递增；pH 6最佳(苯酚84.87、4-CPh 90.22、2,4-DCPh 93.14 mg/g)；pH>6下降 mg/g
+  - 条件: {'optimal_pH': '6.0', 'phenol_at_pH6': '84.87 mg/g (C0=100 mg/L)', '4_CPh_at_pH6': '90.22 mg/g', '2_4_DCPh_at_pH6': '93.14 mg_g', 'pKa_values': 'phenol 9.95, 4-CPh 9.14, 2,4-DCPh 7.9', 'mechanism': 'pH<pKa: molecular phenols dominant → favorable adsorption; pH>pKa: phenolate anions → electrostatic repulsion with negatively charged WAS-BC', 'ref': '[Page 5-6; Fig 8; 3.1节]'}
+  - 来源: literature: 10.1038/s41598-021-82277-2
+- **TGA热稳定性分析**: 生物质200-750°C主要热解；生物炭500°C仅~10wt%质量损失→高温稳定 °C
+  - 条件: {'biomass_pyrolysis': '200-750°C main decomposition', 'biomass_moisture': '50-100°C evaporation', 'biochar_500C': '~10 wt% mass loss (moisture/adsorbed gases)', 'biochar_high_T': 'continuous decomposition due to extensive carbonization → graphitic carbon formation', 'stability': 'stable at wide range of temperatures; stable at experimental conditions', 'ref': '[Page 5; 7; Fig 6]'}
+  - 来源: literature: 10.1038/s41598-021-82277-2
 - **再生性能与循环稳定性**: 0.05 mol/L EDTA-2Na洗脱，25°C，3h。5次循环后保持良好吸附性能。可制成压缩过滤装置原型 None
   - 条件: {'regeneration': '0.05 mol/L EDTA-2Na, 25°C, 3h', 'cycles': 'at least 5 cycles', 'post_treatment': 'distilled water wash → room temperature overnight drying', 'device_prototype': 'compression filter device (shown in photos)', 'ref': '[Fig. 5a; Section 2.4.5; Section 3.3]'}
   - 来源: literature: 10.1016/j.jhazmat.2021.125612
@@ -61,3 +72,4 @@
 ## 来源汇总
 
 - literature: 10.1016/j.jhazmat.2021.125612
+- literature: 10.1038/s41598-021-82277-2

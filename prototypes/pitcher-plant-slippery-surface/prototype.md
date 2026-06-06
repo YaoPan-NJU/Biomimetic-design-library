@@ -3,10 +3,10 @@
 ## 元数据
 
 - **原型 ID**: pitcher-plant-slippery-surface
-- **知识条目数**: 55
-- **性能数据数**: 0
-- **机制描述数**: 0
-- **工程约束数**: 0
+- **知识条目数**: 101
+- **性能数据数**: 1
+- **机制描述数**: 6
+- **工程约束数**: 8
 
 ## 仿生元数据
 
@@ -38,7 +38,62 @@
 
 仿生故事线：从单一生物原型（仅解决捕获或输运单一环节）向多重仿生（捕获+输运+存储三阶段优化）演进，揭示自然界‘分工协同’的集水智慧；设计溯源：所有高效FHD均回归流体力学与界面科学基本原理（Laplace方程、Furmidge方程、Cassie-Baxter态），仿生结构仅为物理机制的空间载体，可通过定量参数（如15°尖端角、Ra粗糙度差、0.16s脱离时间）直接指导工程放大与性能预测。
 
+## 性能数据
+
+| 参数 | 值 | 单位 | 污染物 | 材料 | 来源 |
+|------|-----|------|--------|------|------|
+| Mg alloy SLIPS ice removal force reduction | 6 | times reduction |  | Mg alloy SLIPS via spray method | literature: 10.1007/s42242-021-00133-8 |
+
+## 吸附机制
+
+- **Lotus leaf superhydrophobicity mechanism**: Network of waxy crystals on surface + nanostructures on top of microscale nipples
+  - 条件: {'description': 'Dual-scale hierarchical structure creates high CA and low sliding angle; water droplets roll easily'}
+  - 来源: literature: 10.1007/s42242-021-00133-8
+- **Nepenthes pitcher plant trapping mechanism**: Superhydrophilic peristome with radial ridges of smooth overlapping epidermal cells; forms uniform liquid film when wetted; insects slip on oil-repellent surface into digestive juices
+  - 条件: {'organism': 'Nepenthes (carnivorous plant, tropical areas)', 'structure': 'Peristome (pitcher rim) with regular microstructure'}
+  - 来源: literature: 10.1007/s42242-021-00133-8
+- **Desert beetle water collection mechanism**: Alternate hydrophilic and hydrophobic surfaces on back for water collection
+  - 条件: {'application': 'Water collection in arid areas'}
+  - 来源: literature: 10.1007/s42242-021-00133-8
+- **Fish scale superhydrophilic/underwater superoleophobic mechanism**: Superhydrophilic surface with underwater superoleophobicity for oil-water separation
+  - 条件: {'application': 'Low-cost oil transportation and oil-water separation'}
+  - 来源: literature: 10.1007/s42242-021-00133-8
+- **UV-responsive SLIPS self-replenishment mechanism**: UV-driven self-replenishment via azobenzene conformational change
+  - 条件: {'material': 'Porous silicon-based substrate with azobenzene groups + silicone oil', 'wavelength': '365 nm', 'mechanism': 'Azobenzene conformational change causes substrate to shrink slightly, squeezing stored silicone oil to surface', 'capability': 'Repeatedly restores surface lubricant layer'}
+  - 来源: literature: 10.1007/s42242-021-00133-8
+- **Lubricant loss mechanisms**: Diffusion to surrounding surface, external shear, gravity, evaporation
+  - 条件: {'mitigation_strategies': 'Liquid retention (enhance bond strength), Liquid restoration (interconnected porous structure for internal storage)'}
+  - 来源: literature: 10.1007/s42242-021-00133-8
+
+## 工程约束
+
+- **Hydrophilic threshold contact angle (Young's model)**: 0-90 degrees
+  - 条件: {'description': 'When 0° ≤ θ ≤ 90°, water droplet can spread on surface; surface is hydrophilic', 'model': "Young's equation"}
+  - 来源: literature: 10.1007/s42242-021-00133-8
+- **Hydrophobic threshold contact angle (Young's model)**: 90-180 degrees
+  - 条件: {'description': 'When 90° < θ ≤ 180°, surface cannot be wetted by water; surface is hydrophobic', 'model': "Young's equation"}
+  - 来源: literature: 10.1007/s42242-021-00133-8
+- **Critical condition for hydrophilic-hydrophobic transition**: f_LA ≥ (r · cos θ₀) / (r · cos θ₀ + 1) None
+  - 条件: {'description': 'Critical f_LA value for transition; at this point θ₀ < 90°'}
+  - 来源: literature: 10.1007/s42242-021-00133-8
+- **Lotus leaf superhydrophobicity mechanism**: Network of waxy crystals on surface + nanostructures on top of microscale nipples None
+  - 条件: {'description': 'Dual-scale hierarchical structure creates high CA and low sliding angle; water droplets roll easily'}
+  - 来源: literature: 10.1007/s42242-021-00133-8
+- **Fish scale superhydrophilic/underwater superoleophobic mechanism**: Superhydrophilic surface with underwater superoleophobicity for oil-water separation None
+  - 条件: {'application': 'Low-cost oil transportation and oil-water separation'}
+  - 来源: literature: 10.1007/s42242-021-00133-8
+- **ZnO nanorod array on wood omniphobic surface**: Omniphobic (repels both water and oil) None
+  - 条件: {'material': 'Wood + ZnO nanorod array + PTES (1H,1H,2H,2H-perfluorooctyltriethoxysilane) + fluorinated lubricant', 'test_liquids': 'Water (methylene blue) and hexadecane (Aero-Brite dye)', 'natural_structure': 'Wood cell structure with groove-like channels and cell walls'}
+  - 来源: literature: 10.1007/s42242-021-00133-8
+- **Wood superhydrophobic surface wear resistance**: 3.5 kPa
+  - 条件: {'material': 'Wood + fluoroalkylsilane/silica composite suspension', 'wear_cycles': '45 cycles', 'result': 'Maintained superhydrophobicity; performance restorable by recasting at normal temperature'}
+  - 来源: literature: 10.1007/s42242-021-00133-8
+- **SLIPS supercooled water nucleation stability**: 150 freeze-thaw cycles
+  - 条件: {'material': 'SLIPS based on aluminum pan', 'result': 'Lowest nucleation temperature compared to untreated Al and SHS; stable after 150 freeze-thaw cycles'}
+  - 来源: literature: 10.1007/s42242-021-00133-8
+
 ## 来源汇总
 
 - literature: 10.1002/adfm.202200359
 - literature: 10.1007/s40242-021-0010-4
+- literature: 10.1007/s42242-021-00133-8

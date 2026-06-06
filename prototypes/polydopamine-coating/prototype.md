@@ -3,10 +3,10 @@
 ## 元数据
 
 - **原型 ID**: polydopamine-coating
-- **知识条目数**: 61
-- **性能数据数**: 1
-- **机制描述数**: 2
-- **工程约束数**: 5
+- **知识条目数**: 125
+- **性能数据数**: 9
+- **机制描述数**: 6
+- **工程约束数**: 15
 
 ## 仿生元数据
 
@@ -42,17 +42,41 @@
 
 | 参数 | 值 | 单位 | 污染物 | 材料 | 来源 |
 |------|-----|------|--------|------|------|
+| 最大吸附容量 qmax — BC/PDA/La(OH)3复合材料 | 159.8 | mg/g | 无机磷 | BC/PDA/La(OH)3-1 | patent |
+| 吸附容量对比 — BC/PDA/La(OH)3 vs BC/La(OH)3 vs BC/PDA vs BC | 159.8 vs 91.2 vs 12.6 vs 0 | mg/g | 无机磷 |  | patent |
+| 循环稳定性 — 5次循环后吸附容量保持 | 110 | mg/g | 无机磷 | BC/PDA/La(OH)3-1 | patent |
+| 实际水体吸附容量 | 143.4 | mg/g | 无机磷 | BC/PDA/La(OH)3-1 | patent |
 | 循环吸附稳定性-重金属去除率保持 | >72 | % |  |  | patent: CN115055171A |
+| 最大吸附容量 qmax — BC/PDA/La(OH)3复合材料 | 159.8 | mg/g | 无机磷 | BC/PDA/La(OH)3-1 | patent |
+| 吸附容量对比 — BC/PDA/La(OH)3 vs BC/La(OH)3 vs BC/PDA vs BC | 159.8 vs 91.2 vs 12.6 vs 0 | mg/g | 无机磷 |  | patent |
+| 循环稳定性 — 5次循环后吸附容量保持 | 110 | mg/g | 无机磷 | BC/PDA/La(OH)3-1 | patent |
+| 实际水体吸附容量 | 143.4 | mg/g | 无机磷 | BC/PDA/La(OH)3-1 | patent |
 
 ## 吸附机制
 
+- **吸附机制 — 配位螯合**: La与磷酸根配位生成磷酸镧化合物
+  - 条件: {'mechanism_type': '化学吸附/配位作用', 'active_component': 'La(OH)3纳米颗粒'}
 - **PDA吸附机制-姜黄素**: None
   - 条件: {'mechanism': 'π-π*电子跃迁 + 形成羰基键', 'description': 'PDA与姜黄素分子产生物理吸附（π-π*电子跃迁）和化学吸附（羰基键）'}
 - **PDA吸附机制-番茄红素**: None
   - 条件: {'mechanism': 'π-π*电子跃迁 + michael加成反应', 'description': 'PDA与番茄红素分子产生物理吸附（π-π*电子跃迁）和化学吸附（michael加成反应）'}
+- **吸附机制 — 配位螯合**: La与磷酸根配位生成磷酸镧化合物
+  - 条件: {'mechanism_type': '化学吸附/配位作用', 'active_component': 'La(OH)3纳米颗粒'}
+- **水滴'生长-跳跃'排液机制 Water droplet 'growing-jumping' discharge mechanism**: 两阶段机制：'生长'阶段(水滴在微腔中核化生长→Laplace压力梯度∇P~2σ/d_eq(1/R₁-1/R₂)驱动水滴变形自导向)→'跳跃'阶段(合并后表面能释放触发自发跳跃运动，低粘附力确保跳跃)
+  - 条件: {'stage_1_growing': '水滴在微腔中核化生长→随机和reentrant几何结构导致变形→Laplace压力梯度∇P驱动自导向', 'stage_2_jumping': '合并后表面能释放→自发面外跳跃运动→低粘附力确保跳跃', 'laplace_pressure': '∇P ~ 2σ/d_eq(1/R₁ - 1/R₂)', 'purpose': '避免粘性Wenzel态破坏超疏水性，确保稳定乳液分离'}
+  - 来源: literature: 10.1016/j.seppur.2023.123547
+- **油滴捕获的'捕获-聚并-脱离'机制 Oil capture 'capture-coalescence-detachment' mechanism**: 三阶段机制：'捕获'(超疏水Al₂O₃突起作为油吸收器捕获微小油滴，不平衡力Fd=γ_oil(cosθ₁-cosθ₂)驱动)→'聚并'(被捕获油滴作为油储库，小油滴聚并成大油滴)→'脱离'(水下超疏油PDA/PET表面+Al₂O₃突起表面张力排斥大油滴)
+  - 条件: {'stage_1_capture': '超疏水Al₂O₃突起捕获微小油滴，Fd = γ_oil(cosθ₁-cosθ₂)驱动(θ₁<1°, θ₂>150°)', 'stage_2_coalescence': "被捕获油滴作为'油储库'，小油滴聚并成大油滴", 'stage_3_detachment': '水下超疏油PDA/PET表面+Al₂O₃突起表面张力排斥大油滴脱离', 'hydration_layer': '亲水PDA/PET区域的水化层排斥被捕获油滴'}
+  - 来源: literature: 10.1016/j.seppur.2023.123547
 
 ## 工程约束
 
+- **循环稳定性 — 5次循环后吸附容量保持**: 110 mg/g
+  - 条件: {'material': 'BC/PDA/La(OH)3-1', 'pollutant': '无机磷', 'cycles': 5, 'desorption_condition': '0.1 mol/L NaOH甲醇溶液超声解吸'}
+- **镧泄漏量 — 5次循环**: 5 mg/L
+  - 条件: {'material': 'BC/PDA/La(OH)3-1', 'cycles': 5, 'measurement_type': '最大值上限'}
+- **pH适用范围**: 150 mg/g
+  - 条件: {'material': 'BC/PDA/La(OH)3-1', 'pollutant': '无机磷', 'ph_range': '5.0-9.0', 'tested_ph_values': [5.0, 6.0, 7.0, 8.0, 9.0]}
 - **番茄红素光稳定性提升**: 97.98 %
   - 条件: {'material': 'HPDA@LYC（纳米包埋后）', 'control': '番茄红素粉末（未包埋）', 'light_condition': '室内散射光全光照射', 'duration': '12h', 'temperature': '25°C', 'control_retention': '83.75%', 'improvement': '从83.75%提升至97.98%'}
 - **PDA的pH敏感性机制**: None None
@@ -63,8 +87,14 @@
   - 条件: {'循环次数': '5-10次解吸试验后', '最优选(镍离子)': '去除率保持在78%以上'}
 - **循环吸附稳定性-材料回收率**: >82 %
   - 条件: {'循环次数': '5-10次解吸试验后'}
+- **循环稳定性 — 5次循环后吸附容量保持**: 110 mg/g
+  - 条件: {'material': 'BC/PDA/La(OH)3-1', 'pollutant': '无机磷', 'cycles': 5, 'desorption_condition': '0.1 mol/L NaOH甲醇溶液超声解吸'}
+- **镧泄漏量 — 5次循环**: 5 mg/L
+  - 条件: {'material': 'BC/PDA/La(OH)3-1', 'cycles': 5, 'measurement_type': '最大值上限'}
 
 ## 来源汇总
 
+- literature: 10.1016/j.seppur.2023.123547
+- patent
 - patent: CN115040496A
 - patent: CN115055171A
