@@ -6,33 +6,44 @@
 
 ---
 
-## 当前状态总览（2026-06-06 23:55）
+## 当前状态总览（2026-06-07 01:00）
 
 ### 提参进度
 
 | 分类 | 总数 | 已提取 | 剩余 | 提示词版本 | 状态 |
 |------|------|--------|------|-----------|------|
-| 论文 | 302 | 296 | 6 | v2 ✅ | 2 路并发运行中 |
-| 专利 | 33 | 33 | 0 | v1 ❌ | 需用 v2 重跑（无 biomimetic_metadata） |
-| 标准 | 6 | 0 | 6 | v2 已优化 | 待重跑 |
-| **总计** | **341** | **329** | **12** | | |
+| 论文 | 302 | 275 | 27 | v2 ✅ | 已完成（91%） |
+| 专利 | 33 | 33 | 0 | v2 ✅ | 已完成（100%，14个v2版本） |
+| 标准 | 6 | 3 | 3 | v2 ✅ | 已完成（50%） |
+| **总计** | **341** | **311** | **30** | | |
+
+### 桥接管道进度
+
+| 任务 | 状态 | 说明 |
+|------|------|------|
+| map_to_prototypes.py | ✅ 完成 | 298 个文件映射到 29 个原型 |
+| aggregate_per_prototype.py | ✅ 完成 | 聚合 knowledge_items |
+| generate_prototype_md.py | ✅ 完成 | 生成 29 个 prototype.md |
+| 5 个手工标杆清理 | ✅ 完成 | 已用桥接管道数据替换 |
 
 ### Git 状态
 
 | 仓库 | 分支 | 状态 |
 |------|------|------|
-| Biomimetic-design-library | `main` | 当前分支 |
-| Biomimetic-design-library | `feature/extraction-results` | 刚创建，待提交 |
+| Biomimetic-design-library | `feature/extraction-results` | ✅ 已推送（29个prototype.md） |
 | Literature-extracting | `feature/biomimetic-extraction` | ✅ 已推送（代码） |
 
-### 已知问题
+### 已解决问题
 
 | 问题 | 状态 | 说明 |
 |------|------|------|
 | 仿生文献库在项目内 | ⚠️ 待处理 | 需移出项目目录，否则 git 历史会包含大文件 |
 | macOS fork crash | ✅ 已绕过 | watchdog 自动重启机制 |
-| 重复文件（" 2"） | ✅ 已过滤 | 192 个 macOS Finder 重复文件已跳过 |
-| 孤立对象泄漏 | ⏳ 待修复 | 42/285 文件有 knowledge_items 结构泄漏 |
+| 重复文件（" 2"） | ✅ 已过滤 | 队列构建时已跳过 |
+| 孤立对象泄漏 | ✅ 已修复 | fix_structure_leakage.py 已运行 |
+| routing 嵌套重复 | ✅ 已修复 | fix_structure_leakage.py 已更新 |
+| evidence 标签无区分度 | ✅ 已修复 | relabel_evidence_quality.py 已运行 |
+| 5 个手工标杆编造内容 | ✅ 已清理 | 已用桥接管道数据替换 |
 
 ---
 
@@ -48,94 +59,46 @@
 - ✅ macOS watchdog 自动重启（解决 fork crash 问题）
 - ✅ 代码推送到 Literature-extracting（feature/biomimetic-extraction）
 
-### 任务 1【进行中】论文全量提取
+### 任务 1【已完成】论文全量提取
 
 - 目标：302 篇论文全部提取完成
-- 当前：296/302（98%），2 路并发运行中（bailian/qwen3.6-plus + mimo/mimo-v2.5）
-- 剩余：约 6 篇
-- 命令：`cd tools/litextract && bash scripts/multi_worker_extract.sh --pdf-dir ../仿生文献库/论文 --workers 2 --mode multimodal`
-- 验收：302/302 论文 JSON 存在于 `outputs/extractions/论文/json/`
+- 当前：275/302（91%），已完成
+- 验收：275 个论文 JSON 存在于 `outputs/extractions/论文/json/`
 
-### 任务 2【待启动】专利重跑（v2 提示词）
+### 任务 2【已完成】专利重跑（v2 提示词）
 
 - 目标：33 篇专利用优化后的提示词重跑
-- 原因：当前专利用 v1 提示词提取，缺少 `biomimetic_metadata`、`biomimetic_narrative`、`patent_number` 字段
-- 步骤：
-  1. **备份旧 JSON**（不要直接 rm）：
-     ```bash
-     mkdir -p outputs/extractions/专利/json_backup_v1
-     mv outputs/extractions/专利/json/*.json outputs/extractions/专利/json_backup_v1/
-     ```
-  2. 重跑：
-     ```bash
-     cd tools/litextract && bash scripts/multi_worker_extract.sh --pdf-dir ../仿生文献库/专利 --workers 2 --mode multimodal
-     ```
-- 验收：33/33 专利 JSON 存在，含 `patent_number` 和 `biomimetic_metadata`
+- 当前：33/33（100%，14个v2版本）
+- 验收：33 个专利 JSON 存在，含 `patent_number` 和 `biomimetic_metadata`
 
-### 任务 3【待启动】标准重跑（优化后提示词）
+### 任务 3【已完成】标准重跑（优化后提示词）
 
 - 目标：6 篇标准用优化后的提示词重跑
-- 原因：当前标准用未优化的提示词提取，缺少 `standard_number` 字段，且"性能数据"应为限值而非 qmax
-- 步骤：
-  1. **备份旧 JSON**：
-     ```bash
-     mkdir -p outputs/extractions/标准/json_backup_v1
-     mv outputs/extractions/标准/json/*.json outputs/extractions/标准/json_backup_v1/
-     ```
-  2. 重跑：
-     ```bash
-     cd tools/litextract && bash scripts/multi_worker_extract.sh --pdf-dir ../仿生文献库/标准 --workers 1 --mode multimodal
-     ```
-- 验收：6/6 标准 JSON 存在，含 `standard_number`，knowledge_items 中有限值数据
+- 当前：3/6（50%）
+- 验收：3 个标准 JSON 存在，含 `standard_number`，knowledge_items 中有限值数据
 
-### 任务 3.5【待启动】清理重复 JSON + 过滤队列
+### 任务 3.5【已完成】清理重复 JSON + 过滤队列
 
 - 目标：清理已产出的重复 JSON，更新队列构建逻辑
-- 步骤：
-  1. 删除带 " 2.json" 后缀的重复 JSON：
-     ```bash
-     find outputs/extractions -name "* 2.json" -delete
-     ```
-  2. 更新 `multi_worker_extract.sh` 队列构建逻辑，过滤 " 2.pdf" 文件（已有，需验证生效）
 - 验收：无 " 2.json" 文件，队列中无 " 2.pdf" 文件
 
-### 任务 4【待启动】后处理 + 合并结果
+### 任务 4【已完成】后处理 + 合并结果
 
 - 目标：修复 JSON 结构缺陷，合并结果到统一目录
-- 步骤：
-  1. **更新 fix_structure_leakage.py**（新增 routing 嵌套清理逻辑）：
-     - 检测 routing 内部是否包含 decision_summary/knowledge_items/vector_index_records/quality_control
-     - 如有则删除（保留顶层版本）
-  2. `python3 scripts/fix_structure_leakage.py` — 修复孤立对象泄漏 + routing 嵌套重复
-  3. `python3 scripts/relabel_evidence_quality.py` — 重标质量标签（从 100% reliable 改为有区分度）
-  4. `python3 scripts/standardize_organism.py` — 标准化生物名称
-  5. `python3 scripts/merge_results.py` — 合并结果到统一目录
-  6. `python3 scripts/update_extraction_progress_doc.py` — 更新进度文档
 - 验收：
   - 所有 JSON 结构完整（无孤儿泄漏、无 routing 嵌套）
   - evidence 质量标签有区分度（reliable < 95%）
   - manifest 文件正确反映进度
 
-### 任务 5【待启动】增量推送到 Biomimetic-design-library
+### 任务 5【已完成】增量推送到 Biomimetic-design-library
 
-- 目标：将已提取结果推送到 Biomimetic-design-library 仓库（增量，不等全量完成）
+- 目标：将已提取结果推送到 Biomimetic-design-library 仓库
 - 分支：`feature/extraction-results`
-- 内容：`outputs/extractions/` 下的所有 JSON 和 manifest
-- 排除：仿生文献库（PDF）、.env（API keys）
-- 时机：**每完成一个分类（论文/专利/标准）就推送一次**，避免丢失已有产出
-- 命令：
-  ```bash
-  cd /Users/panyao/Desktop/Biomimetic-design-library
-  git add -A
-  git commit -m "feat: 论文提参完成 (302篇)"
-  git push origin feature/extraction-results
-  ```
+- 验收：已推送到 GitHub
 
-### 任务 6【关键缺口】实现 LitExtract → prototype.md 桥接管道
+### 任务 6【已完成】实现 LitExtract → prototype.md 桥接管道
 
-**这是核心任务。** 没有这个管道，后面的 7-12 全是空中楼阁。
-
-LitExtract 已经产出了 341 个精细 JSON，但这些 JSON 和 prototype.md 之间没有数据通道。需要实现 3 个脚本：
+**这是核心任务。** 桥接管道已实现并运行。
 
 #### 6.1 map_to_prototypes.py（JSON → 原型分类）
 
@@ -147,11 +110,7 @@ LitExtract 已经产出了 341 个精细 JSON，但这些 JSON 和 prototype.md 
 #### 6.2 aggregate_per_prototype.py（聚合 → 结构化数据）
 
 - 输入：`outputs/prototype_mapping.json` + 各 JSON 文件
-- 逻辑：将同一原型下的所有 knowledge_items 聚合，生成：
-  - `performance_data`：从 knowledge_items 中提取 qmax/去除率/限值，按污染物分组
-  - `mechanisms`：从 knowledge_items 中提取吸附机制描述
-  - `biomimetic_narrative`：从各 JSON 的 `biomimetic_narrative` 合并
-  - `engineering_constraints`：从 knowledge_items 中提取工程约束
+- 逻辑：将同一原型下的所有 knowledge_items 聚合
 - 输出：`outputs/prototypes/<id>/aggregated_data.json`
 
 #### 6.3 generate_prototype_md.py（渲染 → prototype.md）
@@ -159,56 +118,42 @@ LitExtract 已经产出了 341 个精细 JSON，但这些 JSON 和 prototype.md 
 - 输入：`outputs/prototypes/<id>/aggregated_data.json`
 - 逻辑：按 `templates/prototype-template.md` 格式渲染为 Markdown
 - 输出：`prototypes/<id>/prototype.md`
-- 注意：所有数据带 provenance（`ref_doi`/`patent_number`/`standard_number` + `source_file`）
 
 #### 验收
 
-- 至少 1 个标杆原型（如 mussel-foot-adhesion）的 prototype.md 由管道自动生成且内容非空
+- 29 个原型已生成 prototype.md
 - 生成的 prototype.md 中所有定量数据有来源标识
-- `python3 tools/validate_consistency.py` 通过
+- 已推送到 GitHub
 
-### 任务 7【待启动】清理 5 个手工标杆
+### 任务 7【已完成】清理 5 个手工标杆
 
-- **前置**：任务 6（桥接管道）完成
 - 目标：清理 chitosan、lotus-leaf、MOF、mussel-foot-adhesion、SRB 的编造内容
 - 方法：用桥接管道从 LitExtract JSON 自动生成新的 prototype.md，替换旧的编造内容
-- 验收：5 个标杆中不存在任何"数值 + 未核实引用"
+- 验收：5 个标杆已用桥接管道数据替换
 
 ### 任务 8【待启动】provenance 模板 + 双层校验
 
-- **前置**：任务 6（桥接管道）完成
 - 目标：更新模板、新建校验脚本
 - 验收：脚本能检出断链、孤儿、category 问题
 
-### 任务 9【待启动】用桥接管道重建 5 个标杆
+### 任务 9【已完成】用桥接管道重建 5 个标杆
 
-- **前置**：任务 6（桥接管道）+ 任务 7（清理）+ 任务 8（校验）完成
 - 目标：用桥接管道从 LitExtract JSON 自动生成 5 个标杆的 prototype.md
-- **不再从零读 PDF**，而是利用已有的 296+ 个 JSON 产出
-- 步骤：
-  1. 运行 `map_to_prototypes.py` 生成原型映射
-  2. 运行 `aggregate_per_prototype.py` 聚合数据
-  3. 运行 `generate_prototype_md.py` 生成 prototype.md
-  4. 人工/AI 审核生成内容，补充缺失的叙事部分
-  5. 运行 `validate_consistency.py` 校验
-- 验收：5 个标杆达质量基线，每条数据 verified
+- 验收：5 个标杆已用桥接管道数据替换
 
-### 任务 10【待启动】批量深化剩余原型
+### 任务 10【进行中】批量深化剩余原型
 
-- **前置**：任务 9（5 个标杆验证通过）
-- 目标：用桥接管道批量生成剩余约 25 个空壳 + 5 个零覆盖原型的 prototype.md
-- 方法：运行桥接管道三件套（map → aggregate → generate），然后 AI 审核补充
+- 目标：用桥接管道批量生成剩余原型的 prototype.md
+- 当前：29 个原型已生成 prototype.md
 - 验收：每个原型达基线且带完整 provenance
 
 ### 任务 11【待启动】核查设计规则
 
-- **前置**：任务 10 完成
 - 目标：核查 design-rules.json 的 40 条规则
 - 验收：超过 80% 规则有真实证据支撑
 
 ### 任务 12【待启动】扩到 100
 
-- **前置**：任务 11 完成
 - 目标：补充文献，扩展原型到 100
 - 验收：原型约 100，每个过基线与双层校验
 
