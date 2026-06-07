@@ -1,8 +1,8 @@
 # HANDOFF — 换设备续工作入口
 
-> 最后更新：2026-06-08 00:45
+> 最后更新：2026-06-08 01:15
 > 当前分支：`feature/extraction-results`
-> 最新 commit：`1c66310` (docs: 创建 HANDOFF.md + 更新 README 状态)
+> 最新 commit：`b6ab7df` (feat: Step 3 - 清理 chimera + 停放分离簇 + PDA/mussel 去重)
 
 ---
 
@@ -16,8 +16,8 @@
 |------|------|------|
 | Step 1: 自检 | ✅ 完成 | 36 原型，22 有数据，774 条 perf，0 verified |
 | Step 2: 建校验脚本 | ✅ 完成 | validate_consistency.py (R10-R14) + check_chimera.py |
-| Step 3: 清理 chimera + 停放分离簇 | ⏳ 进行中 | 下一步 |
-| Step 4: 机制建模重构 | ⏳ 待启动 | |
+| Step 3: 清理 chimera + 停放分离簇 | ✅ 完成 | 分离簇停放 separation/，PDA/mussel 去重 |
+| Step 4: 机制建模重构 | ⏳ 待启动 | 下一步 |
 | Step 5: mussel 金标准 | ⏳ 待启动 | |
 
 ## 已定关键决定
@@ -33,12 +33,11 @@
 
 ## 下一步任务
 
-1. **Step 3**：清理 chimera + 停放分离簇
-   - 核 superhydrophobic-artificial 的 ~10 条吸附数据
-   - 停放 5 个分离簇原型（shark-skin, lotus-leaf, water-strider-leg, cactus-spine, superhydrophobic-artificial）
-   - 清理 spider-skin
-   - PDA/mussel 去重 + 互链
-   - check_chimera.py --strict 验收
+1. **Step 4**：机制建模重构
+   - 修改 build_prototypes_db.py 支持新 schema（mechanisms + mechanism_instances + active_features）
+   - 第一批：mussel-foot-adhesion、polydopamine-coating、metal-organic-framework（或 chitosan）
+   - 分类机制（原理级 vs 实例级），实例级移入 mechanism_instances
+   - 原理级去重 + 补 active_features
 
 ## 关键文件位置
 
@@ -64,6 +63,8 @@
 
 ## 最近 Changelog
 
+- `b6ab7df` feat: Step 3 - 清理 chimera + 停放分离簇 + PDA/mussel 去重
+- `1c66310` docs: 创建 HANDOFF.md + 更新 README 状态
 - `6223025` feat: 增强校验脚本 (R10-R14) + 新建 check_chimera.py
 - `2656784` chore: 后处理流程 - 清理空值KI + 删除重复 + supplement补全 + 重建正典
 - `2218d0a` feat: 完成26篇缺失论文提取 + 重建prototypes_db + 校验通过
