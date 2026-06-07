@@ -426,6 +426,17 @@
         }
       },
       {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2021-Chen-separation-membrane.json",
+        "paper_id": "Chen2022_liposome_RO_membrane",
+        "sections": {
+          "problem_definition": "自然界中细胞膜需要高效且选择性地传输水分同时排斥离子；在水处理反渗透脱盐中，传统聚酰胺(PA)薄膜复合膜面临水通量与盐截留率之间的trade-off效应，难以同时实现高渗透性和高选择性。",
+          "biological_solution": "自然界水通道蛋白(AQP)通过6个跨膜结构域和独特的~2.8Å沙漏结构孔道，实现约3×10⁹水分子/秒的快速传输并有效排斥单价离子。本研究受此启发，利用单酰基链(C14lyso)构建松散脂质体作为人工水通道(AWC)，通过单酰基链产生的更多自由体积模拟AQP的高效水传输功能，并将其成功嵌入PA选择层中，突破了性能瓶颈。",
+          "key_features": "必须保留特征：单酰基链构成的松散脂质体结构（提供高自由体积和高水渗透率）、脂质体双分子层的天然离子排斥能力。可灵活调整特征：脂质体浓度（优化至0.25 mg/mL）、胆固醇添加比例（8:2以平衡稳定性与柔性）、脂质体在PA层中的分布位置（主要富集于底部区域）。",
+          "design_mapping": "生物AQP沙漏孔道 → 单酰基链松散脂质体(AWC)；细胞膜磷脂双分子层 → C14lyso脂质体双分子层；跨膜蛋白嵌入 → 界面聚合过程中将脂质体嵌入PA选择层。软约束建议：控制脂质体浓度避免过度阻碍MPD扩散，优化胆固醇比例防止脂质体过度刚性化，利用脂质体减缓MPD扩散的特性促进超薄PA层的形成。",
+          "explainability_anchors": "仿生故事线：从AQP的沙漏形纳米孔道和超快水传输机制出发，设计具有松散结构的单酰基链脂质体作为人工水通道，突破传统RO膜的trade-off限制。设计溯源：C14lyso脂质体的高水渗透率(Pf=5.84×10⁻⁴ m/s，是致密DOPC的8倍)直接源于单酰基链带来的高自由体积，其对NaCl的有效截留源于脂质双分子层的天然排斥作用，最终在TFC-C14lyso-2膜中实现水通量提升50.3%且截留率达98.6%的卓越性能，并在120h长期运行及高盐度(32000 ppm)下保持稳定。"
+        }
+      },
+      {
         "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2022-Pachaiappan-heavy-metal-removal-review.json",
         "paper_id": "2022-Pachaiappan-heavy-metal-removal-review",
         "sections": {

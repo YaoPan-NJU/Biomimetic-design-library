@@ -3,7 +3,7 @@
   "name_zh": "水黾腿部",
   "name_en": "Water Strider Leg",
   "organism": {
-    "scientific": "Nelumbo nucifera, Gerridae, Rosa, Oryza sativa, Cicadidae, Collembola",
+    "scientific": "Nelumbo nucifera / Gerridae",
     "category": "动物"
   },
   "biomimetic_dimension": "结构仿生",
@@ -509,6 +509,17 @@
   ],
   "narrative": {
     "entries": [
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2020-李-超疏水-油水分离-综述-研究进展 2.json",
+        "paper_id": "li2020_superhydrophobic_review",
+        "sections": {
+          "problem_definition": "自然界挑战：荷叶与水黾需在潮湿或水面环境中保持干燥与清洁，避免水浸润导致失重、污染或功能丧失。水处理对应：含油废水及复杂乳液分离过程中，传统过滤/吸附材料易被水润湿，导致通量衰减、油水选择性差、膜污染与孔道堵塞。",
+          "biological_solution": "进化策略：演化出微米级乳突与纳米级蜡质晶体交织的微纳分级拓扑结构，并分泌低表面能物质。关键机制：基于Cassie-Baxter模型在粗糙表面截留空气垫，实现水滴高接触角与低滚动角，利用水(约72 mN/m)与油(约27.5 mN/m)的表面张力差异实现选择性排斥与渗透。成功案例：荷叶自清洁效应与水黾水面行走能力，为超疏水/超亲油分离界面提供了核心范式。",
+          "key_features": "必须保留特征：微纳双重粗糙度几何拓扑、低表面能化学组分（如氟硅烷/PTFE）、Cassie-Baxter态空气层截留机制。可灵活调整特征：基底材质（金属网/织物/气凝胶/聚合物）、制备工艺路线（水热/溶胶凝胶/刻蚀/静电纺丝/涂覆等）、宏观孔径分布与材料机械柔性。",
+          "design_mapping": "生物→材料映射：生物微纳乳突映射为材料表面的微米骨架与纳米颗粒/纤维堆叠结构；生物蜡质层映射为氟/硅低表面能涂层或本征疏水聚合物修饰。软约束建议：优先采用涂覆或静电纺丝实现快速成型与柔性适配；针对强酸碱或高温工况需强化化学交联或选用无机-有机杂化体系；设计时需预留抗堵塞的宏观孔隙梯度以应对复杂乳液。",
+          "explainability_anchors": "仿生故事线：从“出淤泥而不染”的荷叶效应出发，揭示表面拓扑与化学能的协同润湿调控原理，将其转化为“拒水亲油”的分离界面工程。设计溯源：基于Young/Wenzel/Cassie-Baxter润湿理论框架，结合水油表面张力差，通过系统梳理的7类合成方法实现结构-功能映射，最终指向高效、抗污、可循环的油水分离材料开发，并明确当前实验室向工程化转化的核心瓶颈。"
+        }
+      },
       {
         "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2023-Aijaz-superhydrophobic-hydrophobic-membrane-wastewater-review.json",
         "paper_id": "2023-Aijaz-electrospun-MD-antifouling-desalination-review",
