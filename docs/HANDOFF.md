@@ -1,8 +1,8 @@
 # HANDOFF — 换设备续工作入口
 
-> 最后更新：2026-06-08 02:15
+> 最后更新：2026-06-08 02:45
 > 当前分支：`feature/extraction-results`
-> 最新 commit：`0f96073` (feat: Step 5 准备 - mussel 清理 + 标 needs_literature)
+> 最新 commit：`58a29f6` (feat: Step 5 - 金标准核查脚本 + MOF 核查报告)
 
 ---
 
@@ -18,7 +18,7 @@
 | Step 2: 建校验脚本 | ✅ 完成 | validate_consistency.py (R10-R14) + check_chimera.py |
 | Step 3: 清理 chimera + 停放分离簇 | ✅ 完成 | 分离簇停放 separation/，PDA/mussel 去重 |
 | Step 4: 机制建模重构 | ✅ 完成 | 第一批 (mussel/PDA/MOF) 已重构 |
-| Step 5: 金标准验证 | ⏳ 进行中 | mussel 无数据，改用 MOF 作为第一个金标准 |
+| Step 5: 金标准验证 | ⏳ 进行中 | MOF 核查脚本完成，202 条待人工核查 |
 
 ## 已定关键决定
 
@@ -65,8 +65,8 @@
 
 ## 最近 Changelog
 
+- `58a29f6` feat: Step 5 - 金标准核查脚本 + MOF 核查报告
+- `a42ab53` docs: 更新 HANDOFF.md - mussel 无数据，改用 MOF 作为金标准
 - `0f96073` feat: Step 5 准备 - mussel 清理 + 标 needs_literature
 - `c85d674` docs: 更新 HANDOFF.md - Step 4 完成
 - `82b0694` feat: Step 4 - 机制建模重构第一批 (mussel/PDA/MOF)
-- `31a8d50` docs: 更新 HANDOFF.md - Step 3 完成
-- `b6ab7df` feat: Step 3 - 清理 chimera + 停放分离簇 + PDA/mussel 去重
