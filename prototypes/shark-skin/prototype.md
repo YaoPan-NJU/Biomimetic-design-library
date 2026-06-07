@@ -1,70 +1,98 @@
-# shark-skin
+---
+id: shark-skin
+name: 鲨鱼皮（Shark Skin）
+category: 动物
+organism: Nelumbo nucifera, shark skin, Salvinia
+biomimetic_dimension: 结构仿生
+features:
+  - 抗生物污染
+adsorption_mechanisms:
+  - 表面润湿性对细菌粘附的影响规律
+  - 细菌粘附的长程和短程相互作用距离阈值
+  - 超疏水表面接触角阈值 Superhydrophobic contact angle threshold
+  - 微生物表面润湿性偏好 Microorganism surface wettability preference
+  - 超疏水表面防污机制 Superhydrophobic surface antifouling mechanism
+  - 天然抗污生物 Natural antifouling organisms
+  - 超疏水表面防污短暂性 Superhydrophobic surface antifouling short-lived
+  - 超疏水性定义阈值
+  - PDMS '胶+粉'法通用性
+  - 无氟透明超疏水涂层接触角
+applicability:
+  pH_range: null
+  temp_range: null
+  salinity: any
+evidence_level: low
+# provenance: 4 papers, 0 verified, 19 unverified
+# coverage: low
+# status: active
+---
+# 鲨鱼皮（Shark Skin）
 
-## 元数据
+## 1. 生物原型简介
 
-- **原型 ID**: shark-skin
-- **知识条目数**: 103
-- **性能数据数**: 0
-- **机制描述数**: 1
-- **工程约束数**: 5
+**问题定义**：自然界中生物表面面临微生物定殖与生物膜形成的生存挑战，对应水处理中吸附材料与膜表面的细菌粘附、生物污损及通量衰减问题。
 
-## 仿生元数据
+**生物策略**：进化出微纳拓扑结构与表面理化特性协同的防御策略：通过高长径比纳米柱的机械形变储存弹性能并刺穿细菌膜，或利用极端润湿性与负电荷实现被动排斥。成功案例包括蝉翼/蜻蜓翼的物理接触杀菌、荷叶/芋叶的超疏水自清洁以及鲨鱼皮微拓扑肋条对生物膜定殖的显著延迟。
 
-- **organism_scientific**: Nelumbo nucifera
-- **biomimetic_dimension**: 结构仿生
-- **features**: ['微纳双尺度结构', '低表面能修饰', 'Cassie-Baxter态', '空气层隔离', '自清洁效应', '超疏水界面']
-- **applicability**: {'pH_range': None, 'temp_range': None, 'salinity': None}
-- **engineering_constraints**: [{'constraint': '机械稳定性与耐磨性', 'relevance': 'high', 'explanation': '纳米级结构强度有限，耐磨性不足是超疏水材料走向工业化应用的主要障碍'}, {'constraint': '大面积制备与结构均匀性', 'relevance': 'medium', 'explanation': '模板法和静电纺丝在复杂或大面积基底上保持微纳双尺度结构的均匀性和一致性存在工艺挑战'}]
+## 2. 吸附机制详解
 
-## 仿生叙事
+### 机制1：表面润湿性对细菌粘附的影响规律
 
-### problem_definition
+**描述**：WCA 40°-70°或54°-130°最利于细菌粘附；超疏水和超亲水均抵抗粘附
+**来源**：DOI 10.1002/admi.202201425
 
-自然界中水生或潮湿环境下的动植物需要保持表面干燥、清洁及防污；在水处理领域，油水分离膜和吸附材料需要构建超疏水/超亲油界面，以实现高效油水分离、抗污染和自清洁功能。
+### 机制2：细菌粘附的长程和短程相互作用距离阈值
 
-### biological_solution
+**描述**：长程>150 nm(van der Waals等)，短程<3 nm(氢键、静电、疏水等)
+**来源**：DOI 10.1002/admi.202201425
 
-荷叶等生物通过进化出表皮微纳双尺度乳突结构并覆盖蜡质等低表面能物质，实现超疏水与自清洁。关键机制是形成Cassie-Baxter态，利用微纳结构截留空气层隔离液滴与固体表面，水滴滚落时携带走污染物颗粒。成功案例包括荷叶的自清洁效应、鲨鱼皮的表面防污以及壁虎脚的微纳结构调控。
+### 机制3：超疏水表面接触角阈值 Superhydrophobic contact angle threshold
 
-### key_features
+**描述**：接触角>150°表现为超疏水行为；接触角<10°为超亲水
+**来源**：DOI 10.33263/BRIAC132.185
 
-必须保留特征：微米与纳米相结合的双尺度粗糙结构、低表面能化学修饰（构建Cassie态空气层）；可灵活调整特征：微纳结构的具体形貌与尺寸（如微柱间距）、低表面能修饰剂种类（如TEOS、各类硅烷偶联剂）、基底与骨架材料（如PVDF、PDMS、SiO2颗粒）。
+### 机制4：微生物表面润湿性偏好 Microorganism surface wettability preference
 
-### design_mapping
+**描述**：Ulva linza偏好疏水表面，Balanus Amphitrite偏好亲水表面
+**来源**：DOI 10.33263/BRIAC132.185
 
-生物→材料映射：荷叶表皮微乳突映射为PDMS模板法或静电纺丝构建的微纳阵列/纤维膜，植物表面蜡质映射为硅烷偶联剂脱水缩合引入的疏水基团（如-CnH2n+1等）。软约束建议：优先采用反应条件温和的硅烷脱水缩合或PDMS“胶+粉”法以提升工艺通用性，并利用Si-O键赋予材料优异的UV抗性和热稳定性。
+### 机制5：超疏水表面防污机制 Superhydrophobic surface antifouling mechanism
 
-### explainability_anchors
+**描述**：超疏水表面的抗污性能归因于截留的空气泡层，减少了细菌与表面之间的接触
+**来源**：DOI 10.33263/BRIAC132.185
 
-仿生故事线：从荷叶“出淤泥而不染”的宏观自清洁现象出发，深入解析微纳双尺度与空气垫的微观物理机制，最终通过硅基化学与模板/纺丝工艺实现人工超疏水界面的工程化复刻。设计溯源：基于Young方程与Cassie-Baxter润湿模型，将自然界的低表面能与粗糙度协同策略，溯源并转化为硅烷偶联剂改性与微纳结构构建的材料设计准则。
+### 机制6：天然抗污生物 Natural antifouling organisms
 
-## 吸附机制
+**描述**：荷叶(Nelumbo nucifera)、水蕨(Salvinia)、斗蓬草(Alchemilla mollis)通过超疏水表面抵抗生物膜；鲨鱼通过真皮小齿上的微结构缎带降低阻力和避免生物附着
+**来源**：DOI 10.33263/BRIAC132.185
 
-- **超疏水表面防污机制 Superhydrophobic surface antifouling mechanism**: 超疏水表面的抗污性能归因于截留的空气泡层，减少了细菌与表面之间的接触
-  - 条件: {'mechanism': 'entrapped air-bubble layer reduces contact between bacteria and surface', 'state': 'Cassie-Baxter regime with air trapped underneath', 'bacteria_type': 'gram-positive', 'signal': 'autoinducing peptide (AIP)'}
-  - 来源: literature: 10.33263/BRIAC132.185
+### 机制7：超疏水表面防污短暂性 Superhydrophobic surface antifouling short-lived
 
-## 工程约束
+**描述**：超疏水表面的抗污性能是短暂的（short-lived）
+**来源**：DOI 10.33263/BRIAC132.185
 
-- **超疏水表面接触角阈值 Superhydrophobic contact angle threshold**: 接触角>150°表现为超疏水行为；接触角<10°为超亲水 degrees
-  - 条件: {'superhydrophobic': '>150°', 'superhydrophilic': '<10°', 'classification': 'based on contact angle with substratum surface'}
-  - 来源: literature: 10.33263/BRIAC132.185
-- **TiO2纳米颗粒仿鲨鱼皮抗菌 TiO2 nanoparticle photocatalytic shark-skin antibacterial**: 抗菌TiO2纳米颗粒+光催化仿鲨鱼皮图案表面使E. coli附着比相同化学成分的平滑膜减少约70% percent
-  - 条件: {'biomimetic_source': 'shark skin pattern', 'nanoparticles': 'titanium dioxide (TiO2) NPs', 'mechanism': 'photocatalytic', 'target': 'Escherichia coli', 'reduction': '~70%', 'comparison': 'compared with smooth films with same chemical composition', 'plants': 'lotus (Nelumbo nucifera), water fern (Salvinia), lady mantle (Alchemilla mollis)', 'animals': 'shark (dermal denticles with microstructured ribbons)'}
-  - 来源: literature: 10.33263/BRIAC132.185
-- **超疏水表面防污机制 Superhydrophobic surface antifouling mechanism**: 超疏水表面的抗污性能归因于截留的空气泡层，减少了细菌与表面之间的接触 None
-  - 条件: {'mechanism': 'entrapped air-bubble layer reduces contact between bacteria and surface', 'state': 'Cassie-Baxter regime with air trapped underneath', 'bacteria_type': 'gram-positive', 'signal': 'autoinducing peptide (AIP)'}
-  - 来源: literature: 10.33263/BRIAC132.185
-- **超疏水表面防污短暂性 Superhydrophobic surface antifouling short-lived**: 超疏水表面的抗污性能是短暂的（short-lived） None
-  - 条件: {'limitation': 'anti-biofouling properties are short-lived'}
-  - 来源: literature: 10.33263/BRIAC132.185
-- **硅基超疏水材料机械稳定性挑战**: 纳米级结构强度有限，耐磨性不足是工业化主要障碍 None
-  - 条件: {'challenge_1': '微纳结构在纳米级别时强度有限', 'challenge_2': '现有研究尝试在强厚多孔结构中制备涂层以增强耐久性，但非普适方案', 'challenge_3': '微米级网格可保护内部纳米结构但无法抵抗切割和穿刺', 'status': '所有超疏水材料均需解决的通用问题'}
-  - 来源: literature: 10.3390/polym15030543
+### 机制8：超疏水性定义阈值
 
-## 来源汇总
+**描述**：接触角>150°且滚动角<10°
+**来源**：DOI 10.3390/polym15030543
 
-- literature: 10.1002/admi.202201425
-- literature: 10.1016/j.jmst.2020.07.002
-- literature: 10.33263/BRIAC132.185
-- literature: 10.3390/polym15030543
+## 3. 结构特征与结构-功能关系
+
+必须保留：特征尺寸小于细菌、高长径比结构、极端润湿性(超疏/超亲)、表面负电荷排斥；可灵活调整：纳米柱具体长径比、排列规则性(均匀/非均匀)、单/双高度组合、基底合成工艺(软光刻/刻蚀/水热等)。
+
+## 4. 已报道性能数据
+
+[待补充]
+
+## 5. 适用场景
+
+**约束条件**：
+- 硅基超疏水材料机械稳定性挑战: 纳米级结构强度有限，耐磨性不足是工业化主要障碍 None
+
+## 6. 相关原型
+
+- pitcher-plant-slippery-surface
+
+## 参考文献
+
+[待补充]

@@ -1,99 +1,74 @@
-# pitcher-plant-slippery-surface
+---
+id: pitcher-plant-slippery-surface
+name: 猪笼草滑溜表面（Pitcher Plant Slippery Surface）
+category: 植物
+organism: Nepenthes spp.
+biomimetic_dimension: 结构仿生
+features:
+  - 抗生物污染
+adsorption_mechanisms:
+  - Nepenthes pitcher plant trapping mechanism
+  - UV-responsive SLIPS self-replenishment mechanism
+  - 仿生集水生物原型及机制
+  - HHNCM亲水-疏水纳米纤维铜网（三仿生：甲虫+蜂窝网+猪笼草）
+applicability:
+  pH_range: null
+  temp_range: null
+  salinity: any
+evidence_level: low
+# provenance: 3 papers, 0 verified, 5 unverified
+# coverage: normal
+# status: active
+---
+# 猪笼草滑溜表面（Pitcher Plant Slippery Surface）
 
-## 元数据
+## 1. 生物原型简介
 
-- **原型 ID**: pitcher-plant-slippery-surface
-- **知识条目数**: 101
-- **性能数据数**: 1
-- **机制描述数**: 6
-- **工程约束数**: 8
+**问题定义**：自然界挑战：猪笼草需在潮湿多雨环境中高效捕获易滑脱的昆虫，传统粘性或干燥表面易失效；水处理对应：复杂水环境中需同时排斥油性污染物、生物流体及微生物，防止表面结垢与生物污染，传统超疏水表面在高压或长期浸泡下易失效。
 
-## 仿生元数据
+**生物策略**：进化策略：猪笼草唇缘(peristome)演化出径向排列的平滑重叠表皮细胞，形成超亲水微结构；关键机制：雨水润湿后形成连续均匀的超薄水膜，极大降低摩擦系数，使昆虫失足滑落；成功案例：该机制在热带雨林高湿环境下实现高效、可靠的被动捕食，不依赖化学毒素或粘性分泌物。
 
-- **organism_scientific**: Nepenthes alata, Namib desert beetle, Cactus, Spider silk
-- **biomimetic_dimension**: 结构仿生
-- **features**: ['SHB/SHL图案化表面', '锥形不对称结构+梯度沟槽', '周期性纺锤结/接头结构', 'SLIPS超滑表面', '润湿性梯度', 'Laplace压力差驱动', '低接触角滞后']
-- **applicability**: {'pH_range': None, 'temp_range': None, 'salinity': None}
-- **engineering_constraints**: [{'constraint': '多重仿生制备复杂度', 'relevance': 'high', 'explanation': '从单仿生到四仿生设计，制备工艺复杂度呈指数级增长，需权衡协同增效与制造可行性。'}, {'constraint': 'SLIPS润滑剂固定', 'relevance': 'high', 'explanation': '猪笼草仿生SLIPS表面需解决润滑剂流失问题，如通过PDMS刷接枝固定硅油以维持长期超滑性能。'}, {'constraint': '亲疏水比例与阵列几何优化', 'relevance': 'medium', 'explanation': '甲虫仿生中SHL与SHB面积比需精确控制（如1:3），且仙人掌仿生中刺尖端角（15°）与排列方式（交替优于对称）直接影响液滴滑动时间与收集效率。'}]
+## 2. 吸附机制详解
 
-## 仿生叙事
+### 机制1：Nepenthes pitcher plant trapping mechanism
 
-### problem_definition
+**描述**：Superhydrophilic peristome with radial ridges of smooth overlapping epidermal cells; forms uniform liquid film when wetted; insects slip on oil-repellent surface into digestive juices
+**来源**：DOI 10.1007/s42242-021-00133-8
 
-自然界挑战：干旱/半干旱地区生物面临极度缺水，需从稀薄雾气中高效获取水分；水处理对应：传统雾水收集装置受限于空气动力学效率低、液滴易滞留或二次蒸发，难以实现高效捕获、定向输运与快速脱离的协同。
+### 机制2：UV-responsive SLIPS self-replenishment mechanism
 
-### biological_solution
+**描述**：UV-driven self-replenishment via azobenzene conformational change
+**来源**：DOI 10.1007/s42242-021-00133-8
 
-进化策略：多种生物独立进化出高效集水微纳结构；关键机制：利用表面能梯度、Laplace压力差、润湿性图案化及超滑表面降低接触角滞后，驱动液滴定向移动；成功案例：纳米布甲虫亲疏水图案、仙人掌锥形梯度沟槽、蜘蛛丝周期性纺锤结、猪笼草SLIPS表面协同作用，使集水率跨越数个数量级（最高达81,250 mg h⁻¹ cm⁻²）。
+### 机制3：仿生集水生物原型及机制
 
-### key_features
+**描述**：沙漠甲虫(交替亲水岛/疏水路径)、蜘蛛丝(纺锤节-关节结构)、仙人掌刺(锥形+定向刚毛)、猪笼草(二级微沟槽)
+**来源**：DOI 10.1007/s40242-021-0010-4
 
-必须保留特征：微纳分级粗糙度、润湿性梯度（亲/疏水或超滑）、非对称几何形态（锥形/纺锤结）；可灵活调整特征：基底材料（织物/金属网/泡沫）、图案比例（如SHL:SHB=1:3）、阵列排列方式（对称/交替）、润滑剂固定策略。
+### 机制4：HHNCM亲水-疏水纳米纤维铜网（三仿生：甲虫+蜂窝网+猪笼草）
 
-### design_mapping
+**描述**：1110
+**来源**：DOI 10.1002/adfm.202200359
 
-生物→材料映射：甲虫亲疏水峰谷→静电纺丝/光刻/喷涂制备的SHB/SHL图案化织物；仙人掌锥形刺→3D打印/kirigami人工刺阵列；蜘蛛丝纺锤结→异质结构微纤维/交叉纤维网；猪笼草SLIPS→PDMS刷接枝多孔表面。软约束建议：优先采用低成本成熟工艺（如纺织工业兼容的Cu沉积，成本$1.5/m²），控制结构特征尺寸以匹配~10 μm雾滴边界层，优化亲疏水比例与阵列间距以最大化Laplace压差与毛细力协同。
+## 3. 结构特征与结构-功能关系
 
-### explainability_anchors
+必须保留特征：多孔微纳结构基底、低表面张力润滑剂灌注、热力学优先润湿条件(ΔE1, ΔE2 > 0)；可灵活调整特征：润滑剂具体类型(Krytox油、硅油、离子液体等)、基底材质(金属、木材、聚合物)、表面微纳形貌参数及孔隙分布。
 
-仿生故事线：从单一生物原型（仅解决捕获或输运单一环节）向多重仿生（捕获+输运+存储三阶段优化）演进，揭示自然界‘分工协同’的集水智慧；设计溯源：所有高效FHD均回归流体力学与界面科学基本原理（Laplace方程、Furmidge方程、Cassie-Baxter态），仿生结构仅为物理机制的空间载体，可通过定量参数（如15°尖端角、Ra粗糙度差、0.16s脱离时间）直接指导工程放大与性能预测。
+## 4. 已报道性能数据
 
-## 性能数据
+| 污染物 | 材料 | qmax/去除率 | pH | 来源 | 核查 |
+|--------|------|-------------|-----|------|------|
+|  | Mg alloy SLIPS via s | 6 | - | literature: 10.1007/s42242-021 | ❓ |
 
-| 参数 | 值 | 单位 | 污染物 | 材料 | 来源 |
-|------|-----|------|--------|------|------|
-| Mg alloy SLIPS ice removal force reduction | 6 | times reduction |  | Mg alloy SLIPS via spray method | literature: 10.1007/s42242-021-00133-8 |
+## 5. 适用场景
 
-## 吸附机制
+**约束条件**：
+- SLIPS supercooled water nucleation stability: 150 freeze-thaw cycles
 
-- **Lotus leaf superhydrophobicity mechanism**: Network of waxy crystals on surface + nanostructures on top of microscale nipples
-  - 条件: {'description': 'Dual-scale hierarchical structure creates high CA and low sliding angle; water droplets roll easily'}
-  - 来源: literature: 10.1007/s42242-021-00133-8
-- **Nepenthes pitcher plant trapping mechanism**: Superhydrophilic peristome with radial ridges of smooth overlapping epidermal cells; forms uniform liquid film when wetted; insects slip on oil-repellent surface into digestive juices
-  - 条件: {'organism': 'Nepenthes (carnivorous plant, tropical areas)', 'structure': 'Peristome (pitcher rim) with regular microstructure'}
-  - 来源: literature: 10.1007/s42242-021-00133-8
-- **Desert beetle water collection mechanism**: Alternate hydrophilic and hydrophobic surfaces on back for water collection
-  - 条件: {'application': 'Water collection in arid areas'}
-  - 来源: literature: 10.1007/s42242-021-00133-8
-- **Fish scale superhydrophilic/underwater superoleophobic mechanism**: Superhydrophilic surface with underwater superoleophobicity for oil-water separation
-  - 条件: {'application': 'Low-cost oil transportation and oil-water separation'}
-  - 来源: literature: 10.1007/s42242-021-00133-8
-- **UV-responsive SLIPS self-replenishment mechanism**: UV-driven self-replenishment via azobenzene conformational change
-  - 条件: {'material': 'Porous silicon-based substrate with azobenzene groups + silicone oil', 'wavelength': '365 nm', 'mechanism': 'Azobenzene conformational change causes substrate to shrink slightly, squeezing stored silicone oil to surface', 'capability': 'Repeatedly restores surface lubricant layer'}
-  - 来源: literature: 10.1007/s42242-021-00133-8
-- **Lubricant loss mechanisms**: Diffusion to surrounding surface, external shear, gravity, evaporation
-  - 条件: {'mitigation_strategies': 'Liquid retention (enhance bond strength), Liquid restoration (interconnected porous structure for internal storage)'}
-  - 来源: literature: 10.1007/s42242-021-00133-8
+## 6. 相关原型
 
-## 工程约束
+- shark-skin
 
-- **Hydrophilic threshold contact angle (Young's model)**: 0-90 degrees
-  - 条件: {'description': 'When 0° ≤ θ ≤ 90°, water droplet can spread on surface; surface is hydrophilic', 'model': "Young's equation"}
-  - 来源: literature: 10.1007/s42242-021-00133-8
-- **Hydrophobic threshold contact angle (Young's model)**: 90-180 degrees
-  - 条件: {'description': 'When 90° < θ ≤ 180°, surface cannot be wetted by water; surface is hydrophobic', 'model': "Young's equation"}
-  - 来源: literature: 10.1007/s42242-021-00133-8
-- **Critical condition for hydrophilic-hydrophobic transition**: f_LA ≥ (r · cos θ₀) / (r · cos θ₀ + 1) None
-  - 条件: {'description': 'Critical f_LA value for transition; at this point θ₀ < 90°'}
-  - 来源: literature: 10.1007/s42242-021-00133-8
-- **Lotus leaf superhydrophobicity mechanism**: Network of waxy crystals on surface + nanostructures on top of microscale nipples None
-  - 条件: {'description': 'Dual-scale hierarchical structure creates high CA and low sliding angle; water droplets roll easily'}
-  - 来源: literature: 10.1007/s42242-021-00133-8
-- **Fish scale superhydrophilic/underwater superoleophobic mechanism**: Superhydrophilic surface with underwater superoleophobicity for oil-water separation None
-  - 条件: {'application': 'Low-cost oil transportation and oil-water separation'}
-  - 来源: literature: 10.1007/s42242-021-00133-8
-- **ZnO nanorod array on wood omniphobic surface**: Omniphobic (repels both water and oil) None
-  - 条件: {'material': 'Wood + ZnO nanorod array + PTES (1H,1H,2H,2H-perfluorooctyltriethoxysilane) + fluorinated lubricant', 'test_liquids': 'Water (methylene blue) and hexadecane (Aero-Brite dye)', 'natural_structure': 'Wood cell structure with groove-like channels and cell walls'}
-  - 来源: literature: 10.1007/s42242-021-00133-8
-- **Wood superhydrophobic surface wear resistance**: 3.5 kPa
-  - 条件: {'material': 'Wood + fluoroalkylsilane/silica composite suspension', 'wear_cycles': '45 cycles', 'result': 'Maintained superhydrophobicity; performance restorable by recasting at normal temperature'}
-  - 来源: literature: 10.1007/s42242-021-00133-8
-- **SLIPS supercooled water nucleation stability**: 150 freeze-thaw cycles
-  - 条件: {'material': 'SLIPS based on aluminum pan', 'result': 'Lowest nucleation temperature compared to untreated Al and SHS; stable after 150 freeze-thaw cycles'}
-  - 来源: literature: 10.1007/s42242-021-00133-8
+## 参考文献
 
-## 来源汇总
-
-- literature: 10.1002/adfm.202200359
-- literature: 10.1007/s40242-021-0010-4
-- literature: 10.1007/s42242-021-00133-8
+[1] DOI: 10.1007/s42242-021-00133-8

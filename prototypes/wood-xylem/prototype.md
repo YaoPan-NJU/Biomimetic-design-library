@@ -1,75 +1,87 @@
-# wood-xylem
+---
+id: wood-xylem
+name: 木材木质部（Wood Xylem）
+category: 植物
+organism: Limonia acidissima
+biomimetic_dimension: 结构仿生
+features:
+  - 大孔
+  - 层次孔
+adsorption_mechanisms:
+  - 吸附机制——分子态酚+静电排斥
+  - 共价交联网络的XPS证据
+  - 吸附机制：氨基配位螯合
+  - TCTGAs组分与合成工艺
+qmax_range: "2.0-571.0 mg/g"
+applicability:
+  pH_range: [6.0, 6.0]
+  temp_range: null
+  salinity: low
+evidence_level: low
+# provenance: 2 papers, 0 verified, 7 unverified
+# coverage: normal
+# status: active
+---
+# 木材木质部（Wood Xylem）
 
-## 元数据
+## 1. 生物原型简介
 
-- **原型 ID**: wood-xylem
-- **知识条目数**: 42
-- **性能数据数**: 3
-- **机制描述数**: 2
-- **工程约束数**: 4
+**问题定义**：自然界中植物果壳需形成抗降解的致密复合结构以保护内部组织；对应水处理中面临低浓度酚类及卤代酚类污染物的高效、低成本去除难题。
 
-## 仿生元数据
+**生物策略**：木苹果壳在进化中形成纤维素/半纤维素/木质素三组分天然结构，经碳化后保留稳定的芳香碳骨架与丰富含氧官能团，提供多机制吸附位点；结合绿色物理球磨细化策略，成功实现120 min内快速吸附平衡，对2,4-DCPh吸附容量达226.55 mg/g。
 
-- **biomimetic_dimension**: 结构仿生
-- **features**: ['定向对齐微通道', '蜂窝状宏观孔道', '三尺度力学层级', '共价交联网络', '超高孔隙率(>99%)', '氨基选择性识别位点', '各向异性力学性能']
-- **applicability**: {'pH_range': None, 'temp_range': None, 'salinity': 'moderate'}
-- **engineering_constraints**: [{'constraint': '定向冷冻工艺梯度控制', 'relevance': 'high', 'explanation': '冰晶生长方向直接决定微通道对齐度与蜂窝形貌，需精确控制液氮浸入速率与温度梯度以复刻仿生结构。'}, {'constraint': '交联剂与GO配比阈值', 'relevance': 'high', 'explanation': 'GO浓度超过0.5 wt%易引发结节区聚集破坏孔隙连通性，TMPTAP交联密度需平衡力学强度与吸附位点暴露。'}, {'constraint': '水下结构抗剪切稳定性', 'relevance': 'medium', 'explanation': '气凝胶在水相过滤中需承受流体冲击与反复压缩，依赖三尺度协同机制维持>90%形貌恢复率以防粉化流失。'}, {'constraint': '温和再生条件适配', 'relevance': 'medium', 'explanation': '采用0.05 mol/L EDTA-2Na在25°C下洗脱，需优化解吸时间与浓度以兼顾金属回收率与共价网络化学稳定性。'}]
+## 2. 吸附机制详解
 
-## 仿生叙事
+### 机制1：吸附机制——分子态酚+静电排斥
 
-### problem_definition
+**描述**：pH<pKa时分子态酚占优→利于吸附；高pH酚酸根阴离子→与负电荷WAS-BC排斥
+**来源**：DOI 10.1038/s41598-021-82277-2
 
-自然界挑战：植物木质部需在极低密度下实现水分/养分的高效纵向传输，同时抵抗重力与风载带来的机械应力。水处理对应：传统多孔吸附剂面临传质阻力大、吸附动力学慢、机械强度低易粉化、以及复杂水体中目标重金属选择性差的工程瓶颈。
+### 机制2：共价交联网络的XPS证据
 
-### biological_solution
+**描述**：XPS C 1s确认C-N键形成→TMPTAP成功交联TCNF和GO。N 1s吸附后偏移：Pb²⁺@TCTGAs 399.2, Cu²⁺@ 399.2, Zn²⁺@ 399.4, Cd²⁺@ 399.2, Mn²⁺@ 399.1 eV(vs原始398.9 eV)→N孤对电子与金属离子形成配位键
+**关键官能团**：NH3+, -NH2, -NH- responsible for divalent metal cation adsorption (HSAB)
+**来源**：DOI 10.1016/j.jhazmat.2021.125612
 
-进化策略：木材演化出“宏观蜂窝骨架+介观纤维管胞+分子级细胞壁”的三尺度层级结构，结合纵向对齐导管实现低阻力流体通道。关键机制：薄壁细胞提供柔韧性与弹性屈曲吸能，细胞壁内纤维素微纤丝与基质共价交联赋予结构完整性与抗疲劳性。成功案例：受此启发的TCTGAs气凝胶成功复现对齐微通道与蜂窝网络，实现Pb(II)超快吸附(2min达87%)、571 mg/g超高容量及优异的水下循环压缩稳定性。
+### 机制3：吸附机制：氨基配位螯合
 
-### key_features
+**描述**：XPS确认N 1s偏移(398.9→399.1-399.4 eV)→N孤对电子与金属离子形成配位键。O 1s也偏移→含氧官能团参与吸附。EDX mapping确认Pb/Cu/Zn/Cd均匀分布。机制：NH3+/NH2/NH-基团与重金属离子螯合/配位
+**关键官能团**：NH3+, -NH2, -NH- → borderline base → complex borderline acids (Pb²⁺, Cu²⁺, Zn²⁺)
+**来源**：DOI 10.1016/j.jhazmat.2021.125612
 
-必须保留特征：定向对齐的直管微通道(保障超快离子扩散)、三尺度力学层级(宏观蜂窝/介观纤维/分子交联协同抗变形)、氨基配位识别位点(基于HSAB理论的选择性络合)。可灵活调整特征：GO与交联剂(TMPTAP)的相对比例(调控孔隙率与交联密度)、气凝胶宏观几何形态(可塑造成圆柱/星形等适配不同反应器模块)、表面官能团类型(可替换为其他边界碱基团以靶向不同重金属离子)。
+### 机制4：TCTGAs组分与合成工艺
 
-### design_mapping
+**描述**：TCNF(TEMPO氧化纤维素纳米纤维)+GO(改良Hummers法)+TMPTAP(三(2-氨基乙基)胺-聚丙二醇→交联剂+金属螯合配体)。Zr/BDC/OA比例不适用→但TCNF/GO/TMPTAP混合→超声分散→定向冷冻→冻干
+**来源**：DOI 10.1016/j.jhazmat.2021.125612
 
-生物→材料映射：木材纵向导管/纤维管胞 → 定向冷冻法构筑的对齐微通道与蜂窝状宏观孔道；细胞壁纤维素-木质素共价网络 → TCNF/GO/TMPTAP共价交联网络(形成C-N键)；水分高效传输与结构支撑 → 超快离子扩散路径与三尺度力学抗压缩机制。软约束建议：优先采用定向冷冻工艺控制冰晶生长方向以复刻各向异性通道；交联剂添加量需控制在0.5 wt% GO最优阈值附近以避免相分离；材料设计需兼顾孔隙率(>99%)与骨架强度的平衡，确保水下可压缩过滤器件的长期服役。
+## 3. 结构特征与结构-功能关系
 
-### explainability_anchors
+必须保留：天然生物质碳化衍生的芳香碳骨架、纳米级多孔形貌、表面-OH/-COOH/C=O官能团；可灵活调整：球磨强度与时间（调控粒径与比表面积）、热解温度（调控孔隙与官能团比例）、表面化学修饰（靶向增强卤素-π或疏水作用）。
 
-仿生故事线：从“木材如何以极低密度实现高效输水与抗风载”出发，提炼出“对齐通道降阻+三尺度交联强韧”的核心法则，将其平移至重金属吸附场景，解决传统吸附剂“传质慢、易破碎、选择性弱”的痛点。设计溯源：所有性能指标(571 mg/g吸附量、2min超快动力学、20次循环90%形貌保持)均可直接追溯至定向冷冻形成的仿生孔道结构、共价交联网络的力学支撑以及HSAB理论指导的氨基选择性配位机制，形成“结构-传质-力学-化学”四位一体的可解释设计闭环。
+## 4. 已报道性能数据
 
-## 性能数据
+| 污染物 | 材料 | qmax/去除率 | pH | 来源 | 核查 |
+|--------|------|-------------|-----|------|------|
+|  | WAS-BC | 苯酚102.71、4-CPh 172.2 | 6.0 | literature: 10.1038/s41598-021 | ❓ |
+|  |  | 2,4-DCPh(二氯) > 4-CPh | - | literature: 10.1038/s41598-021 | ❓ |
+|  |  | Pb(II) 571, Cu(II) 4 | - | literature: 10.1016/j.jhazmat. | ❓ |
 
-| 参数 | 值 | 单位 | 污染物 | 材料 | 来源 |
-|------|-----|------|--------|------|------|
-| Langmuir最大吸附容量——三种酚类 | 苯酚102.71、4-CPh 172.24、2,4-DCPh 226.55 mg/g | mg/g |  | WAS-BC | literature: 10.1038/s41598-021-82277-2 |
-| 氯取代基对吸附容量的影响——构效关系 | 2,4-DCPh(二氯) > 4-CPh(一氯) > 苯酚(无氯)；226.55 > 172.24 > 102.71 mg/g | mg/g |  |  | literature: 10.1038/s41598-021-82277-2 |
-| TCTGAs对五种重金属的Langmuir最大吸附容量 qmax | Pb(II) 571, Cu(II) 462, Zn(II) 361, Cd(II) 263, Mn(II) 208 | mg/g |  |  | literature: 10.1016/j.jhazmat.2021.125612 |
+## 5. 适用场景
 
-## 吸附机制
+**约束条件**：
+- TGA热稳定性分析: 生物质200-750°C主要热解；生物炭500°C仅~10wt%质量损失→高温稳定 °C
+- 再生性能与循环稳定性: 0.05 mol/L EDTA-2Na洗脱，25°C，3h。5次循环后保持良好吸附性能。可制成压缩过滤装置原型 None
+- 水下力学稳定性: TCTGAs在水下表现出优异的力学结构稳定性→有利于水处理中的循环回收。普通冷冻法制备的气凝胶无法承受大变形 None
 
-- **吸附机制——分子态酚+静电排斥**: pH<pKa时分子态酚占优→利于吸附；高pH酚酸根阴离子→与负电荷WAS-BC排斥
-  - 条件: {'pH_low': 'molecular phenols dominant → higher sorption', 'pH_high': 'phenolate/dichlorophenate anions → electrostatic repulsion with negatively charged WAS-BC', 'pKa_phenol': '9.95', 'pKa_4_CPh': '9.14', 'pKa_2_4_DCPh': '7.9', 'dominant_mechanism': 'molecular state phenols + hydrophobic + π-π interactions', 'ref': '[Page 6; Fig 8]'}
-  - 来源: literature: 10.1038/s41598-021-82277-2
-- **吸附机制：氨基配位螯合**: XPS确认N 1s偏移(398.9→399.1-399.4 eV)→N孤对电子与金属离子形成配位键。O 1s也偏移→含氧官能团参与吸附。EDX mapping确认Pb/Cu/Zn/Cd均匀分布。机制：NH3+/NH2/NH-基团与重金属离子螯合/配位
-  - 条件: {'XPS_N1s': 'shift from 398.9 eV to 399.1-399.4 eV upon metal loading', 'XPS_O1s': 'also shifted → oxygen groups participate', 'EDX': 'Pb, Cu, Zn, Cd uniformly distributed on TCTGAs', 'functional_groups': 'NH3+, -NH2, -NH- → borderline base → complex borderline acids (Pb²⁺, Cu²⁺, Zn²⁺)', 'meanism': 'chelating/complexation between donor N atom and metal ions', 'ref': '[Fig. 4; Section 3.3.2]'}
-  - 来源: literature: 10.1016/j.jhazmat.2021.125612
+## 6. 相关原型
 
-## 工程约束
+- bone-structure
+- coral-skeleton
+- iron-oxidizing-bacteria
+- metal-organic-framework
+- oyster-shell
 
-- **pH影响——最佳pH 6.0**: pH 2-6吸附容量递增；pH 6最佳(苯酚84.87、4-CPh 90.22、2,4-DCPh 93.14 mg/g)；pH>6下降 mg/g
-  - 条件: {'optimal_pH': '6.0', 'phenol_at_pH6': '84.87 mg/g (C0=100 mg/L)', '4_CPh_at_pH6': '90.22 mg/g', '2_4_DCPh_at_pH6': '93.14 mg_g', 'pKa_values': 'phenol 9.95, 4-CPh 9.14, 2,4-DCPh 7.9', 'mechanism': 'pH<pKa: molecular phenols dominant → favorable adsorption; pH>pKa: phenolate anions → electrostatic repulsion with negatively charged WAS-BC', 'ref': '[Page 5-6; Fig 8; 3.1节]'}
-  - 来源: literature: 10.1038/s41598-021-82277-2
-- **TGA热稳定性分析**: 生物质200-750°C主要热解；生物炭500°C仅~10wt%质量损失→高温稳定 °C
-  - 条件: {'biomass_pyrolysis': '200-750°C main decomposition', 'biomass_moisture': '50-100°C evaporation', 'biochar_500C': '~10 wt% mass loss (moisture/adsorbed gases)', 'biochar_high_T': 'continuous decomposition due to extensive carbonization → graphitic carbon formation', 'stability': 'stable at wide range of temperatures; stable at experimental conditions', 'ref': '[Page 5; 7; Fig 6]'}
-  - 来源: literature: 10.1038/s41598-021-82277-2
-- **再生性能与循环稳定性**: 0.05 mol/L EDTA-2Na洗脱，25°C，3h。5次循环后保持良好吸附性能。可制成压缩过滤装置原型 None
-  - 条件: {'regeneration': '0.05 mol/L EDTA-2Na, 25°C, 3h', 'cycles': 'at least 5 cycles', 'post_treatment': 'distilled water wash → room temperature overnight drying', 'device_prototype': 'compression filter device (shown in photos)', 'ref': '[Fig. 5a; Section 2.4.5; Section 3.3]'}
-  - 来源: literature: 10.1016/j.jhazmat.2021.125612
-- **水下力学稳定性**: TCTGAs在水下表现出优异的力学结构稳定性→有利于水处理中的循环回收。普通冷冻法制备的气凝胶无法承受大变形 None
-  - 条件: {'underwater_stability': 'excellent underwater mechanical structural stability (Fig. S10, Movie S1)', 'regular_freezing': 'TCTGAs fabricated in common freezing failed to bear large deformation', 'anisotropic': 'aligned microchannels → anisotropic mechanical performance; parallel to channel → easy crushing', 'ref': '[Section 3.2; Fig. S8-S10]'}
-  - 来源: literature: 10.1016/j.jhazmat.2021.125612
+## 参考文献
 
-## 来源汇总
-
-- literature: 10.1016/j.jhazmat.2021.125612
-- literature: 10.1038/s41598-021-82277-2
+[1] DOI: 10.1016/j.jhazmat.2021.125612
+[2] DOI: 10.1038/s41598-021-82277-2

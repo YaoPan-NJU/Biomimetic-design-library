@@ -1,126 +1,124 @@
-# mussel-foot-adhesion
+---
+id: mussel-foot-adhesion
+name: 贻贝足丝（Mussel Foot Adhesion）
+category: 动物
+organism: Mytilus edulis
+biomimetic_dimension: 分子仿生
+features:
+  - 疏水性
+  - 邻苯二酚基团
+  - 金属配位能力
+  - π电子体系
+  - 湿态粘附
+pollutants:
+  - CrO42-
+  - Cu2+
+adsorption_mechanisms:
+  - N位点激活PDS生成¹O₂的机制 Mechanism of N site activating PDS to generate ¹O₂
+  - MI-PDA表面官能团识别机制 Surface functional group recognition mechanism of MI-PDA
+  - PDA涂层粘附机制
+  - PDA-ODA超疏水棉花织物接触角
+  - PDA微胶囊自修复超疏水棉花织物
+  - PDA-TA/硼砂阻燃超疏水棉花织物
+  - 超疏水PDA涂层棉花织物耐久性测试
+  - PDA自聚合形成机制 PDA self-polymerization mechanism
+  - PDA涂层 vs 传统涂层技术对比 PDA coating vs traditional coating techniques
+  - 多巴胺辅助共沉积机制 Dopamine-assisted co-deposition mechanism
+qmax_range: "1.0-114.9 mg/g"
+applicability:
+  pH_range: [3.0, 6.8]
+  temp_range: null
+  salinity: moderate
+evidence_level: low
+# provenance: 17 papers, 0 verified, 21 unverified
+# coverage: normal
+# status: active
+---
+# 贻贝足丝（Mussel Foot Adhesion）
 
-## 元数据
+## 1. 生物原型简介
 
-- **原型 ID**: mussel-foot-adhesion
-- **知识条目数**: 488
-- **性能数据数**: 31
-- **机制描述数**: 27
-- **工程约束数**: 60
+**问题定义**：自然界挑战：海洋贻贝需在潮湿、高盐及动态水流环境中实现强韧、持久的表面粘附与抗污。水处理对应：传统吸附材料在水相中易发生官能团失活、机械强度不足，难以高效协同去除重金属、染料及油污，且固液分离与回收成本高。
 
-## 仿生元数据
+**生物策略**：进化策略：贻贝进化出富含多巴胺/儿茶酚的足丝蛋白，通过氧化自聚形成强界面粘附层。关键机制：儿茶酚基团提供广谱氢键、π-π堆积、金属配位及共价交联能力，实现湿态强粘附与多功能化。成功案例：仿生聚多巴胺修饰的纳米纤维素复合材料（如CCNF-DA/Ag NPs），显著提升材料机械强度、抗菌性及对多污染物的协同捕获能力。
 
-- **organism_scientific**: Nelumbo nucifera, Mytilus edulis, Oryza sativa, Stenocara gracilipes, Nepenthes
-- **biomimetic_dimension**: 结构仿生
-- **features**: ['层级微纳结构', 're-entrant几何', 'Janus不对称润湿', '液体灌注', '智能响应切换', '双超疏液', '预润湿切换']
-- **applicability**: {'pH_range': None, 'temp_range': None, 'salinity': None}
-- **engineering_constraints**: [{'constraint': '机械稳定性与鲁棒性', 'relevance': 'high', 'explanation': '微纳结构在复杂水流和摩擦下易受损，需通过层级结构递推或液体灌注策略来维持Cassie态并增强鲁棒性。'}, {'constraint': '表面能精确控制', 'relevance': 'high', 'explanation': '按需分离（尤其是分离表面能差异极小的不混溶有机液体）高度依赖表面能的精确调控，需严格遵循IWT理论和极性-非极性理论。'}, {'constraint': '通量与截留率的权衡', 'relevance': 'medium', 'explanation': '传统2D膜面临通量瓶颈，需通过设计3D Janus材料（如海绵/气凝胶）利用凝聚分离机制替代尺寸筛分，以突破通量限制。'}]
+## 2. 吸附机制详解
 
-## 仿生叙事
+### 机制1：N位点激活PDS生成¹O₂的机制 Mechanism of N site activating PDS to generate ¹O₂
 
-### problem_definition
+**描述**：PDS吸附在MI-PDA缺电子N位点上→电子从PDS的S原子转移到N原子→O-O键缩短→S-O键断裂→产生¹O₂；N位点吸附能(-31.42 eV)高于O位点(-17.09 eV)，优先产生¹O₂
+**来源**：DOI 10.1016/j.apcatb.2023.122852
 
-自然界中生物需在水、油、气等多相复杂环境中实现自清洁、捕食或水面行走；在水处理领域，这对应于高效分离油水乳液、多层油水混合物及多相不混溶有机液体的严苛需求，传统材料难以兼顾高通量、高选择性与多相适应性。
+### 机制2：MI-PDA表面官能团识别机制 Surface functional group recognition mechanism of MI-PDA
 
-### biological_solution
+**描述**：N 1s谱中-N=(399.1eV)、-NH-(400.0eV)、-NH₂(400.7eV)对应吲哚环中的环化氮和开链低聚物；含氮和含氧基团(-NH₂、-OH)作为识别位点，通过氢键选择性结合SMX
+**来源**：DOI 10.1016/j.apcatb.2023.122852
 
-生物通过进化出层级微纳结构（如荷叶微乳突）、特殊几何形貌（re-entrant结构）、不对称润湿（荷叶上下表面差异）及液体灌注（猪笼草）等策略，实现超润湿或双超疏液特性。这些机制结合四大润湿性理论（Young/Wenzel/Cassie、IWT、极性-非极性、液体灌注），为设计按需分离材料提供了定量指导。
+### 机制3：PDA涂层粘附机制
 
-### key_features
+**描述**：金属配位、Michael加成、Schiff碱形成、氢键、π-π堆积五种相互作用
+**来源**：DOI 10.1039/d5su00041f
 
-必须保留特征：层级微纳结构（增强润湿性并维持鲁棒性）、表面化学与微观形貌的协同调控。可灵活调整特征：智能响应触发器类型（pH/热/光/电/溶剂/离子/气体）、Janus膜的不对称润湿方向、液体灌注的润滑液选择及3D孔隙结构。
+### 机制4：PDA-ODA超疏水棉花织物接触角
 
-### design_mapping
+**描述**：WCA 162°, WSA 7°
+**来源**：DOI 10.1039/d5su00041f
 
-生物原型到材料的映射：荷叶微乳突→静电纺丝/模板法构建微纳粗糙度；贻贝足丝蛋白→PDA（聚多巴胺）涂层实现通用双亲性修饰；猪笼草→多孔材料注入润滑液实现双超疏液。软约束建议：优先采用PDA等温和仿生涂层结合静电纺丝或定向冻塑构建3D多孔网络，以平衡高通量与高截留率，并利用预润湿或外部刺激实现按需切换。
+### 机制5：PDA微胶囊自修复超疏水棉花织物
 
-### explainability_anchors
+**描述**：机械刺激后完全恢复超疏水性
+**来源**：DOI 10.1039/d5su00041f
 
-仿生故事线：从‘荷叶出淤泥而不染’的自清洁现象，演进到‘智能响应按需分离’的多相液体处理系统。设计溯源：基于超疏水理论构建基础微纳结构→利用IWT理论精确设计表面能→引入re-entrant几何突破双超疏液限制→结合极性与液体灌注理论实现多相不混溶液体分离。
+### 机制6：PDA-TA/硼砂阻燃超疏水棉花织物
 
-## 性能数据
+**描述**：WCA 153.3°±1.2°, WSA 9°±0.8°, 分离效率>98%
+**来源**：DOI 10.1039/d5su00041f
 
-| 参数 | 值 | 单位 | 污染物 | 材料 | 来源 |
-|------|-----|------|--------|------|------|
-| 铀吸附容量 / Uranium adsorption capacity | 403.21 | mg/g | 铀(U) | PDA改性PAO薄膜 | patent |
-| 改性时间对铀吸附容量影响 / Effect of modification time on U adsorption | 改性时间4h→403.085mg/g; 8h→403.045mg/g; 12h→403.21mg/g，影响不大 | mg/g |  |  | patent |
-| 铀吸附容量计算公式 / Uranium adsorption capacity calculation formula | qt = (C0 - Ce) × V / m | None |  |  | patent |
-| 铀吸附容量 Uranium adsorption capacity | >50 | mg/g | 铀 U(VI) | 聚多巴胺包覆Fe3O4磁性仿生吸附剂 | patent |
-| 铀去除率 Uranium removal rate (pH≥5) | >90 | % | 铀 U(VI) | 聚多巴胺包覆Fe3O4磁性仿生吸附剂 | patent |
-| 特定条件下去除率 Removal rate at pH 3.0 | 97.3 | % | 铀 U(VI) | 聚多巴胺包覆Fe3O4磁性仿生吸附剂 | patent |
-| 循环吸附稳定性-重金属去除率保持 | >72 | % |  |  | patent: CN115055171A |
-| 实施例1对Cu2+吸附容量 / Example 1 adsorption capacity for Cu2+ | 12.5 | mg/g | Cu2+ | PDA-Fe3O4@CS | patent |
-| 实施例1对CrO42-吸附容量 / Example 1 adsorption capacity for CrO42- | 114.88 | mg/g | CrO42- | PDA-Fe3O4@CS | patent |
-| PDA:CS质量比对Cu2+吸附容量影响 / Effect of PDA:CS ratio on Cu2+ adsorption | PDA:CS=1:4→12.5mg/g; 1:2→15mg/g; 3:4→17.5mg/g; 5:4→25mg/g; 3:2→47.5mg/g(峰值); 7:4→45mg/g(下降) | mg/g | Cu2+ |  | patent |
-| PDA:CS质量比对CrO42-吸附容量影响 / Effect of PDA:CS ratio on CrO42- adsorption | PDA:CS=1:4→114.88mg/g; 1:2→109.77mg/g; 3:4→105.8mg/g; 5:4→98.2mg/g; 3:2→88mg/g; 7:4→91.88mg/g | mg/g | CrO42- |  | patent |
-| 铀吸附容量 / Uranium adsorption capacity | 403.21 | mg/g | 铀(U) | PDA改性PAO薄膜 | patent |
-| 改性时间对铀吸附容量影响 / Effect of modification time on U adsorption | 改性时间4h→403.085mg/g; 8h→403.045mg/g; 12h→403.21mg/g，影响不大 | mg/g |  |  | patent |
-| 铀吸附容量计算公式 / Uranium adsorption capacity calculation formula | qt = (C0 - Ce) × V / m | None |  |  | patent |
-| 铀吸附容量 Uranium adsorption capacity | >50 | mg/g | 铀 U(VI) | 聚多巴胺包覆Fe3O4磁性仿生吸附剂 | patent |
-| 铀去除率 Uranium removal rate (pH≥5) | >90 | % | 铀 U(VI) | 聚多巴胺包覆Fe3O4磁性仿生吸附剂 | patent |
-| 特定条件下去除率 Removal rate at pH 3.0 | 97.3 | % | 铀 U(VI) | 聚多巴胺包覆Fe3O4磁性仿生吸附剂 | patent |
-| 实施例1对Cu2+吸附容量 / Example 1 adsorption capacity for Cu2+ | 12.5 | mg/g | Cu2+ | PDA-Fe3O4@CS | patent |
-| 实施例1对CrO42-吸附容量 / Example 1 adsorption capacity for CrO42- | 114.88 | mg/g | CrO42- | PDA-Fe3O4@CS | patent |
-| PDA:CS质量比对Cu2+吸附容量影响 / Effect of PDA:CS ratio on Cu2+ adsorption | PDA:CS=1:4→12.5mg/g; 1:2→15mg/g; 3:4→17.5mg/g; 5:4→25mg/g; 3:2→47.5mg/g(峰值); 7:4→45mg/g(下降) | mg/g | Cu2+ |  | patent |
+### 机制7：超疏水PDA涂层棉花织物耐久性测试
 
-## 吸附机制
+**描述**：1000次胶带剥离/手指擦拭/刀片划痕/砂纸磨损/锤击后仍保持超疏水性
+**来源**：DOI 10.1039/d5su00041f
 
-- **吸附机制-螯合作用 / Adsorption mechanism - chelation**: 聚多巴胺结构中的含氮基团与重金属离子的鳌合作用
-  - 条件: {'functional_groups': '含氮基团（儿茶酚/胺基）', 'interaction_type': '配位螯合', 'target': '重金属离子'}
-- **贻贝仿生启发机制 / Mussel-inspired biomimetic mechanism**: 通过聚多巴胺自组装单分子层技术对聚酯纤维织物进行表面修饰，受贻贝足丝蛋白粘附机制启发
-  - 条件: {'biomimetic_organism': '贻贝(mussel)', 'biological_mechanism': '贻贝足丝蛋白通过多巴胺类化合物的氧化聚合实现强粘附', 'translation_to_material': '聚多巴胺涂层作为桥梁连接聚酯基体和重金属离子'}
-- **仿贻贝聚多巴胺改性机制 / Mussel-inspired PDA modification mechanism**: 多巴胺自聚合形成聚多巴胺对PAO薄膜进行表面改性
-  - 条件: {'biomimetic_organism': '贻贝(mussel)', 'mechanism': '多巴胺自聚合(oxidative self-polymerization)', 'substrate': 'PAO薄膜', 'functional_groups': '邻苯二酚(catechol)、亚胺/胺基团', 'interaction_types': ['静电相互作用', '共价反应', '非共价作用力(范德华力、氢键)', '金属配位/螯合']}
-- **PDA吸附机制-姜黄素**: None
-  - 条件: {'mechanism': 'π-π*电子跃迁 + 形成羰基键', 'description': 'PDA与姜黄素分子产生物理吸附（π-π*电子跃迁）和化学吸附（羰基键）'}
-- **PDA吸附机制-番茄红素**: None
-  - 条件: {'mechanism': 'π-π*电子跃迁 + michael加成反应', 'description': 'PDA与番茄红素分子产生物理吸附（π-π*电子跃迁）和化学吸附（michael加成反应）'}
-- **聚多巴胺聚合机理 Polydopamine polymerization mechanism**: 多巴胺在弱碱性环境下通过酚羟基氧化成醌，醌式相互叠加实现聚合；聚多巴胺在Fe3O4外以羟基间氢键或物理堆积形式沉积，不涉及与Fe元素的配位作用
-  - 条件: {'biomimetic_source': '贻贝足丝蛋白仿生', 'buffer_system': 'Tris-HCl缓冲体系(pH 8.48-8.52)', 'mechanism': '酚羟基氧化→醌式叠加→氢键/物理堆积沉积'}
-- **铀吸附机制 Uranium adsorption mechanism**: 聚多巴胺壳层大量羟基为主要吸附位点，氨基主要参与苯环成环，仅部分氨基参与与铀的作用
-  - 条件: {'pollutant': '铀 U(VI)', 'material': '聚多巴胺包覆Fe3O4磁性仿生吸附剂', 'primary_group': '羟基(-OH)', 'secondary_group': '氨基(-NH2)'}
-- **贻贝仿生改性机制 / Mussel-inspired biomimetic modification mechanism**: 利用贻贝仿生学，通过多巴胺的氧化自聚作用，形成黏附力极强的聚多巴胺涂覆在磁性壳聚糖基体表面
-  - 条件: {'biomimetic_organism': '贻贝(mussel)', 'biological_mechanism': '贻贝足丝特有的黏附特性主要来自于L-多巴(L-DOPA)和赖氨酸残基', 'translation': '多巴胺在含氧的弱碱性水溶液里发生氧化自聚，制备出具有超强黏附性能的聚多巴胺涂层', 'historical_context': '1983年Waite发现贻贝足丝黏附机制；2007年Messersmith等首次制备PDA涂层'}
-- **吸附机制-螯合作用 / Adsorption mechanism - chelation**: 聚多巴胺结构中的含氮基团与重金属离子的鳌合作用
-  - 条件: {'functional_groups': '含氮基团（儿茶酚/胺基）', 'interaction_type': '配位螯合', 'target': '重金属离子'}
-- **贻贝仿生启发机制 / Mussel-inspired biomimetic mechanism**: 通过聚多巴胺自组装单分子层技术对聚酯纤维织物进行表面修饰，受贻贝足丝蛋白粘附机制启发
-  - 条件: {'biomimetic_organism': '贻贝(mussel)', 'biological_mechanism': '贻贝足丝蛋白通过多巴胺类化合物的氧化聚合实现强粘附', 'translation_to_material': '聚多巴胺涂层作为桥梁连接聚酯基体和重金属离子'}
+### 机制8：PDA自聚合形成机制 PDA self-polymerization mechanism
 
-## 工程约束
+**描述**：氧化条件下羟基自发去质子化形成多巴胺醌，经亲核分子内环化变为leukodopaminechrome，再经进一步氧化重排形成5,6-二羟基吲哚或5,6-吲哚醌，最终通过2,3,4,7位分支反应交联形成类真黑素聚合物PDA
+**来源**：DOI 10.1039/d1cs00658d
 
-- **多巴胺水溶液pH调节 / Dopamine solution pH adjustment**: pH 7.5-9.5（较佳范围）；pH 8.5（最佳） None
-  - 条件: {'optimal': '8.5', 'range': '7.5-9.5'}
-- **反应温度 / Reaction temperature**: 20-40°C（较佳范围）；30°C（最佳） °C
-  - 条件: {'optimal': '30°C', 'range': '20-40°C', 'observation': '随着反应温度的增加，聚酯纤维织物表面的颜色也越深'}
-- **薄膜成型-分相脱膜条件 / Film formation phase inversion conditions**: 刮涂厚度0.8mm，浸入水中3min分相脱膜，40°C干燥24h None
-  - 条件: {'coating_thickness': '0.8mm', 'phase_inversion': '常温去离子水中3min', 'drying_temp': '40°C', 'drying_time': '24h', 'appearance': '淡黄色的半透明状材料'}
-- **PAO薄膜SEM形貌 / PAO film SEM morphology**: 表面光滑平整，分布着许多形状不规则的小孔 None
-  - 条件: {'technique': 'SEM(扫描电镜)', 'figure': '图3', 'surface': '光滑平整', 'pores': '形状不规则的小孔'}
-- **PDA改性薄膜SEM形貌 / PDA-modified film SEM morphology**: 表面粗糙，无孔隙的存在，聚多巴胺像'鱼鳞'一样分层沉积在材料表面 None
-  - 条件: {'technique': 'SEM(扫描电镜)', 'figure': '图4', 'surface': '粗糙', 'pores': '无孔隙', 'pda_morphology': "像'鱼鳞'一样分层沉积"}
-- **非溶剂致相分离法(NIPS)制备PAO薄膜 / Non-solvent induced phase separation for PAO film**: 采用非溶剂致相分离法制备PAO薄膜材料 None
-  - 条件: {'method': '非溶剂致相分离法(NIPS)', 'process': 'PAO溶液刮涂成膜→浸入水中分相脱膜→干燥', 'advantage': '薄膜成型简单'}
-- **番茄红素光稳定性提升**: 97.98 %
-  - 条件: {'material': 'HPDA@LYC（纳米包埋后）', 'control': '番茄红素粉末（未包埋）', 'light_condition': '室内散射光全光照射', 'duration': '12h', 'temperature': '25°C', 'control_retention': '83.75%', 'improvement': '从83.75%提升至97.98%'}
-- **PDA的pH敏感性机制**: None None
-  - 条件: {'mechanism': '聚多巴胺在肿瘤微酸性环境中可解聚', 'application': '响应肿瘤部位pH值，提高肿瘤胞内有效脂溶性色素浓度'}
-- **铀去除率 Uranium removal rate (pH≥5)**: >90 %
-  - 条件: {'pollutant': '铀 U(VI)', 'material': '聚多巴胺包覆Fe3O4磁性仿生吸附剂', 'ph': '≥5', 'initial_concentration': '100 mg/L'}
-- **特定条件下去除率 Removal rate at pH 3.0**: 97.3 %
-  - 条件: {'pollutant': '铀 U(VI)', 'material': '聚多巴胺包覆Fe3O4磁性仿生吸附剂', 'ph': 3.0, 'initial_concentration': '100 mg/L', 'volume': '25 mL', 'adsorbent_dosage': '0.05 g', 'temperature': '25±0.2°C', 'shaking_speed': '240 r/min', 'contact_time': '72 h', 'detection_method': '分光光度法(偶氮砷III指示剂)'}
+## 3. 结构特征与结构-功能关系
 
-## 来源汇总
+必须保留特征：儿茶酚/多巴胺粘附化学基团、纳米纤维素高比表面积与多级孔隙网络、羧基/羟基配位络合位点。可灵活调整特征：磁性组分（Fe3O4）负载比例、疏水改性剂（硅烷/TMCS）种类、复合骨架（石墨烯/水凝胶）的拓扑构型及交联密度。
 
-- literature: 10.1002/smll.202204624
-- literature: 10.1016/j.apcatb.2023.122852
-- literature: 10.1016/j.carbpol.2022.120242
-- literature: 10.1016/j.cej.2021.129237
-- literature: 10.1021/acsami.0c18794
-- literature: 10.1021/acsnano.4c18335
-- literature: 10.1021/acsnano.5c01252
-- literature: 10.1039/d1cs00658d
-- literature: 10.1039/d5su00041f
-- literature: 10.3390/nano11113008
-- patent
-- patent: CN115040496A
-- patent: CN115055171A
+## 4. 已报道性能数据
+
+| 污染物 | 材料 | qmax/去除率 | pH | 来源 | 核查 |
+|--------|------|-------------|-----|------|------|
+|  |  | MI-PDA/PDS体系对SMX去除率> | 6.8 | literature: 10.1016/j.apcatb.2 | ❓ |
+| Cu2+ |  | PDA:CS=1:4→12.5mg/g; | - | patent: CN113042006A | ❓ |
+| CrO42- |  | PDA:CS=1:4→114.88mg/ | - | patent: CN113042006A | ❓ |
+
+## 5. 适用场景
+
+**约束条件**：
+- MI-PDA的循环稳定性 Cycling stability of MI-PDA: 连续4次循环后催化活性仍保持>71%，吸附性能无明显衰减；催化剂形貌和化学结构在激活PDS后保持稳定 None
+- Fe³⁺-PA/OTMS/PI电纺膜的通量和循环稳定性: 通量8424±105 L·m⁻²·h⁻¹，分离效率>99%，20次循环后仍保持 L·m⁻²·h⁻¹
+- PTFE层层组装不锈钢纤维毡的WCA和循环性能: WCA 154°（5次循环后），分离效率>98%，30次以上循环 None
+- PANI/TiO₂可见光催化超疏水网格的通量和循环性能: 油通量170 kL·m⁻²·h⁻¹，100次循环后渗透油纯度>99% kL·m⁻²·h⁻¹
+- 双刺激响应膜（UV+pH）的可逆润湿性切换和光催化降解: UV或pH单独作用→疏水；UV+pH协同→亲水；UV照射可降解多种污染物 None
+- m-CPMCA燃烧再生循环: 86 % (retained after 7 cycles)
+- pH响应润湿性反转机制 pH-responsive wettability reversal mechanism: 可离子化和可水解聚合物响应pH变化质子化/去质子化，改变水合状态，在亲水和疏水间切换 None
+- 多巴胺水溶液pH调节 / Dopamine solution pH adjustment: pH 7.5-9.5（较佳范围）；pH 8.5（最佳） None
+- 反应温度 / Reaction temperature: 20-40°C（较佳范围）；30°C（最佳） °C
+- 番茄红素光稳定性提升: 97.98 %
+
+## 6. 相关原型
+
+- alginate
+- cactus-spine
+- chitosan
+- lotus-leaf
+- metal-organic-framework
+
+## 参考文献
+
+[1] DOI: 10.1016/j.apcatb.2023.122852
+[2] 专利: CN113042006A

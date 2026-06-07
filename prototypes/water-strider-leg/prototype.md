@@ -1,46 +1,69 @@
-# water-strider-leg
+---
+id: water-strider-leg
+name: 水黾腿部（Water Strider Leg）
+category: 动物
+organism: Gerris spp.
+biomimetic_dimension: 结构仿生
+features:
+  - 疏水性
+adsorption_mechanisms:
+  - 仿生荷叶效应在MD膜中的应用：层级结构抗污染
+  - 仿荷叶自修复超疏水表面（PDMS/正十九烷）
+  - 10种生物原型的超润湿表面特征
+applicability:
+  pH_range: null
+  temp_range: null
+  salinity: any
+evidence_level: low
+# provenance: 4 papers, 0 verified, 3 unverified
+# coverage: low
+# status: active
+---
+# 水黾腿部（Water Strider Leg）
 
-## 元数据
+## 1. 生物原型简介
 
-- **原型 ID**: water-strider-leg
-- **知识条目数**: 76
-- **性能数据数**: 0
-- **机制描述数**: 0
-- **工程约束数**: 0
+**问题定义**：自然界中荷叶和水黾需要在水环境中保持表面干燥与清洁；在膜蒸馏（MD）脱盐及废水处理中，膜材料面临高盐度、表面活性剂及油类污染物导致的膜孔润湿、通量衰减和严重污染挑战。
 
-## 仿生元数据
+**生物策略**：荷叶和水黾腿进化出层级微纳结构与天然re-entrant形态，结合表面低表面能蜡质层，形成稳定的空气垫（Cassie-Baxter态），实现超疏水与自清洁。在MD膜工程中，利用电纺纳米纤维天然的圆柱形re-entrant结构，结合无机纳米颗粒（如ZnO）粗化和氟化改性，构建全疏水膜，成功排斥水及低表面张力液体，实现高效抗润湿与抗污染。
 
-- **organism_scientific**: Nelumbo nucifera, Mytilus edulis, Oryza sativa, Stenocara gracilipes, Nepenthes
-- **biomimetic_dimension**: 结构仿生
-- **features**: ['层级微纳结构', 're-entrant几何', 'Janus不对称润湿', '液体灌注', '智能响应切换', '双超疏液', '预润湿切换']
-- **applicability**: {'pH_range': None, 'temp_range': None, 'salinity': None}
-- **engineering_constraints**: [{'constraint': '机械稳定性与鲁棒性', 'relevance': 'high', 'explanation': '微纳结构在复杂水流和摩擦下易受损，需通过层级结构递推或液体灌注策略来维持Cassie态并增强鲁棒性。'}, {'constraint': '表面能精确控制', 'relevance': 'high', 'explanation': '按需分离（尤其是分离表面能差异极小的不混溶有机液体）高度依赖表面能的精确调控，需严格遵循IWT理论和极性-非极性理论。'}, {'constraint': '通量与截留率的权衡', 'relevance': 'medium', 'explanation': '传统2D膜面临通量瓶颈，需通过设计3D Janus材料（如海绵/气凝胶）利用凝聚分离机制替代尺寸筛分，以突破通量限制。'}]
+## 2. 吸附机制详解
 
-## 仿生叙事
+### 机制1：仿生荷叶效应在MD膜中的应用：层级结构抗污染
 
-### problem_definition
+**描述**：层级结构启发来源：荷叶、银艾蒿叶、水黾腿→超疏水表面的水滚落特性。层级结构→形成空气垫→减少膜面与水滴粘附力→抗污染基础。构建方法：(1)无机NPs(ZnO/SiO₂/TiO₂)作为粗化剂→层级粗糙→水CA>150°。(2)氟化聚合物+低表面能→C-F键485 kJ/mol。(3)PVDF-HFP/PVDF-TFE/PVDF-CTFE共聚物→高氟含量→优于纯PVDF疏水性。PVDF/HFP静电纺膜改性策略：涂覆、接枝、层层组装、等离子聚合、共混、化学气相沉积、界面聚合、电喷、浸涂→增强表面特性→克服污染和润湿挑战。热压/多层方法可改善LEP但降低通量→需平衡LEP和孔径
+**来源**：DOI 10.1016/j.desal.2023.116475
 
-自然界中生物需在水、油、气等多相复杂环境中实现自清洁、捕食或水面行走；在水处理领域，这对应于高效分离油水乳液、多层油水混合物及多相不混溶有机液体的严苛需求，传统材料难以兼顾高通量、高选择性与多相适应性。
+### 机制2：仿荷叶自修复超疏水表面（PDMS/正十九烷）
 
-### biological_solution
+**描述**：通过正十九烷嵌入微结构PDMS基体实现蜡分泌自修复机制
+**来源**：DOI 10.3390/ma18122772
 
-生物通过进化出层级微纳结构（如荷叶微乳突）、特殊几何形貌（re-entrant结构）、不对称润湿（荷叶上下表面差异）及液体灌注（猪笼草）等策略，实现超润湿或双超疏液特性。这些机制结合四大润湿性理论（Young/Wenzel/Cassie、IWT、极性-非极性、液体灌注），为设计按需分离材料提供了定量指导。
+### 机制3：10种生物原型的超润湿表面特征
 
-### key_features
+**描述**：上荷叶：微乳突(micropapilla)+低表面能蜡质→WCA>150°→超疏水。下荷叶：亲水→Janus不对称润湿。稻叶：微纳结构→各向异性润湿。芋叶：微乳突→WCA 159°±2°→仿荷叶。蝶翅：层级鳞片→方向性润湿。水黾腿：微纳刚毛→水下超疏油→支撑力。鱼鳞：微纳结构+亲水→水下OCA>150°→超疏油→油污水中自清洁。贻贝壳：层状碳酸钙→多层级结构。椰壳：碳化→双亲性→预润湿切换。猪笼草唇缘：微纳沟槽+水膜→液体灌注→抗粘附→捕虫
+**来源**：DOI 10.1002/smll.202204624
 
-必须保留特征：层级微纳结构（增强润湿性并维持鲁棒性）、表面化学与微观形貌的协同调控。可灵活调整特征：智能响应触发器类型（pH/热/光/电/溶剂/离子/气体）、Janus膜的不对称润湿方向、液体灌注的润滑液选择及3D孔隙结构。
+## 3. 结构特征与结构-功能关系
 
-### design_mapping
+必须保留特征：层级微纳粗糙结构、re-entrant表面纹理（如圆柱形/蘑菇形）、超低表面能化学修饰（<30 mN/m）。可灵活调整特征：粗化纳米颗粒种类（优选ZnO以兼顾杀菌与环保）、聚合物基底材料（PVDF/PTFE等）、Janus膜亲水层成分（壳聚糖/PEI等）。
 
-生物原型到材料的映射：荷叶微乳突→静电纺丝/模板法构建微纳粗糙度；贻贝足丝蛋白→PDA（聚多巴胺）涂层实现通用双亲性修饰；猪笼草→多孔材料注入润滑液实现双超疏液。软约束建议：优先采用PDA等温和仿生涂层结合静电纺丝或定向冻塑构建3D多孔网络，以平衡高通量与高截留率，并利用预润湿或外部刺激实现按需切换。
+## 4. 已报道性能数据
 
-### explainability_anchors
+[待补充]
 
-仿生故事线：从‘荷叶出淤泥而不染’的自清洁现象，演进到‘智能响应按需分离’的多相液体处理系统。设计溯源：基于超疏水理论构建基础微纳结构→利用IWT理论精确设计表面能→引入re-entrant几何突破双超疏液限制→结合极性与液体灌注理论实现多相不混溶液体分离。
+## 5. 适用场景
 
-## 来源汇总
+[待补充：最适合的应用场景和不适用的情况]
 
-- literature: 10.1002/smll.202204624
-- literature: 10.1007/s40242-021-0010-4
-- literature: 10.1016/j.desal.2023.116475
-- literature: 10.3390/ma18122772
+## 6. 相关原型
+
+- cactus-spine
+- lotus-leaf
+- mussel-foot-adhesion
+- namib-beetle
+- spider-silk
+
+## 参考文献
+
+[待补充]

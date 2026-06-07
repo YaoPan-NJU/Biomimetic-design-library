@@ -1,127 +1,167 @@
-# alginate
+---
+id: alginate
+name: 海藻酸盐（Alginate）
+category: 植物
+organism: Phaeophyceae
+biomimetic_dimension: 分子仿生
+features:
+  - 负电表面
+  - 羧基
+  - 金属配位能力
+pollutants:
+  - As(III)
+  - Ciprofloxacin (CIP)
+  - Co(II)
+  - Cr(VI)
+  - Crystal Violet (CV) dye
+  - Cu(II)
+  - Levofloxacin (S-FOX)
+  - MB (methylene blue)
+  - Pb(II)
+  - Phosphate
+  - U(VI)
+  - acid blue-113 (anionic dye)
+  - tetracycline
+  - triclosan (TCS)
+adsorption_mechanisms:
+  - 海藻酸钠水凝胶的七种制备方法
+  - 海藻酸钠水凝胶的吸附机制分类
+  - Zeta电位验证
+  - 吸附机制——化学吸附+静电作用
+  - 海藻酸盐的吸附机制类型
+  - 蠕动泵连续油水分离
+  - FTIR化学表征——硅烷改性成功
+  - 吸附机理——疏水亲油+毛细管力
+  - 仿荷叶超疏水——硅烷改性
+  - Adsorption mechanisms summary
+qmax_range: "3.2-2887.0 mg/g"
+applicability:
+  pH_range: [3.0, 6.0]
+  temp_range: null
+  salinity: moderate
+evidence_level: low
+# provenance: 11 papers, 0 verified, 67 unverified
+# coverage: normal
+# status: active
+---
+# 海藻酸盐（Alginate）
 
-## 元数据
+## 1. 生物原型简介
 
-- **原型 ID**: alginate
-- **知识条目数**: 284
-- **性能数据数**: 50
-- **机制描述数**: 12
-- **工程约束数**: 26
+**问题定义**：自然界中褐藻需要在海洋复杂离子环境中维持结构稳定并富集特定金属离子；水处理中面临多组分复杂水体（重金属、染料、抗生素等）的高效、选择性吸附及材料机械强度不足的挑战。
 
-## 仿生元数据
+**生物策略**：褐藻通过分泌海藻酸钠，利用Egg-box模型与二价阳离子（如Ca²⁺）交联形成稳定的三维网络结构。进化策略包括通过丰富的羧基和羟基提供配位位点，以及形成多网络和'砖与mortar'结构增强力学性能。成功案例包括利用离子印迹技术实现Pb(II)的高选择性识别，以及构建吸附-光催化协同体系实现污染物降解与材料再生。
 
-- **organism_scientific**: Phaeophyceae
-- **biomimetic_dimension**: 结构仿生
-- **features**: ['蛋盒结构交联', '三维网状多孔结构', '丰富含氧官能团(-COOH, -OH)', 'pH敏感性', '高保水性', '生物相容性']
-- **applicability**: {'pH_range': None, 'temp_range': None, 'salinity': None}
-- **engineering_constraints**: [{'constraint': '机械性能与成胶稳定性', 'relevance': 'high', 'explanation': '文献指出SA水凝胶在实际应用中需解决机械性能不足和成胶稳定性问题，以维持结构完整性'}, {'constraint': '重复利用与回收', 'relevance': 'high', 'explanation': '文献强调需解决水凝胶吸附后的重复利用和回收问题，以降低工程应用成本并避免二次污染'}, {'constraint': '吸附性能进一步提升', 'relevance': 'medium', 'explanation': '尽管部分复合水凝胶吸附量极高，但文献仍将吸附性能的进一步提升列为未来研究方向'}]
+## 2. 吸附机制详解
 
-## 仿生叙事
+### 机制1：海藻酸钠水凝胶的七种制备方法
 
-### problem_definition
+**描述**：离子交联、共价交联、乳化、静电络合、自组装、微波辅助、超声辅助
+**来源**：DOI 10.1016/j.ijbiomac.2025.140801
 
-自然界中褐藻需在海洋动态环境中维持结构稳定并高效富集离子；水处理领域亟需高效、低成本、可再生且环保的吸附材料以去除重金属和染料等复杂污染物。
+### 机制2：海藻酸钠水凝胶的吸附机制分类
 
-### biological_solution
+**描述**：物理吸附（范德华力+氢键）和化学吸附（共价键+离子交换+表面络合）
+**来源**：DOI 10.1016/j.ijbiomac.2025.140801
 
-褐藻进化出富含G单元和M单元的海藻酸钠天然阴离子多糖，利用G单元上的羧基与二价阳离子（如Ca²⁺）发生离子置换，形成稳定的'蛋盒结构'(egg-box model)三维网络。这种天然交联机制和模拟细胞外基质的物理环境，赋予了材料优异的离子结合能力、高保水性和结构稳定性。
+### 机制3：Zeta电位验证
 
-### key_features
+**描述**：CNF-SA比纯SA水凝胶珠含有更多负电荷羧酸根离子→增强静电吸附Pb²⁺
+**来源**：DOI 10.1016/j.molliq.2020.115122
 
-必须保留特征：G单元与二价阳离子的'蛋盒结构'离子交联机制、骨架上丰富的含氧官能团（-COOH, -OH）；可灵活调整特征：复合无机纳米材料（如TiO₂、高岭土、凹凸棒土）或接枝有机聚合物（如PAA）以调控孔隙率、机械强度和特异性吸附位点。
+### 机制4：吸附机制——化学吸附+静电作用
 
-### design_mapping
+**描述**：准二级动力学+Langmuir→化学吸附为主；-COO⁻与Pb²⁺静电吸引+配位；CNF增加负电荷→增强静电吸附
+**关键官能团**：['-COO⁻ (carboxylate)', '-OH (hydroxyl)']
+**来源**：DOI 10.1016/j.molliq.2020.115122
 
-生物海藻酸钠多糖映射为SA基复合水凝胶材料；天然'蛋盒'离子交联映射为Ca²⁺等交联剂构建的水凝胶网络节点；细胞外基质三维环境映射为高保水、多孔的水凝胶传质骨架。软约束建议：可通过引入无机粘土或纳米颗粒增强机械性能，利用接枝共聚（如SA-g-PAA）大幅增加官能团密度以提升吸附容量。
+### 机制5：海藻酸盐的吸附机制类型
 
-### explainability_anchors
+**描述**：静电相互作用、离子交换、配位螯合、化学还原（Cr(VI)→Cr(III)）、光催化还原、氢键、范德华力
+**来源**：DOI 10.5004/dwt.2022.28834
 
-仿生故事线：从海洋褐藻的抗逆流结构维持与离子富集机制，到'蛋盒结构'水凝胶的仿生设计，再到高效重金属/染料吸附材料的工程实现。设计溯源：SA的G单元-COOH与Ca²⁺的配位化学直接映射为水凝胶的交联节点，天然多糖的三维网络映射为污染物的传质与吸附通道，实现了从生物大分子组装到宏观水处理材料的跨尺度设计。
+### 机制6：蠕动泵连续油水分离
 
-## 性能数据
+**描述**：通过蠕动泵负压吸引→气凝胶疏水亲油+毛细管吸收力协同→连续选择性吸油
+**来源**：DOI 10.1016/j.jhazmat.2022.129965
 
-| 参数 | 值 | 单位 | 污染物 | 材料 | 来源 |
-|------|-----|------|--------|------|------|
-| SA-CCS-LS@Fe3O4-1.5对中性红脱除率 NR removal by SA-CCS-LS@Fe3O4-1.5 | 95%以上 | % |  |  | patent: CN117654453A |
-| SA-CCS-LS@Fe3O4-1.5-0.6对三种伯氨基染料脱除率 removal rates of optimized adsorbent | 中性红98.82%，刚果红97.54%，活性黑-5 95.77% | % |  |  | patent: CN117654453A |
-| 脱除率计算公式 removal rate formula | Re% = (C0 - Ce) / C0 × 100% | % |  |  | patent: CN117654453A |
-| 吸附剂对吸附容量的影响 | 有吸附剂时吸油容量显著提升 | None |  |  | patent: CN119488883A |
-| 凹凸棒土有机改性对去除率的影响 Effect of attapulgite organic modification on removal rate | 未对凹凸棒土改性时，复合材料对重金属离子去除率降低 | None |  |  | patent |
-| 活性炭改性对去除率的影响 Effect of activated carbon modification on removal rate | 未对活性炭改性时，复合材料对磺胺类抗生素去除率降低 | None |  |  | patent |
-| SA-CCS-LS@Fe3O4-1.5对中性红脱除率 Removal rate of neutral red by SA-CCS-LS@Fe3O4-1.5 | >95% | % | 中性红(neutral red, 522nm) | SA-CCS-LS@Fe3O4-1.5 | patent |
-| SA-CCS-LS@Fe3O4-1.5-0.6对中性红脱除率(最优) Removal rate of neutral red by optimal adsorbent | 98.82 | % | 中性红(neutral red, 522nm) | SA-CCS-LS@Fe3O4-1.5-0.6(最优配方) | patent |
-| SA-CCS-LS@Fe3O4-1.5-0.6对刚果红脱除率 Removal rate of Congo red by optimal adsorbent | 97.54 | % | 刚果红(Congo red, 498nm) | SA-CCS-LS@Fe3O4-1.5-0.6 | patent |
-| SA-CCS-LS@Fe3O4-1.5-0.6对活性黑-5脱除率 Removal rate of reactive black-5 by optimal adsorbent | 95.77 | % | 活性黑-5(reactive black-5, 600nm) | SA-CCS-LS@Fe3O4-1.5-0.6 | patent |
-| 脱除率计算公式 Removal rate calculation formula | Re% = (C0-Ce)/C0 × 100% | None |  |  | patent |
-| 凹凸棒土有机改性对去除率的影响 Effect of attapulgite organic modification on removal rate | 未对凹凸棒土改性时，复合材料对重金属离子去除率降低 | None |  |  | patent |
-| 活性炭改性对去除率的影响 Effect of activated carbon modification on removal rate | 未对活性炭改性时，复合材料对磺胺类抗生素去除率降低 | None |  |  | patent |
-| CA/KCB气凝胶对Pb²⁺的最大吸附容量 | 664.6 | mg/g | Pb(II) | CA/KCB composite aerogel (KMnO4-modified cotton stalk biochar + calcium alginate) | literature: 10.1016/j.ijbiomac.2025.140801 |
-| GO/海藻酸水凝胶膜对Cr(III)和Pb(II)的吸附容量 | Cr(III): 118.6, Pb(II): 327.9 | mg/g |  | Graphene oxide/alginate hydrogel membranes (GAHMs) | literature: 10.1016/j.ijbiomac.2025.140801 |
-| 壳聚糖/三聚氰胺/海藻酸气凝胶对Pb(II)的吸附容量 | 1331.6 | mg/g | Pb(II) | Alginate/melamine/chitosan aerogel | literature: 10.1016/j.ijbiomac.2025.140801 |
-| ZIF-8/SC水凝胶对环丙沙星的吸附容量 | 2887 | mg/g | Ciprofloxacin (CIP) | ZIF-8/SC three-dimensional polysaccharide-based MOF hydrogel | literature: 10.1016/j.ijbiomac.2025.140801 |
-| NiFe₂O₄@Ca-alginate对MB和Rh6G的吸附容量 | MB: 1243, Rh6G: 845 | mg/g |  | NiFe₂O₄@Ca-alginate anisotropic plate-like particles | literature: 10.1016/j.ijbiomac.2025.140801 |
-| Alginate@PEI对Cr(VI)的吸附容量 | 431.6 | mg/g | Cr(VI) | Alginate@PEI core-shell/bead-like adsorbent | literature: 10.1016/j.ijbiomac.2025.140801 |
-| SA/PEI-0.25蜂窝弹性气凝胶对Cr(VI)和Cd(II)的吸附容量 | Cr(VI): 678.67, Cd(II): 464.23 | mg/g |  | SA/PEI-0.25 three-dimensional honeycomb elastic amino-functionalized aerogels | literature: 10.1016/j.ijbiomac.2025.140801 |
+### 机制7：FTIR化学表征——硅烷改性成功
 
-## 吸附机制
+**描述**：改性后1206 cm⁻¹(Si-O-Si不对称伸缩)和722 cm⁻¹(C-Si不对称伸缩)特征峰出现; 疏水基团显著增强
+**来源**：DOI 10.1016/j.jhazmat.2022.129965
 
-- **吸附机制分析 adsorption mechanism**: LS和CCS与环氧氯丙烷交联修饰氨基；SA和CCS的羧酸盐基团与Ca²⁺交联；CCS的氨基/羧基和PEI的亚胺基提供吸附位点；LS的磺酸基增强配位
-  - 条件: {'交联机制': '环氧氯丙烷交联LS/CCS/SA的氨基', '凝胶化': 'Ca²⁺与羧酸盐基团（SA/CCS/LS）交联形成蛋盒结构', '吸附位点': 'CCS的氨基+羧基、PEI的亚胺基、LS的磺酸基', '选择性来源': '伯氨基染料与吸附剂的特异性作用'}
-- **蛋盒结构交联机制 egg-box crosslinking mechanism**: 海藻酸钠通过G单元羧基与Ca²⁺配位形成'蛋盒'结构三维网络凝胶
-  - 条件: {'来源': '海洋褐藻细胞壁天然交联机制', '关键基团': '海藻酸钠G单元上的羧酸盐基团(COO⁻)', '交联离子': 'Ca²⁺', '结构': '三维网络水凝胶', '证据': 'FTIR中羧酸盐峰从1421cm⁻¹迁移至1409cm⁻¹，567cm⁻¹出现Ca²⁺交联峰'}
-- **海藻酸钙微球吸附重金属的机制 Heavy metal adsorption mechanism of calcium alginate microspheres**: 海藻酸钙中大量负电荷羧酸根离子能与Pb2+和Cd2+结合，生成藻酸重金属盐沉淀储存在囊腔内，与沸石活性点相互独立，削弱铅镉相互抑制性
-  - 条件: {'pollutants': ['Pb2+', 'Cd2+'], 'mechanism': '羧酸根离子配位 + 沉淀储存', 'structural_advantage': '囊腔储存与沸石活性点独立，削弱竞争抑制'}
-- **Fe3+改性活性炭吸附磺胺类抗生素的机制 Mechanism of Fe3+-modified activated carbon adsorbing sulfonamide antibiotics**: 以化学吸附为主
-  - 条件: {'pollutant': '磺胺类抗生素', 'adsorption_type': '化学吸附为主', 'contributing_factors': '比表面积增大、含氧官能团增多'}
-- **海藻酸钙微球吸附重金属的机制 Heavy metal adsorption mechanism of calcium alginate microspheres**: 海藻酸钙中大量负电荷羧酸根离子能与Pb2+和Cd2+结合，生成藻酸重金属盐沉淀储存在囊腔内，与沸石活性点相互独立，削弱铅镉相互抑制性
-  - 条件: {'pollutants': ['Pb2+', 'Cd2+'], 'mechanism': '羧酸根离子配位 + 沉淀储存', 'structural_advantage': '囊腔储存与沸石活性点独立，削弱竞争抑制'}
-- **Fe3+改性活性炭吸附磺胺类抗生素的机制 Mechanism of Fe3+-modified activated carbon adsorbing sulfonamide antibiotics**: 以化学吸附为主
-  - 条件: {'pollutant': '磺胺类抗生素', 'adsorption_type': '化学吸附为主', 'contributing_factors': '比表面积增大、含氧官能团增多'}
-- **海藻酸钠水凝胶的吸附机制分类**: 物理吸附（范德华力+氢键）和化学吸附（共价键+离子交换+表面络合）
-  - 条件: {'physical_adsorption': '多孔结构和亲水基团提供大比表面积，范德华力和氢键作用', 'chemical_adsorption': '带负电-COOH与阳离子/阳离子染料交换形成稳定配合物', 'covalent_bonding': '氨基与羧基脱水缩合形成酰胺键', 'characterization': 'XRD, FT-IR, zeta potential表征'}
-  - 来源: literature: 10.1016/j.ijbiomac.2025.140801
-- **吸附机制——化学吸附+静电作用**: 准二级动力学+Langmuir→化学吸附为主；-COO⁻与Pb²⁺静电吸引+配位；CNF增加负电荷→增强静电吸附
-  - 条件: {'kinetics': 'pseudo-second-order → chemical adsorption', 'isotherm': 'Langmuir → monolayer', 'mechanism': 'electrostatic attraction + coordination', 'functional_groups': ['-COO⁻ (carboxylate)', '-OH (hydroxyl)'], 'CNF_enhancement': 'additional negative charges increase electrostatic attraction', 'ref': '[Page 1; abstract; Section 1]'}
-  - 来源: literature: 10.1016/j.molliq.2020.115122
-- **海藻酸盐的吸附机制类型**: 静电相互作用、离子交换、配位螯合、化学还原（Cr(VI)→Cr(III)）、光催化还原、氢键、范德华力
-  - 条件: {'electrostatic': '质子化/去质子化调控表面电荷', 'ion_exchange': '重金属置换凝胶中的Ca²⁺（egg-box模型）', 'complexation': '与-COOH/-OH/-NH₂等官能团配位', 'reduction': 'Cr(VI)被还原为Cr(III)（PEI/海藻酸盐膜）', 'characterization': 'FTIR, SEM-EDX, XPS确认机制'}
-  - 来源: literature: 10.5004/dwt.2022.28834
-- **吸附机理——疏水亲油+毛细管力**: 疏水亲油性(硅烷改性)+气凝胶多孔结构的毛细管吸收力→协同选择性吸油
-  - 条件: {'mechanism': 'hydrophobic-oleophilic nature + capillary absorption force of porous structure', 'process': 'oil droplets contact surface → absorbed and penetrate aerogel; water droplets stay on surface', 'synergy': 'physical adsorption (capillary) + surface chemistry (hydrophobic modification)', 'reference': '[Page 4; Section 2.5.10, Page 10; Section 3.5]'}
-  - 来源: literature: 10.1016/j.jhazmat.2022.129965
+### 机制8：吸附机理——疏水亲油+毛细管力
 
-## 工程约束
+**描述**：疏水亲油性(硅烷改性)+气凝胶多孔结构的毛细管吸收力→协同选择性吸油
+**来源**：DOI 10.1016/j.jhazmat.2022.129965
 
-- **循环再生性能 cycling stability**: 5次循环后中性红相对脱除率98.82%，刚果红98.19% %
-  - 条件: {'吸附剂': 'SA-CCS-LS@Fe3O4-1.5-0.6', '解吸剂': '0.1M NaOH', '循环次数': '5次', '后处理': '解吸后冻干72h', '基准': '第一次使用脱除率为100%'}
-- **实施例3配方（循环测试对象）**: 纤维素纳米纤维2.0g+埃洛石1.5g+玻璃纤维0.25g+PEI-ECH 0.5g/100g水+MTMS疏水改性3min None
-  - 条件: {'polymer': '纤维素纳米纤维 2.0g', 'adsorbent': '埃洛石 1.5g', 'reinforcement': '玻璃纤维 0.25g', 'crosslinker': '聚酰胺-环氧氯丙烷 0.5g（替代FeCl₃）', 'conditions': '50°C, 5000rpm搅拌≥2h', 'hydrophobic': '甲基三甲氧基硅烷(MTMS)乙醇溶液浸泡3min', 'special': '10次循环分离测试对象，力学性能优于对比例3', 'pollutants_tested': ['石油醚', '二氯乙烷', '二氯甲烷', '三氯甲烷', '甲基红', '甲苯', '四氯化碳'], 'claim_scope': '权利要求1', 'biomass_polymer': ['卡拉胶', '海藻酸钠', '羧甲基纤维素', '明胶', '纤维素纳米纤维', '魔芋葡甘聚糖', '羟乙基纤维素', '壳聚糖', '阿拉伯树胶', '结冷胶', '淀粉']}
-- **海藻酸钙交联凹凸棒土-沸石微球制备 Calcium alginate crosslinked attapulgite-zeolite microsphere preparation**: 沸石粉15-20份 + 海藻酸钠溶液(1-2%, 1:10加入) + 有机改性凹凸棒土, 35-45°C搅拌1-2h, 滴加CaCl2(0.1-0.2mol/L), 继续搅拌8-10h None
-  - 条件: {'zeolite': '预处理沸石粉 15-20份', 'sodium_alginate': '浓度1-2%，按1:10加入沸石粉中', 'attapulgite': '有机改性凹凸棒土', 'crosslinker': '氯化钙溶液 浓度0.1-0.2mol/L', 'temperature': '35-45°C水浴', 'mixing_time': '混合搅拌1-2h + 滴加CaCl2后继续搅拌8-10h'}
-- **海藻酸钙微球吸附重金属的机制 Heavy metal adsorption mechanism of calcium alginate microspheres**: 海藻酸钙中大量负电荷羧酸根离子能与Pb2+和Cd2+结合，生成藻酸重金属盐沉淀储存在囊腔内，与沸石活性点相互独立，削弱铅镉相互抑制性 None
-  - 条件: {'pollutants': ['Pb2+', 'Cd2+'], 'mechanism': '羧酸根离子配位 + 沉淀储存', 'structural_advantage': '囊腔储存与沸石活性点独立，削弱竞争抑制'}
-- **循环使用性能 Cycling performance**: 洗脱后循环使用多次，饱和吸附量几乎不下降 None
-  - 条件: {'regeneration': '洗脱后循环使用', 'stability': '多次循环后饱和吸附量几乎不下降'}
-- **循环使用性能 Cycling stability**: 5次循环后中性红相对脱除率从100%降至98.82%，刚果红从100%降至98.19% %
-  - 条件: {'material': 'SA-CCS-LS@Fe3O4-1.5-0.6', 'regeneration': '0.1M NaOH + 冻干72h', 'cycles': 5, 'neutral_red_retention': '98.82%', 'congo_red_retention': '98.19%'}
-- **再生方法 Regeneration method**: 0.1M NaOH溶液解吸 + 冻干72h None
-  - 条件: {'regeneration_solution': '0.1 M NaOH', 'post_treatment': '冻干72h', 'condition': '25°C, 120rpm'}
-- **海藻酸钙交联凹凸棒土-沸石微球制备 Calcium alginate crosslinked attapulgite-zeolite microsphere preparation**: 沸石粉15-20份 + 海藻酸钠溶液(1-2%, 1:10加入) + 有机改性凹凸棒土, 35-45°C搅拌1-2h, 滴加CaCl2(0.1-0.2mol/L), 继续搅拌8-10h None
-  - 条件: {'zeolite': '预处理沸石粉 15-20份', 'sodium_alginate': '浓度1-2%，按1:10加入沸石粉中', 'attapulgite': '有机改性凹凸棒土', 'crosslinker': '氯化钙溶液 浓度0.1-0.2mol/L', 'temperature': '35-45°C水浴', 'mixing_time': '混合搅拌1-2h + 滴加CaCl2后继续搅拌8-10h'}
-- **海藻酸钙微球吸附重金属的机制 Heavy metal adsorption mechanism of calcium alginate microspheres**: 海藻酸钙中大量负电荷羧酸根离子能与Pb2+和Cd2+结合，生成藻酸重金属盐沉淀储存在囊腔内，与沸石活性点相互独立，削弱铅镉相互抑制性 None
-  - 条件: {'pollutants': ['Pb2+', 'Cd2+'], 'mechanism': '羧酸根离子配位 + 沉淀储存', 'structural_advantage': '囊腔储存与沸石活性点独立，削弱竞争抑制'}
-- **循环使用性能 Cycling performance**: 洗脱后循环使用多次，饱和吸附量几乎不下降 None
-  - 条件: {'regeneration': '洗脱后循环使用', 'stability': '多次循环后饱和吸附量几乎不下降'}
+## 3. 结构特征与结构-功能关系
 
-## 来源汇总
+必须保留特征：Egg-box离子交联机制、丰富的含氧官能团（-COOH, -OH）提供基础吸附位点、三维多孔网络结构。可灵活调整特征：复合组分（如壳聚糖、PEI、MOF）以引入氨基或特定孔道、多网络交联密度、表面形貌（如蜂窝状、气凝胶、微球）。
 
-- literature: 10.1007/s10924-021-02312-1
-- literature: 10.1016/j.ijbiomac.2025.140801
-- literature: 10.1016/j.jhazmat.2022.129965
-- literature: 10.1016/j.molliq.2020.115122
-- literature: 10.1039/d1ra09193j
-- literature: 10.16454/j.cnki.issn.1001-0564.2022.04.014
-- literature: 10.5004/dwt.2022.28834
-- patent
-- patent: CN117654453A
-- patent: CN119488883A
+## 4. 已报道性能数据
+
+| 污染物 | 材料 | qmax/去除率 | pH | 来源 | 核查 |
+|--------|------|-------------|-----|------|------|
+| Pb(II) | CA/KCB composite aer | 664.6 | - | literature: 10.1016/j.ijbiomac | ❓ |
+|  | Graphene oxide/algin | Cr(III): 118.6, Pb(I | - | literature: 10.1016/j.ijbiomac | ❓ |
+| Pb(II) | Alginate/melamine/ch | 1331.6 | - | literature: 10.1016/j.ijbiomac | ❓ |
+| Ciprofloxacin ( | ZIF-8/SC three-dimen | 2887 | - | literature: 10.1016/j.ijbiomac | ❓ |
+|  | NiFe₂O₄@Ca-alginate  | MB: 1243, Rh6G: 845 | - | literature: 10.1016/j.ijbiomac | ❓ |
+| Cr(VI) | Alginate@PEI core-sh | 431.6 | - | literature: 10.1016/j.ijbiomac | ❓ |
+|  | SA/PEI-0.25 three-di | Cr(VI): 678.67, Cd(I | - | literature: 10.1016/j.ijbiomac | ❓ |
+|  | Graphitic carbon nit | Pb(II): 383.4, Ni(II | - | literature: 10.1016/j.ijbiomac | ❓ |
+|  | Core/shell amine-mod | Pb(II): 535.6, Cr(VI | - | literature: 10.1016/j.ijbiomac | ❓ |
+| Pb(II) | CaAlg/CPAN TFNC memb | 254.5 | - | literature: 10.1016/j.ijbiomac | ❓ |
+| Pb(II) | Defective MOF-801/so | 375.48 | - | literature: 10.1016/j.ijbiomac | ❓ |
+| Pb(II) | Lead ion-imprinted p | IIP: 357.4, NIP: 296 | - | literature: 10.1016/j.ijbiomac | ❓ |
+| Pb(II) | SA/PEI/三聚氰胺共功能化交联吸附剂 | 596.68 | - | literature: 10.1016/j.ijbiomac | ❓ |
+| Co(II) | Ca-Me/SA@0.75PEI (Me | 698.62 | - | literature: 10.1016/j.ijbiomac | ❓ |
+| Phosphate | SA/Zr hydrogel (Zr⁴⁺ | 256.79 | 3 | literature: 10.1016/j.ijbiomac | ❓ |
+|  | MIL-121@CA thermores | Cu²⁺: 204.5, Cd²⁺: 8 | - | literature: 10.1016/j.ijbiomac | ❓ |
+| Levofloxacin (S | GA(SA-Al/Ca) seconda | 145.12 mg/g, 10分钟内达平 | - | literature: 10.1016/j.ijbiomac | ❓ |
+| Phosphate | SA-La@PEI phosphate  | 121.1 | - | literature: 10.1016/j.ijbiomac | ❓ |
+|  | Alginate-derived bio | MB: 99.61, BF: 86.83 | - | literature: 10.1016/j.ijbiomac | ❓ |
+| Cu(II) | SA/MX/CFO beads (sod | 234.3 | 5.3 | literature: 10.1016/j.ijbiomac | ❓ |
+| Ciprofloxacin ( | κ-Carrageenan/sodium | 229 | - | literature: 10.1016/j.ijbiomac | ❓ |
+| Crystal Violet  | ALG-Aw (alginate-bas | 符合Redlich-Peterson模型 | - | literature: 10.1016/j.ijbiomac | ❓ |
+| Phosphate | Electrochemically mo | 169.89 | - | literature: 10.1016/j.ijbiomac | ❓ |
+| Phosphate | Porous alginate immo | 63.61 | - | literature: 10.1016/j.ijbiomac | ❓ |
+| Phosphate | Ti₃C₂-MXene/Zr cross | 比表面积92.288 m²/g，形成Zr | - | literature: 10.1016/j.ijbiomac | ❓ |
+|  | CA-MIL-53-AC (algina | DDT: 5.29, As(V): 4. | - | literature: 10.1016/j.ijbiomac | ❓ |
+| Phosphate | Magnetic nanostructu | 1 mg-P/L: 96.1%, 10  | - | literature: 10.1016/j.ijbiomac | ❓ |
+| Pb(II) | P-CNF-SA (porous cel | 318.47 | - | literature: 10.1016/j.molliq.2 | ❓ |
+| Cr(VI) | chitosan/PAAS (polya | 7.7 | - | literature: 10.1007/s10924-021 | ❓ |
+| U(VI) | chitosan/PVP (polyvi | 167 ± 25 | 6.0 | literature: 10.1007/s10924-021 | ❓ |
+| ... | ... | ... | ... | ... | 共 43 条 |
+
+## 5. 适用场景
+
+**约束条件**：
+- NH-SA-ZrBT对磷酸根的吸附容量和循环稳定性: 63.61 mg/g
+- PASA水凝胶对铵氮的吸附-脱附循环稳定性: 9次循环后保持87%吸附容量 None
+- SA-T/M₂固胺吸附剂对CO₂的循环稳定性: 2.10 mmol/g（30次循环后） mmol/g
+- 再生循环性能: 5次循环后吸附率仍>80% %
+- 海藻酸盐基吸附剂的再生性能: 多种再生体系：0.1 M HCl/0.05 M CaCl₂（5次循环Pb/Cu去除>70%/40%）、0.5 M HCl（4次循环）、1 M HNO₃（3次循环后损坏）、2 M NaCl（Cd/Hg/Pb再生）、0.5 M HNO₃（10次循环~70%容量） None
+- 压缩循环稳定性: 50次循环(50%应变)后: CNF/SA-a应力保持率77.1%, 高度保持率83.56%; CNF/SA-b 60.6%/82.57%; CNF/SA-c 61.1%/81.97%; CNF/SA-c 10次循环后应力保持率85% %
+- 循环吸油-挤出再生: 20次循环(50%压缩挤出)后仍保持吸附能力; 形状记忆功能→压缩后可恢复初始形状 None
+- Mg–Al LDH–PVA/Alg stability: Deformation percentage = 7.8% (at 200 mg/L phosphate) percent
+- Alg/a-FeOOH stability: Removal efficiency = 97.6% percent
+- Phosphate species vs pH: H3PO4 (pH < 2), H2PO4- (pH 2–7), HPO42- (pH 7–11), PO43- (pH > 11) None
+
+## 6. 相关原型
+
+- cellulose-nanocrystal
+- chitosan
+- chlorella-cell-wall
+- metal-organic-framework
+- mussel-foot-adhesion
+
+## 参考文献
+
+[1] DOI: 10.1007/s10924-021-02312-1
+[2] DOI: 10.1016/j.ijbiomac.2025.140801
+[3] DOI: 10.1016/j.molliq.2020.115122
+[4] 专利: CN109351339A
+[5] 专利: CN117654453A
+[6] 专利: CN119488883A

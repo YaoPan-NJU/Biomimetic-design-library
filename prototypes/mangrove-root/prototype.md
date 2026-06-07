@@ -1,40 +1,56 @@
-# mangrove-root
+---
+id: mangrove-root
+name: 红树林根系（Mangrove Root）
+category: 植物
+organism: 
+biomimetic_dimension: 系统仿生
+features:
+  - 网状
+adsorption_mechanisms:
+  - 人工湿地净化机制途径 Constructed wetland purification mechanisms
+applicability:
+  pH_range: null
+  temp_range: null
+  salinity: moderate
+evidence_level: low
+# provenance: 3 papers, 0 verified, 6 unverified
+# coverage: normal
+# status: active
+---
+# 红树林根系（Mangrove Root）
 
-## 元数据
+## 1. 生物原型简介
 
-- **原型 ID**: mangrove-root
-- **知识条目数**: 32
-- **性能数据数**: 5
-- **机制描述数**: 1
-- **工程约束数**: 2
+[待补充：200-300字介绍]
 
-## 性能数据
+## 2. 吸附机制详解
 
-| 参数 | 值 | 单位 | 污染物 | 材料 | 来源 |
-|------|-----|------|--------|------|------|
-| 三种红树植物对NH4+-N的去除率范围 Removal range of NH4+-N by three mangrove species | 62%-99 | % |  |  | literature: 10.11654/jaes.2021-1478 |
-| 磷酸盐快速去除效果 Rapid PO43--P removal in early stage | 80 | % |  |  | literature: 10.11654/jaes.2021-1478 |
-| 25倍浓度处理下NO2--N去除率 NO2--N removal at 25x concentration | None | None |  |  | literature: 10.11654/jaes.2021-1478 |
-| 秋茄在15倍浓度下NH4+-N去除优势 K. candel superiority at 15x NH4+-N removal | None | None |  |  | literature: 10.11654/jaes.2021-1478 |
-| 红树林人工湿地氮磷去除临界浓度 Critical concentration for N/P removal saturation | None | None |  |  | literature: 10.11654/jaes.2021-1478 |
+### 机制1：人工湿地净化机制途径 Constructed wetland purification mechanisms
 
-## 吸附机制
+**描述**：None
+**来源**：DOI 10.11654/jaes.2021-1478
 
-- **人工湿地净化机制途径 Constructed wetland purification mechanisms**: None
-  - 条件: {'mechanisms': ['过滤', '吸附', '沉淀', '离子交换', '植物吸收', '微生物降解'], 'components': '土壤-植物-底栖生物-微生物生态系统'}
-  - 来源: literature: 10.11654/jaes.2021-1478
+## 3. 结构特征与结构-功能关系
 
-## 工程约束
+[待补充：多尺度结构描述]
 
-- **红树植物根际微生物在净化中的作用 Role of rhizosphere microorganisms**: None None
-  - 条件: {'mechanism': '植物根部过滤+基质吸附+微生物降解', 'denitrification': '较低NH4+-N浓度与湿地基质缺氧条件相互作用可能促进反硝化作用', 'note': 'NH4+-N在第9天降至较低水平后有一定回升并维持平衡'}
-  - 来源: literature: 10.11654/jaes.2021-1478
-- **NO3--N浓度稳定性 Stability of NO3--N concentration in mangrove systems**: None None
-  - 条件: {'observation': '红树植物处理组NO3--N浓度在试验前期上升，随后显著下降并保持稳定', 'control_group': '空白组NO3--N浓度呈不规则上升趋势', 'significance': '红树植物处理组NO3--N显著低于空白组(P<0.05)'}
-  - 来源: literature: 10.11654/jaes.2021-1478
+## 4. 已报道性能数据
 
-## 来源汇总
+| 污染物 | 材料 | qmax/去除率 | pH | 来源 | 核查 |
+|--------|------|-------------|-----|------|------|
+|  |  | 62%-99 | - | literature: 10.11654/jaes.2021 | ❓ |
+|  |  | 80 | - | literature: 10.11654/jaes.2021 | ❓ |
+|  |  | None | - | literature: 10.11654/jaes.2021 | ❓ |
 
-- literature: 10.11654/jaes.2021-1478
-- literature: 10.11840/j.issn.1001-6392.2021.06.001
-- literature: 10.13343/j.cnki.wsxb.20210321
+## 5. 适用场景
+
+**约束条件**：
+- NO3--N浓度稳定性 Stability of NO3--N concentration in mangrove systems: None None
+
+## 6. 相关原型
+
+- mycelium
+
+## 参考文献
+
+[1] DOI: 10.11654/jaes.2021-1478
