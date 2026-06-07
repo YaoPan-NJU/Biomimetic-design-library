@@ -1,0 +1,90 @@
+{
+  "id": "namib-beetle",
+  "name_zh": "纳米布甲虫",
+  "name_en": "Namib Beetle",
+  "organism": {
+    "scientific": "Stenocara gracilipes",
+    "category": "动物"
+  },
+  "biomimetic_dimension": "结构仿生",
+  "features": [
+    "疏水性"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": "any",
+    "note": "测过的 pH/温度范围，不是适用范围。仅从 performance_data 中实际测试过的条件聚合。"
+  },
+  "performance_data": [],
+  "mechanisms": [
+    {
+      "name": "沙漠甲虫Janus双面润湿仿生机制 Namib beetle Janus biomimetic mechanism",
+      "description": "沙漠甲虫背部具有亲水侧（从雾中收集水分）和疏水侧（将水分导向嘴部）的双面异质结构",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s11783-021-1515-2",
+      "verification": "unverified"
+    }
+  ],
+  "narrative": {
+    "entries": [
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2018-Halim-cellulose-superhydrophobic-hydrophobic-oil-water-review.json",
+        "paper_id": "Halim2022_cellulose_oily_wastewater_review",
+        "sections": {
+          "problem_definition": "自然界中生物面临泥水污染附着、油污排斥及干旱集水等极端润湿挑战；水处理中对应复杂油水乳液（水包油/油包水）的高效分离难题，传统膜受限于孔径匹配瓶颈与易污染堵塞。",
+          "biological_solution": "进化出微纳层级粗糙结构（荷叶微米沟槽+纳米蜡管、鱼鳞微乳突+黏液层）与双面异质构型（沙漠甲虫/槐叶萍）；通过Cassie-Baxter亚稳态截留空气或水下气垫效应实现极端润湿性调控；成功案例为纤维素基仿生膜实现98%-99%分离效率与高达65000 L/m²/h通量。",
+          "key_features": "必须保留：微纳层级粗糙度、低表面能涂层、双面润湿性反差（Janus）、气/水缓冲层；可灵活调整：纤维素基底形态（气凝胶/海绵/织物/滤纸）、粗糙增强纳米颗粒种类（SiO2/ZnO/Fe3O4等）、疏水聚合物类型（PDMS/PVDF/PS等）及交联网络密度。",
+          "design_mapping": "生物→材料映射：荷叶结构→SiO2/PDMS修饰纤维素织物/气凝胶；鱼鳞黏液→亲水纤维素基质构建水下超疏油表面；甲虫/Salvinia双面→Janus B-on-A非对称膜；软约束建议：依据Wenzel/Cassie-Baxter方程优化粗糙度比(r)与固液界面分数(fSL)，在突破压力与高通量间取得平衡。",
+          "explainability_anchors": "仿生故事线：从自然自清洁、定向集水与抗污机制迁移至人工极端润湿表面工程；设计溯源：表面微纳拓扑直接决定接触角阈值(≥150°)与Cassie-Baxter气穴稳定性，Janus非对称架构突破传统筛分极限，整体性能由突破压力方程与严苛环境稳定性测试双重锚定。"
+        }
+      }
+    ]
+  },
+  "engineering_constraints": [
+    {
+      "constraint": "交联剂提高疏水稳定性 Crosslinking agents for hydrophobic stability",
+      "value": "Kymene 557H（含羧基）和环氧氯丙烷用于增强纳米材料与纤维素织物/纤维之间的连接",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s11783-021-1515-2"
+    },
+    {
+      "constraint": "浸泡-干燥循环次数对表面稳定性的影响 Dip-drying repetition effect on stability",
+      "value": "SiO2/PDMS涂层经10次浸泡-干燥循环后，表面活性剂冲击前后接触角差从~20°降至~2°",
+      "unit": "degrees",
+      "relevance": "high",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s11783-021-1515-2"
+    },
+    {
+      "constraint": "超疏水膜 harsh condition 稳定性测试标准 Harsh condition stability testing",
+      "value": "浸泡在极端pH(1-2强酸, 12-13强碱)或高盐浓度(NaCl 3.5 wt%)溶液1-72小时；表面活性剂(SDS 4.1 mM)滴加；60-120°C加热72小时",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s11783-021-1515-2"
+    },
+    {
+      "constraint": "超疏油膜 harsh condition 稳定性 Superoleophobic harsh condition stability",
+      "value": "酸性0.1-1 M HCl或pH=1；碱性0.1-1 M NaOH或pH=11-13；盐浓度0.1-1 M或5-10 wt% NaCl；浸泡2-8 M H2SO4 10 min-30天；水中浸泡90天",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s11783-021-1515-2"
+    }
+  ],
+  "provenance_summary": {
+    "n_papers": 1,
+    "n_verified": 0,
+    "n_unverified": 1
+  },
+  "coverage": "low",
+  "status": "active"
+}

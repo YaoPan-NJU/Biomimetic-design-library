@@ -1,0 +1,344 @@
+{
+  "id": "diatom-frustule",
+  "name_zh": "硅藻壳",
+  "name_en": "Diatom Frustule",
+  "organism": {
+    "scientific": "Bacillariophyta (硅藻门)",
+    "category": "微生物"
+  },
+  "biomimetic_dimension": "结构仿生",
+  "features": [
+    "介孔",
+    "分子筛分"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": [
+      7.0,
+      7.0
+    ],
+    "tested_temp_range": null,
+    "salinity": "any",
+    "note": "测过的 pH/温度范围，不是适用范围。仅从 performance_data 中实际测试过的条件聚合。"
+  },
+  "performance_data": [
+    {
+      "parameter": "CA/DE对Pb²⁺最大吸附容量 qmax",
+      "value": "485",
+      "unit": "mg/g",
+      "pollutant": "Pb²⁺",
+      "material": "CA/DE (氨基/羧基缩合修饰硅藻土)",
+      "ph": 7,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.11862/CJIC.2021.025",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第3组-多孔结构/2021-杜-硅藻-硅藻土-吸附-重金属.pdf",
+      "page": 7,
+      "locator": "Section 2.6.1",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "CA/DE对Cd²⁺最大吸附容量 qmax",
+      "value": "462",
+      "unit": "mg/g",
+      "pollutant": "Cd²⁺",
+      "material": "CA/DE",
+      "ph": 7,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.11862/CJIC.2021.025",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第3组-多孔结构/2021-杜-硅藻-硅藻土-吸附-重金属.pdf",
+      "page": 7,
+      "locator": "Section 2.6.1",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "MP/DE对Pb²⁺最大吸附容量 qmax",
+      "value": "396",
+      "unit": "mg/g",
+      "pollutant": "Pb²⁺",
+      "material": "MP/DE (巯基修饰硅藻土)",
+      "ph": 7,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.11862/CJIC.2021.025",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第3组-多孔结构/2021-杜-硅藻-硅藻土-吸附-重金属.pdf",
+      "page": 7,
+      "locator": "Section 2.6.1",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "MP/DE对Cd²⁺最大吸附容量 qmax",
+      "value": "365",
+      "unit": "mg/g",
+      "pollutant": "Cd²⁺",
+      "material": "MP/DE",
+      "ph": 7,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.11862/CJIC.2021.025",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第3组-多孔结构/2021-杜-硅藻-硅藻土-吸附-重金属.pdf",
+      "page": 7,
+      "locator": "Section 2.6.1",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "pH对吸附去除率的影响",
+      "value": "pH≤3去除率低；3<pH<6快速上升；pH 6-8最高：MP/DE对Pb²⁺/Cd²⁺为100%/99.8%，CA/DE为100%/98.5%；pH>9产生氢氧化物沉淀(假吸附)",
+      "unit": null,
+      "pollutant": "",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.11862/CJIC.2021.025",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第3组-多孔结构/2021-杜-硅藻-硅藻土-吸附-重金属.pdf",
+      "page": 7,
+      "locator": "Section 2.6.2",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "文献对比：无机改性硅藻土吸附容量",
+      "value": "无机类(金属氧化物负载)对Pb²⁺吸附容量一般250-350 mg/g，对Cd²⁺为150-250 mg/g。有序孔结构氧化物处理→SSA和qmax显著提升但制备复杂不利于工业",
+      "unit": null,
+      "pollutant": "",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.11862/CJIC.2021.025",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第3组-多孔结构/2021-杜-硅藻-硅藻土-吸附-重金属.pdf",
+      "page": 2,
+      "locator": "Section 0",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "文献对比：有机改性硅藻土吸附容量",
+      "value": "有机类(羟基/羧基改性)吸附容量一般50-160 mg/g→整体偏低。瓶颈：有机物负载→SSA增加小+静电调节差",
+      "unit": null,
+      "pollutant": "",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.11862/CJIC.2021.025",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第3组-多孔结构/2021-杜-硅藻-硅藻土-吸附-重金属.pdf",
+      "page": 2,
+      "locator": "Section 0",
+      "verification": "unverified",
+      "confidence": 0.8
+    }
+  ],
+  "mechanisms": [
+    {
+      "name": "Pb²⁺吸附机理(XPS证据)",
+      "description": "XPS证实：-NH₂与Pb²⁺形成配位键(RNH₂-Mⁿ⁺, 406.73 eV)。N1s谱：吸附前N⁺(400.73 eV)+-NH-(399.78 eV)→吸附后-NH-减弱+新峰406.73 eV(RNH₂-Pb²⁺)。O1s谱：C=O(531.73 eV)→金属-氧信号(531.48 eV)。化学吸附为主",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.11862/CJIC.2021.025",
+      "verification": "unverified"
+    },
+    {
+      "name": "MPTS接枝机理(硅烷偶联)",
+      "description": "MPTS醇解→Si(OCH₃)₃→Si(OH)₃+CH₃OH。Si(OH)₃与DE表面Si-OH脱水缩合→化学键接枝于硅藻土表面。巯基(-SH)暴露于分子末端→吸附重金属离子。FT-IR证据：2559 cm⁻¹ -SH峰，Si-O-Si峰蓝移",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.11862/CJIC.2021.025",
+      "verification": "unverified"
+    },
+    {
+      "name": "CA/DE缩合机理",
+      "description": "APTES醇解→Si(OH)₃→与DE表面Si-OH缩合→AP/DE(氨基端暴露)。AP/DE与CA的-COOH/-OH缩合→CA/DE。CA热解性能强→三种连接形式(见图6B)。FT-IR证据：1709 cm⁻¹ C=O，698/1407/1637 cm⁻¹ COO⁻",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.11862/CJIC.2021.025",
+      "verification": "unverified"
+    },
+    {
+      "name": "文献对比：有机改性硅藻土吸附容量",
+      "description": "有机类(羟基/羧基改性)吸附容量一般50-160 mg/g→整体偏低。瓶颈：有机物负载→SSA增加小+静电调节差",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.11862/CJIC.2021.025",
+      "verification": "unverified"
+    },
+    {
+      "name": "吸附后溶液pH不变",
+      "description": "吸附前后溶液pH未发生明显波动，仍维持pH=7。归因于有机改性负载量少→配位作用不引起pH变化。与直接加入有机吸附剂不同→后者易引起pH改变",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.11862/CJIC.2021.025",
+      "verification": "unverified"
+    },
+    {
+      "name": "热处理——550°C表面Si-OH暴露",
+      "description": "SSA略有减小但吸附性能提高1.71倍→表面氢键减少→裸露Si-OH增多→L碱位增多→与Ni²⁺/Ag⁺配位增强",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.19817/j.cnki.issn1006-3536.2022.01.060",
+      "verification": "unverified"
+    },
+    {
+      "name": "接枝改性——丙烯酸/La³⁺静电吸附",
+      "description": "pH 1-7范围内La³⁺吸附容量随pH增大而上升→—COO⁻与La³⁺静电作用随pH增大而加强",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.19817/j.cnki.issn1006-3536.2022.01.060",
+      "verification": "unverified"
+    },
+    {
+      "name": "复合改性——氨基功能化对直接蓝74",
+      "description": "最佳吸附量363.30 mg/g(1200 mg/L初始浓度)→质子化氨基与阴离子染料静电吸引",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.19817/j.cnki.issn1006-3536.2022.01.060",
+      "verification": "unverified"
+    },
+    {
+      "name": "磷酸盐——零价铁/铁氧化物负载",
+      "description": "吸附量37 mg/g；静电+络合+化学沉淀协同",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.19817/j.cnki.issn1006-3536.2022.01.060",
+      "verification": "unverified"
+    },
+    {
+      "name": "未来研究五大方向",
+      "description": "(1)加强吸附机理(微观作用机制)→精准靶向改性；(2)提高吸附专一性(竞争离子)；(3)再生性能研究；(4)开发新改性方法；(5)低毒/无毒改性剂→绿色工艺",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.19817/j.cnki.issn1006-3536.2022.01.060",
+      "verification": "unverified"
+    }
+  ],
+  "narrative": {
+    "entries": [
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2022-于-硅藻-硅藻土-吸附-综述.json",
+        "paper_id": "2022-Yu-diatomite-organic-pollutants-review",
+        "sections": {
+          "problem_definition": "自然界中硅藻通过生物矿化形成具有规律分布的层级多孔硅质外壳，以优化物质交换与光捕获；在水处理工程中，这对应解决有机污染物（染料、VOCs、POPs）吸附与催化降解过程中的传质受限、活性位点不足及纳米催化剂易团聚等核心挑战。",
+          "biological_solution": "硅藻进化出孔径从十几纳米至数百纳米的天然层级多孔SiO₂结构，提供极高的比表面积和规律的传质通道。成功案例表明，以此天然结构为模板，通过常规提纯、有机接枝、无机负载等分级改性策略，可逐级提升吸附位点和光催化功能，实现多重污染物的高效协同去除。",
+          "key_features": "必须保留特征：层级多孔结构、规律的孔隙分布、高比表面积的SiO₂骨架；可灵活调整特征：表面化学修饰类型（如CTMAB、APTMS）、负载的纳米催化粒子种类（如TiO₂、Cu₂ₓS、ZnFe-LDH）、孔径的局部调控与复合制备工艺。",
+          "design_mapping": "生物硅藻壳→天然层级多孔SiO₂模板；生物表面官能团→表面化学修饰与有机接枝；生物微环境→纳米粒子负载微反应器（防团聚+提供传质通道）。软约束建议：优先选择绿色改性剂，优化水热或溶胶凝胶等复合制备工艺以保障多次循环后的结构稳定性。",
+          "explainability_anchors": "仿生故事线：从天然硅藻壳的层级多孔传质智慧，到人工改性硅藻土的高效吸附/催化复合材料；设计溯源：利用硅藻土天然十几至数百纳米的规律孔隙作为载体，解决纳米光催化剂团聚问题，并通过表面修饰引入特异性吸附位点，实现结构仿生与功能仿生的统一。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2021-杜-硅藻-硅藻土-吸附-重金属.json",
+        "paper_id": "2021-Du-mercapto-carboxyl-diatomite-Pb-Cd",
+        "sections": {
+          "problem_definition": "自然界中硅藻需在复杂水体中实现高效物质交换与离子捕获，对应水处理中重金属离子(Pb²⁺/Cd²⁺)的高效、选择性去除难题，传统吸附材料常面临容量低、孔道易堵及pH敏感等瓶颈。",
+          "biological_solution": "硅藻进化出高度有序的层级多孔硅质壳体(大孔+小孔+微孔)以优化传质效率，并结合表面硅羟基进行化学相互作用；通过将该天然结构作为模板，引入巯基/氨基/羧基等强亲和力螯合位点，成功实现Pb²⁺(485 mg/g)与Cd²⁺(462 mg/g)的超高容量吸附。",
+          "key_features": "必须保留：硅藻天然层级多孔骨架(中心大孔300-500nm、边缘小孔30-50nm及微孔)提供的高比表面积与快速传质通道；可灵活调整：表面接枝的有机官能团类型(巯基/氨基/羧基)及偶联缩合策略(单步MPTS或双步APTES-CA)，可根据目标重金属离子的软硬酸碱特性进行定向定制。",
+          "design_mapping": "生物硅藻分级孔道→硅藻土矿物结构模板；生物表面化学微环境→硅烷偶联剂水解缩合与有机酸接枝网络；软约束建议：优先采用低负载量修饰策略以维持孔道通透性与体系pH稳定，并在中性至弱碱性(pH 6-8)工况下运行以最大化配位吸附效能。",
+          "explainability_anchors": "仿生故事线：遵循‘天然结构模板传质+表面分子识别螯合’的协同进化逻辑，将硅藻土的多孔特性与人工官能团修饰深度融合，实现从‘被动吸附’到‘主动靶向捕获’的跨越；设计溯源：直接映射自硅藻天然孔结构特征(条目5)与表面Si-OH基团(条目20)，通过FT-IR/XPS证实了硅烷缩合接枝与-NH₂/-SH配位机制(条目10-12)，吸附容量跃升与pH稳定性数据(条目1,9,18)完整验证了该仿生路径的工程可行性。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2022-Roychoudhury-diatom-biosilica-porous-shell-review.json",
+        "paper_id": "2022-Roychoudhury-diatom-biosilica-review",
+        "sections": {
+          "problem_definition": "自然界中硅藻需在极低硅浓度海水中高效富集硅并构建坚固多孔外壳以抵御流体剪切力；水处理中对应需开发高比表面积、易功能化且能高效捕获痕量重金属/有机染料的绿色吸附材料。",
+          "biological_solution": "硅藻进化出由silaffins与LCPA调控的生物硅化自组装机制，在SDV内将硅浓度富集千倍并沉积为层级多孔非晶态SiO₂外壳；结合表面丰富Si-OH基团与frustulin蛋白，实现对金属离子的特异性结合与结构稳定；成功案例包括代谢掺杂Ti/Ge实现功能化，及体外修饰Mn/Fe/石墨烯实现Hg²⁺(>500 mg/g)、Pb²⁺(99 mg/g)等高效去除。",
+          "key_features": "必须保留特征：层级纳米/微米孔道网络、高反应性表面Si-OH基团、生物硅温和自组装路径；可灵活调整特征：孔道尺寸分布（依硅藻物种调控）、表面偶联配体（-SH/-NH₂等）、金属掺杂种类与负载方式（体内代谢/体外修饰）。",
+          "design_mapping": "生物原型→材料映射：硅藻frustule→仿生层级多孔SiO₂骨架；silaffins/LCPA调控→仿生肽/聚合物诱导SiO₂溶胶-凝胶自组装；表面Si-OH→原位接枝功能基团或金属纳米粒子；软约束建议：优先采用温和水相合成替代高温煅烧以保留孔道与有机组分；针对Cr⁶⁺等阴离子需额外引入还原性位点以突破天然吸附瓶颈。",
+          "explainability_anchors": "仿生故事线：从硅藻“海水提硅建壳”的自然智慧出发，提取其“生物模板+自组装+表面化学”三位一体策略，指导设计兼具高吸附容量、易功能化与潜在传感监测能力的硅基杂化吸附剂；设计溯源：吸附性能提升直接映射于生物硅化机制启发的绿色合成路线与frustulin/Si-OH介导的配位/离子交换机制，确保材料设计具有明确的生物学依据与可解释性。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2022-杨-硅藻-硅藻土-吸附-水处理-综述.json",
+        "paper_id": "2022-Yang-diatomite-wastewater-review",
+        "sections": {
+          "problem_definition": "水处理领域需要兼具高比表面积和丰富活性位点的吸附材料；自然界中硅藻经过长期进化形成了高度有序的多孔硅质骨架，为构建高效吸附材料提供了理想的天然结构基础。",
+          "biological_solution": "利用硅藻遗骸形成的天然多孔结构和表面硅羟基(Si-OH)，通过物理/化学改性（如热处理疏通孔道、酸碱处理去除杂质暴露活性位点、接枝引入特定官能团），大幅提升比表面积和靶向吸附能力，成功实现对重金属、有机染料及放射性元素的高效去除。",
+          "key_features": "必须保留特征：天然多孔骨架结构、表面活性硅羟基(Si-OH)位点；可灵活调整特征：孔径分布（通过热处理或酸碱调节）、表面官能团类型（通过接枝或无机负载引入亲核/亲电基团）。",
+          "design_mapping": "生物→材料映射：硅藻天然硅质骨架→多孔吸附基底；表面硅羟基→化学接枝与配位锚点。软约束建议：改性过程中需严格控制腐蚀剂（如HF）浓度和热处理温度（≤600°C），以保护天然骨架不被破坏。",
+          "explainability_anchors": "仿生故事线：从生物成因矿物（硅藻土）的天然多孔结构出发，通过结构保留与表面化学修饰，实现高效水处理。设计溯源：基于硅藻土天然孔隙疏通（热处理/酸碱改性）与表面Si-OH功能化（接枝/无机负载）的材料改性策略。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2022-Selmeczy-diatom-review.json",
+        "paper_id": "2022-Selmeczy-diatom-ecosystem-services-review",
+        "sections": {
+          "problem_definition": "自然界中硅藻需在复杂水质与营养限制下高效捕获溶解硅、固定重金属并驱动碳氮循环；对应水处理领域亟需低成本、高吸附容量且合成绿色的多功能吸附材料，以协同去除重金属、营养盐、有机污染物及染料。",
+          "biological_solution": "进化出层级多孔生物硅壳体(frustule)与高效硅转运/矿化系统；通过SIT转运蛋白富集硅酸，在SDV中由silaffins和LCPA调控自组装形成物种特异性纳米图案，并结合生物吸附、生物富集、生物矿化与生物转运四重机制协同去除/固定污染物；成功案例包括贡献全球20-40%海洋初级生产力与40%碳封存，且硅藻土已实现77万吨/年工业化规模并广泛用于过滤与吸附。",
+          "key_features": "必须保留：层级多孔SiO₂骨架结构、纳米/微米级贯通孔道、表面官能团介导的多机制吸附能力；可灵活调整：孔道尺寸与表面图案（通过模板或合成参数调控）、掺杂金属种类与比例（借鉴温和生物矿化）、材料宏观形态（粉末/颗粒/膜组件）。",
+          "design_mapping": "生物→材料映射：硅藻frustule映射为仿生层级多孔SiO₂/复合吸附骨架；SIT转运与silaffins调控映射为仿生表面修饰与温和溶胶-凝胶/生物矿化合成路线；四重去除机制映射为物理吸附+化学络合+离子交换+沉淀协同设计。软约束建议：采用近中性pH与常温合成模拟生物硅化环境；控制前驱体浓度梯度诱导自组装多孔结构；优先利用工业硅藻土或生物模板法降低量产门槛。",
+          "explainability_anchors": "仿生故事线：从硅藻‘以硅筑壳、高效固碳除污’的生态智慧出发，提取其天然层级多孔模板与多机制协同吸附原理，转化为水处理吸附材料的结构原型与绿色合成路径。设计溯源：直接溯源至文献中硅藻frustule的纳米/微米穿孔特征、生物硅化温和合成机制及77万吨/年硅藻土工业化数据，确保仿生逻辑具备明确的生物学依据与工程放大可行性。"
+        }
+      }
+    ]
+  },
+  "engineering_constraints": [
+    {
+      "constraint": "无机改性——硅烷/硅藻土对甲醛去除+循环",
+      "value": "去除率79.09%(较原土提高1.59倍)；5次循环后仍65.94%",
+      "unit": "%",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.19817/j.cnki.issn1006-3536.2022.01.062"
+    },
+    {
+      "constraint": "TGA/DSC热稳定性",
+      "value": "MP/DE三阶段失重：20-238°C物理水(4.517%)，238-410°C结晶水(11.99%)，410-584°C MPTS分解+SiO₂晶型转变(7.86%)。CA/DE三阶段：20-274°C水+CA蒸发(3.6%)，275-554°C CA热降解(13.6%)，554-900°C继续分解(3.3%)",
+      "unit": null,
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.11862/CJIC.2021.025"
+    },
+    {
+      "constraint": "全球硅循环——硅藻主导",
+      "value": "全球生物硅产量：200-280 Tmol Si/yr(主要由海洋硅藻产生)。对比：陆生植物硅积累60-200 Tmol Si/yr；硅酸盐风化释放~19-46 Tmol/yr；河流输入海洋溶解硅~5 Tmol Si/yr。淡水硅浓度100-150 μmol/L vs 海洋表层<10 μmol/L(深层≤160 μmol/L)。湖泊硅埋藏率可达1.30 Tmol/yr",
+      "unit": "Tmol Si/yr",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s10750-022-04984-9"
+    },
+    {
+      "constraint": "硅藻氮循环——固氮内共生",
+      "value": "硅藻可固氮内共生：Rhopalodiales目硅藻宿主含固氮蓝藻内共生体→在寡营养热带/亚热带地区N循环中起关键作用。低无机氮+低N/P比时→固氮显著贡献N供应→影响高营养级(水生昆虫丰度可增加)",
+      "unit": null,
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s10750-022-04984-9"
+    }
+  ],
+  "provenance_summary": {
+    "n_papers": 6,
+    "n_verified": 0,
+    "n_unverified": 17
+  },
+  "coverage": "normal",
+  "status": "active"
+}

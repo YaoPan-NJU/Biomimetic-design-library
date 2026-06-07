@@ -1,0 +1,247 @@
+{
+  "id": "starch-granule",
+  "name_zh": "淀粉颗粒",
+  "name_en": "Starch Granule",
+  "organism": {
+    "scientific": "",
+    "category": "植物"
+  },
+  "biomimetic_dimension": "分子仿生",
+  "features": [
+    "微孔"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": [
+      6.0,
+      6.0
+    ],
+    "tested_temp_range": null,
+    "salinity": "low",
+    "note": "测过的 pH/温度范围，不是适用范围。仅从 performance_data 中实际测试过的条件聚合。"
+  },
+  "performance_data": [
+    {
+      "parameter": "球磨淀粉磁性复合材料对Cd(II)吸附容量",
+      "value": "121-187",
+      "unit": "mg/g",
+      "pollutant": "Cd(II)",
+      "material": "ball-milled starch magnetic composites (PEI/MMA-MSMs)",
+      "ph": 6,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.ijbiomac.2022.07.175",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "第8组-仿生材料/2022-Fang-magnetic-starch-adsorption-adsorbent-review.pdf",
+      "page": 3,
+      "locator": "Section 2.1.1 Ball milling",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "CMS-g-PVI/PVA/Fe3O4水凝胶珠多污染物吸附容量",
+      "value": "Pb(II): 65.00, Cu(II): 83.60, Cd(II): 53.20, CR: 83.66, CV: 91.58",
+      "unit": "mg/g",
+      "pollutant": "",
+      "material": "CMS-g-PVI/PVA/Fe3O4 hydrogel beads (m-CVP)",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.ijbiomac.2022.07.175",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "第8组-仿生材料/2022-Fang-magnetic-starch-adsorption-adsorbent-review.pdf",
+      "page": 5,
+      "locator": "Section 2.2.1 Grafted starch-based magnetic adsorbents",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "eggshell/starch/Fe3O4对Cd2+/Pb2+吸附容量",
+      "value": "Cd2+: 48.544, Pb2+: 57.143",
+      "unit": "mg/g",
+      "pollutant": "",
+      "material": "eggshell/starch/Fe3O4 magnetic nanocomposites",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.ijbiomac.2022.07.175",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "第8组-仿生材料/2022-Fang-magnetic-starch-adsorption-adsorbent-review.pdf",
+      "page": 10,
+      "locator": "Section 4.1.1 Removal of heavy metals",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "最优材料S950C90的MB吸附容量",
+      "value": "891 mg/g(298K, C₀=500 mg/L)。比未活化S800高~9倍，比商用活性炭高~4倍",
+      "unit": "mg/g",
+      "pollutant": "methylene blue (MB)",
+      "material": "S950C90 (starch-derived, CO2 activated at 950°C for 90min)",
+      "ph": null,
+      "temperature": "298 K",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2022.129174",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第3组-多孔结构/2022-Li-porous-hierarchical-starch-adsorption.pdf",
+      "page": 1,
+      "locator": "Abstract",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "MB qmax与SSA/微孔体积的线性相关",
+      "value": "MB饱和吸附容量与BET SSA线性相关R²=0.96(S800K5除外→0.97)。与微孔体积线性相关R²=0.96(同)。与介孔体积无相关(R²=0.002)。超微孔(<0.7nm)R²=0.77→弱于总微孔",
+      "unit": null,
+      "pollutant": "",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2022.129174",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第3组-多孔结构/2022-Li-porous-hierarchical-starch-adsorption.pdf",
+      "page": 9,
+      "locator": "Section 3.3",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "pH对吸附容量的影响",
+      "value": "pH 3: qe~830 mg/g, Re~83%。pH 9-11: qe~930 mg/g, Re~96%。Zeta电位：pH 3 +12mV→pH 5 零点→pH 11 -30mV。pH>5时材料表面带负电→静电吸引阳离子MB",
+      "unit": "mg/g",
+      "pollutant": "",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2022.129174",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第3组-多孔结构/2022-Li-porous-hierarchical-starch-adsorption.pdf",
+      "page": 7,
+      "locator": "Fig. 4",
+      "verification": "unverified",
+      "confidence": 0.8
+    }
+  ],
+  "mechanisms": [
+    {
+      "name": "MSAs对污染物的主要吸附机制汇总",
+      "description": "electrostatic attraction, π-π stacking, π-cations interaction, intraparticle dispersion, van der Waals interaction, H-bonding, physical adsorption, chemical adsorption",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.ijbiomac.2022.07.175",
+      "verification": "unverified"
+    },
+    {
+      "name": "CMCS-2@Fe3O4对Dox吸附机制",
+      "description": "electrostatic attraction, π-π stacking interplay, H-bonding",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.ijbiomac.2022.07.175",
+      "verification": "unverified"
+    },
+    {
+      "name": "四环素(TC)在羧甲基淀粉改性磁膨润土上的吸附机制",
+      "description": "ionic exchange process + ion bridge (synergism effects)",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.ijbiomac.2022.07.175",
+      "verification": "unverified"
+    },
+    {
+      "name": "Cu(II)在WSA/starch/Fe3O4上的吸附机制",
+      "description": "pore saturation, electrostatic interplay, surface interplay, H bonds, chemical deposition, ionic exchange, complex forming",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.ijbiomac.2022.07.175",
+      "verification": "unverified"
+    },
+    {
+      "name": "淀粉-磁性颗粒结合方式",
+      "description": "hydrophobic effect, complexing, H bonding force, electrostatic attractions",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.ijbiomac.2022.07.175",
+      "verification": "unverified"
+    },
+    {
+      "name": "pH对吸附容量的影响",
+      "description": "pH 3: qe~830 mg/g, Re~83%。pH 9-11: qe~930 mg/g, Re~96%。Zeta电位：pH 3 +12mV→pH 5 零点→pH 11 -30mV。pH>5时材料表面带负电→静电吸引阳离子MB",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2022.129174",
+      "verification": "unverified"
+    },
+    {
+      "name": "MB吸附机制——静电+π-π",
+      "description": "XPS证据：C1s峰偏移(286.6→286.1, 288.3→287.8, 289.8→289.2 eV)→静电吸引(Starbon®负电含氧基团↔MB正电二甲基亚胺基团)。π-π*峰强度降低→π-π堆积(MB共轭体系↔Starbon®芳香环)。C-N增加4.2-7.1%→MB沉积",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2022.129174",
+      "verification": "unverified"
+    }
+  ],
+  "narrative": {
+    "entries": [
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2022-Li-porous-hierarchical-starch-adsorption.json",
+        "paper_id": "2022-Li-Starbon-hierarchical-carbon-MB",
+        "sections": {
+          "problem_definition": "自然界中生物体需在复杂流体环境中高效捕获目标分子并维持快速物质交换；对应水处理中染料废水吸附容量低、传质动力学慢及再生能耗高的工程挑战。",
+          "biological_solution": "借鉴生物组织“功能分区”进化策略，构建微孔(高密度吸附位点)与介孔(快速传质通道)协同的层级网络；结合表面静电吸引与π-π堆积机制实现高效捕获，并通过pH调控表面电荷实现低能耗可逆脱附；成功案例为淀粉衍生Starbons®经冻干-碳化-CO₂活化实现MB吸附qmax 891 mg/g且5min达平衡。",
+          "key_features": "必须保留：微-介-大孔层级协同结构、qmax与SSA/微孔体积的强线性构效关系、pH-swing可逆再生机制；可灵活调整：生物质前驱体类型(纤维素/木质素/壳聚糖等)、活化剂种类(CO₂/KOH/O₂)、表面官能团密度以适配不同污染物。",
+          "design_mapping": "生物层级输运网络→冻干定型+绿色活化构筑的分级多孔碳骨架；生物表面特异性识别→碳骨架含氧负电基团与芳香环协同(静电+π-π)；生物环境响应→pH调控Zeta电位实现吸附/脱附切换；软约束建议：优先优化0.7-2.0nm孔径分布以匹配大分子污染物，平衡高温活化能耗与孔隙发育，集成溶剂回收系统。",
+          "explainability_anchors": "仿生故事线围绕“生物质废弃物高值化”与“结构-功能一体化”展开，将自然界的传质-捕获分工逻辑映射至材料设计；设计溯源直接锚定S950C90实验数据(SSA 2457 m²/g, R²=0.96构效线性, 5min超快平衡)，验证了“微孔定容量、介孔定速率”的定量设计准则，为碳基吸附剂提供可解释、可迁移的架构蓝图。"
+        }
+      }
+    ]
+  },
+  "engineering_constraints": [
+    {
+      "constraint": "MSAs再生性能汇总",
+      "value": "MB: ≤15% reduction after 8 cycles (90.5% after 5 cycles); ibuprofen: 73.56% after 5 cycles",
+      "unit": "%",
+      "relevance": "high",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.ijbiomac.2022.07.175"
+    },
+    {
+      "constraint": "4次循环再生性能",
+      "value": "循环1: 吸附~800→脱附~760。循环2: ~660→~650。循环3: ~600→~590。循环4: ~610→~580 mg/g。脱附剂：乙醇/乙酸(20:1 v/v)+超声5min。pH-swing脱附",
+      "unit": "mg/g",
+      "relevance": "high",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2022.129174"
+    },
+    {
+      "constraint": "pH-swing脱附机制",
+      "value": "MB吸附容量随pH升高而增大→可利用pH降低脱附。脱附剂：乙醇/乙酸(20:1 v/v)+超声5min→重复3次→高效脱附。酸性条件下Starbon®表面带正电→排斥阳离子MB→脱附",
+      "unit": null,
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2022.129174"
+    }
+  ],
+  "provenance_summary": {
+    "n_papers": 2,
+    "n_verified": 0,
+    "n_unverified": 13
+  },
+  "coverage": "normal",
+  "status": "active"
+}

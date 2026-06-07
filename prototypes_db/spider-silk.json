@@ -1,0 +1,238 @@
+{
+  "id": "spider-silk",
+  "name_zh": "蜘蛛丝",
+  "name_en": "Spider Silk",
+  "organism": {
+    "scientific": "Araneae (蜘蛛)",
+    "category": "动物"
+  },
+  "biomimetic_dimension": "结构仿生",
+  "features": [
+    "疏水性",
+    "纤维状"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": "low",
+    "note": "测过的 pH/温度范围，不是适用范围。仅从 performance_data 中实际测试过的条件聚合。"
+  },
+  "performance_data": [
+    {
+      "parameter": "Cd(II)去除性能 Cd(II) removal",
+      "value": "100%去除; 20min达EPA安全标准(5ppb); 起始浓度1000ppb",
+      "unit": "%",
+      "pollutant": "Cd(II)",
+      "material": "CNF/PEI@GOA",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.cej.2021.128670",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第5组-纤维结构/2021-Zhou-cellulose-silk-nanofiber-adsorption.pdf",
+      "page": 5,
+      "locator": "Fig. 5a",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "Cr(VI)去除性能 Cr(VI) removal",
+      "value": "100%去除; 20min达EPA安全标准(100ppb); 起始浓度1000ppb",
+      "unit": "%",
+      "pollutant": "Cr(VI)",
+      "material": "CNF/PEI@GOA",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.cej.2021.128670",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第5组-纤维结构/2021-Zhou-cellulose-silk-nanofiber-adsorption.pdf",
+      "page": 5,
+      "locator": "Fig. 5b",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "Cu(II)去除性能 Cu(II) removal",
+      "value": "100%去除; 30min达安全标准; 起始浓度1000ppb",
+      "unit": "%",
+      "pollutant": "Cu(II)",
+      "material": "CNF/PEI@GOA",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.cej.2021.128670",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第5组-纤维结构/2021-Zhou-cellulose-silk-nanofiber-adsorption.pdf",
+      "page": 5,
+      "locator": "Fig. 5c",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "Pb(II)去除性能 Pb(II) removal",
+      "value": "100%去除; 40min达EPA安全标准(0ppb); 起始浓度1000ppb",
+      "unit": "%",
+      "pollutant": "Pb(II)",
+      "material": "CNF/PEI@GOA",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.cej.2021.128670",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第5组-纤维结构/2021-Zhou-cellulose-silk-nanofiber-adsorption.pdf",
+      "page": 5,
+      "locator": "Fig. 5d",
+      "verification": "unverified",
+      "confidence": 0.8
+    }
+  ],
+  "mechanisms": [
+    {
+      "name": "蜘蛛丝增强策略：金属掺杂和CNT/石墨烯复合",
+      "description": "ALD金属掺杂：通过金属配位键/共价键增强强度和韧性；f-CNTs机械剪切加载：韧性提高≈300%；SWCNTs/PEDOT-PSS涂层：韧性420 MJ/m³+导电率1077 S/cm；喂食石墨烯/CNT：蜘蛛产出增强力学性能的牵引丝",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1002/advs.202103965",
+      "verification": "unverified"
+    },
+    {
+      "name": "蜘蛛丝仿生灵感来源 Spider silk biomimetic inspiration",
+      "description": "spidroin两亲性(疏水丙氨酸+亲水甘氨酸/谷氨酰胺/脯氨酸/丝氨酸)→超分子自组装→纤维形成",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.cej.2021.128670",
+      "verification": "unverified"
+    },
+    {
+      "name": "静电纺丝纤维形貌调控因素",
+      "description": "溶液粘度、表面张力、溶剂、电导率、介电性能；电压、喂料速度、接收距离、喷丝头直径；温度、湿度、气体介质",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s40242-021-0010-4",
+      "verification": "unverified"
+    },
+    {
+      "name": "仿生集水生物原型及机制",
+      "description": "沙漠甲虫(交替亲水岛/疏水路径)、蜘蛛丝(纺锤节-关节结构)、仙人掌刺(锥形+定向刚毛)、猪笼草(二级微沟槽)",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s40242-021-0010-4",
+      "verification": "unverified"
+    }
+  ],
+  "narrative": {
+    "entries": [
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2021-Li-silk-hierarchical-shell-review.json",
+        "paper_id": "2022-Li-spider-silk-hierarchical-review",
+        "sections": {
+          "problem_definition": "自然界挑战：蜘蛛需在复杂多变环境中构建兼具高强度、高韧性及环境响应性的捕食网与高效集水结构；水处理对应：吸附/分离材料需在动态水流与化学环境中保持结构稳定、抗疲劳，并实现高效定向传质、污染物捕获与孔道动态调控。",
+          "biological_solution": "进化策略：通过spidroin蛋白自组装形成高度有序的多级异质结构；关键机制：β-sheet纳米晶作为刚性节点提供强度与永久形状记忆，非晶链段作为柔性网络耗散能量，纺锤结利用Laplace压差与表面能梯度驱动水滴定向传输；成功案例：大壶状腺丝（MA丝）实现1652 MPa强度与354 MJ/m³韧性，天然周期性纺锤结结构实现高效大气集水。",
+          "key_features": "必须保留特征：β-sheet物理交联节点、非晶耗能网络、核壳异质分布、周期性微纳拓扑（纺锤结）；可灵活调整特征：节点化学组成（可替换为金属配位点或合成刚性基团）、基质亲疏水性与柔性程度、纺锤结几何参数（顶角、周期）以适配不同水处理流速与分离精度需求。",
+          "design_mapping": "生物→材料映射：β-sheet纳米晶映射为刚性功能节点/物理交联点；非晶区映射为柔性高分子/水凝胶基质；核壳结构映射为梯度吸附层与力学支撑层；纺锤结映射为微纳集水/分离通道。软约束建议：采用微流控或动态交联纺丝模拟天然剪切场；控制结晶度（~22%）平衡强韧性；利用水分子触发超收缩实现孔道动态调节或自清洁。",
+          "explainability_anchors": "仿生故事线：从蜘蛛丝‘纳米渔网’的强韧机制与纺锤结集水原理出发，指导水处理材料实现‘结构-力学-传质’一体化设计；设计溯源：理论依据Keten纳米晶尺寸效应与spidroin蛋白二级结构组装规律，通过β-sheet含量、非晶序列及拓扑形貌的定量调控，确保仿生逻辑可追溯、性能可预测。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2021-Zhang-silk-separation-membrane-porous.json",
+        "paper_id": "2021-Zhang-spider-silk-nanoemulsion-separation",
+        "sections": {
+          "problem_definition": "自然界蜘蛛丝需从空气中高效捕获并收集微小雾滴；水处理中面临表面活性剂稳定的纳米油滴乳液(尺寸<膜孔径)难以通过传统尺寸筛分机制高效分离，且易发生膜污染的难题。",
+          "biological_solution": "蜘蛛丝进化出周期性纺锤节结构，利用曲率差异产生Laplace压力差，自发驱动微小液滴定向迁移与聚并；该策略被成功映射至静电纺丝纳米纤维膜，实现无需外力或化学改性的纳米油滴高效破乳、定向传输与高通量分离。",
+          "key_features": "必须保留特征：纺锤节几何形貌(产生Laplace压差)、超亲水/水下超疏油表面特性、微纳层级粗糙结构；可灵活调整特征：纺锤节具体尺寸参数(宽100-500nm/长~2μm)、聚合物种类与浓度配比、支撑层孔隙率与整体膜厚度。",
+          "design_mapping": "生物→材料映射：蜘蛛丝纺锤节→电纺PAN纳米纤维纺锤节阵列；自然集水Laplace力→膜内油滴定向迁移与聚并破乳驱动力；双层皮肤/支撑结构→功能分离层/高通量传质层。软约束建议：优先通过调控前驱体溶液物性触发Rayleigh不稳定性一步成型，避免复杂后处理；操作压力可适度放宽，依赖自发Laplace力主导分离过程。",
+          "explainability_anchors": "仿生故事线：从蜘蛛丝捕雾的“几何驱动液滴迁移”自然现象出发，揭示Laplace压差破乳机制，突破传统“孔径<液滴”的筛分范式；设计溯源：直接溯源至文献中纺锤节尺寸参数与电纺工艺窗口(PAN 3.5wt%)，通过AFM/SEM表征的微纳粗糙度与接触角数据验证仿生结构成功复现，性能数据(油截留>95%、通量>1143 LMH/bar、FRR 99.98%)闭环验证仿生机制有效性。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2021-Zhou-cellulose-silk-nanofiber-adsorption.json",
+        "paper_id": "2021-Zhou-spider-silk-amphoteric-bionic-fibers",
+        "sections": {
+          "problem_definition": "自然界挑战：蜘蛛需在常温常压下将液态丝蛋白快速转化为高强度、结构稳定的固态纤维；水处理对应：传统吸附材料难以在低浓度重金属废水中实现快速传质、多离子协同去除及材料结构长期稳定再生。",
+          "biological_solution": "进化策略：利用两亲性丝蛋白(spidroin)的疏水/亲水区块驱动超分子自组装；关键机制：疏水丙氨酸与亲水氨基酸交替排列诱导液-液相分离与自组装，随后通过β-折叠结构固化并自然风干成纤；成功案例：蜘蛛丝纺丝过程在极低能耗下实现高强度、高孔隙率纤维的快速成型。",
+          "key_features": "必须保留特征：两性官能团(氨基/羧基)的高密度平衡、超分子自组装驱动的快速成纤机制、高溶胀多孔骨架以保障传质；可灵活调整特征：具体聚合物组分(CNF/PEI/GO比例)、交联剂类型与用量、层状静电组装的精确厚度。",
+          "design_mapping": "生物→材料映射：两亲性spidroin→CNF/PEI与GO的静电组装两性界面；β-折叠稳定结构→GO的sp²二维晶格网络；自然风干固化→ECH化学交联；丝蛋白高孔隙率→CNF骨架的高溶胀网络(113.37%)。软约束建议：维持体系近中性电荷平衡以优化自组装；确保溶胀率>100%以匹配快速传质需求；控制界面接触角在115°-125°区间以引导均匀纤维形态。",
+          "explainability_anchors": "仿生故事线：以蜘蛛丝纺丝原理为蓝图，将生物大分子的两亲自组装逻辑平移至高分子静电层状组装，打造兼具快速响应与高稳定性的两性仿生吸附纤维。设计溯源：氨基/羧基密度平衡(6.93/5.81 mmol/g)直接映射丝蛋白亲疏水区块比例；CNF溶胀网络与GO二维稳定层分别对应蜘蛛丝的多孔基质与β-折叠增强相；QCM-D电荷监控与ECH交联工艺完整复现了生物纺丝的精准调控与环境固化路径。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2023-Li-antifouling-separation-porous-adsorption-review.json",
+        "paper_id": "2023-Li-antifouling-separation-porous-adsorption-review",
+        "sections": {
+          "problem_definition": "自然界挑战：海水中铀浓度极低且存在大量竞争离子（如钒）和严重的生物污损；水处理对应：需要开发兼具超高选择性、快速传质动力学和抗生物污损能力的吸附材料，以实现经济可行的海水提铀。",
+          "biological_solution": "进化策略：生物体通过特异性分子识别（如SUP蛋白、DNAzyme）、高效传质结构（如植物蒸腾通道、木材分级孔）和表面防御（如鲨鱼皮抗污损）适应复杂环境。关键机制：几何约束与电荷稳定实现UO2^2+特异性结合；垂直通道与分级孔道加速低浓度传质；通用锚定化学（贻贝PDA）实现多功能集成。成功案例：仿SUP蛋白纳米口袋MOF实现Kd=1.67 pM及U/V选择性17.03；仿植物蒸腾光热纤维实现11.76 mg/g自然海水提铀。",
+          "key_features": "必须保留特征：UO2^2+特异性结合口袋的几何约束与配位模式（如赤道面4-6配位）、抗生物污损表面微结构。可灵活调整特征：载体宏观形态（纤维、水凝胶、气凝胶）、光热/电驱动辅助模块、锚定化学层厚度。",
+          "design_mapping": "生物→材料映射：SUP蛋白/DNAzyme → MOF/COF纳米陷阱或水凝胶；植物蒸腾/木材孔道 → 垂直排列碳管或3D打印分级多孔气凝胶；贻贝足丝 → PDA聚多巴胺涂层；鲨鱼皮/蛾眼 → 表面微纳拓扑抗污损结构。软约束建议：在保持结合口袋几何精度的同时，引入亲水基团（如开链酰胺肟）以改善水合铀酰离子的传质。",
+          "explainability_anchors": "仿生故事线：从‘大海捞针’到‘精准捕获’——借鉴生物大分子的‘锁钥模型’（SUP蛋白）解决选择性难题，借鉴植物‘蒸腾拉力’（垂直通道）解决极低浓度传质难题，借鉴海洋生物‘自清洁’（抗污损表面）解决长效运行难题。设计溯源：材料的高选择性源于分子层面的几何约束与协同配位，高吸附容量源于宏观层面的分级传质与光热协同，长效稳定性源于表面的抗污损拓扑设计。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2021-Penetration-separation-membrane-hierarchical-review.json",
+        "paper_id": "2021-Penetration-separation-membrane-hierarchical-review",
+        "sections": {
+          "problem_definition": "自然界中干旱/高湿环境生物面临高效定向收集与传输水分的挑战；对应水处理领域传统分离膜存在的渗透方向不可控、液/液分离效率低、易污染及高盐/表面活性剂环境下润湿失效等问题。",
+          "biological_solution": "生物通过演化出层级微纳粗糙度与化学异质性（亲/疏水交替区域）构建表面能梯度；结合拉普拉斯压力差与毛细力协同，实现液体/气体在特定方向的自发定向传输（液二极管效应）；成功案例包括沙漠甲虫背部交替亲疏水区域集水、蜘蛛丝纺锤节-关节结构导水、仙人掌锥形刺定向传输及猪笼草二级微沟槽防粘附。",
+          "key_features": "必须保留非对称润湿性（Janus界面）、微纳层级粗糙度及厚度方向润湿梯度；可灵活调整纤维形貌（圆柱/串珠/多孔/核壳）、聚合物基材（PS/PAN/PU/PCL等）及拓扑结构密度（纳米针间距/层厚比）。",
+          "design_mapping": "生物原型（沙漠甲虫/仙人掌/蜘蛛丝）映射为静电纺丝Janus纳纤膜的非对称亲/疏水层；荷叶微纳乳突映射为PS纳米纤维/微球复合超疏水层；猪笼草微沟槽映射为互穿结构纳米针拓扑。软约束建议：通过调控静电纺丝接收距离与溶液粘度控制纤维直径；优先采用共混或核壳电纺实现梯度润湿；在含油/表面活性剂废水中引入全疏水/水下超疏油设计。",
+          "explainability_anchors": "仿生故事线：从自然界‘定向液体传输系统’的构效关系出发，提炼‘结构粗糙度+表面能梯度=定向驱动力’的核心法则，映射至Janus膜设计。设计溯源：直接溯源至Wenzel/Cassie润湿理论及拉普拉斯压力机制，通过‘纳米针效应缩短气液界面破裂距离’与‘润湿梯度调控突破压力比k’实现性能可解释与可预测。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2022-Progress-review.json",
+        "paper_id": "Yu2022_Fog_Harvesting_Devices_Multiple_Creatures_Review",
+        "sections": {
+          "problem_definition": "自然界挑战：干旱/半干旱地区生物面临极度缺水，需从稀薄雾气中高效获取水分；水处理对应：传统雾水收集装置受限于空气动力学效率低、液滴易滞留或二次蒸发，难以实现高效捕获、定向输运与快速脱离的协同。",
+          "biological_solution": "进化策略：多种生物独立进化出高效集水微纳结构；关键机制：利用表面能梯度、Laplace压力差、润湿性图案化及超滑表面降低接触角滞后，驱动液滴定向移动；成功案例：纳米布甲虫亲疏水图案、仙人掌锥形梯度沟槽、蜘蛛丝周期性纺锤结、猪笼草SLIPS表面协同作用，使集水率跨越数个数量级（最高达81,250 mg h⁻¹ cm⁻²）。",
+          "key_features": "必须保留特征：微纳分级粗糙度、润湿性梯度（亲/疏水或超滑）、非对称几何形态（锥形/纺锤结）；可灵活调整特征：基底材料（织物/金属网/泡沫）、图案比例（如SHL:SHB=1:3）、阵列排列方式（对称/交替）、润滑剂固定策略。",
+          "design_mapping": "生物→材料映射：甲虫亲疏水峰谷→静电纺丝/光刻/喷涂制备的SHB/SHL图案化织物；仙人掌锥形刺→3D打印/kirigami人工刺阵列；蜘蛛丝纺锤结→异质结构微纤维/交叉纤维网；猪笼草SLIPS→PDMS刷接枝多孔表面。软约束建议：优先采用低成本成熟工艺（如纺织工业兼容的Cu沉积，成本$1.5/m²），控制结构特征尺寸以匹配~10 μm雾滴边界层，优化亲疏水比例与阵列间距以最大化Laplace压差与毛细力协同。",
+          "explainability_anchors": "仿生故事线：从单一生物原型（仅解决捕获或输运单一环节）向多重仿生（捕获+输运+存储三阶段优化）演进，揭示自然界‘分工协同’的集水智慧；设计溯源：所有高效FHD均回归流体力学与界面科学基本原理（Laplace方程、Furmidge方程、Cassie-Baxter态），仿生结构仅为物理机制的空间载体，可通过定量参数（如15°尖端角、Ra粗糙度差、0.16s脱离时间）直接指导工程放大与性能预测。"
+        }
+      }
+    ]
+  },
+  "engineering_constraints": [
+    {
+      "constraint": "FRR与循环稳定性 Flux recovery and cycling",
+      "value": "FRR 99.98%; 8次循环无显著通量衰减",
+      "unit": "%",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.seppur.2021.119824"
+    },
+    {
+      "constraint": "纺锤节构建机制——Rayleigh不稳定性",
+      "value": "低粘度/低导电率→电场力无法完全克服表面张力→液膜断裂→液滴串→纺锤形→纺锤节纤维",
+      "unit": null,
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.seppur.2021.119824"
+    },
+    {
+      "constraint": "再生性能 Regeneration",
+      "value": "5次循环去除率>99%",
+      "unit": "%",
+      "relevance": "high",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.cej.2021.128670"
+    }
+  ],
+  "provenance_summary": {
+    "n_papers": 7,
+    "n_verified": 0,
+    "n_unverified": 8
+  },
+  "coverage": "normal",
+  "status": "active"
+}
