@@ -7,16 +7,22 @@ biomimetic_dimension: 结构仿生
 features:
   - 抗生物污染
 adsorption_mechanisms:
+  - Hydrophobic threshold contact angle (Young's model)
+  - Critical condition for hydrophilic-hydrophobic transition
+  - Lotus leaf superhydrophobicity mechanism
   - Nepenthes pitcher plant trapping mechanism
+  - Desert beetle water collection mechanism
+  - Fish scale superhydrophilic/underwater superoleophobic mechanism
+  - Porous silver membrane reversible wettability switching
+  - Wood superhydrophobic surface wear resistance
   - UV-responsive SLIPS self-replenishment mechanism
-  - 仿生集水生物原型及机制
-  - HHNCM亲水-疏水纳米纤维铜网（三仿生：甲虫+蜂窝网+猪笼草）
+  - Lubricant loss mechanisms
 applicability:
   pH_range: null
   temp_range: null
   salinity: any
 evidence_level: low
-# provenance: 3 papers, 0 verified, 5 unverified
+# provenance: 4 papers, 0 verified, 22 unverified
 # coverage: normal
 # status: active
 ---
@@ -30,25 +36,45 @@ evidence_level: low
 
 ## 2. 吸附机制详解
 
-### 机制1：Nepenthes pitcher plant trapping mechanism
+### 机制1：Hydrophobic threshold contact angle (Young's model)
+
+**描述**：90-180
+**来源**：DOI 10.1007/s42242-021-00133-8
+
+### 机制2：Critical condition for hydrophilic-hydrophobic transition
+
+**描述**：f_LA ≥ (r · cos θ₀) / (r · cos θ₀ + 1)
+**来源**：DOI 10.1007/s42242-021-00133-8
+
+### 机制3：Lotus leaf superhydrophobicity mechanism
+
+**描述**：Network of waxy crystals on surface + nanostructures on top of microscale nipples
+**来源**：DOI 10.1007/s42242-021-00133-8
+
+### 机制4：Nepenthes pitcher plant trapping mechanism
 
 **描述**：Superhydrophilic peristome with radial ridges of smooth overlapping epidermal cells; forms uniform liquid film when wetted; insects slip on oil-repellent surface into digestive juices
 **来源**：DOI 10.1007/s42242-021-00133-8
 
-### 机制2：UV-responsive SLIPS self-replenishment mechanism
+### 机制5：Desert beetle water collection mechanism
 
-**描述**：UV-driven self-replenishment via azobenzene conformational change
+**描述**：Alternate hydrophilic and hydrophobic surfaces on back for water collection
 **来源**：DOI 10.1007/s42242-021-00133-8
 
-### 机制3：仿生集水生物原型及机制
+### 机制6：Fish scale superhydrophilic/underwater superoleophobic mechanism
 
-**描述**：沙漠甲虫(交替亲水岛/疏水路径)、蜘蛛丝(纺锤节-关节结构)、仙人掌刺(锥形+定向刚毛)、猪笼草(二级微沟槽)
-**来源**：DOI 10.1007/s40242-021-0010-4
+**描述**：Superhydrophilic surface with underwater superoleophobicity for oil-water separation
+**来源**：DOI 10.1007/s42242-021-00133-8
 
-### 机制4：HHNCM亲水-疏水纳米纤维铜网（三仿生：甲虫+蜂窝网+猪笼草）
+### 机制7：Porous silver membrane reversible wettability switching
 
-**描述**：1110
-**来源**：DOI 10.1002/adfm.202200359
+**描述**：Superhydrophilic ↔ Superhydrophobic
+**来源**：DOI 10.1007/s42242-021-00133-8
+
+### 机制8：Wood superhydrophobic surface wear resistance
+
+**描述**：3.5
+**来源**：DOI 10.1007/s42242-021-00133-8
 
 ## 3. 结构特征与结构-功能关系
 

@@ -8,8 +8,13 @@ features:
   - 纤维状
   - 层状
 pollutants:
+  - As(III)
+  - Cd(II)
+  - Cu(II)
   - Cu²⁺
   - MB
+  - U(VI)
+  - Zn(II)
   - chloroform
   - methyl orange (MO)
   - methylene blue (MB)
@@ -19,18 +24,18 @@ adsorption_mechanisms:
   - 结晶紫吸附机制
   - 静电纺丝工艺参数
   - 木质素疏水性来源
+  - MOF-纳米纤维复合材料的主要吸附机制
+  - ZIF-8吸附Cu(II)的三步机制
+  - ZIF-67–MIM/CA去除Cr(VI)的多重机制
   - MO吸附机制
   - Cu²⁺吸附机制
-  - 丝素蛋白分子结构与力学性能
-  - 丝素蛋白极性官能团——吸附活性位点
-  - Na₂CO₃脱胶丝纤维——超疏水油水分离
 qmax_range: "2.0-811.3 mg/g"
 applicability:
-  pH_range: [4.2, 4.2]
+  pH_range: [3.0, 4.2]
   temp_range: null
   salinity: low
 evidence_level: low
-# provenance: 5 papers, 0 verified, 20 unverified
+# provenance: 6 papers, 0 verified, 30 unverified
 # coverage: normal
 # status: active
 ---
@@ -70,20 +75,20 @@ evidence_level: low
 **描述**：木质素疏水性: 酚环+甲氧基; SF疏水性: 疏水嵌段
 **来源**：DOI 10.1016/j.ijbiomac.2023.126863
 
-### 机制6：MO吸附机制
+### 机制6：MOF-纳米纤维复合材料的主要吸附机制
 
-**描述**：主导：PEI质子化氨基(-NH₃⁺)与阴离子染料MO静电吸引；辅助(GO部分)：MO芳香环与GO的π-π堆叠
-**来源**：DOI 10.1002/admi.202001892
+**描述**：配位作用、离子交换、静电吸引、表面络合、物理吸附
+**来源**：DOI 10.1039/d1ra07034g
 
-### 机制7：Cu²⁺吸附机制
+### 机制7：ZIF-8吸附Cu(II)的三步机制
 
-**描述**：PEI氨基(-NH₂)螯合Cu²⁺→化学吸附；中心发散孔道→快速扩散→活性位点可及；低密度+高孔隙→快速传质
-**来源**：DOI 10.1002/admi.202001892
+**描述**：离子扩散→配位至吡啶N→Zn/Cu离子交换
+**来源**：DOI 10.1039/d1ra07034g
 
-### 机制8：丝素蛋白分子结构与力学性能
+### 机制8：ZIF-67–MIM/CA去除Cr(VI)的多重机制
 
-**描述**：β-sheet结晶区提供机械强度，极限强度300-740 MPa；丝素为嵌段共聚物：疏水重复区(Gly/Ala/Ser 43-46%/25-30%/12%) + 亲水非重复区
-**来源**：DOI 10.1007/s10924-022-02741-6
+**描述**：物理吸附+静电吸引+配位+离子交换+部分还原
+**来源**：DOI 10.1039/d1ra07034g
 
 ## 3. 结构特征与结构-功能关系
 
@@ -95,6 +100,13 @@ evidence_level: low
 |--------|------|-------------|-----|------|------|
 |  | BS/SF/PUF biocomposi | Cu2+: 331.69 mg/g; C | - | literature: 10.1016/j.eti.2022 | ❓ |
 |  | BS/SF/PUF biocomposi | Cu2+ 89.8% (pH 5); C | - | literature: 10.1016/j.eti.2022 | ❓ |
+| Cu(II) | ZIF-8–PAN nanofibers | 225.62 | - | literature: 10.1039/d1ra07034g | ❓ |
+| Cd(II) | PAN–MOF-808 composit | 225.05 | - | literature: 10.1039/d1ra07034g | ❓ |
+| Zn(II) | PAN–MOF-808 composit | 287.06 | - | literature: 10.1039/d1ra07034g | ❓ |
+| Cu(II) | ZIF-67@Fe3O4@ESM com | 344.82 | - | literature: 10.1039/d1ra07034g | ❓ |
+| U(VI) | ZIF-8–PAN nanofiber  | 530.3 | 3.0 | literature: 10.1039/d1ra07034g | ❓ |
+| As(III) | MIL-100(Fe)@BC nanoc | 4.81 | - | literature: 10.1039/d1ra07034g | ❓ |
+| Cu(II) | ZIF-67–MIM/CA compos | 18.9 | - | literature: 10.1039/d1ra07034g | ❓ |
 | Cu²⁺ | SF-PEI-2 millimetric | 186.7 | 4.2 | literature: 10.1002/admi.20200 | ❓ |
 | Cu²⁺ | SF-PEI-2@GO core-she | 171.6 | 4.2 | literature: 10.1002/admi.20200 | ❓ |
 | methyl orange ( | SF-PEI-2 millimetric | 811.3 | - | literature: 10.1002/admi.20200 | ❓ |
@@ -107,6 +119,7 @@ evidence_level: low
 **约束条件**：
 - 循环再生性能: EDTA脱附→4次连续吸附/脱附循环后仍可高效再用 cycles
 - TGA热稳定性: BS: 总失重仅9%(至800°C); 复合材料: 第一阶段8.6%(150°C失水)→第二阶段35.4%(380°C SF酰胺分解)→第三阶段28.3%(400-800°C PUF碳骨架分解)→73%总失重 %
+- UiO-66-NH2–PAN-chitosan复合膜的循环再生稳定性: 5 cycles with slight decrease None
 - Cu²⁺再生循环: EDTA(0.1M)洗脱→蓝变白→可循环；但首次循环后容量有损失(EDTA残留) None
 - 再生丝素膜——酸性染料吸附: 酸性黄11 Qe=88.50 mg/g(b=1.06); 萘酚橙74.63 mg/g(b=0.30); 直接橙S 76.34 mg/g(b=0.12) mg/g
 
@@ -122,4 +135,5 @@ evidence_level: low
 
 [1] DOI: 10.1002/admi.202001892
 [2] DOI: 10.1016/j.eti.2022.102741
-[3] DOI: 10.1039/d1va00047k
+[3] DOI: 10.1039/d1ra07034g
+[4] DOI: 10.1039/d1va00047k

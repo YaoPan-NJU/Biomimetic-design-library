@@ -11,27 +11,40 @@ features:
   - 羧基
 pollutants:
   - As(III)
+  - Cd(II)
   - Cd²⁺
   - Cr(VI)
   - Cr⁶⁺
   - Cu²⁺
   - Hg²⁺
+  - MB
   - MB (methylene blue)
+  - MB (亚甲基蓝)
   - Pb(II)
   - Pb²⁺
   - TiO2 nanoparticles
   - U(VI)
+  - acetaminophen
   - acid blue-113 (anionic dye)
+  - chloroform
+  - fluvastatin (pharmaceutical)
+  - ibuprofen
+  - methylene blue (MB)
+  - oil
   - reactive dyes
   - tetracycline
   - triclosan (TCS)
   - 二氯甲烷
   - 亚甲基蓝 (MB)
   - 刚果红 (CR)
+  - 四环素 (tetracycline)
   - 孔雀石绿 (MG)
   - 无机磷
   - 曙红 (Eosin)
   - 柴油
+  - 氟伐他汀 (fluvastatin)
+  - 氯仿
+  - 油
   - 玫瑰红B
   - 结晶紫 (CV)
 adsorption_mechanisms:
@@ -45,13 +58,13 @@ adsorption_mechanisms:
   - NF膜去除BPA的机制 NF membrane BPA removal mechanism
   - DFT和MD在BPA吸附机制研究中的应用 DFT and MD in BPA adsorption mechanism studies
   - MF膜去除BPA的机制 MF membrane BPA removal mechanism
-qmax_range: "2.5-2749.7 mg/g"
+qmax_range: "2.0-7780.0 mg/g"
 applicability:
-  pH_range: [5.0, 8.08]
+  pH_range: [5.0, 9.0]
   temp_range: null
   salinity: any
 evidence_level: low
-# provenance: 34 papers, 0 verified, 198 unverified
+# provenance: 37 papers, 0 verified, 232 unverified
 # coverage: normal
 # status: active
 ---
@@ -144,7 +157,7 @@ evidence_level: low
 |  | hydrophobic nanocell | 正己烷: 80; 氯仿: 70; >10 | - | literature: 10.1016/j.jclepro. | ❓ |
 |  | compressible graphen | 155-288 g/g; 密度<7×10 | - | literature: 10.1016/j.jclepro. | ❓ |
 |  | magnetic PVA/CNF aer | 泵油: 136; 乙醇: 105; 旧泵 | - | literature: 10.1016/j.jclepro. | ❓ |
-| ... | ... | ... | ... | ... | 共 85 条 |
+| ... | ... | ... | ... | ... | 共 109 条 |
 
 ## 5. 适用场景
 
@@ -187,9 +200,11 @@ evidence_level: low
 [15] DOI: 10.1038/s41467-021-23388-2
 [16] DOI: 10.16085/j.issn.1000-6613.2021-0391
 [17] DOI: 10.19965/j.cnki.iwt.2022-1185
-[18] DOI: 10.3969/j.issn.1001-9731.2022.10.023
-[19] DOI: 10.3969/j.issn.1006-1878.2022.02.012
-[20] 专利: CN108658160B
-[21] 专利: CN114887602A
-[22] 专利: CN119488883A
-[23] 专利: CN121130847A
+[18] DOI: 10.3390/polym15143114
+[19] DOI: 10.3969/j.issn.1001-9731.2022.10.023
+[20] DOI: 10.3969/j.issn.1006-1878.2022.02.012
+[21] DOI: 10.6023/A23020049
+[22] 专利: CN108658160B
+[23] 专利: CN114887602A
+[24] 专利: CN119488883A
+[25] 专利: CN121130847A

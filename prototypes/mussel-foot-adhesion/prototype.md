@@ -2,7 +2,7 @@
 id: mussel-foot-adhesion
 name: 贻贝足丝（Mussel Foot Adhesion）
 category: 动物
-organism: Mytilus edulis
+organism: Mytilus spp.
 biomimetic_dimension: 分子仿生
 features:
   - 疏水性
@@ -13,7 +13,13 @@ features:
 pollutants:
   - CrO42-
   - Cu2+
+  - Methylene Blue
+  - Methylene Blue (MB)
+  - Methylene Blue (MB) and Congo Red (CR)
+  - 铀 U(VI)
+  - 铀(U)
 adsorption_mechanisms:
+  - Mechanisms of Heavy Metal Removal by Nanocellulose
   - N位点激活PDS生成¹O₂的机制 Mechanism of N site activating PDS to generate ¹O₂
   - MI-PDA表面官能团识别机制 Surface functional group recognition mechanism of MI-PDA
   - PDA涂层粘附机制
@@ -21,16 +27,15 @@ adsorption_mechanisms:
   - PDA微胶囊自修复超疏水棉花织物
   - PDA-TA/硼砂阻燃超疏水棉花织物
   - 超疏水PDA涂层棉花织物耐久性测试
-  - PDA自聚合形成机制 PDA self-polymerization mechanism
-  - PDA涂层 vs 传统涂层技术对比 PDA coating vs traditional coating techniques
-  - 多巴胺辅助共沉积机制 Dopamine-assisted co-deposition mechanism
-qmax_range: "1.0-114.9 mg/g"
+  - PLA非织造织物超疏水磁性油水分离
+  - 六种自然超浸润材料及其浸润特性
+qmax_range: "1.0-1178.0 mg/g"
 applicability:
   pH_range: [3.0, 6.8]
   temp_range: null
   salinity: moderate
 evidence_level: low
-# provenance: 17 papers, 0 verified, 21 unverified
+# provenance: 18 papers, 0 verified, 105 unverified
 # coverage: normal
 # status: active
 ---
@@ -44,45 +49,45 @@ evidence_level: low
 
 ## 2. 吸附机制详解
 
-### 机制1：N位点激活PDS生成¹O₂的机制 Mechanism of N site activating PDS to generate ¹O₂
+### 机制1：Mechanisms of Heavy Metal Removal by Nanocellulose
+
+**描述**：Ion exchange and Chemical complexation
+**来源**：DOI 10.3390/nano11113008
+
+### 机制2：N位点激活PDS生成¹O₂的机制 Mechanism of N site activating PDS to generate ¹O₂
 
 **描述**：PDS吸附在MI-PDA缺电子N位点上→电子从PDS的S原子转移到N原子→O-O键缩短→S-O键断裂→产生¹O₂；N位点吸附能(-31.42 eV)高于O位点(-17.09 eV)，优先产生¹O₂
 **来源**：DOI 10.1016/j.apcatb.2023.122852
 
-### 机制2：MI-PDA表面官能团识别机制 Surface functional group recognition mechanism of MI-PDA
+### 机制3：MI-PDA表面官能团识别机制 Surface functional group recognition mechanism of MI-PDA
 
 **描述**：N 1s谱中-N=(399.1eV)、-NH-(400.0eV)、-NH₂(400.7eV)对应吲哚环中的环化氮和开链低聚物；含氮和含氧基团(-NH₂、-OH)作为识别位点，通过氢键选择性结合SMX
 **来源**：DOI 10.1016/j.apcatb.2023.122852
 
-### 机制3：PDA涂层粘附机制
+### 机制4：PDA涂层粘附机制
 
 **描述**：金属配位、Michael加成、Schiff碱形成、氢键、π-π堆积五种相互作用
 **来源**：DOI 10.1039/d5su00041f
 
-### 机制4：PDA-ODA超疏水棉花织物接触角
+### 机制5：PDA-ODA超疏水棉花织物接触角
 
 **描述**：WCA 162°, WSA 7°
 **来源**：DOI 10.1039/d5su00041f
 
-### 机制5：PDA微胶囊自修复超疏水棉花织物
+### 机制6：PDA微胶囊自修复超疏水棉花织物
 
 **描述**：机械刺激后完全恢复超疏水性
 **来源**：DOI 10.1039/d5su00041f
 
-### 机制6：PDA-TA/硼砂阻燃超疏水棉花织物
+### 机制7：PDA-TA/硼砂阻燃超疏水棉花织物
 
 **描述**：WCA 153.3°±1.2°, WSA 9°±0.8°, 分离效率>98%
 **来源**：DOI 10.1039/d5su00041f
 
-### 机制7：超疏水PDA涂层棉花织物耐久性测试
+### 机制8：超疏水PDA涂层棉花织物耐久性测试
 
 **描述**：1000次胶带剥离/手指擦拭/刀片划痕/砂纸磨损/锤击后仍保持超疏水性
 **来源**：DOI 10.1039/d5su00041f
-
-### 机制8：PDA自聚合形成机制 PDA self-polymerization mechanism
-
-**描述**：氧化条件下羟基自发去质子化形成多巴胺醌，经亲核分子内环化变为leukodopaminechrome，再经进一步氧化重排形成5,6-二羟基吲哚或5,6-吲哚醌，最终通过2,3,4,7位分支反应交联形成类真黑素聚合物PDA
-**来源**：DOI 10.1039/d1cs00658d
 
 ## 3. 结构特征与结构-功能关系
 
@@ -92,7 +97,25 @@ evidence_level: low
 
 | 污染物 | 材料 | qmax/去除率 | pH | 来源 | 核查 |
 |--------|------|-------------|-----|------|------|
+|  |  | Ion exchange and Che | - | literature: 10.3390/nano111130 | ❓ |
+|  | Amino-functionalized | Pb(II): 87 mg/g; Cu( | - | literature: 10.3390/nano111130 | ❓ |
+|  | Hybrid Fe3O4/BNC nan | Pb(II): 65 mg/g; Mn( | - | literature: 10.3390/nano111130 | ❓ |
+| Methylene Blue  | Soy protein-grafted  | 454 mg/g | - | literature: 10.3390/nano111130 | ❓ |
+| Methylene Blue  | CMC/MAA/HAp hybrid m | 671 mg/g | - | literature: 10.3390/nano111130 | ❓ |
+| Methylene Blue | Porous 3D sponge fro | 850 mg/g | - | literature: 10.3390/nano111130 | ❓ |
+| Methylene Blue  | CNF/graphene nanoshe | MB: 1178 mg/g; Congo | - | literature: 10.3390/nano111130 | ❓ |
 |  |  | MI-PDA/PDS体系对SMX去除率> | 6.8 | literature: 10.1016/j.apcatb.2 | ❓ |
+|  | MCGA (cellulose/grap | 80-197 | - | literature: 10.1016/j.carbpol. | ❓ |
+|  | Nanocellulose/alumin | 64.83-117.65 | - | literature: 10.1016/j.carbpol. | ❓ |
+| 铀(U) | PDA改性PAO薄膜 | 403.21 | 5.0 | patent: CN114849661A | ❓ |
+|  |  | 改性时间4h→403.085mg/g;  | - | patent: CN114849661A | ❓ |
+|  |  | qt = (C0 - Ce) × V / | - | patent: CN114849661A | ❓ |
+| 铀 U(VI) | 聚多巴胺包覆Fe3O4磁性仿生吸附剂 | >50 | ≥5 | patent: CN105413659B | ❓ |
+| 铀 U(VI) | 聚多巴胺包覆Fe3O4磁性仿生吸附剂 | >90 | ≥5 | patent: CN105413659B | ❓ |
+| 铀 U(VI) | 聚多巴胺包覆Fe3O4磁性仿生吸附剂 | 97.3 | 3.0 | patent: CN105413659B | ❓ |
+|  |  | >72 | - | patent: CN115055171A | ❓ |
+| Cu2+ | PDA-Fe3O4@CS | 12.5 | - | patent: CN113042006A | ❓ |
+| CrO42- | PDA-Fe3O4@CS | 114.88 | - | patent: CN113042006A | ❓ |
 | Cu2+ |  | PDA:CS=1:4→12.5mg/g; | - | patent: CN113042006A | ❓ |
 | CrO42- |  | PDA:CS=1:4→114.88mg/ | - | patent: CN113042006A | ❓ |
 
@@ -121,4 +144,9 @@ evidence_level: low
 ## 参考文献
 
 [1] DOI: 10.1016/j.apcatb.2023.122852
-[2] 专利: CN113042006A
+[2] DOI: 10.1016/j.carbpol.2022.120242
+[3] DOI: 10.3390/nano11113008
+[4] 专利: CN105413659B
+[5] 专利: CN113042006A
+[6] 专利: CN114849661A
+[7] 专利: CN115055171A

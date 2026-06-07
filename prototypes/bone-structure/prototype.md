@@ -7,17 +7,21 @@ biomimetic_dimension: 结构仿生
 features:
   - 层次孔
   - 离子交换
+pollutants:
+  - Cr(VI)（Cr₂O₇²⁻和CrO₄²⁻）
 adsorption_mechanisms:
   - HAp膜重金属去除性能
   - HAp四种重金属吸附机制
   - HAp膜制备方法
   - HAp膜类型与制备技术
+  - MOFs光催化降解染料的机理
+qmax_range: "398.4-471.7 mg/g"
 applicability:
   pH_range: null
   temp_range: null
   salinity: any
 evidence_level: low
-# provenance: 3 papers, 0 verified, 6 unverified
+# provenance: 4 papers, 0 verified, 8 unverified
 # coverage: normal
 # status: active
 ---
@@ -51,6 +55,10 @@ evidence_level: low
 **描述**：聚合物膜：NIPS/静电纺丝/TIPS/干压缩；有机材料：PA/CA/CE/PSf/PES/PTFE/PVDF/PP/PAN；无机材料：Al₂O₃/SiO₂/TiO₂/ZrO₂+黏土；陶瓷膜：多孔(支撑层)+刚性(分离层)；平板/中空纤维两种构型
 **来源**：DOI 10.1016/j.jtice.2024.105668
 
+### 机制5：MOFs光催化降解染料的机理
+
+**描述**：VB电子→CB→·OH和O₂⁻·自由基降解
+
 ## 3. 结构特征与结构-功能关系
 
 必须保留特征：多尺度层级有序组装拓扑、软硬相复合界面、梯度/多孔网络结构；可灵活调整特征：无机矿物组分可替换为高吸附活性材料(如功能化氧化物、碳基材料)，有机相可替换为特定聚合物或配体，孔隙尺寸与连通性可根据目标污染物分子尺寸进行定制。
@@ -61,6 +69,7 @@ evidence_level: low
 |--------|------|-------------|-----|------|------|
 |  |  | 铜离子浓度越高，在相同条件下去除百分比越 | - | literature: 10.1016/j.cjche.20 | ❓ |
 |  |  | 增加吸附剂投加量→Cu去除率增加；最大C | - | literature: 10.1016/j.cjche.20 | ❓ |
+| Cr(VI)（Cr₂O₇²⁻和 | HPU-13@Fe₃O₄磁性杂化MOF | Cr₂O₇²⁻: 398.41 mg/g | - | literature | ❓ |
 
 ## 5. 适用场景
 

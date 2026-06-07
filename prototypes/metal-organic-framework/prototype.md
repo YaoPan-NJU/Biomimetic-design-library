@@ -2,7 +2,7 @@
 id: metal-organic-framework
 name: 金属有机框架（Metal Organic Framework）
 category: 仿生材料
-organism: 
+organism: Bombyx mori
 biomimetic_dimension: 结构仿生
 features:
   - 微孔
@@ -13,16 +13,82 @@ features:
   - 催化降解
   - 分子筛分
 pollutants:
+  - ATZ
+  - As(III)
+  - As(III), As(V)
   - As(V)
+  - As(V), As(III)
+  - As(V)和F
+  - As3+, As5+
+  - As5+, Cr6+
+  - Atrazine (ATZ)
+  - Black 10 B (anionic dye)
   - Boron
+  - CIP（环丙沙星盐酸盐）
+  - CR
   - Cd(II)
+  - Cephalexin
+  - Co(II)
+  - Congo red CR
   - Cr(VI)
+  - Cr(VI)（Cr₂O₇²⁻和CrO₄²⁻）
+  - Cu(II)
+  - DCF（双氯芬酸）
+  - DEET (insecticide)
+  - DFC
+  - Diclofenac (DF)
+  - Diclofenac sodium (DFC)
+  - Direct red 80
+  - Dy3+
+  - Eosin Y (EY)和Methyl Orange (MO)
+  - Glyphosate (GP)
   - Hg(II)
+  - Hg2+
+  - Hg2+, Pb2+
+  - Hg²⁺
+  - Hg²⁺和22种重金属
   - H₂
+  - MB
+  - MB (亚甲基蓝)
+  - MB（亚甲基蓝）
+  - MG（孔雀石绿）
+  - MO
+  - Malachite green MG
   - Methyl Blue (MB)
+  - Methyl orange
+  - Methyl orange (anionic dye)
+  - Methyl orange MO
+  - Methylene blue (cationic dye)
+  - Methylene blue MB
+  - NOR（诺氟沙星）
+  - Ni(II)
+  - Orange II
+  - Orange II OII
+  - PO4³⁻
   - Pb(II)
   - Pb2+
+  - Pb2+, Cr6+
+  - Pb²⁺
+  - Perfluorooctanesulfonate (PFBS)
+  - RhB
+  - RhB（罗丹明B）
+  - Rhodamine B (RhB)
+  - Rhodamine B RhB
+  - Roxarsone (ROX)
+  - SCP
+  - SCP（磺胺氯吡嗪）
   - SY染料
+  - Sulfachloropyridazine (SCP)
+  - Sulfamethoxazole (SMX)
+  - TC
+  - TCH
+  - TC（四环素）
+  - TC（盐酸四环素）
+  - Tetracycline (TC)
+  - U(VI)
+  - Xylenol orange (anionic dye)
+  - Zn(II)
+  - arsenic
   - cationic TC·HCl
   - chloramphenicol (CAP)
   - ciprofloxacin (CIP)
@@ -31,32 +97,48 @@ pollutants:
   - tetracycline (TC)
   - tetracycline hydrochloride (TC·HCl)
   - 二氯甲烷
+  - 亚甲基蓝 MB
   - 亚甲基蓝(MB)
+  - 偶氮染料AO7
+  - 刚果红
+  - 刚果红 CR
   - 刚果红(CR)
+  - 双氯芬酸钠
+  - 孔雀石绿 MG
   - 孔雀石绿(MG)
   - 柴油
   - 活性亮红(RBR)
+  - 甲基橙 MO
+  - 甲基橙(MO)
+  - 甲苯
   - 直接红80(DR80)
+  - 碘蒸气(I₂)
+  - 磷(P)和氟(F)
+  - 磷酸盐 (PO4^3-)
+  - 结晶紫 CV
+  - 罗丹明B Rh-B
+  - 苯
   - 茜素红(AR)
   - 酸性红94(Acid Red 94)
+  - 铀(VI)
 adsorption_mechanisms:
+  - 缺陷MOFs研究的未来方向
+  - MOF-808对PFOS的吸附机制
+  - MOFs吸附有机污染物的化学吸附机制
+  - MOFs材料催化降解的三种机理
+  - 离子强度对MOFs去除污染物的影响
+  - MOFs材料的研究展望
   - 壳聚糖的七种染料吸附机制
   - Cu(II)配位壳聚糖磁性材料对RBR的吸附容量
   - Cu-MOF配位驱动吸附机理
   - MOF材料水稳定性提升策略
-  - 活性炭表面性质对BPA吸附的影响 Effect of activated carbon surface properties on BPA adsorption
-  - 碳纳米管对BPA的吸附机制 Adsorption mechanism of CNTs for BPA
-  - BPA吸附的主要机制 Main adsorption mechanisms for BPA
-  - pH对BPA吸附的影响 pH effect on BPA adsorption
-  - 膜分离技术对BPA的去除效率比较 Membrane separation efficiency comparison
-  - NF膜去除BPA的机制 NF membrane BPA removal mechanism
-qmax_range: "3.0-4518.0 mg/g"
+qmax_range: "2.0-6004.9 mg/g"
 applicability:
-  pH_range: [2.0, 7.0]
+  pH_range: [2.0, 10.0]
   temp_range: null
   salinity: any
 evidence_level: low
-# provenance: 24 papers, 0 verified, 149 unverified
+# provenance: 45 papers, 0 verified, 406 unverified
 # coverage: normal
 # status: active
 ---
@@ -70,47 +152,46 @@ evidence_level: low
 
 ## 2. 吸附机制详解
 
-### 机制1：壳聚糖的七种染料吸附机制
+### 机制1：缺陷MOFs研究的未来方向
+
+**描述**：宏量制备、PS-AOP非自由基路径、导体/半导体复合、负载化应用、MicroED表征、DFT机理探究、环境影响评估
+**来源**：DOI 10.11862/CJIC.2022.252
+
+### 机制2：MOF-808对PFOS的吸附机制
+
+**描述**：静电引力
+**来源**：DOI 10.11896/cldb.22060239
+
+### 机制3：MOFs吸附有机污染物的化学吸附机制
+
+**描述**：氢键、开放性金属位点
+**来源**：DOI 10.11896/cldb.22060239
+
+### 机制4：MOFs材料催化降解的三种机理
+
+**描述**：硫酸根自由基介导、光催化、类芬顿
+**来源**：DOI 10.11896/cldb.22060239
+
+### 机制5：离子强度对MOFs去除污染物的影响
+
+**描述**：离子强度对静电作用影响明显，盐析效应可促进吸附但高盐浓度又会抑制
+**来源**：DOI 10.11896/cldb.22060239
+
+### 机制6：MOFs材料的研究展望
+
+**描述**：绿色快速宏量生产、多种污染物协同去除、机理深入研究、生态毒性研究
+**来源**：DOI 10.11896/cldb.22060239
+
+### 机制7：壳聚糖的七种染料吸附机制
 
 **描述**：离子交换、络合、配位/螯合、静电相互作用、酸碱相互作用、氢键、疏水相互作用
 **关键官能团**：-OH和-NH₂基团
 **来源**：DOI 10.1016/j.ijbiomac.2021.04.158
 
-### 机制2：Cu(II)配位壳聚糖磁性材料对RBR的吸附容量
+### 机制8：Cu(II)配位壳聚糖磁性材料对RBR的吸附容量
 
 **描述**：880.84
 **来源**：DOI 10.1016/j.ijbiomac.2021.04.158
-
-### 机制3：Cu-MOF配位驱动吸附机理
-
-**描述**：189.3
-**来源**：DOI 10.11862/CJIC.2021.068
-
-### 机制4：MOF材料水稳定性提升策略
-
-**描述**：高价金属-含氧配体(Zr羧酸盐/Zr酚盐/Cr羧酸盐/Fe羧酸盐); pKa大的唑类配体(Zn咪唑盐/Ni吡唑盐); 提升疏水性
-**来源**：DOI 10.11862/CJIC.2021.068
-
-### 机制5：活性炭表面性质对BPA吸附的影响 Effect of activated carbon surface properties on BPA adsorption
-
-**描述**：活性炭表面高比表面积(500-1500 m²/g)和丰富含氧官能团(羧基、羟基、酚羟基)通过孔隙填充、范德华力、静电作用和氢键实现BPA吸附
-**关键官能团**：['羧基(-COOH)', '羟基(-OH)', '酚羟基']
-**来源**：DOI 10.1016/j.cej.2024.149414
-
-### 机制6：碳纳米管对BPA的吸附机制 Adsorption mechanism of CNTs for BPA
-
-**描述**：BPA分子中两个苯环可通过π-π电子供体-受体机制平行吸附在CNT表面；三种吸附位点：表面、沟槽区、间隙孔；CNT吸附容量范围43.76-580 mg/g
-**来源**：DOI 10.1016/j.cej.2024.149414
-
-### 机制7：BPA吸附的主要机制 Main adsorption mechanisms for BPA
-
-**描述**：六种主要机制：静电相互作用、π-π相互作用、疏水作用、酸碱作用、氢键、孔隙填充，以及这些机制的组合
-**来源**：DOI 10.1016/j.cej.2024.149414
-
-### 机制8：pH对BPA吸附的影响 pH effect on BPA adsorption
-
-**描述**：pH 2-8范围内对去除效率影响较小；pH 9-11时BPA吸附效率下降(BPA在pH>8开始去质子化，阴离子形态与带负电吸附剂表面产生静电排斥)
-**来源**：DOI 10.1016/j.cej.2024.149414
 
 ## 3. 结构特征与结构-功能关系
 
@@ -120,6 +201,29 @@ evidence_level: low
 
 | 污染物 | 材料 | qmax/去除率 | pH | 来源 | 核查 |
 |--------|------|-------------|-----|------|------|
+| 磷酸盐 (PO4^3-) | HP-UiO-66(Zr)-OA（辛酸调 | 186.6 | - | literature: 10.11862/CJIC.2022 | ❓ |
+| Pb2+ | SS-NH2-UiO-66-5（酒石酸钾 | 186.14 | 5.46（最佳） | literature: 10.11862/CJIC.2022 | ❓ |
+| As(V) | HP-UiO-66（热处理去除BDC-N | 248.75 | - | literature: 10.11862/CJIC.2022 | ❓ |
+| Roxarsone (ROX) | UiO-66-20（苯甲酸调制的缺陷Ui | 730 | - | literature: 10.11862/CJIC.2022 | ❓ |
+| 磷(P)和氟(F) | Ce-BDC-48 | P: 278.8 mg/g, F: 12 | - | literature: 10.11862/CJIC.2022 | ❓ |
+| Pb2+ | UiO-66-1:1-120 | 172.1 | - | literature: 10.11862/CJIC.2022 | ❓ |
+| Perfluorooctane | UiO-66-10 | 1.24 | - | literature: 10.11862/CJIC.2022 | ❓ |
+| Diclofenac (DF) | 缺陷UiO-66 | 321 | - | literature: 10.11862/CJIC.2022 | ❓ |
+| Rhodamine B (Rh | pyrrole-UiO-66 | 384.1 | - | literature: 10.11862/CJIC.2022 | ❓ |
+| Eosin Y (EY)和Me | 缺陷MOF-808 | EY: 661.7 mg/g, MO:  | - | literature: 10.11862/CJIC.2022 | ❓ |
+| Dy3+ | SS-NH2-UiO-66-5 | 186.14 | - | literature: 10.11862/CJIC.2022 | ❓ |
+| Glyphosate (GP) | 缺陷UiO-67(Zr) | 322.58 | - | literature: 10.11862/CJIC.2022 | ❓ |
+| Eosin Y (EY)和Me | 缺陷MOF-808 | EY: 661.7, MO: 532.4 | - | literature: 10.11862/CJIC.2022 | ❓ |
+| 磷酸盐 (PO4^3-) | Zn-ZIF-72 | 102±2 | - | literature: 10.11862/CJIC.2022 | ❓ |
+| As(V) | HP-UiO-66-40% | 248.75 | - | literature: 10.11862/CJIC.2022 | ❓ |
+| As(V)和F | La-fum | As(V): 1.665 mmol/g, | - | literature: 10.11862/CJIC.2022 | ❓ |
+| 偶氮染料AO7 | Fe3O4@MIL-101(Fe) | 98.1% | - | literature: 10.11896/cldb.2206 | ❓ |
+| RhB | Ce-UiO-66 | 99% | - | literature: 10.11896/cldb.2206 | ❓ |
+| MB | UiO-66-NH2 | ~99% | - | literature: 10.11896/cldb.2206 | ❓ |
+| MB | Fe3O4@MOF-5 | 100% | - | literature: 10.11896/cldb.2206 | ❓ |
+| MO | Fe3O4@MIL-100(Fe)-OS | 99.9% | - | literature: 10.11896/cldb.2206 | ❓ |
+|  | UiO-66-NH2@CNTs | MO 93%, RhB 100% | - | literature: 10.11896/cldb.2206 | ❓ |
+| RhB | Fe-MOF | 90% | - | literature: 10.11896/cldb.2206 | ❓ |
 | 活性亮红(RBR) | Cu(II)配位壳聚糖基磁性材料(CTS | 880.84 | 4 | literature: 10.1016/j.ijbiomac | ❓ |
 |  | 磁性黄原酸盐改性壳聚糖 | MB: 197.8 mg/g, SO:  | - | literature: 10.1016/j.ijbiomac | ❓ |
 |  | 二铵酒石酸盐改性壳聚糖凝胶珠(交联) | CR: 1597 mg/g, DY: 1 | - | literature: 10.1016/j.ijbiomac | ❓ |
@@ -127,30 +231,7 @@ evidence_level: low
 |  | 壳聚糖/聚丙烯酸/GO复合物理水凝胶 | MB: 296.5 mg/g, FY3: | - | literature: 10.1016/j.ijbiomac | ❓ |
 | SY染料 | 阳离子聚合物改性磁性壳聚糖珠(Fe₃O₄ | 769.23 | - | literature: 10.1016/j.ijbiomac | ❓ |
 |  | Fe₃O₄-CS复合物 | 638.6 | - | literature: 10.1016/j.ijbiomac | ❓ |
-| 亚甲基蓝(MB) | 聚丙烯酰胺/壳聚糖/Fe3O4复合水凝胶 | 1603 | - | literature: 10.1016/j.ijbiomac | ❓ |
-| 孔雀石绿(MG) | 珍珠项链状ZIF-8@壳聚糖/PVA纳米 | 1000 | - | literature: 10.1016/j.ijbiomac | ❓ |
-| 酸性红94(Acid Red  | 纳米MIL-101(Fe)@壳聚糖混合海 | 4518 | - | literature: 10.1016/j.ijbiomac | ❓ |
-| 刚果红(CR) | 二铵酒石酸盐改性壳聚糖(交联) | 1597 | - | literature: 10.1016/j.ijbiomac | ❓ |
-| 直接红80(DR80) | 半互穿网络半吸收性壳聚糖-淀粉水凝胶 | 312.77 | - | literature: 10.1016/j.ijbiomac | ❓ |
-| 茜素红(AR) | 锆(IV)负载壳聚糖/Fe3O4/氧化石 | 231 | - | literature: 10.1016/j.ijbiomac | ❓ |
-|  | 壳聚糖/膨润土混合复合物 | MG: 496.5 mg/g, AR:  | - | literature: 10.1016/j.ijbiomac | ❓ |
-|  |  | 大多数活性炭吸附效率超过250 mg/g | - | literature: 10.1016/j.cej.2024 | ❓ |
-|  |  | NF膜通过尺寸排阻、吸附、静电排斥和Do | - | literature: 10.1016/j.cej.2024 | ❓ |
-|  |  | MF膜孔径(0.1-10μm)大于BPA | - | literature: 10.1016/j.cej.2024 | ❓ |
-|  |  | UF膜反应器内负载FeOCl纳米催化剂可 | - | literature: 10.1016/j.cej.2024 | ❓ |
-| H₂ | MOF-5 | 4.5% (质量分数) | - | literature: 10.11868/j.issn.10 | ❓ |
-| Pb(II) | Fe3O4@TMU-32 | 1600 | 7 | literature: 10.1016/j.jece.202 | ❓ |
-| Hg(II) | Fe-BTC/PDA | 1634 | 7 | literature: 10.1016/j.jece.202 | ❓ |
-| As(V) | La-BDC (lanthanum MO | 552 | 7 | literature: 10.1016/j.jece.202 | ❓ |
-| Cr(VI) | nFe3O4@MIL-88A(Fe)/A | 1092 | 2 | literature: 10.1016/j.jece.202 | ❓ |
-| Cd(II) | ZIF-8-mmen (dimethyl | 1000 | 6 | literature: 10.1016/j.jece.202 | ❓ |
-| Boron | ZIF-67 | 579 | 4 | literature: 10.1016/j.jece.202 | ❓ |
-| Hg(II) | Zr-MSA (zirconium-ba | 734 mg/g with 99.9%  | - | literature: 10.1016/j.jece.202 | ❓ |
-| As(V) | UiO-66 with various  | 200 mg/g (UiO-66-36T | - | literature: 10.1016/j.jece.202 | ❓ |
-|  |  | Adsorption: low cost | - | literature: 10.1016/j.jece.202 | ❓ |
-| Hg(II) | UiO-66 and modified  | UiO-66: 15%, CeO2@Ui | - | literature: 10.1016/j.jece.202 | ❓ |
-| tetracycline hy | MOF-818 | 442.5 | - | literature: 10.1016/j.ccr.2021 | ❓ |
-| ... | ... | ... | ... | ... | 共 58 条 |
+| ... | ... | ... | ... | ... | 共 270 条 |
 
 ## 5. 适用场景
 
@@ -161,10 +242,10 @@ evidence_level: low
 - PVDF/PAN/壳聚糖/UiO-66-NH₂纳米纤维膜长期稳定性: 18小时超长去除时间; 稳定膜通量 h
 - BUT-39对Cr₂O₇²⁻吸附性能及再生问题: 215 mg·g⁻¹
 - MOF材料水稳定性提升策略: 高价金属-含氧配体(Zr羧酸盐/Zr酚盐/Cr羧酸盐/Fe羧酸盐); pKa大的唑类配体(Zn咪唑盐/Ni吡唑盐); 提升疏水性 None
+- Cu-BTC对亚甲基蓝的吸附条件与再生: pH=7时最大吸附容量 None
 - pH对BPA吸附的影响 pH effect on BPA adsorption: pH 2-8范围内对去除效率影响较小；pH 9-11时BPA吸附效率下降(BPA在pH>8开始去质子化，阴离子形态与带负电吸附剂表面产生静电排斥) None
 - 温度对BPA吸附的影响 Temperature effect on BPA adsorption: BPA吸附通常是放热过程(温度升高吸附容量下降)；但某些材料因表面化学或孔结构变化在高温下吸附容量反而增加 None
-- 锆基MOF高稳定性原因: 锆金属离子与有机连接物之间具有很强的配位键合 None
-- TGA热稳定性: PAN失重59.9%(1000°C)；Cu-BTC失重76.1%；MOF/PAN-MIM失重76.4% %
+- UiO-66-NH2–PAN-chitosan复合膜的循环再生稳定性: 5 cycles with slight decrease None
 
 ## 6. 相关原型
 
@@ -176,14 +257,33 @@ evidence_level: low
 
 ## 参考文献
 
-[1] DOI: 10.1016/j.ccr.2021.213970
-[2] DOI: 10.1016/j.cej.2024.149414
-[3] DOI: 10.1016/j.ecoenv.2020.111577
-[4] DOI: 10.1016/j.ijbiomac.2021.04.158
-[5] DOI: 10.1016/j.jcis.2023.01.075
-[6] DOI: 10.1016/j.jece.2022.107394
-[7] DOI: 10.1016/j.jiec.2021.09.029
-[8] DOI: 10.1021/acs.est.1c01723
-[9] DOI: 10.11868/j.issn.1001-4381.2020.000559
-[10] DOI: 10.16085/j.issn.1000-6613.2021-1614
-[11] 专利: CN121130847A
+[1] DOI: 10.1002/adfm.202207723
+[2] DOI: 10.1016/j.ccr.2021.213970
+[3] DOI: 10.1016/j.cej.2022.136320
+[4] DOI: 10.1016/j.cej.2023.141710
+[5] DOI: 10.1016/j.cej.2024.149414
+[6] DOI: 10.1016/j.chemosphere.2021.131393
+[7] DOI: 10.1016/j.ecoenv.2020.111577
+[8] DOI: 10.1016/j.gee.2022.03.005
+[9] DOI: 10.1016/j.ijbiomac.2021.04.158
+[10] DOI: 10.1016/j.jcis.2023.01.075
+[11] DOI: 10.1016/j.jece.2022.107394
+[12] DOI: 10.1016/j.jiec.2021.09.029
+[13] DOI: 10.1016/j.jssc.2017.01.030
+[14] DOI: 10.1016/j.seppur.2022.122416
+[15] DOI: 10.1016/j.seppur.2023.124144
+[16] DOI: 10.1016/j.susmat.2021.e00378
+[17] DOI: 10.1016/j.ultsonch.2017.06.016
+[18] DOI: 10.1021/acs.est.1c01723
+[19] DOI: 10.1039/d1ra07034g
+[20] DOI: 10.1039/d2ew00941b
+[21] DOI: 10.1080/10643389.2023.2168473
+[22] DOI: 10.11862/CJIC.2022.252
+[23] DOI: 10.11868/j.issn.1001-4381.2020.000559
+[24] DOI: 10.11896/cldb.22060239
+[25] DOI: 10.13822/j.cnki.hxsj.2021008265
+[26] DOI: 10.16085/j.issn.1000-6613.2021-1614
+[27] DOI: 10.16085/j.issn.1000-6613.2022-0497
+[28] DOI: 10.19500/j.cnki.0367-6358.20201018
+[29] DOI: 10.6023/A23020049
+[30] 专利: CN121130847A

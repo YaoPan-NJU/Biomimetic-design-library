@@ -36,11 +36,16 @@ pollutants:
   - tetracycline
   - triclosan (TCS)
   - 二氯甲烷
+  - 亚甲基蓝 (MB)
   - 亚甲基蓝(MB)
   - 亚甲基蓝(MB)阳离子染料
   - 刚果红(CR)
+  - 四环素 (tetracycline)
   - 孔雀石绿(MG)
   - 柴油
+  - 氟伐他汀 (fluvastatin)
+  - 氯仿
+  - 油
   - 活性亮红(RBR)
   - 活性黑5(RB5)
   - 直接红80(DR80)
@@ -57,13 +62,13 @@ adsorption_mechanisms:
   - Cr(VI)的氧化还原吸附机制（VMCP案例）
   - 磁性壳聚糖的五种制备方法
   - 协同吸附案例：FFO@Sil@Chi-DTPA同时去除MB和Pb(II)
-qmax_range: "1.0-4518.0 mg/g"
+qmax_range: "1.0-7780.0 mg/g"
 applicability:
-  pH_range: [3.0, 7.0]
+  pH_range: [3.0, 9.0]
   temp_range: null
   salinity: low_to_moderate
 evidence_level: low
-# provenance: 44 papers, 0 verified, 206 unverified
+# provenance: 47 papers, 0 verified, 246 unverified
 # coverage: normal
 # status: active
 ---
@@ -155,7 +160,7 @@ evidence_level: low
 | Cd(II) | Porous chitosan part | 518 (3mm), 188 (1mm) | 6.5 | literature: 10.1016/j.rechem.2 | ❓ |
 | Al(III) | Chitosan | 45.45 | - | literature: 10.1016/j.rechem.2 | ❓ |
 | Cr(VI) | Chitosan (crosslinke | 78 (non-crosslinked) | - | literature: 10.1016/j.rechem.2 | ❓ |
-| ... | ... | ... | ... | ... | 共 109 条 |
+| ... | ... | ... | ... | ... | 共 119 条 |
 
 ## 5. 适用场景
 
@@ -205,9 +210,10 @@ evidence_level: low
 [22] DOI: 10.15898/j.ykcs.202208230155
 [23] DOI: 10.19965/j.cnki.iwt.2022-1185
 [24] DOI: 10.3390/molecules26030594
-[25] DOI: 10.3969/j.issn.1001-9731.2022.10.023
-[26] 专利: CN109351339A
-[27] 专利: CN114873705A
-[28] 专利: CN117654453A
-[29] 专利: CN119488883A
-[30] 专利: CN121130847A
+[25] DOI: 10.3390/polym15143114
+[26] DOI: 10.3969/j.issn.1001-9731.2022.10.023
+[27] 专利: CN109351339A
+[28] 专利: CN114873705A
+[29] 专利: CN117654453A
+[30] 专利: CN119488883A
+[31] 专利: CN121130847A

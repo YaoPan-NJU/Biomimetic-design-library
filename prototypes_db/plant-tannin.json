@@ -19,16 +19,75 @@
     "note": "测过的 pH/温度范围，不是适用范围。仅从 performance_data 中实际测试过的条件聚合。"
   },
   "performance_data": [],
-  "mechanisms": [],
+  "mechanisms": [
+    {
+      "name": "Teflon AF 2400涂层PVDF膜VMD性能",
+      "description": "超疏水表面151°，平均通量22 L/m²h，盐截留率99.99%，进料温度~60°C",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.3390/polym14245439",
+      "verification": "unverified"
+    },
+    {
+      "name": "疏水改性三大方法",
+      "description": "表面涂层（浸涂/过滤涂覆）、表面接枝（化学/辐射/等离子体/光引发）、共混",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.3390/polym14245439",
+      "verification": "unverified"
+    },
+    {
+      "name": "PVDF-co-HFP/POTS超疏水膜MD性能",
+      "description": "通量27.94 kg/m²h，盐截留率100%（含SDS低表面张力表面活性剂的NaCl进料）",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.3390/polym14245439",
+      "verification": "unverified"
+    },
+    {
+      "name": "PVDF-co-HFP/F-POSS全疏水膜",
+      "description": "乙醇中接触角128.2°，高盐进料+低表面张力物质中通量和盐截留率保持稳定",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.3390/polym14245439",
+      "verification": "unverified"
+    },
+    {
+      "name": "Cassie-Baxter方程与膜疏水性关系",
+      "description": "接触角与膜表面粗糙度相关，粗糙度增加→气液接触面积增加→界面效应增强",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.3390/polym14245439",
+      "verification": "unverified"
+    },
+    {
+      "name": "P(VDF-co-CTFE) FOMA功能化超疏水膜",
+      "description": "超疏水性，优异抗污染和抗润湿性能，DCMD几乎无通量下降",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.3390/polym14245439",
+      "verification": "unverified"
+    }
+  ],
   "narrative": {
     "entries": []
   },
-  "engineering_constraints": [],
+  "engineering_constraints": [
+    {
+      "constraint": "P(VDF-co-HFP) VMD稳定性",
+      "value": "100小时稳定性，截留率>99.8%",
+      "unit": "h / %",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.3390/polym14245439"
+    }
+  ],
   "provenance_summary": {
-    "n_papers": 0,
+    "n_papers": 1,
     "n_verified": 0,
-    "n_unverified": 0
+    "n_unverified": 6
   },
   "coverage": "low",
-  "status": "needs_literature"
+  "status": "active"
 }

@@ -2,19 +2,28 @@
 id: cactus-spine
 name: 仙人掌刺（Cactus Spine）
 category: 植物
-organism: Opuntia spp.
+organism: Nepenthes alata, Namib desert beetle, Cactus, Spider silk
 biomimetic_dimension: 形态仿生
 features:
   - 疏水性
   - 自清洁
 adsorption_mechanisms:
+  - 仿荷叶PS纳米纤维/微球复合超疏水表面接触角
+  - 静电纺丝纤维形貌调控因素
+  - PAN/热解PAN Janus织物润湿性
+  - 单向渗透三力竞争机制
   - 仿生集水生物原型及机制
+  - PCL/Teflon AF核壳纤维超疏水/超疏油
+  - Janus膜在膜蒸馏中的抗污染性能
+  - Janus膜水下气泡单向传输
+  - Janus膜油水分离性能优势
+  - HHNCM亲水-疏水纳米纤维铜网（三仿生：甲虫+蜂窝网+猪笼草）
 applicability:
   pH_range: null
   temp_range: null
   salinity: any
 evidence_level: low
-# provenance: 2 papers, 0 verified, 1 unverified
+# provenance: 3 papers, 0 verified, 11 unverified
 # coverage: low
 # status: active
 ---
@@ -28,9 +37,44 @@ evidence_level: low
 
 ## 2. 吸附机制详解
 
-### 机制1：仿生集水生物原型及机制
+### 机制1：仿荷叶PS纳米纤维/微球复合超疏水表面接触角
+
+**描述**：160.4 ± 1.2
+**来源**：DOI 10.1007/s40242-021-0010-4
+
+### 机制2：静电纺丝纤维形貌调控因素
+
+**描述**：溶液粘度、表面张力、溶剂、电导率、介电性能；电压、喂料速度、接收距离、喷丝头直径；温度、湿度、气体介质
+**来源**：DOI 10.1007/s40242-021-0010-4
+
+### 机制3：PAN/热解PAN Janus织物润湿性
+
+**描述**：PAN侧超疏水，热解PAN侧超亲水
+**来源**：DOI 10.1007/s40242-021-0010-4
+
+### 机制4：单向渗透三力竞争机制
+
+**描述**：静水压(HP)+毛细力(CF)+疏水力(HF)共同决定液滴渗透行为
+**来源**：DOI 10.1007/s40242-021-0010-4
+
+### 机制5：仿生集水生物原型及机制
 
 **描述**：沙漠甲虫(交替亲水岛/疏水路径)、蜘蛛丝(纺锤节-关节结构)、仙人掌刺(锥形+定向刚毛)、猪笼草(二级微沟槽)
+**来源**：DOI 10.1007/s40242-021-0010-4
+
+### 机制6：PCL/Teflon AF核壳纤维超疏水/超疏油
+
+**描述**：超疏水且超疏油
+**来源**：DOI 10.1007/s40242-021-0010-4
+
+### 机制7：Janus膜在膜蒸馏中的抗污染性能
+
+**描述**：全疏水Janus膜同时具备抗油污染和抗表面活性剂润湿能力
+**来源**：DOI 10.1007/s40242-021-0010-4
+
+### 机制8：Janus膜水下气泡单向传输
+
+**描述**：气泡从亲水向超疏水方向单向渗透
 **来源**：DOI 10.1007/s40242-021-0010-4
 
 ## 3. 结构特征与结构-功能关系

@@ -2,27 +2,27 @@
 id: shark-skin
 name: 鲨鱼皮（Shark Skin）
 category: 动物
-organism: Nelumbo nucifera, shark skin, Salvinia
+organism: Nelumbo nucifera (lotus leaf); fish scale; Gecko; Morpho deidamia butterfly; rose petal
 biomimetic_dimension: 结构仿生
 features:
   - 抗生物污染
 adsorption_mechanisms:
   - 表面润湿性对细菌粘附的影响规律
   - 细菌粘附的长程和短程相互作用距离阈值
-  - 超疏水表面接触角阈值 Superhydrophobic contact angle threshold
-  - 微生物表面润湿性偏好 Microorganism surface wettability preference
-  - 超疏水表面防污机制 Superhydrophobic surface antifouling mechanism
-  - 天然抗污生物 Natural antifouling organisms
-  - 超疏水表面防污短暂性 Superhydrophobic surface antifouling short-lived
-  - 超疏水性定义阈值
-  - PDMS '胶+粉'法通用性
-  - 无氟透明超疏水涂层接触角
+  - 油水分离材料分类（基于润湿性）
+  - CVD法制备超疏水石墨烯气凝胶（SGAs）
+  - Table 1 超疏水/超亲油材料代表性汇总
+  - 特殊润湿性分类
+  - 荷叶效应仿生原理
+  - 荷叶上下表面润湿性差异
+  - 壁虎脚仿生特性
+  - 玫瑰花瓣高黏附超疏水
 applicability:
   pH_range: null
   temp_range: null
   salinity: any
 evidence_level: low
-# provenance: 4 papers, 0 verified, 19 unverified
+# provenance: 6 papers, 0 verified, 34 unverified
 # coverage: low
 # status: active
 ---
@@ -46,35 +46,35 @@ evidence_level: low
 **描述**：长程>150 nm(van der Waals等)，短程<3 nm(氢键、静电、疏水等)
 **来源**：DOI 10.1002/admi.202201425
 
-### 机制3：超疏水表面接触角阈值 Superhydrophobic contact angle threshold
+### 机制3：油水分离材料分类（基于润湿性）
 
-**描述**：接触角>150°表现为超疏水行为；接触角<10°为超亲水
-**来源**：DOI 10.33263/BRIAC132.185
+**描述**：两类主要材料：超疏水/超亲油（oil-removing）和超亲水/水下超疏油（water-removing）
+**来源**：DOI 10.1021/acsami.0c18794
 
-### 机制4：微生物表面润湿性偏好 Microorganism surface wettability preference
+### 机制4：CVD法制备超疏水石墨烯气凝胶（SGAs）
 
-**描述**：Ulva linza偏好疏水表面，Balanus Amphitrite偏好亲水表面
-**来源**：DOI 10.33263/BRIAC132.185
+**描述**：WCA=160.2°, OCA=0°
+**来源**：DOI 10.1021/acsami.0c18794
 
-### 机制5：超疏水表面防污机制 Superhydrophobic surface antifouling mechanism
+### 机制5：Table 1 超疏水/超亲油材料代表性汇总
 
-**描述**：超疏水表面的抗污性能归因于截留的空气泡层，减少了细菌与表面之间的接触
-**来源**：DOI 10.33263/BRIAC132.185
+**描述**：13种材料体系覆盖浸涂、喷涂、相分离、电镀、LBL、表面氧化、聚合、ATRP、冷冻干燥等技术
+**来源**：DOI 10.1021/acsami.0c18794
 
-### 机制6：天然抗污生物 Natural antifouling organisms
+### 机制6：特殊润湿性分类
 
-**描述**：荷叶(Nelumbo nucifera)、水蕨(Salvinia)、斗蓬草(Alchemilla mollis)通过超疏水表面抵抗生物膜；鲨鱼通过真皮小齿上的微结构缎带降低阻力和避免生物附着
-**来源**：DOI 10.33263/BRIAC132.185
+**描述**：超疏水/超亲油（'除油'型）和超亲水/水下超疏油（'除水'型）
+**来源**：DOI 10.1021/acsami.0c18794
 
-### 机制7：超疏水表面防污短暂性 Superhydrophobic surface antifouling short-lived
+### 机制7：荷叶效应仿生原理
 
-**描述**：超疏水表面的抗污性能是短暂的（short-lived）
-**来源**：DOI 10.33263/BRIAC132.185
+**描述**：微纳复合结构+低表面能蜡质的协同效应产生超疏水性
+**来源**：DOI 10.1021/acsami.0c18794
 
-### 机制8：超疏水性定义阈值
+### 机制8：荷叶上下表面润湿性差异
 
-**描述**：接触角>150°且滚动角<10°
-**来源**：DOI 10.3390/polym15030543
+**描述**：上表面超疏水，下表面超亲水/水下超疏油
+**来源**：DOI 10.1021/acsami.0c18794
 
 ## 3. 结构特征与结构-功能关系
 
