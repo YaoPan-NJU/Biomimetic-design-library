@@ -1,8 +1,8 @@
 # HANDOFF — 换设备续工作入口
 
-> 最后更新：2026-06-08 00:30
+> 最后更新：2026-06-08 00:45
 > 当前分支：`feature/extraction-results`
-> 最新 commit：`6223025` (feat: 增强校验脚本 + check_chimera.py)
+> 最新 commit：`1c66310` (docs: 创建 HANDOFF.md + 更新 README 状态)
 
 ---
 
