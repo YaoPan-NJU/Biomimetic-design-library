@@ -1,8 +1,8 @@
 # HANDOFF — 换设备续工作入口
 
-> 最后更新：2026-06-08 01:45
+> 最后更新：2026-06-08 02:15
 > 当前分支：`feature/extraction-results`
-> 最新 commit：`82b0694` (feat: Step 4 - 机制建模重构第一批)
+> 最新 commit：`0f96073` (feat: Step 5 准备 - mussel 清理 + 标 needs_literature)
 
 ---
 
@@ -18,7 +18,7 @@
 | Step 2: 建校验脚本 | ✅ 完成 | validate_consistency.py (R10-R14) + check_chimera.py |
 | Step 3: 清理 chimera + 停放分离簇 | ✅ 完成 | 分离簇停放 separation/，PDA/mussel 去重 |
 | Step 4: 机制建模重构 | ✅ 完成 | 第一批 (mussel/PDA/MOF) 已重构 |
-| Step 5: mussel 金标准 | ⏳ 进行中 | 下一步 |
+| Step 5: 金标准验证 | ⏳ 进行中 | mussel 无数据，改用 MOF 作为第一个金标准 |
 
 ## 已定关键决定
 
@@ -33,10 +33,11 @@
 
 ## 下一步任务
 
-1. **Step 5**：mussel-foot-adhesion 金标准
-   - 清理 mussel 的污染机制（88% → <10%）
-   - 从原始 PDF 提取真正的贻贝足丝机制和性能数据
-   - 对每条性能数据执行 verified 判定（四条件同时满足）
+1. **Step 5**：metal-organic-framework 金标准验证
+   - mussel 无数据，改用 MOF（214 条吸附数据）作为第一个金标准
+   - 对 MOF 的性能数据执行 verified 判定（四条件同时满足）
+   - 解析 ref_doi → 确认文献存在
+   - 打开 PDF → 确认数值在指定页/表出现
    - 无法核实的数据移到 _quarantine
    - 产出 verified/unverified/quarantine 报告
 
@@ -64,8 +65,8 @@
 
 ## 最近 Changelog
 
+- `0f96073` feat: Step 5 准备 - mussel 清理 + 标 needs_literature
+- `c85d674` docs: 更新 HANDOFF.md - Step 4 完成
 - `82b0694` feat: Step 4 - 机制建模重构第一批 (mussel/PDA/MOF)
 - `31a8d50` docs: 更新 HANDOFF.md - Step 3 完成
 - `b6ab7df` feat: Step 3 - 清理 chimera + 停放分离簇 + PDA/mussel 去重
-- `1c66310` docs: 创建 HANDOFF.md + 更新 README 状态
-- `6223025` feat: 增强校验脚本 (R10-R14) + 新建 check_chimera.py
