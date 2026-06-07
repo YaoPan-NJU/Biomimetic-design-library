@@ -1,0 +1,101 @@
+{
+  "id": "lobster-exoskeleton",
+  "name_zh": "龙虾外骨骼",
+  "name_en": "Lobster Exoskeleton",
+  "organism": {
+    "scientific": "",
+    "category": "动物"
+  },
+  "biomimetic_dimension": "结构仿生",
+  "features": [
+    "纤维状"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": "moderate",
+    "note": "测过的 pH/温度范围，不是适用范围。仅从 performance_data 中实际测试过的条件聚合。"
+  },
+  "performance_data": [
+    {
+      "parameter": "Chitosan/Fe-hydroxyapatite beads对Pb(II)的最大吸附容量",
+      "value": "1385",
+      "unit": "mg/g",
+      "pollutant": "Pb(II)",
+      "material": "Chitosan/Fe-hydroxyapatite beads",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s10311-023-01563-9",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第1组-配位螯合/2023-Vo-chitosan-membrane-shell-hydroxyapatite-review.pdf",
+      "page": 1,
+      "locator": "Abstract",
+      "verification": "unverified",
+      "confidence": 0.8
+    }
+  ],
+  "mechanisms": [
+    {
+      "name": "Chitosan beads的六种吸附机制",
+      "description": "静电作用(electrostatic interaction)、络合(complexation)、氢键(hydrogen bonding)、酸碱作用(acid-base interaction)、配位/螯合(coordination/chelation)、离子交换(ion exchange)",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s10311-023-01563-9",
+      "verification": "unverified"
+    }
+  ],
+  "narrative": {
+    "entries": [
+      {
+        "source_file": "tools/litextract/outputs/extractions/论文/json/2023-Vo-chitosan-membrane-shell-hydroxyapatite-review.json",
+        "paper_id": "2023-Vo-chitosan-beads-wastewater-review",
+        "sections": {
+          "problem_definition": "自然界中生物聚合物需高效捕获特定离子以构建骨架或维持生理平衡；水处理中面临重金属与有机污染物高效去除、吸附剂易流失、再生困难及固液分离繁琐等工程挑战。",
+          "biological_solution": "进化策略：甲壳素作为自然界第二大生物聚合物，利用β-(1→4)糖苷键骨架上的-NH₂和-OH实现金属离子的配位螯合。关键机制：模拟天然细胞外基质的三维网络结构提供高孔隙率与传质通道。成功案例：CS/Fe-hydroxyapatite珠粒对Pb(II)吸附达1385 mg/g，印迹磁性CS珠粒实现15次循环再利用。",
+          "key_features": "必须保留特征：含-NH₂和-OH的β-(1→4)糖苷键骨架、模拟细胞外基质的三维水凝胶珠粒形态。可灵活调整特征：层级孔结构（如MOF菱形通道协同）、磁性组分（Fe3O4）、特定官能团（巯基、β-环糊精）及离子印迹空腔。",
+          "design_mapping": "生物→材料映射：甲壳素骨架→壳聚糖珠粒基底；细胞外基质三维网络→交联水凝胶珠粒；生物矿化通道→MOF/CS层级孔结构。软约束建议：建议引入无机材料复合以避免质量损失；针对工业应用优先选择化学或热再生，并引入磁性组分以简化固液分离。",
+          "explainability_anchors": "仿生故事线：从甲壳类生物外壳的离子螯合能力与细胞外基质的三维多孔网络出发，启发设计兼具高吸附容量、优异水力学性能与易分离特性的壳聚糖基珠粒。设计溯源：ZIF-8/CS的层级孔设计源于生物通道协同效应；磁性及印迹设计源于生物特异性识别与便捷分离的工程需求。"
+        }
+      }
+    ]
+  },
+  "engineering_constraints": [
+    {
+      "constraint": "Imprinted magnetic chitosan beads对Ni(II)的循环再利用次数",
+      "value": "15",
+      "unit": "cycles",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s10311-023-01563-9"
+    },
+    {
+      "constraint": "柠檬酸/CS/Fe/PEI珠粒对Cu(II)的吸附与循环",
+      "value": "127",
+      "unit": "mg/g",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s10311-023-01563-9"
+    },
+    {
+      "constraint": "壳聚糖珠粒的七大再生方法（Table 9）",
+      "value": "热再生、化学再生、微波辅助、超声、溶剂、超临界流体",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s10311-023-01563-9"
+    }
+  ],
+  "provenance_summary": {
+    "n_papers": 1,
+    "n_verified": 0,
+    "n_unverified": 2
+  },
+  "coverage": "normal",
+  "status": "active"
+}
