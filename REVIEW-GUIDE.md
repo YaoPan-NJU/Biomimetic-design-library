@@ -2,6 +2,21 @@
 
 > 本文件为外部审查 AI 准备，提供项目全貌和审查入口。
 
+## ⚠️ 重要：本项目由两个仓库组成
+
+| 仓库 | 分支 | 内容 |
+|------|------|------|
+| **[Biomimetic-design-library](https://github.com/YaoPan-NJU/Biomimetic-design-library/tree/feature/extraction-results)** | `feature/extraction-results` | 仿生设计库（原型、映射、校验、审计） |
+| **[Literature-extracting](https://github.com/YaoPan-NJU/Literature-extracting/tree/feature/biomimetic-extraction)** | `feature/biomimetic-extraction` | 提参工具 LitExtract（提示词、脚本、提取结果 JSON） |
+
+**必须两个仓库都读**，否则会缺失：
+- 提参提示词（v1/v2）— 理解"怎么提取的"
+- 315 个提取结果 JSON — 原始数据
+- 提参脚本（preprocess.py、multi_worker_extract.sh 等）— 理解工程实现
+- Schema 定义 — 理解数据结构
+
+`Biomimetic-design-library` 的 `tools/litextract/` 是 Literature-extracting 的 git submodule 引用。
+
 ## 审查目标
 
 对 Biomimetic-design-library 项目的**数据质量、架构设计、工程规范**进行全面审查，给出改进建议。
@@ -14,6 +29,27 @@
 |------|------|
 | `README.md` | 项目简介、架构、三层匹配机制 |
 | `SESSION-CONTEXT.md` | 当前状态总览（提参进度、原型进度、待办任务） |
+
+### 1.5 提参工具与提示词（Literature-extracting 仓库）（15 min）⭐
+
+在 [Literature-extracting](https://github.com/YaoPan-NJU/Literature-extracting/tree/feature/biomimetic-extraction) 仓库中阅读：
+
+| 文件 | 内容 |
+|------|------|
+| `prompts/biomimetic_extraction_prompt.md` | v1 提示词（基础版，330 行） |
+| `prompts/biomimetic_extraction_prompt_v2.md` | v2 提示词（含仿生元数据、专利/标准策略，625 行）⭐ |
+| `schema/` | JSON Schema 定义（biomimetic-v1、biomimetic-v2） |
+| `scripts/preprocess.py` | PDF 预处理（多模态提取文本+表格） |
+| `scripts/multi_worker_extract.sh` | 多路并发提取脚本（支持 1/2/3 路） |
+| `outputs/extractions/论文/json/` | 275 个论文提取结果 |
+| `outputs/extractions/专利/json/` | 37 个专利提取结果 |
+| `outputs/extractions/标准/json/` | 3 个标准提取结果 |
+
+**v2 提示词是核心**，它定义了：
+- Step 1-3：基础提取（knowledge_items、source、evidence）
+- Step 4：仿生元数据提取（prototype_targets、biomimetic_metadata、biomimetic_narrative）
+- 专利/标准专项策略（patent_number、standard_number）
+- evidence 质量分级规则（reliable/needs_review/suspicious/unavailable）
 
 ### 2. 设计与架构（10 min）
 
@@ -96,12 +132,21 @@
 
 ## 分支说明
 
+### Biomimetic-design-library
+
 | 分支 | 内容 | 推荐 |
 |------|------|------|
-| `feature/extraction-results` | **最新**：全部提取结果 + 42 个原型 + 桥接管道代码 + 审计报告 | ⭐ 主要审查对象 |
+| `feature/extraction-results` | **最新**：42 个原型 + 桥接管道代码 + 审计报告 + 子模块引用 | ⭐ 主要审查对象 |
 | `main` | 基础框架（taxonomy、template、feature-mapping） | 参考 |
 
-**只需审查 `feature/extraction-results` 分支**，它包含了 main 的所有内容加上最新产出。
+### Literature-extracting
+
+| 分支 | 内容 | 推荐 |
+|------|------|------|
+| `feature/biomimetic-extraction` | **最新**：提示词 v2 + 提参脚本 + 315 个 JSON + schema 定义 | ⭐ 必读 |
+| `main` | LitExtract 框架基础代码 | 参考 |
+
+**两个仓库的 `feature/*` 分支都需要审查。**
 
 ## 项目数据概览
 
@@ -115,12 +160,26 @@
 校验规则：1.5/6 已实现
 ```
 
+## 克隆与初始化
+
+```bash
+# 克隆仿生设计库
+git clone -b feature/extraction-results https://github.com/YaoPan-NJU/Biomimetic-design-library.git
+cd Biomimetic-design-library
+
+# 初始化子模块（获取提参工具和提取结果）
+git submodule init
+git submodule update
+```
+
+子模块初始化后，`tools/litextract/` 目录将包含完整的提参工具代码和 315 个 JSON 提取结果。
+
 ## 相关仓库
 
 | 仓库 | 分支 | 内容 |
 |------|------|------|
 | [Biomimetic-design-library](https://github.com/YaoPan-NJU/Biomimetic-design-library/tree/feature/extraction-results) | `feature/extraction-results` | 本项目（仿生设计库） |
-| [Literature-extracting](https://github.com/YaoPan-NJU/Literature-extracting/tree/feature/biomimetic-extraction) | `feature/biomimetic-extraction` | 提参工具（LitExtract） |
+| [Literature-extracting](https://github.com/YaoPan-NJU/Literature-extracting/tree/feature/biomimetic-extraction) | `feature/biomimetic-extraction` | 提参工具（LitExtract）— 提示词、脚本、提取结果 |
 
 ---
 
