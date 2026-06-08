@@ -37,6 +37,8 @@ brief = ctx.query(
 ## 相关文档
 
 - [交付计划](docs/ADRMATS_DELIVERY_PLAN.md) — 唯一执行入口
+- [ADRMATS 调用说明](docs/ADRMATS_CALL_GUIDE.md) — 接口文档
+- [支持范围与风险](docs/SUPPORT_SCOPE_AND_RISKS.md) — 当前能力边界
 - [库定位与 brief 结构](docs/design.md)
 - [分层检索策略](docs/ADRMATS_INTEGRATION.md)
 

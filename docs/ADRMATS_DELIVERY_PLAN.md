@@ -117,43 +117,43 @@
 
 ## 4. 工作顺序
 
-### Milestone 0：交付计划与状态收敛
+### Milestone 0：交付计划与状态收敛 ✅
 
 - [x] 新增 docs/ADRMATS_DELIVERY_PLAN.md
-- [ ] 更新 README.md 和 docs/HANDOFF.md，只保留入口和当前真实状态
-- [ ] 修复 Windows 默认编码下 validate/check 脚本报错
-- [ ] 运行 validate_consistency.py、check_chimera.py
-- [ ] commit 并 push
-- [ ] 回报 commit hash、命令结果、剩余风险
+- [x] 更新 README.md 和 docs/HANDOFF.md，只保留入口和当前真实状态
+- [x] 修复 Windows 默认编码下 validate/check 脚本报错
+- [x] 运行 validate_consistency.py、check_chimera.py
+- [x] commit 并 push
+- [x] 回报 commit hash、命令结果、剩余风险
 
-### Milestone 1：接口契约收敛
+### Milestone 1：接口契约收敛 ✅
 
-- [ ] 修改 BiomimeticContext.query()，让真实返回结构与文档 schema 一致
-- [ ] 新增自动 schema 验收
-- [ ] 不允许手写 brief 示例作为通过依据
-- [ ] commit 并 push
+- [x] 修改 BiomimeticContext.query()，让真实返回结构与文档 schema 一致
+- [x] 新增自动 schema 验收
+- [x] 不允许手写 brief 示例作为通过依据
+- [x] commit 并 push
 
-### Milestone 2：污染物标准化与画像数据化
+### Milestone 2：污染物标准化与画像数据化 ✅
 
-- [ ] 把 pollutant profiles 和 aliases 从 Python 代码迁出到 JSON 数据文件
-- [ ] Pb(II)、Pb²⁺、Pb2+、lead ion 必须归一
-- [ ] PFOA、SMX、BPA 必须有分子特征画像
-- [ ] commit 并 push
+- [x] 把 pollutant profiles 和 aliases 从 Python 代码迁出到 JSON 数据文件
+- [x] Pb(II)、Pb²⁺、Pb2+、lead ion 必须归一
+- [x] PFOA、SMX、BPA 必须有分子特征画像
+- [x] commit 并 push
 
-### Milestone 3：真实 ADRMATS 查询闭环
+### Milestone 3：真实 ADRMATS 查询闭环 ✅
 
-- [ ] 用 verify_adrmats_delivery.py 生成并验证 PFOA/SMX/BPA/Pb(II) 的真实接口 brief
-- [ ] 每个 brief 必须通过 honesty 标注检查
-- [ ] 输出 examples/adrmats_briefs/ 下的生成样例
-- [ ] commit 并 push
+- [x] 用 verify_adrmats_delivery.py 生成并验证 PFOA/SMX/BPA/Pb(II) 的真实接口 brief
+- [x] 每个 brief 必须通过 honesty 标注检查
+- [x] 输出 examples/adrmats_briefs/ 下的生成样例
+- [x] commit 并 push
 
-### Milestone 4：v0.1 交付包
+### Milestone 4：v0.1 交付包 ✅
 
-- [ ] 形成 ADRMATS 调用说明
-- [ ] 列出当前支持范围、不能支持的范围、未验证风险
-- [ ] 所有验收脚本通过
-- [ ] 打 tag 或至少提交 final delivery commit
-- [ ] push GitHub
+- [x] 形成 ADRMATS 调用说明
+- [x] 列出当前支持范围、不能支持的范围、未验证风险
+- [x] 所有验收脚本通过
+- [x] 打 tag 或至少提交 final delivery commit
+- [x] push GitHub
 
 ---
 
@@ -170,10 +170,12 @@
 
 ## 6. 当前状态
 
-**最新 commit**：f47a3af
+**最新 commit**：e916b1e
 **分支**：feature/extraction-results
+**版本**：v0.1
 
 **已完成**：
+- Milestone 0-4 全部完成
 - 校验错误：0
 - chimera 违规：0
 - 污染物名称：已统一

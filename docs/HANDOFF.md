@@ -30,8 +30,10 @@
 | 文件 | 用途 |
 |------|------|
 | `docs/ADRMATS_DELIVERY_PLAN.md` | 唯一执行入口 |
+| `docs/ADRMATS_CALL_GUIDE.md` | ADRMATS 调用说明 |
+| `docs/SUPPORT_SCOPE_AND_RISKS.md` | 支持范围与风险 |
 | `tools/biomimetic_context.py` | ADRMATS 接口 |
-| `tools/verify_adrmats_delivery.py` | 验收脚本（待创建） |
+| `tools/verify_adrmats_delivery.py` | 验收脚本 |
 | `tools/validate_consistency.py` | 校验脚本 |
 | `tools/check_chimera.py` | chimera 检测 |
 | `feature-mapping.json` | 污染物-原型映射 |
