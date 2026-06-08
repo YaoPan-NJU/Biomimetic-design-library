@@ -7,35 +7,37 @@
 
 ## Current Snapshot
 
-- `updated_at`: `2026-06-08 17:30`
+- `updated_at`: `2026-06-08 19:35`
 - `agent`: `coffee-cli`
 - `current_milestone`: `Milestone 3`（已完成）
-- `status`: `waiting_for_supervisor_review`
-- `latest_commit`: `10e5816`
+- `status`: `HUMAN_REVIEW_REQUIRED`
+- `latest_commit`: `8002205`
 - `pushed_to_github`: `是`
-- `working_tree_clean`: `否`（有新文件：generate_adrmats_briefs.py 和 examples/adrmats_briefs/）
+- `working_tree_clean`: `是`
 
 ## Commands Actually Run
 
 ```text
-# 生成 ADRMATS 真实接口 brief
-python tools/generate_adrmats_briefs.py 2>&1
-# 结果：4/4 通过，所有 brief 生成成功
+# 运行验收脚本
+python tools/verify_adrmats_delivery.py 2>&1
+# 结果：6/6 通过，退出码 0
 
-# 验证生成的文件
-ls examples/adrmats_briefs/
-# 结果：4 个 JSON 文件
+# 验证 examples/adrmats_briefs/ 目录
+ls -la examples/adrmats_briefs/
+# 结果：4 个 JSON 文件已存在
 ```
 
 ## Passed Checks
 
+- ✅ verify_adrmats_delivery.py: 6/6 通过
+- ✅ validate_consistency.py: 0 error
+- ✅ check_chimera.py: 0 violation
 - ✅ PFOA: molecular_feature_inference, direct_evidence=False
 - ✅ SMX: molecular_feature_inference, direct_evidence=False
 - ✅ BPA: molecular_feature_inference, direct_evidence=False
 - ✅ Pb(II): direct_pollutant_evidence, direct_evidence=True
-- ✅ 所有 brief 由接口真实生成，不是手写
-- ✅ validate_consistency.py: 0 error
-- ✅ check_chimera.py: 0 violation
+- ✅ 所有 brief 由 BiomimeticContext.query() 真实生成
+- ✅ examples/adrmats_briefs/ 目录包含 4 个 JSON 文件
 
 ## Failed Checks
 
@@ -44,11 +46,11 @@ ls examples/adrmats_briefs/
 ## Files Changed In Current Milestone
 
 ### Milestone 3
-- `tools/generate_adrmats_briefs.py`（新增，生成真实接口 brief）
-- `examples/adrmats_briefs/pfoa_痕量吸附去除.json`（新增，真实接口生成）
-- `examples/adrmats_briefs/smx_抗生素吸附去除.json`（新增，真实接口生成）
-- `examples/adrmats_briefs/bpa_内分泌干扰物去除.json`（新增，真实接口生成）
-- `examples/adrmats_briefs/pb(ii)_重金属离子去除.json`（新增，真实接口生成）
+- `tools/generate_adrmats_briefs.py`（新增）
+- `examples/adrmats_briefs/pfoa_痕量吸附去除.json`（真实接口生成）
+- `examples/adrmats_briefs/smx_抗生素吸附去除.json`（真实接口生成）
+- `examples/adrmats_briefs/bpa_内分泌干扰物去除.json`（真实接口生成）
+- `examples/adrmats_briefs/pb(ii)_重金属离子去除.json`（真实接口生成）
 
 ## Remaining Risks
 
@@ -57,15 +59,15 @@ ls examples/adrmats_briefs/
 
 ## Next Intended Action
 
-等待监督指令状态变为 `CONTINUE` 后再继续 Milestone 4。
+等待监督指令，不自动进入 Milestone 4。
 
 ---
 
 ## 监督指令检查
 
-- `docs/AI_SUPERVISOR_DIRECTIVE.md` 状态：`CONTINUE`
-- 行为：已完成 Milestone 3，等待监督指令更新
+- `docs/AI_SUPERVISOR_DIRECTIVE.md` 状态：`HUMAN_REVIEW_REQUIRED`
+- 行为：Milestone 3 已完成，等待人工/Codex 复查
 
 ---
 
-*本文件由 coffee-cli 于 2026-06-08 17:30 更新*
+*本文件由 coffee-cli 于 2026-06-08 19:35 更新*
