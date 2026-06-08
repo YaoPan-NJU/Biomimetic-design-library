@@ -58,8 +58,21 @@ Biomimetic-design-library/
 │   ├── ADRMATS_CALL_GUIDE.md      # 调用说明
 │   ├── ADRMATS_INTEGRATION.md     # 分层检索策略
 │   ├── SUPPORT_SCOPE_AND_RISKS.md # 支持范围与风险
-│   ├── REPOSITORY_HYGIENE.md      # 本文件
+│   ├── REPOSITORY_HYGIENE.md      # 仓库治理规范
 │   └── archive/                   # 归档文档（过程文件、评估报告）
+
+**docs/ 允许的 md 文件**：
+- design.md
+- ADRMATS_DELIVERY_PLAN.md
+- ADRMATS_CALL_GUIDE.md
+- ADRMATS_INTEGRATION.md
+- SUPPORT_SCOPE_AND_RISKS.md
+- REPOSITORY_HYGIENE.md
+
+**docs/ 不允许的文件**：
+- 过程文件（AI_*.md, HANDOFF.md 等）→ 移到 docs/archive/
+- 评估报告（*_evaluation.md）→ 移到 docs/archive/
+- 临时指令（任务布置_*.md 等）→ 移到 docs/archive/
 │
 ├── examples/                      # 真实接口输出示例
 │   └── adrmats_briefs/
