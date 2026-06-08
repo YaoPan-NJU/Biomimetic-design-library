@@ -1,5 +1,6 @@
 # ADRMATS 集成文档 — 分层检索策略
 
+> **唯一执行入口：[ADRMATS_DELIVERY_PLAN.md](ADRMATS_DELIVERY_PLAN.md)**
 > 适用项目：Biomimetic-design-library（ADRMATS 的仿生**启发**检索模块）
 > 编制日期：2026-06-08
 > 配合阅读：`docs/design.md`（库定位与 brief 结构）
