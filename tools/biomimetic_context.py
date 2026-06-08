@@ -28,125 +28,86 @@ import os
 from typing import Dict, List, Optional, Any
 
 
-# 污染物分子特征画像数据库
-POLLUTANT_PROFILES = {
-    "Pb(II)": {
-        "canonical_name": "Pb(II)",
-        "pollutant_class": "重金属",
-        "molecular_features": ["二价阳离子", "软酸", "高电荷密度", "可与含硫/氮配体配位"],
-        "likely_interactions": ["配位", "静电吸引", "离子交换", "络合"],
-        "profile_basis": "database"
-    },
-    "PFOA": {
-        "canonical_name": "PFOA（Perfluorooctanoic acid）",
-        "pollutant_class": "PFASs（全氟和多氟烷基物质）",
-        "molecular_features": ["长链全氟烷基", "羧酸基团", "疏水性", "两亲性", "化学稳定性"],
-        "likely_interactions": ["疏水分配", "氢键", "静电吸引", "孔道限域"],
-        "profile_basis": "database"
-    },
-    "BPA": {
-        "canonical_name": "BPA（Bisphenol A）",
-        "pollutant_class": "内分泌干扰物/酚类化合物",
-        "molecular_features": ["芳香环", "酚羟基", "疏水性", "弱酸性"],
-        "likely_interactions": ["氢键", "π-π堆积", "疏水分配", "静电吸引"],
-        "profile_basis": "database"
-    },
-    "TC": {
-        "canonical_name": "TC（Tetracycline）",
-        "pollutant_class": "抗生素",
-        "molecular_features": ["芳香环", "酚羟基", "酰胺基", "二甲氨基", "弱碱性"],
-        "likely_interactions": ["氢键", "π-π堆积", "静电吸引", "配位"],
-        "profile_basis": "database"
-    },
-    "SMX": {
-        "canonical_name": "SMX（Sulfamethoxazole）",
-        "pollutant_class": "抗生素/磺胺类",
-        "molecular_features": ["芳香环", "磺酰胺基", "异恶唑环", "弱酸性"],
-        "likely_interactions": ["氢键", "π-π堆积", "静电吸引", "疏水分配"],
-        "profile_basis": "database"
-    },
-    "TCE": {
-        "canonical_name": "TCE（Trichloroethylene）",
-        "pollutant_class": "卤代烃/VOCs",
-        "molecular_features": ["氯代烯烃", "疏水性", "挥发性", "弱极性"],
-        "likely_interactions": ["疏水分配", "π-π堆积", "孔道限域"],
-        "profile_basis": "database"
-    },
-    "MB": {
-        "canonical_name": "MB（Methylene Blue）",
-        "pollutant_class": "阳离子染料",
-        "molecular_features": ["芳香环", "正电荷", "平面结构", "水溶性"],
-        "likely_interactions": ["静电吸引", "π-π堆积", "氢键"],
-        "profile_basis": "database"
-    },
-    "Cr(VI)": {
-        "canonical_name": "Cr(VI)",
-        "pollutant_class": "重金属",
-        "molecular_features": ["六价铬", "含氧阴离子", "强氧化性"],
-        "likely_interactions": ["静电吸引", "还原沉淀", "配位"],
-        "profile_basis": "database"
-    },
-    "Hg(II)": {
-        "canonical_name": "Hg(II)",
-        "pollutant_class": "重金属",
-        "molecular_features": ["二价阳离子", "软酸", "高亲硫性"],
-        "likely_interactions": ["配位", "离子交换", "沉淀"],
-        "profile_basis": "database"
-    },
-    "Cd(II)": {
-        "canonical_name": "Cd(II)",
-        "pollutant_class": "重金属",
-        "molecular_features": ["二价阳离子", "软酸", "中等电荷密度"],
-        "likely_interactions": ["配位", "静电吸引", "离子交换"],
-        "profile_basis": "database"
-    }
-}
+def get_project_root():
+    """获取项目根目录"""
+    # 从 tools/biomimetic_context.py 向上两级
+    return os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 class BiomimeticContext:
     """ADRMATS 仿生启发检索接口"""
 
-    def __init__(self, prototypes_db_path: str = "prototypes_db", feature_mapping_path: str = "feature-mapping.json", matching_rules_path: str = "feature_matching_rules.json"):
-        self.prototypes_db_path = prototypes_db_path
-        self.feature_mapping_path = feature_mapping_path
-        self.matching_rules_path = matching_rules_path
+    def __init__(self, prototypes_db_path: str = None, feature_mapping_path: str = None, matching_rules_path: str = None, pollutant_profiles_path: str = None, pollutant_aliases_path: str = None):
+        # 获取项目根目录
+        project_root = get_project_root()
+
+        # 设置默认路径
+        self.prototypes_db_path = prototypes_db_path or os.path.join(project_root, "prototypes_db")
+        self.feature_mapping_path = feature_mapping_path or os.path.join(project_root, "feature-mapping.json")
+        self.matching_rules_path = matching_rules_path or os.path.join(project_root, "feature_matching_rules.json")
+        self.pollutant_profiles_path = pollutant_profiles_path or os.path.join(project_root, "pollutant_profiles.json")
+        self.pollutant_aliases_path = pollutant_aliases_path or os.path.join(project_root, "pollutant_aliases.json")
 
         # 加载 feature-mapping
-        with open(feature_mapping_path, encoding='utf-8') as f:
+        with open(self.feature_mapping_path, encoding='utf-8') as f:
             self.feature_mapping = json.load(f)
 
         # 加载匹配规则
-        with open(matching_rules_path, encoding='utf-8') as f:
+        with open(self.matching_rules_path, encoding='utf-8') as f:
             self.matching_rules = json.load(f)
+
+        # 加载污染物画像
+        with open(self.pollutant_profiles_path, encoding='utf-8') as f:
+            self.pollutant_profiles = json.load(f)
+
+        # 加载污染物别名
+        with open(self.pollutant_aliases_path, encoding='utf-8') as f:
+            self.pollutant_aliases = json.load(f)
 
         # 加载所有原型
         self.prototypes = {}
-        for filename in os.listdir(prototypes_db_path):
+        for filename in os.listdir(self.prototypes_db_path):
             if filename.endswith('.json'):
-                filepath = os.path.join(prototypes_db_path, filename)
+                filepath = os.path.join(self.prototypes_db_path, filename)
                 with open(filepath, encoding='utf-8') as f:
                     d = json.load(f)
                 self.prototypes[d.get('id', '')] = d
 
     def get_pollutant_profile(self, pollutant: str) -> Dict[str, Any]:
         """获取污染物分子特征画像"""
+        profiles = self.pollutant_profiles.get('profiles', {})
+
+        # 首先通过别名查找 canonical name
+        canonical = self._get_canonical_name(pollutant)
+
         # 精确匹配
-        if pollutant in POLLUTANT_PROFILES:
-            return POLLUTANT_PROFILES[pollutant].copy()
+        if canonical in profiles:
+            return profiles[canonical].copy()
 
         # 模糊匹配
-        for key, profile in POLLUTANT_PROFILES.items():
-            if pollutant.lower() in key.lower() or key.lower() in pollutant.lower():
+        for key, profile in profiles.items():
+            if canonical.lower() in key.lower() or key.lower() in canonical.lower():
                 return profile.copy()
 
         # 默认画像
         return {
-            "canonical_name": pollutant,
+            "canonical_name": canonical,
             "pollutant_class": "未知",
             "molecular_features": [],
             "likely_interactions": [],
             "profile_basis": "llm_inference"
         }
+
+    def _get_canonical_name(self, pollutant: str) -> str:
+        """通过别名获取 canonical name"""
+        aliases_data = self.pollutant_aliases.get('aliases', {})
+
+        for canonical, info in aliases_data.items():
+            alias_list = info.get('aliases', [])
+            if pollutant in alias_list or pollutant.lower() in [a.lower() for a in alias_list]:
+                return canonical
+
+        return pollutant
 
     def find_direct_evidence(self, pollutant: str) -> List[Dict[str, Any]]:
         """查找有直接实验数据的原型"""
@@ -154,20 +115,14 @@ class BiomimeticContext:
 
         ppm = self.feature_mapping.get('pollutant_prototype_map', {})
 
-        # 污染物别名映射（用于匹配）
-        pollutant_aliases = {
-            'Pb(II)': ['Pb(II)', 'Pb²⁺', 'Pb2+', 'Pb'],
-            'Cd(II)': ['Cd(II)', 'Cd²⁺', 'Cd2+', 'Cd'],
-            'Hg(II)': ['Hg(II)', 'Hg²⁺', 'Hg2+', 'Hg'],
-            'Cu(II)': ['Cu(II)', 'Cu²⁺', 'Cu2+', 'Cu'],
-            'Cr(VI)': ['Cr(VI)', 'Cr⁶⁺', 'Cr'],
-            'As(V)': ['As(V)', 'As(III)', 'As'],
-            'U(VI)': ['U(VI)', 'U'],
-        }
+        # 从 JSON 文件获取别名
+        canonical = self._get_canonical_name(pollutant)
+        aliases_data = self.pollutant_aliases.get('aliases', {})
 
         # 获取所有可能的别名
         aliases = [pollutant]
-        for canonical, alias_list in pollutant_aliases.items():
+        for canon, info in aliases_data.items():
+            alias_list = info.get('aliases', [])
             if pollutant in alias_list or pollutant.lower() in [a.lower() for a in alias_list]:
                 aliases = alias_list
                 break
