@@ -388,17 +388,19 @@ class BiomimeticContext:
                 inferences.append(f"{c['prototype_id']}: 基于分子特征推断，非直接证据")
 
         return {
-            'context': {
-                'water_quality': water_quality or {},
-                'removal_target': {'污染物': pollutant},
-                'pollutant_profile': pollutant_profile,
-                'engineering_constraints': engineering_constraints or []
-            },
-            'candidates': brief_candidates,
-            'honesty_ledger': {
-                'facts': facts,
-                'leads': leads,
-                'inferences': inferences
+            'brief': {
+                'context': {
+                    'water_quality': water_quality or {},
+                    'removal_target': {'污染物': pollutant},
+                    'pollutant_profile': pollutant_profile,
+                    'engineering_constraints': engineering_constraints or []
+                },
+                'candidates': brief_candidates,
+                'honesty_ledger': {
+                    'facts': facts,
+                    'leads': leads,
+                    'inferences': inferences
+                }
             }
         }
 
