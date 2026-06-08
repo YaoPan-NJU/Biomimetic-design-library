@@ -19,17 +19,29 @@ import sys
 import os
 import subprocess
 
+# 设置环境变量确保 UTF-8 编码
+os.environ['PYTHONUTF8'] = '1'
+
 # 添加项目根目录到 path
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from tools.biomimetic_context import BiomimeticContext
 
 
+def safe_print(text):
+    """安全打印，处理编码问题"""
+    try:
+        print(text)
+    except UnicodeEncodeError:
+        # 如果编码错误，用 replace 模式
+        print(text.encode('utf-8', errors='replace').decode('utf-8'))
+
+
 def print_section(title):
     """打印带分隔线的标题"""
-    print(f"\n{'='*60}")
-    print(f"  {title}")
-    print(f"{'='*60}\n")
+    safe_print(f"\n{'='*60}")
+    safe_print(f"  {title}")
+    safe_print(f"{'='*60}\n")
 
 
 def validate_brief_structure(brief, test_name):
@@ -197,10 +209,10 @@ def validate_no_needs_review_in_strong_ranking(brief, test_name):
 
 def run_test(pollutant, water_quality, engineering_constraints, test_name):
     """运行单个测试"""
-    print(f"\n--- 测试: {test_name} ---")
-    print(f"污染物: {pollutant}")
-    print(f"水质: {json.dumps(water_quality, ensure_ascii=False)}")
-    print(f"约束: {engineering_constraints}")
+    safe_print(f"\n--- 测试: {test_name} ---")
+    safe_print(f"污染物: {pollutant}")
+    safe_print(f"水质: {json.dumps(water_quality, ensure_ascii=False)}")
+    safe_print(f"约束: {engineering_constraints}")
 
     ctx = BiomimeticContext()
     brief = ctx.query(
@@ -217,28 +229,28 @@ def run_test(pollutant, water_quality, engineering_constraints, test_name):
     all_errors = structure_errors + evidence_errors + ranking_errors
 
     if all_errors:
-        print(f"\n❌ 测试失败:")
+        safe_print(f"\n[FAIL] 测试失败:")
         for error in all_errors:
-            print(f"  - {error}")
+            safe_print(f"  - {error}")
         return False, all_errors
     else:
-        print(f"\n✅ 测试通过")
+        safe_print(f"\n[PASS] 测试通过")
 
         # 打印关键信息
         b = brief['brief']
         candidates = b.get('candidates', [])
 
-        print(f"\ncandidates 数量: {len(candidates)}")
+        safe_print(f"\ncandidates 数量: {len(candidates)}")
         for i, c in enumerate(candidates[:3]):
             match = c.get('match', {})
-            print(f"  {i+1}. {c.get('prototype_id')}: match_basis={match.get('match_basis')}, direct_evidence={match.get('direct_evidence')}")
+            safe_print(f"  {i+1}. {c.get('prototype_id')}: match_basis={match.get('match_basis')}, direct_evidence={match.get('direct_evidence')}")
 
         # 打印 honesty_ledger
         hl = b.get('honesty_ledger', {})
-        print(f"\nhonesty_ledger:")
-        print(f"  facts: {len(hl.get('facts', []))} 条")
-        print(f"  leads: {len(hl.get('leads', []))} 条")
-        print(f"  inferences: {len(hl.get('inferences', []))} 条")
+        safe_print(f"\nhonesty_ledger:")
+        safe_print(f"  facts: {len(hl.get('facts', []))} 条")
+        safe_print(f"  leads: {len(hl.get('leads', []))} 条")
+        safe_print(f"  inferences: {len(hl.get('inferences', []))} 条")
 
         return True, []
 
@@ -297,17 +309,18 @@ def main():
             ["python", "tools/validate_consistency.py"],
             capture_output=True,
             text=True,
-            encoding='utf-8'
+            encoding='utf-8',
+            errors='replace'
         )
         if "错误: 0" in result.stdout:
-            print("✅ validate_consistency.py: 0 error")
+            safe_print("[PASS] validate_consistency.py: 0 error")
             results.append({"test_name": "validate_consistency.py", "passed": True, "errors": []})
         else:
-            print("❌ validate_consistency.py 有错误")
-            print(result.stdout[-500:])
+            safe_print("[FAIL] validate_consistency.py 有错误")
+            safe_print(result.stdout[-500:])
             results.append({"test_name": "validate_consistency.py", "passed": False, "errors": ["有错误"]})
     except Exception as e:
-        print(f"❌ 运行 validate_consistency.py 失败: {e}")
+        safe_print(f"[FAIL] 运行 validate_consistency.py 失败: {e}")
         results.append({"test_name": "validate_consistency.py", "passed": False, "errors": [str(e)]})
 
     # 运行 check_chimera.py
@@ -317,17 +330,18 @@ def main():
             ["python", "tools/check_chimera.py"],
             capture_output=True,
             text=True,
-            encoding='utf-8'
+            encoding='utf-8',
+            errors='replace'
         )
         if "违规原型: 0" in result.stdout:
-            print("✅ check_chimera.py: 0 violation")
+            safe_print("[PASS] check_chimera.py: 0 violation")
             results.append({"test_name": "check_chimera.py", "passed": True, "errors": []})
         else:
-            print("❌ check_chimera.py 有违规")
-            print(result.stdout[-500:])
+            safe_print("[FAIL] check_chimera.py 有违规")
+            safe_print(result.stdout[-500:])
             results.append({"test_name": "check_chimera.py", "passed": False, "errors": ["有违规"]})
     except Exception as e:
-        print(f"❌ 运行 check_chimera.py 失败: {e}")
+        safe_print(f"[FAIL] 运行 check_chimera.py 失败: {e}")
         results.append({"test_name": "check_chimera.py", "passed": False, "errors": [str(e)]})
 
     # 汇总结果
@@ -337,19 +351,19 @@ def main():
     failed_count = len(results) - passed_count
 
     for r in results:
-        status = "✅" if r["passed"] else "❌"
-        print(f"{status} {r['test_name']}")
+        status = "[PASS]" if r["passed"] else "[FAIL]"
+        safe_print(f"{status} {r['test_name']}")
         if r["errors"]:
             for error in r["errors"]:
-                print(f"    - {error}")
+                safe_print(f"    - {error}")
 
-    print(f"\n总计: {passed_count} 通过, {failed_count} 失败")
+    safe_print(f"\n总计: {passed_count} 通过, {failed_count} 失败")
 
     if failed_count > 0:
-        print("\n❌ 验收失败")
+        safe_print("\n[FAIL] 验收失败")
         return 1
     else:
-        print("\n✅ 验收通过")
+        safe_print("\n[PASS] 验收通过")
         return 0
 
 
