@@ -7,35 +7,35 @@
 
 ## Current Snapshot
 
-- `updated_at`: `2026-06-08 17:20`
+- `updated_at`: `2026-06-08 17:30`
 - `agent`: `coffee-cli`
-- `current_milestone`: `Milestone 2`（已完成，修复编码问题）
+- `current_milestone`: `Milestone 3`（已完成）
 - `status`: `waiting_for_supervisor_review`
-- `latest_commit`: `285841c`
+- `latest_commit`: `10e5816`
 - `pushed_to_github`: `是`
-- `working_tree_clean`: `否`（有 1 个修改文件：verify_adrmats_delivery.py）
+- `working_tree_clean`: `否`（有新文件：generate_adrmats_briefs.py 和 examples/adrmats_briefs/）
 
 ## Commands Actually Run
 
 ```text
-# 修复 verify_adrmats_delivery.py 编码问题
-python tools/verify_adrmats_delivery.py 2>&1
-# 结果：6/6 通过，无编码错误
+# 生成 ADRMATS 真实接口 brief
+python tools/generate_adrmats_briefs.py 2>&1
+# 结果：4/4 通过，所有 brief 生成成功
 
-# 验证修复
-python tools/verify_adrmats_delivery.py 2>&1 | tail -20
-# 结果：[PASS] 验收通过
+# 验证生成的文件
+ls examples/adrmats_briefs/
+# 结果：4 个 JSON 文件
 ```
 
 ## Passed Checks
 
-- ✅ verify_adrmats_delivery.py: 6/6 通过
-- ✅ validate_consistency.py: 0 error
-- ✅ check_chimera.py: 0 violation
 - ✅ PFOA: molecular_feature_inference, direct_evidence=False
 - ✅ SMX: molecular_feature_inference, direct_evidence=False
 - ✅ BPA: molecular_feature_inference, direct_evidence=False
 - ✅ Pb(II): direct_pollutant_evidence, direct_evidence=True
+- ✅ 所有 brief 由接口真实生成，不是手写
+- ✅ validate_consistency.py: 0 error
+- ✅ check_chimera.py: 0 violation
 
 ## Failed Checks
 
@@ -43,28 +43,12 @@ python tools/verify_adrmats_delivery.py 2>&1 | tail -20
 
 ## Files Changed In Current Milestone
 
-### Milestone 0
-- `docs/ADRMATS_DELIVERY_PLAN.md`（新增）
-- `README.md`（重写）
-- `docs/HANDOFF.md`（重写）
-- `docs/ADRMATS_INTEGRATION.md`（添加入口指向）
-
-### Milestone 1
-- `tools/biomimetic_context.py`（修改 query() 添加 brief 外壳）
-- `tools/verify_adrmats_delivery.py`（新增验收脚本）
-
-### Milestone 2
-- `pollutant_profiles.json`（新增，25 个污染物的分子特征画像）
-- `pollutant_aliases.json`（新增，28 个污染物的别名映射表）
-- `tools/biomimetic_context.py`（修改，从 JSON 文件加载数据）
-
-### 修复编码问题
-- `tools/verify_adrmats_delivery.py`（修改，移除 emoji，使用 safe_print）
-
-### 监督机制文件（已提交）
-- `docs/AI_COORDINATION_PROTOCOL.md`（新增）
-- `docs/AI_SUPERVISOR_DIRECTIVE.md`（新增）
-- `docs/AI_AGENT_PROGRESS.md`（新增）
+### Milestone 3
+- `tools/generate_adrmats_briefs.py`（新增，生成真实接口 brief）
+- `examples/adrmats_briefs/pfoa_痕量吸附去除.json`（新增，真实接口生成）
+- `examples/adrmats_briefs/smx_抗生素吸附去除.json`（新增，真实接口生成）
+- `examples/adrmats_briefs/bpa_内分泌干扰物去除.json`（新增，真实接口生成）
+- `examples/adrmats_briefs/pb(ii)_重金属离子去除.json`（新增，真实接口生成）
 
 ## Remaining Risks
 
@@ -73,15 +57,15 @@ python tools/verify_adrmats_delivery.py 2>&1 | tail -20
 
 ## Next Intended Action
 
-等待监督指令状态变为 `CONTINUE` 后再继续 Milestone 3。
+等待监督指令状态变为 `CONTINUE` 后再继续 Milestone 4。
 
 ---
 
 ## 监督指令检查
 
-- `docs/AI_SUPERVISOR_DIRECTIVE.md` 状态：`FIX_REQUIRED`
-- 行为：已修复 verify_adrmats_delivery.py 编码问题，等待监督指令更新
+- `docs/AI_SUPERVISOR_DIRECTIVE.md` 状态：`CONTINUE`
+- 行为：已完成 Milestone 3，等待监督指令更新
 
 ---
 
-*本文件由 coffee-cli 于 2026-06-08 17:20 更新*
+*本文件由 coffee-cli 于 2026-06-08 17:30 更新*
