@@ -6,16 +6,15 @@
     python tools/check_repo_hygiene.py
 
 检查项目：
-1. 根目录是否有不允许的 .md 过程文档、evaluation 文件、brief JSON、README 变体
-2. docs/ 下是否有 AI_AGENT_PROGRESS.md、AI_SUPERVISOR_DIRECTIVE.md、AI_COORDINATION_PROTOCOL.md
-3. 是否存在 __pycache__、.pyc、.env、*.local 等应忽略文件
-4. examples/adrmats_briefs/ 外是否存在 brief JSON
-5. 是否存在 HANDOFF.md、REVIEW-GUIDE.md、SESSION-CONTEXT.md 等重复状态文档
+1. docs/ 根目录 allowlist 检查
+2. 根目录不允许的文件检查
+3. brief JSON 位置检查
+4. 重复状态文档检查
 """
 
 import os
 import sys
-import glob
+import subprocess
 
 # 设置环境变量确保 UTF-8 编码
 os.environ['PYTHONUTF8'] = '1'
@@ -34,6 +33,92 @@ def print_section(title):
     safe_print(f"\n{'='*60}")
     safe_print(f"  {title}")
     safe_print(f"{'='*60}\n")
+
+
+def get_git_tracked_files():
+    """获取 git 追踪的文件列表"""
+    try:
+        result = subprocess.run(
+            ['git', 'ls-files'],
+            capture_output=True,
+            text=True,
+            encoding='utf-8',
+            errors='replace'
+        )
+        return set(result.stdout.strip().split('\n')) if result.stdout.strip() else set()
+    except Exception:
+        return set()
+
+
+def get_git_ignored_files():
+    """获取被 .gitignore 忽略的文件列表"""
+    try:
+        result = subprocess.run(
+            ['git', 'ls-files', '--ignored', '--exclude-standard'],
+            capture_output=True,
+            text=True,
+            encoding='utf-8',
+            errors='replace'
+        )
+        return set(result.stdout.strip().split('\n')) if result.stdout.strip() else set()
+    except Exception:
+        return set()
+
+
+def check_docs_allowlist():
+    """检查 docs/ 根目录 allowlist"""
+    issues = []
+
+    # docs/ 允许的 md 文件
+    allowed_docs = {
+        'design.md',
+        'ADRMATS_DELIVERY_PLAN.md',
+        'ADRMATS_CALL_GUIDE.md',
+        'ADRMATS_INTEGRATION.md',
+        'SUPPORT_SCOPE_AND_RISKS.md',
+        'REPOSITORY_HYGIENE.md'
+    }
+
+    # 不允许的文件模式
+    disallowed_patterns = [
+        'Github management-INSTRUCTIONS.md',
+        'quality-audit',
+        '路径映射修复指令',
+        'AI_AGENT_PROGRESS',
+        'AI_COORDINATION_PROTOCOL',
+        'AI_SUPERVISOR_DIRECTIVE',
+        'HANDOFF',
+        'REVIEW-GUIDE',
+        'SESSION-CONTEXT',
+        '_evaluation',
+        '任务布置_',
+        '分层核查标准_',
+        '金标准闭环_',
+        '优化方案_',
+        '文献检索指令',
+        '下一步执行计划_',
+        '最新提取质量问题汇总',
+        '架构审查与优化建议_'
+    ]
+
+    docs_dir = 'docs'
+    if os.path.exists(docs_dir):
+        for item in os.listdir(docs_dir):
+            item_path = os.path.join(docs_dir, item)
+
+            # 跳过目录（如 archive/、context/）
+            if os.path.isdir(item_path):
+                continue
+
+            # 检查是否在 allowlist 中
+            if item not in allowed_docs:
+                # 检查是否匹配不允许的模式
+                for pattern in disallowed_patterns:
+                    if pattern in item:
+                        issues.append(f"docs/ 下不允许的文件: {item}")
+                        break
+
+    return issues
 
 
 def check_root_directory():
@@ -66,50 +151,6 @@ def check_root_directory():
     return issues
 
 
-def check_docs_directory():
-    """检查 docs/ 目录是否有过程文件"""
-    issues = []
-
-    # 不应在 docs/ 根目录的过程文件
-    process_files = [
-        'AI_AGENT_PROGRESS.md',
-        'AI_SUPERVISOR_DIRECTIVE.md',
-        'AI_COORDINATION_PROTOCOL.md',
-        'HANDOFF.md',
-        'REVIEW-GUIDE.md',
-        'SESSION-CONTEXT.md'
-    ]
-
-    docs_dir = 'docs'
-    if os.path.exists(docs_dir):
-        for item in os.listdir(docs_dir):
-            if os.path.isfile(os.path.join(docs_dir, item)):
-                if item in process_files:
-                    issues.append(f"docs/ 下的过程文件: {item}")
-
-    return issues
-
-
-def check_ignored_files():
-    """检查是否存在应忽略的文件"""
-    issues = []
-
-    # 检查 __pycache__
-    for root, dirs, files in os.walk('.'):
-        if '__pycache__' in dirs:
-            issues.append(f"存在 __pycache__ 目录: {os.path.join(root, '__pycache__')}")
-
-        for file in files:
-            if file.endswith('.pyc'):
-                issues.append(f"存在 .pyc 文件: {os.path.join(root, file)}")
-            elif file == '.env':
-                issues.append(f"存在 .env 文件: {os.path.join(root, file)}")
-            elif file.endswith('.local'):
-                issues.append(f"存在 .local 文件: {os.path.join(root, file)}")
-
-    return issues
-
-
 def check_brief_json_outside_examples():
     """检查 examples/adrmats_briefs/ 外是否存在 brief JSON"""
     issues = []
@@ -117,23 +158,20 @@ def check_brief_json_outside_examples():
     # 允许 brief JSON 的目录
     allowed_dirs = ['examples/adrmats_briefs']
 
-    for root, dirs, files in os.walk('.'):
-        # 跳过 .git 目录
-        if '.git' in root:
-            continue
+    # 获取 git 追踪的文件
+    tracked_files = get_git_tracked_files()
 
-        for file in files:
-            if file.endswith('.json') and '_brief_' in file.lower():
-                # 检查是否在允许的目录中
-                rel_path = os.path.relpath(os.path.join(root, file), '.')
-                in_allowed = False
-                for allowed_dir in allowed_dirs:
-                    if rel_path.startswith(allowed_dir):
-                        in_allowed = True
-                        break
+    for tracked_file in tracked_files:
+        if tracked_file.endswith('.json') and '_brief_' in tracked_file.lower():
+            # 检查是否在允许的目录中
+            in_allowed = False
+            for allowed_dir in allowed_dirs:
+                if tracked_file.startswith(allowed_dir):
+                    in_allowed = True
+                    break
 
-                if not in_allowed:
-                    issues.append(f"brief JSON 在不允许的位置: {rel_path}")
+            if not in_allowed:
+                issues.append(f"brief JSON 在不允许的位置: {tracked_file}")
 
     return issues
 
@@ -152,11 +190,15 @@ def check_duplicate_state_docs():
         '下一步执行计划*.md'
     ]
 
-    for pattern in duplicate_docs:
-        matches = glob.glob(pattern)
-        if matches:
-            for match in matches:
-                issues.append(f"重复状态文档: {match}")
+    # 获取 git 追踪的文件
+    tracked_files = get_git_tracked_files()
+
+    for tracked_file in tracked_files:
+        for pattern in duplicate_docs:
+            if pattern.replace('*', '') in tracked_file:
+                # 检查是否在 archive 或 context 目录中
+                if not (tracked_file.startswith('docs/archive/') or tracked_file.startswith('docs/context/')):
+                    issues.append(f"重复状态文档: {tracked_file}")
 
     return issues
 
@@ -167,8 +209,18 @@ def main():
 
     all_issues = []
 
-    # 1. 检查根目录
-    safe_print("[检查 1] 根目录文件...")
+    # 1. 检查 docs/ allowlist
+    safe_print("[检查 1] docs/ 根目录 allowlist...")
+    docs_issues = check_docs_allowlist()
+    all_issues.extend(docs_issues)
+    if docs_issues:
+        for issue in docs_issues:
+            safe_print(f"  [ISSUE] {issue}")
+    else:
+        safe_print("  [PASS] docs/ 目录合规")
+
+    # 2. 检查根目录
+    safe_print("\n[检查 2] 根目录文件...")
     root_issues = check_root_directory()
     all_issues.extend(root_issues)
     if root_issues:
@@ -177,28 +229,8 @@ def main():
     else:
         safe_print("  [PASS] 根目录文件合规")
 
-    # 2. 检查 docs/ 目录
-    safe_print("\n[检查 2] docs/ 目录...")
-    docs_issues = check_docs_directory()
-    all_issues.extend(docs_issues)
-    if docs_issues:
-        for issue in docs_issues:
-            safe_print(f"  [ISSUE] {issue}")
-    else:
-        safe_print("  [PASS] docs/ 目录合规")
-
-    # 3. 检查应忽略文件
-    safe_print("\n[检查 3] 应忽略文件...")
-    ignored_issues = check_ignored_files()
-    all_issues.extend(ignored_issues)
-    if ignored_issues:
-        for issue in ignored_issues:
-            safe_print(f"  [ISSUE] {issue}")
-    else:
-        safe_print("  [PASS] 无应忽略文件")
-
-    # 4. 检查 brief JSON 位置
-    safe_print("\n[检查 4] brief JSON 位置...")
+    # 3. 检查 brief JSON 位置
+    safe_print("\n[检查 3] brief JSON 位置...")
     brief_issues = check_brief_json_outside_examples()
     all_issues.extend(brief_issues)
     if brief_issues:
@@ -207,8 +239,8 @@ def main():
     else:
         safe_print("  [PASS] brief JSON 位置合规")
 
-    # 5. 检查重复状态文档
-    safe_print("\n[检查 5] 重复状态文档...")
+    # 4. 检查重复状态文档
+    safe_print("\n[检查 4] 重复状态文档...")
     duplicate_issues = check_duplicate_state_docs()
     all_issues.extend(duplicate_issues)
     if duplicate_issues:

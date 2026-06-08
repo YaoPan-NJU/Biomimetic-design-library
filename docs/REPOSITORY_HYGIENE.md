@@ -12,11 +12,12 @@
 | 分支 | 用途 |
 |------|------|
 | `main` | 稳定发布分支 |
-| `feature/extraction-results` | 当前工作分支 |
+| `release/v1.1` | **v1.1 交付分支** |
+| `feature/extraction-results` | 开发分支 |
 
-**当前工作流**：`feature/extraction-results` → PR → `main`
+**当前工作流**：`feature/extraction-results` → merge → `release/v1.1` → PR → `main`
 
-**未来可引入**：`develop` 分支用于日常集成，但当前以 feature → PR → main/release 为准。
+**未来可引入**：`develop` 分支用于日常集成，但当前以 feature → release → main 为准。
 
 ### 1.2 分支规则
 

@@ -170,8 +170,8 @@
 
 ## 6. 当前状态
 
-**最新 commit**：d16f7f1
-**分支**：feature/extraction-results
+**最新 commit**：f30dc98
+**交付分支**：release/v1.1
 **版本**：v1.1
 
 **已完成**：
