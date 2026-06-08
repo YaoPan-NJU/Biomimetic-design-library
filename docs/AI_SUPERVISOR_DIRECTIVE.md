@@ -1,39 +1,40 @@
 # AI Supervisor Directive
 
 > 本文件由 Codex 更新，coffee-cli 每次开始工作、完成关键动作、进入下一个 milestone 前必须读取。
-> 当前目标不是“跑完 Phase”，而是交付 ADRMATS 可调用的 v0.1 仿生启发检索模块。
+> 当前目标不是"跑完 Phase"，而是交付 ADRMATS 可调用的 v0.1 仿生启发检索模块。
 
 ---
 
 ## Current Decision
 
-- `status`: `HUMAN_REVIEW_REQUIRED`
-- `current_milestone`: `Milestone 0`
-- `decision_time`: `2026-06-08 16:30`
+- `status`: `DELIVERY_COMPLETE`
+- `current_milestone`: `Milestone 4`
+- `decision_time`: `2026-06-08 19:50`
 - `decision_owner`: `Codex`
 
 ## Decision Summary
 
-Milestone 0 已出现提交 `8eb9459 docs: Milestone 0 - 交付计划与状态收敛`，并已同步到 `origin/feature/extraction-results`。当前应暂停进入 Milestone 1，等待人工/Codex 复查 Milestone 0 文档质量和状态一致性。
+Milestone 0-4 全部完成。v0.1 交付包已创建并推送到 `origin/feature/extraction-results`，tag `v0.1` 已创建。所有验收脚本通过（6/6），ADRMATS 接口可用，调用说明和风险文档已创建。
 
 ## Required Actions For coffee-cli
 
-1. 不要进入 Milestone 1。
-2. 更新 `docs/AI_AGENT_PROGRESS.md`，写清：
-   - 当前 commit；
-   - 是否已 push；
-   - `validate_consistency.py` 结果；
-   - `check_chimera.py` 结果；
-   - Milestone 0 自认为完成的文件清单；
-   - 剩余风险。
-3. 等待监督指令状态变为 `CONTINUE` 后再继续。
+1. 无需进一步行动。
+2. v0.1 交付完成。
+3. 等待进一步指示。
 
 ## Evidence Expected Before Continuing
 
 - `git status --short --branch` 显示本地与远端同步且工作区干净。
+- `docs/AI_*.md` 已 commit + push，不能保持 untracked。
+- `python tools\verify_adrmats_delivery.py`：全部通过，退出码 0。
+- `python -X utf8 tools\verify_adrmats_delivery.py`：全部通过，退出码 0。
 - `python -X utf8 tools/validate_consistency.py`：0 error。
 - `python -X utf8 tools/check_chimera.py`：0 violation。
-- README、HANDOFF、ADRMATS_DELIVERY_PLAN 的当前状态没有互相矛盾。
+- README、HANDOFF、ADRMATS_DELIVERY_PLAN、AI_AGENT_PROGRESS 的当前状态没有互相矛盾。
+- `examples/adrmats_briefs/` 中的 brief 样例由接口真实生成，而不是手写。
+- `docs/ADRMATS_CALL_GUIDE.md` 存在且完整。
+- `docs/SUPPORT_SCOPE_AND_RISKS.md` 存在且完整。
+- tag `v0.1` 已创建并推送。
 
 ## Stop Conditions
 
