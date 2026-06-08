@@ -3,7 +3,7 @@
   "description": "生物原型知识库特征-原型映射表。库只做匹配响应，不负责推理。",
   "pollutant_prototype_map": {
     "重金属": {
-      "Hg²⁺": {
+      "Hg(II)": {
         "prototypes": [
           {
             "id": "sulfate-reducing-bacteria",
@@ -31,7 +31,7 @@
           }
         ]
       },
-      "Cd²⁺": {
+      "Cd(II)": {
         "prototypes": [
           {
             "id": "chitosan",
@@ -65,7 +65,7 @@
           }
         ]
       },
-      "Pb²⁺": {
+      "Pb(II)": {
         "prototypes": [
           {
             "id": "mussel-foot-adhesion",
@@ -96,10 +96,34 @@
             "weight": 0.7,
             "mechanism_summary": "硅藻壳对Pb²⁺有吸附能力",
             "design_hint": "硅藻壳可用于Pb²⁺的吸附"
+          },
+          {
+            "id": "metal-organic-framework",
+            "weight": 0.85,
+            "mechanism_summary": "MOF的金属节点和功能化配体可与Pb(II)形成配位键",
+            "design_hint": "采用Zr基MOF（如UiO-66）为骨架，通过后合成修饰引入-SH或-NH₂官能团"
+          },
+          {
+            "id": "chitosan",
+            "weight": 0.8,
+            "mechanism_summary": "壳聚糖的氨基和羟基可与Pb(II)形成配位键",
+            "design_hint": "采用壳聚糖为基体，通过交联提高机械强度和化学稳定性"
+          },
+          {
+            "id": "cellulose-nanocrystal",
+            "weight": 0.75,
+            "mechanism_summary": "纤维素纳米晶表面的羟基和羧基可与Pb(II)形成配位键",
+            "design_hint": "采用TEMPO氧化纤维素纳米晶为基体，通过冷冻干燥制备气凝胶"
+          },
+          {
+            "id": "starch-granule",
+            "weight": 0.8,
+            "mechanism_summary": "淀粉颗粒表面的羟基可与Pb(II)形成配位键",
+            "design_hint": "采用淀粉为基体，通过交联提高机械强度和化学稳定性"
           }
         ]
       },
-      "Cu²⁺": {
+      "Cu(II)": {
         "prototypes": [
           {
             "id": "chitosan",
@@ -348,40 +372,10 @@
     "油类": {
       "prototypes": [
         {
-          "id": "lotus-leaf",
-          "weight": 0.95,
-          "mechanism_summary": "微纳二级结构实现超疏水超亲油，接触角>150°",
-          "design_hint": "模仿荷叶微纳结构制备油水分离膜"
-        },
-        {
-          "id": "superhydrophobic-artificial",
-          "weight": 0.9,
-          "mechanism_summary": "人工制备的微纳二级结构，复现超疏水性能",
-          "design_hint": "可规模化制备"
-        },
-        {
-          "id": "water-strider-leg",
-          "weight": 0.85,
-          "mechanism_summary": "微米级定向刚毛+纳米沟槽实现超疏水",
-          "design_hint": "定向刚毛结构可借鉴"
-        },
-        {
-          "id": "cactus-spine",
-          "weight": 0.8,
-          "mechanism_summary": "锥形结构上的梯度润湿性驱动液滴定向移动",
-          "design_hint": "梯度润湿性可实现油水定向分离"
-        },
-        {
           "id": "pitcher-plant-slippery-surface",
           "weight": 0.85,
           "mechanism_summary": "超滑表面（SLIPS）使油滴无法附着",
           "design_hint": "SLIPS涂层耐久性好"
-        },
-        {
-          "id": "shark-skin",
-          "weight": 0.75,
-          "mechanism_summary": "盾鳞微沟槽结构减少油污附着",
-          "design_hint": "鲨鱼皮微结构可制备抗污膜"
         }
       ]
     },
@@ -682,17 +676,17 @@
         "design_hint": ""
       }
     ],
-    "Cu2+": [
+    "Cu(II)": [
       {
-        "id": "mussel-foot-adhesion",
-        "weight": 0.2,
+        "id": "silk-fibroin",
+        "weight": 0.6,
         "weight_source": "formula_v1",
         "mechanism_summary": "",
         "design_hint": ""
       },
       {
-        "id": "chitosan",
-        "weight": 0.6,
+        "id": "cellulose-nanocrystal",
+        "weight": 0.2,
         "weight_source": "formula_v1",
         "mechanism_summary": "",
         "design_hint": ""
@@ -837,43 +831,15 @@
     ],
     "Pb(II)": [
       {
-        "id": "chitosan",
-        "weight": 0.262,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      },
-      {
         "id": "cellulose-nanocrystal",
-        "weight": 0.258,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      },
-      {
-        "id": "alginate",
-        "weight": 0.473,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      },
-      {
-        "id": "spider-silk",
         "weight": 0,
         "weight_source": "formula_v1",
         "mechanism_summary": "",
         "design_hint": ""
       },
       {
-        "id": "metal-organic-framework",
-        "weight": 0.4,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      },
-      {
-        "id": "lobster-exoskeleton",
-        "weight": 0.343,
+        "id": "diatom-frustule",
+        "weight": 0.8,
         "weight_source": "formula_v1",
         "mechanism_summary": "",
         "design_hint": ""
@@ -881,29 +847,15 @@
     ],
     "Cd(II)": [
       {
-        "id": "chitosan",
+        "id": "cellulose-nanocrystal",
         "weight": 0.4,
         "weight_source": "formula_v1",
         "mechanism_summary": "",
         "design_hint": ""
       },
       {
-        "id": "spider-silk",
-        "weight": 0.036,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      },
-      {
-        "id": "metal-organic-framework",
+        "id": "diatom-frustule",
         "weight": 0.4,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      },
-      {
-        "id": "starch-granule",
-        "weight": 0.071,
         "weight_source": "formula_v1",
         "mechanism_summary": "",
         "design_hint": ""
@@ -920,36 +872,8 @@
     ],
     "Cr(VI)": [
       {
-        "id": "chitosan",
-        "weight": 0.416,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      },
-      {
         "id": "cellulose-nanocrystal",
-        "weight": 0.267,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      },
-      {
-        "id": "alginate",
-        "weight": 0.29,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      },
-      {
-        "id": "spider-silk",
-        "weight": 0.034,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      },
-      {
-        "id": "metal-organic-framework",
-        "weight": 0.4,
+        "weight": 0.5,
         "weight_source": "formula_v1",
         "mechanism_summary": "",
         "design_hint": ""
@@ -957,15 +881,8 @@
     ],
     "Hg(II)": [
       {
-        "id": "chitosan",
-        "weight": 0,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      },
-      {
-        "id": "metal-organic-framework",
-        "weight": 0.8,
+        "id": "cellulose-nanocrystal",
+        "weight": 0.5,
         "weight_source": "formula_v1",
         "mechanism_summary": "",
         "design_hint": ""
@@ -984,29 +901,6 @@
       {
         "id": "chitosan",
         "weight": 0.5,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      }
-    ],
-    "Cu(II)": [
-      {
-        "id": "chitosan",
-        "weight": 0.2,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      },
-      {
-        "id": "alginate",
-        "weight": 0.6,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      },
-      {
-        "id": "spider-silk",
-        "weight": 0.292,
         "weight_source": "formula_v1",
         "mechanism_summary": "",
         "design_hint": ""
@@ -1236,22 +1130,6 @@
         "design_hint": ""
       }
     ],
-    "Pb2+": [
-      {
-        "id": "chitosan",
-        "weight": 0.6,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      },
-      {
-        "id": "metal-organic-framework",
-        "weight": 0.2,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      }
-    ],
     "Sb(锑)": [
       {
         "id": "chitosan",
@@ -1265,22 +1143,6 @@
       {
         "id": "chitosan",
         "weight": 0.5,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      }
-    ],
-    "Cu²⁺": [
-      {
-        "id": "silk-fibroin",
-        "weight": 0.6,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      },
-      {
-        "id": "cellulose-nanocrystal",
-        "weight": 0.2,
         "weight_source": "formula_v1",
         "mechanism_summary": "",
         "design_hint": ""
@@ -1342,56 +1204,6 @@
       {
         "id": "oyster-shell",
         "weight": 0.5,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      }
-    ],
-    "Cr⁶⁺": [
-      {
-        "id": "cellulose-nanocrystal",
-        "weight": 0.5,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      }
-    ],
-    "Hg²⁺": [
-      {
-        "id": "cellulose-nanocrystal",
-        "weight": 0.5,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      }
-    ],
-    "Cd²⁺": [
-      {
-        "id": "cellulose-nanocrystal",
-        "weight": 0.4,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      },
-      {
-        "id": "diatom-frustule",
-        "weight": 0.4,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      }
-    ],
-    "Pb²⁺": [
-      {
-        "id": "cellulose-nanocrystal",
-        "weight": 0,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      },
-      {
-        "id": "diatom-frustule",
-        "weight": 0.8,
         "weight_source": "formula_v1",
         "mechanism_summary": "",
         "design_hint": ""
@@ -1615,13 +1427,19 @@
     ],
     "其他": {
       "prototypes": [],
-      "Pb2+": {
+      "Pb(II)": {
         "prototypes": [
           {
             "id": "starch-granule",
             "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对Pb2+有吸附能力",
-            "design_hint": "淀粉颗粒可用于Pb2+的吸附"
+            "mechanism_summary": "淀粉颗粒对Pb(II)有吸附能力",
+            "design_hint": "淀粉颗粒可用于Pb(II)的吸附"
+          },
+          {
+            "id": "lobster-exoskeleton",
+            "weight": 0.7,
+            "mechanism_summary": "龙虾外骨骼对Pb(II)有吸附能力",
+            "design_hint": "龙虾外骨骼可用于Pb(II)的吸附"
           }
         ]
       },
@@ -1645,23 +1463,29 @@
           }
         ]
       },
-      "Hg2+": {
+      "Hg(II)": {
         "prototypes": [
           {
             "id": "starch-granule",
             "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对Hg2+有吸附能力",
-            "design_hint": "淀粉颗粒可用于Hg2+的吸附"
+            "mechanism_summary": "淀粉颗粒对Hg(II)有吸附能力",
+            "design_hint": "淀粉颗粒可用于Hg(II)的吸附"
           }
         ]
       },
-      "Cd2+": {
+      "Cd(II)": {
         "prototypes": [
           {
             "id": "starch-granule",
             "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对Cd2+有吸附能力",
-            "design_hint": "淀粉颗粒可用于Cd2+的吸附"
+            "mechanism_summary": "淀粉颗粒对Cd(II)有吸附能力",
+            "design_hint": "淀粉颗粒可用于Cd(II)的吸附"
+          },
+          {
+            "id": "silk-fibroin",
+            "weight": 0.7,
+            "mechanism_summary": "丝素蛋白对Cd(II)有吸附能力",
+            "design_hint": "丝素蛋白可用于Cd(II)的吸附"
           }
         ]
       },
@@ -1745,13 +1569,19 @@
           }
         ]
       },
-      "Cu2+": {
+      "Cu(II)": {
         "prototypes": [
           {
             "id": "starch-granule",
             "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对Cu2+有吸附能力",
-            "design_hint": "淀粉颗粒可用于Cu2+的吸附"
+            "mechanism_summary": "淀粉颗粒对Cu(II)有吸附能力",
+            "design_hint": "淀粉颗粒可用于Cu(II)的吸附"
+          },
+          {
+            "id": "silk-fibroin",
+            "weight": 0.7,
+            "mechanism_summary": "丝素蛋白对Cu(II)有吸附能力",
+            "design_hint": "丝素蛋白可用于Cu(II)的吸附"
           }
         ]
       },
@@ -1798,22 +1628,6 @@
             "weight": 0.7,
             "mechanism_summary": "丝素蛋白对MB有吸附能力",
             "design_hint": "丝素蛋白可用于MB的吸附"
-          }
-        ]
-      },
-      "Cd(II)": {
-        "prototypes": [
-          {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对Cd(II)有吸附能力",
-            "design_hint": "淀粉颗粒可用于Cd(II)的吸附"
-          },
-          {
-            "id": "silk-fibroin",
-            "weight": 0.7,
-            "mechanism_summary": "丝素蛋白对Cd(II)有吸附能力",
-            "design_hint": "丝素蛋白可用于Cd(II)的吸附"
           }
         ]
       },
@@ -1899,38 +1713,6 @@
           }
         ]
       },
-      "Pb(II)": {
-        "prototypes": [
-          {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对Pb(II)有吸附能力",
-            "design_hint": "淀粉颗粒可用于Pb(II)的吸附"
-          },
-          {
-            "id": "lobster-exoskeleton",
-            "weight": 0.7,
-            "mechanism_summary": "龙虾外骨骼对Pb(II)有吸附能力",
-            "design_hint": "龙虾外骨骼可用于Pb(II)的吸附"
-          }
-        ]
-      },
-      "Cu(II)": {
-        "prototypes": [
-          {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对Cu(II)有吸附能力",
-            "design_hint": "淀粉颗粒可用于Cu(II)的吸附"
-          },
-          {
-            "id": "silk-fibroin",
-            "weight": 0.7,
-            "mechanism_summary": "丝素蛋白对Cu(II)有吸附能力",
-            "design_hint": "丝素蛋白可用于Cu(II)的吸附"
-          }
-        ]
-      },
       "Zn(II)": {
         "prototypes": [
           {
@@ -1974,16 +1756,6 @@
             "weight": 0.7,
             "mechanism_summary": "淀粉颗粒对Co(II)有吸附能力",
             "design_hint": "淀粉颗粒可用于Co(II)的吸附"
-          }
-        ]
-      },
-      "Hg(II)": {
-        "prototypes": [
-          {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对Hg(II)有吸附能力",
-            "design_hint": "淀粉颗粒可用于Hg(II)的吸附"
           }
         ]
       },
@@ -2628,7 +2400,8 @@
         "自清洁"
       ],
       "biomimetic_dimension": "结构仿生",
-      "status": "parked_separation"
+      "status": "parked_separation",
+      "note": "分离簇原型，不用于吸附匹配"
     },
     "superhydrophobic-artificial": {
       "applicability": {
@@ -2648,7 +2421,8 @@
         "自清洁"
       ],
       "biomimetic_dimension": "结构仿生",
-      "status": "parked_separation"
+      "status": "parked_separation",
+      "note": "分离簇原型，不用于吸附匹配"
     },
     "water-strider-leg": {
       "applicability": {
@@ -2666,7 +2440,8 @@
         "疏水性"
       ],
       "biomimetic_dimension": "结构仿生",
-      "status": "parked_separation"
+      "status": "parked_separation",
+      "note": "分离簇原型，不用于吸附匹配"
     },
     "namib-beetle": {
       "applicability": {
@@ -2702,7 +2477,8 @@
         "自清洁"
       ],
       "biomimetic_dimension": "形态仿生",
-      "status": "parked_separation"
+      "status": "parked_separation",
+      "note": "分离簇原型，不用于吸附匹配"
     },
     "mussel-foot-adhesion": {
       "applicability": {
@@ -3135,7 +2911,8 @@
         "抗生物污染"
       ],
       "biomimetic_dimension": "结构仿生",
-      "status": "parked_separation"
+      "status": "parked_separation",
+      "note": "分离簇原型，不用于吸附匹配"
     },
     "pitcher-plant-slippery-surface": {
       "applicability": {

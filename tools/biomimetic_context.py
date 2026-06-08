@@ -106,13 +106,18 @@ POLLUTANT_PROFILES = {
 class BiomimeticContext:
     """ADRMATS 仿生启发检索接口"""
 
-    def __init__(self, prototypes_db_path: str = "prototypes_db", feature_mapping_path: str = "feature-mapping.json"):
+    def __init__(self, prototypes_db_path: str = "prototypes_db", feature_mapping_path: str = "feature-mapping.json", matching_rules_path: str = "feature_matching_rules.json"):
         self.prototypes_db_path = prototypes_db_path
         self.feature_mapping_path = feature_mapping_path
+        self.matching_rules_path = matching_rules_path
 
         # 加载 feature-mapping
         with open(feature_mapping_path, encoding='utf-8') as f:
             self.feature_mapping = json.load(f)
+
+        # 加载匹配规则
+        with open(matching_rules_path, encoding='utf-8') as f:
+            self.matching_rules = json.load(f)
 
         # 加载所有原型
         self.prototypes = {}
@@ -149,6 +154,31 @@ class BiomimeticContext:
 
         ppm = self.feature_mapping.get('pollutant_prototype_map', {})
 
+        # 污染物别名映射（用于匹配）
+        pollutant_aliases = {
+            'Pb(II)': ['Pb(II)', 'Pb²⁺', 'Pb2+', 'Pb'],
+            'Cd(II)': ['Cd(II)', 'Cd²⁺', 'Cd2+', 'Cd'],
+            'Hg(II)': ['Hg(II)', 'Hg²⁺', 'Hg2+', 'Hg'],
+            'Cu(II)': ['Cu(II)', 'Cu²⁺', 'Cu2+', 'Cu'],
+            'Cr(VI)': ['Cr(VI)', 'Cr⁶⁺', 'Cr'],
+            'As(V)': ['As(V)', 'As(III)', 'As'],
+            'U(VI)': ['U(VI)', 'U'],
+        }
+
+        # 获取所有可能的别名
+        aliases = [pollutant]
+        for canonical, alias_list in pollutant_aliases.items():
+            if pollutant in alias_list or pollutant.lower() in [a.lower() for a in alias_list]:
+                aliases = alias_list
+                break
+
+        def matches_pollutant(text):
+            """检查文本是否包含目标污染物"""
+            if not text:
+                return False
+            text_lower = text.lower()
+            return any(alias.lower() in text_lower for alias in aliases)
+
         def search_prototypes(obj, path=""):
             if isinstance(obj, dict):
                 for k, v in obj.items():
@@ -156,7 +186,7 @@ class BiomimeticContext:
                         for p in v:
                             if isinstance(p, dict) and 'id' in p:
                                 # 检查是否匹配污染物
-                                if pollutant.lower() in str(p.get('mechanism_summary', '')).lower():
+                                if matches_pollutant(str(p.get('mechanism_summary', ''))):
                                     candidates.append({
                                         'prototype_id': p['id'],
                                         'weight': p.get('weight', 0.5),
@@ -168,7 +198,7 @@ class BiomimeticContext:
                     elif isinstance(v, (dict, list)):
                         search_prototypes(v, f"{path}.{k}")
                 # 检查 key 是否匹配
-                if isinstance(k, str) and pollutant.lower() in k.lower():
+                if isinstance(k, str) and matches_pollutant(k):
                     if isinstance(v, dict) and 'prototypes' in v:
                         for p in v['prototypes']:
                             if isinstance(p, dict) and 'id' in p:
@@ -202,58 +232,59 @@ class BiomimeticContext:
 
         molecular_features = pollutant_profile.get('molecular_features', [])
         likely_interactions = pollutant_profile.get('likely_interactions', [])
+        pollutant_class = pollutant_profile.get('pollutant_class', '')
 
-        # 特征到原型的映射规则
-        feature_to_prototype = {
-            '芳香环': ['polydopamine-coating', 'plant-tannin', 'metal-organic-framework'],
-            '疏水性': ['lotus-leaf', 'polydopamine-coating', 'starch-granule'],
-            '羧酸基团': ['alginate', 'cellulose-nanocrystal'],
-            '酚羟基': ['plant-tannin', 'polydopamine-coating'],
-            '长链全氟烷基': ['metal-organic-framework'],
-            '二价阳离子': ['chitosan', 'alginate', 'bone-structure', 'oyster-shell'],
-            '软酸': ['chitosan', 'alginate', 'sulfate-reducing-bacteria'],
-            '正电荷': ['chitosan'],
-            '负电荷': ['alginate', 'cellulose-nanocrystal'],
-            '磺酰胺基': ['starch-granule'],
-            '酰胺基': ['chitosan', 'silk-fibroin'],
-        }
-
-        interaction_to_prototype = {
-            '配位': ['chitosan', 'alginate', 'metal-organic-framework', 'bone-structure'],
-            '静电吸引': ['chitosan', 'alginate', 'cellulose-nanocrystal'],
-            '氢键': ['chitosan', 'alginate', 'cellulose-nanocrystal', 'starch-granule'],
-            'π-π堆积': ['polydopamine-coating', 'plant-tannin', 'metal-organic-framework'],
-            '疏水分配': ['lotus-leaf', 'polydopamine-coating', 'starch-granule'],
-            '孔道限域': ['metal-organic-framework', 'diatom-frustule'],
-            '离子交换': ['chitosan', 'alginate', 'bone-structure', 'oyster-shell'],
-        }
+        # 从数据化规则加载映射
+        feature_to_prototype = self.matching_rules.get('molecular_feature_to_prototype', {})
+        interaction_to_prototype = self.matching_rules.get('interaction_to_prototype', {})
+        class_to_prototype = self.matching_rules.get('pollutant_class_to_prototype', {})
 
         # 收集匹配的原型
         prototype_scores = {}
 
+        # 1. 按分子特征匹配
         for feature in molecular_features:
             if feature in feature_to_prototype:
-                for pid in feature_to_prototype[feature]:
+                rule = feature_to_prototype[feature]
+                for pid in rule.get('prototypes', []):
                     if pid not in prototype_scores:
-                        prototype_scores[pid] = {'score': 0, 'features': [], 'interactions': []}
+                        prototype_scores[pid] = {'score': 0, 'weight': 0, 'features': [], 'interactions': [], 'reasons': []}
                     prototype_scores[pid]['score'] += 1
+                    prototype_scores[pid]['weight'] += rule.get('weight', 0.5)
                     prototype_scores[pid]['features'].append(feature)
+                    prototype_scores[pid]['reasons'].append(rule.get('reason', ''))
 
+        # 2. 按相互作用匹配
         for interaction in likely_interactions:
             if interaction in interaction_to_prototype:
-                for pid in interaction_to_prototype[interaction]:
+                rule = interaction_to_prototype[interaction]
+                for pid in rule.get('prototypes', []):
                     if pid not in prototype_scores:
-                        prototype_scores[pid] = {'score': 0, 'features': [], 'interactions': []}
+                        prototype_scores[pid] = {'score': 0, 'weight': 0, 'features': [], 'interactions': [], 'reasons': []}
                     prototype_scores[pid]['score'] += 1
+                    prototype_scores[pid]['weight'] += rule.get('weight', 0.5)
                     prototype_scores[pid]['interactions'].append(interaction)
+                    prototype_scores[pid]['reasons'].append(rule.get('reason', ''))
+
+        # 3. 按污染物类别匹配
+        for class_name, rule in class_to_prototype.items():
+            if class_name in pollutant_class:
+                for pid in rule.get('prototypes', []):
+                    if pid not in prototype_scores:
+                        prototype_scores[pid] = {'score': 0, 'weight': 0, 'features': [], 'interactions': [], 'reasons': []}
+                    prototype_scores[pid]['score'] += 1
+                    prototype_scores[pid]['weight'] += rule.get('weight', 0.5)
+                    prototype_scores[pid]['reasons'].append(f"污染物类别匹配: {class_name}")
 
         # 转换为候选列表
         for pid, score_info in prototype_scores.items():
             if score_info['score'] >= 1:  # 至少匹配 1 个特征
+                avg_weight = score_info['weight'] / score_info['score']
+                reason = score_info['reasons'][0] if score_info['reasons'] else "分子特征匹配"
                 candidates.append({
                     'prototype_id': pid,
-                    'weight': min(0.5 + score_info['score'] * 0.1, 0.9),
-                    'reason': f"分子特征匹配: {', '.join(score_info['features'][:3])}",
+                    'weight': min(avg_weight, 0.9),
+                    'reason': reason,
                     'match_basis': 'molecular_feature_inference',
                     'direct_evidence': False,
                     'molecular_feature_links': score_info['features'][:5]
@@ -262,7 +293,7 @@ class BiomimeticContext:
         # 按权重排序
         candidates.sort(key=lambda x: x['weight'], reverse=True)
 
-        return candidates[:5]  # 返回 top 5
+        return candidates[:10]  # 返回 top 10
 
     def query(self, pollutant: str, water_quality: Dict[str, Any] = None, engineering_constraints: List[str] = None) -> Dict[str, Any]:
         """查询接口：输入污染物和工况，输出 brief"""
@@ -292,7 +323,7 @@ class BiomimeticContext:
 
         # 5. 构建 brief
         brief_candidates = []
-        for c in all_candidates[:5]:  # top 5
+        for c in all_candidates[:10]:  # top 10
             pid = c['prototype_id']
             if pid in self.prototypes:
                 proto = self.prototypes[pid]
