@@ -1,8 +1,8 @@
 # HANDOFF — 换设备续工作入口
 
-> 最后更新：2026-06-08 02:45
+> 最后更新：2026-06-08 08:15
 > 当前分支：`feature/extraction-results`
-> 最新 commit：`58a29f6` (feat: Step 5 - 金标准核查脚本 + MOF 核查报告)
+> 最新 commit：`9495f3a` (feat: MOF 金标准验证 - pollutant 补全 + verification 状态更新)
 
 ---
 
@@ -18,7 +18,7 @@
 | Step 2: 建校验脚本 | ✅ 完成 | validate_consistency.py (R10-R14) + check_chimera.py |
 | Step 3: 清理 chimera + 停放分离簇 | ✅ 完成 | 分离簇停放 separation/，PDA/mussel 去重 |
 | Step 4: 机制建模重构 | ✅ 完成 | 第一批 (mussel/PDA/MOF) 已重构 |
-| Step 5: 金标准验证 | ⏳ 进行中 | MOF 核查脚本完成，202 条待人工核查 |
+| Step 5: 金标准验证 | ⏳ 进行中 | MOF 验证完成：236 条 pending_manual_check, 16 条 needs_review |
 
 ## 已定关键决定
 
@@ -33,13 +33,14 @@
 
 ## 下一步任务
 
-1. **Step 5**：metal-organic-framework 金标准验证
-   - mussel 无数据，改用 MOF（214 条吸附数据）作为第一个金标准
-   - 对 MOF 的性能数据执行 verified 判定（四条件同时满足）
-   - 解析 ref_doi → 确认文献存在
-   - 打开 PDF → 确认数值在指定页/表出现
-   - 无法核实的数据移到 _quarantine
-   - 产出 verified/unverified/quarantine 报告
+1. **人工核查 MOF 的 236 条数据**（开 PDF 确认数值）
+   - 有 28 个唯一 DOI，29 个唯一 source_file
+   - 每条需确认：数值在 PDF 指定页/表出现、材料、污染物、条件一致
+   - 通过 → 标 verified，不通过 → 标 needs_review 或删除
+
+2. **处理 16 条 needs_review**（无 pollutant/无 DOI/通用比较）
+
+3. **其余 4 个金标准验证**（chitosan, alginate, cellulose-nanocrystal, starch-granule）
 
 ## 关键文件位置
 
@@ -65,8 +66,8 @@
 
 ## 最近 Changelog
 
+- `9495f3a` feat: MOF 金标准验证 - pollutant 补全 + verification 状态更新
+- `cc1b89d` docs: 更新 HANDOFF.md - MOF 核查脚本完成
 - `58a29f6` feat: Step 5 - 金标准核查脚本 + MOF 核查报告
 - `a42ab53` docs: 更新 HANDOFF.md - mussel 无数据，改用 MOF 作为金标准
 - `0f96073` feat: Step 5 准备 - mussel 清理 + 标 needs_literature
-- `c85d674` docs: 更新 HANDOFF.md - Step 4 完成
-- `82b0694` feat: Step 4 - 机制建模重构第一批 (mussel/PDA/MOF)

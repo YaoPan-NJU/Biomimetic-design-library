@@ -8,30 +8,32 @@
 
 ## 当前状态
 
-> 数据快照：2026-06-08 | 分支：`feature/extraction-results` | commit: `6223025`
+> 数据快照：2026-06-08 08:15 | 分支：`feature/extraction-results` | commit: `9495f3a`
 
 ### 原型层
 
 | 指标 | 数值 |
 |------|------|
-| prototypes/ 目录 | 36 |
-| prototypes_db/*.json | 36 |
-| 有性能数据的原型 | 22 |
-| 状态：active | 30 |
-| 状态：needs_literature | 6 |
+| prototypes_db/*.json (吸附) | 31 |
+| prototypes_db/separation/*.json (分离) | 5 |
+| 有性能数据的原型 | 19 |
+| 状态：active | 19 |
+| 状态：needs_literature | 8 |
+| 状态：parked_separation | 5 |
 
-### 结构化知识
+### 结构化知识（吸附原型）
 
 | 指标 | 数值 |
 |------|------|
-| performance_data 总数 | 774 |
-| mechanisms 总数 | 1,326 |
-| engineering_constraints 总数 | 301 |
-| 缺 pollutant 的性能数据 | 238 (31%) |
-| 缺 active_features 的机制 | 1,297 (98%) |
+| performance_data 总数 | 752 |
+| mechanisms 总数 | 723 |
+| engineering_constraints 总数 | 270 |
+| 缺 pollutant 的性能数据 | 191 (25%) |
+| 缺 active_features 的机制 | 581 (80%) |
 | verified | 0 |
-| unverified | 774 |
-| needs_review | 0 |
+| pending_manual_check | 236 |
+| needs_review | 16 |
+| unverified | 500 |
 
 ### feature-mapping.json
 
@@ -84,12 +86,12 @@ Biomimetic-design-library/
 
 ## 当前主要风险和使用边界
 
-- ⚠️ **774 条性能数据全部 unverified**，不能给 ADRMATS 当事实排序依据
-- ⚠️ 238 条性能数据缺 pollutant 字段，无法按污染物匹配
-- ⚠️ 1,297 条机制缺 active_features，无法精细桥接
-- ⚠️ 5 个 chimera 原型需清理（shark-skin, polydopamine-coating, spider-silk, water-strider-leg, cactus-spine）
-- ⚠️ 6 个原型 needs_literature（无数据）
-- ⚠️ 超疏水/分离簇原型将停放至 separation/ 命名空间
+- ⚠️ **0 条 verified**，236 条 pending_manual_check（MOF 金标准），500 条 unverified
+- ⚠️ 191 条性能数据缺 pollutant 字段，无法按污染物匹配
+- ⚠️ 581 条机制缺 active_features，无法精细桥接
+- ⚠️ 5 个分离簇原型已停放（shark-skin, lotus-leaf, water-strider-leg, cactus-spine, superhydrophobic-artificial）
+- ⚠️ 8 个原型 needs_literature（无数据）
+- ⚠️ MOF 金标准的 236 条数据需人工开 PDF 确认数值
 
 ## 如何使用
 
