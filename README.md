@@ -22,18 +22,24 @@
 
 ## 当前状态（v1.1）
 
+> 数据快照：2026-06-09 00:35 | 分支：`feature/extraction-results` | 第二波提取完成
+
 | 指标 | 数值 |
 |------|------|
 | 交付分支 | `release/v1.1` |
 | 版本 | v1.1 |
 | prototypes_db/*.json | 31 |
-| 能出 brief 的原型 | 13 |
+| separation/ 原型 | 5 (parked) |
+| 有性能数据的原型 | 20 |
 | 性能数据总数 | 752 |
+| 机制总数 | 790 |
+| 工程约束总数 | 270 |
 | verified | 0 |
-| single_source | 236 |
-| unverified | 500 |
+| pending_manual_check | 236 |
+| unverified | 516 |
 | 校验错误 | 0 |
-| chimera 违规 | 0 |
+| 校验警告 | 254 (主要是 R14) |
+| 第二波提取 JSON | 57 |
 
 ---
 
