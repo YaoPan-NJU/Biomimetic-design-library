@@ -2,6 +2,8 @@
 
 水处理仿生吸附材料开发智能体系统的核心组件。
 
+> **👉 库的定位与 brief 结构：[docs/design.md](docs/design.md#0-库的定位北极星)**
+> **👉 ADRMATS 集成与分层检索策略：[docs/ADRMATS_INTEGRATION.md](docs/ADRMATS_INTEGRATION.md)**
 > **👉 换设备续工作？先读 [docs/HANDOFF.md](docs/HANDOFF.md)**
 
 ---

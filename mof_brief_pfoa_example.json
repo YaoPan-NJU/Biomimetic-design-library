@@ -1,0 +1,98 @@
+{
+  "brief": {
+    "context": {
+      "water_quality": {
+        "pH": 7.0,
+        "temperature": 25,
+        "salinity": "medium"
+      },
+      "removal_target": {
+        "污染物": "PFOA（全氟辛酸）",
+        "目标形态": "溶解态",
+        "去除率": ">80%"
+      },
+      "pollutant_profile": {
+        "canonical_name": "PFOA（Perfluorooctanoic acid）",
+        "pollutant_class": "PFASs（全氟和多氟烷基物质）",
+        "molecular_features": [
+          "长链全氟烷基",
+          "羧酸基团",
+          "疏水性",
+          "两亲性",
+          "化学稳定性"
+        ],
+        "likely_interactions": [
+          "疏水分配",
+          "氢键",
+          "静电吸引",
+          "孔道限域"
+        ],
+        "profile_basis": "chemical_knowledge_inference"
+      },
+      "engineering_constraints": [
+        "水稳定性",
+        "抗生物污损",
+        "可回收性"
+      ]
+    },
+    "candidates": [
+      {
+        "prototype_id": "metal-organic-framework",
+        "organism": "Bombyx mori（仿生材料）",
+        "match": {
+          "reason": "MOF的多级孔道结构可提供孔道限域效应，功能化配体可与PFOA的羧酸基团形成氢键或静电作用",
+          "weight": 0.65,
+          "applicability_fit": "pH 1-12, 温度 0-300°C, 盐度 any",
+          "match_basis": "molecular_feature_inference",
+          "direct_evidence": false
+        },
+        "mechanism": {
+          "name": "孔道限域与功能化配体协同吸附",
+          "基本原理": "MOF的微孔结构可对PFOA长链全氟烷基产生空间限域效应，增强疏水相互作用；同时，MOF表面的功能化配体（如-NH₂）可与PFOA的羧酸基团形成氢键或静电吸引，实现协同吸附",
+          "key_structures": [
+            "微孔结构",
+            "介孔传质通道",
+            "功能化配体"
+          ],
+          "functional_groups": [
+            "-NH₂",
+            "-COOH"
+          ],
+          "molecular_feature_links": [
+            "PFOA的长链全氟烷基与MOF微孔的疏水相互作用",
+            "PFOA的羧酸基团与MOF-NH₂的氢键作用",
+            "PFOA的两亲性与MOF多级孔道的协同匹配"
+          ],
+          "attribution": {
+            "source": "llm_inference",
+            "ref": null,
+            "verification_tier": "unverified"
+          }
+        },
+        "design_translation": {
+          "idea": "设计具有多级孔道结构的MOF（微孔提供限域效应，介孔加速传质），通过后合成修饰引入亲水性官能团（如-NH₂、-COOH），增强与PFOA羧酸基团的氢键作用；同时考虑MOF的水稳定性，优先选择Zr基或Fe基MOF",
+          "material_realization_examples": [],
+          "source_tier": "llm_inference"
+        },
+        "evidence_context": {
+          "performance_leads": []
+        }
+      }
+    ],
+    "honesty_ledger": {
+      "facts": [
+        "MOF具有多级孔道结构和功能化配体",
+        "PFOA具有长链全氟烷基和羧酸基团"
+      ],
+      "leads": [
+        "MOF对PFOA的吸附效果尚无直接实验数据",
+        "孔道限域和氢键作用的协同机制需实验验证"
+      ],
+      "inferences": [
+        "整个匹配基于分子特征推断（match_basis=molecular_feature_inference），非直接证据",
+        "设计转译（design_translation）为LLM外推（source_tier=llm_inference），需实验验证",
+        "污染物画像（pollutant_profile）基于化学知识推断（profile_basis=chemical_knowledge_inference）"
+      ]
+    }
+  }
+}

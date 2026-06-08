@@ -1,0 +1,46 @@
+{
+  "brief": {
+    "context": {
+      "water_quality": {"pH": 7.0, "temperature": 25, "salinity": "medium"},
+      "removal_target": {"污染物": "TC（四环素）", "目标形态": "溶解态", "去除率": ">80%"},
+      "pollutant_profile": {
+        "canonical_name": "TC（Tetracycline）",
+        "pollutant_class": "抗生素",
+        "molecular_features": ["芳香环", "酚羟基", "酰胺基", "二甲氨基", "弱碱性"],
+        "likely_interactions": ["氢键", "π-π堆积", "静电吸引", "配位"],
+        "profile_basis": "chemical_knowledge_inference"
+      },
+      "engineering_constraints": ["pH适应性", "抗生物污损", "可回收性"]
+    },
+    "candidates": [{
+      "prototype_id": "alginate",
+      "organism": "Phaeophyceae（褐藻）",
+      "match": {
+        "reason": "海藻酸盐的羧基可与四环素的酰胺基/酚羟基形成氢键，凝胶网络可包埋四环素分子",
+        "weight": 0.60,
+        "applicability_fit": "pH 4-9, 温度 0-60°C, 盐度 low",
+        "match_basis": "molecular_feature_inference",
+        "direct_evidence": false
+      },
+      "mechanism": {
+        "name": "氢键与凝胶包埋协同吸附",
+        "基本原理": "海藻酸盐的羧基（-COOH）和羟基（-OH）可与四环素的酰胺基/酚羟基形成氢键；同时凝胶网络的多孔结构可对四环素分子产生空间限域效应，增强吸附",
+        "key_structures": ["羧基（-COOH）", "羟基（-OH）", "凝胶网络"],
+        "functional_groups": ["-COOH", "-OH"],
+        "molecular_feature_links": ["四环素的酰胺基/酚羟基与海藻酸盐的羧基/羟基形成氢键", "凝胶网络对四环素分子的包埋和限域"],
+        "attribution": {"source": "llm_inference", "ref": null, "verification_tier": "unverified"}
+      },
+      "design_translation": {
+        "idea": "采用海藻酸钠为前驱体，通过Ca²⁺离子交联制备凝胶微球；引入疏水基团增强对四环素芳香环的π-π堆积作用；或与碳材料复合，利用碳材料的高比表面积和π-π堆积作用增强吸附",
+        "material_realization_examples": [],
+        "source_tier": "llm_inference"
+      },
+      "evidence_context": {"performance_leads": []}
+    }],
+    "honesty_ledger": {
+      "facts": ["海藻酸盐具有羧基和羟基官能团", "四环素具有酰胺基、酚羟基和芳香环结构"],
+      "leads": ["海藻酸盐对四环素的吸附效果尚无直接实验数据", "氢键和凝胶包埋的协同机制需实验验证"],
+      "inferences": ["整个匹配基于分子特征推断（match_basis=molecular_feature_inference）", "设计转译为LLM外推（source_tier=llm_inference）", "污染物画像基于化学知识推断"]
+    }
+  }
+}

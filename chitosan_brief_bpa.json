@@ -1,0 +1,96 @@
+{
+  "brief": {
+    "context": {
+      "water_quality": {
+        "pH": 7.0,
+        "temperature": 25,
+        "salinity": "medium"
+      },
+      "removal_target": {
+        "污染物": "BPA（双酚A）",
+        "目标形态": "溶解态",
+        "去除率": ">80%"
+      },
+      "pollutant_profile": {
+        "canonical_name": "BPA（Bisphenol A）",
+        "pollutant_class": "内分泌干扰物/酚类化合物",
+        "molecular_features": [
+          "芳香环",
+          "酚羟基",
+          "疏水性",
+          "弱酸性"
+        ],
+        "likely_interactions": [
+          "氢键",
+          "π-π堆积",
+          "疏水分配",
+          "静电吸引"
+        ],
+        "profile_basis": "chemical_knowledge_inference"
+      },
+      "engineering_constraints": [
+        "pH 适应性",
+        "可回收性",
+        "抗生物污损"
+      ]
+    },
+    "candidates": [
+      {
+        "prototype_id": "chitosan",
+        "organism": "Crustacea（仿生材料）",
+        "match": {
+          "reason": "壳聚糖的氨基和羟基可与BPA的酚羟基形成氢键，正电表面可通过静电作用吸附BPA",
+          "weight": 0.65,
+          "applicability_fit": "pH 3-9, 温度 0-80°C, 盐度 low_to_moderate",
+          "match_basis": "molecular_feature_inference",
+          "direct_evidence": false
+        },
+        "mechanism": {
+          "name": "氢键与静电协同吸附",
+          "基本原理": "壳聚糖的氨基（-NH₂）和羟基（-OH）可与BPA的酚羟基形成氢键；同时壳聚糖在酸性条件下质子化带正电，可通过静电作用吸附BPA的酚氧负离子",
+          "key_structures": [
+            "氨基（-NH₂）",
+            "羟基（-OH）",
+            "正电表面"
+          ],
+          "functional_groups": [
+            "-NH₂",
+            "-OH"
+          ],
+          "molecular_feature_links": [
+            "BPA的酚羟基与壳聚糖的氨基/羟基形成氢键",
+            "BPA的弱酸性在碱性条件下带负电，与壳聚糖正电表面静电吸引"
+          ],
+          "attribution": {
+            "source": "llm_inference",
+            "ref": null,
+            "verification_tier": "unverified"
+          }
+        },
+        "design_translation": {
+          "idea": "采用壳聚糖为基体，通过引入疏水基团（如乙酰基）增强对BPA的疏水分配作用；或与碳材料（如活性炭、石墨烯）复合，利用碳材料的π-π堆积作用增强对BPA的吸附；同时保持壳聚糖的亲水性，便于水相应用",
+          "material_realization_examples": [],
+          "source_tier": "llm_inference"
+        },
+        "evidence_context": {
+          "performance_leads": []
+        }
+      }
+    ],
+    "honesty_ledger": {
+      "facts": [
+        "壳聚糖具有氨基和羟基官能团",
+        "BPA具有酚羟基和芳香环结构"
+      ],
+      "leads": [
+        "壳聚糖对BPA的吸附效果尚无直接实验数据",
+        "氢键和静电作用的协同机制需实验验证"
+      ],
+      "inferences": [
+        "整个匹配基于分子特征推断（match_basis=molecular_feature_inference），非直接证据",
+        "设计转译（design_translation）为LLM外推（source_tier=llm_inference），需实验验证",
+        "污染物画像（pollutant_profile）基于化学知识推断（profile_basis=chemical_knowledge_inference）"
+      ]
+    }
+  }
+}
