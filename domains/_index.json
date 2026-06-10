@@ -1,0 +1,96 @@
+{
+  "description": "领域列表与跨域关系索引",
+  "domains": [
+    {
+      "id": "fluid-mechanics",
+      "name": "流体力学",
+      "description": "减阻、湍流控制、混合强化",
+      "prototype_count": 0,
+      "related_domains": ["mass-transfer", "biofilm"]
+    },
+    {
+      "id": "biochemical-reactions",
+      "name": "生化反应",
+      "description": "代谢反应机制、酶催化、氧化还原",
+      "prototype_count": 0,
+      "related_domains": ["metabolic-pathways", "microbial-community"]
+    },
+    {
+      "id": "separation-filtration",
+      "name": "分离/过滤",
+      "description": "逆流交换、高效过滤、分子筛分",
+      "prototype_count": 0,
+      "related_domains": ["solid-liquid-separation", "mass-transfer"]
+    },
+    {
+      "id": "microbial-community",
+      "name": "微生物群落",
+      "description": "群落结构、功能分工、种间互作",
+      "prototype_count": 0,
+      "related_domains": ["biochemical-reactions", "biofilm", "metabolic-pathways"]
+    },
+    {
+      "id": "biofilm",
+      "name": "生物膜",
+      "description": "生物膜形成、成熟、脱落、调控",
+      "prototype_count": 0,
+      "related_domains": ["microbial-community", "solid-liquid-separation"]
+    },
+    {
+      "id": "metabolic-pathways",
+      "name": "代谢路径",
+      "description": "代谢链、协同降解、物质循环",
+      "prototype_count": 0,
+      "related_domains": ["biochemical-reactions", "resource-recovery"]
+    },
+    {
+      "id": "mass-transfer",
+      "name": "传质与流场",
+      "description": "对流传质、扩散传质、流场优化",
+      "prototype_count": 0,
+      "related_domains": ["fluid-mechanics", "biochemical-reactions"]
+    },
+    {
+      "id": "solid-liquid-separation",
+      "name": "固液分离",
+      "description": "絮凝、沉降、过滤、膜分离",
+      "prototype_count": 0,
+      "related_domains": ["separation-filtration", "microbial-community"]
+    },
+    {
+      "id": "shock-resistance",
+      "name": "抗冲击与自恢复",
+      "description": "韧性机制、休眠/复苏、缓冲",
+      "prototype_count": 0,
+      "related_domains": ["microbial-community", "system-community"]
+    },
+    {
+      "id": "resource-recovery",
+      "name": "资源化",
+      "description": "碳源回收、磷回收、能源回收、再生水",
+      "prototype_count": 0,
+      "related_domains": ["metabolic-pathways", "energy-drive"]
+    },
+    {
+      "id": "energy-drive",
+      "name": "能源/驱动",
+      "description": "光合作用、化学能转化、ATP 驱动",
+      "prototype_count": 0,
+      "related_domains": ["biochemical-reactions", "resource-recovery"]
+    },
+    {
+      "id": "system-community",
+      "name": "系统/群落",
+      "description": "多级净化、物质循环、生态系统",
+      "prototype_count": 0,
+      "related_domains": ["microbial-community", "shock-resistance"]
+    },
+    {
+      "id": "adsorption",
+      "name": "吸附",
+      "description": "化学吸附、物理吸附、结构驱动分离",
+      "prototype_count": 0,
+      "related_domains": ["separation-filtration", "mass-transfer"]
+    }
+  ]
+}
