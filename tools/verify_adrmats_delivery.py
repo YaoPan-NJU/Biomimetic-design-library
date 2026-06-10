@@ -306,7 +306,7 @@ def main():
     print_section("运行 validate_consistency.py")
     try:
         result = subprocess.run(
-            ["python", "tools/validate_consistency.py"],
+            ["python3", "-X", "utf8", "tools/validate_consistency.py"],
             capture_output=True,
             text=True,
             encoding='utf-8',
@@ -327,7 +327,7 @@ def main():
     print_section("运行 check_chimera.py")
     try:
         result = subprocess.run(
-            ["python", "tools/check_chimera.py"],
+            ["python3", "-X", "utf8", "tools/check_chimera.py"],
             capture_output=True,
             text=True,
             encoding='utf-8',
