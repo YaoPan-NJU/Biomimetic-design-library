@@ -321,6 +321,100 @@ def build_metadata_list(data: dict, json_file: str) -> list:
     }]
 
 
+def _perf_key(p: dict) -> str:
+    """生成 performance_data 条目的唯一键，用于 merge 时匹配。
+
+    使用 parameter+value+material+source_file 四元组，避免 pollutant 命名格式不一致
+    （如 Pb(II) vs Pb2+, RhB (Rhodamine B) vs RhB）导致 key 不匹配。
+    """
+    src = p.get("source_file", "") or ""
+    return f'{p.get("parameter","") or ""}|{p.get("value","") or ""}|{p.get("material","") or ""}|{src}'
+
+
+def _mech_key(m: dict) -> str:
+    """生成 mechanism 条目的唯一键，用于 merge 时匹配。"""
+    desc = m.get('description') or ''
+    return f'{m.get("name","")}|{str(desc)[:80]}'
+
+
+def merge_with_existing(new_result: dict, existing_path: str) -> dict:
+    """将新聚合结果与已有的富化数据合并。
+
+    合并策略：
+    - mechanisms: 按 name+description 匹配，保留旧的 基本原理、active_features、verification
+    - performance_data: 按 parameter+value+material+source_file 匹配，保留旧的 verification、confidence、source 等溯源字段
+    - 其他顶层富化字段（如 mechanism_instances）: 保留旧值
+    """
+    if not os.path.exists(existing_path):
+        return new_result
+
+    try:
+        with open(existing_path, 'r', encoding='utf-8') as f:
+            old = json.load(f)
+    except Exception:
+        return new_result
+
+    # === 合并 mechanisms ===
+    old_mechs = old.get('mechanisms', [])
+    old_mech_map = {}
+    for m in old_mechs:
+        key = _mech_key(m)
+        old_mech_map[key] = m
+
+    for new_m in new_result.get('mechanisms', []):
+        key = _mech_key(new_m)
+        old_m = old_mech_map.get(key)
+        if old_m:
+            # 保留旧的富化字段
+            if '基本原理' in old_m and old_m['基本原理']:
+                new_m['基本原理'] = old_m['基本原理']
+            if 'active_features' in old_m and old_m['active_features']:
+                new_m['active_features'] = old_m['active_features']
+            # 保留旧的 verification（如果不是默认值）
+            old_ver = old_m.get('verification', 'unverified')
+            if old_ver and old_ver != 'unverified':
+                new_m['verification'] = old_ver
+
+    # === 合并 performance_data ===
+    old_perf = old.get('performance_data', [])
+    old_perf_map = {}
+    for p in old_perf:
+        key = _perf_key(p)
+        old_perf_map[key] = p
+
+    n_verified_restored = 0
+    for new_p in new_result.get('performance_data', []):
+        key = _perf_key(new_p)
+        old_p = old_perf_map.get(key)
+        if old_p:
+            # 保留旧的 verification（如果不是默认值）
+            old_ver = old_p.get('verification', 'unverified')
+            if old_ver and old_ver != 'unverified':
+                new_p['verification'] = old_ver
+                n_verified_restored += 1
+            # 保留旧的 confidence
+            old_conf = old_p.get('confidence')
+            if old_conf is not None and old_conf != 0.8:
+                new_p['confidence'] = old_conf
+            # 保留旧的 source 相关字段
+            for field in ['source', 'ref_doi', 'source_file', 'page', 'locator']:
+                old_val = old_p.get(field)
+                if old_val and not new_p.get(field):
+                    new_p[field] = old_val
+
+    # === 保留旧的顶层富化字段 ===
+    if 'mechanism_instances' in old and old['mechanism_instances']:
+        new_result['mechanism_instances'] = old['mechanism_instances']
+
+    # === 更新 provenance_summary ===
+    if n_verified_restored > 0:
+        ps = new_result.get('provenance_summary', {})
+        ps['n_verified'] = ps.get('n_verified', 0) + n_verified_restored
+        ps['n_unverified'] = max(0, ps.get('n_unverified', 0) - n_verified_restored)
+
+    return new_result
+
+
 def aggregate_prototype(prototype_id: str, file_infos: list, feature_mapping: dict) -> dict:
     """将多个 JSON 文件的数据聚合为一个结构化原型。"""
     all_items = []
@@ -540,7 +634,8 @@ def main():
     # 创建输出目录
     os.makedirs(output_dir, exist_ok=True)
 
-    # 聚合每个原型
+    # 聚合每个原型（merge 模式：保留已有富化数据）
+    merge_stats = {'merged': 0, 'new': 0}
     for pid in sorted(valid_ids):
         file_infos = prototype_mapping.get(pid, [])
         print(f'\n  {pid}: {len(file_infos)} files')
@@ -548,15 +643,40 @@ def main():
         result = aggregate_prototype(pid, file_infos, feature_mapping)
 
         output_path = output_dir / f'{pid}.json'
+        # merge 模式：与已有数据合并，保留富化字段
+        result = merge_with_existing(result, str(output_path))
+        if os.path.exists(output_path):
+            merge_stats['merged'] += 1
+        else:
+            merge_stats['new'] += 1
+
         with open(output_path, 'w', encoding='utf-8') as f:
             json.dump(result, f, ensure_ascii=False, indent=2)
 
-        print(f'    → {output_path.name}: {len(result["performance_data"])} perf, {len(result["mechanisms"])} mech, {len(result["engineering_constraints"])} constr')
+        n_benali = sum(1 for m in result.get('mechanisms', []) if '基本原理' in m)
+        n_ver = sum(1 for p in result.get('performance_data', []) if p.get('verification', 'unverified') != 'unverified')
+        print(f'    → {output_path.name}: {len(result["performance_data"])} perf, {len(result["mechanisms"])} mech, {n_benali} 基本原理, {n_ver} verified')
 
     # 统计
     print(f'\n=== 完成 ===')
     print(f'输出目录: {output_dir}')
     print(f'原型数: {len(valid_ids)}')
+    print(f'Merge: {merge_stats["merged"]} 个已有原型合并, {merge_stats["new"]} 个新原型')
+
+    # 统计富化字段恢复情况
+    total_benali = 0
+    total_verified = 0
+    for pid in sorted(valid_ids):
+        path = output_dir / f'{pid}.json'
+        with open(path, 'r') as f:
+            d = json.load(f)
+        n_benali = sum(1 for m in d.get('mechanisms', []) if '基本原理' in m)
+        n_ver = sum(1 for p in d.get('performance_data', []) if p.get('verification', 'unverified') != 'unverified')
+        if n_benali > 0:
+            total_benali += 1
+        total_verified += n_ver
+    print(f'带 基本原理 的原型: {total_benali}')
+    print(f'verified 性能条目: {total_verified}')
 
     # 检查空原型
     empty = []
