@@ -37,7 +37,7 @@ def get_project_root():
 class BiomimeticContext:
     """ADRMATS 仿生启发检索接口"""
 
-    def __init__(self, prototypes_db_path: str = None, feature_mapping_path: str = None, matching_rules_path: str = None, pollutant_profiles_path: str = None, pollutant_aliases_path: str = None):
+    def __init__(self, prototypes_db_path: str = None, feature_mapping_path: str = None, matching_rules_path: str = None, pollutant_profiles_path: str = None, pollutant_aliases_path: str = None, design_rules_path: str = None):
         # 获取项目根目录
         project_root = get_project_root()
 
@@ -47,6 +47,7 @@ class BiomimeticContext:
         self.matching_rules_path = matching_rules_path or os.path.join(project_root, "feature_matching_rules.json")
         self.pollutant_profiles_path = pollutant_profiles_path or os.path.join(project_root, "pollutant_profiles.json")
         self.pollutant_aliases_path = pollutant_aliases_path or os.path.join(project_root, "pollutant_aliases.json")
+        self.design_rules_path = design_rules_path or os.path.join(project_root, "docs/imported/library-enhancement/design-rules.json")
 
         # 加载 feature-mapping
         with open(self.feature_mapping_path, encoding='utf-8') as f:
@@ -63,6 +64,12 @@ class BiomimeticContext:
         # 加载污染物别名
         with open(self.pollutant_aliases_path, encoding='utf-8') as f:
             self.pollutant_aliases = json.load(f)
+
+        # 加载设计规则（pending_validation 状态）
+        self.design_rules = {}
+        if os.path.exists(self.design_rules_path):
+            with open(self.design_rules_path, encoding='utf-8') as f:
+                self.design_rules = json.load(f)
 
         # 加载所有原型
         self.prototypes = {}
@@ -250,6 +257,66 @@ class BiomimeticContext:
 
         return candidates[:10]  # 返回 top 10
 
+    def find_applicable_rules(self, water_quality: Dict[str, Any] = None, pollutant: str = None) -> List[Dict[str, Any]]:
+        """查找适用的设计规则（pending_validation 状态）"""
+        if not water_quality or not self.design_rules:
+            return []
+
+        applicable_rules = []
+        rules = self.design_rules.get('condition_mechanism_rules', [])
+
+        for rule in rules:
+            condition = rule.get('condition', {})
+            param = condition.get('parameter', '').lower()
+            operator = condition.get('operator', '')
+            value = condition.get('value', [])
+
+            # 检查 pH 条件
+            if param == 'ph' and 'ph' in water_quality:
+                ph = water_quality['ph']
+                if operator == 'range' and len(value) == 2:
+                    if value[0] <= ph <= value[1]:
+                        applicable_rules.append({
+                            'rule_id': rule.get('rule_id'),
+                            'title': rule.get('title'),
+                            'title_zh': rule.get('title_zh', ''),
+                            'behavior': rule.get('behavior', ''),
+                            'behavior_zh': rule.get('behavior_zh', ''),
+                            'affected_prototypes': rule.get('affected_prototypes', []),
+                            'confidence': rule.get('confidence', 0.5),
+                            'validation_status': 'pending_validation'
+                        })
+                elif operator == 'threshold' and len(value) == 1:
+                    if ph < value[0]:
+                        applicable_rules.append({
+                            'rule_id': rule.get('rule_id'),
+                            'title': rule.get('title'),
+                            'title_zh': rule.get('title_zh', ''),
+                            'behavior': rule.get('behavior', ''),
+                            'behavior_zh': rule.get('behavior_zh', ''),
+                            'affected_prototypes': rule.get('affected_prototypes', []),
+                            'confidence': rule.get('confidence', 0.5),
+                            'validation_status': 'pending_validation'
+                        })
+
+            # 检查温度条件
+            elif param == 'temperature' and 'temperature' in water_quality:
+                temp = water_quality['temperature']
+                if operator == 'range' and len(value) == 2:
+                    if value[0] <= temp <= value[1]:
+                        applicable_rules.append({
+                            'rule_id': rule.get('rule_id'),
+                            'title': rule.get('title'),
+                            'title_zh': rule.get('title_zh', ''),
+                            'behavior': rule.get('behavior', ''),
+                            'behavior_zh': rule.get('behavior_zh', ''),
+                            'affected_prototypes': rule.get('affected_prototypes', []),
+                            'confidence': rule.get('confidence', 0.5),
+                            'validation_status': 'pending_validation'
+                        })
+
+        return applicable_rules
+
     def query(self, pollutant: str, water_quality: Dict[str, Any] = None, engineering_constraints: List[str] = None) -> Dict[str, Any]:
         """查询接口：输入污染物和工况，输出 brief"""
 
@@ -342,6 +409,9 @@ class BiomimeticContext:
             else:
                 inferences.append(f"{c['prototype_id']}: 基于分子特征推断，非直接证据")
 
+        # 7. 查找适用规则（pending_validation）
+        applicable_rules = self.find_applicable_rules(water_quality, pollutant)
+
         return {
             'brief': {
                 'context': {
@@ -351,6 +421,7 @@ class BiomimeticContext:
                     'engineering_constraints': engineering_constraints or []
                 },
                 'candidates': brief_candidates,
+                'applicable_rules': applicable_rules,
                 'honesty_ledger': {
                     'facts': facts,
                     'leads': leads,
