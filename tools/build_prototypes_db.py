@@ -402,6 +402,14 @@ def merge_with_existing(new_result: dict, existing_path: str) -> dict:
                 if old_val and not new_p.get(field):
                     new_p[field] = old_val
 
+    # === 保留旧的 organism（如果已手动修正） ===
+    # 如果旧的 organism 不为空且与新的不同，保留旧的（可能是手动修正过的）
+    old_organism = old.get('organism', {})
+    new_organism = new_result.get('organism', {})
+    if old_organism and old_organism.get('scientific') and old_organism.get('scientific') != new_organism.get('scientific'):
+        # 保留旧的 organism，因为它可能是手动修正过的
+        new_result['organism'] = old_organism
+
     # === 保留旧的顶层富化字段 ===
     if 'mechanism_instances' in old and old['mechanism_instances']:
         new_result['mechanism_instances'] = old['mechanism_instances']
