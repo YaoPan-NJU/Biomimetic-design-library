@@ -3,7 +3,7 @@
   "name_zh": "植物单宁",
   "name_en": "Plant Tannin",
   "organism": {
-    "scientific": "",
+    "scientific": "Plant sources (单宁酸)",
     "category": "植物"
   },
   "biomimetic_dimension": "分子仿生",
@@ -13,12 +13,301 @@
     "π电子体系"
   ],
   "tested_conditions": {
-    "tested_ph_range": null,
+    "tested_ph_range": [
+      2.5,
+      7.0
+    ],
     "tested_temp_range": null,
     "salinity": "low_to_moderate",
     "note": "测过的 pH/温度范围，不是适用范围。仅从 performance_data 中实际测试过的条件聚合。"
   },
-  "performance_data": [],
+  "performance_data": [
+    {
+      "parameter": "Pb(II)最大吸附容量",
+      "value": "803.84",
+      "unit": "mg/g",
+      "pollutant": "Pb(II)",
+      "material": "TRGA（单宁-石墨烯气凝胶）",
+      "ph": 4.0,
+      "temperature": "25°C",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.indcrop.2021.114304",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2022-Zhu-tannin-aerogel-graphene-heavy-metal-adsorption.pdf",
+      "page": 1,
+      "locator": "Abstract",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "Cd(II)最大吸附容量",
+      "value": "395.80",
+      "unit": "mg/g",
+      "pollutant": "Cd(II)",
+      "material": "TRGA",
+      "ph": 4.0,
+      "temperature": "25°C",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.indcrop.2021.114304",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2022-Zhu-tannin-aerogel-graphene-heavy-metal-adsorption.pdf",
+      "page": 1,
+      "locator": "Abstract",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "最优单宁含量对Pb吸附容量的影响",
+      "value": "GO:T质量比40:60（T含量40%）时Pb吸附容量最高803.84 mg/g；T含量从0%增至100%时，吸附量从128.2升至803.84 mg/g，超过40%后下降",
+      "unit": "mg/g",
+      "pollutant": "",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "200 mg/L Pb(II), pH 4.0, 24 h",
+      "source": "literature",
+      "ref_doi": "10.1016/j.indcrop.2021.114304",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2022-Zhu-tannin-aerogel-graphene-heavy-metal-adsorption.pdf",
+      "page": 4,
+      "locator": "Section 3.3.1",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "最大吸附容量 qmax (Langmuir)",
+      "value": "1000",
+      "unit": "mg/g",
+      "pollutant": "MB（亚甲基蓝）",
+      "material": "TRGAA hydrogel",
+      "ph": "7",
+      "temperature": "室温（25°C）",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.colsurfa.2021.126972",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2021-Yao-tannic-acid-hydrogel-graphene-methylene-blue.pdf",
+      "page": 1,
+      "locator": "Abstract",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "去除率 removal percentage",
+      "value": "98.6",
+      "unit": "%",
+      "pollutant": "MB",
+      "material": "TRGAA hydrogel",
+      "ph": "7（中性）",
+      "temperature": null,
+      "conditions": "最优条件",
+      "source": "literature",
+      "ref_doi": "10.1016/j.colsurfa.2021.126972",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2021-Yao-tannic-acid-hydrogel-graphene-methylene-blue.pdf",
+      "page": 6,
+      "locator": "Section 3.3.2",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "pH对去除率的影响",
+      "value": "pH 2: ~60%; pH 7-11: ~98.6%（稳定）",
+      "unit": "%",
+      "pollutant": "MB",
+      "material": "TRGAA hydrogel",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.colsurfa.2021.126972",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2021-Yao-tannic-acid-hydrogel-graphene-methylene-blue.pdf",
+      "page": 6,
+      "locator": "Section 3.3.2 + Fig.4B",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "不同吸附剂去除率对比",
+      "value": "GO: ~40%; TA-rGO: ~50%; P(AMPSA-co-AA): ~62%; GO/P(AMPSA-co-AA): ~75%; TRGAA: ~100%",
+      "unit": "%",
+      "pollutant": "MB",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.colsurfa.2021.126972",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2021-Yao-tannic-acid-hydrogel-graphene-methylene-blue.pdf",
+      "page": 6,
+      "locator": "Section 3.3.1 + Fig.4A",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "浓度对去除率的影响",
+      "value": "100 mg/L: 98.6%; 800 mg/L: ~95%; 1600 mg/L: 63.6%",
+      "unit": "%",
+      "pollutant": "MB",
+      "material": "TRGAA hydrogel",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.colsurfa.2021.126972",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2021-Yao-tannic-acid-hydrogel-graphene-methylene-blue.pdf",
+      "page": 6,
+      "locator": "Section 3.3.3 + Fig.4D",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "温度对吸附容量的影响",
+      "value": "25°C: ~485 mg/g; 55°C: ~490 mg/g（缓慢增加）",
+      "unit": "mg/g",
+      "pollutant": "MB",
+      "material": "TRGAA hydrogel",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.colsurfa.2021.126972",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2021-Yao-tannic-acid-hydrogel-graphene-methylene-blue.pdf",
+      "page": 9,
+      "locator": "Section 3.3.5 + Fig.7A",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "Cr(VI)最大吸附容量 Qm (Langmuir)",
+      "value": "456.62",
+      "unit": "mg/g",
+      "pollutant": "Cr(VI)",
+      "material": "CNF-TA-PMMT-PEI",
+      "ph": 3,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.seppur.2024.127979",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2024-Yuan-tannic-acid-cellulose-aerogel-heavy-metal-chromium.pdf",
+      "page": 1,
+      "locator": "Abstract",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "Cu(II)最大吸附容量 Qm (Langmuir)",
+      "value": "289.86",
+      "unit": "mg/g",
+      "pollutant": "Cu(II)",
+      "material": "CNF-TA-PMMT-PEI",
+      "ph": 6,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.seppur.2024.127979",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2024-Yuan-tannic-acid-cellulose-aerogel-heavy-metal-chromium.pdf",
+      "page": 1,
+      "locator": "Abstract",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "Congo red (CR)最大吸附容量 Qm (Langmuir)",
+      "value": "3429.23",
+      "unit": "mg/g",
+      "pollutant": "Congo red (CR)",
+      "material": "CNF-TA-PMMT-PEI",
+      "ph": 3,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.seppur.2024.127979",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2024-Yuan-tannic-acid-cellulose-aerogel-heavy-metal-chromium.pdf",
+      "page": 1,
+      "locator": "Abstract",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "Cr(VI)最大吸附容量 Qmax",
+      "value": "218.71",
+      "unit": "mg/g",
+      "pollutant": "",
+      "material": "T-PBC",
+      "ph": 2.5,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.matchemphys.2024.129770",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2024-Mao-tannic-acid-biochar-heavy-metal-chromium-adsorption.pdf",
+      "page": 1,
+      "locator": "Highlights",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "BPA最大吸附容量 Qmax",
+      "value": "320.51",
+      "unit": "mg/g",
+      "pollutant": "",
+      "material": "T-PBC",
+      "ph": 2.5,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.matchemphys.2024.129770",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2024-Mao-tannic-acid-biochar-heavy-metal-chromium-adsorption.pdf",
+      "page": 1,
+      "locator": "Highlights",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "实际电镀废水去除率",
+      "value": "83.04",
+      "unit": "%",
+      "pollutant": "Cr(VI)",
+      "material": "T-PBC",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.matchemphys.2024.129770",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2024-Mao-tannic-acid-biochar-heavy-metal-chromium-adsorption.pdf",
+      "page": 1,
+      "locator": "Abstract",
+      "verification": "unverified",
+      "confidence": 0.8
+    }
+  ],
   "mechanisms": [
     {
       "name": "Teflon AF 2400涂层PVDF膜VMD性能",
@@ -73,6 +362,62 @@
       "ref_doi": "10.3390/polym14245439",
       "verification": "unverified",
       "基本原理": "needs_review"
+    },
+    {
+      "name": "吸附机理",
+      "description": "单宁的邻苯二酚基团通过螯合作用与重金属离子形成五元环螯合物；石墨烯提供π共轭结构和三维多孔传质通道；含氧官能团（—OH、—C=O）作为吸附活性位点",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.indcrop.2021.114304",
+      "verification": "unverified"
+    },
+    {
+      "name": "吸附机制",
+      "description": "π-π堆积（TA-rGO芳香环与MB芳香环）、氢键（MB氮原子与-COOH/-SO₃H）、静电作用（-COO⁻/-SO₃⁻与阳离子MB）",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.colsurfa.2021.126972",
+      "verification": "unverified"
+    },
+    {
+      "name": "Cr(VI)吸附机制总结",
+      "description": "静电吸引 + 还原(Cr(VI)→Cr(III)) + 螯合",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.seppur.2024.127979",
+      "verification": "unverified"
+    },
+    {
+      "name": "Cu(II)吸附机制总结",
+      "description": "螯合(-OH, -NH2) + 离子交换",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.seppur.2024.127979",
+      "verification": "unverified"
+    },
+    {
+      "name": "CR吸附机制总结",
+      "description": "静电吸引 + π-π堆叠 + 席夫碱反应 + 氢键",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.seppur.2024.127979",
+      "verification": "unverified"
+    },
+    {
+      "name": "缓蚀机理",
+      "description": "DOLE分子通过羟基、羰基和共轭环上的孤对电子与Fe空d轨道配位形成化学吸附，同时范德华力和静电作用贡献物理吸附，在X70钢表面形成保护性吸附膜，同时阻滞阴极（H+还原）和阳极（Fe溶解）反应",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.indcrop.2022.116106",
+      "verification": "unverified"
+    },
+    {
+      "name": "BPA吸附机理",
+      "description": "Pore filling, hydrogen bonding, π-π interactions",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.matchemphys.2024.129770",
+      "verification": "unverified"
     }
   ],
   "narrative": {
@@ -87,6 +432,39 @@
           "design_mapping": "生物低表面能蜡质层映射为含氟聚合物（C-F键）；生物微观乳突粗糙结构映射为膜多孔结构及纳米纤维/相分离孔结构。软约束建议：优先选择PVDF以平衡成本与综合性能，或采用ECTFE提升耐磨强度；推荐使用TEP、ATBC等绿色溶剂替代传统有毒溶剂以降低环境影响。",
           "explainability_anchors": "仿生故事线：从荷叶的超疏水自清洁效应出发，解析低表面能与粗糙度协同机制，映射至含氟聚合物膜的C-F键低表面能与多孔结构设计。设计溯源：基于Cassie-Baxter方程指导膜表面疏水改性与结构调控，利用C-F键485 kJ/mol高键能保障膜在苛刻高盐、高温环境下的长期稳定性，从根源上缓解膜润湿和污染痛点。"
         }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/第三波/json/2024-Yuan-tannic-acid-cellulose-aerogel-heavy-metal-chromium.json",
+        "paper_id": "2024-Yuan-tannic-acid-cellulose-aerogel-heavy-metal-chromium",
+        "sections": {
+          "problem_definition": "工业废水中重金属(Cr(VI), Cu(II))和有机染料(CR)毒性高、难降解、易富集；传统纯CNF气凝胶机械强度低、活性位点少、稳定性差；需要构建富含活性位点、结构稳定、可循环的高效三维吸附材料。",
+          "biological_solution": "模仿贻贝足丝蛋白的聚多巴胺(PDA)化学和植物单宁酸(TA)的多酚网络：PDA富含邻苯二酚、亚胺、氨基，可强效粘附于蒙脱土表面并提供多元吸附位点；TA作为天然多酚交联剂，通过氢键、Michael加成和席夫碱反应将PMMT和聚乙烯亚胺(PEI)牢固锚定在CNF骨架上，形成致密且高孔隙的蜂窝状三维网络。TA的酚羟基赋予材料电子转移和还原能力，PEI的密集氨基提供正电荷和螯合位点。",
+          "key_features": "必须保留：PDA的邻苯二酚/氨基粘附层、TA的多酚交联网络、PEI的氨基官能团、CNF的三维蜂窝骨架。可灵活调整：TA交联密度、PEI接枝量、MMT层间距。",
+          "design_mapping": "生物结构→材料设计：贻贝DOPA→PDA涂层改性粘土；植物单宁→TA多酚交联剂；高密度氨基→PEI功能化；蜂窝孔隙→冷冻干燥冰晶模板法。软约束建议：TA与PEI的协同交联是关键，PEI含量过高会堵塞孔隙降低吸附；酸性条件下氨基质子化增强静电吸附，但需平衡TA的还原活性。",
+          "explainability_anchors": "仿生故事线：融合贻贝仿生粘附化学(PEI)与植物多酚交联网络(TA)，构建CNF-PMMT-PEI-TA三维蜂窝气凝胶，利用多酚还原+氨基螯合+静电吸引的多重协同机制实现Cr(VI)/Cu(II)/CR的高效捕获与转化。设计溯源：贻贝足丝→PDA→植物单宁→PEI接枝→CNF三维气凝胶→多污染物协同去除。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/第三波/json/2023-Tan-corrosion-inhibitor-leaves-extract.json",
+        "paper_id": "tan2023_dole_corrosion_inhibitor",
+        "sections": {
+          "problem_definition": "工业酸洗过程中X70管线钢在硫酸介质中面临严重腐蚀问题，传统缓蚀剂多为有毒有机合成物，不符合环保要求。需要开发可生物降解的绿色缓蚀剂。",
+          "biological_solution": "降香黄檀（Dalbergia odorifera）叶片含有丰富的黄酮类和多酚类活性成分（DCMB、HMDD、HMPC、HDPC），这些分子含有大量羟基、羰基和共轭π体系，可通过孤对电子与Fe的空d轨道配位形成化学吸附膜，同时范德华力和静电作用贡献物理吸附，实现化学-物理协同吸附保护。",
+          "key_features": "必须保留：多羟基和羰基官能团（吸附活性位点）、共轭π体系（提供电子和轨道重叠）。可灵活调整：分子平面性（影响平行吸附覆盖率）、提取溶剂和浓度。",
+          "design_mapping": "生物分子→缓蚀功能：植物叶片黄酮类→含O/N杂原子的有机缓蚀分子→在金属表面形成保护性吸附膜。仿生设计启示：天然多酚分子的多官能团协同吸附策略可迁移至水处理吸附材料设计。",
+          "explainability_anchors": "仿生故事线：从降香黄檀叶片的天然防护成分出发，利用其多羟基/羰基分子的金属配位能力，在X70钢表面构建仿生保护膜。设计溯源：植物叶片→黄酮类分子→多官能团吸附→金属表面保护。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/第三波/json/2024-Mao-tannic-acid-biochar-heavy-metal-chromium-adsorption.json",
+        "paper_id": "2024-Mao-tannic-acid-biochar-heavy-metal-chromium-adsorption",
+        "sections": {
+          "problem_definition": "工业废水常同时含有重金属(如Cr(VI))和有机污染物(如双酚A BPA)，单一吸附剂难以同时高效去除。传统生物炭孔隙发达但缺乏特异性化学吸附位点。",
+          "biological_solution": "单宁酸(TA)是一种天然植物多酚，其分子结构中含有大量酚羟基。仿生设计中，利用TA丰富的含氧官能团修饰多孔生物炭。在酸性条件下，酚羟基质子化使表面带正电，通过静电吸引捕获Cr(VI)；同时，酚羟基作为电子供体将Cr(VI)还原为低毒的Cr(III)；对于BPA，酚羟基则提供氢键结合位点和π-π堆积作用。",
+          "key_features": "必须保留：单宁酸的多酚结构、生物炭的多孔骨架。可灵活调整：TA修饰比例、生物炭前驱体来源。",
+          "design_mapping": "生物分子→材料设计：植物多酚单宁酸→表面功能化修饰剂；酚羟基电子给体→Cr(VI)还原剂；酚羟基氢键网络→有机分子捕获器。软约束建议：需平衡孔隙率与官能团密度，避免过度修饰导致孔隙堵塞。",
+          "explainability_anchors": "仿生故事线：提取植物防御分子(单宁)的富电子特性，赋予惰性多孔骨架以'化学活性'，实现对阴离子重金属的'静电捕获-还原解毒'双效机制，以及有机分子的'氢键锚定'。"
+        }
       }
     ]
   },
@@ -99,13 +477,40 @@
       "explanation": "",
       "source": "literature",
       "ref_doi": "10.3390/polym14245439"
+    },
+    {
+      "constraint": "循环再生性能",
+      "value": "6次吸附-脱附循环后去除率仍>90%",
+      "unit": "%",
+      "relevance": "high",
+      "explanation": "浸泡12 h + 超声 + 真空干燥",
+      "source": "literature",
+      "ref_doi": "10.1016/j.colsurfa.2021.126972"
+    },
+    {
+      "constraint": "7次循环后吸附保留率",
+      "value": "Cr: 74.81%, Cu: 68.23%, CR: 81.54%",
+      "unit": "%",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.seppur.2024.127979"
+    },
+    {
+      "constraint": "再生性能",
+      "value": "High efficiency over 2 cycles",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.matchemphys.2024.129770"
     }
   ],
   "provenance_summary": {
-    "n_papers": 1,
+    "n_papers": 6,
     "n_verified": 0,
-    "n_unverified": 6
+    "n_unverified": 28
   },
-  "coverage": "low",
+  "coverage": "normal",
   "status": "active"
 }

@@ -838,6 +838,25 @@
       "locator": "结果分析",
       "verification": "unverified",
       "confidence": 0.8
+    },
+    {
+      "parameter": "最大吸附容量 qmax",
+      "value": "231.431",
+      "unit": "mg/g",
+      "pollutant": "TC（四环素）",
+      "material": "PVA-CA凝胶珠",
+      "ph": "5（最优）",
+      "temperature": "未明确指定",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2021.126863",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2022-Liao-tetracycline-adsorption.pdf",
+      "page": 1,
+      "locator": "Abstract",
+      "verification": "unverified",
+      "confidence": 0.8
     }
   ],
   "mechanisms": [
@@ -1059,6 +1078,22 @@
       "ref_doi": null,
       "verification": "unverified",
       "基本原理": "needs_review"
+    },
+    {
+      "name": "吸附机制（阳离子桥联）",
+      "description": "阳离子桥联反应是主要吸附驱动力，Cu²⁺同时参与凝胶化和TC吸附",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2021.126863",
+      "verification": "unverified"
+    },
+    {
+      "name": "双网络结构优势",
+      "description": "PVA改善机械强度和稳定性，SA提供金属离子配位和离子交换位点",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2021.126863",
+      "verification": "unverified"
     }
   ],
   "narrative": {
@@ -1270,12 +1305,21 @@
       "explanation": "",
       "source": "patent",
       "ref_doi": null
+    },
+    {
+      "constraint": "循环再生性能",
+      "value": "5次循环后吸附容量仍保持较高水平",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2021.126863"
     }
   ],
   "provenance_summary": {
-    "n_papers": 11,
+    "n_papers": 12,
     "n_verified": 0,
-    "n_unverified": 67
+    "n_unverified": 70
   },
   "coverage": "normal",
   "status": "active"

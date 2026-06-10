@@ -2261,6 +2261,63 @@
       "locator": "Starch-Based Composites and Nano-particles",
       "verification": "unverified",
       "confidence": 0.8
+    },
+    {
+      "parameter": "最大吸附容量 Qmax",
+      "value": "142.26",
+      "unit": "mg/g",
+      "pollutant": "Rhodamine B (RB)",
+      "material": "Wheat flour (WF)",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.molliq.2020.114587",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2021-Hasan-dye-adsorption-water-treatment.pdf",
+      "page": 1,
+      "locator": "Abstract",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "最佳pH去除率",
+      "value": "98.7",
+      "unit": "%",
+      "pollutant": "Rhodamine B (RB)",
+      "material": "",
+      "ph": 5.5,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.molliq.2020.114587",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2021-Hasan-dye-adsorption-water-treatment.pdf",
+      "page": 4,
+      "locator": "Section 3.2.1",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "STAH20最大吸附容量qmax",
+      "value": "2967.66",
+      "unit": "mg/g",
+      "pollutant": "亚甲基蓝(MB)",
+      "material": "STAH20（20 min NaOH预处理）",
+      "ph": null,
+      "temperature": null,
+      "conditions": "pH 9, 35°C, 50-5000 mg/L初始浓度",
+      "source": "literature",
+      "ref_doi": "10.1016/j.cej.2020.126953",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2021-Chen-hydrogel-dye-methylene-blue-adsorption.pdf",
+      "page": 1,
+      "locator": "Highlights",
+      "verification": "unverified",
+      "confidence": 0.8
     }
   ],
   "mechanisms": [
@@ -2470,6 +2527,22 @@
       "ref_doi": "10.1016/j.carbpol.2021.117763",
       "verification": "unverified",
       "基本原理": "通过化学接枝在淀粉骨架上引入功能单体（如丙烯酸、丙烯酰胺），增强吸附性能"
+    },
+    {
+      "name": "吸附机理",
+      "description": "静电相互作用, π-π 共轭, 氢键络合",
+      "functional_groups": "Hydroxyl, Carboxyl",
+      "source": "literature",
+      "ref_doi": "10.1016/j.molliq.2020.114587",
+      "verification": "unverified"
+    },
+    {
+      "name": "吸附机理",
+      "description": "氢键（Yoshida H-bonding + Dipole-dipole H-bonding）+ 静电相互作用 + n-π相互作用",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.cej.2020.126953",
+      "verification": "unverified"
     }
   ],
   "narrative": {
@@ -2516,6 +2589,17 @@
           "key_features": "必须保留特征：天然多糖骨架提供的丰富羟基和三维网络结构、模拟酶-底物识别的主客体包合机制。可灵活调整特征：引入的特定官能团类型（如羧基、磺酸基、氨基）、复合无机组分（如二氧化硅、膨润土、铁氧化物）。",
           "design_mapping": "生物→材料映射：植物多糖骨架 → 吸附剂基底材料；酶-底物特异性识别 → β-环糊精等主客体包合结构；生物分子多功能基团 → 化学改性引入的特定官能团。软约束建议：在保持天然骨架生物相容性的前提下，通过交联或复合纳米材料增强其机械稳定性和吸附位点密度。",
           "explainability_anchors": "仿生故事线：从天然植物淀粉的低效吸附出发，借鉴生物体内酶与底物的高效特异性识别机制，通过'天然骨架+功能化修饰+多重相互作用'的设计范式，开发出高性能吸附材料。设计溯源：主客体包合机制直接映射自酶-底物识别，多重相互作用（静电、氢键、配位）映射自生物大分子与靶标的结合方式。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/第三波/json/2021-Hasan-dye-adsorption-water-treatment.json",
+        "paper_id": "2021-Hasan-dye-adsorption-water-treatment",
+        "sections": {
+          "problem_definition": "工业废水中的阳离子染料（如罗丹明B）具有高毒性、致癌性和难降解性，严重威胁水环境和人类健康；传统吸附剂成本高、再生难，需要开发廉价、高效、绿色的天然生物聚合物吸附剂。",
+          "biological_solution": "小麦面粉(WF)作为一种天然碳水化合物聚合物，富含丰富的羟基(-OH)和羧基(-COOH)官能团。这些天然官能团能够通过络合机制、静电相互作用、氢键以及π-π共轭作用，高效捕获和固定水溶液中的阳离子染料分子。其多孔的微观结构提供了巨大的比表面积，促进了染料的包封。",
+          "key_features": "必须保留：天然聚合物骨架、丰富的羟基/羧基官能团、多孔微观结构。可灵活调整：原料来源（不同谷物面粉）、表面改性程度。",
+          "design_mapping": "生物结构→材料设计：淀粉/蛋白质聚合物→天然高分子吸附骨架；羟基/羧基网络→染料配位/静电捕获位点；颗粒多孔性→染料分子包封空间。软约束建议：利用天然面粉的复杂组分无需复杂合成，直接水洗预处理即可使用，体现极简的绿色仿生理念。",
+          "explainability_anchors": "仿生故事线：利用天然植物源性碳水化合物聚合物的分子结构特征（丰富的含氧官能团），通过静电和氢键网络实现对带正电荷的有毒染料的高效络合与包封，实现‘以自然治污染’。设计溯源：小麦淀粉/蛋白→天然聚合物多孔颗粒→表面-OH/-COOH官能团活化→静电吸引/氢键络合→RB染料去除。"
         }
       }
     ]
@@ -2610,12 +2694,30 @@
       "explanation": "",
       "source": "literature",
       "ref_doi": null
+    },
+    {
+      "constraint": "再生循环稳定性",
+      "value": "约85",
+      "unit": "%",
+      "relevance": "high",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.molliq.2020.114587"
+    },
+    {
+      "constraint": "再生循环性能",
+      "value": "5次循环后脱附效率>85%，吸附容量从2961.7降至2137.5 mg/g，保持>2000 mg/g",
+      "unit": "mg/g",
+      "relevance": "high",
+      "explanation": "5000 mg/L MB, pH 9, 35°C",
+      "source": "literature",
+      "ref_doi": "10.1016/j.cej.2020.126953"
     }
   ],
   "provenance_summary": {
-    "n_papers": 8,
+    "n_papers": 10,
     "n_verified": 0,
-    "n_unverified": 141
+    "n_unverified": 146
   },
   "coverage": "normal",
   "status": "active"

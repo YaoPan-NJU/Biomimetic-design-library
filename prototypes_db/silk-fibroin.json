@@ -14,7 +14,7 @@
   "tested_conditions": {
     "tested_ph_range": [
       3.0,
-      4.2
+      7.0
     ],
     "tested_temp_range": null,
     "salinity": "low",
@@ -305,6 +305,196 @@
       "locator": "Section 4.4.2 Effect of contact time",
       "verification": "unverified",
       "confidence": 0.8
+    },
+    {
+      "parameter": "最大吸附容量 Qmax",
+      "value": "163.84",
+      "unit": "mg/g",
+      "pollutant": "Methylene blue (MB)",
+      "material": "FK/SF(CTAB+EtOH) aerogel",
+      "ph": 7,
+      "temperature": "45°C",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jtice.2023.105298",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2025-Xing-silk-fibroin-keratin-aerogel-dye-methylene-blue.pdf",
+      "page": 1,
+      "locator": "Abstract",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "pH 7时吸附容量(100 mg/L MB)",
+      "value": "42",
+      "unit": "mg/g",
+      "pollutant": "MB",
+      "material": "",
+      "ph": 7,
+      "temperature": "25°C",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jtice.2023.105298",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2025-Xing-silk-fibroin-keratin-aerogel-dye-methylene-blue.pdf",
+      "page": 6,
+      "locator": "Section 5.6",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "MB去除率随CTAB浓度变化",
+      "value": "decreases as CTAB concentration increases",
+      "unit": null,
+      "pollutant": "",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jtice.2023.105298",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2025-Xing-silk-fibroin-keratin-aerogel-dye-methylene-blue.pdf",
+      "page": 5,
+      "locator": "Section 5.5",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "MB去除率随SF浓度变化",
+      "value": "先下降后上升(SF=9%时回升)",
+      "unit": null,
+      "pollutant": "",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jtice.2023.105298",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2025-Xing-silk-fibroin-keratin-aerogel-dye-methylene-blue.pdf",
+      "page": 5,
+      "locator": "Section 5.5",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "pH 2-10吸附容量变化趋势",
+      "value": "pH 2-7增加，pH 7-10趋于平稳",
+      "unit": null,
+      "pollutant": "MB",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jtice.2023.105298",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2025-Xing-silk-fibroin-keratin-aerogel-dye-methylene-blue.pdf",
+      "page": 6,
+      "locator": "Section 5.6",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "初始浓度400 mg/L时吸附容量",
+      "value": "118",
+      "unit": "mg/g",
+      "pollutant": "MB",
+      "material": "",
+      "ph": 7,
+      "temperature": "25°C",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jtice.2023.105298",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2025-Xing-silk-fibroin-keratin-aerogel-dye-methylene-blue.pdf",
+      "page": 6,
+      "locator": "Section 5.7",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "最大吸附容量 qmax (SF/GO, Freundlich)",
+      "value": "381.67",
+      "unit": "mg/g",
+      "pollutant": "MB",
+      "material": "SF/GO blend film",
+      "ph": null,
+      "temperature": "室温（lab conditions）",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1039/d1va00047k",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2022-Martis-silk-fibroin-graphene-dye-methylene-blue-adsorption.pdf",
+      "page": 1,
+      "locator": "Abstract",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "最大吸附容量 qmax (SF, Freundlich)",
+      "value": "235.84",
+      "unit": "mg/g",
+      "pollutant": "MB",
+      "material": "pure SF film",
+      "ph": null,
+      "temperature": "室温",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1039/d1va00047k",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2022-Martis-silk-fibroin-graphene-dye-methylene-blue-adsorption.pdf",
+      "page": 1,
+      "locator": "Abstract",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "去除率 removal efficiency",
+      "value": "SF: 86.24%; SF/GO: 96.29%",
+      "unit": "%",
+      "pollutant": "MB",
+      "material": "SF and SF/GO films",
+      "ph": null,
+      "temperature": null,
+      "conditions": "ambient, room temperature",
+      "source": "literature",
+      "ref_doi": "10.1039/d1va00047k",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2022-Martis-silk-fibroin-graphene-dye-methylene-blue-adsorption.pdf",
+      "page": 5,
+      "locator": "Section 4.4.2",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "浓度对吸附容量的影响",
+      "value": "SF: 10→33.81, 100→278.75 mg/g; SF/GO: 10→44.75, 100→295.52 mg/g",
+      "unit": "mg/g",
+      "pollutant": "MB",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1039/d1va00047k",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2022-Martis-silk-fibroin-graphene-dye-methylene-blue-adsorption.pdf",
+      "page": 6,
+      "locator": "Section 4.4.4",
+      "verification": "unverified",
+      "confidence": 0.8
     }
   ],
   "mechanisms": [
@@ -447,6 +637,46 @@
       "ref_doi": "10.1039/d1va00047k",
       "verification": "unverified",
       "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移"
+    },
+    {
+      "name": "pH 2-4时吸附机理",
+      "description": "物理吸附和配位辅助(两者均带正电)",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jtice.2023.105298",
+      "verification": "unverified"
+    },
+    {
+      "name": "脱胶蚕丝的超疏水性",
+      "description": "Na₂CO₃脱胶蚕丝: WCA=158°, OCA=0°; 水脱胶: WCA=153°; 原始蚕丝: WCA=103-110°",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s10924-022-02741-6",
+      "verification": "unverified"
+    },
+    {
+      "name": "蚕丝蛋白油水分离材料汇总",
+      "description": "纳米纤维丝膜: 油水分离效率99.91-99.97%; SiO₂/SF海绵: 油吸附70.9-160.8 g/g; 超疏水蚕丝海绵: 油回收率>50%（10次循环）",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s10924-022-02741-6",
+      "verification": "unverified"
+    },
+    {
+      "name": "丝素蛋白复合材料的吸附机制",
+      "description": "静电相互作用、氢键、配位/螯合、π-π堆积、离子交换",
+      "functional_groups": "-OH, -NH₂, -COOH, 酰胺基",
+      "source": "literature",
+      "ref_doi": "10.1007/s10924-022-02741-6",
+      "verification": "unverified"
+    },
+    {
+      "name": "吸附机制",
+      "description": "静电吸引为主：pH>6时SF和GO表面-COOH解离为-COO⁻，与阳离子MB通过静电作用结合",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1039/d1va00047k",
+      "verification": "unverified"
     }
   ],
   "narrative": {
@@ -504,6 +734,28 @@
           "key_features": "必须保留SF极性基团与GO含氧官能团的静电协同作用及pH 6-10下的负电荷捕获机制；可灵活调整GO掺杂比例、成膜厚度及针对不同目标污染物的表面官能团修饰。",
           "design_mapping": "SF氨基酸残基映射为材料表面高活性吸附位点，GO二维褶皱结构映射为高粗糙度界面以暴露更多结合位点；软约束建议维持中性至弱碱性操作环境以保障COO⁻电离，并优化溶液共混-浇铸工艺确保GO均匀分散。",
           "explainability_anchors": "仿生故事线：借鉴天然蛋白极性结合能力，耦合二维纳米材料构建仿生复合吸附界面；设计溯源：吸附容量跃升源于极性基团协同与表面粗糙度增加，伪二级动力学与Freundlich等温线模型印证化学吸附主导与多层仿生机制，生物相容性数据保障其作为绿色水处理吸附剂的工程潜力。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/第三波/json/2025-Xing-silk-fibroin-keratin-aerogel-dye-methylene-blue.json",
+        "paper_id": "2025-Xing-silk-fibroin-keratin-aerogel-dye-methylene-blue",
+        "sections": {
+          "problem_definition": "印染废水中阳离子染料(如亚甲基蓝)毒性强难降解；同时大量废弃羽毛堆积造成环境污染和角蛋白资源浪费。传统吸附剂制备复杂、再生困难、易产生二次污染。",
+          "biological_solution": "蚕丝蛋白(SF)和羽毛角蛋白(FK)均为天然生物高分子，富含酰胺键、氨基、羧基等活性基团，可作为配位/静电吸附位点捕获污染物。利用深共熔溶剂提取羽毛角蛋白，与丝蛋白溶液混合，添加CTAB作为凝胶剂形成均匀三维网络，经冷冻干燥和乙醇处理诱导丝蛋白从无规卷曲转变为稳定的β-折叠构象，获得具有高孔隙率、良好机械强度和耐水性的生物基多孔气凝胶。",
+          "key_features": "必须保留：丝蛋白β-折叠构象(经乙醇诱导)、角蛋白丰富活性位点(酰胺/氨基/羧基)、CTAB凝胶交联网络、冷冻干燥多孔结构。可灵活调整：FK/SF比例、CTAB浓度、乙醇处理时间、初始染料浓度。",
+          "design_mapping": "生物结构→材料设计：蚕丝β-折叠晶体→乙醇诱导构象转变增强机械强度；羽毛角蛋白→深共熔溶剂绿色提取；静电交联→CTAB阳离子与蛋白负电荷结合；冷冻造孔→冰晶升华形成三维连通孔隙。软约束建议：控制CTAB在2%左右平衡孔隙率和结构稳定性；SF浓度≥9%时活性位点补偿孔隙率下降。",
+          "explainability_anchors": "仿生故事线：利用废弃羽毛角蛋白和蚕丝蛋白两种天然生物高分子，通过深共熔溶剂绿色提取、CTAB凝胶交联、冷冻干燥造孔、乙醇构象转变，构建富含活性位点的多孔生物气凝胶吸附剂，实现'以废治污'和生物质高值化利用。设计溯源：羽毛/蚕丝→天然蛋白高分子→深共熔溶剂提取→CTAB凝胶化→冷冻干燥→乙醇β-折叠转变→多孔气凝胶→亚甲基蓝静电/配位吸附。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/第三波/json/2022-Martis-silk-fibroin-graphene-dye-methylene-blue-adsorption.json",
+        "paper_id": "martis2022_silk_fibroin_go_mb_adsorption",
+        "sections": {
+          "problem_definition": "水中合成染料（如亚甲基蓝）污染严重威胁水生生态和人类健康，传统处理方法成本高且产生二次污染。需要开发低成本、生物相容、高效的吸附材料。",
+          "biological_solution": "家蚕（Bombyx mori）丝素蛋白是一种天然纤维蛋白，含18种氨基酸，其中甘氨酸、丙氨酸、丝氨酸和酪氨酸占90%。这些氨基酸残基含有大量极性基团（-OH、-NH₂、-COOH），可通过静电作用、氢键等多种机制与染料分子结合。丝素蛋白的β-折叠结构提供了稳定的分子骨架。",
+          "key_features": "必须保留：丝素蛋白的极性氨基酸残基（-OH、-NH₂、-COOH等官能团，吸附活性位点）、β-折叠二级结构（结构稳定性）。可灵活调整：GO的引入量和分散程度（增强表面粗糙度和活性位点密度）、薄膜厚度。",
+          "design_mapping": "生物分子→材料设计：家蚕丝素蛋白→天然高分子吸附基体→提供极性官能团和生物相容性；氧化石墨烯→功能增强组分→增加表面粗糙度、活性位点和热稳定性。仿生设计启示：利用天然蛋白质的固有官能团实现染料吸附，通过纳米材料复合增强性能。",
+          "explainability_anchors": "仿生故事线：从家蚕丝素蛋白出发，利用其天然氨基酸极性基团实现染料分子的静电吸附。GO的引入增加了表面粗糙度和含氧官能团，协同提升吸附容量。设计溯源：家蚕→丝素蛋白→SF/GO复合膜→MB高效吸附。核心机制是静电吸引（-COO⁻与阳离子MB）。"
         }
       }
     ]
@@ -571,12 +823,75 @@
       "explanation": "",
       "source": "literature",
       "ref_doi": "10.1039/d1va00047k"
+    },
+    {
+      "constraint": "TGA热稳定性趋势",
+      "value": "SF浓度增加→热稳定性提升，初始热分解温度升高",
+      "unit": null,
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.16375/j.cnki.cn45-1395/t.2026.02.014"
+    },
+    {
+      "constraint": "pH 7时吸附容量(100 mg/L MB)",
+      "value": "42",
+      "unit": "mg/g",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jtice.2023.105298"
+    },
+    {
+      "constraint": "pH 2-10吸附容量变化趋势",
+      "value": "pH 2-7增加，pH 7-10趋于平稳",
+      "unit": null,
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jtice.2023.105298"
+    },
+    {
+      "constraint": "未处理气凝胶水中稳定性",
+      "value": "立即破坏(结构崩溃)",
+      "unit": null,
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jtice.2023.105298"
+    },
+    {
+      "constraint": "pH 2-4时吸附机理",
+      "value": "物理吸附和配位辅助(两者均带正电)",
+      "unit": null,
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jtice.2023.105298"
+    },
+    {
+      "constraint": "再生丝素蛋白膜染料吸附",
+      "value": "酸黄11: 88.50 mg/g; 直接橙S: 76.34 mg/g; 萘酚橙: 74.63 mg/g（Langmuir, R²=0.98-0.99）",
+      "unit": "mg/g",
+      "relevance": "high",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s10924-022-02741-6"
+    },
+    {
+      "constraint": "TGA热稳定性",
+      "value": "SF初始失重17%（室温-175°C，水分蒸发）；SF/GO初始失重12%；第二阶段250-430°C失重42%（SF）/40%（SF/GO）；SF/GO高温热稳定性优于纯SF",
+      "unit": "%",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1039/d1va00047k"
     }
   ],
   "provenance_summary": {
-    "n_papers": 6,
+    "n_papers": 10,
     "n_verified": 0,
-    "n_unverified": 30
+    "n_unverified": 45
   },
   "coverage": "normal",
   "status": "active"
