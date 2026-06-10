@@ -587,6 +587,13 @@ def aggregate_prototype(prototype_id: str, file_infos: list, feature_mapping: di
 
 
 def main():
+    import argparse
+
+    parser = argparse.ArgumentParser(description='构建 prototypes_db 结构化存储')
+    parser.add_argument('--merge', action='store_true', help='与已有数据合并，保留富化字段')
+    parser.add_argument('--export-enrichment', action='store_true', help='导出 enrichment 层分离文件')
+    args = parser.parse_args()
+
     repo_dir = Path(__file__).resolve().parents[1]
     extractions_dir = repo_dir / 'tools' / 'litextract' / 'outputs' / 'extractions'
     feature_mapping_path = repo_dir / 'feature-mapping.json'
@@ -660,6 +667,39 @@ def main():
 
         with open(output_path, 'w', encoding='utf-8') as f:
             json.dump(result, f, ensure_ascii=False, indent=2)
+
+        # 导出 enrichment 层分离文件
+        if args.export_enrichment:
+            enrichment_dir = output_dir / 'enrichment'
+            os.makedirs(enrichment_dir, exist_ok=True)
+
+            # 提取非默认富化字段
+            enrichment_data = {}
+            for m in result.get('mechanisms', []):
+                if '基本原理' in m and m['基本原理']:
+                    if 'mechanisms' not in enrichment_data:
+                        enrichment_data['mechanisms'] = {}
+                    enrichment_data['mechanisms'][m.get('name', '')] = {
+                        '基本原理': m['基本原理'],
+                        'active_features': m.get('active_features', []),
+                        'verification': m.get('verification', 'unverified')
+                    }
+
+            for p in result.get('performance_data', []):
+                if p.get('verification', 'unverified') != 'unverified':
+                    if 'performance_data' not in enrichment_data:
+                        enrichment_data['performance_data'] = {}
+                    key = f'{p.get("parameter", "")}|{p.get("value", "")}|{p.get("material", "")}'
+                    enrichment_data['performance_data'][key] = {
+                        'verification': p['verification'],
+                        'confidence': p.get('confidence', 0.8),
+                        'source': p.get('source', '')
+                    }
+
+            if enrichment_data:
+                enrichment_path = enrichment_dir / f'{pid}.json'
+                with open(enrichment_path, 'w', encoding='utf-8') as f:
+                    json.dump(enrichment_data, f, ensure_ascii=False, indent=2)
 
         n_benali = sum(1 for m in result.get('mechanisms', []) if '基本原理' in m)
         n_ver = sum(1 for p in result.get('performance_data', []) if p.get('verification', 'unverified') != 'unverified')
