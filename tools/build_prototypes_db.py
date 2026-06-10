@@ -601,7 +601,7 @@ def main():
 
     # 收集所有 JSON 文件
     json_files = []
-    for subdir in ['论文/json', '专利/json', '标准/json']:
+    for subdir in ['论文/json', '专利/json', '标准/json', '第三波/json', '中文文献', '中文文献/json']:
         pattern = str(extractions_dir / subdir / '*.json')
         json_files.extend(glob.glob(pattern))
     print(f'Total JSON files: {len(json_files)}')
