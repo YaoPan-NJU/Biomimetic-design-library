@@ -1,0 +1,29 @@
+{
+  "domain_id": "[domain-id]",
+  "domain_name": "[领域中文名称]",
+  "version": "1.0",
+  "description": "[领域简要描述]",
+
+  "sub_categories": {
+    "[子类别1]": {
+      "description": "[子类别描述]",
+      "prototypes": [
+        {
+          "id": "[prototype-id]",
+          "weight": 0.90,
+          "scale_focus": "material|component|reactor|system",
+          "insight": "[该原型在此子类别下的核心设计启示摘要]"
+        }
+      ]
+    }
+  },
+
+  "design_scenarios": {
+    "[设计场景1]": {
+      "description": "[场景描述]",
+      "relevant_prototypes": ["[prototype-id1]", "[prototype-id2]"],
+      "recommended_scale": "material|component|reactor|system",
+      "narrative": "[简要说明这些原型如何协同解决该设计问题]"
+    }
+  }
+}

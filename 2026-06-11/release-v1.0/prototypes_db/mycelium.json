@@ -1,0 +1,215 @@
+{
+  "id": "mycelium",
+  "name_zh": "菌丝体",
+  "name_en": "Mycelium",
+  "organism": {
+    "scientific": "Beauveria bassiana / Botrytis cinerea (丝状真菌菌丝体)",
+    "category": "微生物"
+  },
+  "biomimetic_dimension": "结构仿生",
+  "features": [
+    "纤维状",
+    "网状",
+    "氨基"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": "low",
+    "note": "测过的 pH/温度范围，不是适用范围。仅从 performance_data 中实际测试过的条件聚合。"
+  },
+  "performance_data": [
+    {
+      "parameter": "重金属去除方法比较 Comparison of heavy metal removal methods",
+      "value": "生物吸附法: 来源丰富/操作简单/成本低/快速高效/无二次污染/但不稳定",
+      "unit": null,
+      "pollutant": "",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.19465/j.cnki.2095-9710.2021.04.005",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第5组-纤维结构/2021-刘-纤维素-膜-菌丝-吸附-综述.pdf",
+      "page": 1,
+      "locator": "Table 1",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "刺柏纳米纤维素Cd2+去除 Spinifex nanocellulose Cd2+ removal",
+      "value": "大而快速的去除容量，源于纳米纤维素表面羧酸根与Cd2+离子的相互作用",
+      "unit": null,
+      "pollutant": "",
+      "material": "nanocellulose from spinifex",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.tibtech.2022.09.011",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2022-Zhang-adsorption-adsorbent-removal-review.pdf",
+      "page": 6,
+      "locator": "Section Biopolymer processed nanofibers",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "纤维素纳米纤维/PVA染料去除效率 CNF/PVA dye removal",
+      "value": "阳离子和阴离子染料分子平均去除效率>60%",
+      "unit": "percent",
+      "pollutant": "",
+      "material": "cellulose nanofibers blended with PVA",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.tibtech.2022.09.011",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2022-Zhang-adsorption-adsorbent-removal-review.pdf",
+      "page": 6,
+      "locator": "Section Biopolymer processed nanofibers",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "TOCNFs对Cu2+吸附容量 TOCNFs Cu2+ adsorption capacity",
+      "value": "75 mg/g（羧酸根含量1.5 mmol/g）",
+      "unit": "mg/g",
+      "pollutant": "",
+      "material": "TEMPO-oxidized cellulose nanofibers (TOCNFs)",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.tibtech.2022.09.011",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2022-Zhang-adsorption-adsorbent-removal-review.pdf",
+      "page": 6,
+      "locator": "Section Biopolymer processed nanofibers",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "TOCNFs对亚甲基蓝吸附容量 TOCNFs methylene blue adsorption",
+      "value": "TOCNFs: 769 mg/g; CNCs: 118 mg/g",
+      "unit": "mg/g",
+      "pollutant": "",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.tibtech.2022.09.011",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2022-Zhang-adsorption-adsorbent-removal-review.pdf",
+      "page": 7,
+      "locator": "Section Biopolymer processed nanofibers",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "灵芝菌丝-玉米芯-海藻酸去除土壤蒽 Ganoderma-corn cob-alginate anthracene removal",
+      "value": "土壤蒽去除率约96%（pH 5.0，45°C，20天）",
+      "unit": "percent",
+      "pollutant": "",
+      "material": "Ganoderma lucidum mycelium pellets with corncobs in hydrophobically modified Ca-alginate (PCL modified)",
+      "ph": null,
+      "temperature": null,
+      "conditions": "pH 5.0, 45°C, 20 days incubation",
+      "source": "literature",
+      "ref_doi": "10.1016/j.tibtech.2022.09.011",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2022-Zhang-adsorption-adsorbent-removal-review.pdf",
+      "page": 10,
+      "locator": "Section Microbial immobilized biomass material",
+      "verification": "unverified",
+      "confidence": 0.8
+    }
+  ],
+  "mechanisms": [
+    {
+      "name": "氨基化CELF木质素粉末去除偶氮染料 Aminated CELF lignin powder for azo dye",
+      "description": "静电作用、氢键和π-π堆叠",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.tibtech.2022.09.011",
+      "verification": "unverified"
+    },
+    {
+      "name": "PEI改性纤维素微晶去除PFAS PEI-modified cellulose for PFAS",
+      "description": "静电作用和物理吸附",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.tibtech.2022.09.011",
+      "verification": "unverified"
+    },
+    {
+      "name": "纳米纤维素泡沫吸附油 Nanocellulose foam for oil",
+      "description": "物理吸附，如疏水反应",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.tibtech.2022.09.011",
+      "verification": "unverified"
+    },
+    {
+      "name": "CMC水凝胶重金属螯合 CMC hydrogel heavy metal chelation",
+      "description": "CMC的羟基和羧基可与重金属离子形成螯合物",
+      "functional_groups": "hydroxyl and carboxyl groups",
+      "source": "literature",
+      "ref_doi": "10.1016/j.tibtech.2022.09.011",
+      "verification": "unverified"
+    }
+  ],
+  "narrative": {
+    "entries": [
+      {
+        "source_file": "tools/litextract/outputs/extractions/论文/json/2021-刘-纤维素-膜-菌丝-吸附-综述.json",
+        "paper_id": "2021-刘-真菌吸附重金属研究进展",
+        "sections": {
+          "problem_definition": "自然界挑战：真菌在复杂土壤/水体中需高效捕获微量重金属离子以维持代谢平衡；水处理对应：工业废水中低浓度重金属离子难以通过传统物理化学方法经济高效去除。",
+          "biological_solution": "进化策略：真菌细胞壁演化出高比例多糖(几丁质+纤维素)与蛋白/脂类复合网络；关键机制：几丁质氨基/羟基提供天然螯合位点，分枝交织结构形成高比表面积多孔通道，实现快速物理截留与化学络合；成功案例：球孢白僵菌Z1在pH 6.0条件下对Cd²⁺去除率达56.17%，验证了天然菌丝的高效吸附潜力。",
+          "key_features": "必须保留特征：几丁质/纤维素衍生的氨基与羟基螯合位点、三维多孔交织网络骨架；可灵活调整特征：菌丝分层结构比例、表面官能团密度、材料交联度以提升稳定性。",
+          "design_mapping": "生物→材料映射：几丁质氨基/羟基→合成/改性高分子吸附剂螯合基团；纤维素分枝网络→纤维素纳米纤维(CNF)或仿生多孔支架；营养/气生分化→梯度孔径/功能分层复合材料。软约束建议：设计需预留pH缓冲微环境，避免强酸强碱破坏螯合位点；引入适度交联或无机复合以弥补天然材料稳定性缺陷。",
+          "explainability_anchors": "仿生故事线：从真菌细胞壁“多糖骨架+活性基团”的天然捕获机制出发，转化为“仿生多孔支架+靶向螯合位点”的工程材料设计；设计溯源：基于球孢白僵菌等丝状真菌的吸附实验数据(pH 6.0最优、去除率56.17%)及七种重金属去除法对比结论，确立生物吸附法在成本与效率上的综合优势，指导材料向低成本、高比表面积、易再生方向迭代。"
+        }
+      },
+      {
+        "source_file": "tools/litextract/outputs/extractions/论文/json/2022-Zhang-adsorption-adsorbent-removal-review.json",
+        "paper_id": "Zhang2022_biomass_remediation_review",
+        "sections": {
+          "problem_definition": "自然界中植物细胞壁需高效捕获水分与养分并维持抗降解结构，而传统水处理依赖多级串联工艺（treatment train），存在能耗高、碳足迹大、吸附与降解环节割裂的局限。",
+          "biological_solution": "进化出由纤维素纳米纤丝与改性木质素构成的分级多孔网络，兼具高比表面积、丰富含氧官能团及生物相容性；关键机制为物理/化学吸附富集（静电、氢键、π-π堆叠、配体交换）与酶/微生物原位降解的协同；成功案例如RAPIMER系统实现‘吸附-富集-降解-营养供给’一体化，突破传统处理链局限。",
+          "key_features": "必须保留：纤维素-木质素分级网络骨架、高密度含氧/羧基官能团、三维多孔/泡沫形态、酶/微生物固定化界面；可灵活调整：具体生物质来源（如咖啡渣、丝瓜络、刺柏）、交联度与溶胀率、表面接枝化学（如PEI、氨基化）、目标污染物靶向修饰。",
+          "design_mapping": "生物→材料映射：植物细胞壁纤维素网络→TEMPO氧化纳米纤维素/水凝胶骨架（提供高羧基密度与物理吸附位点）；木质素基质→改性木质素粉末/生物炭（提供π-π堆叠、疏水作用及电子供受体复合物）；真菌营养微环境→多孔泡沫/水凝胶载体（负载漆酶/脲酶等实现原位降解）。软约束建议：优先采用水热碳化或温和改性以保留含氧官能团；调控交联网络平衡溶胀率与结构强度；合成过程需严格兼容生物酶活性中心。",
+          "explainability_anchors": "仿生故事线：借鉴植物细胞壁‘结构支撑-养分循环’双重角色，将传统单一吸附材料升级为‘吸附基质+生物修复营养源’的复合系统；设计溯源：基于RAPIMER逆向工程原理，以纤维素纳米纤丝构建吸附骨架，以改性木质素提供疏水/π-π作用及酶固定化微环境，最终实现全生命周期可持续的水处理材料设计范式。"
+        }
+      }
+    ]
+  },
+  "engineering_constraints": [
+    {
+      "constraint": "pH对真菌吸附的影响 pH effect on fungal adsorption",
+      "value": "pH 6.0时球孢白僵菌Z1对Cd²⁺去除率56.17%；pH过低→H⁺竞争位点；pH过高→金属氢氧化物沉淀",
+      "unit": "%",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.19465/j.cnki.2095-9710.2021.04.005"
+    }
+  ],
+  "provenance_summary": {
+    "n_papers": 2,
+    "n_verified": 0,
+    "n_unverified": 10
+  },
+  "coverage": "normal",
+  "status": "active"
+}

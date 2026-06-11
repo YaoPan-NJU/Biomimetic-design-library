@@ -1,0 +1,269 @@
+{
+  "$schema": "https://json-schema.org/draft-2020-12/schema",
+  "$id": "https://biomimetic.local/schema/biomimetic-v1.schema.json",
+  "title": "Biomimetic Extraction Schema v1",
+  "description": "仿生水处理吸附材料设计知识提取 — 结构化输出格式",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "paper_id",
+    "bibliographic_metadata",
+    "prototype_associations",
+    "biomimetic_design_chain",
+    "performance_data",
+    "structural_features",
+    "mechanism_analysis",
+    "engineering_constraints",
+    "evidence_tracking"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "biomimetic-v1"
+    },
+    "paper_id": {
+      "type": "string",
+      "description": "稳定短 ID: first_author_year_keyword"
+    },
+    "bibliographic_metadata": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["title", "authors", "year", "abstract"],
+      "properties": {
+        "title": {"type": ["string", "null"]},
+        "authors": {"type": "array", "items": {"type": "string"}},
+        "year": {"type": ["integer", "string", "null"]},
+        "doi": {"type": ["string", "null"]},
+        "language": {"type": ["string", "null"]},
+        "keywords": {"type": "array", "items": {"type": "string"}},
+        "abstract": {"type": ["string", "null"]},
+        "file_name": {"type": ["string", "null"]}
+      }
+    },
+    "prototype_associations": {
+      "type": "array",
+      "description": "该论文关联的仿生原型列表",
+      "items": {
+        "type": "object",
+        "required": ["prototype_id", "match_confidence"],
+        "additionalProperties": true,
+        "properties": {
+          "prototype_id": {
+            "type": "string",
+            "description": "原型ID，须匹配 feature-mapping.json 中 prototype_metadata 的 key"
+          },
+          "match_confidence": {
+            "enum": ["high", "medium", "low"]
+          },
+          "match_reason": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "biomimetic_design_chain": {
+      "type": "object",
+      "description": "仿生设计逻辑链 — 库的核心字段",
+      "required": [
+        "nature_challenge",
+        "evolutionary_strategy",
+        "key_mechanisms",
+        "one_line_story"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "nature_challenge": {
+          "type": ["string", "null"],
+          "description": "生物在自然界中面临的具体挑战（50-200字）"
+        },
+        "evolutionary_strategy": {
+          "type": ["string", "null"],
+          "description": "生物通过进化形成的解决策略"
+        },
+        "key_mechanisms": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "支撑策略的关键生物机制列表"
+        },
+        "key_functional_groups": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["group", "function"],
+            "properties": {
+              "group": {"type": "string"},
+              "function": {"type": "string"}
+            }
+          }
+        },
+        "bio_to_material_mapping": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["bio_feature", "material_design"],
+            "properties": {
+              "bio_feature": {"type": "string"},
+              "material_design": {"type": "string"},
+              "confidence": {"enum": ["high", "medium", "low"]}
+            }
+          }
+        },
+        "must_keep_features": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["feature", "reason"],
+            "properties": {
+              "feature": {"type": "string"},
+              "reason": {"type": "string"}
+            }
+          }
+        },
+        "adjustable_features": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["feature", "adjustment_range"],
+            "properties": {
+              "feature": {"type": "string"},
+              "adjustment_range": {"type": "string"}
+            }
+          }
+        },
+        "one_line_story": {
+          "type": ["string", "null"],
+          "description": "一句话仿生故事"
+        },
+        "design_traceability": {
+          "type": ["string", "null"],
+          "description": "设计可追溯性描述"
+        }
+      }
+    },
+    "performance_data": {
+      "type": "array",
+      "description": "吸附性能定量数据，每个实验条件一组",
+      "items": {
+        "type": "object",
+        "required": ["pollutant", "data_source"],
+        "additionalProperties": true,
+        "properties": {
+          "pollutant": {"type": "string", "description": "使用 taxonomy/pollutants.md 标准名称"},
+          "material_form": {"type": ["string", "null"]},
+          "qmax_mg_g": {"type": ["number", "null"]},
+          "removal_rate_pct": {"type": ["number", "null"]},
+          "pH": {"type": ["number", "null"]},
+          "temperature_C": {"type": ["number", "null"]},
+          "kinetics_model": {"type": ["string", "null"]},
+          "isotherm_model": {"type": ["string", "null"]},
+          "selectivity": {"type": ["string", "null"]},
+          "reusability_cycles": {"type": ["integer", "null"]},
+          "data_source": {"enum": ["experimental", "reported", "estimated"]},
+          "reference": {"type": ["string", "null"]},
+          "confidence": {"enum": ["high", "medium", "low"]}
+        }
+      }
+    },
+    "structural_features": {
+      "type": "object",
+      "description": "多尺度结构特征",
+      "additionalProperties": true,
+      "properties": {
+        "macro_scale": {
+          "type": ["object", "null"],
+          "properties": {
+            "feature": {"type": ["string", "null"]},
+            "size_range": {"type": ["string", "null"]},
+            "function": {"type": ["string", "null"]}
+          }
+        },
+        "meso_scale": {
+          "type": ["object", "null"],
+          "properties": {
+            "feature": {"type": ["string", "null"]},
+            "size_range": {"type": ["string", "null"]},
+            "function": {"type": ["string", "null"]}
+          }
+        },
+        "micro_scale": {
+          "type": ["object", "null"],
+          "properties": {
+            "feature": {"type": ["string", "null"]},
+            "size_range": {"type": ["string", "null"]},
+            "function": {"type": ["string", "null"]}
+          }
+        },
+        "nano_scale": {
+          "type": ["object", "null"],
+          "properties": {
+            "feature": {"type": ["string", "null"]},
+            "size_range": {"type": ["string", "null"]},
+            "function": {"type": ["string", "null"]}
+          }
+        },
+        "structure_function_relationship": {"type": ["string", "null"]}
+      }
+    },
+    "mechanism_analysis": {
+      "type": "array",
+      "description": "吸附机制详解，每个机制一条",
+      "items": {
+        "type": "object",
+        "required": ["mechanism_name", "phenomenon"],
+        "additionalProperties": true,
+        "properties": {
+          "mechanism_name": {"type": "string", "description": "使用 taxonomy/mechanisms.md 标准名称"},
+          "phenomenon": {"type": "string"},
+          "molecular_basis": {"type": "array", "items": {"type": "string"}},
+          "key_functional_groups": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["group", "role"],
+              "properties": {
+                "group": {"type": "string"},
+                "role": {"type": "string"}
+              }
+            }
+          },
+          "biomimetic_inspiration": {"type": ["string", "null"]},
+          "supporting_evidence": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "engineering_constraints": {
+      "type": "array",
+      "description": "工程约束评估",
+      "items": {
+        "type": "object",
+        "required": ["constraint", "assessment"],
+        "additionalProperties": true,
+        "properties": {
+          "constraint": {"type": "string"},
+          "assessment": {"enum": ["high", "medium", "low"]},
+          "explanation": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "evidence_tracking": {
+      "type": "object",
+      "description": "证据溯源汇总",
+      "additionalProperties": true,
+      "properties": {
+        "total_claims": {"type": ["integer", "null"]},
+        "evidence_backed": {"type": ["integer", "null"]},
+        "unsubstantiated": {"type": ["integer", "null"]},
+        "key_evidence": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "claim": {"type": "string"},
+              "evidence_type": {"type": "string"},
+              "location": {"type": "string"},
+              "quality": {"enum": ["reliable", "needs_review", "suspicious"]}
+            }
+          }
+        }
+      }
+    }
+  }
+}

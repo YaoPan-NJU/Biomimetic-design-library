@@ -1,0 +1,30 @@
+{
+  "description": "改造场景路由：现有设备/工艺类型 → 常见问题 → 仿生改造策略",
+  "version": "1.0",
+
+  "曝气池": {
+    "common_problems": ["曝气效率低", "混合不均匀", "死区", "短流"],
+    "relevant_domains": ["mass-transfer", "fluid-mechanics"],
+    "biomimetic_strategies": []
+  },
+  "二沉池": {
+    "common_problems": ["污泥沉降性差", "出水悬浮物高", "污泥膨胀"],
+    "relevant_domains": ["solid-liquid-separation", "microbial-community"],
+    "biomimetic_strategies": []
+  },
+  "厌氧反应器": {
+    "common_problems": ["颗粒污泥培养困难", "三相分离效果差", "传质受限"],
+    "relevant_domains": ["microbial-community", "metabolic-pathways", "resource-recovery"],
+    "biomimetic_strategies": []
+  },
+  "生物膜反应器": {
+    "common_problems": ["挂膜困难", "生物膜脱落", "填料堵塞"],
+    "relevant_domains": ["biofilm", "microbial-community"],
+    "biomimetic_strategies": []
+  },
+  "MBR膜池": {
+    "common_problems": ["膜污染", "膜通量衰减", "曝气不均"],
+    "relevant_domains": ["biofilm", "solid-liquid-separation", "mass-transfer"],
+    "biomimetic_strategies": []
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "description": "设计问题路由：设计问题 → 涉及领域 → 按尺度分组的原型",
+  "version": "1.0",
+
+  "传质类": {
+    "曝气效率低": {
+      "relevant_domains": ["mass-transfer", "fluid-mechanics"],
+      "prototypes_by_scale": {
+        "component": [],
+        "reactor": []
+      }
+    },
+    "混合不均匀": {
+      "relevant_domains": ["mass-transfer", "fluid-mechanics"],
+      "prototypes_by_scale": {
+        "reactor": []
+      }
+    }
+  },
+  "生物膜类": {
+    "挂膜困难": {
+      "relevant_domains": ["biofilm", "microbial-community"],
+      "prototypes_by_scale": {
+        "material": [],
+        "component": []
+      }
+    }
+  },
+  "固液分离类": {
+    "污泥沉降性差": {
+      "relevant_domains": ["solid-liquid-separation", "microbial-community"],
+      "prototypes_by_scale": {
+        "material": [],
+        "reactor": []
+      }
+    }
+  },
+  "改造类": {
+    "池型优化": {
+      "relevant_domains": ["mass-transfer", "fluid-mechanics"],
+      "prototypes_by_scale": {
+        "reactor": []
+      }
+    },
+    "流场改造": {
+      "relevant_domains": ["fluid-mechanics", "mass-transfer"],
+      "prototypes_by_scale": {
+        "component": [],
+        "reactor": []
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "description": "运行调控路由：传感信号 → 调控类型 → 仿生调控策略 + 参考参数",
+  "version": "1.0",
+  "note": "面向实时运行控制场景，作为决策支持层提供仿生参考",
+
+  "曝气调控": {
+    "trigger_signals": [
+      {"signal": "DO", "condition": "偏低", "unit": "mg/L"},
+      {"signal": "OUR", "condition": "异常升高"}
+    ],
+    "adjustment_targets": ["曝气量", "曝气模式", "曝气头布局"],
+    "biomimetic_strategies": []
+  },
+  "流道调控": {
+    "trigger_signals": [
+      {"signal": "RTD", "condition": "短路流/死区"},
+      {"signal": "混合液流速", "condition": "分布不均"}
+    ],
+    "adjustment_targets": ["进水方式", "导流板角度", "回流比"],
+    "biomimetic_strategies": []
+  },
+  "加药调控": {
+    "trigger_signals": [
+      {"signal": "TN", "condition": "出水偏高"},
+      {"signal": "碳氮比", "condition": "偏低"}
+    ],
+    "adjustment_targets": ["碳源投加量", "碳源投加点", "加药频率"],
+    "biomimetic_strategies": []
+  },
+  "污泥调控": {
+    "trigger_signals": [
+      {"signal": "SVI", "condition": "偏高(>150)"},
+      {"signal": "MLSS", "condition": "异常"}
+    ],
+    "adjustment_targets": ["排泥量", "回流比", "DO控制"],
+    "biomimetic_strategies": []
+  }
+}

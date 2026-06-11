@@ -1,0 +1,51 @@
+{
+  "description": "工艺路由：水处理工艺 → 涉及领域 → 原型列表 + 改造机会",
+  "version": "1.0",
+
+  "活性污泥法": {
+    "A2O": {
+      "relevant_domains": ["microbial-community", "mass-transfer", "metabolic-pathways"],
+      "key_prototypes": [],
+      "retrofit_opportunities": ["厌氧区流场优化", "好氧区曝气效率", "内回流优化"]
+    },
+    "SBR": {
+      "relevant_domains": ["microbial-community", "shock-resistance"],
+      "key_prototypes": [],
+      "retrofit_opportunities": ["周期优化", "DO 梯度控制"]
+    },
+    "氧化沟": {
+      "relevant_domains": ["mass-transfer", "fluid-mechanics"],
+      "key_prototypes": [],
+      "retrofit_opportunities": ["流道优化", "曝气效率提升"]
+    },
+    "MBR": {
+      "relevant_domains": ["biofilm", "solid-liquid-separation", "mass-transfer"],
+      "key_prototypes": [],
+      "retrofit_opportunities": ["膜污染控制", "生物膜管理"]
+    }
+  },
+  "生物膜法": {
+    "BAF": {
+      "relevant_domains": ["biofilm", "mass-transfer", "solid-liquid-separation"],
+      "key_prototypes": [],
+      "retrofit_opportunities": ["填料优化", "反冲洗策略"]
+    },
+    "MBBR": {
+      "relevant_domains": ["biofilm", "mass-transfer"],
+      "key_prototypes": [],
+      "retrofit_opportunities": ["填料表面改性", "混合效率"]
+    }
+  },
+  "厌氧处理": {
+    "UASB": {
+      "relevant_domains": ["microbial-community", "metabolic-pathways", "resource-recovery"],
+      "key_prototypes": [],
+      "retrofit_opportunities": ["颗粒污泥培养", "三相分离器优化"]
+    },
+    "IC": {
+      "relevant_domains": ["microbial-community", "mass-transfer"],
+      "key_prototypes": [],
+      "retrofit_opportunities": ["内循环效率", "上升流速控制"]
+    }
+  }
+}

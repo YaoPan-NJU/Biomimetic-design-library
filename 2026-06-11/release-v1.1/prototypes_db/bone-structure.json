@@ -1,0 +1,181 @@
+{
+  "id": "bone-structure",
+  "name_zh": "骨结构",
+  "name_en": "Bone Structure",
+  "organism": {
+    "scientific": "",
+    "category": "动物"
+  },
+  "biomimetic_dimension": "结构仿生",
+  "features": [
+    "层次孔",
+    "离子交换"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": "any",
+    "note": "测过的 pH/温度范围，不是适用范围。仅从 performance_data 中实际测试过的条件聚合。"
+  },
+  "performance_data": [
+    {
+      "parameter": "Cu浓度对去除率的影响",
+      "value": "铜离子浓度越高，在相同条件下去除百分比越低",
+      "unit": null,
+      "pollutant": "",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.cjche.2020.07.066",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第4组-生物矿化/2020-Bambaeero-chitosan-bone-shell-hydroxyapatite.pdf",
+      "page": 6,
+      "locator": "3.1节",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "投加量对Cu去除率的影响",
+      "value": "增加吸附剂投加量→Cu去除率增加；最大Cu去除在0.030g壳聚糖吸附剂、pH 5时获得",
+      "unit": null,
+      "pollutant": "",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.cjche.2020.07.066",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第4组-生物矿化/2020-Bambaeero-chitosan-bone-shell-hydroxyapatite.pdf",
+      "page": 6,
+      "locator": "3.1节",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "HPU-13@Fe₃O₄对Cr(VI)的吸附容量",
+      "value": "Cr₂O₇²⁻: 398.41 mg/g; CrO₄²⁻: 471.69 mg/g",
+      "unit": "mg/g",
+      "pollutant": "Cr(VI)（Cr₂O₇²⁻和CrO₄²⁻）",
+      "material": "HPU-13@Fe₃O₄磁性杂化MOF",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": null,
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2021-陈-多孔-MOF-重金属-铬-综述.pdf",
+      "page": 5,
+      "locator": "2.2.3节",
+      "verification": "unverified",
+      "confidence": 0.8
+    }
+  ],
+  "mechanisms": [
+    {
+      "name": "HAp膜重金属去除性能",
+      "description": "壳聚糖/HAp纳米纤维膜(静电纺丝)：Pb(II) 296.7 mg/g、Co(II) 180.2 mg/g、Ni(II) 213.8 mg/g，5次循环无明显下降；HAp/PU复合泡沫(50%HAp)：Pb(II) 150 mg/g；nHAp凝胶/玉米醇溶蛋白膜(10% nHAp)→机械性能最强；nHAp增至50%→Cu(II)从27.2增至67.8 mg/g",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jtice.2024.105668",
+      "verification": "unverified",
+      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移"
+    },
+    {
+      "name": "HAp四种重金属吸附机制",
+      "description": "(1)离子交换：HAp表面Ca²⁺/PO₄³⁻与重金属离子交换；(2)表面配合：污染物与HAp表面官能团形成化学键；(3)溶解-再沉淀：HAp溶解→释放PO₄³⁻→与重金属形成更难溶磷酸盐沉淀；(4)静电吸附：HAp表面正电荷与阴离子型重金属静电吸引",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jtice.2024.105668",
+      "verification": "unverified",
+      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移"
+    },
+    {
+      "name": "HAp膜制备方法",
+      "description": "聚合物膜：NIPS(非溶剂致相分离,最常用)、TIPS(热致相分离,高重现性,窄孔径)、静电纺丝(纳米纤维膜)；陶瓷膜：浆料浇注(最早)、挤出、粉末压制、相转化/烧结",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jtice.2024.105668",
+      "verification": "unverified",
+      "基本原理": "needs_review"
+    },
+    {
+      "name": "HAp膜类型与制备技术",
+      "description": "聚合物膜：NIPS/静电纺丝/TIPS/干压缩；有机材料：PA/CA/CE/PSf/PES/PTFE/PVDF/PP/PAN；无机材料：Al₂O₃/SiO₂/TiO₂/ZrO₂+黏土；陶瓷膜：多孔(支撑层)+刚性(分离层)；平板/中空纤维两种构型",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jtice.2024.105668",
+      "verification": "unverified",
+      "基本原理": "needs_review"
+    },
+    {
+      "name": "MOFs光催化降解染料的机理",
+      "description": "VB电子→CB→·OH和O₂⁻·自由基降解",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": null,
+      "verification": "unverified",
+      "基本原理": "needs_review"
+    }
+  ],
+  "narrative": {
+    "entries": [
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2024-Rev-hierarchical-bone-nanofiber-review.json",
+        "paper_id": "2024-Rev-hierarchical-bone-nanofiber-review",
+        "sections": {
+          "problem_definition": "自然界挑战：弱脆性无机矿物(如羟基磷灰石、CaCO₃)需克服固有脆性以实现高强度与高韧性；水处理对应：传统吸附材料常面临机械强度低、易粉化流失、孔隙传质阻力大以及结构稳定性与吸附容量难以兼顾的工程瓶颈。",
+          "biological_solution": "进化策略：生物通过纳米级构建块的层级有序组装、有机/无机界面增韧及非经典结晶路径实现性能跃升；关键机制：内在增韧(塑性变形)与外在增韧(裂纹屏蔽)协同，结合残余应力改变裂纹路径、梯度结构平滑应力过渡；成功案例：骨的12级多尺度结构与珍珠层的砖泥结构成功统一强度与韧性矛盾。",
+          "key_features": "必须保留特征：多尺度层级有序组装拓扑、软硬相复合界面、梯度/多孔网络结构；可灵活调整特征：无机矿物组分可替换为高吸附活性材料(如功能化氧化物、碳基材料)，有机相可替换为特定聚合物或配体，孔隙尺寸与连通性可根据目标污染物分子尺寸进行定制。",
+          "design_mapping": "生物→材料映射：生物矿化组织→仿生复合吸附剂；纳米构建块→吸附功能纳米单元；有机基质→聚合物粘结剂/界面修饰层；非晶前驱体路径→温和溶剂热/自组装合成路线。软约束建议：优先采用定向冷冻或剪切流场诱导组装以复制层级排列；界面结合力需调控至适中区间以避免脆断或脱粘；利用水介导或分子模板实现低能耗温和合成。",
+          "explainability_anchors": "仿生故事线：从‘脆性矿物如何通过精妙结构设计变得强韧’出发，揭示自然界‘以弱胜强’的跨尺度组装哲学；设计溯源：核心原则直接脱胎于文献对骨、珍珠层等BMTs的结构解析，将生物矿化的层级组装、界面调控与非晶前驱体策略平移至吸附材料设计，确保材料在复杂水环境中兼具高机械稳定性、抗疲劳性与高效传质吸附性能。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2020-Bambaeero-chitosan-bone-shell-hydroxyapatite.json",
+        "paper_id": "2020-Bambaeero-chitosan-bone-shell-hydroxyapatite",
+        "sections": {
+          "problem_definition": "自然界中生物体通过生物矿化与有机-无机复合结构实现离子稳态调控与机械支撑；对应水处理领域亟需低成本、高容量、环境友好的吸附材料，以解决Cu(II)/Zn(II)等重金属污染物的同步高效去除难题。",
+          "biological_solution": "生物进化出利用碳酸钙(蜗牛壳)、羟基磷灰石(骨骼)与甲壳素衍生物(虾壳)构建轻质高强复合材料的策略；关键机制在于无机矿物相的离子交换/表面沉淀与有机高分子官能团(-NH₂/-OH)的配位络合协同作用；成功案例为蜗牛壳粉+骨灰提取HAP+虾壳壳聚糖制备的三元天然复合吸附剂，实现双离子同步高效去除。",
+          "key_features": "必须保留：三元生物源组分(CaCO₃/HAP/壳聚糖)协同网络、多孔粗糙高比表面积形貌、氨基/羟基/磷酸根多活性位点；可灵活调整：各组分质量配比、RSM工艺参数(pH/投加量/接触时间)、生物源替代物(如蛋壳/珊瑚/其他甲壳类废弃物)。",
+          "design_mapping": "生物→材料映射：蜗牛壳(CaCO₃)→提供钙基矿物骨架与微环境pH缓冲；骨灰(HAP)→提供Ca₁₀(PO₄)₆(OH)₂晶体相与金属离子交换位点；虾壳(壳聚糖)→构建亲水高分子网络与-NH₂/-OH络合中心。软约束建议：严格控pH于4-6防Cu沉淀；投加量锚定0.02g以平衡吸附容量与经济性；利用RSM模型动态适配水质波动与多参数交互。",
+          "explainability_anchors": "仿生故事线：从海洋/陆地生物废弃物的天然矿化与结构支撑机制中提取‘无机矿物+有机高分子’复合范式，重构为水处理吸附材料；设计溯源：基于生物矿化原理与甲壳类脱乙酰化产物的协同吸附机制，经SEM/EDX验证多孔形貌与Ca/P/O/C元素分布，结合RSM量化多参数交互作用，实现从自然废弃物到高值化环保材料的可解释性闭环设计。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2024-Jaffar-membrane-hydroxyapatite-adsorption-adsorbent-review.json",
+        "paper_id": "2024-Jaffar-HAp-heavy-metal-review",
+        "sections": {
+          "problem_definition": "自然界中生物骨骼与贝壳需高效矿化并维持结构稳定，而水处理中面临重金属离子高效捕获、吸附剂易团聚难回收、多组分竞争吸附及全规模操作受限的挑战。",
+          "biological_solution": "生物通过天然碳酸钙矿化形成骨骼与贝壳，进化出六方P6₃/m晶体结构，提供Ca1/Ca2及OH⁻离子通道，并利用表面-OH和PO₄³⁻基团实现静电吸引、氢键与化学配合的多机制协同。成功案例包括利用蛋壳、贻贝壳、牛骨等生物废弃物仿生矿化合成HAp，实现低成本且高效的重金属吸附(如鸡骨HAp对Pb(II)吸附达311.16 mg/g)。",
+          "key_features": "必须保留特征：六方晶体结构的离子交换通道(Ca1/Ca2/OH⁻)、表面丰富的-OH和PO₄³⁻官能团以维持四种吸附机制(离子交换/表面配合/溶解-再沉淀/静电吸附)。可灵活调整特征：pH 8-12范围内的形貌调控(针状至球状)、复合化策略(磁性/聚合物/碳基掺杂)及生物/化学合成路径。",
+          "design_mapping": "生物矿化过程→微波辅助/水热/化学沉淀等仿生合成方法；骨骼/贝壳微观通道→HAp晶体Ca/P离子交换与溶解-再沉淀机制；生物组织复合结构→HAp/聚合物静电纺丝膜或磁性复合材料。软约束建议：控制聚合物膜中nHAP含量(≤10%)以防膜脆碎，优先采用湿法或微波法以平衡结晶度与形貌，利用磁性复合解决回收难题。",
+          "explainability_anchors": "仿生故事线：从天然生物骨骼的矿化机制出发，复刻其六方晶体通道与表面活性位点，解决人工吸附剂机制单一与易团聚的问题。设计溯源：HAp的四种吸附机制直接映射自生物磷灰石的理化特性，复合膜设计(如壳聚糖/HAp纳米纤维膜)则借鉴了生物组织的有机-无机杂化结构，在保持高吸附量(如Pb(II) 296.7 mg/g)的同时提升机械强度与抗污染性。"
+        }
+      }
+    ]
+  },
+  "engineering_constraints": [
+    {
+      "constraint": "pH范围限制 pH constraint",
+      "value": "仅测试pH 4-6，pH>6未研究(因Cu²⁺沉淀)",
+      "unit": null,
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.cjche.2020.07.066"
+    }
+  ],
+  "provenance_summary": {
+    "n_papers": 4,
+    "n_verified": 0,
+    "n_unverified": 8
+  },
+  "coverage": "normal",
+  "status": "active"
+}

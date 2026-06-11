@@ -1,0 +1,1330 @@
+{
+  "id": "fish-scale-hydroxyapatite",
+  "name_zh": "鱼鳞羟基磷灰石",
+  "name_en": "Fish Scale Hydroxyapatite",
+  "organism": {
+    "scientific": "Nelumbo nucifera, Fish",
+    "category": "动物"
+  },
+  "biomimetic_dimension": "过程仿生",
+  "features": [
+    "离子交换"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": [
+      5.0,
+      6.0
+    ],
+    "tested_temp_range": null,
+    "salinity": "any",
+    "note": "测过的 pH/温度范围，不是适用范围。仅从 performance_data 中实际测试过的条件聚合。"
+  },
+  "performance_data": [
+    {
+      "parameter": "静态吸附Langmuir qmax",
+      "value": "1013.96",
+      "unit": "mg/g",
+      "pollutant": "Ciprofloxacin (CIP)",
+      "material": "DPBC",
+      "ph": "6",
+      "temperature": "298 K",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.chemosphere.2021.131962",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第4组-生物矿化/2021-Dou-hydrophobic-porous-biochar-adsorption.pdf",
+      "page": 6,
+      "locator": "3.6节",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "固定床动态吸附容量",
+      "value": "880.53",
+      "unit": "mg/g",
+      "pollutant": "",
+      "material": "DPBC",
+      "ph": "6",
+      "temperature": "298 K",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.chemosphere.2021.131962",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第4组-生物矿化/2021-Dou-hydrophobic-porous-biochar-adsorption.pdf",
+      "page": 7,
+      "locator": "3.7节",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "Langmuir最大吸附容量 Cd(II) qmax",
+      "value": "88.1",
+      "unit": "mg/g",
+      "pollutant": "Cd(II)",
+      "material": "HA-3HPB",
+      "ph": "5.0",
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2022.129330",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第3组-多孔结构/2022-Wu-porous-hierarchical-hydroxyapatite-biochar 2.pdf",
+      "page": 7,
+      "locator": "Section 3.4, Table 1",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "Langmuir最大吸附容量 Pb(II) qmax",
+      "value": "110.2",
+      "unit": "mg/g",
+      "pollutant": "Pb(II)",
+      "material": "HA-3HPB",
+      "ph": "5.0",
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2022.129330",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第3组-多孔结构/2022-Wu-porous-hierarchical-hydroxyapatite-biochar 2.pdf",
+      "page": 7,
+      "locator": "Section 3.4, Table 1",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "共存阳离子对Pb(II)去除率影响",
+      "value": "≥99.83",
+      "unit": "%",
+      "pollutant": "Pb(II)",
+      "material": "HA-3HPB",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2022.129330",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第3组-多孔结构/2022-Wu-porous-hierarchical-hydroxyapatite-biochar 2.pdf",
+      "page": 7,
+      "locator": "Section 3.3",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "共存阳离子对Cd(II)去除率影响",
+      "value": "99.1-97.6",
+      "unit": "%",
+      "pollutant": "Cd(II)",
+      "material": "HA-3HPB",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2022.129330",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第3组-多孔结构/2022-Wu-porous-hierarchical-hydroxyapatite-biochar 2.pdf",
+      "page": 7,
+      "locator": "Section 3.3",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "离子强度对Cd(II)去除率影响",
+      "value": "99.57%→97.84%（NaNO3 0→0.5 mol/L）",
+      "unit": "%",
+      "pollutant": "Cd(II)",
+      "material": "HA-3HPB",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2022.129330",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第3组-多孔结构/2022-Wu-porous-hierarchical-hydroxyapatite-biochar 2.pdf",
+      "page": 7,
+      "locator": "Section 3.3",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "鱼鳞羟基磷灰石对酸性品红最大吸附容量（最优）",
+      "value": "478",
+      "unit": "mg/g",
+      "pollutant": "酸性品红",
+      "material": "鱼鳞提取羟基磷灰石",
+      "ph": null,
+      "temperature": "30°C",
+      "conditions": "",
+      "source": "patent",
+      "ref_doi": null,
+      "patent_number": "CN114849640A",
+      "standard_number": null,
+      "source_file": "2022-CN114849640A-羟基磷灰石-吸附-染料 2.pdf",
+      "page": 5,
+      "locator": "实施例1",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "盐酸浓度对吸附容量的影响-0.1mol/L",
+      "value": "478",
+      "unit": "mg/g",
+      "pollutant": "酸性品红",
+      "material": "鱼鳞提取羟基磷灰石",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "patent",
+      "ref_doi": null,
+      "patent_number": "CN114849640A",
+      "standard_number": null,
+      "source_file": "2022-CN114849640A-羟基磷灰石-吸附-染料 2.pdf",
+      "page": 5,
+      "locator": "实施例1",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "盐酸浓度对吸附容量的影响-0.5mol/L",
+      "value": "386",
+      "unit": "mg/g",
+      "pollutant": "酸性品红",
+      "material": "鱼鳞提取羟基磷灰石",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "patent",
+      "ref_doi": null,
+      "patent_number": "CN114849640A",
+      "standard_number": null,
+      "source_file": "2022-CN114849640A-羟基磷灰石-吸附-染料 2.pdf",
+      "page": 5,
+      "locator": "实施例2",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "盐酸浓度对吸附容量的影响-1mol/L",
+      "value": "356",
+      "unit": "mg/g",
+      "pollutant": "酸性品红",
+      "material": "鱼鳞提取羟基磷灰石",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "patent",
+      "ref_doi": null,
+      "patent_number": "CN114849640A",
+      "standard_number": null,
+      "source_file": "2022-CN114849640A-羟基磷灰石-吸附-染料 2.pdf",
+      "page": 5,
+      "locator": "实施例3",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "第一步NaOH处理温度对吸附容量的影响-50°C",
+      "value": "423",
+      "unit": "mg/g",
+      "pollutant": "酸性品红",
+      "material": "鱼鳞提取羟基磷灰石",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "patent",
+      "ref_doi": null,
+      "patent_number": "CN114849640A",
+      "standard_number": null,
+      "source_file": "2022-CN114849640A-羟基磷灰石-吸附-染料 2.pdf",
+      "page": 5,
+      "locator": "实施例4",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "第一步NaOH处理温度对吸附容量的影响-70°C（最优）",
+      "value": "478",
+      "unit": "mg/g",
+      "pollutant": "酸性品红",
+      "material": "鱼鳞提取羟基磷灰石",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "patent",
+      "ref_doi": null,
+      "patent_number": "CN114849640A",
+      "standard_number": null,
+      "source_file": "2022-CN114849640A-羟基磷灰石-吸附-染料 2.pdf",
+      "page": 5,
+      "locator": "实施例1",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "第一步NaOH处理温度对吸附容量的影响-100°C",
+      "value": "450",
+      "unit": "mg/g",
+      "pollutant": "酸性品红",
+      "material": "鱼鳞提取羟基磷灰石",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "patent",
+      "ref_doi": null,
+      "patent_number": "CN114849640A",
+      "standard_number": null,
+      "source_file": "2022-CN114849640A-羟基磷灰石-吸附-染料 2.pdf",
+      "page": 5,
+      "locator": "实施例5",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "干燥方式对吸附容量的影响-冷冻干燥",
+      "value": "478",
+      "unit": "mg/g",
+      "pollutant": "酸性品红",
+      "material": "鱼鳞提取羟基磷灰石",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "patent",
+      "ref_doi": null,
+      "patent_number": "CN114849640A",
+      "standard_number": null,
+      "source_file": "2022-CN114849640A-羟基磷灰石-吸附-染料 2.pdf",
+      "page": 5,
+      "locator": "实施例1",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "干燥方式对吸附容量的影响-热风烘干",
+      "value": "430",
+      "unit": "mg/g",
+      "pollutant": "酸性品红",
+      "material": "鱼鳞提取羟基磷灰石",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "patent",
+      "ref_doi": null,
+      "patent_number": "CN114849640A",
+      "standard_number": null,
+      "source_file": "2022-CN114849640A-羟基磷灰石-吸附-染料 2.pdf",
+      "page": 6,
+      "locator": "实施例6",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "干燥方式对吸附容量的影响-自然风干",
+      "value": "462",
+      "unit": "mg/g",
+      "pollutant": "酸性品红",
+      "material": "鱼鳞提取羟基磷灰石",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "patent",
+      "ref_doi": null,
+      "patent_number": "CN114849640A",
+      "standard_number": null,
+      "source_file": "2022-CN114849640A-羟基磷灰石-吸附-染料 2.pdf",
+      "page": 6,
+      "locator": "实施例7",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "吸附容量最低值",
+      "value": "356",
+      "unit": "mg/g",
+      "pollutant": "酸性品红",
+      "material": "鱼鳞提取羟基磷灰石",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "patent",
+      "ref_doi": null,
+      "patent_number": "CN114849640A",
+      "standard_number": null,
+      "source_file": "2022-CN114849640A-羟基磷灰石-吸附-染料 2.pdf",
+      "page": 5,
+      "locator": "实施例3",
+      "verification": "unverified",
+      "confidence": 0.8
+    }
+  ],
+  "mechanisms": [
+    {
+      "name": "自然界仿生原型：植物/动物超浸润表面",
+      "description": "植物：荷叶→超疏水自清洁(WCA~159°)；芋头叶→WCA 159±2°；印度美人蕉叶→WCA 165±2°；玫瑰花瓣→WCA 152.4°(高粘附)；花生叶/油菜籽→超疏水。动物：蝴蝶翅膀→沿体轴放射状交错纳米带→稳定飞行+自清洁；蝉翼→纳米结构→超疏水；蜻蜓翼→微纳结构。共同特征：层级微纳结构→超疏水性和自清洁",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s10853-022-07945-8",
+      "verification": "unverified"
+    },
+    {
+      "name": "超疏水-超亲油膜：制备方法与性能对比",
+      "description": "制备方法：1）电纺法→PS纳米纤维→不锈钢网→Cassie-Baxter态→空气trapped层→超疏水；2）原位聚合(F-PBZ/SiO₂ NPs)→CA纳米纤维→WCA高(浓度依赖)→粗糙度Ra可控；3）电纺PMIA/SiO₂-SN→双微纳结构→可再生(SN再生)→耐腐蚀+耐机械；4）同轴电纺→核壳结构(PVDF核/硅烷壳)→超疏水→乳液分离；5）模板法+溶胶凝胶→MTES→500°C仍保持超疏水→热稳定",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s10853-022-07945-8",
+      "verification": "unverified"
+    },
+    {
+      "name": "仿生单宁酸金属配合物→超疏水纳米纤维膜",
+      "description": "植物多酚(单宁酸TA)→廉价+广谱化学功能+强锚定能力+金属离子螯合+自由基清除+抗菌。TA金属配合物(Ag⁺/Cu²⁺/Al³⁺/Ti⁴⁺)→在PI纳米纤维表面形成粗糙层级结构→PDMS修饰→超疏水PDMS/TA-Mⁿ⁺/PI膜。PDMS/TA-Al³⁺/PI膜→超疏水+超亲油+UV屏蔽→户外油水分离。ZIF-8@GSH/PI膜→仿荷叶自清洁→光催化染料降解",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s10853-022-07945-8",
+      "verification": "unverified"
+    },
+    {
+      "name": "智能响应膜：光/pH/温度/等离子体可切换润湿性",
+      "description": "1）光响应：TiO₂光催化→UV照射→亲水+光降解有机物→MB可被完全降解。TiO₂@PVDF/PAN核壳→避免TiO₂团聚→UV 1h→分解87%罗丹明B。2）pH响应：PVDF-g-PAA树状纤维→中性水中超亲水+水下疏油→pH 2.0中疏水+超亲油；SNP/DA-TiO₂/PI膜→pH≥12时从超疏水变为超亲水。3）可逆切换：Cu网+Au+疏水分子→O₂等离子体→超亲水/水下超疏油→加热→恢复→可逆双向分离",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s10853-022-07945-8",
+      "verification": "unverified"
+    },
+    {
+      "name": "Janus膜：不对称润湿性→单向传输+乳液分离",
+      "description": "Janus膜：两面不对称润湿性→同时满足两种矛盾性能。1）CNTs/PAN→疏水CNTs+亲水PAN→不对称润湿→高通量+高分离效率+机械化学稳定；2）CA纤维+D₄等离子接枝→Janus CA膜→离心纺丝(低成本高产率)；3）PLA+纳米粘土→可生物降解Janus织物→吸收重油+微生物降解；4）PLA/CNT+PLA/SiO₂ NF→Janus-PLA→SiO₂与CNTs静电相互作用→同步增强+塑化；5）PDA/聚电解质循环共沉积→Janus中空纤维(JHFM)→连续脱乳+单向油传输→模块化",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s10853-022-07945-8",
+      "verification": "unverified"
+    },
+    {
+      "name": "五类超浸润膜体系分类与性能评分",
+      "description": "五类超浸润膜：1）超疏水-超亲油(最常用)→分离油水混合物→水通过/油截留；2）超亲水-超疏油→水截留/油通过→抗油污；3）全疏(SA)→预润湿切换→选择性分离轻油或重油；4）全亲→预润湿切换→双向分离；5）智能响应→外部刺激切换→适应不同场景。Figure 10a对各膜性能评分(每格2分，最高10分)→各膜在通量/效率/稳定性/成本等维度各有优劣",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s10853-022-07945-8",
+      "verification": "unverified"
+    },
+    {
+      "name": "仿生鱼鳞→水下超疏油膜：TiO₂鳞片包覆织物",
+      "description": "仿鱼鳞→天然棉织物+鳞片状纳米TiO₂包覆→超亲水+水下超疏油。机理：鳞片状TiO₂超亲水→水扩散速率快+织物微结构高保水→完全饱和水→稳定油/水/固三相界面→水下超疏油。织物廉价+柔韧+强机械性能→良好的油水分离候选材料",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s10853-022-07945-8",
+      "verification": "unverified"
+    },
+    {
+      "name": "仿生PVDF-SiO₂多尺度粗糙度→耐循环超疏水",
+      "description": "PVDF+SiO₂→电纺→多尺度粗糙结构→防止水滴进入→优异多循环性能+稳定超疏水性。克服小孔径膜处理高粘油的挑战→多尺度结构使高粘油仍可通过",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s10853-022-07945-8",
+      "verification": "unverified"
+    },
+    {
+      "name": "六种制备方法性能对比",
+      "description": "Table 1对比：逐层自组装(PEI/PAA/PAN+TALH→超亲水→99.89%效率)；溶胶凝胶(TEOS+HCl→超亲水→WCA 0°)；气相沉积(PU+Fe₃O₄+TEOS+FP→超疏水→WCA 157°→OCA 0°)；电化学(金字塔膜→全疏→WCA 172°→OCA 146°)；生物法(PK+PEG+PDA→超疏油→99.9%效率→孔径<0.2μm)；浸涂(PDMS+PVDF→超疏水→WCA 155°→孔径0.201μm)；原位聚合(CA+F-PBZ+SiO₂→超疏水-超亲油→WCA 161°→OCA 3°→孔径0.04μm→纤维直径350nm)",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s10853-022-07945-8",
+      "verification": "unverified"
+    },
+    {
+      "name": "超疏水表面定义标准",
+      "description": "WCA >150° AND contact angle hysteresis <10°",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.3390/membranes13080727",
+      "verification": "unverified"
+    },
+    {
+      "name": "超疏水FZP膜(ZnO+PDTS/PVDF)性能",
+      "description": "WCA: 162.3°, Sliding angle: 9.8°",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.3390/membranes13080727",
+      "verification": "unverified"
+    },
+    {
+      "name": "POSS-rGO/PVDF静电纺丝膜",
+      "description": "Flux: ~28 L/m²h (21.5% higher than pristine PVDF, ~2x commercial PTFE), >99.9% rejection",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.3390/membranes13080727",
+      "verification": "unverified"
+    },
+    {
+      "name": "全疏水SiNPs/PVDF-HFP/APTES膜",
+      "description": "WCA: 151.49° (water), 140.64° (oil), 119.59° (4mM SDS), 107.5° (ethanol), flux: 16.5 kg/m²h (72h)",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.3390/membranes13080727",
+      "verification": "unverified"
+    },
+    {
+      "name": "FAS+ZnO/PVDF-HFP全疏水膜(ePFP-25Z)",
+      "description": "WCA: >161° (water), 131.5°±1.8° (oil), 131°±2.9° (ethanol), stable 80h, rejection: >99.9%",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.3390/membranes13080727",
+      "verification": "unverified"
+    },
+    {
+      "name": "朱等人Janus膜不对称超润湿性",
+      "description": "Underwater superoleophobicity: 164°, In-air superhydrophobicity: 166°",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.3390/membranes13080727",
+      "verification": "unverified"
+    },
+    {
+      "name": "理想MD膜性能参数要求",
+      "description": "High LEP, high void volume fraction (porosity), narrow pore size distribution, low pore tortuosity, high hydrophobicity, low thermal conductivity, antifouling properties, robust for prolonged operation",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.3390/membranes13080727",
+      "verification": "unverified"
+    },
+    {
+      "name": "超疏水膜 vs 全疏水膜 vs Janus膜抗污染特性",
+      "description": "Superhydrophobic: higher resistance to scaling-induced wetting; Omniphobic: higher resistance to surfactant-induced wetting; Janus: robust against both scaling and surfactant-induced wetting",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.3390/membranes13080727",
+      "verification": "unverified"
+    },
+    {
+      "name": "全疏水膜re-entrant结构设计",
+      "description": "Re-entrant structure (overhanging features) is important design factor for surfaces resistant to low surface tension liquids",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.3390/membranes13080727",
+      "verification": "unverified"
+    },
+    {
+      "name": "仿生膜三类分类体系",
+      "description": "纤维素基表面相互作用分离膜分为三类：超疏水膜(hydrophobic)、水下超疏油膜(hydrophilic/oleophobic)、Janus膜",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s11783-021-1515-2",
+      "verification": "unverified"
+    },
+    {
+      "name": "荷叶超疏水仿生机制 Lotus leaf superhydrophobic biomimetic mechanism",
+      "description": "荷叶表面具有微米级沟槽和纳米级蜡管层级结构，低滚动角使水滴滚动并带走灰尘，实现自清洁效应",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s11783-021-1515-2",
+      "verification": "unverified"
+    },
+    {
+      "name": "鱼鳞水下超疏油仿生机制 Fish scale underwater superoleophobic mechanism",
+      "description": "鱼鳞表面的黏液层通过蛋白质吸水形成，能排斥有机物质包括油污；鱼鳞还具有微乳突结构增加粗糙度",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s11783-021-1515-2",
+      "verification": "unverified"
+    },
+    {
+      "name": "沙漠甲虫Janus双面润湿仿生机制 Namib beetle Janus biomimetic mechanism",
+      "description": "沙漠甲虫背部具有亲水侧（从雾中收集水分）和疏水侧（将水分导向嘴部）的双面异质结构",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s11783-021-1515-2",
+      "verification": "unverified"
+    },
+    {
+      "name": "Salvinia植物Janus表面仿生 Salvinia plant Janus surface",
+      "description": "Salvinia植物具有蛋抽状毛发结构：柄部疏水涂层、顶部亲水涂层，稳定气-水界面",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s11783-021-1515-2",
+      "verification": "unverified"
+    },
+    {
+      "name": "接触角润湿性定义 Contact angle wettability definitions",
+      "description": "疏水/疏油膜: 水/油接触角>90°; 超疏水/超疏油膜: 水/油接触角≥150°",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s11783-021-1515-2",
+      "verification": "unverified"
+    },
+    {
+      "name": "超疏水膜适用体系 Superhydrophobic membrane application",
+      "description": "超疏水膜适用于水包油(water-in-oil)体系，油渗透膜而水被排斥",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s11783-021-1515-2",
+      "verification": "unverified"
+    },
+    {
+      "name": "纤维素作为支撑材料的三种形态 Cellulose supporting material forms",
+      "description": "纤维素作为超疏水膜支撑材料分为三种类型：3D多孔结构(海绵或气凝胶)、织物(编织或非织造)、纸张",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s11783-021-1515-2",
+      "verification": "unverified"
+    },
+    {
+      "name": "超疏水表面聚合物涂层 Polymers for superhydrophobic coating",
+      "description": "常用疏水聚合物：聚苯乙烯(PS)、PVDF、PDMS、聚苯胺(PANI)、全氟辛基三乙氧基硅烷、三氯(十八烷基)硅烷(OTS)、硬脂酸",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s11783-021-1515-2",
+      "verification": "unverified"
+    },
+    {
+      "name": "交联剂提高疏水稳定性 Crosslinking agents for hydrophobic stability",
+      "description": "Kymene 557H（含羧基）和环氧氯丙烷用于增强纳米材料与纤维素织物/纤维之间的连接",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s11783-021-1515-2",
+      "verification": "unverified"
+    },
+    {
+      "name": "超疏水棉织物耐水压 Woven cotton superhydrophobic hydrostatic pressure",
+      "description": "涂覆7-40 nm二氧化硅纳米颗粒和PDMS树脂的编织棉织物可承受2.56 kPa静水压而不泄漏",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s11783-021-1515-2",
+      "verification": "unverified"
+    },
+    {
+      "name": "超疏水膜 harsh condition 稳定性测试标准 Harsh condition stability testing",
+      "description": "浸泡在极端pH(1-2强酸, 12-13强碱)或高盐浓度(NaCl 3.5 wt%)溶液1-72小时；表面活性剂(SDS 4.1 mM)滴加；60-120°C加热72小时",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s11783-021-1515-2",
+      "verification": "unverified"
+    },
+    {
+      "name": "Janus膜三种类型 Janus membrane three types",
+      "description": "Janus膜分为三种类型：A and B型（两层厚度相似）、A on B型（疏水层较薄）、B on A型（亲水层较薄）",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s11783-021-1515-2",
+      "verification": "unverified"
+    },
+    {
+      "name": "超疏油膜与超疏水膜适用场景对比 Superoleophobic vs superhydrophobic application comparison",
+      "description": "超疏水膜适合水包油体系（采油、溢油回收），优先收集油；超疏油膜适合油包水体系（生活污水、炼油、食品加工、石化、制革、钢铁行业），优先收集水",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s11783-021-1515-2",
+      "verification": "unverified"
+    },
+    {
+      "name": "Janus膜超越传统膜的关键优势 Janus membrane advantage over traditional membranes",
+      "description": "Janus膜即使孔径大于油滴直径也能分离油滴；超疏水和超疏油膜要求孔径≤液滴直径，高流速与低分离效率存在权衡",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s11783-021-1515-2",
+      "verification": "unverified"
+    },
+    {
+      "name": "六种自然超浸润材料及其浸润特性",
+      "description": "壁虎脚：超疏水+高粘附（van der Waals力）；蝴蝶翅：各向异性润湿（径向外方向水滴快速滚落，反方向被钉扎）；玫瑰花瓣：高粘附超疏水（微乳突阵列结构）；荷叶上表面：超疏水（微纳复合结构+蜡质）；荷叶下表面：超亲水+水下超疏油；鱼鳞：水下超疏油（黏液层+定向微乳突+纳米结构）",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "unverified"
+    },
+    {
+      "name": "油水分离材料的两大分类策略",
+      "description": "1）'除油型'超疏水/超亲油材料：油透过、水被阻挡；2）'除水型'超亲水/水下超疏油材料：水透过、油被阻挡",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "unverified"
+    },
+    {
+      "name": "PDMS浸涂法超疏水织物的WCA和分离效率",
+      "description": "WCA 155.0±0.6°（THF:Water=3:7时最优），分离效率~100%",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "unverified"
+    },
+    {
+      "name": "无氟超疏水棉织物（ZnO纳米棒+硬脂酸）的WCA和分离效率",
+      "description": "WCA >164°，分离效率>96.5%",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "unverified"
+    },
+    {
+      "name": "CVD法制备超疏水石墨烯气凝胶（SGA）的润湿性和吸附性能",
+      "description": "WCA 160.2°，OCA 0°，超低密度，大比表面积",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "unverified"
+    },
+    {
+      "name": "PANI/TiO₂可见光催化超疏水网格的通量和循环性能",
+      "description": "油通量170 kL·m⁻²·h⁻¹，100次循环后渗透油纯度>99%",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "unverified"
+    },
+    {
+      "name": "Co配位键自修复超疏水织物的修复性能",
+      "description": "液氮处理后室温10分钟自修复，分离效率恢复>98%；传统PDMS@PET放置24h后完全丧失分离能力",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "unverified"
+    },
+    {
+      "name": "CeO₂超疏水光催化膜的分离效率",
+      "description": "油水分离效率99%，MB可在UV下降解",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "unverified"
+    },
+    {
+      "name": "双刺激响应膜（UV+pH）的可逆润湿性切换和光催化降解",
+      "description": "UV或pH单独作用→疏水；UV+pH协同→亲水；UV照射可降解多种污染物",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "unverified"
+    },
+    {
+      "name": "超疏水材料WCA随浸涂液THF/水比例的变化规律",
+      "description": "THF:Water=10:0时不超疏水；3:7时WCA最高155.0±0.6°；1:9时次优",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "unverified"
+    },
+    {
+      "name": "溶胶-凝胶法制备的PDMS@SiO₂超疏水织物的耐久性",
+      "description": "超声18h、600次磨损、96次洗涤、有机溶液/酸碱/沸水/冰水浸泡后仍保持超疏水性",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "unverified"
+    },
+    {
+      "name": "润湿理论基础：Young/Wenzel/Cassie模型",
+      "description": "三种经典润湿模型：1）Young方程：cosθ=(γSA-γSL)/γLA→理想光滑表面接触角；2）Wenzel模型：cosθ*=Rcosθ→粗糙结构放大固有润湿性（R>1=粗糙度因子=实际面积/投影面积）；3）Cassie模型：cosθ*=fcosθ+f-1→液体在复合界面（固体+空气）上→f=固液接触面积分数→空气垫效应→低粘附。超疏水需Cassie态→微纳结构间空气垫→CA>150°",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.34133/2022/9895418",
+      "verification": "unverified"
+    },
+    {
+      "name": "荷叶超疏水仿生：微纳层级结构+WCA/WSA",
+      "description": "荷叶表面微纳层级结构：大量微米级乳突(直径~10μm)随机分布→每个乳突进一步覆盖纳米级树枝状突起(直径~120nm)→微纳层级结构+疏水蜡晶体层→Cassie态→WCA达160°+WSA仅2°→自清洁效应。两条制备路线：1）疏水基底+构建微纳结构→直接超疏水；2）亲水基底+构建微纳结构+低表面能修饰→超疏水",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.34133/2022/9895418",
+      "verification": "unverified"
+    },
+    {
+      "name": "飞秒激光硅超疏水：SF6气氛+氟硅烷修饰",
+      "description": "硅基底在SF₆气氛中飞秒激光烧蚀→高深宽比锥形尖刺(尺寸~10μm, 深宽比4)+纳米突起→层级结构→氟硅烷修饰→WCA达160°+接触角迟滞<3°（平坦氟硅烷化硅仅115°）。空气中飞秒激光烧蚀硅→周期性微山(周期10μm, 高~2.9μm, 直径6μm)+纳米突起→氟硅烷修饰→WCA达158°+WSA仅4°+反弹系数0.9",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.34133/2022/9895418",
+      "verification": "unverified"
+    },
+    {
+      "name": "PDMS飞秒激光超疏水：一步法+珊瑚状层级结构",
+      "description": "PDMS基底一步飞秒激光烧蚀→周期性微沟槽(宽12.17μm, 深8.57μm)+不规则纳米颗粒→微沟槽周期减小至D≤10μm时→相邻沟槽强重叠→珊瑚状均匀层级微结构→天然疏水PDMS直接超疏水（无需化学修饰）→WCA达157.5°+WSA仅1°→超低粘附超疏水",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.34133/2022/9895418",
+      "verification": "unverified"
+    },
+    {
+      "name": "PTFE飞秒激光超疏水：耐极端环境",
+      "description": "PTFE基底一步飞秒激光→孔+突起(300nm-2μm)互连→蚁巢状多孔网络→固有疏水放大为超疏水→WCA达155.5°+WSA仅2.5°（原PTFE WCA=111.5°）。耐久性：pH 1-13酸碱溶液→WCA>150°+WSA<10°；200°C加热一天→无显著变化；极端环境：250°C+40%HF+浓H₂SO₄+10M NaOH+王水→超疏水性不变→化学惰性+微结构减少接触面积→双重保护",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.34133/2022/9895418",
+      "verification": "unverified"
+    },
+    {
+      "name": "PDMS飞秒激光多状态润湿性切换",
+      "description": "PDMS基底一步飞秒激光→层级微结构→天然疏水→WCA 155.5°+WSA 2°（超疏水）→水中银镜反射→水下超亲油(OCA 6.5°)。氧等离子体处理30s(55W)→表面-CH₃→-SiOH→超亲水(WCA 4.5°)→水下超疏油(OCA 158°+OSA 3°)。同一激光处理PDMS可实现6种超润湿状态切换：超亲水/超疏水/水下超疏油/水下超亲油/水下超疏气/水下超亲气",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.34133/2022/9895418",
+      "verification": "unverified"
+    },
+    {
+      "name": "水下超疏气/超亲气仿生：鱼鳞+荷叶",
+      "description": "鱼鳞水下超疏气：亲水层级结构→水中被水完全润湿→水层填充→水下Cassie态→气泡被水层排斥→BCA达155°→倾斜9°气泡滚落。荷叶水下超亲气：疏水层级结构→水中空气层稳定→气泡在空气中扩散→水下超亲气。飞秒激光硅→水下超疏气→BCA达162°+倾斜2°气泡滚落。飞秒激光铝→水下超疏气→BCA 154°。水下超疏气膜拦截气泡→水下超亲气膜允许气泡通过→水/气分离",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.34133/2022/9895418",
+      "verification": "unverified"
+    },
+    {
+      "name": "SLIPS NiTi合金：血液相容性+抗菌",
+      "description": "NiTi合金（生物工程材料→形状记忆+超弹性+生物相容性）→飞秒Bessel激光→深孔阵列(直径3μm, 深~30μm, 深宽比10)→空气中存储7天→碳氢化合物吸附→疏水(WCA 120°)→全氟癸烷注入→SLIPS→WCA 23°+血液无残留滑落。未处理NiTi→血液留下明显痕迹。SLIPS显著改善血液相容性→抗凝血+低溶血率+抗菌",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.34133/2022/9895418",
+      "verification": "unverified"
+    },
+    {
+      "name": "飞秒激光制备超润湿表面的通用规律",
+      "description": "飞秒激光制备超润湿表面的通用规律：1）亲水基底+微纳结构→放大亲水性→超亲水→水下超疏油/超疏气；2）疏水基底+微纳结构→放大疏水性→超疏水→水下超亲油/超亲气；3）亲水基底+微纳结构+低表面能修饰→超疏水；4）reentrant微结构+低表面能修饰→超双疏；5）多孔微结构+润滑液注入→SLIPS。表面化学+微结构→协同决定润湿性。飞秒激光+氧等离子体/暗存储→可逆切换",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.34133/2022/9895418",
+      "verification": "unverified"
+    },
+    {
+      "name": "飞秒激光超疏水表面的油水分离应用",
+      "description": "飞秒激光制备超疏水多孔PTFE→油水分离：激光烧蚀PTFE表面→层级微结构→机械钻孔→多孔片→超疏水+超亲油→油渗透通过+水被截留→成功分离油水混合物。耐久性→甚至可分离油+强酸/碱混合物。水下超疏油多孔铝箔→预润水→水渗透+油被截留→油水分离。水下超疏油不锈钢网→水通过+油截留→油水分离",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.34133/2022/9895418",
+      "verification": "unverified"
+    },
+    {
+      "name": "八重协同吸附机制",
+      "description": "疏水+π-π+π-π EDA+阳离子交换+氢键+孔填充+静电+阳阳-π",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.chemosphere.2021.131962",
+      "verification": "unverified"
+    },
+    {
+      "name": "疏水相互作用证据",
+      "description": "CIP溶解度最低在pH 7→最大吸附在pH 5-8→负相关→疏水作用主导",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.chemosphere.2021.131962",
+      "verification": "unverified"
+    },
+    {
+      "name": "油水分离材料分类（基于润湿性）",
+      "description": "两类主要材料：超疏水/超亲油（oil-removing）和超亲水/水下超疏油（water-removing）",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "unverified"
+    },
+    {
+      "name": "CVD法制备超疏水石墨烯气凝胶（SGAs）",
+      "description": "WCA=160.2°, OCA=0°",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "unverified"
+    },
+    {
+      "name": "Table 1 超疏水/超亲油材料代表性汇总",
+      "description": "13种材料体系覆盖浸涂、喷涂、相分离、电镀、LBL、表面氧化、聚合、ATRP、冷冻干燥等技术",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "unverified"
+    },
+    {
+      "name": "特殊润湿性分类",
+      "description": "超疏水/超亲油（'除油'型）和超亲水/水下超疏油（'除水'型）",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "unverified"
+    },
+    {
+      "name": "荷叶效应仿生原理",
+      "description": "微纳复合结构+低表面能蜡质的协同效应产生超疏水性",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "unverified"
+    },
+    {
+      "name": "荷叶上下表面润湿性差异",
+      "description": "上表面超疏水，下表面超亲水/水下超疏油",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "unverified"
+    },
+    {
+      "name": "壁虎脚仿生特性",
+      "description": "大量对齐刚毛产生的超疏水+高黏附特性（范德华力）",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "unverified"
+    },
+    {
+      "name": "玫瑰花瓣高黏附超疏水",
+      "description": "微乳突阵列结构产生高黏附超疏水性",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "unverified"
+    },
+    {
+      "name": "浸涂法制备超疏水表面 — THF/水比例优化",
+      "description": "THF:Water = 3:7 时 WCA 达到 155.0 ± 0.6°",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "unverified"
+    },
+    {
+      "name": "溶胶-凝胶法制备超疏水纺织品耐久性",
+      "description": "18h超声、600次磨损、96次洗涤后仍保持超疏水性",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "unverified"
+    },
+    {
+      "name": "Table 1 — 超疏水/超亲油材料制备技术汇总",
+      "description": "13种材料体系，效率90%~99.9%",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "unverified"
+    },
+    {
+      "name": "TiO2光催化降解机理",
+      "description": "UV照射下TiO2价带电子跃迁至导带，产生电子-空穴对，通过O₂→O₂⁻和H₂O→OH·自由基降解油污染物为CO₂和H₂O",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "unverified"
+    },
+    {
+      "name": "CeO2纳米粒子超疏水光催化膜",
+      "description": "分离效率 99%",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "unverified"
+    },
+    {
+      "name": "pH响应PDMS-bP4VP电纺膜",
+      "description": "pH 7超疏水，pH 4超亲水，可切换油/水分离",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "unverified"
+    },
+    {
+      "name": "双刺激UV+pH可切换润湿性",
+      "description": "单独UV或pH → 疏水；UV+pH协同 → 亲水",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "unverified"
+    },
+    {
+      "name": "荷叶超疏水仿生机制",
+      "description": "低表面能蜡质层+乳突状粗糙结构协同产生超疏水性",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
+      "verification": "unverified"
+    },
+    {
+      "name": "超浸润膜分离乳化油的双重机理",
+      "description": "筛分效应（膜孔径<乳液尺寸）+ 界面破乳选择性分离",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
+      "verification": "unverified"
+    },
+    {
+      "name": "超疏水/超亲油膜分离W/O乳液机理",
+      "description": "油滴被挤压进入微孔→乳化剂脱离→大油滴聚集渗透；水滴被超疏水膜截留",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
+      "verification": "unverified"
+    },
+    {
+      "name": "超亲水/水下超疏油膜分离O/W乳液机理",
+      "description": "膜表面形成水膜作为屏蔽层→阻碍油扩散和渗透→重力驱动下选择性透过水",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
+      "verification": "unverified"
+    },
+    {
+      "name": "TiO₂纳米线/不锈钢网超疏水膜",
+      "description": "50次循环后仍保持超疏水性；24h强酸碱或有机溶剂浸泡后分离效率仍达99%",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
+      "verification": "unverified"
+    },
+    {
+      "name": "PVDF/PDMS超疏水纳米纤维膜",
+      "description": "渗透系数35751 L/(m²·h)，分离效率99.6%，可去除>150nm水滴",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
+      "verification": "unverified"
+    },
+    {
+      "name": "F-SiO₂/PVDF-P-SiO₂/PVDF Janus膜",
+      "description": "氟化后WCA 157.7°（超疏水），等离子刻蚀后水下油CA 150.8°（水下超疏油），通量6800 L/(m²·h)以上，分离效率~99%",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
+      "verification": "unverified"
+    },
+    {
+      "name": "pH响应PMMA-b-P4VP智能纤维膜",
+      "description": "初始WCA 152°（超疏水/超亲油），碱性条件下转为水下超疏油",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
+      "verification": "unverified"
+    },
+    {
+      "name": "热响应PNIPAAm改性尼龙膜",
+      "description": "25°C超亲水/水下超疏油（分离O/W乳液效率>98%），45°C超疏水（可分离16种稳定油水乳液）",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
+      "verification": "unverified"
+    },
+    {
+      "name": "超浸润膜四大类型分类",
+      "description": "超疏水-超亲油膜、超亲水-水下超疏油膜、Janus膜、Smart膜",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
+      "verification": "unverified"
+    },
+    {
+      "name": "润湿性四大理论体系",
+      "description": "1)超疏水理论：Young方程cosθ₀=(γsv-γsl)/γlv→Wenzel方程cosθW=Rcosθ₀(R>1,粗糙增强润湿)→Cassie方程cosθW=f₁cosθ₀-f₂(f₂>>f₁,空气垫效应)。2)本征润湿阈值理论(IWT)：材料SE位于油水IWT之间→θ₁>θ₁*(拒液)+θ₂<θ₂*(润液)→选择性分离。3)极性-非极性理论：γsv=γsvᵈ+γsvᵖ→水(极性)的Young方程含极性分量→油(非极性)仅含色散分量→极性差异可辅助分离。4)液体灌注理论：猪笼草唇缘→一种液体润湿表面形成稳定液膜→排斥另一种液体→ΔE<0→热力学稳定",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1002/smll.202204624",
+      "verification": "unverified"
+    },
+    {
+      "name": "层级微纳结构理论与re-entrant几何",
+      "description": "层级结构接触角递推公式：cosθn=(1-fLG,n)cosθn-1-fLG,n(n=1,2,3...层数)。每增加一层亚结构→接触角进一步增大。Re-entrant几何条件：θW<θC=max[φ,arctan(L/2H)]且θW/O>φ、θO/W>φ(φ为柱顶局部几何角=90°对垂直柱)。L=柱间距,H=柱高。Ras等(2016)首次提出：中间表面能+WCA 56°-74°+re-entrant结构→实现水下超疏油+油下超疏水(UWSOB/UOSHB)双超疏液",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1002/smll.202204624",
+      "verification": "unverified"
+    },
+    {
+      "name": "10种生物原型的超润湿表面特征",
+      "description": "上荷叶：微乳突(micropapilla)+低表面能蜡质→WCA>150°→超疏水。下荷叶：亲水→Janus不对称润湿。稻叶：微纳结构→各向异性润湿。芋叶：微乳突→WCA 159°±2°→仿荷叶。蝶翅：层级鳞片→方向性润湿。水黾腿：微纳刚毛→水下超疏油→支撑力。鱼鳞：微纳结构+亲水→水下OCA>150°→超疏油→油污水中自清洁。贻贝壳：层状碳酸钙→多层级结构。椰壳：碳化→双亲性→预润湿切换。猪笼草唇缘：微纳沟槽+水膜→液体灌注→抗粘附→捕虫",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1002/smll.202204624",
+      "verification": "unverified"
+    },
+    {
+      "name": "八类制备方法：微纳结构构建技术",
+      "description": "1)静电纺丝：可控孔径+互联多孔+大比表面积+高孔隙率。2)浸涂/喷涂：简单通用→覆盖纳米粒子→调表面形貌。3)模板法：传统模塑+牺牲模板→3D多孔材料(海绵/泡沫/气凝胶)。4)层层自组装(LBL)：多层微纳结构→壳聚糖+TiO₂接枝十六烷基三甲氧基硅烷→WCA>150°→油分离通量1516-1457 L/m²h(正己烷/硅油/植物油/柴油)→效率>99.2%。5)湿化学反应：原位聚合+ATRP→高交联→稳定性。6)电化学沉积：大面积→简单低成本→无机涂层→耐腐蚀。7)飞秒激光：超短脉冲(10⁻¹⁵s)+非接触+超高能量密度→微纳结构→多功能表面",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1002/smll.202204624",
+      "verification": "unverified"
+    },
+    {
+      "name": "Janus膜：荷叶启发不对称润湿→按需分离",
+      "description": "荷叶上表面超疏水+下表面超亲水→Janus不对称润湿→翻转切换→按需分离。PDA-PTFE Janus膜：PDA涂覆+剥离→疏水/亲水→效率99.97%→10次循环稳定。Cu(SC18H37)₂/Cu(OH)₂铜网：液-液界面修饰→两面相反润湿→低成本→分离轻油/重油水混合物。CuC2O4鱼鳞状微纳结构+SHL/UWSOB→O/W乳液通量≈2000 L/m²h+COD≈54 mg/L→抗污染。单向油传输Janus铜网→SOL+UWSOB→正己烷通量65,000 L/m²h+效率99.16%",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1002/smll.202204624",
+      "verification": "unverified"
+    },
+    {
+      "name": "双超疏液材料：猪笼草液体灌注+re-entrant结构",
+      "description": "双超疏液(UWSOB/UOSHB)：水下超疏油+油下超疏水→预润湿切换→按需分离。两种实现路径：(1)交替润湿(IASHB/UWSOB)：沙漠甲虫背部→亲水凸起+疏水蜡质背景→构建SE窄范围→交替亲水-超疏水。(2)液体灌注：猪笼草唇缘→微纳沟槽+稳定水膜→排斥昆虫。Re-entrant结构是热力学矛盾的关键→使两种液体都被困在粗糙表面→另一液体不能置换灌注液层。PK-F双超疏液膜：脂肪族聚酮+氟基团→中间WCA+re-entrant纤毛结构(临界角≈73°)→油杂质≈1 ppm+油纯度>99.5%+通量60-120 L/m²h",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1002/smll.202204624",
+      "verification": "unverified"
+    },
+    {
+      "name": "智能响应触发器：七类外部刺激可逆切换润湿性",
+      "description": "1)pH响应：PDMS-b-PDMAEMA→质子化/去质子化→油通量8800-9500 L/m²h+水通量7400-7800 L/m²h→效率>98.5%。P2VP-co-PDMS→SOL↔SOB切换。2)热响应：PNIPAAm→LCST~32°C→收缩/膨胀→WCA/OCA可逆切换。PMMA-b-PNIPAAm静电纺→通量9400 L/m²h(水)+4200 L/m²h(油)→12s响应。3)光响应：TiO₂/ZnO→UV→SHB→SHL。偶氮苯→cis/trans异构→10s UV/可见光切换→效率>99%→通量≈2352/2653 L/m²h。4)电响应：氟化POSS+PDMS→0→1.5 kV→WCA变化→V=2.0±0.3 kV。聚吡咯/聚苯胺→掺杂/去掺杂→30s切换→95%效率。5)溶剂响应：硬脂酸乙醇溶液→THF清洗→SHB↔SHL。乙醇响应→润湿位移→SHB→IASHL/IASOL。6)离子响应：Na⁺冠醚→配合→SHB→SHL。GO-PIL→NaHMP/LiTESI交换→亲水↔疏水。7)气体响应：CO₂→PDEA→碳酸氢铵→WCA 140°→36°。N₂/H₂/O₂→ZnO→300°C退火→SHB↔SHL",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1002/smll.202204624",
+      "verification": "unverified"
+    },
+    {
+      "name": "天然生物质双亲材料：预润湿切换实现按需分离",
+      "description": "天然生物质(砂层/木板/坚果壳/废马铃薯渣/硅藻土/棉花/蒲公英种子)含淀粉/纤维素/果胶→双亲性→预润湿→按需分离。SiO₂/玉米醇溶蛋白/PAN纤维：电喷→玉米醇溶蛋白分子顶部/底部亲水谷氨酰胺桥+两侧疏水α螺旋→双亲→水预润湿→UWSOB→油预润湿→UOSHB→按需分离轻油/重油水混合物。肠浒苔改性石墨烯气凝胶→水热-冻铸→高孔隙率+小孔径→双亲→可控制备分离。但生物质材料的鲁棒稳定性和可回收性仍是重要挑战",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1002/smll.202204624",
+      "verification": "unverified"
+    },
+    {
+      "name": "从两相到多相：按需分离范围的扩展",
+      "description": "按需分离范围扩展：两相油水混合物→两相不混溶有机液体→多相油水混合物→多相不混溶有机液体。SiO₂-TiO₂纳米纤维膜(静电纺)：结合极性-非极性理论+液体灌注理论→可分离极性SE差异仅5.2 mN/m的不混溶有机液体(硝基甲烷/二碘甲烷)和2 mN/m(乙二醇/二碘甲烷)。通过灌注中间极性有机液体→形成稳定液膜→允许高极性液体通过→排斥低极性液体→连续分离H₂O/硝基甲烷/环己烷三相。液灌注膜的局限：灌注液易被来液置换→材料寿命缩短",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1002/smll.202204624",
+      "verification": "unverified"
+    }
+  ],
+  "narrative": {
+    "entries": [
+      {
+        "source_file": "tools/litextract/outputs/extractions/论文/json/2023-景-超疏水-油水分离-膜-综述.json",
+        "paper_id": "Jing2023_Superwetting_OilWater_Separation_Review",
+        "sections": {
+          "problem_definition": "自然界中荷叶需保持表面清洁以进行光合作用，鱼鳞需在水下抵抗油污附着；在水处理中，这对应着如何高效分离复杂乳化油（水包油/油包水乳液）及分层油，并防止膜污染和通量下降的工程挑战。",
+          "biological_solution": "荷叶进化出低表面能蜡质层与微纳乳突粗糙结构实现超疏水自清洁（WCA>150°）；鱼鳞通过磷酸钙/蛋白质/亲水黏液与放射状微乳突实现超亲水及水下超疏油。工程上利用这两种进化策略，结合筛分效应与界面破乳双机制，成功开发出超疏水-超亲油、超亲水-水下超疏油、Janus及智能响应膜，实现高达98-99.95%的分离效率。",
+          "key_features": "必须保留特征：微/纳米级表面粗糙结构（如乳突状或放射状）、特定的表面化学组成（低表面能或亲水基团）以构建超浸润性。可灵活调整特征：基底材料选择、微纳粒子的具体种类与尺寸、智能响应基团（如仿贻贝pH响应邻苯二酚）的引入方式。",
+          "design_mapping": "生物微纳乳突/放射状结构 → 材料表面的微/纳米粒子粗糙化修饰；荷叶蜡质层 → 低表面能化学修饰（超疏水/超亲油）；鱼鳞亲水黏液 → 亲水聚合物或基团修饰以形成水化层（超亲水/水下超疏油）。软约束建议：针对单一乳液类型选择单一浸润性膜，针对复杂或交替乳液环境建议设计Janus膜或智能响应膜。",
+          "explainability_anchors": "仿生故事线：从荷叶的‘出淤泥而不染’（超疏水自清洁）和鱼鳞的‘水下抗油’（水下超疏油）汲取灵感，通过复刻其微纳结构与表面化学，解决水处理中油水乳液分离难题。设计溯源：基于Young/Wenzel/Cassie基础理论模型，将生物界的超浸润现象转化为膜材料的筛分与界面破乳协同分离机制。"
+        }
+      },
+      {
+        "source_file": "tools/litextract/outputs/extractions/论文/json/2022-Mao-superhydrophobic-hydrophobic-separation-membrane-review.json",
+        "paper_id": "2022-Mao-superwetting-membrane-nanofiber-oil-water-review",
+        "sections": {
+          "problem_definition": "自然界中生物表面需应对复杂流体环境（如雨水冲刷、油污附着、高湿环境）以实现自清洁、防污或定向集水；水处理领域对应油水混合物及表面活性剂稳定乳化液的高效分离难题，传统分离膜易受油污染导致通量骤降、选择性差且能耗高。",
+          "biological_solution": "进化策略：通过微纳层级拓扑结构与表面化学能的协同调控，实现极端润湿状态切换。关键机制：基于Young-Wenzel-Cassie-Baxter润湿理论，利用粗糙度因子与表面张力调控三相接触线，截留空气层（超疏水）或稳定水化层（水下超疏油）；结合入侵压力阈值与Stokes浮力实现物理筛分与重力驱动。成功案例：荷叶微乳突结构实现超疏水自清洁；鱼鳞鳞片状微结构结合高保水性实现水下超疏油防污；玫瑰花瓣高粘附微结构为定向传输提供灵感。",
+          "key_features": "必须保留特征：微纳多级粗糙拓扑结构、表面能化学修饰（低/高表面能涂层）、三相界面稳定机制（气/液/固或水/油/固）。可灵活调整特征：基材类型（棉织物/纳米纤维/金属网）、响应性模块（光/pH/温/等离子体）、膜构型（对称/Janus不对称/全疏/全亲）、制备工艺（电纺/喷涂/原位聚合/激光蚀刻）。",
+          "design_mapping": "生物→材料映射：荷叶/芋头叶微纳乳突→电纺/激光蚀刻构建多尺度粗糙度；鱼鳞鳞片包覆→TiO₂/GO等纳米片层自组装形成水下亲水屏障；甲虫集水/蝴蝶定向→Janus不对称润湿设计实现单向传输。软约束建议：优先采用重力驱动或低压操作以降低能耗；控制孔径分布与表面粗糙度匹配入侵压力公式；避免使用含氟等难降解改性剂，转向植物多酚-金属配合物等绿色仿生化学。",
+          "explainability_anchors": "仿生故事线：从“荷叶效应”发现超疏水自清洁原理，到“鱼鳞防油”揭示水下超疏油机制，再到“甲虫集水/蝴蝶定向”启发智能响应与不对称传输，最终融合为覆盖全场景的五类超浸润膜体系。设计溯源：严格遵循Young-Wenzel-Cassie-Baxter润湿理论演进，将生物表面的几何拓扑与化学组成解耦为“粗糙度因子(r/f)”与“表面能(γ)”，通过材料工程复现并优化，实现从自然现象到水处理膜性能（通量、效率、抗污染）的定量映射。"
+        }
+      },
+      {
+        "source_file": "tools/litextract/outputs/extractions/论文/json/2023-Tan-membrane-review.json",
+        "paper_id": "Tan2023_Antifouling_Nanofibrous_MD_Review",
+        "sections": {
+          "problem_definition": "自然界中荷叶与海洋生物长期面临水滴滞留、油污附着及盐分结晶挑战；对应水处理中，膜蒸馏(MD)膜极易受有机物、无机盐及表面活性剂污染，导致微孔润湿、蒸汽扩散受阻、通量骤降与脱盐失效。",
+          "biological_solution": "进化出微纳双尺度粗糙结构结合低表面能蜡质(荷叶效应)以维持Cassie-Baxter气垫态，实现水滴自清洁；海洋生物(鱼鳞/贝壳)演化出不对称界面，一面亲水形成水化层拒污、一面疏水/全疏阻水透汽。成功案例为PDA-GCSs光热Janus膜，实现73%光热转换效率、10倍通量提升及>99.99%盐截留。",
+          "key_features": "必须保留：微纳粗糙度与低表面能协同、Cassie-Baxter态稳定性(WCA>150°且滞后<10°)、不对称润湿梯度、re-entrant抗润湿拓扑。可灵活调整：基底聚合物(PVDF/PTFE/PAN)、纳米填料类型(ZnO/TiO2/CNT/GO/MOF)、表面氟化/硅烷化试剂、光热/亲水功能层厚度与沉积工艺。",
+          "design_mapping": "生物→材料映射：荷叶乳突→静电纺丝/电喷涂构建的纳米纤维+气凝胶/纳米颗粒复合粗糙层；鱼鳞不对称界面→Janus双层/三层膜(亲水拒污侧/疏水透汽侧)；贻贝粘附→PDA界面聚合实现功能层牢固锚定。软约束建议：控制接触角滞后<10°以保障自清洁滚落；LEP需>100 kPa抵抗跨膜压；协同优化孔隙率与WCA以最大化异相成核能垒(ΔG_hetero)。",
+          "explainability_anchors": "仿生故事线：从“荷叶拒水自洁”到“海洋生物抗污不对称界面”，通过构筑气垫屏障与润湿性梯度，从根本上阻断污染物吸附与膜孔润湿。设计溯源：核心参数直接溯源至Cassie-Baxter方程(f_sl, f_lv)与异相成核能垒公式(ΔG_hetero/ΔG_homo)，性能指标(WCA>150°, LEP>120 kPa, 盐截留>99.9%)与文献中20+种膜配方定量数据严格对应，确保仿生逻辑可量化验证与工程复现。"
+        }
+      },
+      {
+        "source_file": "tools/litextract/outputs/extractions/论文/json/2018-Halim-cellulose-superhydrophobic-hydrophobic-oil-water-review.json",
+        "paper_id": "Halim2022_cellulose_oily_wastewater_review",
+        "sections": {
+          "problem_definition": "自然界中生物面临泥水污染附着、油污排斥及干旱集水等极端润湿挑战；水处理中对应复杂油水乳液（水包油/油包水）的高效分离难题，传统膜受限于孔径匹配瓶颈与易污染堵塞。",
+          "biological_solution": "进化出微纳层级粗糙结构（荷叶微米沟槽+纳米蜡管、鱼鳞微乳突+黏液层）与双面异质构型（沙漠甲虫/槐叶萍）；通过Cassie-Baxter亚稳态截留空气或水下气垫效应实现极端润湿性调控；成功案例为纤维素基仿生膜实现98%-99%分离效率与高达65000 L/m²/h通量。",
+          "key_features": "必须保留：微纳层级粗糙度、低表面能涂层、双面润湿性反差（Janus）、气/水缓冲层；可灵活调整：纤维素基底形态（气凝胶/海绵/织物/滤纸）、粗糙增强纳米颗粒种类（SiO2/ZnO/Fe3O4等）、疏水聚合物类型（PDMS/PVDF/PS等）及交联网络密度。",
+          "design_mapping": "生物→材料映射：荷叶结构→SiO2/PDMS修饰纤维素织物/气凝胶；鱼鳞黏液→亲水纤维素基质构建水下超疏油表面；甲虫/Salvinia双面→Janus B-on-A非对称膜；软约束建议：依据Wenzel/Cassie-Baxter方程优化粗糙度比(r)与固液界面分数(fSL)，在突破压力与高通量间取得平衡。",
+          "explainability_anchors": "仿生故事线：从自然自清洁、定向集水与抗污机制迁移至人工极端润湿表面工程；设计溯源：表面微纳拓扑直接决定接触角阈值(≥150°)与Cassie-Baxter气穴稳定性，Janus非对称架构突破传统筛分极限，整体性能由突破压力方程与严苛环境稳定性测试双重锚定。"
+        }
+      },
+      {
+        "source_file": "tools/litextract/outputs/extractions/论文/json/2020-Zheng-self-cleaning-separation-wastewater-water-treatment-review.json",
+        "paper_id": "2020-Zheng-special-wettability-oily-wastewater-review",
+        "sections": {
+          "problem_definition": "自然界挑战：生物体在复杂水环境中需维持表面干燥、清洁或定向导流（如荷叶防污、鱼鳞防油粘附）；水处理对应：含油废水及表面活性剂稳定乳液分离面临膜污染严重、通量快速衰减、油水界面张力高及传统材料选择性差等工程难题。",
+          "biological_solution": "进化策略：生物通过微纳多级粗糙结构与表面化学修饰的协同，精准调控固-液-气/油三相界面能，实现超疏水/超亲水/各向异性润湿；关键机制：基于Wenzel/Cassie-Baxter润湿模型与Young-Laplace入侵压力控制，结合PDA通用粘附化学、光催化降解与动态配位键；成功案例：荷叶微纳蜡质层实现超疏水自清洁，鱼鳞定向微乳突捕获水膜实现水下超疏油，贻贝足丝PDA实现材料表面快速通用功能化。",
+          "key_features": "必须保留特征：微纳复合粗糙度、低/高表面能化学组分、三相界面润湿态（Cassie-Baxter态）的精准调控；可灵活调整特征：基底材质（织物/金属网格/海绵）、功能涂层（PDA/PDMS/ZIF-8/水凝胶）、智能响应机制（光催化自清洁/配位自修复/Janus膜翻转切换）。",
+          "design_mapping": "生物→材料映射：荷叶微乳突→浸涂/电纺构建微纳突起；鱼鳞定向结构→同步电喷射/电纺制备定向纳米纤维；贻贝足丝→PDA/单宁酸-Fe(III)配位沉积实现表面改性；壁虎刚毛→阵列化微结构或气凝胶多孔网络。软约束建议：优先采用无氟绿色改性剂；根据目标乳液类型（O/W或W/O）选择“除水型”或“除油型”润湿策略；引入光催化或动态键以提升抗污染与自修复能力。",
+          "explainability_anchors": "仿生故事线：从“荷叶拒水”到“鱼鳞拒油”，再到“贻贝粘附”与“壁虎定向粘附”，揭示表面拓扑与化学协同决定宏观分离性能的普适规律；设计溯源：基于Young/Wenzel/Cassie-Baxter理论量化接触角与入侵压力，结合PDA仿生化学与Janus不对称设计，实现高通量（>10^5 L·m⁻²·h⁻¹）、高效率（>99%）及自清洁/自修复的智能分离材料。"
+        }
+      },
+      {
+        "source_file": "tools/litextract/outputs/extractions/论文/json/2022-Finally-superhydrophobic-hydrophobic-porous-review.json",
+        "paper_id": "2022-Yong-femtosecond-laser-superwettability-review",
+        "sections": {
+          "problem_definition": "自然界生物面临极端润湿与防粘附挑战（如荷叶防污自洁、鱼鳞水下抗油粘附、弹尾虫广谱拒液、猪笼草防粘捕虫），对应水处理中膜材料易受油污/微生物污染、油水分离效率低、复杂污染物广谱排斥难及表面易结垢堵塞等问题。",
+          "biological_solution": "生物通过进化微纳层级结构（荷叶乳突+纳米蜡晶）、亲疏水化学协同（鱼鳞亲水层+微结构）、特殊几何拓扑（弹尾虫蘑菇状再入结构）及多孔储液机制（猪笼草唇缘微沟槽+润滑液），实现Cassie态稳定、水下超疏油/超疏气、超双疏及超滑自修复。成功案例涵盖荷叶自清洁、鱼鳞水下油排斥、猪笼草SLIPS防粘附等。",
+          "key_features": "必须保留：微纳层级粗糙度、特定表面化学能（低表面能修饰或亲水化）、几何拓扑约束（如reentrant角满足θ≥ψ）、多孔储液网络。可灵活调整：基底材质（硅/金属/聚合物）、激光加工参数（脉冲能量/扫描策略）、表面修饰剂类型（氟硅烷/等离子体处理）、润滑液种类（全氟化合物/硅油）。",
+          "design_mapping": "生物微纳结构→飞秒激光诱导微纳突起/多孔网络；生物表面化学→氟硅烷修饰/氧等离子体氧化；生物储液机制→激光造孔+低表面能涂层+润滑液注入(SLIPS)。软约束建议：优先采用一步法激光直写结合原位化学调控；针对水下应用强化亲水基底+微结构组合；针对广谱排斥严格遵循θ≥ψ再入几何设计；耐久性设计需兼顾结构锚固与化学键合。",
+          "explainability_anchors": "仿生故事线：从“荷叶出淤泥不染”到“猪笼草滑不留手”，揭示自然界通过“结构-化学-界面”三位一体调控润湿性的底层逻辑。设计溯源：基于Young/Wenzel/Cassie经典润湿理论，将生物拓扑特征参数化（如乳突尺寸、reentrant角、孔隙率），通过飞秒激光非接触、低热损伤特性实现跨尺度精准复刻，最终映射为可编程、全谱系超润湿水处理膜/吸附材料的设计准则。"
+        }
+      },
+      {
+        "source_file": "tools/litextract/outputs/extractions/论文/json/2021-Dou-hydrophobic-porous-biochar-adsorption.json",
+        "paper_id": "2021-Dou-hydrophobic-porous-biochar-adsorption",
+        "sections": {
+          "problem_definition": "自然界中鱼鳞依赖天然三维层状与胶原纤维交织的矿化复合结构实现轻量化与高机械强度的平衡；在水处理中，传统吸附剂面临比表面积有限、孔径分布宽泛导致对特定抗生素分子（如CIP）传质阻力大、吸附容量低及动力学缓慢的挑战。",
+          "biological_solution": "鱼鳞通过生物矿化形成“层状骨架+胶原纤维+羟基磷灰石”的层级复合结构。仿生策略采用热解与选择性脱矿，将胶原纤维转化为富含微孔的无定形碳层，去除羟基磷灰石精准暴露并定义孔径，同时保留原始三维层状网络作为分子传输通道。该策略成功制备出超高比表面积生物炭，实现对抗生素CIP的超高容量吸附。",
+          "key_features": "必须保留特征：三维互连层状碳骨架与精准匹配目标污染物分子尺寸的定义微孔（~1.49 nm）；可灵活调整特征：表面含氧/氮官能团密度（通过KOH/PTFS比例与焙烧温度调控）、总孔容与介孔比例、活化剂种类以适配不同极性或尺寸的有机污染物。",
+          "design_mapping": "生物→材料映射：鱼鳞天然层状结构映射为3D互连多孔碳网络（提供快速分子传输通道）；胶原纤维映射为热解生成的不规则碳层（提供丰富微孔与物理吸附位点）；羟基磷灰石映射为原位造孔模板（选择性去除后暴露并定义1.49 nm微孔）。软约束建议：严格控制活化时间与升温程序以避免孔壁坍塌；固定床运行宜采用较低流速以延长穿透时间并发挥高动态容量优势。",
+          "explainability_anchors": "仿生故事线遵循“天然层级模板保留→选择性脱矿造孔→分子尺寸精准匹配”的演化逻辑；设计溯源明确：超高吸附容量（>1000 mg/g）与快速动力学（<4h）直接归因于1.49 nm定义微孔引发的分子孔填充效应及3D互连网络降低的传质阻力，八重协同机制（疏水/π-π/氢键/静电等）由保留的碳骨架与表面官能团共同实现，性能提升具有清晰的结构-功能映射关系。"
+        }
+      },
+      {
+        "source_file": "tools/litextract/outputs/extractions/论文/json/2020-Zheng-self-cleaning-separation-wastewater-water-treatment-review 3.json",
+        "paper_id": "2020-Zheng-self-cleaning-separation-wastewater-water-treatment-review",
+        "sections": {
+          "problem_definition": "自然界中荷叶需要在露水环境下保持干燥且能自清洁，面临水滴粘附和灰尘附着的问题；水处理中需要高效分离油水混合物和乳化液，面临膜污染、分离效率低和不可回收的问题。",
+          "biological_solution": "荷叶表面通过微纳复合结构和蜡质低表面能物质的协同效应实现超疏水性（接触角>150°），水滴极易滚落并带走灰尘，实现超低粘附自清洁表面。鱼鳞则通过表面粘液和 oriented micropapillae 多级结构在水下形成复合界面排斥油滴，实现水下超疏油。进化策略是通过多尺度结构调控界面润湿行为。",
+          "key_features": "必须保留：微纳复合层级结构（粗糙度放大润湿性）、表面化学组成（低表面能物质或亲水层）。可灵活调整：基底材料（金属网、织物、海绵、气凝胶）、表面改性方法（浸涂、电纺、CVD、溶胶凝胶等）。",
+          "design_mapping": "生物结构→材料设计：荷叶微纳结构→人工超疏水表面（SiO₂纳米颗粒+低表面能修饰）；鱼鳞多级乳突→水下超疏油材料（亲水凝胶涂层）；PDA涂层→自修复功能。软约束建议：保留表面粗糙度和化学组成是关键，基底可替换为低成本材料。",
+          "explainability_anchors": "仿生故事线：从荷叶/鱼鳞等自然超润湿现象出发，理解微纳结构与表面化学对润湿性的协同调控机制，设计人工超疏水/超亲水分离材料。设计溯源：荷叶→微纳复合结构→超疏水表面→油水分离；鱼鳞→多级乳突→水下超疏油→抗油污膜。"
+        }
+      },
+      {
+        "source_file": "tools/litextract/outputs/extractions/论文/json/2023-景-超疏水-油水分离-膜-综述 2.json",
+        "paper_id": "jing2023_superwetting_oil_water_separation_membrane_review",
+        "sections": {
+          "problem_definition": "石油开采、运输、加工过程中产生大量含油废水，特别是乳化油（<20μm）和溶解油的分离极具挑战性。传统分离方法对复杂油水混合物存在效率低、成本高、二次污染等问题。",
+          "biological_solution": "自然界中荷叶表面通过低表面能蜡质层和乳突状粗糙结构实现超疏水自清洁（'出淤泥而不染'）；鱼鳞通过磷酸钙、蛋白质和亲水性黏液层以及放射状微孔突结构实现超亲水/水下超疏油性能。这些天然超浸润表面为油水分离膜设计提供了仿生灵感。",
+          "key_features": "必须保留：表面张力调控（使膜材料表面张力介于油水之间）、纳微多级结构（增大表面粗糙度）。可灵活调整：化学组成（亲水/疏水基团）、制备方法（静电纺丝/喷涂/相分离等）、膜孔径（小于乳液尺寸）。",
+          "design_mapping": "生物结构→材料设计：荷叶蜡质层+乳突结构→低表面能修饰+微纳粗糙结构（超疏水膜）；鱼鳞磷酸钙+亲水黏液→亲水基团+水化层（超亲水膜）；荷叶上下表面非对称性→Janus膜（非对称润湿性）。软约束建议：膜孔径需小于乳液液滴尺寸以实现筛分效应。",
+          "explainability_anchors": "仿生故事线：模仿荷叶的'出淤泥而不染'实现超疏水选择性分离油包水乳液；模仿鱼鳞的水下超疏油实现超亲水选择性分离水包油乳液；模仿荷叶上下表面的非对称性设计Janus膜。设计溯源：从荷叶/鱼鳞→Young/Wenzel/Cassie模型→超浸润膜设计→油水分离应用。"
+        }
+      },
+      {
+        "source_file": "tools/litextract/outputs/extractions/论文/json/2022-Yang-separation-membrane-porous-wastewater-review.json",
+        "paper_id": "2022-Yang-superwetting-on-demand-oil-water-separation-review",
+        "sections": {
+          "problem_definition": "自然界中生物需在水、油、气等多相复杂环境中实现自清洁、捕食或水面行走；在水处理领域，这对应于高效分离油水乳液、多层油水混合物及多相不混溶有机液体的严苛需求，传统材料难以兼顾高通量、高选择性与多相适应性。",
+          "biological_solution": "生物通过进化出层级微纳结构（如荷叶微乳突）、特殊几何形貌（re-entrant结构）、不对称润湿（荷叶上下表面差异）及液体灌注（猪笼草）等策略，实现超润湿或双超疏液特性。这些机制结合四大润湿性理论（Young/Wenzel/Cassie、IWT、极性-非极性、液体灌注），为设计按需分离材料提供了定量指导。",
+          "key_features": "必须保留特征：层级微纳结构（增强润湿性并维持鲁棒性）、表面化学与微观形貌的协同调控。可灵活调整特征：智能响应触发器类型（pH/热/光/电/溶剂/离子/气体）、Janus膜的不对称润湿方向、液体灌注的润滑液选择及3D孔隙结构。",
+          "design_mapping": "生物原型到材料的映射：荷叶微乳突→静电纺丝/模板法构建微纳粗糙度；贻贝足丝蛋白→PDA（聚多巴胺）涂层实现通用双亲性修饰；猪笼草→多孔材料注入润滑液实现双超疏液。软约束建议：优先采用PDA等温和仿生涂层结合静电纺丝或定向冻塑构建3D多孔网络，以平衡高通量与高截留率，并利用预润湿或外部刺激实现按需切换。",
+          "explainability_anchors": "仿生故事线：从‘荷叶出淤泥而不染’的自清洁现象，演进到‘智能响应按需分离’的多相液体处理系统。设计溯源：基于超疏水理论构建基础微纳结构→利用IWT理论精确设计表面能→引入re-entrant几何突破双超疏液限制→结合极性与液体灌注理论实现多相不混溶液体分离。"
+        }
+      },
+      {
+        "source_file": "tools/litextract/outputs/extractions/专利/json/2022-CN114849640A-羟基磷灰石-吸附-染料.json",
+        "paper_id": "CN114849640A_2022_fish_scale_hydroxyapatite_dye",
+        "sections": {
+          "problem_definition": "纺织业发展导致含染料废水排放增多，严重污染水体且染料具有致癌性；商业合成的羟基磷灰石表面积小、粒径大，对染料吸附效果不明显；传统化学合成HAP耗能大、价格高昂。",
+          "biological_solution": "鱼类鳞片天然含有羟基磷灰石矿物成分，是生物矿化的产物。鱼鳞作为食品加工废弃物被大量丢弃，但其富含的羟基磷灰石具有优异的离子交换能力和吸附性能。通过简单的碱处理提取鱼鳞中的天然羟基磷灰石，既实现了废弃物资源化，又获得了高性能吸附材料。",
+          "key_features": "必须保留：鱼鳞作为羟基磷灰石天然来源（生物矿化产物）、盐酸除蛋白+NaOH提纯的两步净化工艺。可灵活调整：盐酸浓度（0.1-1mol/L）、第一步NaOH处理温度（50-100°C）、干燥方式（冻干/风干/烘干）。",
+          "design_mapping": "生物来源→材料设计：草鱼鱼鳞（生物矿化羟基磷灰石）→盐酸除蛋白→5%NaOH 5h除杂质→50%NaOH 1h提取→冻干→高吸附性能HAP。软约束建议：最优条件为0.1mol/L HCl、70°C第一步处理、冻干；低浓度HCl处理保留更多羟基磷灰石活性位点。",
+          "explainability_anchors": "仿生故事线：利用鱼类鳞片天然生物矿化的羟基磷灰石结构，通过温和化学处理提取天然吸附剂，实现食品废弃物→高性能染料吸附剂的转化。设计溯源：草鱼鱼鳞（生物矿化HAP）→除蛋白→碱提纯→冻干→高比表面积HAP→高效吸附酸性品红（478mg/g）。核心洞察：生物矿化来源的羟基磷灰石比化学合成的具有更好的吸附性能，天然结构优于人工合成。"
+        }
+      }
+    ]
+  },
+  "engineering_constraints": [
+    {
+      "constraint": "智能响应膜：光/pH/温度/等离子体可切换润湿性",
+      "value": "1）光响应：TiO₂光催化→UV照射→亲水+光降解有机物→MB可被完全降解。TiO₂@PVDF/PAN核壳→避免TiO₂团聚→UV 1h→分解87%罗丹明B。2）pH响应：PVDF-g-PAA树状纤维→中性水中超亲水+水下疏油→pH 2.0中疏水+超亲油；SNP/DA-TiO₂/PI膜→pH≥12时从超疏水变为超亲水。3）可逆切换：Cu网+Au+疏水分子→O₂等离子体→超亲水/水下超疏油→加热→恢复→可逆双向分离",
+      "unit": null,
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s10853-022-07945-8"
+    },
+    {
+      "constraint": "仿生PVDF-SiO₂多尺度粗糙度→耐循环超疏水",
+      "value": "PVDF+SiO₂→电纺→多尺度粗糙结构→防止水滴进入→优异多循环性能+稳定超疏水性。克服小孔径膜处理高粘油的挑战→多尺度结构使高粘油仍可通过",
+      "unit": null,
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s10853-022-07945-8"
+    },
+    {
+      "constraint": "MOF水稳定性关键因素",
+      "value": "Higher ligand basicity → greater metal-ligand bond strength → better stability; 6-coordinate (octahedral) > 4-coordinate (tetrahedral); higher oxidation state → higher stability",
+      "unit": null,
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.3390/membranes13080727"
+    },
+    {
+      "constraint": "交联剂提高疏水稳定性 Crosslinking agents for hydrophobic stability",
+      "value": "Kymene 557H（含羧基）和环氧氯丙烷用于增强纳米材料与纤维素织物/纤维之间的连接",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s11783-021-1515-2"
+    },
+    {
+      "constraint": "浸泡-干燥循环次数对表面稳定性的影响 Dip-drying repetition effect on stability",
+      "value": "SiO2/PDMS涂层经10次浸泡-干燥循环后，表面活性剂冲击前后接触角差从~20°降至~2°",
+      "unit": "degrees",
+      "relevance": "high",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s11783-021-1515-2"
+    },
+    {
+      "constraint": "超疏水膜 harsh condition 稳定性测试标准 Harsh condition stability testing",
+      "value": "浸泡在极端pH(1-2强酸, 12-13强碱)或高盐浓度(NaCl 3.5 wt%)溶液1-72小时；表面活性剂(SDS 4.1 mM)滴加；60-120°C加热72小时",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s11783-021-1515-2"
+    },
+    {
+      "constraint": "超疏油膜 harsh condition 稳定性 Superoleophobic harsh condition stability",
+      "value": "酸性0.1-1 M HCl或pH=1；碱性0.1-1 M NaOH或pH=11-13；盐浓度0.1-1 M或5-10 wt% NaCl；浸泡2-8 M H2SO4 10 min-30天；水中浸泡90天",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s11783-021-1515-2"
+    },
+    {
+      "constraint": "Fe³⁺-PA/OTMS/PI电纺膜的通量和循环稳定性",
+      "value": "通量8424±105 L·m⁻²·h⁻¹，分离效率>99%，20次循环后仍保持",
+      "unit": "L·m⁻²·h⁻¹",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794"
+    },
+    {
+      "constraint": "PTFE层层组装不锈钢纤维毡的WCA和循环性能",
+      "value": "WCA 154°（5次循环后），分离效率>98%，30次以上循环",
+      "unit": null,
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794"
+    },
+    {
+      "constraint": "PANI/TiO₂可见光催化超疏水网格的通量和循环性能",
+      "value": "油通量170 kL·m⁻²·h⁻¹，100次循环后渗透油纯度>99%",
+      "unit": "kL·m⁻²·h⁻¹",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794"
+    },
+    {
+      "constraint": "双刺激响应膜（UV+pH）的可逆润湿性切换和光催化降解",
+      "value": "UV或pH单独作用→疏水；UV+pH协同→亲水；UV照射可降解多种污染物",
+      "unit": null,
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794"
+    },
+    {
+      "constraint": "再生性能",
+      "value": "5次热处理再生后容量降至498 mg/g(仍较高水平)",
+      "unit": "mg/g",
+      "relevance": "high",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.chemosphere.2021.131962"
+    }
+  ],
+  "provenance_summary": {
+    "n_papers": 13,
+    "n_verified": 0,
+    "n_unverified": 108
+  },
+  "coverage": "normal",
+  "status": "active"
+}

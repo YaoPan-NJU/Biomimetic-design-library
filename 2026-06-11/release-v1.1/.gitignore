@@ -1,0 +1,32 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Temp
+*.tmp
+*.bak
+
+# 文献库 (大量PDF, 不上传)
+仿生文献库/
+
+# 提取临时文件
+*_visual_cache.json
+tools/verify_report_*.json
+
+# macOS Finder 重复文件
+* 2.*
+
+# 隐私信息 (API keys)
+.env
+!.env.example

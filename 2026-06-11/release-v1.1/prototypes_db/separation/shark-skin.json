@@ -1,0 +1,336 @@
+{
+  "id": "shark-skin",
+  "name_zh": "鲨鱼皮",
+  "name_en": "Shark Skin",
+  "organism": {
+    "scientific": "Nelumbo nucifera, shark skin, Salvinia",
+    "category": "动物"
+  },
+  "biomimetic_dimension": "结构仿生",
+  "features": [
+    "抗生物污染"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": "any",
+    "note": "测过的 pH/温度范围，不是适用范围。仅从 performance_data 中实际测试过的条件聚合。"
+  },
+  "performance_data": [],
+  "mechanisms": [
+    {
+      "name": "表面润湿性对细菌粘附的影响规律",
+      "description": "WCA 40°-70°或54°-130°最利于细菌粘附；超疏水和超亲水均抵抗粘附",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1002/admi.202201425",
+      "verification": "unverified"
+    },
+    {
+      "name": "细菌粘附的长程和短程相互作用距离阈值",
+      "description": "长程>150 nm(van der Waals等)，短程<3 nm(氢键、静电、疏水等)",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1002/admi.202201425",
+      "verification": "unverified"
+    },
+    {
+      "name": "特殊润湿性分类",
+      "description": "超疏水/超亲油（'除油'型）和超亲水/水下超疏油（'除水'型）",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "unverified"
+    },
+    {
+      "name": "荷叶效应仿生原理",
+      "description": "微纳复合结构+低表面能蜡质的协同效应产生超疏水性",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "unverified"
+    },
+    {
+      "name": "荷叶上下表面润湿性差异",
+      "description": "上表面超疏水，下表面超亲水/水下超疏油",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "unverified"
+    },
+    {
+      "name": "壁虎脚仿生特性",
+      "description": "大量对齐刚毛产生的超疏水+高黏附特性（范德华力）",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "unverified"
+    },
+    {
+      "name": "玫瑰花瓣高黏附超疏水",
+      "description": "微乳突阵列结构产生高黏附超疏水性",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "unverified"
+    },
+    {
+      "name": "浸涂法制备超疏水表面 — THF/水比例优化",
+      "description": "THF:Water = 3:7 时 WCA 达到 155.0 ± 0.6°",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "unverified"
+    },
+    {
+      "name": "溶胶-凝胶法制备超疏水纺织品耐久性",
+      "description": "18h超声、600次磨损、96次洗涤后仍保持超疏水性",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "unverified"
+    },
+    {
+      "name": "Table 1 — 超疏水/超亲油材料制备技术汇总",
+      "description": "13种材料体系，效率90%~99.9%",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "unverified"
+    },
+    {
+      "name": "TiO2光催化降解机理",
+      "description": "UV照射下TiO2价带电子跃迁至导带，产生电子-空穴对，通过O₂→O₂⁻和H₂O→OH·自由基降解油污染物为CO₂和H₂O",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "unverified"
+    },
+    {
+      "name": "CeO2纳米粒子超疏水光催化膜",
+      "description": "分离效率 99%",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "unverified"
+    },
+    {
+      "name": "pH响应PDMS-bP4VP电纺膜",
+      "description": "pH 7超疏水，pH 4超亲水，可切换油/水分离",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "unverified"
+    },
+    {
+      "name": "双刺激UV+pH可切换润湿性",
+      "description": "单独UV或pH → 疏水；UV+pH协同 → 亲水",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "unverified"
+    },
+    {
+      "name": "超疏水表面接触角阈值 Superhydrophobic contact angle threshold",
+      "description": "接触角>150°表现为超疏水行为；接触角<10°为超亲水",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.33263/BRIAC132.185",
+      "verification": "unverified"
+    },
+    {
+      "name": "微生物表面润湿性偏好 Microorganism surface wettability preference",
+      "description": "Ulva linza偏好疏水表面，Balanus Amphitrite偏好亲水表面",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.33263/BRIAC132.185",
+      "verification": "unverified"
+    },
+    {
+      "name": "超疏水表面防污机制 Superhydrophobic surface antifouling mechanism",
+      "description": "超疏水表面的抗污性能归因于截留的空气泡层，减少了细菌与表面之间的接触",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.33263/BRIAC132.185",
+      "verification": "unverified"
+    },
+    {
+      "name": "天然抗污生物 Natural antifouling organisms",
+      "description": "荷叶(Nelumbo nucifera)、水蕨(Salvinia)、斗蓬草(Alchemilla mollis)通过超疏水表面抵抗生物膜；鲨鱼通过真皮小齿上的微结构缎带降低阻力和避免生物附着",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.33263/BRIAC132.185",
+      "verification": "unverified"
+    },
+    {
+      "name": "超疏水表面防污短暂性 Superhydrophobic surface antifouling short-lived",
+      "description": "超疏水表面的抗污性能是短暂的（short-lived）",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.33263/BRIAC132.185",
+      "verification": "unverified"
+    },
+    {
+      "name": "超疏水性定义阈值",
+      "description": "接触角>150°且滚动角<10°",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.3390/polym15030543",
+      "verification": "unverified"
+    },
+    {
+      "name": "PDMS '胶+粉'法通用性",
+      "description": "17种以上颗粒均可制备超疏水表面",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.3390/polym15030543",
+      "verification": "unverified"
+    },
+    {
+      "name": "无氟透明超疏水涂层接触角",
+      "description": "163°±2.1°",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.3390/polym15030543",
+      "verification": "unverified"
+    },
+    {
+      "name": "巯基硅烷改性棉纤维超疏水纺织品接触角和滚动角",
+      "description": "接触角159°，滚动角4°",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.3390/polym15030543",
+      "verification": "unverified"
+    },
+    {
+      "name": "PDMS微柱阵列防冰性能",
+      "description": "微柱间距与疏水性正相关，间距25μm时WCA达161.1°",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.3390/polym15030543",
+      "verification": "unverified"
+    },
+    {
+      "name": "超疏水防冰最佳延迟结冰时间",
+      "description": "98±2.3 min",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.3390/polym15030543",
+      "verification": "unverified"
+    },
+    {
+      "name": "透明无氟超疏水涂层防冰时间",
+      "description": "483 s（空白对照15 s）",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.3390/polym15030543",
+      "verification": "unverified"
+    },
+    {
+      "name": "超疏水表面自清洁原理",
+      "description": "粗糙低能表面上水滴可携带走污染物颗粒",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.3390/polym15030543",
+      "verification": "unverified"
+    },
+    {
+      "name": "超疏水防腐蚀机制",
+      "description": "微纳结构中空气膜隔离金属与腐蚀液，阻碍电化学反应",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.3390/polym15030543",
+      "verification": "unverified"
+    },
+    {
+      "name": "硅基超疏水材料五项核心优势",
+      "description": "疏水基团丰富、可构建微纳结构、反应条件温和、UV/热抗性、低毒性",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.3390/polym15030543",
+      "verification": "unverified"
+    },
+    {
+      "name": "硅基超疏水材料机械稳定性挑战",
+      "description": "纳米级结构强度有限，耐磨性不足是工业化主要障碍",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.3390/polym15030543",
+      "verification": "unverified"
+    },
+    {
+      "name": "自然界九种超疏水生物原型",
+      "description": "荷叶、水鳖叶、蝴蝶翅膀、蝇眼、蝉翼、壁虎脚、鲨鱼皮、水黾腿、玫瑰花瓣",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.3390/polym15030543",
+      "verification": "unverified"
+    }
+  ],
+  "narrative": {
+    "entries": [
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2022-Attachment-review.json",
+        "paper_id": "2022-Attachment-review",
+        "sections": {
+          "problem_definition": "自然界中生物表面面临微生物定殖与生物膜形成的生存挑战，对应水处理中吸附材料与膜表面的细菌粘附、生物污损及通量衰减问题。",
+          "biological_solution": "进化出微纳拓扑结构与表面理化特性协同的防御策略：通过高长径比纳米柱的机械形变储存弹性能并刺穿细菌膜，或利用极端润湿性与负电荷实现被动排斥。成功案例包括蝉翼/蜻蜓翼的物理接触杀菌、荷叶/芋叶的超疏水自清洁以及鲨鱼皮微拓扑肋条对生物膜定殖的显著延迟。",
+          "key_features": "必须保留：特征尺寸小于细菌、高长径比结构、极端润湿性(超疏/超亲)、表面负电荷排斥；可灵活调整：纳米柱具体长径比、排列规则性(均匀/非均匀)、单/双高度组合、基底合成工艺(软光刻/刻蚀/水热等)。",
+          "design_mapping": "生物→材料映射：蝉/蜻蜓翼纳米柱→高长径比硅基/聚合物纳米阵列；荷叶/芋叶微乳突→微纳复合粗糙涂层；鲨鱼皮→Sharklet型微拓扑沟槽。软约束建议：优先采用低密度非均匀排布以产生更大跨壁应力；严格调控表面化学以避开中等润湿性；可耦合光催化或磁响应液态金属增强杀菌效能。",
+          "explainability_anchors": "仿生故事线：从被动防污(荷叶自清洁)到主动机械杀菌(蝉翼刺穿)再到拓扑延迟定殖(鲨鱼皮)的递进设计逻辑。设计溯源：所有结构参数(直径80-200nm、高度400-500nm、间距<0.2µm)与性能阈值均直接溯源至文献实测数据与梁力学/DLVO界面物理模型，确保构效关系可解释、可迁移至水处理防污设计。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2020-Han-antifouling-review.json",
+        "paper_id": "2020-Han-antifouling-review",
+        "sections": {
+          "problem_definition": "自然界挑战：海洋生物污损经历有机调节膜形成、微生物生物膜附着、孢子永久交联定殖到大型生物附着四阶段，导致航行阻力剧增与维护成本高昂；水处理对应：水处理膜与设备表面面临相似的生物膜污染与沉积物附着，造成通量衰减、能耗上升及频繁化学清洗需求。",
+          "biological_solution": "进化策略：海洋生物演化出三大非杀生防污策略：(1)低表面能光滑表面（鲨鱼/海豚皮）实现污损释放；(2)微拓扑物理屏障（鲨鱼皮Sharklet、荷叶/芋头叶乳突）阻止沉降；(3)动态柔性界面（珊瑚触手摆动、鱼鳞黏液）抵抗粘附。关键机制：通过临界表面张力(20-30 mN/m)最小化粘附力、亲疏水微相分离构建非均匀表面、两性离子水合层排斥蛋白吸附、动态二硫键实现自修复。成功案例：PDMS基Sharklet AF™微结构使孢子沉降率降低约80%；两性离子水凝胶与两亲性共聚物实现广谱抗污与长期稳定。",
+          "key_features": "必须保留特征：临界表面张力20-30 mN/m区间、微纳级拓扑物理屏障、界面水合/抗蛋白吸附层、动态响应或自修复能力；可灵活调整特征：聚合物基体类型(PDMS/PEG/两性离子)、微结构具体几何尺寸与排列方式、自修复触发条件(光/温/化学)、弹性模量与表面张力的具体配比。",
+          "design_mapping": "生物→材料映射：鲨鱼皮/荷叶微结构→PDMS/硅酮微图案化防污涂层；软珊瑚触手→石墨烯-硅氧烷弹性体(GSE)动态响应膜；血管内壁/鱼鳞黏液→两亲性共聚物微相分离表面与两性离子聚合物刷/水凝胶；软约束建议：设计时需以Baier曲线为基准锚定表面能，结合Brady-Singer断裂力学模型平衡弹性模量与临界表面张力，优先采用高固含量(>70%)配方以兼顾施工性与长效性。",
+          "explainability_anchors": "仿生故事线：从传统高毒性杀生涂层向被动式物理/化学仿生防污演进，借鉴海洋生物‘不杀生而拒污’的进化智慧；设计溯源：以Baier表面张力理论为热力学基础，融合Sharklet微拓扑几何学与动态水凝胶自修复化学，通过‘低粘附-物理阻隔-动态响应’多级防御机制实现水处理界面的长效抗污染，其工程可行性已由船舶FRC涂层22%节油率与>60个月服役寿命验证。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2022-App-antifouling-water-treatment-review.json",
+        "paper_id": "App2022_biofouling_mitigation_review",
+        "sections": {
+          "problem_definition": "自然界中船舶与海洋设施面临严重的生物附着问题，导致流体阻力剧增与温室气体排放上升；在水处理与膜分离领域，生物污染占比高达45%，且生物膜内细菌抗药性提升千倍，传统化学防污策略面临环保禁令与抗性瓶颈，亟需长效、无毒的物理抗污方案。",
+          "biological_solution": "生物通过进化出微纳多级粗糙结构与低表面能化学组分（如荷叶蜡晶、鲨鱼皮真皮小齿缎带）实现自清洁与抗附着。核心机制为诱导Cassie-Baxter态空气截留，大幅降低微生物-表面有效接触面积与接触角滞后(CAH)。成功案例包括荷叶超疏水自清洁、鲨鱼皮微结构实现12.5%减阻与抗附着，以及两性离子聚合物(pSBMA/pCBMA)涂层使细菌粘附与生物膜形成降低92%-96%。",
+          "key_features": "必须保留微纳多级粗糙度拓扑结构与低表面能界面特性，以稳定维持Cassie-Baxter态空气截留层；可灵活调整基底材料体系（如PDMS、TiO2纳米颗粒或两性离子聚合物）、微结构几何尺度与空间排布密度，以及表面化学修饰策略，以适配不同水处理工况与目标污染物。",
+          "design_mapping": "生物特征向材料映射：鲨鱼皮真皮小齿缎带映射为微脊/微流道阵列减阻防污涂层；荷叶微纳结构+蜡晶映射为超疏水复合膜表面；两性离子聚合物映射为强水化层抗生物吸附界面。软约束建议：精确调控表面粗糙度因子与固液接触分数(φS)以最小化接触角滞后，防止微结构塌陷进入高粘附Wenzel态；在合成中平衡超疏水性与长期水动力剪切下的机械耐久性。",
+          "explainability_anchors": "仿生故事线围绕“从化学杀灭到物理拒止”的防污范式转变展开，直接回应TBT/铜基涂料的环保禁令与生物膜千倍抗药性挑战。设计溯源明确指向经典润湿理论（Young/Wenzel/Cassie-Baxter方程），通过微纳拓扑形貌与低表面能化学的协同设计构建稳定空气屏障，在生物膜形成的初始附着阶段即切断微生物-基底接触，实现可解释、可预测的长效防污与减阻双重效能。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2023-Li-superhydrophobic-hydrophobic-self-cleaning-review.json",
+        "paper_id": "2023-Li-superhydrophobic-hydrophobic-self-cleaning-review",
+        "sections": {
+          "problem_definition": "自然界中水生或潮湿环境下的动植物需要保持表面干燥、清洁及防污；在水处理领域，油水分离膜和吸附材料需要构建超疏水/超亲油界面，以实现高效油水分离、抗污染和自清洁功能。",
+          "biological_solution": "荷叶等生物通过进化出表皮微纳双尺度乳突结构并覆盖蜡质等低表面能物质，实现超疏水与自清洁。关键机制是形成Cassie-Baxter态，利用微纳结构截留空气层隔离液滴与固体表面，水滴滚落时携带走污染物颗粒。成功案例包括荷叶的自清洁效应、鲨鱼皮的表面防污以及壁虎脚的微纳结构调控。",
+          "key_features": "必须保留特征：微米与纳米相结合的双尺度粗糙结构、低表面能化学修饰（构建Cassie态空气层）；可灵活调整特征：微纳结构的具体形貌与尺寸（如微柱间距）、低表面能修饰剂种类（如TEOS、各类硅烷偶联剂）、基底与骨架材料（如PVDF、PDMS、SiO2颗粒）。",
+          "design_mapping": "生物→材料映射：荷叶表皮微乳突映射为PDMS模板法或静电纺丝构建的微纳阵列/纤维膜，植物表面蜡质映射为硅烷偶联剂脱水缩合引入的疏水基团（如-CnH2n+1等）。软约束建议：优先采用反应条件温和的硅烷脱水缩合或PDMS“胶+粉”法以提升工艺通用性，并利用Si-O键赋予材料优异的UV抗性和热稳定性。",
+          "explainability_anchors": "仿生故事线：从荷叶“出淤泥而不染”的宏观自清洁现象出发，深入解析微纳双尺度与空气垫的微观物理机制，最终通过硅基化学与模板/纺丝工艺实现人工超疏水界面的工程化复刻。设计溯源：基于Young方程与Cassie-Baxter润湿模型，将自然界的低表面能与粗糙度协同策略，溯源并转化为硅烷偶联剂改性与微纳结构构建的材料设计准则。"
+        }
+      }
+    ]
+  },
+  "engineering_constraints": [
+    {
+      "constraint": "硅基超疏水材料机械稳定性挑战",
+      "value": "纳米级结构强度有限，耐磨性不足是工业化主要障碍",
+      "unit": null,
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.3390/polym15030543"
+    }
+  ],
+  "provenance_summary": {
+    "n_papers": 5,
+    "n_verified": 0,
+    "n_unverified": 31
+  },
+  "coverage": "parked",
+  "status": "parked_separation"
+}
