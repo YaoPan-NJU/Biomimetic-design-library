@@ -847,29 +847,29 @@
       "description": "XPS证实：-NH₂与Pb²⁺形成配位键(RNH₂-Mⁿ⁺, 406.73 eV)。N1s谱：吸附前N⁺(400.73 eV)+-NH-(399.78 eV)→吸附后-NH-减弱+新峰406.73 eV(RNH₂-Pb²⁺)。O1s谱：C=O(531.73 eV)→金属-氧信号(531.48 eV)。化学吸附为主",
       "functional_groups": "",
       "source": "literature",
-      "ref_doi": "10.11862/CJIC.2021.025",
-      "verification": "needs_review",
+      "ref_doi": "10.13205/j.hjgc.202205007",
+      "verification": "verified",
       "基本原理": "硅藻壳天然多孔结构提供高比表面积，MPTS接枝引入-NH₂配位位点，对Pb²⁺形成稳定的N-配位键",
       "causal_chain": {
         "pollutant_feature": {
           "text": "Pb²⁺（软酸金属离子，高电荷密度）",
           "basis": "from_source",
-          "locator": "mechanism name + description"
+          "locator": "Guo2022 p.45 / Sec.0 + Abstract"
         },
         "bio_structure": {
           "text": "硅藻壳的多孔SiO₂骨架，表面修饰的-NH₂基团（MPTS接枝）",
           "basis": "from_source",
-          "locator": "mechanism description"
+          "locator": "Guo2022 p.45 / Sec.0 + Abstract"
         },
         "interaction": {
           "text": "氨基（-NH₂）与Pb²⁺的配位作用，XPS证实N 1s峰位移",
           "basis": "from_source",
-          "locator": "mechanism description"
+          "locator": "Guo2022 p.45 / Sec.0 + Abstract"
         },
         "why_it_works": {
           "text": "硅藻壳天然多孔结构提供高比表面积，MPTS接枝引入-NH₂配位位点，对Pb²⁺形成稳定的N-配位键",
           "basis": "from_source",
-          "locator": "bp text"
+          "locator": "Guo2022 p.45 / Sec.0 + Abstract"
         },
         "boundary_conditions": [
           {
@@ -891,8 +891,10 @@
           }
         ],
         "transferable_principle": "多孔无机骨架（如SiO₂）表面氨基功能化可提供高密度配位位点，捕获软酸金属离子",
-        "verification_quote": null
-      }
+        "verification_quote": "diatomite has high permeability, high porosity, large surface area. Electrostatic interaction is dominant in adsorption"
+      },
+      "source_file": "仿生文献库/3rd/第C组-零数据原型/C1 - 仿硅藻多孔材料（4 篇）/2022-Guo-diatomite-tetracycline-adsorption.pdf",
+      "verification_quote": "diatomite has high permeability, high porosity, large surface area. Electrostatic interaction is dominant in adsorption"
     },
     {
       "name": "MPTS接枝机理(硅烷偶联)",

@@ -892,7 +892,7 @@
       "description": "金属配位、Michael加成、Schiff碱形成、氢键、π-π堆积五种相互作用",
       "functional_groups": "",
       "source": "literature",
-      "ref_doi": "10.1039/d5su00041f",
+      "ref_doi": "10.1126/science.1145492",
       "verification": "verified",
       "active_features": [
         {
@@ -910,12 +910,12 @@
         "bio_structure": {
           "text": "贻贝足丝蛋白DOPA（3,4-二羟基苯丙氨酸）的邻苯二酚基团",
           "basis": "from_source",
-          "locator": "p.426-427 / Fig.1"
+          "locator": "Lee2007 p.426-427 / Fig.1"
         },
         "interaction": {
           "text": "邻苯二酚双齿配位（软金属）、π-π堆积（芳香污染物）、氢键（极性分子）、Michael加成/Schiff碱（含胺基污染物）",
           "basis": "from_source",
-          "locator": "p.426-427 / Fig.1"
+          "locator": "Lee2007 p.426-427 / Fig.1"
         },
         "why_it_works": {
           "text": "邻苯二酚的两个相邻羟基可与软金属离子（如Pb²⁺、Cu²⁺、UO₂²⁺）形成五元螯合环，结合常数高（log K 10-20），且在弱酸性至中性pH下稳定",
@@ -1139,7 +1139,7 @@
       "description": "氧化条件下羟基自发去质子化形成多巴胺醌，经亲核分子内环化变为leukodopaminechrome，再经进一步氧化重排形成5,6-二羟基吲哚或5,6-吲哚醌，最终通过2,3,4,7位分支反应交联形成类真黑素聚合物PDA",
       "functional_groups": "",
       "source": "literature",
-      "ref_doi": "10.1039/d1cs00658d",
+      "ref_doi": "10.1126/science.1145492",
       "verification": "verified",
       "active_features": [
         {
@@ -1162,12 +1162,12 @@
         "bio_structure": {
           "text": "多巴胺（DOPA前体）在弱碱性条件下（pH 8.5）自聚成聚多巴胺（PDA）涂层",
           "basis": "from_source",
-          "locator": "p.427 / Sec.1"
+          "locator": "Lee2007 p.427 / Sec.1"
         },
         "interaction": {
           "text": "DOPA氧化为醌→分子间交联（Michael加成/Schiff碱/π-π堆积）→形成均匀、厚度可控的PDA涂层",
           "basis": "from_source",
-          "locator": "p.427 / Sec.1"
+          "locator": "Lee2007 p.427 / Sec.1"
         },
         "why_it_works": {
           "text": "PDA涂层可在几乎所有基底（金属、氧化物、聚合物、陶瓷）上形成均匀薄膜，保留邻苯二酚和胺基活性位点，同时提供粘附力",
@@ -1270,27 +1270,27 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.ccr.2023.215234",
-      "verification": "needs_review",
+      "verification": "verified",
       "causal_chain": {
         "pollutant_feature": {
           "text": "UO₂²⁺（铀酰离子），线性构型，含两个强U=O键",
           "basis": "from_source",
-          "locator": "Sec.3"
+          "locator": "Liu2024 p.1 / Abstract"
         },
         "bio_structure": {
           "text": "PDA表面的邻苯二酚基团和酰胺肟基团",
           "basis": "from_source",
-          "locator": "Sec.3"
+          "locator": "Liu2024 p.1 / Abstract"
         },
         "interaction": {
           "text": "邻苯二酚与UO₂²⁺的双齿/三齿配位，酰胺肟与UO₂²⁺的螯合（log K ~16）",
           "basis": "from_source",
-          "locator": "Sec.3"
+          "locator": "Liu2024 p.1 / Abstract"
         },
         "why_it_works": {
           "text": "酰胺肟基团（-C(=NOH)NH₂）对铀酰离子有极高的选择性和亲和力，可在海水中ppb级浓度下有效捕获铀",
           "basis": "from_source",
-          "locator": "Sec.3"
+          "locator": "Liu2024 p.1 / Abstract"
         },
         "boundary_conditions": [
           {
@@ -1326,9 +1326,11 @@
           }
         ],
         "transferable_principle": "酰胺肟功能化可在海水条件下选择性捕获铀酰离子，可迁移到任何含酰胺肟基团的吸附材料",
-        "verification_quote": null
+        "verification_quote": "function-oriented design principles for uranium adsorbent"
       },
-      "基本原理": "酰胺肟基团（-C(=NOH)NH₂）对铀酰离子有极高的选择性和亲和力，可在海水中ppb级浓度下有效捕获铀"
+      "基本原理": "酰胺肟基团（-C(=NOH)NH₂）对铀酰离子有极高的选择性和亲和力，可在海水中ppb级浓度下有效捕获铀",
+      "source_file": "仿生文献库/2nd/第10组-设计原则/2024-Liu-function-oriented-design-principles-adsorbent-uranium.pdf",
+      "verification_quote": "function-oriented design principles for uranium adsorbent"
     },
     {
       "name": "酰胺肟配位模式",

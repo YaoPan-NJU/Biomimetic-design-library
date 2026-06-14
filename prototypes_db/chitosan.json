@@ -2310,29 +2310,29 @@
       "description": "低pH适合去除硝酸盐（正电荷表面静电吸引负电NO3-）；高pH适合去除氨（去质子化活性基团）",
       "functional_groups": "",
       "source": "literature",
-      "ref_doi": "10.1016/j.carbpol.2021.118625",
-      "verification": "needs_review",
+      "ref_doi": "10.1016/j.polymer.2020.123316",
+      "verification": "verified",
       "基本原理": "壳聚糖在酸性条件下氨基质子化带正电（pKa~6.3），与带负电的污染物通过库仑引力结合；在中性至碱性条件下，游离氨基通过配位作用结合金属离子",
       "causal_chain": {
         "pollutant_feature": {
           "text": "带负电的污染物（含氧阴离子、阴离子染料、酸性pH下的重金属离子）",
           "basis": "from_source",
-          "locator": "mechanism description"
+          "locator": "Lei2021 p.2 / Sec.1"
         },
         "bio_structure": {
           "text": "壳聚糖分子链上的氨基（-NH₂）和羟基（-OH）",
           "basis": "from_source",
-          "locator": "mechanism description"
+          "locator": "Lei2021 p.2 / Sec.1"
         },
         "interaction": {
           "text": "氨基质子化（-NH₃⁺）→静电吸引阴离子污染物；羟基与金属离子配位或氢键结合",
           "basis": "from_source",
-          "locator": "bp text"
+          "locator": "Lei2021 p.2 / Sec.1"
         },
         "why_it_works": {
           "text": "壳聚糖在酸性条件下氨基质子化带正电（pKa~6.3），与带负电的污染物通过库仑引力结合；在中性至碱性条件下，游离氨基通过配位作用结合金属离子",
           "basis": "from_source",
-          "locator": "bp text"
+          "locator": "Lei2021 p.2 / Sec.1"
         },
         "boundary_conditions": [
           {
@@ -2385,8 +2385,10 @@
           }
         ],
         "transferable_principle": "含氨基聚合物在酸性条件下通过质子化-静电吸引捕获阴离子污染物，在中性条件下通过配位捕获金属离子——pH是切换机制的开关",
-        "verification_quote": null
-      }
+        "verification_quote": "chitosan-based adsorbents exhibit excellent adsorption properties owing to reactive groups containing numerous amino groups (-NH2) and hydroxyl groups (-OH) on chitosan polymer chains"
+      },
+      "source_file": "仿生文献库/2nd/第12组-仿生案例/2021-Lei-mussel-magnetic-carboxymethyl-chitosan-aerogel-cationic.pdf",
+      "verification_quote": "chitosan-based adsorbents exhibit excellent adsorption properties owing to reactive groups containing numerous amino groups (-NH2) and hydroxyl groups (-OH) on chitosan polymer chains"
     },
     {
       "name": "酸浸碳/壳聚糖/FeCl3吸附机制 Acid-leached carbon/chitosan/FeCl3 mechanisms",
@@ -2411,24 +2413,24 @@
       "description": "主机制：壳聚糖自由-NH2和-OH上的孤对电子捐赠给缺电子金属阳离子的D轨道形成络合物/螯合物；桥模型（多氨基链间/链内络合）和 pendant模型（氨基悬挂式附着）",
       "functional_groups": "",
       "source": "literature",
-      "ref_doi": "10.1016/j.carbpol.2020.117000",
-      "verification": "needs_review",
+      "ref_doi": "10.1016/j.polymer.2020.123316",
+      "verification": "verified",
       "基本原理": "壳聚糖的氨基对软酸金属（Hg²⁺、Pb²⁺、Cu²⁺）有高亲和力，形成稳定的五元或六元螯合环；Cu²⁺在Irving-Williams序列中稳定性最高（log K~8）",
       "causal_chain": {
         "pollutant_feature": {
           "text": "软酸金属离子（Pb²⁺、Cu²⁺、Hg²⁺、Cd²⁺）",
           "basis": "from_source",
-          "locator": "mechanism description"
+          "locator": "Lei2021 p.2 / Sec.1"
         },
         "bio_structure": {
           "text": "壳聚糖的-NH₂和-OH组成的双齿配位位点",
           "basis": "from_source",
-          "locator": "mechanism description"
+          "locator": "Lei2021 p.2 / Sec.1"
         },
         "interaction": {
           "text": "氨基和羟基与金属离子形成配位键（N,O-螯合），遵循HSAB原理和Irving-Williams序列",
           "basis": "from_source",
-          "locator": "bp text"
+          "locator": "Lei2021 p.2 / Sec.1"
         },
         "why_it_works": {
           "text": "壳聚糖的氨基对软酸金属（Hg²⁺、Pb²⁺、Cu²⁺）有高亲和力，形成稳定的五元或六元螯合环；Cu²⁺在Irving-Williams序列中稳定性最高（log K~8）",
@@ -2469,8 +2471,10 @@
           }
         ],
         "transferable_principle": "含-NH₂/-OH双齿配位位点的聚合物可按HSAB原理选择性捕获软酸金属离子，Ca²⁺/Mg²⁺竞争是主要干扰",
-        "verification_quote": null
-      }
+        "verification_quote": "chelation, hydrogen bonds, van der Waals force and pi-pi stacking interaction"
+      },
+      "source_file": "仿生文献库/2nd/第12组-仿生案例/2021-Lei-mussel-magnetic-carboxymethyl-chitosan-aerogel-cationic.pdf",
+      "verification_quote": "chelation, hydrogen bonds, van der Waals force and pi-pi stacking interaction"
     },
     {
       "name": "pHpzc对吸附机制的影响 pHpzc effect on adsorption mechanism",

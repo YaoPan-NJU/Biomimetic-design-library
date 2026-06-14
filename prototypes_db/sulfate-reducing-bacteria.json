@@ -23,8 +23,8 @@
       "description": "SO₄²⁻ →(sat, ATP) APS →(APS还原酶, 2e⁻) SO₃²⁻ →(CBS, 6e⁻) H₂S；消耗大量H⁺→提升水体pH",
       "functional_groups": "",
       "source": "literature",
-      "ref_doi": "10.16581/j.cnki.issn1671-3206.20230927.002",
-      "verification": "needs_review",
+      "ref_doi": "10.1016/j.jenvman.2020.111555",
+      "verification": "verified",
       "基本原理": "生物硫化物沉淀是去除软酸金属最有效的方法之一——金属硫化物溶度积极低，且SRB可在厌氧条件下持续产S²⁻",
       "causal_chain": {
         "pollutant_feature": {
@@ -35,12 +35,12 @@
         "bio_structure": {
           "text": "SRB细胞内的硫酸盐还原酶系统（DSR/APS还原酶）和细胞外聚合物（EPS）",
           "basis": "from_source",
-          "locator": "mechanism description"
+          "locator": "Kumar2021 p.111555 / Abstract + Sec.1"
         },
         "interaction": {
           "text": "SRB将SO₄²⁻还原为S²⁻（硫化物），S²⁻与软酸金属离子形成极难溶的金属硫化物（如HgS Ksp=10⁻⁵²、PbS Ksp=10⁻²⁸）",
           "basis": "from_source",
-          "locator": "mechanism description"
+          "locator": "Kumar2021 p.111555 / Abstract + Sec.1"
         },
         "why_it_works": {
           "text": "生物硫化物沉淀是去除软酸金属最有效的方法之一——金属硫化物溶度积极低，且SRB可在厌氧条件下持续产S²⁻",
@@ -91,8 +91,10 @@
           }
         ],
         "transferable_principle": "利用微生物硫酸盐还原产生S²⁻进行金属硫化物沉淀，是厌氧条件下去除软酸金属的高效生物策略",
-        "verification_quote": null
-      }
+        "verification_quote": "SRB consume SO42- as terminal electron acceptor and convert it to different sulfur forms (H2S, HS-, S2-). These sulfide products are responsible for metal precipitation"
+      },
+      "source_file": "仿生文献库/论文/第4组-生物矿化/2020-Kumar-sulfate-reducing-heavy-metal-dye-wastewater-review 2.pdf",
+      "verification_quote": "SRB consume SO42- as terminal electron acceptor and convert it to different sulfur forms (H2S, HS-, S2-). These sulfide products are responsible for metal precipitation"
     }
   ],
   "narrative": {
