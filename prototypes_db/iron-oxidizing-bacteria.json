@@ -482,29 +482,62 @@
       "verification": "needs_review",
       "causal_chain": {
         "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "As(III)（中性分子H₃AsO₃）和As(V)（含氧阴离子H₂AsO₄⁻）",
+          "basis": "from_source",
+          "locator": "mechanism name"
         },
         "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "铁氧化菌（如Acidithiobacillus ferrooxidans）生成的施氏矿物（schwertmannite, Fe₈O₈(OH)₆SO₄）",
+          "basis": "from_source",
+          "locator": "mechanism description"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "As(III)在施氏矿物表面被氧化为As(V)，然后通过表面配位（内球配合）固定在铁氧化物表面",
+          "basis": "from_source",
+          "locator": "mechanism description"
         },
         "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "施氏矿物的高比表面积和表面羟基（-OH）提供大量配位位点；生物氧化As(III)→As(V)降低毒性并增强吸附",
+          "basis": "from_source",
+          "locator": "bp text"
         },
-        "boundary_conditions": [],
-        "transferable_principle": "",
+        "boundary_conditions": [
+          {
+            "text": "pH < 4时施氏矿物溶解，释放吸附的砷",
+            "parameter": "pH",
+            "condition": {
+              "operator": "threshold_lt",
+              "value": [
+                4
+              ],
+              "basis_note": "定性"
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          },
+          {
+            "text": "高浓度磷酸盐与砷酸盐竞争配位位点",
+            "parameter": "competing_ion",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "铁氧化菌原位生成的铁氧化物（施氏矿物）可同时氧化和吸附砷，是生物-矿物协同除砷策略",
         "verification_quote": null
-      }
+      },
+      "基本原理": "施氏矿物的高比表面积和表面羟基（-OH）提供大量配位位点；生物氧化As(III)→As(V)降低毒性并增强吸附"
     },
     {
       "name": "MICP化学反应机理",
@@ -512,32 +545,7 @@
       "functional_groups": "",
       "source": "patent",
       "ref_doi": null,
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "Cu在施氏矿物表面配位模式",
@@ -545,32 +553,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.3390/min15080868",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "砷在铁(氧氢)氧化物表面配位模式",
@@ -578,32 +561,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.3390/min15080868",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "去除机理三阶段",
@@ -611,32 +569,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.13671/j.hjkxxb.2021.0204",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "吸附机制",
@@ -644,32 +577,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.clay.2021.106392",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     }
   ],
   "narrative": {

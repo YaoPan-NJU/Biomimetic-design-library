@@ -304,30 +304,45 @@
       "source": "literature",
       "ref_doi": "10.1002/adfm.202200199",
       "verification": "needs_review",
-      "基本原理": "细胞膜的脂质双分子层和膜蛋白可通过静电作用、配位作用或分子识别选择性结合污染物",
+      "基本原理": "生物离子通道的选择性来自精确的孔道尺寸和通道内壁的化学环境（如KcsA通道的羰基氧配位），可实现亚埃级离子选择",
       "causal_chain": {
         "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "特定离子（如K⁺、Na⁺、Ca²⁺）和极性有机分子",
+          "basis": "from_source",
+          "locator": "bp text"
         },
         "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "细胞膜的脂质双分子层和膜蛋白（离子通道、水通道蛋白）",
+          "basis": "from_source",
+          "locator": "mechanism description"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "离子通道的选择性过滤器通过尺寸排斥和配位作用实现离子选择性；水通道蛋白（AQP）仅允许水分子通过",
+          "basis": "from_source",
+          "locator": "mechanism description"
         },
         "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "生物离子通道的选择性来自精确的孔道尺寸和通道内壁的化学环境（如KcsA通道的羰基氧配位），可实现亚埃级离子选择",
+          "basis": "from_source",
+          "locator": "bp text"
         },
-        "boundary_conditions": [],
-        "transferable_principle": "",
+        "boundary_conditions": [
+          {
+            "text": "仿生膜的稳定性远低于生物膜，高压力/高盐下膜结构破坏",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "生物离子通道的选择性过滤机制（尺寸排斥+化学配位）可启发高选择性分离膜设计",
         "verification_quote": null
       }
     },
@@ -338,32 +353,7 @@
       "source": "literature",
       "ref_doi": "10.1016/j.cej.2021.133878",
       "verification": "needs_review",
-      "基本原理": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "基本原理": "needs_review"
     },
     {
       "name": "Aquaporin(AQP)结构与水传输机制 AQP structure and water transport mechanism",
@@ -372,32 +362,7 @@
       "source": "literature",
       "ref_doi": "10.1016/j.cej.2021.133878",
       "verification": "needs_review",
-      "基本原理": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "基本原理": "needs_review"
     },
     {
       "name": "水传输机制 Water transport mechanism",
@@ -406,32 +371,7 @@
       "source": "literature",
       "ref_doi": "10.1016/j.cej.2021.133878",
       "verification": "needs_review",
-      "基本原理": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "基本原理": "needs_review"
     },
     {
       "name": "生物离子通道仿生设计原则",
@@ -440,32 +380,7 @@
       "source": "literature",
       "ref_doi": "10.1016/j.advmem.2022.100032",
       "verification": "needs_review",
-      "基本原理": "细胞膜的脂质双分子层和膜蛋白可通过静电作用、配位作用或分子识别选择性结合污染物",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "基本原理": "细胞膜的脂质双分子层和膜蛋白可通过静电作用、配位作用或分子识别选择性结合污染物"
     },
     {
       "name": "冠醚仿生离子通道——12-crown-4 Li⁺选择性",
@@ -474,32 +389,7 @@
       "source": "literature",
       "ref_doi": "10.1016/j.advmem.2022.100032",
       "verification": "needs_review",
-      "基本原理": "细胞膜的脂质双分子层和膜蛋白可通过静电作用、配位作用或分子识别选择性结合污染物",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "基本原理": "细胞膜的脂质双分子层和膜蛋白可通过静电作用、配位作用或分子识别选择性结合污染物"
     },
     {
       "name": "功能化石墨烯纳米孔——模拟Na⁺通道",
@@ -508,32 +398,7 @@
       "source": "literature",
       "ref_doi": "10.1016/j.advmem.2022.100032",
       "verification": "needs_review",
-      "基本原理": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "基本原理": "needs_review"
     },
     {
       "name": "MOF纳米晶体——离子选择性膜",
@@ -542,32 +407,7 @@
       "source": "literature",
       "ref_doi": "10.1016/j.advmem.2022.100032",
       "verification": "needs_review",
-      "基本原理": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "基本原理": "needs_review"
     },
     {
       "name": "液晶膜——反常Cl⁻/SO₄²⁻选择性",
@@ -576,32 +416,7 @@
       "source": "literature",
       "ref_doi": "10.1016/j.advmem.2022.100032",
       "verification": "needs_review",
-      "基本原理": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "基本原理": "needs_review"
     },
     {
       "name": "扩散速率调控——PVA减缓PIP扩散一个数量级",
@@ -610,32 +425,7 @@
       "source": "literature",
       "ref_doi": "10.1016/j.advmem.2022.100032",
       "verification": "needs_review",
-      "基本原理": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "基本原理": "needs_review"
     },
     {
       "name": "界面单体分布调控——表面活性剂",
@@ -644,32 +434,7 @@
       "source": "literature",
       "ref_doi": "10.1016/j.advmem.2022.100032",
       "verification": "needs_review",
-      "基本原理": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "基本原理": "needs_review"
     },
     {
       "name": "GO基2D层状膜——层间距调控",
@@ -678,32 +443,7 @@
       "source": "literature",
       "ref_doi": "10.1016/j.advmem.2022.100032",
       "verification": "needs_review",
-      "基本原理": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "基本原理": "needs_review"
     },
     {
       "name": "水通道蛋白仿生膜制备挑战",
@@ -712,32 +452,7 @@
       "source": "literature",
       "ref_doi": "10.1039/d4va00378k",
       "verification": "needs_review",
-      "基本原理": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "基本原理": "needs_review"
     }
   ],
   "narrative": {

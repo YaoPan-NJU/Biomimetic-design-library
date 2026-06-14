@@ -45,30 +45,45 @@
       "source": "literature",
       "ref_doi": "10.1007/s10311-023-01563-9",
       "verification": "needs_review",
-      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "基本原理": "龙虾外骨骼是壳聚糖的天然来源之一，吸附机制与壳聚糖相同",
       "causal_chain": {
         "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "多种污染物（重金属、染料、有机物）",
+          "basis": "from_source",
+          "locator": "mechanism name"
         },
         "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "龙虾外骨骼的几丁质-矿物复合结构，脱矿后提取几丁质/壳聚糖",
+          "basis": "from_source",
+          "locator": "literature"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "与chitosan相同：氨基配位、羟基氢键、静电吸引",
+          "basis": "from_source",
+          "locator": "bp text"
         },
         "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "龙虾外骨骼是壳聚糖的天然来源之一，吸附机制与壳聚糖相同",
+          "basis": "llm_inferred",
+          "locator": null
         },
-        "boundary_conditions": [],
-        "transferable_principle": "",
+        "boundary_conditions": [
+          {
+            "text": "与壳聚糖相同的pH限制",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "龙虾外骨骼提取的壳聚糖与虾蟹壳来源壳聚糖吸附机制相同",
         "verification_quote": null
       }
     }

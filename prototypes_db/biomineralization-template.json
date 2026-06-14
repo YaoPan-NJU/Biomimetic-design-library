@@ -15,7 +15,58 @@
     "note": "测过的 pH/温度范围，不是适用范围。仅从 performance_data 中实际测试过的条件聚合。"
   },
   "performance_data": [],
-  "mechanisms": [],
+  "mechanisms": [
+    {
+      "name": "生物矿化模板吸附机制（待文献支撑）",
+      "source": "llm_inference",
+      "ref_doi": null,
+      "source_file": null,
+      "verification": "needs_review",
+      "基本原理": "生物矿化通过有机模板控制无机晶体生长方向和形貌，形成的多级孔结构可作为吸附剂骨架",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "金属离子（通过矿化过程捕获）",
+          "basis": "llm_inferred",
+          "locator": null
+        },
+        "bio_structure": {
+          "text": "生物矿化过程中的有机模板（蛋白质、多糖）",
+          "basis": "llm_inferred",
+          "locator": null
+        },
+        "interaction": {
+          "text": "有机模板引导无机矿化→形成多级孔结构→物理吸附+表面配位",
+          "basis": "llm_inferred",
+          "locator": null
+        },
+        "why_it_works": {
+          "text": "生物矿化通过有机模板控制无机晶体生长方向和形貌，形成的多级孔结构可作为吸附剂骨架",
+          "basis": "llm_inferred",
+          "locator": null
+        },
+        "boundary_conditions": [
+          {
+            "text": "待文献确定具体失效边界",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "利用有机模板控制无机材料的孔结构和表面化学，实现仿生矿化吸附剂设计",
+        "verification_quote": null
+      },
+      "functional_groups": [],
+      "key_structures": []
+    }
+  ],
   "narrative": {
     "entries": []
   },

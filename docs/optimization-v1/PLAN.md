@@ -21,7 +21,7 @@
 4. **每阶段产出一份阶段报告**，固定包含四块：①修改文件列表 ②执行的命令 ③验收命令的实际输出 ④残留风险。报告存到 `docs/optimization-v1/phaseN-report.md`。
 5. **不许跳验收。** 每个 Phase 的"验收标准"全部为绿，才能进入下一个 Phase。
 6. **surgical 改动。** 只改本方案要求改的内容；不顺手"优化"无关代码、注释、格式；不删除非本方案产生的死代码（发现了就在阶段报告里记一笔）。
-7. **canon 唯一真源是 `prototypes_db/*.json`。** 所有 `prototypes/*/prototype.md`、`feature-mapping.json` 等都是派生物，改完 canon 后用既有工具重建，不手改派生物。
+7. **canon 唯一真源是 `prototypes_db/*.json`。** 所有 `prototypes/*/prototype.md`、`feature-mapping.json` 等都是派生物，改完 canon 后用既有工具重建，不手改派生物。⚠️ **严禁运行 `build_prototypes_db.py`**——它从 extraction 原始 JSON 重建 canon，会冲掉 Phase 2/3/4 的清理（chimera 复活、已删机制重入）。canon 已冻结，只在其上直接编辑；生成 prototype.md 用 `generate_prototype_md.py`（canon→md 方向）。
 8. **不确定就停。** 任何一步遇到本方案没覆盖的歧义，停止该条目处理，把它记入该阶段报告的"待裁决清单"，继续处理其它条目，最后统一交回 Yao。
 9. **全程 UTF-8。** Python 脚本统一 `python -X utf8`。
 
@@ -505,7 +505,7 @@ python -X utf8 tools/verify_adrmats_delivery.py   # 期望：仍全 PASS，且�
 **前置**：Phase 0–8 全部通过。
 
 **步骤**
-1. 重建派生物：`python tools/build_prototypes_db.py`（带 enrichment 兜底），随后跑全套检查。
+1. 重建派生物：⚠️ **不运行 `build_prototypes_db.py`**（会冲掉清理）。改用 `generate_prototype_md.py` 从 canon 生成 prototype.md；enrichment 已在 Phase 4 导出。随后跑全套检查。
 2. 重新生成 4 个金标准 brief 示例（Pb(II)、PFOA、SMX、BPA），存 `examples/adrmats_briefs/`，并人工抽查其 `honesty_ledger`：verified 进 facts、llm_inferred 进 inferences，无错配。
 3. 更新 `README.md` 与 `docs/SUPPORT_SCOPE_AND_RISKS.md`，使统计与真实一致（verified 数、active 原型数、DEMOTE/PARK 说明）。
 4. 写总验收报告 `docs/optimization-v1/FINAL-report.md`。

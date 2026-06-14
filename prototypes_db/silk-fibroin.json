@@ -509,30 +509,49 @@
       "source": "literature",
       "ref_doi": "10.1016/j.eti.2022.102741",
       "verification": "needs_review",
-      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "基本原理": "丝素蛋白表面富含羧基和氨基，在中性pH下带负电荷，通过静电吸引捕获阳离子染料",
       "causal_chain": {
         "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "阳离子染料（MB、CV）和重金属离子",
+          "basis": "from_source",
+          "locator": "mechanism description"
         },
         "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "丝素蛋白的β-折叠结构和表面羧基/氨基",
+          "basis": "from_source",
+          "locator": "literature"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "静电吸引（负电表面与阳离子）、配位（-COOH/-NH₂与金属离子）",
+          "basis": "from_source",
+          "locator": "bp text"
         },
         "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "丝素蛋白表面富含羧基和氨基，在中性pH下带负电荷，通过静电吸引捕获阳离子染料",
+          "basis": "llm_inferred",
+          "locator": null
         },
-        "boundary_conditions": [],
-        "transferable_principle": "",
+        "boundary_conditions": [
+          {
+            "text": "丝素蛋白在强酸/强碱下水解",
+            "parameter": "pH",
+            "condition": {
+              "operator": "range",
+              "value": [
+                2,
+                11
+              ],
+              "basis_note": "定性范围"
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "丝素蛋白的β-折叠结构提供力学稳定性，表面羧基/氨基提供吸附活性，是可降解的生物吸附剂",
         "verification_quote": null
       }
     },
@@ -543,32 +562,7 @@
       "source": "literature",
       "ref_doi": "10.1016/j.eti.2022.102741",
       "verification": "needs_review",
-      "基本原理": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "基本原理": "needs_review"
     },
     {
       "name": "结晶紫吸附机制",
@@ -577,32 +571,7 @@
       "source": "literature",
       "ref_doi": "10.1016/j.ijbiomac.2023.126863",
       "verification": "needs_review",
-      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移"
     },
     {
       "name": "静电纺丝工艺参数",
@@ -611,32 +580,7 @@
       "source": "literature",
       "ref_doi": "10.1016/j.ijbiomac.2023.126863",
       "verification": "needs_review",
-      "基本原理": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "基本原理": "needs_review"
     },
     {
       "name": "木质素疏水性来源",
@@ -645,32 +589,7 @@
       "source": "literature",
       "ref_doi": "10.1016/j.ijbiomac.2023.126863",
       "verification": "needs_review",
-      "基本原理": "木质部的纤维素和木质素可通过羟基、羧基和芳香环结合污染物",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "基本原理": "木质部的纤维素和木质素可通过羟基、羧基和芳香环结合污染物"
     },
     {
       "name": "MOF-纳米纤维复合材料的主要吸附机制",
@@ -679,32 +598,7 @@
       "source": "literature",
       "ref_doi": "10.1039/d1ra07034g",
       "verification": "needs_review",
-      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移"
     },
     {
       "name": "ZIF-8吸附Cu(II)的三步机制",
@@ -713,32 +607,7 @@
       "source": "literature",
       "ref_doi": "10.1039/d1ra07034g",
       "verification": "needs_review",
-      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移"
     },
     {
       "name": "ZIF-67–MIM/CA去除Cr(VI)的多重机制",
@@ -747,32 +616,7 @@
       "source": "literature",
       "ref_doi": "10.1039/d1ra07034g",
       "verification": "needs_review",
-      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移"
     },
     {
       "name": "MO吸附机制",
@@ -781,32 +625,7 @@
       "source": "literature",
       "ref_doi": "10.1002/admi.202001892",
       "verification": "needs_review",
-      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移"
     },
     {
       "name": "Cu²⁺吸附机制",
@@ -815,32 +634,7 @@
       "source": "literature",
       "ref_doi": "10.1002/admi.202001892",
       "verification": "needs_review",
-      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移"
     },
     {
       "name": "丝素蛋白分子结构与力学性能",
@@ -849,32 +643,7 @@
       "source": "literature",
       "ref_doi": "10.1007/s10924-022-02741-6",
       "verification": "needs_review",
-      "基本原理": "蚕丝蛋白的氨基、羧基和酰胺基可通过静电吸引、氢键或配位作用结合污染物",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "基本原理": "蚕丝蛋白的氨基、羧基和酰胺基可通过静电吸引、氢键或配位作用结合污染物"
     },
     {
       "name": "丝素蛋白极性官能团——吸附活性位点",
@@ -888,32 +657,7 @@
       "source": "literature",
       "ref_doi": "10.1007/s10924-022-02741-6",
       "verification": "needs_review",
-      "基本原理": "蚕丝蛋白的氨基、羧基和酰胺基可通过静电吸引、氢键或配位作用结合污染物",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "基本原理": "蚕丝蛋白的氨基、羧基和酰胺基可通过静电吸引、氢键或配位作用结合污染物"
     },
     {
       "name": "Na₂CO₃脱胶丝纤维——超疏水油水分离",
@@ -922,32 +666,7 @@
       "source": "literature",
       "ref_doi": "10.1007/s10924-022-02741-6",
       "verification": "needs_review",
-      "基本原理": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "基本原理": "needs_review"
     },
     {
       "name": "丝素仿生层级结构设计原则",
@@ -956,32 +675,7 @@
       "source": "literature",
       "ref_doi": "10.1007/s10924-022-02741-6",
       "verification": "needs_review",
-      "基本原理": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "基本原理": "needs_review"
     },
     {
       "name": "吸附机制——静电作用",
@@ -990,32 +684,7 @@
       "source": "literature",
       "ref_doi": "10.1039/d1va00047k",
       "verification": "needs_review",
-      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移"
     },
     {
       "name": "pH 2-4时吸附机理",
@@ -1023,32 +692,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.jtice.2023.105298",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "脱胶蚕丝的超疏水性",
@@ -1056,32 +700,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1007/s10924-022-02741-6",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "蚕丝蛋白油水分离材料汇总",
@@ -1089,32 +708,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1007/s10924-022-02741-6",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "丝素蛋白复合材料的吸附机制",
@@ -1122,32 +716,7 @@
       "functional_groups": "-OH, -NH₂, -COOH, 酰胺基",
       "source": "literature",
       "ref_doi": "10.1007/s10924-022-02741-6",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "吸附机制",
@@ -1158,29 +727,49 @@
       "verification": "needs_review",
       "causal_chain": {
         "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "阳离子染料（MB、CV）和重金属离子",
+          "basis": "from_source",
+          "locator": "mechanism description"
         },
         "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "丝素蛋白的β-折叠结构和表面羧基/氨基",
+          "basis": "from_source",
+          "locator": "literature"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "静电吸引（负电表面与阳离子）、配位（-COOH/-NH₂与金属离子）",
+          "basis": "from_source",
+          "locator": "bp text"
         },
         "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "丝素蛋白表面富含羧基和氨基，在中性pH下带负电荷，通过静电吸引捕获阳离子染料",
+          "basis": "llm_inferred",
+          "locator": null
         },
-        "boundary_conditions": [],
-        "transferable_principle": "",
+        "boundary_conditions": [
+          {
+            "text": "丝素蛋白在强酸/强碱下水解",
+            "parameter": "pH",
+            "condition": {
+              "operator": "range",
+              "value": [
+                2,
+                11
+              ],
+              "basis_note": "定性范围"
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "丝素蛋白的β-折叠结构提供力学稳定性，表面羧基/氨基提供吸附活性，是可降解的生物吸附剂",
         "verification_quote": null
-      }
+      },
+      "基本原理": "丝素蛋白表面富含羧基和氨基，在中性pH下带负电荷，通过静电吸引捕获阳离子染料"
     }
   ],
   "narrative": {

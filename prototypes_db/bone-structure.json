@@ -86,32 +86,7 @@
       "source": "literature",
       "ref_doi": "10.1016/j.jtice.2024.105668",
       "verification": "needs_review",
-      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移"
     },
     {
       "name": "HAp四种重金属吸附机制",
@@ -120,30 +95,48 @@
       "source": "literature",
       "ref_doi": "10.1016/j.jtice.2024.105668",
       "verification": "needs_review",
-      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "基本原理": "HAp的Ca²⁺位点可被重金属离子交换取代，且磷酸根可与重金属形成难溶磷酸盐沉淀，实现双重去除机制",
       "causal_chain": {
         "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "Pb²⁺、Cd²⁺、Cu²⁺、Zn²⁺等二价重金属离子",
+          "basis": "from_source",
+          "locator": "mechanism name"
         },
         "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "羟基磷灰石（HAp, Ca₁₀(PO₄)₆(OH)₂）的晶体结构和表面Ca²⁺/OH⁻位点",
+          "basis": "from_source",
+          "locator": "mechanism description"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "表面离子交换（Ca²⁺↔Pb²⁺/Cd²⁺）、表面配位（OH⁻与金属离子）、共沉淀（磷酸盐沉淀）",
+          "basis": "from_source",
+          "locator": "mechanism description"
         },
         "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "HAp的Ca²⁺位点可被重金属离子交换取代，且磷酸根可与重金属形成难溶磷酸盐沉淀，实现双重去除机制",
+          "basis": "llm_inferred",
+          "locator": null
         },
-        "boundary_conditions": [],
-        "transferable_principle": "",
+        "boundary_conditions": [
+          {
+            "text": "pH < 4时HAp开始溶解释放Ca²⁺",
+            "parameter": "pH",
+            "condition": {
+              "operator": "threshold_lt",
+              "value": [
+                4
+              ],
+              "basis_note": "定性"
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "羟基磷灰石通过离子交换+共沉淀双重机制去除重金属，是骨骼/牙齿启发的无机吸附剂",
         "verification_quote": null
       }
     },
@@ -154,32 +147,7 @@
       "source": "literature",
       "ref_doi": "10.1016/j.jtice.2024.105668",
       "verification": "needs_review",
-      "基本原理": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "基本原理": "needs_review"
     },
     {
       "name": "HAp膜类型与制备技术",
@@ -188,32 +156,7 @@
       "source": "literature",
       "ref_doi": "10.1016/j.jtice.2024.105668",
       "verification": "needs_review",
-      "基本原理": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "基本原理": "needs_review"
     },
     {
       "name": "MOFs光催化降解染料的机理",
@@ -222,32 +165,7 @@
       "source": "literature",
       "ref_doi": null,
       "verification": "needs_review",
-      "基本原理": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "基本原理": "needs_review"
     }
   ],
   "narrative": {

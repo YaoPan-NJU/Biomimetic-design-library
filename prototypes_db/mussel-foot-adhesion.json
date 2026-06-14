@@ -870,32 +870,7 @@
           "name": "adsorption",
           "evidence": "Detected in mechanism: N位点激活PDS生成¹O₂的机制 Mechanism of N site activating PD"
         }
-      ],
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      ]
     },
     {
       "name": "MI-PDA表面官能团识别机制 Surface functional group recognition mechanism of MI-PDA",
@@ -910,32 +885,7 @@
           "name": "hydroxyl group (-OH)",
           "evidence": "Detected in mechanism: MI-PDA表面官能团识别机制 Surface functional group recogniti"
         }
-      ],
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      ]
     },
     {
       "name": "PDA涂层粘附机制",
@@ -953,29 +903,62 @@
       ],
       "causal_chain": {
         "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "多种污染物（软金属、有机染料、抗生素）的活性官能团",
+          "basis": "llm_inferred",
+          "locator": null
         },
         "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "贻贝足丝蛋白DOPA（3,4-二羟基苯丙氨酸）的邻苯二酚基团",
+          "basis": "from_source",
+          "locator": "p.2 / Sec.1"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "邻苯二酚双齿配位（软金属）、π-π堆积（芳香污染物）、氢键（极性分子）、Michael加成/Schiff碱（含胺基污染物）",
+          "basis": "from_source",
+          "locator": "p.2 / Sec.1"
         },
         "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "邻苯二酚的两个相邻羟基可与软金属离子（如Pb²⁺、Cu²⁺、UO₂²⁺）形成五元螯合环，结合常数高（log K 10-20），且在弱酸性至中性pH下稳定",
+          "basis": "llm_inferred",
+          "locator": null
         },
-        "boundary_conditions": [],
-        "transferable_principle": "",
+        "boundary_conditions": [
+          {
+            "text": "pH > 8.5时邻苯二酚氧化为醌，丧失配位能力",
+            "parameter": "pH",
+            "condition": {
+              "operator": "threshold_gt",
+              "value": [
+                8.5
+              ],
+              "basis_note": "定性，无PDF精确阈值"
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          },
+          {
+            "text": "强氧化性环境（如Cr(VI)、高浓度H₂O₂）会氧化DOPA为醌",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "邻苯二酚基团可在湿态、高盐条件下通过双齿配位捕获软金属离子，可迁移到任何含catechol功能化的材料表面",
         "verification_quote": null
-      }
+      },
+      "基本原理": "邻苯二酚的两个相邻羟基可与软金属离子（如Pb²⁺、Cu²⁺、UO₂²⁺）形成五元螯合环，结合常数高（log K 10-20），且在弱酸性至中性pH下稳定"
     },
     {
       "name": "PDA-ODA超疏水棉花织物接触角",
@@ -983,32 +966,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1039/d5su00041f",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "PDA微胶囊自修复超疏水棉花织物",
@@ -1016,32 +974,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1039/d5su00041f",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "PDA-TA/硼砂阻燃超疏水棉花织物",
@@ -1049,32 +982,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1039/d5su00041f",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "超疏水PDA涂层棉花织物耐久性测试",
@@ -1089,32 +997,7 @@
           "name": "coating",
           "evidence": "Detected in mechanism: 超疏水PDA涂层棉花织物耐久性测试"
         }
-      ],
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      ]
     },
     {
       "name": "PLA非织造织物超疏水磁性油水分离",
@@ -1122,32 +1005,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1039/d5su00041f",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "六种自然超浸润材料及其浸润特性",
@@ -1162,32 +1020,7 @@
           "name": "micro-nano hierarchical structure",
           "evidence": "Detected in mechanism: 六种自然超浸润材料及其浸润特性"
         }
-      ],
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      ]
     },
     {
       "name": "油水分离材料的两大分类策略",
@@ -1195,32 +1028,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1021/acsami.0c18794",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "PDMS浸涂法超疏水织物的WCA和分离效率",
@@ -1228,32 +1036,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1021/acsami.0c18794",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "无氟超疏水棉织物（ZnO纳米棒+硬脂酸）的WCA和分离效率",
@@ -1261,32 +1044,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1021/acsami.0c18794",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "CVD法制备超疏水石墨烯气凝胶（SGA）的润湿性和吸附性能",
@@ -1294,32 +1052,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1021/acsami.0c18794",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "PANI/TiO₂可见光催化超疏水网格的通量和循环性能",
@@ -1327,32 +1060,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1021/acsami.0c18794",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "Co配位键自修复超疏水织物的修复性能",
@@ -1360,32 +1068,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1021/acsami.0c18794",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "CeO₂超疏水光催化膜的分离效率",
@@ -1393,32 +1076,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1021/acsami.0c18794",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "双刺激响应膜（UV+pH）的可逆润湿性切换和光催化降解",
@@ -1433,32 +1091,7 @@
           "name": "membrane",
           "evidence": "Detected in mechanism: 双刺激响应膜（UV+pH）的可逆润湿性切换和光催化降解"
         }
-      ],
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      ]
     },
     {
       "name": "超疏水材料WCA随浸涂液THF/水比例的变化规律",
@@ -1466,32 +1099,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1021/acsami.0c18794",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "溶胶-凝胶法制备的PDMS@SiO₂超疏水织物的耐久性",
@@ -1499,32 +1107,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1021/acsami.0c18794",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "两性离子水合能力 vs PEG Zwitterion hydration capacity vs PEG",
@@ -1532,32 +1115,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1039/d1cs00658d",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "磷酸胆碱仿生机制 Phosphorylcholine biomimetic mechanism",
@@ -1572,32 +1130,7 @@
           "name": "membrane",
           "evidence": "Detected in mechanism: 磷酸胆碱仿生机制 Phosphorylcholine biomimetic mechanism"
         }
-      ],
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      ]
     },
     {
       "name": "PDA自聚合形成机制 PDA self-polymerization mechanism",
@@ -1620,29 +1153,62 @@
       ],
       "causal_chain": {
         "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "需要表面功能化涂层的吸附应用场景",
+          "basis": "llm_inferred",
+          "locator": null
         },
         "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "多巴胺（DOPA前体）在弱碱性条件下（pH 8.5）自聚成聚多巴胺（PDA）涂层",
+          "basis": "from_source",
+          "locator": "Sec.2"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "DOPA氧化为醌→分子间交联（Michael加成/Schiff碱/π-π堆积）→形成均匀、厚度可控的PDA涂层",
+          "basis": "from_source",
+          "locator": "Sec.2"
         },
         "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "PDA涂层可在几乎所有基底（金属、氧化物、聚合物、陶瓷）上形成均匀薄膜，保留邻苯二酚和胺基活性位点，同时提供粘附力",
+          "basis": "llm_inferred",
+          "locator": null
         },
-        "boundary_conditions": [],
-        "transferable_principle": "",
+        "boundary_conditions": [
+          {
+            "text": "pH < 6时自聚合速率极慢，涂层难以形成",
+            "parameter": "pH",
+            "condition": {
+              "operator": "threshold_lt",
+              "value": [
+                6
+              ],
+              "basis_note": "定性"
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          },
+          {
+            "text": "涂层厚度随时间增加但活性位点密度下降",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "多巴胺自聚可在任意基底上沉积含catechol/amine的活性涂层，是通用的表面功能化平台技术",
         "verification_quote": null
-      }
+      },
+      "基本原理": "PDA涂层可在几乎所有基底（金属、氧化物、聚合物、陶瓷）上形成均匀薄膜，保留邻苯二酚和胺基活性位点，同时提供粘附力"
     },
     {
       "name": "PDA涂层 vs 传统涂层技术对比 PDA coating vs traditional coating techniques",
@@ -1667,32 +1233,7 @@
           "name": "coating",
           "evidence": "Detected in mechanism: PDA涂层 vs 传统涂层技术对比 PDA coating vs traditional coati"
         }
-      ],
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      ]
     },
     {
       "name": "多巴胺辅助共沉积机制 Dopamine-assisted co-deposition mechanism",
@@ -1717,32 +1258,7 @@
           "name": "coating",
           "evidence": "Detected in mechanism: 多巴胺辅助共沉积机制 Dopamine-assisted co-deposition mechani"
         }
-      ],
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      ]
     },
     {
       "name": "铀酰离子配位化学",
@@ -1753,29 +1269,62 @@
       "verification": "needs_review",
       "causal_chain": {
         "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "UO₂²⁺（铀酰离子），线性构型，含两个强U=O键",
+          "basis": "from_source",
+          "locator": "Sec.3"
         },
         "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "PDA表面的邻苯二酚基团和酰胺肟基团",
+          "basis": "from_source",
+          "locator": "Sec.3"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "邻苯二酚与UO₂²⁺的双齿/三齿配位，酰胺肟与UO₂²⁺的螯合（log K ~16）",
+          "basis": "from_source",
+          "locator": "Sec.3"
         },
         "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "酰胺肟基团（-C(=NOH)NH₂）对铀酰离子有极高的选择性和亲和力，可在海水中ppb级浓度下有效捕获铀",
+          "basis": "from_source",
+          "locator": "Sec.3"
         },
-        "boundary_conditions": [],
-        "transferable_principle": "",
+        "boundary_conditions": [
+          {
+            "text": "高浓度碳酸盐（海水条件）会与铀酰形成碳酸铀酰络合物，竞争配位",
+            "parameter": "salinity",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          },
+          {
+            "text": "pH < 4时酰胺肟基团质子化，配位能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "threshold_lt",
+              "value": [
+                4
+              ],
+              "basis_note": "定性"
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "酰胺肟功能化可在海水条件下选择性捕获铀酰离子，可迁移到任何含酰胺肟基团的吸附材料",
         "verification_quote": null
-      }
+      },
+      "基本原理": "酰胺肟基团（-C(=NOH)NH₂）对铀酰离子有极高的选择性和亲和力，可在海水中ppb级浓度下有效捕获铀"
     },
     {
       "name": "酰胺肟配位模式",
@@ -1783,32 +1332,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.ccr.2023.215234",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "配体优化六大策略",
@@ -1816,32 +1340,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.ccr.2023.215234",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "双功能协同策略",
@@ -1849,32 +1348,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.ccr.2023.215234",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "离子印迹策略——三种改进方向",
@@ -1882,32 +1356,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.ccr.2023.215234",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "电化学提取三阶段机理",
@@ -1927,32 +1376,7 @@
           "name": "adsorption",
           "evidence": "Detected in mechanism: 电化学提取三阶段机理"
         }
-      ],
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      ]
     },
     {
       "name": "MOF光催化协同机制",
@@ -1960,32 +1384,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.ccr.2023.215234",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "疏水改性方法分类",
@@ -2000,32 +1399,7 @@
           "name": "coating",
           "evidence": "Detected in mechanism: 疏水改性方法分类"
         }
-      ],
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      ]
     },
     {
       "name": "CVD法均匀性问题",
@@ -2040,32 +1414,7 @@
           "name": "porous structure",
           "evidence": "Detected in mechanism: CVD法均匀性问题"
         }
-      ],
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      ]
     },
     {
       "name": "疏水改性材料分布统计",
@@ -2073,32 +1422,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.carbpol.2022.120242",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "特殊润湿性分类",
@@ -2106,32 +1430,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1021/acsami.0c18794",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "荷叶效应仿生原理",
@@ -2146,32 +1445,7 @@
           "name": "micro-nano hierarchical structure",
           "evidence": "Detected in mechanism: 荷叶效应仿生原理"
         }
-      ],
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      ]
     },
     {
       "name": "荷叶上下表面润湿性差异",
@@ -2179,32 +1453,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1021/acsami.0c18794",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "壁虎脚仿生特性",
@@ -2212,32 +1461,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1021/acsami.0c18794",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "玫瑰花瓣高黏附超疏水",
@@ -2245,32 +1469,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1021/acsami.0c18794",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "浸涂法制备超疏水表面 — THF/水比例优化",
@@ -2278,32 +1477,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1021/acsami.0c18794",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "溶胶-凝胶法制备超疏水纺织品耐久性",
@@ -2311,32 +1485,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1021/acsami.0c18794",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "Table 1 — 超疏水/超亲油材料制备技术汇总",
@@ -2344,32 +1493,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1021/acsami.0c18794",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "TiO2光催化降解机理",
@@ -2377,32 +1501,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1021/acsami.0c18794",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "CeO2纳米粒子超疏水光催化膜",
@@ -2410,32 +1509,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1021/acsami.0c18794",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "pH响应PDMS-bP4VP电纺膜",
@@ -2450,32 +1524,7 @@
           "name": "membrane",
           "evidence": "Detected in mechanism: pH响应PDMS-bP4VP电纺膜"
         }
-      ],
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      ]
     },
     {
       "name": "双刺激UV+pH可切换润湿性",
@@ -2483,32 +1532,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1021/acsami.0c18794",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "氨水诱导超疏水/超亲油PVDF膜 Ammonia-water induced superhydrophobic PVDF membrane",
@@ -2516,32 +1540,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1021/acsnano.5c01252",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "CO2响应润湿性反转机制 CO2-responsive wettability reversal mechanism",
@@ -2556,32 +1555,7 @@
           "name": "amino group (-NH2)",
           "evidence": "Detected in mechanism: CO2响应润湿性反转机制 CO2-responsive wettability reversal m"
         }
-      ],
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      ]
     },
     {
       "name": "电响应润湿性反转机制 Electro-responsive wettability reversal mechanism",
@@ -2589,32 +1563,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1021/acsnano.5c01252",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "光热响应润湿性反转机制 Photothermal-responsive wettability reversal mechanism",
@@ -2622,32 +1571,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1021/acsnano.5c01252",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "pH响应润湿性反转机制 pH-responsive wettability reversal mechanism",
@@ -2655,32 +1579,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1021/acsnano.5c01252",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "Janus膜电荷聚合物协同破乳 Janus membrane with charged polymers for demulsification",
@@ -2695,32 +1594,7 @@
           "name": "membrane",
           "evidence": "Detected in mechanism: Janus膜电荷聚合物协同破乳 Janus membrane with charged polyme"
         }
-      ],
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      ]
     },
     {
       "name": "传统膜疏水/水下亲油致命缺陷 Traditional membrane hydrophobic/underwater oleophilic drawbacks",
@@ -2728,32 +1602,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1021/acsnano.5c01252",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "PNIPAM刷温度响应润湿性切换",
@@ -2761,32 +1610,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1021/acsnano.4c18335",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "亲疏水刷仿鲨鱼皮水减阻率",
@@ -2794,32 +1618,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1021/acsnano.4c18335",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "PPFEMA刷疏水减阻最大减阻率",
@@ -2827,32 +1626,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1021/acsnano.4c18335",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "超疏水表面+响应刷边界滑移调控",
@@ -2860,32 +1634,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1021/acsnano.4c18335",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "NP-GLIDE涂层设计原理",
@@ -2900,32 +1649,7 @@
           "name": "coating",
           "evidence": "Detected in mechanism: NP-GLIDE涂层设计原理"
         }
-      ],
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      ]
     },
     {
       "name": "聚合物刷减阻性能对比（亲水vs疏水）",
@@ -2933,32 +1657,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1021/acsnano.4c18335",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "聚合物刷防雾涂层厚度与亲水性关系",
@@ -2973,32 +1672,7 @@
           "name": "coating",
           "evidence": "Detected in mechanism: 聚合物刷防雾涂层厚度与亲水性关系"
         }
-      ],
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      ]
     },
     {
       "name": "三种驱动力协同机制",
@@ -3013,32 +1687,7 @@
           "name": "adsorption",
           "evidence": "Detected in mechanism: 三种驱动力协同机制"
         }
-      ],
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      ]
     },
     {
       "name": "染料絮凝实验——盐浓度效应确认静电机制",
@@ -3046,32 +1695,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.cej.2021.129237",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "润湿性四大理论体系",
@@ -3086,32 +1710,7 @@
           "name": "membrane",
           "evidence": "Detected in mechanism: 润湿性四大理论体系"
         }
-      ],
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      ]
     },
     {
       "name": "层级微纳结构理论与re-entrant几何",
@@ -3119,32 +1718,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1002/smll.202204624",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "10种生物原型的超润湿表面特征",
@@ -3152,32 +1726,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1002/smll.202204624",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "八类制备方法：微纳结构构建技术",
@@ -3185,32 +1734,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1002/smll.202204624",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "Janus膜：荷叶启发不对称润湿→按需分离",
@@ -3218,32 +1742,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1002/smll.202204624",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "双超疏液材料：猪笼草液体灌注+re-entrant结构",
@@ -3251,32 +1750,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1002/smll.202204624",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "智能响应触发器：七类外部刺激可逆切换润湿性",
@@ -3284,32 +1758,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1002/smll.202204624",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "从两相到多相：按需分离范围的扩展",
@@ -3329,32 +1778,7 @@
           "name": "membrane",
           "evidence": "Detected in mechanism: 从两相到多相：按需分离范围的扩展"
         }
-      ],
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      ]
     },
     {
       "name": "吸附机制-螯合作用 / Adsorption mechanism - chelation",
@@ -3369,32 +1793,7 @@
           "name": "adsorption",
           "evidence": "Detected in mechanism: 吸附机制-螯合作用 / Adsorption mechanism - chelation"
         }
-      ],
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      ]
     },
     {
       "name": "贻贝仿生启发机制 / Mussel-inspired biomimetic mechanism",
@@ -3414,32 +1813,7 @@
           "name": "self-assembly",
           "evidence": "Detected in mechanism: 贻贝仿生启发机制 / Mussel-inspired biomimetic mechanism"
         }
-      ],
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      ]
     },
     {
       "name": "仿贻贝聚多巴胺改性机制 / Mussel-inspired PDA modification mechanism",
@@ -3454,32 +1828,7 @@
           "name": "membrane",
           "evidence": "Detected in mechanism: 仿贻贝聚多巴胺改性机制 / Mussel-inspired PDA modification mec"
         }
-      ],
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      ]
     },
     {
       "name": "PDA吸附机制-姜黄素",
@@ -3494,32 +1843,7 @@
           "name": "adsorption",
           "evidence": "Detected in mechanism: PDA吸附机制-姜黄素"
         }
-      ],
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      ]
     },
     {
       "name": "PDA吸附机制-番茄红素",
@@ -3534,32 +1858,7 @@
           "name": "adsorption",
           "evidence": "Detected in mechanism: PDA吸附机制-番茄红素"
         }
-      ],
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      ]
     },
     {
       "name": "聚多巴胺聚合机理 Polydopamine polymerization mechanism",
@@ -3579,32 +1878,7 @@
           "name": "catechol",
           "evidence": "Detected in mechanism: 聚多巴胺聚合机理 Polydopamine polymerization mechanism"
         }
-      ],
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      ]
     },
     {
       "name": "铀吸附机制 Uranium adsorption mechanism",
@@ -3629,32 +1903,7 @@
           "name": "adsorption",
           "evidence": "Detected in mechanism: 铀吸附机制 Uranium adsorption mechanism"
         }
-      ],
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      ]
     },
     {
       "name": "贻贝仿生改性机制 / Mussel-inspired biomimetic modification mechanism",
@@ -3662,32 +1911,7 @@
       "functional_groups": "",
       "source": "patent",
       "ref_doi": null,
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "吸附机制",
@@ -3695,32 +1919,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.apsusc.2020.148379",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "pHpzc和pH影响",
@@ -3728,32 +1927,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.apsusc.2022.154338",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "吸附机理六重协同",
@@ -3761,32 +1935,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.apsusc.2022.154338",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "吸附机制-酚羟基参与",
@@ -3794,32 +1943,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.cej.2020.127837",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "XPS分析-吸附机理",
@@ -3827,32 +1951,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.jhazmat.2020.124347",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "吸附活性基团协同",
@@ -3860,32 +1959,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.jhazmat.2020.124347",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "XPS吸附机理",
@@ -3893,32 +1967,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.jhazmat.2022.129112",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "吸附机理-pH依赖性",
@@ -3926,32 +1975,7 @@
       "functional_groups": "",
       "source": "patent",
       "ref_doi": null,
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "吸附机制类型",
@@ -3959,32 +1983,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.jece.2021.105709",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "PDA吸附机制补充",
@@ -3992,32 +1991,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.13550/j.jxhg.20220633",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     }
   ],
   "narrative": {

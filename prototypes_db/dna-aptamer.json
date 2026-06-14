@@ -15,7 +15,58 @@
     "note": "测过的 pH/温度范围，不是适用范围。仅从 performance_data 中实际测试过的条件聚合。"
   },
   "performance_data": [],
-  "mechanisms": [],
+  "mechanisms": [
+    {
+      "name": "DNA适配体分子识别机制（待文献支撑）",
+      "source": "llm_inference",
+      "ref_doi": null,
+      "source_file": null,
+      "verification": "needs_review",
+      "基本原理": "DNA适配体可通过SELEX筛选获得对任意目标分子的高亲和力（Kd nM级）和高选择性",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "特定目标分子（通过SELEX筛选确定）",
+          "basis": "llm_inferred",
+          "locator": null
+        },
+        "bio_structure": {
+          "text": "DNA适配体的三维折叠结构（发夹、G-四链体等）",
+          "basis": "llm_inferred",
+          "locator": null
+        },
+        "interaction": {
+          "text": "适配体与目标分子的特异性结合（氢键、范德华力、形状互补）",
+          "basis": "llm_inferred",
+          "locator": null
+        },
+        "why_it_works": {
+          "text": "DNA适配体可通过SELEX筛选获得对任意目标分子的高亲和力（Kd nM级）和高选择性",
+          "basis": "llm_inferred",
+          "locator": null
+        },
+        "boundary_conditions": [
+          {
+            "text": "待文献确定具体失效边界",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "DNA适配体是人工分子识别元件，可针对任意目标污染物筛选，实现超选择性吸附",
+        "verification_quote": null
+      },
+      "functional_groups": [],
+      "key_structures": []
+    }
+  ],
   "narrative": {
     "entries": []
   },

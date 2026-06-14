@@ -148,32 +148,7 @@
       "source": "literature",
       "ref_doi": "10.1016/j.tibtech.2022.09.011",
       "verification": "needs_review",
-      "基本原理": "木质部的纤维素和木质素可通过羟基、羧基和芳香环结合污染物",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "基本原理": "木质部的纤维素和木质素可通过羟基、羧基和芳香环结合污染物"
     },
     {
       "name": "PEI改性纤维素微晶去除PFAS PEI-modified cellulose for PFAS",
@@ -182,32 +157,7 @@
       "source": "literature",
       "ref_doi": "10.1016/j.tibtech.2022.09.011",
       "verification": "needs_review",
-      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移"
     },
     {
       "name": "纳米纤维素泡沫吸附油 Nanocellulose foam for oil",
@@ -216,32 +166,7 @@
       "source": "literature",
       "ref_doi": "10.1016/j.tibtech.2022.09.011",
       "verification": "needs_review",
-      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移"
     },
     {
       "name": "CMC水凝胶重金属螯合 CMC hydrogel heavy metal chelation",
@@ -250,30 +175,48 @@
       "source": "literature",
       "ref_doi": "10.1016/j.tibtech.2022.09.011",
       "verification": "needs_review",
-      "基本原理": "needs_review",
+      "基本原理": "CMC水凝胶的羧基提供高密度配位位点，三维网络结构提供高比表面积和快速扩散通道",
       "causal_chain": {
         "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "重金属离子（Pb²⁺、Cu²⁺、Cd²⁺）",
+          "basis": "from_source",
+          "locator": "mechanism name"
         },
         "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "菌丝体衍生的羧甲基纤维素（CMC）水凝胶网络",
+          "basis": "from_source",
+          "locator": "mechanism description"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "羧基（-COO⁻）与重金属离子的螯合配位",
+          "basis": "from_source",
+          "locator": "mechanism description"
         },
         "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "CMC水凝胶的羧基提供高密度配位位点，三维网络结构提供高比表面积和快速扩散通道",
+          "basis": "llm_inferred",
+          "locator": null
         },
-        "boundary_conditions": [],
-        "transferable_principle": "",
+        "boundary_conditions": [
+          {
+            "text": "pH < 3时羧基质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "threshold_lt",
+              "value": [
+                3
+              ],
+              "basis_note": "定性"
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "菌丝体衍生的含羧基水凝胶可作为廉价的重金属螯合吸附剂",
         "verification_quote": null
       }
     }

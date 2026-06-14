@@ -90,30 +90,48 @@
       "source": "literature",
       "ref_doi": "10.1038/s41598-021-82277-2",
       "verification": "needs_review",
-      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "基本原理": "木质素的芳香环和酚羟基与酚类污染物结构相似，通过π-π堆积和氢键实现选择性吸附",
       "causal_chain": {
         "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "酚类有机物（苯酚、氯代酚）",
+          "basis": "from_source",
+          "locator": "mechanism name"
         },
         "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "木质部的纤维素和木质素组成的多级孔道结构",
+          "basis": "from_source",
+          "locator": "bp text"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "酚羟基与木质素的氢键作用、芳香环的π-π堆积",
+          "basis": "from_source",
+          "locator": "mechanism description"
         },
         "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "木质素的芳香环和酚羟基与酚类污染物结构相似，通过π-π堆积和氢键实现选择性吸附",
+          "basis": "llm_inferred",
+          "locator": null
         },
-        "boundary_conditions": [],
-        "transferable_principle": "",
+        "boundary_conditions": [
+          {
+            "text": "pH > 10时酚类解离为酚盐，吸附下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "threshold_gt",
+              "value": [
+                10
+              ],
+              "basis_note": "定性"
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "木质部的多级孔道+木质素芳香结构是天然的酚类吸附平台",
         "verification_quote": null
       }
     },
@@ -124,32 +142,7 @@
       "source": "literature",
       "ref_doi": "10.1016/j.jhazmat.2021.125612",
       "verification": "needs_review",
-      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移"
     },
     {
       "name": "吸附机制：氨基配位螯合",
@@ -158,32 +151,7 @@
       "source": "literature",
       "ref_doi": "10.1016/j.jhazmat.2021.125612",
       "verification": "needs_review",
-      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移"
     },
     {
       "name": "TCTGAs组分与合成工艺",
@@ -192,32 +160,7 @@
       "source": "literature",
       "ref_doi": "10.1016/j.jhazmat.2021.125612",
       "verification": "needs_review",
-      "基本原理": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "基本原理": "needs_review"
     }
   ],
   "narrative": {

@@ -167,29 +167,45 @@
       "verification": "needs_review",
       "causal_chain": {
         "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "重金属离子和磷酸盐",
+          "basis": "llm_inferred",
+          "locator": null
         },
         "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "扇贝壳的文石型CaCO₃层状结构",
+          "basis": "from_source",
+          "locator": "literature"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "离子交换（Ca²⁺↔重金属）、表面沉淀、物理吸附",
+          "basis": "from_source",
+          "locator": "mechanism description"
         },
         "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "与牡蛎壳类似，扇贝壳的CaCO₃结构提供Ca²⁺交换位点和碱性环境",
+          "basis": "llm_inferred",
+          "locator": null
         },
-        "boundary_conditions": [],
-        "transferable_principle": "",
+        "boundary_conditions": [
+          {
+            "text": "煅烧温度影响晶型转变和吸附性能",
+            "parameter": "temperature",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "贝壳类CaCO₃的吸附机制与牡蛎壳相同，煅烧可显著提升性能",
         "verification_quote": null
-      }
+      },
+      "基本原理": "与牡蛎壳类似，扇贝壳的CaCO₃结构提供Ca²⁺交换位点和碱性环境"
     },
     {
       "name": "钝化机理",
@@ -197,32 +213,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.13254/j.jare.2020.0504",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     },
     {
       "name": "吸附机理增强因素",
@@ -230,32 +221,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.11759/hykx20221122001",
-      "verification": "needs_review",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
-        },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
-      }
+      "verification": "needs_review"
     }
   ],
   "narrative": {
