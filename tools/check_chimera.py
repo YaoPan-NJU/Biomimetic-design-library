@@ -93,6 +93,51 @@ def check_mechanism_consistency(pid: str, data: dict) -> list:
     return issues
 
 
+def check_blocklist(pid: str, data: dict, blocklist: dict) -> list:
+    """检查 mechanism / performance_data / narrative 是否命中 blocklist 污染关键词。"""
+    issues = []
+    blocked_kws = blocklist.get(pid, [])
+    if not blocked_kws:
+        return issues
+
+    def match(text, label, detail=''):
+        text_lower = text.lower()
+        for kw in blocked_kws:
+            if kw.lower() in text_lower:
+                issues.append(
+                    f'BLOCKLIST[{label}]: {detail} 命中 "{kw}"'
+                )
+                return True
+        return False
+
+    # 1. mechanisms
+    for m in data.get('mechanisms', []):
+        name = m.get('name', '')
+        desc = m.get('description', '')
+        principle = m.get('基本原理', '')
+        match(f'{name} {desc} {principle}', 'mechanism', f'"{name[:60]}"')
+
+    # 1b. mechanism_instances（同 mechanisms 扫描逻辑）
+    for m in data.get('mechanism_instances', []):
+        name = m.get('name', '')
+        desc = m.get('description', '')
+        match(f'{name} {desc}', 'instance', f'"{name[:60]}"')
+
+    # 2. performance_data
+    for i, p in enumerate(data.get('performance_data', [])):
+        fields = ' '.join(str(p.get(k, '')) for k in ['pollutant', 'parameter', 'value', 'material', 'conditions', 'source_file'])
+        match(fields, 'perf', f'perf[{i}] pollutant={p.get("pollutant","")}, material={p.get("material","")[:40]}')
+
+    # 3. narrative entries
+    for entry in data.get('narrative', {}).get('entries', []):
+        sections = entry.get('sections', {})
+        all_text = ' '.join(str(v) for v in sections.values() if v)
+        paper_id = entry.get('paper_id', '')
+        match(all_text, 'narrative', f'paper_id={paper_id[:40]}')
+
+    return issues
+
+
 def check_routing(pid: str, data: dict, extraction_dir: str) -> list:
     """检查来源论文的 routing.biomimetic_organism 是否与原型 ID 匹配。"""
     issues = []
@@ -133,6 +178,13 @@ def main():
     db_dir = args.db_dir or str(repo_dir / 'prototypes_db')
     extraction_dir = args.extraction_dir or str(repo_dir / 'tools' / 'litextract' / 'outputs' / 'extractions')
 
+    # 加载 blocklist
+    blocklist_path = os.path.join(os.path.dirname(__file__), 'chimera_blocklist.json')
+    blocklist = {}
+    if os.path.exists(blocklist_path):
+        with open(blocklist_path, 'r', encoding='utf-8') as f:
+            blocklist = json.load(f)
+
     mode = 'strict' if args.strict else 'report-only'
     print(f'=== Chimera 检查 ({mode} 模式) ===\n')
 
@@ -158,6 +210,9 @@ def main():
 
         # 2. 机制主题一致性
         issues.extend(check_mechanism_consistency(pid, data))
+
+        # 2b. blocklist 检查
+        issues.extend(check_blocklist(pid, data, blocklist))
 
         # 3. routing 检查（如果 extraction 目录存在）
         if os.path.exists(extraction_dir):

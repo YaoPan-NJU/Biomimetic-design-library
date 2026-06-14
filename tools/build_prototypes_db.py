@@ -739,6 +739,21 @@ def main():
         for pid in empty:
             print(f'  - {pid}')
 
+    # Chimera blocklist 检查（重建后自动跑，非 0 则报错）
+    import sys as _sys
+    import subprocess as _sp
+    chimera_script = Path(__file__).resolve().parent / 'check_chimera.py'
+    if chimera_script.exists():
+        result = _sp.run(
+            [_sys.executable, '-X', 'utf8', str(chimera_script), '--strict'],
+            capture_output=True, text=True
+        )
+        if result.returncode != 0:
+            print(f'\n❌ Chimera 检查失败:\n{result.stdout}')
+            sys.exit(1)
+        else:
+            print('\n✅ Chimera 检查通过')
+
 
 if __name__ == '__main__':
     main()

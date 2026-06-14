@@ -64,7 +64,7 @@
       "parameter": "最优单宁含量对Pb吸附容量的影响",
       "value": "GO:T质量比40:60（T含量40%）时Pb吸附容量最高803.84 mg/g；T含量从0%增至100%时，吸附量从128.2升至803.84 mg/g，超过40%后下降",
       "unit": "mg/g",
-      "pollutant": "",
+      "pollutant": "Pb(II)",
       "material": "",
       "ph": null,
       "temperature": null,
@@ -76,8 +76,9 @@
       "source_file": "2022-Zhu-tannin-aerogel-graphene-heavy-metal-adsorption.pdf",
       "page": 4,
       "locator": "Section 3.3.1",
-      "verification": "unverified",
-      "confidence": 0.8
+      "verification": "needs_review",
+      "confidence": 0.8,
+      "note": "pollutant inferred from fields by Phase 4 backfill"
     },
     {
       "parameter": "最大吸附容量 qmax (Langmuir)",
@@ -254,7 +255,7 @@
       "parameter": "Cr(VI)最大吸附容量 Qmax",
       "value": "218.71",
       "unit": "mg/g",
-      "pollutant": "",
+      "pollutant": "Cr(VI)",
       "material": "T-PBC",
       "ph": 2.5,
       "temperature": null,
@@ -266,8 +267,9 @@
       "source_file": "2024-Mao-tannic-acid-biochar-heavy-metal-chromium-adsorption.pdf",
       "page": 1,
       "locator": "Highlights",
-      "verification": "unverified",
-      "confidence": 0.8
+      "verification": "needs_review",
+      "confidence": 0.8,
+      "note": "pollutant inferred from fields by Phase 4 backfill"
     },
     {
       "parameter": "BPA最大吸附容量 Qmax",
@@ -285,8 +287,9 @@
       "source_file": "2024-Mao-tannic-acid-biochar-heavy-metal-chromium-adsorption.pdf",
       "page": 1,
       "locator": "Highlights",
-      "verification": "unverified",
-      "confidence": 0.8
+      "verification": "needs_review",
+      "confidence": 0.8,
+      "note": "pollutant unidentifiable"
     },
     {
       "parameter": "实际电镀废水去除率",
@@ -315,8 +318,33 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.3390/polym14245439",
-      "verification": "unverified",
-      "基本原理": "needs_review"
+      "verification": "needs_review",
+      "基本原理": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "interaction": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
     },
     {
       "name": "疏水改性三大方法",
@@ -324,8 +352,33 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.3390/polym14245439",
-      "verification": "unverified",
-      "基本原理": "needs_review"
+      "verification": "needs_review",
+      "基本原理": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "interaction": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
     },
     {
       "name": "PVDF-co-HFP/POTS超疏水膜MD性能",
@@ -333,8 +386,33 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.3390/polym14245439",
-      "verification": "unverified",
-      "基本原理": "needs_review"
+      "verification": "needs_review",
+      "基本原理": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "interaction": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
     },
     {
       "name": "PVDF-co-HFP/F-POSS全疏水膜",
@@ -342,8 +420,33 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.3390/polym14245439",
-      "verification": "unverified",
-      "基本原理": "needs_review"
+      "verification": "needs_review",
+      "基本原理": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "interaction": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
     },
     {
       "name": "Cassie-Baxter方程与膜疏水性关系",
@@ -351,8 +454,33 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.3390/polym14245439",
-      "verification": "unverified",
-      "基本原理": "needs_review"
+      "verification": "needs_review",
+      "基本原理": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "interaction": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
     },
     {
       "name": "P(VDF-co-CTFE) FOMA功能化超疏水膜",
@@ -360,8 +488,33 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.3390/polym14245439",
-      "verification": "unverified",
-      "基本原理": "needs_review"
+      "verification": "needs_review",
+      "基本原理": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "interaction": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
     },
     {
       "name": "吸附机理",
@@ -369,7 +522,32 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.indcrop.2021.114304",
-      "verification": "unverified"
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "interaction": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
     },
     {
       "name": "吸附机制",
@@ -377,7 +555,32 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.colsurfa.2021.126972",
-      "verification": "unverified"
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "interaction": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
     },
     {
       "name": "Cr(VI)吸附机制总结",
@@ -385,7 +588,32 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.seppur.2024.127979",
-      "verification": "unverified"
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "interaction": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
     },
     {
       "name": "Cu(II)吸附机制总结",
@@ -393,7 +621,32 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.seppur.2024.127979",
-      "verification": "unverified"
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "interaction": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
     },
     {
       "name": "CR吸附机制总结",
@@ -401,7 +654,32 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.seppur.2024.127979",
-      "verification": "unverified"
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "interaction": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
     },
     {
       "name": "缓蚀机理",
@@ -409,7 +687,32 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.indcrop.2022.116106",
-      "verification": "unverified"
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "interaction": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
     },
     {
       "name": "BPA吸附机理",
@@ -417,7 +720,32 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.matchemphys.2024.129770",
-      "verification": "unverified"
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "interaction": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
     }
   ],
   "narrative": {
@@ -508,8 +836,8 @@
   ],
   "provenance_summary": {
     "n_papers": 6,
-    "n_verified": 0,
-    "n_unverified": 28
+    "n_verified": 3,
+    "n_unverified": 25
   },
   "coverage": "normal",
   "status": "active"

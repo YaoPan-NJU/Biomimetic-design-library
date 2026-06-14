@@ -54,8 +54,9 @@
       "source_file": "2024-Zhang-shell-powder-heavy-metal-review.pdf",
       "page": 2,
       "locator": "Section 1.2",
-      "verification": "unverified",
-      "confidence": 0.8
+      "verification": "needs_review",
+      "confidence": 0.8,
+      "note": "pollutant unidentifiable"
     },
     {
       "parameter": "贝壳基羟基磷灰石去除率",
@@ -73,8 +74,9 @@
       "source_file": "2024-Zhang-shell-powder-heavy-metal-review.pdf",
       "page": 3,
       "locator": "Section 1.2",
-      "verification": "unverified",
-      "confidence": 0.8
+      "verification": "needs_review",
+      "confidence": 0.8,
+      "note": "pollutant unidentifiable"
     },
     {
       "parameter": "吸附剂用量对Cd去除率的影响",
@@ -130,8 +132,9 @@
       "source_file": "2021-Zhang-shellfish-heavy-metal-passivation-review.pdf",
       "page": 6,
       "locator": "Table 1 煅烧处理对贝壳类材料孔径和比表面积的影响",
-      "verification": "unverified",
-      "confidence": 0.8
+      "verification": "needs_review",
+      "confidence": 0.8,
+      "note": "pollutant ambiguous: candidates=['Pb(II)', 'Cd(II)']"
     },
     {
       "parameter": "煅烧双色牡蛎壳去除率(Cu/Co/Pb)",
@@ -149,8 +152,9 @@
       "source_file": "2021-Zhang-shellfish-heavy-metal-passivation-review.pdf",
       "page": 5,
       "locator": "Section 3.3 煅烧处理",
-      "verification": "unverified",
-      "confidence": 0.8
+      "verification": "needs_review",
+      "confidence": 0.8,
+      "note": "pollutant unidentifiable"
     }
   ],
   "mechanisms": [
@@ -160,7 +164,32 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.3969/j.issn.1672-7304.2024.02.0011",
-      "verification": "unverified"
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "interaction": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
     },
     {
       "name": "钝化机理",
@@ -168,7 +197,32 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.13254/j.jare.2020.0504",
-      "verification": "unverified"
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "interaction": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
     },
     {
       "name": "吸附机理增强因素",
@@ -176,7 +230,32 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.11759/hykx20221122001",
-      "verification": "unverified"
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "interaction": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
     }
   ],
   "narrative": {
@@ -197,8 +276,8 @@
   "engineering_constraints": [],
   "provenance_summary": {
     "n_papers": 3,
-    "n_verified": 0,
-    "n_unverified": 10
+    "n_verified": 4,
+    "n_unverified": 6
   },
   "coverage": "normal",
   "status": "active"
