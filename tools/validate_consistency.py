@@ -297,8 +297,29 @@ def main():
             print(f'  ⚠️ {report["prototype_id"]}: {report["warnings"][:5]}')
             db_warnings += len(report['warnings'])
 
+    # R15: feature-mapping ↔ prototypes_db 引用完整性
+    print('\n4. 校验 feature-mapping ↔ prototypes_db 引用完整性...')
+    r15_errors = 0
+    fm = json.load(open(feature_mapping_path, encoding='utf-8'))
+    fm_ids = set(fm.get('prototype_metadata', {}).keys())
+    db_ids = set()
+    if os.path.isdir(db_dir):
+        for fn in os.listdir(db_dir):
+            if fn.endswith('.json'):
+                db_ids.add(fn[:-5])
+    in_mapping_not_db = fm_ids - db_ids
+    in_db_not_mapping = db_ids - fm_ids
+    if in_mapping_not_db:
+        print(f'  ❌ 在 feature-mapping 但不在 prototypes_db: {sorted(in_mapping_not_db)}')
+        r15_errors += len(in_mapping_not_db)
+    if in_db_not_mapping:
+        print(f'  ❌ 在 prototypes_db 但不在 feature-mapping: {sorted(in_db_not_mapping)}')
+        r15_errors += len(in_db_not_mapping)
+    if not in_mapping_not_db and not in_db_not_mapping:
+        print(f'  ✅ 一致: {len(fm_ids)} 个原型')
+
     # 总结
-    total_errors = db_errors + len(mapping_report['errors']) + md_errors
+    total_errors = db_errors + len(mapping_report['errors']) + md_errors + r15_errors
     total_warnings = db_warnings + len(mapping_report['warnings']) + md_warnings
 
     print(f'\n=== 总结 ===')

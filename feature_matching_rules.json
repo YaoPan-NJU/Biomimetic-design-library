@@ -6,8 +6,7 @@
     "芳香环": {
       "prototypes": [
         "polydopamine-coating",
-        "plant-tannin",
-        "metal-organic-framework"
+        "plant-tannin"
       ],
       "reason": "芳香环可通过π-π堆积作用与含芳香环的吸附剂结合",
       "weight": 0.7
@@ -15,19 +14,10 @@
     "疏水性": {
       "prototypes": [
         "lotus-leaf",
-        "polydopamine-coating",
-        "starch-granule"
+        "polydopamine-coating"
       ],
       "reason": "疏水性污染物可通过疏水分配作用与疏水表面结合",
       "weight": 0.6
-    },
-    "羧酸基团": {
-      "prototypes": [
-        "alginate",
-        "cellulose-nanocrystal"
-      ],
-      "reason": "羧酸基团可与带正电的污染物通过静电吸引结合",
-      "weight": 0.7
     },
     "酚羟基": {
       "prototypes": [
@@ -37,17 +27,9 @@
       "reason": "酚羟基可与金属离子形成配位键，或通过氢键与极性污染物结合",
       "weight": 0.7
     },
-    "长链全氟烷基": {
-      "prototypes": [
-        "metal-organic-framework"
-      ],
-      "reason": "MOF的孔道结构可对长链全氟烷基产生限域效应",
-      "weight": 0.6
-    },
     "二价阳离子": {
       "prototypes": [
         "chitosan",
-        "alginate",
         "bone-structure",
         "oyster-shell"
       ],
@@ -57,7 +39,6 @@
     "软酸": {
       "prototypes": [
         "chitosan",
-        "alginate",
         "sulfate-reducing-bacteria"
       ],
       "reason": "软酸金属离子（如Hg²⁺、Pb²⁺）可与含硫/氮配体形成稳定配位键",
@@ -70,19 +51,9 @@
       "reason": "正电荷污染物可与带负电的吸附剂通过静电吸引结合",
       "weight": 0.7
     },
-    "负电荷": {
-      "prototypes": [
-        "alginate",
-        "cellulose-nanocrystal"
-      ],
-      "reason": "负电荷污染物可与带正电的吸附剂通过静电吸引结合",
-      "weight": 0.7
-    },
     "磺酰胺基": {
       "prototypes": [
-        "starch-granule",
-        "chitosan",
-        "alginate"
+        "chitosan"
       ],
       "reason": "磺酰胺基可与吸附剂的极性基团形成氢键",
       "weight": 0.6
@@ -97,9 +68,7 @@
     },
     "氯代烯烃": {
       "prototypes": [
-        "polydopamine-coating",
-        "metal-organic-framework",
-        "cellulose-nanocrystal"
+        "polydopamine-coating"
       ],
       "reason": "氯代烃可通过疏水分配和孔道限域作用被吸附",
       "weight": 0.6
@@ -107,17 +76,14 @@
     "平面结构": {
       "prototypes": [
         "polydopamine-coating",
-        "plant-tannin",
-        "metal-organic-framework"
+        "plant-tannin"
       ],
       "reason": "平面分子可通过π-π堆积作用与含芳香环的吸附剂结合",
       "weight": 0.6
     },
     "水溶性": {
       "prototypes": [
-        "chitosan",
-        "alginate",
-        "cellulose-nanocrystal"
+        "chitosan"
       ],
       "reason": "水溶性污染物需要亲水性吸附剂",
       "weight": 0.5
@@ -127,8 +93,6 @@
     "配位": {
       "prototypes": [
         "chitosan",
-        "alginate",
-        "metal-organic-framework",
         "bone-structure"
       ],
       "reason": "金属离子与配体上的供电子原子（N/O/S）形成配位键",
@@ -136,19 +100,14 @@
     },
     "静电吸引": {
       "prototypes": [
-        "chitosan",
-        "alginate",
-        "cellulose-nanocrystal"
+        "chitosan"
       ],
       "reason": "带电污染物与带相反电荷的吸附剂通过库仑引力结合",
       "weight": 0.8
     },
     "氢键": {
       "prototypes": [
-        "chitosan",
-        "alginate",
-        "cellulose-nanocrystal",
-        "starch-granule"
+        "chitosan"
       ],
       "reason": "污染物分子的极性基团与吸附剂的含氧/氮基团形成氢键",
       "weight": 0.7
@@ -156,8 +115,7 @@
     "π-π堆积": {
       "prototypes": [
         "polydopamine-coating",
-        "plant-tannin",
-        "metal-organic-framework"
+        "plant-tannin"
       ],
       "reason": "芳香环污染物与吸附剂的芳香环通过π-π堆积作用平行排列",
       "weight": 0.7
@@ -165,15 +123,13 @@
     "疏水分配": {
       "prototypes": [
         "lotus-leaf",
-        "polydopamine-coating",
-        "starch-granule"
+        "polydopamine-coating"
       ],
       "reason": "非极性污染物与吸附剂的疏水表面通过疏水相互作用聚集",
       "weight": 0.6
     },
     "孔道限域": {
       "prototypes": [
-        "metal-organic-framework",
         "diatom-frustule"
       ],
       "reason": "多孔材料的孔道结构对污染物分子产生空间限域效应",
@@ -182,7 +138,6 @@
     "离子交换": {
       "prototypes": [
         "chitosan",
-        "alginate",
         "bone-structure",
         "oyster-shell"
       ],
@@ -209,8 +164,6 @@
     "重金属": {
       "prototypes": [
         "chitosan",
-        "alginate",
-        "metal-organic-framework",
         "bone-structure",
         "oyster-shell"
       ],
@@ -223,8 +176,6 @@
     },
     "阳离子染料": {
       "prototypes": [
-        "alginate",
-        "cellulose-nanocrystal",
         "chlorella-cell-wall"
       ],
       "mechanisms": [
@@ -245,9 +196,7 @@
     },
     "抗生素": {
       "prototypes": [
-        "polydopamine-coating",
-        "metal-organic-framework",
-        "starch-granule"
+        "polydopamine-coating"
       ],
       "mechanisms": [
         "π-π堆积",
@@ -256,21 +205,10 @@
       ],
       "weight": 0.7
     },
-    "PFASs": {
-      "prototypes": [
-        "metal-organic-framework"
-      ],
-      "mechanisms": [
-        "疏水分配",
-        "孔道限域"
-      ],
-      "weight": 0.6
-    },
     "内分泌干扰物": {
       "prototypes": [
         "polydopamine-coating",
-        "plant-tannin",
-        "metal-organic-framework"
+        "plant-tannin"
       ],
       "mechanisms": [
         "π-π堆积",
@@ -281,9 +219,7 @@
     },
     "卤代烃": {
       "prototypes": [
-        "polydopamine-coating",
-        "metal-organic-framework",
-        "cellulose-nanocrystal"
+        "polydopamine-coating"
       ],
       "mechanisms": [
         "疏水分配",

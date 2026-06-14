@@ -40,12 +40,6 @@
             "design_hint": "壳聚糖可直接使用或交联改性提高稳定性"
           },
           {
-            "id": "alginate",
-            "weight": 0.85,
-            "mechanism_summary": "羧基络合Cd²⁺，形成蛋盒结构",
-            "design_hint": "海藻酸钠可制成微球或凝胶"
-          },
-          {
             "id": "fish-scale-hydroxyapatite",
             "weight": 0.8,
             "mechanism_summary": "羟基磷灰石中的Ca²⁺可被Cd²⁺离子交换",
@@ -74,12 +68,6 @@
             "design_hint": "邻苯二酚基团是Pb²⁺的高效配位点"
           },
           {
-            "id": "alginate",
-            "weight": 0.85,
-            "mechanism_summary": "羧基与Pb²⁺形成稳定络合物",
-            "design_hint": "海藻酸钠凝胶对Pb²⁺选择性好"
-          },
-          {
             "id": "fish-scale-hydroxyapatite",
             "weight": 0.9,
             "mechanism_summary": "Pb²⁺可替换HAP中的Ca²⁺形成更稳定的磷氯铅矿",
@@ -98,28 +86,10 @@
             "design_hint": "硅藻壳可用于Pb²⁺的吸附"
           },
           {
-            "id": "metal-organic-framework",
-            "weight": 0.85,
-            "mechanism_summary": "MOF的金属节点和功能化配体可与Pb(II)形成配位键",
-            "design_hint": "采用Zr基MOF（如UiO-66）为骨架，通过后合成修饰引入-SH或-NH₂官能团"
-          },
-          {
             "id": "chitosan",
             "weight": 0.8,
             "mechanism_summary": "壳聚糖的氨基和羟基可与Pb(II)形成配位键",
             "design_hint": "采用壳聚糖为基体，通过交联提高机械强度和化学稳定性"
-          },
-          {
-            "id": "cellulose-nanocrystal",
-            "weight": 0.75,
-            "mechanism_summary": "纤维素纳米晶表面的羟基和羧基可与Pb(II)形成配位键",
-            "design_hint": "采用TEMPO氧化纤维素纳米晶为基体，通过冷冻干燥制备气凝胶"
-          },
-          {
-            "id": "starch-granule",
-            "weight": 0.8,
-            "mechanism_summary": "淀粉颗粒表面的羟基可与Pb(II)形成配位键",
-            "design_hint": "采用淀粉为基体，通过交联提高机械强度和化学稳定性"
           }
         ]
       },
@@ -158,12 +128,6 @@
             "weight": 0.8,
             "mechanism_summary": "氨基配位Zn²⁺",
             "design_hint": "壳聚糖对Zn²⁺吸附容量中等"
-          },
-          {
-            "id": "alginate",
-            "weight": 0.75,
-            "mechanism_summary": "羧基络合Zn²⁺",
-            "design_hint": "海藻酸钠凝胶可吸附Zn²⁺"
           }
         ]
       },
@@ -174,12 +138,6 @@
             "weight": 0.8,
             "mechanism_summary": "氨基配位Ni²⁺",
             "design_hint": "壳聚糖对Ni²⁺吸附容量中等"
-          },
-          {
-            "id": "alginate",
-            "weight": 0.75,
-            "mechanism_summary": "羧基络合Ni²⁺",
-            "design_hint": "海藻酸钠凝胶可吸附Ni²⁺"
           }
         ]
       },
@@ -226,18 +184,6 @@
       "染料": {
         "阳离子染料": {
           "prototypes": [
-            {
-              "id": "alginate",
-              "weight": 0.85,
-              "mechanism_summary": "羧基带负电，静电吸附亚甲基蓝等阳离子染料",
-              "design_hint": "海藻酸钠凝胶是去除阳离子染料的常用材料"
-            },
-            {
-              "id": "cellulose-nanocrystal",
-              "weight": 0.8,
-              "mechanism_summary": "TEMPO氧化后表面羧基带负电",
-              "design_hint": "纤维素纳米晶可制成膜或气凝胶"
-            },
             {
               "id": "chlorella-cell-wall",
               "weight": 0.75,
@@ -293,12 +239,6 @@
             "weight": 0.8,
             "mechanism_summary": "π-π堆积和氢键协同吸附抗生素",
             "design_hint": "PDA涂层对多种抗生素有吸附能力"
-          },
-          {
-            "id": "metal-organic-framework",
-            "weight": 0.85,
-            "mechanism_summary": "MOF的高比表面积和可调孔径适合吸附大分子抗生素",
-            "design_hint": "MOF孔径可精确调控以匹配抗生素分子尺寸"
           }
         ]
       }
@@ -508,13 +448,6 @@
         "design_hint": ""
       },
       {
-        "id": "cellulose-nanocrystal",
-        "weight": 0.398,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      },
-      {
         "id": "diatom-frustule",
         "weight": 0.242,
         "weight_source": "formula_v1",
@@ -524,20 +457,6 @@
       {
         "id": "mycelium",
         "weight": 0.17,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      },
-      {
-        "id": "alginate",
-        "weight": 0.334,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      },
-      {
-        "id": "metal-organic-framework",
-        "weight": 0.514,
         "weight_source": "formula_v1",
         "mechanism_summary": "",
         "design_hint": ""
@@ -555,25 +474,11 @@
         "weight_source": "formula_v1",
         "mechanism_summary": "",
         "design_hint": ""
-      },
-      {
-        "id": "starch-granule",
-        "weight": 0.037,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
       }
     ],
     "无机磷": [
       {
         "id": "polydopamine-coating",
-        "weight": 0.4,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      },
-      {
-        "id": "cellulose-nanocrystal",
         "weight": 0.4,
         "weight_source": "formula_v1",
         "mechanism_summary": "",
@@ -594,20 +499,6 @@
         "weight_source": "formula_v1",
         "mechanism_summary": "",
         "design_hint": ""
-      },
-      {
-        "id": "cellulose-nanocrystal",
-        "weight": 0.4,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      },
-      {
-        "id": "metal-organic-framework",
-        "weight": 0.4,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
       }
     ],
     "柴油": [
@@ -620,20 +511,6 @@
       },
       {
         "id": "chitosan",
-        "weight": 0.4,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      },
-      {
-        "id": "cellulose-nanocrystal",
-        "weight": 0.4,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      },
-      {
-        "id": "metal-organic-framework",
         "weight": 0.4,
         "weight_source": "formula_v1",
         "mechanism_summary": "",
@@ -683,13 +560,6 @@
         "weight_source": "formula_v1",
         "mechanism_summary": "",
         "design_hint": ""
-      },
-      {
-        "id": "cellulose-nanocrystal",
-        "weight": 0.2,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
       }
     ],
     "CrO42-": [
@@ -708,25 +578,11 @@
         "weight_source": "formula_v1",
         "mechanism_summary": "",
         "design_hint": ""
-      },
-      {
-        "id": "metal-organic-framework",
-        "weight": 0.4,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
       }
     ],
     "SY染料": [
       {
         "id": "chitosan",
-        "weight": 0.4,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      },
-      {
-        "id": "metal-organic-framework",
         "weight": 0.4,
         "weight_source": "formula_v1",
         "mechanism_summary": "",
@@ -740,25 +596,11 @@
         "weight_source": "formula_v1",
         "mechanism_summary": "",
         "design_hint": ""
-      },
-      {
-        "id": "metal-organic-framework",
-        "weight": 0.4,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
       }
     ],
     "孔雀石绿(MG)": [
       {
         "id": "chitosan",
-        "weight": 0.4,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      },
-      {
-        "id": "metal-organic-framework",
         "weight": 0.4,
         "weight_source": "formula_v1",
         "mechanism_summary": "",
@@ -772,25 +614,11 @@
         "weight_source": "formula_v1",
         "mechanism_summary": "",
         "design_hint": ""
-      },
-      {
-        "id": "metal-organic-framework",
-        "weight": 0.4,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
       }
     ],
     "刚果红(CR)": [
       {
         "id": "chitosan",
-        "weight": 0.4,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      },
-      {
-        "id": "metal-organic-framework",
         "weight": 0.4,
         "weight_source": "formula_v1",
         "mechanism_summary": "",
@@ -804,13 +632,6 @@
         "weight_source": "formula_v1",
         "mechanism_summary": "",
         "design_hint": ""
-      },
-      {
-        "id": "metal-organic-framework",
-        "weight": 0.4,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
       }
     ],
     "茜素红(AR)": [
@@ -820,23 +641,9 @@
         "weight_source": "formula_v1",
         "mechanism_summary": "",
         "design_hint": ""
-      },
-      {
-        "id": "metal-organic-framework",
-        "weight": 0.4,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
       }
     ],
     "Pb(II)": [
-      {
-        "id": "cellulose-nanocrystal",
-        "weight": 0,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      },
       {
         "id": "diatom-frustule",
         "weight": 0.8,
@@ -846,13 +653,6 @@
       }
     ],
     "Cd(II)": [
-      {
-        "id": "cellulose-nanocrystal",
-        "weight": 0.4,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      },
       {
         "id": "diatom-frustule",
         "weight": 0.4,
@@ -864,24 +664,6 @@
     "Al(III)": [
       {
         "id": "chitosan",
-        "weight": 0.5,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      }
-    ],
-    "Cr(VI)": [
-      {
-        "id": "cellulose-nanocrystal",
-        "weight": 0.5,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      }
-    ],
-    "Hg(II)": [
-      {
-        "id": "cellulose-nanocrystal",
         "weight": 0.5,
         "weight_source": "formula_v1",
         "mechanism_summary": "",
@@ -922,25 +704,11 @@
         "weight_source": "formula_v1",
         "mechanism_summary": "",
         "design_hint": ""
-      },
-      {
-        "id": "cellulose-nanocrystal",
-        "weight": 0.4,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
       }
     ],
     "TiO2 nanoparticles": [
       {
         "id": "chitosan",
-        "weight": 0.4,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      },
-      {
-        "id": "cellulose-nanocrystal",
         "weight": 0.4,
         "weight_source": "formula_v1",
         "mechanism_summary": "",
@@ -954,39 +722,11 @@
         "weight_source": "formula_v1",
         "mechanism_summary": "",
         "design_hint": ""
-      },
-      {
-        "id": "cellulose-nanocrystal",
-        "weight": 0.4,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      },
-      {
-        "id": "alginate",
-        "weight": 0.4,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
       }
     ],
     "MB (methylene blue)": [
       {
         "id": "chitosan",
-        "weight": 0.4,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      },
-      {
-        "id": "cellulose-nanocrystal",
-        "weight": 0.4,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      },
-      {
-        "id": "alginate",
         "weight": 0.4,
         "weight_source": "formula_v1",
         "mechanism_summary": "",
@@ -1000,39 +740,11 @@
         "weight_source": "formula_v1",
         "mechanism_summary": "",
         "design_hint": ""
-      },
-      {
-        "id": "cellulose-nanocrystal",
-        "weight": 0.4,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      },
-      {
-        "id": "alginate",
-        "weight": 0.4,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
       }
     ],
     "As(III)": [
       {
         "id": "chitosan",
-        "weight": 0.4,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      },
-      {
-        "id": "cellulose-nanocrystal",
-        "weight": 0.4,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      },
-      {
-        "id": "alginate",
         "weight": 0.4,
         "weight_source": "formula_v1",
         "mechanism_summary": "",
@@ -1046,39 +758,11 @@
         "weight_source": "formula_v1",
         "mechanism_summary": "",
         "design_hint": ""
-      },
-      {
-        "id": "cellulose-nanocrystal",
-        "weight": 0.4,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      },
-      {
-        "id": "alginate",
-        "weight": 0.4,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
       }
     ],
     "acid blue-113 (anionic dye)": [
       {
         "id": "chitosan",
-        "weight": 0.4,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      },
-      {
-        "id": "cellulose-nanocrystal",
-        "weight": 0.4,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      },
-      {
-        "id": "alginate",
         "weight": 0.4,
         "weight_source": "formula_v1",
         "mechanism_summary": "",
@@ -1173,13 +857,6 @@
         "weight_source": "formula_v1",
         "mechanism_summary": "",
         "design_hint": ""
-      },
-      {
-        "id": "starch-granule",
-        "weight": 0.6,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
       }
     ],
     "MB": [
@@ -1209,204 +886,6 @@
         "design_hint": ""
       }
     ],
-    "亚甲基蓝 (MB)": [
-      {
-        "id": "cellulose-nanocrystal",
-        "weight": 0.5,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      }
-    ],
-    "结晶紫 (CV)": [
-      {
-        "id": "cellulose-nanocrystal",
-        "weight": 0.5,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      }
-    ],
-    "孔雀石绿 (MG)": [
-      {
-        "id": "cellulose-nanocrystal",
-        "weight": 0.5,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      }
-    ],
-    "曙红 (Eosin)": [
-      {
-        "id": "cellulose-nanocrystal",
-        "weight": 0.5,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      }
-    ],
-    "刚果红 (CR)": [
-      {
-        "id": "cellulose-nanocrystal",
-        "weight": 0.5,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      }
-    ],
-    "玫瑰红B": [
-      {
-        "id": "cellulose-nanocrystal",
-        "weight": 0.5,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      }
-    ],
-    "Ciprofloxacin (CIP)": [
-      {
-        "id": "alginate",
-        "weight": 0.5,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      }
-    ],
-    "Co(II)": [
-      {
-        "id": "alginate",
-        "weight": 0.5,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      }
-    ],
-    "Phosphate": [
-      {
-        "id": "alginate",
-        "weight": 0.5,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      }
-    ],
-    "Levofloxacin (S-FOX)": [
-      {
-        "id": "alginate",
-        "weight": 0.5,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      }
-    ],
-    "Crystal Violet (CV) dye": [
-      {
-        "id": "alginate",
-        "weight": 0.5,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      }
-    ],
-    "H₂": [
-      {
-        "id": "metal-organic-framework",
-        "weight": 0.5,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      }
-    ],
-    "As(V)": [
-      {
-        "id": "metal-organic-framework",
-        "weight": 0.5,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      }
-    ],
-    "Boron": [
-      {
-        "id": "metal-organic-framework",
-        "weight": 0.5,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      }
-    ],
-    "tetracycline hydrochloride (TC·HCl)": [
-      {
-        "id": "metal-organic-framework",
-        "weight": 0.5,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      }
-    ],
-    "cationic TC·HCl": [
-      {
-        "id": "metal-organic-framework",
-        "weight": 0.5,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      }
-    ],
-    "chloramphenicol (CAP)": [
-      {
-        "id": "metal-organic-framework",
-        "weight": 0.5,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      }
-    ],
-    "sulfachloropyridazine (SCP)": [
-      {
-        "id": "metal-organic-framework",
-        "weight": 0.5,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      }
-    ],
-    "ciprofloxacin (CIP)": [
-      {
-        "id": "metal-organic-framework",
-        "weight": 0.5,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      }
-    ],
-    "tetracycline (TC)": [
-      {
-        "id": "metal-organic-framework",
-        "weight": 0.5,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      }
-    ],
-    "Methyl Blue (MB)": [
-      {
-        "id": "metal-organic-framework",
-        "weight": 0.5,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      }
-    ],
-    "malachite green": [
-      {
-        "id": "metal-organic-framework",
-        "weight": 0.5,
-        "weight_source": "formula_v1",
-        "mechanism_summary": "",
-        "design_hint": ""
-      }
-    ],
     "苯胺黑(Amido black)阴离子染料": [
       {
         "id": "cell-membrane-ion-channel",
@@ -1430,12 +909,6 @@
       "Pb(II)": {
         "prototypes": [
           {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对Pb(II)有吸附能力",
-            "design_hint": "淀粉颗粒可用于Pb(II)的吸附"
-          },
-          {
             "id": "lobster-exoskeleton",
             "weight": 0.7,
             "mechanism_summary": "龙虾外骨骼对Pb(II)有吸附能力",
@@ -1443,44 +916,8 @@
           }
         ]
       },
-      "astrazon red (dye)": {
-        "prototypes": [
-          {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对astrazon red (dye)有吸附能力",
-            "design_hint": "淀粉颗粒可用于astrazon red (dye)的吸附"
-          }
-        ]
-      },
-      "Co2+": {
-        "prototypes": [
-          {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对Co2+有吸附能力",
-            "design_hint": "淀粉颗粒可用于Co2+的吸附"
-          }
-        ]
-      },
-      "Hg(II)": {
-        "prototypes": [
-          {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对Hg(II)有吸附能力",
-            "design_hint": "淀粉颗粒可用于Hg(II)的吸附"
-          }
-        ]
-      },
       "Cd(II)": {
         "prototypes": [
-          {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对Cd(II)有吸附能力",
-            "design_hint": "淀粉颗粒可用于Cd(II)的吸附"
-          },
           {
             "id": "silk-fibroin",
             "weight": 0.7,
@@ -1489,94 +926,8 @@
           }
         ]
       },
-      "MB (methylene blue)": {
-        "prototypes": [
-          {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对MB (methylene blue)有吸附能力",
-            "design_hint": "淀粉颗粒可用于MB (methylene blue)的吸附"
-          }
-        ]
-      },
-      "CR (congo red)": {
-        "prototypes": [
-          {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对CR (congo red)有吸附能力",
-            "design_hint": "淀粉颗粒可用于CR (congo red)的吸附"
-          }
-        ]
-      },
-      "RB (rhodamine B)": {
-        "prototypes": [
-          {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对RB (rhodamine B)有吸附能力",
-            "design_hint": "淀粉颗粒可用于RB (rhodamine B)的吸附"
-          }
-        ]
-      },
-      "CV (crystal violet)": {
-        "prototypes": [
-          {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对CV (crystal violet)有吸附能力",
-            "design_hint": "淀粉颗粒可用于CV (crystal violet)的吸附"
-          }
-        ]
-      },
-      "Cr6+": {
-        "prototypes": [
-          {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对Cr6+有吸附能力",
-            "design_hint": "淀粉颗粒可用于Cr6+的吸附"
-          }
-        ]
-      },
-      "Ca2+ and Mg2+ (hardness ions)": {
-        "prototypes": [
-          {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对Ca2+ and Mg2+ (hardness ions)有吸附能力",
-            "design_hint": "淀粉颗粒可用于Ca2+ and Mg2+ (hardness ions)的吸附"
-          }
-        ]
-      },
-      "Zn2+": {
-        "prototypes": [
-          {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对Zn2+有吸附能力",
-            "design_hint": "淀粉颗粒可用于Zn2+的吸附"
-          }
-        ]
-      },
-      "Ni2+": {
-        "prototypes": [
-          {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对Ni2+有吸附能力",
-            "design_hint": "淀粉颗粒可用于Ni2+的吸附"
-          }
-        ]
-      },
       "Cu(II)": {
         "prototypes": [
-          {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对Cu(II)有吸附能力",
-            "design_hint": "淀粉颗粒可用于Cu(II)的吸附"
-          },
           {
             "id": "silk-fibroin",
             "weight": 0.7,
@@ -1585,44 +936,8 @@
           }
         ]
       },
-      "As3+": {
-        "prototypes": [
-          {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对As3+有吸附能力",
-            "design_hint": "淀粉颗粒可用于As3+的吸附"
-          }
-        ]
-      },
-      "MG (malachite green)": {
-        "prototypes": [
-          {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对MG (malachite green)有吸附能力",
-            "design_hint": "淀粉颗粒可用于MG (malachite green)的吸附"
-          }
-        ]
-      },
-      "BB9": {
-        "prototypes": [
-          {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对BB9有吸附能力",
-            "design_hint": "淀粉颗粒可用于BB9的吸附"
-          }
-        ]
-      },
       "MB": {
         "prototypes": [
-          {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对MB有吸附能力",
-            "design_hint": "淀粉颗粒可用于MB的吸附"
-          },
           {
             "id": "silk-fibroin",
             "weight": 0.7,
@@ -1634,12 +949,6 @@
       "methylene blue (MB)": {
         "prototypes": [
           {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对methylene blue (MB)有吸附能力",
-            "design_hint": "淀粉颗粒可用于methylene blue (MB)的吸附"
-          },
-          {
             "id": "silk-fibroin",
             "weight": 0.7,
             "mechanism_summary": "丝素蛋白对methylene blue (MB)有吸附能力",
@@ -1647,34 +956,8 @@
           }
         ]
       },
-      "fluvastatin (pharmaceutical)": {
-        "prototypes": [
-          {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对fluvastatin (pharmaceutical)有吸附能力",
-            "design_hint": "淀粉颗粒可用于fluvastatin (pharmaceutical)的吸附"
-          }
-        ]
-      },
-      "oil": {
-        "prototypes": [
-          {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对oil有吸附能力",
-            "design_hint": "淀粉颗粒可用于oil的吸附"
-          }
-        ]
-      },
       "chloroform": {
         "prototypes": [
-          {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对chloroform有吸附能力",
-            "design_hint": "淀粉颗粒可用于chloroform的吸附"
-          },
           {
             "id": "silk-fibroin",
             "weight": 0.7,
@@ -1683,44 +966,8 @@
           }
         ]
       },
-      "ibuprofen": {
-        "prototypes": [
-          {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对ibuprofen有吸附能力",
-            "design_hint": "淀粉颗粒可用于ibuprofen的吸附"
-          }
-        ]
-      },
-      "acetaminophen": {
-        "prototypes": [
-          {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对acetaminophen有吸附能力",
-            "design_hint": "淀粉颗粒可用于acetaminophen的吸附"
-          }
-        ]
-      },
-      "organic pollutants": {
-        "prototypes": [
-          {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对organic pollutants有吸附能力",
-            "design_hint": "淀粉颗粒可用于organic pollutants的吸附"
-          }
-        ]
-      },
       "Zn(II)": {
         "prototypes": [
-          {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对Zn(II)有吸附能力",
-            "design_hint": "淀粉颗粒可用于Zn(II)的吸附"
-          },
           {
             "id": "silk-fibroin",
             "weight": 0.7,
@@ -1729,159 +976,13 @@
           }
         ]
       },
-      "Ni(II)": {
-        "prototypes": [
-          {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对Ni(II)有吸附能力",
-            "design_hint": "淀粉颗粒可用于Ni(II)的吸附"
-          }
-        ]
-      },
-      "Pb(II), Zn(II), Ni(II), Cd(II)": {
-        "prototypes": [
-          {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对Pb(II), Zn(II), Ni(II), Cd(II)有吸附能力",
-            "design_hint": "淀粉颗粒可用于Pb(II), Zn(II), Ni(II), Cd(II)的吸附"
-          }
-        ]
-      },
-      "Co(II)": {
-        "prototypes": [
-          {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对Co(II)有吸附能力",
-            "design_hint": "淀粉颗粒可用于Co(II)的吸附"
-          }
-        ]
-      },
-      "Ni(II), Cu(II), Cr(VI), Pb(II), Zn(II)": {
-        "prototypes": [
-          {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对Ni(II), Cu(II), Cr(VI), Pb(II), Zn(II)有吸附能力",
-            "design_hint": "淀粉颗粒可用于Ni(II), Cu(II), Cr(VI), Pb(II), Zn(II)的吸附"
-          }
-        ]
-      },
       "As(III)": {
         "prototypes": [
-          {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对As(III)有吸附能力",
-            "design_hint": "淀粉颗粒可用于As(III)的吸附"
-          },
           {
             "id": "silk-fibroin",
             "weight": 0.7,
             "mechanism_summary": "丝素蛋白对As(III)有吸附能力",
             "design_hint": "丝素蛋白可用于As(III)的吸附"
-          }
-        ]
-      },
-      "As(V)": {
-        "prototypes": [
-          {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对As(V)有吸附能力",
-            "design_hint": "淀粉颗粒可用于As(V)的吸附"
-          }
-        ]
-      },
-      "arsenic": {
-        "prototypes": [
-          {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对arsenic有吸附能力",
-            "design_hint": "淀粉颗粒可用于arsenic的吸附"
-          }
-        ]
-      },
-      "arsenate": {
-        "prototypes": [
-          {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对arsenate有吸附能力",
-            "design_hint": "淀粉颗粒可用于arsenate的吸附"
-          }
-        ]
-      },
-      "Cr(VI), Pb(II), Fe(III), Cd(II)": {
-        "prototypes": [
-          {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对Cr(VI), Pb(II), Fe(III), Cd(II)有吸附能力",
-            "design_hint": "淀粉颗粒可用于Cr(VI), Pb(II), Fe(III), Cd(II)的吸附"
-          }
-        ]
-      },
-      "calcium ions": {
-        "prototypes": [
-          {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对calcium ions有吸附能力",
-            "design_hint": "淀粉颗粒可用于calcium ions的吸附"
-          }
-        ]
-      },
-      "Methyl blue": {
-        "prototypes": [
-          {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对Methyl blue有吸附能力",
-            "design_hint": "淀粉颗粒可用于Methyl blue的吸附"
-          }
-        ]
-      },
-      "Crystal violet": {
-        "prototypes": [
-          {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对Crystal violet有吸附能力",
-            "design_hint": "淀粉颗粒可用于Crystal violet的吸附"
-          }
-        ]
-      },
-      "Reactive black 5": {
-        "prototypes": [
-          {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对Reactive black 5有吸附能力",
-            "design_hint": "淀粉颗粒可用于Reactive black 5的吸附"
-          }
-        ]
-      },
-      "Reactive orange 131": {
-        "prototypes": [
-          {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对Reactive orange 131有吸附能力",
-            "design_hint": "淀粉颗粒可用于Reactive orange 131的吸附"
-          }
-        ]
-      },
-      "Methylene blue": {
-        "prototypes": [
-          {
-            "id": "starch-granule",
-            "weight": 0.7,
-            "mechanism_summary": "淀粉颗粒对Methylene blue有吸附能力",
-            "design_hint": "淀粉颗粒可用于Methylene blue的吸附"
           }
         ]
       },
@@ -1925,10 +1026,6 @@
           "weight": 0.95
         },
         {
-          "id": "namib-beetle",
-          "weight": 0.9
-        },
-        {
           "id": "cactus-spine",
           "weight": 0.85
         },
@@ -1946,10 +1043,6 @@
       "dimension": "表面性质",
       "description": "表面接触角<90°，亲和水分子",
       "prototypes": [
-        {
-          "id": "cellulose-nanocrystal",
-          "weight": 0.95
-        },
         {
           "id": "chitosan",
           "weight": 0.9
@@ -1970,34 +1063,6 @@
         }
       ]
     },
-    "负电表面": {
-      "dimension": "表面性质",
-      "description": "表面带负电荷，可通过静电作用吸附阳离子",
-      "prototypes": [
-        {
-          "id": "alginate",
-          "weight": 0.95
-        },
-        {
-          "id": "cellulose-nanocrystal",
-          "weight": 0.7
-        }
-      ]
-    },
-    "微孔": {
-      "dimension": "结构性质",
-      "description": "孔径<2nm，适合小分子吸附，提供极高比表面积",
-      "prototypes": [
-        {
-          "id": "metal-organic-framework",
-          "weight": 0.95
-        },
-        {
-          "id": "starch-granule",
-          "weight": 0.6
-        }
-      ]
-    },
     "介孔": {
       "dimension": "结构性质",
       "description": "孔径2-50nm，适合中等分子吸附，良好的传质性能",
@@ -2005,14 +1070,6 @@
         {
           "id": "diatom-frustule",
           "weight": 0.95
-        },
-        {
-          "id": "diatom-inspired-porous",
-          "weight": 0.9
-        },
-        {
-          "id": "metal-organic-framework",
-          "weight": 0.65
         }
       ]
     },
@@ -2049,10 +1106,6 @@
         {
           "id": "iron-oxidizing-bacteria",
           "weight": 0.7
-        },
-        {
-          "id": "metal-organic-framework",
-          "weight": 0.6
         }
       ]
     },
@@ -2075,10 +1128,6 @@
         {
           "id": "lobster-exoskeleton",
           "weight": 0.85
-        },
-        {
-          "id": "cellulose-nanocrystal",
-          "weight": 0.65
         }
       ]
     },
@@ -2173,16 +1222,8 @@
       "description": "-COOH基团，可络合金属离子、提供负电荷",
       "prototypes": [
         {
-          "id": "alginate",
-          "weight": 1.0
-        },
-        {
           "id": "chlorella-cell-wall",
           "weight": 0.6
-        },
-        {
-          "id": "cellulose-nanocrystal",
-          "weight": 0.65
         }
       ]
     },
@@ -2215,14 +1256,6 @@
         {
           "id": "chitosan",
           "weight": 0.9
-        },
-        {
-          "id": "alginate",
-          "weight": 0.85
-        },
-        {
-          "id": "metal-organic-framework",
-          "weight": 0.9
         }
       ]
     },
@@ -2251,10 +1284,6 @@
         {
           "id": "iron-oxidizing-bacteria",
           "weight": 0.9
-        },
-        {
-          "id": "metal-organic-framework",
-          "weight": 0.65
         }
       ]
     },
@@ -2299,10 +1328,6 @@
           "weight": 0.9
         },
         {
-          "id": "metal-organic-framework",
-          "weight": 0.85
-        },
-        {
           "id": "magnetic-bacteria",
           "weight": 0.6
         }
@@ -2333,10 +1358,6 @@
         {
           "id": "cell-membrane-ion-channel",
           "weight": 1.0
-        },
-        {
-          "id": "metal-organic-framework",
-          "weight": 0.9
         },
         {
           "id": "diatom-frustule",
@@ -2382,23 +1403,6 @@
     }
   },
   "prototype_metadata": {
-    "namib-beetle": {
-      "applicability": {
-        "pH_range": [
-          1,
-          14
-        ],
-        "temp_range": [
-          0,
-          80
-        ],
-        "salinity": "any"
-      },
-      "features": [
-        "疏水性"
-      ],
-      "biomimetic_dimension": "结构仿生"
-    },
     "mussel-foot-adhesion": {
       "applicability": {
         "pH_range": [
@@ -2437,26 +1441,6 @@
         "纤维状"
       ],
       "biomimetic_dimension": "结构仿生"
-    },
-    "cellulose-nanocrystal": {
-      "applicability": {
-        "pH_range": [
-          2,
-          12
-        ],
-        "temp_range": [
-          0,
-          100
-        ],
-        "salinity": "any"
-      },
-      "features": [
-        "亲水性",
-        "负电表面",
-        "纤维状",
-        "羧基"
-      ],
-      "biomimetic_dimension": "分子仿生"
     },
     "chitosan": {
       "applicability": {
@@ -2497,65 +1481,6 @@
       ],
       "biomimetic_dimension": "功能仿生"
     },
-    "alginate": {
-      "applicability": {
-        "pH_range": [
-          3,
-          10
-        ],
-        "temp_range": [
-          0,
-          80
-        ],
-        "salinity": "moderate"
-      },
-      "features": [
-        "负电表面",
-        "羧基",
-        "金属配位能力"
-      ],
-      "biomimetic_dimension": "分子仿生"
-    },
-    "metal-organic-framework": {
-      "applicability": {
-        "pH_range": [
-          1,
-          12
-        ],
-        "temp_range": [
-          0,
-          300
-        ],
-        "salinity": "any"
-      },
-      "features": [
-        "微孔",
-        "介孔",
-        "层次孔",
-        "金属配位能力",
-        "活性氧位点",
-        "催化降解",
-        "分子筛分"
-      ],
-      "biomimetic_dimension": "结构仿生"
-    },
-    "starch-granule": {
-      "applicability": {
-        "pH_range": [
-          4,
-          10
-        ],
-        "temp_range": [
-          0,
-          80
-        ],
-        "salinity": "low"
-      },
-      "features": [
-        "微孔"
-      ],
-      "biomimetic_dimension": "分子仿生"
-    },
     "diatom-frustule": {
       "applicability": {
         "pH_range": [
@@ -2571,23 +1496,6 @@
       "features": [
         "介孔",
         "分子筛分"
-      ],
-      "biomimetic_dimension": "结构仿生"
-    },
-    "diatom-inspired-porous": {
-      "applicability": {
-        "pH_range": [
-          2,
-          10
-        ],
-        "temp_range": [
-          0,
-          100
-        ],
-        "salinity": "any"
-      },
-      "features": [
-        "介孔"
       ],
       "biomimetic_dimension": "结构仿生"
     },
@@ -2912,13 +1820,6 @@
       "features": [],
       "biomimetic_dimension": "分子仿生",
       "applicability": null
-    },
-    "silkworm-silk": {
-      "status": "deprecated",
-      "reason": "无提取数据，无文献支撑",
-      "features": [],
-      "biomimetic_dimension": "分子仿生",
-      "applicability": null
     }
   },
   "mechanism_feature_bridge": {
@@ -3083,14 +1984,6 @@
       "tested_temp_range": null,
       "salinity": "moderate"
     },
-    "cellulose-nanocrystal": {
-      "tested_ph_range": [
-        5.0,
-        8.08
-      ],
-      "tested_temp_range": null,
-      "salinity": "any"
-    },
     "diatom-frustule": {
       "tested_ph_range": [
         7.0,
@@ -3114,19 +2007,6 @@
       "tested_temp_range": null,
       "salinity": "moderate"
     },
-    "alginate": {
-      "tested_ph_range": [
-        3.0,
-        6.0
-      ],
-      "tested_temp_range": null,
-      "salinity": "moderate"
-    },
-    "namib-beetle": {
-      "tested_ph_range": null,
-      "tested_temp_range": null,
-      "salinity": "any"
-    },
     "spider-silk": {
       "tested_ph_range": null,
       "tested_temp_range": null,
@@ -3136,14 +2016,6 @@
       "tested_ph_range": null,
       "tested_temp_range": null,
       "salinity": "low_to_moderate"
-    },
-    "metal-organic-framework": {
-      "tested_ph_range": [
-        2.0,
-        7.0
-      ],
-      "tested_temp_range": null,
-      "salinity": "any"
     },
     "wood-xylem": {
       "tested_ph_range": [
@@ -3164,19 +2036,6 @@
       "salinity": "moderate"
     },
     "water-strider-leg": {
-      "tested_ph_range": null,
-      "tested_temp_range": null,
-      "salinity": "any"
-    },
-    "starch-granule": {
-      "tested_ph_range": [
-        6.0,
-        6.0
-      ],
-      "tested_temp_range": null,
-      "salinity": "low"
-    },
-    "diatom-inspired-porous": {
       "tested_ph_range": null,
       "tested_temp_range": null,
       "salinity": "any"
@@ -3311,153 +2170,15 @@
         "relevance": "medium"
       },
       {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "超疏水膜 harsh condition 稳定性测试标准 Harsh condition stability testing",
-        "value": "浸泡在极端pH(1-2强酸, 12-13强碱)或高盐浓度(NaCl 3.5 wt%)溶液1-72小时；表面活性剂(SDS 4.1 mM)滴加；60-120°C加热72小时",
-        "relevance": "high"
-      },
-      {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "蛋白质纤维——酸碱稳定性",
-        "value": "淀粉样纤维: 强酸制备→酸性条件稳定; 蚕丝纤维: 广泛用于重金属去除→酸性稳定; 长期硫酸酸性→可能发生水解",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "不同来源CNC的结晶度与热稳定性",
-        "value": "棉花短绒CNC结晶度72%(最高); 红藻CNC长度432±87nm+长径比15.1(最高); 棉花/香蒲/红藻CNC热稳定性213/232/220°C",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "CNC/CS气凝胶水稳定性(质量残留率)",
-        "value": "93.8",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "TGA热稳定性",
-        "value": "CYCS失重83.8%；CNC失重72.7%；CYCS/CNC失重60.3%→交联提高热稳定性；三阶段失重：30-150°C(水分蒸发)/220-380°C(壳聚糖分解)/390-780°C(进一步分解+CO₂+H₂O)",
-        "relevance": "medium"
-      },
-      {
         "prototype_id": "diatom-frustule",
         "constraint": "TGA/DSC热稳定性",
         "value": "MP/DE三阶段失重：20-238°C物理水(4.517%)，238-410°C结晶水(11.99%)，410-584°C MPTS分解+SiO₂晶型转变(7.86%)。CA/DE三阶段：20-274°C水+CA蒸发(3.6%)，275-554°C CA热降解(13.6%)，554-900°C继续分解(3.3%)",
         "relevance": "medium"
       },
       {
-        "prototype_id": "alginate",
-        "constraint": "Mg–Al LDH–PVA/Alg stability",
-        "value": "Deformation percentage = 7.8% (at 200 mg/L phosphate)",
-        "relevance": "high"
-      },
-      {
-        "prototype_id": "alginate",
-        "constraint": "Alg/a-FeOOH stability",
-        "value": "Removal efficiency = 97.6%",
-        "relevance": "high"
-      },
-      {
-        "prototype_id": "namib-beetle",
-        "constraint": "超疏水膜 harsh condition 稳定性测试标准 Harsh condition stability testing",
-        "value": "浸泡在极端pH(1-2强酸, 12-13强碱)或高盐浓度(NaCl 3.5 wt%)溶液1-72小时；表面活性剂(SDS 4.1 mM)滴加；60-120°C加热72小时",
-        "relevance": "high"
-      },
-      {
         "prototype_id": "spider-silk",
         "constraint": "纺锤节构建机制——Rayleigh不稳定性",
         "value": "低粘度/低导电率→电场力无法完全克服表面张力→液膜断裂→液滴串→纺锤形→纺锤节纤维",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "metal-organic-framework",
-        "constraint": "PVDF/PAN/壳聚糖/UiO-66-NH₂纳米纤维膜长期稳定性",
-        "value": "18小时超长去除时间; 稳定膜通量",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "metal-organic-framework",
-        "constraint": "MOF材料水稳定性提升策略",
-        "value": "高价金属-含氧配体(Zr羧酸盐/Zr酚盐/Cr羧酸盐/Fe羧酸盐); pKa大的唑类配体(Zn咪唑盐/Ni吡唑盐); 提升疏水性",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "metal-organic-framework",
-        "constraint": "锆基MOF高稳定性原因",
-        "value": "锆金属离子与有机连接物之间具有很强的配位键合",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "metal-organic-framework",
-        "constraint": "TGA热稳定性",
-        "value": "PAN失重59.9%(1000°C)；Cu-BTC失重76.1%；MOF/PAN-MIM失重76.4%",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "metal-organic-framework",
-        "constraint": "Zn-MOF三维结构及热稳定性",
-        "value": "热稳定性<300°C; 粒径100-600 μm",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "metal-organic-framework",
-        "constraint": "MOF water stability importance for antibacterial adsorption",
-        "value": "Some MOFs with excellent water stability reported; further research ongoing to improve stability through in-situ synthesis and post-synthetic modification",
-        "relevance": "high"
-      },
-      {
-        "prototype_id": "metal-organic-framework",
-        "constraint": "配体延伸法的稳定性缓解策略",
-        "value": "搭建桨状构型MOFs和利用高连接性金属离子簇可减轻配体相互渗透和骨架坍塌问题",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "metal-organic-framework",
-        "constraint": "MOFs水稳定性问题",
-        "value": "大多数介孔MOFs在水体环境中不稳定，提高水稳定性是未来研究方向",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "metal-organic-framework",
-        "constraint": "MOF材料稳定性问题",
-        "value": "MOF-177: 5000→30 m²·g⁻¹(3d); UiO-66: 仅酸性稳定; ZIF-8: 仅碱性稳定",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "metal-organic-framework",
-        "constraint": "配体长度与结构稳定性关系——越短稳定性越强",
-        "value": null,
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "metal-organic-framework",
-        "constraint": "UiO-66耐酸碱稳定性——骨架在强酸/强碱中稳定",
-        "value": null,
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "metal-organic-framework",
-        "constraint": "MOF稳定性问题与改善策略",
-        "value": "MOF稳定性问题：大部分MOF热稳定性和水稳定性差→降解导致吸附能力下降+潜在二次污染。改善策略：(1)金属氧化物掺杂→Fe3O4@TMU-32增强水稳定性。(2)GO掺杂→MIL-101(Fe)/GO三明治结构增强水稳定性。(3)骨架增强→MBB(H2INT)安装入NENU-400(NENU-401)→三角双锥笼→六方双锥→通道分为六个小三角通道(~0.38 nm)→水稳定性增强。文献报道：DTDD-MOF和MTD-UiO-66在pH 1-10无失重→ATA-UiO-66不同pH溶液中稳定24h→UiO-66-COOH@PAN在0.25M HCl中稳定24h→仅TMU-32有0.65%轻微降解",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "metal-organic-framework",
-        "constraint": "MOF稳定性与环境影响",
-        "value": "MOF在液体中的稳定性不如无机多孔材料；分解产生的有毒金属（重金属）需考虑环境影响；建议使用Al、Fe等良性金属制备MOF",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "metal-organic-framework",
-        "constraint": "ZIF-L@木材过滤器——PM去除稳定性",
-        "value": "木材气凝胶(脱木素+去半纤维素)+ZIF-L/UiO-66-NH₂→PM去除→正电荷ZIF-L层通过静电作用捕获负电荷粉末→层间基质+–NH₂基团增强表面吸附+尺寸排阻→多次循环稳定",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "metal-organic-framework",
-        "constraint": "Zr浸出稳定性",
-        "value": "酸性和中性条件下Zr损失<2%。XRD吸附前后无明显变化→结构保持",
         "relevance": "medium"
       },
       {
@@ -3865,168 +2586,6 @@
         "relevance": "high"
       },
       {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "再生循环性能",
-        "value": "5次循环后吸附率仍>80%",
-        "relevance": "high"
-      },
-      {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "浸泡-干燥循环次数对表面稳定性的影响 Dip-drying repetition effect on stability",
-        "value": "SiO2/PDMS涂层经10次浸泡-干燥循环后，表面活性剂冲击前后接触角差从~20°降至~2°",
-        "relevance": "high"
-      },
-      {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "再生性能与循环稳定性",
-        "value": "5次吸附-解吸循环后：Pb²⁺去除率91.2%(下降8.7%), Cu²⁺ 87.5%(下降10.62%), Zn²⁺ 85.9%(下降11.95%)。初始3次循环几乎无衰减。解吸平衡：Pb²⁺ 8min, Cu²⁺ 10min, Zn²⁺ 12min",
-        "relevance": "high"
-      },
-      {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "NC生物吸附剂再生方法",
-        "value": "HCl(回收>90%金属离子但导致功能基团水解); NaOH(回收>70%); EDTA(螯合脱附)",
-        "relevance": "high"
-      },
-      {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "纳米纤维素膜机械性能与循环稳定性",
-        "value": "PVA/CT/NCC/MA30复合膜→5次循环后83.67±1.08%吸附保留；pH敏感纳米纤维素颗粒→As(V)吸附容量在pH 3达255.19 mg/g→pH 4.5时仅44.33 mg/g→5倍差异；8次再生循环仍表现良好；poly(VIM)/MFC冷冻凝胶→200次加载-卸载循环后能量损失系数<23%→优异形状恢复和抗疲劳性",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "淀粉样纤维再生性能",
-        "value": "酸洗再生→3次吸附-再生循环→去除效率与新鲜气凝胶一致",
-        "relevance": "high"
-      },
-      {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "磁性溶菌酶纳米纤维——染料去除+循环",
-        "value": "20次吸附-解吸循环后仍保持高去除效率; 外部磁场回收",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "6次吸附-脱附循环",
-        "value": "CR脱附剂：DMF。Cu²⁺脱附剂：0.2 M EDTA-2Na。6次循环→具体保留率数据在Fig. 7中(未在文本中完整给出)。脱附后冻干12h再生",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "CNC-CMC气凝胶——MB吸附与再生",
-        "value": "MB 225 g/g (第1次); 5次循环后保留86.2%初始容量; 后续循环基本恒定",
-        "relevance": "high"
-      },
-      {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "Desorption/regeneration - three eluent categories",
-        "value": "(1) Acids/bases: 0.1M HCl in ethanol 60/40 (Cu from amide-cellulose, 5 cycles: 48.1→44.7 mg/g); 1M HCl + 5wt% thiourea (Hg from TO-NFC, 4 cycles: 97.5→93.2%); (2) Metal salts+base: 0.2M NaOH + 0.2M NaCl (Cr from CPA-2, 5 cycles: >80% maintained); (3) Complexing agents: 0.1M EDTA (Pb/Cu/Zn from PAO/BC, 5 cycles: 8.7-12% decrease); 0.05M EDTA-2Na (Cu from PEI aerogel, 4 cycles: high efficiency maintained)",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "再生性能汇总",
-        "value": "多数体系5次循环保持>80%效率; CNF 99.5%效率; 珠30次循环92%效率",
-        "relevance": "high"
-      },
-      {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "二乙基三胺接枝二醛CNCs吸附As(III/V)及再生 Diethylenetriamine grafted dialdehyde CNCs for As and regeneration",
-        "value": "As(III)解吸率88.92%, As(V)解吸率92.56% (使用1.0 M NaOH)",
-        "relevance": "high"
-      },
-      {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "巯基改性CNF膜吸附Pb(II)再生与稳定性 Regeneration of thiol-modified CNF membrane for Pb(II)",
-        "value": "使用0.05 M EDTA解吸; 3次循环后仍保持95%原始Pb(II)吸附容量",
-        "relevance": "high"
-      },
-      {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "CNC-alginate水凝胶珠吸附MB的再生 Regeneration of CNC-alginate gel beads for MB",
-        "value": "使用1 M HCl和98%乙醇体积比1:1的混合液作为洗脱剂",
-        "relevance": "high"
-      },
-      {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "CNC增强角蛋白吸附剂对染料的碱再生 NaOH regeneration of CNC-keratin adsorbent for dyes",
-        "value": "使用0.1 g/L NaOH溶液解吸活性黑5(RB)和直接红80(DR)",
-        "relevance": "high"
-      },
-      {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "吸附剂再生方法",
-        "value": "热处理(活性炭); 简单洗涤(生物炭); pH调节; 溶剂洗脱; 多次再生无显著性能损失",
-        "relevance": "high"
-      },
-      {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "压缩循环稳定性",
-        "value": "50次循环(50%应变)后: CNF/SA-a应力保持率77.1%, 高度保持率83.56%; CNF/SA-b 60.6%/82.57%; CNF/SA-c 61.1%/81.97%; CNF/SA-c 10次循环后应力保持率85%",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "循环吸油-挤出再生",
-        "value": "20次循环(50%压缩挤出)后仍保持吸附能力; 形状记忆功能→压缩后可恢复初始形状",
-        "relevance": "high"
-      },
-      {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "CTS/CMC/PAA水凝胶对Pb²⁺的再生性能",
-        "value": "98.98",
-        "relevance": "high"
-      },
-      {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "再生性能 Regeneration",
-        "value": "5次循环后Cu²⁺吸附量>80%初始值",
-        "relevance": "high"
-      },
-      {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "纤维素水凝胶再生性能",
-        "value": "NaOH再生→恢复吸附能力",
-        "relevance": "high"
-      },
-      {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "循环稳定性 — 5次循环后吸附容量保持",
-        "value": "110",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "镧泄漏量 — 5次循环",
-        "value": "5",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "重氮化处理壳聚糖-MOF泡沫-循环吸附二氯甲烷-首次吸附量",
-        "value": "70.7",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "重氮化处理壳聚糖-MOF泡沫-循环吸附二氯甲烷-20次循环后吸附量",
-        "value": "61.7",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "未重氮化壳聚糖-MOF泡沫-循环吸附二氯甲烷-性能衰减",
-        "value": "前8次循环吸附量迅速下降",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "实施例3配方（循环测试对象）",
-        "value": "纤维素纳米纤维2.0g+埃洛石1.5g+玻璃纤维0.25g+PEI-ECH 0.5g/100g水+MTMS疏水改性3min",
-        "relevance": "medium"
-      },
-      {
         "prototype_id": "diatom-frustule",
         "constraint": "无机改性——硅烷/硅藻土对甲醛去除+循环",
         "value": "去除率79.09%(较原土提高1.59倍)；5次循环后仍65.94%",
@@ -4063,66 +2622,6 @@
         "relevance": "medium"
       },
       {
-        "prototype_id": "alginate",
-        "constraint": "NH-SA-ZrBT对磷酸根的吸附容量和循环稳定性",
-        "value": "63.61",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "alginate",
-        "constraint": "PASA水凝胶对铵氮的吸附-脱附循环稳定性",
-        "value": "9次循环后保持87%吸附容量",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "alginate",
-        "constraint": "SA-T/M₂固胺吸附剂对CO₂的循环稳定性",
-        "value": "2.10 mmol/g（30次循环后）",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "alginate",
-        "constraint": "再生循环性能",
-        "value": "5次循环后吸附率仍>80%",
-        "relevance": "high"
-      },
-      {
-        "prototype_id": "alginate",
-        "constraint": "压缩循环稳定性",
-        "value": "50次循环(50%应变)后: CNF/SA-a应力保持率77.1%, 高度保持率83.56%; CNF/SA-b 60.6%/82.57%; CNF/SA-c 61.1%/81.97%; CNF/SA-c 10次循环后应力保持率85%",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "alginate",
-        "constraint": "循环吸油-挤出再生",
-        "value": "20次循环(50%压缩挤出)后仍保持吸附能力; 形状记忆功能→压缩后可恢复初始形状",
-        "relevance": "high"
-      },
-      {
-        "prototype_id": "alginate",
-        "constraint": "循环再生性能 cycling stability",
-        "value": "5次循环后中性红相对脱除率98.82%，刚果红98.19%",
-        "relevance": "high"
-      },
-      {
-        "prototype_id": "alginate",
-        "constraint": "实施例3配方（循环测试对象）",
-        "value": "纤维素纳米纤维2.0g+埃洛石1.5g+玻璃纤维0.25g+PEI-ECH 0.5g/100g水+MTMS疏水改性3min",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "alginate",
-        "constraint": "循环使用性能 Cycling performance",
-        "value": "洗脱后循环使用多次，饱和吸附量几乎不下降",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "namib-beetle",
-        "constraint": "浸泡-干燥循环次数对表面稳定性的影响 Dip-drying repetition effect on stability",
-        "value": "SiO2/PDMS涂层经10次浸泡-干燥循环后，表面活性剂冲击前后接触角差从~20°降至~2°",
-        "relevance": "high"
-      },
-      {
         "prototype_id": "spider-silk",
         "constraint": "FRR与循环稳定性 Flux recovery and cycling",
         "value": "FRR 99.98%; 8次循环无显著通量衰减",
@@ -4133,102 +2632,6 @@
         "constraint": "再生性能 Regeneration",
         "value": "5次循环去除率>99%",
         "relevance": "high"
-      },
-      {
-        "prototype_id": "metal-organic-framework",
-        "constraint": "ZIF-67/BC/CH气凝胶对Cr(VI)吸附及再生",
-        "value": "pH=6时最大吸附; 5次循环后保持72%",
-        "relevance": "high"
-      },
-      {
-        "prototype_id": "metal-organic-framework",
-        "constraint": "nFe₃O₄@MIL-88A(Fe)/APTMS对Cr(VI)吸附及再生",
-        "value": "5次循环后去除率仅下降3%",
-        "relevance": "high"
-      },
-      {
-        "prototype_id": "metal-organic-framework",
-        "constraint": "BUT-39对Cr₂O₇²⁻吸附性能及再生问题",
-        "value": "215",
-        "relevance": "high"
-      },
-      {
-        "prototype_id": "metal-organic-framework",
-        "constraint": "CZIF-700对CIP吸附及循环性能",
-        "value": "416.7",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "metal-organic-framework",
-        "constraint": "ZIF-8/茶袋再生性能",
-        "value": "20次循环后仍高效",
-        "relevance": "high"
-      },
-      {
-        "prototype_id": "metal-organic-framework",
-        "constraint": "再生策略",
-        "value": "石墨烯: NaOH 1M+90°C→4次循环86%→70%效率; MIPs: 甲醇/乙酸9:1→4次循环84%→65%; 粘土: 300°C→3次循环71%→51%; OMC: NaCl 0.8M→5次循环78.9%→48.5%",
-        "relevance": "high"
-      },
-      {
-        "prototype_id": "metal-organic-framework",
-        "constraint": "CNC-CMC气凝胶——MB吸附与再生",
-        "value": "MB 225 g/g (第1次); 5次循环后保留86.2%初始容量; 后续循环基本恒定",
-        "relevance": "high"
-      },
-      {
-        "prototype_id": "metal-organic-framework",
-        "constraint": "吸附剂再生方法",
-        "value": "热处理(活性炭); 简单洗涤(生物炭); pH调节; 溶剂洗脱; 多次再生无显著性能损失",
-        "relevance": "high"
-      },
-      {
-        "prototype_id": "metal-organic-framework",
-        "constraint": "再生性能——5次循环",
-        "value": "5次循环后保持90%吸附容量；循环1→99.6%; 循环2→93.9%; 循环3→90.2%; 循环4→91.5%; 循环5→90.5%",
-        "relevance": "high"
-      },
-      {
-        "prototype_id": "metal-organic-framework",
-        "constraint": "HP-UiO-66(Zr)-OA的再生性能",
-        "value": "0.01 mol/L NaOH洗脱率~95%。3次循环后保持~90%去除效率。Zr浸出3.5 μg/L(7500 BV)。再生后SSA 505 m²/g，介孔结构保持完整",
-        "relevance": "high"
-      },
-      {
-        "prototype_id": "metal-organic-framework",
-        "constraint": "ZIF reusability performance",
-        "value": "3–4 cycles with >70% retention",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "metal-organic-framework",
-        "constraint": "ZIF reusability after regeneration cycles",
-        "value": "regeneration efficiency decreases after the second cycle; ethanol washing requires further amendment",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "metal-organic-framework",
-        "constraint": "ZIF organic arsenic compound reusability limitation",
-        "value": "reusability of adsorbents for organo-arsenic compounds can be comparatively quite poor",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "metal-organic-framework",
-        "constraint": "重氮化处理壳聚糖-MOF泡沫-循环吸附二氯甲烷-首次吸附量",
-        "value": "70.7",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "metal-organic-framework",
-        "constraint": "重氮化处理壳聚糖-MOF泡沫-循环吸附二氯甲烷-20次循环后吸附量",
-        "value": "61.7",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "metal-organic-framework",
-        "constraint": "未重氮化壳聚糖-MOF泡沫-循环吸附二氯甲烷-性能衰减",
-        "value": "前8次循环吸附量迅速下降",
-        "relevance": "medium"
       },
       {
         "prototype_id": "wood-xylem",
@@ -4252,18 +2655,6 @@
         "prototype_id": "lobster-exoskeleton",
         "constraint": "壳聚糖珠粒的七大再生方法（Table 9）",
         "value": "热再生、化学再生、微波辅助、超声、溶剂、超临界流体",
-        "relevance": "high"
-      },
-      {
-        "prototype_id": "starch-granule",
-        "constraint": "MSAs再生性能汇总",
-        "value": "MB: ≤15% reduction after 8 cycles (90.5% after 5 cycles); ibuprofen: 73.56% after 5 cycles",
-        "relevance": "high"
-      },
-      {
-        "prototype_id": "starch-granule",
-        "constraint": "4次循环再生性能",
-        "value": "循环1: 吸附~800→脱附~760。循环2: ~660→~650。循环3: ~600→~590。循环4: ~610→~580 mg/g。脱附剂：乙醇/乙酸(20:1 v/v)+超声5min。pH-swing脱附",
         "relevance": "high"
       }
     ],
@@ -4332,24 +2723,6 @@
         "prototype_id": "chitosan",
         "constraint": "Temperature effect and thermodynamics",
         "value": "Optimal temperature 25-35°C for most studies; can be endothermic or exothermic",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "温度对BPA吸附的影响 Temperature effect on BPA adsorption",
-        "value": "BPA吸附通常是放热过程(温度升高吸附容量下降)；但某些材料因表面化学或孔结构变化在高温下吸附容量反而增加",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "Temperature effect and thermodynamics",
-        "value": "Optimal temperature 25-35°C for most studies; can be endothermic or exothermic",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "metal-organic-framework",
-        "constraint": "温度对BPA吸附的影响 Temperature effect on BPA adsorption",
-        "value": "BPA吸附通常是放热过程(温度升高吸附容量下降)；但某些材料因表面化学或孔结构变化在高温下吸附容量反而增加",
         "relevance": "medium"
       }
     ],
@@ -4595,129 +2968,9 @@
         "relevance": "medium"
       },
       {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "pH对BPA吸附的影响 pH effect on BPA adsorption",
-        "value": "pH 2-8范围内对去除效率影响较小；pH 9-11时BPA吸附效率下降(BPA在pH>8开始去质子化，阴离子形态与带负电吸附剂表面产生静电排斥)",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "交联剂提高疏水稳定性 Crosslinking agents for hydrophobic stability",
-        "value": "Kymene 557H（含羧基）和环氧氯丙烷用于增强纳米材料与纤维素织物/纤维之间的连接",
-        "relevance": "high"
-      },
-      {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "超疏油膜 harsh condition 稳定性 Superoleophobic harsh condition stability",
-        "value": "酸性0.1-1 M HCl或pH=1；碱性0.1-1 M NaOH或pH=11-13；盐浓度0.1-1 M或5-10 wt% NaCl；浸泡2-8 M H2SO4 10 min-30天；水中浸泡90天",
-        "relevance": "high"
-      },
-      {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "pH effect on adsorption - optimal range",
-        "value": "Optimal pH typically 4-6 for most studies; adsorption capacity increases with pH up to optimum",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "Zeta potential and pH relationship - Hg2+ example",
-        "value": "TO-NFC aerogel: highest adsorption efficiency ~97% at pH 5-9; zeta potential highly negative at -33 mV in this range; 80% efficiency even at pH 1",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "羧基化CNF吸附Hg(II)的pH依赖性与zeta电位 pH dependence and zeta potential of carboxylated CNF for Hg(II)",
-        "value": "pH 4去除率~5%, pH 11去除率~54%; zeta电位从-6.6 mV降至-17.6 mV",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "CNC-PVAm微凝胶对阴离子染料去除的pH影响 pH effect of CNC-PVAm on anionic dye removal",
-        "value": "AR染料(100 mg/L)在pH 3.5时去除率99.9%，pH 9时59.9%",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "c-DAC吸附Cr(VI)的宽pH适应性 Wide pH range of c-DAC for Cr(VI)",
-        "value": "c-DAC在pH 2-10范围内保持正电荷，可有效吸附负电性Cr(VI)离子",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "pH 2 极端酸性条件下的抑制作用",
-        "value": "H+优先与吡啶酮双酸改性纤维素上的吸附位点发生相互作用，对染料吸附产生抑制",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "cellulose-nanocrystal",
-        "constraint": "pH 12 极端碱性条件下的影响",
-        "value": "强碱性条件下亚甲基蓝的结构和性质发生细微改变，影响吸附过程",
-        "relevance": "medium"
-      },
-      {
         "prototype_id": "mycelium",
         "constraint": "pH对真菌吸附的影响 pH effect on fungal adsorption",
         "value": "pH 6.0时球孢白僵菌Z1对Cd²⁺去除率56.17%；pH过低→H⁺竞争位点；pH过高→金属氢氧化物沉淀",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "alginate",
-        "constraint": "Phosphate species vs pH",
-        "value": "H3PO4 (pH < 2), H2PO4- (pH 2–7), HPO42- (pH 7–11), PO43- (pH > 11)",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "namib-beetle",
-        "constraint": "交联剂提高疏水稳定性 Crosslinking agents for hydrophobic stability",
-        "value": "Kymene 557H（含羧基）和环氧氯丙烷用于增强纳米材料与纤维素织物/纤维之间的连接",
-        "relevance": "high"
-      },
-      {
-        "prototype_id": "namib-beetle",
-        "constraint": "超疏油膜 harsh condition 稳定性 Superoleophobic harsh condition stability",
-        "value": "酸性0.1-1 M HCl或pH=1；碱性0.1-1 M NaOH或pH=11-13；盐浓度0.1-1 M或5-10 wt% NaCl；浸泡2-8 M H2SO4 10 min-30天；水中浸泡90天",
-        "relevance": "high"
-      },
-      {
-        "prototype_id": "metal-organic-framework",
-        "constraint": "酸性条件吸附优势原理 Why acidic pH favors Cr(VI) adsorption",
-        "value": "酸性条件下吸附剂表面易被H⁺质子化带正电，对带负电的HCrO₄⁻或Cr₂O₇²⁻亲和性高；碱性条件下OH⁻与CrO₄²⁻竞争吸附",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "metal-organic-framework",
-        "constraint": "pH对BPA吸附的影响 pH effect on BPA adsorption",
-        "value": "pH 2-8范围内对去除效率影响较小；pH 9-11时BPA吸附效率下降(BPA在pH>8开始去质子化，阴离子形态与带负电吸附剂表面产生静电排斥)",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "metal-organic-framework",
-        "constraint": "MOF optimal pH range for heavy metal adsorption",
-        "value": "approximately 2-7",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "metal-organic-framework",
-        "constraint": "ZIF-8 Cr(VI) adsorption at pH 3",
-        "value": "150 mg/g",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "metal-organic-framework",
-        "constraint": "ZIF-8-mmen Cd(II) adsorption at pH 6",
-        "value": "1000",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "metal-organic-framework",
-        "constraint": "UiO-66-(COOH)2/GO pH-independent TC adsorption",
-        "value": "pH-independent adsorption for TC·HCl",
-        "relevance": "medium"
-      },
-      {
-        "prototype_id": "metal-organic-framework",
-        "constraint": "ZIF-8/GO pH-dependent competitive adsorption",
-        "value": "Pb(II): significant decrease at pH<6 with NaNO3; 1-Naphthylamine: significant decrease at pH>7 with NaNO3",
         "relevance": "medium"
       },
       {
@@ -4725,22 +2978,9 @@
         "constraint": "pH稳定性",
         "value": "GNM/CS@GNM膜在pH 3.0-11.0范围内渗透率稳定→膜形态可保证此pH范围稳定运行",
         "relevance": "medium"
-      },
-      {
-        "prototype_id": "starch-granule",
-        "constraint": "pH-swing脱附机制",
-        "value": "MB吸附容量随pH升高而增大→可利用pH降低脱附。脱附剂：乙醇/乙酸(20:1 v/v)+超声5min→重复3次→高效脱附。酸性条件下Starbon®表面带正电→排斥阳离子MB→脱附",
-        "relevance": "medium"
       }
     ],
-    "salinity_tolerance": [
-      {
-        "prototype_id": "alginate",
-        "constraint": "海藻酸盐基吸附剂的再生性能",
-        "value": "多种再生体系：0.1 M HCl/0.05 M CaCl₂（5次循环Pb/Cu去除>70%/40%）、0.5 M HCl（4次循环）、1 M HNO₃（3次循环后损坏）、2 M NaCl（Cd/Hg/Pb再生）、0.5 M HNO₃（10次循环~70%容量）",
-        "relevance": "high"
-      }
-    ]
+    "salinity_tolerance": []
   },
   "layer1_scoring": {
     "description": "条件预筛使用 tested_conditions 做软降权，不硬排除",

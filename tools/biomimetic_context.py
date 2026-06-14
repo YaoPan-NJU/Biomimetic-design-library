@@ -382,7 +382,7 @@ class BiomimeticContext:
                         'attribution': {
                             'source': main_mech.get('source', 'unknown'),
                             'ref': main_mech.get('ref_doi', main_mech.get('ref', '')),
-                            'verification_tier': 'single_source'
+                            'verification_tier': main_mech.get('verification', 'needs_review') or 'needs_review'
                         }
                     },
                     'design_translation': {
@@ -452,6 +452,8 @@ class BiomimeticContext:
 
         for p in proto.get('performance_data', []):
             pol = p.get('pollutant', '')
+            if not pol or not pol.strip():
+                continue  # 空 pollutant 不参与匹配
             if pollutant.lower() in pol.lower() or pol.lower() in pollutant.lower():
                 leads.append({
                     'pollutant': pol,
@@ -475,8 +477,8 @@ def main():
         water_quality={"pH": 6.0, "temperature": 25, "salinity": "low"},
         engineering_constraints=["水稳定性", "可回收性"]
     )
-    print(f"候选原型数: {len(brief['candidates'])}")
-    for c in brief['candidates']:
+    print(f"候选原型数: {len(brief['brief']['candidates'])}")
+    for c in brief['brief']['candidates']:
         print(f"  - {c['prototype_id']}: {c['match']['match_basis']} (direct_evidence={c['match']['direct_evidence']})")
 
     # 测试 2: feature-based 查询
@@ -486,8 +488,8 @@ def main():
         water_quality={"pH": 7.0, "temperature": 25, "salinity": "medium"},
         engineering_constraints=["水稳定性"]
     )
-    print(f"候选原型数: {len(brief['candidates'])}")
-    for c in brief['candidates']:
+    print(f"候选原型数: {len(brief['brief']['candidates'])}")
+    for c in brief['brief']['candidates']:
         print(f"  - {c['prototype_id']}: {c['match']['match_basis']} (direct_evidence={c['match']['direct_evidence']})")
 
 
