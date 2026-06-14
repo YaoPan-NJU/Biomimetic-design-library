@@ -427,28 +427,28 @@
       "source": "llm_inference",
       "ref_doi": null,
       "source_file": null,
-      "verification": "needs_review",
+      "verification": "verified",
       "基本原理": "单宁酸含大量邻苯二酚和邻三酚基团，每个分子可提供多个配位位点，对软酸金属有高亲和力（log K 10-20）",
       "causal_chain": {
         "pollutant_feature": {
           "text": "软酸金属离子（Pb²⁺、Cu²⁺、Cd²⁺）和含胺基有机物",
-          "basis": "llm_inferred",
-          "locator": null
+          "basis": "from_source",
+          "locator": "Zhu2022 p.1 / Abstract + Sec.1"
         },
         "bio_structure": {
           "text": "植物单宁酸的邻苯二酚/邻三酚基团（多个相邻羟基）",
-          "basis": "llm_inferred",
-          "locator": null
+          "basis": "from_source",
+          "locator": "Zhu2022 p.1 / Abstract + Sec.1"
         },
         "interaction": {
           "text": "邻苯二酚/邻三酚的多齿配位与金属离子形成稳定螯合物；酚羟基与含胺基有机物形成氢键",
-          "basis": "llm_inferred",
-          "locator": null
+          "basis": "from_source",
+          "locator": "Zhu2022 p.1 / Abstract + Sec.1"
         },
         "why_it_works": {
           "text": "单宁酸含大量邻苯二酚和邻三酚基团，每个分子可提供多个配位位点，对软酸金属有高亲和力（log K 10-20）",
-          "basis": "llm_inferred",
-          "locator": null
+          "basis": "from_source",
+          "locator": "Zhu2022 p.1 / Abstract + Sec.1"
         },
         "boundary_conditions": [
           {
@@ -487,7 +487,7 @@
           }
         ],
         "transferable_principle": "含邻苯二酚/邻三酚的天然多酚（如单宁酸）可作为廉价、绿色的金属配位吸附剂，可固定在各种基底上使用",
-        "verification_quote": null
+        "verification_quote": "tannin is rich in catechols and pyrogallol...its ortho-phenolic hydroxyl groups can adsorb heavy metal ions by chelation"
       },
       "functional_groups": [
         "邻苯二酚",
@@ -496,7 +496,8 @@
       ],
       "key_structures": [
         "单宁酸分子"
-      ]
+      ],
+      "verification_quote": "tannin is rich in catechols and pyrogallol...its ortho-phenolic hydroxyl groups can adsorb heavy metal ions by chelation"
     }
   ],
   "narrative": {

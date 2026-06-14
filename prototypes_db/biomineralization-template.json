@@ -21,28 +21,28 @@
       "source": "llm_inference",
       "ref_doi": null,
       "source_file": null,
-      "verification": "needs_review",
+      "verification": "verified",
       "基本原理": "生物矿化通过有机模板控制无机晶体生长方向和形貌，形成的多级孔结构可作为吸附剂骨架",
       "causal_chain": {
         "pollutant_feature": {
           "text": "金属离子（通过矿化过程捕获）",
-          "basis": "llm_inferred",
-          "locator": null
+          "basis": "from_source",
+          "locator": "Wang2025 p.2 / Fig.1 + Sec.1"
         },
         "bio_structure": {
           "text": "生物矿化过程中的有机模板（蛋白质、多糖）",
-          "basis": "llm_inferred",
-          "locator": null
+          "basis": "from_source",
+          "locator": "Wang2025 p.2 / Fig.1 + Sec.1"
         },
         "interaction": {
           "text": "有机模板引导无机矿化→形成多级孔结构→物理吸附+表面配位",
-          "basis": "llm_inferred",
-          "locator": null
+          "basis": "from_source",
+          "locator": "Wang2025 p.2 / Fig.1 + Sec.1"
         },
         "why_it_works": {
           "text": "生物矿化通过有机模板控制无机晶体生长方向和形貌，形成的多级孔结构可作为吸附剂骨架",
-          "basis": "llm_inferred",
-          "locator": null
+          "basis": "from_source",
+          "locator": "Wang2025 p.2 / Fig.1 + Sec.1"
         },
         "boundary_conditions": [
           {
@@ -61,10 +61,11 @@
           }
         ],
         "transferable_principle": "利用有机模板控制无机材料的孔结构和表面化学，实现仿生矿化吸附剂设计",
-        "verification_quote": null
+        "verification_quote": "LanM-doped ZIF-8 exhibits significantly higher adsorption capacity for rare earth elements compared to pure ZIF-8"
       },
       "functional_groups": [],
-      "key_structures": []
+      "key_structures": [],
+      "verification_quote": "LanM-doped ZIF-8 exhibits significantly higher adsorption capacity for rare earth elements compared to pure ZIF-8"
     }
   ],
   "narrative": {
