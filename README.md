@@ -20,26 +20,46 @@
 
 ---
 
-## 当前状态（v1.1）
+## 当前状态（整改中 · 2026-06-14）
 
-> 数据快照：2026-06-09 08:40 | 分支：`feature/extraction-results` | 第二波提取完成（118 JSON）
+> 工作分支：`opt/curation-grounding-v1`｜整改主题：**策展 + 接地 + 诚实分级**（把"看着广、其实是叙事"的库，收敛为"窄但每条可信、可溯源"的库）。
 
 | 指标 | 数值 |
 |------|------|
-| 交付分支 | `release/v1.1` |
-| 版本 | v1.1 |
-| prototypes_db/*.json | 31 |
-| separation/ 原型 | 5 (parked) |
-| 有性能数据的原型 | 20 |
-| 性能数据总数 | 752 |
-| 机制总数 | 790 |
-| 工程约束总数 | 270 |
-| verified | 0 |
-| pending_manual_check | 236 |
-| unverified | 516 |
-| 校验错误 | 0 |
-| 校验警告 | 254 (主要是 R14) |
-| 第二波提取 JSON | 57 |
+| active 原型（参与检索）| 24 |
+| materials_reference（降级，不检索）| 4（MOF / 纤维素纳米晶 / 淀粉 / 海藻酸盐）|
+| parked（超范围停放）| 1（namib-beetle）|
+| 机制总数 | 534 |
+| 因果链卡（核心、可迁移原理）| 28 张（覆盖 24/24 原型）|
+| 其中 PDF 已核验 verified | 23 张 |
+| 仍待下载文献核验 | 5 张（coral / magnetic-bacteria / pitcher-plant / lobster / spider-silk）|
+| 校验错误 / chimera 违规 | 0 / 0 |
+
+**整改进度**：Phase 0–6 已完成并复核（基线、接口诚实度、策展、去污染、字段语义、因果链补全、PDF 核验）；Phase 7（设计转译）/ 8（失效边界 + DO-NOT）/ 9（总验收）进行中。详见 `docs/optimization-v1/`。
+
+---
+
+## ADRMATS 集成状态（给协作同事）
+
+- 本库定位：ADRMATS 的**仿生启发检索模块**，产出 `BiomimeticDesignBrief`，喂给其 `MaterialDesigningAgent` 作设计灵感。
+- **当前与 ADRMATS 零代码集成**：ADRMATS 仓库里没有 import 本库、`requirements.txt` 无依赖、设计 Proposer 仅凭 LLM 知识生成。集成需在 ADRMATS 侧动手。
+- 接口侧：`tools/biomimetic_context.py` 的 `query()` 可用，已修诚实度（不再硬编码证据等级、空污染物不乱配）。
+- 建议集成形态（二选一，详见 `docs/adrmats-integration-analysis.md`）：A 案 在 ADRMATS 的对抗设计流里调 `query()` 把 brief 注入 Proposer prompt（改动小，推荐）；B 案 仿 `crewai_*_tool.py` 封成 CrewAI 工具挂给设计 Agent。
+- 输入对接：ADRMATS 约束 Agent 的输出（污染物 + 水质 + 约束）正好映射到 `query(pollutant, water_quality, engineering_constraints)`；污染物名归一用 `pollutant_aliases.json`。
+
+---
+
+## 整改相关文档
+
+| 文档 | 用途 |
+|------|------|
+| `docs/optimization-v1/PLAN.md`（即 `优化方案_仿生库策展与接地_v1.md`）| 9 阶段执行手册 |
+| `docs/optimization-v1/DEFINITIONS.md` | 判定标准 / 字段 schema / 边界护栏 / 铁律（权威）|
+| `docs/optimization-v1/交接文档_HANDOFF.md` | 复核角色交接（含当前进度与失败模式教训）|
+| `docs/optimization-v1/coverage-gaps.md` | 策展后失去 direct evidence 的污染物（Boron / Co(II) 为真缺口）|
+| `docs/adrmats-integration-analysis.md` | 与 ADRMATS 的集成差距分析 |
+
+> ⚠️ **勿运行 `tools/build_prototypes_db.py`**：它从原始提取反向重建 canon，会冲掉整改成果。canon（`prototypes_db/*.json`）已冻结，只在其上直接编辑。
 
 ---
 
