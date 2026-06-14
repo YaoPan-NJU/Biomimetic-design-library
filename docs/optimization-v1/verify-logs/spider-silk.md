@@ -1,6 +1,5 @@
 # spider-silk — 核验日志
 
-- ✅ 抗污染机制 Antifouling mechanism: verified | source=仿生文献库/2nd/全局综述（补充）/2024-Wang-nanomaterials-antifouling-revie
-  quote: "nanomaterials for antifouling in water purification..."
+- ⏳ 抗污染机制 Antifouling mechanism: needs_review
 
-总计: verified=1, needs_review=0
+总计: verified=0, needs_review=1
