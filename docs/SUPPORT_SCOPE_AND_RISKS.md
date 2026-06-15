@@ -136,7 +136,7 @@ python -X utf8 tools/check_repo_hygiene.py            # 治理检查
 ### 短期
 
 - 学生下载 8 篇文献 → 按 A 档核验 → 升级为 hard DO-NOT
-- 修复 `check_repo_hygiene.py` 暴露的治理问题
+- 仓库治理已修复（`check_repo_hygiene.py` PASS），后续需保持合规
 - 清理 silk-fibroin 重复机制
 
 ### 中期

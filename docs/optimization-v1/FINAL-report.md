@@ -1,7 +1,7 @@
 # FINAL Report — 仿生库整改总验收
 
 > 分支：`opt/curation-grounding-v1`
-> 当前 HEAD：`096c281`（Phase 9 基线）
+> 当前 HEAD：`ccded69`（Phase 9: 打包与总验收）
 > Phase 8 patch：`333b092`
 > 日期：2026-06-15
 
