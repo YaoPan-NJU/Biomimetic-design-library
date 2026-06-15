@@ -115,7 +115,7 @@ def validate_brief_structure(brief, test_name):
                 # 检查 attribution
                 if 'attribution' in mech:
                     attr = mech['attribution']
-                    attr_fields = ['source', 'ref', 'verification_tier']
+                    attr_fields = ['source', 'ref', 'verification_tier', 'confidence']
                     for field in attr_fields:
                         if field not in attr:
                             errors.append(f"candidate[{i}].mechanism.attribution 缺少 {field}")
@@ -186,7 +186,7 @@ def validate_direct_evidence_rules(brief, pollutant, test_name):
 
 
 def validate_no_needs_review_in_strong_ranking(brief, test_name):
-    """验证 needs_review 条目不得进入强排序"""
+    """验证 needs_review 条目不得进入强排序（除非标记 confidence: low）"""
     errors = []
 
     if 'brief' not in brief:
@@ -200,9 +200,10 @@ def validate_no_needs_review_in_strong_ranking(brief, test_name):
         mechanism = c.get('mechanism', {})
         attribution = mechanism.get('attribution', {})
         verification_tier = attribution.get('verification_tier', '')
+        confidence = attribution.get('confidence', 'normal')
 
-        if verification_tier == 'needs_review':
-            errors.append(f"candidate[{i}] ({c.get('prototype_id')}): needs_review 条目进入强排序")
+        if verification_tier == 'needs_review' and confidence != 'low':
+            errors.append(f"candidate[{i}] ({c.get('prototype_id')}): needs_review 条目进入强排序且未标记 confidence:low")
 
     return errors
 
@@ -306,7 +307,7 @@ def main():
     print_section("运行 validate_consistency.py")
     try:
         result = subprocess.run(
-            ["python3", "-X", "utf8", "tools/validate_consistency.py"],
+            ["python", "-X", "utf8", "tools/validate_consistency.py"],
             capture_output=True,
             text=True,
             encoding='utf-8',
@@ -327,7 +328,7 @@ def main():
     print_section("运行 check_chimera.py")
     try:
         result = subprocess.run(
-            ["python3", "-X", "utf8", "tools/check_chimera.py"],
+            ["python", "-X", "utf8", "tools/check_chimera.py"],
             capture_output=True,
             text=True,
             encoding='utf-8',

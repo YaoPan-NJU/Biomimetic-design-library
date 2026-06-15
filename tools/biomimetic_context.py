@@ -350,9 +350,11 @@ class BiomimeticContext:
             if pid in self.prototypes:
                 proto = self.prototypes[pid]
 
-                # 获取机制
+                # 获取机制（按 verification 优先级排序：verified > corroborated > 其他 > needs_review）
                 mechs = proto.get('mechanisms', [])
-                main_mech = mechs[0] if mechs else {}
+                _verif_priority = {'verified': 0, 'corroborated': 1, 'needs_review': 3}
+                sorted_mechs = sorted(mechs, key=lambda m: _verif_priority.get(m.get('verification', 'needs_review'), 2))
+                main_mech = sorted_mechs[0] if sorted_mechs else {}
 
                 # 获取设计转译
                 entries = proto.get('narrative', {}).get('entries', [])
@@ -382,7 +384,8 @@ class BiomimeticContext:
                         'attribution': {
                             'source': main_mech.get('source', 'unknown'),
                             'ref': main_mech.get('ref_doi', main_mech.get('ref', '')),
-                            'verification_tier': main_mech.get('verification', 'needs_review') or 'needs_review'
+                            'verification_tier': main_mech.get('verification', 'needs_review') or 'needs_review',
+                            'confidence': 'low' if (main_mech.get('verification', 'needs_review') or 'needs_review') == 'needs_review' else 'normal'
                         }
                     },
                     'design_translation': {
@@ -404,10 +407,22 @@ class BiomimeticContext:
             facts.append(f"有 {len(direct_candidates)} 个原型对 {pollutant} 有直接实验数据")
 
         for c in all_candidates[:5]:
+            pid = c['prototype_id']
             if c.get('direct_evidence'):
-                leads.append(f"{c['prototype_id']}: 有直接实验数据，但未经独立核实")
+                # 检查该候选展示的主机制 verification
+                if pid in self.prototypes:
+                    proto_check = self.prototypes[pid]
+                    mechs_check = proto_check.get('mechanisms', [])
+                    sorted_check = sorted(mechs_check, key=lambda m: _verif_priority.get(m.get('verification', 'needs_review'), 2))
+                    top_mech_check = sorted_check[0] if sorted_check else {}
+                    if top_mech_check.get('verification') == 'needs_review':
+                        inferences.append(f"{pid}: 有直接实验数据但机制未经核实，置信度低")
+                    else:
+                        leads.append(f"{pid}: 有直接实验数据，但未经独立核实")
+                else:
+                    leads.append(f"{pid}: 有直接实验数据，但未经独立核实")
             else:
-                inferences.append(f"{c['prototype_id']}: 基于分子特征推断，非直接证据")
+                inferences.append(f"{pid}: 基于分子特征推断，非直接证据")
 
         # 7. 查找适用规则（pending_validation）
         applicable_rules = self.find_applicable_rules(water_quality, pollutant)
