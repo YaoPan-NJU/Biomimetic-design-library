@@ -469,11 +469,8 @@
             "text": "强碱性条件下单宁酸氧化聚合",
             "parameter": "pH",
             "condition": {
-              "operator": "threshold_gt",
-              "value": [
-                10
-              ],
-              "basis_note": "定性"
+              "operator": "qualitative",
+              "value": null
             },
             "basis": "llm_inferred",
             "verification": "needs_review",

@@ -116,6 +116,45 @@
 
 ---
 
+## 7.5 Review 后修补（放行前修复）
+
+Phase 8 初版提交后经 review 发现以下问题，已全部修复：
+
+### 已修复：3 条隐藏数值阈值
+
+这些 BC 的 `text` 已在 Phase 8.1 改为定性描述，但 `condition.value` 仍保留数值，违反"B 档 / llm_inferred 不得携带数字阈值"规则。
+
+| 原型 | 修复前 condition | 修复后 |
+|------|-----------------|--------|
+| plant-tannin | `{"operator":"threshold_gt","value":[10]}` | `{"operator":"qualitative","value":null}` |
+| silk-fibroin (×2) | `{"operator":"range","value":[2,11]}` | `{"operator":"qualitative","value":null}` |
+
+### 已修复：SRB boundary from_source/verification 不一致
+
+`sulfate-reducing-bacteria` 的 "SRB是严格厌氧菌" BC 原标记 `basis=from_source` + `locator="biology knowledge"`，但 "biology knowledge" 不算真实 locator，不构成 from_source 证据。
+
+修复：`basis → llm_inferred`，`verification → needs_review`，`locator → null`。
+
+### 已升级：check_boundary_guardrail.py
+
+新增 5 项检查：
+- BC 必填字段完整性（text/parameter/condition/basis/gate_level/verification）
+- basis 合法值（仅 from_source | llm_inferred）
+- `basis≠from_source` 时 `condition.value` 必须为 null
+- `locator="biology knowledge"` 不算真实 locator
+- `basis=from_source` 时 `verification` 必须为 verified/corroborated
+
+### 已记录：silk-fibroin 重复机制
+
+silk-fibroin 存在两个同名 "吸附机制" mechanism 且带重复 BC，属于 pre-existing 数据质量风险。不在本次小修中合并机制，留待后续清理。
+
+### 当前状态
+
+- 0 硬 DO-NOT / 62 软 caution（未夸大为硬约束）
+- check_boundary_guardrail.py: 8 项检查全绿
+
+---
+
 ## 8. 残留风险
 
 1. **0 条硬 DO-NOT**：所有边界均为 B 档（llm_inferred + needs_review），因为 Phase 6 核验的 PDF 主要覆盖正向机制，边界条件未被逐条从 PDF 中提取。如需硬 DO-NOT，需从 PDF 中逐条摘取边界并核验。
@@ -123,6 +162,8 @@
 2. **4 个原型的边界标记为 "待文献支撑"**：biomineralization-template、coral-skeleton、dna-aptamer、magnetic-bacteria 的 BC 为 placeholder。需学生下载对应文献后按 A 档核验。
 
 3. **verify_adrmats_delivery.py 的 needs_review 排名**：已通过 Phase 7.5 修复，但若原型所有机制都是 needs_review，该原型仍会出现在候选中（标记 confidence: low）。
+
+4. **silk-fibroin 重复机制**：存在两个同名 "吸附机制" mechanism 及重复 BC，pre-existing 数据质量问题，留待后续清理。
 
 ---
 

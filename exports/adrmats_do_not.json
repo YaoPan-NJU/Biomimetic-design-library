@@ -739,11 +739,8 @@
     "mechanism_name": "单宁酸-金属配位机理",
     "parameter": "pH",
     "condition": {
-      "operator": "threshold_gt",
-      "value": [
-        10
-      ],
-      "basis_note": "定性"
+      "operator": "qualitative",
+      "value": null
     },
     "text": "强碱性条件下单宁酸氧化聚合",
     "gate_level": "soft",
@@ -817,12 +814,8 @@
     "mechanism_name": "吸附机制",
     "parameter": "pH",
     "condition": {
-      "operator": "range",
-      "value": [
-        2,
-        11
-      ],
-      "basis_note": "定性范围"
+      "operator": "qualitative",
+      "value": null
     },
     "text": "丝素蛋白在强酸/强碱下水解",
     "gate_level": "soft",
@@ -836,12 +829,8 @@
     "mechanism_name": "吸附机制",
     "parameter": "pH",
     "condition": {
-      "operator": "range",
-      "value": [
-        2,
-        11
-      ],
-      "basis_note": "定性范围"
+      "operator": "qualitative",
+      "value": null
     },
     "text": "丝素蛋白在强酸/强碱下水解",
     "gate_level": "soft",
@@ -890,9 +879,9 @@
     },
     "text": "SRB是严格厌氧菌，有氧环境完全失活",
     "gate_level": "soft",
-    "basis": "from_source",
-    "verification": "",
-    "locator": "biology knowledge",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
     "source_asset": null
   },
   {
