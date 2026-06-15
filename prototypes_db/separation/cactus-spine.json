@@ -1,0 +1,156 @@
+{
+  "id": "cactus-spine",
+  "name_zh": "仙人掌刺",
+  "name_en": "Cactus Spine",
+  "organism": {
+    "scientific": "Nepenthes alata, Namib desert beetle, Cactus, Spider silk",
+    "category": "植物"
+  },
+  "biomimetic_dimension": "形态仿生",
+  "features": [
+    "疏水性",
+    "自清洁"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": "any",
+    "note": "测过的 pH/温度范围，不是适用范围。仅从 performance_data 中实际测试过的条件聚合。"
+  },
+  "performance_data": [],
+  "mechanisms": [
+    {
+      "name": "仿荷叶PS纳米纤维/微球复合超疏水表面接触角",
+      "description": "160.4 ± 1.2",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s40242-021-0010-4",
+      "verification": "unverified"
+    },
+    {
+      "name": "静电纺丝纤维形貌调控因素",
+      "description": "溶液粘度、表面张力、溶剂、电导率、介电性能；电压、喂料速度、接收距离、喷丝头直径；温度、湿度、气体介质",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s40242-021-0010-4",
+      "verification": "unverified"
+    },
+    {
+      "name": "PAN/热解PAN Janus织物润湿性",
+      "description": "PAN侧超疏水，热解PAN侧超亲水",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s40242-021-0010-4",
+      "verification": "unverified"
+    },
+    {
+      "name": "单向渗透三力竞争机制",
+      "description": "静水压(HP)+毛细力(CF)+疏水力(HF)共同决定液滴渗透行为",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s40242-021-0010-4",
+      "verification": "unverified"
+    },
+    {
+      "name": "仿生集水生物原型及机制",
+      "description": "沙漠甲虫(交替亲水岛/疏水路径)、蜘蛛丝(纺锤节-关节结构)、仙人掌刺(锥形+定向刚毛)、猪笼草(二级微沟槽)",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s40242-021-0010-4",
+      "verification": "unverified"
+    },
+    {
+      "name": "PCL/Teflon AF核壳纤维超疏水/超疏油",
+      "description": "超疏水且超疏油",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s40242-021-0010-4",
+      "verification": "unverified"
+    },
+    {
+      "name": "Janus膜在膜蒸馏中的抗污染性能",
+      "description": "全疏水Janus膜同时具备抗油污染和抗表面活性剂润湿能力",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s40242-021-0010-4",
+      "verification": "unverified"
+    },
+    {
+      "name": "Janus膜水下气泡单向传输",
+      "description": "气泡从亲水向超疏水方向单向渗透",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s40242-021-0010-4",
+      "verification": "unverified"
+    },
+    {
+      "name": "Janus膜油水分离性能优势",
+      "description": "双层Janus材料油水分离效率优于单层疏水/亲油膜",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s40242-021-0010-4",
+      "verification": "unverified"
+    },
+    {
+      "name": "HHNCM亲水-疏水纳米纤维铜网（三仿生：甲虫+蜂窝网+猪笼草）",
+      "description": "1110",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1002/adfm.202200359",
+      "verification": "unverified"
+    },
+    {
+      "name": "纳米布沙漠甲虫雾水收集机制",
+      "description": "亲水凸起捕获雾滴，疏水凹槽定向运输",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1002/adfm.202200359",
+      "verification": "unverified"
+    }
+  ],
+  "narrative": {
+    "entries": [
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2021-Penetration-separation-membrane-hierarchical-review.json",
+        "paper_id": "2021-Penetration-separation-membrane-hierarchical-review",
+        "sections": {
+          "problem_definition": "自然界中干旱/高湿环境生物面临高效定向收集与传输水分的挑战；对应水处理领域传统分离膜存在的渗透方向不可控、液/液分离效率低、易污染及高盐/表面活性剂环境下润湿失效等问题。",
+          "biological_solution": "生物通过演化出层级微纳粗糙度与化学异质性（亲/疏水交替区域）构建表面能梯度；结合拉普拉斯压力差与毛细力协同，实现液体/气体在特定方向的自发定向传输（液二极管效应）；成功案例包括沙漠甲虫背部交替亲疏水区域集水、蜘蛛丝纺锤节-关节结构导水、仙人掌锥形刺定向传输及猪笼草二级微沟槽防粘附。",
+          "key_features": "必须保留非对称润湿性（Janus界面）、微纳层级粗糙度及厚度方向润湿梯度；可灵活调整纤维形貌（圆柱/串珠/多孔/核壳）、聚合物基材（PS/PAN/PU/PCL等）及拓扑结构密度（纳米针间距/层厚比）。",
+          "design_mapping": "生物原型（沙漠甲虫/仙人掌/蜘蛛丝）映射为静电纺丝Janus纳纤膜的非对称亲/疏水层；荷叶微纳乳突映射为PS纳米纤维/微球复合超疏水层；猪笼草微沟槽映射为互穿结构纳米针拓扑。软约束建议：通过调控静电纺丝接收距离与溶液粘度控制纤维直径；优先采用共混或核壳电纺实现梯度润湿；在含油/表面活性剂废水中引入全疏水/水下超疏油设计。",
+          "explainability_anchors": "仿生故事线：从自然界‘定向液体传输系统’的构效关系出发，提炼‘结构粗糙度+表面能梯度=定向驱动力’的核心法则，映射至Janus膜设计。设计溯源：直接溯源至Wenzel/Cassie润湿理论及拉普拉斯压力机制，通过‘纳米针效应缩短气液界面破裂距离’与‘润湿梯度调控突破压力比k’实现性能可解释与可预测。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2022-Progress-review.json",
+        "paper_id": "Yu2022_Fog_Harvesting_Devices_Multiple_Creatures_Review",
+        "sections": {
+          "problem_definition": "自然界挑战：干旱/半干旱地区生物面临极度缺水，需从稀薄雾气中高效获取水分；水处理对应：传统雾水收集装置受限于空气动力学效率低、液滴易滞留或二次蒸发，难以实现高效捕获、定向输运与快速脱离的协同。",
+          "biological_solution": "进化策略：多种生物独立进化出高效集水微纳结构；关键机制：利用表面能梯度、Laplace压力差、润湿性图案化及超滑表面降低接触角滞后，驱动液滴定向移动；成功案例：纳米布甲虫亲疏水图案、仙人掌锥形梯度沟槽、蜘蛛丝周期性纺锤结、猪笼草SLIPS表面协同作用，使集水率跨越数个数量级（最高达81,250 mg h⁻¹ cm⁻²）。",
+          "key_features": "必须保留特征：微纳分级粗糙度、润湿性梯度（亲/疏水或超滑）、非对称几何形态（锥形/纺锤结）；可灵活调整特征：基底材料（织物/金属网/泡沫）、图案比例（如SHL:SHB=1:3）、阵列排列方式（对称/交替）、润滑剂固定策略。",
+          "design_mapping": "生物→材料映射：甲虫亲疏水峰谷→静电纺丝/光刻/喷涂制备的SHB/SHL图案化织物；仙人掌锥形刺→3D打印/kirigami人工刺阵列；蜘蛛丝纺锤结→异质结构微纤维/交叉纤维网；猪笼草SLIPS→PDMS刷接枝多孔表面。软约束建议：优先采用低成本成熟工艺（如纺织工业兼容的Cu沉积，成本$1.5/m²），控制结构特征尺寸以匹配~10 μm雾滴边界层，优化亲疏水比例与阵列间距以最大化Laplace压差与毛细力协同。",
+          "explainability_anchors": "仿生故事线：从单一生物原型（仅解决捕获或输运单一环节）向多重仿生（捕获+输运+存储三阶段优化）演进，揭示自然界‘分工协同’的集水智慧；设计溯源：所有高效FHD均回归流体力学与界面科学基本原理（Laplace方程、Furmidge方程、Cassie-Baxter态），仿生结构仅为物理机制的空间载体，可通过定量参数（如15°尖端角、Ra粗糙度差、0.16s脱离时间）直接指导工程放大与性能预测。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2022-Progress-review 2.json",
+        "paper_id": "yu2022_fog_harvesting_biomimetic_review",
+        "sections": {
+          "problem_definition": "自然界挑战：干旱沙漠环境中液态水极度匮乏，生物需从稀薄雾气中高效捕获水分；水处理对应：低浓度气溶胶/雾水的高效收集与淡水化，突破传统冷凝/吸附的能耗与效率瓶颈。",
+          "biological_solution": "进化策略：通过体表微纳形貌与界面化学的协同演化实现被动式集水；关键机制：亲疏水异质界面捕获雾滴，结合非对称几何构型（锥形刺、纺锤节、楔形槽）产生Laplace压力差与表面能梯度，驱动液滴定向连续输运；成功案例：纳米布沙漠甲虫（Stenocara gracilipes）背部亲疏水凸起阵列、仙人掌刺与蜘蛛丝周期性结构、猪笼草楔形微通道。",
+          "key_features": "必须保留特征：亲疏水异质界面、非对称几何构型（锥形/纺锤节/楔形）、定向输运驱动力（Laplace压差/表面能梯度/毛细力）；可灵活调整特征：材料基底类型（织物/金属网/高分子/生物质）、微纳结构尺度与排列密度、表面化学修饰工艺（喷涂/光刻/剪纸/自组装）。",
+          "design_mapping": "生物→材料映射：甲虫背部亲疏水凸起映射为Janus涂层或图案化微区；仙人掌刺/蜘蛛丝纺锤节映射为锥形纤维或周期性非对称微针阵列；猪笼草/叶脉通道映射为光刻或模板法制备的定向导流槽；软约束建议：优先采用低成本宏量制备技术（如剪纸法、喷涂法）替代复杂光刻；结构参数（如尖端角15°、纺锤节间距1.43-1.67mm）需根据实际雾滴粒径分布与风速进行流体力学优化。",
+          "explainability_anchors": "仿生故事线：从沙漠甲虫‘捕雾-导流’生存策略出发，揭示自然界如何利用微纳结构与界面能梯度突破气液传质瓶颈；设计溯源：材料构效关系直接溯源至文献中的流体力学模型（ηa/ηd效率公式、Laplace压力模型、Re/St数）与多源仿生原型（甲虫、仙人掌、蜘蛛丝、猪笼草），确保集雾性能可解释、参数可预测。"
+        }
+      }
+    ]
+  },
+  "engineering_constraints": [],
+  "provenance_summary": {
+    "n_papers": 3,
+    "n_verified": 0,
+    "n_unverified": 11
+  },
+  "coverage": "parked",
+  "status": "parked_separation"
+}

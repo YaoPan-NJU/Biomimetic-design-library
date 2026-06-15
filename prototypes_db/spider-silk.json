@@ -1,0 +1,499 @@
+{
+  "id": "spider-silk",
+  "name_zh": "蜘蛛丝",
+  "name_en": "Spider Silk",
+  "organism": {
+    "scientific": "Araneus diadematus",
+    "category": "节肢动物"
+  },
+  "biomimetic_dimension": "结构仿生",
+  "features": [
+    "疏水性",
+    "纤维状"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": "low",
+    "note": "测过的 pH/温度范围，不是适用范围。仅从 performance_data 中实际测试过的条件聚合。"
+  },
+  "performance_data": [
+    {
+      "parameter": "Cd(II)去除性能 Cd(II) removal",
+      "value": "100%去除; 20min达EPA安全标准(5ppb); 起始浓度1000ppb",
+      "unit": "%",
+      "pollutant": "Cd(II)",
+      "material": "CNF/PEI@GOA",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.cej.2021.128670",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第5组-纤维结构/2021-Zhou-cellulose-silk-nanofiber-adsorption.pdf",
+      "page": 5,
+      "locator": "Fig. 5a",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "Cr(VI)去除性能 Cr(VI) removal",
+      "value": "100%去除; 20min达EPA安全标准(100ppb); 起始浓度1000ppb",
+      "unit": "%",
+      "pollutant": "Cr(VI)",
+      "material": "CNF/PEI@GOA",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.cej.2021.128670",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第5组-纤维结构/2021-Zhou-cellulose-silk-nanofiber-adsorption.pdf",
+      "page": 5,
+      "locator": "Fig. 5b",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "Cu(II)去除性能 Cu(II) removal",
+      "value": "100%去除; 30min达安全标准; 起始浓度1000ppb",
+      "unit": "%",
+      "pollutant": "Cu(II)",
+      "material": "CNF/PEI@GOA",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.cej.2021.128670",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第5组-纤维结构/2021-Zhou-cellulose-silk-nanofiber-adsorption.pdf",
+      "page": 5,
+      "locator": "Fig. 5c",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "Pb(II)去除性能 Pb(II) removal",
+      "value": "100%去除; 40min达EPA安全标准(0ppb); 起始浓度1000ppb",
+      "unit": "%",
+      "pollutant": "Pb(II)",
+      "material": "CNF/PEI@GOA",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.cej.2021.128670",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第5组-纤维结构/2021-Zhou-cellulose-silk-nanofiber-adsorption.pdf",
+      "page": 5,
+      "locator": "Fig. 5d",
+      "verification": "unverified",
+      "confidence": 0.8
+    }
+  ],
+  "mechanisms": [
+    {
+      "name": "蜘蛛丝增强策略：金属掺杂和CNT/石墨烯复合",
+      "description": "ALD金属掺杂：通过金属配位键/共价键增强强度和韧性；f-CNTs机械剪切加载：韧性提高≈300%；SWCNTs/PEDOT-PSS涂层：韧性420 MJ/m³+导电率1077 S/cm；喂食石墨烯/CNT：蜘蛛产出增强力学性能的牵引丝",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1002/advs.202103965",
+      "verification": "needs_review"
+    },
+    {
+      "name": "抗污染机制 Antifouling mechanism",
+      "description": "超亲水/水下超疏油→Cassie态→油滴不粘附→浮力上升→简单水冲洗恢复",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.seppur.2021.119824",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "蛋白质、微生物等生物污损物",
+          "basis": "from_source",
+          "locator": "Wang2024 p.1 / Abstract"
+        },
+        "bio_structure": {
+          "text": "蜘蛛丝蛋白的β-折叠纳米晶体和无定形链段",
+          "basis": "from_source",
+          "locator": "Wang2024 p.1 / Abstract"
+        },
+        "interaction": {
+          "text": "亲水性表面排斥蛋白质吸附；力学弹性防止微裂纹藏污",
+          "basis": "from_source",
+          "locator": "Wang2024 p.1 / Abstract"
+        },
+        "why_it_works": {
+          "text": "蜘蛛丝的超亲水性和力学弹性使其具有天然抗污性能",
+          "basis": "llm_inferred",
+          "locator": null
+        },
+        "boundary_conditions": [
+          {
+            "text": "干燥环境下蜘蛛丝失去亲水性",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          },
+          {
+            "text": "干燥环境下蜘蛛丝可能失去亲水性",
+            "parameter": "wet_stability",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": "domain_knowledge"
+          }
+        ],
+        "transferable_principle": "蜘蛛丝的亲水+弹性组合是天然的抗污策略，可启发抗污涂层设计",
+        "verification_quote": null
+      },
+      "基本原理": "蜘蛛丝的超亲水性和力学弹性使其具有天然抗污性能",
+      "source_file": null,
+      "verification_quote": null
+    },
+    {
+      "name": "纳米乳液分离挑战——粘度+表面活性剂",
+      "description": "高粘度油→粘附膜面→增加污染; 高表面活性剂→油水界面坚实层→静电排斥→阻止聚并",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.seppur.2021.119824",
+      "verification": "needs_review"
+    },
+    {
+      "name": "润湿理论基础：Young/Wenzel/Cassie模型",
+      "description": "三种经典润湿模型：1）Young方程：cosθ=(γSA-γSL)/γLA→理想光滑表面接触角；2）Wenzel模型：cosθ*=Rcosθ→粗糙结构放大固有润湿性（R>1=粗糙度因子=实际面积/投影面积）；3）Cassie模型：cosθ*=fcosθ+f-1→液体在复合界面（固体+空气）上→f=固液接触面积分数→空气垫效应→低粘附。超疏水需Cassie态→微纳结构间空气垫→CA>150°",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.34133/2022/9895418",
+      "verification": "needs_review"
+    },
+    {
+      "name": "飞秒激光硅超疏水：SF6气氛+氟硅烷修饰",
+      "description": "硅基底在SF₆气氛中飞秒激光烧蚀→高深宽比锥形尖刺(尺寸~10μm, 深宽比4)+纳米突起→层级结构→氟硅烷修饰→WCA达160°+接触角迟滞<3°（平坦氟硅烷化硅仅115°）。空气中飞秒激光烧蚀硅→周期性微山(周期10μm, 高~2.9μm, 直径6μm)+纳米突起→氟硅烷修饰→WCA达158°+WSA仅4°+反弹系数0.9",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.34133/2022/9895418",
+      "verification": "needs_review"
+    },
+    {
+      "name": "PDMS飞秒激光超疏水：一步法+珊瑚状层级结构",
+      "description": "PDMS基底一步飞秒激光烧蚀→周期性微沟槽(宽12.17μm, 深8.57μm)+不规则纳米颗粒→微沟槽周期减小至D≤10μm时→相邻沟槽强重叠→珊瑚状均匀层级微结构→天然疏水PDMS直接超疏水（无需化学修饰）→WCA达157.5°+WSA仅1°→超低粘附超疏水",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.34133/2022/9895418",
+      "verification": "needs_review"
+    },
+    {
+      "name": "PTFE飞秒激光超疏水：耐极端环境",
+      "description": "PTFE基底一步飞秒激光→孔+突起(300nm-2μm)互连→蚁巢状多孔网络→固有疏水放大为超疏水→WCA达155.5°+WSA仅2.5°（原PTFE WCA=111.5°）。耐久性：pH 1-13酸碱溶液→WCA>150°+WSA<10°；200°C加热一天→无显著变化；极端环境：250°C+40%HF+浓H₂SO₄+10M NaOH+王水→超疏水性不变→化学惰性+微结构减少接触面积→双重保护",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.34133/2022/9895418",
+      "verification": "needs_review"
+    },
+    {
+      "name": "PDMS飞秒激光多状态润湿性切换",
+      "description": "PDMS基底一步飞秒激光→层级微结构→天然疏水→WCA 155.5°+WSA 2°（超疏水）→水中银镜反射→水下超亲油(OCA 6.5°)。氧等离子体处理30s(55W)→表面-CH₃→-SiOH→超亲水(WCA 4.5°)→水下超疏油(OCA 158°+OSA 3°)。同一激光处理PDMS可实现6种超润湿状态切换：超亲水/超疏水/水下超疏油/水下超亲油/水下超疏气/水下超亲气",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.34133/2022/9895418",
+      "verification": "needs_review"
+    },
+    {
+      "name": "SLIPS NiTi合金：血液相容性+抗菌",
+      "description": "NiTi合金（生物工程材料→形状记忆+超弹性+生物相容性）→飞秒Bessel激光→深孔阵列(直径3μm, 深~30μm, 深宽比10)→空气中存储7天→碳氢化合物吸附→疏水(WCA 120°)→全氟癸烷注入→SLIPS→WCA 23°+血液无残留滑落。未处理NiTi→血液留下明显痕迹。SLIPS显著改善血液相容性→抗凝血+低溶血率+抗菌",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.34133/2022/9895418",
+      "verification": "needs_review"
+    },
+    {
+      "name": "飞秒激光制备超润湿表面的通用规律",
+      "description": "飞秒激光制备超润湿表面的通用规律：1）亲水基底+微纳结构→放大亲水性→超亲水→水下超疏油/超疏气；2）疏水基底+微纳结构→放大疏水性→超疏水→水下超亲油/超亲气；3）亲水基底+微纳结构+低表面能修饰→超疏水；4）reentrant微结构+低表面能修饰→超双疏；5）多孔微结构+润滑液注入→SLIPS。表面化学+微结构→协同决定润湿性。飞秒激光+氧等离子体/暗存储→可逆切换",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.34133/2022/9895418",
+      "verification": "needs_review"
+    },
+    {
+      "name": "飞秒激光超疏水表面的油水分离应用",
+      "description": "飞秒激光制备超疏水多孔PTFE→油水分离：激光烧蚀PTFE表面→层级微结构→机械钻孔→多孔片→超疏水+超亲油→油渗透通过+水被截留→成功分离油水混合物。耐久性→甚至可分离油+强酸/碱混合物。水下超疏油多孔铝箔→预润水→水渗透+油被截留→油水分离。水下超疏油不锈钢网→水通过+油截留→油水分离",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.34133/2022/9895418",
+      "verification": "needs_review"
+    },
+    {
+      "name": "Cr(VI) XPS吸附机制",
+      "description": "Cr-N(III) 575.46+585.03eV; Cr-O(VI) 576.27+586.31eV; Cr=O(VI) 577.72+587.59eV; 氨基质子化-NH₃⁺(401.2eV)",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.cej.2021.128670",
+      "verification": "needs_review"
+    },
+    {
+      "name": "Cd(II) XPS吸附机制",
+      "description": "Cd-N 411.36eV(42.95%)+404.50eV(37.72%); Cd-O 404.65eV(57.05%)+531.28eV(39.15%)",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.cej.2021.128670",
+      "verification": "needs_review"
+    },
+    {
+      "name": "纤维形成——疏水基底",
+      "description": "CNF/PEI在PTFE板接触角118.5°; GO接触角121.7°; 液-液界面接触吸引但不混合",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.cej.2021.128670",
+      "verification": "needs_review"
+    },
+    {
+      "name": "专化-协同机制 Specialization and cooperation mechanism",
+      "description": "Cd(II): 协同(氨基+羧基); Cr(VI): 专化(氨基主导); Cu/Pb: 专化(羧基主导)",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.cej.2021.128670",
+      "verification": "needs_review"
+    },
+    {
+      "name": "蜘蛛丝仿生灵感来源 Spider silk biomimetic inspiration",
+      "description": "spidroin两亲性(疏水丙氨酸+亲水甘氨酸/谷氨酰胺/脯氨酸/丝氨酸)→超分子自组装→纤维形成",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.cej.2021.128670",
+      "verification": "needs_review"
+    },
+    {
+      "name": "铀酰离子配位化学",
+      "description": "UO2^2+线性对称[O=U=O]^2+, U-O键长1.76 Å, 4-6个配体在赤道面配位, 四方/五方/六方双锥",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.ccr.2023.215234",
+      "verification": "needs_review"
+    },
+    {
+      "name": "酰胺肟配位模式",
+      "description": "四种结合模式：单齿(单氧配位)/三齿(环状酰亚胺二肟)/侧向η2(开链酰胺肟)/螯合",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.ccr.2023.215234",
+      "verification": "needs_review"
+    },
+    {
+      "name": "配体优化六大策略",
+      "description": "(1)高含量开链AO (2)增加AO亲水性 (3)高柔性配体链 (4)合适PAO链长 (5)引入给电子取代基 (6)空间协同螯合",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.ccr.2023.215234",
+      "verification": "needs_review"
+    },
+    {
+      "name": "双功能协同策略",
+      "description": "三种机制：(1)第二配体提供额外配位位点 (2)增强AO碱性→更强U(VI)络合 (3)酸性基团解离碳酸盐→释放UO2^2+",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.ccr.2023.215234",
+      "verification": "needs_review"
+    },
+    {
+      "name": "离子印迹策略——三种改进方向",
+      "description": "(1)高孔隙材料增加可及位点 (2)2D/表面印迹提高可及性 (3)强化功能基-铀酰配位",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.ccr.2023.215234",
+      "verification": "needs_review"
+    },
+    {
+      "name": "电化学提取三阶段机理",
+      "description": "电迁移→电吸附→电化学沉积; UO2^2+→U(IV)还原沉淀→突破热力学平衡",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.ccr.2023.215234",
+      "verification": "needs_review"
+    },
+    {
+      "name": "MOF光催化协同机制",
+      "description": "MOF SCU-19(POM+MOF)：三重机制——配体配位+光催化还原+部分化学还原",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.ccr.2023.215234",
+      "verification": "needs_review"
+    },
+    {
+      "name": "静电纺丝纤维形貌调控因素",
+      "description": "溶液粘度、表面张力、溶剂、电导率、介电性能；电压、喂料速度、接收距离、喷丝头直径；温度、湿度、气体介质",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s40242-021-0010-4",
+      "verification": "needs_review"
+    },
+    {
+      "name": "PAN/热解PAN Janus织物润湿性",
+      "description": "PAN侧超疏水，热解PAN侧超亲水",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s40242-021-0010-4",
+      "verification": "needs_review"
+    },
+    {
+      "name": "单向渗透三力竞争机制",
+      "description": "静水压(HP)+毛细力(CF)+疏水力(HF)共同决定液滴渗透行为",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s40242-021-0010-4",
+      "verification": "needs_review"
+    },
+    {
+      "name": "PCL/Teflon AF核壳纤维超疏水/超疏油",
+      "description": "超疏水且超疏油",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s40242-021-0010-4",
+      "verification": "needs_review"
+    },
+    {
+      "name": "Janus膜在膜蒸馏中的抗污染性能",
+      "description": "全疏水Janus膜同时具备抗油污染和抗表面活性剂润湿能力",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s40242-021-0010-4",
+      "verification": "needs_review"
+    },
+    {
+      "name": "Janus膜水下气泡单向传输",
+      "description": "气泡从亲水向超疏水方向单向渗透",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s40242-021-0010-4",
+      "verification": "needs_review"
+    },
+    {
+      "name": "Janus膜油水分离性能优势",
+      "description": "双层Janus材料油水分离效率优于单层疏水/亲油膜",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s40242-021-0010-4",
+      "verification": "needs_review"
+    },
+    {
+      "name": "纳米布沙漠甲虫雾水收集机制",
+      "description": "亲水凸起捕获雾滴，疏水凹槽定向运输",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1002/adfm.202200359",
+      "verification": "needs_review"
+    }
+  ],
+  "narrative": {
+    "entries": [
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2021-Li-silk-hierarchical-shell-review.json",
+        "paper_id": "2022-Li-spider-silk-hierarchical-review",
+        "sections": {
+          "problem_definition": "自然界挑战：蜘蛛需在复杂多变环境中构建兼具高强度、高韧性及环境响应性的捕食网与高效集水结构；水处理对应：吸附/分离材料需在动态水流与化学环境中保持结构稳定、抗疲劳，并实现高效定向传质、污染物捕获与孔道动态调控。",
+          "biological_solution": "进化策略：通过spidroin蛋白自组装形成高度有序的多级异质结构；关键机制：β-sheet纳米晶作为刚性节点提供强度与永久形状记忆，非晶链段作为柔性网络耗散能量，纺锤结利用Laplace压差与表面能梯度驱动水滴定向传输；成功案例：大壶状腺丝（MA丝）实现1652 MPa强度与354 MJ/m³韧性，天然周期性纺锤结结构实现高效大气集水。",
+          "key_features": "必须保留特征：β-sheet物理交联节点、非晶耗能网络、核壳异质分布、周期性微纳拓扑（纺锤结）；可灵活调整特征：节点化学组成（可替换为金属配位点或合成刚性基团）、基质亲疏水性与柔性程度、纺锤结几何参数（顶角、周期）以适配不同水处理流速与分离精度需求。",
+          "design_mapping": "生物→材料映射：β-sheet纳米晶映射为刚性功能节点/物理交联点；非晶区映射为柔性高分子/水凝胶基质；核壳结构映射为梯度吸附层与力学支撑层；纺锤结映射为微纳集水/分离通道。软约束建议：采用微流控或动态交联纺丝模拟天然剪切场；控制结晶度（~22%）平衡强韧性；利用水分子触发超收缩实现孔道动态调节或自清洁。",
+          "explainability_anchors": "仿生故事线：从蜘蛛丝‘纳米渔网’的强韧机制与纺锤结集水原理出发，指导水处理材料实现‘结构-力学-传质’一体化设计；设计溯源：理论依据Keten纳米晶尺寸效应与spidroin蛋白二级结构组装规律，通过β-sheet含量、非晶序列及拓扑形貌的定量调控，确保仿生逻辑可追溯、性能可预测。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2021-Zhang-silk-separation-membrane-porous.json",
+        "paper_id": "2021-Zhang-spider-silk-nanoemulsion-separation",
+        "sections": {
+          "problem_definition": "自然界蜘蛛丝需从空气中高效捕获并收集微小雾滴；水处理中面临表面活性剂稳定的纳米油滴乳液(尺寸<膜孔径)难以通过传统尺寸筛分机制高效分离，且易发生膜污染的难题。",
+          "biological_solution": "蜘蛛丝进化出周期性纺锤节结构，利用曲率差异产生Laplace压力差，自发驱动微小液滴定向迁移与聚并；该策略被成功映射至静电纺丝纳米纤维膜，实现无需外力或化学改性的纳米油滴高效破乳、定向传输与高通量分离。",
+          "key_features": "必须保留特征：纺锤节几何形貌(产生Laplace压差)、超亲水/水下超疏油表面特性、微纳层级粗糙结构；可灵活调整特征：纺锤节具体尺寸参数(宽100-500nm/长~2μm)、聚合物种类与浓度配比、支撑层孔隙率与整体膜厚度。",
+          "design_mapping": "生物→材料映射：蜘蛛丝纺锤节→电纺PAN纳米纤维纺锤节阵列；自然集水Laplace力→膜内油滴定向迁移与聚并破乳驱动力；双层皮肤/支撑结构→功能分离层/高通量传质层。软约束建议：优先通过调控前驱体溶液物性触发Rayleigh不稳定性一步成型，避免复杂后处理；操作压力可适度放宽，依赖自发Laplace力主导分离过程。",
+          "explainability_anchors": "仿生故事线：从蜘蛛丝捕雾的“几何驱动液滴迁移”自然现象出发，揭示Laplace压差破乳机制，突破传统“孔径<液滴”的筛分范式；设计溯源：直接溯源至文献中纺锤节尺寸参数与电纺工艺窗口(PAN 3.5wt%)，通过AFM/SEM表征的微纳粗糙度与接触角数据验证仿生结构成功复现，性能数据(油截留>95%、通量>1143 LMH/bar、FRR 99.98%)闭环验证仿生机制有效性。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2021-Zhou-cellulose-silk-nanofiber-adsorption.json",
+        "paper_id": "2021-Zhou-spider-silk-amphoteric-bionic-fibers",
+        "sections": {
+          "problem_definition": "自然界挑战：蜘蛛需在常温常压下将液态丝蛋白快速转化为高强度、结构稳定的固态纤维；水处理对应：传统吸附材料难以在低浓度重金属废水中实现快速传质、多离子协同去除及材料结构长期稳定再生。",
+          "biological_solution": "进化策略：利用两亲性丝蛋白(spidroin)的疏水/亲水区块驱动超分子自组装；关键机制：疏水丙氨酸与亲水氨基酸交替排列诱导液-液相分离与自组装，随后通过β-折叠结构固化并自然风干成纤；成功案例：蜘蛛丝纺丝过程在极低能耗下实现高强度、高孔隙率纤维的快速成型。",
+          "key_features": "必须保留特征：两性官能团(氨基/羧基)的高密度平衡、超分子自组装驱动的快速成纤机制、高溶胀多孔骨架以保障传质；可灵活调整特征：具体聚合物组分(CNF/PEI/GO比例)、交联剂类型与用量、层状静电组装的精确厚度。",
+          "design_mapping": "生物→材料映射：两亲性spidroin→CNF/PEI与GO的静电组装两性界面；β-折叠稳定结构→GO的sp²二维晶格网络；自然风干固化→ECH化学交联；丝蛋白高孔隙率→CNF骨架的高溶胀网络(113.37%)。软约束建议：维持体系近中性电荷平衡以优化自组装；确保溶胀率>100%以匹配快速传质需求；控制界面接触角在115°-125°区间以引导均匀纤维形态。",
+          "explainability_anchors": "仿生故事线：以蜘蛛丝纺丝原理为蓝图，将生物大分子的两亲自组装逻辑平移至高分子静电层状组装，打造兼具快速响应与高稳定性的两性仿生吸附纤维。设计溯源：氨基/羧基密度平衡(6.93/5.81 mmol/g)直接映射丝蛋白亲疏水区块比例；CNF溶胀网络与GO二维稳定层分别对应蜘蛛丝的多孔基质与β-折叠增强相；QCM-D电荷监控与ECH交联工艺完整复现了生物纺丝的精准调控与环境固化路径。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2023-Li-antifouling-separation-porous-adsorption-review.json",
+        "paper_id": "2023-Li-antifouling-separation-porous-adsorption-review",
+        "sections": {
+          "problem_definition": "自然界挑战：海水中铀浓度极低且存在大量竞争离子（如钒）和严重的生物污损；水处理对应：需要开发兼具超高选择性、快速传质动力学和抗生物污损能力的吸附材料，以实现经济可行的海水提铀。",
+          "biological_solution": "进化策略：生物体通过特异性分子识别（如SUP蛋白、DNAzyme）、高效传质结构（如植物蒸腾通道、木材分级孔）和表面防御（如鲨鱼皮抗污损）适应复杂环境。关键机制：几何约束与电荷稳定实现UO2^2+特异性结合；垂直通道与分级孔道加速低浓度传质；通用锚定化学（贻贝PDA）实现多功能集成。成功案例：仿SUP蛋白纳米口袋MOF实现Kd=1.67 pM及U/V选择性17.03；仿植物蒸腾光热纤维实现11.76 mg/g自然海水提铀。",
+          "key_features": "必须保留特征：UO2^2+特异性结合口袋的几何约束与配位模式（如赤道面4-6配位）、抗生物污损表面微结构。可灵活调整特征：载体宏观形态（纤维、水凝胶、气凝胶）、光热/电驱动辅助模块、锚定化学层厚度。",
+          "design_mapping": "生物→材料映射：SUP蛋白/DNAzyme → MOF/COF纳米陷阱或水凝胶；植物蒸腾/木材孔道 → 垂直排列碳管或3D打印分级多孔气凝胶；贻贝足丝 → PDA聚多巴胺涂层；鲨鱼皮/蛾眼 → 表面微纳拓扑抗污损结构。软约束建议：在保持结合口袋几何精度的同时，引入亲水基团（如开链酰胺肟）以改善水合铀酰离子的传质。",
+          "explainability_anchors": "仿生故事线：从‘大海捞针’到‘精准捕获’——借鉴生物大分子的‘锁钥模型’（SUP蛋白）解决选择性难题，借鉴植物‘蒸腾拉力’（垂直通道）解决极低浓度传质难题，借鉴海洋生物‘自清洁’（抗污损表面）解决长效运行难题。设计溯源：材料的高选择性源于分子层面的几何约束与协同配位，高吸附容量源于宏观层面的分级传质与光热协同，长效稳定性源于表面的抗污损拓扑设计。"
+        }
+      }
+    ]
+  },
+  "engineering_constraints": [
+    {
+      "constraint": "FRR与循环稳定性 Flux recovery and cycling",
+      "value": "FRR 99.98%; 8次循环无显著通量衰减",
+      "unit": "%",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.seppur.2021.119824"
+    },
+    {
+      "constraint": "纺锤节构建机制——Rayleigh不稳定性",
+      "value": "低粘度/低导电率→电场力无法完全克服表面张力→液膜断裂→液滴串→纺锤形→纺锤节纤维",
+      "unit": null,
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.seppur.2021.119824"
+    },
+    {
+      "constraint": "再生性能 Regeneration",
+      "value": "5次循环去除率>99%",
+      "unit": "%",
+      "relevance": "high",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.cej.2021.128670"
+    }
+  ],
+  "provenance_summary": {
+    "n_papers": 8,
+    "n_verified": 0,
+    "n_unverified": 40
+  },
+  "coverage": "normal",
+  "status": "active",
+  "design_translation": [
+    {
+      "idea": "利用蜘蛛丝的高强度和表面官能团进行污染物捕获",
+      "specific_functional_group": "丝蛋白的酰胺基和羧基",
+      "material_handle": "重组蜘蛛丝蛋白或仿生纺丝",
+      "target_interaction": "酰胺基和羧基配位金属离子，高强度支撑过滤应用",
+      "source_tier": "llm_inference",
+      "examples": []
+    }
+  ]
+}

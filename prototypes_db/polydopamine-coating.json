@@ -1,0 +1,2052 @@
+{
+  "id": "polydopamine-coating",
+  "name_zh": "聚多巴胺涂层",
+  "name_en": "Polydopamine Coating",
+  "organism": {
+    "scientific": "Mytilus edulis",
+    "category": "海洋无脊椎动物"
+  },
+  "biomimetic_dimension": "分子仿生",
+  "features": [
+    "邻苯二酚基团",
+    "金属配位能力",
+    "π电子体系",
+    "湿态粘附"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": [
+      3.0,
+      7.0
+    ],
+    "tested_temp_range": null,
+    "salinity": "moderate",
+    "note": "测过的 pH/温度范围，不是适用范围。仅从 performance_data 中实际测试过的条件聚合。"
+  },
+  "performance_data": [
+    {
+      "parameter": "最大吸附容量 qmax — BC/PDA/La(OH)3复合材料",
+      "value": "159.8",
+      "unit": "mg/g",
+      "pollutant": "无机磷",
+      "material": "BC/PDA/La(OH)3-1",
+      "ph": 7.0,
+      "temperature": "25°C",
+      "conditions": "",
+      "source": "patent",
+      "ref_doi": null,
+      "patent_number": "CN114887602A",
+      "standard_number": null,
+      "source_file": "仿生文献库/专利/2022-CN114887602A-聚多巴胺-纤维素-吸附-除磷.pdf",
+      "page": 9,
+      "locator": "说明书第[0147]-[0148]段",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "吸附容量对比 — BC/PDA/La(OH)3 vs BC/La(OH)3 vs BC/PDA vs BC",
+      "value": "159.8 vs 91.2 vs 12.6 vs 0",
+      "unit": "mg/g",
+      "pollutant": "无机磷",
+      "material": "",
+      "ph": 7.0,
+      "temperature": null,
+      "conditions": "",
+      "source": "patent",
+      "ref_doi": null,
+      "patent_number": "CN114887602A",
+      "standard_number": null,
+      "source_file": "仿生文献库/专利/2022-CN114887602A-聚多巴胺-纤维素-吸附-除磷.pdf",
+      "page": 9,
+      "locator": "说明书第[0147]段，图2",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "循环稳定性 — 5次循环后吸附容量保持",
+      "value": "110",
+      "unit": "mg/g",
+      "pollutant": "无机磷",
+      "material": "BC/PDA/La(OH)3-1",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "patent",
+      "ref_doi": null,
+      "patent_number": "CN114887602A",
+      "standard_number": null,
+      "source_file": "仿生文献库/专利/2022-CN114887602A-聚多巴胺-纤维素-吸附-除磷.pdf",
+      "page": 9,
+      "locator": "说明书第[0149]段，图7",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "实际水体吸附容量",
+      "value": "143.4",
+      "unit": "mg/g",
+      "pollutant": "无机磷",
+      "material": "BC/PDA/La(OH)3-1",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "patent",
+      "ref_doi": null,
+      "patent_number": "CN114887602A",
+      "standard_number": null,
+      "source_file": "仿生文献库/专利/2022-CN114887602A-聚多巴胺-纤维素-吸附-除磷.pdf",
+      "page": 9,
+      "locator": "说明书第[0149]段，图11",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "循环吸附稳定性-重金属去除率保持",
+      "value": ">72",
+      "unit": "%",
+      "pollutant": "",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "patent",
+      "ref_doi": null,
+      "patent_number": "CN115055171A",
+      "standard_number": null,
+      "source_file": "2022-CN115055171A-聚多巴胺-磁性-重金属-吸附 2.pdf",
+      "page": 7,
+      "locator": "说明书第0036段",
+      "verification": "needs_review",
+      "confidence": 0.8,
+      "note": "pollutant unidentifiable"
+    },
+    {
+      "parameter": "最大吸附容量 qmax (Langmuir, 300K)",
+      "value": "196.67",
+      "unit": "mg/g",
+      "pollutant": "Pb(II)",
+      "material": "MnO2/PDA/Fe3O4 fibers",
+      "ph": "5.0",
+      "temperature": "300 K",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.apsusc.2020.148379",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2021-Shi-polydopamine-magnetic-iron-oxide-lead-adsorption.pdf",
+      "page": 4,
+      "locator": "Section 3.3.3",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "最大吸附容量 qmax (Langmuir, 308K)",
+      "value": "200.45",
+      "unit": "mg/g",
+      "pollutant": "Pb(II)",
+      "material": "MnO2/PDA/Fe3O4 fibers",
+      "ph": "5.0",
+      "temperature": "308 K",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.apsusc.2020.148379",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2021-Shi-polydopamine-magnetic-iron-oxide-lead-adsorption.pdf",
+      "page": 4,
+      "locator": "Section 3.3.3",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "最大吸附容量 qmax (Langmuir, 318K)",
+      "value": "205.07",
+      "unit": "mg/g",
+      "pollutant": "Pb(II)",
+      "material": "MnO2/PDA/Fe3O4 fibers",
+      "ph": "5.0",
+      "temperature": "318 K",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.apsusc.2020.148379",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2021-Shi-polydopamine-magnetic-iron-oxide-lead-adsorption.pdf",
+      "page": 4,
+      "locator": "Section 3.3.3",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "MB最大吸附容量",
+      "value": "1372.32",
+      "unit": "mg/g",
+      "pollutant": "",
+      "material": "PDA/MGO/CA-CD",
+      "ph": null,
+      "temperature": null,
+      "conditions": "pH 11, 298K, 50-1000 mg/L",
+      "source": "literature",
+      "ref_doi": "10.1016/j.apsusc.2022.154338",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2022-Yan-polydopamine-magnetic-dye-adsorption-water-treatment.pdf",
+      "page": 1,
+      "locator": "Abstract",
+      "verification": "needs_review",
+      "confidence": 0.8,
+      "note": "pollutant unidentifiable"
+    },
+    {
+      "parameter": "MG和CV最大吸附容量",
+      "value": "MG 822.39 mg/g; CV 570.79 mg/g",
+      "unit": "mg/g",
+      "pollutant": "",
+      "material": "PDA/MGO/CA-CD",
+      "ph": null,
+      "temperature": null,
+      "conditions": "MG: pH 7, CV: pH 11, 298K",
+      "source": "literature",
+      "ref_doi": "10.1016/j.apsusc.2022.154338",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2022-Yan-polydopamine-magnetic-dye-adsorption-water-treatment.pdf",
+      "page": 1,
+      "locator": "Abstract",
+      "verification": "needs_review",
+      "confidence": 0.8,
+      "note": "pollutant unidentifiable"
+    },
+    {
+      "parameter": "COF@PDA对Fe2+最大吸附容量(Langmuir)",
+      "value": "204.9",
+      "unit": "mg/g",
+      "pollutant": "Fe2+",
+      "material": "COF@PDA",
+      "ph": 6,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.cej.2020.127837",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2021-Xiao-cof-adsorption-water-treatment-regeneration.pdf",
+      "page": 14,
+      "locator": "Section 4 Conclusions",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "COF@PDA对Co2+最大吸附容量(Langmuir)",
+      "value": "194.2",
+      "unit": "mg/g",
+      "pollutant": "Co2+",
+      "material": "COF@PDA",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.cej.2020.127837",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2021-Xiao-cof-adsorption-water-treatment-regeneration.pdf",
+      "page": 14,
+      "locator": "Section 4 Conclusions",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "COF@PDA对Ni2+最大吸附容量(Langmuir)",
+      "value": "207.5",
+      "unit": "mg/g",
+      "pollutant": "Ni2+",
+      "material": "COF@PDA",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.cej.2020.127837",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2021-Xiao-cof-adsorption-water-treatment-regeneration.pdf",
+      "page": 14,
+      "locator": "Section 4 Conclusions",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "5次循环后吸附容量保持率",
+      "value": "Fe2+: ~98%, Co2+: ~97.1%, Ni2+: ~97.3%",
+      "unit": "%",
+      "pollutant": "",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.cej.2020.127837",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2021-Xiao-cof-adsorption-water-treatment-regeneration.pdf",
+      "page": 7,
+      "locator": "Section 3.2.5",
+      "verification": "needs_review",
+      "confidence": 0.8,
+      "note": "pollutant ambiguous: candidates=['Ni(II)', 'Co(II)']"
+    },
+    {
+      "parameter": "COF对Fe2+最大吸附容量",
+      "value": "55.4",
+      "unit": "mg/g",
+      "pollutant": "",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.cej.2020.127837",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2021-Xiao-cof-adsorption-water-treatment-regeneration.pdf",
+      "page": 7,
+      "locator": "Section 3.2.3",
+      "verification": "needs_review",
+      "confidence": 0.8,
+      "note": "pollutant unidentifiable"
+    },
+    {
+      "parameter": "COF对Co2+最大吸附容量",
+      "value": "31.4",
+      "unit": "mg/g",
+      "pollutant": "",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.cej.2020.127837",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2021-Xiao-cof-adsorption-water-treatment-regeneration.pdf",
+      "page": 7,
+      "locator": "Section 3.2.3",
+      "verification": "needs_review",
+      "confidence": 0.8,
+      "note": "pollutant unidentifiable"
+    },
+    {
+      "parameter": "COF对Ni2+最大吸附容量",
+      "value": "56.5",
+      "unit": "mg/g",
+      "pollutant": "",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.cej.2020.127837",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2021-Xiao-cof-adsorption-water-treatment-regeneration.pdf",
+      "page": 7,
+      "locator": "Section 3.2.3",
+      "verification": "needs_review",
+      "confidence": 0.8,
+      "note": "pollutant unidentifiable"
+    },
+    {
+      "parameter": "Pb2+最佳去除率",
+      "value": "96.31",
+      "unit": "%",
+      "pollutant": "Pb(II)",
+      "material": "PDA/KA/Fe3O4",
+      "ph": null,
+      "temperature": null,
+      "conditions": "adsorbent 5mg, pH 6, time 5h, C0=4mg/L, 30°C",
+      "source": "patent",
+      "ref_doi": null,
+      "patent_number": "CN113244898A",
+      "standard_number": null,
+      "source_file": "2021-CN113244898A-polydopamine-kaolin-lead.pdf",
+      "page": 1,
+      "locator": "摘要",
+      "verification": "needs_review",
+      "confidence": 0.8,
+      "note": "pollutant inferred from fields by Phase 4 backfill"
+    },
+    {
+      "parameter": "初始浓度对吸附容量与去除率的影响",
+      "value": "C0 4-70 mg/L; Qe迅速升高，C0>30 mg/L后达饱和；Re明显降低",
+      "unit": null,
+      "pollutant": "",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "patent",
+      "ref_doi": null,
+      "patent_number": "CN113244898A",
+      "standard_number": null,
+      "source_file": "2021-CN113244898A-polydopamine-kaolin-lead.pdf",
+      "page": 10,
+      "locator": "应用实施例3",
+      "verification": "needs_review",
+      "confidence": 0.8,
+      "note": "pollutant unidentifiable"
+    },
+    {
+      "parameter": "吸附剂剂量对去除率的影响",
+      "value": "1-9 mg/10mL; 5mg时Re最大95.68%，继续增加剂量Re基本不变",
+      "unit": null,
+      "pollutant": "",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "patent",
+      "ref_doi": null,
+      "patent_number": "CN113244898A",
+      "standard_number": null,
+      "source_file": "2021-CN113244898A-polydopamine-kaolin-lead.pdf",
+      "page": 10,
+      "locator": "应用实施例4",
+      "verification": "needs_review",
+      "confidence": 0.8,
+      "note": "pollutant unidentifiable"
+    },
+    {
+      "parameter": "Gd(III)最大吸附容量",
+      "value": "150.86",
+      "unit": "mg/g",
+      "pollutant": "",
+      "material": "MWCNT-PDA-CS-GO-I（印迹气凝胶）",
+      "ph": null,
+      "temperature": null,
+      "conditions": "pH 7.0",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2020.124347",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2021-Zhang-chitosan-aerogel-heavy-metal-rare-earth.pdf",
+      "page": 1,
+      "locator": "Abstract",
+      "verification": "needs_review",
+      "confidence": 0.8,
+      "note": "pollutant unidentifiable"
+    },
+    {
+      "parameter": "Cu²⁺最大吸附容量",
+      "value": "434.8",
+      "unit": "mg/g",
+      "pollutant": "",
+      "material": "MCC10 (MCC-PDA-PEI/CS-PDA-PEI)",
+      "ph": 5.5,
+      "temperature": "25°C",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2022.129112",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2022-Godiya-chitosan-cellulose-hydrogel-heavy-metal-adsorption.pdf",
+      "page": 1,
+      "locator": "Abstract",
+      "verification": "needs_review",
+      "confidence": 0.8,
+      "note": "pollutant unidentifiable"
+    },
+    {
+      "parameter": "未改性MCC/CS吸附容量对比",
+      "value": "Cu²⁺ 158.7; Zn²⁺ 161.2; Ni²⁺ 172.4 mg/g",
+      "unit": "mg/g",
+      "pollutant": "",
+      "material": "未改性MCC/CS",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2022.129112",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2022-Godiya-chitosan-cellulose-hydrogel-heavy-metal-adsorption.pdf",
+      "page": 5,
+      "locator": "Section 3.3",
+      "verification": "needs_review",
+      "confidence": 0.8,
+      "note": "pollutant unidentifiable"
+    },
+    {
+      "parameter": "Cr(VI)最大吸附容量 Qm (Langmuir)",
+      "value": "456.62",
+      "unit": "mg/g",
+      "pollutant": "Cr(VI)",
+      "material": "CNF-TA-PMMT-PEI",
+      "ph": 3,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.seppur.2024.127979",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2024-Yuan-tannic-acid-cellulose-aerogel-heavy-metal-chromium.pdf",
+      "page": 1,
+      "locator": "Abstract",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "Cu(II)最大吸附容量 Qm (Langmuir)",
+      "value": "289.86",
+      "unit": "mg/g",
+      "pollutant": "Cu(II)",
+      "material": "CNF-TA-PMMT-PEI",
+      "ph": 6,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.seppur.2024.127979",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2024-Yuan-tannic-acid-cellulose-aerogel-heavy-metal-chromium.pdf",
+      "page": 1,
+      "locator": "Abstract",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "Congo red (CR)最大吸附容量 Qm (Langmuir)",
+      "value": "3429.23",
+      "unit": "mg/g",
+      "pollutant": "Congo red (CR)",
+      "material": "CNF-TA-PMMT-PEI",
+      "ph": 3,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.seppur.2024.127979",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2024-Yuan-tannic-acid-cellulose-aerogel-heavy-metal-chromium.pdf",
+      "page": 1,
+      "locator": "Abstract",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "H-PDA-SO最大吸附容量(298K/摘要)",
+      "value": "96.5",
+      "unit": "mg/g",
+      "pollutant": "U(VI)",
+      "material": "",
+      "ph": null,
+      "temperature": "25°C室温",
+      "conditions": "",
+      "source": "patent",
+      "ref_doi": null,
+      "patent_number": "CN114570339A",
+      "standard_number": null,
+      "source_file": "2022-CN114570339A-polydopamine-uranium-adsorbent.pdf",
+      "page": 1,
+      "locator": "摘要",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "H-PDA-SO最大吸附容量(298K/实施例)",
+      "value": "103",
+      "unit": "mg/g",
+      "pollutant": "U(VI)",
+      "material": "",
+      "ph": null,
+      "temperature": "25°C室温",
+      "conditions": "",
+      "source": "patent",
+      "ref_doi": null,
+      "patent_number": "CN114570339A",
+      "standard_number": null,
+      "source_file": "2022-CN114570339A-polydopamine-uranium-adsorbent.pdf",
+      "page": 4,
+      "locator": "有益效果(2)",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "H-PDA-SO最大吸附容量(288K)",
+      "value": "81.25",
+      "unit": "mg/g",
+      "pollutant": "U(VI)",
+      "material": "",
+      "ph": null,
+      "temperature": "288K (15°C)",
+      "conditions": "",
+      "source": "patent",
+      "ref_doi": null,
+      "patent_number": "CN114570339A",
+      "standard_number": null,
+      "source_file": "2022-CN114570339A-polydopamine-uranium-adsorbent.pdf",
+      "page": 7,
+      "locator": "实施例10, 图6",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "H-PDA-SO最大吸附容量(308K)",
+      "value": "132.25",
+      "unit": "mg/g",
+      "pollutant": "U(VI)",
+      "material": "",
+      "ph": null,
+      "temperature": "308K (35°C)",
+      "conditions": "",
+      "source": "patent",
+      "ref_doi": null,
+      "patent_number": "CN114570339A",
+      "standard_number": null,
+      "source_file": "2022-CN114570339A-polydopamine-uranium-adsorbent.pdf",
+      "page": 7,
+      "locator": "实施例10, 图6",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "H-PDA-SO在pH 6.0时的吸附容量",
+      "value": "~38",
+      "unit": "mg/g",
+      "pollutant": "",
+      "material": "H-PDA-SO",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "patent",
+      "ref_doi": null,
+      "patent_number": "CN114570339A",
+      "standard_number": null,
+      "source_file": "2022-CN114570339A-polydopamine-uranium-adsorbent.pdf",
+      "page": 10,
+      "locator": "图4b",
+      "verification": "needs_review",
+      "confidence": 0.8,
+      "note": "pollutant unidentifiable"
+    },
+    {
+      "parameter": "H-PDA在pH 6.0时的吸附容量",
+      "value": "~36",
+      "unit": "mg/g",
+      "pollutant": "",
+      "material": "H-PDA",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "patent",
+      "ref_doi": null,
+      "patent_number": "CN114570339A",
+      "standard_number": null,
+      "source_file": "2022-CN114570339A-polydopamine-uranium-adsorbent.pdf",
+      "page": 10,
+      "locator": "图4a",
+      "verification": "needs_review",
+      "confidence": 0.8,
+      "note": "pollutant unidentifiable"
+    },
+    {
+      "parameter": "H-PDA-SO对U(VI)吸附容量(图7估读)",
+      "value": "~8.2",
+      "unit": "mg/g",
+      "pollutant": "",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "patent",
+      "ref_doi": null,
+      "patent_number": "CN114570339A",
+      "standard_number": null,
+      "source_file": "2022-CN114570339A-polydopamine-uranium-adsorbent.pdf",
+      "page": 12,
+      "locator": "图7",
+      "verification": "needs_review",
+      "confidence": 0.8,
+      "note": "pollutant unidentifiable"
+    },
+    {
+      "parameter": "Hg(II)最大吸附容量 qmax",
+      "value": "51.73",
+      "unit": "mg/g",
+      "pollutant": "Hg(II)",
+      "material": "HAp/Fe3O4/PDA",
+      "ph": 6,
+      "temperature": "25°C",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jece.2021.105709",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2021-Foroutan-polydopamine-magnetic-iron-oxide-nickel-mercury.pdf",
+      "page": 1,
+      "locator": "Abstract",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "Co(II)最大吸附容量 qmax",
+      "value": "49.32",
+      "unit": "mg/g",
+      "pollutant": "Co(II)",
+      "material": "HAp/Fe3O4/PDA",
+      "ph": 6,
+      "temperature": "25°C",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jece.2021.105709",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2021-Foroutan-polydopamine-magnetic-iron-oxide-nickel-mercury.pdf",
+      "page": 1,
+      "locator": "Abstract",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "Ni(II)最大吸附容量 qmax",
+      "value": "48.09",
+      "unit": "mg/g",
+      "pollutant": "Ni(II)",
+      "material": "HAp/Fe3O4/PDA",
+      "ph": 6,
+      "temperature": "25°C",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jece.2021.105709",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2021-Foroutan-polydopamine-magnetic-iron-oxide-nickel-mercury.pdf",
+      "page": 1,
+      "locator": "Abstract",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "25°C时Hg(II)去除率",
+      "value": "94.36",
+      "unit": "%",
+      "pollutant": "Hg(II)",
+      "material": "HAp/Fe3O4/PDA",
+      "ph": 6,
+      "temperature": "25°C",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jece.2021.105709",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2021-Foroutan-polydopamine-magnetic-iron-oxide-nickel-mercury.pdf",
+      "page": 7,
+      "locator": "Section 3.4 Temperature and thermodynamic study",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "25°C时Co(II)去除率",
+      "value": "93.66",
+      "unit": "%",
+      "pollutant": "Co(II)",
+      "material": "HAp/Fe3O4/PDA",
+      "ph": 6,
+      "temperature": "25°C",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jece.2021.105709",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2021-Foroutan-polydopamine-magnetic-iron-oxide-nickel-mercury.pdf",
+      "page": 7,
+      "locator": "Section 3.4",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "25°C时Ni(II)去除率",
+      "value": "92.36",
+      "unit": "%",
+      "pollutant": "Ni(II)",
+      "material": "HAp/Fe3O4/PDA",
+      "ph": 6,
+      "temperature": "25°C",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jece.2021.105709",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2021-Foroutan-polydopamine-magnetic-iron-oxide-nickel-mercury.pdf",
+      "page": 7,
+      "locator": "Section 3.4",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "50°C时Hg(II)去除率",
+      "value": "90.14",
+      "unit": "%",
+      "pollutant": "Hg(II)",
+      "material": "HAp/Fe3O4/PDA",
+      "ph": 6,
+      "temperature": "50°C",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jece.2021.105709",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2021-Foroutan-polydopamine-magnetic-iron-oxide-nickel-mercury.pdf",
+      "page": 7,
+      "locator": "Section 3.4",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "50°C时Co(II)去除率",
+      "value": "88.84",
+      "unit": "%",
+      "pollutant": "Co(II)",
+      "material": "HAp/Fe3O4/PDA",
+      "ph": 6,
+      "temperature": "50°C",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jece.2021.105709",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2021-Foroutan-polydopamine-magnetic-iron-oxide-nickel-mercury.pdf",
+      "page": 7,
+      "locator": "Section 3.4",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "50°C时Ni(II)去除率",
+      "value": "87.46",
+      "unit": "%",
+      "pollutant": "Ni(II)",
+      "material": "HAp/Fe3O4/PDA",
+      "ph": 6,
+      "temperature": "50°C",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jece.2021.105709",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2021-Foroutan-polydopamine-magnetic-iron-oxide-nickel-mercury.pdf",
+      "page": 7,
+      "locator": "Section 3.4",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "吸附容量（pH 6时）",
+      "value": "约0.33",
+      "unit": "mmol/g",
+      "pollutant": "Ge(IV)",
+      "material": "Fe₃O₄@PDA-PEI",
+      "ph": "6（最佳）",
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.13373/j.cnki.cjrm.XY21060036",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2023-Xiang-polydopamine-amine-germanium-adsorption.pdf",
+      "page": 7,
+      "locator": "图8描述",
+      "verification": "unverified",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "PDA/DCS最大单层吸附量 qmax",
+      "value": "1194.4",
+      "unit": "mg/g",
+      "pollutant": "Carmine (胭脂红)",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.13550/j.jxhg.20220633",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2023-Jin-polydopamine-chitosan-carmine-adsorption.pdf",
+      "page": 1,
+      "locator": "摘要",
+      "verification": "unverified",
+      "confidence": 0.8
+    }
+  ],
+  "mechanisms": [
+    {
+      "name": "Teflon AF 2400涂层PVDF膜VMD性能",
+      "description": "超疏水表面151°，平均通量22 L/m²h，盐截留率99.99%，进料温度~60°C",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.3390/polym14245439",
+      "verification": "needs_review"
+    },
+    {
+      "name": "疏水改性三大方法",
+      "description": "表面涂层（浸涂/过滤涂覆）、表面接枝（化学/辐射/等离子体/光引发）、共混",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.3390/polym14245439",
+      "verification": "needs_review",
+      "基本原理": "needs_review",
+      "active_features": [
+        {
+          "type": "structural_feature",
+          "name": "coating",
+          "evidence": "Detected in mechanism: 疏水改性三大方法"
+        }
+      ]
+    },
+    {
+      "name": "PVDF-co-HFP/POTS超疏水膜MD性能",
+      "description": "通量27.94 kg/m²h，盐截留率100%（含SDS低表面张力表面活性剂的NaCl进料）",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.3390/polym14245439",
+      "verification": "needs_review"
+    },
+    {
+      "name": "PVDF-co-HFP/F-POSS全疏水膜",
+      "description": "乙醇中接触角128.2°，高盐进料+低表面张力物质中通量和盐截留率保持稳定",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.3390/polym14245439",
+      "verification": "needs_review"
+    },
+    {
+      "name": "Cassie-Baxter方程与膜疏水性关系",
+      "description": "接触角与膜表面粗糙度相关，粗糙度增加→气液接触面积增加→界面效应增强",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.3390/polym14245439",
+      "verification": "needs_review"
+    },
+    {
+      "name": "P(VDF-co-CTFE) FOMA功能化超疏水膜",
+      "description": "超疏水性，优异抗污染和抗润湿性能，DCMD几乎无通量下降",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.3390/polym14245439",
+      "verification": "needs_review"
+    },
+    {
+      "name": "水滴'生长-跳跃'排液机制 Water droplet 'growing-jumping' discharge mechanism",
+      "description": "两阶段机制：'生长'阶段(水滴在微腔中核化生长→Laplace压力梯度∇P~2σ/d_eq(1/R₁-1/R₂)驱动水滴变形自导向)→'跳跃'阶段(合并后表面能释放触发自发跳跃运动，低粘附力确保跳跃)",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.seppur.2023.123547",
+      "verification": "needs_review",
+      "基本原理": "needs_review"
+    },
+    {
+      "name": "油滴捕获的'捕获-聚并-脱离'机制 Oil capture 'capture-coalescence-detachment' mechanism",
+      "description": "三阶段机制：'捕获'(超疏水Al₂O₃突起作为油吸收器捕获微小油滴，不平衡力Fd=γ_oil(cosθ₁-cosθ₂)驱动)→'聚并'(被捕获油滴作为油储库，小油滴聚并成大油滴)→'脱离'(水下超疏油PDA/PET表面+Al₂O₃突起表面张力排斥大油滴)",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.seppur.2023.123547",
+      "verification": "needs_review",
+      "基本原理": "needs_review"
+    },
+    {
+      "name": "制备方法概述(绿色制备/废弃PET再利用) Preparation method overview (green/waste PET reuse)",
+      "description": "三步法：静电纺丝制备PET纤维膜→DA-HCl原位聚合PDA修饰→真空抽滤涂覆Al₂O₃突起；原料为废弃可口可乐PET瓶",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.seppur.2023.123547",
+      "verification": "needs_review",
+      "基本原理": "needs_review",
+      "active_features": [
+        {
+          "type": "structural_feature",
+          "name": "fiber structure",
+          "evidence": "Detected in mechanism: 制备方法概述(绿色制备/废弃PET再利用) Preparation method overview "
+        },
+        {
+          "type": "structural_feature",
+          "name": "membrane",
+          "evidence": "Detected in mechanism: 制备方法概述(绿色制备/废弃PET再利用) Preparation method overview "
+        }
+      ]
+    },
+    {
+      "name": "特殊润湿性分类",
+      "description": "超疏水/超亲油（'除油'型）和超亲水/水下超疏油（'除水'型）",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "needs_review",
+      "基本原理": "needs_review"
+    },
+    {
+      "name": "荷叶效应仿生原理",
+      "description": "微纳复合结构+低表面能蜡质的协同效应产生超疏水性",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "needs_review",
+      "基本原理": "needs_review",
+      "active_features": [
+        {
+          "type": "structural_feature",
+          "name": "micro-nano hierarchical structure",
+          "evidence": "Detected in mechanism: 荷叶效应仿生原理"
+        }
+      ]
+    },
+    {
+      "name": "荷叶上下表面润湿性差异",
+      "description": "上表面超疏水，下表面超亲水/水下超疏油",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "needs_review",
+      "基本原理": "needs_review"
+    },
+    {
+      "name": "壁虎脚仿生特性",
+      "description": "大量对齐刚毛产生的超疏水+高黏附特性（范德华力）",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "needs_review",
+      "基本原理": "needs_review"
+    },
+    {
+      "name": "玫瑰花瓣高黏附超疏水",
+      "description": "微乳突阵列结构产生高黏附超疏水性",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "needs_review",
+      "基本原理": "needs_review"
+    },
+    {
+      "name": "浸涂法制备超疏水表面 — THF/水比例优化",
+      "description": "THF:Water = 3:7 时 WCA 达到 155.0 ± 0.6°",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "needs_review"
+    },
+    {
+      "name": "溶胶-凝胶法制备超疏水纺织品耐久性",
+      "description": "18h超声、600次磨损、96次洗涤后仍保持超疏水性",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "needs_review",
+      "基本原理": "needs_review"
+    },
+    {
+      "name": "Table 1 — 超疏水/超亲油材料制备技术汇总",
+      "description": "13种材料体系，效率90%~99.9%",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "needs_review",
+      "基本原理": "needs_review"
+    },
+    {
+      "name": "TiO2光催化降解机理",
+      "description": "UV照射下TiO2价带电子跃迁至导带，产生电子-空穴对，通过O₂→O₂⁻和H₂O→OH·自由基降解油污染物为CO₂和H₂O",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "needs_review",
+      "基本原理": "needs_review"
+    },
+    {
+      "name": "CeO2纳米粒子超疏水光催化膜",
+      "description": "分离效率 99%",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "needs_review"
+    },
+    {
+      "name": "pH响应PDMS-bP4VP电纺膜",
+      "description": "pH 7超疏水，pH 4超亲水，可切换油/水分离",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "needs_review",
+      "基本原理": "needs_review",
+      "active_features": [
+        {
+          "type": "structural_feature",
+          "name": "membrane",
+          "evidence": "Detected in mechanism: pH响应PDMS-bP4VP电纺膜"
+        }
+      ]
+    },
+    {
+      "name": "双刺激UV+pH可切换润湿性",
+      "description": "单独UV或pH → 疏水；UV+pH协同 → 亲水",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "needs_review",
+      "基本原理": "needs_review"
+    },
+    {
+      "name": "荷叶超疏水仿生机制",
+      "description": "低表面能蜡质层+乳突状粗糙结构协同产生超疏水性",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
+      "verification": "needs_review",
+      "基本原理": "needs_review"
+    },
+    {
+      "name": "超浸润膜分离乳化油的双重机理",
+      "description": "筛分效应（膜孔径<乳液尺寸）+ 界面破乳选择性分离",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
+      "verification": "needs_review",
+      "基本原理": "needs_review",
+      "active_features": [
+        {
+          "type": "structural_feature",
+          "name": "membrane",
+          "evidence": "Detected in mechanism: 超浸润膜分离乳化油的双重机理"
+        }
+      ]
+    },
+    {
+      "name": "超疏水/超亲油膜分离W/O乳液机理",
+      "description": "油滴被挤压进入微孔→乳化剂脱离→大油滴聚集渗透；水滴被超疏水膜截留",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
+      "verification": "needs_review",
+      "基本原理": "needs_review",
+      "active_features": [
+        {
+          "type": "structural_feature",
+          "name": "membrane",
+          "evidence": "Detected in mechanism: 超疏水/超亲油膜分离W/O乳液机理"
+        }
+      ]
+    },
+    {
+      "name": "超亲水/水下超疏油膜分离O/W乳液机理",
+      "description": "膜表面形成水膜作为屏蔽层→阻碍油扩散和渗透→重力驱动下选择性透过水",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
+      "verification": "needs_review",
+      "基本原理": "needs_review",
+      "active_features": [
+        {
+          "type": "structural_feature",
+          "name": "membrane",
+          "evidence": "Detected in mechanism: 超亲水/水下超疏油膜分离O/W乳液机理"
+        }
+      ]
+    },
+    {
+      "name": "TiO₂纳米线/不锈钢网超疏水膜",
+      "description": "50次循环后仍保持超疏水性；24h强酸碱或有机溶剂浸泡后分离效率仍达99%",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
+      "verification": "needs_review"
+    },
+    {
+      "name": "PVDF/PDMS超疏水纳米纤维膜",
+      "description": "渗透系数35751 L/(m²·h)，分离效率99.6%，可去除>150nm水滴",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
+      "verification": "needs_review"
+    },
+    {
+      "name": "F-SiO₂/PVDF-P-SiO₂/PVDF Janus膜",
+      "description": "氟化后WCA 157.7°（超疏水），等离子刻蚀后水下油CA 150.8°（水下超疏油），通量6800 L/(m²·h)以上，分离效率~99%",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
+      "verification": "needs_review"
+    },
+    {
+      "name": "pH响应PMMA-b-P4VP智能纤维膜",
+      "description": "初始WCA 152°（超疏水/超亲油），碱性条件下转为水下超疏油",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
+      "verification": "needs_review"
+    },
+    {
+      "name": "热响应PNIPAAm改性尼龙膜",
+      "description": "25°C超亲水/水下超疏油（分离O/W乳液效率>98%），45°C超疏水（可分离16种稳定油水乳液）",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
+      "verification": "needs_review",
+      "基本原理": "needs_review",
+      "active_features": [
+        {
+          "type": "structural_feature",
+          "name": "membrane",
+          "evidence": "Detected in mechanism: 热响应PNIPAAm改性尼龙膜"
+        }
+      ]
+    },
+    {
+      "name": "超浸润膜四大类型分类",
+      "description": "超疏水-超亲油膜、超亲水-水下超疏油膜、Janus膜、Smart膜",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
+      "verification": "needs_review",
+      "基本原理": "needs_review",
+      "active_features": [
+        {
+          "type": "structural_feature",
+          "name": "membrane",
+          "evidence": "Detected in mechanism: 超浸润膜四大类型分类"
+        }
+      ]
+    },
+    {
+      "name": "超疏水抗菌表面'双重保险'原理",
+      "description": "疏水材料减少细菌黏附+抗菌材料主动杀菌，实现长效抗菌",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.13550/j.jxhg.20201035",
+      "verification": "needs_review",
+      "基本原理": "needs_review"
+    },
+    {
+      "name": "超疏水抗菌表面分类体系",
+      "description": "三类：无机、有机、无机-有机",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.13550/j.jxhg.20201035",
+      "verification": "needs_review",
+      "基本原理": "needs_review"
+    },
+    {
+      "name": "铜基超疏水抗菌表面 — 花瓣状Cu2O",
+      "description": "WCA 154°，对大肠杆菌抗菌效果较好",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.13550/j.jxhg.20201035",
+      "verification": "needs_review"
+    },
+    {
+      "name": "铜纳米粒子超疏水抗菌表面",
+      "description": "WCA 164°，对革兰氏阴性/阳性菌均有抗菌活性",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.13550/j.jxhg.20201035",
+      "verification": "needs_review"
+    },
+    {
+      "name": "CuO/SiO2透明超疏水涂层",
+      "description": "300~2500 nm范围内透光率96.6%",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.13550/j.jxhg.20201035",
+      "verification": "needs_review",
+      "基本原理": "needs_review",
+      "active_features": [
+        {
+          "type": "structural_feature",
+          "name": "coating",
+          "evidence": "Detected in mechanism: CuO/SiO2透明超疏水涂层"
+        }
+      ]
+    },
+    {
+      "name": "纳米Ag棉织物超疏水抗菌",
+      "description": "WCA 148.7°，良好抗菌性能",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.13550/j.jxhg.20201035",
+      "verification": "needs_review"
+    },
+    {
+      "name": "中空多孔碳球封装纳米Ag超疏水抗菌",
+      "description": "WCA 160.6°，大肠杆菌抑菌率96%，金黄色葡萄球菌抑菌率83%",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.13550/j.jxhg.20201035",
+      "verification": "needs_review"
+    },
+    {
+      "name": "含氟季铵盐抗菌机理",
+      "description": "C-F键能497 kJ/mol，全氟烷基协同抗菌基团向表面迁移实现高效抗菌",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.13550/j.jxhg.20201035",
+      "verification": "needs_review",
+      "基本原理": "needs_review",
+      "active_features": [
+        {
+          "type": "functional_group",
+          "name": "quaternary ammonium",
+          "evidence": "Detected in mechanism: 含氟季铵盐抗菌机理"
+        }
+      ]
+    },
+    {
+      "name": "纳米Ag/硅烷棉织物超疏水抗菌",
+      "description": "WCA 153°±2°，优异抗菌性能",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.13550/j.jxhg.20201035",
+      "verification": "needs_review"
+    },
+    {
+      "name": "树枝状纳米银超疏水表面",
+      "description": "WCA >150°，较好抗菌性",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.13550/j.jxhg.20201035",
+      "verification": "needs_review"
+    },
+    {
+      "name": "Cu纳米线/PDMS超疏水表面",
+      "description": "拉伸、扭曲、砂纸磨损下仍具有超疏水性",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": null,
+      "verification": "needs_review",
+      "基本原理": "needs_review"
+    },
+    {
+      "name": "ZIF-8/PVDF超疏水抗菌涂层",
+      "description": "WCA 160°，对大肠杆菌有良好抗菌活性",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.13550/j.jxhg.20201035",
+      "verification": "needs_review"
+    },
+    {
+      "name": "pH响应型超疏水抗菌棉织物",
+      "description": "杀菌率>80%",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.13550/j.jxhg.20201035",
+      "verification": "needs_review",
+      "基本原理": "needs_review"
+    },
+    {
+      "name": "超疏水医用纱布",
+      "description": "WCA 158°，对金黄色葡萄球菌和大肠杆菌抗菌作用显著",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.13550/j.jxhg.20201035",
+      "verification": "needs_review"
+    },
+    {
+      "name": "多巴胺黏附固定无机抗菌剂策略",
+      "description": "多巴胺直接黏附固定无机抗菌剂可简化超疏水表面制备过程",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.13550/j.jxhg.20201035",
+      "verification": "needs_review",
+      "基本原理": "needs_review"
+    },
+    {
+      "name": "未来发展方向：多功能化智能化",
+      "description": "阻燃+超疏水+抗菌、导电+超疏水+抗菌、自修复+超疏水、响应性+超疏水+抗菌",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.13550/j.jxhg.20201035",
+      "verification": "needs_review",
+      "基本原理": "needs_review"
+    },
+    {
+      "name": "无机-有机复合策略优势",
+      "description": "无机纳米粒子提供粗糙度+有机物提供低表面能/抗菌性，协同实现超疏水抗菌",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.13550/j.jxhg.20201035",
+      "verification": "needs_review",
+      "基本原理": "needs_review"
+    },
+    {
+      "name": "吸附机制 — 配位螯合",
+      "description": "La与磷酸根配位生成磷酸镧化合物",
+      "functional_groups": "",
+      "source": "patent",
+      "ref_doi": null,
+      "verification": "needs_review",
+      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "active_features": [
+        {
+          "type": "process_feature",
+          "name": "adsorption",
+          "evidence": "Detected in mechanism: 吸附机制 — 配位螯合"
+        }
+      ]
+    },
+    {
+      "name": "PDA吸附机制-姜黄素",
+      "description": null,
+      "functional_groups": "",
+      "source": "patent",
+      "ref_doi": null,
+      "verification": "needs_review",
+      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "active_features": [
+        {
+          "type": "process_feature",
+          "name": "adsorption",
+          "evidence": "Detected in mechanism: PDA吸附机制-姜黄素"
+        }
+      ]
+    },
+    {
+      "name": "PDA吸附机制-番茄红素",
+      "description": null,
+      "functional_groups": "",
+      "source": "patent",
+      "ref_doi": null,
+      "verification": "needs_review",
+      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "active_features": [
+        {
+          "type": "process_feature",
+          "name": "adsorption",
+          "evidence": "Detected in mechanism: PDA吸附机制-番茄红素"
+        }
+      ]
+    },
+    {
+      "name": "吸附机制",
+      "description": "表面络合和离子交换",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.apsusc.2020.148379",
+      "verification": "needs_review"
+    },
+    {
+      "name": "pHpzc和pH影响",
+      "description": "pHpzc=4.32；pH>4.32时静电吸引增强，MB/MG/CV吸附量随pH增加",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.apsusc.2022.154338",
+      "verification": "needs_review"
+    },
+    {
+      "name": "吸附机理六重协同",
+      "description": "(1)静电相互作用；(2)氢键；(3)Yoshida H-π键；(4)π-π共轭；(5)n-π相互作用；(6)β-CD主客体识别",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.apsusc.2022.154338",
+      "verification": "needs_review"
+    },
+    {
+      "name": "吸附机制-酚羟基参与",
+      "description": "phenolic hydroxyl groups participate in adsorption (C-O and O 1s binding energy shifts)",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.cej.2020.127837",
+      "verification": "needs_review"
+    },
+    {
+      "name": "pH对吸附的影响机制",
+      "description": "pH 2-6吸附量逐渐增强；pH<5表面正电排斥，pH>5转负电静电吸引；pH>6时Pb2+水解干扰",
+      "functional_groups": "",
+      "source": "patent",
+      "ref_doi": null,
+      "verification": "needs_review"
+    },
+    {
+      "name": "XPS分析-吸附机理",
+      "description": "C 1s红移形成吸附剂-金属络合物；N 1s出现—NH—(402 eV)和—NH₂(406 eV)两个峰；吸附后出现Gd 4d特征峰(149 eV和143 eV)",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2020.124347",
+      "verification": "needs_review"
+    },
+    {
+      "name": "吸附活性基团协同",
+      "description": "—NH₂(壳聚糖+PDA)、—OH(壳聚糖+GO+PDA)、—COOH(MWCNT-COOH)三类基团协同参与Gd(III)螯合",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2020.124347",
+      "verification": "needs_review"
+    },
+    {
+      "name": "XPS吸附机理",
+      "description": "N 1s峰从398.4/401.6 eV移至399.4 eV；O 1s峰从531.9/530.0 eV移至530.8/532.1 eV；C 1s峰C=N从284.2 eV移至285.5 eV；Cu 2p₃/₂峰932.5-933.7 eV",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2022.129112",
+      "verification": "needs_review"
+    },
+    {
+      "name": "Cr(VI)吸附机制总结",
+      "description": "静电吸引 + 还原(Cr(VI)→Cr(III)) + 螯合",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.seppur.2024.127979",
+      "verification": "needs_review"
+    },
+    {
+      "name": "Cu(II)吸附机制总结",
+      "description": "螯合(-OH, -NH2) + 离子交换",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.seppur.2024.127979",
+      "verification": "needs_review"
+    },
+    {
+      "name": "CR吸附机制总结",
+      "description": "静电吸引 + π-π堆叠 + 席夫碱反应 + 氢键",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.seppur.2024.127979",
+      "verification": "needs_review"
+    },
+    {
+      "name": "吸附机理-pH依赖性",
+      "description": "酸性条件：静电作用为主；碱性条件：配位作用为主",
+      "functional_groups": "",
+      "source": "patent",
+      "ref_doi": null,
+      "verification": "needs_review"
+    },
+    {
+      "name": "吸附机制类型",
+      "description": "physical mechanism",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jece.2021.105709",
+      "verification": "needs_review"
+    },
+    {
+      "name": "PDA吸附机制补充",
+      "description": "π-π interaction (π-π 相互作用)",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.polymer.2020.123316",
+      "verification": "verified",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "芳香族污染物（染料、PAHs）和软酸金属离子",
+          "basis": "llm_inferred",
+          "locator": null
+        },
+        "bio_structure": {
+          "text": "聚多巴胺（PDA）涂层表面的邻苯二酚基团和吲哚环",
+          "basis": "from_source",
+          "locator": "Lei2021 p.2 / Sec.1"
+        },
+        "interaction": {
+          "text": "π-π堆积（吲哚环与芳香污染物）、双齿配位（邻苯二酚与软金属）、氢键（-OH/-NH与极性分子）",
+          "basis": "from_source",
+          "locator": "Lei2021 p.2 / Sec.1"
+        },
+        "why_it_works": {
+          "text": "PDA涂层同时含邻苯二酚（金属配位）和吲哚环（π-π堆积），可在单一表面上实现对芳香族污染物和金属离子的双重吸附",
+          "basis": "llm_inferred",
+          "locator": null
+        },
+        "boundary_conditions": [
+          {
+            "text": "碱性条件下邻苯二酚氧化为醌，金属配位能力丧失",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          },
+          {
+            "text": "弱酸性以下DOPA自聚合速率极慢，涂层难以形成",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": "CM-002: catechol-low-ph-suppression"
+          }
+        ],
+        "transferable_principle": "PDA涂层是通用的表面功能化平台——邻苯二酚提供金属配位，吲哚环提供π-π堆积，可同时去除芳香族污染物和金属离子",
+        "verification_quote": "PDA has been regarded as a promising bio-sorbent due to its large number of reactive groups containing catechol, amino, imine groups"
+      },
+      "基本原理": "PDA涂层同时含邻苯二酚（金属配位）和吲哚环（π-π堆积），可在单一表面上实现对芳香族污染物和金属离子的双重吸附",
+      "source_file": "仿生文献库/2nd/第12组-仿生案例/2021-Lei-mussel-magnetic-carboxymethyl-chitosan-aerogel-cationic.pdf",
+      "verification_quote": "PDA has been regarded as a promising bio-sorbent due to its large number of reactive groups containing catechol, amino, imine groups"
+    }
+  ],
+  "narrative": {
+    "entries": [
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2022-Li-hydrophobic-separation-membrane-porous-review 2.json",
+        "paper_id": "2022-Li-hydrophobic-separation-membrane-porous-review",
+        "sections": {
+          "problem_definition": "自然界中极端疏水表面面临液体粘附和污染挑战；在水处理工程中，高盐废水、RO浓水及含油废水的处理面临膜润湿、无机/有机结垢污染以及苛刻化学和热环境下的材料降解问题。",
+          "biological_solution": "自然界通过低表面能物质和微观粗糙度结构（如荷叶效应）实现超疏水和自清洁。含氟聚合物通过C-F键（键能485 kJ/mol）提供极低表面能和优异的热化学稳定性，结合多孔粗糙结构放大疏水性（Cassie-Baxter方程），成功应用于膜蒸馏（MD）和膜结晶（MCr）中，实现高盐废水的高效分离与高纯度水生产。",
+          "key_features": "必须保留特征：C-F键赋予的低表面能与高热化学稳定性、微孔粗糙结构以维持Cassie-Baxter超疏水状态。可灵活调整特征：膜构型（DCMD/VMD/AGMD/SGMD）、聚合物种类（PVDF/PTFE/ECTFE）、制备工艺（NIPS/TIPS/VIPS/电纺/拉伸烧结）及绿色溶剂体系。",
+          "design_mapping": "生物低表面能蜡质层映射为含氟聚合物（C-F键）；生物微观乳突粗糙结构映射为膜多孔结构及纳米纤维/相分离孔结构。软约束建议：优先选择PVDF以平衡成本与综合性能，或采用ECTFE提升耐磨强度；推荐使用TEP、ATBC等绿色溶剂替代传统有毒溶剂以降低环境影响。",
+          "explainability_anchors": "仿生故事线：从荷叶的超疏水自清洁效应出发，解析低表面能与粗糙度协同机制，映射至含氟聚合物膜的C-F键低表面能与多孔结构设计。设计溯源：基于Cassie-Baxter方程指导膜表面疏水改性与结构调控，利用C-F键485 kJ/mol高键能保障膜在苛刻高盐、高温环境下的长期稳定性，从根源上缓解膜润湿和污染痛点。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2023-景-超疏水-油水分离-膜-综述 2.json",
+        "paper_id": "jing2023_superwetting_oil_water_separation_membrane_review",
+        "sections": {
+          "problem_definition": "石油开采、运输、加工过程中产生大量含油废水，特别是乳化油（<20μm）和溶解油的分离极具挑战性。传统分离方法对复杂油水混合物存在效率低、成本高、二次污染等问题。",
+          "biological_solution": "自然界中荷叶表面通过低表面能蜡质层和乳突状粗糙结构实现超疏水自清洁（'出淤泥而不染'）；鱼鳞通过磷酸钙、蛋白质和亲水性黏液层以及放射状微孔突结构实现超亲水/水下超疏油性能。这些天然超浸润表面为油水分离膜设计提供了仿生灵感。",
+          "key_features": "必须保留：表面张力调控（使膜材料表面张力介于油水之间）、纳微多级结构（增大表面粗糙度）。可灵活调整：化学组成（亲水/疏水基团）、制备方法（静电纺丝/喷涂/相分离等）、膜孔径（小于乳液尺寸）。",
+          "design_mapping": "生物结构→材料设计：荷叶蜡质层+乳突结构→低表面能修饰+微纳粗糙结构（超疏水膜）；鱼鳞磷酸钙+亲水黏液→亲水基团+水化层（超亲水膜）；荷叶上下表面非对称性→Janus膜（非对称润湿性）。软约束建议：膜孔径需小于乳液液滴尺寸以实现筛分效应。",
+          "explainability_anchors": "仿生故事线：模仿荷叶的'出淤泥而不染'实现超疏水选择性分离油包水乳液；模仿鱼鳞的水下超疏油实现超亲水选择性分离水包油乳液；模仿荷叶上下表面的非对称性设计Janus膜。设计溯源：从荷叶/鱼鳞→Young/Wenzel/Cassie模型→超浸润膜设计→油水分离应用。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2021-高-超疏水-油水分离-综述-研究进展 2.json",
+        "paper_id": "gao2021_superhydrophobic_antibacterial_review",
+        "sections": {
+          "problem_definition": "自然界中荷叶面临水生环境中微生物附着和污物沉积的挑战；在水处理中，分离膜和涂层表面极易受油类污染、细菌（如大肠杆菌、金黄色葡萄球菌）黏附及生物膜形成影响，导致分离效率下降、通量衰减和二次污染。",
+          "biological_solution": "荷叶通过表面微纳分级粗糙结构与表皮蜡质（低表面能）的协同作用，实现超疏水和自清洁（荷叶效应）。在水处理材料设计中，由此进化出'双重保险'策略：利用微纳结构实现疏水排斥（减少细菌和油污黏附），同时结合主动杀菌机制（如Ag/Cu/ZnO离子释放、光催化或季铵盐接触杀菌）杀灭残留细菌，实现长效防污抗菌。",
+          "key_features": "必须保留特征：微纳分级粗糙结构、低表面能化学修饰、疏水排斥与主动杀菌的协同机制。可灵活调整特征：抗菌剂种类（无机纳米粒子、有机季铵盐、天然壳聚糖）、基底材料（棉织物、玻璃、聚合物）、制备工艺（相分离、喷涂、电沉积、多巴胺黏附）。",
+          "design_mapping": "生物微纳乳突映射为无机纳米粒子（如SiO2/ZnO/CuO）或相分离构建的粗糙结构；表皮蜡质映射为有机氟/有机硅/长链烷烃等低表面能修饰；自清洁机制映射为超疏水油水分离与抗细菌黏附；主动防御映射为掺杂抗菌纳米粒子或接枝杀菌基团。软约束建议：优先采用无机-有机复合策略以兼顾粗糙度与低表面能，使用多巴胺或壳聚糖等仿生/天然分子简化制备流程并提升环保性。",
+          "explainability_anchors": "仿生故事线：从荷叶的'出淤泥而不染'（超疏水自清洁）到水处理表面的'双重保险'（抗黏附+主动杀菌）防污策略。设计溯源：荷叶效应（微纳结构+低表面能）直接映射为无机纳米颗粒构建粗糙度+有机硅/氟降低表面能的材料设计，解决了传统单一疏水表面易被细菌生物膜破坏的痛点。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/专利/json/2022-CN115040496A-聚多巴胺-壳聚糖-吸附.json",
+        "paper_id": "CN115040496A_2022_hollow_mesoporous_PDA_fat_soluble_pigment",
+        "sections": {
+          "problem_definition": "脂溶性色素（姜黄素、番茄红素）具有抗肿瘤、抗氧化等广泛药理作用，但难溶于水、口服不易吸收、存在肝脏首过效应、体内代谢清除快、生物利用率低、稳定性差、见光易分解，需要合适的药物递送系统解决这些问题。",
+          "biological_solution": "聚多巴胺（PDA）是天然生物色素黑色素的主要成分，通过多巴胺的氧化自聚合反应得到，具有良好的稳定性、生物可降解性、生物相容性和光热转换特性。PDA表面具有大量邻苯二酚和氨基功能基团，具有很强的粘附性（仿贻贝足丝蛋白机制），可包覆在多种材料表面。壳聚糖是由氨基葡萄糖组成的天然阳离子聚合物，具有良好的生物相容性、低毒性和可生物降解性，且具有肠粘膜粘附特性。",
+          "key_features": "必须保留：中空介孔聚多巴胺纳米粒（HPDA）作为核心载体（高比表面积、纳米孔道、中空结构、pH敏感性、邻苯二酚/氨基官能团）、聚乙二醇改性壳聚糖作为外层包覆（肠粘膜粘附、减少巨噬细胞摄取、被动靶向）。可灵活调整：HPDA与脂溶性色素质量比（5-8:1）、壳聚糖与PEG质量比（1:0.2-0.3）、冻干条件。",
+          "design_mapping": "生物结构→材料设计：贻贝足丝蛋白→多巴胺自聚合→聚多巴胺（PDA）载体；天然生物色素黑色素→PDA化学组成；甲壳类动物外壳→壳聚糖→PEG改性壳聚糖外层包覆。中空介孔结构→硬模板法（SiO2模板+HF蚀刻）。软约束建议：保留邻苯二酚和氨基官能团是物理+化学吸附的关键，中空介孔结构是高负载效率的核心，壳聚糖包覆是肠粘膜粘附和延释的保障。",
+          "explainability_anchors": "仿生故事线：模仿贻贝足丝蛋白的邻苯二酚粘附化学，用多巴胺自聚合制备聚多巴胺中空介孔纳米粒作为药物载体；利用天然壳聚糖的肠粘膜粘附特性作为外层包衣，实现脂溶性色素的高效负载、pH响应释放和靶向缓释。设计溯源：贻贝→多巴胺→PDA→中空介孔结构（SiO2硬模板+HF蚀刻）→物理+化学吸附脂溶性色素→PEG-CS包覆→肿瘤pH响应释放。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/第三波/json/2022-Yan-polydopamine-magnetic-dye-adsorption-water-treatment.json",
+        "paper_id": "yan2022_pda_mgo_cacd_cationic_dye",
+        "sections": {
+          "problem_definition": "纺织工业废水中阳离子染料（MB、MG、CV）具有致癌性、难降解、高毒性，对生态环境和人体健康构成严重威胁。需要高效、可回收、选择性的吸附材料。",
+          "biological_solution": "利用贻贝足丝蛋白中多巴胺的自聚合特性，在磁性石墨烯氧化物表面构建PDA功能层，提供邻苯二酚、氨基和醌基官能团。结合β-CD聚合物的超分子空腔实现'主客体'识别。Fe₃O₄赋予磁分离回收能力。",
+          "key_features": "必须保留：PDA邻苯二酚基团（吸附和粘附核心）、Fe₃O₄磁性内核（快速回收）、β-CD空腔（主客体识别）。可灵活调整：PDA/β-CD比例、交联剂类型。",
+          "design_mapping": "生物结构→材料设计：贻贝足丝蛋白→PDA涂层（邻苯二酚+氨基+醌基）；β-CD空腔→主客体超分子识别；Fe₃O₄→磁分离回收。软约束建议：保留PDA-β-CD-Fe₃O₄三元协同结构是关键，可优化各组分比例。",
+          "explainability_anchors": "仿生故事线：模仿贻贝足丝蛋白的水下粘附化学（多巴胺→PDA），结合β-CD的超分子识别能力，构建磁性可回收吸附材料。设计溯源：从贻贝→多巴胺→PDA→PDA/MGO/CA-CD的仿生链路。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/第三波/json/2021-CN113244898A-polydopamine-kaolin-lead.json",
+        "paper_id": "2021-CN113244898A-polydopamine-kaolin-lead",
+        "sections": {
+          "problem_definition": "天然粘土矿物(如高岭土)成本低、环境友好但表面缺乏活性官能团，对重金属离子吸附能力差；传统固液分离(过滤/离心)耗时耗能。需开发高吸附容量、易分离回收的功能化复合材料。",
+          "biological_solution": "受贻贝足丝蛋白启发，利用多巴胺(DA)在碱性、有氧、潮湿环境下极易发生自聚合形成聚多巴胺(PDA)的特性，将富含氨基、亚氨基和邻苯二酚基团的PDA涂层原位生长于磁性高岭土表面。PDA提供丰富的-NH2/-OH配位位点，Fe3O4提供磁分离能力，高岭土提供多孔骨架支撑，实现'吸附-磁分离'一体化。",
+          "key_features": "必须保留：多巴胺自聚合碱性条件(pH 8.5)、磁性Fe3O4内核、高岭土多孔基底、PDA表面氨基配位。可灵活调整：FeCl3/KA投料比、PDA包覆时间、溶液pH调控吸附窗口。",
+          "design_mapping": "生物结构→材料设计：贻贝DOPA自聚合→PDA涂层原位修饰；足丝蛋白粘附→物理/氢键复合包覆；磁性分离→共沉淀法合成Fe3O4@KA；配位吸附→PDA氨基与Pb2+形成-N···Pb配位键。软约束建议：控制PDA包覆量避免过度堵塞介孔，保持pH≤6防止Pb2+水解，利用外加磁场实现秒级固液分离。",
+          "explainability_anchors": "仿生故事线：模拟贻贝足丝蛋白的湿态粘附与自聚合化学，将多巴胺转化为聚多巴胺纳米层包覆于磁性高岭土表面，构建富含氨基吸附位点与磁性分离功能的三维复合材料。设计溯源：贻贝→DOPA→PDA自聚合→磁性粘土表面改性→Pb2+静电吸引/氨基配位→外磁分离。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/第三波/json/2021-Zhang-chitosan-aerogel-heavy-metal-rare-earth.json",
+        "paper_id": "zhang2021_chitosan_carbon_imprinted_aerogel_gd",
+        "sections": {
+          "problem_definition": "废旧稀土产品中Gd(III)的高选择性回收是清洁生产的关键需求。稀土元素化学性质极其相似，常规提取方法无法高效分离纯Gd。需要同时具备高选择性和高吸附容量的材料。",
+          "biological_solution": "贻贝足丝蛋白启发的PDA提供邻苯二酚和氨基官能团（仿生粘附+金属螯合），壳聚糖提供—NH₂和—OH活性位点（天然生物聚合物），离子印迹技术在聚合物中创建Gd(III)特异性识别孔穴。三者协同实现高效选择性吸附。",
+          "key_features": "必须保留：PDA邻苯二酚/氨基（金属螯合核心）、壳聚糖—NH₂/—OH（活性位点）、离子印迹孔穴（选择性识别）。可灵活调整：MWCNT/GO比例、印迹模板浓度。",
+          "design_mapping": "生物结构→材料设计：贻贝足丝蛋白→PDA涂层（邻苯二酚+氨基）；壳聚糖→CS骨架（天然生物聚合物）；离子印迹→特异性识别孔穴。软约束建议：PDA同时作为粘附剂和交联剂，实现'仿生粘附+功能化'双功能。",
+          "explainability_anchors": "仿生故事线：模仿贻贝足丝蛋白的水下粘附化学（多巴胺→PDA），结合壳聚糖的天然多糖活性和离子印迹的选择性识别，构建高选择性稀土回收气凝胶。设计溯源：从贻贝→多巴胺→PDA→MWCNT-PDA-CS-GO的仿生链路。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/第三波/json/2024-Yuan-tannic-acid-cellulose-aerogel-heavy-metal-chromium.json",
+        "paper_id": "2024-Yuan-tannic-acid-cellulose-aerogel-heavy-metal-chromium",
+        "sections": {
+          "problem_definition": "工业废水中重金属(Cr(VI), Cu(II))和有机染料(CR)毒性高、难降解、易富集；传统纯CNF气凝胶机械强度低、活性位点少、稳定性差；需要构建富含活性位点、结构稳定、可循环的高效三维吸附材料。",
+          "biological_solution": "模仿贻贝足丝蛋白的聚多巴胺(PDA)化学和植物单宁酸(TA)的多酚网络：PDA富含邻苯二酚、亚胺、氨基，可强效粘附于蒙脱土表面并提供多元吸附位点；TA作为天然多酚交联剂，通过氢键、Michael加成和席夫碱反应将PMMT和聚乙烯亚胺(PEI)牢固锚定在CNF骨架上，形成致密且高孔隙的蜂窝状三维网络。TA的酚羟基赋予材料电子转移和还原能力，PEI的密集氨基提供正电荷和螯合位点。",
+          "key_features": "必须保留：PDA的邻苯二酚/氨基粘附层、TA的多酚交联网络、PEI的氨基官能团、CNF的三维蜂窝骨架。可灵活调整：TA交联密度、PEI接枝量、MMT层间距。",
+          "design_mapping": "生物结构→材料设计：贻贝DOPA→PDA涂层改性粘土；植物单宁→TA多酚交联剂；高密度氨基→PEI功能化；蜂窝孔隙→冷冻干燥冰晶模板法。软约束建议：TA与PEI的协同交联是关键，PEI含量过高会堵塞孔隙降低吸附；酸性条件下氨基质子化增强静电吸附，但需平衡TA的还原活性。",
+          "explainability_anchors": "仿生故事线：融合贻贝仿生粘附化学(PEI)与植物多酚交联网络(TA)，构建CNF-PMMT-PEI-TA三维蜂窝气凝胶，利用多酚还原+氨基螯合+静电吸引的多重协同机制实现Cr(VI)/Cu(II)/CR的高效捕获与转化。设计溯源：贻贝足丝→PDA→植物单宁→PEI接枝→CNF三维气凝胶→多污染物协同去除。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/第三波/json/2022-CN114570339A-polydopamine-uranium-adsorbent.json",
+        "paper_id": "2022-CN114570339A-polydopamine-uranium-adsorbent",
+        "sections": {
+          "problem_definition": "核泄漏和水体核素污染导致含U(VI)水体具有来源广、总量多、复杂性高、危害性大等特点；传统乳液模板法存在尺寸控制受限、模板洗脱破坏结构、有机试剂污染环境等问题；U(VI)浓度低导致扩散慢，阳离子库仑排斥和竞争离子（钠、钙等）阻塞活性位点。",
+          "biological_solution": "聚多巴胺(PDA)是贻贝足丝蛋白的仿生聚合物，含有邻苯二酚、氨基、亚氨基等丰富官能团，具有强烈的非共价相互作用（静电作用、氢键作用、配位或螯合作用），提供优越的粘附性和二次反应活性。将PDA与水杨醛肟共沉积，结合PDA多功能表面改性和肟基对铀酰离子的优异配对能力，实现高效铀吸附。",
+          "key_features": "必须保留：PDA的邻苯二酚/氨基/亚氨基官能团（提供粘附和多反应活性）、肟基（对铀酰离子特异性配对）、中空纳米结构（高比表面积、快速传质）。可灵活调整：水杨醛肟用量比例、聚合时间、气泡模板条件。",
+          "design_mapping": "生物结构→材料设计：贻贝DOPA→聚多巴胺(PDA)自聚合；足丝粘附→底物包覆能力；肟功能化→铀酰离子特异性识别；纳米气泡模板→中空纳米结构。软约束建议：保持DA快速聚合特性（10min包覆），pH 8.5-8.8为最佳聚合条件，水杨醛肟与DA共沉积实现一步法功能化。",
+          "explainability_anchors": "仿生故事线：模仿贻贝足丝蛋白的聚多巴胺化学，利用DA快速自聚合形成PDA基底，同时水杨醛肟共沉积实现肟功能化，构建中空纳米吸附剂用于铀酰离子高效去除。设计溯源：贻贝→DOPA→PDA→PDA-肟共沉积→H-PDA-SO中空纳米吸附剂→U(VI)吸附。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/第三波/json/2023-Jin-polydopamine-chitosan-carmine-adsorption.json",
+        "paper_id": "2023-Jin-polydopamine-chitosan-carmine-adsorption",
+        "sections": {
+          "problem_definition": "天然壳聚糖（CS）虽然具有吸附潜力，但结晶度高、溶解性差，限制了其在印染废水（如胭脂红）处理中的应用。传统化学改性常需使用有毒交联剂。",
+          "biological_solution": "模拟海洋贻贝足丝蛋白的粘附化学，利用多巴胺（Dopamine）在弱碱性环境下自聚合形成聚多巴胺（PDA）。PDA含有丰富的邻苯二酚和氨基基团，不仅能通过席夫碱反应与双醛壳聚糖（DCS）共价结合，还能通过π-π堆叠和静电作用高效捕获染料分子。",
+          "key_features": "必须保留：PDA的邻苯二酚/氨基官能团（提供反应位点和吸附力）；双醛壳聚糖的多孔骨架（提高比表面积）。可灵活调整：氧化程度、PDA接枝量。",
+          "design_mapping": "生物结构→材料设计：贻贝足丝蛋白→聚多巴胺（PDA）涂层；细胞外基质→多孔生物高分子网络；贻贝湿粘附机制→PDA与基材的共价/非共价结合。软约束建议：需控制氧化条件以保持骨架的多孔性，避免过度交联导致孔隙闭塞。",
+          "explainability_anchors": "仿生故事线：从海洋贻贝的强力水下粘附机制中获取灵感，将多巴胺转化为聚多巴胺涂层引入生物高分子（壳聚糖），构建具有高亲和力官能团的绿色吸附材料，实现对阴离子染料的高效去除。"
+        }
+      }
+    ]
+  },
+  "engineering_constraints": [
+    {
+      "constraint": "P(VDF-co-HFP) VMD稳定性",
+      "value": "100小时稳定性，截留率>99.8%",
+      "unit": "h / %",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.3390/polym14245439"
+    },
+    {
+      "constraint": "APP3膜的循环稳定性 Cycle stability of APP3 membrane",
+      "value": "25次循环后分离效率达99.86%，通量>2121 L·m⁻²·h⁻¹，表面形貌保持稳定无结构坍塌",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.seppur.2023.123547"
+    },
+    {
+      "constraint": "APP3膜的酸碱稳定性 Acid and alkali stability of APP3 membrane",
+      "value": "在不同pH溶液中浸泡24h后保持稳定(图9c-d)",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.seppur.2023.123547"
+    },
+    {
+      "constraint": "循环稳定性 — 5次循环后吸附容量保持",
+      "value": "110",
+      "unit": "mg/g",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "patent",
+      "ref_doi": null
+    },
+    {
+      "constraint": "镧泄漏量 — 5次循环",
+      "value": "5",
+      "unit": "mg/L",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "patent",
+      "ref_doi": null
+    },
+    {
+      "constraint": "番茄红素光稳定性提升",
+      "value": "97.98",
+      "unit": "%",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "patent",
+      "ref_doi": null
+    },
+    {
+      "constraint": "循环吸附稳定性-重金属去除率保持",
+      "value": ">72",
+      "unit": "%",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "patent",
+      "ref_doi": null
+    },
+    {
+      "constraint": "循环吸附稳定性-材料回收率",
+      "value": ">82",
+      "unit": "%",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "patent",
+      "ref_doi": null
+    },
+    {
+      "constraint": "循环再生性能",
+      "value": "8次循环后：MB去除率下降8.56%（481.44→438.6 mg/g）；MG下降11.60%；CV下降5.63%",
+      "unit": "%",
+      "relevance": "high",
+      "explanation": "100 mg/L染料, 300 min, 298K",
+      "source": "literature",
+      "ref_doi": "10.1016/j.apsusc.2022.154338"
+    },
+    {
+      "constraint": "TGA热稳定性",
+      "value": "PDA/MGO/CA-CD在100-800°C失重55.99 wt%（GO+PDA+CA-CD分解）",
+      "unit": "wt%",
+      "relevance": "medium",
+      "explanation": "25-800°C, N₂气氛",
+      "source": "literature",
+      "ref_doi": "10.1016/j.apsusc.2022.154338"
+    },
+    {
+      "constraint": "再生条件",
+      "value": "0.5 M HCl, 30 mL, 12 h",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.cej.2020.127837"
+    },
+    {
+      "constraint": "5次循环后吸附容量保持率",
+      "value": "Fe2+: ~98%, Co2+: ~97.1%, Ni2+: ~97.3%",
+      "unit": "%",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.cej.2020.127837"
+    },
+    {
+      "constraint": "Zeta电位(pH=7)",
+      "value": "KA: -22.4 mV, KA/Fe3O4: -7.49 mV, PDA/KA/Fe3O4: -17.23 mV",
+      "unit": "mV",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "patent",
+      "ref_doi": null
+    },
+    {
+      "constraint": "循环再生性能",
+      "value": "4次循环后Cu²⁺吸附从189.4降至81.6 mg/g（保持>40%）；Zn²⁺从166.4→71.2；Ni²⁺从163.2→68.8 mg/g",
+      "unit": "mg/g",
+      "relevance": "high",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2022.129112"
+    },
+    {
+      "constraint": "7次循环后吸附保留率",
+      "value": "Cr: 74.81%, Cu: 68.23%, CR: 81.54%",
+      "unit": "%",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.seppur.2024.127979"
+    },
+    {
+      "constraint": "H-PDA-SO Zeta电位(pH 3-9范围)",
+      "value": "pH3≈-30, pH4≈0, pH5≈10, pH6≈12, pH7≈11, pH8≈10, pH9≈8",
+      "unit": "mV",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "patent",
+      "ref_doi": null
+    },
+    {
+      "constraint": "H-PDA Zeta电位(pH 3-9范围)",
+      "value": "pH3≈40, pH4≈28, pH5≈18, pH6≈12, pH7≈10, pH8≈9, pH9≈8",
+      "unit": "mV",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "patent",
+      "ref_doi": null
+    },
+    {
+      "constraint": "循环再生性能",
+      "value": "5",
+      "unit": "cycles",
+      "relevance": "high",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jece.2021.105709"
+    },
+    {
+      "constraint": "吸附容量（pH 6时）",
+      "value": "约0.33",
+      "unit": "mmol/g",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.13373/j.cnki.cjrm.XY21060036"
+    },
+    {
+      "constraint": "TGA热稳定性",
+      "value": "Fe₃O₄: 650°C内9.5%质量损失；Fe₃O₄@PDA: 38.5%质量损失（PDA负载量~37.1%）；Fe₃O₄@PDA-PEI: 375°C出现明显质量损失（PEI分解）",
+      "unit": "%",
+      "relevance": "medium",
+      "explanation": "650°C以内",
+      "source": "literature",
+      "ref_doi": "10.13373/j.cnki.cjrm.XY21060036"
+    },
+    {
+      "constraint": "PDA/DCS循环5次后吸附量",
+      "value": "616.90",
+      "unit": "mg/g",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.13550/j.jxhg.20220633"
+    }
+  ],
+  "provenance_summary": {
+    "n_papers": 19,
+    "n_verified": 16,
+    "n_unverified": 94
+  },
+  "coverage": "normal",
+  "status": "active",
+  "mechanism_instances": [
+    {
+      "name": "Teflon AF 2400涂层PVDF膜VMD性能",
+      "description": "超疏水表面151°，平均通量22 L/m²h，盐截留率99.99%，进料温度~60°C",
+      "source": "literature",
+      "ref_doi": "10.3390/polym14245439",
+      "source_file": null
+    },
+    {
+      "name": "PVDF-co-HFP/POTS超疏水膜MD性能",
+      "description": "通量27.94 kg/m²h，盐截留率100%（含SDS低表面张力表面活性剂的NaCl进料）",
+      "source": "literature",
+      "ref_doi": "10.3390/polym14245439",
+      "source_file": null
+    },
+    {
+      "name": "PVDF-co-HFP/F-POSS全疏水膜",
+      "description": "乙醇中接触角128.2°，高盐进料+低表面张力物质中通量和盐截留率保持稳定",
+      "source": "literature",
+      "ref_doi": "10.3390/polym14245439",
+      "source_file": null
+    },
+    {
+      "name": "Cassie-Baxter方程与膜疏水性关系",
+      "description": "接触角与膜表面粗糙度相关，粗糙度增加→气液接触面积增加→界面效应增强",
+      "source": "literature",
+      "ref_doi": "10.3390/polym14245439",
+      "source_file": null
+    },
+    {
+      "name": "P(VDF-co-CTFE) FOMA功能化超疏水膜",
+      "description": "超疏水性，优异抗污染和抗润湿性能，DCMD几乎无通量下降",
+      "source": "literature",
+      "ref_doi": "10.3390/polym14245439",
+      "source_file": null
+    },
+    {
+      "name": "浸涂法制备超疏水表面 — THF/水比例优化",
+      "description": "THF:Water = 3:7 时 WCA 达到 155.0 ± 0.6°",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "source_file": null
+    },
+    {
+      "name": "CeO2纳米粒子超疏水光催化膜",
+      "description": "分离效率 99%",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "source_file": null
+    },
+    {
+      "name": "TiO₂纳米线/不锈钢网超疏水膜",
+      "description": "50次循环后仍保持超疏水性；24h强酸碱或有机溶剂浸泡后分离效率仍达99%",
+      "source": "literature",
+      "ref_doi": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
+      "source_file": null
+    },
+    {
+      "name": "PVDF/PDMS超疏水纳米纤维膜",
+      "description": "渗透系数35751 L/(m²·h)，分离效率99.6%，可去除>150nm水滴",
+      "source": "literature",
+      "ref_doi": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
+      "source_file": null
+    },
+    {
+      "name": "F-SiO₂/PVDF-P-SiO₂/PVDF Janus膜",
+      "description": "氟化后WCA 157.7°（超疏水），等离子刻蚀后水下油CA 150.8°（水下超疏油），通量6800 L/(m²·h)以上，分离效率~99%",
+      "source": "literature",
+      "ref_doi": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
+      "source_file": null
+    },
+    {
+      "name": "pH响应PMMA-b-P4VP智能纤维膜",
+      "description": "初始WCA 152°（超疏水/超亲油），碱性条件下转为水下超疏油",
+      "source": "literature",
+      "ref_doi": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
+      "source_file": null
+    },
+    {
+      "name": "铜基超疏水抗菌表面 — 花瓣状Cu2O",
+      "description": "WCA 154°，对大肠杆菌抗菌效果较好",
+      "source": "literature",
+      "ref_doi": "10.13550/j.jxhg.20201035",
+      "source_file": null
+    },
+    {
+      "name": "铜纳米粒子超疏水抗菌表面",
+      "description": "WCA 164°，对革兰氏阴性/阳性菌均有抗菌活性",
+      "source": "literature",
+      "ref_doi": "10.13550/j.jxhg.20201035",
+      "source_file": null
+    },
+    {
+      "name": "纳米Ag棉织物超疏水抗菌",
+      "description": "WCA 148.7°，良好抗菌性能",
+      "source": "literature",
+      "ref_doi": "10.13550/j.jxhg.20201035",
+      "source_file": null
+    },
+    {
+      "name": "中空多孔碳球封装纳米Ag超疏水抗菌",
+      "description": "WCA 160.6°，大肠杆菌抑菌率96%，金黄色葡萄球菌抑菌率83%",
+      "source": "literature",
+      "ref_doi": "10.13550/j.jxhg.20201035",
+      "source_file": null
+    },
+    {
+      "name": "纳米Ag/硅烷棉织物超疏水抗菌",
+      "description": "WCA 153°±2°，优异抗菌性能",
+      "source": "literature",
+      "ref_doi": "10.13550/j.jxhg.20201035",
+      "source_file": null
+    },
+    {
+      "name": "树枝状纳米银超疏水表面",
+      "description": "WCA >150°，较好抗菌性",
+      "source": "literature",
+      "ref_doi": "10.13550/j.jxhg.20201035",
+      "source_file": null
+    },
+    {
+      "name": "ZIF-8/PVDF超疏水抗菌涂层",
+      "description": "WCA 160°，对大肠杆菌有良好抗菌活性",
+      "source": "literature",
+      "ref_doi": "10.13550/j.jxhg.20201035",
+      "source_file": null
+    },
+    {
+      "name": "超疏水医用纱布",
+      "description": "WCA 158°，对金黄色葡萄球菌和大肠杆菌抗菌作用显著",
+      "source": "literature",
+      "ref_doi": "10.13550/j.jxhg.20201035",
+      "source_file": null
+    }
+  ],
+  "design_translation": [
+    {
+      "idea": "利用 PDA 涂层的邻苯二酚和胺基双功能基团进行表面改性，实现普适性粘附和污染物捕获",
+      "specific_functional_group": "邻苯二酚 + 胺基（-NH₂）双官能团",
+      "material_handle": "多巴胺在弱碱性（pH 8.5）条件下自聚成 PDA 涂层",
+      "target_interaction": "邻苯二酚配位金属离子，胺基捕获阴离子污染物",
+      "source_tier": "literature",
+      "examples": [
+        "DOI: 10.1126/science.1145492"
+      ]
+    }
+  ]
+}

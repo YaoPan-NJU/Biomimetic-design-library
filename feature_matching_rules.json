@@ -1,0 +1,243 @@
+{
+  "version": "1.0",
+  "description": "feature-based 匹配规则数据化，用于 BiomimeticContext 接口",
+  "last_updated": "2026-06-08",
+  "molecular_feature_to_prototype": {
+    "芳香环": {
+      "prototypes": [
+        "polydopamine-coating",
+        "plant-tannin"
+      ],
+      "reason": "芳香环可通过π-π堆积作用与含芳香环的吸附剂结合",
+      "weight": 0.7
+    },
+    "疏水性": {
+      "prototypes": [
+        "lotus-leaf",
+        "polydopamine-coating"
+      ],
+      "reason": "疏水性污染物可通过疏水分配作用与疏水表面结合",
+      "weight": 0.6
+    },
+    "酚羟基": {
+      "prototypes": [
+        "plant-tannin",
+        "polydopamine-coating"
+      ],
+      "reason": "酚羟基可与金属离子形成配位键，或通过氢键与极性污染物结合",
+      "weight": 0.7
+    },
+    "二价阳离子": {
+      "prototypes": [
+        "chitosan",
+        "bone-structure",
+        "oyster-shell"
+      ],
+      "reason": "二价阳离子可与含羧基/羟基的吸附剂形成配位键",
+      "weight": 0.8
+    },
+    "软酸": {
+      "prototypes": [
+        "chitosan",
+        "sulfate-reducing-bacteria"
+      ],
+      "reason": "软酸金属离子（如Hg²⁺、Pb²⁺）可与含硫/氮配体形成稳定配位键",
+      "weight": 0.8
+    },
+    "正电荷": {
+      "prototypes": [
+        "chitosan"
+      ],
+      "reason": "正电荷污染物可与带负电的吸附剂通过静电吸引结合",
+      "weight": 0.7
+    },
+    "磺酰胺基": {
+      "prototypes": [
+        "chitosan"
+      ],
+      "reason": "磺酰胺基可与吸附剂的极性基团形成氢键",
+      "weight": 0.6
+    },
+    "酰胺基": {
+      "prototypes": [
+        "chitosan",
+        "silk-fibroin"
+      ],
+      "reason": "酰胺基可与吸附剂的极性基团形成氢键",
+      "weight": 0.6
+    },
+    "氯代烯烃": {
+      "prototypes": [
+        "polydopamine-coating"
+      ],
+      "reason": "氯代烃可通过疏水分配和孔道限域作用被吸附",
+      "weight": 0.6
+    },
+    "平面结构": {
+      "prototypes": [
+        "polydopamine-coating",
+        "plant-tannin"
+      ],
+      "reason": "平面分子可通过π-π堆积作用与含芳香环的吸附剂结合",
+      "weight": 0.6
+    },
+    "水溶性": {
+      "prototypes": [
+        "chitosan"
+      ],
+      "reason": "水溶性污染物需要亲水性吸附剂",
+      "weight": 0.5
+    }
+  },
+  "interaction_to_prototype": {
+    "配位": {
+      "prototypes": [
+        "chitosan",
+        "bone-structure"
+      ],
+      "reason": "金属离子与配体上的供电子原子（N/O/S）形成配位键",
+      "weight": 0.9
+    },
+    "静电吸引": {
+      "prototypes": [
+        "chitosan"
+      ],
+      "reason": "带电污染物与带相反电荷的吸附剂通过库仑引力结合",
+      "weight": 0.8
+    },
+    "氢键": {
+      "prototypes": [
+        "chitosan"
+      ],
+      "reason": "污染物分子的极性基团与吸附剂的含氧/氮基团形成氢键",
+      "weight": 0.7
+    },
+    "π-π堆积": {
+      "prototypes": [
+        "polydopamine-coating",
+        "plant-tannin"
+      ],
+      "reason": "芳香环污染物与吸附剂的芳香环通过π-π堆积作用平行排列",
+      "weight": 0.7
+    },
+    "疏水分配": {
+      "prototypes": [
+        "lotus-leaf",
+        "polydopamine-coating"
+      ],
+      "reason": "非极性污染物与吸附剂的疏水表面通过疏水相互作用聚集",
+      "weight": 0.6
+    },
+    "孔道限域": {
+      "prototypes": [
+        "diatom-frustule"
+      ],
+      "reason": "多孔材料的孔道结构对污染物分子产生空间限域效应",
+      "weight": 0.7
+    },
+    "离子交换": {
+      "prototypes": [
+        "chitosan",
+        "bone-structure",
+        "oyster-shell"
+      ],
+      "reason": "吸附剂表面的可交换离子与溶液中的污染物离子进行等当量交换",
+      "weight": 0.8
+    },
+    "沉淀": {
+      "prototypes": [
+        "sulfate-reducing-bacteria"
+      ],
+      "reason": "微生物代谢产物与金属离子形成不溶性沉淀",
+      "weight": 0.9
+    },
+    "还原": {
+      "prototypes": [
+        "sulfate-reducing-bacteria",
+        "polydopamine-coating"
+      ],
+      "reason": "吸附剂将高价金属离子还原为低价态，降低毒性",
+      "weight": 0.8
+    }
+  },
+  "pollutant_class_to_prototype": {
+    "重金属": {
+      "prototypes": [
+        "chitosan",
+        "bone-structure",
+        "oyster-shell"
+      ],
+      "mechanisms": [
+        "配位",
+        "静电吸引",
+        "离子交换"
+      ],
+      "weight": 0.9
+    },
+    "阳离子染料": {
+      "prototypes": [
+        "chlorella-cell-wall"
+      ],
+      "mechanisms": [
+        "静电吸引",
+        "氢键"
+      ],
+      "weight": 0.8
+    },
+    "阴离子染料": {
+      "prototypes": [
+        "chitosan",
+        "chlorella-cell-wall"
+      ],
+      "mechanisms": [
+        "静电吸引"
+      ],
+      "weight": 0.8
+    },
+    "抗生素": {
+      "prototypes": [
+        "polydopamine-coating"
+      ],
+      "mechanisms": [
+        "π-π堆积",
+        "氢键",
+        "孔道限域"
+      ],
+      "weight": 0.7
+    },
+    "内分泌干扰物": {
+      "prototypes": [
+        "polydopamine-coating",
+        "plant-tannin"
+      ],
+      "mechanisms": [
+        "π-π堆积",
+        "氢键",
+        "疏水分配"
+      ],
+      "weight": 0.7
+    },
+    "卤代烃": {
+      "prototypes": [
+        "polydopamine-coating"
+      ],
+      "mechanisms": [
+        "疏水分配",
+        "孔道限域"
+      ],
+      "weight": 0.6
+    },
+    "放射性元素": {
+      "prototypes": [
+        "chitosan",
+        "oyster-shell",
+        "bone-structure"
+      ],
+      "mechanisms": [
+        "配位",
+        "离子交换"
+      ],
+      "weight": 0.8
+    }
+  }
+}

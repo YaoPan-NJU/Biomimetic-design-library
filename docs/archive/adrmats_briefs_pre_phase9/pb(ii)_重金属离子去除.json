@@ -1,0 +1,618 @@
+{
+  "brief": {
+    "context": {
+      "water_quality": {
+        "pH": 6,
+        "temperature": 25,
+        "salinity": "low"
+      },
+      "removal_target": {
+        "污染物": "Pb(II)"
+      },
+      "pollutant_profile": {
+        "canonical_name": "Pb(II)",
+        "pollutant_class": "重金属",
+        "molecular_features": [
+          "二价阳离子",
+          "软酸",
+          "高电荷密度",
+          "可与含硫/氮配体配位"
+        ],
+        "likely_interactions": [
+          "配位",
+          "静电吸引",
+          "离子交换",
+          "络合"
+        ],
+        "profile_basis": "database"
+      },
+      "engineering_constraints": []
+    },
+    "candidates": [
+      {
+        "prototype_id": "mussel-foot-adhesion",
+        "organism": "Mytilus spp.",
+        "match": {
+          "reason": "DOPA对Pb²⁺有强螯合能力",
+          "weight": 0.9,
+          "applicability_fit": "pH 3.0-6.8, 盐度 moderate",
+          "match_basis": "direct_pollutant_evidence",
+          "direct_evidence": true
+        },
+        "mechanism": {
+          "name": "Mechanisms of Heavy Metal Removal by Nanocellulose",
+          "基本原理": "needs_review",
+          "key_structures": [],
+          "functional_groups": "",
+          "molecular_feature_links": [],
+          "attribution": {
+            "source": "literature",
+            "ref": "10.3390/nano11113008",
+            "verification_tier": "single_source"
+          }
+        },
+        "design_translation": {
+          "idea": "生物→材料映射：贻贝足丝蛋白粘附化学→聚多巴胺/儿茶酚接枝层；植物纤维/细菌胞外基质→纳米纤维素（CNC/CNF/BNC）三维网络；足丝抗污特性→银纳米颗粒（Ag NPs）复合抗菌。软约束建议：控制多巴胺自聚pH（弱碱性）与时间以平衡涂层厚度与孔隙通透性；优化磁性/疏水组分比例以兼顾吸附容量与磁分离/油水分离效率；确保仿生涂层与纤维素基底间的界面相容性。",
+          "material_realization_examples": [],
+          "source_tier": "literature"
+        },
+        "evidence_context": {
+          "performance_leads": []
+        }
+      },
+      {
+        "prototype_id": "alginate",
+        "organism": "Phaeophyceae",
+        "match": {
+          "reason": "羧基与Pb²⁺形成稳定络合物",
+          "weight": 0.85,
+          "applicability_fit": "pH 3.0-6.0, 盐度 moderate",
+          "match_basis": "direct_pollutant_evidence",
+          "direct_evidence": true
+        },
+        "mechanism": {
+          "name": "海藻酸钠水凝胶的七种制备方法",
+          "基本原理": "海藻酸盐与二价金属离子（如Ca²⁺）通过配位交联形成三维凝胶网络，提供多孔结构和吸附位点",
+          "key_structures": [],
+          "functional_groups": "",
+          "molecular_feature_links": [],
+          "attribution": {
+            "source": "literature",
+            "ref": "10.1016/j.ijbiomac.2025.140801",
+            "verification_tier": "single_source"
+          }
+        },
+        "design_translation": {
+          "idea": "生物→材料映射：褐藻细胞壁多糖→海藻酸钠基水凝胶；Egg-box交联→Ca²⁺/Zr⁴⁺等金属离子交联网络；生物结构增强→'砖与mortar'仿生复合膜或多网络气凝胶。软约束建议：在保持Egg-box基础骨架的同时，通过引入PEI或MOF等组分弥补单一海藻酸钠对阴离子（如Cr(VI)、磷酸根）吸附能力的不足，并利用离子印迹技术定制特定重金属（如Pb(II)）的空腔。",
+          "material_realization_examples": [],
+          "source_tier": "literature"
+        },
+        "evidence_context": {
+          "performance_leads": [
+            {
+              "pollutant": "Pb(II)",
+              "material": "CA/KCB composite aerogel (KMnO4-modified cotton stalk biochar + calcium alginate)",
+              "value": "664.6",
+              "unit": "mg/g",
+              "verification_tier": "unverified"
+            },
+            {
+              "pollutant": "",
+              "material": "Graphene oxide/alginate hydrogel membranes (GAHMs)",
+              "value": "Cr(III): 118.6, Pb(II): 327.9",
+              "unit": "mg/g",
+              "verification_tier": "unverified"
+            },
+            {
+              "pollutant": "Pb(II)",
+              "material": "Alginate/melamine/chitosan aerogel",
+              "value": "1331.6",
+              "unit": "mg/g",
+              "verification_tier": "unverified"
+            },
+            {
+              "pollutant": "",
+              "material": "NiFe₂O₄@Ca-alginate anisotropic plate-like particles",
+              "value": "MB: 1243, Rh6G: 845",
+              "unit": "mg/g",
+              "verification_tier": "unverified"
+            },
+            {
+              "pollutant": "",
+              "material": "SA/PEI-0.25 three-dimensional honeycomb elastic amino-functionalized aerogels",
+              "value": "Cr(VI): 678.67, Cd(II): 464.23",
+              "unit": "mg/g",
+              "verification_tier": "unverified"
+            }
+          ]
+        }
+      },
+      {
+        "prototype_id": "fish-scale-hydroxyapatite",
+        "organism": "Nelumbo nucifera, Fish",
+        "match": {
+          "reason": "Pb²⁺可替换HAP中的Ca²⁺形成更稳定的磷氯铅矿",
+          "weight": 0.9,
+          "applicability_fit": "pH 5.0-6.0, 盐度 any",
+          "match_basis": "direct_pollutant_evidence",
+          "direct_evidence": true
+        },
+        "mechanism": {
+          "name": "自然界仿生原型：植物/动物超浸润表面",
+          "基本原理": "needs_review",
+          "key_structures": [],
+          "functional_groups": "",
+          "molecular_feature_links": [],
+          "attribution": {
+            "source": "literature",
+            "ref": "10.1007/s10853-022-07945-8",
+            "verification_tier": "single_source"
+          }
+        },
+        "design_translation": {
+          "idea": "生物微纳乳突/放射状结构 → 材料表面的微/纳米粒子粗糙化修饰；荷叶蜡质层 → 低表面能化学修饰（超疏水/超亲油）；鱼鳞亲水黏液 → 亲水聚合物或基团修饰以形成水化层（超亲水/水下超疏油）。软约束建议：针对单一乳液类型选择单一浸润性膜，针对复杂或交替乳液环境建议设计Janus膜或智能响应膜。",
+          "material_realization_examples": [],
+          "source_tier": "literature"
+        },
+        "evidence_context": {
+          "performance_leads": [
+            {
+              "pollutant": "",
+              "material": "DPBC",
+              "value": "880.53",
+              "unit": "mg/g",
+              "verification_tier": "unverified"
+            },
+            {
+              "pollutant": "Pb(II)",
+              "material": "HA-3HPB",
+              "value": "110.2",
+              "unit": "mg/g",
+              "verification_tier": "unverified"
+            },
+            {
+              "pollutant": "Pb(II)",
+              "material": "HA-3HPB",
+              "value": "≥99.83",
+              "unit": "%",
+              "verification_tier": "unverified"
+            }
+          ]
+        }
+      },
+      {
+        "prototype_id": "oyster-shell",
+        "organism": "Ostreidae",
+        "match": {
+          "reason": "CaCO₃与Pb²⁺进行离子交换，形成PbCO₃",
+          "weight": 0.8,
+          "applicability_fit": "pH 7.0-7.0, 盐度 moderate",
+          "match_basis": "direct_pollutant_evidence",
+          "direct_evidence": true
+        },
+        "mechanism": {
+          "name": "牡蛎壳改性吸附机制",
+          "基本原理": "骨骼/牙齿的羟基磷灰石晶体可与重金属离子发生离子交换或表面配位，实现吸附",
+          "key_structures": [],
+          "functional_groups": "",
+          "molecular_feature_links": [],
+          "attribution": {
+            "source": "literature",
+            "ref": "10.16663/j.cnki.lskj.2021.02.025",
+            "verification_tier": "single_source"
+          }
+        },
+        "design_translation": {
+          "idea": "生物→材料映射：牡蛎壳CaCO₃→活性钙源前驱体；易拉罐Al→活性铝源前驱体；生物矿化层间化学→LDH层状阴离子交换位点；软约束建议：控制合成pH与陈化时间以优化结晶度，实际应用中需预留抗碳酸盐干扰的设计余量并探索原位再生路径。",
+          "material_realization_examples": [],
+          "source_tier": "literature"
+        },
+        "evidence_context": {
+          "performance_leads": [
+            {
+              "pollutant": "",
+              "material": "",
+              "value": "CAs-4: 127.50 mg/g (实测), 126.41 mg/g (Langmuir); CA-4: 126.67 mg/g (实测), 127.43 mg/g (Langmuir)",
+              "unit": "mg/g",
+              "verification_tier": "unverified"
+            },
+            {
+              "pollutant": "",
+              "material": "",
+              "value": "约17",
+              "unit": "倍",
+              "verification_tier": "unverified"
+            }
+          ]
+        }
+      },
+      {
+        "prototype_id": "diatom-frustule",
+        "organism": "Bacillariophyta (硅藻门)",
+        "match": {
+          "reason": "硅藻壳对Pb²⁺有吸附能力",
+          "weight": 0.7,
+          "applicability_fit": "pH 7.0-7.0, 盐度 any",
+          "match_basis": "direct_pollutant_evidence",
+          "direct_evidence": true
+        },
+        "mechanism": {
+          "name": "Pb²⁺吸附机理(XPS证据)",
+          "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+          "key_structures": [],
+          "functional_groups": "",
+          "molecular_feature_links": [],
+          "attribution": {
+            "source": "literature",
+            "ref": "10.11862/CJIC.2021.025",
+            "verification_tier": "single_source"
+          }
+        },
+        "design_translation": {
+          "idea": "生物硅藻壳→天然层级多孔SiO₂模板；生物表面官能团→表面化学修饰与有机接枝；生物微环境→纳米粒子负载微反应器（防团聚+提供传质通道）。软约束建议：优先选择绿色改性剂，优化水热或溶胶凝胶等复合制备工艺以保障多次循环后的结构稳定性。",
+          "material_realization_examples": [],
+          "source_tier": "literature"
+        },
+        "evidence_context": {
+          "performance_leads": [
+            {
+              "pollutant": "Pb(II)",
+              "material": "CA/DE (氨基/羧基缩合修饰硅藻土)",
+              "value": "485",
+              "unit": "mg/g",
+              "verification_tier": "unverified"
+            },
+            {
+              "pollutant": "Pb(II)",
+              "material": "MP/DE (巯基修饰硅藻土)",
+              "value": "396",
+              "unit": "mg/g",
+              "verification_tier": "unverified"
+            },
+            {
+              "pollutant": "",
+              "material": "",
+              "value": "pH≤3去除率低；3<pH<6快速上升；pH 6-8最高：MP/DE对Pb²⁺/Cd²⁺为100%/99.8%，CA/DE为100%/98.5%；pH>9产生氢氧化物沉淀(假吸附)",
+              "unit": null,
+              "verification_tier": "unverified"
+            },
+            {
+              "pollutant": "",
+              "material": "",
+              "value": "无机类(金属氧化物负载)对Pb²⁺吸附容量一般250-350 mg/g，对Cd²⁺为150-250 mg/g。有序孔结构氧化物处理→SSA和qmax显著提升但制备复杂不利于工业",
+              "unit": null,
+              "verification_tier": "unverified"
+            },
+            {
+              "pollutant": "",
+              "material": "",
+              "value": "有机类(羟基/羧基改性)吸附容量一般50-160 mg/g→整体偏低。瓶颈：有机物负载→SSA增加小+静电调节差",
+              "unit": null,
+              "verification_tier": "unverified"
+            }
+          ]
+        }
+      },
+      {
+        "prototype_id": "metal-organic-framework",
+        "organism": "Bombyx mori",
+        "match": {
+          "reason": "MOF的金属节点和功能化配体可与Pb(II)形成配位键",
+          "weight": 0.85,
+          "applicability_fit": "pH 2.0-10.0, 盐度 any",
+          "match_basis": "direct_pollutant_evidence",
+          "direct_evidence": true
+        },
+        "mechanism": {
+          "name": "缺陷MOFs研究的未来方向",
+          "基本原理": "needs_review",
+          "key_structures": [],
+          "functional_groups": "",
+          "molecular_feature_links": [],
+          "attribution": {
+            "source": "literature",
+            "ref": "10.11862/CJIC.2022.252",
+            "verification_tier": "single_source"
+          }
+        },
+        "design_translation": {
+          "idea": "生物→材料映射：天然壳聚糖聚合物链→仿生三维多孔/纤维/水凝胶基质；氨基/羟基识别位点→工程化多功能吸附位点；天然结构适应性→可调交联网络与复合架构。软约束建议：优先选用无毒生物基交联剂控制溶胀率；磁性纳米颗粒采用原位合成或表面包覆策略，确保分散均匀且不遮蔽活性位点；根据目标染料电荷特性动态调节体系pH以激活主导吸附机制。",
+          "material_realization_examples": [],
+          "source_tier": "literature"
+        },
+        "evidence_context": {
+          "performance_leads": [
+            {
+              "pollutant": "Pb(II)",
+              "material": "SS-NH2-UiO-66-5（酒石酸钾钠调制的缺陷NH2-UiO-66）",
+              "value": "186.14",
+              "unit": "mg/g",
+              "verification_tier": "single_source"
+            },
+            {
+              "pollutant": "Pb(II)",
+              "material": "UiO-66-1:1-120",
+              "value": "172.1",
+              "unit": "mg/g",
+              "verification_tier": "single_source"
+            },
+            {
+              "pollutant": "Pb(II)",
+              "material": "UiO-66-NH₂-PAM-PET纳米纤维复合材料",
+              "value": "711.9",
+              "unit": "mg/g",
+              "verification_tier": "single_source"
+            },
+            {
+              "pollutant": "Pb(II)",
+              "material": "Fe3O4@TMU-32",
+              "value": "1600",
+              "unit": "mg/g",
+              "verification_tier": "single_source"
+            },
+            {
+              "pollutant": "",
+              "material": "",
+              "value": "Adsorption: low cost, effectiveness, design/operation flexibility, potential reversibility; Ion exchange: simplicity, high efficiency but lack of selectivity, costly, secondary pollution; Precipitation: simplicity, industrial applications, high efficiency but low solubility, high sensitivity, toxic H2S emission; Membrane: selectivity, eco-friendly but costly, secondary pollution",
+              "unit": null,
+              "verification_tier": "needs_review"
+            }
+          ]
+        }
+      },
+      {
+        "prototype_id": "chitosan",
+        "organism": "Crustacea",
+        "match": {
+          "reason": "壳聚糖的氨基和羟基可与Pb(II)形成配位键",
+          "weight": 0.8,
+          "applicability_fit": "pH 3.0-7.0, 盐度 low_to_moderate",
+          "match_basis": "direct_pollutant_evidence",
+          "direct_evidence": true
+        },
+        "mechanism": {
+          "name": "pH对氮污染物吸附的影响机制 pH effect on N-pollutants adsorption",
+          "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合",
+          "key_structures": [],
+          "functional_groups": "",
+          "molecular_feature_links": [],
+          "attribution": {
+            "source": "literature",
+            "ref": "10.1016/j.carbpol.2021.118625",
+            "verification_tier": "single_source"
+          }
+        },
+        "design_translation": {
+          "idea": "生物→材料映射：天然甲壳素/壳聚糖链段映射为生物基吸附骨架，蛋白金属结合域映射为人工负载的高价金属节点(La/Zr/Fe)，细胞膜离子通道映射为季铵化/交联调控的离子交换网络；软约束建议：严格控制交联剂比例以保留活性氨基，优先采用低分子量或静电纺丝纳米纤维形态以降低传质阻力，针对目标污染物电荷特性精准匹配操作pH窗口。",
+          "material_realization_examples": [],
+          "source_tier": "literature"
+        },
+        "evidence_context": {
+          "performance_leads": [
+            {
+              "pollutant": "",
+              "material": "",
+              "value": "去除率从79%提升至92%（分子量从3.62×10⁵降至6.21×10³）",
+              "unit": "percent",
+              "verification_tier": "unverified"
+            },
+            {
+              "pollutant": "",
+              "material": "",
+              "value": "纯壳聚糖: 80.71 mg/g; 壳聚糖-GLA: 59.67 mg/g; 壳聚糖-ECH: 62.47 mg/g; 壳聚糖-EGDE: 45.94 mg/g（Cu(II)吸附）",
+              "unit": "mg/g",
+              "verification_tier": "unverified"
+            },
+            {
+              "pollutant": "",
+              "material": "",
+              "value": "Chitosan-GLA: 124→405 mg/g; Chitosan-ECH: 92→331 mg/g（Cd(II)吸附）",
+              "unit": "mg/g",
+              "verification_tier": "unverified"
+            },
+            {
+              "pollutant": "",
+              "material": "",
+              "value": "Ag(I)-imprinted CT/TEA HL: 510.0 mg/g; Thiourea-modified CT resin: 406.38 mg/g; Ag(I)-imprinted TA/GLA O-CMC: 156.32 mg/g; succinyl-grafted CT: 290.0 mg/g (Zn)",
+              "unit": "mg/g",
+              "verification_tier": "unverified"
+            },
+            {
+              "pollutant": "",
+              "material": "磁性黄原酸盐改性壳聚糖",
+              "value": "MB: 197.8 mg/g, SO: 169.8 mg/g",
+              "unit": "mg/g",
+              "verification_tier": "unverified"
+            }
+          ]
+        }
+      },
+      {
+        "prototype_id": "cellulose-nanocrystal",
+        "organism": "Lotus leaf",
+        "match": {
+          "reason": "纤维素纳米晶表面的羟基和羧基可与Pb(II)形成配位键",
+          "weight": 0.75,
+          "applicability_fit": "pH 5.0-8.08, 盐度 any",
+          "match_basis": "direct_pollutant_evidence",
+          "direct_evidence": true
+        },
+        "mechanism": {
+          "name": "CNC/PVA气凝胶超疏水性与油吸附",
+          "基本原理": "纤维素纳米晶表面的活性基团（-OH、-COOH）与污染物之间通过物理或化学作用力结合",
+          "key_structures": [],
+          "functional_groups": "",
+          "molecular_feature_links": [],
+          "attribution": {
+            "source": "literature",
+            "ref": "10.1007/s10924-023-02989-6",
+            "verification_tier": "single_source"
+          }
+        },
+        "design_translation": {
+          "idea": "生物→材料映射：植物/细菌纤维素层级网络→仿生多孔吸附基质与过滤膜；表面羟基→仿生物矿化螯合位点(接枝功能基团)；高结晶度→仿蛛丝/蚕丝力学增强模板。软约束建议：在提升比表面积(如TEMPO氧化至480m²/g)时需平衡结晶度损失与能耗；功能化修饰需兼顾水分散性与抗团聚；规模化生产需匹配现有工业化设施产能与低碳足迹要求。",
+          "material_realization_examples": [],
+          "source_tier": "literature"
+        },
+        "evidence_context": {
+          "performance_leads": [
+            {
+              "pollutant": "",
+              "material": "cellulose nanofiber-based CNF-Fe(0)@FeS from agro-waste sugarcane bagasse",
+              "value": "MB 200.0; CR 111.1",
+              "unit": "mg/g",
+              "verification_tier": "unverified"
+            },
+            {
+              "pollutant": "",
+              "material": "carboxylated CNFs",
+              "value": "比未改性CNF提高3%-10%",
+              "unit": "%",
+              "verification_tier": "unverified"
+            },
+            {
+              "pollutant": "",
+              "material": "",
+              "value": "不超过20",
+              "unit": "mg/g",
+              "verification_tier": "unverified"
+            },
+            {
+              "pollutant": "",
+              "material": "",
+              "value": "大多数活性炭吸附效率超过250 mg/g；改性N-doped碳(PDA-C)可达1351 mg/g且吸附时间<5min",
+              "unit": "mg/g",
+              "verification_tier": "unverified"
+            },
+            {
+              "pollutant": "",
+              "material": "",
+              "value": "NF膜通过尺寸排阻、吸附、静电排斥和Donnan效应的组合作用去除BPA；NF膜通常带负电荷(表面可离解基团电离)，与BPA阴离子产生静电排斥",
+              "unit": null,
+              "verification_tier": "unverified"
+            }
+          ]
+        }
+      },
+      {
+        "prototype_id": "starch-granule",
+        "organism": "Zea mays / Solanum tuberosum / Manihot esculenta / Musa spp.",
+        "match": {
+          "reason": "淀粉颗粒表面的羟基可与Pb(II)形成配位键",
+          "weight": 0.8,
+          "applicability_fit": "pH 2.0-10.0, 盐度 low",
+          "match_basis": "direct_pollutant_evidence",
+          "direct_evidence": true
+        },
+        "mechanism": {
+          "name": "淀粉基吸附剂吸附重金属的主要机理总结",
+          "基本原理": "淀粉颗粒表面的活性基团（-OH）与污染物之间通过物理或化学作用力结合",
+          "key_structures": [],
+          "functional_groups": "",
+          "molecular_feature_links": [],
+          "attribution": {
+            "source": "literature",
+            "ref": "10.1016/j.carbpol.2022.119463",
+            "verification_tier": "single_source"
+          }
+        },
+        "design_translation": {
+          "idea": "生物→材料映射：淀粉分子的羟基（-OH）→材料表面丰富的亲水性和氢键位点；改性引入的羧基（-COOH）/胺基（-NH₂）→增强静电作用的电荷位点；淀粉链→提供柔韧性和可生物降解性的聚合物基体。软约束建议：设计的材料应在pH 4-9的宽范围内保持官能团活性；可考虑引入磁性组分（如MR-FeS@SC）或优化孔结构以平衡吸附容量与机械强度；再生过程应优先使用温和的碱/酸溶液（如NaOH, HCl）以降低",
+          "material_realization_examples": [],
+          "source_tier": "literature"
+        },
+        "evidence_context": {
+          "performance_leads": [
+            {
+              "pollutant": "Pb(II)",
+              "material": "hydrolyzed cassava starch-g-poly(acrylic acid)",
+              "value": "118.61",
+              "unit": "mg/g",
+              "verification_tier": "unverified"
+            },
+            {
+              "pollutant": "Pb(II)",
+              "material": "starch-g-poly(acrylonitrile)",
+              "value": "115.83",
+              "unit": "mg/g",
+              "verification_tier": "unverified"
+            },
+            {
+              "pollutant": "Pb(II)",
+              "material": "Fe2O3 NPs/starch nanocomposite",
+              "value": "2000",
+              "unit": "mg/g",
+              "verification_tier": "unverified"
+            },
+            {
+              "pollutant": "Pb(II)",
+              "material": "polyamine-type corn starch/GMA",
+              "value": "1.25",
+              "unit": "mmol/g",
+              "verification_tier": "unverified"
+            },
+            {
+              "pollutant": "Pb(II)",
+              "material": "potato starch/cellulose/toluene-diisocyanate",
+              "value": "66.66",
+              "unit": "mg/g",
+              "verification_tier": "unverified"
+            }
+          ]
+        }
+      },
+      {
+        "prototype_id": "lobster-exoskeleton",
+        "organism": "",
+        "match": {
+          "reason": "龙虾外骨骼对Pb(II)有吸附能力",
+          "weight": 0.7,
+          "applicability_fit": "盐度 moderate",
+          "match_basis": "direct_pollutant_evidence",
+          "direct_evidence": true
+        },
+        "mechanism": {
+          "name": "Chitosan beads的六种吸附机制",
+          "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+          "key_structures": [],
+          "functional_groups": "",
+          "molecular_feature_links": [],
+          "attribution": {
+            "source": "literature",
+            "ref": "10.1007/s10311-023-01563-9",
+            "verification_tier": "single_source"
+          }
+        },
+        "design_translation": {
+          "idea": "生物→材料映射：甲壳素骨架→壳聚糖珠粒基底；细胞外基质三维网络→交联水凝胶珠粒；生物矿化通道→MOF/CS层级孔结构。软约束建议：建议引入无机材料复合以避免质量损失；针对工业应用优先选择化学或热再生，并引入磁性组分以简化固液分离。",
+          "material_realization_examples": [],
+          "source_tier": "literature"
+        },
+        "evidence_context": {
+          "performance_leads": [
+            {
+              "pollutant": "Pb(II)",
+              "material": "Chitosan/Fe-hydroxyapatite beads",
+              "value": "1385",
+              "unit": "mg/g",
+              "verification_tier": "unverified"
+            }
+          ]
+        }
+      }
+    ],
+    "honesty_ledger": {
+      "facts": [
+        "有 10 个原型对 Pb(II) 有直接实验数据"
+      ],
+      "leads": [
+        "mussel-foot-adhesion: 有直接实验数据，但未经独立核实",
+        "alginate: 有直接实验数据，但未经独立核实",
+        "fish-scale-hydroxyapatite: 有直接实验数据，但未经独立核实",
+        "oyster-shell: 有直接实验数据，但未经独立核实",
+        "diatom-frustule: 有直接实验数据，但未经独立核实"
+      ],
+      "inferences": []
+    }
+  }
+}

@@ -1,0 +1,3012 @@
+{
+  "version": "1.0",
+  "description": "生物原型知识库特征-原型映射表。库只做匹配响应，不负责推理。",
+  "pollutant_prototype_map": {
+    "重金属": {
+      "Hg(II)": {
+        "prototypes": [
+          {
+            "id": "sulfate-reducing-bacteria",
+            "weight": 0.95,
+            "mechanism_summary": "代谢产生H₂S，与Hg²⁺形成极难溶的HgS（Ksp=10⁻⁵²）",
+            "design_hint": "设计含-SH功能基团的吸附材料"
+          },
+          {
+            "id": "mussel-foot-adhesion",
+            "weight": 0.85,
+            "mechanism_summary": "DOPA中的邻苯二酚基团与Hg²⁺形成双齿配位键",
+            "design_hint": "在材料表面引入邻苯二酚基团实现湿态螯合"
+          },
+          {
+            "id": "polydopamine-coating",
+            "weight": 0.8,
+            "mechanism_summary": "聚多巴胺保留邻苯二酚基团，可螯合Hg²⁺",
+            "design_hint": "PDA涂层通用性强，可粘附在各种基材表面"
+          },
+          {
+            "id": "plant-tannin",
+            "weight": 0.75,
+            "mechanism_summary": "缩合单宁含大量邻苯二酚类似结构，可络合Hg²⁺",
+            "design_hint": "单宁来源广泛、成本低，适合大规模应用"
+          }
+        ]
+      },
+      "Cd(II)": {
+        "prototypes": [
+          {
+            "id": "chitosan",
+            "weight": 0.9,
+            "mechanism_summary": "C2位氨基和C3/C6位羟基协同配位Cd²⁺",
+            "design_hint": "壳聚糖可直接使用或交联改性提高稳定性"
+          },
+          {
+            "id": "fish-scale-hydroxyapatite",
+            "weight": 0.8,
+            "mechanism_summary": "羟基磷灰石中的Ca²⁺可被Cd²⁺离子交换",
+            "design_hint": "鱼鳞来源的HAP具有层次孔结构"
+          },
+          {
+            "id": "bone-structure",
+            "weight": 0.75,
+            "mechanism_summary": "骨骼羟基磷灰石的离子交换能力",
+            "design_hint": "骨骼来源广泛，可直接碳化或酸处理"
+          },
+          {
+            "id": "diatom-frustule",
+            "weight": 0.7,
+            "mechanism_summary": "硅藻壳对Cd²⁺有吸附能力",
+            "design_hint": "硅藻壳可用于Cd²⁺的吸附"
+          }
+        ]
+      },
+      "Pb(II)": {
+        "prototypes": [
+          {
+            "id": "mussel-foot-adhesion",
+            "weight": 0.9,
+            "mechanism_summary": "DOPA对Pb²⁺有强螯合能力",
+            "design_hint": "邻苯二酚基团是Pb²⁺的高效配位点"
+          },
+          {
+            "id": "fish-scale-hydroxyapatite",
+            "weight": 0.9,
+            "mechanism_summary": "Pb²⁺可替换HAP中的Ca²⁺形成更稳定的磷氯铅矿",
+            "design_hint": "离子交换后结构稳定，不易二次释放"
+          },
+          {
+            "id": "oyster-shell",
+            "weight": 0.8,
+            "mechanism_summary": "CaCO₃与Pb²⁺进行离子交换，形成PbCO₃",
+            "design_hint": "牡蛎壳来源丰富、成本极低"
+          },
+          {
+            "id": "diatom-frustule",
+            "weight": 0.7,
+            "mechanism_summary": "硅藻壳对Pb²⁺有吸附能力",
+            "design_hint": "硅藻壳可用于Pb²⁺的吸附"
+          },
+          {
+            "id": "chitosan",
+            "weight": 0.8,
+            "mechanism_summary": "壳聚糖的氨基和羟基可与Pb(II)形成配位键",
+            "design_hint": "采用壳聚糖为基体，通过交联提高机械强度和化学稳定性"
+          }
+        ]
+      },
+      "Cu(II)": {
+        "prototypes": [
+          {
+            "id": "chitosan",
+            "weight": 0.85,
+            "mechanism_summary": "氨基与Cu²⁺形成稳定配位键",
+            "design_hint": "壳聚糖对Cu²⁺有较好的选择性"
+          },
+          {
+            "id": "mussel-foot-adhesion",
+            "weight": 0.8,
+            "mechanism_summary": "邻苯二酚螯合Cu²⁺",
+            "design_hint": "DOPA-Cu配位常数高"
+          },
+          {
+            "id": "polydopamine-coating",
+            "weight": 0.75,
+            "mechanism_summary": "PDA涂层可螯合Cu²⁺",
+            "design_hint": "通用涂层方案"
+          },
+          {
+            "id": "silk-fibroin",
+            "weight": 0.7,
+            "mechanism_summary": "丝素蛋白对Cu²⁺有吸附能力",
+            "design_hint": "丝素蛋白可用于Cu²⁺的吸附"
+          }
+        ]
+      },
+      "Zn²⁺": {
+        "prototypes": [
+          {
+            "id": "chitosan",
+            "weight": 0.8,
+            "mechanism_summary": "氨基配位Zn²⁺",
+            "design_hint": "壳聚糖对Zn²⁺吸附容量中等"
+          }
+        ]
+      },
+      "Ni²⁺": {
+        "prototypes": [
+          {
+            "id": "chitosan",
+            "weight": 0.8,
+            "mechanism_summary": "氨基配位Ni²⁺",
+            "design_hint": "壳聚糖对Ni²⁺吸附容量中等"
+          }
+        ]
+      },
+      "Cr³⁺/Cr⁶⁺": {
+        "prototypes": [
+          {
+            "id": "chitosan",
+            "weight": 0.85,
+            "mechanism_summary": "氨基在酸性条件下质子化带正电，可吸附Cr₂O₇²⁻阴离子",
+            "design_hint": "壳聚糖对Cr(VI)的吸附机制与其他重金属不同"
+          },
+          {
+            "id": "iron-oxidizing-bacteria",
+            "weight": 0.8,
+            "mechanism_summary": "生物FeOOH可催化还原Cr(VI)为Cr(III)",
+            "design_hint": "利用铁氧化物的氧化还原活性"
+          },
+          {
+            "id": "polydopamine-coating",
+            "weight": 0.7,
+            "mechanism_summary": "PDA的还原性可将Cr(VI)还原为Cr(III)",
+            "design_hint": "PDA兼具吸附和还原功能"
+          }
+        ]
+      },
+      "As³⁺/As⁵⁺": {
+        "prototypes": [
+          {
+            "id": "iron-oxidizing-bacteria",
+            "weight": 0.9,
+            "mechanism_summary": "生物FeOOH对As有极强亲和力，可催化As(III)氧化为As(V)",
+            "design_hint": "铁氧化物是除砷的经典材料"
+          },
+          {
+            "id": "chitosan",
+            "weight": 0.6,
+            "mechanism_summary": "氨基对砷酸根有一定吸附",
+            "design_hint": "需改性提高对砷的亲和力"
+          }
+        ]
+      }
+    },
+    "有机污染物": {
+      "染料": {
+        "阳离子染料": {
+          "prototypes": [
+            {
+              "id": "chlorella-cell-wall",
+              "weight": 0.75,
+              "mechanism_summary": "细胞壁多糖和蛋白质含羧基",
+              "design_hint": "微藻来源的生物吸附剂"
+            }
+          ]
+        },
+        "阴离子染料": {
+          "prototypes": [
+            {
+              "id": "chitosan",
+              "weight": 0.85,
+              "mechanism_summary": "氨基质子化带正电，静电吸附甲基橙等阴离子染料",
+              "design_hint": "壳聚糖是去除阴离子染料的经典材料"
+            },
+            {
+              "id": "chlorella-cell-wall",
+              "weight": 0.7,
+              "mechanism_summary": "酸性条件下细胞壁蛋白质含氨基带正电",
+              "design_hint": "微藻吸附剂成本低"
+            }
+          ]
+        },
+        "prototypes": []
+      },
+      "芳香族化合物": {
+        "prototypes": [
+          {
+            "id": "polydopamine-coating",
+            "weight": 0.85,
+            "mechanism_summary": "吲哚和醌式结构的共轭体系与芳香族污染物π-π堆积",
+            "design_hint": "PDA涂层可吸附苯酚、PAHs等"
+          },
+          {
+            "id": "plant-tannin",
+            "weight": 0.8,
+            "mechanism_summary": "多个芳香环的共轭体系与芳香族污染物π-π作用",
+            "design_hint": "单宁基材料对芳香族污染物有选择性"
+          },
+          {
+            "id": "mussel-foot-adhesion",
+            "weight": 0.75,
+            "mechanism_summary": "DOPA的芳香环提供π-π堆积作用",
+            "design_hint": "贻贝足丝蛋白可用于芳香族污染物吸附"
+          }
+        ]
+      },
+      "抗生素": {
+        "prototypes": [
+          {
+            "id": "polydopamine-coating",
+            "weight": 0.8,
+            "mechanism_summary": "π-π堆积和氢键协同吸附抗生素",
+            "design_hint": "PDA涂层对多种抗生素有吸附能力"
+          }
+        ]
+      }
+    },
+    "无机非金属污染物": {
+      "NH₄⁺-N": {
+        "prototypes": [
+          {
+            "id": "chlorella-cell-wall",
+            "weight": 0.8,
+            "mechanism_summary": "微藻可主动摄取和富集氨氮",
+            "design_hint": "微藻兼具吸附和生物降解功能"
+          },
+          {
+            "id": "mangrove-root",
+            "weight": 0.75,
+            "mechanism_summary": "红树林根系过滤系统可去除氨氮",
+            "design_hint": "生态修复方案"
+          }
+        ]
+      },
+      "NO₃⁻": {
+        "prototypes": [
+          {
+            "id": "chitosan",
+            "weight": 0.7,
+            "mechanism_summary": "质子化氨基可吸附硝酸根",
+            "design_hint": "壳聚糖对硝酸根吸附容量有限"
+          },
+          {
+            "id": "mangrove-root",
+            "weight": 0.75,
+            "mechanism_summary": "红树林根系微生物可反硝化脱氮",
+            "design_hint": "生态修复方案"
+          }
+        ]
+      },
+      "PO₄³⁻": {
+        "prototypes": [
+          {
+            "id": "oyster-shell",
+            "weight": 0.8,
+            "mechanism_summary": "牡蛎壳可吸附磷酸盐",
+            "design_hint": "牡蛎壳来源丰富、成本低"
+          },
+          {
+            "id": "iron-oxidizing-bacteria",
+            "weight": 0.75,
+            "mechanism_summary": "铁氧化物可吸附磷酸盐",
+            "design_hint": "生物铁氧化物具有高比表面积"
+          }
+        ]
+      },
+      "F⁻": {
+        "prototypes": [
+          {
+            "id": "bone-structure",
+            "weight": 0.8,
+            "mechanism_summary": "羟基磷灰石可吸附氟离子",
+            "design_hint": "骨骼来源的HAP是除氟的经典材料"
+          },
+          {
+            "id": "fish-scale-hydroxyapatite",
+            "weight": 0.8,
+            "mechanism_summary": "鱼鳞HAP可吸附氟离子",
+            "design_hint": "鱼鳞HAP具有层次孔结构"
+          }
+        ]
+      }
+    },
+    "油类": {
+      "prototypes": [
+        {
+          "id": "pitcher-plant-slippery-surface",
+          "weight": 0.85,
+          "mechanism_summary": "超滑表面（SLIPS）使油滴无法附着",
+          "design_hint": "SLIPS涂层耐久性好"
+        }
+      ]
+    },
+    "放射性元素": {
+      "U": {
+        "prototypes": [
+          {
+            "id": "mussel-foot-adhesion",
+            "weight": 0.8,
+            "mechanism_summary": "DOPA对U(VI)有螯合能力",
+            "design_hint": "邻苯二酚基团可络合铀酰离子"
+          },
+          {
+            "id": "chitosan",
+            "weight": 0.75,
+            "mechanism_summary": "氨基和羟基可配位铀酰离子",
+            "design_hint": "壳聚糖可改性提高对铀的选择性"
+          }
+        ]
+      },
+      "Sr": {
+        "prototypes": [
+          {
+            "id": "oyster-shell",
+            "weight": 0.75,
+            "mechanism_summary": "CaCO₃可与Sr²⁺进行离子交换",
+            "design_hint": "牡蛎壳来源丰富"
+          },
+          {
+            "id": "bone-structure",
+            "weight": 0.7,
+            "mechanism_summary": "HAP中的Ca²⁺可被Sr²⁺替换",
+            "design_hint": "骨骼HAP对Sr有一定选择性"
+          }
+        ]
+      },
+      "Cs": {
+        "prototypes": [
+          {
+            "id": "chitosan",
+            "weight": 0.6,
+            "mechanism_summary": "壳聚糖对Cs⁺有一定吸附",
+            "design_hint": "需改性提高对Cs的选择性"
+          },
+          {
+            "id": "magnetic-bacteria",
+            "weight": 0.65,
+            "mechanism_summary": "磁性纳米粒子可作为Cs吸附剂载体",
+            "design_hint": "磁性可回收"
+          }
+        ]
+      }
+    },
+    "unknown": [
+      {
+        "id": "pitcher-plant-slippery-surface",
+        "weight": 0.002,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      },
+      {
+        "id": "polydopamine-coating",
+        "weight": 0.16,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      },
+      {
+        "id": "mangrove-root",
+        "weight": 0.21,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      },
+      {
+        "id": "superhydrophobic-artificial",
+        "weight": 0.398,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      },
+      {
+        "id": "chlorella-cell-wall",
+        "weight": 0.214,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      },
+      {
+        "id": "mussel-foot-adhesion",
+        "weight": 0.01,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      },
+      {
+        "id": "lotus-leaf",
+        "weight": 0.238,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      },
+      {
+        "id": "bone-structure",
+        "weight": 0.008,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      },
+      {
+        "id": "chitosan",
+        "weight": 0.572,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      },
+      {
+        "id": "silk-fibroin",
+        "weight": 0.01,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      },
+      {
+        "id": "oyster-shell",
+        "weight": 0.298,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      },
+      {
+        "id": "diatom-frustule",
+        "weight": 0.242,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      },
+      {
+        "id": "mycelium",
+        "weight": 0.17,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      },
+      {
+        "id": "wood-xylem",
+        "weight": 0.415,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      },
+      {
+        "id": "cell-membrane-ion-channel",
+        "weight": 0.308,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "无机磷": [
+      {
+        "id": "polydopamine-coating",
+        "weight": 0.4,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "二氯甲烷": [
+      {
+        "id": "superhydrophobic-artificial",
+        "weight": 0.4,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      },
+      {
+        "id": "chitosan",
+        "weight": 0.4,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "柴油": [
+      {
+        "id": "superhydrophobic-artificial",
+        "weight": 0.4,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      },
+      {
+        "id": "chitosan",
+        "weight": 0.4,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "酸性品红": [
+      {
+        "id": "fish-scale-hydroxyapatite",
+        "weight": 0.5,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "Rhodamine B": [
+      {
+        "id": "chlorella-cell-wall",
+        "weight": 0.5,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "potentially toxic elements (PTE)": [
+      {
+        "id": "chlorella-cell-wall",
+        "weight": 0.5,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "Basic Blue 41 (碱性蓝41)": [
+      {
+        "id": "chlorella-cell-wall",
+        "weight": 0.5,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "Cu(II)": [
+      {
+        "id": "silk-fibroin",
+        "weight": 0.6,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "CrO42-": [
+      {
+        "id": "mussel-foot-adhesion",
+        "weight": 0.5,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "活性亮红(RBR)": [
+      {
+        "id": "chitosan",
+        "weight": 0.4,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "SY染料": [
+      {
+        "id": "chitosan",
+        "weight": 0.4,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "亚甲基蓝(MB)": [
+      {
+        "id": "chitosan",
+        "weight": 0.4,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "孔雀石绿(MG)": [
+      {
+        "id": "chitosan",
+        "weight": 0.4,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "酸性红94(Acid Red 94)": [
+      {
+        "id": "chitosan",
+        "weight": 0.4,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "刚果红(CR)": [
+      {
+        "id": "chitosan",
+        "weight": 0.4,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "直接红80(DR80)": [
+      {
+        "id": "chitosan",
+        "weight": 0.4,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "茜素红(AR)": [
+      {
+        "id": "chitosan",
+        "weight": 0.4,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "Pb(II)": [
+      {
+        "id": "diatom-frustule",
+        "weight": 0.8,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "Cd(II)": [
+      {
+        "id": "diatom-frustule",
+        "weight": 0.4,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "Al(III)": [
+      {
+        "id": "chitosan",
+        "weight": 0.5,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "Microplastics": [
+      {
+        "id": "chitosan",
+        "weight": 0.5,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "Reactive Blue 19": [
+      {
+        "id": "chitosan",
+        "weight": 0.5,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "Mn2+": [
+      {
+        "id": "chitosan",
+        "weight": 0.5,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "reactive dyes": [
+      {
+        "id": "chitosan",
+        "weight": 0.4,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "TiO2 nanoparticles": [
+      {
+        "id": "chitosan",
+        "weight": 0.4,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "U(VI)": [
+      {
+        "id": "chitosan",
+        "weight": 0.4,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "MB (methylene blue)": [
+      {
+        "id": "chitosan",
+        "weight": 0.4,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "triclosan (TCS)": [
+      {
+        "id": "chitosan",
+        "weight": 0.4,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "As(III)": [
+      {
+        "id": "chitosan",
+        "weight": 0.4,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "tetracycline": [
+      {
+        "id": "chitosan",
+        "weight": 0.4,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "acid blue-113 (anionic dye)": [
+      {
+        "id": "chitosan",
+        "weight": 0.4,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "FD&C Red 40染料": [
+      {
+        "id": "chitosan",
+        "weight": 0.5,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "亚甲基蓝(MB)阳离子染料": [
+      {
+        "id": "chitosan",
+        "weight": 0.5,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "活性黑5(RB5)": [
+      {
+        "id": "chitosan",
+        "weight": 0.5,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "PO43- (磷酸根)": [
+      {
+        "id": "chitosan",
+        "weight": 0.5,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "PO43-": [
+      {
+        "id": "chitosan",
+        "weight": 0.5,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "Sb(锑)": [
+      {
+        "id": "chitosan",
+        "weight": 0.5,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "Cr(铬)": [
+      {
+        "id": "chitosan",
+        "weight": 0.5,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "methyl orange (MO)": [
+      {
+        "id": "silk-fibroin",
+        "weight": 0.5,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "chloroform": [
+      {
+        "id": "silk-fibroin",
+        "weight": 0.5,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "methylene blue (MB)": [
+      {
+        "id": "silk-fibroin",
+        "weight": 0.2,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "MB": [
+      {
+        "id": "silk-fibroin",
+        "weight": 0.5,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "phosphorus (PO₄³⁻, 以KH₂PO₄配制)": [
+      {
+        "id": "oyster-shell",
+        "weight": 0.5,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "磷酸盐(以P计)": [
+      {
+        "id": "oyster-shell",
+        "weight": 0.5,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "苯胺黑(Amido black)阴离子染料": [
+      {
+        "id": "cell-membrane-ion-channel",
+        "weight": 0.5,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "罗丹明B(RhB)染料": [
+      {
+        "id": "cell-membrane-ion-channel",
+        "weight": 0.5,
+        "weight_source": "formula_v1",
+        "mechanism_summary": "",
+        "design_hint": ""
+      }
+    ],
+    "其他": {
+      "prototypes": [],
+      "Pb(II)": {
+        "prototypes": [
+          {
+            "id": "lobster-exoskeleton",
+            "weight": 0.7,
+            "mechanism_summary": "龙虾外骨骼对Pb(II)有吸附能力",
+            "design_hint": "龙虾外骨骼可用于Pb(II)的吸附"
+          }
+        ]
+      },
+      "Cd(II)": {
+        "prototypes": [
+          {
+            "id": "silk-fibroin",
+            "weight": 0.7,
+            "mechanism_summary": "丝素蛋白对Cd(II)有吸附能力",
+            "design_hint": "丝素蛋白可用于Cd(II)的吸附"
+          }
+        ]
+      },
+      "Cu(II)": {
+        "prototypes": [
+          {
+            "id": "silk-fibroin",
+            "weight": 0.7,
+            "mechanism_summary": "丝素蛋白对Cu(II)有吸附能力",
+            "design_hint": "丝素蛋白可用于Cu(II)的吸附"
+          }
+        ]
+      },
+      "MB": {
+        "prototypes": [
+          {
+            "id": "silk-fibroin",
+            "weight": 0.7,
+            "mechanism_summary": "丝素蛋白对MB有吸附能力",
+            "design_hint": "丝素蛋白可用于MB的吸附"
+          }
+        ]
+      },
+      "methylene blue (MB)": {
+        "prototypes": [
+          {
+            "id": "silk-fibroin",
+            "weight": 0.7,
+            "mechanism_summary": "丝素蛋白对methylene blue (MB)有吸附能力",
+            "design_hint": "丝素蛋白可用于methylene blue (MB)的吸附"
+          }
+        ]
+      },
+      "chloroform": {
+        "prototypes": [
+          {
+            "id": "silk-fibroin",
+            "weight": 0.7,
+            "mechanism_summary": "丝素蛋白对chloroform有吸附能力",
+            "design_hint": "丝素蛋白可用于chloroform的吸附"
+          }
+        ]
+      },
+      "Zn(II)": {
+        "prototypes": [
+          {
+            "id": "silk-fibroin",
+            "weight": 0.7,
+            "mechanism_summary": "丝素蛋白对Zn(II)有吸附能力",
+            "design_hint": "丝素蛋白可用于Zn(II)的吸附"
+          }
+        ]
+      },
+      "As(III)": {
+        "prototypes": [
+          {
+            "id": "silk-fibroin",
+            "weight": 0.7,
+            "mechanism_summary": "丝素蛋白对As(III)有吸附能力",
+            "design_hint": "丝素蛋白可用于As(III)的吸附"
+          }
+        ]
+      },
+      "U(VI)": {
+        "prototypes": [
+          {
+            "id": "silk-fibroin",
+            "weight": 0.7,
+            "mechanism_summary": "丝素蛋白对U(VI)有吸附能力",
+            "design_hint": "丝素蛋白可用于U(VI)的吸附"
+          }
+        ]
+      },
+      "methyl orange (MO)": {
+        "prototypes": [
+          {
+            "id": "silk-fibroin",
+            "weight": 0.7,
+            "mechanism_summary": "丝素蛋白对methyl orange (MO)有吸附能力",
+            "design_hint": "丝素蛋白可用于methyl orange (MO)的吸附"
+          }
+        ]
+      }
+    }
+  },
+  "feature_prototype_map": {
+    "疏水性": {
+      "dimension": "表面性质",
+      "description": "表面接触角>90°，排斥水分子",
+      "prototypes": [
+        {
+          "id": "lotus-leaf",
+          "weight": 1.0
+        },
+        {
+          "id": "superhydrophobic-artificial",
+          "weight": 0.95
+        },
+        {
+          "id": "water-strider-leg",
+          "weight": 0.95
+        },
+        {
+          "id": "cactus-spine",
+          "weight": 0.85
+        },
+        {
+          "id": "mussel-foot-adhesion",
+          "weight": 0.6
+        },
+        {
+          "id": "spider-silk",
+          "weight": 0.55
+        }
+      ]
+    },
+    "亲水性": {
+      "dimension": "表面性质",
+      "description": "表面接触角<90°，亲和水分子",
+      "prototypes": [
+        {
+          "id": "chitosan",
+          "weight": 0.9
+        }
+      ]
+    },
+    "正电表面": {
+      "dimension": "表面性质",
+      "description": "表面带正电荷，可通过静电作用吸附阴离子",
+      "prototypes": [
+        {
+          "id": "chlorella-cell-wall",
+          "weight": 0.85
+        },
+        {
+          "id": "chitosan",
+          "weight": 0.9
+        }
+      ]
+    },
+    "介孔": {
+      "dimension": "结构性质",
+      "description": "孔径2-50nm，适合中等分子吸附，良好的传质性能",
+      "prototypes": [
+        {
+          "id": "diatom-frustule",
+          "weight": 0.95
+        }
+      ]
+    },
+    "大孔": {
+      "dimension": "结构性质",
+      "description": "孔径>50nm，适合大分子和颗粒物，提供快速传质通道",
+      "prototypes": [
+        {
+          "id": "coral-skeleton",
+          "weight": 0.9
+        },
+        {
+          "id": "wood-xylem",
+          "weight": 0.9
+        }
+      ]
+    },
+    "层次孔": {
+      "dimension": "结构性质",
+      "description": "多级孔径共存，兼顾传质和吸附容量",
+      "prototypes": [
+        {
+          "id": "bone-structure",
+          "weight": 0.95
+        },
+        {
+          "id": "wood-xylem",
+          "weight": 0.9
+        },
+        {
+          "id": "oyster-shell",
+          "weight": 0.85
+        },
+        {
+          "id": "iron-oxidizing-bacteria",
+          "weight": 0.7
+        }
+      ]
+    },
+    "纤维状": {
+      "dimension": "结构性质",
+      "description": "纤维形态结构，高长径比，可形成网络",
+      "prototypes": [
+        {
+          "id": "spider-silk",
+          "weight": 0.95
+        },
+        {
+          "id": "silk-fibroin",
+          "weight": 0.9
+        },
+        {
+          "id": "mycelium",
+          "weight": 0.9
+        },
+        {
+          "id": "lobster-exoskeleton",
+          "weight": 0.85
+        }
+      ]
+    },
+    "层状": {
+      "dimension": "结构性质",
+      "description": "层状排列结构，层间可提供吸附位点",
+      "prototypes": [
+        {
+          "id": "scallop-shell",
+          "weight": 0.95
+        },
+        {
+          "id": "oyster-shell",
+          "weight": 0.9
+        },
+        {
+          "id": "silk-fibroin",
+          "weight": 0.6
+        }
+      ]
+    },
+    "乳突阵列": {
+      "dimension": "结构性质",
+      "description": "微米级突起阵列，增大比表面积，可实现超疏水",
+      "prototypes": [
+        {
+          "id": "lotus-leaf",
+          "weight": 1.0
+        },
+        {
+          "id": "superhydrophobic-artificial",
+          "weight": 0.95
+        }
+      ]
+    },
+    "网状": {
+      "dimension": "结构性质",
+      "description": "三维网状结构，提供高孔隙率和渗透性",
+      "prototypes": [
+        {
+          "id": "mycelium",
+          "weight": 0.9
+        },
+        {
+          "id": "mangrove-root",
+          "weight": 0.85
+        }
+      ]
+    },
+    "邻苯二酚基团": {
+      "dimension": "化学性质",
+      "description": "catechol基团，可与金属离子形成双齿配位键",
+      "prototypes": [
+        {
+          "id": "mussel-foot-adhesion",
+          "weight": 1.0
+        },
+        {
+          "id": "polydopamine-coating",
+          "weight": 0.95
+        },
+        {
+          "id": "plant-tannin",
+          "weight": 0.85
+        }
+      ]
+    },
+    "氨基": {
+      "dimension": "化学性质",
+      "description": "-NH₂基团，可配位金属离子、参与静电吸附",
+      "prototypes": [
+        {
+          "id": "chitosan",
+          "weight": 1.0
+        },
+        {
+          "id": "chlorella-cell-wall",
+          "weight": 0.8
+        },
+        {
+          "id": "mycelium",
+          "weight": 0.7
+        },
+        {
+          "id": "scallop-shell",
+          "weight": 0.5
+        }
+      ]
+    },
+    "羧基": {
+      "dimension": "化学性质",
+      "description": "-COOH基团，可络合金属离子、提供负电荷",
+      "prototypes": [
+        {
+          "id": "chlorella-cell-wall",
+          "weight": 0.6
+        }
+      ]
+    },
+    "巯基": {
+      "dimension": "化学性质",
+      "description": "-SH基团，对软金属离子（Hg²⁺, Cd²⁺, Pb²⁺）有极强亲和力",
+      "prototypes": [
+        {
+          "id": "sulfate-reducing-bacteria",
+          "weight": 1.0
+        }
+      ]
+    },
+    "金属配位能力": {
+      "dimension": "化学性质",
+      "description": "能与金属离子形成配位键的能力",
+      "prototypes": [
+        {
+          "id": "mussel-foot-adhesion",
+          "weight": 1.0
+        },
+        {
+          "id": "polydopamine-coating",
+          "weight": 0.95
+        },
+        {
+          "id": "plant-tannin",
+          "weight": 0.9
+        },
+        {
+          "id": "chitosan",
+          "weight": 0.9
+        }
+      ]
+    },
+    "π电子体系": {
+      "dimension": "化学性质",
+      "description": "芳香环或共轭体系，可通过π-π堆积吸附芳香族污染物",
+      "prototypes": [
+        {
+          "id": "mussel-foot-adhesion",
+          "weight": 0.9
+        },
+        {
+          "id": "polydopamine-coating",
+          "weight": 0.95
+        },
+        {
+          "id": "plant-tannin",
+          "weight": 0.9
+        }
+      ]
+    },
+    "活性氧位点": {
+      "dimension": "化学性质",
+      "description": "可催化产生活性氧或进行氧化还原反应",
+      "prototypes": [
+        {
+          "id": "iron-oxidizing-bacteria",
+          "weight": 0.9
+        }
+      ]
+    },
+    "湿态粘附": {
+      "dimension": "功能特性",
+      "description": "在潮湿环境中保持强粘附力",
+      "prototypes": [
+        {
+          "id": "mussel-foot-adhesion",
+          "weight": 1.0
+        },
+        {
+          "id": "polydopamine-coating",
+          "weight": 0.95
+        }
+      ]
+    },
+    "自清洁": {
+      "dimension": "功能特性",
+      "description": "通过表面结构实现自清洁功能",
+      "prototypes": [
+        {
+          "id": "lotus-leaf",
+          "weight": 1.0
+        },
+        {
+          "id": "superhydrophobic-artificial",
+          "weight": 0.95
+        },
+        {
+          "id": "cactus-spine",
+          "weight": 0.7
+        }
+      ]
+    },
+    "催化降解": {
+      "dimension": "功能特性",
+      "description": "催化降解有机污染物",
+      "prototypes": [
+        {
+          "id": "iron-oxidizing-bacteria",
+          "weight": 0.9
+        },
+        {
+          "id": "magnetic-bacteria",
+          "weight": 0.6
+        }
+      ]
+    },
+    "离子交换": {
+      "dimension": "功能特性",
+      "description": "通过离子交换机制去除污染物",
+      "prototypes": [
+        {
+          "id": "oyster-shell",
+          "weight": 0.9
+        },
+        {
+          "id": "fish-scale-hydroxyapatite",
+          "weight": 0.9
+        },
+        {
+          "id": "bone-structure",
+          "weight": 0.85
+        }
+      ]
+    },
+    "分子筛分": {
+      "dimension": "功能特性",
+      "description": "基于分子大小的选择性过滤",
+      "prototypes": [
+        {
+          "id": "cell-membrane-ion-channel",
+          "weight": 1.0
+        },
+        {
+          "id": "diatom-frustule",
+          "weight": 0.65
+        }
+      ]
+    },
+    "生物矿化模板": {
+      "dimension": "功能特性",
+      "description": "作为生物矿化过程的模板或仿生矿化的灵感",
+      "prototypes": [
+        {
+          "id": "oyster-shell",
+          "weight": 0.95
+        },
+        {
+          "id": "scallop-shell",
+          "weight": 0.95
+        },
+        {
+          "id": "coral-skeleton",
+          "weight": 0.9
+        },
+        {
+          "id": "iron-oxidizing-bacteria",
+          "weight": 0.85
+        }
+      ]
+    },
+    "抗生物污染": {
+      "dimension": "功能特性",
+      "description": "抵抗微生物附着和生物膜形成",
+      "prototypes": [
+        {
+          "id": "shark-skin",
+          "weight": 0.95
+        },
+        {
+          "id": "pitcher-plant-slippery-surface",
+          "weight": 0.95
+        }
+      ]
+    }
+  },
+  "prototype_metadata": {
+    "mussel-foot-adhesion": {
+      "applicability": {
+        "pH_range": [
+          3,
+          10
+        ],
+        "temp_range": [
+          0,
+          80
+        ],
+        "salinity": "moderate"
+      },
+      "features": [
+        "疏水性",
+        "邻苯二酚基团",
+        "金属配位能力",
+        "π电子体系",
+        "湿态粘附"
+      ],
+      "biomimetic_dimension": "分子仿生"
+    },
+    "spider-silk": {
+      "applicability": {
+        "pH_range": [
+          4,
+          9
+        ],
+        "temp_range": [
+          0,
+          60
+        ],
+        "salinity": "low"
+      },
+      "features": [
+        "疏水性",
+        "纤维状"
+      ],
+      "biomimetic_dimension": "结构仿生"
+    },
+    "chitosan": {
+      "applicability": {
+        "pH_range": [
+          3,
+          9
+        ],
+        "temp_range": [
+          0,
+          80
+        ],
+        "salinity": "low_to_moderate"
+      },
+      "features": [
+        "亲水性",
+        "正电表面",
+        "氨基",
+        "金属配位能力"
+      ],
+      "biomimetic_dimension": "分子仿生"
+    },
+    "chlorella-cell-wall": {
+      "applicability": {
+        "pH_range": [
+          4,
+          9
+        ],
+        "temp_range": [
+          10,
+          40
+        ],
+        "salinity": "low_to_moderate"
+      },
+      "features": [
+        "正电表面",
+        "氨基",
+        "羧基"
+      ],
+      "biomimetic_dimension": "功能仿生"
+    },
+    "diatom-frustule": {
+      "applicability": {
+        "pH_range": [
+          2,
+          10
+        ],
+        "temp_range": [
+          0,
+          100
+        ],
+        "salinity": "any"
+      },
+      "features": [
+        "介孔",
+        "分子筛分"
+      ],
+      "biomimetic_dimension": "结构仿生"
+    },
+    "coral-skeleton": {
+      "applicability": {
+        "pH_range": [
+          6,
+          9
+        ],
+        "temp_range": [
+          0,
+          40
+        ],
+        "salinity": "moderate"
+      },
+      "features": [
+        "大孔",
+        "生物矿化模板"
+      ],
+      "biomimetic_dimension": "结构仿生"
+    },
+    "wood-xylem": {
+      "applicability": {
+        "pH_range": [
+          4,
+          9
+        ],
+        "temp_range": [
+          0,
+          60
+        ],
+        "salinity": "low"
+      },
+      "features": [
+        "大孔",
+        "层次孔"
+      ],
+      "biomimetic_dimension": "结构仿生"
+    },
+    "bone-structure": {
+      "applicability": {
+        "pH_range": [
+          4,
+          10
+        ],
+        "temp_range": [
+          0,
+          100
+        ],
+        "salinity": "any"
+      },
+      "features": [
+        "层次孔",
+        "离子交换"
+      ],
+      "biomimetic_dimension": "结构仿生"
+    },
+    "oyster-shell": {
+      "applicability": {
+        "pH_range": [
+          5,
+          10
+        ],
+        "temp_range": [
+          0,
+          80
+        ],
+        "salinity": "moderate"
+      },
+      "features": [
+        "层次孔",
+        "层状",
+        "离子交换",
+        "生物矿化模板"
+      ],
+      "biomimetic_dimension": "过程仿生"
+    },
+    "iron-oxidizing-bacteria": {
+      "applicability": {
+        "pH_range": [
+          2,
+          8
+        ],
+        "temp_range": [
+          10,
+          40
+        ],
+        "salinity": "low_to_moderate"
+      },
+      "features": [
+        "层次孔",
+        "活性氧位点",
+        "催化降解",
+        "生物矿化模板"
+      ],
+      "biomimetic_dimension": "过程仿生"
+    },
+    "silk-fibroin": {
+      "applicability": {
+        "pH_range": [
+          4,
+          9
+        ],
+        "temp_range": [
+          0,
+          60
+        ],
+        "salinity": "low"
+      },
+      "features": [
+        "纤维状",
+        "层状"
+      ],
+      "biomimetic_dimension": "结构仿生"
+    },
+    "mycelium": {
+      "applicability": {
+        "pH_range": [
+          3,
+          9
+        ],
+        "temp_range": [
+          10,
+          40
+        ],
+        "salinity": "low"
+      },
+      "features": [
+        "纤维状",
+        "网状",
+        "氨基"
+      ],
+      "biomimetic_dimension": "结构仿生"
+    },
+    "lobster-exoskeleton": {
+      "applicability": {
+        "pH_range": [
+          4,
+          9
+        ],
+        "temp_range": [
+          0,
+          60
+        ],
+        "salinity": "moderate"
+      },
+      "features": [
+        "纤维状"
+      ],
+      "biomimetic_dimension": "结构仿生"
+    },
+    "scallop-shell": {
+      "applicability": {
+        "pH_range": [
+          5,
+          10
+        ],
+        "temp_range": [
+          0,
+          80
+        ],
+        "salinity": "moderate"
+      },
+      "features": [
+        "层状",
+        "氨基",
+        "生物矿化模板"
+      ],
+      "biomimetic_dimension": "过程仿生"
+    },
+    "sulfate-reducing-bacteria": {
+      "applicability": {
+        "pH_range": [
+          4,
+          9
+        ],
+        "temp_range": [
+          15,
+          40
+        ],
+        "salinity": "low_to_moderate"
+      },
+      "features": [
+        "巯基"
+      ],
+      "biomimetic_dimension": "过程仿生"
+    },
+    "polydopamine-coating": {
+      "applicability": {
+        "pH_range": [
+          3,
+          10
+        ],
+        "temp_range": [
+          0,
+          80
+        ],
+        "salinity": "moderate"
+      },
+      "features": [
+        "邻苯二酚基团",
+        "金属配位能力",
+        "π电子体系",
+        "湿态粘附"
+      ],
+      "biomimetic_dimension": "分子仿生"
+    },
+    "plant-tannin": {
+      "applicability": {
+        "pH_range": [
+          3,
+          9
+        ],
+        "temp_range": [
+          0,
+          80
+        ],
+        "salinity": "low_to_moderate"
+      },
+      "features": [
+        "邻苯二酚基团",
+        "金属配位能力",
+        "π电子体系"
+      ],
+      "biomimetic_dimension": "分子仿生"
+    },
+    "pitcher-plant-slippery-surface": {
+      "applicability": {
+        "pH_range": [
+          1,
+          14
+        ],
+        "temp_range": [
+          0,
+          100
+        ],
+        "salinity": "any"
+      },
+      "features": [
+        "抗生物污染"
+      ],
+      "biomimetic_dimension": "结构仿生"
+    },
+    "mangrove-root": {
+      "applicability": {
+        "pH_range": [
+          5,
+          9
+        ],
+        "temp_range": [
+          15,
+          35
+        ],
+        "salinity": "moderate"
+      },
+      "features": [
+        "网状"
+      ],
+      "biomimetic_dimension": "系统仿生"
+    },
+    "fish-scale-hydroxyapatite": {
+      "applicability": {
+        "pH_range": [
+          4,
+          10
+        ],
+        "temp_range": [
+          0,
+          80
+        ],
+        "salinity": "any"
+      },
+      "features": [
+        "离子交换"
+      ],
+      "biomimetic_dimension": "过程仿生"
+    },
+    "cell-membrane-ion-channel": {
+      "applicability": {
+        "pH_range": [
+          6,
+          8
+        ],
+        "temp_range": [
+          15,
+          40
+        ],
+        "salinity": "low"
+      },
+      "features": [
+        "分子筛分"
+      ],
+      "biomimetic_dimension": "功能仿生"
+    },
+    "magnetic-bacteria": {
+      "applicability": {
+        "pH_range": [
+          4,
+          9
+        ],
+        "temp_range": [
+          15,
+          40
+        ],
+        "salinity": "low"
+      },
+      "features": [
+        "催化降解"
+      ],
+      "biomimetic_dimension": "功能仿生"
+    },
+    "biomineralization-template": {
+      "status": "deprecated",
+      "reason": "无提取数据，无文献支撑",
+      "features": [],
+      "biomimetic_dimension": "过程仿生",
+      "applicability": null
+    },
+    "dna-aptamer": {
+      "status": "deprecated",
+      "reason": "无提取数据，无文献支撑",
+      "features": [],
+      "biomimetic_dimension": "分子仿生",
+      "applicability": null
+    }
+  },
+  "mechanism_feature_bridge": {
+    "配位螯合": [
+      "邻苯二酚基团",
+      "氨基",
+      "羧基",
+      "巯基",
+      "金属配位能力"
+    ],
+    "静电吸附": [
+      "正电表面",
+      "负电表面"
+    ],
+    "π-π堆积": [
+      "π电子体系"
+    ],
+    "氢键": [
+      "亲水性"
+    ],
+    "离子交换": [
+      "离子交换能力"
+    ],
+    "微孔吸附": [
+      "微孔"
+    ],
+    "介孔吸附": [
+      "介孔"
+    ],
+    "大孔吸附": [
+      "大孔"
+    ],
+    "层次孔吸附": [
+      "层次孔"
+    ],
+    "超疏水分离": [
+      "疏水性",
+      "乳突阵列"
+    ],
+    "超滑表面": [
+      "抗生物污染"
+    ],
+    "分子筛分": [
+      "分子筛分"
+    ],
+    "网络过滤": [
+      "网状",
+      "纤维状"
+    ],
+    "生物矿化": [
+      "生物矿化模板"
+    ],
+    "生物沉淀": [
+      "巯基"
+    ],
+    "催化降解": [
+      "活性氧位点",
+      "催化降解"
+    ]
+  },
+  "tested_conditions": {
+    "pitcher-plant-slippery-surface": {
+      "tested_ph_range": null,
+      "tested_temp_range": null,
+      "salinity": "any"
+    },
+    "cactus-spine": {
+      "tested_ph_range": null,
+      "tested_temp_range": null,
+      "salinity": "any"
+    },
+    "polydopamine-coating": {
+      "tested_ph_range": [
+        7.0,
+        7.0
+      ],
+      "tested_temp_range": null,
+      "salinity": "moderate"
+    },
+    "mangrove-root": {
+      "tested_ph_range": null,
+      "tested_temp_range": null,
+      "salinity": "moderate"
+    },
+    "superhydrophobic-artificial": {
+      "tested_ph_range": null,
+      "tested_temp_range": null,
+      "salinity": "any"
+    },
+    "fish-scale-hydroxyapatite": {
+      "tested_ph_range": [
+        6.0,
+        6.0
+      ],
+      "tested_temp_range": null,
+      "salinity": "any"
+    },
+    "iron-oxidizing-bacteria": {
+      "tested_ph_range": null,
+      "tested_temp_range": null,
+      "salinity": "low_to_moderate"
+    },
+    "shark-skin": {
+      "tested_ph_range": null,
+      "tested_temp_range": null,
+      "salinity": "any"
+    },
+    "chlorella-cell-wall": {
+      "tested_ph_range": null,
+      "tested_temp_range": null,
+      "salinity": "low_to_moderate"
+    },
+    "scallop-shell": {
+      "tested_ph_range": null,
+      "tested_temp_range": null,
+      "salinity": "moderate"
+    },
+    "mussel-foot-adhesion": {
+      "tested_ph_range": [
+        3.0,
+        6.8
+      ],
+      "tested_temp_range": null,
+      "salinity": "moderate"
+    },
+    "lotus-leaf": {
+      "tested_ph_range": null,
+      "tested_temp_range": null,
+      "salinity": "any"
+    },
+    "sulfate-reducing-bacteria": {
+      "tested_ph_range": null,
+      "tested_temp_range": null,
+      "salinity": "low_to_moderate"
+    },
+    "bone-structure": {
+      "tested_ph_range": null,
+      "tested_temp_range": null,
+      "salinity": "any"
+    },
+    "chitosan": {
+      "tested_ph_range": [
+        3.0,
+        7.0
+      ],
+      "tested_temp_range": null,
+      "salinity": "low_to_moderate"
+    },
+    "silk-fibroin": {
+      "tested_ph_range": [
+        4.2,
+        4.2
+      ],
+      "tested_temp_range": null,
+      "salinity": "low"
+    },
+    "oyster-shell": {
+      "tested_ph_range": [
+        7.0,
+        7.0
+      ],
+      "tested_temp_range": null,
+      "salinity": "moderate"
+    },
+    "diatom-frustule": {
+      "tested_ph_range": [
+        7.0,
+        7.0
+      ],
+      "tested_temp_range": null,
+      "salinity": "any"
+    },
+    "mycelium": {
+      "tested_ph_range": null,
+      "tested_temp_range": null,
+      "salinity": "low"
+    },
+    "magnetic-bacteria": {
+      "tested_ph_range": null,
+      "tested_temp_range": null,
+      "salinity": "low"
+    },
+    "coral-skeleton": {
+      "tested_ph_range": null,
+      "tested_temp_range": null,
+      "salinity": "moderate"
+    },
+    "spider-silk": {
+      "tested_ph_range": null,
+      "tested_temp_range": null,
+      "salinity": "low"
+    },
+    "plant-tannin": {
+      "tested_ph_range": null,
+      "tested_temp_range": null,
+      "salinity": "low_to_moderate"
+    },
+    "wood-xylem": {
+      "tested_ph_range": [
+        6.0,
+        6.0
+      ],
+      "tested_temp_range": null,
+      "salinity": "low"
+    },
+    "cell-membrane-ion-channel": {
+      "tested_ph_range": null,
+      "tested_temp_range": null,
+      "salinity": "low"
+    },
+    "lobster-exoskeleton": {
+      "tested_ph_range": null,
+      "tested_temp_range": null,
+      "salinity": "moderate"
+    },
+    "water-strider-leg": {
+      "tested_ph_range": null,
+      "tested_temp_range": null,
+      "salinity": "any"
+    }
+  },
+  "constraint_prototype_map": {
+    "stability": [
+      {
+        "prototype_id": "pitcher-plant-slippery-surface",
+        "constraint": "SLIPS supercooled water nucleation stability",
+        "value": "150",
+        "relevance": "high"
+      },
+      {
+        "prototype_id": "polydopamine-coating",
+        "constraint": "APP3膜的酸碱稳定性 Acid and alkali stability of APP3 membrane",
+        "value": "在不同pH溶液中浸泡24h后保持稳定(图9c-d)",
+        "relevance": "high"
+      },
+      {
+        "prototype_id": "polydopamine-coating",
+        "constraint": "番茄红素光稳定性提升",
+        "value": "97.98",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "mangrove-root",
+        "constraint": "NO3--N浓度稳定性 Stability of NO3--N concentration in mangrove systems",
+        "value": null,
+        "relevance": "high"
+      },
+      {
+        "prototype_id": "superhydrophobic-artificial",
+        "constraint": "高离子浓度稳定性 high ionic strength stability",
+        "value": "在高离子浓度环境下依然保持很好的疏水性和吸附性",
+        "relevance": "high"
+      },
+      {
+        "prototype_id": "fish-scale-hydroxyapatite",
+        "constraint": "MOF水稳定性关键因素",
+        "value": "Higher ligand basicity → greater metal-ligand bond strength → better stability; 6-coordinate (octahedral) > 4-coordinate (tetrahedral); higher oxidation state → higher stability",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "fish-scale-hydroxyapatite",
+        "constraint": "超疏水膜 harsh condition 稳定性测试标准 Harsh condition stability testing",
+        "value": "浸泡在极端pH(1-2强酸, 12-13强碱)或高盐浓度(NaCl 3.5 wt%)溶液1-72小时；表面活性剂(SDS 4.1 mM)滴加；60-120°C加热72小时",
+        "relevance": "high"
+      },
+      {
+        "prototype_id": "shark-skin",
+        "constraint": "硅基超疏水材料机械稳定性挑战",
+        "value": "纳米级结构强度有限，耐磨性不足是工业化主要障碍",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "mussel-foot-adhesion",
+        "constraint": "番茄红素光稳定性提升",
+        "value": "97.98",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "lotus-leaf",
+        "constraint": "MOF水稳定性关键因素",
+        "value": "Higher ligand basicity → greater metal-ligand bond strength → better stability; 6-coordinate (octahedral) > 4-coordinate (tetrahedral); higher oxidation state → higher stability",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "lotus-leaf",
+        "constraint": "超疏水膜 harsh condition 稳定性测试标准 Harsh condition stability testing",
+        "value": "浸泡在极端pH(1-2强酸, 12-13强碱)或高盐浓度(NaCl 3.5 wt%)溶液1-72小时；表面活性剂(SDS 4.1 mM)滴加；60-120°C加热72小时",
+        "relevance": "high"
+      },
+      {
+        "prototype_id": "lotus-leaf",
+        "constraint": "硅基超疏水材料机械稳定性挑战",
+        "value": "纳米级结构强度有限，耐磨性不足是工业化主要障碍",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "聚丙烯酸-磁性壳聚糖(MCS-PAA)对Pb(II)的吸附与酸稳定性",
+        "value": "MCS-PAA: 204.89 vs MCS: 108.52 vs Fe3O4: 79.56",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "壳聚糖酸性不稳定性的改性策略",
+        "value": "交联形成不溶于水的网络结构提高酸稳定性；接枝引入活性官能团增强吸附性能；复合引入更多吸附位点",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "CNC/CS气凝胶水稳定性(质量残留率)",
+        "value": "93.8",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "TGA热稳定性",
+        "value": "CYCS失重83.8%；CNC失重72.7%；CYCS/CNC失重60.3%→交联提高热稳定性；三阶段失重：30-150°C(水分蒸发)/220-380°C(壳聚糖分解)/390-780°C(进一步分解+CO₂+H₂O)",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "壳聚糖的热稳定性 Thermal stability of chitosan-based sorbents",
+        "value": "原始壳聚糖热降解分两阶段：30-220°C(水分和挥发物去除)和230-545°C(糖苷键断裂、脱乙酰、聚合物骨架分解)；改性壳聚糖在500-800°C第三阶段降解",
+        "relevance": "high"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "番茄红素光稳定性提升",
+        "value": "97.98",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "silk-fibroin",
+        "constraint": "TGA热稳定性",
+        "value": "BS: 总失重仅9%(至800°C); 复合材料: 第一阶段8.6%(150°C失水)→第二阶段35.4%(380°C SF酰胺分解)→第三阶段28.3%(400-800°C PUF碳骨架分解)→73%总失重",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "silk-fibroin",
+        "constraint": "TGA热稳定性",
+        "value": "SF: 92%→73%→37%→2%残余(三阶段)；SF-GLYMO: 97%→35%→15%→15%残余(SiO₂)；SF-PEI-2: 86%→62%→31%→5%残余",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "silk-fibroin",
+        "constraint": "TGA热稳定性",
+        "value": "SF/GO热稳定性优于纯SF; 第一阶段(至175°C): SF失重17%, SF/GO 12%(水/溶剂损失); 第二阶段(250-430°C): SF~42%, SF/GO~40%分解",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "diatom-frustule",
+        "constraint": "TGA/DSC热稳定性",
+        "value": "MP/DE三阶段失重：20-238°C物理水(4.517%)，238-410°C结晶水(11.99%)，410-584°C MPTS分解+SiO₂晶型转变(7.86%)。CA/DE三阶段：20-274°C水+CA蒸发(3.6%)，275-554°C CA热降解(13.6%)，554-900°C继续分解(3.3%)",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "spider-silk",
+        "constraint": "纺锤节构建机制——Rayleigh不稳定性",
+        "value": "低粘度/低导电率→电场力无法完全克服表面张力→液膜断裂→液滴串→纺锤形→纺锤节纤维",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "wood-xylem",
+        "constraint": "TGA热稳定性分析",
+        "value": "生物质200-750°C主要热解；生物炭500°C仅~10wt%质量损失→高温稳定",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "wood-xylem",
+        "constraint": "水下力学稳定性",
+        "value": "TCTGAs在水下表现出优异的力学结构稳定性→有利于水处理中的循环回收。普通冷冻法制备的气凝胶无法承受大变形",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "cell-membrane-ion-channel",
+        "constraint": "机械和化学稳定性",
+        "value": "高压后部分塑性变形→但选择性保持; 乙醇/酸碱/反冲洗→性能不降→AWCs无浸出/重溶解",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "cell-membrane-ion-channel",
+        "constraint": "水中浸泡稳定性(4个月)",
+        "value": "浸泡水中4个月→GNM/CS@GNM膜结构不变→渗透率不变(4010±240 L/m²hbar)→油滴完全截留；GO膜4个月后明显损伤",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "cell-membrane-ion-channel",
+        "constraint": "纳米孔法vs插层法——传质通道稳定性",
+        "value": "纳米孔法：传质通道为纳米孔→不易被跨膜压力压缩→渗透率几乎不受压力影响；插层法：增大层间距→高压下层间距被压缩→渗透率急剧下降→纳米孔法在工程应用中更稳定",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "cell-membrane-ion-channel",
+        "constraint": "膜稳定性测试 Stability test results",
+        "value": "120h长期运行通量和截留率基本稳定；在不同压力下通量线性增加且截留率稳定；升高温度时C14lyso膜通量增长斜率大于TFC-0；NaCl浓度增至32000ppm仍保持良好脱盐性能；化学溶液处理后无明显变化",
+        "relevance": "high"
+      }
+    ],
+    "regeneration": [
+      {
+        "prototype_id": "polydopamine-coating",
+        "constraint": "APP3膜的循环稳定性 Cycle stability of APP3 membrane",
+        "value": "25次循环后分离效率达99.86%，通量>2121 L·m⁻²·h⁻¹，表面形貌保持稳定无结构坍塌",
+        "relevance": "high"
+      },
+      {
+        "prototype_id": "polydopamine-coating",
+        "constraint": "循环稳定性 — 5次循环后吸附容量保持",
+        "value": "110",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "polydopamine-coating",
+        "constraint": "镧泄漏量 — 5次循环",
+        "value": "5",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "polydopamine-coating",
+        "constraint": "循环吸附稳定性-重金属去除率保持",
+        "value": ">72",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "polydopamine-coating",
+        "constraint": "循环吸附稳定性-材料回收率",
+        "value": ">82",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "superhydrophobic-artificial",
+        "constraint": "重氮化处理壳聚糖-MOF泡沫-循环吸附二氯甲烷-首次吸附量",
+        "value": "70.7",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "superhydrophobic-artificial",
+        "constraint": "重氮化处理壳聚糖-MOF泡沫-循环吸附二氯甲烷-20次循环后吸附量",
+        "value": "61.7",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "superhydrophobic-artificial",
+        "constraint": "未重氮化壳聚糖-MOF泡沫-循环吸附二氯甲烷-性能衰减",
+        "value": "前8次循环吸附量迅速下降",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "superhydrophobic-artificial",
+        "constraint": "循环再生性能 recyclability",
+        "value": "多次挤压后仍能迅速重新吸附有机物，无有机物泄漏",
+        "relevance": "high"
+      },
+      {
+        "prototype_id": "fish-scale-hydroxyapatite",
+        "constraint": "仿生PVDF-SiO₂多尺度粗糙度→耐循环超疏水",
+        "value": "PVDF+SiO₂→电纺→多尺度粗糙结构→防止水滴进入→优异多循环性能+稳定超疏水性。克服小孔径膜处理高粘油的挑战→多尺度结构使高粘油仍可通过",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "fish-scale-hydroxyapatite",
+        "constraint": "浸泡-干燥循环次数对表面稳定性的影响 Dip-drying repetition effect on stability",
+        "value": "SiO2/PDMS涂层经10次浸泡-干燥循环后，表面活性剂冲击前后接触角差从~20°降至~2°",
+        "relevance": "high"
+      },
+      {
+        "prototype_id": "fish-scale-hydroxyapatite",
+        "constraint": "Fe³⁺-PA/OTMS/PI电纺膜的通量和循环稳定性",
+        "value": "通量8424±105 L·m⁻²·h⁻¹，分离效率>99%，20次循环后仍保持",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "fish-scale-hydroxyapatite",
+        "constraint": "PTFE层层组装不锈钢纤维毡的WCA和循环性能",
+        "value": "WCA 154°（5次循环后），分离效率>98%，30次以上循环",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "fish-scale-hydroxyapatite",
+        "constraint": "PANI/TiO₂可见光催化超疏水网格的通量和循环性能",
+        "value": "油通量170 kL·m⁻²·h⁻¹，100次循环后渗透油纯度>99%",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "fish-scale-hydroxyapatite",
+        "constraint": "再生性能",
+        "value": "5次热处理再生后容量降至498 mg/g(仍较高水平)",
+        "relevance": "high"
+      },
+      {
+        "prototype_id": "mussel-foot-adhesion",
+        "constraint": "MI-PDA的循环稳定性 Cycling stability of MI-PDA",
+        "value": "连续4次循环后催化活性仍保持>71%，吸附性能无明显衰减；催化剂形貌和化学结构在激活PDS后保持稳定",
+        "relevance": "high"
+      },
+      {
+        "prototype_id": "mussel-foot-adhesion",
+        "constraint": "Fe³⁺-PA/OTMS/PI电纺膜的通量和循环稳定性",
+        "value": "通量8424±105 L·m⁻²·h⁻¹，分离效率>99%，20次循环后仍保持",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "mussel-foot-adhesion",
+        "constraint": "PTFE层层组装不锈钢纤维毡的WCA和循环性能",
+        "value": "WCA 154°（5次循环后），分离效率>98%，30次以上循环",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "mussel-foot-adhesion",
+        "constraint": "PANI/TiO₂可见光催化超疏水网格的通量和循环性能",
+        "value": "油通量170 kL·m⁻²·h⁻¹，100次循环后渗透油纯度>99%",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "mussel-foot-adhesion",
+        "constraint": "m-CPMCA燃烧再生循环",
+        "value": "86",
+        "relevance": "high"
+      },
+      {
+        "prototype_id": "mussel-foot-adhesion",
+        "constraint": "循环复用性能 Cycling stability",
+        "value": "3次循环后吸附性能无明显降低",
+        "relevance": "high"
+      },
+      {
+        "prototype_id": "mussel-foot-adhesion",
+        "constraint": "循环吸附稳定性-重金属去除率保持",
+        "value": ">72",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "mussel-foot-adhesion",
+        "constraint": "循环吸附稳定性-材料回收率",
+        "value": ">82",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "mussel-foot-adhesion",
+        "constraint": "解吸再生性能 / Desorption and regeneration performance",
+        "value": "可在碱性条件下解吸，解吸后的吸附剂仍可用于重金属废水的吸附",
+        "relevance": "high"
+      },
+      {
+        "prototype_id": "lotus-leaf",
+        "constraint": "油水分离效率和循环稳定性",
+        "value": "不同油品分离效率均>88%（5次循环后），WCA约158±1°",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "lotus-leaf",
+        "constraint": "仿生PVDF-SiO₂多尺度粗糙度→耐循环超疏水",
+        "value": "PVDF+SiO₂→电纺→多尺度粗糙结构→防止水滴进入→优异多循环性能+稳定超疏水性。克服小孔径膜处理高粘油的挑战→多尺度结构使高粘油仍可通过",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "lotus-leaf",
+        "constraint": "浸泡-干燥循环次数对表面稳定性的影响 Dip-drying repetition effect on stability",
+        "value": "SiO2/PDMS涂层经10次浸泡-干燥循环后，表面活性剂冲击前后接触角差从~20°降至~2°",
+        "relevance": "high"
+      },
+      {
+        "prototype_id": "lotus-leaf",
+        "constraint": "Fe³⁺-PA/OTMS/PI电纺膜的通量和循环稳定性",
+        "value": "通量8424±105 L·m⁻²·h⁻¹，分离效率>99%，20次循环后仍保持",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "lotus-leaf",
+        "constraint": "PTFE层层组装不锈钢纤维毡的WCA和循环性能",
+        "value": "WCA 154°（5次循环后），分离效率>98%，30次以上循环",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "lotus-leaf",
+        "constraint": "PANI/TiO₂可见光催化超疏水网格的通量和循环性能",
+        "value": "油通量170 kL·m⁻²·h⁻¹，100次循环后渗透油纯度>99%",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "lotus-leaf",
+        "constraint": "含再生纤维素双层PVDF-HFP膜 - 含油废水处理",
+        "value": "12.8",
+        "relevance": "high"
+      },
+      {
+        "prototype_id": "sulfate-reducing-bacteria",
+        "constraint": "SRB硫循环耦合其他元素循环",
+        "value": "硫循环与碳/氮/磷循环耦合；硫氧化可与反硝化耦合(硫自养反硝化)→减少N₂O排放；硫化物可作为反硝化的电子供体→同时去除重金属；微生物硫代谢的环境意义：DMS产生→云形成→气候调节",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "0.1 M NaCl再生效率 0.1 M NaCl regeneration efficiency",
+        "value": "Cl-置换NO3-，维持约75%吸附效率",
+        "relevance": "high"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "酸洗脱再生效率 Acid eluent desorption efficiency",
+        "value": "0.5M HCl洗脱: Cd 98.94%, Pb 97.50%（戊二醛交联+聚苯胺接枝壳聚糖珠），4次循环后吸附容量不变",
+        "relevance": "high"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "EDTA洗脱vs酸洗脱 EDTA vs acid eluents for regeneration",
+        "value": "EDTA作为洗脱剂时吸附容量几乎不变；使用HNO3/H2SO4/HCl时后续循环吸附容量显著降低（壳聚糖分解）",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "Fe(III)-交联CS珠粒对Cr(VI)的吸附与再生",
+        "value": "166.3",
+        "relevance": "high"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "VMCP对Cr(VI)的吸附与5次循环",
+        "value": "246.0",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "CH-MNP-CA纳米吸附剂对Pb(II)的循环再利用",
+        "value": "5",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "P-MCS对Co(II)的吸附与循环",
+        "value": "46.1",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "Imprinted magnetic chitosan beads对Ni(II)的循环再利用次数",
+        "value": "15",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "柠檬酸/CS/Fe/PEI珠粒对Cu(II)的吸附与循环",
+        "value": "127",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "壳聚糖珠粒的七大再生方法（Table 9）",
+        "value": "热再生、化学再生、微波辅助、超声、溶剂、超临界流体",
+        "relevance": "high"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "乙基丙烯酸酯接枝壳聚糖(CEA)的再生性能",
+        "value": "0.6 M HCl解吸80 min，解吸率98%",
+        "relevance": "high"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "再生与循环性能",
+        "value": "NaOH浓度0.05→0.20 mol/L→再生效率70.4%→77.5%。再生次数1→2次→77.5%→95.5%。推荐：NaOH 0.02 mol/L, 2次浸泡。4次循环后除氟效率仍达87.5%",
+        "relevance": "high"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "6次吸附-脱附循环",
+        "value": "CR脱附剂：DMF。Cu²⁺脱附剂：0.2 M EDTA-2Na。6次循环→具体保留率数据在Fig. 7中(未在文本中完整给出)。脱附后冻干12h再生",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "Desorption/regeneration - three eluent categories",
+        "value": "(1) Acids/bases: 0.1M HCl in ethanol 60/40 (Cu from amide-cellulose, 5 cycles: 48.1→44.7 mg/g); 1M HCl + 5wt% thiourea (Hg from TO-NFC, 4 cycles: 97.5→93.2%); (2) Metal salts+base: 0.2M NaOH + 0.2M NaCl (Cr from CPA-2, 5 cycles: >80% maintained); (3) Complexing agents: 0.1M EDTA (Pb/Cu/Zn from PAO/BC, 5 cycles: 8.7-12% decrease); 0.05M EDTA-2Na (Cu from PEI aerogel, 4 cycles: high efficiency maintained)",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "吸附剂再生方法",
+        "value": "热处理(活性炭); 简单洗涤(生物炭); pH调节; 溶剂洗脱; 多次再生无显著性能损失",
+        "relevance": "high"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "CTS/CMC/PAA水凝胶对Pb²⁺的再生性能",
+        "value": "98.98",
+        "relevance": "high"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "3D GO/壳聚糖复合物稳定性与可循环性",
+        "value": "高分子量壳聚糖+3D GO可实现5次循环90%吸附容量；壳聚糖/GO海绵>80%再生效率5次循环",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "壳聚糖复合物的再生挑战",
+        "value": "NaOH/酸处理导致壳聚糖逐步水解，吸附容量随循环次数降低",
+        "relevance": "high"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "循环利用性能 Recyclability performance",
+        "value": "EDTA-2Na为脱附剂，循环5个周期后Pb2+和Cu2+去除率仍保持在85%以上",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "壳聚糖基吸附剂的砷解吸与再生 As desorption and regeneration of chitosan-based sorbents",
+        "value": "0.1 M NaOH作为解吸剂可恢复>90%砷去除效率；碱性介质中壳聚糖表面电荷中和导致砷解吸",
+        "relevance": "high"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "重氮化处理壳聚糖-MOF泡沫-循环吸附二氯甲烷-首次吸附量",
+        "value": "70.7",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "重氮化处理壳聚糖-MOF泡沫-循环吸附二氯甲烷-20次循环后吸附量",
+        "value": "61.7",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "未重氮化壳聚糖-MOF泡沫-循环吸附二氯甲烷-性能衰减",
+        "value": "前8次循环吸附量迅速下降",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "循环再生性能 cycling stability",
+        "value": "5次循环后中性红相对脱除率98.82%，刚果红98.19%",
+        "relevance": "high"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "实施例3配方（循环测试对象）",
+        "value": "纤维素纳米纤维2.0g+埃洛石1.5g+玻璃纤维0.25g+PEI-ECH 0.5g/100g水+MTMS疏水改性3min",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "循环使用性能 Cycling performance",
+        "value": "洗脱后循环使用多次，饱和吸附量几乎不下降",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "silk-fibroin",
+        "constraint": "循环再生性能",
+        "value": "EDTA脱附→4次连续吸附/脱附循环后仍可高效再用",
+        "relevance": "high"
+      },
+      {
+        "prototype_id": "silk-fibroin",
+        "constraint": "Cu²⁺再生循环",
+        "value": "EDTA(0.1M)洗脱→蓝变白→可循环；但首次循环后容量有损失(EDTA残留)",
+        "relevance": "high"
+      },
+      {
+        "prototype_id": "silk-fibroin",
+        "constraint": "再生丝素膜——酸性染料吸附",
+        "value": "酸性黄11 Qe=88.50 mg/g(b=1.06); 萘酚橙74.63 mg/g(b=0.30); 直接橙S 76.34 mg/g(b=0.12)",
+        "relevance": "high"
+      },
+      {
+        "prototype_id": "diatom-frustule",
+        "constraint": "无机改性——硅烷/硅藻土对甲醛去除+循环",
+        "value": "去除率79.09%(较原土提高1.59倍)；5次循环后仍65.94%",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "diatom-frustule",
+        "constraint": "全球硅循环——硅藻主导",
+        "value": "全球生物硅产量：200-280 Tmol Si/yr(主要由海洋硅藻产生)。对比：陆生植物硅积累60-200 Tmol Si/yr；硅酸盐风化释放~19-46 Tmol/yr；河流输入海洋溶解硅~5 Tmol Si/yr。淡水硅浓度100-150 μmol/L vs 海洋表层<10 μmol/L(深层≤160 μmol/L)。湖泊硅埋藏率可达1.30 Tmol/yr",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "diatom-frustule",
+        "constraint": "硅藻氮循环——固氮内共生",
+        "value": "硅藻可固氮内共生：Rhopalodiales目硅藻宿主含固氮蓝藻内共生体→在寡营养热带/亚热带地区N循环中起关键作用。低无机氮+低N/P比时→固氮显著贡献N供应→影响高营养级(水生昆虫丰度可增加)",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "magnetic-bacteria",
+        "constraint": "MTB生物地球化学循环功能",
+        "value": "MTB参与六大元素循环：(1)Fe→生物矿化Fe₃O₄/Fe₃S₄+ferrosome铁储存；(2)S→硫氧化/硫酸盐还原(双重代谢)；(3)P→聚磷酸盐积累+穿梭运输(防止富营养化)；(4)C→CBB/rTCA/WL途径固碳(RuBisCO)；(5)N→固氮(N₂→NH₃)；(6)重金属隔离(Se/Te/Cd/Co)",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "magnetic-bacteria",
+        "constraint": "MTB——铁循环与全球铁循环",
+        "value": "MTB全球分布于水生生态系统→可占某些栖息地微生物组~30%→生物矿化假设在沉积物铁循环中重要→太古宙起源→可能在地球历史中持续贡献铁循环；铁可用性限制MTB种群增长→HNLC海洋中尤为显著",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "magnetic-bacteria",
+        "constraint": "MTB——硫循环双重代谢",
+        "value": "Nitrospirae MTB执行氧化还原双重硫代谢：上层微氧层→硫氧化(以硝酸盐/氧气为电子受体)；下层缺氧层→硫酸盐还原；电子穿梭依赖氧化还原条件；硫包涵体(S8)作为中间产物",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "spider-silk",
+        "constraint": "FRR与循环稳定性 Flux recovery and cycling",
+        "value": "FRR 99.98%; 8次循环无显著通量衰减",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "spider-silk",
+        "constraint": "再生性能 Regeneration",
+        "value": "5次循环去除率>99%",
+        "relevance": "high"
+      },
+      {
+        "prototype_id": "wood-xylem",
+        "constraint": "再生性能与循环稳定性",
+        "value": "0.05 mol/L EDTA-2Na洗脱，25°C，3h。5次循环后保持良好吸附性能。可制成压缩过滤装置原型",
+        "relevance": "high"
+      },
+      {
+        "prototype_id": "lobster-exoskeleton",
+        "constraint": "Imprinted magnetic chitosan beads对Ni(II)的循环再利用次数",
+        "value": "15",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "lobster-exoskeleton",
+        "constraint": "柠檬酸/CS/Fe/PEI珠粒对Cu(II)的吸附与循环",
+        "value": "127",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "lobster-exoskeleton",
+        "constraint": "壳聚糖珠粒的七大再生方法（Table 9）",
+        "value": "热再生、化学再生、微波辅助、超声、溶剂、超临界流体",
+        "relevance": "high"
+      }
+    ],
+    "temperature_sensitivity": [
+      {
+        "prototype_id": "superhydrophobic-artificial",
+        "constraint": "裂解温度对吸附性能的影响 pyrolysis temperature effect",
+        "value": "300°C最利于超疏水/亲油性生物炭泡沫去除有机物",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "chlorella-cell-wall",
+        "constraint": "温度对藻类染料吸附的影响 Effect of temperature on algal dye adsorption",
+        "value": "温度升高导致吸附量降低，表明生物吸附过程的放热性质。Caulerpa scalpelliformis对Sandocryl Golden Yellow C-2G的吸附量从20°C时的28 mg/g降低到60°C时的23 mg/g",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "chlorella-cell-wall",
+        "constraint": "热解温度对生物炭性质的影响 Effect of pyrolysis temperature",
+        "value": "热解温度升高：(1)含氧官能团减少——300-400°C含多样化脂肪族和纤维素结构，600-700°C高度芳香化；(2)pH升高——300°C时3.93升至600°C时11.8(Eucheuma spinosum)；(3)生物炭产率下降约10%/100°C；(4)CEC和灰分含量增加；(5)>900°C生物炭壁退化，孔径增大",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "mussel-foot-adhesion",
+        "constraint": "反应温度 / Reaction temperature",
+        "value": "20-40°C（较佳范围）；30°C（最佳）",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "mussel-foot-adhesion",
+        "constraint": "吸附操作温度 Adsorption operating temperature",
+        "value": "25±0.2",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "lotus-leaf",
+        "constraint": "Ceramic hollow fiber sintering temperature for polymer burn-off",
+        "value": "600",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "lotus-leaf",
+        "constraint": "Ceramic hollow fiber sintering temperature for particle consolidation",
+        "value": "1225",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "lotus-leaf",
+        "constraint": "Sol-gel calcination temperature for template removal",
+        "value": "400",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "lotus-leaf",
+        "constraint": "Sol-gel calcination temperature range",
+        "value": "400-500",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "温度对BPA吸附的影响 Temperature effect on BPA adsorption",
+        "value": "BPA吸附通常是放热过程(温度升高吸附容量下降)；但某些材料因表面化学或孔结构变化在高温下吸附容量反而增加",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "Temperature effect and thermodynamics",
+        "value": "Optimal temperature 25-35°C for most studies; can be endothermic or exothermic",
+        "relevance": "medium"
+      }
+    ],
+    "pH_sensitivity": [
+      {
+        "prototype_id": "superhydrophobic-artificial",
+        "constraint": "pH稳定性 pH stability",
+        "value": "pH 1-11范围内吸附容量变化不大，保持很好的疏水性和吸附性",
+        "relevance": "high"
+      },
+      {
+        "prototype_id": "fish-scale-hydroxyapatite",
+        "constraint": "智能响应膜：光/pH/温度/等离子体可切换润湿性",
+        "value": "1）光响应：TiO₂光催化→UV照射→亲水+光降解有机物→MB可被完全降解。TiO₂@PVDF/PAN核壳→避免TiO₂团聚→UV 1h→分解87%罗丹明B。2）pH响应：PVDF-g-PAA树状纤维→中性水中超亲水+水下疏油→pH 2.0中疏水+超亲油；SNP/DA-TiO₂/PI膜→pH≥12时从超疏水变为超亲水。3）可逆切换：Cu网+Au+疏水分子→O₂等离子体→超亲水/水下超疏油→加热→恢复→可逆双向分离",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "fish-scale-hydroxyapatite",
+        "constraint": "交联剂提高疏水稳定性 Crosslinking agents for hydrophobic stability",
+        "value": "Kymene 557H（含羧基）和环氧氯丙烷用于增强纳米材料与纤维素织物/纤维之间的连接",
+        "relevance": "high"
+      },
+      {
+        "prototype_id": "fish-scale-hydroxyapatite",
+        "constraint": "超疏油膜 harsh condition 稳定性 Superoleophobic harsh condition stability",
+        "value": "酸性0.1-1 M HCl或pH=1；碱性0.1-1 M NaOH或pH=11-13；盐浓度0.1-1 M或5-10 wt% NaCl；浸泡2-8 M H2SO4 10 min-30天；水中浸泡90天",
+        "relevance": "high"
+      },
+      {
+        "prototype_id": "fish-scale-hydroxyapatite",
+        "constraint": "双刺激响应膜（UV+pH）的可逆润湿性切换和光催化降解",
+        "value": "UV或pH单独作用→疏水；UV+pH协同→亲水；UV照射可降解多种污染物",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "chlorella-cell-wall",
+        "constraint": "pH对藻类染料吸附的影响 Effect of pH on algal dye adsorption",
+        "value": "低pH时藻类表面带正电荷，有利于阴离子染料通过静电吸引吸附；高pH时表面带负电荷，有利于阳离子染料吸附。Caulerpa scalpelliformis对Sandocryl Golden Yellow C-2G的吸附量从pH 3.0时的17 mg/g增加到pH 8.0时的27 mg/g",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "mussel-foot-adhesion",
+        "constraint": "双刺激响应膜（UV+pH）的可逆润湿性切换和光催化降解",
+        "value": "UV或pH单独作用→疏水；UV+pH协同→亲水；UV照射可降解多种污染物",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "mussel-foot-adhesion",
+        "constraint": "pH响应润湿性反转机制 pH-responsive wettability reversal mechanism",
+        "value": "可离子化和可水解聚合物响应pH变化质子化/去质子化，改变水合状态，在亲水和疏水间切换",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "mussel-foot-adhesion",
+        "constraint": "多巴胺水溶液pH调节 / Dopamine solution pH adjustment",
+        "value": "pH 7.5-9.5（较佳范围）；pH 8.5（最佳）",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "mussel-foot-adhesion",
+        "constraint": "铀去除率 Uranium removal rate (pH≥5)",
+        "value": ">90",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "mussel-foot-adhesion",
+        "constraint": "特定条件下去除率 Removal rate at pH 3.0",
+        "value": "97.3",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "mussel-foot-adhesion",
+        "constraint": "适用pH范围 Applicable pH range",
+        "value": "1-6.5",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "mussel-foot-adhesion",
+        "constraint": "材料形貌与稳定性 / Material morphology and stability",
+        "value": "尺寸均一，形貌规整，在环境中易生物降解，易回收，可循环使用",
+        "relevance": "high"
+      },
+      {
+        "prototype_id": "lotus-leaf",
+        "constraint": "PDMAEMA-b-PMMA pH响应膜性能 PDMAEMA-b-PMMA pH-responsive membrane performance",
+        "value": "可分离三元混合物并有效去除Pb²⁺(最高90.83%)，宽pH范围适用",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "lotus-leaf",
+        "constraint": "智能响应膜：光/pH/温度/等离子体可切换润湿性",
+        "value": "1）光响应：TiO₂光催化→UV照射→亲水+光降解有机物→MB可被完全降解。TiO₂@PVDF/PAN核壳→避免TiO₂团聚→UV 1h→分解87%罗丹明B。2）pH响应：PVDF-g-PAA树状纤维→中性水中超亲水+水下疏油→pH 2.0中疏水+超亲油；SNP/DA-TiO₂/PI膜→pH≥12时从超疏水变为超亲水。3）可逆切换：Cu网+Au+疏水分子→O₂等离子体→超亲水/水下超疏油→加热→恢复→可逆双向分离",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "lotus-leaf",
+        "constraint": "交联剂提高疏水稳定性 Crosslinking agents for hydrophobic stability",
+        "value": "Kymene 557H（含羧基）和环氧氯丙烷用于增强纳米材料与纤维素织物/纤维之间的连接",
+        "relevance": "high"
+      },
+      {
+        "prototype_id": "lotus-leaf",
+        "constraint": "超疏油膜 harsh condition 稳定性 Superoleophobic harsh condition stability",
+        "value": "酸性0.1-1 M HCl或pH=1；碱性0.1-1 M NaOH或pH=11-13；盐浓度0.1-1 M或5-10 wt% NaCl；浸泡2-8 M H2SO4 10 min-30天；水中浸泡90天",
+        "relevance": "high"
+      },
+      {
+        "prototype_id": "lotus-leaf",
+        "constraint": "双刺激响应膜（UV+pH）的可逆润湿性切换和光催化降解",
+        "value": "UV或pH单独作用→疏水；UV+pH协同→亲水；UV照射可降解多种污染物",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "lotus-leaf",
+        "constraint": "Hydrophobic surface immersion drying temperature",
+        "value": "60-100",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "lotus-leaf",
+        "constraint": "超疏水材料的耐久性与稳定性 Durability and stability of superhydrophobic materials",
+        "value": "多种超疏水材料在pH 1-13和强紫外照射下仍保持>150°接触角；PSF/FEP混合基质膜10次循环后油水分离效率仍达99.79%-99.47%",
+        "relevance": "high"
+      },
+      {
+        "prototype_id": "lotus-leaf",
+        "constraint": "超疏水铜网耐久性：pH和温度稳定性",
+        "value": "pH稳定性：铜网浸入不同pH溶液5min→自然干燥→测CA。pH 2强酸→CA显著降至约120°→超疏水性丧失。强碱溶液→CA仍保持150°。其他pH→CA保持>150°。温度稳定性：铜网置于热板上5min→不同温度。50-200°C→CA保持>160°→无显著变化。250°C→CA开始显著下降。300°C→CA降至120°→超疏水性丧失。结论：化学稳定性有限(强酸侵蚀)→热稳定性在250°C以下良好",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "bone-structure",
+        "constraint": "pH范围限制 pH constraint",
+        "value": "仅测试pH 4-6，pH>6未研究(因Cu²⁺沉淀)",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "pH对氮污染物吸附的影响机制 pH effect on N-pollutants adsorption",
+        "value": "低pH适合去除硝酸盐（正电荷表面静电吸引负电NO3-）；高pH适合去除氨（去质子化活性基团）",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "pH范围限制 pH constraint",
+        "value": "仅测试pH 4-6，pH>6未研究(因Cu²⁺沉淀)",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "pH对BPA吸附的影响 pH effect on BPA adsorption",
+        "value": "pH 2-8范围内对去除效率影响较小；pH 9-11时BPA吸附效率下降(BPA在pH>8开始去质子化，阴离子形态与带负电吸附剂表面产生静电排斥)",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "CWF-2c15对Cr(VI)的吸附效率（pH=5）",
+        "value": "87%",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "pH effect on adsorption - optimal range",
+        "value": "Optimal pH typically 4-6 for most studies; adsorption capacity increases with pH up to optimum",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "Zeta potential and pH relationship - Hg2+ example",
+        "value": "TO-NFC aerogel: highest adsorption efficiency ~97% at pH 5-9; zeta potential highly negative at -33 mV in this range; 80% efficiency even at pH 1",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "pH-dependent complex formation / pH依赖的络合形成",
+        "value": "pH < 5.3: zero/minimal complex formation; pH 5.3-5.8: one -NH2 forms metal complex; pH > 5.8: second -NH2 incorporated forming [Cu(-NH2)2]2+ stable up to pH ~7.7; pH > 7.7: Cu(OH)2 precipitation",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "最佳pH值 Optimal pH",
+        "value": "6",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "pH对吸附性能的影响 Effect of pH on adsorption",
+        "value": "pH 4~7范围内两种材料(PSC和CCC)均表现出稳定的吸附性能；pH=7时Pb2+和Cu2+最大吸附容量均为12.36mg/g和8.31mg/g；pH 2~3时吸附容量较低",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "pH对砷吸附的影响 pH effect on arsenic adsorption",
+        "value": "As(V)吸附随pH升高先增后减(最优pH 6.7)；As(III)在pH 5-9范围内吸附不受pH影响(因中性态)，pH>9时吸附下降",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "壳聚糖的溶解性与pH敏感性 Solubility and pH sensitivity of chitosan",
+        "value": "壳聚糖为弱碱，酸性条件下通过氨基质子化溶解(NH3+)，碱性条件下脱质子化凝胶化；乙酸对壳聚糖分子量影响最温和",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "pH对Sb去除率的影响 Effect of pH on Sb removal",
+        "value": "pH 1-7范围内Sb去除率均>80%，最高93.12%(pH=1)；pH=9时降至46.56%",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "pH对Cr去除率的影响 Effect of pH on Cr removal",
+        "value": "pH 1-9范围内C-FeS对Cr去除始终>85%；PFS也>85%；PAC<22%(pH=9)",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "反应时间对Sb去除的影响(实施例1, pH=5) Effect of reaction time on Sb removal (Example 1, pH=5)",
+        "value": "5min: 82.5%；10min: 92.85%(最大)",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "反应时间对Cr去除的影响(实施例1, pH=5) Effect of reaction time on Cr removal (Example 1, pH=5)",
+        "value": "5min: 75%；10min: 81%",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "羧甲基壳聚糖vs普通壳聚糖的pH适用范围对比 CMC vs chitosan pH range comparison",
+        "value": "羧甲基壳聚糖：pH 1-7均>80%；普通壳聚糖：仅pH=1时93.12%，随pH升高显著降低",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "复配絮凝剂投加量和pH范围 Dosage and pH range of flocculant",
+        "value": "投加量0.5-1.5g/L(优选1.0g/L)，pH适用范围1-7",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "chitosan",
+        "constraint": "实际印染废水pH适配性 Real dyeing wastewater pH compatibility",
+        "value": "实际印染废水pH一般在3-6之间，本发明絮凝剂在pH 1-7范围内均有效，无需额外调pH",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "mycelium",
+        "constraint": "pH对真菌吸附的影响 pH effect on fungal adsorption",
+        "value": "pH 6.0时球孢白僵菌Z1对Cd²⁺去除率56.17%；pH过低→H⁺竞争位点；pH过高→金属氢氧化物沉淀",
+        "relevance": "medium"
+      },
+      {
+        "prototype_id": "cell-membrane-ion-channel",
+        "constraint": "pH稳定性",
+        "value": "GNM/CS@GNM膜在pH 3.0-11.0范围内渗透率稳定→膜形态可保证此pH范围稳定运行",
+        "relevance": "medium"
+      }
+    ],
+    "salinity_tolerance": []
+  },
+  "layer1_scoring": {
+    "description": "条件预筛使用 tested_conditions 做软降权，不硬排除",
+    "rules": [
+      {
+        "condition": "查询 pH 在 tested_ph_range 内",
+        "weight_multiplier": 1.0,
+        "note": "正常权重"
+      },
+      {
+        "condition": "查询 pH 在 tested_ph_range 外但在 ±2 内",
+        "weight_multiplier": 0.5,
+        "note": "软降权"
+      },
+      {
+        "condition": "查询 pH 远离 tested_ph_range（>±2）",
+        "weight_multiplier": 0.2,
+        "note": "大幅降权但不排除"
+      },
+      {
+        "condition": "tested_ph_range 为 null（未测试）",
+        "weight_multiplier": 1.0,
+        "note": "不降权（未测试 ≠ 不适用）"
+      }
+    ],
+    "temperature": "同理处理 tested_temp_range",
+    "rationale": "只在 pH 5-7 测过的原型不能对 pH 8 的查询直接判出局，数据稀疏时不硬排除"
+  }
+}
