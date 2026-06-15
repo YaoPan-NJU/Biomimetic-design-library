@@ -1,111 +1,142 @@
-# 跨设备交接快照 — 2026-06-15
+# 跨设备交接快照 — 2026-06-15（Phase 9 后）
 
-用途：从当前电脑切换到家里电脑继续 Phase 8 patch、Phase 9、最终 review。本文只压缩上下文，不替代阶段报告。
+用途：把办公室电脑上的最新上下文压缩给家里电脑、家里 Codex 和本地 AI。本文是“接着干什么”的入口，不替代阶段报告。
+
+## 一句话状态
+
+Phase 0-9 已完成，final acceptance review 已通过，`opt/curation-grounding-v1` 的成果已经合入并推送到 `adsorption/dev`。回家后不要再启动 Phase 9；先同步 `adsorption/dev`，复跑验收，再进入“证据增强 review”。
 
 ## 当前仓库状态
 
-- 当前工作目录：`C:\Users\15995\Biomimetic-design-library`
-- 当前分支：`opt/curation-grounding-v1`
-- 远端跟踪：`origin/opt/curation-grounding-v1`
-- 当前 HEAD：`333b092 @ Phase 8 patch: 修复 review 发现的 schema/护栏问题`
-- 当前分支比远端领先 3 个已提交 commit：
-  - `437eb9f @ Phase 7.5: 修复接口候选排序诚实度 + pitcher-plant function 字段`
-  - `53dff3c @ Phase 8: 失效边界补全 + DO-NOT 导出`
-  - `333b092 @ Phase 8 patch: 修复 review 发现的 schema/护栏问题`
-- Phase 8 patch 已提交；Phase 9 尚未开始。
+- 办公室工作目录：`C:\Users\15995\Biomimetic-design-library`
+- 当前应使用分支：`adsorption/dev`
+- 源工作分支：`opt/curation-grounding-v1`
+- 远端：`origin`
+- 已接受的关键 commit：
+  - `333b092`：Phase 8 patch，修复 boundary schema/护栏问题
+  - `ccded69`：Phase 9，打包与总验收
+  - `bac696a`：Phase 9 acceptance patch，修正最终文档和示例目录
+- 办公室最后核对时：`adsorption/dev`、`origin/adsorption/dev`、`opt/curation-grounding-v1`、`origin/opt/curation-grounding-v1` 均指向 `bac696a`。
 
-## Phase 8 Patch 快照
+如果回家后看到的最新 commit 不是 `bac696a` 或更新的文档交接 commit，先不要 review，先同步仓库。
 
-Phase 8 patch 已在 `333b092` 提交，包含：
+## 已完成内容
 
-- `docs/optimization-v1/phase8-report.md`
-- `exports/adrmats_do_not.json`
-- `prototypes_db/plant-tannin.json`
-- `prototypes_db/silk-fibroin.json`
-- `prototypes_db/sulfate-reducing-bacteria.json`
-- `tools/check_boundary_guardrail.py`
+### Phase 8 Patch
 
-这些修改对应已发现的 Phase 8 放行前问题：
+`333b092` 已修复：
 
-1. `plant-tannin` 的 B 档 boundary 在 `condition.value` 中残留数值 `[10]`。
-2. `silk-fibroin` 两处 B 档 boundary 在 `condition.value` 中残留数值 `[2, 11]`。
-3. `sulfate-reducing-bacteria` 的 SRB 厌氧 boundary 原本 `basis=from_source`，但只有 `locator="biology knowledge"`，没有真实 PDF locator/quote，也没有 `verification`。
-4. `check_boundary_guardrail.py` 初版只查 `text` 数字，不查 `condition.operator/value`，存在盲区。
+- `plant-tannin` B 档 boundary 的隐藏数值 `[10]`
+- `silk-fibroin` 两条 B 档 boundary 的隐藏数值 `[2,11]`
+- `sulfate-reducing-bacteria` 的 SRB 厌氧 boundary 从伪 `from_source` 降回 `llm_inferred / needs_review / soft`
+- `tools/check_boundary_guardrail.py` 升级为 8 项检查，覆盖必填字段、basis 合法性、condition.value、locator、verification 等
 
-## 已确认的重要结论
+### Phase 9
 
-### Phase 7.5
+`ccded69` 已完成：
 
-Phase 7.5 修复了接口排序诚实度问题：
+- 刷新 `exports/adrmats_do_not.json`
+- 生成 4 个新版 ADRMATS brief 示例
+- 更新 `README.md`
+- 更新 `docs/SUPPORT_SCOPE_AND_RISKS.md`
+- 创建 `docs/optimization-v1/FINAL-report.md`
+- 修复 `check_repo_hygiene.py` 暴露的治理问题
 
-- `query()` 不再盲取 `mechanisms[0]`。
-- 候选机制按 verification 优先级选择。
-- `needs_review` 机制不会再以普通置信度进入强排序。
-- `verify_adrmats_delivery.py` 已适配 `confidence` 字段。
+### Final Acceptance Patch
 
-此前实际验收结果：
+`bac696a` 已完成：
+
+- 对齐 README、SUPPORT、FINAL-report 的最终状态表述
+- 移走 `examples/adrmats_briefs/` 中的旧中文示例
+- 保留 4 个新版 `brief_*.json` 作为官方示例
+- 复跑后 `check_repo_hygiene.py` PASS
+
+## 当前硬指标
+
+| 指标 | 当前值 |
+|---|---:|
+| active 原型 | 24 |
+| materials_reference | 4 |
+| parked | 1 |
+| 机制总数 | 534 |
+| 合格因果链卡 | 28 |
+| PDF 已核验 verified | 23 |
+| boundary_conditions | 62 |
+| hard DO-NOT | 0 |
+| soft caution | 62 |
+| official brief examples | 4 |
+| 校验错误 | 0 |
+| chimera 违规 | 0 |
+
+## 已通过的验收
+
+办公室最终验收已确认：
 
 - `verify_adrmats_delivery.py`：6/6 PASS
-- PFOA / SMX / BPA 不再伪装 direct evidence
-- Pb(II) 前排 direct evidence 候选展示 verified 机制
+- `check_boundary_guardrail.py`：8 项全绿，62 BC，0 hard，62 soft
+- `export_do_not.py`：导出 62 条，覆盖 24 个原型
+- `test_interface_honesty.py`：3/3 PASS
+- `check_translation_specificity.py`：25/25 合格
+- `check_chimera.py --strict`：0 违规
+- `validate_consistency.py`：0 error，193 个既有 warning
+- `check_repo_hygiene.py`：PASS
+- `examples/adrmats_briefs/`：仅 4 个新版 `brief_*.json`，均包含 `rule_based_cautions`
 
-### Phase 8
+注意：`tools/check_causal_chain.py` 可能会重写 `docs/optimization-v1/phase5-chains.md`。如果只是复核，不要把它产生的无意 diff 提交；先看 `git status`。
 
-Phase 8 初版完成：
+## 剩余风险
 
-- 24 个 active 原型都有 boundary condition。
-- 28 个 qualified 机制都有 BC。
-- 当前导出应为 62 条 boundary。
-- 当前硬 DO-NOT 为 0。
-- 当前 soft caution 为 62。
+这些不是 Phase 9 blocker，但会影响后续证据质量：
 
-Phase 8 初版不能直接进入 Phase 9；现在 Phase 8 patch 已完成并通过关键 gate，可以进入 Phase 9。
-
-## 当前阻断项
-
-Phase 9 还没有开始。Phase 8 patch 的关键 gate 已通过：
-
-1. `check_boundary_guardrail.py`：PASS，62 条 BC，0 hard DO-NOT，62 soft caution。
-2. `verify_adrmats_delivery.py`：6/6 PASS。
-3. `export_do_not.py`：成功导出 62 条 boundary，涉及 24 个原型。
-
-当前剩余阻断项转移到 Phase 9：
-
-1. `check_repo_hygiene.py` 之前仍有治理失败，需要 Phase 9 修到 PASS。
-2. README / SUPPORT / FINAL-report 需要和真实统计对齐。
-3. Phase 9 examples 不能把 `needs_review` 写进 facts 或强排序。
-
-## 关键铁律
-
-- 严禁运行 `tools/build_prototypes_db.py`。
-- canon 唯一真源是 `prototypes_db/*.json`。
-- `needs_review` 可以存在，但不能进入强排序、facts、hard DO-NOT、verified 证据链。
-- `llm_inferred` 永不升级为 `verified`。
-- B 档和未核验 C 档 boundary 只能定性，不能携带数值阈值。
-- 具体数值阈值只能出现在 A 档：`basis=from_source` 且 `verification=verified/corroborated` 且有真实 locator + quote。
-- Phase 9 是打包和总验收阶段，必须在 Phase 8 patch gate 通过后再启动。
+1. **0 hard DO-NOT / 62 soft caution**：当前所有边界都是软提示，没有 PDF 逐条核验的硬约束。
+2. **5 个原型待文献下载**：coral-skeleton、magnetic-bacteria、pitcher-plant、lobster-exoskeleton、spider-silk。
+3. **silk-fibroin 重复机制**：两个同名“吸附机制”及重复 BC，属于既有数据质量问题。
+4. **大量 needs_review**：低置信候选可以出现，但已经标为 `confidence: low`，不会冒充 verified。
 
 ## 回家后第一步
 
-如果家里电脑是原始文件所在地，请先确认：
+在家里电脑执行：
 
 ```powershell
 cd <家里电脑的 Biomimetic-design-library 路径>
 git status --short --branch
-git log --oneline --decorate -n 8
+git fetch origin
+git checkout adsorption/dev
+git pull --ff-only origin adsorption/dev
+git log --oneline --decorate -n 10
 ```
 
-需要看到：
+期望至少看到：
 
-- 当前分支是 `opt/curation-grounding-v1`
-- 已包含 `437eb9f`、`53dff3c`、`333b092`
-- 如果家里电脑没有 `333b092`，先不要开 Phase 9；需要先同步 Phase 8 patch。
+```text
+bac696a @ Phase 9 patch: align final docs and examples after acceptance review
+ccded69 @ Phase 9: 打包与总验收
+333b092 @ Phase 8 patch: 修复 review 发现的 schema/护栏问题
+```
 
-同步方式二选一：
+如果看不到 `bac696a`，不要继续 review，先解决同步问题。
 
-1. 当前电脑 push 当前分支，然后家里电脑 pull。
-2. 如果不能 push，把 `333b092` patch 或整个仓库状态打包带回家，再在家里电脑应用。
+## 家里 Codex / 本地 AI 应先读这些文件
 
-## 推荐下一步
+按顺序读：
+
+1. `README.md`
+2. `docs/SUPPORT_SCOPE_AND_RISKS.md`
+3. `docs/optimization-v1/FINAL-report.md`
+4. `docs/optimization-v1/CROSS_DEVICE_HANDOFF_20260615.md`
+5. `docs/optimization-v1/HOME_PHASE9_WORK_PLAN_20260615.md`
+6. `docs/optimization-v1/DEFINITIONS.md`
+7. `docs/optimization-v1/literature-requests.md`
+
+## 禁令
+
+- 不要再跑 Phase 9。
+- 不要运行 `tools/build_prototypes_db.py`。
+- 不要把 `needs_review` 自动改成 `verified`。
+- 不要为了让脚本全绿而删除风险记录。
+- 不要把 soft caution 写成 hard DO-NOT。
+- 不要在没有真实 source locator + quote 的情况下写数值阈值。
+
+## 下一步入口
 
 继续按 `docs/optimization-v1/HOME_PHASE9_WORK_PLAN_20260615.md` 执行。

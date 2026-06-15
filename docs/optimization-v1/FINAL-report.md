@@ -1,7 +1,8 @@
 # FINAL Report — 仿生库整改总验收
 
-> 分支：`opt/curation-grounding-v1`
-> 当前 HEAD：`ccded69`（Phase 9: 打包与总验收）
+> 分支：`adsorption/dev`（由 `opt/curation-grounding-v1` 合入）
+> Phase 9 commit：`ccded69`（Phase 9: 打包与总验收）
+> Final acceptance patch：`bac696a`
 > Phase 8 patch：`333b092`
 > 日期：2026-06-15
 
@@ -22,7 +23,8 @@
 | 7.5 | 接口候选排序诚实度 | `437eb9f` | ✅ |
 | 8 | 失效边界+DO-NOT | `53dff3c` | ✅ |
 | 8 patch | schema/护栏修复 | `333b092` | ✅ |
-| 9 | 打包与总验收 | 本报告 | ✅ |
+| 9 | 打包与总验收 | `ccded69` | ✅ |
+| 9 patch | final acceptance 文档/examples 对齐 | `bac696a` | ✅ |
 
 ---
 
@@ -147,16 +149,16 @@ All 3 tests PASSED
 
 ---
 
-## 7. 是否建议入库
+## 7. 入库结论
 
-**待 final acceptance review**。
+**final acceptance review 已通过，建议以当前状态入库；成果已合入 `adsorption/dev`。**
 
-当前状态：Phase 9 打包完成，全套验收脚本全绿。但以下事项需 final review 确认：
+当前状态：Phase 9 打包完成，全套验收脚本全绿，README / SUPPORT / FINAL-report / examples 已在 `bac696a` 对齐。以下事项保留为后续证据增强 review，不再作为 Phase 9 blocker：
 
-- 0 硬 DO-NOT 是否可接受（当前全部是 soft caution）
-- 5 个无对口 PDF 的原型边界是否足够
-- 是否需要抽查 PDF 证据链
-- README / SUPPORT 文档是否与真实统计一致
+- 当前硬 DO-NOT 为 0，全部边界仍是 soft caution。
+- 5 个无对口 PDF 的原型边界仍需学生下载文献后核验。
+- 可继续抽查 PDF 证据链，把满足 A 档标准的 soft caution 升级为 hard DO-NOT。
+- silk-fibroin 重复机制留待后续数据清理。
 
 ---
 
@@ -170,4 +172,4 @@ All 3 tests PASSED
 
 ---
 
-*Phase 9 完成，待 final acceptance review。*
+*Phase 9 与 final acceptance review 已完成；后续进入证据增强 review。*
