@@ -924,14 +924,11 @@
         },
         "boundary_conditions": [
           {
-            "text": "pH > 8.5时邻苯二酚氧化为醌，丧失配位能力",
+            "text": "碱性条件下邻苯二酚氧化为醌，丧失双齿配位能力",
             "parameter": "pH",
             "condition": {
-              "operator": "threshold_gt",
-              "value": [
-                8.5
-              ],
-              "basis_note": "定性，无PDF精确阈值"
+              "operator": "qualitative",
+              "value": null
             },
             "basis": "llm_inferred",
             "verification": "needs_review",
@@ -953,6 +950,20 @@
             "locator": null,
             "quote": null,
             "source_asset": null
+          },
+          {
+            "text": "弱酸性以下DOPA自聚合速率极慢，涂层难以形成",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": "CM-002: catechol-low-ph-suppression"
           }
         ],
         "transferable_principle": "邻苯二酚基团可在湿态、高盐条件下通过双齿配位捕获软金属离子，可迁移到任何含catechol功能化的材料表面",
@@ -1176,14 +1187,11 @@
         },
         "boundary_conditions": [
           {
-            "text": "pH < 6时自聚合速率极慢，涂层难以形成",
+            "text": "弱酸性以下自聚合速率极慢，涂层难以形成",
             "parameter": "pH",
             "condition": {
-              "operator": "threshold_lt",
-              "value": [
-                6
-              ],
-              "basis_note": "定性"
+              "operator": "qualitative",
+              "value": null
             },
             "basis": "llm_inferred",
             "verification": "needs_review",
@@ -1205,6 +1213,34 @@
             "locator": null,
             "quote": null,
             "source_asset": null
+          },
+          {
+            "text": "弱酸性以下DOPA自聚合速率极慢，涂层难以形成",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": "CM-002: catechol-low-ph-suppression"
+          },
+          {
+            "text": "碱性条件下邻苯二酚氧化为醌，丧失双齿配位能力",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": "CM-003: catechol-oxidation-quinone"
           }
         ],
         "transferable_principle": "多巴胺自聚可在任意基底上沉积含catechol/amine的活性涂层，是通用的表面功能化平台技术",
@@ -1312,14 +1348,11 @@
             "source_asset": null
           },
           {
-            "text": "pH < 4时酰胺肟基团质子化，配位能力下降",
+            "text": "酸性条件下酰胺肟基团质子化，配位能力下降",
             "parameter": "pH",
             "condition": {
-              "operator": "threshold_lt",
-              "value": [
-                4
-              ],
-              "basis_note": "定性"
+              "operator": "qualitative",
+              "value": null
             },
             "basis": "llm_inferred",
             "verification": "needs_review",
@@ -1327,6 +1360,34 @@
             "locator": null,
             "quote": null,
             "source_asset": null
+          },
+          {
+            "text": "弱酸性以下DOPA自聚合速率极慢，涂层难以形成",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": "CM-002: catechol-low-ph-suppression"
+          },
+          {
+            "text": "碱性条件下邻苯二酚氧化为醌，丧失双齿配位能力",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": "CM-003: catechol-oxidation-quinone"
           }
         ],
         "transferable_principle": "酰胺肟功能化可在海水条件下选择性捕获铀酰离子，可迁移到任何含酰胺肟基团的吸附材料",

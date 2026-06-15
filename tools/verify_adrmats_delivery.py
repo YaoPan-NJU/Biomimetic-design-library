@@ -148,6 +148,19 @@ def validate_brief_structure(brief, test_name):
             if field not in hl:
                 errors.append(f"honesty_ledger 缺少 {field}")
 
+    # 检查 rule_based_cautions
+    if 'rule_based_cautions' not in b:
+        errors.append("缺少 rule_based_cautions")
+    else:
+        rbc = b['rule_based_cautions']
+        if 'do_not' not in rbc or 'cautions' not in rbc:
+            errors.append("rule_based_cautions 缺少 do_not 或 cautions")
+        else:
+            # 检查 hard cautions 的 verification 必须是 verified/corroborated
+            for item in rbc.get('do_not', []):
+                if item.get('verification') not in ('verified', 'corroborated'):
+                    errors.append(f"rule_based_cautions.do_not 中有 verification={item.get('verification')} 的条目（应为 verified/corroborated）")
+
     return errors
 
 

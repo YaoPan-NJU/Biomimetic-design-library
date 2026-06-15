@@ -873,14 +873,11 @@
         },
         "boundary_conditions": [
           {
-            "text": "pH < 4时氨基质子化，配位能力下降",
+            "text": "酸性条件下氨基质子化，配位能力下降",
             "parameter": "pH",
             "condition": {
-              "operator": "threshold_lt",
-              "value": [
-                4
-              ],
-              "basis_note": "定性"
+              "operator": "qualitative",
+              "value": null
             },
             "basis": "llm_inferred",
             "verification": "needs_review",
@@ -888,6 +885,20 @@
             "locator": null,
             "quote": null,
             "source_asset": null
+          },
+          {
+            "text": "酸性条件下硅醇基团质子化，配位能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": "domain_knowledge"
           }
         ],
         "transferable_principle": "多孔无机骨架（如SiO₂）表面氨基功能化可提供高密度配位位点，捕获软酸金属离子",

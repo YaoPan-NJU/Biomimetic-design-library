@@ -2336,14 +2336,11 @@
         },
         "boundary_conditions": [
           {
-            "text": "pH < 3时壳聚糖溶解，失去吸附能力",
+            "text": "强酸性条件下壳聚糖溶解，失去吸附能力",
             "parameter": "pH",
             "condition": {
-              "operator": "threshold_lt",
-              "value": [
-                3
-              ],
-              "basis_note": "定性"
+              "operator": "qualitative",
+              "value": null
             },
             "basis": "llm_inferred",
             "verification": "needs_review",
@@ -2353,14 +2350,11 @@
             "source_asset": null
           },
           {
-            "text": "pH > 8时氨基去质子化，对阴离子吸附能力下降",
+            "text": "碱性条件下氨基去质子化，对阴离子吸附能力下降",
             "parameter": "pH",
             "condition": {
-              "operator": "threshold_gt",
-              "value": [
-                8
-              ],
-              "basis_note": "定性"
+              "operator": "qualitative",
+              "value": null
             },
             "basis": "llm_inferred",
             "verification": "needs_review",
@@ -2382,6 +2376,20 @@
             "locator": null,
             "quote": null,
             "source_asset": null
+          },
+          {
+            "text": "强酸性条件下壳聚糖溶解，氨基完全质子化失去配位能力",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": "CM-004: amino-protonation-anion-adsorption"
           }
         ],
         "transferable_principle": "含氨基聚合物在酸性条件下通过质子化-静电吸引捕获阴离子污染物，在中性条件下通过配位捕获金属离子——pH是切换机制的开关",
@@ -2439,14 +2447,11 @@
         },
         "boundary_conditions": [
           {
-            "text": "pH < 3时氨基完全质子化，失去配位能力",
+            "text": "强酸性条件下氨基完全质子化，失去金属配位能力",
             "parameter": "pH",
             "condition": {
-              "operator": "threshold_lt",
-              "value": [
-                3
-              ],
-              "basis_note": "定性"
+              "operator": "qualitative",
+              "value": null
             },
             "basis": "llm_inferred",
             "verification": "needs_review",
@@ -2468,6 +2473,34 @@
             "locator": null,
             "quote": null,
             "source_asset": null
+          },
+          {
+            "text": "强酸性条件下壳聚糖溶解，氨基完全质子化失去配位能力",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": "CM-004: amino-protonation-anion-adsorption"
+          },
+          {
+            "text": "碱性条件下氨基去质子化，对阴离子吸附能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": "CM-005: amino-deprotonation-metal-coordination"
           }
         ],
         "transferable_principle": "含-NH₂/-OH双齿配位位点的聚合物可按HSAB原理选择性捕获软酸金属离子，Ca²⁺/Mg²⁺竞争是主要干扰",

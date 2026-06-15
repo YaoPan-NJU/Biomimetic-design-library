@@ -119,14 +119,11 @@
         },
         "boundary_conditions": [
           {
-            "text": "pH < 4时HAp开始溶解释放Ca²⁺",
+            "text": "酸性条件下HAp开始溶解，释放Ca²⁺，配位/沉淀能力下降",
             "parameter": "pH",
             "condition": {
-              "operator": "threshold_lt",
-              "value": [
-                4
-              ],
-              "basis_note": "定性"
+              "operator": "qualitative",
+              "value": null
             },
             "basis": "llm_inferred",
             "verification": "needs_review",
@@ -134,6 +131,20 @@
             "locator": null,
             "quote": null,
             "source_asset": null
+          },
+          {
+            "text": "酸性条件下HAp溶解，释放Ca²⁺，吸附能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": "domain_knowledge"
           }
         ],
         "transferable_principle": "羟基磷灰石通过离子交换+共沉淀双重机制去除重金属，是骨骼/牙齿启发的无机吸附剂",

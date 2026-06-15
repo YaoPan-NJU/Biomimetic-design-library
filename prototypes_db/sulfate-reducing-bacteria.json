@@ -56,17 +56,15 @@
               "value": null
             },
             "basis": "from_source",
-            "locator": "biology knowledge"
+            "locator": "biology knowledge",
+            "gate_level": "soft"
           },
           {
-            "text": "pH < 5时SRB活性显著下降",
+            "text": "酸性条件下SRB活性显著下降",
             "parameter": "pH",
             "condition": {
-              "operator": "threshold_lt",
-              "value": [
-                5
-              ],
-              "basis_note": "定性"
+              "operator": "qualitative",
+              "value": null
             },
             "basis": "llm_inferred",
             "verification": "needs_review",

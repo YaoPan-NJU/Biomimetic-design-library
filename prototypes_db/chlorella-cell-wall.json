@@ -529,14 +529,11 @@
         },
         "boundary_conditions": [
           {
-            "text": "pH < 3时羧基和氨基质子化，表面电荷反转，阳离子吸附下降",
+            "text": "强酸性条件下羧基和氨基质子化，表面电荷反转，阳离子吸附下降",
             "parameter": "pH",
             "condition": {
-              "operator": "threshold_lt",
-              "value": [
-                3
-              ],
-              "basis_note": "定性"
+              "operator": "qualitative",
+              "value": null
             },
             "basis": "llm_inferred",
             "verification": "needs_review",
@@ -544,6 +541,20 @@
             "locator": null,
             "quote": null,
             "source_asset": null
+          },
+          {
+            "text": "强酸性条件下羧基和氨基质子化，表面电荷反转",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": "CM-006: carboxyl-deprotonation-metal-coordination"
           }
         ],
         "transferable_principle": "含多糖/蛋白质的生物质表面天然富含-COOH/-NH₂/-OH，可同时通过静电、配位、氢键三种机制吸附多种污染物",

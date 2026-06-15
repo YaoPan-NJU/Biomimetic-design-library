@@ -150,14 +150,11 @@
         },
         "boundary_conditions": [
           {
-            "text": "盐度过高（>35‰）时盐排斥机制饱和",
+            "text": "高盐度条件下盐排斥机制趋于饱和，选择性下降",
             "parameter": "salinity",
             "condition": {
-              "operator": "threshold_gt",
-              "value": [
-                35
-              ],
-              "basis_note": "定性"
+              "operator": "qualitative",
+              "value": null
             },
             "basis": "llm_inferred",
             "verification": "needs_review",

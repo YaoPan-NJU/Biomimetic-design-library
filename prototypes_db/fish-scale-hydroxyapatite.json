@@ -1095,14 +1095,11 @@
         },
         "boundary_conditions": [
           {
-            "text": "pH < 4时HAp溶解释放Ca²⁺",
+            "text": "酸性条件下HAp溶解，释放Ca²⁺，吸附能力下降",
             "parameter": "pH",
             "condition": {
-              "operator": "threshold_lt",
-              "value": [
-                4
-              ],
-              "basis_note": "定性"
+              "operator": "qualitative",
+              "value": null
             },
             "basis": "llm_inferred",
             "verification": "needs_review",

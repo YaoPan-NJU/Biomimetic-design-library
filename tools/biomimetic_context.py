@@ -427,6 +427,11 @@ class BiomimeticContext:
         # 7. 查找适用规则（pending_validation）
         applicable_rules = self.find_applicable_rules(water_quality, pollutant)
 
+        # 8. 收集 rule_based_cautions（从候选原型的 boundary_conditions）
+        rule_based_cautions = self._collect_rule_based_cautions(
+            all_candidates[:5], water_quality, pollutant
+        )
+
         return {
             'brief': {
                 'context': {
@@ -437,6 +442,7 @@ class BiomimeticContext:
                 },
                 'candidates': brief_candidates,
                 'applicable_rules': applicable_rules,
+                'rule_based_cautions': rule_based_cautions,
                 'honesty_ledger': {
                     'facts': facts,
                     'leads': leads,
@@ -479,6 +485,77 @@ class BiomimeticContext:
                 })
 
         return leads[:5]  # 返回 top 5
+
+    def _collect_rule_based_cautions(self, candidates: List[Dict], water_quality: Dict, pollutant: str) -> Dict[str, List[Dict]]:
+        """收集候选原型的边界条件，按工况匹配，分 hard/soft 输出"""
+        do_not = []  # hard: 可参与门控
+        cautions = []  # soft: 只提示
+
+        if not water_quality:
+            return {'do_not': do_not, 'cautions': cautions}
+
+        ph = water_quality.get('ph')
+        temp = water_quality.get('temperature')
+        salinity = water_quality.get('salinity', '')
+
+        for c in candidates:
+            pid = c.get('prototype_id', '')
+            if pid not in self.prototypes:
+                continue
+            proto = self.prototypes[pid]
+
+            for m in proto.get('mechanisms', []):
+                cc = m.get('causal_chain', {})
+                if not cc:
+                    continue
+                for bc in cc.get('boundary_conditions', []):
+                    param = bc.get('parameter', '')
+                    matched = False
+
+                    # 按参数类型匹配工况
+                    if param == 'pH' and ph is not None:
+                        matched = True
+                    elif param == 'temperature' and temp is not None:
+                        matched = True
+                    elif param == 'salinity' and salinity:
+                        matched = True
+                    elif param in ('competing_ion', 'wet_stability', 'regeneration', 'other'):
+                        # 通用边界，总是匹配
+                        matched = True
+
+                    if matched:
+                        entry = {
+                            'prototype_id': pid,
+                            'mechanism_name': m.get('name', ''),
+                            'parameter': param,
+                            'text': bc.get('text', ''),
+                            'basis': bc.get('basis', ''),
+                            'verification': bc.get('verification', ''),
+                            'source_asset': bc.get('source_asset')
+                        }
+                        if bc.get('gate_level') == 'hard':
+                            do_not.append(entry)
+                        else:
+                            cautions.append(entry)
+
+        # 去重
+        seen = set()
+        unique_do_not = []
+        for item in do_not:
+            key = (item['prototype_id'], item['text'])
+            if key not in seen:
+                seen.add(key)
+                unique_do_not.append(item)
+
+        seen = set()
+        unique_cautions = []
+        for item in cautions:
+            key = (item['prototype_id'], item['text'])
+            if key not in seen:
+                seen.add(key)
+                unique_cautions.append(item)
+
+        return {'do_not': unique_do_not, 'cautions': unique_cautions}
 
 
 def main():

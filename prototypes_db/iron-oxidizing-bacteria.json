@@ -503,14 +503,11 @@
         },
         "boundary_conditions": [
           {
-            "text": "pH < 4时施氏矿物溶解，释放吸附的砷",
+            "text": "酸性条件下施氏矿物溶解，释放吸附的砷",
             "parameter": "pH",
             "condition": {
-              "operator": "threshold_lt",
-              "value": [
-                4
-              ],
-              "basis_note": "定性"
+              "operator": "qualitative",
+              "value": null
             },
             "basis": "llm_inferred",
             "verification": "needs_review",

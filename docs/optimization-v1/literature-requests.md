@@ -11,6 +11,7 @@
 | pitcher-plant | 猪笼草 SLIPS 策略在高流速下润滑液可能被冲刷 | 若润滑液不稳，防污应用会失效 | 猪笼草 超滑 润滑液 稳定性 | ("Nepenthes" OR "pitcher plant") AND ("SLIPS" OR "slippery liquid-infused") AND ("stability" OR "durability" OR "lubricant loss") | Web of Science | 润滑液流失速率和补充机制 |
 | lobster-exoskeleton | 壳聚糖珠(Chitosan beads)六种吸附机制 | 需要 chitosan beads 吸附重金属的对口论文 | 壳聚糖珠 吸附 重金属 机制 | ("chitosan bead" OR "chitosan sphere") AND ("adsorption" OR "mechanism") AND ("heavy metal" OR "Cu" OR "Pb" OR "Cd") | Web of Science | chitosan beads 的吸附机制分析 |
 | spider-silk | 蜘蛛丝抗污染机制 | 需要蜘蛛丝蛋白抗污的对口论文 | 蜘蛛丝 抗污染 蛋白 | ("spider silk" OR "spidroin") AND ("antifouling" OR "anti-biofouling") AND ("protein" OR "surface") | Web of Science | 蜘蛛丝抗污性能数据 |
+| dna-aptamer | DNA适配体在不同pH/温度/离子强度下的结合稳定性 | 适配体构象敏感，失效边界未知可能导致错误选材 | DNA适配体 稳定性 温度 pH 离子强度 | ("DNA aptamer") AND ("stability" OR "thermal stability" OR "pH stability") AND ("binding" OR "affinity" OR "dissociation") | Web of Science | 适配体在不同工况下的结合常数和构象稳定性 |
 
 ## 下载后操作
 

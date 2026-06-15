@@ -1,0 +1,943 @@
+[
+  {
+    "prototype_id": "biomineralization-template",
+    "mechanism_name": "生物矿化模板吸附机制（待文献支撑）",
+    "parameter": "other",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "待文献确定具体失效边界",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": null
+  },
+  {
+    "prototype_id": "biomineralization-template",
+    "mechanism_name": "生物矿化模板吸附机制（待文献支撑）",
+    "parameter": "other",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "具体失效边界待文献支撑",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": "needs_literature"
+  },
+  {
+    "prototype_id": "bone-structure",
+    "mechanism_name": "HAp四种重金属吸附机制",
+    "parameter": "pH",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "酸性条件下HAp开始溶解，释放Ca²⁺，配位/沉淀能力下降",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": null
+  },
+  {
+    "prototype_id": "bone-structure",
+    "mechanism_name": "HAp四种重金属吸附机制",
+    "parameter": "pH",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "酸性条件下HAp溶解，释放Ca²⁺，吸附能力下降",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": "domain_knowledge"
+  },
+  {
+    "prototype_id": "cell-membrane-ion-channel",
+    "mechanism_name": "细胞膜仿生设计概念",
+    "parameter": "other",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "仿生膜的稳定性远低于生物膜，高压力/高盐下膜结构破坏",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": null
+  },
+  {
+    "prototype_id": "cell-membrane-ion-channel",
+    "mechanism_name": "细胞膜仿生设计概念",
+    "parameter": "salinity",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "高盐条件下膜结构可能被破坏，选择性下降",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": "domain_knowledge"
+  },
+  {
+    "prototype_id": "chitosan",
+    "mechanism_name": "pH对氮污染物吸附的影响机制 pH effect on N-pollutants adsorption",
+    "parameter": "pH",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "强酸性条件下壳聚糖溶解，失去吸附能力",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": null
+  },
+  {
+    "prototype_id": "chitosan",
+    "mechanism_name": "pH对氮污染物吸附的影响机制 pH effect on N-pollutants adsorption",
+    "parameter": "pH",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "碱性条件下氨基去质子化，对阴离子吸附能力下降",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": null
+  },
+  {
+    "prototype_id": "chitosan",
+    "mechanism_name": "pH对氮污染物吸附的影响机制 pH effect on N-pollutants adsorption",
+    "parameter": "salinity",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "高盐浓度下静电屏蔽效应减弱阴离子吸附",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": null
+  },
+  {
+    "prototype_id": "chitosan",
+    "mechanism_name": "pH对氮污染物吸附的影响机制 pH effect on N-pollutants adsorption",
+    "parameter": "pH",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "强酸性条件下壳聚糖溶解，氨基完全质子化失去配位能力",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": "CM-004: amino-protonation-anion-adsorption"
+  },
+  {
+    "prototype_id": "chitosan",
+    "mechanism_name": "金属离子络合机制 Metal ion complexation mechanism",
+    "parameter": "pH",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "强酸性条件下氨基完全质子化，失去金属配位能力",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": null
+  },
+  {
+    "prototype_id": "chitosan",
+    "mechanism_name": "金属离子络合机制 Metal ion complexation mechanism",
+    "parameter": "competing_ion",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "高浓度Ca²⁺、Mg²⁺竞争配位位点",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": null
+  },
+  {
+    "prototype_id": "chitosan",
+    "mechanism_name": "金属离子络合机制 Metal ion complexation mechanism",
+    "parameter": "pH",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "强酸性条件下壳聚糖溶解，氨基完全质子化失去配位能力",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": "CM-004: amino-protonation-anion-adsorption"
+  },
+  {
+    "prototype_id": "chitosan",
+    "mechanism_name": "金属离子络合机制 Metal ion complexation mechanism",
+    "parameter": "pH",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "碱性条件下氨基去质子化，对阴离子吸附能力下降",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": "CM-005: amino-deprotonation-metal-coordination"
+  },
+  {
+    "prototype_id": "chlorella-cell-wall",
+    "mechanism_name": "藻类去除合成染料的三种机制 Three mechanisms of dye removal by algae",
+    "parameter": "pH",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "强酸性条件下羧基和氨基质子化，表面电荷反转，阳离子吸附下降",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": null
+  },
+  {
+    "prototype_id": "chlorella-cell-wall",
+    "mechanism_name": "藻类去除合成染料的三种机制 Three mechanisms of dye removal by algae",
+    "parameter": "pH",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "强酸性条件下羧基和氨基质子化，表面电荷反转",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": "CM-006: carboxyl-deprotonation-metal-coordination"
+  },
+  {
+    "prototype_id": "coral-skeleton",
+    "mechanism_name": "珊瑚骨骼CaCO₃吸附机制（待文献支撑）",
+    "parameter": "other",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "待文献确定具体失效边界",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": null
+  },
+  {
+    "prototype_id": "coral-skeleton",
+    "mechanism_name": "珊瑚骨骼CaCO₃吸附机制（待文献支撑）",
+    "parameter": "other",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "具体失效边界待文献支撑",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": "needs_literature"
+  },
+  {
+    "prototype_id": "diatom-frustule",
+    "mechanism_name": "Pb²⁺吸附机理(XPS证据)",
+    "parameter": "pH",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "酸性条件下氨基质子化，配位能力下降",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": null
+  },
+  {
+    "prototype_id": "diatom-frustule",
+    "mechanism_name": "Pb²⁺吸附机理(XPS证据)",
+    "parameter": "pH",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "酸性条件下硅醇基团质子化，配位能力下降",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": "domain_knowledge"
+  },
+  {
+    "prototype_id": "dna-aptamer",
+    "mechanism_name": "DNA适配体分子识别机制（待文献支撑）",
+    "parameter": "other",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "待文献确定具体失效边界",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": null
+  },
+  {
+    "prototype_id": "dna-aptamer",
+    "mechanism_name": "DNA适配体分子识别机制（待文献支撑）",
+    "parameter": "other",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "具体失效边界待文献支撑",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": "needs_literature"
+  },
+  {
+    "prototype_id": "fish-scale-hydroxyapatite",
+    "mechanism_name": "八重协同吸附机制",
+    "parameter": "pH",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "酸性条件下HAp溶解，释放Ca²⁺，吸附能力下降",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": null
+  },
+  {
+    "prototype_id": "iron-oxidizing-bacteria",
+    "mechanism_name": "施氏矿物As(III)吸附机制-表面沉淀",
+    "parameter": "pH",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "酸性条件下施氏矿物溶解，释放吸附的砷",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": null
+  },
+  {
+    "prototype_id": "iron-oxidizing-bacteria",
+    "mechanism_name": "施氏矿物As(III)吸附机制-表面沉淀",
+    "parameter": "competing_ion",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "高浓度磷酸盐与砷酸盐竞争配位位点",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": null
+  },
+  {
+    "prototype_id": "lobster-exoskeleton",
+    "mechanism_name": "Chitosan beads的六种吸附机制",
+    "parameter": "pH",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "与壳聚糖相同的pH限制",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": null
+  },
+  {
+    "prototype_id": "lobster-exoskeleton",
+    "mechanism_name": "Chitosan beads的六种吸附机制",
+    "parameter": "pH",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "与壳聚糖相同的pH限制，酸性下溶解",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": "domain_knowledge"
+  },
+  {
+    "prototype_id": "magnetic-bacteria",
+    "mechanism_name": "趋磁细菌磁小体分离机制（待文献支撑）",
+    "parameter": "other",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "待文献确定具体失效边界",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": null
+  },
+  {
+    "prototype_id": "magnetic-bacteria",
+    "mechanism_name": "趋磁细菌磁小体分离机制（待文献支撑）",
+    "parameter": "other",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "具体失效边界待文献支撑",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": "needs_literature"
+  },
+  {
+    "prototype_id": "mangrove-root",
+    "mechanism_name": "人工湿地净化机制途径 Constructed wetland purification mechanisms",
+    "parameter": "salinity",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "高盐度条件下盐排斥机制趋于饱和，选择性下降",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": null
+  },
+  {
+    "prototype_id": "mussel-foot-adhesion",
+    "mechanism_name": "PDA涂层粘附机制",
+    "parameter": "pH",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "碱性条件下邻苯二酚氧化为醌，丧失双齿配位能力",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": null
+  },
+  {
+    "prototype_id": "mussel-foot-adhesion",
+    "mechanism_name": "PDA涂层粘附机制",
+    "parameter": "other",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "强氧化性环境（如Cr(VI)、高浓度H₂O₂）会氧化DOPA为醌",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": null
+  },
+  {
+    "prototype_id": "mussel-foot-adhesion",
+    "mechanism_name": "PDA涂层粘附机制",
+    "parameter": "pH",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "弱酸性以下DOPA自聚合速率极慢，涂层难以形成",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": "CM-002: catechol-low-ph-suppression"
+  },
+  {
+    "prototype_id": "mussel-foot-adhesion",
+    "mechanism_name": "PDA自聚合形成机制 PDA self-polymerization mechanism",
+    "parameter": "pH",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "弱酸性以下自聚合速率极慢，涂层难以形成",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": null
+  },
+  {
+    "prototype_id": "mussel-foot-adhesion",
+    "mechanism_name": "PDA自聚合形成机制 PDA self-polymerization mechanism",
+    "parameter": "other",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "涂层厚度随时间增加但活性位点密度下降",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": null
+  },
+  {
+    "prototype_id": "mussel-foot-adhesion",
+    "mechanism_name": "PDA自聚合形成机制 PDA self-polymerization mechanism",
+    "parameter": "pH",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "弱酸性以下DOPA自聚合速率极慢，涂层难以形成",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": "CM-002: catechol-low-ph-suppression"
+  },
+  {
+    "prototype_id": "mussel-foot-adhesion",
+    "mechanism_name": "PDA自聚合形成机制 PDA self-polymerization mechanism",
+    "parameter": "pH",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "碱性条件下邻苯二酚氧化为醌，丧失双齿配位能力",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": "CM-003: catechol-oxidation-quinone"
+  },
+  {
+    "prototype_id": "mussel-foot-adhesion",
+    "mechanism_name": "铀酰离子配位化学",
+    "parameter": "salinity",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "高浓度碳酸盐（海水条件）会与铀酰形成碳酸铀酰络合物，竞争配位",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": null
+  },
+  {
+    "prototype_id": "mussel-foot-adhesion",
+    "mechanism_name": "铀酰离子配位化学",
+    "parameter": "pH",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "酸性条件下酰胺肟基团质子化，配位能力下降",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": null
+  },
+  {
+    "prototype_id": "mussel-foot-adhesion",
+    "mechanism_name": "铀酰离子配位化学",
+    "parameter": "pH",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "弱酸性以下DOPA自聚合速率极慢，涂层难以形成",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": "CM-002: catechol-low-ph-suppression"
+  },
+  {
+    "prototype_id": "mussel-foot-adhesion",
+    "mechanism_name": "铀酰离子配位化学",
+    "parameter": "pH",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "碱性条件下邻苯二酚氧化为醌，丧失双齿配位能力",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": "CM-003: catechol-oxidation-quinone"
+  },
+  {
+    "prototype_id": "mycelium",
+    "mechanism_name": "CMC水凝胶重金属螯合 CMC hydrogel heavy metal chelation",
+    "parameter": "pH",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "强酸性条件下羧基质子化，螯合能力下降",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": null
+  },
+  {
+    "prototype_id": "mycelium",
+    "mechanism_name": "CMC水凝胶重金属螯合 CMC hydrogel heavy metal chelation",
+    "parameter": "pH",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "强酸性条件下羧基和氨基质子化，螯合能力下降",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": "CM-006: carboxyl-deprotonation-metal-coordination"
+  },
+  {
+    "prototype_id": "oyster-shell",
+    "mechanism_name": "牡蛎壳改性吸附机制",
+    "parameter": "other",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "未煅烧的CaCO₃吸附容量远低于煅烧产物CaO",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": null
+  },
+  {
+    "prototype_id": "oyster-shell",
+    "mechanism_name": "牡蛎壳改性吸附机制",
+    "parameter": "other",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "未煅烧CaCO₃吸附容量远低于煅烧产物CaO",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": "domain_knowledge"
+  },
+  {
+    "prototype_id": "pitcher-plant-slippery-surface",
+    "mechanism_name": "Nepenthes SLIPS抗污机制",
+    "parameter": "other",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "润滑液在高流速下可能被冲刷流失，需要补充机制",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": null
+  },
+  {
+    "prototype_id": "pitcher-plant-slippery-surface",
+    "mechanism_name": "Nepenthes SLIPS抗污机制",
+    "parameter": "other",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "润滑液与被分离介质不互溶是前提条件",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": null
+  },
+  {
+    "prototype_id": "pitcher-plant-slippery-surface",
+    "mechanism_name": "Nepenthes SLIPS抗污机制",
+    "parameter": "other",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "润滑液在高流速下可能被冲刷流失",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": "domain_knowledge"
+  },
+  {
+    "prototype_id": "plant-tannin",
+    "mechanism_name": "单宁酸-金属配位机理",
+    "parameter": "pH",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "强酸性条件下酚羟基不解离，配位能力下降",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": null
+  },
+  {
+    "prototype_id": "plant-tannin",
+    "mechanism_name": "单宁酸-金属配位机理",
+    "parameter": "pH",
+    "condition": {
+      "operator": "threshold_gt",
+      "value": [
+        10
+      ],
+      "basis_note": "定性"
+    },
+    "text": "强碱性条件下单宁酸氧化聚合",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": null
+  },
+  {
+    "prototype_id": "plant-tannin",
+    "mechanism_name": "单宁酸-金属配位机理",
+    "parameter": "pH",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "碱性条件下多酚可能发生氧化降解",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": "CM-003: catechol-oxidation-quinone"
+  },
+  {
+    "prototype_id": "polydopamine-coating",
+    "mechanism_name": "PDA吸附机制补充",
+    "parameter": "pH",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "碱性条件下邻苯二酚氧化为醌，金属配位能力丧失",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": null
+  },
+  {
+    "prototype_id": "polydopamine-coating",
+    "mechanism_name": "PDA吸附机制补充",
+    "parameter": "pH",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "弱酸性以下DOPA自聚合速率极慢，涂层难以形成",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": "CM-002: catechol-low-ph-suppression"
+  },
+  {
+    "prototype_id": "scallop-shell",
+    "mechanism_name": "吸附机理三步骤",
+    "parameter": "temperature",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "煅烧温度影响晶型转变和吸附性能",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": null
+  },
+  {
+    "prototype_id": "silk-fibroin",
+    "mechanism_name": "吸附机制",
+    "parameter": "pH",
+    "condition": {
+      "operator": "range",
+      "value": [
+        2,
+        11
+      ],
+      "basis_note": "定性范围"
+    },
+    "text": "丝素蛋白在强酸/强碱下水解",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": null
+  },
+  {
+    "prototype_id": "silk-fibroin",
+    "mechanism_name": "吸附机制",
+    "parameter": "pH",
+    "condition": {
+      "operator": "range",
+      "value": [
+        2,
+        11
+      ],
+      "basis_note": "定性范围"
+    },
+    "text": "丝素蛋白在强酸/强碱下水解",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": null
+  },
+  {
+    "prototype_id": "spider-silk",
+    "mechanism_name": "抗污染机制 Antifouling mechanism",
+    "parameter": "other",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "干燥环境下蜘蛛丝失去亲水性",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": null
+  },
+  {
+    "prototype_id": "spider-silk",
+    "mechanism_name": "抗污染机制 Antifouling mechanism",
+    "parameter": "wet_stability",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "干燥环境下蜘蛛丝可能失去亲水性",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": "domain_knowledge"
+  },
+  {
+    "prototype_id": "sulfate-reducing-bacteria",
+    "mechanism_name": "SRB硫酸盐还原三步酶促机理",
+    "parameter": "other",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "SRB是严格厌氧菌，有氧环境完全失活",
+    "gate_level": "soft",
+    "basis": "from_source",
+    "verification": "",
+    "locator": "biology knowledge",
+    "source_asset": null
+  },
+  {
+    "prototype_id": "sulfate-reducing-bacteria",
+    "mechanism_name": "SRB硫酸盐还原三步酶促机理",
+    "parameter": "pH",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "酸性条件下SRB活性显著下降",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": null
+  },
+  {
+    "prototype_id": "sulfate-reducing-bacteria",
+    "mechanism_name": "SRB硫酸盐还原三步酶促机理",
+    "parameter": "other",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "高浓度重金属对SRB有毒性",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": null
+  },
+  {
+    "prototype_id": "wood-xylem",
+    "mechanism_name": "吸附机制——分子态酚+静电排斥",
+    "parameter": "pH",
+    "condition": {
+      "operator": "qualitative",
+      "value": null
+    },
+    "text": "强碱性条件下酚类解离为酚盐，吸附下降",
+    "gate_level": "soft",
+    "basis": "llm_inferred",
+    "verification": "needs_review",
+    "locator": null,
+    "source_asset": null
+  }
+]

@@ -199,14 +199,11 @@
         },
         "boundary_conditions": [
           {
-            "text": "pH < 3时羧基质子化，螯合能力下降",
+            "text": "强酸性条件下羧基质子化，螯合能力下降",
             "parameter": "pH",
             "condition": {
-              "operator": "threshold_lt",
-              "value": [
-                3
-              ],
-              "basis_note": "定性"
+              "operator": "qualitative",
+              "value": null
             },
             "basis": "llm_inferred",
             "verification": "needs_review",
@@ -214,6 +211,20 @@
             "locator": null,
             "quote": null,
             "source_asset": null
+          },
+          {
+            "text": "强酸性条件下羧基和氨基质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": "CM-006: carboxyl-deprotonation-metal-coordination"
           }
         ],
         "transferable_principle": "菌丝体衍生的含羧基水凝胶可作为廉价的重金属螯合吸附剂",
