@@ -1290,7 +1290,8 @@
         "why_it_works": {
           "text": "酰胺肟基团（-C(=NOH)NH₂）对铀酰离子有极高的选择性和亲和力，可在海水中ppb级浓度下有效捕获铀",
           "basis": "from_source",
-          "locator": "Liu2024 p.1 / Abstract"
+          "locator": "Sec. 2.1.1, p.2",
+          "quote": "The coexistence of the amine group and oxime group in this structure grants AO compounds amphoteric properties, facilitating effective chelation across a wide pH range. DFT calculations reveal that the η2 motif bound to the N-O bond represents the most stable form."
         },
         "boundary_conditions": [
           {
@@ -1330,7 +1331,7 @@
       },
       "基本原理": "酰胺肟基团（-C(=NOH)NH₂）对铀酰离子有极高的选择性和亲和力，可在海水中ppb级浓度下有效捕获铀",
       "source_file": "仿生文献库/2nd/第10组-设计原则/2024-Liu-function-oriented-design-principles-adsorbent-uranium.pdf",
-      "verification_quote": "function-oriented design principles for uranium adsorbent"
+      "verification_quote": "Several binding motifs between AO groups and uranyl ions have been postulated. Density functional theory (DFT) calculations reveal that the η2 motif bound to the N-O bond represents the most stable form."
     },
     {
       "name": "酰胺肟配位模式",
@@ -2414,5 +2415,27 @@
     "n_unverified": 134
   },
   "coverage": "normal",
-  "status": "active"
+  "status": "active",
+  "design_translation": [
+    {
+      "idea": "利用贻贝足丝蛋白 DOPA 的邻苯二酚基团进行表面功能化，通过双齿配位捕获软金属离子",
+      "specific_functional_group": "邻苯二酚（catechol）基团，pKa ~9.5",
+      "material_handle": "聚多巴胺（PDA）涂层或多巴胺改性聚合物",
+      "target_interaction": "与 Pb²⁺、Cu²⁺、UO₂²⁺ 等软金属离子形成五元螯合环（log K 10-20）",
+      "source_tier": "literature",
+      "examples": [
+        "DOI: 10.1126/science.1145492"
+      ]
+    },
+    {
+      "idea": "利用酰胺肟基团对铀酰离子的高选择性配位，实现海水中 ppb 级铀的捕获",
+      "specific_functional_group": "酰胺肟基团（-C(=NOH)NH₂），η2 配位模式",
+      "material_handle": "聚丙烯腈（PAN）接枝酰胺肟化，或 PDA 前驱体合成",
+      "target_interaction": "与 UO₂²⁺ 形成 η2 配位络合物，在海水 pH 8.3 下稳定",
+      "source_tier": "literature",
+      "examples": [
+        "DOI: 10.1016/j.ccr.2023.215234"
+      ]
+    }
+  ]
 }
