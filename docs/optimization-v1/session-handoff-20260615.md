@@ -3,10 +3,10 @@
 ## 当前状态
 
 - **分支**: `opt/curation-grounding-v1`（已推送到 GitHub）
-- **最新 commit**: `2d0889c`（docs: 更新README + 补齐交接文档）
-- **Phase 进度**: Phase 0–6 全部完成，Phase 7 待开始
+- **最新 commit**: `e78ea8c`（Phase 7: 设计转译重做）
+- **Phase 进度**: Phase 0–7 全部完成，Phase 8 待开始
 
-## Phase 0–6 完成摘要
+## Phase 0–7 完成摘要
 
 | Phase | Commit | 内容 | 结果 |
 |-------|--------|------|------|
@@ -17,17 +17,30 @@
 | 4 | `48e2cf4` | 字段语义+诚实标注 | pollutant回填49 + causal_chain骨架528 + verification统一 |
 | 5 | `0b49533` | 因果链补全 | 28张合格卡覆盖24原型，506空骨架已清 |
 | 6 | `c7bee7f` | PDF核验 | 23 verified / 5 needs_review |
+| 7 | `e78ea8c` | 设计转译重做 | 24原型25条translation，2 literature / 23 llm_inference |
 
-## Phase 6 最终结果
+## Phase 7 最终结果
 
-### 23 张 verified（源论文与原型一致）
-mussel(PDA粘附+自聚+铀酰)、chitosan(pH+络合)、chlorella(程2021小球藻)、diatom(Guo2022硅藻土)、polydopamine(PDA catechol)、SRB(Kumar2021)、IOB(Luo2021施氏矿物)、bone(Bambaeero2021 HAp)、oyster(李2017)、scallop(Wang2024)、fish-scale(Balasooriya2022)、mangrove(刘2022)、mycelium(刘2021真菌菌丝)、wood(Mo2021)、silk-fibroin(Prasad2022 ×2)、dna-aptamer(Li2021)、biomineralization(Wang2025)、plant-tannin(Zhu2022)、cell-membrane(BerattoRamos2022)
+### Design Translation 统计
+- 有 translation 的原型: 24
+- 总条数: 25（mussel 有 2 条）
+- literature 类: 2（有本地 PDF）
+- llm_inference 类: 23（无本地 PDF，机理推断）
 
-### 5 张 needs_review（本地无对口文献）
-coral-skeleton、magnetic-bacteria、pitcher-plant、lobster-exoskeleton、spider-silk
+### Phase 6 小尾巴修复
+- **mussel 2024-Liu 卡**: 降级为 needs_review
+  - 原因: 2024-Liu 论文专注于酰胺肟基团，不涉及 DOPA/儿茶酚
+  - mechanism "铀酰离子配位化学": verification → needs_review
+  - design_translation[1]（酰胺肟）: source_tier → llm_inference
 
-### literature-requests.md
-5个待下载原型的7条检索式已写好
+### 12 个 translation 降级
+以下原型的 translation 原标记为 literature，但本地无对应 PDF，已降级为 llm_inference：
+bone-structure、chitosan、diatom-frustule、dna-aptamer、fish-scale-hydroxyapatite、iron-oxidizing-bacteria、mycelium、oyster-shell、pitcher-plant-slippery-surface、plant-tannin、silk-fibroin、sulfate-reducing-bacteria
+
+### 验证结果
+- check_translation_specificity: 25/25 合格 ✅
+- check_chimera --strict: 0 违规 ✅
+- validate_consistency: 0 错误 ✅
 
 ## 关键铁律（后续session必须遵守）
 
@@ -37,18 +50,35 @@ coral-skeleton、magnetic-bacteria、pitcher-plant、lobster-exoskeleton、spide
 4. **宁可少而真，不可多而假**
 5. **unverified/single_source 不得作为 active 终态**
 6. **from_source 必须有 DOI/source_file，否则降 llm_inferred**
+7. **literature 类 translation 必须有本地 PDF 可定位**
 
-## 下一步：Phase 7（设计转译重做）
+## 下一步：Phase 8（失效边界条件补全）
 
-- 为每个 active 原型写 ≥1 条 design_translation
-- 必须含三要素：specific_functional_group / material_handle / target_interaction
-- 删除/改写所有套话
-- 禁用泛词清单：良好的吸附性能、优异的、广泛的应用前景等
+- 按 DEFINITIONS §8 为每个 active 原型补 boundary_conditions
+- 三档来源：A（PDF 摘边界）/ B（机理推理）/ C（写检索请求）
+- 数值护栏：具体数字只允许 A 档 verified 条目
+
+## 待下载文献（12 篇）
+
+| 原型 | DOI |
+|------|-----|
+| bone-structure | 10.1016/j.jece.2021.106072 |
+| chitosan | 10.1016/j.ijbiomac.2019.01.010 |
+| diatom-frustule | 10.1016/j.jhazmat.2022.128658 |
+| dna-aptamer | 10.1021/acs.analchem.1c02364 |
+| fish-scale-hydroxyapatite | 10.1016/j.jclepro.2022.132234 |
+| iron-oxidizing-bacteria | 10.1016/j.watres.2021.117201 |
+| mycelium | 10.1016/j.biortech.2021.125015 |
+| oyster-shell | 10.1016/j.jenvman.2017.06.047 |
+| pitcher-plant | 10.1038/nature10856 |
+| plant-tannin | 10.1016/j.cej.2022.136395 |
+| silk-fibroin | 10.1016/j.ijbiomac.2022.05.184 |
+| sulfate-reducing-bacteria | 10.1016/j.jhazmat.2021.126058 |
 
 ## 其他同事工作
 
 - ADRMATS 集成：由同事负责，本库只需提供 BiomimeticContext.query() 接口
-- 5篇文献下载：学生负责，按 literature-requests.md 检索词执行
+- 12篇文献下载：学生负责，按上述 DOI 执行
 
 ## 关键文件位置
 
@@ -59,7 +89,10 @@ coral-skeleton、magnetic-bacteria、pitcher-plant、lobster-exoskeleton、spide
 | `docs/optimization-v1/交接文档_HANDOFF.md` | 复核角色交接 |
 | `docs/optimization-v1/coverage-gaps.md` | 策展后缺口（Boron/Co(II)真缺口） |
 | `docs/optimization-v1/literature-requests.md` | 5篇待下载文献检索词 |
+| `docs/optimization-v1/phase7-report.md` | Phase 7 完整报告 |
+| `docs/optimization-v1/phase7-translation.md` | Translation 明细 |
 | `tools/biomimetic_context.py` | ADRMATS 接口 |
 | `tools/check_chimera.py` | chimera 检查（mechanism+perf+narrative+instances） |
 | `tools/check_causal_chain.py` | 因果链合格率检查 |
+| `tools/check_translation_specificity.py` | Translation 合格检查 |
 | `prototypes_db/*.json` | canon（24 active + 4 materials_reference + 1 parked） |

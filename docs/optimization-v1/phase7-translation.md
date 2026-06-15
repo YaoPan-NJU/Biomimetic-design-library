@@ -6,8 +6,8 @@
 |------|------|
 | 有 translation 的原型 | 24 |
 | 总条数 | 25 |
-| literature 类 | 15 |
-| llm_inference 类 | 10 |
+| literature 类 | 2 |
+| llm_inference 类 | 23 |
 
 ## 每原型 Translation
 
@@ -28,8 +28,8 @@
 - specific_functional_group: 羟基磷灰石（HAp）的 Ca²⁺ 和 PO₄³⁻ 位点
 - material_handle: 合成羟基磷灰石粉末或涂层
 - target_interaction: Ca²⁺ 位点配位 F⁻、Pb²⁺，PO₄³⁻ 位点捕获阳离子
-- source_tier: 📚 literature
-- examples: DOI: 10.1016/j.jece.2021.106072
+- source_tier: 🤖 llm_inference
+- examples: 无
 
 ---
 
@@ -50,8 +50,8 @@
 - specific_functional_group: 氨基（-NH₂）和羟基（-OH），pKa ~6.3
 - material_handle: 壳聚糖直接使用或交联改性（如戊二醛、环氧氯丙烷）
 - target_interaction: 氨基质子化后静电吸引阴离子，羟基配位金属离子
-- source_tier: 📚 literature
-- examples: DOI: 10.1016/j.ijbiomac.2019.01.010
+- source_tier: 🤖 llm_inference
+- examples: 无
 
 ---
 
@@ -83,8 +83,8 @@
 - specific_functional_group: 硅羟基（Si-OH），高比表面积（20-200 m²/g）
 - material_handle: 硅藻土直接使用或酸活化/改性处理
 - target_interaction: 硅羟基通过氢键和静电作用吸附污染物
-- source_tier: 📚 literature
-- examples: DOI: 10.1016/j.jhazmat.2022.128658
+- source_tier: 🤖 llm_inference
+- examples: 无
 
 ---
 
@@ -94,8 +94,8 @@
 - specific_functional_group: 适配体的碱基序列形成的三维构象
 - material_handle: 化学合成适配体，固定化在载体上
 - target_interaction: 适配体与目标分子的特异性结合（Kd 纳摩尔级）
-- source_tier: 📚 literature
-- examples: DOI: 10.1021/acs.analchem.1c02364
+- source_tier: 🤖 llm_inference
+- examples: 无
 
 ---
 
@@ -105,8 +105,8 @@
 - specific_functional_group: 鱼鳞衍生 HAp 的 Ca²⁺ 和 PO₄³⁻ 位点
 - material_handle: 鱼鳞热处理转化为羟基磷灰石
 - target_interaction: Ca²⁺ 配位 F⁻ 和重金属，PO₄³⁻ 捕获阳离子
-- source_tier: 📚 literature
-- examples: DOI: 10.1016/j.jclepro.2022.132234
+- source_tier: 🤖 llm_inference
+- examples: 无
 
 ---
 
@@ -116,8 +116,8 @@
 - specific_functional_group: 施氏矿物（schwertmannite）的 Fe-O/OH 位点
 - material_handle: IOB 培养生成施氏矿物，或合成类似结构
 - target_interaction: Fe-O/OH 位点吸附 As(V)、Cr(VI) 等阴离子重金属
-- source_tier: 📚 literature
-- examples: DOI: 10.1016/j.watres.2021.117201
+- source_tier: 🤖 llm_inference
+- examples: 无
 
 ---
 
@@ -167,8 +167,8 @@
 - specific_functional_group: 酰胺肟基团（-C(=NOH)NH₂），η2 配位模式
 - material_handle: 聚丙烯腈（PAN）接枝酰胺肟化，或 PDA 前驱体合成
 - target_interaction: 与 UO₂²⁺ 形成 η2 配位络合物，在海水 pH 8.3 下稳定
-- source_tier: 📚 literature
-- examples: DOI: 10.1016/j.ccr.2023.215234
+- source_tier: 🤖 llm_inference
+- examples: 无
 
 ---
 
@@ -178,8 +178,8 @@
 - specific_functional_group: 几丁质的氨基和羟基，β-葡聚糖的羟基
 - material_handle: 真菌菌丝体培养、固定化或改性
 - target_interaction: 氨基和羟基配位重金属离子，生物降解性好
-- source_tier: 📚 literature
-- examples: DOI: 10.1016/j.biortech.2021.125015
+- source_tier: 🤖 llm_inference
+- examples: 无
 
 ---
 
@@ -189,8 +189,8 @@
 - specific_functional_group: 方解石/文石型 CaCO₃
 - material_handle: 牡蛎壳粉碎、煅烧或酸活化
 - target_interaction: CaCO₃ 溶解提供 CO₃²⁻ 和 Ca²⁺，沉淀重金属碳酸盐
-- source_tier: 📚 literature
-- examples: DOI: 10.1016/j.jenvman.2017.06.047
+- source_tier: 🤖 llm_inference
+- examples: 无
 
 ---
 
@@ -200,8 +200,8 @@
 - specific_functional_group: 光滑蜡质表面的低表面能基团
 - material_handle: SLIPS 液体灌注多孔表面
 - target_interaction: 超滑表面阻止污染物附着，实现自清洁
-- source_tier: 📚 literature
-- examples: DOI: 10.1038/nature10856
+- source_tier: 🤖 llm_inference
+- examples: 无
 
 ---
 
@@ -211,8 +211,8 @@
 - specific_functional_group: 邻苯二酚和没食子酰基（galloyl）
 - material_handle: 单宁酸直接使用或固定化在载体上
 - target_interaction: 多酚基团与金属离子形成配位络合物，与蛋白质形成氢键
-- source_tier: 📚 literature
-- examples: DOI: 10.1016/j.cej.2022.136395
+- source_tier: 🤖 llm_inference
+- examples: 无
 
 ---
 
@@ -244,8 +244,8 @@
 - specific_functional_group: 丝氨酸（Ser）的羟基，酪氨酸（Tyr）的酚羟基
 - material_handle: 丝素蛋白提取、再生或交联成型
 - target_interaction: 羟基和酚羟基配位金属离子，β-折叠提供结构稳定性
-- source_tier: 📚 literature
-- examples: DOI: 10.1016/j.ijbiomac.2022.05.184
+- source_tier: 🤖 llm_inference
+- examples: 无
 
 ---
 
@@ -266,8 +266,8 @@
 - specific_functional_group: H₂S/HS⁻ 的硫基（-S²⁻）
 - material_handle: SRB 培养、固定化或生物反应器
 - target_interaction: S²⁻ 与重金属形成难溶硫化物（如 CuS、PbS）
-- source_tier: 📚 literature
-- examples: DOI: 10.1016/j.jhazmat.2021.126058
+- source_tier: 🤖 llm_inference
+- examples: 无
 
 ---
 
