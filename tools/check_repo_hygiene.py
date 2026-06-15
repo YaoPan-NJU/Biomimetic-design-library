@@ -194,11 +194,13 @@ def check_duplicate_state_docs():
     tracked_files = get_git_tracked_files()
 
     for tracked_file in tracked_files:
+        # git ls-files 对含特殊字符的路径会加引号，需剥离
+        clean_path = tracked_file.strip('"')
         for pattern in duplicate_docs:
-            if pattern.replace('*', '') in tracked_file:
-                # 检查是否在 archive 或 context 目录中
-                if not (tracked_file.startswith('docs/archive/') or tracked_file.startswith('docs/context/')):
-                    issues.append(f"重复状态文档: {tracked_file}")
+            if pattern.replace('*', '') in clean_path:
+                # 检查是否在 archive、context 或 optimization-v1 目录中（这些是合法位置）
+                if not (clean_path.startswith('docs/archive/') or clean_path.startswith('docs/context/') or clean_path.startswith('docs/optimization-v1/')):
+                    issues.append(f"重复状态文档: {clean_path}")
 
     return issues
 

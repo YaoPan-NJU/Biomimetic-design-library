@@ -20,7 +20,7 @@
 
 ---
 
-## 当前状态（整改中 · 2026-06-14）
+## 当前状态（2026-06-15 · Phase 0–8 完成）
 
 > 工作分支：`opt/curation-grounding-v1`｜整改主题：**策展 + 接地 + 诚实分级**（把"看着广、其实是叙事"的库，收敛为"窄但每条可信、可溯源"的库）。
 
@@ -33,9 +33,14 @@
 | 因果链卡（核心、可迁移原理）| 28 张（覆盖 24/24 原型）|
 | 其中 PDF 已核验 verified | 23 张 |
 | 仍待下载文献核验 | 5 张（coral / magnetic-bacteria / pitcher-plant / lobster / spider-silk）|
+| boundary_conditions 总数 | 62 条 |
+| 硬 DO-NOT（verified 边界）| **0 条**（边界尚未从 PDF 逐条核验）|
+| 软 caution（定性提示）| 62 条 |
 | 校验错误 / chimera 违规 | 0 / 0 |
 
-**整改进度**：Phase 0–6 已完成并复核（基线、接口诚实度、策展、去污染、字段语义、因果链补全、PDF 核验）；Phase 7（设计转译）/ 8（失效边界 + DO-NOT）/ 9（总验收）进行中。详见 `docs/optimization-v1/`。
+**整改进度**：Phase 0–8 已完成（基线、接口诚实度、策展、去污染、字段语义、因果链补全、PDF 核验、设计转译、接口排序修复、失效边界补全）。Phase 9（总验收）进行中。详见 `docs/optimization-v1/`。
+
+> ⚠️ **当前边界输出全是 soft caution，没有 hard DO-NOT**。具体数值阈值（pH 值、浓度等）尚未从 PDF 中逐条提取核验，因此所有边界条件均为定性描述（`basis=llm_inferred`）。
 
 ---
 
@@ -103,15 +108,22 @@ Biomimetic-design-library/
 ├── pollutant_profiles.json        # 污染物分子特征画像
 ├── prototypes_db/                 # 正典数据（JSON，canonical source）
 ├── prototypes/                    # 渲染产物（prototype.md）
+├── exports/                       # 导出产物
+│   └── adrmats_do_not.json        # 边界条件汇总（62 条）
 ├── docs/                          # 项目文档
 │   ├── design.md                  # 设计规范
 │   ├── ADRMATS_DELIVERY_PLAN.md   # 交付计划
 │   ├── ADRMATS_CALL_GUIDE.md      # 调用说明
-│   └── archive/                   # 归档文档
+│   ├── SUPPORT_SCOPE_AND_RISKS.md # 支持范围与风险
+│   └── optimization-v1/           # 整改方案与报告
 ├── examples/adrmats_briefs/       # 真实接口输出示例
 ├── templates/                     # 模板
 ├── taxonomy/                      # 分类体系
 └── tools/                         # 工具脚本
+    ├── biomimetic_context.py      # ADRMATS 接口
+    ├── check_boundary_guardrail.py # 边界护栏校验
+    ├── export_do_not.py           # DO-NOT 导出
+    └── ...                        # 其他校验脚本
 ```
 
 ---
@@ -160,16 +172,31 @@ Biomimetic-design-library/
 ## 验证命令
 
 ```bash
-# ADRMATS 验收
+# ADRMATS 验收（含 brief 结构 + 排序诚实度 + cautions）
 python -X utf8 tools/verify_adrmats_delivery.py
 
-# 校验一致性
+# 接口诚实度测试
+python -X utf8 tools/test_interface_honesty.py
+
+# 边界护栏校验（schema + 数值护栏 + gate_level 一致性）
+python -X utf8 tools/check_boundary_guardrail.py
+
+# DO-NOT 导出
+python -X utf8 tools/export_do_not.py
+
+# 因果链合格率
+python -X utf8 tools/check_causal_chain.py
+
+# Translation 合格检查
+python -X utf8 tools/check_translation_specificity.py
+
+# Chimera 检查
+python -X utf8 tools/check_chimera.py --strict
+
+# 一致性校验
 python -X utf8 tools/validate_consistency.py
 
-# 检查 chimera
-python -X utf8 tools/check_chimera.py
-
-# 检查仓库治理
+# 仓库治理
 python -X utf8 tools/check_repo_hygiene.py
 ```
 
