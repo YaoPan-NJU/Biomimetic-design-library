@@ -2,7 +2,7 @@
 
 status: active_full_audit
 
-Last updated: 2026-06-16 20:45 Asia/Shanghai
+Last updated: 2026-06-16 21:00 Asia/Shanghai
 
 ## Scope
 
@@ -76,6 +76,14 @@ The fourth applied Package A batch continued path-only cleanup:
 - `iron-oxidizing-bacteria`: normalized Xu2022 and Jhariya2024 performance-row source paths to the confirmed C2 local PDFs.
 
 This checkpoint did not add new mechanism/constraint source fields, did not demote Qian2021 background rows, did not change verification status, and did not run `tools/build_prototypes_db.py`.
+
+## Package A5 Cleanup Checkpoint
+
+The fifth applied Package A batch made one path-only cleanup:
+
+- `superhydrophobic-artificial`: normalized the CN121130847A performance-row source path to the confirmed patent PDF under `仿生文献库/专利/`.
+
+This checkpoint did not change WCA classification, pollutant fields, constraints, verification status, or run `tools/build_prototypes_db.py`.
 
 Approval is still needed before:
 

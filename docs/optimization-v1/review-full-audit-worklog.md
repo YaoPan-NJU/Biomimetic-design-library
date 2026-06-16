@@ -35,6 +35,7 @@ status: active
 | 2026-06-16 20:15 CST | Codex | Package A2 low-risk mechanical cleanup | applied_checkpoint | Applied a second small mechanical cleanup batch: oyster-shell Li2017/Xu2022 pollutant/path normalization and iron-oxidizing-bacteria Luo2021 As(III)/As(V) pollutant plus source_file path normalization. No verification upgrades, no mechanism narrowing, no boundary changes, no wrong-source removals, and no build script run. |
 | 2026-06-16 20:30 CST | Codex | Package A3 low-risk mechanical cleanup | applied_checkpoint | Applied silk-fibroin source_file path normalization for confirmed local PDFs and filled three direct pollutant fields. Skipped false-precision value narrowing, same-DOI deduplication, quote replacement, and mechanism changes because those need separate approval or stronger review. No verification upgrades and no build script run. |
 | 2026-06-16 20:45 CST | Codex | Package A4 low-risk mechanical cleanup | applied_checkpoint | Normalized iron-oxidizing-bacteria Xu2022 and Jhariya2024 performance_data source_file paths to confirmed C2 local PDFs. Did not add mechanism/constraint source_file fields, demote Qian2021 rows, change verification, or run the build script. |
+| 2026-06-16 21:00 CST | Codex | Package A5 low-risk mechanical cleanup | applied_checkpoint | Normalized superhydrophobic-artificial CN121130847A performance_data source_file path to the confirmed patent PDF. Did not change WCA classification, pollutant, constraints, verification, or run the build script. |
 
 ## Batch 06 Codex Checkpoint - 2026-06-16
 
