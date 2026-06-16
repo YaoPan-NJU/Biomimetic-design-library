@@ -2,7 +2,7 @@
 
 status: active_full_audit
 
-Last updated: 2026-06-16 19:55 Asia/Shanghai
+Last updated: 2026-06-16 20:15 Asia/Shanghai
 
 ## Scope
 
@@ -50,6 +50,15 @@ Yao approved only low-risk mechanical cleanup. The first applied batch changed `
 - normalized confirmed ` 2.pdf` source-file suffixes for wood, bone, and oyster rows.
 
 This checkpoint did not upgrade verification status, did not apply hard/soft boundary changes, did not remove wrong-source rows, and did not run `tools/build_prototypes_db.py`.
+
+## Package A2 Cleanup Checkpoint
+
+The second applied Package A batch continued only low-risk metadata cleanup:
+
+- `oyster-shell`: filled the remaining Li2017 phosphate/phosphorus pollutant field and normalized Li2017/Xu2022 source paths to the actual local PDF files.
+- `iron-oxidizing-bacteria`: filled Luo2021 As(III)/As(V) pollutant fields for `performance_data[0-6]` and normalized the Luo2021 source path to the C2 local PDF.
+
+This checkpoint still did not upgrade verification status, did not narrow mechanisms, did not apply hard/soft boundaries, did not remove wrong-source rows, and did not run `tools/build_prototypes_db.py`.
 
 Approval is still needed before:
 
