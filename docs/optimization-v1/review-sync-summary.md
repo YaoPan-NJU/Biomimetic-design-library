@@ -2,7 +2,7 @@
 
 status: active_full_audit
 
-Last updated: 2026-06-16 12:48 Asia/Shanghai
+Last updated: 2026-06-16 13:06 Asia/Shanghai
 
 ## Scope
 
@@ -68,10 +68,23 @@ Yao selected A1+B1+C1 for the next stage:
 - `docs/optimization-v1/review-boundary-do-not-register.md`
 - Batch 01 files for `chitosan`, `polydopamine-coating`, `plant-tannin`, `silk-fibroin`, `wood-xylem`
 - Batch 02 files for `biomineralization-template`, `bone-structure`, `oyster-shell`, `scallop-shell`, plus `fish-scale-hydroxyapatite` preflight
+- Batch 03 preflight file for `chlorella-cell-wall`, `iron-oxidizing-bacteria`, `sulfate-reducing-bacteria`, `mycelium`, and `cell-membrane-ion-channel`
 
 ## Latest Checkpoint
 
-Batch 02 mineral/shell audit is queued for Yao decision. No prototype JSON files were edited and `tools/build_prototypes_db.py` was not run.
+Batch 03 microbes/cells preflight is queued for Yao decision. No prototype JSON files were edited and `tools/build_prototypes_db.py` was not run.
+
+| prototype_id | latest result |
+|---|---|
+| chlorella-cell-wall | Cheng2021 supports Pb microalgae adsorption and Peng2022 supports Chlorella-derived magnetic biochar, but dye-mechanism and wastewater-technology rows need correction or reassignment. |
+| iron-oxidizing-bacteria | Luo2021/Jhariya2024 Fe-mineral evidence is useful with metadata fixes; CN113275374A scanned patent/MICP rows need OCR and scope decision. |
+| sulfate-reducing-bacteria | Kumar2020 supports SRB sulfide-precipitation mechanism, but there are zero verified performance rows and iron-cycle constraints are wrong-source. |
+| mycelium | Liu2021 fungal biosorption evidence is usable with locator/title cleanup; Zhang2022 cellulose/nanocellulose rows are wrong-source or scope-split candidates. |
+| cell-membrane-ion-channel | Evidence supports membrane separation/ion-selective filtration more than adsorption; metric rows must be separated from adsorption qmax before ranking. |
+
+## Prior Full-Audit Checkpoint
+
+Batch 02 mineral/shell audit remains queued for Yao decision.
 
 | prototype_id | latest result |
 |---|---|

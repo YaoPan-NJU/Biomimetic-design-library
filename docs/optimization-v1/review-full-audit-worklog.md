@@ -15,6 +15,30 @@ status: active
 
 | 2026-06-16 13:15 CST | Codex | review-full-audit-batch-01-wood-xylem.md | codex_reviewed | Completed local PDF text audit for wood-xylem after OpenClaw failure; all three performance values supported, one mechanism source/quote mismatch queued, enrichment placeholders queued. |
 | 2026-06-16 12:48 CST | Codex | full-audit-02-minerals-shells | codex_reviewed_checkpoint | Added Batch 02 audit docs for biomineralization-template, bone-structure, oyster-shell, scallop-shell, and fish-scale-hydroxyapatite preflight. Updated full-audit decision queue and boundary register. No prototypes_db files modified. |
+| 2026-06-16 13:06 CST | Codex | full-audit-03-microbes-cells | codex_preflight_reviewed | Added Batch 03 preflight for chlorella-cell-wall, iron-oxidizing-bacteria, sulfate-reducing-bacteria, mycelium, and cell-membrane-ion-channel. Queued supported metadata fixes, wrong-source removals/reassignments, scope decisions, and DO-NOT/boundary candidates. No prototypes_db files modified. |
+
+## Batch 03 Codex Checkpoint - 2026-06-16
+
+Current state:
+
+- `review-full-audit-batch-03-microbes-cells-preflight.md` covers all five Batch 03 prototypes.
+- No `prototypes_db/*.json` files were modified.
+- No build script was run.
+- All Batch 03 JSON-change candidates were queued as `pending_yao`.
+
+Key findings:
+
+- `chlorella-cell-wall` has a strong Cheng2021 Pb microalgae source and Peng2022 Chlorella-derived magnetic biochar source, but dye-mechanism and unrelated wastewater-technology rows must be corrected or removed.
+- `iron-oxidizing-bacteria` has strong Luo2021/Jhariya2024 Fe-mineral evidence, but CN113275374A scanned patent/MICP rows need OCR and reassignment decisions.
+- `sulfate-reducing-bacteria` has a supported SRB sulfide-precipitation mechanism but zero verified performance rows; iron-cycle constraints are wrong-source.
+- `mycelium` should keep Liu2021 fungal biosorption evidence with better locators, while Zhang2022 cellulose/nanocellulose rows need removal or reassignment.
+- `cell-membrane-ion-channel` is mainly a separation/filtration prototype; membrane metric rows must not be mixed with adsorption qmax without a scope decision.
+
+Next execution strategy:
+
+- Wait for Yao approval before changing prototype JSON.
+- Continue Batch 04 separation/superwetting surfaces if auditing continues before JSON cleanup.
+- If cleaning approved items first, prioritize Batch 03 hard wrong-source groups: Chlorella Technology rows, SRB iron-cycle constraints, mycelium Zhang2022 rows, and cell-membrane metric normalization.
 
 ## Batch 02 Codex Checkpoint - 2026-06-16
 
