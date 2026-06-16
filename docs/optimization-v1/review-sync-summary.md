@@ -127,6 +127,14 @@ The seventh applied Package A batch made PDA-side metadata-only changes:
 
 This checkpoint deliberately did not edit `mussel-foot-adhesion`, because its overlapping PDA-derived rows require Yao ownership/scope approval. It did not change verification status, apply boundaries, remove wrong-source rows, or run `tools/build_prototypes_db.py`.
 
+The eighth applied Package A batch accepted the targeted PDA/mussel patent OCR audit:
+
+- `polydopamine-coating`: normalized CN113244898A rows [17-19] and CN114570339A rows [26-32] from bare filenames to confirmed local `仿生文献库/3rd/第三波-仿生吸附专利/` PDF paths.
+- `mussel-foot-adhesion`: normalized Tang2023 row [0] to the confirmed ` 2.pdf` local PDF path.
+- Decision queue now records that the prior `missing_pdf` concern is mostly resolved, but CN114570339A figure-estimated values and CN113244898A Pb percentage discrepancy remain approval-gated.
+
+This checkpoint did not edit duplicated mussel CN114570339A rows, because their PDA/mussel ownership is still unresolved. It did not change verification status, apply boundaries, remove wrong-source rows, correct disputed values, or run `tools/build_prototypes_db.py`.
+
 Approval is still needed before:
 
 - adding quotes/locators to prototype JSON files,
