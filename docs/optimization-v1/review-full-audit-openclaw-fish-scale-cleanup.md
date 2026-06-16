@@ -118,4 +118,78 @@ The repeated 478 mg/g values (rows 7, 8, 12, 14) are **exact duplicates** — th
 | B02-FISH-001 | mechanisms[0-53], mechanisms[56-86], engineering_constraints[0-10] | hard_do_not | ~85 mechanisms + 10 engineering constraints are from superwetting/membrane/Janus/oil-water separation literature. Using these as fish-scale HAp adsorption evidence would drive wrong design recommendations (oil-water separation, superhydrophobic coatings, Janus membranes). | multiple membrane/superwetting sources | title/domain check | Source domains are membrane/superwetting, not HAp adsorption | wrong_source | **keep as hard_do_not** — these must not be used as HAp adsorption evidence. Remove/reassign after Yao approval. |
 | B02-FISH-002 | performance_data[0-1], mechanisms[55], engineering_constraints[11] | soft_boundary | Dou2021 supports fish-scale-derived porous biochar for CIP, not HAp as final adsorbent. HAp-based inorganics are removed during biochar preparation. | Dou2021 PDF | abstract; methods | "fish scale-based porous activated biochar" | supported | **keep as soft_boundary** — decide whether to expand prototype scope to include fish-scale biochar, or move to a separate prototype. |
 | B02-FISH-003 | performance_data[7-17] | soft_boundary | CN114849640A acid-fuchsin values are condition-specific: 100 mg/L dye, 5 mg HAp, 25 mL solution, 30°C, 24 h. Do not generalize 478 mg/g to other dyes or contact times. | CN114849640A PDF | [0045]-[0063] | "100mg/L...酸性品红...30C...24h" | supported | **keep as soft_boundary** — strong fish-scale HAp evidence but condition-scoped |
-| B02-FISH-004 | performance_data[18-21] | knowledge_gap | CN113275374A values are now readable from visual cache, but the patent describes MICP bacteria + HAP co-immobilization, not fish-scale extracted HAp alone. Also, DB has empty pollutant fields. | CN113275374A visual_cache p.6 | Table 1 | "混合比例1:1:1, Cd²⁺初始浓度1
+| B02-FISH-004 | performance_data[18-21] | knowledge_gap | CN113275374A values are now readable from visual cache, but the patent describes MICP bacteria + HAP co-immobilization, not fish-scale extracted HAp alone. Also, DB has empty pollutant fields. | CN113275374A visual_cache p.6 | Table 1 | "混合比例1:1:1, Cd²⁺初始浓度10mg/L, 去除率98.52%" | needs_human_decision | **upgrade to needs_human_decision** — values are verified from OCR but scope is MICP, not fish-scale HAp alone. Decide: keep as biomineralization evidence, or remove. |
+| B02-FISH-005 | performance_data[22-23] | hard_do_not | Marine-shell/abalone HA Congo Red values must not be used as fish-scale HAp evidence. | Wang2021 PDF | abstract | "abalone HA microspheres...495.5626 mg/g" | wrong_source | **keep as hard_do_not** — remove/reassign after Yao approval. |
+| B02-FISH-006 | mechanisms[54].causal_chain.boundary_conditions | knowledge_gap | HAp pH dissolution boundary exists in general literature, but this JSON row has no direct quote for its specific wording. | Balasooriya2022 or Jaffar2024 | mechanism/pH sections | N/A | partial | **keep as knowledge_gap** — source and quote before converting into a boundary. |
+| B02-FISH-007 | performance_data[24-28], mechanisms[88] | hard_do_not | Generic shell-powder review values and mechanisms must not be used as fish-scale HAp evidence. | Zhang2024 PDF | Section 1.2, 2.1, 2.3 | Generic shell-powder review values | wrong_source | **keep as hard_do_not** — remove/reassign after Yao approval. |
+| B02-FISH-008 | mechanisms[87] | hard_do_not | MICP urea hydrolysis mechanism must not be used as fish-scale HAp adsorption evidence. | CN113275374A | [0027]-[0028] | "脲酶水解尿素...CO₃²⁻+Ca²⁺→CaCO₃↓" | wrong_source | **keep as hard_do_not** — remove/reassign to MICP prototype. |
+
+---
+
+## Source Family Classification for mechanisms[0-86] + engineering_constraints[0-11]
+
+| index_range | source_family | domain | in_fish_scale_hap_scope | recommended_action |
+|---|---|---|---|---|
+| mechanisms[0-8] | 10.1007/s10853-022-07945-8 | Superwetting materials review | ❌ no | remove |
+| mechanisms[9-17] | 10.3390/membranes13080727 | Membrane distillation/fouling review | ❌ no | remove |
+| mechanisms[18-30] | 10.1007/s11783-021-1515-2 | Cellulose superhydrophobic membranes | ❌ no | remove |
+| mechanisms[31-43] | 10.1021/acsami.0c18794 | Superwetting surfaces for oil-water separation | ❌ no | remove |
+| mechanisms[44-53] | 10.34133/2022/9895418 | Femtosecond laser superwettability | ❌ no | remove |
+| mechanisms[54] | Balasooriya2022 (10.3390/ma14202324) + Dou2021 (10.1016/j.chemosphere.2021.131962) | General HAp adsorption mechanisms + biochar CIP mechanism | ⚠️ partial — HAp mechanism valid, but label mixes biochar mechanism | narrow_and_fix_source |
+| mechanisms[55] | Dou2021 (10.1016/j.chemosphere.2021.131962) | Hydrophobic interaction for CIP on biochar | ⚠️ scope — valid but biochar/CIP, not HAp/heavy-metal | needs_human_decision |
+| mechanisms[56-72] | 10.1002/smll.202204624 | Superwetting on-demand separation (Small journal) | ❌ no | remove |
+| mechanisms[73-86] | 10.16490/j.cnki.issn.1001-3660.2023.02.015 | 超浸润膜-油水分离 (CNKI) | ❌ no | remove |
+| mechanisms[87] | CN113275374A | MICP urea hydrolysis / CaCO₃ | ❌ no | remove_or_reassign |
+| mechanisms[88] | Zhang2024 (10.3969/j.issn.1672-7304.2024.02.0011) | Generic shell-powder adsorption mechanism | ❌ no | remove_or_reassign |
+| engineering_constraints[0-1] | 10.1007/s10853-022-07945-8 | Smart responsive membranes | ❌ no | remove |
+| engineering_constraints[2] | 10.3390/membranes13080727 | MOF water stability for membranes | ❌ no | remove |
+| engineering_constraints[3-6] | 10.1007/s11783-021-1515-2 | Cellulose membrane crosslinking/stability | ❌ no | remove |
+| engineering_constraints[7-10] | 10.1021/acsami.0c18794 | Superwetting fabric/mesh flux/stability | ❌ no | remove |
+| engineering_constraints[11] | Dou2021 (10.1016/j.chemosphere.2021.131962) | Biochar/CIP regeneration | ⚠️ scope — valid but biochar, not HAp | needs_human_decision |
+
+**Summary:** Of 89 mechanisms + 12 engineering constraints, only ~3 entries (mechanisms[54], mechanisms[55], engineering_constraints[11]) have any connection to fish-scale-derived materials, and even those are biochar/CIP evidence, not HAp heavy-metal evidence. The remaining ~98 entries are entirely wrong-source contamination from membrane/superwetting/oil-water-separation literature.
+
+---
+
+## Enrichment Cross-Check: enrichment/fish-scale-hydroxyapatite.json
+
+The enrichment JSON mirrors the main JSON's mechanism entries. Key findings:
+
+1. **Empty causal_chain fields:** All enrichment mechanism entries have empty `causal_chain` objects (empty text, basis, locator for all sub-fields). This is consistent with B06-ENR-001 (empty causal chains as placeholders).
+2. **No wrong-source mirroring beyond main JSON:** The enrichment file mirrors the same source families as the main JSON. No additional wrong-source entries were found in enrichment that don't exist in the main file.
+3. **Consistency with main JSON:** The enrichment mechanism names match the main JSON mechanism names 1:1. No orphan entries.
+4. **No independent evidence:** Enrichment entries add no independent verification, quotes, or locators beyond what's in the main JSON.
+
+**Recommendation:** Enrichment cleanup should follow main JSON cleanup. Do not use enrichment causal chains as evidence until populated.
+
+---
+
+## Open Questions
+
+These are the items that require Yao or Codex decision:
+
+1. **FISH-CD-012/013 (Dou2021 biochar scope):** Should fish-scale-derived porous biochar (CIP adsorption, qmax 1013.96 mg/g) be kept inside the fish-scale-hydroxyapatite prototype, moved to a separate fish-scale-biochar prototype, or removed entirely? The material is derived from fish scales but HAp is removed during preparation. **Decision: expand scope / split prototype / remove.**
+
+2. **FISH-CD-014 (Wu2022 rice-husk HAp-biochar):** Should HAp-tailored hierarchical porous biochar (rice husk feedstock, Cd 88.1 / Pb 110.2 mg/g) be kept as soft background evidence, or reassigned to a general HAp-biochar prototype? **Decision: keep_soft / reassign.**
+
+3. **FISH-CD-015 (CN113275374A MICP scope):** The patent values are now verified from visual cache (Cd²⁺ 98.52%, Pb²⁺ 99.49%), but this is MICP bacteria biomineralization with commercial HAP, not fish-scale extracted HAp. Should these rows be kept, reassigned to iron-oxidizing-bacteria or biomineralization-template, or removed? **Decision: keep / reassign / remove.**
+
+4. **FISH-CD-016/017 (Wang2021 abalone + Zhang2024 shell-powder):** Confirm removal of abalone HA and generic shell-powder rows. These are clearly wrong-source. **Decision: approve removal.**
+
+5. **FISH-CD-018 (mechanisms[54] source fix):** The "八重协同吸附机制" entry currently cites Dou2021 DOI but the mechanism content comes from Balasooriya2022. Should the DOI be corrected to Balasooriya2022 (10.3390/ma14202324) and the label narrowed to "nano-HAp heavy-metal adsorption mechanisms"? **Decision: fix source / keep as-is / remove.**
+
+6. **FISH-CD-019/020 (Dou2021 mechanism/regeneration):** Should the hydrophobic interaction mechanism (mechanisms[55]) and regeneration constraint (engineering_constraints[11]) be kept inside fish-scale-hydroxyapatite with a scope caveat, or moved/removed with the biochar scope decision? **Decision depends on Q1 above.**
+
+7. **Mechanism/constraint mass removal:** Approve removal of ~85 mechanisms (indices 0-53, 56-86) and ~10 engineering constraints (indices 0-10) that are entirely wrong-source (membrane/superwetting/oil-water separation). This is the single largest cleanup action. **Decision: approve bulk removal.**
+
+8. **performance_data consolidation:** Approve merging of 4 duplicate CN114849640A rows (indices 8, 12, 14 into index 7) and removal of 1 redundant summary row (index 17), reducing 11 patent rows to 7 unique condition-variant rows. **Decision: approve consolidation.**
+
+---
+
+## Audit Statistics
+
+- **performance_data rows:** 29 total → 7 keep (CN114849640A unique), 4 merge/dedup, 1 remove (redundant summary), 2 needs_human_decision (Dou2021 biochar), 5 keep_soft (Wu2022 rice-husk), 4 needs_human_decision (CN113275374A MICP), 2 wrong_source (Wang2021 abalone), 5 wrong_source (Zhang2024 shell-powder)
+- **mechanisms:** 89 total → ~3 need source fix/scope decision (indices 54, 55, 87-88), ~85 wrong_source removal (indices 0-53, 56-86)
+- **engineering_constraints:** 12 total → 1 needs scope decision (index 11), 10 wrong_source removal (indices 0-10), 1 not deeply audited
+- **enrichment:** All causal chains empty; no independent evidence; follows main JSON cleanup
+- **Total Yao decisions needed:** 8 items (see Open Questions)
