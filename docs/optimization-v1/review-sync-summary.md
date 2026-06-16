@@ -2,7 +2,7 @@
 
 status: active_full_audit
 
-Last updated: 2026-06-17 09:40 Asia/Shanghai
+Last updated: 2026-06-17 06:03 Asia/Shanghai
 
 ## Scope
 
