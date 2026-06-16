@@ -2,7 +2,7 @@
 
 status: active_full_audit
 
-Last updated: 2026-06-17 00:25 Asia/Shanghai
+Last updated: 2026-06-17 09:40 Asia/Shanghai
 
 ## Scope
 
@@ -117,6 +117,15 @@ Key accepted findings:
 - PDA-side path normalization and pollutant fills are viable Package A candidates; mussel-side metadata changes should wait for ownership decisions.
 - Yuan2024 is a tannic-acid/cellulose/PEI composite with PDA-modified montmorillonite, so its extreme qmax values need a material-class caveat or reassignment.
 - Enrichment causal chains are empty evidence shells and include wrong-source hydrophobic/superhydrophobic membrane mirrors.
+
+## Package A7 Cleanup Checkpoint
+
+The seventh applied Package A batch made PDA-side metadata-only changes:
+
+- `polydopamine-coating`: normalized performance-row `source_file` values to confirmed local PDF paths for CN115055171A, Shi2021, Yan2022, Xiao2021, Zhang2021, Godiya2022, Yuan2024, Foroutan2021, Xiang2023, and Jin2023 source families.
+- `polydopamine-coating`: filled six empty pollutant fields for Yan2022 MB/MG/CV and Xiao2021 Fe/Co/Ni rows.
+
+This checkpoint deliberately did not edit `mussel-foot-adhesion`, because its overlapping PDA-derived rows require Yao ownership/scope approval. It did not change verification status, apply boundaries, remove wrong-source rows, or run `tools/build_prototypes_db.py`.
 
 Approval is still needed before:
 
