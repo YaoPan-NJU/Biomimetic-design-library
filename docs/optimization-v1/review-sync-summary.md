@@ -135,6 +135,16 @@ The eighth applied Package A batch accepted the targeted PDA/mussel patent OCR a
 
 This checkpoint did not edit duplicated mussel CN114570339A rows, because their PDA/mussel ownership is still unresolved. It did not change verification status, apply boundaries, remove wrong-source rows, correct disputed values, or run `tools/build_prototypes_db.py`.
 
+The ninth applied Package A batch accepted Batch 08 remaining-core preflight:
+
+- `pitcher-plant-slippery-surface`: normalized performance_data[0] source_file to the confirmed local Zeng2021 ` 2.pdf` path.
+- `spider-silk`: normalized the four Zhou2021 performance source_file values to the confirmed local ` 2.pdf` path; Codex verified the ` 2.pdf` and ` 3.pdf` copies have identical SHA-1 hashes.
+- `coral-skeleton` and `magnetic-bacteria` remain zero-performance knowledge gaps.
+- `lobster-exoskeleton` Vo path normalization was not applied because the proposed `2023-Vo... 2.pdf` PDF was not found locally.
+- Enrichment mirroring candidates were not applied because enrichment sync remains blocked until wrong-source/scope cleanup decisions are approved.
+
+This checkpoint did not change verification status, apply boundaries, remove wrong-source rows, recompute provenance, correct values, or run `tools/build_prototypes_db.py`.
+
 Approval is still needed before:
 
 - adding quotes/locators to prototype JSON files,
