@@ -2,7 +2,7 @@
 
 status: active_full_audit
 
-Last updated: 2026-06-16 14:12 Asia/Shanghai
+Last updated: 2026-06-16 19:55 Asia/Shanghai
 
 ## Scope
 
@@ -41,7 +41,17 @@ The task was evidence review and decision preparation only. No `prototypes_db/*.
 
 `review-decision-queue.md` now contains decision-ready items for Yao approval. `queued_for_yao_decision` does not authorize edits by itself.
 
-Approval is needed before:
+## Package A1 Cleanup Checkpoint
+
+Yao approved only low-risk mechanical cleanup. The first applied batch changed `prototypes_db` in a limited scope:
+
+- normalized source paths and removed exact duplicate rows in `prototypes_db/diatom-frustule.json`;
+- filled direct-source pollutant fields in `plant-tannin`, `wood-xylem`, `bone-structure`, and `oyster-shell`;
+- normalized confirmed ` 2.pdf` source-file suffixes for wood, bone, and oyster rows.
+
+This checkpoint did not upgrade verification status, did not apply hard/soft boundary changes, did not remove wrong-source rows, and did not run `tools/build_prototypes_db.py`.
+
+Approval is still needed before:
 
 - adding quotes/locators to prototype JSON files,
 - changing any verification status,
