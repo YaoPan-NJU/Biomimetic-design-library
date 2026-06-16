@@ -1,8 +1,8 @@
 # Evidence Review Sync Summary
 
-status: decision_queue_ready
+status: active_full_audit
 
-Last updated: 2026-06-16 07:57 Asia/Shanghai
+Last updated: 2026-06-16 12:48 Asia/Shanghai
 
 ## Scope
 
@@ -51,3 +51,32 @@ Approval is needed before:
 ## GitHub Sync Policy
 
 Milestone updates are pushed to the `review` branch so progress is visible remotely while local review continues.
+
+## Full Audit Continuation
+
+Yao selected A1+B1+C1 for the next stage:
+
+- phased full audit across the prototype library,
+- queue-before-edit, with no `prototypes_db/*.json` edits before approval,
+- evidence-graded boundaries: `hard_do_not`, `soft_boundary`, `knowledge_gap`.
+
+## Full Audit Outputs
+
+- `docs/optimization-v1/review-full-audit-plan.md`
+- `docs/optimization-v1/review-full-audit-worklog.md`
+- `docs/optimization-v1/review-full-audit-decision-queue.md`
+- `docs/optimization-v1/review-boundary-do-not-register.md`
+- Batch 01 files for `chitosan`, `polydopamine-coating`, `plant-tannin`, `silk-fibroin`, `wood-xylem`
+- Batch 02 files for `biomineralization-template`, `bone-structure`, `oyster-shell`, `scallop-shell`, plus `fish-scale-hydroxyapatite` preflight
+
+## Latest Checkpoint
+
+Batch 02 mineral/shell audit is queued for Yao decision. No prototype JSON files were edited and `tools/build_prototypes_db.py` was not run.
+
+| prototype_id | latest result |
+|---|---|
+| biomineralization-template | Wang2025 supports real LanM@ZIF-8 Nd3+ adsorption, but provenance/source metadata and missing performance_data need approval. |
+| bone-structure | Bambaeero/Jaffar HAp evidence is usable with metadata fixes; Chen2021 MOF/Cr(VI) rows are wrong-source. |
+| oyster-shell | Qiu/Li/Xu phosphate evidence is supported; Wang2021 abalone HA and generic shell/soil reviews need narrowing or reassignment. |
+| scallop-shell | Wang2024 scallop Congo Red evidence is strong; existing performance rows are mostly generic shell reviews. |
+| fish-scale-hydroxyapatite | Preflight found large membrane/superwetting wrong-source contamination; CN114849640A is the strongest fish-scale HAp source, while CN113275374A needs OCR. |

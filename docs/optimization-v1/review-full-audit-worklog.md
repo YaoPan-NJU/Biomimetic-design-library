@@ -14,6 +14,30 @@ status: active
 | 2026-06-16 12:46 CST | Codex | review-boundary-do-not-register.md | batch01_boundaries | Added evidence-graded DO-NOT, soft_boundary, and knowledge_gap candidates. Missing/scanned PDFs are treated as knowledge gaps, not hard DO-NOT. |
 
 | 2026-06-16 13:15 CST | Codex | review-full-audit-batch-01-wood-xylem.md | codex_reviewed | Completed local PDF text audit for wood-xylem after OpenClaw failure; all three performance values supported, one mechanism source/quote mismatch queued, enrichment placeholders queued. |
+| 2026-06-16 12:48 CST | Codex | full-audit-02-minerals-shells | codex_reviewed_checkpoint | Added Batch 02 audit docs for biomineralization-template, bone-structure, oyster-shell, scallop-shell, and fish-scale-hydroxyapatite preflight. Updated full-audit decision queue and boundary register. No prototypes_db files modified. |
+
+## Batch 02 Codex Checkpoint - 2026-06-16
+
+Current state:
+
+- `biomineralization-template`, `bone-structure`, `oyster-shell`, and `scallop-shell` have Codex-reviewed Batch 02 audit files.
+- `fish-scale-hydroxyapatite` has a preflight audit file because the prototype contains 29 performance rows, 89 mechanisms, 12 engineering constraints, and a large wrong-source membrane/superwetting block.
+- No `prototypes_db/*.json` files were modified.
+- No build script was run.
+- All Batch 02 JSON-change candidates were queued as `pending_yao`.
+
+Key findings:
+
+- `fish-scale-hydroxyapatite` has the highest cleanup priority in this batch: special-wettability/membrane mechanisms and constraints should be removed or reassigned before detailed HAp quote insertion.
+- `bone-structure` contains a clear MOF/Cr(VI) wrong-source row that should not remain as bone/HAp evidence.
+- `oyster-shell` and `scallop-shell` both contain generic shell-review and soil-passivation evidence that should be kept soft or split to shell-general evidence.
+- Strong supported evidence exists but needs metadata normalization: Wang2025 LanM@ZIF-8, Bambaeero2020, Jaffar2024, Qiu2021, Li2017, Xu2022, Wang2024 scallop shell, and CN114849640A.
+
+Next execution strategy:
+
+- Wait for Yao approval before changing prototype JSON.
+- If continuing audit before approval, start Batch 03 with low-concurrency/local text-first workflow.
+- If cleaning Batch 02 after approval, begin with `fish-scale-hydroxyapatite` source-block removal/reassignment, then add missing quote/locator metadata to supported mineral/shell fields.
 
 ## Batch 01 Codex Checkpoint - 2026-06-16
 
