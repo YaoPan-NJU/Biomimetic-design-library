@@ -2,7 +2,7 @@
 
 status: active_full_audit
 
-Last updated: 2026-06-17 00:20 Asia/Shanghai
+Last updated: 2026-06-17 00:25 Asia/Shanghai
 
 ## Scope
 
@@ -105,6 +105,18 @@ Key accepted findings:
 - CN113275374A supports MICP/mixed-bacteria biomineralization and should not be used as fish-scale HAp evidence without reassignment.
 - Wang2021 and Zhang2024 are shell/abalone/generic shell-powder sources, not fish-scale HAp.
 - The large superwetting/membrane mechanism and constraint ranges remain wrong-source candidates requiring Yao approval before removal.
+
+## PDA/Mussel OpenClaw Acceptance Checkpoint
+
+OpenClaw produced `review-full-audit-openclaw-pda-mussel-overlap.md`, and Codex accepted decision-ready findings after spot-checking duplicate structure and representative extraction quotes.
+
+Key accepted findings:
+
+- `polydopamine-coating` and `mussel-foot-adhesion` share 32 exact duplicate performance rows.
+- The duplicate rows are PDA-coated adsorbent/composite evidence. They should not be counted twice in ranking/provenance; final ownership requires Yao scope approval.
+- PDA-side path normalization and pollutant fills are viable Package A candidates; mussel-side metadata changes should wait for ownership decisions.
+- Yuan2024 is a tannic-acid/cellulose/PEI composite with PDA-modified montmorillonite, so its extreme qmax values need a material-class caveat or reassignment.
+- Enrichment causal chains are empty evidence shells and include wrong-source hydrophobic/superhydrophobic membrane mirrors.
 
 Approval is still needed before:
 
