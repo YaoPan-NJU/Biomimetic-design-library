@@ -2,7 +2,7 @@
 
 status: active_full_audit
 
-Last updated: 2026-06-16 21:00 Asia/Shanghai
+Last updated: 2026-06-16 21:25 Asia/Shanghai
 
 ## Scope
 
@@ -84,6 +84,14 @@ The fifth applied Package A batch made one path-only cleanup:
 - `superhydrophobic-artificial`: normalized the CN121130847A performance-row source path to the confirmed patent PDF under `仿生文献库/专利/`.
 
 This checkpoint did not change WCA classification, pollutant fields, constraints, verification status, or run `tools/build_prototypes_db.py`.
+
+## Package A6 Cleanup Checkpoint
+
+The sixth applied Package A batch made one path-only cleanup:
+
+- `fish-scale-hydroxyapatite`: normalized CN114849640A acid-fuchsin performance rows `performance_data[7-17]` to the confirmed patent PDF under `仿生文献库/专利/`.
+
+This checkpoint deliberately did not deduplicate repeated 478 mg/g rows, add patent paragraph locators, change verification status, apply boundary decisions, or run `tools/build_prototypes_db.py`.
 
 Approval is still needed before:
 
