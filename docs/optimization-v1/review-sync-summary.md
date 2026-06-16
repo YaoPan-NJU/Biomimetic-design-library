@@ -98,7 +98,28 @@ OpenClaw Batch 07 parked/registry consistency and the targeted MOF verification-
 | MOF scope boundary | MOF-5 H2 storage is valid MOF material-property evidence but should be excluded from water-treatment adsorption ranking unless the database keeps gas-storage properties separately. |
 | DNA aptamer | Targeted evidence build accepted: 9/11 sources are biosensor-only; Bilibana2022 RNA-GO and CN121588773A DNA-GC are the only adsorption/capture evidence sources. |
 | diatom path/dedup | Targeted cleanup accepted: 7 source path families need normalization, 22 exact duplicate rows should be removed after approval, and one Pb XPS mechanism cites the wrong DOI/source. |
-| next OpenClaw tasks | Continue targeted starch extreme-value sanity check. |
+| starch extreme values | Targeted sanity check accepted: CV 24,375 mg/g is concentration-derived, Khoo2023 abstract maxima are cross-material review summaries, and oil/aerogel values should not drive starch-granule aqueous ranking. |
+| next OpenClaw tasks | No currently running OpenClaw worker. Prepare next-stage decision summary and await Yao approval for queued cleanup categories, or start another targeted source family if requested. |
+
+## Starch Extreme-Value OpenClaw Acceptance - 2026-06-16
+
+File accepted:
+
+- `docs/optimization-v1/review-full-audit-openclaw-starch-extreme-values.md`
+
+Codex spot checks:
+
+- Confirmed `prototypes_db/materials_reference/starch-granule.json` has 121 performance rows and zero verified provenance in its summary.
+- Confirmed high-risk JSON rows: Pb2+ 2000 mg/g, mmol/g rows, Ihsanullah concentration-dependent dye rows, Khoo review maxima, oil/chloroform sorbent rows, missing-source row 77, and Chen2021 STAH20 2967.66 mg/g.
+- Confirmed Ihsanullah2022 PDF text supports CV uptake increasing from 4999 to 24,375 mg/g and MB uptake increasing from 1455.76 to 1918.81 mg/g with initial concentration changes, so these are not generic qmax values.
+- Confirmed Khoo2023 abstract text lists review-wide maxima of 13,000, 66, 2000, 25,000, and 782 mg/g across pollutant classes, not starch-granule-specific performance.
+- Confirmed Khoo2023 Table 3 contains rice straw-cationic starch aerogel oil adsorption at 13,000 mg/g, which is an oil/superhydrophobic sorbent class.
+
+Accepted queue impact:
+
+- Added F10 starch decision items to `review-full-audit-decision-queue.md`.
+- Added B10 starch DO-NOT/boundary candidates to `review-boundary-do-not-register.md`.
+- No database JSON edits were made.
 
 ## Diatom Path/Dedup OpenClaw Acceptance - 2026-06-16
 
