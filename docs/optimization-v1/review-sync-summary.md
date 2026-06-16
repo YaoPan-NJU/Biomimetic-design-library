@@ -2,7 +2,7 @@
 
 status: active_full_audit
 
-Last updated: 2026-06-16 13:06 Asia/Shanghai
+Last updated: 2026-06-16 14:12 Asia/Shanghai
 
 ## Scope
 
@@ -52,6 +52,14 @@ Approval is needed before:
 
 Milestone updates are pushed to the `review` branch so progress is visible remotely while local review continues.
 
+## Execution Model
+
+Current role split:
+
+- OpenClaw owns bulk PDF/extraction/OCR verification and draft batch outputs.
+- Codex owns scope control, key decisions, stage acceptance, spot checks, queue curation, boundary register, worklog/sync summary, and GitHub checkpoints.
+- Codex should not do large manual row-by-row audits unless needed for acceptance spot checks or critical disputes.
+
 ## Full Audit Continuation
 
 Yao selected A1+B1+C1 for the next stage:
@@ -63,16 +71,62 @@ Yao selected A1+B1+C1 for the next stage:
 ## Full Audit Outputs
 
 - `docs/optimization-v1/review-full-audit-plan.md`
+- `docs/optimization-v1/review-openclaw-coordination.md`
+- `docs/optimization-v1/review-openclaw-next-tasks.md`
+- `docs/optimization-v1/review-openclaw-worker-prompts.md`
 - `docs/optimization-v1/review-full-audit-worklog.md`
 - `docs/optimization-v1/review-full-audit-decision-queue.md`
 - `docs/optimization-v1/review-boundary-do-not-register.md`
 - Batch 01 files for `chitosan`, `polydopamine-coating`, `plant-tannin`, `silk-fibroin`, `wood-xylem`
 - Batch 02 files for `biomineralization-template`, `bone-structure`, `oyster-shell`, `scallop-shell`, plus `fish-scale-hydroxyapatite` preflight
 - Batch 03 preflight file for `chlorella-cell-wall`, `iron-oxidizing-bacteria`, `sulfate-reducing-bacteria`, `mycelium`, and `cell-membrane-ion-channel`
+- Batch 04 preflight file for `lotus-leaf`, `shark-skin`, `water-strider-leg`, `cactus-spine`, and `superhydrophobic-artificial`
+- Batch 05 preflight file for `dna-aptamer`, `diatom-frustule`, `mangrove-root`, and material-reference `alginate`, `cellulose-nanocrystal`, `metal-organic-framework`, `starch-granule`
+- Batch 06 enrichment mirror crosscheck file for all 24 `prototypes_db/enrichment/*.json` files
 
 ## Latest Checkpoint
 
-Batch 03 microbes/cells preflight is queued for Yao decision. No prototype JSON files were edited and `tools/build_prototypes_db.py` was not run.
+OpenClaw next-task package is prepared after Batch 06 enrichment mirror crosscheck. No prototype JSON files were edited and `tools/build_prototypes_db.py` was not run.
+
+| area | latest result |
+|---|---|
+| execution model | OpenClaw owns bulk evidence verification; Codex owns stage acceptance, spot checks, queue curation, boundaries, and GitHub checkpoints. |
+| next OpenClaw tasks | Prepared task list and copy-paste worker prompts for Batch 07 parked/registry consistency, DNA aptamer evidence build, diatom path/dedup cleanup, MOF verification semantics, and starch extreme-value sanity checks. |
+| enrichment schema | Enrichment `mechanisms` are object maps keyed by mechanism names, while main JSON `mechanisms` are arrays. |
+| causal chains | 525/525 enrichment mechanism entries have empty or placeholder causal-chain fields. |
+| empty mirrors | `biomineralization-template`, `coral-skeleton`, `dna-aptamer`, and `magnetic-bacteria` enrichment files are `{}` despite main JSON mechanisms. |
+| count mismatches | `diatom-frustule`, `pitcher-plant-slippery-surface`, `plant-tannin`, and `silk-fibroin` enrichment mirrors have fewer mechanisms than main JSONs. |
+| evidence policy | Enrichment entries should not be treated as source-backed evidence until populated from approved main JSON rows with locators and quotes. |
+
+## Prior Full-Audit Checkpoint
+
+Batch 05 selective/material-reference preflight remains queued for Yao decision.
+
+| prototype_id | latest result |
+|---|---|
+| dna-aptamer | Underbuilt: zero performance rows, one mechanism, zero provenance, and empty enrichment mirror despite local aptamer PDFs/extractions. |
+| diatom-frustule | Local PDFs exist for major source groups, but source paths are often bare or suffix-mismatched; duplicated row groups need cleanup before quote insertion. |
+| mangrove-root | Evidence is constructed-wetland/system removal percentage evidence; keep separate from material qmax ranking. |
+| alginate | Largest row block depends on missing Dong2025 PDF; patent rows need exact path and paragraph locators. |
+| cellulose-nanocrystal | Overbroad material-reference store mixing CNC, CNF, general cellulose, bio-foam, diatomite composite, membrane, and tannin-cellulose evidence. |
+| metal-organic-framework | `n_verified=252` is mostly `verification=single_source`, not full quote+locator verification; chitosan and membrane rows are wrong-source candidates. |
+| starch-granule | All performance rows are unverified and several extreme/mixed-unit review-table values need sanity checking before ranking. |
+
+## Earlier Full-Audit Checkpoint
+
+Batch 04 separation/superwetting surfaces preflight remains queued for Yao decision.
+
+| prototype_id | latest result |
+|---|---|
+| lotus-leaf | Overaggregated special-wettability/oil-water-separation store with 355 mechanisms and zero verified provenance; needs split before row-level quote insertion. |
+| shark-skin | Zero performance rows and mostly generic antifouling/superhydrophobic background mechanisms; direct shark-skin performance evidence is still a knowledge gap. |
+| water-strider-leg | Zero performance rows and generic wetting/membrane rows; keep as background until direct water-strider evidence is added. |
+| cactus-spine | Zero performance rows and mixed cactus/desert-beetle/honeycomb/fog-collection content; needs scope split. |
+| superhydrophobic-artificial | CN113244892B and CN121130847A provide the strongest direct artificial-foam evidence, with scope and wettability-classification caveats queued. |
+
+## Older Full-Audit Checkpoint
+
+Batch 03 microbes/cells preflight remains queued for Yao decision.
 
 | prototype_id | latest result |
 |---|---|
@@ -82,7 +136,7 @@ Batch 03 microbes/cells preflight is queued for Yao decision. No prototype JSON 
 | mycelium | Liu2021 fungal biosorption evidence is usable with locator/title cleanup; Zhang2022 cellulose/nanocellulose rows are wrong-source or scope-split candidates. |
 | cell-membrane-ion-channel | Evidence supports membrane separation/ion-selective filtration more than adsorption; metric rows must be separated from adsorption qmax before ranking. |
 
-## Prior Full-Audit Checkpoint
+## Oldest Full-Audit Checkpoint
 
 Batch 02 mineral/shell audit remains queued for Yao decision.
 
