@@ -86,17 +86,38 @@ Yao selected A1+B1+C1 for the next stage:
 
 ## Latest Checkpoint
 
-OpenClaw next-task package is prepared after Batch 06 enrichment mirror crosscheck. No prototype JSON files were edited and `tools/build_prototypes_db.py` was not run.
+OpenClaw Batch 07 parked/registry consistency and the targeted MOF verification-semantics audit are complete and accepted into the decision queue after Codex spot-checking. No prototype JSON files were edited and `tools/build_prototypes_db.py` was not run.
 
 | area | latest result |
 |---|---|
 | execution model | OpenClaw owns bulk evidence verification; Codex owns stage acceptance, spot checks, queue curation, boundaries, and GitHub checkpoints. |
-| next OpenClaw tasks | Prepared task list and copy-paste worker prompts for Batch 07 parked/registry consistency, DNA aptamer evidence build, diatom path/dedup cleanup, MOF verification semantics, and starch extreme-value sanity checks. |
-| enrichment schema | Enrichment `mechanisms` are object maps keyed by mechanism names, while main JSON `mechanisms` are arrays. |
-| causal chains | 525/525 enrichment mechanism entries have empty or placeholder causal-chain fields. |
-| empty mirrors | `biomineralization-template`, `coral-skeleton`, `dna-aptamer`, and `magnetic-bacteria` enrichment files are `{}` despite main JSON mechanisms. |
-| count mismatches | `diatom-frustule`, `pitcher-plant-slippery-surface`, `plant-tannin`, and `silk-fibroin` enrichment mirrors have fewer mechanisms than main JSONs. |
-| evidence policy | Enrichment entries should not be treated as source-backed evidence until populated from approved main JSON rows with locators and quotes. |
+| Batch 07 parked/registry | `namib-beetle` remains a no-performance, duplicated-scope parked item. It should not be promoted without dedicated Namib beetle source evidence. |
+| Batch 07 source mapping | `2022-Progress-review` extraction/PDF variants and `missing_26_pdf_dir` vs ` 2.pdf`/` 3.pdf` variants need provenance resolution before automated path normalization. |
+| MOF semantics | `verification=single_source` is a source-presence/review-summary signal, not quote+locator verification; `n_verified=252` should not be treated as fully verified. |
+| MOF wrong-source rows | Aramesh chitosan rows, Cheng membrane/BPA rows, and Yan polydopamine rows are queued for removal/reassignment decisions. |
+| MOF scope boundary | MOF-5 H2 storage is valid MOF material-property evidence but should be excluded from water-treatment adsorption ranking unless the database keeps gas-storage properties separately. |
+| next OpenClaw tasks | Continue targeted DNA aptamer evidence build, diatom path/dedup cleanup, and starch extreme-value sanity check. |
+
+## Batch 07 / MOF OpenClaw Acceptance - 2026-06-16
+
+Files accepted:
+
+- `docs/optimization-v1/review-full-audit-openclaw-batch-07-parked-registry.md`
+- `docs/optimization-v1/review-full-audit-openclaw-mof-verification-semantics.md`
+
+Codex spot checks:
+
+- Confirmed `prototypes_db/parked/namib-beetle.json` has zero `performance_data`, 16 mechanisms, 4 engineering constraints, and 2 narrative entries.
+- Confirmed MOF `performance_data[23-36]` are Aramesh2021 chitosan-source rows; `performance_data[31-32]` are MOF-containing hybrids needing a human decision, while the other Aramesh rows are wrong-source for MOF.
+- Confirmed MOF `performance_data[77-80]` are activated-carbon/NF/MF/UF-AOP BPA rows with empty material fields from Cheng2024 membrane review.
+- Confirmed MOF `performance_data[88]` is H2 storage at 78 K, not water-treatment adsorption.
+- Confirmed MOF `performance_data[252-253]` are PDA/MGO/CA-CD polydopamine composite rows from Yan2022.
+
+Accepted queue impact:
+
+- Added F07 registry and MOF decision items to `review-full-audit-decision-queue.md`.
+- Added B07 knowledge-gap, soft-boundary, and hard-DO-NOT candidates to `review-boundary-do-not-register.md`.
+- No database JSON edits were made.
 
 ## Prior Full-Audit Checkpoint
 

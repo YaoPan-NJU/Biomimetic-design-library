@@ -22,6 +22,9 @@ status: active
 | 2026-06-16 | Yao + Codex | review-openclaw-coordination.md | role_split_updated | Yao decided OpenClaw should own bulk evidence work. Codex role narrowed to key decisions, stage acceptance, spot-checking, queue curation, boundary register, worklog/sync summary, and GitHub checkpoints. |
 | 2026-06-16 13:56 CST | Codex | review-openclaw-next-tasks.md | openclaw_tasks_prepared | Prepared next OpenClaw worker tasks for Batch 07 parked/registry consistency and targeted sub-batches for DNA aptamer, diatom path/dedup, MOF verification semantics, and starch extreme-value sanity checks. |
 | 2026-06-16 14:12 CST | Codex | review-openclaw-worker-prompts.md | openclaw_prompts_prepared | Prepared copy-paste OpenClaw worker prompts for Batch 07 and targeted DNA aptamer, diatom, MOF, and starch sub-batches. No prototypes_db files modified. |
+| 2026-06-16 15:45 CST | OpenClaw/mimo-v2.5 | review-full-audit-openclaw-batch-07-parked-registry.md | ready_for_codex_acceptance | Completed parked/registry consistency audit. Key findings: namib-beetle has zero performance_data, duplicated fog-harvesting scope, and source/path ambiguity around Progress-review and missing_26 variants. |
+| 2026-06-16 15:30 CST | OpenClaw/mimo-v2.5 | review-full-audit-openclaw-mof-verification-semantics.md | ready_for_codex_acceptance | Completed targeted MOF verification-semantics audit. Key findings: `single_source` is not quote+locator verification, `n_verified=252` is inflated, and Aramesh/Cheng/Yan row groups are wrong-source or scope decisions. |
+| 2026-06-16 15:55 CST | Codex | F07 queue and boundary updates | codex_accepted_spot_checked | Spot-checked MOF Aramesh/Cheng/Yan/H2 rows directly against JSON indices and namib-beetle counts. Added only decision-ready F07 items to decision queue and boundary register. No prototypes_db files modified. |
 
 ## Batch 06 Codex Checkpoint - 2026-06-16
 
