@@ -2,7 +2,7 @@
 
 status: active_full_audit
 
-Last updated: 2026-06-16 20:15 Asia/Shanghai
+Last updated: 2026-06-16 20:30 Asia/Shanghai
 
 ## Scope
 
@@ -59,6 +59,15 @@ The second applied Package A batch continued only low-risk metadata cleanup:
 - `iron-oxidizing-bacteria`: filled Luo2021 As(III)/As(V) pollutant fields for `performance_data[0-6]` and normalized the Luo2021 source path to the C2 local PDF.
 
 This checkpoint still did not upgrade verification status, did not narrow mechanisms, did not apply hard/soft boundaries, did not remove wrong-source rows, and did not run `tools/build_prototypes_db.py`.
+
+## Package A3 Cleanup Checkpoint
+
+The third applied Package A batch continued only low-risk metadata cleanup:
+
+- `silk-fibroin`: normalized confirmed local source paths for Supriya, Adil, Bruder, Martis, Xing, and the second Martis extraction family.
+- `silk-fibroin`: filled three direct pollutant fields for Cu/Cr and MB rows where the audit already identified the pollutants.
+
+This checkpoint skipped false-precision value narrowing, same-DOI deduplication, quote replacement, mechanism changes, and any verification upgrades.
 
 Approval is still needed before:
 
