@@ -2,7 +2,7 @@
 
 status: active_full_audit
 
-Last updated: 2026-06-16 21:25 Asia/Shanghai
+Last updated: 2026-06-17 00:20 Asia/Shanghai
 
 ## Scope
 
@@ -92,6 +92,19 @@ The sixth applied Package A batch made one path-only cleanup:
 - `fish-scale-hydroxyapatite`: normalized CN114849640A acid-fuchsin performance rows `performance_data[7-17]` to the confirmed patent PDF under `仿生文献库/专利/`.
 
 This checkpoint deliberately did not deduplicate repeated 478 mg/g rows, add patent paragraph locators, change verification status, apply boundary decisions, or run `tools/build_prototypes_db.py`.
+
+## Fish-Scale OpenClaw Acceptance Checkpoint
+
+OpenClaw produced `review-full-audit-openclaw-fish-scale-cleanup.md`, and Codex accepted only decision-ready findings after spot-checking local extraction quotes.
+
+Key accepted findings:
+
+- CN114849640A is the core fish-scale extracted HAp acid-fuchsin source; repeated 478 mg/g rows are semantic duplicates from the same 实施例1, not independent replication.
+- Dou2021 supports fish-scale-derived porous biochar/CIP, not fish-scale HAp as final adsorbent.
+- Wu2022 supports rice-husk HAp-biochar, not fish-scale material.
+- CN113275374A supports MICP/mixed-bacteria biomineralization and should not be used as fish-scale HAp evidence without reassignment.
+- Wang2021 and Zhang2024 are shell/abalone/generic shell-powder sources, not fish-scale HAp.
+- The large superwetting/membrane mechanism and constraint ranges remain wrong-source candidates requiring Yao approval before removal.
 
 Approval is still needed before:
 
