@@ -96,7 +96,28 @@ OpenClaw Batch 07 parked/registry consistency and the targeted MOF verification-
 | MOF semantics | `verification=single_source` is a source-presence/review-summary signal, not quote+locator verification; `n_verified=252` should not be treated as fully verified. |
 | MOF wrong-source rows | Aramesh chitosan rows, Cheng membrane/BPA rows, and Yan polydopamine rows are queued for removal/reassignment decisions. |
 | MOF scope boundary | MOF-5 H2 storage is valid MOF material-property evidence but should be excluded from water-treatment adsorption ranking unless the database keeps gas-storage properties separately. |
-| next OpenClaw tasks | Continue targeted DNA aptamer evidence build, diatom path/dedup cleanup, and starch extreme-value sanity check. |
+| DNA aptamer | Targeted evidence build accepted: 9/11 sources are biosensor-only; Bilibana2022 RNA-GO and CN121588773A DNA-GC are the only adsorption/capture evidence sources. |
+| next OpenClaw tasks | Continue targeted diatom path/dedup cleanup and starch extreme-value sanity check. |
+
+## DNA Aptamer OpenClaw Acceptance - 2026-06-16
+
+File accepted:
+
+- `docs/optimization-v1/review-full-audit-openclaw-dna-aptamer-evidence-build.md`
+
+Codex spot checks:
+
+- Confirmed `prototypes_db/dna-aptamer.json` has zero `performance_data`, one mechanism, and `provenance_summary` counts at zero; enrichment mirror is `{}`.
+- Confirmed current mechanism has contradictory metadata: `source: llm_inference` with `verification: verified`, while boundary conditions remain llm-inferred placeholders.
+- Confirmed Bilibana2022 text supports RNA-GO MC-LR adsorption qmax 1.44 mg/g, removal >95%, large surface area, and five-cycle regeneration with about 10% efficiency loss.
+- Confirmed CN121588773A visual cache/text supports DNA-GC AFB1 Kd 0.25 nM and qualitative largest adsorption capacity. Visual figure cache suggests an approximate adsorption capacity around 35 mg/g, but this remains figure-derived and needs human approval before use as a numeric qmax.
+- Confirmed the rest of the aptamer literature pool is mainly biosensor/detection/mechanism evidence and must not be converted into adsorption performance rows.
+
+Accepted queue impact:
+
+- Added F08 DNA decision items to `review-full-audit-decision-queue.md`.
+- Added B08 DNA DO-NOT/boundary candidates to `review-boundary-do-not-register.md`.
+- No database JSON edits were made.
 
 ## Batch 07 / MOF OpenClaw Acceptance - 2026-06-16
 

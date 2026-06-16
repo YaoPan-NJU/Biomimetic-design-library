@@ -25,6 +25,8 @@ status: active
 | 2026-06-16 15:45 CST | OpenClaw/mimo-v2.5 | review-full-audit-openclaw-batch-07-parked-registry.md | ready_for_codex_acceptance | Completed parked/registry consistency audit. Key findings: namib-beetle has zero performance_data, duplicated fog-harvesting scope, and source/path ambiguity around Progress-review and missing_26 variants. |
 | 2026-06-16 15:30 CST | OpenClaw/mimo-v2.5 | review-full-audit-openclaw-mof-verification-semantics.md | ready_for_codex_acceptance | Completed targeted MOF verification-semantics audit. Key findings: `single_source` is not quote+locator verification, `n_verified=252` is inflated, and Aramesh/Cheng/Yan row groups are wrong-source or scope decisions. |
 | 2026-06-16 15:55 CST | Codex | F07 queue and boundary updates | codex_accepted_spot_checked | Spot-checked MOF Aramesh/Cheng/Yan/H2 rows directly against JSON indices and namib-beetle counts. Added only decision-ready F07 items to decision queue and boundary register. No prototypes_db files modified. |
+| 2026-06-16 19:05 CST | OpenClaw/mimo-v2.5 | review-full-audit-openclaw-dna-aptamer-evidence-build.md | ready_for_codex_acceptance | Completed targeted DNA aptamer evidence build. Key findings: most local aptamer sources are biosensor-only; Bilibana2022 RNA-GO and CN121588773A DNA-GC are the only adsorption/capture evidence sources. |
+| 2026-06-16 19:15 CST | Codex | F08 DNA queue and boundary updates | codex_accepted_spot_checked | Spot-checked Bilibana2022 qmax/removal/regeneration text and CN121588773A Kd/figure evidence from local text/visual cache. Added F08 DNA decision and boundary items. No prototypes_db files modified. |
 
 ## Batch 06 Codex Checkpoint - 2026-06-16
 
