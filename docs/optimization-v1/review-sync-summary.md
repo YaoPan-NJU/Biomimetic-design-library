@@ -97,7 +97,30 @@ OpenClaw Batch 07 parked/registry consistency and the targeted MOF verification-
 | MOF wrong-source rows | Aramesh chitosan rows, Cheng membrane/BPA rows, and Yan polydopamine rows are queued for removal/reassignment decisions. |
 | MOF scope boundary | MOF-5 H2 storage is valid MOF material-property evidence but should be excluded from water-treatment adsorption ranking unless the database keeps gas-storage properties separately. |
 | DNA aptamer | Targeted evidence build accepted: 9/11 sources are biosensor-only; Bilibana2022 RNA-GO and CN121588773A DNA-GC are the only adsorption/capture evidence sources. |
-| next OpenClaw tasks | Continue targeted diatom path/dedup cleanup and starch extreme-value sanity check. |
+| diatom path/dedup | Targeted cleanup accepted: 7 source path families need normalization, 22 exact duplicate rows should be removed after approval, and one Pb XPS mechanism cites the wrong DOI/source. |
+| next OpenClaw tasks | Continue targeted starch extreme-value sanity check. |
+
+## Diatom Path/Dedup OpenClaw Acceptance - 2026-06-16
+
+File accepted:
+
+- `docs/optimization-v1/review-full-audit-openclaw-diatom-path-dedup.md`
+
+Codex spot checks:
+
+- Confirmed `prototypes_db/diatom-frustule.json` currently has 42 performance rows, 15 mechanisms, 16 engineering constraints, and 13 narrative entries.
+- Confirmed performance duplicates in Qin2024, Guo2022, Abou-Elanwar2025, and Sriram2022 groups.
+- Confirmed duplicate mechanism, engineering-constraint, and narrative entries by row content and paper IDs.
+- Confirmed local PDFs exist for the Du2021 ` 2.pdf` path and Sriram2022 C1-folder path.
+- Confirmed `mechanisms[0]` cites Guo2022 DOI/source while the row text is Pb2+/MPTS/XPS evidence that belongs to Du2021.
+- Confirmed `mechanisms[1]` and `mechanisms[3]` use microalgae cell-wall template text even though the rows are diatomite mineral-surface chemistry.
+- Confirmed duplicated Arachnoidiscus narrative entries are wheel-hub structural-mechanics biomimicry, not adsorption evidence.
+
+Accepted queue impact:
+
+- Added F09 diatom path/dedup decision items to `review-full-audit-decision-queue.md`.
+- Added B09 diatom DO-NOT/boundary candidates to `review-boundary-do-not-register.md`.
+- No database JSON edits were made.
 
 ## DNA Aptamer OpenClaw Acceptance - 2026-06-16
 

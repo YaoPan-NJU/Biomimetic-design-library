@@ -27,6 +27,8 @@ status: active
 | 2026-06-16 15:55 CST | Codex | F07 queue and boundary updates | codex_accepted_spot_checked | Spot-checked MOF Aramesh/Cheng/Yan/H2 rows directly against JSON indices and namib-beetle counts. Added only decision-ready F07 items to decision queue and boundary register. No prototypes_db files modified. |
 | 2026-06-16 19:05 CST | OpenClaw/mimo-v2.5 | review-full-audit-openclaw-dna-aptamer-evidence-build.md | ready_for_codex_acceptance | Completed targeted DNA aptamer evidence build. Key findings: most local aptamer sources are biosensor-only; Bilibana2022 RNA-GO and CN121588773A DNA-GC are the only adsorption/capture evidence sources. |
 | 2026-06-16 19:15 CST | Codex | F08 DNA queue and boundary updates | codex_accepted_spot_checked | Spot-checked Bilibana2022 qmax/removal/regeneration text and CN121588773A Kd/figure evidence from local text/visual cache. Added F08 DNA decision and boundary items. No prototypes_db files modified. |
+| 2026-06-16 19:12 CST | OpenClaw/mimo-v2.5 | review-full-audit-openclaw-diatom-path-dedup.md | ready_for_codex_acceptance | Completed targeted diatom path/dedup audit. Header timestamp was corrected from worker-emitted 2025 date to the local run time. Key findings: 7 source path families need normalization, 22 exact duplicate rows exist, Pb XPS mechanism cites the wrong DOI, and Arachnoidiscus wheel-hub narrative is cross-domain. |
+| 2026-06-16 19:25 CST | Codex | F09 diatom queue and boundary updates | codex_accepted_spot_checked | Spot-checked diatom JSON counts, duplicate performance/mechanism/constraint/narrative rows, source-path existence, and wrong-domain mechanism text. Added F09/B09 queue and boundary items. No prototypes_db files modified. |
 
 ## Batch 06 Codex Checkpoint - 2026-06-16
 
