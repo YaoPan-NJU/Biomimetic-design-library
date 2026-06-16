@@ -145,6 +145,14 @@ The ninth applied Package A batch accepted Batch 08 remaining-core preflight:
 
 This checkpoint did not change verification status, apply boundaries, remove wrong-source rows, recompute provenance, correct values, or run `tools/build_prototypes_db.py`.
 
+Batch 09 source-gap resolver added no database changes:
+
+- `lobster-exoskeleton`: the 2023-Vo extraction JSON exists, but the matching PDF is missing locally; the local `2024-Vo-wastewater-review 2.pdf` is a different paper and must not be substituted.
+- `coral-skeleton`: no local coral/CaCO3 adsorption source was found. Codex corrected the OpenClaw report to note that Han2020 local PDF was not found; the available Han extraction is antifouling-topic and does not support coral adsorption claims.
+- `magnetic-bacteria`: local MTB review PDF/cache/json exist; zero performance_data is appropriate for review-level ecological evidence, so no Package A change is needed.
+
+This checkpoint is queue/boundary documentation only. It did not modify `prototypes_db`, change verification status, apply boundaries, remove wrong-source rows, or run `tools/build_prototypes_db.py`.
+
 Approval is still needed before:
 
 - adding quotes/locators to prototype JSON files,
