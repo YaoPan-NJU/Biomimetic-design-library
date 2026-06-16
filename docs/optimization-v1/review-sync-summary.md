@@ -2,7 +2,7 @@
 
 status: active_full_audit
 
-Last updated: 2026-06-16 20:30 Asia/Shanghai
+Last updated: 2026-06-16 20:45 Asia/Shanghai
 
 ## Scope
 
@@ -68,6 +68,14 @@ The third applied Package A batch continued only low-risk metadata cleanup:
 - `silk-fibroin`: filled three direct pollutant fields for Cu/Cr and MB rows where the audit already identified the pollutants.
 
 This checkpoint skipped false-precision value narrowing, same-DOI deduplication, quote replacement, mechanism changes, and any verification upgrades.
+
+## Package A4 Cleanup Checkpoint
+
+The fourth applied Package A batch continued path-only cleanup:
+
+- `iron-oxidizing-bacteria`: normalized Xu2022 and Jhariya2024 performance-row source paths to the confirmed C2 local PDFs.
+
+This checkpoint did not add new mechanism/constraint source fields, did not demote Qian2021 background rows, did not change verification status, and did not run `tools/build_prototypes_db.py`.
 
 Approval is still needed before:
 
