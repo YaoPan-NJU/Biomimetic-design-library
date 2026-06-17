@@ -101,7 +101,61 @@
       "source": "literature",
       "ref_doi": "10.1016/j.jtice.2024.105668",
       "verification": "verified",
-      "基本原理": "HAp的Ca²⁺位点可被重金属离子交换取代，且磷酸根可与重金属形成难溶磷酸盐沉淀，实现双重去除机制"
+      "基本原理": "HAp的Ca²⁺位点可被重金属离子交换取代，且磷酸根可与重金属形成难溶磷酸盐沉淀，实现双重去除机制",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "Pb²⁺、Cd²⁺、Cu²⁺、Zn²⁺等二价重金属离子",
+          "basis": "from_source",
+          "locator": "Bambaeero2021 p.221 / Abstract + Sec.1"
+        },
+        "bio_structure": {
+          "text": "羟基磷灰石（HAp, Ca₁₀(PO₄)₆(OH)₂）的晶体结构和表面Ca²⁺/OH⁻位点",
+          "basis": "from_source",
+          "locator": "Bambaeero2021 p.221 / Abstract + Sec.1"
+        },
+        "interaction": {
+          "text": "表面离子交换（Ca²⁺↔Pb²⁺/Cd²⁺）、表面配位（OH⁻与金属离子）、共沉淀（磷酸盐沉淀）",
+          "basis": "from_source",
+          "locator": "Bambaeero2021 p.221 / Abstract + Sec.1"
+        },
+        "why_it_works": {
+          "text": "HAp的Ca²⁺位点可被重金属离子交换取代，且磷酸根可与重金属形成难溶磷酸盐沉淀，实现双重去除机制",
+          "basis": "llm_inferred",
+          "locator": null
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件下HAp开始溶解，释放Ca²⁺，配位/沉淀能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          },
+          {
+            "text": "酸性条件下HAp溶解，释放Ca²⁺，吸附能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": "domain_knowledge"
+          }
+        ],
+        "transferable_principle": "羟基磷灰石通过离子交换+共沉淀双重机制去除重金属，是骨骼/牙齿启发的无机吸附剂",
+        "verification_quote": "HAP has been used as an adsorbent in the removal of Sr, Zn, Co, Cd ions in various environments including electrolyte solutions"
+      }
     },
     {
       "name": "HAp膜制备方法",
@@ -176,5 +230,15 @@
     "n_unverified": 8
   },
   "coverage": "normal",
-  "status": "active"
+  "status": "active",
+  "design_translation": [
+    {
+      "idea": "利用羟基磷灰石的钙磷结构进行重金属和氟离子吸附",
+      "specific_functional_group": "羟基磷灰石（HAp）的 Ca²⁺ 和 PO₄³⁻ 位点",
+      "material_handle": "合成羟基磷灰石粉末或涂层",
+      "target_interaction": "Ca²⁺ 位点配位 F⁻、Pb²⁺，PO₄³⁻ 位点捕获阳离子",
+      "source_tier": "llm_inference",
+      "examples": []
+    }
+  ]
 }

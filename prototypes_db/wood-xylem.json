@@ -87,7 +87,47 @@
       "source": "literature",
       "ref_doi": "10.1038/s41598-021-82277-2",
       "verification": "verified",
-      "基本原理": "木质素的芳香环和酚羟基与酚类污染物结构相似，通过π-π堆积和氢键实现选择性吸附"
+      "基本原理": "木质素的芳香环和酚羟基与酚类污染物结构相似，通过π-π堆积和氢键实现选择性吸附",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "酚类有机物（苯酚、氯代酚）",
+          "basis": "from_source",
+          "locator": "Mo2021 p.1 / Abstract"
+        },
+        "bio_structure": {
+          "text": "木质部的纤维素和木质素组成的多级孔道结构",
+          "basis": "from_source",
+          "locator": "Mo2021 p.1 / Abstract"
+        },
+        "interaction": {
+          "text": "酚羟基与木质素的氢键作用、芳香环的π-π堆积",
+          "basis": "from_source",
+          "locator": "Mo2021 p.1 / Abstract"
+        },
+        "why_it_works": {
+          "text": "木质素的芳香环和酚羟基与酚类污染物结构相似，通过π-π堆积和氢键实现选择性吸附",
+          "basis": "llm_inferred",
+          "locator": null
+        },
+        "boundary_conditions": [
+          {
+            "text": "强碱性条件下酚类解离为酚盐，吸附下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "木质部的多级孔道+木质素芳香结构是天然的酚类吸附平台",
+        "verification_quote": "wood nanocellulose aerogel for pollutant capture"
+      }
     },
     {
       "name": "共价交联网络的XPS证据",
@@ -178,5 +218,15 @@
     "n_unverified": 7
   },
   "coverage": "normal",
-  "status": "active"
+  "status": "active",
+  "design_translation": [
+    {
+      "idea": "利用木材木质部的纤维素和木质素进行吸附和过滤",
+      "specific_functional_group": "纤维素的羟基，木质素的酚羟基",
+      "material_handle": "木材切片、碳化或化学改性",
+      "target_interaction": "羟基通过氢键吸附极性污染物，多孔结构物理过滤",
+      "source_tier": "llm_inference",
+      "examples": []
+    }
+  ]
 }

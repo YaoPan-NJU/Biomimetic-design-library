@@ -319,7 +319,61 @@
       "source": "literature",
       "ref_doi": "10.1002/adfm.202200199",
       "verification": "verified",
-      "基本原理": "生物离子通道的选择性来自精确的孔道尺寸和通道内壁的化学环境（如KcsA通道的羰基氧配位），可实现亚埃级离子选择"
+      "基本原理": "生物离子通道的选择性来自精确的孔道尺寸和通道内壁的化学环境（如KcsA通道的羰基氧配位），可实现亚埃级离子选择",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "特定离子（如K⁺、Na⁺、Ca²⁺）和极性有机分子",
+          "basis": "from_source",
+          "locator": "BerattoRamos2022 p.1 / Abstract"
+        },
+        "bio_structure": {
+          "text": "细胞膜的脂质双分子层和膜蛋白（离子通道、水通道蛋白）",
+          "basis": "from_source",
+          "locator": "BerattoRamos2022 p.1 / Abstract"
+        },
+        "interaction": {
+          "text": "离子通道的选择性过滤器通过尺寸排斥和配位作用实现离子选择性；水通道蛋白（AQP）仅允许水分子通过",
+          "basis": "from_source",
+          "locator": "BerattoRamos2022 p.1 / Abstract"
+        },
+        "why_it_works": {
+          "text": "生物离子通道的选择性来自精确的孔道尺寸和通道内壁的化学环境（如KcsA通道的羰基氧配位），可实现亚埃级离子选择",
+          "basis": "from_source",
+          "locator": "BerattoRamos2022 p.1 / Abstract"
+        },
+        "boundary_conditions": [
+          {
+            "text": "仿生膜的稳定性远低于生物膜，高压力/高盐下膜结构破坏",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          },
+          {
+            "text": "高盐条件下膜结构可能被破坏，选择性下降",
+            "parameter": "salinity",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": "domain_knowledge"
+          }
+        ],
+        "transferable_principle": "生物离子通道的选择性过滤机制（尺寸排斥+化学配位）可启发高选择性分离膜设计",
+        "verification_quote": "aquaporin-based biomimetic membranes for water filtration"
+      }
     },
     {
       "name": "生物离子通道仿生设计原则",
@@ -537,5 +591,15 @@
     "n_unverified": 15
   },
   "coverage": "normal",
-  "status": "active"
+  "status": "active",
+  "design_translation": [
+    {
+      "idea": "利用细胞膜离子通道的选择性传输机制设计分离膜",
+      "specific_functional_group": "通道蛋白的亲水孔道和电荷选择性滤器",
+      "material_handle": "仿生纳米通道膜或离子印迹聚合物",
+      "target_interaction": "基于尺寸和电荷的离子选择性传输",
+      "source_tier": "llm_inference",
+      "examples": []
+    }
+  ]
 }

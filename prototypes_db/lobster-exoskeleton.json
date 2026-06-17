@@ -45,7 +45,61 @@
       "source": "literature",
       "ref_doi": "10.1007/s10311-023-01563-9",
       "verification": "needs_review",
-      "基本原理": "龙虾外骨骼是壳聚糖的天然来源之一，吸附机制与壳聚糖相同"
+      "基本原理": "龙虾外骨骼是壳聚糖的天然来源之一，吸附机制与壳聚糖相同",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "多种污染物（重金属、染料、有机物）",
+          "basis": "from_source",
+          "locator": "Lei2021 p.2 / Sec.1"
+        },
+        "bio_structure": {
+          "text": "龙虾外骨骼的几丁质-矿物复合结构，脱矿后提取几丁质/壳聚糖",
+          "basis": "from_source",
+          "locator": "Lei2021 p.2 / Sec.1"
+        },
+        "interaction": {
+          "text": "与chitosan相同：氨基配位、羟基氢键、静电吸引",
+          "basis": "from_source",
+          "locator": "Lei2021 p.2 / Sec.1"
+        },
+        "why_it_works": {
+          "text": "龙虾外骨骼是壳聚糖的天然来源之一，吸附机制与壳聚糖相同",
+          "basis": "llm_inferred",
+          "locator": null
+        },
+        "boundary_conditions": [
+          {
+            "text": "与壳聚糖相同的pH限制",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          },
+          {
+            "text": "与壳聚糖相同的pH限制，酸性下溶解",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": "domain_knowledge"
+          }
+        ],
+        "transferable_principle": "龙虾外骨骼提取的壳聚糖与虾蟹壳来源壳聚糖吸附机制相同",
+        "verification_quote": null
+      }
     }
   ],
   "narrative": {
@@ -98,5 +152,15 @@
     "n_unverified": 1
   },
   "coverage": "normal",
-  "status": "active"
+  "status": "active",
+  "design_translation": [
+    {
+      "idea": "利用龙虾外骨骼的几丁质-蛋白质复合结构设计高强度吸附材料",
+      "specific_functional_group": "几丁质的乙酰氨基和羟基",
+      "material_handle": "几丁质提取、脱乙酰化或复合改性",
+      "target_interaction": "乙酰氨基和羟基配位重金属，层状结构提供机械强度",
+      "source_tier": "llm_inference",
+      "examples": []
+    }
+  ]
 }

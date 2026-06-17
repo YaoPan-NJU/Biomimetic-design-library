@@ -1491,7 +1491,61 @@
       "source": "literature",
       "ref_doi": "10.13550/j.jxhg.20220633",
       "verification": "verified",
-      "基本原理": "PDA涂层同时含邻苯二酚（金属配位）和吲哚环（π-π堆积），可在单一表面上实现对芳香族污染物和金属离子的双重吸附"
+      "基本原理": "PDA涂层同时含邻苯二酚（金属配位）和吲哚环（π-π堆积），可在单一表面上实现对芳香族污染物和金属离子的双重吸附",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "芳香族污染物（染料、PAHs）和软酸金属离子",
+          "basis": "llm_inferred",
+          "locator": null
+        },
+        "bio_structure": {
+          "text": "聚多巴胺（PDA）涂层表面的邻苯二酚基团和吲哚环",
+          "basis": "from_source",
+          "locator": "Lei2021 p.2 / Sec.1"
+        },
+        "interaction": {
+          "text": "π-π堆积（吲哚环与芳香污染物）、双齿配位（邻苯二酚与软金属）、氢键（-OH/-NH与极性分子）",
+          "basis": "from_source",
+          "locator": "Lei2021 p.2 / Sec.1"
+        },
+        "why_it_works": {
+          "text": "PDA涂层同时含邻苯二酚（金属配位）和吲哚环（π-π堆积），可在单一表面上实现对芳香族污染物和金属离子的双重吸附",
+          "basis": "llm_inferred",
+          "locator": null
+        },
+        "boundary_conditions": [
+          {
+            "text": "碱性条件下邻苯二酚氧化为醌，金属配位能力丧失",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          },
+          {
+            "text": "弱酸性以下DOPA自聚合速率极慢，涂层难以形成",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": "CM-002: catechol-low-ph-suppression"
+          }
+        ],
+        "transferable_principle": "PDA涂层是通用的表面功能化平台——邻苯二酚提供金属配位，吲哚环提供π-π堆积，可同时去除芳香族污染物和金属离子",
+        "verification_quote": "PDA has been regarded as a promising bio-sorbent due to its large number of reactive groups containing catechol, amino, imine groups"
+      }
     },
     {
       "name": "Cr(VI)吸附机制总结",
@@ -1963,6 +2017,18 @@
       "source": "literature",
       "ref_doi": "10.13550/j.jxhg.20201035",
       "source_file": null
+    }
+  ],
+  "design_translation": [
+    {
+      "idea": "利用 PDA 涂层的邻苯二酚和胺基双功能基团进行表面改性，实现普适性粘附和污染物捕获",
+      "specific_functional_group": "邻苯二酚 + 胺基（-NH₂）双官能团",
+      "material_handle": "多巴胺在弱碱性（pH 8.5）条件下自聚成 PDA 涂层",
+      "target_interaction": "邻苯二酚配位金属离子，胺基捕获阴离子污染物",
+      "source_tier": "literature",
+      "examples": [
+        "DOI: 10.1126/science.1145492"
+      ]
     }
   ]
 }

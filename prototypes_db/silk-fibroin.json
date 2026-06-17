@@ -600,7 +600,47 @@
       "source": "literature",
       "ref_doi": "10.1016/j.eti.2022.102741",
       "verification": "needs_review",
-      "基本原理": "丝素蛋白表面富含羧基和氨基，在中性pH下带负电荷，通过静电吸引捕获阳离子染料"
+      "基本原理": "丝素蛋白表面富含羧基和氨基，在中性pH下带负电荷，通过静电吸引捕获阳离子染料",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "阳离子染料（MB、CV）和重金属离子",
+          "basis": "from_source",
+          "locator": "Prasad2022 p.102741 / Abstract"
+        },
+        "bio_structure": {
+          "text": "丝素蛋白的β-折叠结构和表面羧基/氨基",
+          "basis": "from_source",
+          "locator": "Prasad2022 p.102741 / Abstract"
+        },
+        "interaction": {
+          "text": "静电吸引（负电表面与阳离子）、配位（-COOH/-NH₂与金属离子）",
+          "basis": "from_source",
+          "locator": "Prasad2022 p.102741 / Abstract"
+        },
+        "why_it_works": {
+          "text": "丝素蛋白表面富含羧基和氨基，在中性pH下带负电荷，通过静电吸引捕获阳离子染料",
+          "basis": "llm_inferred",
+          "locator": null
+        },
+        "boundary_conditions": [
+          {
+            "text": "丝素蛋白在强酸/强碱下水解",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "丝素蛋白的β-折叠结构提供力学稳定性，表面羧基/氨基提供吸附活性，是可降解的生物吸附剂",
+        "verification_quote": "Biosilica/Silk Fibroin/Polyurethane biocomposite for Cu²⁺ and Cr⁶⁺ removal"
+      }
     },
     {
       "name": "BS/SF/PUF三元协同设计",
@@ -645,7 +685,47 @@
       "source": "literature",
       "ref_doi": "10.1039/d1va00047k",
       "verification": "needs_review",
-      "基本原理": "丝素蛋白表面富含羧基和氨基，在中性pH下带负电荷，通过静电吸引捕获阳离子染料"
+      "基本原理": "丝素蛋白表面富含羧基和氨基，在中性pH下带负电荷，通过静电吸引捕获阳离子染料",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "阳离子染料（MB、CV）和重金属离子",
+          "basis": "from_source",
+          "locator": "Prasad2022 p.102741 / Abstract"
+        },
+        "bio_structure": {
+          "text": "丝素蛋白的β-折叠结构和表面羧基/氨基",
+          "basis": "from_source",
+          "locator": "Prasad2022 p.102741 / Abstract"
+        },
+        "interaction": {
+          "text": "静电吸引（负电表面与阳离子）、配位（-COOH/-NH₂与金属离子）",
+          "basis": "from_source",
+          "locator": "Prasad2022 p.102741 / Abstract"
+        },
+        "why_it_works": {
+          "text": "丝素蛋白表面富含羧基和氨基，在中性pH下带负电荷，通过静电吸引捕获阳离子染料",
+          "basis": "llm_inferred",
+          "locator": null
+        },
+        "boundary_conditions": [
+          {
+            "text": "丝素蛋白在强酸/强碱下水解",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "丝素蛋白的β-折叠结构提供力学稳定性，表面羧基/氨基提供吸附活性，是可降解的生物吸附剂",
+        "verification_quote": "Biosilica/Silk Fibroin/Polyurethane biocomposite for Cu²⁺ and Cr⁶⁺ removal"
+      }
     },
     {
       "name": "脱胶蚕丝的超疏水性",
@@ -895,5 +975,15 @@
     "n_unverified": 45
   },
   "coverage": "normal",
-  "status": "active"
+  "status": "active",
+  "design_translation": [
+    {
+      "idea": "利用丝素蛋白的 β-折叠结构和氨基酸侧链进行吸附",
+      "specific_functional_group": "丝氨酸（Ser）的羟基，酪氨酸（Tyr）的酚羟基",
+      "material_handle": "丝素蛋白提取、再生或交联成型",
+      "target_interaction": "羟基和酚羟基配位金属离子，β-折叠提供结构稳定性",
+      "source_tier": "llm_inference",
+      "examples": []
+    }
+  ]
 }

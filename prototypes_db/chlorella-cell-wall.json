@@ -483,7 +483,61 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1155/2021/9923643",
-      "verification": "unverified"
+      "verification": "unverified",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "阳离子染料（MB、CV、MG）和阴离子染料（CR、MO）",
+          "basis": "from_source",
+          "locator": "程2021 p.1 / Abstract"
+        },
+        "bio_structure": {
+          "text": "微藻细胞壁上的多糖、蛋白质和脂质组成的活性表面",
+          "basis": "from_source",
+          "locator": "程2021 p.1 / Abstract"
+        },
+        "interaction": {
+          "text": "静电吸引（阳离子染料与负电表面）、配位作用（金属离子与羧基/氨基）、氢键（极性有机物）",
+          "basis": "from_source",
+          "locator": "程2021 p.1 / Abstract"
+        },
+        "why_it_works": {
+          "text": "微藻细胞壁富含羧基（-COOH）、氨基（-NH₂）、羟基（-OH），在中性pH下表面净负电荷，通过静电吸引捕获阳离子染料；同时通过配位和氢键结合多种有机污染物",
+          "basis": "from_source",
+          "locator": "程2021 p.1 / Abstract"
+        },
+        "boundary_conditions": [
+          {
+            "text": "强酸性条件下羧基和氨基质子化，表面电荷反转，阳离子吸附下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          },
+          {
+            "text": "强酸性条件下羧基和氨基质子化，表面电荷反转",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": "CM-006: carboxyl-deprotonation-metal-coordination"
+          }
+        ],
+        "transferable_principle": "含多糖/蛋白质的生物质表面天然富含-COOH/-NH₂/-OH，可同时通过静电、配位、氢键三种机制吸附多种污染物",
+        "verification_quote": "4种淡水微藻(Chlorella pyrenoidosa等)对Pb²⁺的吸附特性,5-10min内吸附效率达最大值"
+      }
     },
     {
       "name": "pH对藻类染料吸附的影响 Effect of pH on algal dye adsorption",
@@ -677,5 +731,15 @@
     "n_unverified": 37
   },
   "coverage": "normal",
-  "status": "active"
+  "status": "active",
+  "design_translation": [
+    {
+      "idea": "利用小球藻细胞壁的多糖和蛋白质进行重金属吸附",
+      "specific_functional_group": "羧基（-COOH）、氨基（-NH₂）、磷酸基",
+      "material_handle": "小球藻生物质直接使用或固定化处理",
+      "target_interaction": "羧基和氨基配位重金属离子，磷酸基增强结合",
+      "source_tier": "llm_inference",
+      "examples": []
+    }
+  ]
 }

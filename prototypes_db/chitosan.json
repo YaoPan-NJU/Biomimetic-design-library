@@ -2264,7 +2264,89 @@
       "source": "literature",
       "ref_doi": "10.1016/j.carbpol.2020.117000",
       "verification": "verified",
-      "基本原理": "壳聚糖的氨基对软酸金属（Hg²⁺、Pb²⁺、Cu²⁺）有高亲和力，形成稳定的五元或六元螯合环；Cu²⁺在Irving-Williams序列中稳定性最高（log K~8）"
+      "基本原理": "壳聚糖的氨基对软酸金属（Hg²⁺、Pb²⁺、Cu²⁺）有高亲和力，形成稳定的五元或六元螯合环；Cu²⁺在Irving-Williams序列中稳定性最高（log K~8）",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "软酸金属离子（Pb²⁺、Cu²⁺、Hg²⁺、Cd²⁺）",
+          "basis": "from_source",
+          "locator": "Lei2021 p.2 / Sec.1"
+        },
+        "bio_structure": {
+          "text": "壳聚糖的-NH₂和-OH组成的双齿配位位点",
+          "basis": "from_source",
+          "locator": "Lei2021 p.2 / Sec.1"
+        },
+        "interaction": {
+          "text": "氨基和羟基与金属离子形成配位键（N,O-螯合），遵循HSAB原理和Irving-Williams序列",
+          "basis": "from_source",
+          "locator": "Lei2021 p.2 / Sec.1"
+        },
+        "why_it_works": {
+          "text": "壳聚糖的氨基对软酸金属（Hg²⁺、Pb²⁺、Cu²⁺）有高亲和力，形成稳定的五元或六元螯合环；Cu²⁺在Irving-Williams序列中稳定性最高（log K~8）",
+          "basis": "llm_inferred",
+          "locator": null
+        },
+        "boundary_conditions": [
+          {
+            "text": "强酸性条件下氨基完全质子化，失去金属配位能力",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          },
+          {
+            "text": "高浓度Ca²⁺、Mg²⁺竞争配位位点",
+            "parameter": "competing_ion",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          },
+          {
+            "text": "强酸性条件下壳聚糖溶解，氨基完全质子化失去配位能力",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": "CM-004: amino-protonation-anion-adsorption"
+          },
+          {
+            "text": "碱性条件下氨基去质子化，对阴离子吸附能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": "CM-005: amino-deprotonation-metal-coordination"
+          }
+        ],
+        "transferable_principle": "含-NH₂/-OH双齿配位位点的聚合物可按HSAB原理选择性捕获软酸金属离子，Ca²⁺/Mg²⁺竞争是主要干扰",
+        "verification_quote": "chelation, hydrogen bonds, van der Waals force and pi-pi stacking interaction"
+      }
     },
     {
       "name": "pHpzc对吸附机制的影响 pHpzc effect on adsorption mechanism",
@@ -2430,7 +2512,89 @@
       "source": "literature",
       "ref_doi": "10.1016/j.carbpol.2021.118625",
       "verification": "verified",
-      "基本原理": "壳聚糖在酸性条件下氨基质子化带正电（pKa~6.3），与带负电的污染物通过库仑引力结合；在中性至碱性条件下，游离氨基通过配位作用结合金属离子"
+      "基本原理": "壳聚糖在酸性条件下氨基质子化带正电（pKa~6.3），与带负电的污染物通过库仑引力结合；在中性至碱性条件下，游离氨基通过配位作用结合金属离子",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "带负电的污染物（含氧阴离子、阴离子染料、酸性pH下的重金属离子）",
+          "basis": "from_source",
+          "locator": "Lei2021 p.2 / Sec.1"
+        },
+        "bio_structure": {
+          "text": "壳聚糖分子链上的氨基（-NH₂）和羟基（-OH）",
+          "basis": "from_source",
+          "locator": "Lei2021 p.2 / Sec.1"
+        },
+        "interaction": {
+          "text": "氨基质子化（-NH₃⁺）→静电吸引阴离子污染物；羟基与金属离子配位或氢键结合",
+          "basis": "from_source",
+          "locator": "Lei2021 p.2 / Sec.1"
+        },
+        "why_it_works": {
+          "text": "壳聚糖在酸性条件下氨基质子化带正电（pKa~6.3），与带负电的污染物通过库仑引力结合；在中性至碱性条件下，游离氨基通过配位作用结合金属离子",
+          "basis": "from_source",
+          "locator": "Lei2021 p.2 / Sec.1"
+        },
+        "boundary_conditions": [
+          {
+            "text": "强酸性条件下壳聚糖溶解，失去吸附能力",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          },
+          {
+            "text": "碱性条件下氨基去质子化，对阴离子吸附能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          },
+          {
+            "text": "高盐浓度下静电屏蔽效应减弱阴离子吸附",
+            "parameter": "salinity",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          },
+          {
+            "text": "强酸性条件下壳聚糖溶解，氨基完全质子化失去配位能力",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": "CM-004: amino-protonation-anion-adsorption"
+          }
+        ],
+        "transferable_principle": "含氨基聚合物在酸性条件下通过质子化-静电吸引捕获阴离子污染物，在中性条件下通过配位捕获金属离子——pH是切换机制的开关",
+        "verification_quote": "chitosan-based adsorbents exhibit excellent adsorption properties owing to reactive groups containing numerous amino groups (-NH2) and hydroxyl groups (-OH) on chitosan polymer chains"
+      }
     },
     {
       "name": "酸浸碳/壳聚糖/FeCl3吸附机制 Acid-leached carbon/chitosan/FeCl3 mechanisms",
@@ -4476,5 +4640,15 @@
     "n_unverified": 205
   },
   "coverage": "normal",
-  "status": "active"
+  "status": "active",
+  "design_translation": [
+    {
+      "idea": "利用壳聚糖的氨基和羟基进行络合吸附，pH 响应控制吸附/脱附",
+      "specific_functional_group": "氨基（-NH₂）和羟基（-OH），pKa ~6.3",
+      "material_handle": "壳聚糖直接使用或交联改性（如戊二醛、环氧氯丙烷）",
+      "target_interaction": "氨基质子化后静电吸引阴离子，羟基配位金属离子",
+      "source_tier": "llm_inference",
+      "examples": []
+    }
+  ]
 }

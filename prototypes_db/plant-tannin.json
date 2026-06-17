@@ -371,7 +371,75 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.indcrop.2021.114304",
-      "verification": "needs_review"
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "软酸金属离子（Pb²⁺、Cu²⁺、Cd²⁺）和含胺基有机物",
+          "basis": "from_source",
+          "locator": "Zhu2022 p.1 / Abstract + Sec.1"
+        },
+        "bio_structure": {
+          "text": "植物单宁酸的邻苯二酚/邻三酚基团（多个相邻羟基）",
+          "basis": "from_source",
+          "locator": "Zhu2022 p.1 / Abstract + Sec.1"
+        },
+        "interaction": {
+          "text": "邻苯二酚/邻三酚的多齿配位与金属离子形成稳定螯合物；酚羟基与含胺基有机物形成氢键",
+          "basis": "from_source",
+          "locator": "Zhu2022 p.1 / Abstract + Sec.1"
+        },
+        "why_it_works": {
+          "text": "单宁酸含大量邻苯二酚和邻三酚基团，每个分子可提供多个配位位点，对软酸金属有高亲和力（log K 10-20）",
+          "basis": "from_source",
+          "locator": "Zhu2022 p.1 / Abstract + Sec.1"
+        },
+        "boundary_conditions": [
+          {
+            "text": "强酸性条件下酚羟基不解离，配位能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          },
+          {
+            "text": "强碱性条件下单宁酸氧化聚合",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          },
+          {
+            "text": "碱性条件下多酚可能发生氧化降解",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": "CM-003: catechol-oxidation-quinone"
+          }
+        ],
+        "transferable_principle": "含邻苯二酚/邻三酚的天然多酚（如单宁酸）可作为廉价、绿色的金属配位吸附剂，可固定在各种基底上使用",
+        "verification_quote": "tannin is rich in catechols and pyrogallol...its ortho-phenolic hydroxyl groups can adsorb heavy metal ions by chelation"
+      }
     },
     {
       "name": "缓蚀机理",
@@ -506,5 +574,15 @@
     "n_unverified": 28
   },
   "coverage": "normal",
-  "status": "active"
+  "status": "active",
+  "design_translation": [
+    {
+      "idea": "利用植物单宁的多酚结构进行金属离子络合和蛋白质沉淀",
+      "specific_functional_group": "邻苯二酚和没食子酰基（galloyl）",
+      "material_handle": "单宁酸直接使用或固定化在载体上",
+      "target_interaction": "多酚基团与金属离子形成配位络合物，与蛋白质形成氢键",
+      "source_tier": "llm_inference",
+      "examples": []
+    }
+  ]
 }

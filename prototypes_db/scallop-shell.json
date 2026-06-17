@@ -177,7 +177,47 @@
       "source": "literature",
       "ref_doi": "10.3969/j.issn.1672-7304.2024.02.0011",
       "verification": "verified",
-      "基本原理": "与牡蛎壳类似，扇贝壳的CaCO₃结构提供Ca²⁺交换位点和碱性环境"
+      "基本原理": "与牡蛎壳类似，扇贝壳的CaCO₃结构提供Ca²⁺交换位点和碱性环境",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "重金属离子和磷酸盐",
+          "basis": "llm_inferred",
+          "locator": null
+        },
+        "bio_structure": {
+          "text": "扇贝壳的文石型CaCO₃层状结构",
+          "basis": "from_source",
+          "locator": "Wang2024 p.36 / Abstract + Sec.1"
+        },
+        "interaction": {
+          "text": "离子交换（Ca²⁺↔重金属）、表面沉淀、物理吸附",
+          "basis": "from_source",
+          "locator": "Wang2024 p.36 / Abstract + Sec.1"
+        },
+        "why_it_works": {
+          "text": "与牡蛎壳类似，扇贝壳的CaCO₃结构提供Ca²⁺交换位点和碱性环境",
+          "basis": "llm_inferred",
+          "locator": null
+        },
+        "boundary_conditions": [
+          {
+            "text": "煅烧温度影响晶型转变和吸附性能",
+            "parameter": "temperature",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "贝壳类CaCO₃的吸附机制与牡蛎壳相同，煅烧可显著提升性能",
+        "verification_quote": "scallops contain ~95% CaCO3. Calcination creates complex porous structure. Freundlich model fits multi-layer adsorption"
+      }
     }
   ],
   "narrative": {
@@ -202,5 +242,15 @@
     "n_unverified": 10
   },
   "coverage": "normal",
-  "status": "active"
+  "status": "active",
+  "design_translation": [
+    {
+      "idea": "利用扇贝壳的层状结构和 CaCO₃ 进行污染物固定",
+      "specific_functional_group": "方解石型 CaCO₃，层状有机基质",
+      "material_handle": "扇贝壳粉碎、热处理或复合改性",
+      "target_interaction": "CaCO₃ 溶解沉淀重金属，层状结构提供物理吸附位点",
+      "source_tier": "llm_inference",
+      "examples": []
+    }
+  ]
 }
