@@ -586,6 +586,70 @@ def aggregate_prototype(prototype_id: str, file_infos: list, feature_mapping: di
     return result
 
 
+def _load_chimera_blocklist():
+    """加载 chimera blocklist 用于构建时过滤。"""
+    bl_path = Path(__file__).resolve().parent / 'chimera_blocklist.json'
+    if bl_path.exists():
+        with open(bl_path, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    return {}
+
+
+def _is_chimera_blocked(text, keywords):
+    """检查文本是否命中 blocklist 关键词。"""
+    if not text:
+        return False
+    t = text.lower()
+    return any(kw.lower() in t for kw in keywords)
+
+
+def filter_chimera(pid, data, blocklist):
+    """从构建结果中移除 chimera 污染条目。"""
+    keywords = blocklist.get(pid, [])
+    if not keywords:
+        return data, 0
+
+    removed = 0
+
+    # mechanisms (name + description + 基本原理)
+    if 'mechanisms' in data:
+        before = len(data['mechanisms'])
+        data['mechanisms'] = [
+            m for m in data['mechanisms']
+            if not _is_chimera_blocked(
+                ' '.join(str(m.get(k, '') or '') for k in ['name', 'description', '基本原理']),
+                keywords
+            )
+        ]
+        removed += before - len(data['mechanisms'])
+
+    # performance_data
+    if 'performance_data' in data:
+        before = len(data['performance_data'])
+        data['performance_data'] = [
+            p for p in data['performance_data']
+            if not _is_chimera_blocked(
+                ' '.join(str(p.get(k, '') or '') for k in ['pollutant', 'parameter', 'value', 'material', 'conditions', 'source_file']),
+                keywords
+            )
+        ]
+        removed += before - len(data['performance_data'])
+
+    # narrative entries
+    if 'narrative' in data and 'entries' in data['narrative']:
+        before = len(data['narrative']['entries'])
+        data['narrative']['entries'] = [
+            e for e in data['narrative']['entries']
+            if not _is_chimera_blocked(
+                ' '.join(str(v) for v in e.get('sections', {}).values() if v),
+                keywords
+            )
+        ]
+        removed += before - len(data['narrative']['entries'])
+
+    return data, removed
+
+
 def main():
     import argparse
 
@@ -649,6 +713,10 @@ def main():
     # 创建输出目录
     os.makedirs(output_dir, exist_ok=True)
 
+    # 加载 chimera blocklist 用于构建时过滤
+    chimera_blocklist = _load_chimera_blocklist()
+    chimera_total_removed = 0
+
     # 聚合每个原型（merge 模式：保留已有富化数据）
     merge_stats = {'merged': 0, 'new': 0}
     for pid in sorted(valid_ids):
@@ -660,6 +728,9 @@ def main():
         output_path = output_dir / f'{pid}.json'
         # merge 模式：与已有数据合并，保留富化字段
         result = merge_with_existing(result, str(output_path))
+        # chimera 过滤：移除 blocklist 污染条目
+        result, n_removed = filter_chimera(pid, result, chimera_blocklist)
+        chimera_total_removed += n_removed
         if os.path.exists(output_path):
             merge_stats['merged'] += 1
         else:
@@ -710,6 +781,8 @@ def main():
     print(f'输出目录: {output_dir}')
     print(f'原型数: {len(valid_ids)}')
     print(f'Merge: {merge_stats["merged"]} 个已有原型合并, {merge_stats["new"]} 个新原型')
+    if chimera_total_removed > 0:
+        print(f'Chimera filter: removed {chimera_total_removed} contaminated entries')
 
     # 统计富化字段恢复情况
     total_benali = 0
