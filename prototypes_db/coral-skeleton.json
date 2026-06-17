@@ -18,76 +18,11 @@
     "note": "测过的 pH/温度范围，不是适用范围。仅从 performance_data 中实际测试过的条件聚合。"
   },
   "performance_data": [],
-  "mechanisms": [
-    {
-      "name": "珊瑚骨骼CaCO₃吸附机制（待文献支撑）",
-      "source": "llm_inference",
-      "ref_doi": null,
-      "source_file": null,
-      "verification": "needs_review",
-      "基本原理": "珊瑚骨骼的多孔CaCO₃结构与牡蛎壳类似，可通过离子交换和沉淀机制去除重金属和磷酸盐",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "重金属离子和磷酸盐",
-          "basis": "llm_inferred",
-          "locator": null
-        },
-        "bio_structure": {
-          "text": "珊瑚骨骼的文石型CaCO₃多孔结构",
-          "basis": "llm_inferred",
-          "locator": null
-        },
-        "interaction": {
-          "text": "Ca²⁺离子交换、表面沉淀、物理吸附",
-          "basis": "llm_inferred",
-          "locator": null
-        },
-        "why_it_works": {
-          "text": "珊瑚骨骼的多孔CaCO₃结构与牡蛎壳类似，可通过离子交换和沉淀机制去除重金属和磷酸盐",
-          "basis": "llm_inferred",
-          "locator": null
-        },
-        "boundary_conditions": [
-          {
-            "text": "待文献确定具体失效边界",
-            "parameter": "other",
-            "condition": {
-              "operator": "qualitative",
-              "value": null
-            },
-            "basis": "llm_inferred",
-            "verification": "needs_review",
-            "gate_level": "soft",
-            "locator": null,
-            "quote": null,
-            "source_asset": null
-          },
-          {
-            "text": "具体失效边界待文献支撑",
-            "parameter": "other",
-            "condition": {
-              "operator": "qualitative",
-              "value": null
-            },
-            "basis": "llm_inferred",
-            "verification": "needs_review",
-            "gate_level": "soft",
-            "locator": null,
-            "quote": null,
-            "source_asset": "needs_literature"
-          }
-        ],
-        "transferable_principle": "珊瑚骨骼CaCO₃的吸附机制与贝壳类相同，多孔结构提供更高比表面积",
-        "verification_quote": null
-      },
-      "functional_groups": [],
-      "key_structures": []
-    }
-  ],
+  "mechanisms": [],
   "narrative": {
     "entries": [
       {
-        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2020-Han-antifouling-review.json",
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2020-Han-antifouling-review.json",
         "paper_id": "2020-Han-antifouling-review",
         "sections": {
           "problem_definition": "自然界挑战：海洋生物污损经历有机调节膜形成、微生物生物膜附着、孢子永久交联定殖到大型生物附着四阶段，导致航行阻力剧增与维护成本高昂；水处理对应：水处理膜与设备表面面临相似的生物膜污染与沉积物附着，造成通量衰减、能耗上升及频繁化学清洗需求。",
@@ -106,15 +41,5 @@
     "n_unverified": 0
   },
   "coverage": "low",
-  "status": "active",
-  "design_translation": [
-    {
-      "idea": "利用珊瑚骨骼的文石结构进行重金属固定",
-      "specific_functional_group": "文石型 CaCO₃ 的 Ca²⁺ 位点",
-      "material_handle": "珊瑚骨骼粉末或合成文石",
-      "target_interaction": "Ca²⁺ 位点吸附和共沉淀重金属碳酸盐",
-      "source_tier": "llm_inference",
-      "examples": []
-    }
-  ]
+  "status": "active"
 }

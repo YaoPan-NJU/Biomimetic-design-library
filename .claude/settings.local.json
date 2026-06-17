@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git clone *)",
+      "Read(//Users/panyao/.claude/plugins/**)",
+      "Read(//Users/panyao/.claude/**)",
+      "Bash(command -v bun)",
+      "Bash(command -v node)",
+      "Bash(/opt/homebrew/bin/node ~/.claude/plugins/cache/jarrodwatts-claude-hud/claude-hud/0.1.0/dist/index.js)",
+      "Bash(/opt/homebrew/bin/node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('/dev/stdin','utf8'\\)\\); console.log\\('JSON is valid'\\)\")",
+      "Bash(bash -c 'cols=$\\(stty size </dev/tty 2>/dev/null | awk '\\\\''{print $2}'\\\\''\\); export COLUMNS=$\\(\\( ${cols:-120} > 4 ? ${cols:-120} - 4 : 1 \\)\\); plugin_dir=$\\(ls -d \"${CLAUDE_CONFIG_DIR:-$HOME/.claude}\"/plugins/cache/*/claude-hud/*/ 2>/dev/null | awk -F/ '\\\\''{ print $\\(NF-1\\) \"\\\\t\" $\\(0\\) }'\\\\'' | grep -E '\\\\''^[0-9]+\\\\.[0-9]+\\\\.[0-9]+[[:space:]]'\\\\'' | sort -t. -k1,1n -k2,2n -k3,3n -k4,4n | tail -1 | cut -f2-\\); exec /opt/homebrew/bin/node \"${plugin_dir}dist/index.js\"')",
+      "Bash(git fetch *)",
+      "Bash(/opt/homebrew/bin/node -e \"const d=JSON.parse\\(require\\('fs'\\).readFileSync\\('/dev/stdin','utf8'\\)\\); console.log\\('prototype_metadata keys:', Object.keys\\(d.prototype_metadata||{}\\).length\\); console.log\\('pollutant_prototype_map keys:', Object.keys\\(d.pollutant_prototype_map||{}\\).length\\); console.log\\('feature_prototype_map keys:', Object.keys\\(d.feature_prototype_map||{}\\).length\\)\")",
+      "Bash(git ls-tree *)",
+      "Bash(/opt/homebrew/bin/node -e \"const d=JSON.parse\\(require\\('fs'\\).readFileSync\\('/dev/stdin','utf8'\\)\\); console.log\\('prototype_metadata:', Object.keys\\(d.prototype_metadata||{}\\).length\\); console.log\\('IDs:', Object.keys\\(d.prototype_metadata||{}\\).join\\(', '\\)\\)\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('prototype_metadata keys:', len\\(d.get\\('prototype_metadata',{}\\)\\)\\); print\\('pollutant_prototype_map keys:', len\\(d.get\\('pollutant_prototype_map',{}\\)\\)\\); print\\('feature_prototype_map keys:', len\\(d.get\\('feature_prototype_map',{}\\)\\)\\)\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('routing entries:', len\\(d\\)\\); print\\('sample keys:', list\\(d.keys\\(\\)\\)[:10]\\)\")",
+      "Bash(python3 -c ' *)",
+      "Bash(python -m pytest extraction/tests/ -v)",
+      "Bash(python3 *)",
+      "Bash(imsg --version)",
+      "Bash(imsg send --to +8615895848729 --text '🤖 仿生设计库提参系统 — iMessage 连通测试 *)",
+      "Bash(cat)",
+      "Read(//tmp/**)",
+      "Bash(bash *)",
+      "Bash(echo \"EXIT_CODE=$?\")",
+      "Bash(chmod +x scripts/multi_worker_extract.sh)",
+      "Bash(git add *)",
+      "Bash(git commit -m 'fix: 污染物标准化 + chimera修复 + organism映射修正 *)",
+      "Bash(git submodule *)"
+    ]
+  }
+}

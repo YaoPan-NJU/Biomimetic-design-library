@@ -863,24 +863,6 @@
   },
   "engineering_constraints": [
     {
-      "constraint": "油水分离效率和循环稳定性",
-      "value": "不同油品分离效率均>88%（5次循环后），WCA约158±1°",
-      "unit": "%",
-      "relevance": "medium",
-      "explanation": "",
-      "source": "literature",
-      "ref_doi": "10.11896/cldb.20060194"
-    },
-    {
-      "constraint": "PDMAEMA-b-PMMA pH响应膜性能 PDMAEMA-b-PMMA pH-responsive membrane performance",
-      "value": "可分离三元混合物并有效去除Pb²⁺(最高90.83%)，宽pH范围适用",
-      "unit": null,
-      "relevance": "medium",
-      "explanation": "",
-      "source": "literature",
-      "ref_doi": "10.1016/j.porgcoat.2024.108885"
-    },
-    {
       "constraint": "智能响应膜：光/pH/温度/等离子体可切换润湿性",
       "value": "1）光响应：TiO₂光催化→UV照射→亲水+光降解有机物→MB可被完全降解。TiO₂@PVDF/PAN核壳→避免TiO₂团聚→UV 1h→分解87%罗丹明B。2）pH响应：PVDF-g-PAA树状纤维→中性水中超亲水+水下疏油→pH 2.0中疏水+超亲油；SNP/DA-TiO₂/PI膜→pH≥12时从超疏水变为超亲水。3）可逆切换：Cu网+Au+疏水分子→O₂等离子体→超亲水/水下超疏油→加热→恢复→可逆双向分离",
       "unit": null,
@@ -890,87 +872,6 @@
       "ref_doi": "10.1007/s10853-022-07945-8"
     },
     {
-      "constraint": "仿生PVDF-SiO₂多尺度粗糙度→耐循环超疏水",
-      "value": "PVDF+SiO₂→电纺→多尺度粗糙结构→防止水滴进入→优异多循环性能+稳定超疏水性。克服小孔径膜处理高粘油的挑战→多尺度结构使高粘油仍可通过",
-      "unit": null,
-      "relevance": "medium",
-      "explanation": "",
-      "source": "literature",
-      "ref_doi": "10.1007/s10853-022-07945-8"
-    },
-    {
-      "constraint": "MOF水稳定性关键因素",
-      "value": "Higher ligand basicity → greater metal-ligand bond strength → better stability; 6-coordinate (octahedral) > 4-coordinate (tetrahedral); higher oxidation state → higher stability",
-      "unit": null,
-      "relevance": "medium",
-      "explanation": "",
-      "source": "literature",
-      "ref_doi": "10.3390/membranes13080727"
-    },
-    {
-      "constraint": "交联剂提高疏水稳定性 Crosslinking agents for hydrophobic stability",
-      "value": "Kymene 557H（含羧基）和环氧氯丙烷用于增强纳米材料与纤维素织物/纤维之间的连接",
-      "unit": null,
-      "relevance": "high",
-      "explanation": "",
-      "source": "literature",
-      "ref_doi": "10.1007/s11783-021-1515-2"
-    },
-    {
-      "constraint": "浸泡-干燥循环次数对表面稳定性的影响 Dip-drying repetition effect on stability",
-      "value": "SiO2/PDMS涂层经10次浸泡-干燥循环后，表面活性剂冲击前后接触角差从~20°降至~2°",
-      "unit": "degrees",
-      "relevance": "high",
-      "explanation": "",
-      "source": "literature",
-      "ref_doi": "10.1007/s11783-021-1515-2"
-    },
-    {
-      "constraint": "超疏水膜 harsh condition 稳定性测试标准 Harsh condition stability testing",
-      "value": "浸泡在极端pH(1-2强酸, 12-13强碱)或高盐浓度(NaCl 3.5 wt%)溶液1-72小时；表面活性剂(SDS 4.1 mM)滴加；60-120°C加热72小时",
-      "unit": null,
-      "relevance": "high",
-      "explanation": "",
-      "source": "literature",
-      "ref_doi": "10.1007/s11783-021-1515-2"
-    },
-    {
-      "constraint": "超疏油膜 harsh condition 稳定性 Superoleophobic harsh condition stability",
-      "value": "酸性0.1-1 M HCl或pH=1；碱性0.1-1 M NaOH或pH=11-13；盐浓度0.1-1 M或5-10 wt% NaCl；浸泡2-8 M H2SO4 10 min-30天；水中浸泡90天",
-      "unit": null,
-      "relevance": "high",
-      "explanation": "",
-      "source": "literature",
-      "ref_doi": "10.1007/s11783-021-1515-2"
-    },
-    {
-      "constraint": "Fe³⁺-PA/OTMS/PI电纺膜的通量和循环稳定性",
-      "value": "通量8424±105 L·m⁻²·h⁻¹，分离效率>99%，20次循环后仍保持",
-      "unit": "L·m⁻²·h⁻¹",
-      "relevance": "medium",
-      "explanation": "",
-      "source": "literature",
-      "ref_doi": "10.1021/acsami.0c18794"
-    },
-    {
-      "constraint": "PTFE层层组装不锈钢纤维毡的WCA和循环性能",
-      "value": "WCA 154°（5次循环后），分离效率>98%，30次以上循环",
-      "unit": null,
-      "relevance": "medium",
-      "explanation": "",
-      "source": "literature",
-      "ref_doi": "10.1021/acsami.0c18794"
-    },
-    {
-      "constraint": "PANI/TiO₂可见光催化超疏水网格的通量和循环性能",
-      "value": "油通量170 kL·m⁻²·h⁻¹，100次循环后渗透油纯度>99%",
-      "unit": "kL·m⁻²·h⁻¹",
-      "relevance": "medium",
-      "explanation": "",
-      "source": "literature",
-      "ref_doi": "10.1021/acsami.0c18794"
-    },
-    {
       "constraint": "双刺激响应膜（UV+pH）的可逆润湿性切换和光催化降解",
       "value": "UV或pH单独作用→疏水；UV+pH协同→亲水；UV照射可降解多种污染物",
       "unit": null,
@@ -978,87 +879,6 @@
       "explanation": "",
       "source": "literature",
       "ref_doi": "10.1021/acsami.0c18794"
-    },
-    {
-      "constraint": "Ceramic hollow fiber sintering temperature for polymer burn-off",
-      "value": "600",
-      "unit": "°C",
-      "relevance": "medium",
-      "explanation": "",
-      "source": "literature",
-      "ref_doi": "10.1016/j.jmrt.2021.02.068"
-    },
-    {
-      "constraint": "Ceramic hollow fiber sintering temperature for particle consolidation",
-      "value": "1225",
-      "unit": "°C and above",
-      "relevance": "medium",
-      "explanation": "",
-      "source": "literature",
-      "ref_doi": "10.1016/j.jmrt.2021.02.068"
-    },
-    {
-      "constraint": "Sol-gel calcination temperature for template removal",
-      "value": "400",
-      "unit": "°C",
-      "relevance": "medium",
-      "explanation": "",
-      "source": "literature",
-      "ref_doi": "10.1016/j.jmrt.2021.02.068"
-    },
-    {
-      "constraint": "Hydrophobic surface immersion drying temperature",
-      "value": "60-100",
-      "unit": "°C",
-      "relevance": "medium",
-      "explanation": "",
-      "source": "literature",
-      "ref_doi": "10.1016/j.jmrt.2021.02.068"
-    },
-    {
-      "constraint": "Sol-gel calcination temperature range",
-      "value": "400-500",
-      "unit": "°C",
-      "relevance": "medium",
-      "explanation": "",
-      "source": "literature",
-      "ref_doi": "10.1016/j.jmrt.2021.02.068"
-    },
-    {
-      "constraint": "超疏水材料的耐久性与稳定性 Durability and stability of superhydrophobic materials",
-      "value": "多种超疏水材料在pH 1-13和强紫外照射下仍保持>150°接触角；PSF/FEP混合基质膜10次循环后油水分离效率仍达99.79%-99.47%",
-      "unit": null,
-      "relevance": "high",
-      "explanation": "",
-      "source": "literature",
-      "ref_doi": "10.16865/j.cnki.1000-7555.2020.0282"
-    },
-    {
-      "constraint": "含再生纤维素双层PVDF-HFP膜 - 含油废水处理",
-      "value": "12.8",
-      "unit": "kg/m²·h (freshwater flux)",
-      "relevance": "high",
-      "explanation": "",
-      "source": "literature",
-      "ref_doi": "10.1007/s11356-022-23066-w"
-    },
-    {
-      "constraint": "硅基超疏水材料机械稳定性挑战",
-      "value": "纳米级结构强度有限，耐磨性不足是工业化主要障碍",
-      "unit": null,
-      "relevance": "medium",
-      "explanation": "",
-      "source": "literature",
-      "ref_doi": "10.3390/polym15030543"
-    },
-    {
-      "constraint": "超疏水铜网耐久性：pH和温度稳定性",
-      "value": "pH稳定性：铜网浸入不同pH溶液5min→自然干燥→测CA。pH 2强酸→CA显著降至约120°→超疏水性丧失。强碱溶液→CA仍保持150°。其他pH→CA保持>150°。温度稳定性：铜网置于热板上5min→不同温度。50-200°C→CA保持>160°→无显著变化。250°C→CA开始显著下降。300°C→CA降至120°→超疏水性丧失。结论：化学稳定性有限(强酸侵蚀)→热稳定性在250°C以下良好",
-      "unit": "°",
-      "relevance": "medium",
-      "explanation": "",
-      "source": "literature",
-      "ref_doi": "10.1002/admi.202300627"
     }
   ],
   "provenance_summary": {
@@ -1075,5 +895,5 @@
   },
   "coverage": "parked",
   "status": "parked_separation",
-  "note": "SCOPE_REVIEW: All remaining mechanisms are from general superhydrophobic/wetting/separation reviews. Zero lotus-specific mechanisms identified. Requires scope split before ranking.; SCOPE_SPLIT: Kept 49 mechanisms (lotus-specific + wetting-theory). Removed 297 non-lotus mechanisms (membrane/antibacterial/superhydrophobic/oil-water/other)."
+  "note": "SCOPE_REVIEW: All remaining mechanisms are from general superhydrophobic/wetting/separation reviews. Zero lotus-specific mechanisms identified. Requires scope split before ranking.; SCOPE_SPLIT: Kept 49 mechanisms (lotus-specific + wetting-theory). Removed 297 non-lotus mechanisms (membrane/antibacterial/superhydrophobic/oil-water/other).; Cleanup: constraints 22->2, narrative 33->33; Narrative: kept 33 lotus+theory, removed 0 non-lotus"
 }

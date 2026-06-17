@@ -15,74 +15,7 @@
     "note": "测过的 pH/温度范围，不是适用范围。仅从 performance_data 中实际测试过的条件聚合。"
   },
   "performance_data": [],
-  "mechanisms": [
-    {
-      "name": "DNA适配体分子识别机制（待文献支撑）",
-      "source": "llm_inference",
-      "ref_doi": "10.3969/j.issn.1004-4957.2021.04.007",
-      "source_file": "仿生文献库/3rd/第B组-新方向/B1-DNA适配体/2021-Li-aptamer-fluorescence-heavy-metal-review.pdf",
-      "verification": "verified",
-      "基本原理": "DNA适配体可通过SELEX筛选获得对任意目标分子的高亲和力（Kd nM级）和高选择性",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "特定目标分子（通过SELEX筛选确定）",
-          "basis": "from_source",
-          "locator": "Li2021 p.478-479 / Table 1"
-        },
-        "bio_structure": {
-          "text": "DNA适配体的三维折叠结构（发夹、G-四链体等）",
-          "basis": "from_source",
-          "locator": "Li2021 p.478-479 / Table 1"
-        },
-        "interaction": {
-          "text": "适配体与目标分子的特异性结合（氢键、范德华力、形状互补）",
-          "basis": "from_source",
-          "locator": "Li2021 p.478-479 / Table 1"
-        },
-        "why_it_works": {
-          "text": "DNA适配体可通过SELEX筛选获得对任意目标分子的高亲和力（Kd nM级）和高选择性",
-          "basis": "from_source",
-          "locator": "Li2021 p.478-479 / Table 1"
-        },
-        "boundary_conditions": [
-          {
-            "text": "待文献确定具体失效边界",
-            "parameter": "other",
-            "condition": {
-              "operator": "qualitative",
-              "value": null
-            },
-            "basis": "llm_inferred",
-            "verification": "needs_review",
-            "gate_level": "soft",
-            "locator": null,
-            "quote": null,
-            "source_asset": null
-          },
-          {
-            "text": "具体失效边界待文献支撑",
-            "parameter": "other",
-            "condition": {
-              "operator": "qualitative",
-              "value": null
-            },
-            "basis": "llm_inferred",
-            "verification": "needs_review",
-            "gate_level": "soft",
-            "locator": null,
-            "quote": null,
-            "source_asset": "needs_literature"
-          }
-        ],
-        "transferable_principle": "DNA适配体是人工分子识别元件，可针对任意目标污染物筛选，实现超选择性吸附",
-        "verification_quote": "aptamers can fold into specific structures and bind target metal ions with high affinity via SELEX selection"
-      },
-      "functional_groups": [],
-      "key_structures": [],
-      "verification_quote": "aptamers can fold into specific structures and bind target metal ions with high affinity via SELEX selection",
-      "note": "BIOSENSOR_SCOPE: Most aptamer literature is detection/biosensor-only. Only Bilibana2022 RNA-GO and CN121588773A DNA-GC have adsorption evidence."
-    }
-  ],
+  "mechanisms": [],
   "narrative": {
     "entries": []
   },
@@ -90,36 +23,8 @@
   "provenance_summary": {
     "n_papers": 0,
     "n_verified": 0,
-    "n_unverified": 0,
-    "boundary_rules": [
-      {
-        "id": "B08-DNA-001",
-        "type": "hard",
-        "rule": "Biosensor LOD/Kd values from detection papers must not be used as adsorption capacity evidence."
-      },
-      {
-        "id": "B08-DNA-002",
-        "type": "soft",
-        "rule": "RNA-GO MC-LR is review-sourced and RNA-based, not independently replicated DNA aptamer adsorption."
-      },
-      {
-        "id": "B08-DNA-003",
-        "type": "soft",
-        "rule": "CN121588773A DNA-GC is AFB1-specific, in vivo/biomedical, patent-backed. Figure-derived qmax needs human approval."
-      }
-    ]
+    "n_unverified": 0
   },
   "coverage": "low",
-  "status": "needs_literature",
-  "design_translation": [
-    {
-      "idea": "利用 DNA 适配体的特异性识别和结合能力进行目标污染物检测和捕获",
-      "specific_functional_group": "适配体的碱基序列形成的三维构象",
-      "material_handle": "化学合成适配体，固定化在载体上",
-      "target_interaction": "适配体与目标分子的特异性结合（Kd 纳摩尔级）",
-      "source_tier": "llm_inference",
-      "examples": []
-    }
-  ],
-  "note": "SCOPE: Zero performance_data. Most sources are biosensor-only. Adsorption evidence: Bilibana2022 RNA-GO MC-LR 1.44 mg/g, CN121588773A DNA-GC AFB1 Kd 0.25 nM."
+  "status": "needs_literature"
 }

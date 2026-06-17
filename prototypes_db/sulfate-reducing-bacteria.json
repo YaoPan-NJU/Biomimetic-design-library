@@ -23,183 +23,15 @@
       "description": "SO₄²⁻ →(sat, ATP) APS →(APS还原酶, 2e⁻) SO₃²⁻ →(CBS, 6e⁻) H₂S；消耗大量H⁺→提升水体pH",
       "functional_groups": "",
       "source": "literature",
-      "ref_doi": "10.1016/j.jenvman.2020.111555",
+      "ref_doi": "10.16581/j.cnki.issn1671-3206.20230927.002",
       "verification": "verified",
-      "基本原理": "生物硫化物沉淀是去除软酸金属最有效的方法之一——金属硫化物溶度积极低，且SRB可在厌氧条件下持续产S²⁻",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "软酸金属离子（Cu²⁺、Pb²⁺、Cd²⁺、Zn²⁺、Hg²⁺）",
-          "basis": "llm_inferred",
-          "locator": null
-        },
-        "bio_structure": {
-          "text": "SRB细胞内的硫酸盐还原酶系统（DSR/APS还原酶）和细胞外聚合物（EPS）",
-          "basis": "from_source",
-          "locator": "Kumar2021 p.111555 / Abstract + Sec.1"
-        },
-        "interaction": {
-          "text": "SRB将SO₄²⁻还原为S²⁻（硫化物），S²⁻与软酸金属离子形成极难溶的金属硫化物（如HgS Ksp=10⁻⁵²、PbS Ksp=10⁻²⁸）",
-          "basis": "from_source",
-          "locator": "Kumar2021 p.111555 / Abstract + Sec.1"
-        },
-        "why_it_works": {
-          "text": "生物硫化物沉淀是去除软酸金属最有效的方法之一——金属硫化物溶度积极低，且SRB可在厌氧条件下持续产S²⁻",
-          "basis": "llm_inferred",
-          "locator": null
-        },
-        "boundary_conditions": [
-          {
-            "text": "SRB是严格厌氧菌，有氧环境完全失活",
-            "parameter": "other",
-            "condition": {
-              "operator": "qualitative",
-              "value": null
-            },
-            "basis": "llm_inferred",
-            "locator": null,
-            "gate_level": "soft",
-            "verification": "needs_review",
-            "quote": null
-          },
-          {
-            "text": "酸性条件下SRB活性显著下降",
-            "parameter": "pH",
-            "condition": {
-              "operator": "qualitative",
-              "value": null
-            },
-            "basis": "llm_inferred",
-            "verification": "needs_review",
-            "gate_level": "soft",
-            "locator": null,
-            "quote": null,
-            "source_asset": null
-          },
-          {
-            "text": "高浓度重金属对SRB有毒性",
-            "parameter": "other",
-            "condition": {
-              "operator": "qualitative",
-              "value": null
-            },
-            "basis": "llm_inferred",
-            "verification": "needs_review",
-            "gate_level": "soft",
-            "locator": null,
-            "quote": null,
-            "source_asset": null
-          }
-        ],
-        "transferable_principle": "利用微生物硫酸盐还原产生S²⁻进行金属硫化物沉淀，是厌氧条件下去除软酸金属的高效生物策略",
-        "verification_quote": "SRB consume SO42- as terminal electron acceptor and convert it to different sulfur forms (H2S, HS-, S2-). These sulfide products are responsible for metal precipitation"
-      },
-      "source_file": "仿生文献库/论文/第4组-生物矿化/2020-Kumar-sulfate-reducing-heavy-metal-dye-wastewater-review 2.pdf",
-      "verification_quote": "SRB consume SO42- as terminal electron acceptor and convert it to different sulfur forms (H2S, HS-, S2-). These sulfide products are responsible for metal precipitation"
+      "基本原理": "生物硫化物沉淀是去除软酸金属最有效的方法之一——金属硫化物溶度积极低，且SRB可在厌氧条件下持续产S²⁻"
     }
   ],
   "narrative": {
     "entries": [
       {
-        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2022-Li-heavy-metal-removal-review.json",
-        "paper_id": "2022-Li-biological-sulfidogenic-process-metal-removal-review",
-        "sections": {
-          "problem_definition": "自然界挑战：矿山酸性排水(AMD)中复杂重金属离子共存且酸度高；水处理对应：传统沉淀法选择性差、药剂成本高且易产生有毒污泥，需开发高效、低耗、可分级回收的仿生处理体系。",
-          "biological_solution": "进化策略：SRB/S0RB利用SO₄²⁻或S⁰作为电子受体驱动生物硫化过程(BSP)；关键机制：表面吸附、表面转化、胞内/外沉淀与络合等六重机制协同，且pH决定硫化途径切换；成功案例：S0RB驱动体系产硫量更高、有机碳消耗更低，中性条件下高速运行且不生成MeHg，实现多金属高效去除。",
-          "key_features": "必须保留特征：S²⁻可控缓释能力、表面负电荷官能团(-COOH/-OH/-NH₂)、pH响应型硫化途径切换、吸附-沉淀-络合多机制协同；可灵活调整特征：具体EPS多糖/蛋白比例、菌群共生配比、电子供体类型及材料载体基质。",
-          "design_mapping": "生物→材料映射：细菌EPS表面→接枝负电官能团的高分子/碳基吸附基底；BSP产硫过程→pH触发型硫化物缓释微胶囊/前驱体；SRB-S0RB协同→碱度缓冲-硫化释放双功能复合体系；软约束建议：设计S²⁻释放动力学曲线以匹配金属离子扩散速率，并设置pH阈值开关以激活特定金属的选择性沉淀窗口。",
-          "explainability_anchors": "仿生故事线：从‘微生物硫化物沉淀工厂’到‘智能响应型仿生吸附材料’的设计跃迁；设计溯源：基于SRB/S0RB系统发育多样性与六重除金属机制，提取EPS表面化学与pH分区调控规律，转化为可工程化的pH响应缓释材料与多功能协同吸附界面，实现矿山废水中重金属的选择性矿化与资源回收。"
-        }
-      },
-      {
-        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2022-Zhang-sulfate-reducing-wastewater-water-treatment-review.json",
-        "paper_id": "2022-Zhang-SRB-metabolism-wastewater-review",
-        "sections": {
-          "problem_definition": "自然界中硫酸盐还原菌(SRB)在酸性及重金属胁迫下面临能量代谢受阻和毒性抑制的挑战；对应水处理中酸性矿山废水(AMD)修复、重金属高效去除及复杂废水硫循环资源回收的工程需求。",
-          "biological_solution": "SRB进化出DSR五步酶级联反应实现高效电子转移与硫化物释放，分泌富含谷氨酸(14%)和天冬氨酸(13%)的EPS通过大量负电荷吸附重金属阳离子，并通过完全氧化代谢途径和SRB-SOB共生机制实现碳氮磷硫耦合与无醋酸残留的高效矿化。",
-          "key_features": "必须保留特征：DSR定向电子转移机制、EPS多酸性氨基酸负电荷吸附位点、还原-沉淀-吸附协同机制；可灵活调整特征：碳源供给方式(自供碳/外加碳)、载体材料(rGO/PVA-SA)、金属催化组分(Cu/Fe双金属)、工艺段组合(厌氧-缺氧-好氧)。",
-          "design_mapping": "生物DSR酶级联→仿生酶级联/电活性矿化材料(rGO诱导菌毛增强电子转移)；生物EPS多酸性氨基酸→仿生多酸性氨基酸功能化基底；ZVI+SRB协同→仿生双金属(Cu/Fe)催化矿化复合材料；SANI/DS-EBPR硫循环→仿生厌氧-缺氧-好氧三段式耦合工艺。软约束建议：采用PVA-SA固定化构建内聚营养型自供碳微球，以缓冲pH波动和重金属毒性。",
-          "explainability_anchors": "仿生故事线：从SRB的‘代谢-防御-共生’生存策略出发，映射到‘电子转移-吸附沉淀-系统耦合’的水处理材料与工艺设计；设计溯源：DSR五步反应能量学方程指导定向电子转移设计，EPS氨基酸组成指导表面官能团修饰，环境因子(pH三重抑制、COD/SO₄²⁻竞争)指导工艺参数控制与材料抗逆性设计。"
-        }
-      },
-      {
-        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2023-Diao-sulfate-reducing-heavy-metal-wastewater-water-treatment-review.json",
-        "paper_id": "2023-Diao-SRB-sulfate-wastewater-review",
-        "sections": {
-          "problem_definition": "自然界SRB在酸性矿山排水等极端环境中面临重金属毒性与底物匮乏的双重生存挑战；对应水处理中重金属/新兴污染物的高效去除、抗毒性干扰及系统长期稳定运行难题。",
-          "biological_solution": "进化出EPS表面有机官能团(羧基/磷酸基/羟基)介导的金属硫化物多级成核机制，结合固定化微环境构建与空间分区代谢策略；关键机制为SO₄²⁻三步还原与硫化物沉淀/吸附/酶促转化协同；成功案例为ABR/UASB反应器在pH<3进水条件下实现>90%硫酸盐还原与>98%重金属去除。",
-          "key_features": "必须保留特征：EPS仿生成核位点、多孔载体微环境、还原-矿化空间分离；可灵活调整特征：碳源类型与COD/SO₄²⁻配比、载体材质(沸石/煤矸石/PVA-SA)、协同还原剂(ZVI/Fe²⁺)引入。",
-          "design_mapping": "生物→材料映射：EPS官能团→仿生材料表面化学修饰/接枝；SRB固定化微环境→多孔支架/水凝胶网络；ABR分区代谢→分级矿化反应器/多层吸附床；软约束建议：维持微环境pH 5-9与COD/SO₄²⁻比0.55-1.7，避免高浓度重金属导致材料表面钝化。",
-          "explainability_anchors": "仿生故事线：从SRB胞外聚合物捕获金属离子到硫化物原位沉淀的“捕获-还原-矿化”级联过程；设计溯源：基于SRB-EPS-金属硫化物三元交互机制与ABR空间分离原理，指导仿生吸附材料的表面化学设计与宏观结构构建。"
-        }
-      },
-      {
-        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2022-闻-生物矿化-硫酸盐还原菌-重金属-废水-综述.json",
-        "paper_id": "2022-Wen-SRB-biomineralization-AMD-review",
-        "sections": {
-          "problem_definition": "自然界中硫酸盐还原菌(SRB)面临酸性矿山废水(AMD)中高浓度重金属毒性和矿物包埋失活的挑战；对应水处理中吸附/矿化材料易发生表面堵塞、活性位点失活及多金属选择性分离困难的问题。",
-          "biological_solution": "SRB进化出EPS-矿化三元交互模型与自保护机制：通过EPS官能团(羧基/磷酰基/羟基)吸附聚集金属离子，细胞内还原产生S²⁻排出后，在EPS球粒而非细胞壁上诱导纳米矿化并聚合成大颗粒（如草莓状黄铁矿），避免细胞包埋；同时利用代谢产生的OH⁻/CO₃²⁻及H₂S，结合不同金属硫化物/氢氧化物的Ksp和pH差异，实现分级沉淀。",
-          "key_features": "必须保留特征：EPS模拟官能团(羧基/磷酰基/羟基)作为成核位点与生长模板、矿化产物与活性界面的空间分离机制（抗堵塞）；可灵活调整特征：微纳层级结构（如草莓状微晶自组装）、多级pH/Ksp控制梯度、反应器空间构型（如多隔室分离）。",
-          "design_mapping": "生物EPS官能团→材料表面接枝羧基/磷酰基/羟基等配体；EPS球粒空间分离→设计核壳结构或大孔-微孔分级载体，使矿化发生在孔道内部或外层而非活性核心；细胞内S²⁻缓释→材料内部负载缓释硫源或硫化物前驱体；草莓状黄铁矿自组装→调控材料微纳层级形貌以增加比表面积和稳定性。软约束建议：材料设计需考虑硫化氢的传质与逸出控制，以及多金属共存时的pH响应选择性。",
-          "explainability_anchors": "仿生故事线：从SRB在极端重金属环境中的'EPS球粒外矿化'自保护智慧，到抗堵塞、高选择性仿生矿化吸附材料的开发；设计溯源：材料表面的官能团分布与孔道结构直接映射SRB-EPS-金属硫化物三元交互成矿模型与矿物-污泥分离策略，确保材料在长期矿化过程中的活性维持与目标金属的高效回收。"
-        }
-      },
-      {
-        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2021-朱-硫酸盐还原菌-生物炭-吸附-去除.json",
-        "paper_id": "2021-Zhu-biochar-SRB-CrVI-adsorption",
-        "sections": {
-          "problem_definition": "自然界中微生物在复杂环境中易失活且单一吸附/还原效率有限；对应水处理中Cr(Ⅵ)高毒性、难降解及传统单一材料去除容量低、易二次污染的挑战。",
-          "biological_solution": "硫酸盐还原菌(SRB)通过代谢将SO₄²⁻还原为S²⁻，进而将高毒Cr(Ⅵ)还原为低毒Cr(Ⅲ)并形成硫化物沉淀；结合多孔生物炭载体提供物理保护与微环境，实现“吸附富集-生物还原-化学沉淀”的协同进化策略。成功案例为IBXM700（700℃小麦秸秆生物炭固定化SRB），去除量达286.54 mg/g。",
-          "key_features": "必须保留特征：多孔碳载体结构、SRB生物还原活性、吸附与还原协同机制、代谢产物S²⁻沉淀路径。可灵活调整特征：载体原料类型（如小麦秸秆可替换为其他生物质）、热解温度（需优化比表面积与芳香化平衡）、菌剂投加量与反应接触时间。",
-          "design_mapping": "生物→材料映射：SRB代谢微环境→生物炭多孔骨架与表面官能团；生物还原酶促反应→碳材料π-π/静电吸附协同SRB代谢产硫；自然沉淀固定→Cr(Ⅲ)硫化物原位生成。软约束建议：优先选择700℃左右热解制备高芳香化多孔碳；控制pH≈5以兼顾静电吸附与菌体活性；保证≥24h水力停留时间以完成拟一级动力学吸附与生物转化。",
-          "explainability_anchors": "仿生故事线：借鉴自然界“多孔基质庇护微生物+代谢产物原位固定重金属”的生态策略，构建“载体吸附富集-菌体生物还原-硫化物化学沉淀”的三重净化路径。设计溯源：基于SRB6-2-1菌株的硫酸盐还原特性与小麦秸秆高温热解形成的碳基多孔结构，通过固定化技术实现物理保护与功能协同，Langmuir单分子层吸附与拟一级动力学验证了该仿生设计的可预测性与工程可行性。"
-        }
-      },
-      {
-        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2022-赵-纤维素-硫酸盐还原菌-重金属-废水-综述.json",
-        "paper_id": "2022-Zhao-SRB-acidic-sulfate-wastewater-review",
-        "sections": {
-          "problem_definition": "自然界酸性硫酸盐废水面临低pH、高重金属与硫化物毒性三重抑制挑战；水处理中需同步实现硫酸盐还原、重金属沉淀与酸度中和，同时克服H₂S释放与系统失活问题。",
-          "biological_solution": "进化出SRB与SOB双菌群耦合的硫循环闭路策略：SRB在厌氧条件下将SO₄²⁻还原为H₂S并产生HCO₃⁻缓冲酸度，H₂S与重金属形成硫化物沉淀；SOB在好氧微区将S²⁻选择性氧化为单质硫(S⁰)回收。该机制通过功能分工与限氧环境实现高效、低毒的被动式矿化。",
-          "key_features": "必须保留特征：SRB异化还原产碱缓冲、H₂S-重金属共沉淀、SOB限氧氧化回收S⁰、双菌群空间/功能分区。可灵活调整特征：载体孔隙结构、O₂/S传质梯度、有机碳源供给方式、反应器水力构型。",
-          "design_mapping": "生物→材料映射：SRB代谢路径→仿生材料内置碱性缓冲微区与还原性活性位点；SOB限氧氧化→仿生材料梯度孔隙/限氧涂层实现S²⁻→S⁰选择性转化；被动湿地系统→仿生低维护渗滤/填充床构型。软约束建议：维持局部微环境pH>4.0，控制溶解氧梯度以优化O₂/S比，预留重金属沉淀扩容空间。",
-          "explainability_anchors": "仿生故事线：从自然湿地/渗滤床的被动净化到SRB/SOB协同的硫循环闭路，揭示“产碱缓冲-共沉淀除重-限氧回收”的级联机制。设计溯源：基于酸性条件下三重抑制机理与反应动力学方程(Eq.1/Eq.2)，将微生物代谢网络转化为材料级联反应路径与空间限域结构。"
-        }
-      },
-      {
-        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2023-李-硫酸盐还原菌-废水-研究进展-综述.json",
-        "paper_id": "2023-Li-SRB-acid-mine-drainage-review",
-        "sections": {
-          "problem_definition": "自然界挑战：酸性矿山废水(AMD)中低pH、高浓度重金属与硫酸盐共存，极端环境抑制微生物活性且传统化学法易产生大量污泥与二次污染。水处理对应：需开发能同步实现pH自调节、重金属高效固定化与硫酸盐还原的低成本、抗毒化仿生吸附-矿化材料。",
-          "biological_solution": "进化策略：SRB在微环境中构建“SRB-EPS-金属硫化物”三元稳定体系，通过酶促硫酸盐还原与胞外电子转移实现重金属原位固定。关键机制：五重协同途径(H₂S沉淀、表面官能团吸附、EPS电子转移、微量营养吸收、酶促还原)将溶解态重金属转化为稳定硫化物。成功案例：PVA+SA包埋结合内聚碳源与ZVI辅助，使体系pH从2.8跃升至7.8-8.3，重金属去除率>99.3%，且凝胶球可重复利用5次。",
-          "key_features": "必须保留特征：EPS羧基/磷酸基/羟基的矿化模板作用、多级孔缓释碳源供给网络、低ORP还原-矿化耦合微环境。可灵活调整特征：载体比表面积与孔径分布(1000-10000 m²/g的MOFs/COFs或炭基材料)、导电界面组分(GO/rGO比例)、包埋基质机械强度配比(PVA/SA/硅砂)。",
-          "design_mapping": "生物→材料映射：SRB酶促还原链与EPS分泌→仿生导电矿化界面与官能团修饰多孔支架；SRB-EPS-硫化物微区→仿生层级矿化-固定化复合凝胶球；内聚碳源代谢→仿生多级孔缓释网络。软约束建议：设计需预留C/S比调控窗口(>0.67)，优先选用乳酸钠或改性生物质作为缓释电子供体；针对高毒性金属(Cu/Cd)，需强化ZVI辅助还原层或提高包埋致密度以屏蔽毒性冲击。",
-          "explainability_anchors": "仿生故事线：从SRB在极端酸性环境中的“代谢-矿化-固定”生存策略出发，提取其电子传递链与EPS模板矿化机制，转化为人工多孔支架的“还原-吸附-沉淀”级联反应路径。设计溯源：材料孔径分布与表面官能团排布直接映射SRB微菌落空间结构；ZVI与碳基载体的引入复刻了自然界矿物-有机质协同缓冲机制，确保工程参数(pH跃升、温度耐受、重复利用性)与生物原型高度一致。"
-        }
-      },
-      {
-        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2021-苗-硫酸盐还原菌-重金属-废水-水处理-综述.json",
-        "paper_id": "2021-Miao-SRB-acid-mine-drainage-review",
-        "sections": {
-          "problem_definition": "自然界中硫酸盐还原菌面临酸性、高重金属浓度及碳源匮乏的极端生境挑战；对应水处理中酸性矿山废水(AMD)重金属离子浓度高、酸性强、传统吸附剂易饱和失活且缺乏持续化学沉淀能力的问题。",
-          "biological_solution": "进化出厌氧代谢硫酸盐生成S²⁻的生存策略，利用S²⁻与重金属离子原位生成极难溶的金属硫化物沉淀(M₂Sx)实现解毒；结合生物膜/颗粒聚集构建微环境并高效利用碳源；成功案例为SRB在AMD处理中实现重金属高效固定、酸中和及>99%的锌去除循环稳定性。",
-          "key_features": "必须保留特征：S²⁻可控释放机制、重金属硫化物原位沉淀、厌氧/微氧隔离微环境；可灵活调整特征：内置碳源类型与释放动力学、载体基质(如膨润土/多孔碳)、反应器构型(两阶段分离/气液接触界面)。",
-          "design_mapping": "生物代谢路径(SO₄²⁻→S²⁻)映射为仿生材料的缓释硫源/硫化物组分；生物固定化颗粒映射为多孔微球/复合水凝胶载体；生物两阶段处理映射为“还原-沉淀”功能分区材料设计。软约束建议：优先采用低分子有机酸衍生物作为内置碳源，设计气液接触界面避免强酸直接冲击活性位点，引入碱性矿物协同缓冲pH。",
-          "explainability_anchors": "仿生故事线：从“微生物厌氧代谢产硫”到“材料原位矿化固毒”的跨尺度功能迁移；设计溯源：基于SRB处理AMD的4种技术路线(厌氧反应器/联合处理/固定化/原位处理)提炼出的“代谢-沉淀-缓冲”协同机制，确保材料设计具备明确的生物学原型与工程可解释性。"
-        }
-      },
-      {
-        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2022-王-硫酸盐还原菌-废水-去除-综述.json",
-        "paper_id": "2022-Wang-SRB-AMD-treatment-review",
-        "sections": {
-          "problem_definition": "自然界中，黄铁矿等硫化矿物在氧气和水作用下氧化，产生富含重金属离子（Fe²⁺/Fe³⁺, Cu²⁺, Zn²⁺等）的酸性矿山废水（AMD），严重污染水体。水处理需在强酸性条件下高效、低成本地去除多种金属离子。",
-          "biological_solution": "硫酸盐还原菌（SRB）进化出一套高效的厌氧代谢与矿化策略：(1) 通过四步分解代谢（分解→电子转移→氧化）利用有机碳源产生硫化氢（H₂S）；(2) H₂S/S²⁻与重金属离子发生沉淀反应，生成极难溶的金属硫化物（如CuS Ksp=8.5×10⁻⁴⁵）；(3) 同时通过胞外聚合物（EPS）中的阴离子官能团（羧基、羟基）吸附络合金属离子；(4) 产生OH⁻提高碱度，辅助形成碳酸盐和氢氧化物沉淀。该系统在多种生物反应器中成功应用，对金属去除率常>99%。",
-          "key_features": "必须保留特征：(1) 硫化物矿化能力（产生H₂S或等效功能基团）；(2) 多酸性官能团（羧基、羟基）的表面化学，用于吸附络合；(3) 在酸性环境下工作的生化/化学机制。可灵活调整特征：(1) 电子供体（碳源）的具体形式（可使用廉价废弃物）；(2) 反应器物理形态（可根据处理规模和金属种类选择MBR、FBR、UASB等）；(3) 代谢途径的精确耦合方式（可设计为分段式或一体化）。",
-          "design_mapping": "生物→材料映射：SRB的硫化物产生途径 → 仿生材料内置硫源或催化产生硫离子的活性位点；SRB的EPS络合功能 → 在材料基底上接枝多酸性氨基酸或类似官能团；SRB利用复杂碳源的能力 → 设计可负载或缓释复杂有机碳源的复合材料。软约束建议：材料结构需设计成有利于质子（H⁺）扩散和电子传递的多孔或层状结构；可考虑将材料组装成梯度床层，以利用不同金属硫化物的Ksp差异实现分步回收。",
-          "explainability_anchors": "仿生故事线：从AMD的‘酸性自我加速’问题出发，借鉴SRB‘以废治废’（用有机碳源产生硫化物去除重金属）的核心策略，设计一种仿生矿化材料。设计溯源：材料的酸性耐受性与表面官能团设计源于SRB的EPS特性；材料的硫化物沉淀功能源于SRB的厌氧代谢终产物H₂S；材料的低成本属性则映射了SRB利用虾壳等复杂碳源的生态智慧。"
-        }
-      },
-      {
-        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2020-Kumar-sulfate-reducing-heavy-metal-dye-wastewater-review.json",
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2020-Kumar-sulfate-reducing-heavy-metal-dye-wastewater-review.json",
         "paper_id": "2020-Kumar-sulfate-reducing-heavy-metal-dye-wastewater-review",
         "sections": {
           "problem_definition": "自然界中厌氧微生物面临高浓度重金属毒性胁迫；水处理中传统化学沉淀法在低pH下失效、缺乏选择性、污泥沉降脱水性能差且资本投入高。",
@@ -210,7 +42,106 @@
         }
       },
       {
-        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2024-Novair-wastewater-water-treatment-removal.json",
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2021-朱-硫酸盐还原菌-生物炭-吸附-去除.json",
+        "paper_id": "2021-Zhu-biochar-SRB-CrVI-adsorption",
+        "sections": {
+          "problem_definition": "自然界中微生物在复杂环境中易失活且单一吸附/还原效率有限；对应水处理中Cr(Ⅵ)高毒性、难降解及传统单一材料去除容量低、易二次污染的挑战。",
+          "biological_solution": "硫酸盐还原菌(SRB)通过代谢将SO₄²⁻还原为S²⁻，进而将高毒Cr(Ⅵ)还原为低毒Cr(Ⅲ)并形成硫化物沉淀；结合多孔生物炭载体提供物理保护与微环境，实现“吸附富集-生物还原-化学沉淀”的协同进化策略。成功案例为IBXM700（700℃小麦秸秆生物炭固定化SRB），去除量达286.54 mg/g。",
+          "key_features": "必须保留特征：多孔碳载体结构、SRB生物还原活性、吸附与还原协同机制、代谢产物S²⁻沉淀路径。可灵活调整特征：载体原料类型（如小麦秸秆可替换为其他生物质）、热解温度（需优化比表面积与芳香化平衡）、菌剂投加量与反应接触时间。",
+          "design_mapping": "生物→材料映射：SRB代谢微环境→生物炭多孔骨架与表面官能团；生物还原酶促反应→碳材料π-π/静电吸附协同SRB代谢产硫；自然沉淀固定→Cr(Ⅲ)硫化物原位生成。软约束建议：优先选择700℃左右热解制备高芳香化多孔碳；控制pH≈5以兼顾静电吸附与菌体活性；保证≥24h水力停留时间以完成拟一级动力学吸附与生物转化。",
+          "explainability_anchors": "仿生故事线：借鉴自然界“多孔基质庇护微生物+代谢产物原位固定重金属”的生态策略，构建“载体吸附富集-菌体生物还原-硫化物化学沉淀”的三重净化路径。设计溯源：基于SRB6-2-1菌株的硫酸盐还原特性与小麦秸秆高温热解形成的碳基多孔结构，通过固定化技术实现物理保护与功能协同，Langmuir单分子层吸附与拟一级动力学验证了该仿生设计的可预测性与工程可行性。"
+        }
+      },
+      {
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2021-苗-硫酸盐还原菌-重金属-废水-水处理-综述.json",
+        "paper_id": "2021-Miao-SRB-acid-mine-drainage-review",
+        "sections": {
+          "problem_definition": "自然界中硫酸盐还原菌面临酸性、高重金属浓度及碳源匮乏的极端生境挑战；对应水处理中酸性矿山废水(AMD)重金属离子浓度高、酸性强、传统吸附剂易饱和失活且缺乏持续化学沉淀能力的问题。",
+          "biological_solution": "进化出厌氧代谢硫酸盐生成S²⁻的生存策略，利用S²⁻与重金属离子原位生成极难溶的金属硫化物沉淀(M₂Sx)实现解毒；结合生物膜/颗粒聚集构建微环境并高效利用碳源；成功案例为SRB在AMD处理中实现重金属高效固定、酸中和及>99%的锌去除循环稳定性。",
+          "key_features": "必须保留特征：S²⁻可控释放机制、重金属硫化物原位沉淀、厌氧/微氧隔离微环境；可灵活调整特征：内置碳源类型与释放动力学、载体基质(如膨润土/多孔碳)、反应器构型(两阶段分离/气液接触界面)。",
+          "design_mapping": "生物代谢路径(SO₄²⁻→S²⁻)映射为仿生材料的缓释硫源/硫化物组分；生物固定化颗粒映射为多孔微球/复合水凝胶载体；生物两阶段处理映射为“还原-沉淀”功能分区材料设计。软约束建议：优先采用低分子有机酸衍生物作为内置碳源，设计气液接触界面避免强酸直接冲击活性位点，引入碱性矿物协同缓冲pH。",
+          "explainability_anchors": "仿生故事线：从“微生物厌氧代谢产硫”到“材料原位矿化固毒”的跨尺度功能迁移；设计溯源：基于SRB处理AMD的4种技术路线(厌氧反应器/联合处理/固定化/原位处理)提炼出的“代谢-沉淀-缓冲”协同机制，确保材料设计具备明确的生物学原型与工程可解释性。"
+        }
+      },
+      {
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2022-Li-heavy-metal-removal-review.json",
+        "paper_id": "2022-Li-biological-sulfidogenic-process-metal-removal-review",
+        "sections": {
+          "problem_definition": "自然界挑战：矿山酸性排水(AMD)中复杂重金属离子共存且酸度高；水处理对应：传统沉淀法选择性差、药剂成本高且易产生有毒污泥，需开发高效、低耗、可分级回收的仿生处理体系。",
+          "biological_solution": "进化策略：SRB/S0RB利用SO₄²⁻或S⁰作为电子受体驱动生物硫化过程(BSP)；关键机制：表面吸附、表面转化、胞内/外沉淀与络合等六重机制协同，且pH决定硫化途径切换；成功案例：S0RB驱动体系产硫量更高、有机碳消耗更低，中性条件下高速运行且不生成MeHg，实现多金属高效去除。",
+          "key_features": "必须保留特征：S²⁻可控缓释能力、表面负电荷官能团(-COOH/-OH/-NH₂)、pH响应型硫化途径切换、吸附-沉淀-络合多机制协同；可灵活调整特征：具体EPS多糖/蛋白比例、菌群共生配比、电子供体类型及材料载体基质。",
+          "design_mapping": "生物→材料映射：细菌EPS表面→接枝负电官能团的高分子/碳基吸附基底；BSP产硫过程→pH触发型硫化物缓释微胶囊/前驱体；SRB-S0RB协同→碱度缓冲-硫化释放双功能复合体系；软约束建议：设计S²⁻释放动力学曲线以匹配金属离子扩散速率，并设置pH阈值开关以激活特定金属的选择性沉淀窗口。",
+          "explainability_anchors": "仿生故事线：从‘微生物硫化物沉淀工厂’到‘智能响应型仿生吸附材料’的设计跃迁；设计溯源：基于SRB/S0RB系统发育多样性与六重除金属机制，提取EPS表面化学与pH分区调控规律，转化为可工程化的pH响应缓释材料与多功能协同吸附界面，实现矿山废水中重金属的选择性矿化与资源回收。"
+        }
+      },
+      {
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2022-Zhang-sulfate-reducing-wastewater-water-treatment-review.json",
+        "paper_id": "2022-Zhang-SRB-metabolism-wastewater-review",
+        "sections": {
+          "problem_definition": "自然界中硫酸盐还原菌(SRB)在酸性及重金属胁迫下面临能量代谢受阻和毒性抑制的挑战；对应水处理中酸性矿山废水(AMD)修复、重金属高效去除及复杂废水硫循环资源回收的工程需求。",
+          "biological_solution": "SRB进化出DSR五步酶级联反应实现高效电子转移与硫化物释放，分泌富含谷氨酸(14%)和天冬氨酸(13%)的EPS通过大量负电荷吸附重金属阳离子，并通过完全氧化代谢途径和SRB-SOB共生机制实现碳氮磷硫耦合与无醋酸残留的高效矿化。",
+          "key_features": "必须保留特征：DSR定向电子转移机制、EPS多酸性氨基酸负电荷吸附位点、还原-沉淀-吸附协同机制；可灵活调整特征：碳源供给方式(自供碳/外加碳)、载体材料(rGO/PVA-SA)、金属催化组分(Cu/Fe双金属)、工艺段组合(厌氧-缺氧-好氧)。",
+          "design_mapping": "生物DSR酶级联→仿生酶级联/电活性矿化材料(rGO诱导菌毛增强电子转移)；生物EPS多酸性氨基酸→仿生多酸性氨基酸功能化基底；ZVI+SRB协同→仿生双金属(Cu/Fe)催化矿化复合材料；SANI/DS-EBPR硫循环→仿生厌氧-缺氧-好氧三段式耦合工艺。软约束建议：采用PVA-SA固定化构建内聚营养型自供碳微球，以缓冲pH波动和重金属毒性。",
+          "explainability_anchors": "仿生故事线：从SRB的‘代谢-防御-共生’生存策略出发，映射到‘电子转移-吸附沉淀-系统耦合’的水处理材料与工艺设计；设计溯源：DSR五步反应能量学方程指导定向电子转移设计，EPS氨基酸组成指导表面官能团修饰，环境因子(pH三重抑制、COD/SO₄²⁻竞争)指导工艺参数控制与材料抗逆性设计。"
+        }
+      },
+      {
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2022-王-硫酸盐还原菌-废水-去除-综述.json",
+        "paper_id": "2022-Wang-SRB-AMD-treatment-review",
+        "sections": {
+          "problem_definition": "自然界中，黄铁矿等硫化矿物在氧气和水作用下氧化，产生富含重金属离子（Fe²⁺/Fe³⁺, Cu²⁺, Zn²⁺等）的酸性矿山废水（AMD），严重污染水体。水处理需在强酸性条件下高效、低成本地去除多种金属离子。",
+          "biological_solution": "硫酸盐还原菌（SRB）进化出一套高效的厌氧代谢与矿化策略：(1) 通过四步分解代谢（分解→电子转移→氧化）利用有机碳源产生硫化氢（H₂S）；(2) H₂S/S²⁻与重金属离子发生沉淀反应，生成极难溶的金属硫化物（如CuS Ksp=8.5×10⁻⁴⁵）；(3) 同时通过胞外聚合物（EPS）中的阴离子官能团（羧基、羟基）吸附络合金属离子；(4) 产生OH⁻提高碱度，辅助形成碳酸盐和氢氧化物沉淀。该系统在多种生物反应器中成功应用，对金属去除率常>99%。",
+          "key_features": "必须保留特征：(1) 硫化物矿化能力（产生H₂S或等效功能基团）；(2) 多酸性官能团（羧基、羟基）的表面化学，用于吸附络合；(3) 在酸性环境下工作的生化/化学机制。可灵活调整特征：(1) 电子供体（碳源）的具体形式（可使用廉价废弃物）；(2) 反应器物理形态（可根据处理规模和金属种类选择MBR、FBR、UASB等）；(3) 代谢途径的精确耦合方式（可设计为分段式或一体化）。",
+          "design_mapping": "生物→材料映射：SRB的硫化物产生途径 → 仿生材料内置硫源或催化产生硫离子的活性位点；SRB的EPS络合功能 → 在材料基底上接枝多酸性氨基酸或类似官能团；SRB利用复杂碳源的能力 → 设计可负载或缓释复杂有机碳源的复合材料。软约束建议：材料结构需设计成有利于质子（H⁺）扩散和电子传递的多孔或层状结构；可考虑将材料组装成梯度床层，以利用不同金属硫化物的Ksp差异实现分步回收。",
+          "explainability_anchors": "仿生故事线：从AMD的‘酸性自我加速’问题出发，借鉴SRB‘以废治废’（用有机碳源产生硫化物去除重金属）的核心策略，设计一种仿生矿化材料。设计溯源：材料的酸性耐受性与表面官能团设计源于SRB的EPS特性；材料的硫化物沉淀功能源于SRB的厌氧代谢终产物H₂S；材料的低成本属性则映射了SRB利用虾壳等复杂碳源的生态智慧。"
+        }
+      },
+      {
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2022-赵-纤维素-硫酸盐还原菌-重金属-废水-综述.json",
+        "paper_id": "2022-Zhao-SRB-acidic-sulfate-wastewater-review",
+        "sections": {
+          "problem_definition": "自然界酸性硫酸盐废水面临低pH、高重金属与硫化物毒性三重抑制挑战；水处理中需同步实现硫酸盐还原、重金属沉淀与酸度中和，同时克服H₂S释放与系统失活问题。",
+          "biological_solution": "进化出SRB与SOB双菌群耦合的硫循环闭路策略：SRB在厌氧条件下将SO₄²⁻还原为H₂S并产生HCO₃⁻缓冲酸度，H₂S与重金属形成硫化物沉淀；SOB在好氧微区将S²⁻选择性氧化为单质硫(S⁰)回收。该机制通过功能分工与限氧环境实现高效、低毒的被动式矿化。",
+          "key_features": "必须保留特征：SRB异化还原产碱缓冲、H₂S-重金属共沉淀、SOB限氧氧化回收S⁰、双菌群空间/功能分区。可灵活调整特征：载体孔隙结构、O₂/S传质梯度、有机碳源供给方式、反应器水力构型。",
+          "design_mapping": "生物→材料映射：SRB代谢路径→仿生材料内置碱性缓冲微区与还原性活性位点；SOB限氧氧化→仿生材料梯度孔隙/限氧涂层实现S²⁻→S⁰选择性转化；被动湿地系统→仿生低维护渗滤/填充床构型。软约束建议：维持局部微环境pH>4.0，控制溶解氧梯度以优化O₂/S比，预留重金属沉淀扩容空间。",
+          "explainability_anchors": "仿生故事线：从自然湿地/渗滤床的被动净化到SRB/SOB协同的硫循环闭路，揭示“产碱缓冲-共沉淀除重-限氧回收”的级联机制。设计溯源：基于酸性条件下三重抑制机理与反应动力学方程(Eq.1/Eq.2)，将微生物代谢网络转化为材料级联反应路径与空间限域结构。"
+        }
+      },
+      {
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2022-闻-生物矿化-硫酸盐还原菌-重金属-废水-综述.json",
+        "paper_id": "2022-Wen-SRB-biomineralization-AMD-review",
+        "sections": {
+          "problem_definition": "自然界中硫酸盐还原菌(SRB)面临酸性矿山废水(AMD)中高浓度重金属毒性和矿物包埋失活的挑战；对应水处理中吸附/矿化材料易发生表面堵塞、活性位点失活及多金属选择性分离困难的问题。",
+          "biological_solution": "SRB进化出EPS-矿化三元交互模型与自保护机制：通过EPS官能团(羧基/磷酰基/羟基)吸附聚集金属离子，细胞内还原产生S²⁻排出后，在EPS球粒而非细胞壁上诱导纳米矿化并聚合成大颗粒（如草莓状黄铁矿），避免细胞包埋；同时利用代谢产生的OH⁻/CO₃²⁻及H₂S，结合不同金属硫化物/氢氧化物的Ksp和pH差异，实现分级沉淀。",
+          "key_features": "必须保留特征：EPS模拟官能团(羧基/磷酰基/羟基)作为成核位点与生长模板、矿化产物与活性界面的空间分离机制（抗堵塞）；可灵活调整特征：微纳层级结构（如草莓状微晶自组装）、多级pH/Ksp控制梯度、反应器空间构型（如多隔室分离）。",
+          "design_mapping": "生物EPS官能团→材料表面接枝羧基/磷酰基/羟基等配体；EPS球粒空间分离→设计核壳结构或大孔-微孔分级载体，使矿化发生在孔道内部或外层而非活性核心；细胞内S²⁻缓释→材料内部负载缓释硫源或硫化物前驱体；草莓状黄铁矿自组装→调控材料微纳层级形貌以增加比表面积和稳定性。软约束建议：材料设计需考虑硫化氢的传质与逸出控制，以及多金属共存时的pH响应选择性。",
+          "explainability_anchors": "仿生故事线：从SRB在极端重金属环境中的'EPS球粒外矿化'自保护智慧，到抗堵塞、高选择性仿生矿化吸附材料的开发；设计溯源：材料表面的官能团分布与孔道结构直接映射SRB-EPS-金属硫化物三元交互成矿模型与矿物-污泥分离策略，确保材料在长期矿化过程中的活性维持与目标金属的高效回收。"
+        }
+      },
+      {
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2023-Diao-sulfate-reducing-heavy-metal-wastewater-water-treatment-review.json",
+        "paper_id": "2023-Diao-SRB-sulfate-wastewater-review",
+        "sections": {
+          "problem_definition": "自然界SRB在酸性矿山排水等极端环境中面临重金属毒性与底物匮乏的双重生存挑战；对应水处理中重金属/新兴污染物的高效去除、抗毒性干扰及系统长期稳定运行难题。",
+          "biological_solution": "进化出EPS表面有机官能团(羧基/磷酸基/羟基)介导的金属硫化物多级成核机制，结合固定化微环境构建与空间分区代谢策略；关键机制为SO₄²⁻三步还原与硫化物沉淀/吸附/酶促转化协同；成功案例为ABR/UASB反应器在pH<3进水条件下实现>90%硫酸盐还原与>98%重金属去除。",
+          "key_features": "必须保留特征：EPS仿生成核位点、多孔载体微环境、还原-矿化空间分离；可灵活调整特征：碳源类型与COD/SO₄²⁻配比、载体材质(沸石/煤矸石/PVA-SA)、协同还原剂(ZVI/Fe²⁺)引入。",
+          "design_mapping": "生物→材料映射：EPS官能团→仿生材料表面化学修饰/接枝；SRB固定化微环境→多孔支架/水凝胶网络；ABR分区代谢→分级矿化反应器/多层吸附床；软约束建议：维持微环境pH 5-9与COD/SO₄²⁻比0.55-1.7，避免高浓度重金属导致材料表面钝化。",
+          "explainability_anchors": "仿生故事线：从SRB胞外聚合物捕获金属离子到硫化物原位沉淀的“捕获-还原-矿化”级联过程；设计溯源：基于SRB-EPS-金属硫化物三元交互机制与ABR空间分离原理，指导仿生吸附材料的表面化学设计与宏观结构构建。"
+        }
+      },
+      {
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2023-李-硫酸盐还原菌-废水-研究进展-综述.json",
+        "paper_id": "2023-Li-SRB-acid-mine-drainage-review",
+        "sections": {
+          "problem_definition": "自然界挑战：酸性矿山废水(AMD)中低pH、高浓度重金属与硫酸盐共存，极端环境抑制微生物活性且传统化学法易产生大量污泥与二次污染。水处理对应：需开发能同步实现pH自调节、重金属高效固定化与硫酸盐还原的低成本、抗毒化仿生吸附-矿化材料。",
+          "biological_solution": "进化策略：SRB在微环境中构建“SRB-EPS-金属硫化物”三元稳定体系，通过酶促硫酸盐还原与胞外电子转移实现重金属原位固定。关键机制：五重协同途径(H₂S沉淀、表面官能团吸附、EPS电子转移、微量营养吸收、酶促还原)将溶解态重金属转化为稳定硫化物。成功案例：PVA+SA包埋结合内聚碳源与ZVI辅助，使体系pH从2.8跃升至7.8-8.3，重金属去除率>99.3%，且凝胶球可重复利用5次。",
+          "key_features": "必须保留特征：EPS羧基/磷酸基/羟基的矿化模板作用、多级孔缓释碳源供给网络、低ORP还原-矿化耦合微环境。可灵活调整特征：载体比表面积与孔径分布(1000-10000 m²/g的MOFs/COFs或炭基材料)、导电界面组分(GO/rGO比例)、包埋基质机械强度配比(PVA/SA/硅砂)。",
+          "design_mapping": "生物→材料映射：SRB酶促还原链与EPS分泌→仿生导电矿化界面与官能团修饰多孔支架；SRB-EPS-硫化物微区→仿生层级矿化-固定化复合凝胶球；内聚碳源代谢→仿生多级孔缓释网络。软约束建议：设计需预留C/S比调控窗口(>0.67)，优先选用乳酸钠或改性生物质作为缓释电子供体；针对高毒性金属(Cu/Cd)，需强化ZVI辅助还原层或提高包埋致密度以屏蔽毒性冲击。",
+          "explainability_anchors": "仿生故事线：从SRB在极端酸性环境中的“代谢-矿化-固定”生存策略出发，提取其电子传递链与EPS模板矿化机制，转化为人工多孔支架的“还原-吸附-沉淀”级联反应路径。设计溯源：材料孔径分布与表面官能团排布直接映射SRB微菌落空间结构；ZVI与碳基载体的引入复刻了自然界矿物-有机质协同缓冲机制，确保工程参数(pH跃升、温度耐受、重复利用性)与生物原型高度一致。"
+        }
+      },
+      {
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2024-Novair-wastewater-water-treatment-removal.json",
         "paper_id": "2024-Novair-SRB-bioremediation-electron-donor-review",
         "sections": {
           "problem_definition": "自然界中SRB在厌氧及重金属胁迫环境下需解决硫酸盐代谢与重金属解毒的生存挑战；对应水处理中含硫酸盐废水与潜在有毒元素(PTEs)的高效协同去除及资源回收难题。",
@@ -231,6 +162,33 @@
       "explanation": "",
       "source": "literature",
       "ref_doi": "10.1016/j.psep.2024.01.103"
+    },
+    {
+      "constraint": "铁循环微生物修复As的调控因素",
+      "value": "Fe(II)浓度、溶解性有机物、无机含氧阴离子、电子供体类型/浓度、电子穿梭体以及重金属离子均能调控异化铁还原过程及次生矿物形成",
+      "unit": null,
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.7524/j.issn.0254-6108.2020050901"
+    },
+    {
+      "constraint": "铁循环微生物修复Cr的具体实例",
+      "value": "嗜酸铁还原菌Acidiphilium cryptum strain JF-5在pH=3.2时可还原50 μmol/L Cr(VI)；Acidocella aromatica strain PFBC可将20 μmol/L Cr(VI)还原至0.4 μmol/L",
+      "unit": "μmol/L",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.7524/j.issn.0254-6108.2020050901"
+    },
+    {
+      "constraint": "铁循环微生物对复合金属污染的修复",
+      "value": "接种铁氧化菌并添加Fe(II)可去除污泥中55.3% Cr、91.5% Cu、83.3% Zn、54.4% Ni、16.2% Pb",
+      "unit": "%",
+      "relevance": "medium",
+      "explanation": "接种+添加Fe(II)硫酸盐",
+      "source": "literature",
+      "ref_doi": "10.7524/j.issn.0254-6108.2020050901"
     }
   ],
   "provenance_summary": {
@@ -239,15 +197,5 @@
     "n_unverified": 1
   },
   "coverage": "low",
-  "status": "active",
-  "design_translation": [
-    {
-      "idea": "利用硫酸盐还原菌的代谢产物（H₂S）沉淀重金属",
-      "specific_functional_group": "H₂S/HS⁻ 的硫基（-S²⁻）",
-      "material_handle": "SRB 培养、固定化或生物反应器",
-      "target_interaction": "S²⁻ 与重金属形成难溶硫化物（如 CuS、PbS）",
-      "source_tier": "llm_inference",
-      "examples": []
-    }
-  ]
+  "status": "active"
 }

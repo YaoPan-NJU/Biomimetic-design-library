@@ -25,7 +25,7 @@
       "parameter": "Langmuir最大吸附容量——三种酚类",
       "value": "苯酚102.71、4-CPh 172.24、2,4-DCPh 226.55 mg/g",
       "unit": "mg/g",
-      "pollutant": "phenol; 4-CPh; 2,4-DCPh",
+      "pollutant": "",
       "material": "WAS-BC",
       "ph": "6.0",
       "temperature": "30 ± 1 °C",
@@ -34,19 +34,17 @@
       "ref_doi": "10.1038/s41598-021-82277-2",
       "patent_number": null,
       "standard_number": null,
-      "source_file": "仿生文献库/论文/第4组-生物矿化/2021-Kumar-wood-shell-biochar-wastewater 2.pdf",
+      "source_file": "仿生文献库/论文/第4组-生物矿化/2021-Kumar-wood-shell-biochar-wastewater.pdf",
       "page": 14,
-      "locator": "Abstract",
-      "verification": "partial",
-      "confidence": 0.8,
-      "note": "pollutant ambiguous: candidates=['phenol', '4-chlorophenol', '2,4-dichlorophenol']",
-      "verification_quote": "The maximum uptake of phenol, 4-CPh, and 2,4-DCPh was 102.71, 172.24, and 226.55 mg/g, respectively"
+      "locator": "Conclusion",
+      "verification": "unverified",
+      "confidence": 0.8
     },
     {
       "parameter": "氯取代基对吸附容量的影响——构效关系",
       "value": "2,4-DCPh(二氯) > 4-CPh(一氯) > 苯酚(无氯)；226.55 > 172.24 > 102.71 mg/g",
       "unit": "mg/g",
-      "pollutant": "phenol; 4-CPh; 2,4-DCPh",
+      "pollutant": "",
       "material": "",
       "ph": null,
       "temperature": null,
@@ -55,19 +53,17 @@
       "ref_doi": "10.1038/s41598-021-82277-2",
       "patent_number": null,
       "standard_number": null,
-      "source_file": "仿生文献库/论文/第4组-生物矿化/2021-Kumar-wood-shell-biochar-wastewater 2.pdf",
+      "source_file": "仿生文献库/论文/第4组-生物矿化/2021-Kumar-wood-shell-biochar-wastewater.pdf",
       "page": 14,
-      "locator": "Abstract",
-      "verification": "partial",
-      "confidence": 0.8,
-      "note": "pollutant ambiguous: candidates=['phenol', '4-chlorophenol', '2,4-dichlorophenol']",
-      "verification_quote": "The maximum uptake of phenol, 4-CPh, and 2,4-DCPh was 102.71, 172.24, and 226.55 mg/g, respectively"
+      "locator": "Conclusion",
+      "verification": "unverified",
+      "confidence": 0.8
     },
     {
       "parameter": "TCTGAs对五种重金属的Langmuir最大吸附容量 qmax",
       "value": "Pb(II) 571, Cu(II) 462, Zn(II) 361, Cd(II) 263, Mn(II) 208",
       "unit": "mg/g",
-      "pollutant": "Pb(II); Cu(II); Zn(II); Cd(II); Mn(II)",
+      "pollutant": "",
       "material": "",
       "ph": null,
       "temperature": "25°C",
@@ -76,12 +72,11 @@
       "ref_doi": "10.1016/j.jhazmat.2021.125612",
       "patent_number": null,
       "standard_number": null,
-      "source_file": "仿生文献库/论文/第3组-多孔结构/2021-Mo-cellulose-nanocellulose-wood-adsorption 2.pdf",
+      "source_file": "仿生文献库/论文/第3组-多孔结构/2021-Mo-cellulose-nanocellulose-wood-adsorption.pdf",
       "page": 1,
       "locator": "Abstract",
-      "verification": "needs_review",
-      "confidence": 0.8,
-      "note": "pollutant ambiguous: candidates=['Pb(II)', 'Cd(II)', 'Cu(II)', 'Zn(II)']"
+      "verification": "unverified",
+      "confidence": 0.8
     }
   ],
   "mechanisms": [
@@ -92,49 +87,7 @@
       "source": "literature",
       "ref_doi": "10.1038/s41598-021-82277-2",
       "verification": "verified",
-      "基本原理": "木质素的芳香环和酚羟基与酚类污染物结构相似，通过π-π堆积和氢键实现选择性吸附",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "酚类有机物（苯酚、氯代酚）",
-          "basis": "from_source",
-          "locator": "Mo2021 p.1 / Abstract"
-        },
-        "bio_structure": {
-          "text": "木质部的纤维素和木质素组成的多级孔道结构",
-          "basis": "from_source",
-          "locator": "Mo2021 p.1 / Abstract"
-        },
-        "interaction": {
-          "text": "酚羟基与木质素的氢键作用、芳香环的π-π堆积",
-          "basis": "from_source",
-          "locator": "Mo2021 p.1 / Abstract"
-        },
-        "why_it_works": {
-          "text": "木质素的芳香环和酚羟基与酚类污染物结构相似，通过π-π堆积和氢键实现选择性吸附",
-          "basis": "llm_inferred",
-          "locator": null
-        },
-        "boundary_conditions": [
-          {
-            "text": "强碱性条件下酚类解离为酚盐，吸附下降",
-            "parameter": "pH",
-            "condition": {
-              "operator": "qualitative",
-              "value": null
-            },
-            "basis": "llm_inferred",
-            "verification": "needs_review",
-            "gate_level": "soft",
-            "locator": null,
-            "quote": null,
-            "source_asset": null
-          }
-        ],
-        "transferable_principle": "木质部的多级孔道+木质素芳香结构是天然的酚类吸附平台",
-        "verification_quote": "wood nanocellulose aerogel for pollutant capture"
-      },
-      "source_file": "仿生文献库/2nd/第12组-仿生案例/2021-Mo-wood-nanocellulose-aerogel-excellent-capture-superfast.pdf",
-      "verification_quote": "wood nanocellulose aerogel for pollutant capture"
+      "基本原理": "木质素的芳香环和酚羟基与酚类污染物结构相似，通过π-π堆积和氢键实现选择性吸附"
     },
     {
       "name": "共价交联网络的XPS证据",
@@ -167,7 +120,7 @@
   "narrative": {
     "entries": [
       {
-        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2021-Kumar-wood-shell-biochar-wastewater.json",
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2021-Kumar-wood-shell-biochar-wastewater.json",
         "paper_id": "2021-Kumar-wood-shell-biochar-wastewater",
         "sections": {
           "problem_definition": "自然界中植物果壳需形成抗降解的致密复合结构以保护内部组织；对应水处理中面临低浓度酚类及卤代酚类污染物的高效、低成本去除难题。",
@@ -178,7 +131,7 @@
         }
       },
       {
-        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2021-Mo-cellulose-nanocellulose-wood-adsorption.json",
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2021-Mo-cellulose-nanocellulose-wood-adsorption.json",
         "paper_id": "2021-Mo-wood-nanocellulose-aerogel",
         "sections": {
           "problem_definition": "自然界挑战：植物木质部需在极低密度下实现水分/养分的高效纵向传输，同时抵抗重力与风载带来的机械应力。水处理对应：传统多孔吸附剂面临传质阻力大、吸附动力学慢、机械强度低易粉化、以及复杂水体中目标重金属选择性差的工程瓶颈。",
@@ -221,36 +174,9 @@
   ],
   "provenance_summary": {
     "n_papers": 2,
-    "n_verified": 3,
-    "n_unverified": 4,
-    "boundary_rules": [
-      {
-        "id": "B01-WOOD-001",
-        "type": "soft",
-        "rule": "Kumar phenol/chlorophenol adsorption optimal at pH 6 and below pKa. Do not generalize to alkaline wastewater."
-      },
-      {
-        "id": "B01-WOOD-002",
-        "type": "gap",
-        "rule": "Kumar2021 uses ball-milled wood apple shell biochar, not preserved xylem. Supports biochar phenol adsorption but not structural biomimicry."
-      },
-      {
-        "id": "B01-WOOD-003",
-        "type": "soft",
-        "rule": "Mo2021 regeneration: 5 Pb(II) cycles. All-metal or long-term regeneration unproven."
-      }
-    ]
+    "n_verified": 0,
+    "n_unverified": 7
   },
   "coverage": "normal",
-  "status": "active",
-  "design_translation": [
-    {
-      "idea": "利用木材木质部的纤维素和木质素进行吸附和过滤",
-      "specific_functional_group": "纤维素的羟基，木质素的酚羟基",
-      "material_handle": "木材切片、碳化或化学改性",
-      "target_interaction": "羟基通过氢键吸附极性污染物，多孔结构物理过滤",
-      "source_tier": "llm_inference",
-      "examples": []
-    }
-  ]
+  "status": "active"
 }

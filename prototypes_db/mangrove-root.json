@@ -21,7 +21,7 @@
       "parameter": "三种红树植物对NH4+-N的去除率范围 Removal range of NH4+-N by three mangrove species",
       "value": "62%-99",
       "unit": "%",
-      "pollutant": "NH₄⁺-N",
+      "pollutant": "",
       "material": "",
       "ph": null,
       "temperature": null,
@@ -30,18 +30,17 @@
       "ref_doi": "10.11654/jaes.2021-1478",
       "patent_number": null,
       "standard_number": null,
-      "source_file": "仿生文献库\\论文\\第7组-系统仿生\\2022-刘-红树林-去除 2.pdf",
+      "source_file": "仿生文献库/论文/第7组-系统仿生/2022-刘-红树林-去除.pdf",
       "page": 9,
       "locator": "Section 3.2",
-      "verification": "needs_review",
-      "confidence": 0.8,
-      "note": "pollutant inferred from fields by Phase 4 backfill"
+      "verification": "unverified",
+      "confidence": 0.8
     },
     {
       "parameter": "磷酸盐快速去除效果 Rapid PO43--P removal in early stage",
       "value": "80",
       "unit": "%",
-      "pollutant": "PO₄³⁻",
+      "pollutant": "",
       "material": "",
       "ph": null,
       "temperature": null,
@@ -50,12 +49,11 @@
       "ref_doi": "10.11654/jaes.2021-1478",
       "patent_number": null,
       "standard_number": null,
-      "source_file": "仿生文献库\\论文\\第7组-系统仿生\\2022-刘-红树林-去除 2.pdf",
+      "source_file": "仿生文献库/论文/第7组-系统仿生/2022-刘-红树林-去除.pdf",
       "page": 9,
       "locator": "Section 3.2",
-      "verification": "needs_review",
-      "confidence": 0.8,
-      "note": "pollutant inferred from fields by Phase 4 backfill"
+      "verification": "unverified",
+      "confidence": 0.8
     },
     {
       "parameter": "25倍浓度处理下NO2--N去除率 NO2--N removal at 25x concentration",
@@ -70,18 +68,17 @@
       "ref_doi": "10.11654/jaes.2021-1478",
       "patent_number": null,
       "standard_number": null,
-      "source_file": "仿生文献库\\论文\\第7组-系统仿生\\2022-刘-红树林-去除 2.pdf",
+      "source_file": "仿生文献库/论文/第7组-系统仿生/2022-刘-红树林-去除.pdf",
       "page": 7,
       "locator": "Section 2.4",
-      "verification": "needs_review",
-      "confidence": 0.8,
-      "note": "pollutant unidentifiable"
+      "verification": "unverified",
+      "confidence": 0.8
     },
     {
       "parameter": "秋茄在15倍浓度下NH4+-N去除优势 K. candel superiority at 15x NH4+-N removal",
       "value": null,
       "unit": null,
-      "pollutant": "NH₄⁺-N",
+      "pollutant": "",
       "material": "",
       "ph": null,
       "temperature": null,
@@ -90,12 +87,11 @@
       "ref_doi": "10.11654/jaes.2021-1478",
       "patent_number": null,
       "standard_number": null,
-      "source_file": "仿生文献库\\论文\\第7组-系统仿生\\2022-刘-红树林-去除 2.pdf",
+      "source_file": "仿生文献库/论文/第7组-系统仿生/2022-刘-红树林-去除.pdf",
       "page": 9,
       "locator": "Section 3.2",
-      "verification": "needs_review",
-      "confidence": 0.8,
-      "note": "pollutant inferred from fields by Phase 4 backfill"
+      "verification": "unverified",
+      "confidence": 0.8
     },
     {
       "parameter": "红树林人工湿地氮磷去除临界浓度 Critical concentration for N/P removal saturation",
@@ -110,12 +106,11 @@
       "ref_doi": "10.11654/jaes.2021-1478",
       "patent_number": null,
       "standard_number": null,
-      "source_file": "仿生文献库\\论文\\第7组-系统仿生\\2022-刘-红树林-去除 2.pdf",
+      "source_file": "仿生文献库/论文/第7组-系统仿生/2022-刘-红树林-去除.pdf",
       "page": 9,
       "locator": "Section 3.2",
-      "verification": "needs_review",
-      "confidence": 0.8,
-      "note": "pollutant unidentifiable"
+      "verification": "unverified",
+      "confidence": 0.8
     }
   ],
   "mechanisms": [
@@ -126,55 +121,13 @@
       "source": "literature",
       "ref_doi": "10.11654/jaes.2021-1478",
       "verification": "verified",
-      "基本原理": "红树林根系可在高盐环境中选择性排斥Na⁺/Cl⁻而吸收K⁺/NO₃⁻，根际微生物群落可降解有机污染物",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "多种水体污染物（重金属、有机物、营养盐）",
-          "basis": "from_source",
-          "locator": "刘2022 p.1 / Abstract"
-        },
-        "bio_structure": {
-          "text": "红树林根系的盐排斥机制和选择性离子输运",
-          "basis": "from_source",
-          "locator": "刘2022 p.1 / Abstract"
-        },
-        "interaction": {
-          "text": "根系表面吸附、微生物降解、植物吸收、根际沉淀",
-          "basis": "from_source",
-          "locator": "刘2022 p.1 / Abstract"
-        },
-        "why_it_works": {
-          "text": "红树林根系可在高盐环境中选择性排斥Na⁺/Cl⁻而吸收K⁺/NO₃⁻，根际微生物群落可降解有机污染物",
-          "basis": "llm_inferred",
-          "locator": null
-        },
-        "boundary_conditions": [
-          {
-            "text": "高盐度条件下盐排斥机制趋于饱和，选择性下降",
-            "parameter": "salinity",
-            "condition": {
-              "operator": "qualitative",
-              "value": null
-            },
-            "basis": "llm_inferred",
-            "verification": "needs_review",
-            "gate_level": "soft",
-            "locator": null,
-            "quote": null,
-            "source_asset": null
-          }
-        ],
-        "transferable_principle": "红树林的盐排斥-选择性输运机制可启发高盐环境下的选择性离子分离材料",
-        "verification_quote": "mangrove constructed wetland for pollutant removal"
-      },
-      "source_file": "仿生文献库/论文/第7组-系统仿生/2022-刘-红树林-去除 2.pdf",
-      "verification_quote": "mangrove constructed wetland for pollutant removal"
+      "基本原理": "红树林根系可在高盐环境中选择性排斥Na⁺/Cl⁻而吸收K⁺/NO₃⁻，根际微生物群落可降解有机污染物"
     }
   ],
   "narrative": {
     "entries": [
       {
-        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2021-吴-红树林-研究进展-综述.json",
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2021-吴-红树林-研究进展-综述.json",
         "paper_id": "Wu2021_marine_ecological_restoration_review",
         "sections": {
           "problem_definition": "自然界挑战：全球滨海湿地（如红树林、盐沼）大面积退化导致水质净化与生态功能丧失。水处理对应：复杂水环境中污染物的高效去除及材料长期运行性能缺乏系统化、多维度的评估框架。",
@@ -185,7 +138,7 @@
         }
       },
       {
-        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2022-刘-红树林-去除.json",
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2022-刘-红树林-去除.json",
         "paper_id": "Liu2022_mangrove_wetland_NP_removal",
         "sections": {
           "problem_definition": "自然界挑战：海水养殖尾水具有高盐度、高氮磷负荷的特点，常规淡水植物和单一净化机制在高盐环境下易失效且极易达到吸附饱和。水处理对应：需要开发适用于高盐环境、具备高吸附容量和多重去除机制的脱氮除磷材料，解决高盐废水中营养盐去除效率低和材料易失活、易产生二次污染的问题。",
@@ -210,26 +163,9 @@
   ],
   "provenance_summary": {
     "n_papers": 3,
-    "n_verified": 5,
-    "n_unverified": 1,
-    "boundary_rules": [
-      {
-        "id": "B05-MANG-001",
-        "type": "soft",
-        "rule": "Mangrove evidence is constructed-wetland system removal %, not adsorbent qmax. Do not compare with material capacities."
-      }
-    ]
+    "n_verified": 0,
+    "n_unverified": 6
   },
   "coverage": "normal",
-  "status": "active",
-  "design_translation": [
-    {
-      "idea": "利用红树林根系的多孔结构和表面官能团进行污染物过滤和吸附",
-      "specific_functional_group": "木质素衍生的酚羟基和羧基",
-      "material_handle": "红树林生物质碳化或直接使用",
-      "target_interaction": "酚羟基和羧基配位重金属离子，多孔结构物理截留",
-      "source_tier": "llm_inference",
-      "examples": []
-    }
-  ]
+  "status": "active"
 }

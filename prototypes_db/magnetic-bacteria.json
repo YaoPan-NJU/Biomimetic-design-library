@@ -17,76 +17,11 @@
     "note": "测过的 pH/温度范围，不是适用范围。仅从 performance_data 中实际测试过的条件聚合。"
   },
   "performance_data": [],
-  "mechanisms": [
-    {
-      "name": "趋磁细菌磁小体分离机制（待文献支撑）",
-      "source": "llm_inference",
-      "ref_doi": null,
-      "source_file": null,
-      "verification": "needs_review",
-      "基本原理": "磁小体是天然的磁性纳米颗粒，表面可功能化，实现磁分离回收+吸附双重功能",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "重金属离子（通过表面功能化捕获）",
-          "basis": "llm_inferred",
-          "locator": null
-        },
-        "bio_structure": {
-          "text": "趋磁细菌的磁小体（Fe₃O₄纳米颗粒，~50nm），外膜包覆",
-          "basis": "llm_inferred",
-          "locator": null
-        },
-        "interaction": {
-          "text": "磁小体提供磁分离能力，外膜功能基团（-NH₂、-COOH）提供吸附位点",
-          "basis": "llm_inferred",
-          "locator": null
-        },
-        "why_it_works": {
-          "text": "磁小体是天然的磁性纳米颗粒，表面可功能化，实现磁分离回收+吸附双重功能",
-          "basis": "llm_inferred",
-          "locator": null
-        },
-        "boundary_conditions": [
-          {
-            "text": "待文献确定具体失效边界",
-            "parameter": "other",
-            "condition": {
-              "operator": "qualitative",
-              "value": null
-            },
-            "basis": "llm_inferred",
-            "verification": "needs_review",
-            "gate_level": "soft",
-            "locator": null,
-            "quote": null,
-            "source_asset": null
-          },
-          {
-            "text": "具体失效边界待文献支撑",
-            "parameter": "other",
-            "condition": {
-              "operator": "qualitative",
-              "value": null
-            },
-            "basis": "llm_inferred",
-            "verification": "needs_review",
-            "gate_level": "soft",
-            "locator": null,
-            "quote": null,
-            "source_asset": "needs_literature"
-          }
-        ],
-        "transferable_principle": "趋磁细菌的磁小体可作为磁性吸附剂的天然模板，实现磁分离回收",
-        "verification_quote": null
-      },
-      "functional_groups": [],
-      "key_structures": []
-    }
-  ],
+  "mechanisms": [],
   "narrative": {
     "entries": [
       {
-        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2022-Mtb-biomineralization-magnetic-heavy-metal-review.json",
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2022-Mtb-biomineralization-magnetic-heavy-metal-review.json",
         "paper_id": "2022-Goswami-magnetotactic-bacteria-review",
         "sections": {
           "problem_definition": "自然界中微生物需在复杂水体中导航至最佳微氧环境并隔离有毒重金属；对应水处理中纳米吸附剂易团聚、重金属吸附后固液分离困难及回收成本高的问题。",
@@ -133,15 +68,5 @@
     "n_unverified": 0
   },
   "coverage": "low",
-  "status": "active",
-  "design_translation": [
-    {
-      "idea": "利用磁性细菌的磁小体进行磁分离和污染物吸附",
-      "specific_functional_group": "磁小体（magnetosome）的 Fe₃O₄ 核心",
-      "material_handle": "磁性细菌培养提取磁小体，或仿生合成磁性纳米粒子",
-      "target_interaction": "Fe₃O₄ 表面羟基吸附重金属，磁性实现快速分离",
-      "source_tier": "llm_inference",
-      "examples": []
-    }
-  ]
+  "status": "active"
 }

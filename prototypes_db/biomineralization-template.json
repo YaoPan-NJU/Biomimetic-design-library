@@ -15,100 +15,16 @@
     "note": "测过的 pH/温度范围，不是适用范围。仅从 performance_data 中实际测试过的条件聚合。"
   },
   "performance_data": [],
-  "mechanisms": [
-    {
-      "name": "生物矿化模板吸附机制（待文献支撑）",
-      "source": "literature-backed",
-      "ref_doi": "10.1016/j.cej.2025.164827",
-      "source_file": "仿生文献库/3rd/第B组-新方向/B2-生物矿化模板/2025-Wang-biomineralization-lanmodulin-heavy-metal-rare-earth-adsorption.pdf",
-      "verification": "verified",
-      "基本原理": "生物矿化通过有机模板控制无机晶体生长方向和形貌，形成的多级孔结构可作为吸附剂骨架",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "金属离子（通过矿化过程捕获）",
-          "basis": "from_source",
-          "locator": "Wang2025 p.2 / Fig.1 + Sec.1"
-        },
-        "bio_structure": {
-          "text": "生物矿化过程中的有机模板（蛋白质、多糖）",
-          "basis": "from_source",
-          "locator": "Wang2025 p.2 / Fig.1 + Sec.1"
-        },
-        "interaction": {
-          "text": "有机模板引导无机矿化→形成多级孔结构→物理吸附+表面配位",
-          "basis": "from_source",
-          "locator": "Wang2025 p.2 / Fig.1 + Sec.1"
-        },
-        "why_it_works": {
-          "text": "生物矿化通过有机模板控制无机晶体生长方向和形貌，形成的多级孔结构可作为吸附剂骨架",
-          "basis": "from_source",
-          "locator": "Wang2025 p.2 / Fig.1 + Sec.1"
-        },
-        "boundary_conditions": [
-          {
-            "text": "待文献确定具体失效边界",
-            "parameter": "other",
-            "condition": {
-              "operator": "qualitative",
-              "value": null
-            },
-            "basis": "llm_inferred",
-            "verification": "needs_review",
-            "gate_level": "soft",
-            "locator": null,
-            "quote": null,
-            "source_asset": null
-          },
-          {
-            "text": "具体失效边界待文献支撑",
-            "parameter": "other",
-            "condition": {
-              "operator": "qualitative",
-              "value": null
-            },
-            "basis": "llm_inferred",
-            "verification": "needs_review",
-            "gate_level": "soft",
-            "locator": null,
-            "quote": null,
-            "source_asset": "needs_literature"
-          }
-        ],
-        "transferable_principle": "利用有机模板控制无机材料的孔结构和表面化学，实现仿生矿化吸附剂设计",
-        "verification_quote": "The experimental results indicate that the incorporation of LanM increases the adsorption capacity of ZIF-8. LanM@ZIF-8 exhibits a maximum adsorption capacity of 787.93 mg/g for Nd3+"
-      },
-      "functional_groups": [],
-      "key_structures": [],
-      "verification_quote": "The experimental results indicate that the incorporation of LanM increases the adsorption capacity of ZIF-8. LanM@ZIF-8 exhibits a maximum adsorption capacity of 787.93 mg/g for Nd3+",
-      "scope_caveat": "当前证据仅覆盖 LanM@ZIF-8 稀土吸附（Wang2025 Nd3+ 787.93 mg/g）；机制文字为通用生物矿化模板定位，未来可扩展"
-    }
-  ],
+  "mechanisms": [],
   "narrative": {
     "entries": []
   },
   "engineering_constraints": [],
   "provenance_summary": {
-    "n_papers": 1,
-    "n_verified": 1,
-    "n_unverified": 0,
-    "boundary_rules": [
-      {
-        "id": "B02-BMT-001",
-        "type": "soft",
-        "rule": "LanM@ZIF-8 pH-sensitive, pH 4 optimal for Nd3+. Do not generalize Qmax outside tested conditions."
-      }
-    ]
+    "n_papers": 0,
+    "n_verified": 0,
+    "n_unverified": 0
   },
   "coverage": "low",
-  "status": "needs_literature",
-  "design_translation": [
-    {
-      "idea": "利用生物矿化模板控制无机材料的形貌和晶相",
-      "specific_functional_group": "有机基质的官能团（羧基、磷酸基）",
-      "material_handle": "有机模板（蛋白质、多糖）引导矿化",
-      "target_interaction": "有机基质的官能团控制无机相的成核和生长",
-      "source_tier": "llm_inference",
-      "examples": []
-    }
-  ]
+  "status": "needs_literature"
 }
