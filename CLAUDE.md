@@ -93,6 +93,13 @@
 - **默认模型 mimo-v2.5-pro**：文本任务（Task 1-3），包括 JSON 对比、PDF 文本提取、路径核查
 - **多模态模型 mimo-v2.5**：需要读取图片时使用（Task 4 专利 OCR、visual_cache.json 中的截图验证）
 - 切换到 mimo-v2.5 的时机：当需要查看 visual_cache 截图、扫描版专利图片、或 figure-estimated values 时
+- ultracode 模式下可为不同子智能体分配不同模型：文本审计用 mimo-v2.5-pro，多模态子任务用 mimo-v2.5
+
+## 并发限制
+
+- **最多 3 个并行子智能体**，共享同一个 API key，超出会触发 429 限流
+- 之前的 OpenClaw 在 Batch 01 同时启动 5 个 worker 导致大面积 429 错误，引以为戒
+- 建议策略：1-2 个并行 + 1 个串行验收
 
 ## 当前任务（Qoder 分配  2026-06-17）
 
