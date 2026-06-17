@@ -18,13 +18,13 @@
 | mussel-foot-adhesion | 88 | 3 | 0 |
 | mycelium | 4 | 1 | 0 |
 | oyster-shell | 3 | 1 | 0 |
-| pitcher-plant-slippery-surface | 21 | 1 | 0 |
+| pitcher-plant-slippery-surface | 20 | 0 | 0 |
 | plant-tannin | 13 | 1 | 0 |
 | polydopamine-coating | 65 | 1 | 0 |
 | scallop-shell | 3 | 1 | 0 |
-| silk-fibroin | 20 | 2 | 0 |
+| silk-fibroin | 19 | 1 | 0 |
 | spider-silk | 31 | 1 | 0 |
 | sulfate-reducing-bacteria | 1 | 1 | 0 |
 | wood-xylem | 4 | 1 | 0 |
 
-总计: 27/532 qualified
+总计: 25/530 qualified

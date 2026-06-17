@@ -31,21 +31,24 @@ def match_mechanism(baseline_mech, current_mechs):
     b_name = normalize_name(baseline_mech.get("name", ""))
     b_desc = normalize_name(baseline_mech.get("description", ""))
     b_doi = normalize_name(baseline_mech.get("ref_doi", "")) if baseline_mech.get("ref_doi") else ""
-    
+
     matches = []
     for cm in current_mechs:
         c_name = normalize_name(cm.get("name", ""))
         c_desc = normalize_name(cm.get("description", ""))
         c_doi = normalize_name(cm.get("ref_doi", "")) if cm.get("ref_doi") else ""
-        
+
         # Match by DOI + name
         if b_doi and c_doi and b_doi == c_doi and b_name == c_name:
             return cm, "doi+name"
-        
+
         # Match by name + description fingerprint (first 100 chars)
+        # Never match across different non-empty DOIs.
         if b_name == c_name and b_desc[:100] == c_desc[:100]:
+            if b_doi and c_doi and b_doi != c_doi:
+                continue
             return cm, "name+desc"
-    
+
     return None, None
 
 def main():
@@ -93,10 +96,26 @@ def main():
             for b_mech in baseline_cc_mechs:
                 matched, method = match_mechanism(b_mech, current_mechs)
                 if matched:
-                    if not matched.get("causal_chain"):
+                    c_doi = normalize_name(matched.get("ref_doi", "")) if matched.get("ref_doi") else ""
+                    b_doi = normalize_name(b_mech.get("ref_doi", "")) if b_mech.get("ref_doi") else ""
+                    if b_doi and c_doi and b_doi != c_doi:
+                        ambiguities.append({
+                            "file": path,
+                            "mechanism_name": b_mech.get("name", "UNKNOWN"),
+                            "reason": "cross_doi_unsafe"
+                        })
+                        stats["cc_ambiguous"] += 1
+                    elif not matched.get("causal_chain"):
                         matched["causal_chain"] = b_mech["causal_chain"]
                         stats["cc_restored"] += 1
                         changed = True
+                    else:
+                        ambiguities.append({
+                            "file": path,
+                            "mechanism_name": b_mech.get("name", "UNKNOWN"),
+                            "reason": "already_has_causal_chain"
+                        })
+                        stats["cc_ambiguous"] += 1
                 else:
                     ambiguities.append({
                         "file": path,
