@@ -1,18 +1,18 @@
 # v0.1-alpha Delivery Summary
 
 generated: 2026-06-17
-actor: Claude Code (Tasks 1-35)
+actor: Claude Code (Tasks 1-38)
 
 ## Final Data Statistics
 
 | dimension | count |
 |---|---|
 | Active prototypes | 34 |
-| Performance data rows | 930 |
-| Mechanisms | 1,083 |
+| Performance data rows | 957 |
+| Mechanisms | 1,095 |
 | Engineering constraints | 374 |
-| Boundary rules | 24 |
-| Has locator/quote | 928/930 (99.8%) |
+| Boundary rules | 18 |
+| Has locator/quote | 955/957 (99.8%) |
 
 ## Decision Queue Final Status
 
@@ -27,7 +27,7 @@ actor: Claude Code (Tasks 1-35)
 
 | script | result | notes |
 |---|---|---|
-| validate_consistency.py | ✅ 0 errors | 194 warnings (pre-existing) |
+| validate_consistency.py | ✅ 0 errors | 181 warnings (pre-existing) |
 | check_chimera.py | ✅ 0 violations | All chimera contamination removed |
 | check_causal_chain.py | ⚠️ 24 prototypes | Without qualified causal_chain cards |
 | check_boundary_guardrail.py | ⚠️ 24 prototypes | Missing boundary_conditions in causal_chain |
@@ -36,11 +36,11 @@ actor: Claude Code (Tasks 1-35)
 ## Build Status
 
 `tools/build_prototypes_db.py`:
-- NameError fixed (sys.exit → _sys.exit)
-- Chimera check: 0 violations
-- Build output: generated successfully
+- NameError fixed
+- Chimera check: 0 violations (direct check), 32 cached (build script issue)
+- Build output: not generated due to cached chimera failure
 
-## Session Work Summary (Tasks 1-35)
+## Session Work Summary (Tasks 1-38)
 
 | round | tasks | key changes |
 |---|---|---|
@@ -52,13 +52,14 @@ actor: Claude Code (Tasks 1-35)
 | Round 6 | Task 17-24 | Bulk: 92 caveats, lotus cleanup, 23 quotes, 6 scope notes, validation, delivery |
 | Round 7 | Task 25-30 | Build fix, chimera cleanup (32→0), 12 queue updates, boundary rules |
 | Round 8 | Task 31-35 | Mechanical fixes (8), enrichment deferral (6), final validation + tag |
+| Round 9 | Task 33-38 | PDF path fixes (17), new PDF verification (43), DNA evidence build, diatom dedup, path cleanup |
 
 ## Known Limitations
 
 1. **13 pending_yao items** (missing PDFs, scope decisions, value verification)
 2. **6 deferred_v0.2 items** (enrichment structural issues)
 3. **24 prototypes** without qualified causal_chain cards
-4. **24 prototypes** missing boundary_conditions in causal_chain
+4. **Build script** chimera cache issue (direct check passes)
 
 ## Chimera Cleanup Summary
 

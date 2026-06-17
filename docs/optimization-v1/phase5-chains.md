@@ -15,16 +15,16 @@
 | lobster-exoskeleton | 1 | 0 | 0 |
 | magnetic-bacteria | 0 | 0 | 0 |
 | mangrove-root | 1 | 0 | 0 |
-| mussel-foot-adhesion | 94 | 0 | 0 |
+| mussel-foot-adhesion | 88 | 0 | 0 |
 | mycelium | 4 | 0 | 0 |
 | oyster-shell | 3 | 0 | 0 |
 | pitcher-plant-slippery-surface | 21 | 0 | 0 |
 | plant-tannin | 13 | 0 | 0 |
-| polydopamine-coating | 66 | 0 | 0 |
+| polydopamine-coating | 65 | 0 | 0 |
 | scallop-shell | 3 | 0 | 0 |
 | silk-fibroin | 20 | 0 | 0 |
-| spider-silk | 36 | 0 | 0 |
+| spider-silk | 31 | 0 | 0 |
 | sulfate-reducing-bacteria | 1 | 0 | 0 |
 | wood-xylem | 4 | 0 | 0 |
 
-总计: 0/540 qualified
+总计: 0/528 qualified
