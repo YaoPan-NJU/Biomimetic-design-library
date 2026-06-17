@@ -17,12 +17,12 @@
   "performance_data": [],
   "mechanisms": [
     {
-      "name": "LanM@ZIF-8 稀土吸附机制",
+      "name": "生物矿化模板吸附机制（待文献支撑）",
       "source": "literature-backed",
       "ref_doi": "10.1016/j.cej.2025.164827",
       "source_file": "仿生文献库/3rd/第B组-新方向/B2-生物矿化模板/2025-Wang-biomineralization-lanmodulin-heavy-metal-rare-earth-adsorption.pdf",
       "verification": "verified",
-      "基本原理": "LanM 蛋白通过矿化过程引导 ZIF-8 框架生长，形成 LanM@ZIF-8 复合材料，其中 LanM 的金属结合位点提供对 Nd³⁺ 等稀土离子的选择性吸附能力",
+      "基本原理": "生物矿化通过有机模板控制无机晶体生长方向和形貌，形成的多级孔结构可作为吸附剂骨架",
       "causal_chain": {
         "pollutant_feature": {
           "text": "金属离子（通过矿化过程捕获）",
@@ -80,7 +80,7 @@
       "functional_groups": [],
       "key_structures": [],
       "verification_quote": "The experimental results indicate that the incorporation of LanM increases the adsorption capacity of ZIF-8. LanM@ZIF-8 exhibits a maximum adsorption capacity of 787.93 mg/g for Nd3+",
-      "note": "SCOPE_NARROWED: 原文字过宽（泛指生物矿化模板），已缩窄为 Wang2025 实际支持的 LanM@ZIF-8 稀土吸附"
+      "scope_caveat": "当前证据仅覆盖 LanM@ZIF-8 稀土吸附（Wang2025 Nd3+ 787.93 mg/g）；机制文字为通用生物矿化模板定位，未来可扩展"
     }
   ],
   "narrative": {
