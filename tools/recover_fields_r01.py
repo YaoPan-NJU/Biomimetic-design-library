@@ -58,40 +58,40 @@ def main():
         capture_output=True, text=True
     )
     all_files = [f.strip() for f in result.stdout.strip().split("\n") if f.strip()]
-    proto_files = [f for f in all_files 
+    proto_files = [f for f in all_files
                    if os.path.dirname(f) == DB_DIR and f.endswith(".json")
                    and "enrichment" not in f and "materials_reference" not in f
                    and "separation" not in f and "parked" not in f]
-    
+
     # Process each file
     stats = {"dt_restored": 0, "cc_restored": 0, "cc_ambiguous": 0, "files_modified": 0}
     ambiguities = []
-    
+
     for path in sorted(proto_files):
         baseline = get_baseline_file(path)
         if baseline is None:
             continue
-        
+
         with open(path) as f:
             current = json.load(f)
-        
+
         changed = False
-        
+
         # 1. Restore design_translation
         baseline_dt = baseline.get("design_translation", [])
         current_dt = current.get("design_translation", [])
-        
+
         if baseline_dt and not current_dt:
             current["design_translation"] = baseline_dt
             stats["dt_restored"] += len(baseline_dt)
             changed = True
-        
+
         # 2. Restore mechanism causal_chain objects
         baseline_mechs = baseline.get("mechanisms", [])
         current_mechs = current.get("mechanisms", [])
-        
+
         baseline_cc_mechs = [m for m in baseline_mechs if m.get("causal_chain")]
-        
+
         if baseline_cc_mechs and current_mechs:
             for b_mech in baseline_cc_mechs:
                 matched, method = match_mechanism(b_mech, current_mechs)
@@ -128,24 +128,24 @@ def main():
             current["mechanisms"] = baseline_mechs
             stats["cc_restored"] += len(baseline_cc_mechs)
             changed = True
-        
+
         if changed:
             with open(path, "w", encoding="utf-8") as f:
                 json.dump(current, f, ensure_ascii=False, indent=2)
                 f.write("\n")
             stats["files_modified"] += 1
-    
+
     # Summary
     print(f"Files modified: {stats['files_modified']}")
     print(f"design_translation entries restored: {stats['dt_restored']}")
     print(f"causal_chain entries restored: {stats['cc_restored']}")
     print(f"causal_chain ambiguous/unmatched: {stats['cc_ambiguous']}")
-    
+
     if ambiguities:
         print("\nAmbiguities:")
         for a in ambiguities:
             print(f"  {a['file']}: {a['mechanism_name']} - {a['reason']}")
-    
+
     return stats
 
 if __name__ == "__main__":

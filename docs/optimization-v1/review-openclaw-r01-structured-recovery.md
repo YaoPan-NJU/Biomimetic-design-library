@@ -3,10 +3,10 @@ status: ready_for_codex_acceptance
 worker: openclaw-r01-correction
 model: xiaomi/mimo-v2.5
 started: 2026-06-17T22:30+08:00
-completed: 2026-06-17T22:36+08:00
+completed: 2026-06-17T22:38+08:00
 baseline_commit: 30481e4
 target_commit: ec369a3
-head_commit: cfdc0c1
+head_commit: 4b39b0c
 branch: openclaw/recovery-r01
 ---
 
@@ -64,7 +64,7 @@ Full prototype file list (unchanged from recovery): 24 files modified under `pro
 
 | Check | Exit Code | Result |
 |---|---|---|
-| `git diff --check` | 0 | ✅ No whitespace errors |
+| `git diff --check 63afd9e..HEAD` | 0 | ✅ No whitespace errors (full acceptance range, 0 violations) |
 | `python3 -c "import glob,json; ..."` (JSON lint) | 0 | ✅ All files parse |
 | `tools/validate_consistency.py` | 0 | ✅ 0 errors, 194 warnings (pre-existing) |
 | `tools/check_chimera.py --strict` | 0 | ✅ 0 violations |
