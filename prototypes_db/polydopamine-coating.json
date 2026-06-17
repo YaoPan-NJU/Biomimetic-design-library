@@ -1197,14 +1197,6 @@
       "verification": "needs_review"
     },
     {
-      "name": "沙漠甲虫仿生灵感与设计原理 Desert beetle biomimetic inspiration and design principle",
-      "description": "受Stenocara beetle背部交替亲水突起+超疏水壳面微结构启发，构建反向甲虫结构：超疏水Al₂O₃突起(捕油)+超亲水PDA/PET底层(排水)，通过表面能梯度(Fd≈γ_oil(cosθ₁-cosθ₂))驱动油滴聚集",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.1016/j.seppur.2023.123547",
-      "verification": "unverified"
-    },
-    {
       "name": "水滴'生长-跳跃'排液机制 Water droplet 'growing-jumping' discharge mechanism",
       "description": "两阶段机制：'生长'阶段(水滴在微腔中核化生长→Laplace压力梯度∇P~2σ/d_eq(1/R₁-1/R₂)驱动水滴变形自导向)→'跳跃'阶段(合并后表面能释放触发自发跳跃运动，低粘附力确保跳跃)",
       "functional_groups": "",
@@ -1548,17 +1540,6 @@
           "key_features": "必须保留特征：C-F键赋予的低表面能与高热化学稳定性、微孔粗糙结构以维持Cassie-Baxter超疏水状态。可灵活调整特征：膜构型（DCMD/VMD/AGMD/SGMD）、聚合物种类（PVDF/PTFE/ECTFE）、制备工艺（NIPS/TIPS/VIPS/电纺/拉伸烧结）及绿色溶剂体系。",
           "design_mapping": "生物低表面能蜡质层映射为含氟聚合物（C-F键）；生物微观乳突粗糙结构映射为膜多孔结构及纳米纤维/相分离孔结构。软约束建议：优先选择PVDF以平衡成本与综合性能，或采用ECTFE提升耐磨强度；推荐使用TEP、ATBC等绿色溶剂替代传统有毒溶剂以降低环境影响。",
           "explainability_anchors": "仿生故事线：从荷叶的超疏水自清洁效应出发，解析低表面能与粗糙度协同机制，映射至含氟聚合物膜的C-F键低表面能与多孔结构设计。设计溯源：基于Cassie-Baxter方程指导膜表面疏水改性与结构调控，利用C-F键485 kJ/mol高键能保障膜在苛刻高盐、高温环境下的长期稳定性，从根源上缓解膜润湿和污染痛点。"
-        }
-      },
-      {
-        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2023-Xiong-superhydrophobic-hydrophobic-separation-membrane.json",
-        "paper_id": "Xiong2023_APP_biomimetic_membrane",
-        "sections": {
-          "problem_definition": "自然界中沙漠甲虫需在干旱环境中高效收集空气中的微量水分；在水处理中，对应挑战是如何在表面活性剂稳定的油水乳液中高效破乳并实现油滴截留与水分子快速渗透，同时避免膜孔堵塞和润湿性失效。",
-          "biological_solution": "沙漠甲虫(Stenocara beetle)背部进化出交替的亲水突起与超疏水壳面微结构，亲水突起捕获水滴，超疏水区域引导水滴滑落。在本设计中，该策略被反转为'反向甲虫结构'：利用超疏水Al₂O₃突起作为'油吸收器'捕获微小油滴，下方超亲水PDA/PET膜允许水渗透。通过表面能梯度驱动油滴聚并脱离，并利用分级结构的Laplace压力梯度驱动水滴'生长-跳跃'排液，避免粘性Wenzel态破坏超疏水性。",
-          "key_features": "必须保留特征：超疏水突起与超亲水基底的润湿性反差(反向甲虫结构)、表面能梯度驱动的捕获-聚并-脱离机制、分级结构产生的Laplace压力梯度。可灵活调整特征：突起材料(如Al₂O₃可替换为其他超疏水微纳颗粒)、基底材料(如废弃PET可替换为其他多孔聚合物)、突起负载量与尺寸。",
-          "design_mapping": "生物背部亲水突起 → 超疏水Al₂O₃簇突起(捕油)；生物超疏水壳面 → 超亲水PDA/PET纤维基底(排水)；生物背部微结构引导水流 → 表面能梯度(Fd≈γ_oil(cosθ₁-cosθ₂))与Laplace压力梯度驱动液滴定向运动。软约束建议：Al₂O₃负载量需优化以防团聚，需引入PDA中间层增强界面化学键合(C-O-Al键)以提升机械与循环稳定性。",
-          "explainability_anchors": "仿生故事线：从沙漠甲虫'亲水捕水-疏水导水'到水处理膜的'疏水捕油-亲水导水'的反向设计创新。设计溯源：利用废弃PET瓶静电纺丝构建多孔基底，通过DA原位聚合和真空抽滤构建分级Al₂O₃突起，完美复刻并反转了甲虫背部的微纳润湿性图案，实现了99.91%的超高乳液分离效率和2193.5 L/m²h的高通量。"
         }
       },
       {

@@ -750,7 +750,7 @@ def main():
         )
         if result.returncode != 0:
             print(f'\n❌ Chimera 检查失败:\n{result.stdout}')
-            sys.exit(1)
+            _sys.exit(1)
         else:
             print('\n✅ Chimera 检查通过')
 
