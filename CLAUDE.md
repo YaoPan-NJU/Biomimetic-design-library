@@ -245,3 +245,84 @@ eview-clcode-task10-lotus-scope-assessment.md
 - 修改 JSON 前先 dry-run
 - 不改 build_prototypes_db.py
 - 每个任务产出 review-clcode-*.md 报告
+
+
+## 第五轮任务（2026-06-17 第五轮）
+
+Yao 已完成 7 批人工审批（91 项 pending_yao），需要执行所有已审批决策。
+
+### Task 14: Decision Queue 全量状态更新（最高优先级）
+参考 `docs/optimization-v1/review-full-audit-decision-queue.md`
+
+将以下已审批项从 `pending_yao` 更新为对应状态：
+
+**机械性操作（Batch 1, 12项）→ applied_mechanical_fix**
+F01-PLT-003, F02-BONE-002, F02-BMT-002, F03-CMIC-003, F04-SHART-001, F11-FISH-001, F01-WOOD-003, F02-FISH-006, F03-SRB-002, F03-MYC-002, F02-SCAL-001, F08-DNA-002
+
+**Enrichment 占位符（Batch 2, 3项）→ acknowledged_placeholder**
+F01-CHI-002, F01-WOOD-005, F01-CHI-003
+
+**Keep-Soft（Batch 3, 14项）→ applied_keep_soft**
+F01-WOOD-006, F02-OYS-004, F02-SCAL-002, F02-SCAL-003, F02-FISH-003, F03-CHL-002, F03-CHL-004, F04-CACT-001, F04-SHART-003, F05-ALG-003, F05-CNC-002, F05-CNC-003, F14-B08-004, F14-B08-005
+
+**Scope 决策（Batch 4, 8项）**
+F04-LOTUS-001 → applied_scope_B (lotus+wetting=56条)
+F05-CNC-001 → applied_scope_B (broad_cellulose_family)
+F03-CMIC-002 → applied_scope_A (metric_type分离)
+F02-BMT-003 → applied_scope_B (broad+scope_caveat)
+F05-STARCH-001 → applied_scope_A (needs_review标记)
+F12-PDA-MU-003 → applied_scope_A (composite caveat)
+F14-B08-004 → applied_scope_A (scope caveat) [注意：已在Batch3中出现]
+F03-CHL-002 → applied_scope_A (algal-biochar) [注意：已在Batch3中出现]
+
+**OCR/扫描（Batch 5a）**
+F01-PDA-003 → knowledge_gap_ocr_pending (mimo-v2.5待办)
+F02-FISH-005 → knowledge_gap_ocr_pending (mimo-v2.5待办)
+F03-IOB-002 → applied_removed
+F11-FISH-004 → applied_removed
+F13-PDA-OCR-002 → human_verified_keep (人工确认~38 mg/g正确)
+
+**极端值（Batch 5b）**
+F01-PLT-005 → applied_keep_caveat (3429 mg/g保留)
+F05-STARCH-002 → applied_demote (不参与排名)
+F10-STARCH-005 → applied_keep_material_caveat (cryogel保留)
+F10-STARCH-006 → hold_pending_primary_source (2000 mg/g待验证)
+F13-PDA-OCR-003 → applied_value_change_96_31 (改为96.31%)
+
+**其他（Batch 5c）**
+F01-PLT-004 → applied_keep_cross_domain
+F07-MOF-003 → applied_keep_hybrid_caveat
+F07-MOF-007 → applied_needs_review_patent
+F07-REG-002 → applied_merged
+F09-DIAT-006 → applied_removed
+
+**Wrong Source（Batch 6）**
+F01-PDA-002 → applied_removed (27条enrichment机制已移除)
+F03-CHL-001 → applied_removed (Task 11已执行)
+
+**Boundary（Batch 7）**
+8项已写入JSON boundary_rules，状态更新为 applied_boundary_2026_06_17_batch2
+
+### Task 15: Scope 决策执行 — Lotus-Leaf Split
+Yao 决策 4-1=B：保留 32 条 lotus-specific + 24 条 wetting-theory = 56 条。
+
+操作步骤：
+1. 参考 `review-clcode-task10-lotus-scope-assessment.md` 的分类结果
+2. 从 `prototypes_db/separation/lotus-leaf.json` 移除不属于 lotus-specific 和 wetting-theory 的 290 条 mechanisms
+3. 同时评估 22 条 engineering_constraints 和 33 条 narrative_entries，移除明显非莲花特异的
+4. 4 条 performance_data：[0-2] 标记 knowledge_gap（PDF缺失），[3] 标记 scope_mismatch（scallop-shell）
+5. 添加 scope_note：保留 lotus-specific + wetting-theory，其余已移除/重分配
+
+### Task 16: PDA OCR 值修正
+F13-PDA-OCR-003：将 `polydopamine-coating.json` performance_data[19] 的值从 95.68% 改为 96.31%（人工确认 OCR 摘要最佳条件值）。
+
+### 执行约束
+- 最多 3 个并行子智能体
+- 用 mimo-v2.5-pro（纯文本任务）
+- 修改 JSON 前先 dry-run
+- 不改 build_prototypes_db.py
+- 每个任务产出 review-clcode-*.md 报告
+
+### 待办备忘（不在本轮执行）
+- mimo-v2.5 OCR 待办：CN113244898A (PDA Pb), CN114570339A (PDA U), CN113275374A (fish-scale Cd/Pb)
+- Abu2023 Pb2+ 2000 mg/g 需要 primary source 交叉验证
