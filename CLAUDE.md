@@ -130,3 +130,40 @@
 - Qoder 会 spot-check 后决定是否 accept
 - 有歧义标记 
 eeds_qoder_review，不要自行决定
+
+
+## 下一批任务（2026-06-17 第二轮）
+
+Qoder 已完成第一层 wrong-source 清除、Scope 决策、边界规则写入。以下是你的新任务：
+
+### Task 5: Metadata Fix Batch（25 项）
+参考 docs/optimization-v1/review-clcode-task1-decision-queue-summary.md Category D 列表：
+- 修正 false precision（silk-fibroin: 86.24%→86%, 96.29%→96%）
+- 修正 verification_quote 为真实文本摘录而非标题（silk-fibroin）
+- 修正 source_file 路径（path normalization，参考 Task 3 报告）
+- 修正 single_source verification 语义（MOF）
+- 修正 unit mismatch（starch-granule mmol/g vs mg/g）
+
+### Task 6: 剩余 Wrong-Source 清除
+以下 3 个原型的 wrong-source 数据尚未清除：
+- **lotus-leaf**: 非莲花示例（shark, gecko, rose-petal, membrane, MOF, shell, sponge）必须从 mechanisms/performance_data 中移除
+- **polydopamine-coating enrichment**: 超疏水/抗菌/膜综述机制必须从 enrichment 中移除
+- **dna-aptamer**: biosensor LOD/Kd 值不能作为吸附容量，需要标注或移除
+
+产出：
+eview-clcode-task5-metadata-fixes.md + 
+eview-clcode-task6-remaining-wrongsource.md
+
+### Task 7: Decision Queue 状态更新
+将已处理的 decision queue 项的 status 更新：
+- 已删除的 wrong-source 项：status → pplied_package_b1
+- 已写入的 scope 决策项：status → pplied_scope_decision
+- 已写入的边界规则项：status → pplied_boundary
+参考：docs/optimization-v1/review-full-audit-decision-queue.md
+
+### 执行约束
+- 最多 3 个并行子智能体
+- 文本任务用 mimo-v2.5-pro，多模态用 mimo-v2.5
+- 修改 JSON 前先 dry-run
+- 不改 build_prototypes_db.py
+- 产出 review-clcode-*.md 报告后结束
