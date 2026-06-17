@@ -205,3 +205,43 @@ eview-clcode-task10-lotus-scope-assessment.md
 - 修改 JSON 前先 dry-run
 - 不改 build_prototypes_db.py
 - 每个任务产出 review-clcode-*.md 报告
+
+
+## 第四轮任务（2026-06-17 第四轮）
+
+家里 Codex 对账发现了几个需要修复的问题，同时进入逐原型验证升级阶段。
+
+### Task 11: 对账修复（Codex 发现的问题）
+参考 `docs/optimization-v1/review-post-office-reconciliation.md`：
+
+1. **B03-CHL-001 清除**：chlorella-cell-wall 的 mechanisms[0]（Cheng2021 Pb2+ 作为染料去除机制）仍在 JSON 中，需要移除
+2. **Biomineralization scope review**：mechanisms[0] 的文字过于宽泛（"有机模板控制无机晶体生长方向/形态"），Wang2025 实际只支持 LanM@ZIF-8 稀土吸附。需要缩窄 mechanism 文字或标注 scope caveat
+3. **CN114887602A 恢复**：PDF 不在当前 worktree 但在 Git object 中（`9ee5da0`）。从 Git 提取到 `仿生文献库/专利/` 路径，然后更新 PDA performance_data 的 source_file
+
+### Task 12: 验证升级 - 第 1 批原型（优先级最高）
+目标：给存活机制和性能行添加 quote + locator，从 `needs_review` / `unverified` 升级为 `partial` 或 `corroborated`。
+
+按优先级处理以下原型（证据最充分、PDF 最齐全）：
+1. **fish-scale-hydroxyapatite** - CN114849640A 是核心源，给 perf[7-17] 添加专利段落 locator
+2. **bone-structure** - Bambaeero2020, 给 mechanisms[0-3] 和 perf[0-1] 添加 quote+locator
+3. **oyster-shell** - Qiu2021/Xu2022, 给 perf[0-5] 添加 quote+locator
+4. **plant-tannin** - Mao2024/Tan2023, 给 mechanisms[6-10] 和 perf[0-5] 添加 quote+locator
+
+每个原型的验证步骤：
+- 读取对应 PDF 的本地文本（或 extraction JSON）
+- 为每个 mechanism/performance 行找到源文本中的确切引文
+- 写入 `verification_quote`（真实文本摘录，非标题）和 `source_page` / `source_locator`
+- 将 `verification` 从 `needs_review`/`unverified` 改为 `partial`（有 quote 但单源）或 `corroborated`（多源支持）
+
+### Task 13: 验证升级 - 第 2 批原型
+1. **silk-fibroin** - 补充 Task 5 清理的引文，从 PDF 提取真实摘录
+2. **wood-xylem** - Kumar2021/Mo2021, 给 mechanisms[0] 和 perf[0-1] 添加引文
+3. **scallop-shell** - Wang2024, 给 mechanisms[0] 和 perf[0-6] 添加引文
+4. **iron-oxidizing-bacteria** - Luo2021, 给 perf[0-6] 添加引文（Task 5 标记 IOB 需要 deeper work）
+
+### 执行约束
+- 最多 3 个并行子智能体
+- 用 mimo-v2.5-pro（纯文本任务）
+- 修改 JSON 前先 dry-run
+- 不改 build_prototypes_db.py
+- 每个任务产出 review-clcode-*.md 报告
