@@ -4,28 +4,57 @@
       "verification": "needs_review",
       "causal_chain": {
         "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "As(III)（中性分子H₃AsO₃）和As(V)（含氧阴离子H₂AsO₄⁻）",
+          "basis": "from_source",
+          "locator": "Luo2021 p.3530 / Abstract + Sec.1"
         },
         "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "铁氧化菌（如Acidithiobacillus ferrooxidans）生成的施氏矿物（schwertmannite, Fe₈O₈(OH)₆SO₄）",
+          "basis": "from_source",
+          "locator": "Luo2021 p.3530 / Abstract + Sec.1"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "As(III)在施氏矿物表面被氧化为As(V)，然后通过表面配位（内球配合）固定在铁氧化物表面",
+          "basis": "from_source",
+          "locator": "Luo2021 p.3530 / Abstract + Sec.1"
         },
         "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "施氏矿物的高比表面积和表面羟基（-OH）提供大量配位位点；生物氧化As(III)→As(V)降低毒性并增强吸附",
+          "basis": "from_source",
+          "locator": "Luo2021 p.3530 / Abstract + Sec.1"
         },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
+        "boundary_conditions": [
+          {
+            "text": "酸性条件下施氏矿物溶解，释放吸附的砷",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          },
+          {
+            "text": "高浓度磷酸盐与砷酸盐竞争配位位点",
+            "parameter": "competing_ion",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "铁氧化菌原位生成的铁氧化物（施氏矿物）可同时氧化和吸附砷，是生物-矿物协同除砷策略",
+        "verification_quote": "schwertmannite was considered as an arsenic removal material with great potential. As(III) more toxic than As(V)"
       }
     },
     "MICP化学反应机理": {
@@ -33,23 +62,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[0]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[0]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "脲酶水解尿素: CO(NH₂)₂+H₂O→NH₂COOH+NH₃; NH₂COOH+H₂O→NH₃+H₂CO₃; 最终产生CO₃²⁻+Ca²⁺→CaCO₃↓",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[0]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[0]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -61,23 +90,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[4]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[4]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "bidentate inner-sphere complexes with singly coordinated surface sites",
+          "basis": "from_source",
+          "locator": "mechanism[4]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[4]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -88,24 +117,24 @@
       "verification": "needs_review",
       "causal_chain": {
         "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "binuclear bidentate corner-sharing (2C), mononuclear bidentate edge-sharing (2E), mononuclear monodentate corner-sharing (1V)",
+          "basis": "from_source",
+          "locator": "mechanism[5]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[5]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "binuclear bidentate corner-sharing (2C), mononuclear bidentate",
+          "basis": "from_source",
+          "locator": "mechanism[5]"
         },
         "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "edge-sharing (2E), mononuclear monodentate corner-sharing (1V)",
+          "basis": "from_source",
+          "locator": "mechanism[5]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -117,23 +146,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[2]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[2]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "第一阶段：As(III)接触锰氧化物壳层后迅速氧化为As(V)，部分Mn(IV)还原溶解；第二阶段：As(V)受静电吸附再吸附于材料表面，少量与Mn-OH表面络合；第三阶段：As(V)扩散穿过壳层到达施氏矿物内核，通过As-O-Fe络合和配体交换富集",
+          "basis": "from_source",
+          "locator": "mechanism[2]"
         },
         "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "第三阶段：As(V)扩散穿过壳层到达施氏矿物内核，通过As-O-Fe络合和配体交换富集",
+          "basis": "from_source",
+          "locator": "mechanism[2]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -145,23 +174,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[3]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[3]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "内球络合、表面络合、氢键、氧化（Sb(III)/As(III)被部分氧化为Sb(V)/As(V)）",
+          "basis": "from_source",
+          "locator": "mechanism[3]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[3]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",

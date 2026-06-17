@@ -5,28 +5,57 @@
       "verification": "needs_review",
       "causal_chain": {
         "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "重金属离子（Pb²⁺、Cu²⁺、Cd²⁺）和含氧阴离子（磷酸盐）",
+          "basis": "from_source",
+          "locator": "李2017 p.1 / Abstract"
         },
         "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "牡蛎壳的文石型CaCO₃层状结构，煅烧后生成CaO",
+          "basis": "from_source",
+          "locator": "李2017 p.1 / Abstract"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "CaCO₃/CaO与重金属的离子交换和表面沉淀；磷酸盐与Ca²⁺形成Ca₃(PO₄)₂沉淀",
+          "basis": "from_source",
+          "locator": "李2017 p.1 / Abstract"
         },
         "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "煅烧牡蛎壳（CaO）在水中生成Ca(OH)₂，提供碱性环境和Ca²⁺，可与磷酸盐形成羟基磷灰石沉淀，同时重金属通过表面配位吸附",
+          "basis": "llm_inferred",
+          "locator": null
         },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
+        "boundary_conditions": [
+          {
+            "text": "未煅烧的CaCO₃吸附容量远低于煅烧产物CaO",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          },
+          {
+            "text": "未煅烧CaCO₃吸附容量远低于煅烧产物CaO",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": "domain_knowledge"
+          }
+        ],
+        "transferable_principle": "贝壳类CaCO₃经煅烧生成CaO后，可同时通过碱性沉淀和离子交换去除重金属和磷酸盐",
+        "verification_quote": "oyster shell biochar for heavy metal adsorption"
       }
     },
     "吸附机理三步骤": {
@@ -34,23 +63,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[2]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[2]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "(1)膜扩散：重金属离子从液相扩散到改性贝壳粉外表面；(2)粒内扩散：在贝壳粉内部孔道中传输；(3)表面吸附反应：与活性位点结合，包括共沉淀",
+          "basis": "from_source",
+          "locator": "mechanism[2]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[2]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -62,23 +91,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[1]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[1]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "石灰效应, 沉淀效应, 物理吸附, 离子交换",
+          "basis": "from_source",
+          "locator": "mechanism[1]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[1]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",

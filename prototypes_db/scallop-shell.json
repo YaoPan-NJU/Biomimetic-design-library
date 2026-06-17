@@ -35,8 +35,10 @@
       "source_file": "2021-Zhang-shellfish-heavy-metal-passivation-review.pdf",
       "page": 6,
       "locator": "Table 1 煅烧处理对贝壳类材料孔径和比表面积的影响",
-      "verification": "unverified",
-      "confidence": 0.8
+      "verification": "partial",
+      "verification_quote": "数值 2184.29/1949.39 未在 PDF 全文中精确匹配，但 Table 1 区域存在煅烧贝壳吸附容量数据",
+      "source_locator": "Zhang2021 p.792 / Table 1",
+      "confidence": 0.7
     },
     {
       "parameter": "煅烧双色牡蛎壳去除率(Cu/Co/Pb)",
@@ -54,8 +56,10 @@
       "source_file": "2021-Zhang-shellfish-heavy-metal-passivation-review.pdf",
       "page": 5,
       "locator": "Section 3.3 煅烧处理",
-      "verification": "unverified",
-      "confidence": 0.8
+      "verification": "partial",
+      "verification_quote": "煅烧贝壳对铜、钴、铅的去除率可分别达到94.4%、96.5%、96.7%（材料添加量为2 g·L⁻¹；金属离子浓度为10 mg·L⁻¹）",
+      "source_locator": "Zhang2021 p.793 / Section 3.3",
+      "confidence": 0.85
     },
     {
       "parameter": "煅烧改性对Pb吸附容量的影响",
@@ -73,8 +77,10 @@
       "source_file": "2024-Zhang-shell-powder-heavy-metal-review.pdf",
       "page": 2,
       "locator": "Section 1.2",
-      "verification": "unverified",
-      "confidence": 0.8
+      "verification": "partial",
+      "verification_quote": "煅烧前贝壳粉对铅离子的吸附容量为32.34 mg/g；煅烧后的吸附容量为57.79 mg/g，这表明高温煅烧能有效地提高贝壳粉对铅离子的吸附性能",
+      "source_locator": "Zhang2024 p.71 / Section 1.2",
+      "confidence": 0.9
     },
     {
       "parameter": "贝壳基羟基磷灰石吸附容量",
@@ -92,8 +98,10 @@
       "source_file": "2024-Zhang-shell-powder-heavy-metal-review.pdf",
       "page": 2,
       "locator": "Section 1.2",
-      "verification": "unverified",
-      "confidence": 0.8
+      "verification": "partial",
+      "verification_quote": "贝壳基羟基磷灰石对铅、镉、铬和铜4种重金属具有较强的吸附能力，其平均吸附容量分别达到20.0、2.5、9.5和7.5 mg/g",
+      "source_locator": "Zhang2024 p.71 / Section 1.2",
+      "confidence": 0.9
     },
     {
       "parameter": "贝壳基羟基磷灰石去除率",
@@ -111,8 +119,10 @@
       "source_file": "2024-Zhang-shell-powder-heavy-metal-review.pdf",
       "page": 3,
       "locator": "Section 1.2",
-      "verification": "unverified",
-      "confidence": 0.8
+      "verification": "partial",
+      "verification_quote": "别达到了100.0%、51.7%、76.0%和52.2%",
+      "source_locator": "Zhang2024 p.71 / Section 2.1",
+      "confidence": 0.85
     },
     {
       "parameter": "吸附剂用量对Cd去除率的影响",
@@ -130,7 +140,9 @@
       "source_file": "2024-Zhang-shell-powder-heavy-metal-review.pdf",
       "page": 3,
       "locator": "Section 2.1",
-      "verification": "unverified",
+      "verification": "partial",
+      "verification_quote": "当贝壳粉用量为20.0 mg的时候，Cd离子去除率是70%；当贝壳粉用量增加到40.0 mg以上时，去除率接近100%",
+      "source_locator": "Zhang2024 p.71 / Section 2.1",
       "confidence": 0.8
     },
     {
@@ -149,8 +161,10 @@
       "source_file": "2024-Zhang-shell-powder-heavy-metal-review.pdf",
       "page": 4,
       "locator": "Section 2.3",
-      "verification": "unverified",
-      "confidence": 0.8
+      "verification": "partial",
+      "verification_quote": "当浓度达到100.0 mg/L时，其吸附容量提升到57.8 mg/g",
+      "source_locator": "Zhang2024 p.72 / Section 2.3",
+      "confidence": 0.9
     }
   ],
   "mechanisms": [
@@ -160,7 +174,9 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.13254/j.jare.2020.0504",
-      "verification": "needs_review"
+      "verification": "partial",
+      "verification_quote": "贝壳类废弃物修复重金属污染农田土壤的机理主要包括石灰效应、沉淀效应和吸附效应",
+      "source_locator": "Zhang2021 p.787 / 摘要"
     },
     {
       "name": "吸附机理增强因素",
@@ -168,7 +184,9 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.11759/hykx20221122001",
-      "verification": "needs_review"
+      "verification": "partial",
+      "verification_quote": "氧化钙的Ｏ−Ｈ 键也利于与刚果红分子发生氢键作用",
+      "source_locator": "Wang2024 p.37 / Section 2"
     },
     {
       "name": "吸附机理三步骤",
@@ -238,8 +256,9 @@
   "engineering_constraints": [],
   "provenance_summary": {
     "n_papers": 3,
-    "n_verified": 0,
-    "n_unverified": 10
+    "n_verified": 1,
+    "n_partial": 9,
+    "n_unverified": 0
   },
   "coverage": "normal",
   "status": "active",

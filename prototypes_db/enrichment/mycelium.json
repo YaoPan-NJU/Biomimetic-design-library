@@ -6,23 +6,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[0]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[0]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "静电作用、氢键和π-π堆叠",
+          "basis": "from_source",
+          "locator": "mechanism[0]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[0]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -35,23 +35,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[1]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[1]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "静电作用和物理吸附",
+          "basis": "from_source",
+          "locator": "mechanism[1]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[1]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -64,23 +64,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[2]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[2]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "物理吸附，如疏水反应",
+          "basis": "from_source",
+          "locator": "mechanism[2]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[2]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -92,28 +92,57 @@
       "verification": "needs_review",
       "causal_chain": {
         "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "重金属离子（Pb²⁺、Cu²⁺、Cd²⁺）",
+          "basis": "from_source",
+          "locator": "刘2021 p.10 / Abstract + Sec.1"
         },
         "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "菌丝体衍生的羧甲基纤维素（CMC）水凝胶网络",
+          "basis": "from_source",
+          "locator": "刘2021 p.10 / Abstract + Sec.1"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "羧基（-COO⁻）与重金属离子的螯合配位",
+          "basis": "from_source",
+          "locator": "刘2021 p.10 / Abstract + Sec.1"
         },
         "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "CMC水凝胶的羧基提供高密度配位位点，三维网络结构提供高比表面积和快速扩散通道",
+          "basis": "llm_inferred",
+          "locator": null
         },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
+        "boundary_conditions": [
+          {
+            "text": "强酸性条件下羧基质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          },
+          {
+            "text": "强酸性条件下羧基和氨基质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": "CM-006: carboxyl-deprotonation-metal-coordination"
+          }
+        ],
+        "transferable_principle": "菌丝体衍生的含羧基水凝胶可作为廉价的重金属螯合吸附剂",
+        "verification_quote": "丝状真菌菌丝体细胞壁含80%-90%多糖(几丁质和纤维素),对重金属有吸附能力"
       }
     }
   }

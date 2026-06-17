@@ -5,28 +5,57 @@
       "verification": "needs_review",
       "causal_chain": {
         "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "阳离子染料（MB、CV、MG）和阴离子染料（CR、MO）",
+          "basis": "from_source",
+          "locator": "程2021 p.1 / Abstract"
         },
         "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "微藻细胞壁上的多糖、蛋白质和脂质组成的活性表面",
+          "basis": "from_source",
+          "locator": "程2021 p.1 / Abstract"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "静电吸引（阳离子染料与负电表面）、配位作用（金属离子与羧基/氨基）、氢键（极性有机物）",
+          "basis": "from_source",
+          "locator": "程2021 p.1 / Abstract"
         },
         "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "微藻细胞壁富含羧基（-COOH）、氨基（-NH₂）、羟基（-OH），在中性pH下表面净负电荷，通过静电吸引捕获阳离子染料；同时通过配位和氢键结合多种有机污染物",
+          "basis": "from_source",
+          "locator": "程2021 p.1 / Abstract"
         },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
+        "boundary_conditions": [
+          {
+            "text": "强酸性条件下羧基和氨基质子化，表面电荷反转，阳离子吸附下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          },
+          {
+            "text": "强酸性条件下羧基和氨基质子化，表面电荷反转",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": "CM-006: carboxyl-deprotonation-metal-coordination"
+          }
+        ],
+        "transferable_principle": "含多糖/蛋白质的生物质表面天然富含-COOH/-NH₂/-OH，可同时通过静电、配位、氢键三种机制吸附多种污染物",
+        "verification_quote": "4种淡水微藻(Chlorella pyrenoidosa等)对Pb²⁺的吸附特性,5-10min内吸附效率达最大值"
       }
     },
     "pH对藻类染料吸附的影响 Effect of pH on algal dye adsorption": {
@@ -34,24 +63,24 @@
       "verification": "needs_review",
       "causal_chain": {
         "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "高pH时表面带负电荷，有利于阳离子染料吸附；Caulerpa scalpelliformis对Sandocryl Golden Yellow C-2G的吸附量从pH 3.0时的17 mg/g增加到pH 8.0时的27 mg/g",
+          "basis": "from_source",
+          "locator": "mechanism[1]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[1]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "低pH时藻类表面带正电荷，有利于阴离子染料通过静电吸引吸附",
+          "basis": "from_source",
+          "locator": "mechanism[1]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[1]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -64,23 +93,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[2]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[2]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "藻类生物吸附主要通过静电吸引和络合作用实现。藻类的高比表面积和高结合亲和力促进生物吸附能力。藻类表面的功能基团(氨基、羧基、羟基、磷酸基)负责通过吸引环境中的染料污染物实现脱色",
+          "basis": "from_source",
+          "locator": "mechanism[2]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[2]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -93,23 +122,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[8]"
         },
         "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "海藻酸盐由β-D-甘露糖醛酸和α-L-古洛糖醛酸的无支链二元共聚物组成；凝胶化机制：单价海藻酸盐(如Na-海藻酸盐)与含Ca²⁺溶液在数分钟内形成凝胶；制备流程：微藻细胞加入凝胶溶液→通过喷嘴挤出液滴→进入含阳离子溶液凝胶化→获得固定化微珠",
+          "basis": "from_source",
+          "locator": "mechanism[8]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "海藻酸盐由β-D-甘露糖醛酸和α-L-古洛糖醛酸的无支链二元共聚物组成。凝胶化机制：单价海藻酸盐(如Na-海藻酸盐)与含Ca²⁺溶液在数分钟内形成凝胶。",
+          "basis": "from_source",
+          "locator": "mechanism[8]"
         },
         "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "制备流程：微藻细胞加入凝胶溶液→通过喷嘴挤出液滴→进入含阳离子溶液凝胶化→获得固定化微珠",
+          "basis": "from_source",
+          "locator": "mechanism[8]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -121,24 +150,24 @@
       "verification": "needs_review",
       "causal_chain": {
         "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "(2)生物积累(bioaccumulation)——污染物进入细胞内部；(3)生物转化(biotransformation)——转化为有益化学物质；(4)生物矿化(biomineralization)；(5)原位/异位生物降解(in situ/ex situ biodegradation)",
+          "basis": "from_source",
+          "locator": "mechanism[9]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[9]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "藻类通过5种机制去除有机污染物：(1)生物吸附(biosorption)——物理化学过程，包括吸收、吸附、表面络合、离子交换和沉淀",
+          "basis": "from_source",
+          "locator": "mechanism[9]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[9]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -150,24 +179,24 @@
       "verification": "needs_review",
       "causal_chain": {
         "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "藻类生物吸附能力与其功能基团相关：羟基(-OH)、羧基(-COOH)、硫酸基(-SO₄)、磷酸基(-PO₄)和氨基(-NH₂)",
+          "basis": "from_source",
+          "locator": "mechanism[10]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[10]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "生物吸附过程涉及细胞表面的多种化学反应：离子交换、表面络合、螯合和微沉淀",
+          "basis": "from_source",
+          "locator": "mechanism[10]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[10]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -180,23 +209,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[11]"
         },
         "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "产生物表面活性剂的藻类可显著增强碳氢化合物污染位点的生物降解；这些生物表面活性剂是复杂的生物分子，包括糖脂、脂蛋白、脂肽、中性脂质、磷脂和脂肪酸",
+          "basis": "from_source",
+          "locator": "mechanism[11]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "它们是两亲性物质，可增加疏水污染物在水中的溶解性以加速碳氢化合物生物修复",
+          "basis": "from_source",
+          "locator": "mechanism[11]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[11]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -208,24 +237,24 @@
       "verification": "needs_review",
       "causal_chain": {
         "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "(2)在细胞内生物积累污染物",
+          "basis": "from_source",
+          "locator": "mechanism[12]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[12]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "藻类通过三种途径去除染料：(1)通过静电吸引和络合将PAHs吸附到藻类细胞壁活性基团上；(3)利用氧化还原酶(偶氮还原酶)将偶氮键还原断裂，释放芳香胺，进一步降解为CO₂和H₂O",
+          "basis": "from_source",
+          "locator": "mechanism[12]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[12]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -237,24 +266,24 @@
       "verification": "needs_review",
       "causal_chain": {
         "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "Enteromorpha prolifera磁性生物炭(γ-Fe2O3, 600°C)：Cr(VI)最大吸附91.5 mg/g，远高于原始生物炭",
+          "basis": "from_source",
+          "locator": "mechanism[4]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[4]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "Y. Wang et al.(2020)报告800°C磁性生物炭Cr(VI)吸附95.23 mg/g，表面含氧官能团丰富，主要机制为化学吸附和单层静电吸附",
+          "basis": "from_source",
+          "locator": "mechanism[4]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[4]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -266,24 +295,24 @@
       "verification": "needs_review",
       "causal_chain": {
         "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "Chlorella微藻-生物炭固定化复合物：Cd(II)吸附217.41 mg/g，远高于原始生物炭95.82 mg/g",
+          "basis": "from_source",
+          "locator": "mechanism[5]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[5]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "机制为静电吸附——生物炭表面负电荷增强了微藻周围的磁强度，提高了改性生物炭的表面电位",
+          "basis": "from_source",
+          "locator": "mechanism[5]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[5]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -295,24 +324,24 @@
       "verification": "needs_review",
       "causal_chain": {
         "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "金属去除机制：(1)离子交换——生物炭上碱金属/碱土金属与重金属离子交换；(3)络合——羧基/酚基/内酯基与金属离子形成多原子结构",
+          "basis": "from_source",
+          "locator": "mechanism[6]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[6]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "(2)静电吸引——pH>400°C时正电荷增加有利于吸引阴离子；(4)沉淀——碱性生物炭升高pH导致金属氧化物/氢氧化物沉淀；(5)共价键——通过共享电子对的不可逆吸附过程",
+          "basis": "from_source",
+          "locator": "mechanism[6]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[6]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -325,23 +354,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[7]"
         },
         "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "微藻对重金属的吸附分为两个阶段：(1)被动吸附——速度非常快、效率非常高，重金属仅被吸附到藻细胞表面；(2)主动吸附——能量驱动过程，与藻体代谢密切相关，需要特定酶参与，速度较慢",
+          "basis": "from_source",
+          "locator": "mechanism[7]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "本研究中5-10min即达到最佳效果，属于被动吸附阶段",
+          "basis": "from_source",
+          "locator": "mechanism[7]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[7]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -354,23 +383,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[3]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[3]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "生物聚合物与黏土复合可增强吸附性能：天然黏土对疏水性污染物无效，多糖和多肽类生物聚合物与黏土结合后具有pH抗性、低润湿性和低特异性。生物聚合物作为吸附剂的优势：高效、无二次污染、易回收、可重复使用",
+          "basis": "from_source",
+          "locator": "mechanism[3]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[3]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",

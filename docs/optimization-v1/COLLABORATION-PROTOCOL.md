@@ -1,7 +1,7 @@
 # COLLABORATION PROTOCOL
 
-> 本文件是 Qoder 与 Claude Code 之间的协作契约。双方必须遵守。
-> 最后更新：2026-06-17 by Qoder
+> 本文件是 QoderWork 与 OpenClaw 之间的协作契约。双方必须遵守。
+> 最后更新：2026-06-17 by QoderWork
 
 ---
 
@@ -10,8 +10,16 @@
 | 层级 | 角色 | 工具 | 权限 |
 |------|------|------|------|
 | L0 审批者 | Yao | 人 | 批准 Package B/C/D/E、scope 变更、原型存废 |
-| L1 审查者 | Qoder | IDE Agent | 验收 Claude Code 产出、更新 decision queue、执行已批准的编辑、commit/push、分配任务 |
-| L2 工人 | Claude Code | Terminal Agent | PDF 审计、路径验证、证据提取、报告生成。**不编辑 prototypes_db JSON** |
+| L1 编排/验收者 | **QoderWork** | Desktop Agent | 接替 Codex。验收 OpenClaw 产出、更新 decision queue、执行已批准的编辑、commit/push、分配任务、spot-check |
+| L2 工人 | OpenClaw | Local Agent (mimo-v2.5-pro / mimo-v2.5) | PDF 审计、路径验证、证据提取、报告生成。**可编辑 prototypes_db JSON（仅限 QoderWork 明确指派的任务）** |
+
+### 2026-06-17 变更说明
+
+Codex 额度耗尽，由 QoderWork 接替 L1 角色。工作模式变更：
+- **通信方式**：QoderWork 通过 `openclaw agent --session-id <id> --message <prompt>` 直接向 OpenClaw 发送任务，不再依赖人工粘贴 prompt
+- **并发**：最多 2 个并行 OpenClaw worker（不同 session-id，不同 API key）
+- **模型选择**：纯文本任务用 mimo-v2.5-pro，多模态（OCR/visual_cache）用 mimo-v2.5
+- **JSON 编辑权限放宽**：OpenClaw 可在 QoderWork 明确指派的任务范围内直接编辑 JSON（之前由 Codex 自己执行），因为 QoderWork 会在验收时 spot-check
 
 ## 2. 文件沟通协议
 

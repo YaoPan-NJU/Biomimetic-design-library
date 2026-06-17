@@ -5,24 +5,24 @@
       "verification": "needs_review",
       "causal_chain": {
         "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "XPS证实：-NH₂与Pb²⁺形成配位键(RNH₂-Mⁿ⁺, 406.73 eV)；N1s谱：吸附前N⁺(400.73 eV)+-NH-(399.78 eV)→吸附后-NH-减弱+新峰406.73 eV(RNH₂-Pb²⁺)",
+          "basis": "from_source",
+          "locator": "mechanism[0]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[0]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "化学吸附为主",
+          "basis": "from_source",
+          "locator": "mechanism[0]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[0]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -34,24 +34,24 @@
       "verification": "needs_review",
       "causal_chain": {
         "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "巯基(-SH)暴露于分子末端→吸附重金属离子",
+          "basis": "from_source",
+          "locator": "mechanism[1]"
         },
         "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "Si(OH)₃与DE表面Si-OH脱水缩合→化学键接枝于硅藻土表面",
+          "basis": "from_source",
+          "locator": "mechanism[1]"
         },
         "interaction": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[1]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[1]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -63,28 +63,102 @@
       "verification": "needs_review",
       "causal_chain": {
         "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "Pb²⁺/Cd²⁺为二价重金属阳离子，在水中以水合离子形式存在，可通过配位键与含N/O供体基团结合",
+          "basis": "from_source",
+          "locator": "p.1 Abstract; p.7 §2.7"
         },
         "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "硅藻土保留天然层级多孔SiO₂骨架（大孔300–500 nm + 小孔30–50 nm），表面富含Si-OH硅羟基，经APTES-CA缩合修饰后暴露–NH₂/–COOH官能团",
+          "basis": "from_source",
+          "locator": "p.3 §2.2 (SEM孔径); p.5 §2.5 (合成机理); p.7 §2.7 (XPS确认)"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "–NH₂的孤对电子与Pb²⁺形成RNH₂-M²⁺配位键（XPS N1s 406.73 eV新峰），–COO⁻与Pb²⁺发生静电/螯合双重作用；Si-OH缩合接枝提供共价锚定",
+          "basis": "from_source",
+          "locator": "p.7 §2.7 (XPS N1s/O1s分析)"
         },
         "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "化学吸附为主：有机官能团（–SH/–NH₂/–COOH）的配位能力远强于天然Si-OH，且层级孔道保证传质效率；改性后吸附容量从原土极低水平跃升至396–485 mg/g",
+          "basis": "from_source",
+          "locator": "p.7 §2.7; p.8 Conclusion(3)"
         },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
+        "boundary_conditions": [
+          {
+            "text": "最佳pH范围6–8，此时质子化作用不明显，–NH₂/–COOH与金属离子配位增强",
+            "parameter": "pH",
+            "condition": {
+              "operator": "range",
+              "value": [
+                6,
+                8
+              ]
+            },
+            "basis": "from_source",
+            "verification": "verified",
+            "gate_level": "hard",
+            "locator": "p.7 §2.6.2",
+            "quote": "当pH值增大至6~8时，样品MP/DE对Pb²⁺、Cd²⁺的最大去除率分别为100%、99.8%，样品CA/DE对Pb²⁺、Cd²⁺的最大去除率分别为100%、98.5%",
+            "source_asset": null
+          },
+          {
+            "text": "pH≤3时去除率低，–NH₂/–COOH质子化导致与金属离子静电斥力",
+            "parameter": "pH",
+            "condition": {
+              "operator": "threshold_lt",
+              "value": 3
+            },
+            "basis": "from_source",
+            "verification": "verified",
+            "gate_level": "hard",
+            "locator": "p.7 §2.6.2",
+            "quote": "在pH≤3的条件下，样品对Pb²⁺、Cd²⁺离子去除率较低",
+            "source_asset": null
+          },
+          {
+            "text": "pH>9产生金属氢氧化物沉淀，形成假吸附，不反映真实吸附容量",
+            "parameter": "pH",
+            "condition": {
+              "operator": "threshold_gt",
+              "value": 9
+            },
+            "basis": "from_source",
+            "verification": "verified",
+            "gate_level": "hard",
+            "locator": "p.7 §2.6.2",
+            "quote": "当溶液pH>9时，溶液中将产生大量的OH⁻，会与Pb²⁺、Cd²⁺离子逐渐生成Pb(OH)₂、Cd(OH)₂沉淀，形成假吸附",
+            "source_asset": null
+          },
+          {
+            "text": "低负载量有机改性不引起溶液pH波动（配位作用不改变体系酸碱性）",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "from_source",
+            "verification": "verified",
+            "gate_level": "hard",
+            "locator": "p.6 §2.6.1",
+            "quote": "吸附后溶液的pH值并未发生明显波动，仍维持为7，这归因于表面的有机改性只是针对硅藻土表面进行，有机物负载量较少",
+            "source_asset": null
+          },
+          {
+            "text": "初始浓度超过800 mg/L后吸附趋于饱和（活性位点不足）",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "from_source",
+            "verification": "verified",
+            "gate_level": "hard",
+            "locator": "p.6 §2.6.1",
+            "quote": "当Pb²⁺、Cd²⁺初始浓度超过800 mg·L⁻¹时，出现吸附平台，即吸附趋于饱和状态",
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "在天然多孔矿物骨架上通过硅烷缩合接枝含N/O供体官能团，可将物理吸附主导的低效体系转化为化学配位主导的高效重金属捕获体系；关键在于保留孔道传质能力的同时最大化表面螯合位点密度",
+        "verification_quote": "该吸附过程以化学吸附为主，驱动力在于表面有机基团与Pb²⁺的配位反应…巯基、氨基/羧基相比DE表面硅羟基而言具有更强的配位能力（p.7 §2.7）"
       }
     },
     "文献对比：有机改性硅藻土吸附容量": {
@@ -93,23 +167,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[3]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[3]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "有机类(羟基/羧基改性)吸附容量一般50-160 mg/g→整体偏低。瓶颈：有机物负载→SSA增加小+静电调节差",
+          "basis": "from_source",
+          "locator": "mechanism[3]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[3]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -122,23 +196,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[4]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[4]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "吸附前后溶液pH未发生明显波动，仍维持pH=7。归因于有机改性负载量少→配位作用不引起pH变化。与直接加入有机吸附剂不同→后者易引起pH改变",
+          "basis": "from_source",
+          "locator": "mechanism[4]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[4]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -151,23 +225,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[5]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[5]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "SSA略有减小但吸附性能提高1.71倍→表面氢键减少→裸露Si-OH增多→L碱位增多→与Ni²⁺/Ag⁺配位增强",
+          "basis": "from_source",
+          "locator": "mechanism[5]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[5]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -180,23 +254,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[6]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[6]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "pH 1-7范围内La³⁺吸附容量随pH增大而上升→—COO⁻与La³⁺静电作用随pH增大而加强",
+          "basis": "from_source",
+          "locator": "mechanism[6]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[6]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -209,23 +283,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[7]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[7]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "最佳吸附量363.30 mg/g(1200 mg/L初始浓度)→质子化氨基与阴离子染料静电吸引",
+          "basis": "from_source",
+          "locator": "mechanism[7]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[7]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -238,23 +312,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[8]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[8]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "吸附量37 mg/g；静电+络合+化学沉淀协同",
+          "basis": "from_source",
+          "locator": "mechanism[8]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[8]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -267,23 +341,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[9]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[9]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "(1)加强吸附机理(微观作用机制)→精准靶向改性；(2)提高吸附专一性(竞争离子)；(3)再生性能研究；(4)开发新改性方法；(5)低毒/无毒改性剂→绿色工艺",
+          "basis": "from_source",
+          "locator": "mechanism[9]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[9]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -295,23 +369,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[14]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[14]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "物理吸附为主，硅羟基参与吸附",
+          "basis": "from_source",
+          "locator": "mechanism[14]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[14]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -323,23 +397,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[12]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[12]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "随NaNO₃浓度增加，TC吸附量逐渐下降，表明外层静电结合为主",
+          "basis": "from_source",
+          "locator": "mechanism[12]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[12]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -351,23 +425,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[10]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[10]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "N和O参与Ni(II)的络合，化学吸附为主",
+          "basis": "from_source",
+          "locator": "mechanism[10]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[10]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",

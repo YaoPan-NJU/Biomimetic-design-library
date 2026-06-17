@@ -8,7 +8,7 @@
 | chitosan | 132 | 2 | 0 |
 | chlorella-cell-wall | 13 | 1 | 0 |
 | coral-skeleton | 1 | 1 | 0 |
-| diatom-frustule | 15 | 0 | 0 |
+| diatom-frustule | 15 | 1 | 0 |
 | dna-aptamer | 1 | 1 | 0 |
 | fish-scale-hydroxyapatite | 89 | 1 | 0 |
 | iron-oxidizing-bacteria | 6 | 1 | 0 |
@@ -27,4 +27,4 @@
 | sulfate-reducing-bacteria | 1 | 1 | 0 |
 | wood-xylem | 4 | 1 | 0 |
 
-总计: 25/530 qualified
+总计: 26/530 qualified

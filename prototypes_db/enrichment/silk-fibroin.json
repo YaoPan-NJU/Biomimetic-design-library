@@ -4,28 +4,43 @@
       "verification": "needs_review",
       "causal_chain": {
         "pollutant_feature": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "阳离子染料（MB、CV）和重金属离子",
+          "basis": "from_source",
+          "locator": "Prasad2022 p.102741 / Abstract"
         },
         "bio_structure": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "丝素蛋白的β-折叠结构和表面羧基/氨基",
+          "basis": "from_source",
+          "locator": "Prasad2022 p.102741 / Abstract"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "静电吸引（负电表面与阳离子）、配位（-COOH/-NH₂与金属离子）",
+          "basis": "from_source",
+          "locator": "Prasad2022 p.102741 / Abstract"
         },
         "why_it_works": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "丝素蛋白表面富含羧基和氨基，在中性pH下带负电荷，通过静电吸引捕获阳离子染料",
+          "basis": "llm_inferred",
+          "locator": null
         },
-        "boundary_conditions": [],
-        "transferable_principle": "",
-        "verification_quote": null
+        "boundary_conditions": [
+          {
+            "text": "丝素蛋白在强酸/强碱下水解",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "丝素蛋白的β-折叠结构提供力学稳定性，表面羧基/氨基提供吸附活性，是可降解的生物吸附剂",
+        "verification_quote": "Biosilica/Silk Fibroin/Polyurethane biocomposite for Cu²⁺ and Cr⁶⁺ removal"
       }
     },
     "BS/SF/PUF三元协同设计": {
@@ -34,23 +49,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[11]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[11]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "BS(生物硅高比表面积)+SF(极性基团螯合)+PUF(多孔弹性基底)→三元协同→综合性能优于单一组分",
+          "basis": "from_source",
+          "locator": "mechanism[11]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[11]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -63,23 +78,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[12]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[12]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "π-π共轭 + 氢键 + 阴阳离子结合",
+          "basis": "from_source",
+          "locator": "mechanism[12]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[12]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -92,23 +107,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[13]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[13]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "SF: 2μL/min, 18kV, 15cm, 90rpm, 4h/层; Lignin/PAN: 3μL/min, 18kV, 15cm, 90rpm, 2h/层",
+          "basis": "from_source",
+          "locator": "mechanism[13]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[13]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -121,23 +136,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[14]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[14]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "木质素疏水性: 酚环+甲氧基; SF疏水性: 疏水嵌段",
+          "basis": "from_source",
+          "locator": "mechanism[14]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[14]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -150,23 +165,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[2]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[2]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "配位作用、离子交换、静电吸引、表面络合、物理吸附",
+          "basis": "from_source",
+          "locator": "mechanism[2]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[2]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -179,23 +194,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[3]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[3]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "离子扩散→配位至吡啶N→Zn/Cu离子交换",
+          "basis": "from_source",
+          "locator": "mechanism[3]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[3]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -208,23 +223,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[4]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[4]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "物理吸附+静电吸引+配位+离子交换+部分还原",
+          "basis": "from_source",
+          "locator": "mechanism[4]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[4]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -237,23 +252,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[0]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[0]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "主导：PEI质子化氨基(-NH₃⁺)与阴离子染料MO静电吸引；辅助(GO部分)：MO芳香环与GO的π-π堆叠",
+          "basis": "from_source",
+          "locator": "mechanism[0]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[0]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -266,23 +281,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[1]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[1]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "PEI氨基(-NH₂)螯合Cu²⁺→化学吸附；中心发散孔道→快速扩散→活性位点可及；低密度+高孔隙→快速传质",
+          "basis": "from_source",
+          "locator": "mechanism[1]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[1]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -295,23 +310,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[5]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[5]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "β-sheet结晶区提供机械强度，极限强度300-740 MPa；丝素为嵌段共聚物：疏水重复区(Gly/Ala/Ser 43-46%/25-30%/12%) + 亲水非重复区",
+          "basis": "from_source",
+          "locator": "mechanism[5]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[5]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -324,23 +339,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[6]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[6]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "羟基(-OH)、氨基(-NH₂)、羧基(-COOH)、酰胺键(-CONH-)→金属离子螯合+染料静电吸附",
+          "basis": "from_source",
+          "locator": "mechanism[6]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[6]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -353,23 +368,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[7]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[7]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "WCA 158°(Na₂CO₃脱胶); 分离效率: 柴油>75%, 汽油>90%, 机油>80% (10次循环后)",
+          "basis": "from_source",
+          "locator": "mechanism[7]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[7]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -382,23 +397,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[8]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[8]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "丝素为天然嵌段共聚物→疏水区(Gly/Ala)+亲水区(Asp/Glu/Lys/Arg)→自组装→β-sheet结晶+无定形区→层级结构",
+          "basis": "from_source",
+          "locator": "mechanism[8]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[8]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -411,23 +426,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[9]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[9]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "pH升高→COO⁻形成→负电荷密度增加→静电吸引阳离子MB→去除率从7.93%升至94-96%",
+          "basis": "from_source",
+          "locator": "mechanism[9]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[9]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -439,23 +454,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[18]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[18]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "物理吸附和配位辅助(两者均带正电)",
+          "basis": "from_source",
+          "locator": "mechanism[18]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[18]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -467,23 +482,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[15]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[15]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "Na₂CO₃脱胶蚕丝: WCA=158°, OCA=0°; 水脱胶: WCA=153°; 原始蚕丝: WCA=103-110°",
+          "basis": "from_source",
+          "locator": "mechanism[15]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[15]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -495,23 +510,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[16]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[16]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "纳米纤维丝膜: 油水分离效率99.91-99.97%; SiO₂/SF海绵: 油吸附70.9-160.8 g/g; 超疏水蚕丝海绵: 油回收率>50%（10次循环）",
+          "basis": "from_source",
+          "locator": "mechanism[16]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[16]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
@@ -523,23 +538,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[17]"
         },
         "bio_structure": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[17]"
         },
         "interaction": {
-          "text": "",
-          "basis": "",
-          "locator": ""
+          "text": "静电相互作用、氢键、配位/螯合、π-π堆积、离子交换",
+          "basis": "from_source",
+          "locator": "mechanism[17]"
         },
         "why_it_works": {
           "text": "",
-          "basis": "",
-          "locator": ""
+          "basis": "from_source",
+          "locator": "mechanism[17]"
         },
         "boundary_conditions": [],
         "transferable_principle": "",
