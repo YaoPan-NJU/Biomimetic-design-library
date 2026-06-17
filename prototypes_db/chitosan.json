@@ -4698,7 +4698,14 @@
   "provenance_summary": {
     "n_papers": 51,
     "n_verified": 57,
-    "n_unverified": 192
+    "n_unverified": 192,
+    "boundary_rules": [
+      {
+        "id": "B01-CHI-002",
+        "type": "soft",
+        "rule": "Bambaeero2020 Cu adsorption verified at pH 5; do not generalize outside tested pH 4-6 range without extra evidence."
+      }
+    ]
   },
   "coverage": "normal",
   "status": "active",

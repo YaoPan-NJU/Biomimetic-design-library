@@ -7271,6 +7271,11 @@
         "id": "B07-MOF-004",
         "type": "soft",
         "rule": "MOF-5 H2 storage at 78K is material property, not water-treatment adsorption. Exclude from ranking."
+      },
+      {
+        "id": "B05-MATREF-001",
+        "type": "soft",
+        "rule": "Material-reference stores aggregate review-table values across many materials and composites. Do not compare directly with biological prototypes unless source grade, metric type, and material scope are normalized."
       }
     ],
     "verification_note": "n_verified counts single_source rows where one source asserts the value (often review tables). This is NOT full quote+locator verification. Actual verified-with-quote count is much lower."

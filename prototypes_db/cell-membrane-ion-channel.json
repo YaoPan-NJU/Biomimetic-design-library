@@ -603,7 +603,14 @@
     "n_papers": 7,
     "n_verified": 12,
     "n_unverified": 15,
-    "scope_note": "This prototype covers membrane separation/filtration/ion-selective NF, not adsorption. Kept as separation prototype per Yao decision 2026-06-17. Exclude from adsorption ranking."
+    "scope_note": "This prototype covers membrane separation/filtration/ion-selective NF, not adsorption. Kept as separation prototype per Yao decision 2026-06-17. Exclude from adsorption ranking.",
+    "boundary_rules": [
+      {
+        "id": "B03-CMIC-001",
+        "type": "soft",
+        "rule": "Current evidence supports membrane separation, desalination, and ion-selective NF, not adsorption. Do not include in adsorption ranking; use metric_type to distinguish separation metrics from qmax."
+      }
+    ]
   },
   "coverage": "normal",
   "status": "active",
