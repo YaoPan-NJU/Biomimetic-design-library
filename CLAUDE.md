@@ -167,3 +167,41 @@ eview-clcode-task6-remaining-wrongsource.md
 - 修改 JSON 前先 dry-run
 - 不改 build_prototypes_db.py
 - 产出 review-clcode-*.md 报告后结束
+
+
+## 第三轮任务（2026-06-17 第三轮）
+
+### Task 8: Path Normalization Sweep（最高优先级）
+参考 docs/optimization-v1/review-clcode-task3-missing-pdf-analysis.md：
+- 扫描 仿生文献库/ 目录，查找所有  2.pdf、 3.pdf 后缀变体
+- 将 prototypes_db/**/*.json 中所有 source_file 路径与实际本地 PDF 做交叉匹配
+- 对能匹配的路径：直接修正 source_file 字段
+- 对仍无法匹配的路径：记录到报告中标注 	ruly_missing
+- 重点关注：chitosan（34 PDFs）、MOF（28 PDFs）、CNC（27 PDFs）、starch（10 PDFs）
+
+### Task 9: Decision Queue 批量状态更新
+Task 7 只更新了 9 项。现在补充更新其余 ~108 项：
+- 对照已执行的 wrong-source 清除（150+30 条）：status → pplied_package_b1
+- 对照已写入的 scope 决策（8 项）：status → pplied_scope_decision
+- 对照已写入的 boundary rules（47 条）：status → pplied_boundary
+- 对照 Task 5 metadata fix（12 项）：status → pplied_metadata_fix
+- 无法匹配到已执行操作的项：保持 pending_yao
+参考文件：
+- docs/optimization-v1/review-full-audit-decision-queue.md
+- docs/optimization-v1/review-boundary-do-not-register.md（已标记 guard_rule 的 14 项）
+
+### Task 10: Lotus-Leaf Scope Assessment
+lotus-leaf 有 346 条剩余机制（Task 6 已移除 9 条膜/蒸馏）。现在评估：
+- 逐条检查 346 条 mechanisms 的 source_doi/source
+- 分类为：lotus-specific / shared-wetting / generic-review / off-topic
+- 统计各类数量
+- 提出 scope split 建议方案
+产出：
+eview-clcode-task10-lotus-scope-assessment.md
+
+### 执行约束（同前）
+- 最多 3 个并行子智能体
+- 文本任务用 mimo-v2.5-pro
+- 修改 JSON 前先 dry-run
+- 不改 build_prototypes_db.py
+- 每个任务产出 review-clcode-*.md 报告
