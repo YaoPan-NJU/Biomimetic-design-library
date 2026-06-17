@@ -923,7 +923,24 @@
   "provenance_summary": {
     "n_papers": 8,
     "n_verified": 0,
-    "n_unverified": 96
+    "n_unverified": 96,
+    "boundary_rules": [
+      {
+        "id": "B04-SHART-001",
+        "type": "soft",
+        "rule": "CN113244892B evidence is organic-liquid/oil adsorption. Do not generalize to inorganic aqueous pollutants."
+      },
+      {
+        "id": "B04-SHART-002",
+        "type": "soft",
+        "rule": "CN121130847A WCA 140.01 deg. Do not label superhydrophobic from this alone (need >=150 deg)."
+      },
+      {
+        "id": "B04-SHART-004",
+        "type": "soft",
+        "rule": "DOI 10.3390/polym14245439 is membrane distillation, not adsorption foam capacity."
+      }
+    ]
   },
   "coverage": "parked",
   "status": "parked_separation"

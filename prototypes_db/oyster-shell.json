@@ -412,7 +412,29 @@
   "provenance_summary": {
     "n_papers": 6,
     "n_verified": 6,
-    "n_unverified": 10
+    "n_unverified": 10,
+    "boundary_rules": [
+      {
+        "id": "B02-OYS-001",
+        "type": "soft",
+        "rule": "Qiu2021 phosphate adsorption stable pH 4-10, peaks ~pH 7. Do not generalize outside Ca-Al-LDH system."
+      },
+      {
+        "id": "B02-OYS-002",
+        "type": "soft",
+        "rule": "Xu2022 optimum at pH 4, 60 min. 144.35 mg/g is condition-specific."
+      },
+      {
+        "id": "B02-OYS-003",
+        "type": "hard",
+        "rule": "Abalone HA qmax must not be reported as oyster-shell without species qualification."
+      },
+      {
+        "id": "B02-OYS-004",
+        "type": "soft",
+        "rule": "Zhang2021 shellfish evidence is soil passivation. Do not use as direct aqueous adsorption without caveat."
+      }
+    ]
   },
   "coverage": "normal",
   "status": "active",

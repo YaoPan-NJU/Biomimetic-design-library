@@ -2477,7 +2477,14 @@
     "n_papers": 27,
     "n_verified": 14,
     "n_unverified": 134,
-    "scope_note": "performance_data[7,12-24,25-42] are PDA-coated adsorbent data shared with polydopamine-coating. Duplicate rows must be excluded from independent ranking (Yao decision 2026-06-17)."
+    "scope_note": "performance_data[7,12-24,25-42] are PDA-coated adsorbent data shared with polydopamine-coating. Duplicate rows must be excluded from independent ranking (Yao decision 2026-06-17).",
+    "boundary_rules": [
+      {
+        "id": "B12-PDA-MU-001",
+        "type": "soft",
+        "rule": "32 PDA-coated adsorbent rows shared with polydopamine-coating. Do not count as independent evidence in ranking."
+      }
+    ]
   },
   "coverage": "normal",
   "status": "active",

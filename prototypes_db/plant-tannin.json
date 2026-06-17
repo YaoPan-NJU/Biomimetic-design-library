@@ -523,7 +523,19 @@
   "provenance_summary": {
     "n_papers": 6,
     "n_verified": 3,
-    "n_unverified": 25
+    "n_unverified": 25,
+    "boundary_rules": [
+      {
+        "id": "B01-PLT-002",
+        "type": "soft",
+        "rule": "DOLE corrosion inhibition was tested in 0.5M H2SO4, not water-treatment adsorption. Transferability uncertain."
+      },
+      {
+        "id": "B01-PLT-003",
+        "type": "soft",
+        "rule": "Mao2024 regeneration covers only 2 cycles. Long-term stability unknown."
+      }
+    ]
   },
   "coverage": "normal",
   "status": "active",

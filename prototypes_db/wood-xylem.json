@@ -220,7 +220,24 @@
   "provenance_summary": {
     "n_papers": 2,
     "n_verified": 3,
-    "n_unverified": 4
+    "n_unverified": 4,
+    "boundary_rules": [
+      {
+        "id": "B01-WOOD-001",
+        "type": "soft",
+        "rule": "Kumar phenol/chlorophenol adsorption optimal at pH 6 and below pKa. Do not generalize to alkaline wastewater."
+      },
+      {
+        "id": "B01-WOOD-002",
+        "type": "gap",
+        "rule": "Kumar2021 uses ball-milled wood apple shell biochar, not preserved xylem. Supports biochar phenol adsorption but not structural biomimicry."
+      },
+      {
+        "id": "B01-WOOD-003",
+        "type": "soft",
+        "rule": "Mo2021 regeneration: 5 Pb(II) cycles. All-metal or long-term regeneration unproven."
+      }
+    ]
   },
   "coverage": "normal",
   "status": "active",

@@ -204,7 +204,14 @@
   "provenance_summary": {
     "n_papers": 5,
     "n_verified": 2,
-    "n_unverified": 6
+    "n_unverified": 6,
+    "boundary_rules": [
+      {
+        "id": "B02-BONE-001",
+        "type": "soft",
+        "rule": "Bambaeero2020 tested pH 4-6 (Cu precipitates above pH 6). Do not generalize beyond this range."
+      }
+    ]
   },
   "coverage": "normal",
   "status": "active",

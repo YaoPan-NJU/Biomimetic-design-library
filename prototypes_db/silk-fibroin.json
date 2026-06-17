@@ -980,7 +980,19 @@
   "provenance_summary": {
     "n_papers": 10,
     "n_verified": 4,
-    "n_unverified": 41
+    "n_unverified": 41,
+    "boundary_rules": [
+      {
+        "id": "B01-SILK-002",
+        "type": "soft",
+        "rule": "Na2CO3-degummed silk WCA 158 deg is preparation-specific. Changing method may alter wettability."
+      },
+      {
+        "id": "B01-SILK-003",
+        "type": "soft",
+        "rule": "Beta-sheet disruption associated with 300-740 MPa strength loss. Do not upgrade to hard_do_not without direct source."
+      }
+    ]
   },
   "coverage": "normal",
   "status": "active",

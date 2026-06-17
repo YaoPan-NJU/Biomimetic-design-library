@@ -1899,7 +1899,14 @@
     "n_papers": 19,
     "n_verified": 16,
     "n_unverified": 94,
-    "scope_note": "performance_data rows shared with mussel-foot-adhesion (32 duplicate rows). Do not count both copies independently in ranking (Yao decision 2026-06-17)."
+    "scope_note": "performance_data rows shared with mussel-foot-adhesion (32 duplicate rows). Do not count both copies independently in ranking (Yao decision 2026-06-17).",
+    "boundary_rules": [
+      {
+        "id": "B12-PDA-SC-001",
+        "type": "soft",
+        "rule": "Yuan2024 CNF-TA-PMMT-PEI is a composite. Do not treat extreme qmax as generic PDA-coating performance."
+      }
+    ]
   },
   "coverage": "normal",
   "status": "active",

@@ -3508,7 +3508,14 @@
   "provenance_summary": {
     "n_papers": 36,
     "n_verified": 0,
-    "n_unverified": 359
+    "n_unverified": 359,
+    "boundary_rules": [
+      {
+        "id": "B04-LOTUS-003",
+        "type": "hard",
+        "rule": "Non-lotus examples (shark, gecko, rose-petal, membrane, MOF, shell, sponge) must not be reported as lotus-leaf-specific."
+      }
+    ]
   },
   "coverage": "parked",
   "status": "parked_separation"

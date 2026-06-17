@@ -89,7 +89,14 @@
   "provenance_summary": {
     "n_papers": 0,
     "n_verified": 0,
-    "n_unverified": 0
+    "n_unverified": 0,
+    "boundary_rules": [
+      {
+        "id": "B02-BMT-001",
+        "type": "soft",
+        "rule": "LanM@ZIF-8 pH-sensitive, pH 4 optimal for Nd3+. Do not generalize Qmax outside tested conditions."
+      }
+    ]
   },
   "coverage": "low",
   "status": "needs_literature",

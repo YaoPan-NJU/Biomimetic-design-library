@@ -633,7 +633,29 @@
     "n_papers": 15,
     "n_verified": 5,
     "n_unverified": 113,
-    "scope_note": "Scope expanded to include fish-scale-derived biochar (Dou2021). HAp is removed during biochar preparation but the prototype covers fish-scale-derived adsorbents broadly (Yao decision 2026-06-17)."
+    "scope_note": "Scope expanded to include fish-scale-derived biochar (Dou2021). HAp is removed during biochar preparation but the prototype covers fish-scale-derived adsorbents broadly (Yao decision 2026-06-17).",
+    "boundary_rules": [
+      {
+        "id": "B02-FISH-002",
+        "type": "soft",
+        "rule": "Dou2021 supports fish-scale-derived biochar (CIP), not HAp as final adsorbent. Accepted per scope expansion."
+      },
+      {
+        "id": "B02-FISH-003",
+        "type": "soft",
+        "rule": "CN114849640A acid-fuchsin values are patent-condition-specific (100mg/L, 5mg HAp, 30C, 24h). Do not generalize 478 mg/g."
+      },
+      {
+        "id": "B11-FISH-001",
+        "type": "soft",
+        "rule": "CN114849640A repeated 478 mg/g rows are the same patent example reused. Do not count as independent replicated evidence."
+      },
+      {
+        "id": "B11-FISH-002",
+        "type": "hard",
+        "rule": "CN113275374A is microbial carbonate biomineralization/MICP, not fish-scale HAp adsorption."
+      }
+    ]
   },
   "coverage": "normal",
   "status": "active",

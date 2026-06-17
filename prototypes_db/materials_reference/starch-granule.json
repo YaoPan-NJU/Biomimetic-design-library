@@ -2717,7 +2717,34 @@
   "provenance_summary": {
     "n_papers": 10,
     "n_verified": 0,
-    "n_unverified": 146
+    "n_unverified": 146,
+    "boundary_rules": [
+      {
+        "id": "B10-STARCH-001",
+        "type": "hard",
+        "rule": "Concentration-dependent ranges must not be treated as Langmuir qmax (e.g. CV 24375 mg/g)."
+      },
+      {
+        "id": "B10-STARCH-002",
+        "type": "hard",
+        "rule": "Khoo2023 review-wide maxima must not be used as starch-granule-specific performance."
+      },
+      {
+        "id": "B10-STARCH-003",
+        "type": "soft",
+        "rule": "Oil/chloroform capacities are from superhydrophobic sorbents, not aqueous starch granule adsorption."
+      },
+      {
+        "id": "B10-STARCH-004",
+        "type": "soft",
+        "rule": "mmol/g rows must not be compared directly with mg/g without unit conversion."
+      },
+      {
+        "id": "B10-STARCH-006",
+        "type": "soft",
+        "rule": "Extreme engineered hydrogel/composite qmax should not represent generic starch granule performance."
+      }
+    ]
   },
   "coverage": "normal",
   "status": "material_reference"

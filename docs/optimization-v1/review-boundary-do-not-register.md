@@ -118,3 +118,27 @@ status: active
 | B10-STARCH-004 | openclaw-starch-extreme-values | starch-granule | prototypes_db/materials_reference/starch-granule.json | performance_data[20,21,23] | soft_boundary | mmol/g rows must not be compared directly with mg/g rows without conversion. | Unit mixing can distort rankings and threshold filters. | Abu2023 | p11-p12 | mmol/g values | partial | pending_yao |
 | B10-STARCH-005 | openclaw-starch-extreme-values | starch-granule | prototypes_db/materials_reference/starch-granule.json | performance_data[77] | knowledge_gap | Tetracycline CSMB capacity/cycling row has no source_file, page, or DOI. | Do not use until source is identified. | N/A | N/A | N/A | missing_pdf | pending_yao |
 | B10-STARCH-006 | openclaw-starch-extreme-values | starch-granule | prototypes_db/materials_reference/starch-granule.json | performance_data[69,70,113,120] | soft_boundary | Extreme engineered hydrogel/composite qmax values should not represent generic starch granule performance. | Keep with source/material-condition caveats or separate engineered starch adsorbent class. | Khoo2023/Khan2021/Chen2021 | row/source check | engineered hydrogel/composite high qmax rows | keep_soft | pending_yao |
+
+---
+
+## Boundary Rules Applied 2026-06-17
+
+### Guard Rules (data already removed, rule prevents re-introduction)
+- **B01-PLT-001**: status → guard_rule (contaminating data removed)
+- **B02-BONE-002**: status → guard_rule (contaminating data removed)
+- **B02-FISH-001**: status → guard_rule (contaminating data removed)
+- **B02-FISH-005**: status → guard_rule (contaminating data removed)
+- **B03-CHL-001**: status → guard_rule (contaminating data removed)
+- **B03-MYC-001**: status → guard_rule (contaminating data removed)
+- **B03-SRB-002**: status → guard_rule (contaminating data removed)
+- **B05-MOF-002**: status → guard_rule (contaminating data removed)
+- **B05-MOF-003**: status → guard_rule (contaminating data removed)
+- **B07-MOF-002**: status → guard_rule (contaminating data removed)
+- **B07-MOF-003**: status → guard_rule (contaminating data removed)
+- **B07-MOF-005**: status → guard_rule (contaminating data removed)
+- **B09-DIAT-003**: status → guard_rule (contaminating data removed)
+- **B09-DIAT-004**: status → guard_rule (contaminating data removed)
+
+### Rules Written to JSON (47 boundary_rules entries across 24 prototype files)
+All soft_boundary, surviving hard_do_not, and knowledge_gap items written as provenance_summary.boundary_rules arrays.
+Items with pending_yao → pplied_boundary_2026_06_17.

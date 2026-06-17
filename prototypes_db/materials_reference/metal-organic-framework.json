@@ -7265,7 +7265,14 @@
   "provenance_summary": {
     "n_papers": 43,
     "n_verified": 252,
-    "n_unverified": 133
+    "n_unverified": 133,
+    "boundary_rules": [
+      {
+        "id": "B07-MOF-004",
+        "type": "soft",
+        "rule": "MOF-5 H2 storage at 78K is material property, not water-treatment adsorption. Exclude from ranking."
+      }
+    ]
   },
   "coverage": "normal",
   "status": "material_reference",

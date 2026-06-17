@@ -899,7 +899,19 @@
   "provenance_summary": {
     "n_papers": 18,
     "n_verified": 21,
-    "n_unverified": 36
+    "n_unverified": 36,
+    "boundary_rules": [
+      {
+        "id": "B09-DIAT-002",
+        "type": "soft",
+        "rule": "Duplicate rows inflate evidence coverage. Do not count as independent evidence."
+      },
+      {
+        "id": "B09-DIAT-005",
+        "type": "soft",
+        "rule": "Arachnoidiscus wheel-hub paper is structural-mechanics biomimicry, not water-treatment adsorption."
+      }
+    ]
   },
   "coverage": "normal",
   "status": "active",

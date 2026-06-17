@@ -245,7 +245,24 @@
   "provenance_summary": {
     "n_papers": 3,
     "n_verified": 4,
-    "n_unverified": 6
+    "n_unverified": 6,
+    "boundary_rules": [
+      {
+        "id": "B02-SCAL-001",
+        "type": "soft",
+        "rule": "900C calcination gives best Congo Red adsorption. Do not generalize without temperature condition."
+      },
+      {
+        "id": "B02-SCAL-002",
+        "type": "soft",
+        "rule": "Rapid uptake in first 5 min, equilibrium at 150 min. Do not assume shorter contact reaches capacity."
+      },
+      {
+        "id": "B02-SCAL-003",
+        "type": "soft",
+        "rule": "Zhang2021 shellfish evidence is soil passivation. Domain caveat needed."
+      }
+    ]
   },
   "coverage": "normal",
   "status": "active",

@@ -89,7 +89,24 @@
   "provenance_summary": {
     "n_papers": 0,
     "n_verified": 0,
-    "n_unverified": 0
+    "n_unverified": 0,
+    "boundary_rules": [
+      {
+        "id": "B08-DNA-001",
+        "type": "hard",
+        "rule": "Biosensor LOD/Kd values from detection papers must not be used as adsorption capacity evidence."
+      },
+      {
+        "id": "B08-DNA-002",
+        "type": "soft",
+        "rule": "RNA-GO MC-LR is review-sourced and RNA-based, not independently replicated DNA aptamer adsorption."
+      },
+      {
+        "id": "B08-DNA-003",
+        "type": "soft",
+        "rule": "CN121588773A DNA-GC is AFB1-specific, in vivo/biomedical, patent-backed. Figure-derived qmax needs human approval."
+      }
+    ]
   },
   "coverage": "low",
   "status": "needs_literature",
