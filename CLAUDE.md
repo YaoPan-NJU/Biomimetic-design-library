@@ -326,3 +326,128 @@ F13-PDA-OCR-003：将 `polydopamine-coating.json` performance_data[19] 的值从
 ### 待办备忘（不在本轮执行）
 - mimo-v2.5 OCR 待办：CN113244898A (PDA Pb), CN114570339A (PDA U), CN113275374A (fish-scale Cd/Pb)
 - Abu2023 Pb2+ 2000 mg/g 需要 primary source 交叉验证
+
+
+## 第六轮任务（2026-06-17 第六轮 — 大批量）
+
+Yao 已审批全部 7 批人工决策。本轮执行所有剩余的 JSON 修改、验证升级和收尾工作。
+
+### Task 17: Scope Caveats 和 Metadata 批量写入
+将以下已审批决策写入对应 JSON 文件：
+
+**Keep-Soft caveats（Batch 3, 14项）：**
+- chitosan.json: enrichment causal_chain 标注 `enrichment_placeholder`
+- wood-xylem.json: Kumar2021 行添加 applicability_note "biomass biochar, not preserved xylem-channel"
+- oyster-shell.json: Zhang2024/Zhang2021 行添加 scope_caveat "generic shell review, not oyster-specific"
+- scallop-shell.json: 添加 scope_caveat "generic modified-shell review"
+- fish-scale-hydroxyapatite.json: Wu2022 行添加 scope_caveat "rice-husk HAp biochar, not fish-scale"
+- chlorella-cell-wall.json: Peng2022 行标注 evidence_type "algal-derived-biochar"; generic algae 行标注 "general-algae-background"
+- cactus-spine.json: 添加 scope_caveat "mixes cactus/desert-beetle/honeycomb/fog-harvesting evidence"
+- superhydrophobic-artificial.json: Li2022 行标注 "fluoropolymer membrane background"
+- alginate.json: chitosan-alginate 行标注 "composite material"
+- cellulose-nanocrystal.json: CN121130847A 行标注 "bio-foam"; Radjai2022 行标注 "cellulose-diatomite composite"
+- pitcher-plant-slippery-surface.json: 添加 scope_note "surface engineering prototype, not adsorption"
+- spider-silk.json: 添加 scope_caveat "31 mechanisms include broad superhydrophobic/femtosecond-laser spillover"
+
+**Scope 决策写入（Batch 4）：**
+- cellulose-nanocrystal.json: provenance_summary 添加 scope "broad_cellulose_family"
+- cell-membrane-ion-channel.json: 给所有 performance_data 行添加 metric_type 字段（区分 adsorption_qmax / rejection_rate / permeance）
+- starch-granule.json: 所有 121 个 performance_data 行的 verification 确保标记为 needs_review（不是 unverified）
+
+**值修正（Batch 5）：**
+- plant-tannin.json perf[11]: 添加 caveat "3429.23 mg/g physically unusual, verify experimental conditions"
+- starch-granule.json: 对 perf[52-59] Ihsanullah2022 行添加 metric_type "concentration_dependent_uptake"（非 Langmuir qmax）
+- starch-granule.json perf[66-77]: Khoo2023 review 行添加 source_type "review_maximum"
+- starch-granule.json perf[73]: 添加 material_class "engineered_superhydrophobic_cryogel"
+- polydopamine-coating.json: Yuan2024 行添加 material_class "CNF-TA-PMMT-PEI_composite"
+
+**机械性 Metadata 添加（Batch 1, 需要实际写入 JSON）：**
+- bone-structure.json: mechanisms[0-3] 和 perf[0-1] 添加 Bambaeero2020 的 source_file 和 locator（如果 Task 12 已有引文则跳过）
+- biomineralization-template.json: 添加 Wang2025 Nd3+ 787.93 mg/g 的 performance_data 行
+- dna-aptamer.json: mechanisms[0].source 从 llm_inference 改为 literature-backed（如果已有 scope_note 则跳过）
+
+### Task 18: Lotus-Leaf 收尾清理
+Task 15 已将 mechanisms 从 346 减至 49，但 engineering_constraints 和 narrative 未清理。
+
+1. 评估 22 条 engineering_constraints：保留与 lotus-specific 或 wetting-theory 相关的，移除非莲花特异的
+2. 评估 33 条 narrative_entries：同上，保留莲花和润湿理论相关的
+3. 参考 review-clcode-task15-lotus-scope-split.md 和 review-clcode-task10-lotus-scope-assessment.md
+
+### Task 19: 验证升级 — 第 3 批（高优先级原型）
+给以下 4 个原型添加真实 PDF 引文（verification_quote + source_locator）：
+
+1. **chitosan** — 117 条 performance_data，核心源包括 Bambaeero2020（已部分处理）、CN114849640A 等。重点给 top-10 高 qmax 行添加引文
+2. **mussel-foot-adhesion** — PDA 重叠行已有，重点给 biological adhesion 行添加引文
+3. **polydopamine-coating** — CN114887602A 已恢复，给 P 吸附行添加引文
+4. **diatom-frustule** — 去重后给存活行添加 Du2021/Guo2022/Qin2024 引文
+
+### Task 20: 验证升级 — 第 4 批（中优先级原型）
+1. **sulfate-reducing-bacteria** — Kumar2020 机制引文补充，添加 performance_data 行（如有 PDF 支持）
+2. **mycelium** — Liu2021 真菌生物吸附引文补充
+3. **mangrove-root** — 系统级证据，标注 metric_type "system_removal_percentage"
+4. **dna-aptamer** — Bilibana2022 RNA-GO MC-LR 吸附添加为 low-confidence performance_data
+
+### Task 21: 验证升级 — 第 5 批（低优先级/特殊原型）
+1. **shark-skin** — 零性能行，添加 scope_note "background-only, no direct performance"
+2. **water-strider-leg** — 零性能行，同上
+3. **cactus-spine** — 零性能行，标注 scope contamination
+4. **coral-skeleton** — 零性能行，标注 "placeholder, no coral/CaCO3 adsorption source"
+5. **magnetic-bacteria** — 零性能行，标注 "review-level ecological source"
+6. **lobster-exoskeleton** — Vo2023 PDF 缺失，标注 knowledge_gap
+
+### Task 22: OCR 扫描专利处理（使用 mimo-v2.5 多模态模型）
+**重要：本任务需要切换到 mimo-v2.5 模型处理 PDF 图片/扫描件。**
+
+1. **CN113244898A**（polydopamine-coating.json perf[17-19]）：
+   - 文件：`仿生文献库/3rd/第三波-仿生吸附专利/2022-CN113244898A-polydopamine-Pb-adsorbent.pdf`
+   - 提取：Pb(II) 吸附容量、pH 影响、最佳条件去除率
+   - 特别关注：perf[19] 已改为 96.31%，验证其他行
+
+2. **CN114570339A**（polydopamine-coating.json perf[26-32]）：
+   - 文件：`仿生文献库/3rd/第三波-仿生吸附专利/2022-CN114570339A-polydopamine-uranium-adsorbent.pdf`
+   - 提取：U(VI) 吸附容量、pH 影响图、选择性数据
+   - 特别关注：perf[30] H-PDA-SO pH6 (~38 mg/g 已人工确认), perf[32] U ~8.2 mg/g（选择性图值）
+
+3. **CN113275374A**（fish-scale-hydroxyapatite.json perf[18-21]）：
+   - 文件：查找本地路径（可能在 仿生文献库/ 下，20MB 扫描专利）
+   - 提取：Cd/Pb 混合细菌+HAp MICP 去除值
+   - 注意：此专利已决策为移除（F03-IOB-002, F11-FISH-004），仅在移除决策未执行时提取
+
+### Task 23: 校验脚本全跑和修复
+运行以下校验脚本，记录结果：
+
+```
+python -X utf8 tools/validate_consistency.py
+python -X utf8 tools/check_chimera.py
+python -X utf8 tools/check_causal_chain.py
+python -X utf8 tools/check_boundary_guardrail.py
+python -X utf8 tools/check_translation_specificity.py
+```
+
+对发现的 error（非 warning）：
+- 如果是本批次引入的：修复
+- 如果是预存的：记录到报告中，不修复
+
+### Task 24: 交付准备
+为 v0.1-alpha 交付准备：
+
+1. 运行 `python -X utf8 tools/build_prototypes_db.py`（如果存在），生成构建产物
+2. 如果 build 脚本不存在或报错，记录错误
+3. 统计最终数据摘要：原型数、机制数、性能行数、验证覆盖率、boundary rules 数
+4. 生成 `review-v0.1-delivery-summary.md` 包含：
+   - 数据规模统计
+   - 验证覆盖率
+   - 已知局限（pending_yao 残留项、missing PDF、OCR 待办）
+   - 后续版本计划
+
+### 执行约束
+- 最多 3 个并行子智能体
+- 文本任务用 mimo-v2.5-pro
+- **Task 22 强制使用 mimo-v2.5（多模态）**
+- 修改 JSON 前先 dry-run
+- 不改 build_prototypes_db.py（如果运行报错就记录）
+- 每个任务产出 review-clcode-*.md 报告
+
+### 待办备忘（不在本轮执行）
+- Abu2023 Pb2+ 2000 mg/g 需要 primary source 交叉验证（需要下载原始论文）
+- Dong2025 alginate review PDF 获取
