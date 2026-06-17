@@ -87,6 +87,13 @@
 - 追加一条记录到 HANDOFF.md
 - 如果所有任务完成，检查是否还有 enrichment/path 类任务可自主推进
 
+
+## 模型选择规则
+
+- **默认模型 mimo-v2.5-pro**：文本任务（Task 1-3），包括 JSON 对比、PDF 文本提取、路径核查
+- **多模态模型 mimo-v2.5**：需要读取图片时使用（Task 4 专利 OCR、visual_cache.json 中的截图验证）
+- 切换到 mimo-v2.5 的时机：当需要查看 visual_cache 截图、扫描版专利图片、或 figure-estimated values 时
+
 ## 当前任务（Qoder 分配  2026-06-17）
 
 ### 任务 1：Enrichment Mirror Gap Fill（最高优先级）
