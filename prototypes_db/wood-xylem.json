@@ -39,7 +39,8 @@
       "locator": "Conclusion",
       "verification": "partial",
       "verification_quote": "The monolayer maximum uptake capacity Q0(max) achieved for phenol, 4-CPh, and 2,4-DCPh was 102.71, 172.24, and 226.55 mg/g, respectively.",
-      "confidence": 0.8
+      "confidence": 0.8,
+      "source_locator": "Kumar2021 p.14 / Conclusion"
     },
     {
       "parameter": "氯取代基对吸附容量的影响——构效关系",
@@ -59,7 +60,8 @@
       "locator": "Conclusion",
       "verification": "partial",
       "verification_quote": "The monolayer maximum uptake capacity Q0(max) achieved for phenol, 4-CPh, and 2,4-DCPh was 102.71, 172.24, and 226.55 mg/g, respectively.",
-      "confidence": 0.8
+      "confidence": 0.8,
+      "source_locator": "Kumar2021 p.14 / Conclusion"
     },
     {
       "parameter": "TCTGAs对五种重金属的Langmuir最大吸附容量 qmax",
@@ -79,7 +81,8 @@
       "locator": "Abstract",
       "verification": "partial",
       "verification_quote": "The as-obtained adsorbent showed the maximum adsorption capacity for Pb(II), Cu(II), Zn(II), Cd(II), and Mn(II) of 571 mg g−1, 462 mg g−1, 361 mg g−1, 263 mg g−1, and 208 mg g−1, respectively.",
-      "confidence": 0.8
+      "confidence": 0.8,
+      "source_locator": "Mo2021 p.1 / Abstract"
     }
   ],
   "mechanisms": [
@@ -130,7 +133,9 @@
         ],
         "transferable_principle": "木质部的多级孔道+木质素芳香结构是天然的酚类吸附平台",
         "verification_quote": "wood nanocellulose aerogel for pollutant capture"
-      }
+      },
+      "verification_quote": "In aqueous solution, phenols are weakly acidic. For solutions containing more H+, the dominant form is molecular state phenols, and the ability to ionize H+ is suppressed. At smaller values of pH, protonated phenol and CPhs had higher sorption than their ionizable forms. Moreover, at high pH values, the magnitude of electrostatic repulsion force between the negatively charged adsorbent surface of WAS-BC and phenolate anions/dichlorophenate anions in solution tends to increase",
+      "source_locator": "Kumar2021 p.10 / Effect of pH"
     },
     {
       "name": "共价交联网络的XPS证据",
@@ -218,7 +223,14 @@
   "provenance_summary": {
     "n_papers": 2,
     "n_verified": 3,
-    "n_unverified": 0
+    "n_unverified": 0,
+    "performance_data_verification": {
+      "partial": 3
+    },
+    "mechanisms_verification": {
+      "partial": 1,
+      "needs_review": 3
+    }
   },
   "coverage": "normal",
   "status": "active",

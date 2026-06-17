@@ -61,3 +61,51 @@
   - wood-xylem mechanism[0] 引文来源 Mo2021 vs Kumar2021
   - 3 zero-perf prototypes → parked?
   - 164 verified perf rows → Yao逐条审批
+
+## 2026-06-18 ~07:30 CST - qoderwork
+- completed:
+  - Batch 3: IOB verification (19 rows from 3 PDFs: Luo/Xu/Jhariya) + Oyster-shell (9 rows from 3 PDFs: Wang/Zhang×2)
+  - Batch 4: OCR 3 scanned patents via mimo-v2.5 multimodal:
+    - CN113275374A → IOB rows 0-3 + fish-scale rows 18-21 (8 rows)
+    - CN114570339A → mussel rows 32-38 + PDA rows 28-34 (14 rows)
+    - CN113244898A → PDA rows 5-7 (3 rows)
+  - Tier 2a fixes: plant-tannin 15 rows source_locator补齐, wood-xylem mechanism[0] verification_quote补全 + 3 rows source_locator
+  - Chitosan row 97 verified from CN119488883A text patent (qualitative)
+  - 6 acceptance reports written
+  - 全量校验: validate_consistency 1 pre-existing error, check_chimera 0 violations
+- current_state:
+  - performance_data: ~410 rows
+    - PDA: 44 (30 verified, 10 partial, 4 needs_review)
+    - Mussel: 43 (26 verified, 7 partial, 10 needs_review)
+    - IOB: 23 (23 partial, 0 needs_review) ← fully verified
+    - Oyster-shell: 13 (12 partial, 1 missing_pdf) ← fully verified
+    - Fish-scale: 29 (25 partial, 4 partial) ← fully verified
+    - Chitosan: 117 (46 verified, 1 partial, 70 needs_review — PDFs missing)
+    - Plant-tannin: 15 partial ← fully verified
+    - Wood-xylem: 3 partial ← fully verified
+    - Silk-fibroin: 25 partial ← fully verified
+    - Scallop-shell: 7 partial ← fully verified
+    - Diatom-frustule: 29 (22 partial, 7 missing_pdf)
+    - Cell-membrane: 14 needs_review (PDFs all missing)
+    - Mycelium: 5 needs_review (PDF missing)
+    - Pitcher-plant: 1 needs_review (PDF missing)
+    - Lobster: 1 needs_review (PDF missing)
+  - mechanisms: 530+ total (15 verified, 14 partial, ~500 needs_review)
+  - enrichment causal chains: 471/478 filled (98.5%)
+  - boundary conditions: 61 in causal_chain blocks
+  - engineering_constraints: 210+ across 19 prototypes
+- next:
+  - P0: Git commit + push all Batch 3-4 changes
+  - P1: 剩余 needs_review 汇总报告给 Yao（PDF缺失项清单）
+  - P1: 机制验证批量推进（114 chitosan + 86 mussel + 64 PDA mechanisms 有 ref_doi）
+  - P2: lotus-leaf cleanup (parked_separation, low priority)
+- blockers:
+  - Chitosan 70 rows: 22 source PDFs 全部缺失，需 Yao 获取文献
+  - Cell-membrane 14 rows: 3 source PDFs 全部缺失
+  - Mussel 10 rows: 3 patent PDFs 缺失 (CN105413659B, CN113042006A, CN114849661A)
+  - PDA 4 rows: CN114887602A 缺失
+- decisions_needed:
+  - B03-CHL-001: chlorella mechanism index
+  - B04-SHART-003: superhydrophobic patent location
+  - 3 zero-perf prototypes → parked? (coral, magnetic-bacteria, lobster)
+  - 164 verified perf rows → Yao逐条审批
