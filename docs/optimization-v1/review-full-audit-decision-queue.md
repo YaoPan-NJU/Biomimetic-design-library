@@ -160,3 +160,18 @@ status: active
 | F15-B09-001 | openclaw-batch-09-core-source-gaps | lobster-exoskeleton | prototypes_db/lobster-exoskeleton.json | performance_data[0] | Batch 09 confirmed the 2023-Vo extraction JSON exists, but no matching source PDF is local; the unrelated 2024-Vo wastewater review must not be substituted. | missing_pdf | extraction_json_only | Acquire DOI 10.1007/s10311-023-01563-9 PDF, park, or downgrade this performance row to knowledge_gap after Yao approval. | pending_yao |
 | F15-B09-002 | openclaw-batch-09-core-source-gaps | coral-skeleton | prototypes_db/coral-skeleton.json | entire prototype | Codex spot-check corrected Batch 09: local Han2020 PDF was not found, and the Han extraction topic is antifouling coatings, not coral/CaCO3 adsorption. Coral has zero performance rows and empty enrichment. | knowledge_gap | missing_pdf / wrong-topic extraction | Park or keep as inferred placeholder until real coral/CaCO3 adsorption sources are acquired. | pending_yao |
 | F15-B09-003 | openclaw-batch-09-core-source-gaps | magnetic-bacteria | prototypes_db/magnetic-bacteria.json | engineering_constraints and performance_data | Batch 09 confirmed the MTB review PDF/cache/json exist and zero performance_data is appropriate for a review-level ecological/evolutionary source. | keep_soft | review-level source | No JSON change recommended; keep as soft/review-level evidence and do not upgrade to performance/ranking evidence. | accepted_codex |
+
+---
+
+## Scope Decisions Applied 2026-06-17
+
+| # | Decision | Action |
+|---|----------|--------|
+| 1 | PDA/mussel duplicate | B: both kept, scope_note added (duplicate_ranking_exclusion) |
+| 2 | fish-scale Dou2021 biochar | A: scope expanded to include fish-scale-derived biochar |
+| 3 | DNA aptamer 35 mg/g figure-derived | A: accepted, figure_estimated flag (pending enrichment) |
+| 4 | MOF-5 H2 storage | B: flagged material_property_only, excluded from adsorption ranking |
+| 5 | namib-beetle | A: parked (no action) |
+| 6 | cell-membrane-ion-channel | A: kept as separation prototype, scope_note added |
+| 7 | coral-skeleton / magnetic-bacteria | A: kept as placeholders (no action) |
+| 8 | mangrove-root | A: kept as system-level evidence (no action) |
