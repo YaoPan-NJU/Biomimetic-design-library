@@ -2,7 +2,19 @@
 
 status: active_full_audit
 
-Last updated: 2026-06-17 06:03 Asia/Shanghai
+Last updated: 2026-06-17 13:30 Asia/Shanghai
+
+## Current Reconciled State
+
+The authoritative post-office reconciliation is `review-post-office-reconciliation.md` at branch head `ef5defe`.
+
+- 58/58 JSON files parse; consistency has 0 errors and 132 warnings.
+- Active canon has 24 prototypes, 432 mechanisms (18 verified, 414 needs_review), and 390 performance rows (172 needs_review, 218 unverified).
+- Causal-chain acceptance is 27/432; `diatom-frustule` is the only active prototype with no qualified card or boundary.
+- Decision queue has 148 unique records; after exact commit reconciliation, 91 remain `pending_yao`. Applied, partial, superseded, accepted-no-change, and approved-pending-application states are recorded separately.
+- Boundary register has 105 unique records: 45 applied in JSON, 14 guard rules, 38 acknowledged knowledge gaps, and 8 approved-but-unapplied representation issues.
+- OpenClaw Batch 10 is retained but rejected by Codex because its first draft miscounted boundaries and mis-mapped queue IDs.
+- No canonical JSON changed in this reconciliation checkpoint, and `tools/build_prototypes_db.py` was not run.
 
 ## Scope
 
