@@ -1,129 +1,107 @@
-# Claude Code Task 64-68: 基础设施修复 + 多模态 PDF 引文验证
+# Claude Code 自主任务: 基础设施修复 + 全量多模态 PDF 引文验证
 
-## 背景
+## 执行模式
 
-Qoder 审阅发现三个系统性缺陷，必须在批量验证前修复：
+这是自主连续执行任务。请从头到尾按顺序完成所有步骤，不要在中间停下来等待人工确认。只有遇到下方"停止条件"中列出的情况才暂停并报告。
 
-1. **build_prototypes_db.py** 的 `merge_with_existing` 不保留 `verification_quote` 和 `source_locator`，下次 build 会丢失所有验证引文
-2. **multimodal_verify.py** 缺少增量保存（崩溃丢数据）、跳过 `missing_pdf` 行、无 API 重试
-3. 修复后运行 `multimodal_verify.py` 验证 6 个原型共 249 行
+## 停止条件（遇到才停，其他一律自主处理）
 
-## 硬性约束
+**遇到以下情况必须停下并报告**:
+1. `.env` 中没有 `MIMO_API_KEY`，或所有 API key 都返回 401/403（认证失败）
+2. 修改脚本后出现你无法修复的 SyntaxError
+3. `check_chimera.py --strict` 报出 chimera 违规（不要自行修改数据，报告给人工处理）
+4. 某个 PDF 文件在项目中完全找不到（搜索了 `仿生文献库/`、`extraction/` 等所有目录都没有）
 
-- 每个文件修改后必须 `git diff` 确认改动已落盘
-- 禁止声称完成但实际未修改
-- `multimodal_verify.py` 运行前先确认 `.env` 中 `MIMO_API_KEY` 已配置
-- 所有 Python 命令必须加 `-X utf8` 标志
-- 纯文本操作，不使用特殊字符
-
-## 当前待验证数量
-
-```
-chitosan:                  perf=9,  mech=82,  subtotal=91
-mussel-foot-adhesion:      perf=0,  mech=50,  subtotal=50
-polydopamine-coating:      perf=0,  mech=28,  subtotal=28
-spider-silk:               perf=0,  mech=20,  subtotal=20
-silk-fibroin:              perf=0,  mech=12,  subtotal=12
-fish-scale-hydroxyapatite:  perf=0,  mech=48,  subtotal=48
-TOTAL:                                       249
-```
+**以下情况不需要停，自主处理**:
+- 个别行 API 超时/报错：脚本已有 3 次重试，重试后仍失败的记为 error，继续下一行
+- 个别行返回 `not_found`：正常现象，PDF 中可能确实没有对应内容
+- 某个原型 0 行待验证：跳过，在报告中注明
+- 某个原型的 PDF 匹配不上：跳过该行，记入 `no_pdf` 统计，继续其他原型
+- 专利 PDF 文件名带 CAJ 后缀：在报告中记录，跳过该行
 
 ---
 
-## Task 64: 修复 build_prototypes_db.py 的 merge_with_existing
+## 步骤 1: 修复 build_prototypes_db.py
 
-目标文件: `tools/build_prototypes_db.py`
+文件: `tools/build_prototypes_db.py`
 
-问题: `merge_with_existing` 函数保留 `verification` 状态，但不保留 `verification_quote` 和 `source_locator`。下次 build 会丢失所有验证引文。
+### 1.1 mechanisms 合并区（约 line 374-376）
 
-### 修复 1 - mechanisms 合并区 (约 line 374-376)
-
-找到这段代码:
-
+找到:
 ```python
             old_ver = old_m.get('verification', 'unverified')
             if old_ver and old_ver != 'unverified':
                 new_m['verification'] = old_ver
 ```
 
-在它后面（同一缩进，在 `if old_m:` 块内）添加:
-
+在其后（同一缩进）添加:
 ```python
-            # 保留旧的验证引文字段
             for vfield in ['verification_quote', 'source_locator']:
                 old_val = old_m.get(vfield)
                 if old_val:
                     new_m[vfield] = old_val
 ```
 
-### 修复 2 - performance_data 合并区 (约 line 400)
+### 1.2 performance_data 合并区（约 line 400）
 
-找到这行:
-
+找到:
 ```python
             for field in ['source', 'ref_doi', 'source_file', 'page', 'locator']:
 ```
 
 改为:
-
 ```python
             for field in ['source', 'ref_doi', 'source_file', 'page', 'locator', 'verification_quote', 'source_locator']:
 ```
 
-### 验证
+### 1.3 验证修复
 
 ```bash
 python -X utf8 tools/build_prototypes_db.py
 ```
 
-确认无报错。然后检查 cell-membrane-ion-channel.json 中已有 `verification_quote` 的行没有被清空:
-
+确认无报错，确认已有 verification_quote 的行未被清空:
 ```bash
 python -X utf8 -c "import json; d=json.load(open('prototypes_db/cell-membrane-ion-channel.json','r',encoding='utf-8')); q=[p for p in d.get('performance_data',[]) if p.get('verification_quote')]; print(f'rows_with_quote={len(q)}')"
 ```
 
-如果输出 rows_with_quote 大于 0，说明保留成功。
+如果 rows_with_quote > 0，修复成功，继续下一步。
 
 ---
 
-## Task 65: 修复 multimodal_verify.py 三个缺陷
+## 步骤 2: 修复 multimodal_verify.py
 
-目标文件: `tools/multimodal_verify.py`
+文件: `tools/multimodal_verify.py`
 
-### 修复 1 - missing_pdf 纳入验证范围 (约 line 270)
+### 2.1 missing_pdf 纳入验证（约 line 270）
 
 找到:
-
 ```python
         if v not in ('needs_review', 'unverified'):
 ```
 
 改为:
-
 ```python
         if v not in ('needs_review', 'unverified', 'missing_pdf'):
 ```
 
-### 修复 2 - API 重试机制 (约 line 212-250)
+### 2.2 API 重试（约 line 212-250）
 
-第一步: 修改 `verify_row_with_api` 函数签名（约 line 212）:
+第一步，修改函数签名（约 line 212）:
 
 找到:
-
 ```python
 def verify_row_with_api(client, row, pdf_path, field='performance_data', max_pages=15):
 ```
 
 改为:
-
 ```python
 def verify_row_with_api(client_pool, row, pdf_path, field='performance_data', max_pages=15):
 ```
 
-第二步: 将 API 调用部分（约 line 233-250）:
+第二步，将 API 调用块（约 line 233-250）:
 
 找到:
-
 ```python
     try:
         response = client.chat.completions.create(
@@ -146,7 +124,6 @@ def verify_row_with_api(client_pool, row, pdf_path, field='performance_data', ma
 ```
 
 替换为:
-
 ```python
     for attempt in range(3):
         client = next(client_pool)
@@ -174,10 +151,9 @@ def verify_row_with_api(client_pool, row, pdf_path, field='performance_data', ma
                 return {'found': False, 'quality': 'error', 'error': str(e)}
 ```
 
-第三步: 修改调用处（约 line 285-289）:
+第三步，修改调用处（约 line 285-289）:
 
 找到:
-
 ```python
         client = next(client_pool)
         label = item.get('parameter', item.get('name', ''))[:60]
@@ -187,7 +163,6 @@ def verify_row_with_api(client_pool, row, pdf_path, field='performance_data', ma
 ```
 
 改为:
-
 ```python
         label = item.get('parameter', item.get('name', ''))[:60]
         print(f"  [{i+1}/{len(items)}] {label}...", end='', flush=True)
@@ -195,10 +170,9 @@ def verify_row_with_api(client_pool, row, pdf_path, field='performance_data', ma
         result = verify_row_with_api(client_pool, item, pdf_path, field)
 ```
 
-### 修复 3 - 增量保存 (约 line 308-312)
+### 2.3 增量保存（约 line 308-312）
 
 找到:
-
 ```python
         time.sleep(0.5)
     
@@ -208,73 +182,67 @@ def verify_row_with_api(client_pool, row, pdf_path, field='performance_data', ma
 ```
 
 改为:
-
 ```python
         time.sleep(0.5)
         
-        # 增量保存: 每处理 5 行写一次
         if (verified + not_found + errors) % 5 == 0:
             with open(json_path, 'w', encoding='utf-8', newline='\n') as f:
                 json.dump(data, f, ensure_ascii=False, indent=2)
                 f.write('\n')
             print(f"\n  [checkpoint: {verified} verified, {not_found} not_found, {errors} errors]", flush=True)
     
-    # 最终保存
     with open(json_path, 'w', encoding='utf-8', newline='\n') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
         f.write('\n')
 ```
 
-### 验证
+### 2.4 语法检查 + 快速测试
 
 ```bash
 python -X utf8 -c "import py_compile; py_compile.compile('tools/multimodal_verify.py', doraise=True); print('Syntax OK')"
 ```
 
-然后用 cell-membrane-ion-channel 做快速测试（只有少量行需要验证）:
-
+然后用 cell-membrane-ion-channel 快速测试（少量行）:
 ```bash
 python -X utf8 tools/multimodal_verify.py cell-membrane-ion-channel
 ```
 
-确认脚本能正常运行、API 重试和增量保存生效。
+确认脚本能正常运行。如果有错误，修复后重新测试，直到通过。
 
 ---
 
-## Task 66: 运行 chitosan 验证 (91 行)
+## 步骤 3: 全量验证（13 个原型，282 行）
 
-chitosan 是最大的原型（9 perf + 82 mech = 91 行），预计 30-45 分钟。
+按从小到大顺序运行（先跑小的快速积累进度，大的放后面）。每个原型依次运行，不要并行。
 
 ```bash
+python -X utf8 tools/multimodal_verify.py plant-tannin
+python -X utf8 tools/multimodal_verify.py lobster-exoskeleton
+python -X utf8 tools/multimodal_verify.py bone-structure
+python -X utf8 tools/multimodal_verify.py iron-oxidizing-bacteria
+python -X utf8 tools/multimodal_verify.py mycelium
+python -X utf8 tools/multimodal_verify.py cell-membrane-ion-channel
+python -X utf8 tools/multimodal_verify.py pitcher-plant-slippery-surface
+python -X utf8 tools/multimodal_verify.py silk-fibroin
+python -X utf8 tools/multimodal_verify.py spider-silk
+python -X utf8 tools/multimodal_verify.py polydopamine-coating
+python -X utf8 tools/multimodal_verify.py fish-scale-hydroxyapatite
+python -X utf8 tools/multimodal_verify.py mussel-foot-adhesion
 python -X utf8 tools/multimodal_verify.py chitosan
 ```
 
-不要中断，让脚本跑完。增量保存每 5 行触发一次，中途崩溃不会丢失全部进度。
+预计总时间 2-3 小时。增量保存每 5 行触发一次，中途崩溃不会丢失全部进度（重跑时会自动跳过已完成的行）。
+
+注意事项:
+- 专利 PDF 在 `仿生文献库/专利/` 目录下（如 CN105413659B.pdf）
+- 某些 PDF 可能是 CAJ 格式，脚本无法读取，记入报告即可
+- 某些行可能 `source_file` 路径不对，脚本会尝试模糊匹配，匹配不上的跳过
 
 ---
 
-## Task 67: 运行剩余 5 个原型验证 (158 行)
+## 步骤 4: 校验
 
-依次运行（每个独立运行，不要并行）:
-
-```bash
-python -X utf8 tools/multimodal_verify.py mussel-foot-adhesion
-python -X utf8 tools/multimodal_verify.py polydopamine-coating
-python -X utf8 tools/multimodal_verify.py spider-silk
-python -X utf8 tools/multimodal_verify.py silk-fibroin
-python -X utf8 tools/multimodal_verify.py fish-scale-hydroxyapatite
-```
-
-注意:
-- mussel 50 + PDA 28 + spider 20 + silk 12 + fish-scale 48 = 158 行
-- mussel 和 PDA 的专利 PDF 在 `仿生文献库/专利/` 目录（如 CN105413659B.pdf 等）
-- 预计每个原型 10-20 分钟
-
----
-
-## Task 68: 全量校验 + commit + push
-
-### 步骤 1: 运行三件套校验
+### 4.1 三件套
 
 ```bash
 python -X utf8 tools/build_prototypes_db.py
@@ -282,38 +250,73 @@ python -X utf8 tools/check_chimera.py --strict
 python -X utf8 tools/validate_consistency.py
 ```
 
-关键: build 之后检查 verification_quote 是否被保留:
+### 4.2 验证 verification_quote 是否在 build 后保留
 
 ```bash
 python -X utf8 -c "
-import json
-protos = ['chitosan','mussel-foot-adhesion','polydopamine-coating','spider-silk','silk-fibroin','fish-scale-hydroxyapatite']
-for name in protos:
-    d = json.load(open(f'prototypes_db/{name}.json','r',encoding='utf-8'))
-    perf_q = sum(1 for p in d.get('performance_data',[]) if p.get('verification_quote'))
-    mech_q = sum(1 for m in d.get('mechanisms',[]) if m.get('verification_quote'))
-    pv = sum(1 for p in d.get('performance_data',[]) if p.get('verification') in ('partial','verified','corroborated'))
-    mv = sum(1 for m in d.get('mechanisms',[]) if m.get('verification') in ('partial','verified','corroborated'))
-    print(f'{name}: perf_quote={perf_q} mech_quote={mech_q} perf_verified={pv} mech_verified={mv}')
+import json, os
+db = 'prototypes_db'
+for f in sorted(os.listdir(db)):
+    if not f.endswith('.json'): continue
+    d = json.load(open(os.path.join(db,f),'r',encoding='utf-8'))
+    pq = sum(1 for p in d.get('performance_data',[]) if p.get('verification_quote'))
+    mq = sum(1 for m in d.get('mechanisms',[]) if m.get('verification_quote'))
+    if pq + mq > 0:
+        print(f'{f}: perf_quote={pq} mech_quote={mq}')
 "
 ```
 
-### 步骤 2: 创建报告
+如果输出为空（0 个 quote），说明 build 覆盖了所有引文，这是严重问题，必须报告。
 
-创建 `docs/optimization-v1/review-clcode-task64-68.md`，内容包括:
-- 每个 Task 完成状态
-- 修复前后的代码变更（git diff 摘要）
-- 每个原型的验证结果（verified / not_found / errors）
-- 校验结果（build / chimera / consistency）
-- verification_quote 保留确认
-- 遇到的问题
+### 4.3 验证覆盖率统计
 
-### 步骤 3: 提交推送
+```bash
+python -X utf8 -c "
+import json, os
+db = 'prototypes_db'
+gp, gm, gpt, gmt = 0, 0, 0, 0
+for f in sorted(os.listdir(db)):
+    if not f.endswith('.json'): continue
+    d = json.load(open(os.path.join(db,f),'r',encoding='utf-8'))
+    for p in d.get('performance_data',[]):
+        gpt += 1
+        if p.get('verification') in ('partial','verified','corroborated','done'): gp += 1
+    for m in d.get('mechanisms',[]):
+        gmt += 1
+        if m.get('verification') in ('partial','verified','corroborated','done'): gm += 1
+print(f'performance_data: {gp}/{gpt} verified ({100*gp/max(gpt,1):.0f}%)')
+print(f'mechanisms: {gm}/{gmt} verified ({100*gm/max(gmt,1):.0f}%)')
+"
+```
+
+---
+
+## 步骤 5: 报告 + 提交
+
+### 5.1 创建报告
+
+创建 `docs/optimization-v1/review-clcode-infra-fix-and-verify.md`，内容包括:
+
+1. **代码修复摘要**: build_prototypes_db.py 和 multimodal_verify.py 各改了什么
+2. **验证结果**: 每个原型的 verified / not_found / errors / no_pdf 数量
+3. **校验结果**: build / chimera / consistency 是否通过
+4. **verification_quote 保留确认**: build 后有多少行保留了 quote
+5. **覆盖率**: 验证前后 performance_data 和 mechanisms 的覆盖率对比
+6. **问题记录**: 遇到的所有异常和跳过的行
+
+### 5.2 提交推送
 
 ```bash
 git add -A
-git commit -m "data: multimodal PDF verification - infra fix + 6 prototypes (Task 64-68)"
+git commit -m "data: infra fix (merge quote preserve + verify retry/save) + multimodal verify 13 prototypes"
 git push origin review
 ```
 
-完成后报告最终状态。
+### 5.3 最终报告
+
+报告最终状态:
+- 修改了哪些文件
+- 验证了多少行，成功率多少
+- 有哪些原型/行失败了，原因是什么
+- 校验是否全部通过
+- 覆盖率提升情况
