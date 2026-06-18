@@ -56,26 +56,64 @@ Codex accepts a batch only when:
 
 ### R01: Recover Lost Structured Fields
 
-Status: dispatched
+Status: completed
 
 Worker branch/worktree: `openclaw/recovery-r01` / `/private/tmp/biomimetic-openclaw-r01`
 
-- [ ] Compare `30481e4` with current `review` without reverting whole files.
-- [ ] Restore 25 lost `design_translation` entries by prototype id.
-- [ ] Restore 27 lost mechanism `causal_chain` cards by stable identity, not array index.
-- [ ] Preserve every valid office cleanup and newly added row.
-- [ ] Report unmatched or ambiguous cards instead of guessing.
-- [ ] Run JSON parse, causal-chain, boundary, translation, consistency, chimera, ADRMATS, and hygiene checks.
-- [ ] Commit only the recovery changes and report.
+- [x] Compare `30481e4` with current `review` without reverting whole files.
+- [x] Restore 25 lost `design_translation` entries by prototype id.
+- [x] Restore 27 lost mechanism `causal_chain` cards by stable identity, not array index.
+- [x] Preserve every valid office cleanup and newly added row.
+- [x] Report unmatched or ambiguous cards instead of guessing.
+- [x] Run JSON parse, causal-chain, boundary, translation, consistency, chimera, ADRMATS, and hygiene checks.
+- [x] Commit only the recovery changes and report.
+
+Integrated commits: `cfdc0c1`, `79142b7`, `548061a`. All are ancestors of `review` at `2242cc9`.
+
+### QW01: QoderWork Phase 0-4 Evidence Batches
+
+Status: completed_pending_final_acceptance
+
+Integrated checkpoints: `8ca0800` (Phase 0-2) and `2242cc9` (Batch 3-4 / Phase 3-4).
+
+- [x] Preserve the pushed history; corrections must be additive commits.
+- [x] Confirm both checkpoints are present on `review` and `origin/review`.
+- [x] Recompute live JSON totals instead of trusting delivery-report summaries.
+- [x] Record that Phase 0-2 reports used `mimo-v2.5-pro`; this violates the current execution policy and cannot be accepted as compliant worker provenance.
+- [ ] Resolve the final-acceptance failures listed under R02 before treating these batches as accepted.
+
+Acceptance snapshot at `2242cc9`:
+
+- 58 JSON files parse.
+- Active performance rows: 406 total = 164 `verified`, 129 `partial`, 105 `needs_review`, 8 `missing_pdf`.
+- 72 of the 164 `verified` performance rows lack either a quote or locator; the 164 upgrades remain unapproved by Yao.
+- Active mechanisms: 530 total = 15 `verified`, 13 `partial`, 401 `needs_review`, 101 `unverified`.
+- `git diff --check` fails for both pushed checkpoints because of trailing whitespace.
+- Consistency has 1 R12 error; boundary validation lacks one active prototype; ADRMATS rejects `partial`; repository hygiene rejects root `CLAUDE.md` despite its regression test expecting it to be allowed.
 
 ### R02: Repair Validation Vocabulary And Reporting
 
-Status: blocked_by_R01
+Status: ready_for_openclaw_dispatch
 
-- [ ] Replace unsupported verification values only after deriving the canonical vocabulary from validator code.
-- [ ] Correct delivery-summary counts from live JSON, including quote and locator counts separately.
-- [ ] Fix the `CLAUDE.md` repo-hygiene allowlist conflict with a focused regression test.
+- [ ] Derive and document one canonical verification vocabulary across stored JSON, `BiomimeticContext`, ADRMATS validation, boundary validation, and reports; resolve the current `partial` incompatibility without silently upgrading evidence.
+- [ ] Re-audit the 164 unapproved performance `verified` values. Retain `verified` only with explicit Yao approval; otherwise downgrade to the strongest evidence-contract-compliant non-verified value.
+- [ ] Correct delivery-summary counts from live JSON, reporting status, quote, locator, and quote-plus-locator counts separately.
+- [ ] Add an additive compliance note for the historical `mimo-v2.5-pro` worker runs; do not rewrite pushed history.
+- [ ] Remove trailing whitespace introduced by `8ca0800` and `2242cc9`, then require `git diff --check` for every later batch.
+- [ ] Fix the `CLAUDE.md` repository-hygiene allowlist conflict and make `tools/test_repo_hygiene.py` pass.
+- [ ] Resolve or explicitly baseline the R12 bone-structure error, pitcher-plant boundary gap, and ADRMATS verification-tier failure.
 - [ ] Re-run all validators without invoking the build script.
+
+### N01-N04: Next OpenClaw Queue From Remaining Gaps
+
+Status: prepared
+
+All workers must use `xiaomi/mimo-v2.5`, at most two concurrently, in isolated worktrees.
+
+- [ ] N01: Audit the isolated 91 auto-matched candidates: 48 chitosan mechanisms, 36 mussel mechanisms, and 7 diatom performance rows. Require real PDF paths, page plus section/table/figure/patent-paragraph locators, and exact short quotes; revert weak matches.
+- [ ] N02: Resolve locally actionable missing-source items first: the seven diatom rows against the existing `2021-杜-硅藻-硅藻土-吸附-重金属 2.pdf` variant, then verify whether the reported PDA and oyster-shell path gaps are stale.
+- [ ] N03: Produce an acquisition-only queue for genuinely absent sources: chitosan 70 rows, cell-membrane 14 rows, mussel patent rows, mycelium, pitcher-plant, lobster, and any residual oyster/PDA rows. Do not upgrade from review summaries or keyword matches.
+- [ ] N04: Execute R02 deterministic vocabulary, statistics, hygiene, and validator repairs as a separate focused batch; keep evidence-row decisions out of that commit.
 
 ### A01-A04: Active Prototype Full Evidence Audit
 
@@ -116,4 +154,3 @@ Status: blocked_by_all_audits
 - During full audit, push after each accepted six-prototype batch.
 - Never push raw worker output before Codex acceptance.
 - Preserve unrelated local changes, especially `tools/litextract` and existing untracked artifacts.
-
