@@ -72,7 +72,7 @@
       "source_file": "2021-陈-多孔-MOF-重金属-铬-综述.pdf",
       "page": 5,
       "locator": "2.2.3节",
-      "verification": "verified",
+      "verification": "needs_review",
       "confidence": 0.8
     }
   ],
@@ -92,9 +92,7 @@
       "source": "literature",
       "ref_doi": "10.1016/j.jtice.2024.105668",
       "verification": "partial",
-      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
-      "verification_quote": "where adsorbate molecules transfer through the liquid film surrounding                      maximum adsorption capacity of Pb (II) using HAp-bentonite composite",
-      "source_locator": "Jaffar2024"
+      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移"
     },
     {
       "name": "HAp四种重金属吸附机制",
@@ -103,61 +101,7 @@
       "source": "literature",
       "ref_doi": "10.1016/j.jtice.2024.105668",
       "verification": "verified",
-      "基本原理": "HAp的Ca²⁺位点可被重金属离子交换取代，且磷酸根可与重金属形成难溶磷酸盐沉淀，实现双重去除机制",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "Pb²⁺、Cd²⁺、Cu²⁺、Zn²⁺等二价重金属离子",
-          "basis": "from_source",
-          "locator": "Bambaeero2021 p.221 / Abstract + Sec.1"
-        },
-        "bio_structure": {
-          "text": "羟基磷灰石（HAp, Ca₁₀(PO₄)₆(OH)₂）的晶体结构和表面Ca²⁺/OH⁻位点",
-          "basis": "from_source",
-          "locator": "Bambaeero2021 p.221 / Abstract + Sec.1"
-        },
-        "interaction": {
-          "text": "表面离子交换（Ca²⁺↔Pb²⁺/Cd²⁺）、表面配位（OH⁻与金属离子）、共沉淀（磷酸盐沉淀）",
-          "basis": "from_source",
-          "locator": "Bambaeero2021 p.221 / Abstract + Sec.1"
-        },
-        "why_it_works": {
-          "text": "HAp的Ca²⁺位点可被重金属离子交换取代，且磷酸根可与重金属形成难溶磷酸盐沉淀，实现双重去除机制",
-          "basis": "llm_inferred",
-          "locator": null
-        },
-        "boundary_conditions": [
-          {
-            "text": "酸性条件下HAp开始溶解，释放Ca²⁺，配位/沉淀能力下降",
-            "parameter": "pH",
-            "condition": {
-              "operator": "qualitative",
-              "value": null
-            },
-            "basis": "llm_inferred",
-            "verification": "needs_review",
-            "gate_level": "soft",
-            "locator": null,
-            "quote": null,
-            "source_asset": null
-          },
-          {
-            "text": "酸性条件下HAp溶解，释放Ca²⁺，吸附能力下降",
-            "parameter": "pH",
-            "condition": {
-              "operator": "qualitative",
-              "value": null
-            },
-            "basis": "llm_inferred",
-            "verification": "needs_review",
-            "gate_level": "soft",
-            "locator": null,
-            "quote": null,
-            "source_asset": "domain_knowledge"
-          }
-        ],
-        "transferable_principle": "羟基磷灰石通过离子交换+共沉淀双重机制去除重金属，是骨骼/牙齿启发的无机吸附剂",
-        "verification_quote": "HAP has been used as an adsorbent in the removal of Sr, Zn, Co, Cd ions in various environments including electrolyte solutions"
-      }
+      "基本原理": "HAp的Ca²⁺位点可被重金属离子交换取代，且磷酸根可与重金属形成难溶磷酸盐沉淀，实现双重去除机制"
     },
     {
       "name": "HAp膜制备方法",
@@ -166,9 +110,7 @@
       "source": "literature",
       "ref_doi": "10.1016/j.jtice.2024.105668",
       "verification": "partial",
-      "基本原理": "needs_review",
-      "verification_quote": "can significantly impact the overall economics of the treatment process.           separation technique (TIPS), electrospinning, reverse thermal separa-",
-      "source_locator": "Jaffar2024"
+      "基本原理": "needs_review"
     },
     {
       "name": "HAp膜类型与制备技术",
@@ -177,9 +119,7 @@
       "source": "literature",
       "ref_doi": "10.1016/j.jtice.2024.105668",
       "verification": "partial",
-      "基本原理": "needs_review",
-      "verification_quote": "ester (CE), Polysulfone (PSf), polyethersulfone (PES), polytetrafluoro-            content, the maximum adsorption capacity was reported at 150 mg/g. A",
-      "source_locator": "Jaffar2024"
+      "基本原理": "needs_review"
     }
   ],
   "narrative": {
@@ -233,22 +173,8 @@
   "provenance_summary": {
     "n_papers": 5,
     "n_verified": 3,
-    "n_unverified": 0,
-    "n_mechanisms": 5,
-    "n_mechanisms_verified": 1,
-    "n_mechanisms_partial": 3,
-    "n_mechanisms_needs_review": 1
+    "n_unverified": 5
   },
   "coverage": "normal",
-  "status": "active",
-  "design_translation": [
-    {
-      "idea": "利用羟基磷灰石的钙磷结构进行重金属和氟离子吸附",
-      "specific_functional_group": "羟基磷灰石（HAp）的 Ca²⁺ 和 PO₄³⁻ 位点",
-      "material_handle": "合成羟基磷灰石粉末或涂层",
-      "target_interaction": "Ca²⁺ 位点配位 F⁻、Pb²⁺，PO₄³⁻ 位点捕获阳离子",
-      "source_tier": "llm_inference",
-      "examples": []
-    }
-  ]
+  "status": "active"
 }

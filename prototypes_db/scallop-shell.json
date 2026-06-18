@@ -36,8 +36,6 @@
       "page": 6,
       "locator": "Table 1 煅烧处理对贝壳类材料孔径和比表面积的影响",
       "verification": "partial",
-      "verification_quote": "数值 2184.29/1949.39 未在 PDF 全文中精确匹配，但 Table 1 区域存在煅烧贝壳吸附容量数据",
-      "source_locator": "Zhang2021 p.792 / Table 1",
       "confidence": 0.7
     },
     {
@@ -57,8 +55,6 @@
       "page": 5,
       "locator": "Section 3.3 煅烧处理",
       "verification": "partial",
-      "verification_quote": "煅烧贝壳对铜、钴、铅的去除率可分别达到94.4%、96.5%、96.7%（材料添加量为2 g·L⁻¹；金属离子浓度为10 mg·L⁻¹）",
-      "source_locator": "Zhang2021 p.793 / Section 3.3",
       "confidence": 0.85
     },
     {
@@ -78,8 +74,6 @@
       "page": 2,
       "locator": "Section 1.2",
       "verification": "partial",
-      "verification_quote": "煅烧前贝壳粉对铅离子的吸附容量为32.34 mg/g；煅烧后的吸附容量为57.79 mg/g，这表明高温煅烧能有效地提高贝壳粉对铅离子的吸附性能",
-      "source_locator": "Zhang2024 p.71 / Section 1.2",
       "confidence": 0.9
     },
     {
@@ -99,8 +93,6 @@
       "page": 2,
       "locator": "Section 1.2",
       "verification": "partial",
-      "verification_quote": "贝壳基羟基磷灰石对铅、镉、铬和铜4种重金属具有较强的吸附能力，其平均吸附容量分别达到20.0、2.5、9.5和7.5 mg/g",
-      "source_locator": "Zhang2024 p.71 / Section 1.2",
       "confidence": 0.9
     },
     {
@@ -120,8 +112,6 @@
       "page": 3,
       "locator": "Section 1.2",
       "verification": "partial",
-      "verification_quote": "别达到了100.0%、51.7%、76.0%和52.2%",
-      "source_locator": "Zhang2024 p.71 / Section 2.1",
       "confidence": 0.85
     },
     {
@@ -141,8 +131,6 @@
       "page": 3,
       "locator": "Section 2.1",
       "verification": "partial",
-      "verification_quote": "当贝壳粉用量为20.0 mg的时候，Cd离子去除率是70%；当贝壳粉用量增加到40.0 mg以上时，去除率接近100%",
-      "source_locator": "Zhang2024 p.71 / Section 2.1",
       "confidence": 0.8
     },
     {
@@ -162,8 +150,6 @@
       "page": 4,
       "locator": "Section 2.3",
       "verification": "partial",
-      "verification_quote": "当浓度达到100.0 mg/L时，其吸附容量提升到57.8 mg/g",
-      "source_locator": "Zhang2024 p.72 / Section 2.3",
       "confidence": 0.9
     }
   ],
@@ -174,9 +160,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.13254/j.jare.2020.0504",
-      "verification": "partial",
-      "verification_quote": "贝壳类废弃物修复重金属污染农田土壤的机理主要包括石灰效应、沉淀效应和吸附效应",
-      "source_locator": "Zhang2021 p.787 / 摘要"
+      "verification": "partial"
     },
     {
       "name": "吸附机理增强因素",
@@ -184,9 +168,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.11759/hykx20221122001",
-      "verification": "partial",
-      "verification_quote": "氧化钙的Ｏ−Ｈ 键也利于与刚果红分子发生氢键作用",
-      "source_locator": "Wang2024 p.37 / Section 2"
+      "verification": "partial"
     },
     {
       "name": "吸附机理三步骤",
@@ -195,47 +177,7 @@
       "source": "literature",
       "ref_doi": "10.3969/j.issn.1672-7304.2024.02.0011",
       "verification": "verified",
-      "基本原理": "与牡蛎壳类似，扇贝壳的CaCO₃结构提供Ca²⁺交换位点和碱性环境",
-      "causal_chain": {
-        "pollutant_feature": {
-          "text": "重金属离子和磷酸盐",
-          "basis": "llm_inferred",
-          "locator": null
-        },
-        "bio_structure": {
-          "text": "扇贝壳的文石型CaCO₃层状结构",
-          "basis": "from_source",
-          "locator": "Wang2024 p.36 / Abstract + Sec.1"
-        },
-        "interaction": {
-          "text": "离子交换（Ca²⁺↔重金属）、表面沉淀、物理吸附",
-          "basis": "from_source",
-          "locator": "Wang2024 p.36 / Abstract + Sec.1"
-        },
-        "why_it_works": {
-          "text": "与牡蛎壳类似，扇贝壳的CaCO₃结构提供Ca²⁺交换位点和碱性环境",
-          "basis": "llm_inferred",
-          "locator": null
-        },
-        "boundary_conditions": [
-          {
-            "text": "煅烧温度影响晶型转变和吸附性能",
-            "parameter": "temperature",
-            "condition": {
-              "operator": "qualitative",
-              "value": null
-            },
-            "basis": "llm_inferred",
-            "verification": "needs_review",
-            "gate_level": "soft",
-            "locator": null,
-            "quote": null,
-            "source_asset": null
-          }
-        ],
-        "transferable_principle": "贝壳类CaCO₃的吸附机制与牡蛎壳相同，煅烧可显著提升性能",
-        "verification_quote": "scallops contain ~95% CaCO3. Calcination creates complex porous structure. Freundlich model fits multi-layer adsorption"
-      }
+      "基本原理": "与牡蛎壳类似，扇贝壳的CaCO₃结构提供Ca²⁺交换位点和碱性环境"
     }
   ],
   "narrative": {
@@ -256,20 +198,9 @@
   "engineering_constraints": [],
   "provenance_summary": {
     "n_papers": 3,
-    "n_verified": 1,
-    "n_partial": 9,
-    "n_unverified": 0
+    "n_verified": 7,
+    "n_unverified": 3
   },
   "coverage": "normal",
-  "status": "active",
-  "design_translation": [
-    {
-      "idea": "利用扇贝壳的层状结构和 CaCO₃ 进行污染物固定",
-      "specific_functional_group": "方解石型 CaCO₃，层状有机基质",
-      "material_handle": "扇贝壳粉碎、热处理或复合改性",
-      "target_interaction": "CaCO₃ 溶解沉淀重金属，层状结构提供物理吸附位点",
-      "source_tier": "llm_inference",
-      "examples": []
-    }
-  ]
+  "status": "active"
 }
