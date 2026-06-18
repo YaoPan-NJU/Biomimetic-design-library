@@ -374,6 +374,10 @@ def merge_with_existing(new_result: dict, existing_path: str) -> dict:
             old_ver = old_m.get('verification', 'unverified')
             if old_ver and old_ver != 'unverified':
                 new_m['verification'] = old_ver
+            for vfield in ['verification_quote', 'source_locator']:
+                old_val = old_m.get(vfield)
+                if old_val:
+                    new_m[vfield] = old_val
 
     # === 合并 performance_data ===
     old_perf = old.get('performance_data', [])
@@ -397,7 +401,7 @@ def merge_with_existing(new_result: dict, existing_path: str) -> dict:
             if old_conf is not None and old_conf != 0.8:
                 new_p['confidence'] = old_conf
             # 保留旧的 source 相关字段
-            for field in ['source', 'ref_doi', 'source_file', 'page', 'locator']:
+            for field in ['source', 'ref_doi', 'source_file', 'page', 'locator', 'verification_quote', 'source_locator']:
                 old_val = old_p.get(field)
                 if old_val and not new_p.get(field):
                     new_p[field] = old_val
