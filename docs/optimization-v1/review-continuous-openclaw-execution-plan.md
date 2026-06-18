@@ -1,12 +1,12 @@
 # Full Evidence Audit Continuous Execution Plan
 
-> **For agentic workers:** Execute tasks through OpenClaw with `mimo-v2.5` only. Track every task with the status fields in this document.
+> **For agentic workers:** Use `mimo-v2.5-pro` for text-only work and `xiaomi/mimo-v2.5` for multimodal/OCR work. Track every task with the status fields in this document.
 
 **Goal:** Complete the 24-active-prototype evidence audit while OpenClaw performs more than 99% of row-level work and Codex performs only dispatch, risk decisions, acceptance gates, and GitHub checkpoints.
 
 **Architecture:** OpenClaw works in isolated task worktrees and produces a machine-readable report plus a commit. Codex never performs bulk PDF extraction or row-by-row editing; it accepts or rejects whole batches using deterministic checks and only spot-checks high-risk claims. Accepted task commits are integrated into `review` and pushed at meaningful checkpoints.
 
-**Tech Stack:** Git worktrees, OpenClaw, `xiaomi/mimo-v2.5`, local PDF/extraction corpus, Python validation scripts.
+**Tech Stack:** Git worktrees, OpenClaw, `mimo-v2.5-pro` for text-only tasks, `xiaomi/mimo-v2.5` for multimodal/OCR tasks, local PDF/extraction corpus, Python validation scripts.
 
 ---
 
@@ -15,7 +15,8 @@
 - OpenClaw: more than 99% of PDF reading, OCR, path matching, row comparison, JSON editing, report generation, and test execution.
 - Codex: less than 1%, limited to task design, acceptance criteria, automated-result review, high-risk spot checks, disputes, and checkpoint approval.
 - Codex must not manually audit large tables or repair rows one by one.
-- Workers must use `xiaomi/mimo-v2.5`; `mimo-v2.5-pro` is forbidden.
+- Text-only PDF extraction, path checks, JSON audits, and report work may use `mimo-v2.5-pro`.
+- Any scanned PDF, page image, figure/table visual check, visual cache, or OCR task must use `xiaomi/mimo-v2.5`; using pro for multimodal work is expected to fail.
 - Maximum concurrency: two workers, each in a separate worktree and non-overlapping file scope.
 - Never run `tools/build_prototypes_db.py` during the audit.
 
@@ -79,7 +80,7 @@ Integrated checkpoints: `8ca0800` (Phase 0-2) and `2242cc9` (Batch 3-4 / Phase 3
 - [x] Preserve the pushed history; corrections must be additive commits.
 - [x] Confirm both checkpoints are present on `review` and `origin/review`.
 - [x] Recompute live JSON totals instead of trusting delivery-report summaries.
-- [x] Record that Phase 0-2 reports used `mimo-v2.5-pro`; this violates the current execution policy and cannot be accepted as compliant worker provenance.
+- [x] Record model provenance accurately: Phase 0-2 text-only work may use `mimo-v2.5-pro`, while multimodal/OCR evidence must come from `xiaomi/mimo-v2.5`.
 - [ ] Resolve the final-acceptance failures listed under R02 before treating these batches as accepted.
 
 Acceptance snapshot at `2242cc9`:
@@ -98,7 +99,7 @@ Status: ready_for_openclaw_dispatch
 - [ ] Derive and document one canonical verification vocabulary across stored JSON, `BiomimeticContext`, ADRMATS validation, boundary validation, and reports; resolve the current `partial` incompatibility without silently upgrading evidence.
 - [ ] Re-audit the 164 unapproved performance `verified` values. Retain `verified` only with explicit Yao approval; otherwise downgrade to the strongest evidence-contract-compliant non-verified value.
 - [ ] Correct delivery-summary counts from live JSON, reporting status, quote, locator, and quote-plus-locator counts separately.
-- [ ] Add an additive compliance note for the historical `mimo-v2.5-pro` worker runs; do not rewrite pushed history.
+- [ ] Correct report provenance so text-only pro runs and multimodal non-pro runs are distinguished; do not rewrite pushed history.
 - [ ] Remove trailing whitespace introduced by `8ca0800` and `2242cc9`, then require `git diff --check` for every later batch.
 - [ ] Fix the `CLAUDE.md` repository-hygiene allowlist conflict and make `tools/test_repo_hygiene.py` pass.
 - [ ] Resolve or explicitly baseline the R12 bone-structure error, pitcher-plant boundary gap, and ADRMATS verification-tier failure.
@@ -108,7 +109,7 @@ Status: ready_for_openclaw_dispatch
 
 Status: prepared
 
-All workers must use `xiaomi/mimo-v2.5`, at most two concurrently, in isolated worktrees.
+Use `mimo-v2.5-pro` for text-only workers and `xiaomi/mimo-v2.5` for multimodal/OCR workers, at most two concurrently, in isolated worktrees.
 
 - [ ] N01: Audit the isolated 91 auto-matched candidates: 48 chitosan mechanisms, 36 mussel mechanisms, and 7 diatom performance rows. Require real PDF paths, page plus section/table/figure/patent-paragraph locators, and exact short quotes; revert weak matches.
 - [ ] N02: Resolve locally actionable missing-source items first: the seven diatom rows against the existing `2021-杜-硅藻-硅藻土-吸附-重金属 2.pdf` variant, then verify whether the reported PDA and oyster-shell path gaps are stale.
