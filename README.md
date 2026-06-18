@@ -20,25 +20,27 @@
 
 ---
 
-## 当前状态（2026-06-15 · Phase 0–9 完成）
+## 当前状态（2026-06-18 · review 分支证据审计进行中）
 
-> 主分支：`adsorption/dev`｜源工作分支：`opt/curation-grounding-v1`｜整改主题：**策展 + 接地 + 诚实分级**（把"看着广、其实是叙事"的库，收敛为"窄但每条可信、可溯源"的库）。
+> 主分支：`adsorption/dev`｜审计分支：`review`（即将合并回主分支）｜整改主题：**PDF 级证据审计 + 机制验证**
 
 | 指标 | 数值 |
 |------|------|
 | active 原型（参与检索）| 24 |
 | materials_reference（降级，不检索）| 4（MOF / 纤维素纳米晶 / 淀粉 / 海藻酸盐）|
 | parked（超范围停放）| 1（namib-beetle）|
-| 机制总数 | 534 |
+| 机制总数 | 530 |
+| 机制已验证（partial/verified）| **256**（48% 覆盖率）|
 | 因果链卡（核心、可迁移原理）| 28 张（覆盖 24/24 原型）|
 | 其中 PDF 已核验 verified | 23 张 |
-| 仍待下载文献核验 | 5 张（coral / magnetic-bacteria / pitcher-plant / lobster / spider-silk）|
+| enrichment 因果链填充 | 471/478（98.5%）|
+| performance_data 已验证行 | ~305/410（75%）|
 | boundary_conditions 总数 | 62 条 |
+| 工程约束 engineering_constraints | 210+（覆盖 19 个原型）|
 | 硬 DO-NOT（verified 边界）| **0 条**（边界尚未从 PDF 逐条核验）|
-| 软 caution（定性提示）| 62 条 |
 | 校验错误 / chimera 违规 | 0 / 0 |
 
-**整改进度**：Phase 0–9 已完成（基线、接口诚实度、策展、去污染、字段语义、因果链补全、PDF 核验、设计转译、接口排序修复、失效边界补全、打包总验收）。final acceptance review 已通过，成果已合入 `adsorption/dev`；后续工作是基于原始 PDF 的证据增强 review。详见 `docs/optimization-v1/FINAL-report.md`。
+**整改进度**：Phase 0–9 已完成（基线、接口诚实度、策展、去污染、字段语义、因果链补全、PDF 核验、设计转译、接口排序修复、失效边界补全、打包总验收）。`review` 分支正在进行 PDF 级证据审计（performance_data 逐行核验 + 机制 ref_doi→PDF 匹配验证）。详见 `docs/optimization-v1/FINAL-report.md` 和 `docs/optimization-v1/COLLAB-HANDOFF.md`。
 
 > ⚠️ **当前边界输出全是 soft caution，没有 hard DO-NOT**。具体数值阈值（pH 值、浓度等）尚未从 PDF 中逐条提取核验，因此所有边界条件均为定性描述（`basis=llm_inferred`）。
 
