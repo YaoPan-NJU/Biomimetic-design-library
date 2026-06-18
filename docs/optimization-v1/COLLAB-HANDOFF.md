@@ -102,3 +102,26 @@
   - B04-SHART-003: superhydrophobic patent location
   - 3 zero-perf prototypes → parked? (coral, magnetic-bacteria, lobster)
   - 164+ verified perf rows → Yao 逐条审批
+
+## 2026-06-18 ~02:00 CST - claude-code (Task 69-73)
+- completed:
+  - Task 64-68: infra fix + 13 prototype multimodal verify (24 perf verified)
+  - Task 69-73: prototype expansion 24->36 + verify 6 new prototypes + doc update
+  - activated: 5 separation (cactus/lotus/shark/superhydrophobic/water-strider) + 1 parked (namib-beetle)
+  - created: 6 skeleton entries (alginate/cellulose/diatom-inspired/MOF/silkworm/starch)
+  - chimera fix: 3 prototypes (cactus/shark/water-strider organism cleaned)
+  - multimodal verify: 6 new prototypes (7 verified, 0 not_found, 1 error)
+  - re-verify chitosan: +2 verified
+- current_state:
+  - active prototypes: 36 (6 pending_extraction)
+  - performance_data: 397/431 verified (92%), 85 with PDF quotes
+  - mechanisms: 265/773 verified (34%), 11 with PDF quotes
+  - pending_extraction: 6 (awaiting litextract)
+  - chimera: 0 violations, consistency: 12 errors (feature-mapping missing)
+- next:
+  - P0: litextract 提取 6 个 pending_extraction 原型
+  - P0: 解决 mechanisms 无 PDF 匹配问题 (检查 source_file 路径 / DOI 下载)
+  - P1: mechanisms 覆盖率继续推高
+  - P2: check_causal_chain / check_boundary_guardrail 达标
+- blockers: none
+- decisions_needed: none

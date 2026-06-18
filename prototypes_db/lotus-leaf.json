@@ -1,0 +1,899 @@
+{
+  "id": "lotus-leaf",
+  "name_zh": "荷叶表面",
+  "name_en": "Lotus Leaf",
+  "organism": {
+    "scientific": "Nelumbo nucifera",
+    "category": "植物"
+  },
+  "biomimetic_dimension": "结构仿生",
+  "features": [
+    "疏水性",
+    "乳突阵列",
+    "自清洁"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": "any",
+    "note": "测过的 pH/温度范围，不是适用范围。仅从 performance_data 中实际测试过的条件聚合。"
+  },
+  "performance_data": [
+    {
+      "parameter": "PDMS/Al₂O₃海绵油水分离与微塑料去除 PDMS/Al₂O₃ sponge oil-water separation and microplastic removal",
+      "value": "PDMS和脱氢松香酸接枝Al₂O₃通过浸涂法制备超疏水聚氨酯海绵，可同时分离油水和去除微塑料",
+      "unit": null,
+      "pollutant": "",
+      "material": "PDMS + 脱氢松香酸接枝Al₂O₃ + 聚氨酯海绵",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.porgcoat.2024.108885",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第2组-超疏水/2024-Zheng-silk-superhydrophobic-hydrophobic-separation-review.pdf",
+      "page": 9,
+      "locator": "Section 3",
+      "verification": "knowledge_gap",
+      "confidence": 0.8,
+      "note": "; PDF missing, cannot verify"
+    },
+    {
+      "parameter": "仿贻贝3D石墨烯泡沫：扇贝模板+高吸附容量",
+      "value": "扇贝壳（95% CaCO₃+5%有机生物聚合物）→化学气相沉积模板法→煅烧→CaO骨架→石墨烯沉积→CaO@graphene→HCl蚀刻+冻干→3D石墨烯泡沫→高纯度+高孔隙率+超低密度+可弯曲。吸附容量达自身重量250倍→各种油和有机溶剂快速分离。扇贝壳CaO模板的氧原子→高温吸收分解烃类+促进碳-碳偶联→协同效应",
+      "unit": null,
+      "pollutant": "",
+      "material": "3D石墨烯泡沫",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.3390/jmse10040534",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库\\论文\\第2组-超疏水\\2022-Khan-wastewater-water-treatment-review 2.pdf",
+      "page": 13,
+      "locator": "Section 3.1",
+      "verification": "knowledge_gap",
+      "confidence": 0.8,
+      "note": "; PDF missing, cannot verify"
+    },
+    {
+      "parameter": "Sol-gel calcination temperature for template removal",
+      "value": "400",
+      "unit": "°C",
+      "pollutant": "",
+      "material": "Hydrophobic silica-based membrane (MTES)",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jmrt.2021.02.068",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2021-Usman-superhydrophobic-hydrophobic-oil-water-separation-review.pdf",
+      "page": 13,
+      "locator": "Section 5.3",
+      "verification": "knowledge_gap",
+      "confidence": 0.8,
+      "note": "; PDF missing, cannot verify"
+    },
+    {
+      "parameter": "改性GO/海绵油吸附容量",
+      "value": "53,000倍自身质量",
+      "unit": null,
+      "pollutant": "",
+      "material": "改性GO附着于海绵表面",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.3390/biomimetics8010035",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/全局综述/2023-Li-oil-water-separation-wastewater-review.pdf",
+      "page": 11,
+      "locator": "Section 3.5 text",
+      "verification": "scope_mismatch",
+      "confidence": 0.8,
+      "note": "; Li2023 oil-water separation review, not lotus-specific"
+    }
+  ],
+  "mechanisms": [
+    {
+      "name": "超疏水材料构建基本原理 - Young方程/Wenzel模型/Cassie-Baxter模型",
+      "description": "超疏水材料是指水的接触角超过150°，滞后角低于10°的表面材料",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.16865/j.cnki.1000-7555.2020.0282",
+      "verification": "unverified"
+    },
+    {
+      "name": "超疏水表面定义与荷叶效应",
+      "description": "材料表面与水的静态接触角(CA)>150°且滚动角(SA)<10°时定义为超疏水表面。荷叶是最早被人类发现的超疏水材料→超疏水效应又称\"荷叶效应\"。超疏水材料具有优异的防污、防腐、防附着、自清洁和减少阻力特性→广泛应用于化工、食品、医疗、船舶。制备两个关键要素：微/纳米结构粗糙度+低表面能。浸润性理论：Young's方程→Wenzel模型→Cassie-Baxter模型。表面张力越小→液体越难润湿→反之越容易润湿",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.16490/j.cnki.issn.1001-3660.2023.09.005",
+      "verification": "unverified"
+    },
+    {
+      "name": "天然蜡类超疏水涂层：材料体系与性能",
+      "description": "天然蜡种类：蜂蜡、鲸蜡、虫白蜡、棕榈蜡、巴西棕榈蜡、桐油等。Gupta等：棕榈树天然蜡+Al₂O₃→CA>150°+SA<5°+极限强度14 MPa+弹性模量427 MPa。宋美慧等：棕榈蜡+疏水纳米SiO₂→浸渍提拉/喷涂→CA 150.6°+SA 6.0°。Torun等：巴西棕榈蜡+PDMS→CA 168°+SA<4°→高力学性能+生物相容性。段凤华等：EP/CW/CB无氟涂层→CW 15%+CB 7.5%→CA 158.5°±1.2°→耐磨性最佳。天然蜡优点：绿色可降解+低熔点→易与其他聚合物复合+蜡向表面迁移改善疏水性+可渗入粗糙/多孔表面→温度调节结晶→自然形成类似荷叶粗糙结构+可分散于乙醇/乙酸乙酯/丙酮+熔融涂覆无需溶剂。缺点：高温易融化+热稳定性低+力学性能低+附着力差+耐用性差",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.16490/j.cnki.issn.1001-3660.2023.09.005",
+      "verification": "unverified"
+    },
+    {
+      "name": "四种绿色超疏水材料的优缺点对比",
+      "description": "天然蜡优点：绿色可降解+低熔点易复合+蜡向表面迁移改善疏水+可渗入粗糙/多孔表面+温度结晶形成荷叶粗糙结构+可分散于有机溶剂+可熔融涂覆。缺点：高温融化+热稳定性低+力学性能低+附着力差+耐用性差。脂肪酸优点：羧基化学结合+来源丰富+价格低廉+大规模工业化潜力。缺点：醇中溶解度有限+附着力差(仅单层)+力学性能和热稳定性差+不宜高温。纤维素优点：可再生+大量羟基可修饰+聚合物相容好+水中分散性好+降低不可降解聚合物比例→绿色环保。缺点：宏观亲水需低表面能改性(环境+成本)+附着力差+力学性能低+吸水后性能下降。生物质优点：利用农业废弃物+可再生+生物降解+碳中和+富含矿物质可转化为无机填料。缺点：处于起步阶段+研究较少",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.16490/j.cnki.issn.1001-3660.2023.09.005",
+      "verification": "unverified"
+    },
+    {
+      "name": "油水分离机理：Young-Laplace方程分析",
+      "description": "Δp=-2γcosθ/R；油（亲油θ<90°）Δp向下→自发透过；水（疏水θ>90°）Δp向上→被阻挡",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.11896/cldb.20060194",
+      "verification": "unverified"
+    },
+    {
+      "name": "表面能变化与润湿性转变机制",
+      "description": "原始棉织物-OH亲水→MPTS引入-CH2/-SH疏水基团（WCA 65°）→纳米银增大粗糙度使亲水→硫醇修饰长链烷基膜降低表面能→超疏水（WCA 160°）",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.11896/cldb.20060194",
+      "verification": "unverified"
+    },
+    {
+      "name": "仿荷叶效应的超疏水设计原则",
+      "description": "超疏水表面=微-纳米复合阶层结构+低表面能化学物质协同作用",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.11896/cldb.20060194",
+      "verification": "unverified"
+    },
+    {
+      "name": "荷叶效应与仿生超疏水结构",
+      "description": "Barthlott 1977年提出荷叶效应→SEM观察→荷叶上表面超疏水性由微米级乳突结构和表面蜡状物共同引起。江雷2002年进一步发现→纳米级绒毛结构存在于微米级乳突上→微纳分级结构→对超疏水表面构造具有关键作用。天然荷叶CA>160°+轻微振动→水滴快速滚落→带走灰尘→\"出淤泥而不染\"。玫瑰花瓣效应：超疏水+高粘附→水滴椭球状不摊开也不滚下→不具备自清洁→紧密微米凸起(16-20μm褶皱+700-800nm凸起)→微纳结构导致超疏水+高粘附特性",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.3969/j.issn.1001-9731.2023.02.007",
+      "verification": "unverified"
+    },
+    {
+      "name": "自然界仿生超疏水表面来源",
+      "description": "自然界超疏水现象：荷叶(微米乳突+蜡状物→微纳分级→CA>160°+低粘附→自清洁)、玫瑰花瓣(紧密微米凸起→超疏水+高粘附→不自清洁)、水蝇腿、昆虫翅膀、蚊子眼睛、壁虎脚。荷叶效应1977年Barthlott提出→2002年江雷发现纳米绒毛→微纳分级结构。玫瑰花瓣Park观察→16-20μm褶皱+700-800nm凸起→超疏水+高粘附。两种仿生启示：(1)微纳分级结构+低表面能→超疏水+低粘附→自清洁；(2)微纳结构但不同排列→超疏水+高粘附→粘附力可调控",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.3969/j.issn.1001-9731.2023.02.007",
+      "verification": "unverified"
+    },
+    {
+      "name": "Superhydrophobic threshold contact angle 超疏水阈值接触角",
+      "description": ">150",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.surfin.2024.104035",
+      "verification": "unverified"
+    },
+    {
+      "name": "Cassie-Baxter state mechanism Cassie-Baxter态机制",
+      "description": "Air pockets within surface roughness features reduce solid-liquid contact area, supporting membrane hydrophobicity",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.surfin.2024.104035",
+      "verification": "unverified"
+    },
+    {
+      "name": "Lotus effect mechanism 荷叶效应机制",
+      "description": "Micro/nano-scale features trap air, creating an air cushion upon which water droplets rest, improving self-cleaning and antifouling",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.surfin.2024.104035",
+      "verification": "unverified"
+    },
+    {
+      "name": "超疏水膜的仿生设计原则 Biomimetic design principles for superhydrophobic membranes",
+      "description": "核心策略：(1)低表面能化合物修饰(氟化物、硅氧烷)；(2)构建层级微纳粗糙结构；两者结合实现Cassie-Baxter态→超疏水；自然灵感来源：荷叶、玫瑰花瓣、蝴蝶翅膀",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.porgcoat.2024.108885",
+      "verification": "unverified"
+    },
+    {
+      "name": "仿生荷叶效应在MD膜中的应用：层级结构抗污染",
+      "description": "层级结构启发来源：荷叶、银艾蒿叶、水黾腿→超疏水表面的水滚落特性。层级结构→形成空气垫→减少膜面与水滴粘附力→抗污染基础。构建方法：(1)无机NPs(ZnO/SiO₂/TiO₂)作为粗化剂→层级粗糙→水CA>150°。(2)氟化聚合物+低表面能→C-F键485 kJ/mol。(3)PVDF-HFP/PVDF-TFE/PVDF-CTFE共聚物→高氟含量→优于纯PVDF疏水性。PVDF/HFP静电纺膜改性策略：涂覆、接枝、层层组装、等离子聚合、共混、化学气相沉积、界面聚合、电喷、浸涂→增强表面特性→克服污染和润湿挑战。热压/多层方法可改善LEP但降低通量→需平衡LEP和孔径",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.desal.2023.116475",
+      "verification": "unverified"
+    },
+    {
+      "name": "自然界仿生原型：植物/动物超浸润表面",
+      "description": "植物：荷叶→超疏水自清洁(WCA~159°)；芋头叶→WCA 159±2°；印度美人蕉叶→WCA 165±2°；玫瑰花瓣→WCA 152.4°(高粘附)；花生叶/油菜籽→超疏水。动物：蝴蝶翅膀→沿体轴放射状交错纳米带→稳定飞行+自清洁；蝉翼→纳米结构→超疏水；蜻蜓翼→微纳结构。共同特征：层级微纳结构→超疏水性和自清洁",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s10853-022-07945-8",
+      "verification": "unverified"
+    },
+    {
+      "name": "仿生单宁酸金属配合物→超疏水纳米纤维膜",
+      "description": "植物多酚(单宁酸TA)→廉价+广谱化学功能+强锚定能力+金属离子螯合+自由基清除+抗菌。TA金属配合物(Ag⁺/Cu²⁺/Al³⁺/Ti⁴⁺)→在PI纳米纤维表面形成粗糙层级结构→PDMS修饰→超疏水PDMS/TA-Mⁿ⁺/PI膜。PDMS/TA-Al³⁺/PI膜→超疏水+超亲油+UV屏蔽→户外油水分离。ZIF-8@GSH/PI膜→仿荷叶自清洁→光催化染料降解",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s10853-022-07945-8",
+      "verification": "unverified"
+    },
+    {
+      "name": "荷叶超疏水仿生机制 Lotus leaf superhydrophobic biomimetic mechanism",
+      "description": "荷叶表面具有微米级沟槽和纳米级蜡管层级结构，低滚动角使水滴滚动并带走灰尘，实现自清洁效应",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s11783-021-1515-2",
+      "verification": "unverified"
+    },
+    {
+      "name": "接触角润湿性定义 Contact angle wettability definitions",
+      "description": "疏水/疏油膜: 水/油接触角>90°; 超疏水/超疏油膜: 水/油接触角≥150°",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s11783-021-1515-2",
+      "verification": "unverified"
+    },
+    {
+      "name": "六种自然超浸润材料及其浸润特性",
+      "description": "壁虎脚：超疏水+高粘附（van der Waals力）；蝴蝶翅：各向异性润湿（径向外方向水滴快速滚落，反方向被钉扎）；玫瑰花瓣：高粘附超疏水（微乳突阵列结构）；荷叶上表面：超疏水（微纳复合结构+蜡质）；荷叶下表面：超亲水+水下超疏油；鱼鳞：水下超疏油（黏液层+定向微乳突+纳米结构）",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "unverified"
+    },
+    {
+      "name": "润湿理论基础：Young/Wenzel/Cassie模型",
+      "description": "三种经典润湿模型：1）Young方程：cosθ=(γSA-γSL)/γLA→理想光滑表面接触角；2）Wenzel模型：cosθ*=Rcosθ→粗糙结构放大固有润湿性（R>1=粗糙度因子=实际面积/投影面积）；3）Cassie模型：cosθ*=fcosθ+f-1→液体在复合界面（固体+空气）上→f=固液接触面积分数→空气垫效应→低粘附。超疏水需Cassie态→微纳结构间空气垫→CA>150°",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.34133/2022/9895418",
+      "verification": "unverified"
+    },
+    {
+      "name": "荷叶超疏水仿生：微纳层级结构+WCA/WSA",
+      "description": "荷叶表面微纳层级结构：大量微米级乳突(直径~10μm)随机分布→每个乳突进一步覆盖纳米级树枝状突起(直径~120nm)→微纳层级结构+疏水蜡晶体层→Cassie态→WCA达160°+WSA仅2°→自清洁效应。两条制备路线：1）疏水基底+构建微纳结构→直接超疏水；2）亲水基底+构建微纳结构+低表面能修饰→超疏水",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.34133/2022/9895418",
+      "verification": "unverified"
+    },
+    {
+      "name": "水下超疏气/超亲气仿生：鱼鳞+荷叶",
+      "description": "鱼鳞水下超疏气：亲水层级结构→水中被水完全润湿→水层填充→水下Cassie态→气泡被水层排斥→BCA达155°→倾斜9°气泡滚落。荷叶水下超亲气：疏水层级结构→水中空气层稳定→气泡在空气中扩散→水下超亲气。飞秒激光硅→水下超疏气→BCA达162°+倾斜2°气泡滚落。飞秒激光铝→水下超疏气→BCA 154°。水下超疏气膜拦截气泡→水下超亲气膜允许气泡通过→水/气分离",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.34133/2022/9895418",
+      "verification": "unverified"
+    },
+    {
+      "name": "超疏水材料定义与润湿理论 Superhydrophobic material definition and wetting theory",
+      "description": "超疏水材料：水接触角>150°，滞后角<10°；润湿理论包括Young方程、Wenzel模型、Cassie-Baxter模型",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.16865/j.cnki.1000-7555.2020.0282",
+      "verification": "unverified"
+    },
+    {
+      "name": "超疏水/亲水接触角边界定义",
+      "description": "65",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s11356-022-23066-w",
+      "verification": "unverified"
+    },
+    {
+      "name": "荷叶仿生超疏水表面",
+      "description": "WCA > 150°",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s11356-022-23066-w",
+      "verification": "unverified"
+    },
+    {
+      "name": "全疏水性(omniphobicity)的Cassie-Baxter机制",
+      "description": "Re-entrant morphology enables Cassie state even when θ < 90°",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s11356-022-23066-w",
+      "verification": "unverified"
+    },
+    {
+      "name": "荷叶不具备全疏水性的原因",
+      "description": "No re-entrant morphology on lotus leaf surface",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s11356-022-23066-w",
+      "verification": "unverified"
+    },
+    {
+      "name": "仿荷叶PS纳米纤维/微球复合超疏水表面接触角",
+      "description": "160.4 ± 1.2",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s40242-021-0010-4",
+      "verification": "unverified"
+    },
+    {
+      "name": "特殊润湿性分类",
+      "description": "超疏水/超亲油（'除油'型）和超亲水/水下超疏油（'除水'型）",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "unverified"
+    },
+    {
+      "name": "荷叶效应仿生原理",
+      "description": "微纳复合结构+低表面能蜡质的协同效应产生超疏水性",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "unverified"
+    },
+    {
+      "name": "荷叶上下表面润湿性差异",
+      "description": "上表面超疏水，下表面超亲水/水下超疏油",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794",
+      "verification": "unverified"
+    },
+    {
+      "name": "荷叶超疏水仿生机制",
+      "description": "低表面能蜡质层+乳突状粗糙结构协同产生超疏水性",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
+      "verification": "unverified"
+    },
+    {
+      "name": "仿荷叶自修复超疏水表面（PDMS/正十九烷）",
+      "description": "通过正十九烷嵌入微结构PDMS基体实现蜡分泌自修复机制",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.3390/ma18122772",
+      "verification": "unverified"
+    },
+    {
+      "name": "Wenzel方程粗糙度放大效应",
+      "description": "cosθ* = r·cosθ，r>1时粗糙度增强润湿性（疏水更疏水，亲水更亲水）",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.3390/ma18122772",
+      "verification": "unverified"
+    },
+    {
+      "name": "超疏水表面接触角阈值 Superhydrophobic contact angle threshold",
+      "description": "接触角>150°表现为超疏水行为；接触角<10°为超亲水",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.33263/BRIAC132.185",
+      "verification": "unverified"
+    },
+    {
+      "name": "天然抗污生物 Natural antifouling organisms",
+      "description": "荷叶(Nelumbo nucifera)、水蕨(Salvinia)、斗蓬草(Alchemilla mollis)通过超疏水表面抵抗生物膜；鲨鱼通过真皮小齿上的微结构缎带降低阻力和避免生物附着",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.33263/BRIAC132.185",
+      "verification": "unverified"
+    },
+    {
+      "name": "自然界九种超疏水生物原型",
+      "description": "荷叶、水鳖叶、蝴蝶翅膀、蝇眼、蝉翼、壁虎脚、鲨鱼皮、水黾腿、玫瑰花瓣",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.3390/polym15030543",
+      "verification": "unverified"
+    },
+    {
+      "name": "仿生油水分离材料的生物灵感来源",
+      "description": "荷叶（超疏水自清洁表面）→低表面能+微纳粗糙结构；蛙卵结构→增加纤维膜表面粗糙度实现超疏水；自然界形态学启发→仿生多尺度超浸润界面材料；光响应→类比生物光敏蛋白；pH/温度响应→类比生物刺激响应机制",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": null,
+      "verification": "unverified"
+    },
+    {
+      "name": "荷叶超疏水表面的微纳层次结构",
+      "description": "荷叶表皮细胞形成乳突（微米级粗糙结构）→乳突上覆盖毛状蜡管层（纳米级粗糙结构）→微纳层次结构+蜡管疏水性→水滴与表面接触面积最小化→静态接触角>150°+低滚动角→自清洁功能",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1063/5.105641",
+      "verification": "unverified"
+    },
+    {
+      "name": "润湿状态转变：Cassie-Baxter到Wenzel",
+      "description": "超疏水表面依赖微纳结构间的空气垫维持Cassie-Baxter（CB）非润湿状态→液滴冲击时可能发生CB到Wenzel（W）润湿态转变→水滴钉扎在微纳结构上→失去超疏水性→这是超疏水表面在实际应用中的主要失效机制",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1063/5.105641",
+      "verification": "unverified"
+    },
+    {
+      "name": "层级微纳结构理论与re-entrant几何",
+      "description": "层级结构接触角递推公式：cosθn=(1-fLG,n)cosθn-1-fLG,n(n=1,2,3...层数)。每增加一层亚结构→接触角进一步增大。Re-entrant几何条件：θW<θC=max[φ,arctan(L/2H)]且θW/O>φ、θO/W>φ(φ为柱顶局部几何角=90°对垂直柱)。L=柱间距,H=柱高。Ras等(2016)首次提出：中间表面能+WCA 56°-74°+re-entrant结构→实现水下超疏油+油下超疏水(UWSOB/UOSHB)双超疏液",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1002/smll.202204624",
+      "verification": "unverified"
+    },
+    {
+      "name": "10种生物原型的超润湿表面特征",
+      "description": "上荷叶：微乳突(micropapilla)+低表面能蜡质→WCA>150°→超疏水。下荷叶：亲水→Janus不对称润湿。稻叶：微纳结构→各向异性润湿。芋叶：微乳突→WCA 159°±2°→仿荷叶。蝶翅：层级鳞片→方向性润湿。水黾腿：微纳刚毛→水下超疏油→支撑力。鱼鳞：微纳结构+亲水→水下OCA>150°→超疏油→油污水中自清洁。贻贝壳：层状碳酸钙→多层级结构。椰壳：碳化→双亲性→预润湿切换。猪笼草唇缘：微纳沟槽+水膜→液体灌注→抗粘附→捕虫",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1002/smll.202204624",
+      "verification": "unverified"
+    },
+    {
+      "name": "八类制备方法：微纳结构构建技术",
+      "description": "1)静电纺丝：可控孔径+互联多孔+大比表面积+高孔隙率。2)浸涂/喷涂：简单通用→覆盖纳米粒子→调表面形貌。3)模板法：传统模塑+牺牲模板→3D多孔材料(海绵/泡沫/气凝胶)。4)层层自组装(LBL)：多层微纳结构→壳聚糖+TiO₂接枝十六烷基三甲氧基硅烷→WCA>150°→油分离通量1516-1457 L/m²h(正己烷/硅油/植物油/柴油)→效率>99.2%。5)湿化学反应：原位聚合+ATRP→高交联→稳定性。6)电化学沉积：大面积→简单低成本→无机涂层→耐腐蚀。7)飞秒激光：超短脉冲(10⁻¹⁵s)+非接触+超高能量密度→微纳结构→多功能表面",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1002/smll.202204624",
+      "verification": "unverified"
+    },
+    {
+      "name": "Janus膜：荷叶启发不对称润湿→按需分离",
+      "description": "荷叶上表面超疏水+下表面超亲水→Janus不对称润湿→翻转切换→按需分离。PDA-PTFE Janus膜：PDA涂覆+剥离→疏水/亲水→效率99.97%→10次循环稳定。Cu(SC18H37)₂/Cu(OH)₂铜网：液-液界面修饰→两面相反润湿→低成本→分离轻油/重油水混合物。CuC2O4鱼鳞状微纳结构+SHL/UWSOB→O/W乳液通量≈2000 L/m²h+COD≈54 mg/L→抗污染。单向油传输Janus铜网→SOL+UWSOB→正己烷通量65,000 L/m²h+效率99.16%",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1002/smll.202204624",
+      "verification": "unverified"
+    },
+    {
+      "name": "润湿理论模型在本研究中的应用",
+      "description": "Young's方程：γsg=γsl+γlg·cosθ→cosθ=1→θ=0°→高表面能→超亲水。低γsg→理论θ=180°→超疏水。Wenzel模型：cosθW=R·cosθ→R=实际面积/投影面积>1→粗糙度增加→疏水性增强(对疏水材料)。Cassie-Baxter模型：cosθC=σ₁cosθ₁-σ₂→σ₁和σ₂为材料1和2的表观面积分数→空气间隙→低粘附→CA更高。本研究通过三步法构建层级粗糙结构→在Cu网表面形成微米(Cu颗粒)+纳米(Cu(OH)₂棒+SiO₂粒子)分级结构→最大化表面粗糙度→Cassie-Baxter态→空气间隙→超疏水CA 171.3°",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.1002/admi.202300627",
+      "verification": "unverified"
+    },
+    {
+      "name": "荷叶超疏水机制 - 微米级乳突结构",
+      "description": "Micro-sized mastoid structures",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.16490/j.cnki.issn.1001-3660.2021.05.001",
+      "verification": "unverified"
+    },
+    {
+      "name": "荷叶超疏水机制 - 纳米晶体结构",
+      "description": "Nano-sized crystal structures",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": "10.16490/j.cnki.issn.1001-3660.2021.05.001",
+      "verification": "unverified"
+    },
+    {
+      "name": "仿生机制 - 荷叶效应微米级疏水结构",
+      "description": "通过低表面能微米级颗粒构建类似荷叶表面的微纳复合疏水结构，水滴接触角>150°，滚动角<10°",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": null,
+      "verification": "unverified"
+    },
+    {
+      "name": "施工工艺 - 关键控制点",
+      "description": "涂层A暴露颗粒间距需控制在可产生荷叶效应的距离；涂层B厚度不使A层颗粒暴露部分被全部遮盖；组份B中纳米孔隙疏水材料颗粒均布于涂层B表面",
+      "functional_groups": "",
+      "source": "literature",
+      "ref_doi": null,
+      "verification": "unverified"
+    }
+  ],
+  "narrative": {
+    "entries": [
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2020-李-超疏水-油水分离-综述-研究进展 2.json",
+        "paper_id": "li2020_superhydrophobic_review",
+        "sections": {
+          "problem_definition": "自然界挑战：荷叶与水黾需在潮湿或水面环境中保持干燥与清洁，避免水浸润导致失重、污染或功能丧失。水处理对应：含油废水及复杂乳液分离过程中，传统过滤/吸附材料易被水润湿，导致通量衰减、油水选择性差、膜污染与孔道堵塞。",
+          "biological_solution": "进化策略：演化出微米级乳突与纳米级蜡质晶体交织的微纳分级拓扑结构，并分泌低表面能物质。关键机制：基于Cassie-Baxter模型在粗糙表面截留空气垫，实现水滴高接触角与低滚动角，利用水(约72 mN/m)与油(约27.5 mN/m)的表面张力差异实现选择性排斥与渗透。成功案例：荷叶自清洁效应与水黾水面行走能力，为超疏水/超亲油分离界面提供了核心范式。",
+          "key_features": "必须保留特征：微纳双重粗糙度几何拓扑、低表面能化学组分（如氟硅烷/PTFE）、Cassie-Baxter态空气层截留机制。可灵活调整特征：基底材质（金属网/织物/气凝胶/聚合物）、制备工艺路线（水热/溶胶凝胶/刻蚀/静电纺丝/涂覆等）、宏观孔径分布与材料机械柔性。",
+          "design_mapping": "生物→材料映射：生物微纳乳突映射为材料表面的微米骨架与纳米颗粒/纤维堆叠结构；生物蜡质层映射为氟/硅低表面能涂层或本征疏水聚合物修饰。软约束建议：优先采用涂覆或静电纺丝实现快速成型与柔性适配；针对强酸碱或高温工况需强化化学交联或选用无机-有机杂化体系；设计时需预留抗堵塞的宏观孔隙梯度以应对复杂乳液。",
+          "explainability_anchors": "仿生故事线：从“出淤泥而不染”的荷叶效应出发，揭示表面拓扑与化学能的协同润湿调控原理，将其转化为“拒水亲油”的分离界面工程。设计溯源：基于Young/Wenzel/Cassie-Baxter润湿理论框架，结合水油表面张力差，通过系统梳理的7类合成方法实现结构-功能映射，最终指向高效、抗污、可循环的油水分离材料开发，并明确当前实验室向工程化转化的核心瓶颈。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2023-孙-纤维素-超疏水-油水分离-综述.json",
+        "paper_id": "2023-Sun-green-superhydrophobic-coating-review",
+        "sections": {
+          "problem_definition": "自然界中植物叶片需排斥水分和灰尘以维持光合作用并防止病原体附着；在水处理领域，面临油类、染料和有机溶剂等污染物的高效分离挑战，同时传统含氟超疏水材料存在严重的生态毒性和二次污染问题。",
+          "biological_solution": "荷叶进化出微/纳米层级双重粗糙结构并结合表面天然蜡质（低表面能），使水滴处于Cassie-Baxter态（接触角>150°，滚动角<10°），实现自清洁（荷叶效应）。在水处理中，利用此机制构建绿色超疏水涂层，通过空气保护层和重力驱动实现高效油水分离（分离效率95-98%）及防污防腐。",
+          "key_features": "必须保留特征：微/纳米层级粗糙结构、低表面能（确保Cassie-Baxter态的实现）。可灵活调整特征：绿色低表面能材料的选择（天然蜡/脂肪酸/纤维素/生物质）、制备工艺（涂覆/模板/刻蚀/电纺）、自修复刺激源（光/温/湿响应）。",
+          "design_mapping": "生物映射：荷叶微纳乳突 → 纳米颗粒（SiO2/Al2O3）或电纺纤维构建人工粗糙度；荷叶表面蜡质 → 天然蜡/脂肪酸/疏水改性纤维素提供低表面能。软约束建议：优先采用水性体系和无氟/少氟修饰以满足绿色环保要求；针对绿色材料力学和耐久性差的弱点，建议引入自修复机制（如PDA光热转换诱导愈合）以延长使用寿命。",
+          "explainability_anchors": "仿生故事线：从荷叶“出淤泥而不染”的自清洁现象出发，揭示微纳结构与低表面能协同的Cassie-Baxter机制，进而指导无氟绿色超疏水涂层的设计与应用。设计溯源：浸润性理论从Young's方程到Wenzel模型再到Cassie-Baxter模型的演进，确立了“粗糙度+低表面能”的核心设计规则，为绿色材料替代含氟材料提供了理论支撑。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2020-杨-超疏水-油水分离.json",
+        "paper_id": "2021-Yang-Ag-superhydrophobic-cotton-oil-water-separation",
+        "sections": {
+          "problem_definition": "自然界中荷叶需在潮湿泥泞环境中保持表面干燥与自清洁；水处理中对应含油废水（轻油、重油及三相混合物）的高效分离难题，以及分离材料在复杂水质（强酸碱、高盐）和机械摩擦下的稳定性挑战。",
+          "biological_solution": "荷叶进化出微米级乳突与纳米级蜡质晶体协同的复合粗糙结构，结合表面低表面能蜡质层；该结构通过捕获空气垫极大化水接触角，实现超疏水自清洁；成功映射至超疏水/超亲油棉织物，实现>88%油水分离效率及优异循环稳定性。",
+          "key_features": "必须保留特征：微-纳米复合阶层结构（微米级基底空隙+纳米级粗糙度）与低表面能化学修饰层的协同；可灵活调整特征：纳米粗糙化材料种类（如替换其他金属/氧化物纳米粒子）、低表面能修饰剂（如替换为氟硅烷）、多孔柔性基底材质。",
+          "design_mapping": "生物→材料映射：荷叶微米乳突→棉织物经纬纱凹洞（~500μm）；荷叶纳米蜡晶→自组装纳米银粒子（50-80nm）；荷叶表面蜡质→十二烷基硫醇低表面能修饰层。软约束建议：优先保障微纳层级的尺寸匹配与表面能修饰的完整性，工程放大可采用低成本层层自组装工艺，但需严格把控硅烷水解缩合条件。",
+          "explainability_anchors": "仿生故事线：从‘荷叶出淤泥而不染’的自清洁现象出发，揭示‘结构粗糙度+低表面能’协同决定界面润湿性的物理本质；设计溯源：基于Young-Laplace方程（Δp=-2γcosθ/R），将生物表面的空气捕获机制转化为材料孔隙的毛细管压力差调控，实现油相（θ<90°）自发透过与水相（θ>90°）高效阻挡的定向分离。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2022-Attachment-review.json",
+        "paper_id": "2022-Attachment-review",
+        "sections": {
+          "problem_definition": "自然界中生物表面面临微生物定殖与生物膜形成的生存挑战，对应水处理中吸附材料与膜表面的细菌粘附、生物污损及通量衰减问题。",
+          "biological_solution": "进化出微纳拓扑结构与表面理化特性协同的防御策略：通过高长径比纳米柱的机械形变储存弹性能并刺穿细菌膜，或利用极端润湿性与负电荷实现被动排斥。成功案例包括蝉翼/蜻蜓翼的物理接触杀菌、荷叶/芋叶的超疏水自清洁以及鲨鱼皮微拓扑肋条对生物膜定殖的显著延迟。",
+          "key_features": "必须保留：特征尺寸小于细菌、高长径比结构、极端润湿性(超疏/超亲)、表面负电荷排斥；可灵活调整：纳米柱具体长径比、排列规则性(均匀/非均匀)、单/双高度组合、基底合成工艺(软光刻/刻蚀/水热等)。",
+          "design_mapping": "生物→材料映射：蝉/蜻蜓翼纳米柱→高长径比硅基/聚合物纳米阵列；荷叶/芋叶微乳突→微纳复合粗糙涂层；鲨鱼皮→Sharklet型微拓扑沟槽。软约束建议：优先采用低密度非均匀排布以产生更大跨壁应力；严格调控表面化学以避开中等润湿性；可耦合光催化或磁响应液态金属增强杀菌效能。",
+          "explainability_anchors": "仿生故事线：从被动防污(荷叶自清洁)到主动机械杀菌(蝉翼刺穿)再到拓扑延迟定殖(鲨鱼皮)的递进设计逻辑。设计溯源：所有结构参数(直径80-200nm、高度400-500nm、间距<0.2µm)与性能阈值均直接溯源至文献实测数据与梁力学/DLVO界面物理模型，确保构效关系可解释、可迁移至水处理防污设计。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2023-尤-超疏水-研究进展-综述.json",
+        "paper_id": "2023-You-superhydrophobic-preparation-application-review",
+        "sections": {
+          "problem_definition": "自然界挑战：荷叶生长于淤泥水体中需保持表面清洁、干燥与结构完整；水处理对应：吸附/分离材料在处理油类、染料及有机溶剂时易发生表面污染、润湿性失效与腐蚀，需开发抗污染、易再生且稳定的界面材料。",
+          "biological_solution": "进化策略：构建微米级乳突与纳米级绒毛/蜡状物共存的分级粗糙表面；关键机制：Cassie-Baxter复合接触态在微纳间隙捕获空气层，结合低表面能蜡质实现接触角>160°与极低滚动角，水滴滚落时带走附着颗粒；成功案例：荷叶‘出淤泥而不染’的自清洁效应，与玫瑰花瓣高粘附态的对比揭示了微纳结构对界面粘附力的精确调控潜力。",
+          "key_features": "必须保留特征：微纳双重粗糙度、低表面能化学修饰、空气垫层维持的Cassie态；可灵活调整特征：微纳结构的具体几何尺寸与拓扑排列、低表面能改性剂种类（如PDMS、硅烷、脂肪酸）、表面粘附力水平（可依据需求调控为低粘附自清洁或高粘附捕获）。",
+          "design_mapping": "生物→材料映射：荷叶微米乳突→通过模板法、刻蚀法或沉积法构建的微纳粗糙基底；荷叶表面蜡质→低表面能涂层（如氟化物、硅烷偶联剂、长链脂肪酸）；软约束建议：优先规避HF等高危试剂，在超疏水性与机械耐磨性间取得平衡，采用一步法或环保沉积工艺以适配工程化量产。",
+          "explainability_anchors": "仿生故事线：从Barthlott(1977)发现荷叶效应到江雷(2002)揭示微纳分级结构的核心作用，奠定了超疏水表面从现象到机理的设计范式；设计溯源：基于Young/Wenzel/Cassie-Baxter润湿理论指导表面能与粗糙度协同调控，通过五大制备工艺复现生物形貌，最终映射至自清洁、油水分离、防腐防冻等水处理与防护应用场景。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2020-Han-antifouling-review.json",
+        "paper_id": "2020-Han-antifouling-review",
+        "sections": {
+          "problem_definition": "自然界挑战：海洋生物污损经历有机调节膜形成、微生物生物膜附着、孢子永久交联定殖到大型生物附着四阶段，导致航行阻力剧增与维护成本高昂；水处理对应：水处理膜与设备表面面临相似的生物膜污染与沉积物附着，造成通量衰减、能耗上升及频繁化学清洗需求。",
+          "biological_solution": "进化策略：海洋生物演化出三大非杀生防污策略：(1)低表面能光滑表面（鲨鱼/海豚皮）实现污损释放；(2)微拓扑物理屏障（鲨鱼皮Sharklet、荷叶/芋头叶乳突）阻止沉降；(3)动态柔性界面（珊瑚触手摆动、鱼鳞黏液）抵抗粘附。关键机制：通过临界表面张力(20-30 mN/m)最小化粘附力、亲疏水微相分离构建非均匀表面、两性离子水合层排斥蛋白吸附、动态二硫键实现自修复。成功案例：PDMS基Sharklet AF™微结构使孢子沉降率降低约80%；两性离子水凝胶与两亲性共聚物实现广谱抗污与长期稳定。",
+          "key_features": "必须保留特征：临界表面张力20-30 mN/m区间、微纳级拓扑物理屏障、界面水合/抗蛋白吸附层、动态响应或自修复能力；可灵活调整特征：聚合物基体类型(PDMS/PEG/两性离子)、微结构具体几何尺寸与排列方式、自修复触发条件(光/温/化学)、弹性模量与表面张力的具体配比。",
+          "design_mapping": "生物→材料映射：鲨鱼皮/荷叶微结构→PDMS/硅酮微图案化防污涂层；软珊瑚触手→石墨烯-硅氧烷弹性体(GSE)动态响应膜；血管内壁/鱼鳞黏液→两亲性共聚物微相分离表面与两性离子聚合物刷/水凝胶；软约束建议：设计时需以Baier曲线为基准锚定表面能，结合Brady-Singer断裂力学模型平衡弹性模量与临界表面张力，优先采用高固含量(>70%)配方以兼顾施工性与长效性。",
+          "explainability_anchors": "仿生故事线：从传统高毒性杀生涂层向被动式物理/化学仿生防污演进，借鉴海洋生物‘不杀生而拒污’的进化智慧；设计溯源：以Baier表面张力理论为热力学基础，融合Sharklet微拓扑几何学与动态水凝胶自修复化学，通过‘低粘附-物理阻隔-动态响应’多级防御机制实现水处理界面的长效抗污染，其工程可行性已由船舶FRC涂层22%节油率与>60个月服役寿命验证。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2024-Omar-superhydrophobic-hydrophobic-separation-membrane-review.json",
+        "paper_id": "Omar2024_Superhydrophobic_Omniphobic_MD_Desalination_Review",
+        "sections": {
+          "problem_definition": "自然界植物叶片需抵抗灰尘和水分附着以维持光合作用；在水处理膜蒸馏（MD）过程中，膜表面面临高盐度、油类、表面活性剂等复杂污染物的润湿与污染挑战，导致通量衰减和脱盐率失效。",
+          "biological_solution": "荷叶利用微纳米分级结构和表面蜡质层截留空气形成气垫（Cassie-Baxter态），实现水滴滚落并带走污染物的自清洁效应；针对低表面张力液体，仿生设计进一步引入 re-entrant（悬垂/倒角）结构，实现超越荷叶效应的全疏水（omniphobic）排斥机制。",
+          "key_features": "必须保留特征：微纳米级表面粗糙度、低表面能化学特性、Cassie-Baxter气穴态；可灵活调整特征：纳米颗粒材质（CuO/Co3O4/SiO2/TiO2/ZnO）、粗糙度具体尺寸（0.3~0.8 μm）、基材类型（陶瓷/聚合物）及膜组件构型（中空纤维/平板/管式）。",
+          "design_mapping": "荷叶微纳乳突 → 纳米颗粒水热沉积构建粗糙表面；荷叶蜡质层 → 氟硅烷（如FAS-17）低表面能修饰；荷叶自清洁 → MD膜的抗润湿/抗污染性能（水接触角>150°，盐截留率99-100%）。软约束建议：处理含油或表面活性剂废水时，需超越基础荷叶效应，设计具有 re-entrant 结构的全疏水表面以排斥低表面张力液体。",
+          "explainability_anchors": "仿生故事线：从荷叶‘出淤泥而不染’的超疏水自清洁，到应对复杂低表面张力污染物的全疏水结构升级，揭示微纳结构与表面能协同抗润湿的本质。设计溯源：超疏水阈值（CA>150°）和Cassie-Baxter态直接映射荷叶效应，全疏水 re-entrant 结构映射对油/溶剂排斥的仿生拓展。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2024-Zheng-silk-superhydrophobic-hydrophobic-separation-review.json",
+        "paper_id": "Zheng2024_wettability_membrane_review",
+        "sections": {
+          "problem_definition": "自然界中植物叶片需应对雨水附着与污染物沉积，进化出自清洁机制以维持生理功能；对应水处理中油水分离、乳化液破乳及有机染料去除面临的膜表面润湿性失控、油污染堵塞及选择性分离效率低下的工程挑战。",
+          "biological_solution": "荷叶通过微纳乳突结构结合低表面能蜡质层，截留空气形成Cassie-Baxter态实现超疏水自清洁；贻贝足丝蛋白在潮湿界面通过氧化聚合实现强粘附。该进化策略成功启发了超疏水/超亲油分离膜与聚多巴胺(PDA)仿生界面层的开发，实现高效、稳定的多相分离。",
+          "key_features": "必须保留微纳层级粗糙结构与低表面能修饰的协同作用，以稳定Cassie-Baxter超疏水态或水下超疏油态；可灵活调整智能响应聚合物(如PNIPAM温敏、PDEAEMA CO2/pH响应)、光催化/抗菌组分(ZIF-8、MXene)及Janus不对称拓扑，以适配不同污染物体系与动态工况。",
+          "design_mapping": "生物微纳乳突映射为SiO₂/Al₂O₃纳米颗粒沉积、静电纺丝纤维网络或限域自组装结构；低表面能蜡质映射为氟化物、硅氧烷或PDMS涂层；贻贝粘附映射为PDA中间层。软约束建议：优先采用浸涂/喷涂等可扩展工艺构建粗糙度，结合刺激响应机制实现抗污染自清洁，避免单一静态超疏水设计导致的油污染瓶颈。",
+          "explainability_anchors": "仿生故事线遵循“自然自清洁现象(荷叶效应/贻贝粘附)→润湿理论解析(Young/Wenzel/Cassie-Baxter)→微纳结构+低表面能协同设计→智能响应与多功能集成”的演进逻辑；设计溯源明确指向荷叶微纳拓扑与贻贝足丝蛋白的跨尺度启发，确保材料润湿性调控与抗污染性能提升具有明确的生物学依据与物理化学机制支撑。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2023-Aijaz-superhydrophobic-hydrophobic-membrane-wastewater-review.json",
+        "paper_id": "2023-Aijaz-electrospun-MD-antifouling-desalination-review",
+        "sections": {
+          "problem_definition": "自然界中荷叶和水黾需要在水环境中保持表面干燥与清洁；在膜蒸馏（MD）脱盐及废水处理中，膜材料面临高盐度、表面活性剂及油类污染物导致的膜孔润湿、通量衰减和严重污染挑战。",
+          "biological_solution": "荷叶和水黾腿进化出层级微纳结构与天然re-entrant形态，结合表面低表面能蜡质层，形成稳定的空气垫（Cassie-Baxter态），实现超疏水与自清洁。在MD膜工程中，利用电纺纳米纤维天然的圆柱形re-entrant结构，结合无机纳米颗粒（如ZnO）粗化和氟化改性，构建全疏水膜，成功排斥水及低表面张力液体，实现高效抗润湿与抗污染。",
+          "key_features": "必须保留特征：层级微纳粗糙结构、re-entrant表面纹理（如圆柱形/蘑菇形）、超低表面能化学修饰（<30 mN/m）。可灵活调整特征：粗化纳米颗粒种类（优选ZnO以兼顾杀菌与环保）、聚合物基底材料（PVDF/PTFE等）、Janus膜亲水层成分（壳聚糖/PEI等）。",
+          "design_mapping": "生物微纳乳突/刚毛 → 电纺纳米纤维互联多孔网络与无机NPs粗化；生物蜡质层 → 氟硅烷（如FTCS/FAS）低表面能改性；水黾腿微结构 → 电纺纤维天然圆柱形re-entrant结构。软约束建议：优先采用一步电纺/电喷工艺直接构建多尺度re-entrant结构以降低制造成本；针对含油废水，建议引入Janus非对称设计（亲水顶层+全疏水底层）以偏转油滴。",
+          "explainability_anchors": "仿生故事线：从荷叶的‘出淤泥而不染’（超疏水抗污染）到水黾的‘水上漂’（全疏水抗润湿），启发MD膜从单纯疏水向全疏水及Janus非对称抗污染设计的代际演进。设计溯源：电纺纤维的圆柱形几何特征天然对应生物的re-entrant结构，免去了复杂微纳加工的额外步骤，实现了仿生原理与工程制造（一步电纺）的完美契合。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2023-景-超疏水-油水分离-膜-综述.json",
+        "paper_id": "Jing2023_Superwetting_OilWater_Separation_Review",
+        "sections": {
+          "problem_definition": "自然界中荷叶需保持表面清洁以进行光合作用，鱼鳞需在水下抵抗油污附着；在水处理中，这对应着如何高效分离复杂乳化油（水包油/油包水乳液）及分层油，并防止膜污染和通量下降的工程挑战。",
+          "biological_solution": "荷叶进化出低表面能蜡质层与微纳乳突粗糙结构实现超疏水自清洁（WCA>150°）；鱼鳞通过磷酸钙/蛋白质/亲水黏液与放射状微乳突实现超亲水及水下超疏油。工程上利用这两种进化策略，结合筛分效应与界面破乳双机制，成功开发出超疏水-超亲油、超亲水-水下超疏油、Janus及智能响应膜，实现高达98-99.95%的分离效率。",
+          "key_features": "必须保留特征：微/纳米级表面粗糙结构（如乳突状或放射状）、特定的表面化学组成（低表面能或亲水基团）以构建超浸润性。可灵活调整特征：基底材料选择、微纳粒子的具体种类与尺寸、智能响应基团（如仿贻贝pH响应邻苯二酚）的引入方式。",
+          "design_mapping": "生物微纳乳突/放射状结构 → 材料表面的微/纳米粒子粗糙化修饰；荷叶蜡质层 → 低表面能化学修饰（超疏水/超亲油）；鱼鳞亲水黏液 → 亲水聚合物或基团修饰以形成水化层（超亲水/水下超疏油）。软约束建议：针对单一乳液类型选择单一浸润性膜，针对复杂或交替乳液环境建议设计Janus膜或智能响应膜。",
+          "explainability_anchors": "仿生故事线：从荷叶的‘出淤泥而不染’（超疏水自清洁）和鱼鳞的‘水下抗油’（水下超疏油）汲取灵感，通过复刻其微纳结构与表面化学，解决水处理中油水乳液分离难题。设计溯源：基于Young/Wenzel/Cassie基础理论模型，将生物界的超浸润现象转化为膜材料的筛分与界面破乳协同分离机制。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2022-Mao-superhydrophobic-hydrophobic-separation-membrane-review.json",
+        "paper_id": "2022-Mao-superwetting-membrane-nanofiber-oil-water-review",
+        "sections": {
+          "problem_definition": "自然界中生物表面需应对复杂流体环境（如雨水冲刷、油污附着、高湿环境）以实现自清洁、防污或定向集水；水处理领域对应油水混合物及表面活性剂稳定乳化液的高效分离难题，传统分离膜易受油污染导致通量骤降、选择性差且能耗高。",
+          "biological_solution": "进化策略：通过微纳层级拓扑结构与表面化学能的协同调控，实现极端润湿状态切换。关键机制：基于Young-Wenzel-Cassie-Baxter润湿理论，利用粗糙度因子与表面张力调控三相接触线，截留空气层（超疏水）或稳定水化层（水下超疏油）；结合入侵压力阈值与Stokes浮力实现物理筛分与重力驱动。成功案例：荷叶微乳突结构实现超疏水自清洁；鱼鳞鳞片状微结构结合高保水性实现水下超疏油防污；玫瑰花瓣高粘附微结构为定向传输提供灵感。",
+          "key_features": "必须保留特征：微纳多级粗糙拓扑结构、表面能化学修饰（低/高表面能涂层）、三相界面稳定机制（气/液/固或水/油/固）。可灵活调整特征：基材类型（棉织物/纳米纤维/金属网）、响应性模块（光/pH/温/等离子体）、膜构型（对称/Janus不对称/全疏/全亲）、制备工艺（电纺/喷涂/原位聚合/激光蚀刻）。",
+          "design_mapping": "生物→材料映射：荷叶/芋头叶微纳乳突→电纺/激光蚀刻构建多尺度粗糙度；鱼鳞鳞片包覆→TiO₂/GO等纳米片层自组装形成水下亲水屏障；甲虫集水/蝴蝶定向→Janus不对称润湿设计实现单向传输。软约束建议：优先采用重力驱动或低压操作以降低能耗；控制孔径分布与表面粗糙度匹配入侵压力公式；避免使用含氟等难降解改性剂，转向植物多酚-金属配合物等绿色仿生化学。",
+          "explainability_anchors": "仿生故事线：从“荷叶效应”发现超疏水自清洁原理，到“鱼鳞防油”揭示水下超疏油机制，再到“甲虫集水/蝴蝶定向”启发智能响应与不对称传输，最终融合为覆盖全场景的五类超浸润膜体系。设计溯源：严格遵循Young-Wenzel-Cassie-Baxter润湿理论演进，将生物表面的几何拓扑与化学组成解耦为“粗糙度因子(r/f)”与“表面能(γ)”，通过材料工程复现并优化，实现从自然现象到水处理膜性能（通量、效率、抗污染）的定量映射。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2023-Tan-membrane-review.json",
+        "paper_id": "Tan2023_Antifouling_Nanofibrous_MD_Review",
+        "sections": {
+          "problem_definition": "自然界中荷叶与海洋生物长期面临水滴滞留、油污附着及盐分结晶挑战；对应水处理中，膜蒸馏(MD)膜极易受有机物、无机盐及表面活性剂污染，导致微孔润湿、蒸汽扩散受阻、通量骤降与脱盐失效。",
+          "biological_solution": "进化出微纳双尺度粗糙结构结合低表面能蜡质(荷叶效应)以维持Cassie-Baxter气垫态，实现水滴自清洁；海洋生物(鱼鳞/贝壳)演化出不对称界面，一面亲水形成水化层拒污、一面疏水/全疏阻水透汽。成功案例为PDA-GCSs光热Janus膜，实现73%光热转换效率、10倍通量提升及>99.99%盐截留。",
+          "key_features": "必须保留：微纳粗糙度与低表面能协同、Cassie-Baxter态稳定性(WCA>150°且滞后<10°)、不对称润湿梯度、re-entrant抗润湿拓扑。可灵活调整：基底聚合物(PVDF/PTFE/PAN)、纳米填料类型(ZnO/TiO2/CNT/GO/MOF)、表面氟化/硅烷化试剂、光热/亲水功能层厚度与沉积工艺。",
+          "design_mapping": "生物→材料映射：荷叶乳突→静电纺丝/电喷涂构建的纳米纤维+气凝胶/纳米颗粒复合粗糙层；鱼鳞不对称界面→Janus双层/三层膜(亲水拒污侧/疏水透汽侧)；贻贝粘附→PDA界面聚合实现功能层牢固锚定。软约束建议：控制接触角滞后<10°以保障自清洁滚落；LEP需>100 kPa抵抗跨膜压；协同优化孔隙率与WCA以最大化异相成核能垒(ΔG_hetero)。",
+          "explainability_anchors": "仿生故事线：从“荷叶拒水自洁”到“海洋生物抗污不对称界面”，通过构筑气垫屏障与润湿性梯度，从根本上阻断污染物吸附与膜孔润湿。设计溯源：核心参数直接溯源至Cassie-Baxter方程(f_sl, f_lv)与异相成核能垒公式(ΔG_hetero/ΔG_homo)，性能指标(WCA>150°, LEP>120 kPa, 盐截留>99.9%)与文献中20+种膜配方定量数据严格对应，确保仿生逻辑可量化验证与工程复现。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2022-Khan-wastewater-water-treatment-review.json",
+        "paper_id": "2022-Khan-functional-materials-wastewater-review",
+        "sections": {
+          "problem_definition": "自然界生物（如荷叶、贻贝）在极端湿润或动态水流环境中面临附着与分离挑战，对应水处理中油水乳化液难分离、传统吸附剂易流失及基材表面兼容性差等工程瓶颈。",
+          "biological_solution": "生物进化出微纳层级结构协同表面化学调控润湿性（如荷叶超疏水自清洁、蝴蝶翅膀抗粘附），以及聚多巴胺介导的强界面粘附机制；成功案例包括仿贻贝PDA涂层实现任意基材超润湿修饰、仿荷叶/蝶翼构建超疏水网膜实现>99%高效水油分离。",
+          "key_features": "必须保留特征：微纳复合粗糙度、低/高表面能化学修饰、强界面粘附层（PDA）；可灵活调整特征：基材类型（棉织物/金属网/海绵/气凝胶）、纳米粒子负载浓度、交联方式（辐照/化学/热固）及涂层厚度。",
+          "design_mapping": "生物→材料映射：荷叶/蝶翼微纳形貌→金属网/海绵表面粗糙化与疏水改性；贻贝足丝蛋白→聚多巴胺(PDA)通用粘合平台；水下Cassie态→超亲水网膜构建水化排斥层。软约束建议：优先采用可放大工艺（喷涂/浸涂/沉积）；平衡表面能调控与孔隙率保留；针对特定废水（高温/高盐）匹配热固性或耐化学腐蚀骨架。",
+          "explainability_anchors": "仿生故事线：从‘荷叶出淤泥而不染’的自清洁机制到‘贻贝湿态强粘附’的界面工程，揭示自然界通过物理形貌与化学组分协同实现极端润湿性调控的底层逻辑。设计溯源：材料设计直接映射生物微纳结构与粘附蛋白机制，通过PDA平台化修饰与多孔骨架复合，实现从实验室超润湿现象到工程化油水分离/吸附材料的跨尺度转化。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2018-Halim-cellulose-superhydrophobic-hydrophobic-oil-water-review.json",
+        "paper_id": "Halim2022_cellulose_oily_wastewater_review",
+        "sections": {
+          "problem_definition": "自然界中生物面临泥水污染附着、油污排斥及干旱集水等极端润湿挑战；水处理中对应复杂油水乳液（水包油/油包水）的高效分离难题，传统膜受限于孔径匹配瓶颈与易污染堵塞。",
+          "biological_solution": "进化出微纳层级粗糙结构（荷叶微米沟槽+纳米蜡管、鱼鳞微乳突+黏液层）与双面异质构型（沙漠甲虫/槐叶萍）；通过Cassie-Baxter亚稳态截留空气或水下气垫效应实现极端润湿性调控；成功案例为纤维素基仿生膜实现98%-99%分离效率与高达65000 L/m²/h通量。",
+          "key_features": "必须保留：微纳层级粗糙度、低表面能涂层、双面润湿性反差（Janus）、气/水缓冲层；可灵活调整：纤维素基底形态（气凝胶/海绵/织物/滤纸）、粗糙增强纳米颗粒种类（SiO2/ZnO/Fe3O4等）、疏水聚合物类型（PDMS/PVDF/PS等）及交联网络密度。",
+          "design_mapping": "生物→材料映射：荷叶结构→SiO2/PDMS修饰纤维素织物/气凝胶；鱼鳞黏液→亲水纤维素基质构建水下超疏油表面；甲虫/Salvinia双面→Janus B-on-A非对称膜；软约束建议：依据Wenzel/Cassie-Baxter方程优化粗糙度比(r)与固液界面分数(fSL)，在突破压力与高通量间取得平衡。",
+          "explainability_anchors": "仿生故事线：从自然自清洁、定向集水与抗污机制迁移至人工极端润湿表面工程；设计溯源：表面微纳拓扑直接决定接触角阈值(≥150°)与Cassie-Baxter气穴稳定性，Janus非对称架构突破传统筛分极限，整体性能由突破压力方程与严苛环境稳定性测试双重锚定。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2020-Zheng-self-cleaning-separation-wastewater-water-treatment-review.json",
+        "paper_id": "2020-Zheng-special-wettability-oily-wastewater-review",
+        "sections": {
+          "problem_definition": "自然界挑战：生物体在复杂水环境中需维持表面干燥、清洁或定向导流（如荷叶防污、鱼鳞防油粘附）；水处理对应：含油废水及表面活性剂稳定乳液分离面临膜污染严重、通量快速衰减、油水界面张力高及传统材料选择性差等工程难题。",
+          "biological_solution": "进化策略：生物通过微纳多级粗糙结构与表面化学修饰的协同，精准调控固-液-气/油三相界面能，实现超疏水/超亲水/各向异性润湿；关键机制：基于Wenzel/Cassie-Baxter润湿模型与Young-Laplace入侵压力控制，结合PDA通用粘附化学、光催化降解与动态配位键；成功案例：荷叶微纳蜡质层实现超疏水自清洁，鱼鳞定向微乳突捕获水膜实现水下超疏油，贻贝足丝PDA实现材料表面快速通用功能化。",
+          "key_features": "必须保留特征：微纳复合粗糙度、低/高表面能化学组分、三相界面润湿态（Cassie-Baxter态）的精准调控；可灵活调整特征：基底材质（织物/金属网格/海绵）、功能涂层（PDA/PDMS/ZIF-8/水凝胶）、智能响应机制（光催化自清洁/配位自修复/Janus膜翻转切换）。",
+          "design_mapping": "生物→材料映射：荷叶微乳突→浸涂/电纺构建微纳突起；鱼鳞定向结构→同步电喷射/电纺制备定向纳米纤维；贻贝足丝→PDA/单宁酸-Fe(III)配位沉积实现表面改性；壁虎刚毛→阵列化微结构或气凝胶多孔网络。软约束建议：优先采用无氟绿色改性剂；根据目标乳液类型（O/W或W/O）选择“除水型”或“除油型”润湿策略；引入光催化或动态键以提升抗污染与自修复能力。",
+          "explainability_anchors": "仿生故事线：从“荷叶拒水”到“鱼鳞拒油”，再到“贻贝粘附”与“壁虎定向粘附”，揭示表面拓扑与化学协同决定宏观分离性能的普适规律；设计溯源：基于Young/Wenzel/Cassie-Baxter理论量化接触角与入侵压力，结合PDA仿生化学与Janus不对称设计，实现高通量（>10^5 L·m⁻²·h⁻¹）、高效率（>99%）及自清洁/自修复的智能分离材料。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2021-Usman-superhydrophobic-hydrophobic-oil-water-separation-review.json",
+        "paper_id": "Usman2021_Superhydrophobic_Ceramic_OilWater_Review",
+        "sections": {
+          "problem_definition": "自然界中植物叶片面临水分滞留、污垢附着及微生物滋生挑战；在水处理中对应油水乳液分离困难、膜污染严重及通量衰减问题。",
+          "biological_solution": "荷叶进化出微米-纳米分级粗糙结构并覆盖低表面能蜡质层，结合壁虎脚部的高粘附特性；通过Cassie-Baxter机制在突起间截留空气，极大减少固液接触面积，实现超疏水（CA>150°）与自清洁滚落；该策略已成功映射至陶瓷膜表面改性，实现高效油水分离。",
+          "key_features": "必须保留：微纳分级粗糙度、低表面能化学修饰、Cassie-Baxter气垫态、接触角滞后<10°；可灵活调整：基底材质（氧化铝、氧化锆、碳布等）、低表面能试剂种类（FAS、C88、PDMS、氟化硅纳米颗粒）及涂覆工艺（浸渍、CVD、溶胶-凝胶）。",
+          "design_mapping": "生物微纳乳突→工程化膜表面粗糙度构建；生物蜡质层→有机硅烷/氟化物低表面能接枝；截留空气层→防油污/防水润湿屏障；软约束建议：优先采用浸渍或溶胶-凝胶等可扩展工艺，严格控制滞后角<10°以保障自清洁与抗污染性能。",
+          "explainability_anchors": "设计溯源至‘荷叶效应’与Cassie-Baxter润湿理论；通过Young/Wenzel/Cassie-Baxter方程量化表面能态转变，将自然界防污自洁机制转化为可测量的材料指标（CA>150°、滞后<10°），形成‘结构粗糙化+表面低能化→截气防润湿→高效油水分离’的完整仿生逻辑链。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2022-Finally-superhydrophobic-hydrophobic-porous-review.json",
+        "paper_id": "2022-Yong-femtosecond-laser-superwettability-review",
+        "sections": {
+          "problem_definition": "自然界生物面临极端润湿与防粘附挑战（如荷叶防污自洁、鱼鳞水下抗油粘附、弹尾虫广谱拒液、猪笼草防粘捕虫），对应水处理中膜材料易受油污/微生物污染、油水分离效率低、复杂污染物广谱排斥难及表面易结垢堵塞等问题。",
+          "biological_solution": "生物通过进化微纳层级结构（荷叶乳突+纳米蜡晶）、亲疏水化学协同（鱼鳞亲水层+微结构）、特殊几何拓扑（弹尾虫蘑菇状再入结构）及多孔储液机制（猪笼草唇缘微沟槽+润滑液），实现Cassie态稳定、水下超疏油/超疏气、超双疏及超滑自修复。成功案例涵盖荷叶自清洁、鱼鳞水下油排斥、猪笼草SLIPS防粘附等。",
+          "key_features": "必须保留：微纳层级粗糙度、特定表面化学能（低表面能修饰或亲水化）、几何拓扑约束（如reentrant角满足θ≥ψ）、多孔储液网络。可灵活调整：基底材质（硅/金属/聚合物）、激光加工参数（脉冲能量/扫描策略）、表面修饰剂类型（氟硅烷/等离子体处理）、润滑液种类（全氟化合物/硅油）。",
+          "design_mapping": "生物微纳结构→飞秒激光诱导微纳突起/多孔网络；生物表面化学→氟硅烷修饰/氧等离子体氧化；生物储液机制→激光造孔+低表面能涂层+润滑液注入(SLIPS)。软约束建议：优先采用一步法激光直写结合原位化学调控；针对水下应用强化亲水基底+微结构组合；针对广谱排斥严格遵循θ≥ψ再入几何设计；耐久性设计需兼顾结构锚固与化学键合。",
+          "explainability_anchors": "仿生故事线：从“荷叶出淤泥不染”到“猪笼草滑不留手”，揭示自然界通过“结构-化学-界面”三位一体调控润湿性的底层逻辑。设计溯源：基于Young/Wenzel/Cassie经典润湿理论，将生物拓扑特征参数化（如乳突尺寸、reentrant角、孔隙率），通过飞秒激光非接触、低热损伤特性实现跨尺度精准复刻，最终映射为可编程、全谱系超润湿水处理膜/吸附材料的设计准则。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2020-李-超疏水-油水分离-综述-研究进展.json",
+        "paper_id": "Li2020_superhydrophobic_review",
+        "sections": {
+          "problem_definition": "自然界中，水生植物和昆虫面临在水环境中保持干燥、自清洁或在水面行走的挑战；在水处理领域，这对应于含油废水和有机溶剂泄漏的高效分离需求，亟需开发能够选择性排斥水并吸附或透过油的超疏水/超亲油材料。",
+          "biological_solution": "荷叶通过表面密布的微纳乳突结构并覆盖低表面能蜡质层，实现了超疏水与自清洁（'荷叶效应'）；水黾腿部独特的微纳分级结构赋予其超疏水特性以支撑水面行走。其关键机制在于微纳粗糙结构与低表面能的协同作用，使水滴处于Cassie-Baxter状态并形成空气垫。基于此原理，研究者成功开发出PTFE喷涂不锈钢网膜（接触角156.2°）、PI高柔性纤维膜（通量3106 L/(m²·h)，分离效率>99%）等高性能油水分离材料。",
+          "key_features": "必须保留特征：微纳米级粗糙结构（构建空气垫）、低表面能化学组成（降低固液界面能）。可灵活调整特征：基底材料形态（如不锈钢网、纤维膜、海绵、泡沫铜、气凝胶）、制备工艺（涂覆、静电纺丝、水热、刻蚀等7种方法）、孔隙率与孔径大小。",
+          "design_mapping": "生物→材料映射：荷叶微纳乳突映射为材料表面的微纳米粗糙结构构建（如TiO₂颗粒修饰、飞秒激光刻蚀、静电纺丝）；蜡质层映射为低表面能基团接枝或涂覆（如PTFE、PDMS、PFDS、油酸钠）。软约束建议：针对大规模工程应用，优先选择涂覆法或沉积法以平衡成本与效率；针对高精度乳化油水分离，可采用静电纺丝或自组装法构建精细孔隙；需通过化学改性（如聚多巴胺辅助）提升涂层结合力以克服机械耐久性约束。",
+          "explainability_anchors": "仿生故事线：从荷叶'出淤泥而不染'的宏观自清洁现象，深入到水黾腿部微观力学支撑，揭示'微纳结构+低表面能'的跨尺度协同机制，最终指导人工超疏水油水分离膜的理性设计。设计溯源：以Young方程、Wenzel模型和Cassie-Baxter模型为润湿理论基石，系统整合7种制备工艺的优劣势，为从实验室仿生原型到工程化水处理材料的转化提供全链条理论支撑。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2022-Kim-superhydrophobic-hydrophobic-membrane-porous-review.json",
+        "paper_id": "Kim2022_Electrospun_Nanofibrous_Membrane_MD_Review",
+        "sections": {
+          "problem_definition": "自然界中荷叶需应对灰尘附着与水滴滞留的污染挑战，对应水处理中膜表面润湿失效、污染物吸附及低表面张力液体（油、表面活性剂）穿透导致的通量下降与分离失效问题。",
+          "biological_solution": "荷叶进化出微纳分级粗糙表面与蜡质低表面能涂层，通过Cassie-Baxter机制在固液界面截留空气形成稳定气垫，实现WCA>150°的超疏水与自清洁；结合银叶菊的体相截留空气与水黾腿的低粘附特性，为抗润湿材料提供进化策略。",
+          "key_features": "必须保留微纳粗糙拓扑与低表面能化学修饰以维持Cassie态超疏水；可灵活调整基底几何形态（如引入re-entrant结构）或采用多层/Janus构型，以突破单一荷叶效应的局限并适配复杂废水体系。",
+          "design_mapping": "生物微纳突起映射为静电纺丝纳米纤维互连网络，蜡质层映射为FAS或氟化聚合物接枝；软约束建议：需利用静电纺丝纤维天然的圆柱形re-entrant几何优势，优化孔隙连通性与机械强度，以延缓空气逃逸并提升抗润湿鲁棒性。",
+          "explainability_anchors": "仿生故事线以‘荷叶效应’自清洁机制为起点，溯源至Cassie-Baxter空气垫理论与表面能调控原理；设计效能通过量化指标锚定（WCA>150°、SA<10°、孔隙率~80%、稳定通量25.2 kg/m²·h），实现从生物拓扑到工程膜材料的可解释映射。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2021-Penetration-separation-membrane-hierarchical-review.json",
+        "paper_id": "2021-Penetration-separation-membrane-hierarchical-review",
+        "sections": {
+          "problem_definition": "自然界中干旱/高湿环境生物面临高效定向收集与传输水分的挑战；对应水处理领域传统分离膜存在的渗透方向不可控、液/液分离效率低、易污染及高盐/表面活性剂环境下润湿失效等问题。",
+          "biological_solution": "生物通过演化出层级微纳粗糙度与化学异质性（亲/疏水交替区域）构建表面能梯度；结合拉普拉斯压力差与毛细力协同，实现液体/气体在特定方向的自发定向传输（液二极管效应）；成功案例包括沙漠甲虫背部交替亲疏水区域集水、蜘蛛丝纺锤节-关节结构导水、仙人掌锥形刺定向传输及猪笼草二级微沟槽防粘附。",
+          "key_features": "必须保留非对称润湿性（Janus界面）、微纳层级粗糙度及厚度方向润湿梯度；可灵活调整纤维形貌（圆柱/串珠/多孔/核壳）、聚合物基材（PS/PAN/PU/PCL等）及拓扑结构密度（纳米针间距/层厚比）。",
+          "design_mapping": "生物原型（沙漠甲虫/仙人掌/蜘蛛丝）映射为静电纺丝Janus纳纤膜的非对称亲/疏水层；荷叶微纳乳突映射为PS纳米纤维/微球复合超疏水层；猪笼草微沟槽映射为互穿结构纳米针拓扑。软约束建议：通过调控静电纺丝接收距离与溶液粘度控制纤维直径；优先采用共混或核壳电纺实现梯度润湿；在含油/表面活性剂废水中引入全疏水/水下超疏油设计。",
+          "explainability_anchors": "仿生故事线：从自然界‘定向液体传输系统’的构效关系出发，提炼‘结构粗糙度+表面能梯度=定向驱动力’的核心法则，映射至Janus膜设计。设计溯源：直接溯源至Wenzel/Cassie润湿理论及拉普拉斯压力机制，通过‘纳米针效应缩短气液界面破裂距离’与‘润湿梯度调控突破压力比k’实现性能可解释与可预测。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2023-景-超疏水-油水分离-膜-综述 2.json",
+        "paper_id": "jing2023_superwetting_oil_water_separation_membrane_review",
+        "sections": {
+          "problem_definition": "石油开采、运输、加工过程中产生大量含油废水，特别是乳化油（<20μm）和溶解油的分离极具挑战性。传统分离方法对复杂油水混合物存在效率低、成本高、二次污染等问题。",
+          "biological_solution": "自然界中荷叶表面通过低表面能蜡质层和乳突状粗糙结构实现超疏水自清洁（'出淤泥而不染'）；鱼鳞通过磷酸钙、蛋白质和亲水性黏液层以及放射状微孔突结构实现超亲水/水下超疏油性能。这些天然超浸润表面为油水分离膜设计提供了仿生灵感。",
+          "key_features": "必须保留：表面张力调控（使膜材料表面张力介于油水之间）、纳微多级结构（增大表面粗糙度）。可灵活调整：化学组成（亲水/疏水基团）、制备方法（静电纺丝/喷涂/相分离等）、膜孔径（小于乳液尺寸）。",
+          "design_mapping": "生物结构→材料设计：荷叶蜡质层+乳突结构→低表面能修饰+微纳粗糙结构（超疏水膜）；鱼鳞磷酸钙+亲水黏液→亲水基团+水化层（超亲水膜）；荷叶上下表面非对称性→Janus膜（非对称润湿性）。软约束建议：膜孔径需小于乳液液滴尺寸以实现筛分效应。",
+          "explainability_anchors": "仿生故事线：模仿荷叶的'出淤泥而不染'实现超疏水选择性分离油包水乳液；模仿鱼鳞的水下超疏油实现超亲水选择性分离水包油乳液；模仿荷叶上下表面的非对称性设计Janus膜。设计溯源：从荷叶/鱼鳞→Young/Wenzel/Cassie模型→超浸润膜设计→油水分离应用。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2023-Li-oil-water-separation-wastewater-review.json",
+        "paper_id": "2023-Li-oil-water-separation-wastewater-review",
+        "sections": {
+          "problem_definition": "自然界中，荷叶通过其表面的微米级乳突和纳米级蜡质晶体结构，能有效排斥灰尘和水滴，实现自清洁。在水处理领域，面临的核心挑战是如何高效、选择性地从水相中分离出油类污染物，包括游离油、油包水乳液和水包油乳液，这与荷叶排斥非极性污染物的机制高度相似。",
+          "biological_solution": "荷叶进化出的策略是构建具有低表面能物质修饰的微/纳米级粗糙表面，使水滴接触时形成Cassie-Baxter态，减少接触面积，从而实现极高的接触角和自清洁功能。这一策略被成功移植到二维材料（如石墨烯、MXene、LDH）的设计中，通过调控材料表面的化学官能团（如-OH， -F）和构建层状或片状粗糙结构，来获得超疏水/超亲油或水下超疏油的特殊润湿性表面。关键机制包括利用表面粗糙度放大本征润湿性（Wenzel/Cassie态）、含氧官能团调控亲疏水平衡以及仿草结构的毛细效应驱动分离。",
+          "key_features": "必须保留的特征是：1）微/纳米多级粗糙结构的构建能力；2）对表面化学能的精确调控（如引入氟基团或保留含氧官能团）。可灵活调整的特征包括：具体的二维材料基底（MXene、GO、MOF、COF、LDH等）、膜的支撑结构（不锈钢网、聚合物膜、海绵）以及制备工艺（真空过滤、水热法、静电自组装）。",
+          "design_mapping": "生物原型到材料设计的映射关系：1）荷叶表面的微米级乳突 → 二维材料（如MXene， LDH）片层堆叠或原位生长形成的微米级粗糙结构；2）荷叶表面的纳米级蜡质晶体 → 通过化学修饰（如氟化、硅烷化）在二维材料表面构建的纳米级低表面能涂层。软约束建议：在追求超高水通量时，可适当调整粗糙度尺度以平衡通量与分离精度；在追求长期稳定性时，应优先考虑在材料本体结构或共价键上引入低表面能基团，而非仅依赖物理吸附的涂层。",
+          "explainability_anchors": "仿生故事线从“荷叶为何不沾水”这一自然现象出发，揭示了粗糙表面与低表面能协同作用的物理化学原理。设计溯源则将这一原理映射到二维材料领域：MXene的-OH/F表面官能团和片层结构被类比为荷叶的“蜡质层”和“乳突”，通过调控这些“仿生要素”，赋予了膜材料如荷叶般的“油水分离”能力。GO膜的亲水性则被解释为利用天然官能团构建水下超疏油表面的另一种仿生路径，类似于荷叶原理在水下的逆向应用。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2025-Wang-superhydrophobic-hydrophobic-self-cleaning-separation-review.json",
+        "paper_id": "2025-Wang-biomimetic-superhydrophobic-review",
+        "sections": {
+          "problem_definition": "自然界中生物面临表面润湿、污染、结冰和浮力支撑等挑战；在水处理领域，这对应着膜污染、油水分离效率低、表面结冰及生物附着等核心痛点。",
+          "biological_solution": "生物通过进化出微/纳层级粗糙结构与低表面能物质的协同策略（如荷叶微乳突与蜡晶、水黾刚毛与纳米沟槽）来截留空气层，形成稳定的Cassie-Baxter态。例如，弹尾虫的纳米双凹结构实现了全疏与耐磨，荷叶实现了低滚动角自清洁，水黾实现了高浮力支撑。",
+          "key_features": "必须保留特征：微/纳双尺度粗糙结构、低固体接触面积分数（高空气分数）、低表面能化学特性。可灵活调整特征：结构的具体几何形态（如乳突、刚毛、纳米柱、沟槽）、各向异性程度、粘附力大小（如玫瑰花瓣的高粘附与荷叶的低粘附）。",
+          "design_mapping": "生物微纳结构映射为材料表面的微纳阵列或粗糙涂层（通过光刻、激光刻蚀、自组装等构建），生物蜡质/疏水蛋白映射为低表面能化学修饰（如氟化物、硬脂酸、PDMS）。软约束建议：在需要高透光率时参考蝉翼纳米柱设计；在需要抗磨损时参考弹尾虫双凹结构或引入自修复机制。",
+          "explainability_anchors": "仿生故事线：从荷叶的‘出淤泥而不染’（自清洁）到水黾的‘水上漂’（空气垫浮力），再到弹尾虫的‘百毒不侵’（全疏耐磨），揭示了微纳结构与空气层协同的超疏水本质。设计溯源：材料表面的接触角、滚动角及防污/油水分离性能，直接溯源至生物原型的固体分数、空气分数及微纳几何参数。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2022-App-antifouling-water-treatment-review.json",
+        "paper_id": "App2022_biofouling_mitigation_review",
+        "sections": {
+          "problem_definition": "自然界中船舶与海洋设施面临严重的生物附着问题，导致流体阻力剧增与温室气体排放上升；在水处理与膜分离领域，生物污染占比高达45%，且生物膜内细菌抗药性提升千倍，传统化学防污策略面临环保禁令与抗性瓶颈，亟需长效、无毒的物理抗污方案。",
+          "biological_solution": "生物通过进化出微纳多级粗糙结构与低表面能化学组分（如荷叶蜡晶、鲨鱼皮真皮小齿缎带）实现自清洁与抗附着。核心机制为诱导Cassie-Baxter态空气截留，大幅降低微生物-表面有效接触面积与接触角滞后(CAH)。成功案例包括荷叶超疏水自清洁、鲨鱼皮微结构实现12.5%减阻与抗附着，以及两性离子聚合物(pSBMA/pCBMA)涂层使细菌粘附与生物膜形成降低92%-96%。",
+          "key_features": "必须保留微纳多级粗糙度拓扑结构与低表面能界面特性，以稳定维持Cassie-Baxter态空气截留层；可灵活调整基底材料体系（如PDMS、TiO2纳米颗粒或两性离子聚合物）、微结构几何尺度与空间排布密度，以及表面化学修饰策略，以适配不同水处理工况与目标污染物。",
+          "design_mapping": "生物特征向材料映射：鲨鱼皮真皮小齿缎带映射为微脊/微流道阵列减阻防污涂层；荷叶微纳结构+蜡晶映射为超疏水复合膜表面；两性离子聚合物映射为强水化层抗生物吸附界面。软约束建议：精确调控表面粗糙度因子与固液接触分数(φS)以最小化接触角滞后，防止微结构塌陷进入高粘附Wenzel态；在合成中平衡超疏水性与长期水动力剪切下的机械耐久性。",
+          "explainability_anchors": "仿生故事线围绕“从化学杀灭到物理拒止”的防污范式转变展开，直接回应TBT/铜基涂料的环保禁令与生物膜千倍抗药性挑战。设计溯源明确指向经典润湿理论（Young/Wenzel/Cassie-Baxter方程），通过微纳拓扑形貌与低表面能化学的协同设计构建稳定空气屏障，在生物膜形成的初始附着阶段即切断微生物-基底接触，实现可解释、可预测的长效防污与减阻双重效能。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2023-Li-superhydrophobic-hydrophobic-self-cleaning-review.json",
+        "paper_id": "2023-Li-superhydrophobic-hydrophobic-self-cleaning-review",
+        "sections": {
+          "problem_definition": "自然界中水生或潮湿环境下的动植物需要保持表面干燥、清洁及防污；在水处理领域，油水分离膜和吸附材料需要构建超疏水/超亲油界面，以实现高效油水分离、抗污染和自清洁功能。",
+          "biological_solution": "荷叶等生物通过进化出表皮微纳双尺度乳突结构并覆盖蜡质等低表面能物质，实现超疏水与自清洁。关键机制是形成Cassie-Baxter态，利用微纳结构截留空气层隔离液滴与固体表面，水滴滚落时携带走污染物颗粒。成功案例包括荷叶的自清洁效应、鲨鱼皮的表面防污以及壁虎脚的微纳结构调控。",
+          "key_features": "必须保留特征：微米与纳米相结合的双尺度粗糙结构、低表面能化学修饰（构建Cassie态空气层）；可灵活调整特征：微纳结构的具体形貌与尺寸（如微柱间距）、低表面能修饰剂种类（如TEOS、各类硅烷偶联剂）、基底与骨架材料（如PVDF、PDMS、SiO2颗粒）。",
+          "design_mapping": "生物→材料映射：荷叶表皮微乳突映射为PDMS模板法或静电纺丝构建的微纳阵列/纤维膜，植物表面蜡质映射为硅烷偶联剂脱水缩合引入的疏水基团（如-CnH2n+1等）。软约束建议：优先采用反应条件温和的硅烷脱水缩合或PDMS“胶+粉”法以提升工艺通用性，并利用Si-O键赋予材料优异的UV抗性和热稳定性。",
+          "explainability_anchors": "仿生故事线：从荷叶“出淤泥而不染”的宏观自清洁现象出发，深入解析微纳双尺度与空气垫的微观物理机制，最终通过硅基化学与模板/纺丝工艺实现人工超疏水界面的工程化复刻。设计溯源：基于Young方程与Cassie-Baxter润湿模型，将自然界的低表面能与粗糙度协同策略，溯源并转化为硅烷偶联剂改性与微纳结构构建的材料设计准则。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2021-赵-超疏水-油水分离-膜-综述.json",
+        "paper_id": "2021-Zhao-special-wettability-nanofiber-oil-water-separation",
+        "sections": {
+          "problem_definition": "自然界中生物界面需在复杂流体环境中抵抗污染并实现选择性物质交换；对应水处理中传统分离膜易被油污堵塞、分离能耗高、且难以高效处理含表面活性剂的稳定乳化油。",
+          "biological_solution": "进化策略：荷叶通过微纳乳突与低表面能蜡质层构建Cassie态气垫实现超疏水自清洁；蛙卵凝胶网络启发多级粗糙度构建以增强界面稳定性；生物光敏蛋白与环境适应机制启发智能润湿切换。关键机制：表面化学修饰与多尺度粗糙结构协同调控固-液-气三相接触角，结合物理筛分与界面破乳实现高效分离。成功案例：仿生超亲水/超疏油纳米纤维膜实现>99%分离效率，并可通过重力驱动完成节能分离。",
+          "key_features": "必须保留特征：微纳多级粗糙拓扑结构、低表面能/高亲水化学基团修饰、高孔隙率与互连孔道网络、Cassie态界面气垫效应。可灵活调整特征：环境响应触发阈值（pH/光照波长/温度区间）、膜孔径分布梯度（适配0.1-10μm乳化液滴）、表面修饰化学体系（以环保聚合物替代含氟试剂）。",
+          "design_mapping": "生物→材料映射：荷叶微乳突/蜡质层映射为静电纺纳米纤维基底+粗糙涂层/低表面能改性；蛙卵结构映射为聚合物复合交联网络；生物刺激响应映射为pH/光/温敏高分子接枝。软约束建议：优先采用绿色化学法构建粗糙度以规避氟污染；通过动态润湿切换与破乳协同补偿单一筛分机制的通量瓶颈；引入交联剂或柔性基底提升微观结构的抗疲劳与耐酸碱能力。",
+          "explainability_anchors": "仿生故事线：从‘荷叶出淤泥而不染’的自清洁智慧出发，融合蛙卵界面的结构韧性，提炼出‘形貌调控润湿性’的核心仿生逻辑。设计溯源：严格遵循Young/Wenzel/Cassie润湿理论框架，将生物界面的多尺度形貌与表面化学精准映射至纳米纤维膜的静电纺丝与后修饰工艺，通过物理筛分与智能响应机制的耦合，实现从被动过滤到主动可控分离的范式转换。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2022-Chem-membrane-magnetic-dye-review.json",
+        "paper_id": "2022-Bazyar-nature-inspired-gating-membranes-review",
+        "sections": {
+          "problem_definition": "自然界中荷叶需在潮湿泥泞环境中保持表面清洁与水分排斥，对应水处理中膜材料面临的油污附着、生物污染及复杂离子/有机物高效分离难题。",
+          "biological_solution": "荷叶进化出微米级乳突与纳米级蜡管构成的微纳层次结构，结合低表面能蜡质实现Cassie-Baxter态超疏水与自清洁；猪笼草与生物离子通道进一步提供液体润滑稳定与刺激响应门控策略，实现高效防污与选择性传输。",
+          "key_features": "必须保留微纳双重粗糙度与低表面能化学特性以维持超疏水态；可灵活调整多孔基底材质、注入润滑液表面能、响应性聚合物（如PNIPAM）接枝密度及孔道曲率半径，以适配不同污染物分离与工况需求。",
+          "design_mapping": "生物乳突/蜡管映射为人工微纳多孔基底与疏水涂层，猪笼草润滑机制映射为SLIPS液体注入多孔表面，生物通道映射为刺激响应聚合物门控网络；软约束建议：依据Young-Laplace方程（ΔP=2γcosθ/R）精确调控界面张力与孔径，确保操作压力低于阈值以防CB态失稳，并优化润滑液与基底亲和力以抑制长期流失。",
+          "explainability_anchors": "仿生故事线以“荷叶自清洁”为核心，串联猪笼草滑腻表面与生物离子通道门控机制，构建“结构决定润湿态-界面化学决定稳定性-外部刺激触发构象转变”的设计逻辑；设计溯源明确微纳粗糙度、铺展系数（SLD(a)>0）及LCST相变行为在人工膜制备中的直接映射关系。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2022-Yang-separation-membrane-porous-wastewater-review.json",
+        "paper_id": "2022-Yang-superwetting-on-demand-oil-water-separation-review",
+        "sections": {
+          "problem_definition": "自然界中生物需在水、油、气等多相复杂环境中实现自清洁、捕食或水面行走；在水处理领域，这对应于高效分离油水乳液、多层油水混合物及多相不混溶有机液体的严苛需求，传统材料难以兼顾高通量、高选择性与多相适应性。",
+          "biological_solution": "生物通过进化出层级微纳结构（如荷叶微乳突）、特殊几何形貌（re-entrant结构）、不对称润湿（荷叶上下表面差异）及液体灌注（猪笼草）等策略，实现超润湿或双超疏液特性。这些机制结合四大润湿性理论（Young/Wenzel/Cassie、IWT、极性-非极性、液体灌注），为设计按需分离材料提供了定量指导。",
+          "key_features": "必须保留特征：层级微纳结构（增强润湿性并维持鲁棒性）、表面化学与微观形貌的协同调控。可灵活调整特征：智能响应触发器类型（pH/热/光/电/溶剂/离子/气体）、Janus膜的不对称润湿方向、液体灌注的润滑液选择及3D孔隙结构。",
+          "design_mapping": "生物原型到材料的映射：荷叶微乳突→静电纺丝/模板法构建微纳粗糙度；贻贝足丝蛋白→PDA（聚多巴胺）涂层实现通用双亲性修饰；猪笼草→多孔材料注入润滑液实现双超疏液。软约束建议：优先采用PDA等温和仿生涂层结合静电纺丝或定向冻塑构建3D多孔网络，以平衡高通量与高截留率，并利用预润湿或外部刺激实现按需切换。",
+          "explainability_anchors": "仿生故事线：从‘荷叶出淤泥而不染’的自清洁现象，演进到‘智能响应按需分离’的多相液体处理系统。设计溯源：基于超疏水理论构建基础微纳结构→利用IWT理论精确设计表面能→引入re-entrant几何突破双超疏液限制→结合极性与液体灌注理论实现多相不混溶液体分离。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2024-Kang-superhydrophobic-hydrophobic-self-cleaning-separation.json",
+        "paper_id": "2024-Kang-hierarchical-superhydrophobic-copper-mesh",
+        "sections": {
+          "problem_definition": "自然界中荷叶需在水生和泥泞环境中保持表面干燥与清洁；水处理领域面临油水混合物高效分离及分离材料易污染、耐久性差的挑战。",
+          "biological_solution": "荷叶进化出微米级乳突与纳米级蜡质构成的层级结构，通过截留空气层形成Cassie-Baxter态，实现超疏水与自清洁。本研究借鉴此策略，通过电沉积、化学氧化和溶胶-凝胶三步法，在铜网上构建微米Cu颗粒、纳米Cu(OH)₂棒和SiO₂纳米粒子的三级层级结构，结合低表面能涂层，实现油水分离效率>96%及自清洁功能。",
+          "key_features": "必须保留特征：三级微纳层级粗糙结构、低表面能修饰、Cassie-Baxter态空气间隙；可灵活调整特征：微纳结构的具体尺寸（如Cu颗粒大小、纳米棒长度）、基材种类与目数。",
+          "design_mapping": "荷叶微米乳突→电沉积微米级Cu颗粒；荷叶纳米蜡质→化学氧化Cu(OH)₂纳米棒与溶胶凝胶SiO₂纳米粒子；荷叶表面低表面能→Teflon涂层。软约束建议：控制电沉积电流（如100mA）和氧化剂浓度（如0.05M过硫酸铵）以优化粗糙度，避免纳米棒过度生长交织导致疏水性下降。",
+          "explainability_anchors": "仿生故事线：从荷叶‘出淤泥而不染’的自然现象，到人工构建3D层级微纳结构实现高效油水分离与自清洁的仿生材料；设计溯源：基于Wenzel和Cassie-Baxter润湿理论，通过三步法系统性调控微纳结构参数，揭示了构效关系并实现了从超亲水到超疏水的精准调控。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2021-高-超疏水-油水分离-综述-研究进展 2.json",
+        "paper_id": "gao2021_superhydrophobic_antibacterial_review",
+        "sections": {
+          "problem_definition": "自然界中荷叶面临水生环境中微生物附着和污物沉积的挑战；在水处理中，分离膜和涂层表面极易受油类污染、细菌（如大肠杆菌、金黄色葡萄球菌）黏附及生物膜形成影响，导致分离效率下降、通量衰减和二次污染。",
+          "biological_solution": "荷叶通过表面微纳分级粗糙结构与表皮蜡质（低表面能）的协同作用，实现超疏水和自清洁（荷叶效应）。在水处理材料设计中，由此进化出'双重保险'策略：利用微纳结构实现疏水排斥（减少细菌和油污黏附），同时结合主动杀菌机制（如Ag/Cu/ZnO离子释放、光催化或季铵盐接触杀菌）杀灭残留细菌，实现长效防污抗菌。",
+          "key_features": "必须保留特征：微纳分级粗糙结构、低表面能化学修饰、疏水排斥与主动杀菌的协同机制。可灵活调整特征：抗菌剂种类（无机纳米粒子、有机季铵盐、天然壳聚糖）、基底材料（棉织物、玻璃、聚合物）、制备工艺（相分离、喷涂、电沉积、多巴胺黏附）。",
+          "design_mapping": "生物微纳乳突映射为无机纳米粒子（如SiO2/ZnO/CuO）或相分离构建的粗糙结构；表皮蜡质映射为有机氟/有机硅/长链烷烃等低表面能修饰；自清洁机制映射为超疏水油水分离与抗细菌黏附；主动防御映射为掺杂抗菌纳米粒子或接枝杀菌基团。软约束建议：优先采用无机-有机复合策略以兼顾粗糙度与低表面能，使用多巴胺或壳聚糖等仿生/天然分子简化制备流程并提升环保性。",
+          "explainability_anchors": "仿生故事线：从荷叶的'出淤泥而不染'（超疏水自清洁）到水处理表面的'双重保险'（抗黏附+主动杀菌）防污策略。设计溯源：荷叶效应（微纳结构+低表面能）直接映射为无机纳米颗粒构建粗糙度+有机硅/氟降低表面能的材料设计，解决了传统单一疏水表面易被细菌生物膜破坏的痛点。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2021-高-超疏水-油水分离-综述-研究进展.json",
+        "paper_id": "2021-Gao-superhydrophobic-antibacterial-surface-review",
+        "sections": {
+          "problem_definition": "自然界中荷叶长期暴露于高湿、多菌及潜在油污环境，面临微生物定植与表面污染挑战；水处理领域对应膜组件生物污染、油水乳化分离困难及传统抗菌剂易流失失效的痛点。",
+          "biological_solution": "荷叶进化出微纳分级粗糙结构与蜡质低表面能层，利用Cassie-Baxter态实现水滴滚落带走污染物（自清洁）；结合人工仿生策略，引入Ag/Cu/ZnO等抗菌剂及核壳封装技术，构建“低表面能减黏附+抗菌剂靶向杀灭”的双重保险机制，实现长效抗生物污染。",
+          "key_features": "必须保留微纳粗糙拓扑形貌与低表面能化学修饰以维持超疏水抗黏附基底；可灵活调整抗菌活性组分（无机金属/有机季铵盐）、载体封装形式（SiO2核壳/多孔碳）及智能响应模块（pH/光催化）以适配不同水质与分离场景。",
+          "design_mapping": "生物荷叶微纳结构→材料表面微纳粗糙度构建（如电沉积、相分离、纳米粒子沉积）；蜡质层→低表面能聚合物/硅烷/氟碳链接枝；抗污机制→Janus不对称膜定向分离或缓释抗菌涂层；软约束建议优先采用多巴胺仿生黏附简化制备流程，并严格控制氟/硅接枝量以符合绿色水处理标准。",
+          "explainability_anchors": "仿生故事线始于荷叶“出淤泥而不染”的宏观自清洁现象，溯源至微纳结构截留空气与低表面能协同的润湿物理机制；设计逻辑将自然抗黏附原理与人工抗菌化学深度耦合，通过“结构拓扑-表面化学”双路径映射，为水处理吸附/分离材料提供可解释的长效防污与油水分离设计范式。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2021-闫-超疏水-油水分离-综述.json",
+        "paper_id": "Yan2021_Superhydrophobic_Review",
+        "sections": {
+          "problem_definition": "自然界挑战：荷叶在潮湿泥泞环境中易受水分滞留与污染物附着，影响光合作用与生存；水处理对应：吸附/分离材料在含油、粉尘及高盐废水中易发生润湿、结垢与腐蚀，导致通量下降与再生困难。",
+          "biological_solution": "进化策略：演化出微米级乳突与纳米级晶体交织的分级粗糙表面，并覆盖疏水蜡质层；关键机制：通过微纳结构截留空气形成气垫，结合低表面能化学特性，使水滴处于Cassie-Baxter复合接触态（接触角>150°），实现自清洁与抗润湿；成功案例：荷叶“出淤泥而不染”的自清洁效应（Lotus Effect）。",
+          "key_features": "必须保留特征：微纳分级粗糙结构、低表面能化学修饰、超疏水接触角(>150°)与低滚动角；可灵活调整特征：微纳形貌具体构型（乳突/珊瑚状/台阶状等）、基底材料类型（金属/高分子/陶瓷）、低表面能修饰剂种类（硅烷/脂肪酸/聚合物）。",
+          "design_mapping": "生物→材料映射：荷叶微米乳突映射为人工微结构阵列或粗糙涂层骨架；纳米晶体与蜡质映射为纳米级粗糙度叠加低表面能分子修饰；空气层截留映射为材料表面的Cassie-Baxter复合界面设计。软约束建议：优先选用可扩展的表面改性工艺（如喷涂、化学沉积）；结构设计需平衡粗糙度与机械强度；避免过度粗糙导致液滴钉扎进入Wenzel态。",
+          "explainability_anchors": "仿生故事线：从荷叶抗污自清洁现象切入，解析微纳分级结构与表面化学协同诱导的超疏水物理机制；设计溯源：基于Young/Wenzel/Cassie-Baxter润湿理论，将生物界面气膜截留原理转化为人工吸附/分离材料的抗润湿与抗污染设计准则，通过定量调控粗糙度因子与固液接触分数实现目标功能。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/专利/json/2022-CN114874407A-超疏水-海绵.json",
+        "paper_id": "CN114874407A",
+        "sections": {
+          "problem_definition": "荷叶表面具有微纳层级粗糙结构和低表面能蜡质层，实现超疏水自清洁效应；水处理中含油废水（如石油泄漏）需要高效油水分离材料，传统海绵亲水亲油无法选择性分离。",
+          "biological_solution": "荷叶通过微米级乳突+纳米级蜡质晶体构建层级粗糙结构，降低水滴接触面积，实现Cassie-Baxter态超疏水。进化策略是通过多尺度结构协同实现超浸润特性。",
+          "key_features": "必须保留：微米级针状/棒状粒子（类荷叶微米乳突）+ 纳米级球形粒子（类荷叶纳米蜡晶）构建层级粗糙结构；氟硅烷低表面能修饰（类蜡质层）。可灵活调整：粒子种类（TiO2/Al2O3/SiO2）、粒子比例、氟硅烷种类。",
+          "design_mapping": "生物结构→材料设计：荷叶微米乳突→微米TiO2晶须；荷叶纳米蜡晶→纳米球形TiO2/Al2O3/SiO2；蜡质低表面能层→氟硅烷修饰。软约束建议：微米:纳米粒子比例5-20:1-10是关键，直接参与交联比后接枝更稳定。",
+          "explainability_anchors": "仿生故事线：模仿荷叶表面的微纳层级粗糙结构，用微米TiO2晶须+纳米球形粒子构建人工粗糙面，氟硅烷赋予低表面能，实现超疏水超亲油油水分离。设计溯源：从荷叶→微纳结构→TiO2复合粒子→超疏水海绵。"
+        }
+      }
+    ]
+  },
+  "engineering_constraints": [
+    {
+      "constraint": "智能响应膜：光/pH/温度/等离子体可切换润湿性",
+      "value": "1）光响应：TiO₂光催化→UV照射→亲水+光降解有机物→MB可被完全降解。TiO₂@PVDF/PAN核壳→避免TiO₂团聚→UV 1h→分解87%罗丹明B。2）pH响应：PVDF-g-PAA树状纤维→中性水中超亲水+水下疏油→pH 2.0中疏水+超亲油；SNP/DA-TiO₂/PI膜→pH≥12时从超疏水变为超亲水。3）可逆切换：Cu网+Au+疏水分子→O₂等离子体→超亲水/水下超疏油→加热→恢复→可逆双向分离",
+      "unit": null,
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s10853-022-07945-8"
+    },
+    {
+      "constraint": "双刺激响应膜（UV+pH）的可逆润湿性切换和光催化降解",
+      "value": "UV或pH单独作用→疏水；UV+pH协同→亲水；UV照射可降解多种污染物",
+      "unit": null,
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1021/acsami.0c18794"
+    }
+  ],
+  "provenance_summary": {
+    "n_papers": 36,
+    "n_verified": 0,
+    "n_unverified": 359,
+    "boundary_rules": [
+      {
+        "id": "B04-LOTUS-003",
+        "type": "hard",
+        "rule": "Non-lotus examples (shark, gecko, rose-petal, membrane, MOF, shell, sponge) must not be reported as lotus-leaf-specific."
+      }
+    ]
+  },
+  "coverage": "parked",
+  "status": "parked_separation",
+  "note": "SCOPE_REVIEW: All remaining mechanisms are from general superhydrophobic/wetting/separation reviews. Zero lotus-specific mechanisms identified. Requires scope split before ranking.; SCOPE_SPLIT: Kept 49 mechanisms (lotus-specific + wetting-theory). Removed 297 non-lotus mechanisms (membrane/antibacterial/superhydrophobic/oil-water/other).; Cleanup: constraints 22->2, narrative 33->33; Narrative: kept 33 lotus+theory, removed 0 non-lotus"
+}

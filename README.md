@@ -26,21 +26,21 @@
 
 | 指标 | 数值 |
 |------|------|
-| active 原型（参与检索）| 24 |
-| materials_reference（降级，不检索）| 4（MOF / 纤维素纳米晶 / 淀粉 / 海藻酸盐）|
-| parked（超范围停放）| 1（namib-beetle）|
-| 机制总数 | 530 |
-| 机制已验证（partial/verified）| **256**（48% 覆盖率）|
+| active 原型（参与检索）| 36（含 6 个 pending_extraction）|
+| materials_reference（降级，不检索）| 0（已并入主库）|
+| parked（超范围停放）| 0（已激活）|
+| 机制总数 | 773 |
+| 机制已验证（partial/verified）| **265**（34% 覆盖率）|
 | 因果链卡（核心、可迁移原理）| 28 张（覆盖 24/24 原型）|
 | 其中 PDF 已核验 verified | 23 张 |
 | enrichment 因果链填充 | 471/478（98.5%）|
-| performance_data 已验证行 | ~305/410（75%）|
+| performance_data 已验证行 | 397/431（92%）|
 | boundary_conditions 总数 | 62 条 |
 | 工程约束 engineering_constraints | 210+（覆盖 19 个原型）|
 | 硬 DO-NOT（verified 边界）| **0 条**（边界尚未从 PDF 逐条核验）|
-| 校验错误 / chimera 违规 | 0 / 0 |
+| 校验错误 / chimera 违规 | 12 / 0（12 个 feature-mapping 缺失）|
 
-**整改进度**：Phase 0–9 已完成（基线、接口诚实度、策展、去污染、字段语义、因果链补全、PDF 核验、设计转译、接口排序修复、失效边界补全、打包总验收）。`review` 分支正在进行 PDF 级证据审计（performance_data 逐行核验 + 机制 ref_doi→PDF 匹配验证）。详见 `docs/optimization-v1/FINAL-report.md` 和 `docs/optimization-v1/COLLAB-HANDOFF.md`。
+**整改进度**：Phase 0–9 已完成（基线、接口诚实度、策展、去污染、字段语义、因果链补全、PDF 核验、设计转译、接口排序修复、失效边界补全、打包总验收）。Task 69-73 完成原型扩展 24→36（激活 5 分离层 + 1 停放层 + 6 skeleton entry）。`review` 分支正在进行 PDF 级证据审计（performance_data 逐行核验 + 机制 ref_doi→PDF 匹配验证）。详见 `docs/optimization-v1/FINAL-report.md` 和 `docs/optimization-v1/COLLAB-HANDOFF.md`。
 
 > ⚠️ **当前边界输出全是 soft caution，没有 hard DO-NOT**。具体数值阈值（pH 值、浓度等）尚未从 PDF 中逐条提取核验，因此所有边界条件均为定性描述（`basis=llm_inferred`）。
 
