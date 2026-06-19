@@ -21,7 +21,7 @@
       "parameter": "三种红树植物对NH4+-N的去除率范围 Removal range of NH4+-N by three mangrove species",
       "value": "62%-99",
       "unit": "%",
-      "pollutant": "",
+      "pollutant": "NH₄⁺-N",
       "material": "",
       "ph": null,
       "temperature": null,
@@ -40,7 +40,7 @@
       "parameter": "磷酸盐快速去除效果 Rapid PO43--P removal in early stage",
       "value": "80",
       "unit": "%",
-      "pollutant": "",
+      "pollutant": "PO₄³⁻",
       "material": "",
       "ph": null,
       "temperature": null,
@@ -78,7 +78,7 @@
       "parameter": "秋茄在15倍浓度下NH4+-N去除优势 K. candel superiority at 15x NH4+-N removal",
       "value": null,
       "unit": null,
-      "pollutant": "",
+      "pollutant": "NH₄⁺-N",
       "material": "",
       "ph": null,
       "temperature": null,
@@ -121,7 +121,49 @@
       "source": "literature",
       "ref_doi": "10.11654/jaes.2021-1478",
       "verification": "verified",
-      "基本原理": "红树林根系可在高盐环境中选择性排斥Na⁺/Cl⁻而吸收K⁺/NO₃⁻，根际微生物群落可降解有机污染物"
+      "基本原理": "红树林根系可在高盐环境中选择性排斥Na⁺/Cl⁻而吸收K⁺/NO₃⁻，根际微生物群落可降解有机污染物",
+      "source_file": "仿生文献库/论文/第7组-系统仿生/2022-刘-红树林-去除 2.pdf",
+      "verification_quote": "mangrove constructed wetland for pollutant removal",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "多种水体污染物（重金属、有机物、营养盐）",
+          "basis": "from_source",
+          "locator": "刘2022 p.1 / Abstract"
+        },
+        "bio_structure": {
+          "text": "红树林根系的盐排斥机制和选择性离子输运",
+          "basis": "from_source",
+          "locator": "刘2022 p.1 / Abstract"
+        },
+        "interaction": {
+          "text": "根系表面吸附、微生物降解、植物吸收、根际沉淀",
+          "basis": "from_source",
+          "locator": "刘2022 p.1 / Abstract"
+        },
+        "why_it_works": {
+          "text": "红树林根系可在高盐环境中选择性排斥Na⁺/Cl⁻而吸收K⁺/NO₃⁻，根际微生物群落可降解有机污染物",
+          "basis": "llm_inferred",
+          "locator": null
+        },
+        "boundary_conditions": [
+          {
+            "text": "高盐度条件下盐排斥机制趋于饱和，选择性下降",
+            "parameter": "salinity",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "红树林的盐排斥-选择性输运机制可启发高盐环境下的选择性离子分离材料",
+        "verification_quote": "mangrove constructed wetland for pollutant removal"
+      }
     }
   ],
   "narrative": {
@@ -167,5 +209,15 @@
     "n_unverified": 1
   },
   "coverage": "normal",
-  "status": "active"
+  "status": "active",
+  "design_translation": [
+    {
+      "idea": "利用红树林根系的多孔结构和表面官能团进行污染物过滤和吸附",
+      "specific_functional_group": "木质素衍生的酚羟基和羧基",
+      "material_handle": "红树林生物质碳化或直接使用",
+      "target_interaction": "酚羟基和羧基配位重金属离子，多孔结构物理截留",
+      "source_tier": "llm_inference",
+      "examples": []
+    }
+  ]
 }

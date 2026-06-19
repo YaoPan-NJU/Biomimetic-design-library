@@ -102,7 +102,8 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1002/advs.202103965",
-      "verification": "partial"
+      "verification": "partial",
+      "verification_quote": "(PEDOT-PSS), forming a composite ﬁber with a toughness of"
     },
     {
       "name": "静电纺丝纤维形貌调控因素",
@@ -167,7 +168,62 @@
       "source": "literature",
       "ref_doi": "10.1016/j.seppur.2021.119824",
       "verification": "partial",
-      "基本原理": "蜘蛛丝的超亲水性和力学弹性使其具有天然抗污性能"
+      "基本原理": "蜘蛛丝的超亲水性和力学弹性使其具有天然抗污性能",
+      "verification_quote": "more stable owing to their smaller oil droplet sizes (100–500 nm) and                              an urgent need to improve the permeate flux and antifouling perfor­",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "蛋白质、微生物等生物污损物",
+          "basis": "from_source",
+          "locator": "Wang2024 p.1 / Abstract"
+        },
+        "bio_structure": {
+          "text": "蜘蛛丝蛋白的β-折叠纳米晶体和无定形链段",
+          "basis": "from_source",
+          "locator": "Wang2024 p.1 / Abstract"
+        },
+        "interaction": {
+          "text": "亲水性表面排斥蛋白质吸附；力学弹性防止微裂纹藏污",
+          "basis": "from_source",
+          "locator": "Wang2024 p.1 / Abstract"
+        },
+        "why_it_works": {
+          "text": "蜘蛛丝的超亲水性和力学弹性使其具有天然抗污性能",
+          "basis": "llm_inferred",
+          "locator": null
+        },
+        "boundary_conditions": [
+          {
+            "text": "干燥环境下蜘蛛丝失去亲水性",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          },
+          {
+            "text": "干燥环境下蜘蛛丝可能失去亲水性",
+            "parameter": "wet_stability",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": "domain_knowledge"
+          }
+        ],
+        "transferable_principle": "蜘蛛丝的亲水+弹性组合是天然的抗污策略，可启发抗污涂层设计",
+        "verification_quote": null
+      }
     },
     {
       "name": "纳米乳液分离挑战——粘度+表面活性剂",
@@ -183,7 +239,8 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.cej.2021.128670",
-      "verification": "partial"
+      "verification": "partial",
+      "verification_quote": "spectra of CNF/PEI@GOA-Cr, a new peak at 531.05 eV (Cr–O, Cr=O) is                the order: Cd(II) < Cr(VI) < Cu(II) < Pb(II). In addition, Cd(II), Cr(VI),"
     },
     {
       "name": "Cd(II) XPS吸附机制",
@@ -191,7 +248,8 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.cej.2021.128670",
-      "verification": "partial"
+      "verification": "partial",
+      "verification_quote": "removed Cd(II), Cr(VI), Cu(II), and Pb(II) with a starting concentration of 1000 ppb, in 40 min. CNF, as the"
     },
     {
       "name": "纤维形成——疏水基底",
@@ -199,7 +257,8 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.cej.2021.128670",
-      "verification": "partial"
+      "verification": "partial",
+      "verification_quote": "cellulose nanofibers (CNF) as the skeleton, and graphene oxide (GO) and polyethyleneimine (PEI) as the outer"
     },
     {
       "name": "专化-协同机制 Specialization and cooperation mechanism",
@@ -207,7 +266,8 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.cej.2021.128670",
-      "verification": "partial"
+      "verification": "partial",
+      "verification_quote": "new peaks at 411.36 and 404.65 eV are attributed to Cd–N and Cd–O,                through a specialization and cooperation mechanism. For the coopera­"
     },
     {
       "name": "蜘蛛丝仿生灵感来源 Spider silk biomimetic inspiration",
@@ -215,7 +275,8 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.cej.2021.128670",
-      "verification": "partial"
+      "verification": "partial",
+      "verification_quote": "Design of amphoteric bionic fibers by imitating spider silk for rapid and"
     },
     {
       "name": "润湿理论基础：Young/Wenzel/Cassie模型",
@@ -223,7 +284,8 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.34133/2022/9895418",
-      "verification": "partial"
+      "verification": "partial",
+      "verification_quote": "Young state                Wenzel state                Cassie state"
     },
     {
       "name": "飞秒激光硅超疏水：SF6气氛+氟硅烷修饰",
@@ -255,7 +317,8 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.34133/2022/9895418",
-      "verification": "partial"
+      "verification": "partial",
+      "verification_quote": "WCA = 60 ± 2°                     WCA = 4 ± 1°             large as 159.4°. In addition, the underwater oil droplet would"
     },
     {
       "name": "SLIPS NiTi合金：血液相容性+抗菌",
@@ -263,7 +326,8 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.34133/2022/9895418",
-      "verification": "partial"
+      "verification": "partial",
+      "verification_quote": "hard metals. NiTi alloy is an ideal bioengineering material                                             hydrophobic surface shows a WCA of 120° to water droplets."
     },
     {
       "name": "飞秒激光制备超润湿表面的通用规律",
@@ -343,7 +407,8 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.ccr.2023.215234",
-      "verification": "partial"
+      "verification": "partial",
+      "verification_quote": "material MOF SCU-19 presented three distinct mechanisms involving                      mers as building blocks, exhibiting excellent photocatalytic and"
     }
   ],
   "narrative": {
@@ -429,5 +494,15 @@
     "n_unverified": 36
   },
   "coverage": "normal",
-  "status": "active"
+  "status": "active",
+  "design_translation": [
+    {
+      "idea": "利用蜘蛛丝的高强度和表面官能团进行污染物捕获",
+      "specific_functional_group": "丝蛋白的酰胺基和羧基",
+      "material_handle": "重组蜘蛛丝蛋白或仿生纺丝",
+      "target_interaction": "酰胺基和羧基配位金属离子，高强度支撑过滤应用",
+      "source_tier": "llm_inference",
+      "examples": []
+    }
+  ]
 }

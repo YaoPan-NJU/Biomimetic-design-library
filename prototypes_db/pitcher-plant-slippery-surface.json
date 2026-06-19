@@ -126,7 +126,8 @@
       "source": "literature",
       "ref_doi": "10.1007/s42242-021-00133-8",
       "verification": "partial",
-      "基本原理": "needs_review"
+      "基本原理": "needs_review",
+      "verification_quote": "tension contaminants for anti-fouling [23]. When used for           to Young’s equation, a contact angle of 90° is the threshold"
     },
     {
       "name": "Critical condition for hydrophilic-hydrophobic transition",
@@ -135,7 +136,8 @@
       "source": "literature",
       "ref_doi": "10.1007/s42242-021-00133-8",
       "verification": "partial",
-      "基本原理": "needs_review"
+      "基本原理": "needs_review",
+      "verification_quote": "fore, the critical conditions for the hydrophilic–hydrophobic"
     },
     {
       "name": "Lotus leaf superhydrophobicity mechanism",
@@ -144,7 +146,8 @@
       "source": "literature",
       "ref_doi": "10.1007/s42242-021-00133-8",
       "verification": "partial",
-      "基本原理": "needs_review"
+      "基本原理": "needs_review",
+      "verification_quote": "crystals on the surface and the nanostructures on the top of"
     },
     {
       "name": "Nepenthes pitcher plant trapping mechanism",
@@ -152,7 +155,75 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1007/s42242-021-00133-8",
-      "verification": "unverified"
+      "verification": "unverified",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "蛋白质、微生物、油滴等生物污损物",
+          "basis": "llm_inferred",
+          "locator": null
+        },
+        "bio_structure": {
+          "text": "猪笼草捕虫笼内壁的微纳米层级沟槽结构，表面分泌润滑液",
+          "basis": "llm_inferred",
+          "locator": null
+        },
+        "interaction": {
+          "text": "液体灌注的光滑表面（SLIPS）使污损物无法粘附，液滴在极低接触角滞后下滑落",
+          "basis": "llm_inferred",
+          "locator": null
+        },
+        "why_it_works": {
+          "text": "猪笼草的微沟槽锁住润滑液形成稳定液体膜，污损物与液体膜接触而非固体表面，摩擦系数极低（μ<0.01），实现超滑移抗污",
+          "basis": "llm_inferred",
+          "locator": null
+        },
+        "boundary_conditions": [
+          {
+            "text": "润滑液在高流速下可能被冲刷流失，需要补充机制",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          },
+          {
+            "text": "润滑液与被分离介质不互溶是前提条件",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          },
+          {
+            "text": "润滑液在高流速下可能被冲刷流失",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": "domain_knowledge"
+          }
+        ],
+        "transferable_principle": "猪笼草的SLIPS策略（液体灌注光滑表面）可迁移到任何需要抗污/自清洁的表面，关键在于微结构锁液+低表面能",
+        "verification_quote": null
+      }
     },
     {
       "name": "Desert beetle water collection mechanism",
@@ -161,7 +232,8 @@
       "source": "literature",
       "ref_doi": "10.1007/s42242-021-00133-8",
       "verification": "partial",
-      "基本原理": "needs_review"
+      "基本原理": "needs_review",
+      "verification_quote": "At this point, the value of θ0 is less than 90°.                 alternate hydrophilic and hydrophobic surfaces modeled on"
     },
     {
       "name": "Fish scale superhydrophilic/underwater superoleophobic mechanism",
@@ -170,7 +242,8 @@
       "source": "literature",
       "ref_doi": "10.1007/s42242-021-00133-8",
       "verification": "partial",
-      "基本原理": "鱼鳞的羟基磷灰石和胶原蛋白可通过配位作用或静电吸引结合重金属离子"
+      "基本原理": "鱼鳞的羟基磷灰石和胶原蛋白可通过配位作用或静电吸引结合重金属离子",
+      "verification_quote": "are chosen as substrates according to the situation, and the      When this superhydrophilic surface is exposed to organic"
     },
     {
       "name": "Porous silver membrane reversible wettability switching",
@@ -179,7 +252,8 @@
       "source": "literature",
       "ref_doi": "10.1007/s42242-021-00133-8",
       "verification": "partial",
-      "基本原理": "needs_review"
+      "基本原理": "needs_review",
+      "verification_quote": "chemical patterned superhydrophobic-superhydrophilic surfaces.             1345. https://​doi.​org/​10.​1039/​C6NJ0​3696A"
     },
     {
       "name": "Wood superhydrophobic surface wear resistance",
@@ -188,7 +262,8 @@
       "source": "literature",
       "ref_doi": "10.1007/s42242-021-00133-8",
       "verification": "partial",
-      "基本原理": "木质部的纤维素和木质素可通过羟基、羧基和芳香环结合污染物"
+      "基本原理": "木质部的纤维素和木质素可通过羟基、羧基和芳香环结合污染物",
+      "verification_quote": "For example, under high-humidity conditions, a superhydro-                better ice resistance than superhydrophobic surfaces (SHS)"
     },
     {
       "name": "UV-responsive SLIPS self-replenishment mechanism",
@@ -197,7 +272,8 @@
       "source": "literature",
       "ref_doi": "10.1007/s42242-021-00133-8",
       "verification": "partial",
-      "基本原理": "needs_review"
+      "基本原理": "needs_review",
+      "verification_quote": "face. The conformational change of the azobenzene groups          et al. [90] designed an SLIPS based on porous poly-high"
     },
     {
       "name": "Lubricant loss mechanisms",
@@ -206,7 +282,8 @@
       "source": "literature",
       "ref_doi": "10.1007/s42242-021-00133-8",
       "verification": "partial",
-      "基本原理": "needs_review"
+      "基本原理": "needs_review",
+      "verification_quote": "to the surrounding surface, external shear, and the influence     releasable polymer coating to introduce a texture structure."
     },
     {
       "name": "纳米布沙漠甲虫雾水收集机制",
@@ -224,7 +301,8 @@
       "source": "literature",
       "ref_doi": "10.1002/adfm.202200359",
       "verification": "partial",
-      "基本原理": "猪笼草的滑液表面可实现超滑移，启发防污和自清洁材料设计"
+      "基本原理": "猪笼草的滑液表面可实现超滑移，启发防污和自清洁材料设计",
+      "verification_quote": "level, about 1110 mg h–1 cm−2. Even after 20 cycles, the fog har-    water pumping ability of aquatic plants, Guo et al. proposed"
     }
   ],
   "narrative": {
@@ -292,5 +370,15 @@
     "n_unverified": 21
   },
   "coverage": "normal",
-  "status": "active"
+  "status": "active",
+  "design_translation": [
+    {
+      "idea": "利用猪笼草的滑溜表面设计防污和自清洁材料",
+      "specific_functional_group": "光滑蜡质表面的低表面能基团",
+      "material_handle": "SLIPS 液体灌注多孔表面",
+      "target_interaction": "超滑表面阻止污染物附着，实现自清洁",
+      "source_tier": "llm_inference",
+      "examples": []
+    }
+  ]
 }

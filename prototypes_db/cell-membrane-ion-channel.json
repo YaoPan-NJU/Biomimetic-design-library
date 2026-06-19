@@ -42,7 +42,7 @@
       "parameter": "Azolla caroliniana对铬和汞的吸附容量",
       "value": "铬(III) 200-48000 mg/dm³, 汞最高578 mg/dm³",
       "unit": null,
-      "pollutant": "",
+      "pollutant": "Hg(II)",
       "material": "",
       "ph": null,
       "temperature": null,
@@ -312,7 +312,8 @@
       "source": "literature",
       "ref_doi": "10.1016/j.cej.2021.133878",
       "verification": "partial",
-      "基本原理": "needs_review"
+      "基本原理": "needs_review",
+      "verification_quote": "mg/mL DOPC liposomes with denser microstructure into the aqueous                  rejection of TFC-C14lyso-2 during the 120 h operation in Fig. 12b."
     },
     {
       "name": "Aquaporin(AQP)结构与水传输机制 AQP structure and water transport mechanism",
@@ -321,7 +322,8 @@
       "source": "literature",
       "ref_doi": "10.1016/j.cej.2021.133878",
       "verification": "partial",
-      "基本原理": "needs_review"
+      "基本原理": "needs_review",
+      "verification_quote": "water transportability and the effect of C14lyso liposomes on the intrinsic structure of the polyamide selective"
     },
     {
       "name": "水传输机制 Water transport mechanism",
@@ -330,7 +332,8 @@
       "source": "literature",
       "ref_doi": "10.1016/j.cej.2021.133878",
       "verification": "partial",
-      "基本原理": "needs_review"
+      "基本原理": "needs_review",
+      "verification_quote": "selective layer. As a result, introducing a certain amount of C14lyso          through TFC-C14lyso. The water transport mechanism across the RO"
     },
     {
       "name": "细胞膜仿生设计概念",
@@ -339,7 +342,63 @@
       "source": "literature",
       "ref_doi": "10.1002/adfm.202200199",
       "verification": "verified",
-      "基本原理": "生物离子通道的选择性来自精确的孔道尺寸和通道内壁的化学环境（如KcsA通道的羰基氧配位），可实现亚埃级离子选择"
+      "基本原理": "生物离子通道的选择性来自精确的孔道尺寸和通道内壁的化学环境（如KcsA通道的羰基氧配位），可实现亚埃级离子选择",
+      "source_file": "仿生文献库/2nd/全局综述（补充）/2022-BerattoRamos-filtration-aquaporin-biomimetic-water.pdf",
+      "verification_quote": "aquaporin-based biomimetic membranes for water filtration",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "特定离子（如K⁺、Na⁺、Ca²⁺）和极性有机分子",
+          "basis": "from_source",
+          "locator": "BerattoRamos2022 p.1 / Abstract"
+        },
+        "bio_structure": {
+          "text": "细胞膜的脂质双分子层和膜蛋白（离子通道、水通道蛋白）",
+          "basis": "from_source",
+          "locator": "BerattoRamos2022 p.1 / Abstract"
+        },
+        "interaction": {
+          "text": "离子通道的选择性过滤器通过尺寸排斥和配位作用实现离子选择性；水通道蛋白（AQP）仅允许水分子通过",
+          "basis": "from_source",
+          "locator": "BerattoRamos2022 p.1 / Abstract"
+        },
+        "why_it_works": {
+          "text": "生物离子通道的选择性来自精确的孔道尺寸和通道内壁的化学环境（如KcsA通道的羰基氧配位），可实现亚埃级离子选择",
+          "basis": "from_source",
+          "locator": "BerattoRamos2022 p.1 / Abstract"
+        },
+        "boundary_conditions": [
+          {
+            "text": "仿生膜的稳定性远低于生物膜，高压力/高盐下膜结构破坏",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          },
+          {
+            "text": "高盐条件下膜结构可能被破坏，选择性下降",
+            "parameter": "salinity",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": "domain_knowledge"
+          }
+        ],
+        "transferable_principle": "生物离子通道的选择性过滤机制（尺寸排斥+化学配位）可启发高选择性分离膜设计",
+        "verification_quote": "aquaporin-based biomimetic membranes for water filtration"
+      }
     },
     {
       "name": "生物离子通道仿生设计原则",
@@ -357,7 +416,8 @@
       "source": "literature",
       "ref_doi": "10.1016/j.advmem.2022.100032",
       "verification": "partial",
-      "基本原理": "细胞膜的脂质双分子层和膜蛋白可通过静电作用、配位作用或分子识别选择性结合污染物"
+      "基本原理": "细胞膜的脂质双分子层和膜蛋白可通过静电作用、配位作用或分子识别选择性结合污染物",
+      "verification_quote": "target ion size. As for the common crown ethers compounds, 12-crown-4"
     },
     {
       "name": "功能化石墨烯纳米孔——模拟Na⁺通道",
@@ -366,7 +426,8 @@
       "source": "literature",
       "ref_doi": "10.1016/j.advmem.2022.100032",
       "verification": "partial",
-      "基本原理": "needs_review"
+      "基本原理": "needs_review",
+      "verification_quote": "[283] Y.S. Yu, L.Y. Huang, X. Lu, H.M. Ding, Ion transport through a nanoporous C2N                     in graphene-embedded 18-crown-6 ether pores, ACS Nano 12 (2018) 6677–6684."
     },
     {
       "name": "MOF纳米晶体——离子选择性膜",
@@ -375,7 +436,8 @@
       "source": "literature",
       "ref_doi": "10.1016/j.advmem.2022.100032",
       "verification": "partial",
-      "基本原理": "needs_review"
+      "基本原理": "needs_review",
+      "verification_quote": "structures including MIL-121 with 1D channels, Al-TCPP with 2D interlayers, and 3D MOFs ZIF-8, HKUST-1 and UiO-66-X with window-cavity channels (Reproduced"
     },
     {
       "name": "液晶膜——反常Cl⁻/SO₄²⁻选择性",
@@ -402,7 +464,8 @@
       "source": "literature",
       "ref_doi": "10.1016/j.advmem.2022.100032",
       "verification": "partial",
-      "基本原理": "needs_review"
+      "基本原理": "needs_review",
+      "verification_quote": "cylsulfate (SDS) regulated interfacial polymerization (SARIP) to regulate           propyltriethoxysilane (APTES) as the modifying agent to narrow the pore"
     },
     {
       "name": "GO基2D层状膜——层间距调控",
@@ -411,7 +474,8 @@
       "source": "literature",
       "ref_doi": "10.1016/j.advmem.2022.100032",
       "verification": "partial",
-      "基本原理": "needs_review"
+      "基本原理": "needs_review",
+      "verification_quote": "chloride monomers, the reaction is more likely to occur at the interface of       reversed the surface charge by consuming negative sites (-COOH) on the"
     },
     {
       "name": "水通道蛋白仿生膜制备挑战",
@@ -557,5 +621,15 @@
     "n_unverified": 15
   },
   "coverage": "normal",
-  "status": "active"
+  "status": "active",
+  "design_translation": [
+    {
+      "idea": "利用细胞膜离子通道的选择性传输机制设计分离膜",
+      "specific_functional_group": "通道蛋白的亲水孔道和电荷选择性滤器",
+      "material_handle": "仿生纳米通道膜或离子印迹聚合物",
+      "target_interaction": "基于尺寸和电荷的离子选择性传输",
+      "source_tier": "llm_inference",
+      "examples": []
+    }
+  ]
 }

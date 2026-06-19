@@ -166,7 +166,63 @@
       "source": "literature",
       "ref_doi": "10.1016/j.tibtech.2022.09.011",
       "verification": "verified",
-      "基本原理": "CMC水凝胶的羧基提供高密度配位位点，三维网络结构提供高比表面积和快速扩散通道"
+      "基本原理": "CMC水凝胶的羧基提供高密度配位位点，三维网络结构提供高比表面积和快速扩散通道",
+      "source_file": "仿生文献库/论文/第5组-纤维结构/2021-刘-纤维素-膜-菌丝-吸附-综述 2.pdf",
+      "verification_quote": "丝状真菌菌丝体细胞壁含80%-90%多糖(几丁质和纤维素),对重金属有吸附能力",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "重金属离子（Pb²⁺、Cu²⁺、Cd²⁺）",
+          "basis": "from_source",
+          "locator": "刘2021 p.10 / Abstract + Sec.1"
+        },
+        "bio_structure": {
+          "text": "菌丝体衍生的羧甲基纤维素（CMC）水凝胶网络",
+          "basis": "from_source",
+          "locator": "刘2021 p.10 / Abstract + Sec.1"
+        },
+        "interaction": {
+          "text": "羧基（-COO⁻）与重金属离子的螯合配位",
+          "basis": "from_source",
+          "locator": "刘2021 p.10 / Abstract + Sec.1"
+        },
+        "why_it_works": {
+          "text": "CMC水凝胶的羧基提供高密度配位位点，三维网络结构提供高比表面积和快速扩散通道",
+          "basis": "llm_inferred",
+          "locator": null
+        },
+        "boundary_conditions": [
+          {
+            "text": "强酸性条件下羧基质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          },
+          {
+            "text": "强酸性条件下羧基和氨基质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": "CM-006: carboxyl-deprotonation-metal-coordination"
+          }
+        ],
+        "transferable_principle": "菌丝体衍生的含羧基水凝胶可作为廉价的重金属螯合吸附剂",
+        "verification_quote": "丝状真菌菌丝体细胞壁含80%-90%多糖(几丁质和纤维素),对重金属有吸附能力"
+      }
     }
   ],
   "narrative": {
@@ -212,5 +268,15 @@
     "n_unverified": 4
   },
   "coverage": "normal",
-  "status": "active"
+  "status": "active",
+  "design_translation": [
+    {
+      "idea": "利用真菌菌丝体的几丁质和葡聚糖进行重金属吸附",
+      "specific_functional_group": "几丁质的氨基和羟基，β-葡聚糖的羟基",
+      "material_handle": "真菌菌丝体培养、固定化或改性",
+      "target_interaction": "氨基和羟基配位重金属离子，生物降解性好",
+      "source_tier": "llm_inference",
+      "examples": []
+    }
+  ]
 }
