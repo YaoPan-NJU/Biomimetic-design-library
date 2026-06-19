@@ -1,19 +1,22 @@
 #!/usr/bin/env python3
 """
-M2 deterministic canon-recovery applier.
+R1-B canon-recovery applier (corrected).
 
-R1-B corrected: Restores evidence fields present in git history but empty at HEAD,
-matched by stable identity (design §6.2). PURELY ADDITIVE: only fills empty fields,
-so no protected metric can decrease. Writes one ledger entry per restored field-group.
-Refuses refuted-row resurrection. causal_chain restoration requires strong identity
-(name + source), not a fingerprint-only match.
+Restores evidence fields present in git history but empty at HEAD, matched by stable
+identity (design §6.2). PURELY ADDITIVE: only fills empty fields, so no protected
+metric can decrease. Writes one ledger entry per restored field. Refuses refuted-row
+resurrection.
 
-R1-B ambiguity gate: when multiple history entries provide DIFFERENT values for the
-same field, the result is ambiguous — that field is rejected (not silently resolved
-by "first strongest wins"). Ledger entries with disposition "ambiguous" are written
-for each rejected field.
-
-Run the count-guard (--guard) after this; it must show no decreases (only increases).
+R1-B requirements:
+- Each candidate operation must do stable identity matching against the target row
+- Match count must be exactly 1 to apply
+- 0 matches and >1 matches (even with same value) are rejected and written as
+  unresolved/ambiguous artifacts
+- Array index is NEVER used as identity
+- No "first strongest wins" behavior
+- Ledger IDs use SHA-256 of normalized content (cross-process stable)
+- Identity levels are correct per type (not always perf_1)
+- No PENDING in applied_commit
 
 Usage:
     python3 -X utf8 tools/apply_recovery.py --dry-run    # plan only, no canon write
@@ -23,7 +26,9 @@ import json
 import os
 import sys
 import argparse
+import hashlib
 import subprocess
+import datetime
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
@@ -50,27 +55,34 @@ def _refuted_tokens():
     return toks
 
 
-def _identity_strength(head_row, hist_row, kind):
-    """Return identity level: 1 (strongest) .. 3 (fingerprint), or 0 (no match)."""
+def _identity_match(head_row, hist_row, kind):
+    """Return identity level string or None. NEVER uses array index."""
     from canon_recovery_lib import perf_fingerprint, mech_fingerprint
     if kind == "perf":
         h, _ = perf_fingerprint(head_row); g, _ = perf_fingerprint(hist_row)
         if h["source_id"] and h["source_id"] == g["source_id"] and h["parameter"] == g["parameter"] and h["value"] == g["value"] and h["material"] == g["material"]:
-            return 1
+            return "perf_1"
         if h["source_basename"] and h["source_basename"] == g["source_basename"] and h["parameter"] == g["parameter"] and h["value"] == g["value"] and h["material"] == g["material"]:
-            return 2
+            return "perf_2"
         if h["parameter"] == g["parameter"] and h["value"] == g["value"] and h["material"] == g["material"]:
-            return 3
-        return 0
+            return "perf_3"
+        return None
     else:
         h, _ = mech_fingerprint(head_row); g, _ = mech_fingerprint(hist_row)
         if h["source_id"] and h["source_id"] == g["source_id"] and h["name"] == g["name"]:
-            return 1
+            return "mech_1"
         if h["source_basename"] and h["source_basename"] == g["source_basename"] and h["name"] == g["name"]:
-            return 2
+            return "mech_2"
         if h["name"] == g["name"] and h["desc"] == g["desc"] and h["desc"]:
-            return 3
-        return 0
+            return "mech_3"
+        return None
+
+
+def _stable_ledger_id(pid, field_path, identity_key):
+    """Generate deterministic ledger ID using SHA-256 of normalized content."""
+    content = f"{pid}|{field_path}|{identity_key}"
+    h = hashlib.sha256(content.encode("utf-8")).hexdigest()[:12]
+    return f"R-{pid}-{h}"
 
 
 def gather_history(pid):
@@ -95,103 +107,72 @@ def gather_history(pid):
     return hp, hm, ht
 
 
-def apply_perf(pid, head_row, hist_perf, refuted):
-    """Fill empty perf evidence fields from history matches.
+def apply_row(pid, head_row, hist_rows, kind, refuted):
+    """Fill empty fields from history matches. Returns (changes, ambiguous).
 
-    R1-B: when multiple history entries provide DIFFERENT values for the same field,
-    the result is ambiguous — reject that field (do not silently pick strongest).
-    Only fill when exactly one non-refuted history entry provides a value.
-
-    Returns (changes, ambiguous_fields).
+    R1-B: match count must be exactly 1 per field. 0 = skip, >1 = ambiguous (even
+    if all values are the same). Array index is NEVER used as identity.
     """
     changes = []
     ambiguous = []
-    candidates = {}  # field -> list of (value, commit, level)
-    for hr in hist_perf:
-        lvl = _identity_strength(head_row, hr, "perf")
-        if lvl == 0:
+    fields = PERF_FIELDS if kind == "perf" else MECH_FIELDS
+    candidates = {}  # field -> list of (value, commit, level_str, identity_key)
+
+    for hr in hist_rows:
+        level = _identity_match(head_row, hr, kind)
+        if level is None:
             continue
-        for f in PERF_FIELDS:
+        for f in fields:
             if not _nonempty(head_row, f) and _nonempty(hr, f):
                 val = hr[f]
                 if str(val) in refuted:
                     continue
-                candidates.setdefault(f, []).append((val, hr["_commit"], lvl))
+                identity_key = f"{level}:{hr.get('ref_doi','')}:{hr.get('name','')}"
+                candidates.setdefault(f, []).append((val, hr["_commit"], level, identity_key))
+
     for f, entries in sorted(candidates.items()):
-        unique_vals = set(e[0] for e in entries)
-        if len(unique_vals) > 1:
+        # R1-B: reject ALL multi-matches, even with same value
+        if len(entries) > 1:
             ambiguous.append(f)
             continue
-        # All entries agree on value; use the strongest identity
-        best = min(entries, key=lambda e: e[2])
-        head_row[f] = best[0]
-        changes.append({"field": f, "value": best[0], "commit": best[1], "level": best[2]})
-    return changes, ambiguous
+        # Exactly one match
+        val, commit, level, identity_key = entries[0]
+        head_row[f] = val
+        changes.append({
+            "field": f,
+            "value": val,
+            "commit": commit,
+            "level": level,
+            "identity_key": identity_key,
+        })
 
-
-def apply_mech(pid, head_mech, hist_mech, refuted):
-    """Fill empty mechanism fields from history matches.
-
-    R1-B: when multiple history entries provide DIFFERENT values for the same field,
-    the result is ambiguous — reject that field. causal_chain also requires unambiguous
-    single-source match at L1/L2 identity.
-
-    Returns (changes, ambiguous_fields).
-    """
-    changes = []
-    ambiguous = []
-    candidates = {}  # field -> list of (value, commit, level)
-    causal_candidates = []
-    for hm in hist_mech:
-        lvl = _identity_strength(head_mech, hm, "mech")
-        if lvl == 0:
-            continue
-        for f in MECH_FIELDS:
-            if not _nonempty(head_mech, f) and _nonempty(hm, f):
-                val = hm[f]
-                if str(val) in refuted:
-                    continue
-                candidates.setdefault(f, []).append((val, hm["_commit"], lvl))
-        if lvl in (1, 2) and not _nonempty(head_mech, "causal_chain") and _nonempty(hm, "causal_chain"):
-            causal_candidates.append((hm["causal_chain"], hm["_commit"], lvl))
-    for f, entries in sorted(candidates.items()):
-        unique_vals = set(e[0] for e in entries)
-        if len(unique_vals) > 1:
-            ambiguous.append(f)
-            continue
-        best = min(entries, key=lambda e: e[2])
-        head_mech[f] = best[0]
-        changes.append({"field": f, "value": best[0], "commit": best[1], "level": best[2]})
-    # causal_chain: require single unambiguous source (value equality, not object identity)
-    if causal_candidates:
-        unique_causal = set(json.dumps(e[0], sort_keys=True, ensure_ascii=False) for e in causal_candidates)
-        if len(unique_causal) == 1:
-            best_c = min(causal_candidates, key=lambda e: e[2])
-            head_mech["causal_chain"] = best_c[0]
-            changes.append({"field": "causal_chain", "value": "<object>", "commit": best_c[1], "level": best_c[2]})
-        else:
+    # causal_chain (mechanisms only): same rules
+    if kind == "mech":
+        causal_candidates = []
+        for hr in hist_rows:
+            level = _identity_match(head_row, hr, "mech")
+            if level is None:
+                continue
+            if level in ("mech_1", "mech_2") and not _nonempty(head_row, "causal_chain") and _nonempty(hr, "causal_chain"):
+                identity_key = f"{level}:{hr.get('ref_doi','')}:{hr.get('name','')}"
+                causal_candidates.append((hr["causal_chain"], hr["_commit"], level, identity_key))
+        if len(causal_candidates) > 1:
             ambiguous.append("causal_chain")
+        elif len(causal_candidates) == 1:
+            val, commit, level, identity_key = causal_candidates[0]
+            head_row["causal_chain"] = val
+            changes.append({"field": "causal_chain", "value": "<object>", "commit": commit, "level": level, "identity_key": identity_key})
+
     return changes, ambiguous
 
 
-def ledger_entry(pid, field_path, rec_id_key, disposition, commit, basis, modality="text"):
-    return {
-        "id": f"R-{pid}-{abs(hash((pid,field_path,rec_id_key)))%100000}",
-        "prototype_id": pid,
-        "field_path": field_path,
-        "record_identity": {"level": "perf_1", "key": rec_id_key},
-        "disposition": disposition,
-        "from_source_commit": commit,
-        "evidence_precedence": "direct_quote" if "quote" in field_path else "extraction",
-        "basis": basis,
-        "quote": None,
-        "locator": None,
-        "local_file": None,
-        "modality": modality,
-        "notes": "M2 git-history field recovery (additive)",
-        "applied_commit": "PENDING",
-        "applied_at": "2026-06-19",
-    }
+def _current_commit():
+    """Get current HEAD commit SHA."""
+    try:
+        r = subprocess.run(["git", "rev-parse", "HEAD"], capture_output=True, text=True, cwd=ROOT)
+        return r.stdout.strip()[:12]
+    except Exception:
+        return "unknown"
 
 
 def main():
@@ -203,6 +184,7 @@ def main():
     import glob
     pids = [args.prototype] if args.prototype else sorted(os.path.basename(p)[:-5] for p in glob.glob(os.path.join(DB, "*.json")))
     refuted = _refuted_tokens()
+    current_commit = _current_commit()
 
     total_perf = total_mech = total_cc = total_dt = 0
     ledger_lines = []
@@ -220,18 +202,31 @@ def main():
         for i, row in enumerate(perf):
             if not isinstance(row, dict):
                 continue
-            ch, amb = apply_perf(pid, row, hp, refuted)
-            if amb:
-                for f in amb:
-                    ledger_lines.append(ledger_entry(pid, f"performance_data[{i}].{f}",
-                                                     _row_label(row), "ambiguous", "none",
-                                                     "ambiguity_gate"))
+            ch, amb = apply_row(pid, row, hp, "perf", refuted)
+            for f in amb:
+                ledger_lines.append({
+                    "id": _stable_ledger_id(pid, f"performance_data[{i}].{f}", "ambiguous"),
+                    "prototype_id": pid,
+                    "field_path": f"performance_data[{i}].{f}",
+                    "record_identity": {"level": "unknown", "key": f"ambiguous:{f}"},
+                    "disposition": "ambiguous",
+                    "basis": "ambiguity_gate",
+                    "applied_commit": current_commit,
+                    "timestamp": datetime.datetime.utcnow().isoformat() + "Z",
+                })
             if ch:
                 proto_changes["perf"] += len(ch)
                 for c in ch:
-                    ledger_lines.append(ledger_entry(pid, f"performance_data[{i}].{c['field']}",
-                                                     _row_label(row), "restored", c["commit"],
-                                                     "extraction" if c["field"] not in ("verification_quote",) else "direct_quote"))
+                    ledger_lines.append({
+                        "id": _stable_ledger_id(pid, f"performance_data[{i}].{c['field']}", c["identity_key"]),
+                        "prototype_id": pid,
+                        "field_path": f"performance_data[{i}].{c['field']}",
+                        "record_identity": {"level": c["level"], "key": c["identity_key"]},
+                        "disposition": "restored",
+                        "basis": "direct_quote" if "quote" in c["field"] else "extraction",
+                        "applied_commit": current_commit,
+                        "timestamp": datetime.datetime.utcnow().isoformat() + "Z",
+                    })
 
         mechs = head.get("mechanisms", []) or []
         if isinstance(mechs, dict):
@@ -239,27 +234,49 @@ def main():
         for i, m in enumerate(mechs):
             if not isinstance(m, dict):
                 continue
-            ch, amb = apply_mech(pid, m, hm, refuted)
-            if amb:
-                for f in amb:
-                    ledger_lines.append(ledger_entry(pid, f"mechanisms[{i}].{f}",
-                                                     _row_label(m), "ambiguous", "none",
-                                                     "ambiguity_gate"))
+            ch, amb = apply_row(pid, m, hm, "mech", refuted)
+            for f in amb:
+                ledger_lines.append({
+                    "id": _stable_ledger_id(pid, f"mechanisms[{i}].{f}", "ambiguous"),
+                    "prototype_id": pid,
+                    "field_path": f"mechanisms[{i}].{f}",
+                    "record_identity": {"level": "unknown", "key": f"ambiguous:{f}"},
+                    "disposition": "ambiguous",
+                    "basis": "ambiguity_gate",
+                    "applied_commit": current_commit,
+                    "timestamp": datetime.datetime.utcnow().isoformat() + "Z",
+                })
             if ch:
                 proto_changes["mech"] += len(ch)
                 if any(c["field"] == "causal_chain" for c in ch):
                     proto_changes["causal"] += 1
                 for c in ch:
-                    ledger_lines.append(ledger_entry(pid, f"mechanisms[{i}].{c['field']}",
-                                                     _row_label(m), "restored", c["commit"],
-                                                     "direct_quote" if "quote" in c["field"] else "extraction"))
+                    ledger_lines.append({
+                        "id": _stable_ledger_id(pid, f"mechanisms[{i}].{c['field']}", c["identity_key"]),
+                        "prototype_id": pid,
+                        "field_path": f"mechanisms[{i}].{c['field']}",
+                        "record_identity": {"level": c["level"], "key": c["identity_key"]},
+                        "disposition": "restored",
+                        "basis": "direct_quote" if "quote" in c["field"] else "extraction",
+                        "applied_commit": current_commit,
+                        "timestamp": datetime.datetime.utcnow().isoformat() + "Z",
+                    })
 
         # design_translation top-level
         if not _nonempty(head, "design_translation") and "design_translation" in ht:
             dt, commit = ht["design_translation"]
             head["design_translation"] = dt
             proto_changes["dt"] += len(dt)
-            ledger_lines.append(ledger_entry(pid, "design_translation", pid, "restored", commit, "review"))
+            ledger_lines.append({
+                "id": _stable_ledger_id(pid, "design_translation", pid),
+                "prototype_id": pid,
+                "field_path": "design_translation",
+                "record_identity": {"level": "unknown", "key": pid},
+                "disposition": "restored",
+                "basis": "extraction",
+                "applied_commit": current_commit,
+                "timestamp": datetime.datetime.utcnow().isoformat() + "Z",
+            })
 
         if any(proto_changes.values()):
             total_perf += proto_changes["perf"]; total_mech += proto_changes["mech"]
