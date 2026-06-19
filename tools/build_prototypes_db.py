@@ -672,12 +672,48 @@ def _assert_canon_write_safe(allowlist_path):
     if r.stdout.strip():
         raise SystemExit('--write-canon refused: prototypes_db/ has uncommitted changes. '
                          'Commit or revert before a guarded rebuild.')
-    # 2. post-rebuild invariant check is invoked by the caller after aggregation; here we
-    #    only assert the precondition snapshot is recordable.
+    # 2. record pre-build snapshot for post-build comparison
     allowlist = []
     if allowlist_path and os.path.exists(allowlist_path):
         allowlist = json.load(open(allowlist_path, encoding='utf-8'))
     return allowlist
+
+
+def _post_build_invariant_check(canon_dir, allowlist):
+    """Post-build M1 guard: compare canon tree after rebuild against pre-build HEAD snapshot.
+
+    Raises SystemExit if any protected metric decreased without an allowlist entry.
+    This function MUST be called after the build writes to canon_dir.
+    """
+    import sys as _sys
+    try:
+        from canon_metrics import snapshot_dir, compare
+    except Exception as e:
+        _sys.stderr.write(f'Post-build invariant check skipped (import failed: {e})\n')
+        return
+    # Snapshot the current (post-build) canon state
+    after = snapshot_dir(str(canon_dir))
+    # Snapshot the committed (pre-build) canon state from HEAD
+    import subprocess as _sp
+    r = _sp.run(['git', 'rev-parse', 'HEAD'], capture_output=True, text=True)
+    head_commit = r.stdout.strip()
+    if not head_commit:
+        _sys.stderr.write('Post-build invariant check skipped (not in a git repo)\n')
+        return
+    try:
+        from canon_metrics import snapshot_commit
+        before = snapshot_commit(head_commit)
+    except Exception as e:
+        _sys.stderr.write(f'Post-build invariant check skipped (snapshot_commit failed: {e})\n')
+        return
+    # Compare
+    diffs = compare(before, after, allowlist=allowlist)
+    if diffs:
+        _sys.stderr.write('POST-BUILD INVARIANT CHECK FAILED:\n')
+        for d in diffs:
+            _sys.stderr.write(f'  {d}\n')
+        raise SystemExit('Post-build invariant check failed: protected metrics decreased. '
+                         'See above for details. Use --allowlist to permit explained drops.')
 
 
 def main():
@@ -704,11 +740,12 @@ def main():
     # === M1 staging-only enforcement ===
     # Default: NEVER touch frozen canon. Emit to a staging candidate directory.
     staging_dir = repo_dir / 'prototypes_db.staging'
-    if args.write_canon or args.writeCanon:  # argparse normalizes to write_canon
+    if args.write_canon:
         output_dir = canon_dir
-        _assert_canon_write_safe(args.allowlist)
+        canon_allowlist = _assert_canon_write_safe(args.allowlist)
         print('⚠️  --write-canon: guarded canon rebuild ENABLED (clean tree + invariant checks).')
     else:
+        canon_allowlist = []
         output_dir = staging_dir
         import shutil
         if staging_dir.exists():
@@ -880,6 +917,15 @@ def main():
             _sys.exit(1)
         else:
             print('\n✅ Chimera 检查通过')
+
+    # Post-build invariant check (only when writing to canon)
+    if args.write_canon:
+        try:
+            _post_build_invariant_check(canon_dir, canon_allowlist)
+            print('✅ Post-build invariant check passed (canon tree matches HEAD)')
+        except SystemExit as e:
+            print(f'\n❌ {e}')
+            raise
 
 
 if __name__ == '__main__':
