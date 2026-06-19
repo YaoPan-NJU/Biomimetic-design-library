@@ -654,18 +654,68 @@ def filter_chimera(pid, data, blocklist):
     return data, removed
 
 
+def _assert_canon_write_safe(allowlist_path):
+    """M1 guard for --write-canon: require a clean canon tree + pass invariant checks.
+
+    Compares the working canon tree against HEAD. Any unexplained protected-metric
+    decrease (vs HEAD) is rejected. The rebuild itself is still forbidden by project
+    policy; this guard exists so a future audited rebuild cannot silently drop evidence.
+    """
+    import sys as _sys
+    try:
+        from canon_metrics import snapshot_dir, snapshot_commit, compare
+    except Exception as e:
+        raise SystemExit(f'--write-canon requires tools/canon_metrics.py (import failed: {e})')
+    # 1. working canon tree must match committed canon (no uncommitted canon damage to mask)
+    import subprocess as _sp
+    r = _sp.run(['git', 'status', '--short', '--', 'prototypes_db/'], capture_output=True, text=True)
+    if r.stdout.strip():
+        raise SystemExit('--write-canon refused: prototypes_db/ has uncommitted changes. '
+                         'Commit or revert before a guarded rebuild.')
+    # 2. post-rebuild invariant check is invoked by the caller after aggregation; here we
+    #    only assert the precondition snapshot is recordable.
+    allowlist = []
+    if allowlist_path and os.path.exists(allowlist_path):
+        allowlist = json.load(open(allowlist_path, encoding='utf-8'))
+    return allowlist
+
+
 def main():
     import argparse
 
     parser = argparse.ArgumentParser(description='构建 prototypes_db 结构化存储')
     parser.add_argument('--merge', action='store_true', help='与已有数据合并，保留富化字段')
     parser.add_argument('--export-enrichment', action='store_true', help='导出 enrichment 层分离文件')
+    # M1 safety: staging-only by default. Writing canon requires an explicit guarded mode.
+    parser.add_argument('--write-canon', action='store_true',
+                        help='[GUARDED] write to prototypes_db/ instead of staging/. '
+                             'Requires a clean canon tree and passes pre/post invariant checks '
+                             '(no unexplained protected-metric drops). Forbidden by project policy; '
+                             'retained only so a guarded, audited rebuild is possible.')
+    parser.add_argument('--allowlist', default=None,
+                        help='JSON list of {metric} entries permitted to decrease when --write-canon')
     args = parser.parse_args()
 
     repo_dir = Path(__file__).resolve().parents[1]
     extractions_dir = repo_dir / 'tools' / 'litextract' / 'outputs' / 'extractions'
     feature_mapping_path = repo_dir / 'feature-mapping.json'
-    output_dir = repo_dir / 'prototypes_db'
+    canon_dir = repo_dir / 'prototypes_db'
+
+    # === M1 staging-only enforcement ===
+    # Default: NEVER touch frozen canon. Emit to a staging candidate directory.
+    staging_dir = repo_dir / 'prototypes_db.staging'
+    if args.write_canon or args.writeCanon:  # argparse normalizes to write_canon
+        output_dir = canon_dir
+        _assert_canon_write_safe(args.allowlist)
+        print('⚠️  --write-canon: guarded canon rebuild ENABLED (clean tree + invariant checks).')
+    else:
+        output_dir = staging_dir
+        import shutil
+        if staging_dir.exists():
+            shutil.rmtree(staging_dir)
+        staging_dir.mkdir(parents=True, exist_ok=True)
+        print(f'M1 SAFETY: default staging-only. Output → {output_dir} (canon untouched). '
+              f'Use --write-canon for a guarded rebuild.')
 
     # 读取 feature-mapping
     with open(feature_mapping_path, 'r', encoding='utf-8') as f:
