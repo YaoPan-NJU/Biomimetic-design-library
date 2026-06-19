@@ -4281,5 +4281,1268 @@
     }
   ],
   "library_tier": "core",
-  "lifecycle_status": "active"
+  "lifecycle_status": "active",
+  "honesty_ledger": {
+    "facts": [
+      {
+        "type": "mechanism",
+        "index": 1,
+        "name": "金属离子络合机制 Metal ion complexation mechanism",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "mechanism",
+        "index": 17,
+        "name": "pH对氮污染物吸附的影响机制 pH effect on N-pollutants adsorption",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 80,
+        "parameter": "实施例1-壳聚糖-ZIF-8-重氮化0.5g-吸附容量",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 81,
+        "parameter": "实施例3-CNF-ZIF-8-高浓度MOF前驱体-吸附容量",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 82,
+        "parameter": "实施例4-明胶-ZIF-8-TMCS疏水改性-吸附容量",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 83,
+        "parameter": "实施例5-明胶-ZIF-8-对甲苯磺酸重氮盐-吸附容量",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 84,
+        "parameter": "实施例6-明胶-ZIF-8-轻交联0.2g重氮盐-吸附容量",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 85,
+        "parameter": "对比例6-明胶-ZIF-8-过量交联1.0g重氮盐-吸附容量",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 86,
+        "parameter": "实施例7-明胶-ZIF-8(Zn)-吸附容量",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 87,
+        "parameter": "对比例7-明胶-ZIF-67(Co)-吸附容量",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 88,
+        "parameter": "重氮化处理壳聚糖-MOF泡沫-广谱吸附容量范围",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 89,
+        "parameter": "重氮化处理壳聚糖-MOF泡沫-对二氯甲烷吸附容量",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 90,
+        "parameter": "重氮化处理壳聚糖-MOF泡沫-对柴油吸附容量",
+        "basis": "verified_with_quote"
+      }
+    ],
+    "leads": [
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "吸附机制-内球配合物 Adsorption mechanism - inner-sphere complexation",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 2,
+        "name": "pHpzc对吸附机制的影响 pHpzc effect on adsorption mechanism",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 3,
+        "name": "表面沉淀机制 Surface precipitation mechanism",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 4,
+        "name": "FTIR表征——吸附前后对比",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 5,
+        "name": "XPS表征——C 1s和N 1s",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 6,
+        "name": "制备方法",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 7,
+        "name": "吸附机制——综合分析",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 8,
+        "name": "CS/GO复合物对MB吸附的π-π堆积机制",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 9,
+        "name": "壳聚糖对阴离子染料的吸附机制",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 10,
+        "name": "抗生素在CS/GO复合物上的吸附机制",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 11,
+        "name": "CS/GO水凝胶形成机制",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 12,
+        "name": "壳聚糖对阴离子染料吸附的pH依赖性",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 13,
+        "name": "壳聚糖吸附砷的机制 Arsenic adsorption mechanisms on chitosan",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 14,
+        "name": "壳聚糖-氧化铝复合材料的砷吸附机制 As adsorption on chitosan-alumina composit",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 15,
+        "name": "壳聚糖基生物吸附剂的内球/外球吸附机制 Inner/outer sphere adsorption mechanisms",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 16,
+        "name": "壳聚糖基吸附剂的氧化铝/二氧化钛嵌入机制 Al2O3/TiO2-impregnated chitosan arsenic",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 18,
+        "name": "酸浸碳/壳聚糖/FeCl3吸附机制 Acid-leached carbon/chitosan/FeCl3 mechani",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 19,
+        "name": "La3+掺入壳聚糖膜HSAB机制 La3+-chitosan HSAB mechanism",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 20,
+        "name": "FS/CA仿荷叶超疏水ENM——油水分离",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 21,
+        "name": "环糊精宿主-客体包合——有机污染物选择性去除",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 22,
+        "name": "铁掺杂壳聚糖ENM——As(III)去除机理",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 23,
+        "name": "Freeze drying mechanism and conditions",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 24,
+        "name": "Three main adsorption mechanisms",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 25,
+        "name": "PEI-grafted cellulose aerogel - Cr(VI) removal mechanism",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 26,
+        "name": "电纺膜功能化——防污策略",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 27,
+        "name": "电纺膜——优势与局限性总结",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 28,
+        "name": "Mechanism of Microplastic Removal by Chitin/GO Sponges",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 29,
+        "name": "壳聚糖基吸附剂重金属吸附机制",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 30,
+        "name": "壳聚糖吸附金属离子的机理",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 31,
+        "name": "Cr(VI)吸附机制——静电吸引",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 32,
+        "name": "壳聚糖对Cr(VI)的两种主要吸附机制",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 33,
+        "name": "壳聚糖材料特性",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 34,
+        "name": "壳聚糖-HAP复合的协同优势",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 35,
+        "name": "吸附机理综合分析",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 36,
+        "name": "壳聚糖脱乙酰度对功能基团的影响",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 37,
+        "name": "超疏水抗菌表面'双重保险'原理",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 38,
+        "name": "超疏水抗菌表面分类体系",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 39,
+        "name": "铜基超疏水抗菌表面 — 花瓣状Cu2O",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 40,
+        "name": "铜纳米粒子超疏水抗菌表面",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 41,
+        "name": "CuO/SiO2透明超疏水涂层",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 42,
+        "name": "纳米Ag棉织物超疏水抗菌",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 43,
+        "name": "中空多孔碳球封装纳米Ag超疏水抗菌",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 44,
+        "name": "含氟季铵盐抗菌机理",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 45,
+        "name": "纳米Ag/硅烷棉织物超疏水抗菌",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 46,
+        "name": "树枝状纳米银超疏水表面",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 47,
+        "name": "Cu纳米线/PDMS超疏水表面",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 48,
+        "name": "ZIF-8/PVDF超疏水抗菌涂层",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 49,
+        "name": "pH响应型超疏水抗菌棉织物",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 50,
+        "name": "超疏水医用纱布",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 51,
+        "name": "多巴胺黏附固定无机抗菌剂策略",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 52,
+        "name": "未来发展方向：多功能化智能化",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 53,
+        "name": "无机-有机复合策略优势",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 54,
+        "name": "pH对CR和Cu²⁺吸附的影响",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 55,
+        "name": "吸附机制——CR的三重作用",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 56,
+        "name": "吸附机制——Cu²⁺的配位作用",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 57,
+        "name": "二元体系中的Cu²⁺桥联对CR的影响",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 58,
+        "name": "BET比表面积与孔体积(文中提及但数据在Table S1)",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 59,
+        "name": "Primary adsorption mechanism - complexation/chelation / 主要吸附",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 60,
+        "name": "Electrostatic interaction and pHpzc / 静电相互作用与零电点",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 61,
+        "name": "Ion-exchange mechanism / 离子交换机制",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 62,
+        "name": "MCM两大改性方向",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 63,
+        "name": "MCM吸附机制汇总",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 64,
+        "name": "壳聚糖化学吸附的通用机理",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 65,
+        "name": "吸附机制判断",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 66,
+        "name": "CS对Cr(VI)选择性吸附机制",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 67,
+        "name": "壳聚糖的基本结构与吸附活性位点",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 68,
+        "name": "壳聚糖基吸附剂的三大未来研究方向",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 69,
+        "name": "Chitosan beads的六种吸附机制",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 70,
+        "name": "磁性壳聚糖的三大吸附机制分类",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 71,
+        "name": "Cr(VI)的氧化还原吸附机制（VMCP案例）",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 72,
+        "name": "磁性壳聚糖的五种制备方法",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 73,
+        "name": "协同吸附案例：FFO@Sil@Chi-DTPA同时去除MB和Pb(II)",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 74,
+        "name": "吸附机制 Ad sorption mechanism",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 75,
+        "name": "XPS表征揭示吸附机制 XPS characterization revealing adsorption mechan",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 76,
+        "name": "吸附机理：螯合作用",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 77,
+        "name": "吸附机理：静电引力与去质子化",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 78,
+        "name": "壳聚糖与石墨烯复合的关键协同优势",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 79,
+        "name": "吸附剂-机理-目标污染物对应表",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 80,
+        "name": "石墨烯复合物表面官能团",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 81,
+        "name": "壳聚糖纳米复合物吸附机制",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 82,
+        "name": "环糊精聚合物选择性吸附",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 83,
+        "name": "选择性提升策略",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 84,
+        "name": "吸附机理类型汇总",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 85,
+        "name": "有机改性凹凸棒土的作用 Effect of organic modification on attapulgite",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 86,
+        "name": "海藻酸钙微球吸附重金属的机制 Heavy metal adsorption mechanism of calcium a",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 87,
+        "name": "Fe3+改性活性炭吸附磺胺类抗生素的机制 Mechanism of Fe3+-modified activated ca",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 88,
+        "name": "PDA吸附机制-姜黄素",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 89,
+        "name": "PDA吸附机制-番茄红素",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 90,
+        "name": "吸附机制分析 adsorption mechanism",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 91,
+        "name": "蛋盒结构交联机制 egg-box crosslinking mechanism",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 92,
+        "name": "权利要求限定的材料组成",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 93,
+        "name": "实施例3配方（循环测试对象）",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 94,
+        "name": "实施例5配方（壳聚糖基）",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 95,
+        "name": "制备方法核心流程",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 96,
+        "name": "接触角测试",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 97,
+        "name": "疏水改性剂种类",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 98,
+        "name": "实施例4-明胶-ZIF-8-TMCS疏水改性-吸附容量",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 99,
+        "name": "实施例4-明胶-ZIF-8-TMCS疏水改性-接触角",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 100,
+        "name": "实施例4-明胶-ZIF-8-TMCS疏水改性-抗压强度",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 101,
+        "name": "吸附机制-π-π相互作用",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 102,
+        "name": "XPS分析-吸附机理",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 103,
+        "name": "吸附活性基团协同",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 104,
+        "name": "XPS吸附机理",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 105,
+        "name": "CSBC吸附机制",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 106,
+        "name": "RHB吸附机制",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 107,
+        "name": "吸附机制-静电相互作用",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 108,
+        "name": "吸附机制-π-π堆叠",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 109,
+        "name": "吸附机制-配位作用",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 0,
+        "parameter": "La-MZ/CTS最大磷酸根吸附容量 Maximum phosphate adsorption capacity",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 1,
+        "parameter": "未负载MZ/CTS吸附容量 Adsorption capacity of unloaded MZ/CTS",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 2,
+        "parameter": "不同镧基吸附剂除磷性能比较 Comparison of lanthanum-based adsorbents for p",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 3,
+        "parameter": "Cu浓度对去除率的影响",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 4,
+        "parameter": "投加量对Cu去除率的影响",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 5,
+        "parameter": "Al-MOF/SA-CS复合珠对BPA最大吸附容量",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 6,
+        "parameter": "沥青基活性炭对BPA最大吸附容量",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 7,
+        "parameter": "H₃PO₄活化坚果壳活性炭对BPA吸附容量",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 8,
+        "parameter": "交联壳聚糖珠的溶胀率和吸附容量对比",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 9,
+        "parameter": "磁性壳聚糖/纤维素珠对Cu/Cd/Pb吸附容量",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 10,
+        "parameter": "壳聚糖/TiO₂纳米纤维膜吸附容量",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 11,
+        "parameter": "MOF改性纤维素/壳聚糖气凝胶BET和吸附容量",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 12,
+        "parameter": "交联对吸附容量的影响 Effect of crosslinking on adsorption capacity",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 13,
+        "parameter": "接枝衣康酸对吸附容量的提升 Itaconic acid grafting effect on adsorption ca",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 14,
+        "parameter": "Table 2高吸附容量吸附剂汇总 Top adsorption capacities from Table 2",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 15,
+        "parameter": "最大吸附容量 qmax",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 16,
+        "parameter": "温度对吸附容量的影响",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 17,
+        "parameter": "壳聚糖脱乙酰度对染料吸附容量的影响",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 18,
+        "parameter": "壳聚糖/海藻酸盐复合物对Cu(II)和Cd(II)的吸附容量提升",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 19,
+        "parameter": "壳聚糖/壳聚糖复合物对Cd(II)吸附容量对比",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 20,
+        "parameter": "壳聚糖/GO复合物对亚甲基蓝(MB)吸附容量",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 21,
+        "parameter": "壳聚糖DD对活性黑5(RB5)吸附容量的影响",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 22,
+        "parameter": "壳聚糖基吸附剂的吸附容量(文献汇总) Chitosan-based adsorbent capacities (lite",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 23,
+        "parameter": "Fe(III)-壳聚糖对砷的去除效率 Fe(III)-chitosan arsenic removal efficien",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 24,
+        "parameter": "壳聚糖交联度对吸附容量的影响 Effect of crosslinking degree on adsorption c",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 25,
+        "parameter": "硫醇功能化壳聚糖对As(III)的去除 Sulfhydryl-functionalized chitosan for A",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 26,
+        "parameter": "壳聚糖基膜技术用于砷去除 Chitosan-based membrane technology for arsenic ",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 27,
+        "parameter": "固定床柱技术砷去除性能 Fixed-bed column arsenic removal performance",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 28,
+        "parameter": "壳聚糖基吸附剂的氧化铝/二氧化钛嵌入机制 Al2O3/TiO2-impregnated chitosan arsenic",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 29,
+        "parameter": "Cs-Zr-PEPA磷酸盐吸附容量 Cs-Zr-PEPA phosphate adsorption capacity",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 30,
+        "parameter": "La-bent/Cs磷酸盐吸附性能 La-bent/Cs phosphate removal efficiency",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 31,
+        "parameter": "壳聚糖分子量对氨去除的影响 Effect of chitosan molecular weight on ammonia",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 32,
+        "parameter": "壳聚糖/PAAS复合ENM对Cr(VI)的吸附容量",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 33,
+        "parameter": "壳聚糖/PVP复合ENM对U(VI)的最大吸附容量",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 34,
+        "parameter": "AOPAN/RC双组分ENM对重金属离子的最大吸附容量",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 35,
+        "parameter": "DA@PDA纤维素复合ENM对MB的吸附容量",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 36,
+        "parameter": "CA ENM对三氯生(TCS)的最大吸附容量",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 37,
+        "parameter": "CaCl₂交联海藻酸盐ENM对MB的最大实际吸附容量",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 38,
+        "parameter": "铁掺杂壳聚糖ENM对As(III)的最大吸附容量",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 39,
+        "parameter": "壳聚糖/PVA ENM对四环素的最大吸附容量",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 40,
+        "parameter": "壳聚糖涂层PAN对酸性蓝113的吸附容量",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 41,
+        "parameter": "Functionalization strategies for high adsorption capacity",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 42,
+        "parameter": "PEI-grafted cellulose aerogel - Cr(VI) removal mechanism",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 43,
+        "parameter": "PVA/聚氨酯电纺膜对活性染料的吸附容量",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 44,
+        "parameter": "Fibroin/PAN/PANI/TiO2电纺膜活性染料去除率",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 45,
+        "parameter": "PVA-co-乙烯电纺膜纳米颗粒去除率",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 46,
+        "parameter": "PAN微滤膜细菌/病毒去除率",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 47,
+        "parameter": "Mechanism of Microplastic Removal by Chitin/GO Sponges",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 48,
+        "parameter": "Dye Removal via Enzyme-Assisted Hydrogel",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 49,
+        "parameter": "Cu-BTC/壳聚糖复合膜对Mn2+的去除率",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 50,
+        "parameter": "温度对吸附容量的影响",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 51,
+        "parameter": "CE/CSA-1对CR和Cu²⁺的协同吸附容量(二元体系)",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 52,
+        "parameter": "Hydrogel/aerogel adsorption capacities / 水凝胶/气凝胶吸附容量",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 53,
+        "parameter": "Nanofiber adsorption capacity / 纳米纤维吸附容量",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 54,
+        "parameter": "Composite adsorption capacities / 复合材料吸附容量",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 55,
+        "parameter": "最大吸附容量 qmax",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 56,
+        "parameter": "CNC含量对吸附容量的影响",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 57,
+        "parameter": "与文献吸附容量对比",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 58,
+        "parameter": "Chitosan/Fe-hydroxyapatite beads对Pb(II)的最大吸附容量",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 59,
+        "parameter": "CCC对Pb2+最大吸附容量 Maximum adsorption capacity of CCC for Pb2+",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 60,
+        "parameter": "CCC对Cu2+最大吸附容量 Maximum adsorption capacity of CCC for Cu2+",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 61,
+        "parameter": "CTS/CMC/PAA水凝胶对Pb²⁺的吸附容量",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 62,
+        "parameter": "壳聚糖对多种重金属的吸附容量（McKee et al.）",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 63,
+        "parameter": "壳聚糖对Cd²⁺的吸附容量",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 64,
+        "parameter": "多孔壳聚糖颗粒对Cd²⁺的吸附容量",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 65,
+        "parameter": "壳聚糖对Al³⁺的吸附容量",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 66,
+        "parameter": "壳聚糖交联/非交联对Cr(VI)的吸附容量",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 67,
+        "parameter": "氨基化壳聚糖颗粒对Hg²⁺的吸附容量",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 68,
+        "parameter": "凹凸棒土有机改性对去除率的影响 Effect of attapulgite organic modification o",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 69,
+        "parameter": "活性炭改性对去除率的影响 Effect of activated carbon modification on remo",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 70,
+        "parameter": "pH对Sb去除率的影响 Effect of pH on Sb removal",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 71,
+        "parameter": "pH对Cr去除率的影响 Effect of pH on Cr removal",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 72,
+        "parameter": "反应时间对Sb去除的影响(实施例1, pH=5) Effect of reaction time on Sb remov",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 73,
+        "parameter": "反应时间对Cr去除的影响(实施例1, pH=5) Effect of reaction time on Cr remov",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 74,
+        "parameter": "5min内去除率>80%的工程意义 Engineering significance of >80% removal i",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 75,
+        "parameter": "对比例与实施例的Sb去除时间对比(图5) Sb removal time comparison (Figure 5)",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 76,
+        "parameter": "SA-CCS-LS@Fe3O4-1.5对中性红脱除率 NR removal by SA-CCS-LS@Fe3O4-1.5",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 77,
+        "parameter": "SA-CCS-LS@Fe3O4-1.5-0.6对三种伯氨基染料脱除率 removal rates of optimize",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 78,
+        "parameter": "脱除率计算公式 removal rate formula",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 79,
+        "parameter": "吸附剂对吸附容量的影响",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 91,
+        "parameter": "Gd(III)最大吸附容量",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 92,
+        "parameter": "Cu²⁺最大吸附容量",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 93,
+        "parameter": "未改性MCC/CS吸附容量对比",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 94,
+        "parameter": "CSBC最大吸附容量 qmax (甲基橙)",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 95,
+        "parameter": "RHB最大吸附容量 qmax (甲基橙)",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 96,
+        "parameter": "最大吸附容量 qmax",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 97,
+        "parameter": "最大吸附容量 qmax",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 98,
+        "parameter": "7次循环后吸附容量保持率",
+        "basis": "needs_review"
+      }
+    ],
+    "inferences": [],
+    "generated_by": "P1c-auto",
+    "note": "Classification based on verification label + quote presence + source type"
+  }
 }

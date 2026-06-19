@@ -696,5 +696,158 @@
     }
   ],
   "library_tier": "core",
-  "lifecycle_status": "active"
+  "lifecycle_status": "active",
+  "honesty_ledger": {
+    "facts": [
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "八重协同吸附机制",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 0,
+        "parameter": "静态吸附Langmuir qmax",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 1,
+        "parameter": "固定床动态吸附容量",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 2,
+        "parameter": "Langmuir最大吸附容量 Cd(II) qmax",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 3,
+        "parameter": "Langmuir最大吸附容量 Pb(II) qmax",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 4,
+        "parameter": "共存阳离子对Pb(II)去除率影响",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 5,
+        "parameter": "共存阳离子对Cd(II)去除率影响",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 6,
+        "parameter": "离子强度对Cd(II)去除率影响",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 7,
+        "parameter": "鱼鳞羟基磷灰石对酸性品红最大吸附容量（最优）",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 8,
+        "parameter": "盐酸浓度对吸附容量的影响-0.1mol/L",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 9,
+        "parameter": "盐酸浓度对吸附容量的影响-0.5mol/L",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 10,
+        "parameter": "盐酸浓度对吸附容量的影响-1mol/L",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 11,
+        "parameter": "第一步NaOH处理温度对吸附容量的影响-50°C",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 12,
+        "parameter": "第一步NaOH处理温度对吸附容量的影响-70°C（最优）",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 13,
+        "parameter": "第一步NaOH处理温度对吸附容量的影响-100°C",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 14,
+        "parameter": "干燥方式对吸附容量的影响-冷冻干燥",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 15,
+        "parameter": "干燥方式对吸附容量的影响-热风烘干",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 16,
+        "parameter": "干燥方式对吸附容量的影响-自然风干",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 17,
+        "parameter": "吸附容量最低值",
+        "basis": "verified_with_quote"
+      }
+    ],
+    "leads": [
+      {
+        "type": "mechanism",
+        "index": 1,
+        "name": "疏水相互作用证据",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 18,
+        "parameter": "混合菌对Cd²⁺去除率",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 19,
+        "parameter": "混合菌对Pb²⁺去除率",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 20,
+        "parameter": "不同混合比例对Cd²⁺去除率",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 21,
+        "parameter": "不同混合比例对Pb²⁺去除率",
+        "basis": "partial_with_quote"
+      }
+    ],
+    "inferences": [],
+    "generated_by": "P1c-auto",
+    "note": "Classification based on verification label + quote presence + source type"
+  }
 }

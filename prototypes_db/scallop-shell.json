@@ -116,5 +116,37 @@
     }
   ],
   "library_tier": "core",
-  "lifecycle_status": "active"
+  "lifecycle_status": "active",
+  "honesty_ledger": {
+    "facts": [],
+    "leads": [
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "钝化机理",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "mechanism",
+        "index": 1,
+        "name": "吸附机理增强因素",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 0,
+        "parameter": "煅烧牡蛎壳(800℃)最大吸附容量",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 1,
+        "parameter": "煅烧双色牡蛎壳去除率(Cu/Co/Pb)",
+        "basis": "partial_with_quote"
+      }
+    ],
+    "inferences": [],
+    "generated_by": "P1c-auto",
+    "note": "Classification based on verification label + quote presence + source type"
+  }
 }

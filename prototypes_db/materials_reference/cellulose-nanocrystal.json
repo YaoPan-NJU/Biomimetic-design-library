@@ -3873,5 +3873,673 @@
     "review_table_caveat": "Aggregate review-table values; cross-comparison requires normalization for methodology, pH, and temperature differences"
   },
   "coverage": "normal",
-  "status": "material_reference"
+  "status": "material_reference",
+  "honesty_ledger": {
+    "facts": [],
+    "leads": [],
+    "inferences": [
+      {
+        "type": "performance",
+        "index": 0,
+        "parameter": "CNF-Fe(0)@FeS对MB和CR的吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 1,
+        "parameter": "羧基化CNF吸附容量提升",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 2,
+        "parameter": "天然CNF吸附容量限制",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 3,
+        "parameter": "最大吸附容量 qmax",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 4,
+        "parameter": "PAO/BC气凝胶对五种重金属的Langmuir最大吸附容量 qmax",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 5,
+        "parameter": "磁性NC/四乙烯五胺复合材料对重金属的吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 6,
+        "parameter": "羧基化CNC/PEI复合材料对Cr⁶⁺的吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 7,
+        "parameter": "纳米膨润土/NC/壳聚糖气凝胶对Cr/Co/Cu的吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 8,
+        "parameter": "PEI接枝NC对Hg²⁺的吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 9,
+        "parameter": "2-巯基苯甲酰胺改性衣康酸接枝NC对Hg²⁺的吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 10,
+        "parameter": "胺接枝Fe₃O₄+MoS₂/纤维素复合材料对Hg²⁺的吸附容量和速率",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 11,
+        "parameter": "改性多功能接枝纤维素对Cd²⁺的吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 12,
+        "parameter": "黄原酸盐NC对Cd²⁺的吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 13,
+        "parameter": "羧甲基纤维素/蒙脱土粘土复合膜对Cu²⁺的吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 14,
+        "parameter": "β-乳球蛋白淀粉样纤维对9种重金属的吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 15,
+        "parameter": "CE/CSA-1对CR和Cu²⁺的协同吸附容量(二元体系)",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 16,
+        "parameter": "CNF气凝胶+TMCS疏水改性——油/溶剂吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 17,
+        "parameter": "NFC/GO复合气凝胶——油/溶剂吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 18,
+        "parameter": "超轻气凝胶(UFAs)——极限吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 19,
+        "parameter": "氮掺杂石墨烯泡沫——油/溶剂吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 20,
+        "parameter": "仿荷叶超疏水棉花纤维——SiO2涂层吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 21,
+        "parameter": "原始棉花纤维——未改性吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 22,
+        "parameter": "碳化空心棉纤维——油吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 23,
+        "parameter": "TiO2涂层纳米纤维素气凝胶——油吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 24,
+        "parameter": "GO/PVA/CNF碳气凝胶(GPCCA)——油吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 25,
+        "parameter": "磁性PVA/CNF气凝胶——油吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 26,
+        "parameter": "NCA/OA/Fe₃O₄磁性纳米纤维素气凝胶——油吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 27,
+        "parameter": "磁性纤维素/TiO2气凝胶——油吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 28,
+        "parameter": "CNC/PVA纳米复合气凝胶——油/溶剂吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 29,
+        "parameter": "大孔纤维素气凝胶——MTMS改性吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 30,
+        "parameter": "碳纳米管泡沫——油吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 31,
+        "parameter": "CNF气凝胶(氟化物-free)——油吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 32,
+        "parameter": "稻壳衍生纤维素——油吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 33,
+        "parameter": "Functionalization strategies for high adsorption capacity",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 34,
+        "parameter": "PEI-grafted cellulose aerogel - Cr(VI) removal mechanism",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 35,
+        "parameter": "PVA/聚氨酯电纺膜对活性染料的吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 36,
+        "parameter": "Fibroin/PAN/PANI/TiO2电纺膜活性染料去除率",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 37,
+        "parameter": "PVA-co-乙烯电纺膜纳米颗粒去除率",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 38,
+        "parameter": "PAN微滤膜细菌/病毒去除率",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 39,
+        "parameter": "接枝改性纳米纤维素吸附容量统计",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 40,
+        "parameter": "CNC-PVAm微凝胶对阴离子染料去除的pH影响 pH effect of CNC-PVAm on anionic dy",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 41,
+        "parameter": "CTS/CMC/PAA水凝胶对Pb²⁺的吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 42,
+        "parameter": "淀粉基吸附剂对六类污染物的最大吸附容量汇总",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 43,
+        "parameter": "木薯淀粉基共聚物对Cd(II)的吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 44,
+        "parameter": "MNPs@Starch-g-poly(vinyl sulfate)纳米复合材料对MB的吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 45,
+        "parameter": "CS-g-PAM水凝胶（50%木薯淀粉）对MB的吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 46,
+        "parameter": "邻苯二酚胺功能化淀粉水凝胶对MB的最大吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 47,
+        "parameter": "磁性MOF-淀粉水凝胶对氟伐他汀的最大吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 48,
+        "parameter": "淀粉基超疏水吸附剂对油类的最大吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 49,
+        "parameter": "超疏水淀粉/Fe3O4/SiO2纳米复合低温凝胶对氯仿的吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 50,
+        "parameter": "β-环糊精纳米海绵对布洛芬的吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 51,
+        "parameter": "β-CD接枝壳聚糖对丙泊酚的吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 52,
+        "parameter": "EDTS改性β-CD对沙丁胺醇和阿替洛尔的吸附容量提升",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 53,
+        "parameter": "CSMB对四环素的吸附容量及循环稳定性",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 54,
+        "parameter": "Pb²⁺最大吸附容量 qmax Pb(II)",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 55,
+        "parameter": "Cu²⁺最大吸附容量 qmax Cu(II)",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 56,
+        "parameter": "Cd²⁺最大吸附容量 qmax Cd(II)",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 57,
+        "parameter": "最大吸附容量 qmax",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 58,
+        "parameter": "CNC含量对吸附容量的影响",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 59,
+        "parameter": "与文献吸附容量对比",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 60,
+        "parameter": "壳聚糖/PAAS复合ENM对Cr(VI)的吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 61,
+        "parameter": "壳聚糖/PVP复合ENM对U(VI)的最大吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 62,
+        "parameter": "AOPAN/RC双组分ENM对重金属离子的最大吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 63,
+        "parameter": "DA@PDA纤维素复合ENM对MB的吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 64,
+        "parameter": "CA ENM对三氯生(TCS)的最大吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 65,
+        "parameter": "CaCl₂交联海藻酸盐ENM对MB的最大实际吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 66,
+        "parameter": "铁掺杂壳聚糖ENM对As(III)的最大吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 67,
+        "parameter": "壳聚糖/PVA ENM对四环素的最大吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 68,
+        "parameter": "壳聚糖涂层PAN对酸性蓝113的吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 69,
+        "parameter": "Langmuir模型理论最大吸附容量 qmax",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 70,
+        "parameter": "5次循环后去除率",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 71,
+        "parameter": "最大吸附容量 qmax",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 72,
+        "parameter": "温度对吸附容量的影响",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 73,
+        "parameter": "最大吸附容量 qmax — BC/PDA/La(OH)3复合材料",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 74,
+        "parameter": "吸附容量对比 — BC/PDA/La(OH)3 vs BC/La(OH)3 vs BC/PDA vs BC",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 75,
+        "parameter": "循环稳定性 — 5次循环后吸附容量保持",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 76,
+        "parameter": "实际水体吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 77,
+        "parameter": "实施例1-壳聚糖-ZIF-8-重氮化0.5g-吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 78,
+        "parameter": "实施例3-CNF-ZIF-8-高浓度MOF前驱体-吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 79,
+        "parameter": "实施例4-明胶-ZIF-8-TMCS疏水改性-吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 80,
+        "parameter": "实施例5-明胶-ZIF-8-对甲苯磺酸重氮盐-吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 81,
+        "parameter": "实施例6-明胶-ZIF-8-轻交联0.2g重氮盐-吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 82,
+        "parameter": "对比例6-明胶-ZIF-8-过量交联1.0g重氮盐-吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 83,
+        "parameter": "实施例7-明胶-ZIF-8(Zn)-吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 84,
+        "parameter": "对比例7-明胶-ZIF-67(Co)-吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 85,
+        "parameter": "重氮化处理壳聚糖-MOF泡沫-广谱吸附容量范围",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 86,
+        "parameter": "重氮化处理壳聚糖-MOF泡沫-对二氯甲烷吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 87,
+        "parameter": "重氮化处理壳聚糖-MOF泡沫-对柴油吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 88,
+        "parameter": "吸附剂对吸附容量的影响",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 89,
+        "parameter": "最大吸附容量 亚甲基蓝 纯溶液",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 90,
+        "parameter": "最大吸附容量 结晶紫 纯溶液",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 91,
+        "parameter": "最大吸附容量 孔雀石绿 纯溶液",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 92,
+        "parameter": "最大吸附容量 曙红 纯溶液",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 93,
+        "parameter": "最大吸附容量 刚果红 纯溶液",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 94,
+        "parameter": "最大吸附容量 玫瑰红B 纯溶液",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 95,
+        "parameter": "最大吸附容量 qmax",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 96,
+        "parameter": "7次循环后吸附容量保持率",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 97,
+        "parameter": "IC最大吸附容量 qmax (Langmuir)",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 98,
+        "parameter": "MB最大吸附容量 qmax (Sips)",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 99,
+        "parameter": "MB吸附容量-pH依赖性(pH 8)",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 100,
+        "parameter": "MB吸附容量-pH依赖性(pH 2)",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 101,
+        "parameter": "IC吸附容量-pH依赖性(pH 2)",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 102,
+        "parameter": "IC吸附容量-pH依赖性(pH 12)",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 103,
+        "parameter": "吸附剂投加量对MB吸附容量影响(0.01g→0.1g)",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 104,
+        "parameter": "吸附剂投加量对IC吸附容量影响(0.01g→0.1g)",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 105,
+        "parameter": "Cu²⁺最大吸附容量",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 106,
+        "parameter": "未改性MCC/CS吸附容量对比",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 107,
+        "parameter": "Cr(VI)最大吸附容量 Qm (Langmuir)",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 108,
+        "parameter": "Cu(II)最大吸附容量 Qm (Langmuir)",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 109,
+        "parameter": "Congo red (CR)最大吸附容量 Qm (Langmuir)",
+        "basis": "unverified"
+      }
+    ],
+    "generated_by": "P1c-auto",
+    "note": "Classification based on verification label + quote presence + source type"
+  }
 }

@@ -222,5 +222,50 @@
     }
   ],
   "library_tier": "core",
-  "lifecycle_status": "active"
+  "lifecycle_status": "active",
+  "honesty_ledger": {
+    "facts": [
+      {
+        "type": "mechanism",
+        "index": 1,
+        "name": "HAp四种重金属吸附机制",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 0,
+        "parameter": "Cu浓度对去除率的影响",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 1,
+        "parameter": "投加量对Cu去除率的影响",
+        "basis": "verified_with_quote"
+      }
+    ],
+    "leads": [
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "HAp膜重金属去除性能",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 2,
+        "name": "HAp膜制备方法",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 3,
+        "name": "HAp膜类型与制备技术",
+        "basis": "needs_review"
+      }
+    ],
+    "inferences": [],
+    "generated_by": "P1c-auto",
+    "note": "Classification based on verification label + quote presence + source type"
+  }
 }

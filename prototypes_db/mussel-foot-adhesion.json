@@ -2173,5 +2173,591 @@
     }
   ],
   "library_tier": "core",
-  "lifecycle_status": "active"
+  "lifecycle_status": "active",
+  "honesty_ledger": {
+    "facts": [
+      {
+        "type": "mechanism",
+        "index": 2,
+        "name": "PDA自聚合形成机制 PDA self-polymerization mechanism",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "mechanism",
+        "index": 19,
+        "name": "PDA涂层粘附机制",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 0,
+        "parameter": "MI-PDA对SMX的去除效率 SMX removal efficiency by MI-PDA/PDS",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 11,
+        "parameter": "循环吸附稳定性-重金属去除率保持",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 12,
+        "parameter": "Hg(II)最大吸附容量 qmax",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 13,
+        "parameter": "Co(II)最大吸附容量 qmax",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 14,
+        "parameter": "Ni(II)最大吸附容量 qmax",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 15,
+        "parameter": "25°C时Hg(II)去除率",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 16,
+        "parameter": "25°C时Co(II)去除率",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 17,
+        "parameter": "25°C时Ni(II)去除率",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 18,
+        "parameter": "50°C时Hg(II)去除率",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 19,
+        "parameter": "50°C时Co(II)去除率",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 20,
+        "parameter": "50°C时Ni(II)去除率",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 21,
+        "parameter": "最大吸附容量 qmax (Langmuir, 300K)",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 22,
+        "parameter": "最大吸附容量 qmax (Langmuir, 308K)",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 23,
+        "parameter": "最大吸附容量 qmax (Langmuir, 318K)",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 24,
+        "parameter": "COF@PDA对Fe2+最大吸附容量(Langmuir)",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 25,
+        "parameter": "COF@PDA对Co2+最大吸附容量(Langmuir)",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 26,
+        "parameter": "COF@PDA对Ni2+最大吸附容量(Langmuir)",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 27,
+        "parameter": "5次循环后吸附容量保持率",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 28,
+        "parameter": "COF对Fe2+最大吸附容量",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 29,
+        "parameter": "COF对Co2+最大吸附容量",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 30,
+        "parameter": "COF对Ni2+最大吸附容量",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 31,
+        "parameter": "Gd(III)最大吸附容量",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 39,
+        "parameter": "PDA/DCS最大单层吸附量 qmax",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 40,
+        "parameter": "吸附容量（pH 6时）",
+        "basis": "verified_with_quote"
+      }
+    ],
+    "leads": [
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "两性离子水合能力 vs PEG Zwitterion hydration capacity vs PEG",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 1,
+        "name": "磷酸胆碱仿生机制 Phosphorylcholine biomimetic mechanism",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 3,
+        "name": "PDA涂层 vs 传统涂层技术对比 PDA coating vs traditional coating techniq",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 4,
+        "name": "多巴胺辅助共沉积机制 Dopamine-assisted co-deposition mechanism",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 5,
+        "name": "三种驱动力协同机制",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 6,
+        "name": "染料絮凝实验——盐浓度效应确认静电机制",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 7,
+        "name": "疏水改性方法分类",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 8,
+        "name": "CVD法均匀性问题",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 9,
+        "name": "疏水改性材料分布统计",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 10,
+        "name": "铀酰离子配位化学",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 11,
+        "name": "酰胺肟配位模式",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 12,
+        "name": "配体优化六大策略",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 13,
+        "name": "双功能协同策略",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 14,
+        "name": "离子印迹策略——三种改进方向",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 15,
+        "name": "电化学提取三阶段机理",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 16,
+        "name": "MOF光催化协同机制",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 17,
+        "name": "N位点激活PDS生成¹O₂的机制 Mechanism of N site activating PDS to gener",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 18,
+        "name": "MI-PDA表面官能团识别机制 Surface functional group recognition mechani",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 20,
+        "name": "PDA-ODA超疏水棉花织物接触角",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 21,
+        "name": "PDA微胶囊自修复超疏水棉花织物",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 22,
+        "name": "PDA-TA/硼砂阻燃超疏水棉花织物",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 23,
+        "name": "超疏水PDA涂层棉花织物耐久性测试",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 24,
+        "name": "PLA非织造织物超疏水磁性油水分离",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 25,
+        "name": "氨水诱导超疏水/超亲油PVDF膜 Ammonia-water induced superhydrophobic PVDF",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 26,
+        "name": "CO2响应润湿性反转机制 CO2-responsive wettability reversal mechanism",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 27,
+        "name": "电响应润湿性反转机制 Electro-responsive wettability reversal mechanism",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 28,
+        "name": "光热响应润湿性反转机制 Photothermal-responsive wettability reversal mec",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 29,
+        "name": "pH响应润湿性反转机制 pH-responsive wettability reversal mechanism",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 30,
+        "name": "Janus膜电荷聚合物协同破乳 Janus membrane with charged polymers for dem",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 31,
+        "name": "传统膜疏水/水下亲油致命缺陷 Traditional membrane hydrophobic/underwater o",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 32,
+        "name": "PNIPAM刷温度响应润湿性切换",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 33,
+        "name": "亲疏水刷仿鲨鱼皮水减阻率",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 34,
+        "name": "PPFEMA刷疏水减阻最大减阻率",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 35,
+        "name": "超疏水表面+响应刷边界滑移调控",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 36,
+        "name": "NP-GLIDE涂层设计原理",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 37,
+        "name": "聚合物刷减阻性能对比（亲水vs疏水）",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 38,
+        "name": "聚合物刷防雾涂层厚度与亲水性关系",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 39,
+        "name": "吸附机制-螯合作用 / Adsorption mechanism - chelation",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 40,
+        "name": "贻贝仿生启发机制 / Mussel-inspired biomimetic mechanism",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 41,
+        "name": "聚多巴胺聚合机理 Polydopamine polymerization mechanism",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 42,
+        "name": "铀吸附机制 Uranium adsorption mechanism",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 43,
+        "name": "贻贝仿生改性机制 / Mussel-inspired biomimetic modification mechanism",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 44,
+        "name": "仿贻贝聚多巴胺改性机制 / Mussel-inspired PDA modification mechanism",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 45,
+        "name": "PDA吸附机制-姜黄素",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 46,
+        "name": "PDA吸附机制-番茄红素",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 47,
+        "name": "吸附机制类型",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 48,
+        "name": "吸附机制",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 49,
+        "name": "吸附机制-酚羟基参与",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 50,
+        "name": "XPS分析-吸附机理",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 51,
+        "name": "吸附活性基团协同",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 52,
+        "name": "吸附机理-pH依赖性",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 53,
+        "name": "XPS吸附机理",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 54,
+        "name": "PDA吸附机制补充",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 32,
+        "parameter": "H-PDA-SO最大吸附容量(298K/摘要)",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 33,
+        "parameter": "H-PDA-SO最大吸附容量(298K/实施例)",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 34,
+        "parameter": "H-PDA-SO最大吸附容量(288K)",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 35,
+        "parameter": "H-PDA-SO最大吸附容量(308K)",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 36,
+        "parameter": "H-PDA-SO在pH 6.0时的吸附容量",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 37,
+        "parameter": "H-PDA在pH 6.0时的吸附容量",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 38,
+        "parameter": "H-PDA-SO对U(VI)吸附容量(图7估读)",
+        "basis": "partial_with_quote"
+      }
+    ],
+    "inferences": [
+      {
+        "type": "performance",
+        "index": 1,
+        "parameter": "铀吸附容量 Uranium adsorption capacity",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 2,
+        "parameter": "铀去除率 Uranium removal rate (pH≥5)",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 3,
+        "parameter": "特定条件下去除率 Removal rate at pH 3.0",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 4,
+        "parameter": "实施例1对Cu2+吸附容量 / Example 1 adsorption capacity for Cu2+",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 5,
+        "parameter": "实施例1对CrO42-吸附容量 / Example 1 adsorption capacity for CrO42-",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 6,
+        "parameter": "PDA:CS质量比对Cu2+吸附容量影响 / Effect of PDA:CS ratio on Cu2+ adsorp",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 7,
+        "parameter": "PDA:CS质量比对CrO42-吸附容量影响 / Effect of PDA:CS ratio on CrO42- ad",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 8,
+        "parameter": "铀吸附容量 / Uranium adsorption capacity",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 9,
+        "parameter": "改性时间对铀吸附容量影响 / Effect of modification time on U adsorption",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 10,
+        "parameter": "铀吸附容量计算公式 / Uranium adsorption capacity calculation formula",
+        "basis": "unverified"
+      }
+    ],
+    "generated_by": "P1c-auto",
+    "note": "Classification based on verification label + quote presence + source type"
+  }
 }

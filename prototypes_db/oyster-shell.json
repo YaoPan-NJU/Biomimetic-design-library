@@ -294,5 +294,62 @@
     }
   ],
   "library_tier": "core",
-  "lifecycle_status": "active"
+  "lifecycle_status": "active",
+  "honesty_ledger": {
+    "facts": [],
+    "leads": [
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "牡蛎壳改性吸附机制",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "mechanism",
+        "index": 1,
+        "name": "钝化机理",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 0,
+        "parameter": "牡蛎壳改性花生壳生物炭最大吸附容量 qmax",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 1,
+        "parameter": "改性前后吸附容量对比倍数",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 3,
+        "parameter": "CaBC最大吸附容量(初始浓度优化)",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 4,
+        "parameter": "煅烧牡蛎壳(800℃)最大吸附容量",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 5,
+        "parameter": "煅烧双色牡蛎壳去除率(Cu/Co/Pb)",
+        "basis": "partial_with_quote"
+      }
+    ],
+    "inferences": [
+      {
+        "type": "performance",
+        "index": 2,
+        "parameter": "CAs-4(废物)与CA-4(试剂)吸附容量对比",
+        "basis": "unverified"
+      }
+    ],
+    "generated_by": "P1c-auto",
+    "note": "Classification based on verification label + quote presence + source type"
+  }
 }
