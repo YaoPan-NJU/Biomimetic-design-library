@@ -1,8 +1,12 @@
 # Documentation Index — Biomimetic Design Library
 
 > Entry point for all project documentation. Read this first.
-> For the ADRMATS calling interface see [`ADRMATS_CALL_GUIDE.md`](ADRMATS_CALL_GUIDE.md).
-> For the recovery programme see [`active/PROJECT-RECOVERY-DESIGN.md`](active/PROJECT-RECOVERY-DESIGN.md).
+
+## 当前方向（V3, 2026-06-19）
+
+本库是 ADRMATS 的仿生启发候选检索库。接口契约=启发候选（Yao 2026-06-19 锁定）。
+权威执行计划：[`active/EXECUTION-PLAN-V3.md`](active/EXECUTION-PLAN-V3.md)。
+当前状态：[`active/execution-state.json`](active/execution-state.json)。
 
 This library is a biomimetic **water-treatment design reference** for ADRMATS. It
 provides biological mechanisms, transferable design principles, evidence, and failure

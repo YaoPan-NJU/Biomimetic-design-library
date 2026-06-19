@@ -4,6 +4,16 @@
 
 ---
 
+## 当前方向（2026-06-19, V3）
+
+本库是 ADRMATS 的仿生启发候选检索库（不设计材料、不按性能排名）。权威执行计划：docs/active/EXECUTION-PLAN-V3.md。
+
+路线：R0✓ → R1✓(G1待签) → P0 接口契约(已定=启发候选) → P1 修正(scope/标签/honesty_ledger/design_translation，按产品价值重排) → P2 Core v1 验收(诚实+有用门槛) → P3 分层扩库(60–80，count 非质量指标) → P4 全量审计 + push(仅 Yao)。
+
+原则：诚实优先、scope 正确、不复活 refuted、每次 canon 改动有 ledger v2 处置、未经 Yao 批准不 push。
+
+---
+
 ## 定位
 
 本库的职责**不是设计材料**，而是把前一个智能体给出的需求，转成"可交给对抗设计模块使用的仿生设计 brief"。
