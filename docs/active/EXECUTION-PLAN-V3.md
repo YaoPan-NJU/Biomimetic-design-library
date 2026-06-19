@@ -4,7 +4,7 @@ status: proposed_for_yao_review
 date: 2026-06-19
 author: codex-replacement-supervisor (independent reviewer), at Yao's request
 relationship:
-  - R0 (Gate G0) and R1 (Gate G1) under RECOVERY-EXECUTION-V2-DESIGN.md are DONE; this plan does not redo them.
+  - R0 (Gate G0) and R1 (Gate G1) under RECOVERY-EXECUTION-V2-DESIGN.md were attempted but NOT PASSED; this plan does not redo them but requires them to be fixed first.
   - This plan SUPERSEDES the forward-looking M5+/expansion sections of RECOVERY-EXECUTION-V2-DESIGN.md.
   - It KEEPS unchanged: evidence-quality-standard.md, refuted-log.md discipline, identity rules, protected-asset rules, the gate model.
 authority: Yao's explicit instruction > committed canon + live validation > this plan > V2 design > archived reports
@@ -63,7 +63,7 @@ scope/来源正确 ＞ 标签诚实 ＞ honesty_ledger 正确 ＞ design_transla
 - R1-A：默认构建确为**仅写暂存**，"默认构建后 canon 树哈希不变"测试为真；invariant guard 真的拦截行/quote/locator/causal/translation/boundary 丢失。
 - R1-B：真实 applier 对**零匹配和多匹配都拒绝**；无 "first strongest wins"。
 - R1-C：ledger v2 schema 生效；**628 条 warning** 逐类归因（应为 v1 迁移缺口，不得当作已验收）；R1 起每个 canon 改动有处置。
-- R1-D：`diatom-frustule.json` 的 824 行 diff 必须做**语义级核对**——确认只有 9+1 条 `partial→needs_review` 状态变更 + JSON 重序列化，**没有**夹带内容/行数变化（按字段计数与行身份比对，不看行数）。
+- R1-D：`diatom-frustule.json` 必须做**语义级核对**——确认只有 8 条 M2-d `partial→needs_review` 状态变更 + JSON 重序列化，**没有**夹带内容/行数变化（按字段计数与行身份比对，不看行数）。
 - R1-E：`validate_consistency.py --strict` 结果与那 **1 个预存 error**（separation render/orphan）归因；`execution-state.json` 存在且与提交对象一致；`execution-entry.md`/`SESSION-HANDOFF.md`/M4 报告**不再声称 M4 通过**。
 
 **通过条件**：以上全部可复现，且 canon 只动了 R1-D。否则停在 G1，列必修项。
@@ -125,7 +125,7 @@ scope/来源正确 ＞ 标签诚实 ＞ honesty_ledger 正确 ＞ design_transla
 - **前提**：P2 通过后才开始；全量审计可并行（走候选 artifact，不动已发布 Core）。
 - **目标构成**：Core 24（默认推荐/feature-match 候选排序）＋ Extended 24–36（启发，逐行排序门）＋ Exploratory 12–24（仅发现，禁确定性性能），总 60–80。**count 不是质量指标**。**性能值永不参与排序**——排序仅基于 feature-match weight（分子结构/机制相似度）。
 - **执行**：OpenClaw 做文献清点 + 候选证据包 + 候选卡；CC 强制 tier/晋级门；按波次提交。
-- **晋级门**：Exploratory→Extended（≥1 直接来源 + 1 源链接机理 + 适用边界 + 归属去重）；Extended→Core（全 PDF 审计 + 合格 causal card + ≥1 证据级 boundary + 每个排名值一手来源 + Yao 批准）。
+- **晋级门**：Exploratory→Extended（≥1 直接来源 + 1 源链接机理 + 适用边界 + 归属去重）；Extended→Core（全 PDF 审计 + 合格 causal card + ≥1 证据级 boundary + 每个排序值一手来源 + Yao 批准）。
 - **Gate G5（每波，Codex + Yao 管归属/tier）**；去重/合并/删除原型 = **仅 Yao**。
 
 ### Phase P4 — 全量审计收尾 + 发布
