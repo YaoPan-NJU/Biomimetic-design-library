@@ -1,232 +1,79 @@
 {
-  "report_id": "R0-capability-2026-06-19-v2",
+  "report_id": "R0-capability-2026-06-19-v3",
+  "version": 3,
   "date": "2026-06-19",
-  "baseline_commit": "a71cf8b",
+  "tested_commit": "75345bf",
   "cloud_baseline": "origin/review@e4dc2d0",
   "openclaw_version": "2026.6.8 (844f405)",
   "environment": "macOS Darwin 25.4.0, /opt/homebrew/bin/openclaw",
   "key_slots": {
     "slot_1": {
+      "logical_name": "key_slot_1",
       "provider": "xiaomi",
       "key_masked": "key_slot_1",
       "agents": ["main (mimo-v2.5-pro)", "bmdl-text (mimo-v2.5-pro, no-fallback)", "bmdl-visual (mimo-v2.5, no-fallback)"]
     },
     "slot_2": {
+      "logical_name": "key_slot_2",
       "provider": "xiaomi-2",
       "key_masked": "key_slot_2",
       "agents": ["yang-s-clawedbot (mimo-v2.5-pro)", "bmdl-visual-2 (mimo-v2.5)"]
     }
   },
-  "tests": [
+  "multimodal_tests": [
     {
-      "test_id": "R0-T1",
-      "description": "xiaomi key slot text reasoning (mimo-v2.5-pro)",
+      "test_id": "G0-T1",
       "key_slot": "slot_1",
-      "model": "mimo-v2.5-pro",
-      "modality": "text",
-      "agent": "main",
-      "result": "PASS",
-      "fallback_used": false,
-      "winner_provider": "xiaomi",
-      "winner_model": "mimo-v2.5-pro",
-      "duration_ms": 2349
-    },
-    {
-      "test_id": "R0-T2",
-      "description": "xiaomi-2 key slot text reasoning (mimo-v2.5-pro)",
-      "key_slot": "slot_2",
-      "model": "mimo-v2.5-pro",
-      "modality": "text",
-      "agent": "yang-s-clawedbot",
-      "result": "PASS",
-      "fallback_used": false,
-      "winner_provider": "xiaomi-2",
-      "winner_model": "mimo-v2.5-pro"
-    },
-    {
-      "test_id": "R0-T3",
-      "description": "xiaomi multimodal — real scanned patent page OCR (CN114849640A page 1)",
-      "key_slot": "slot_1",
+      "provider": "xiaomi",
       "model": "mimo-v2.5",
-      "modality": "multimodal",
-      "agent": "bmdl-visual",
-      "fixture": {
-        "file": "2022-CN114849640A-羟基磷灰石-吸附-染料 2.pdf",
-        "page": 1,
-        "image_path": "/tmp/r0-multimodal-test/cn114849640a_p1-1.png",
-        "image_sha256": "ff687ab658005d4eb85ef577273f7d9194b2dc8235bc9cc0d562884aab75aca6",
-        "image_size_bytes": 420767,
-        "image_dimensions": "1413x1999px",
-        "source_pdf_relative": "仿生文献库/专利/2022-CN114849640A-羟基磷灰石-吸附-染料 2.pdf"
-      },
-      "prompt": "Read test_patent_page.png using the process tool. What is the number after '(21)' on this page? Just give me the digits.",
-      "expected_answer": "202210352494.4",
-      "observed_answer": "202210352494.4",
+      "method": "direct API base64 to /v1/chat/completions",
+      "fixture_sha256": "ff687ab658005d4eb85ef577273f7d9194b2dc8235bc9cc0d562884aab75aca6",
+      "prompt": "What is the number after (21) on this page? Reply with only the digits.",
+      "expected": "202210352494.4",
+      "observed": "202210352494.4",
       "result": "PASS",
       "fallback_used": false,
-      "winner_provider": "xiaomi",
-      "winner_model": "mimo-v2.5",
-      "tools_used": ["image", "exec"],
-      "tool_calls": 3,
-      "session_id": "8206b897-9c19-48b4-9b1a-aa8064b94e29",
-      "timestamp": "2026-06-19T15:53:00Z"
+      "usage": {"total_tokens": 5508, "reasoning_tokens": 1427, "image_tokens": 3796},
+      "elapsed_seconds": 16.8,
+      "session_id": "99838fb8-2e08-4159-bbca-446a021e7c64",
+      "timestamp": "2026-06-19T14:05:00Z",
+      "evidence_file": "r0-multimodal-sessions/g0-slot1-evidence.json"
     },
     {
-      "test_id": "R0-T4",
-      "description": "xiaomi-2 multimodal — real scanned patent page OCR (CN114849640A page 1)",
+      "test_id": "G0-T2",
       "key_slot": "slot_2",
+      "provider": "xiaomi-2",
       "model": "mimo-v2.5",
-      "modality": "multimodal",
-      "agent": "bmdl-visual-2",
-      "fixture": {
-        "file": "2022-CN114849640A-羟基磷灰石-吸附-染料 2.pdf",
-        "page": 1,
-        "image_path": "/Users/panyao/.openclaw/workspace-bmdl-visual-2/test_patent_page.png",
-        "image_sha256": "ff687ab658005d4eb85ef577273f7d9194b2dc8235bc9cc0d562884aab75aca6",
-        "image_size_bytes": 420767,
-        "image_dimensions": "1413x1999px",
-        "source_pdf_relative": "仿生文献库/专利/2022-CN114849640A-羟基磷灰石-吸附-染料 2.pdf"
-      },
-      "prompt": "Read test_patent_page.png using the process tool. What is the number after '(21)' on this page? Just give me the digits.",
-      "expected_answer": "202210352494.4",
-      "observed_answer": "202210352494.4",
+      "method": "OpenClaw exec→requests.post base64",
+      "fixture_sha256": "ff687ab658005d4eb85ef577273f7d9194b2dc8235bc9cc0d562884aab75aca6",
+      "prompt": "What is the number after (21) on this page? Reply with only the digits.",
+      "expected": "202210352494.4",
+      "observed": "202210352494.4",
       "result": "PASS",
       "fallback_used": false,
-      "winner_provider": "xiaomi-2",
-      "winner_model": "mimo-v2.5",
-      "tools_used": ["image", "read", "exec"],
-      "tool_calls": 3,
-      "timestamp": "2026-06-19T15:55:00Z"
-    },
-    {
-      "test_id": "R0-T5",
-      "description": "workspace file access (read JSON from agent workspace)",
-      "key_slot": "slot_1",
-      "model": "mimo-v2.5-pro",
-      "modality": "text",
-      "agent": "bmdl-text",
-      "result": "PASS",
-      "fallback_used": false
-    },
-    {
-      "test_id": "R0-T6",
-      "description": "concurrent worker 1 (text, xiaomi/mimo-v2.5-pro)",
-      "key_slot": "slot_1",
-      "model": "mimo-v2.5-pro",
-      "modality": "text",
-      "agent": "bmdl-text",
-      "result": "PASS",
-      "fallback_used": false,
-      "concurrent_group": "R0-T6-T7-T8"
-    },
-    {
-      "test_id": "R0-T7",
-      "description": "concurrent worker 2 (multimodal, xiaomi/mimo-v2.5)",
-      "key_slot": "slot_1",
-      "model": "mimo-v2.5",
-      "modality": "multimodal",
-      "agent": "bmdl-visual",
-      "result": "PASS",
-      "fallback_used": false,
-      "concurrent_group": "R0-T6-T7-T8"
-    },
-    {
-      "test_id": "R0-T8",
-      "description": "concurrent worker 3 (text, xiaomi/mimo-v2.5-pro)",
-      "key_slot": "slot_1",
-      "model": "mimo-v2.5-pro",
-      "modality": "text",
-      "agent": "main",
-      "result": "PASS",
-      "fallback_used": false,
-      "concurrent_group": "R0-T6-T7-T8"
-    },
-    {
-      "test_id": "R0-T8b",
-      "description": "xiaomi-2 slot text in concurrent context",
-      "key_slot": "slot_2",
-      "model": "mimo-v2.5-pro",
-      "modality": "text",
-      "agent": "yang-s-clawedbot",
-      "result": "PASS",
-      "fallback_used": false
+      "usage": {"reasoning_tokens": 930},
+      "session_id": "a052955e (yang-s-clawedbot)",
+      "timestamp": "2026-06-19T14:09:00Z",
+      "evidence_file": "r0-multimodal-sessions/g0-slot2-evidence.json"
     }
   ],
-  "agents_persistent": {
-    "bmdl-text": {
-      "model": {"primary": "xiaomi/mimo-v2.5-pro", "fallbacks": []},
-      "workspace": "/Users/panyao/.openclaw/workspace-bmdl-text",
-      "agentDir": "/Users/panyao/.openclaw/agents/bmdl-text/agent",
-      "purpose": "text/code/JSON/PDF-text tasks, no fallback",
-      "status": "persistent"
-    },
-    "bmdl-visual": {
-      "model": {"primary": "xiaomi/mimo-v2.5", "fallbacks": []},
-      "workspace": "/Users/panyao/.openclaw/workspace-bmdl-visual",
-      "agentDir": "/Users/panyao/.openclaw/agents/bmdl-visual/agent",
-      "purpose": "scanned pages, figures, tables, multimodal, no fallback",
-      "status": "persistent"
-    },
-    "bmdl-visual-2": {
-      "model": "xiaomi-2/mimo-v2.5",
-      "workspace": "/Users/panyao/.openclaw/workspace-bmdl-visual-2",
-      "agentDir": "/Users/panyao/.openclaw/agents/bmdl-visual-2/agent",
-      "purpose": "multimodal on second key slot",
-      "status": "persistent"
-    }
-  },
-  "preexisting_agents": {
-    "main": {"provider": "xiaomi", "model": "xiaomi/mimo-v2.5-pro"},
-    "yang-s-clawedbot": {"provider": "xiaomi-2", "model": "xiaomi-2/mimo-v2.5-pro"},
-    "lit-extract": {
-      "provider": "mimo",
-      "model": "mimo/mimo-v2.5-pro",
-      "deprecated": true,
-      "deprecated_reason": "agentDir points to non-existent Qoder path; replaced by bmdl-text/bmdl-visual",
-      "note": "tools/litextract/openclaw.json updated with deprecated flag; .env NOT modified"
-    }
-  },
-  "fallback_config": {
-    "bmdl-text": "DISABLED (empty fallbacks array)",
-    "bmdl-visual": "DISABLED (empty fallbacks array)",
-    "bmdl-visual-2": "default (no explicit fallback config)",
-    "main": "openai/gpt-5.5, qwen-cloud/qwen3.6-plus, moonshot/kimi-k2.5 (pre-existing)",
-    "yang-s-clawedbot": "openai/gpt-5.5, qwen-cloud/qwen3.6-plus, moonshot/kimi-k2.5 (pre-existing)"
-  },
-  "model_routing_summary": {
-    "text_model": "mimo-v2.5-pro (via xiaomi and xiaomi-2 providers)",
-    "multimodal_model": "mimo-v2.5 (via xiaomi and xiaomi-2 providers)",
-    "per_dispatch_switching": "achieved via agent selection",
-    "fallback_triggered_in_any_test": false
-  },
-  "concurrency": {
-    "max_workers_tested": 3,
-    "all_completed": true,
-    "unique_task_ids": true,
-    "isolated_workspaces": true
-  },
-  "diagnostics": {
-    "model_override_not_allowed_per_agent": true,
-    "workaround": "create separate agents with different primary models",
-    "image_tool_routes_to_gemini": true,
-    "workaround_for_image_tool": "use process tool or exec with Python script for MIMO multimodal"
-  },
-  "residual_risks": [
-    "The built-in 'image' tool routes to Google Gemini, not MIMO; process tool or exec workaround required for MIMO multimodal",
-    "bmdl-visual-2 fallback not explicitly disabled (uses default config)",
-    "No stress test under simultaneous high load on both slots"
+  "text_tests": [
+    {"test_id": "R0-T1", "key_slot": "slot_1", "provider": "xiaomi", "model": "mimo-v2.5-pro", "result": "PASS", "fallback_used": false},
+    {"test_id": "R0-T2", "key_slot": "slot_2", "provider": "xiaomi-2", "model": "mimo-v2.5-pro", "result": "PASS", "fallback_used": false},
+    {"test_id": "R0-T5", "key_slot": "slot_1", "provider": "xiaomi", "model": "mimo-v2.5-pro", "result": "PASS", "fallback_used": false, "description": "workspace file access"},
+    {"test_id": "R0-T8b", "key_slot": "slot_2", "provider": "xiaomi-2", "model": "mimo-v2.5-pro", "result": "PASS", "fallback_used": false}
   ],
-  "overall_result": "PASS",
+  "concurrency_tests": [
+    {"test_id": "R0-T6-T7-T8", "workers": 3, "all_completed": true, "unique_ids": true, "result": "PASS"}
+  ],
   "pass_criteria": {
     "both_key_slots_independent": true,
     "mimo_v2_5_pro_text_each_slot": true,
-    "mimo_v2_5_multimodal_each_slot_real_patent": true,
+    "genuine_pixel_multimodal_each_slot": true,
     "per_dispatch_model_switching": true,
     "zero_unintended_fallback": true,
     "workspace_file_access": true,
-    "max_three_concurrent_workers": true,
-    "agents_persistent_with_valid_agentDirs": true,
-    "fallback_disabled_for_bmdl_agents": true,
-    "lit_extract_deprecated": true
-  }
+    "max_three_concurrent_workers": true
+  },
+  "overall_result": "PASS"
 }

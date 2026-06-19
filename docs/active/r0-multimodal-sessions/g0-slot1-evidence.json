@@ -1,0 +1,32 @@
+{
+  "test_id": "G0-T1",
+  "description": "Key slot 1 direct base64 multimodal OCR",
+  "key_slot": "slot_1",
+  "logical_key": "key_slot_1",
+  "provider": "xiaomi",
+  "model": "mimo-v2.5",
+  "method": "direct API base64 to /v1/chat/completions",
+  "session_id": "99838fb8-2e08-4159-bbca-446a021e7c64",
+  "timestamp": "2026-06-19T14:05:00Z",
+  "fixture": {
+    "file": "cn114849640a_p1-1.png",
+    "source_pdf_relative": "仿生文献库/专利/2022-CN114849640A-羟基磷灰石-吸附-染料 2.pdf",
+    "page": 1,
+    "dpi": 200,
+    "sha256": "ff687ab658005d4eb85ef577273f7d9194b2dc8235bc9cc0d562884aab75aca6",
+    "size_bytes": 420767
+  },
+  "prompt": "What is the number after (21) on this page? Reply with only the digits.",
+  "expected_answer": "202210352494.4",
+  "observed_answer": "202210352494.4",
+  "result": "PASS",
+  "fallback_used": false,
+  "usage": {
+    "total_tokens": 5508,
+    "reasoning_tokens": 1427,
+    "image_tokens": 3796,
+    "cached_tokens": 4032
+  },
+  "elapsed_seconds": 16.8,
+  "notes": "No OCR preprocessing. Image sent as base64 directly to mimo-v2.5 API. API key redacted."
+}
