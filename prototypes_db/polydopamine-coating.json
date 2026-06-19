@@ -801,48 +801,6 @@
       "verification_quote": "The −NH2 bilayer functionalized MCC/CS hydrogels demonstrated significantly higher adsorbability (i.e., MCC10: 434.8, 277.7, and 261.8 mg/g for Cu2+, Zn2+, and Ni2+ cations, respectively) as compared to the unmodified MCC/CS hydrogel (158.7, 161.2, and 172.4, respectively)"
     },
     {
-      "parameter": "MB最大吸附容量",
-      "value": "1372.32",
-      "unit": "mg/g",
-      "pollutant": "MB (亚甲基蓝)",
-      "material": "PDA/MGO/CA-CD",
-      "ph": null,
-      "temperature": null,
-      "conditions": "pH 11, 298K, 50-1000 mg/L",
-      "source": "literature",
-      "ref_doi": "10.1016/j.apsusc.2022.154338",
-      "patent_number": null,
-      "standard_number": null,
-      "source_file": "2022-Yan-polydopamine-magnetic-dye-adsorption-water-treatment.pdf",
-      "page": 1,
-      "locator": "Abstract",
-      "verification": "verified",
-      "confidence": 0.8,
-      "source_locator": "p.1 (Abstract) / p.11 (Section 3.3.2) / p.17 (Conclusions)",
-      "verification_quote": "Under optimal conditions, the maximum adsorption capacities of PDA/MGO/CA-CD towards MB, MG, and CV were 1372.32, 822.39, and 570.79 mg/g, respectively"
-    },
-    {
-      "parameter": "MG和CV最大吸附容量",
-      "value": "MG 822.39 mg/g; CV 570.79 mg/g",
-      "unit": "mg/g",
-      "pollutant": "MG (孔雀石绿); CV (结晶紫)",
-      "material": "PDA/MGO/CA-CD",
-      "ph": null,
-      "temperature": null,
-      "conditions": "MG: pH 7, CV: pH 11, 298K",
-      "source": "literature",
-      "ref_doi": "10.1016/j.apsusc.2022.154338",
-      "patent_number": null,
-      "standard_number": null,
-      "source_file": "2022-Yan-polydopamine-magnetic-dye-adsorption-water-treatment.pdf",
-      "page": 1,
-      "locator": "Abstract",
-      "verification": "verified",
-      "confidence": 0.8,
-      "source_locator": "p.11 (Section 3.3.2)",
-      "verification_quote": "The maximum equilibrium adsorption capacities of PDA/MGO/CA-CD adsorbent for MB, MG, and CV were as high as 1372.32, 822.39, and 570.79 mg/g at 298 K, respectively"
-    },
-    {
       "parameter": "PDA/DCS最大单层吸附量 qmax",
       "value": "1194.4",
       "unit": "mg/g",
@@ -949,130 +907,6 @@
     }
   ],
   "mechanisms": [
-    {
-      "name": "特殊润湿性分类",
-      "description": "超疏水/超亲油（'除油'型）和超亲水/水下超疏油（'除水'型）",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.1021/acsami.0c18794",
-      "verification": "needs_review",
-      "基本原理": "needs_review"
-    },
-    {
-      "name": "荷叶效应仿生原理",
-      "description": "微纳复合结构+低表面能蜡质的协同效应产生超疏水性",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.1021/acsami.0c18794",
-      "verification": "needs_review",
-      "基本原理": "needs_review",
-      "active_features": [
-        {
-          "type": "structural_feature",
-          "name": "micro-nano hierarchical structure",
-          "evidence": "Detected in mechanism: 荷叶效应仿生原理"
-        }
-      ]
-    },
-    {
-      "name": "荷叶上下表面润湿性差异",
-      "description": "上表面超疏水，下表面超亲水/水下超疏油",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.1021/acsami.0c18794",
-      "verification": "needs_review",
-      "基本原理": "needs_review"
-    },
-    {
-      "name": "壁虎脚仿生特性",
-      "description": "大量对齐刚毛产生的超疏水+高黏附特性（范德华力）",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.1021/acsami.0c18794",
-      "verification": "needs_review",
-      "基本原理": "needs_review"
-    },
-    {
-      "name": "玫瑰花瓣高黏附超疏水",
-      "description": "微乳突阵列结构产生高黏附超疏水性",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.1021/acsami.0c18794",
-      "verification": "needs_review",
-      "基本原理": "needs_review"
-    },
-    {
-      "name": "浸涂法制备超疏水表面 — THF/水比例优化",
-      "description": "THF:Water = 3:7 时 WCA 达到 155.0 ± 0.6°",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.1021/acsami.0c18794",
-      "verification": "needs_review",
-      "verification_quote": "upmost signiﬁcance (Figure 4). If the ratio was 10:0, the acquired             with high WCA (>164°) and separation eﬃciency (>96.5%).50 More"
-    },
-    {
-      "name": "溶胶-凝胶法制备超疏水纺织品耐久性",
-      "description": "18h超声、600次磨损、96次洗涤后仍保持超疏水性",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.1021/acsami.0c18794",
-      "verification": "needs_review",
-      "基本原理": "needs_review"
-    },
-    {
-      "name": "Table 1 — 超疏水/超亲油材料制备技术汇总",
-      "description": "13种材料体系，效率90%~99.9%",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.1021/acsami.0c18794",
-      "verification": "needs_review",
-      "基本原理": "needs_review",
-      "verification_quote": "separate complex oil/water mixtures including extremely stable emulsions. In this review, oil/"
-    },
-    {
-      "name": "TiO2光催化降解机理",
-      "description": "UV照射下TiO2价带电子跃迁至导带，产生电子-空穴对，通过O₂→O₂⁻和H₂O→OH·自由基降解油污染物为CO₂和H₂O",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.1021/acsami.0c18794",
-      "verification": "needs_review",
-      "基本原理": "needs_review"
-    },
-    {
-      "name": "CeO2纳米粒子超疏水光催化膜",
-      "description": "分离效率 99%",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.1021/acsami.0c18794",
-      "verification": "needs_review",
-      "verification_quote": "wrinkled ZIF-8@rGO microspheres into hydroxy-PDMS (hydroxyl-                   good reusability and high eﬃciency at over 99% for separating oil/"
-    },
-    {
-      "name": "pH响应PDMS-bP4VP电纺膜",
-      "description": "pH 7超疏水，pH 4超亲水，可切换油/水分离",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.1021/acsami.0c18794",
-      "verification": "needs_review",
-      "基本原理": "needs_review",
-      "active_features": [
-        {
-          "type": "structural_feature",
-          "name": "membrane",
-          "evidence": "Detected in mechanism: pH响应PDMS-bP4VP电纺膜"
-        }
-      ],
-      "verification_quote": "functions, including photocatalytic, self-healing, and switchable oil/water separation materials,"
-    },
-    {
-      "name": "双刺激UV+pH可切换润湿性",
-      "description": "单独UV或pH → 疏水；UV+pH协同 → 亲水",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.1021/acsami.0c18794",
-      "verification": "needs_review",
-      "基本原理": "needs_review"
-    },
     {
       "name": "超疏水抗菌表面'双重保险'原理",
       "description": "疏水材料减少细菌黏附+抗菌材料主动杀菌，实现长效抗菌",
@@ -1242,67 +1076,6 @@
       "verification_quote": "糙结构，同时结合无机材料的抗菌性实现超疏水抗"
     },
     {
-      "name": "Teflon AF 2400涂层PVDF膜VMD性能",
-      "description": "超疏水表面151°，平均通量22 L/m²h，盐截留率99.99%，进料温度~60°C",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.3390/polym14245439",
-      "verification": "needs_review",
-      "verification_quote": "PVDF-co-TrFE, Hyflon®® AD, Teflon®® AF, Cytop®         , PVF, perfluoropolyether (PFPE), etc."
-    },
-    {
-      "name": "疏水改性三大方法",
-      "description": "表面涂层（浸涂/过滤涂覆）、表面接枝（化学/辐射/等离子体/光引发）、共混",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.3390/polym14245439",
-      "verification": "needs_review",
-      "基本原理": "needs_review",
-      "active_features": [
-        {
-          "type": "structural_feature",
-          "name": "coating",
-          "evidence": "Detected in mechanism: 疏水改性三大方法"
-        }
-      ]
-    },
-    {
-      "name": "PVDF-co-HFP/POTS超疏水膜MD性能",
-      "description": "通量27.94 kg/m²h，盐截留率100%（含SDS低表面张力表面活性剂的NaCl进料）",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.3390/polym14245439",
-      "verification": "needs_review",
-      "verification_quote": "Among all the fluoropolymer membranes, PVDF, PTFE, ECTFE, P(VDF-co-HFP), P(VDF-"
-    },
-    {
-      "name": "PVDF-co-HFP/F-POSS全疏水膜",
-      "description": "乙醇中接触角128.2°，高盐进料+低表面张力物质中通量和盐截留率保持稳定",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.3390/polym14245439",
-      "verification": "needs_review",
-      "verification_quote": "Among all the fluoropolymer membranes, PVDF, PTFE, ECTFE, P(VDF-co-HFP), P(VDF-"
-    },
-    {
-      "name": "Cassie-Baxter方程与膜疏水性关系",
-      "description": "接触角与膜表面粗糙度相关，粗糙度增加→气液接触面积增加→界面效应增强",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.3390/polym14245439",
-      "verification": "needs_review",
-      "verification_quote": "the Cassie–Baxter equation, the hydrophobicity (contact angle) of the membrane could be"
-    },
-    {
-      "name": "P(VDF-co-CTFE) FOMA功能化超疏水膜",
-      "description": "超疏水性，优异抗污染和抗润湿性能，DCMD几乎无通量下降",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.3390/polym14245439",
-      "verification": "needs_review",
-      "verification_quote": "(vinylidene fluoride-co-chlorotrifluoroethylene) (P(VDF-co-CTFE)), PVDF-g-PSSA, and"
-    },
-    {
       "name": "水滴'生长-跳跃'排液机制 Water droplet 'growing-jumping' discharge mechanism",
       "description": "两阶段机制：'生长'阶段(水滴在微腔中核化生长→Laplace压力梯度∇P~2σ/d_eq(1/R₁-1/R₂)驱动水滴变形自导向)→'跳跃'阶段(合并后表面能释放触发自发跳跃运动，低粘附力确保跳跃)",
       "functional_groups": "",
@@ -1343,133 +1116,6 @@
         }
       ],
       "verification_quote": "wanton discharge of oily wastewater from industry and agriculture have                              an effective method to design separation membranes for efficient sepa­"
-    },
-    {
-      "name": "荷叶超疏水仿生机制",
-      "description": "低表面能蜡质层+乳突状粗糙结构协同产生超疏水性",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
-      "verification": "needs_review",
-      "基本原理": "needs_review"
-    },
-    {
-      "name": "超浸润膜分离乳化油的双重机理",
-      "description": "筛分效应（膜孔径<乳液尺寸）+ 界面破乳选择性分离",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
-      "verification": "needs_review",
-      "基本原理": "needs_review",
-      "active_features": [
-        {
-          "type": "structural_feature",
-          "name": "membrane",
-          "evidence": "Detected in mechanism: 超浸润膜分离乳化油的双重机理"
-        }
-      ],
-      "verification_quote": "2009 年，Liu 等 [21]对鱼鳞的                                   径，使其小于乳液尺寸，利用膜孔径的筛分效应实现"
-    },
-    {
-      "name": "超疏水/超亲油膜分离W/O乳液机理",
-      "description": "油滴被挤压进入微孔→乳化剂脱离→大油滴聚集渗透；水滴被超疏水膜截留",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
-      "verification": "needs_review",
-      "基本原理": "needs_review",
-      "active_features": [
-        {
-          "type": "structural_feature",
-          "name": "membrane",
-          "evidence": "Detected in mechanism: 超疏水/超亲油膜分离W/O乳液机理"
-        }
-      ]
-    },
-    {
-      "name": "超亲水/水下超疏油膜分离O/W乳液机理",
-      "description": "膜表面形成水膜作为屏蔽层→阻碍油扩散和渗透→重力驱动下选择性透过水",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
-      "verification": "needs_review",
-      "基本原理": "needs_review",
-      "active_features": [
-        {
-          "type": "structural_feature",
-          "name": "membrane",
-          "evidence": "Detected in mechanism: 超亲水/水下超疏油膜分离O/W乳液机理"
-        }
-      ]
-    },
-    {
-      "name": "TiO₂纳米线/不锈钢网超疏水膜",
-      "description": "50次循环后仍保持超疏水性；24h强酸碱或有机溶剂浸泡后分离效率仍达99%",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
-      "verification": "needs_review"
-    },
-    {
-      "name": "PVDF/PDMS超疏水纳米纤维膜",
-      "description": "渗透系数35751 L/(m²·h)，分离效率99.6%，可去除>150nm水滴",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
-      "verification": "needs_review",
-      "verification_quote": "纺丝技术以聚偏氟乙烯（PVDF）溶液为腔内溶液，                                 盐 酸 盐 ）（ MPC-co-AEMA） 两 性 电 解 质 层 ， 利 用"
-    },
-    {
-      "name": "F-SiO₂/PVDF-P-SiO₂/PVDF Janus膜",
-      "description": "氟化后WCA 157.7°（超疏水），等离子刻蚀后水下油CA 150.8°（水下超疏油），通量6800 L/(m²·h)以上，分离效率~99%",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
-      "verification": "needs_review",
-      "verification_quote": "水/超亲油膜的表面张力需要介于油水之间，使其在                                       与超疏水–超亲油膜相比，超亲水–水下超疏油膜"
-    },
-    {
-      "name": "pH响应PMMA-b-P4VP智能纤维膜",
-      "description": "初始WCA 152°（超疏水/超亲油），碱性条件下转为水下超疏油",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
-      "verification": "needs_review",
-      "verification_quote": "此基础上，重点综述了近年来常见超浸润油水分离膜的研究进展，其中包括超疏水/超亲油膜、超亲水/水下"
-    },
-    {
-      "name": "热响应PNIPAAm改性尼龙膜",
-      "description": "25°C超亲水/水下超疏油（分离O/W乳液效率>98%），45°C超疏水（可分离16种稳定油水乳液）",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
-      "verification": "needs_review",
-      "基本原理": "needs_review",
-      "active_features": [
-        {
-          "type": "structural_feature",
-          "name": "membrane",
-          "evidence": "Detected in mechanism: 热响应PNIPAAm改性尼龙膜"
-        }
-      ],
-      "verification_quote": "的油水分离方式主要包括重力分离、离心分离、气浮、                                            理制备了超亲水–水下超疏油纳米纤维膜；Yin 等 [16]"
-    },
-    {
-      "name": "超浸润膜四大类型分类",
-      "description": "超疏水-超亲油膜、超亲水-水下超疏油膜、Janus膜、Smart膜",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
-      "verification": "needs_review",
-      "基本原理": "needs_review",
-      "active_features": [
-        {
-          "type": "structural_feature",
-          "name": "membrane",
-          "evidence": "Detected in mechanism: 超浸润膜四大类型分类"
-        }
-      ],
-      "verification_quote": "水/超亲油膜的表面张力需要介于油水之间，使其在                                       与超疏水–超亲油膜相比，超亲水–水下超疏油膜"
     },
     {
       "name": "吸附机制 — 配位螯合",
@@ -1587,24 +1233,6 @@
       "ref_doi": "10.1016/j.jhazmat.2022.129112",
       "verification": "needs_review",
       "verification_quote": "as a support for the in situ development of Cu nanoparticles, which showed excellent catalytic performance as"
-    },
-    {
-      "name": "pHpzc和pH影响",
-      "description": "pHpzc=4.32；pH>4.32时静电吸引增强，MB/MG/CV吸附量随pH增加",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.1016/j.apsusc.2022.154338",
-      "verification": "needs_review",
-      "verification_quote": "adsorption capacities of PDA/MGO/CA-CD towards MB, MG, and CV were 1372.32, 822.39, and 570.79 mg/g,"
-    },
-    {
-      "name": "吸附机理六重协同",
-      "description": "(1)静电相互作用；(2)氢键；(3)Yoshida H-π键；(4)π-π共轭；(5)n-π相互作用；(6)β-CD主客体识别",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.1016/j.apsusc.2022.154338",
-      "verification": "needs_review",
-      "verification_quote": "dyes via electrostatic interaction, hydrogen bonding, Yoshida H-bonding, π-π conjugation interaction, n-π"
     },
     {
       "name": "PDA吸附机制补充",
@@ -1814,15 +1442,6 @@
   },
   "engineering_constraints": [
     {
-      "constraint": "P(VDF-co-HFP) VMD稳定性",
-      "value": "100小时稳定性，截留率>99.8%",
-      "unit": "h / %",
-      "relevance": "medium",
-      "explanation": "",
-      "source": "literature",
-      "ref_doi": "10.3390/polym14245439"
-    },
-    {
       "constraint": "APP3膜的循环稳定性 Cycle stability of APP3 membrane",
       "value": "25次循环后分离效率达99.86%，通量>2121 L·m⁻²·h⁻¹，表面形貌保持稳定无结构坍塌",
       "unit": null,
@@ -1947,24 +1566,6 @@
       "explanation": "",
       "source": "literature",
       "ref_doi": "10.1016/j.jhazmat.2022.129112"
-    },
-    {
-      "constraint": "循环再生性能",
-      "value": "8次循环后：MB去除率下降8.56%（481.44→438.6 mg/g）；MG下降11.60%；CV下降5.63%",
-      "unit": "%",
-      "relevance": "high",
-      "explanation": "100 mg/L染料, 300 min, 298K",
-      "source": "literature",
-      "ref_doi": "10.1016/j.apsusc.2022.154338"
-    },
-    {
-      "constraint": "TGA热稳定性",
-      "value": "PDA/MGO/CA-CD在100-800°C失重55.99 wt%（GO+PDA+CA-CD分解）",
-      "unit": "wt%",
-      "relevance": "medium",
-      "explanation": "25-800°C, N₂气氛",
-      "source": "literature",
-      "ref_doi": "10.1016/j.apsusc.2022.154338"
     },
     {
       "constraint": "PDA/DCS循环5次后吸附量",

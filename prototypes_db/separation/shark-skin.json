@@ -3,8 +3,8 @@
   "name_zh": "鲨鱼皮",
   "name_en": "Shark Skin",
   "organism": {
-    "scientific": "Nelumbo nucifera, shark skin, Salvinia",
-    "category": "动物"
+    "common": "鲨鱼皮",
+    "scientific": "Selachimorpha"
   },
   "biomimetic_dimension": "结构仿生",
   "features": [
@@ -35,102 +35,6 @@
       "verification": "unverified"
     },
     {
-      "name": "特殊润湿性分类",
-      "description": "超疏水/超亲油（'除油'型）和超亲水/水下超疏油（'除水'型）",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.1021/acsami.0c18794",
-      "verification": "unverified"
-    },
-    {
-      "name": "荷叶效应仿生原理",
-      "description": "微纳复合结构+低表面能蜡质的协同效应产生超疏水性",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.1021/acsami.0c18794",
-      "verification": "unverified"
-    },
-    {
-      "name": "荷叶上下表面润湿性差异",
-      "description": "上表面超疏水，下表面超亲水/水下超疏油",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.1021/acsami.0c18794",
-      "verification": "unverified"
-    },
-    {
-      "name": "壁虎脚仿生特性",
-      "description": "大量对齐刚毛产生的超疏水+高黏附特性（范德华力）",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.1021/acsami.0c18794",
-      "verification": "unverified"
-    },
-    {
-      "name": "玫瑰花瓣高黏附超疏水",
-      "description": "微乳突阵列结构产生高黏附超疏水性",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.1021/acsami.0c18794",
-      "verification": "unverified"
-    },
-    {
-      "name": "浸涂法制备超疏水表面 — THF/水比例优化",
-      "description": "THF:Water = 3:7 时 WCA 达到 155.0 ± 0.6°",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.1021/acsami.0c18794",
-      "verification": "unverified"
-    },
-    {
-      "name": "溶胶-凝胶法制备超疏水纺织品耐久性",
-      "description": "18h超声、600次磨损、96次洗涤后仍保持超疏水性",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.1021/acsami.0c18794",
-      "verification": "unverified"
-    },
-    {
-      "name": "Table 1 — 超疏水/超亲油材料制备技术汇总",
-      "description": "13种材料体系，效率90%~99.9%",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.1021/acsami.0c18794",
-      "verification": "unverified"
-    },
-    {
-      "name": "TiO2光催化降解机理",
-      "description": "UV照射下TiO2价带电子跃迁至导带，产生电子-空穴对，通过O₂→O₂⁻和H₂O→OH·自由基降解油污染物为CO₂和H₂O",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.1021/acsami.0c18794",
-      "verification": "unverified"
-    },
-    {
-      "name": "CeO2纳米粒子超疏水光催化膜",
-      "description": "分离效率 99%",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.1021/acsami.0c18794",
-      "verification": "unverified"
-    },
-    {
-      "name": "pH响应PDMS-bP4VP电纺膜",
-      "description": "pH 7超疏水，pH 4超亲水，可切换油/水分离",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.1021/acsami.0c18794",
-      "verification": "unverified"
-    },
-    {
-      "name": "双刺激UV+pH可切换润湿性",
-      "description": "单独UV或pH → 疏水；UV+pH协同 → 亲水",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.1021/acsami.0c18794",
-      "verification": "unverified"
-    },
-    {
       "name": "超疏水表面接触角阈值 Superhydrophobic contact angle threshold",
       "description": "接触角>150°表现为超疏水行为；接触角<10°为超亲水",
       "functional_groups": "",
@@ -149,14 +53,6 @@
     {
       "name": "超疏水表面防污机制 Superhydrophobic surface antifouling mechanism",
       "description": "超疏水表面的抗污性能归因于截留的空气泡层，减少了细菌与表面之间的接触",
-      "functional_groups": "",
-      "source": "literature",
-      "ref_doi": "10.33263/BRIAC132.185",
-      "verification": "unverified"
-    },
-    {
-      "name": "天然抗污生物 Natural antifouling organisms",
-      "description": "荷叶(Nelumbo nucifera)、水蕨(Salvinia)、斗蓬草(Alchemilla mollis)通过超疏水表面抵抗生物膜；鲨鱼通过真皮小齿上的微结构缎带降低阻力和避免生物附着",
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.33263/BRIAC132.185",
@@ -333,5 +229,7 @@
   },
   "coverage": "parked",
   "status": "parked_separation",
-  "note": "; scope: background-only, no direct shark-skin adsorption performance"
+  "note": "; scope: background-only, no direct shark-skin adsorption performance",
+  "library_tier": "extended",
+  "lifecycle_status": "active"
 }
