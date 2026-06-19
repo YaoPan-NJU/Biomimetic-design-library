@@ -1,29 +1,41 @@
 {
   "baseline_commit": "e4dc2d0",
-  "current_commit": "382bb91",
+  "current_commit": "8578ff3",
   "branch": "review",
-  "ahead_of_origin": 20,
-  "active_goal": "R1-correction",
-  "authorized_milestones": ["R0", "R1"],
-  "current_gate": "G1-pending-review",
+  "ahead_of_origin": 23,
+  "active_goal": "P0-P1-audit-prep",
+  "authorized_milestones": ["R0", "R1", "P0"],
+  "current_gate": "G2-ready-for-review",
   "completed_phases": [
     "R0-capability",
     "R1-A-build-safety",
     "R1-B-identity-ambiguity",
     "R1-C-ledger-v2",
     "R1-D-m2-correction",
-    "R1-E-validation-docs"
+    "R1-E-validation-docs",
+    "P0-interface-contract",
+    "P1a-audit-core-24"
   ],
-  "pending_phases": [],
-  "canon_writes": [
-    {
-      "commit": "382bb91",
-      "file": "prototypes_db/diatom-frustule.json",
-      "change": "mechanisms[4-13]: partial → needs_review (10 rows)",
-      "disposition": "corrective_downgrade",
-      "ledger_entry": true
-    }
+  "pending_phases": [
+    "G1-signoff-fix-r1d-corruption",
+    "P1a-scope-wrong-source-removal",
+    "P1b-label-honesty",
+    "P1c-honesty-ledger",
+    "P1d-design-translation"
   ],
+  "canon_writes": [],
+  "audit_findings": {
+    "total": 64,
+    "high": 33,
+    "medium": 16,
+    "low": 15,
+    "wrong_source": 45,
+    "label_contradiction": 12,
+    "ledger_inaccuracy": 24,
+    "translation_scope": 6,
+    "data_quality": 1
+  },
+  "critical_issue": "R1-D introduced 2 mechanism duplicates + 13 perf duplicates in diatom-frustule.json — must fix before G1",
   "validation_results": {
     "validate_consistency": "1 error (pre-existing: 5 separation broken links)",
     "check_chimera_strict": "0 violations",
@@ -42,6 +54,6 @@
     "bmdl-visual": {"model": "xiaomi/mimo-v2.5", "fallback": "disabled", "workspace": "~/.openclaw/workspace-bmdl-visual"},
     "bmdl-visual-2": {"model": "xiaomi-2/mimo-v2.5", "fallback": "disabled", "workspace": "~/.openclaw/workspace-bmdl-visual-2"}
   },
-  "last_checkpoint": "2026-06-19T16:30:00Z",
-  "next_action": "Await G1 independent review"
+  "last_checkpoint": "2026-06-19T17:30:00Z",
+  "next_action": "Fix R1-D corruption → G1 sign-off → P1 scope removal"
 }
