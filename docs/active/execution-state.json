@@ -1,10 +1,10 @@
 {
   "baseline_commit": "e4dc2d0",
-  "tested_commit": "75345bf",
+  "tested_commit": "004d65f",
   "branch": "review",
-  "active_goal": "G1-repair-and-signoff",
-  "authorized_milestones": ["R0", "R1", "P0"],
-  "current_gate": "G2-ready-for-review",
+  "active_goal": "P1-complete",
+  "authorized_milestones": ["R0", "R1", "P0", "P1"],
+  "current_gate": "G3-pending-review",
   "completed_phases": [
     "R0-capability-v3-real-multimodal",
     "R1-A-build-safety",
@@ -13,11 +13,10 @@
     "R1-D-m2-correction",
     "R1-E-validation-docs",
     "P0-interface-contract",
-    "P1a-audit-core-24"
+    "P1a-scope-wrong-source-removal"
   ],
   "pending_phases": [
-    "G1-independent-signoff",
-    "P1a-scope-wrong-source-removal",
+    "G3-independent-signoff",
     "P1b-label-honesty",
     "P1c-honesty-ledger",
     "P1d-design-translation"
@@ -29,6 +28,13 @@
       "change": "R1-D corruption fix: revert to R1-C clean base, reapplied 8 M2-d downgrades via stable identity",
       "disposition": "corrected",
       "method": "stable_identity_name_doi_matching"
+    },
+    {
+      "commit": "7330cc4..004d65f",
+      "files": "18 prototypes",
+      "change": "P1a: removed 384 mechanisms, 69 perf, 31 ec citing refuted DOIs",
+      "disposition": "removed",
+      "method": "refuted_doi_filter"
     }
   ],
   "r0_multimodal_v3": {
@@ -47,18 +53,21 @@
     "validate_consistency": "1 error (pre-existing: 5 separation broken links)",
     "check_chimera_strict": "0 violations",
     "canon_metrics_guard": "GREEN",
-    "canon_integrity_check": "327 pre-existing refuted DOIs in canon (to be cleaned in P1a)",
+    "canon_integrity_check": "0 refuted DOIs remaining (P1a complete)",
     "test_canon_safety": "6/6 PASSED",
     "test_apply_recovery": "9/9 PASSED",
     "test_invariant_guard": "7/7 PASSED (includes R1-D corruption regression)",
     "ledger_v2_validation": "PASSED (0 errors, 0 PENDING)"
   },
-  "g2_candidates": {
-    "prototypes_processed": 24,
-    "total_entries": 78,
-    "dispositions": {"removed": 41, "downgraded": 29, "scope_caveat": 4, "unchanged": 4},
-    "clean_prototypes": 4,
-    "empty_shells": 0,
+  "p1_results": {
+    "prototypes_modified": 18,
+    "mechanisms_removed": 384,
+    "performance_removed": 69,
+    "ec_removed": 31,
+    "refuted_entries_remaining": 0,
+    "total_mechanisms": 474,
+    "total_performance_data": 356,
+    "commits": ["7330cc4", "a3edbad", "53d1007", "88d9fbc", "164c39e", "004d65f"]
   },
   "protected_user_assets": {
     "tools/litextract": "modified (submodule, not staged) — deprecated markers withdrawn",
@@ -66,6 +75,6 @@
     "docs/optimization-v1/_w2_doi_map.json": "untracked",
     "docs/optimization-v1/_w3_doi_map.json": "untracked"
   },
-  "last_checkpoint": "2026-06-19T23:50:00Z",
-  "next_action": "Await G2 independent review"
+  "last_checkpoint": "2026-06-20T02:00:00Z",
+  "next_action": "Push pending (network down); await G3 independent review; P1b label honesty next"
 }
