@@ -1,6 +1,6 @@
 # Biomimetic Design Library Recovery Design
 
-status: proposed-for-user-review  
+status: approved
 date: 2026-06-19  
 cloud_baseline: `origin/review@e4dc2d0`  
 working_location: `/Users/panyao/Desktop/Biomimetic-design-library` on branch `review` (Yao directive 2026-06-19: the earlier `/private/tmp/biomimetic-recovery-docs` worktree + `codex/recovery-plan-20260619` branch requirement is OBSOLETE; recovery is performed directly in the Desktop `review` worktree)

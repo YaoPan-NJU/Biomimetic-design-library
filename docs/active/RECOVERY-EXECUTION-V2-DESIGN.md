@@ -1,6 +1,6 @@
 ---
 title: Recovery Execution V2 Design
-status: proposed_for_yao_review
+status: approved
 date: 2026-06-19
 owner: codex-supervisor
 baseline: review@63564fd
