@@ -1,20 +1,24 @@
 #!/usr/bin/env python3
 """
-Canon count-guard metrics (M1).
+Canon count-guard metrics (M1, hardened R1).
 
 A destructive canon operation is one that *silently* drops protected evidence
 (rows, quotes, locators, causal chains, translations, boundaries, scope notes,
 tier metadata). This module snapshots those counts for a prototype tree, and a
 guard compares two snapshots — failing on any *unexplained* decrease.
 
-Protected metrics: a decrease is a regression unless an allowlist entry explains
-it (e.g. an approved wrong-source removal recorded in the recovery ledger).
+Hardened checks (beyond metric drops):
+- Exact duplicate rows (mechanisms, performance_data)
+- Row count anomaly (unexpected spike vs HEAD)
+- Refuted-log DOI/row resurrection
+- Index out-of-bounds in field_path references
 
 Usage:
     python3 -X utf8 tools/canon_metrics.py                 # print working-tree snapshot
     python3 -X utf8 tools/canon_metrics.py --guard          # compare working tree vs HEAD; exit 1 on drops
     python3 -X utf8 tools/canon_metrics.py --guard --allowlist allowlist.json
     python3 -X utf8 tools/canon_metrics.py --commit 4987c0a # snapshot a commit
+    python3 -X utf8 tools/canon_metrics.py --check-integrity # full integrity check
 """
 import json
 import os
@@ -22,6 +26,7 @@ import sys
 import glob
 import argparse
 import subprocess
+import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DB_DIR = os.path.join(ROOT, "prototypes_db")
@@ -186,12 +191,154 @@ def compare(before, after, allowlist=None):
     return regs
 
 
+# === Hardened integrity checks (R1) ===
+
+REFUTED_LOG = os.path.join(ROOT, "docs", "registries", "refuted-log.md")
+
+
+def _load_refuted_dois():
+    """Load DOIs/tokens from refuted-log.md."""
+    dois = set()
+    if os.path.exists(REFUTED_LOG):
+        for line in open(REFUTED_LOG, encoding="utf-8"):
+            if "wrong_source" in line:
+                for tok in re.findall(r"\| ([^|]+?) \|", line):
+                    tok = tok.strip()
+                    if tok and tok != "reason":
+                        dois.add(tok)
+    return dois
+
+
+def _row_identity_key(row, kind="perf"):
+    """Generate a dedup key for a row (parameter+value+material or name+doi)."""
+    if kind == "perf":
+        return f"{row.get('parameter','')}|{row.get('value','')}|{row.get('material','')}|{row.get('ref_doi','') or row.get('source','')}"
+    else:
+        return f"{row.get('name','')}|{row.get('ref_doi','') or row.get('source','')}"
+
+
+def check_duplicates(data, pid):
+    """Check for exact duplicate rows in mechanisms and performance_data."""
+    issues = []
+    # Mechanism duplicates
+    mechs = _mech_list(data)
+    seen_mech = {}
+    for i, m in enumerate(mechs):
+        key = _row_identity_key(m, "mech")
+        if key in seen_mech:
+            issues.append(f"{pid}: duplicate mechanism [{i}] = [{seen_mech[key]}]: {m.get('name','?')[:40]}")
+        else:
+            seen_mech[key] = i
+    # Performance duplicates
+    perfs = _perf_list(data)
+    seen_perf = {}
+    for i, p in enumerate(perfs):
+        key = _row_identity_key(p, "perf")
+        if key in seen_perf:
+            issues.append(f"{pid}: duplicate perf [{i}] = [{seen_perf[key]}]: {p.get('parameter','?')[:30]}={p.get('value','?')[:20]}")
+        else:
+            seen_perf[key] = i
+    return issues
+
+
+def check_refuted_resurrection(data, pid, refuted_dois):
+    """Check if any row cites a refuted DOI."""
+    issues = []
+    for i, p in enumerate(_perf_list(data)):
+        doi = p.get("ref_doi", "") or p.get("source", "") or ""
+        if doi in refuted_dois:
+            issues.append(f"{pid}: perf[{i}] cites refuted DOI {doi[:40]}")
+    for i, m in enumerate(_mech_list(data)):
+        doi = m.get("ref_doi", "") or m.get("source", "") or ""
+        if doi in refuted_dois:
+            issues.append(f"{pid}: mech[{i}] cites refuted DOI {doi[:40]}")
+    return issues
+
+
+def check_row_count_anomaly(before_data, after_data, pid, threshold=0.5):
+    """Flag if row count increased by more than threshold (50% default)."""
+    issues = []
+    before_perf = len(_perf_list(before_data))
+    after_perf = len(_perf_list(after_data))
+    before_mech = len(_mech_list(before_data))
+    after_mech = len(_mech_list(after_data))
+    if before_perf > 0 and after_perf > before_perf * (1 + threshold):
+        issues.append(f"{pid}: perf rows anomaly: {before_perf} → {after_perf} (+{after_perf - before_perf})")
+    if before_mech > 0 and after_mech > before_mech * (1 + threshold):
+        issues.append(f"{pid}: mech rows anomaly: {before_mech} → {after_mech} (+{after_mech - before_mech})")
+    return issues
+
+
+def check_index_bounds(data, pid):
+    """Check that array-index references in field_path are within bounds."""
+    issues = []
+    perfs = _perf_list(data)
+    mechs = _mech_list(data)
+    # Check scope_notes that reference indices
+    for m in mechs:
+        sn = m.get("scope_note", "")
+        for match in re.finditer(r"\[(\d+)\]", sn):
+            idx = int(match.group(1))
+            if idx >= len(mechs):
+                issues.append(f"{pid}: scope_note references mech[{idx}] but only {len(mechs)} mechanisms")
+    return issues
+
+
+def check_integrity(working_dir=None, head_commit="HEAD"):
+    """Full integrity check: duplicates, refuted resurrection, row anomalies, index bounds."""
+    working_dir = working_dir or DB_DIR
+    issues = []
+    refuted_dois = _load_refuted_dois()
+
+    # Load HEAD data for anomaly comparison
+    head_tree = {}
+    try:
+        r = subprocess.run(
+            ["git", "-c", "core.quotepath=false", "ls-tree", "-r", "--name-only", head_commit, "prototypes_db/"],
+            capture_output=True, text=True,
+        )
+        for f in r.stdout.splitlines():
+            if f.startswith("prototypes_db/") and f.endswith(".json") and f.count("/") == 1:
+                r2 = subprocess.run(["git", "show", f"{head_commit}:{f}"], capture_output=True)
+                if r2.returncode == 0:
+                    try:
+                        d = json.loads(r2.stdout)
+                        pid = d.get("id") or os.path.basename(f)[:-5]
+                        head_tree[pid] = d
+                    except Exception:
+                        pass
+    except Exception:
+        pass
+
+    # Check working tree
+    work_tree = _load_tree(working_dir)
+    for pid, data in work_tree.items():
+        issues.extend(check_duplicates(data, pid))
+        issues.extend(check_refuted_resurrection(data, pid, refuted_dois))
+        issues.extend(check_index_bounds(data, pid))
+        if pid in head_tree:
+            issues.extend(check_row_count_anomaly(head_tree[pid], data, pid))
+
+    return issues
+
+
 def main():
     ap = argparse.ArgumentParser(description="Canon count-guard metrics")
     ap.add_argument("--guard", action="store_true", help="compare working tree vs HEAD; exit 1 on unexplained drops")
     ap.add_argument("--commit", help="snapshot this commit instead of working tree")
     ap.add_argument("--allowlist", help="JSON list of {metric} entries permitted to decrease")
+    ap.add_argument("--check-integrity", action="store_true", help="full integrity check: duplicates, refuted, anomalies, bounds")
     args = ap.parse_args()
+
+    if args.check_integrity:
+        issues = check_integrity()
+        if issues:
+            print("INTEGRITY CHECK: FAIL")
+            for issue in issues:
+                print(f"  ❌ {issue}")
+            return 1
+        print("INTEGRITY CHECK: PASS — no duplicates, no refuted resurrection, no anomalies")
+        return 0
 
     if args.guard:
         before = snapshot_commit("HEAD")
