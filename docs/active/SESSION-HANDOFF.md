@@ -1,24 +1,25 @@
 ---
 title: Session Handoff — restart point
-status: live_entry_for_next_session
+status: stale_superseded_by_execution_state
 date: 2026-06-19
 author: claude-code (coordinator)
-branch: review @ d85852c (12 commits ahead of origin/review, NOT pushed)
+branch: review @ 382bb91 (20 commits ahead of origin/review, NOT pushed)
 workspace: /Users/panyao/Desktop/Biomimetic-design-library (Desktop review worktree)
 ---
 
-# SESSION HANDOFF — read this first on a new session
+# SESSION HANDOFF — STALE, see execution-state.json
 
-You are resuming the Biomimetic Design Library **recovery programme**. This file is the
-single durable snapshot. For architecture read `PROJECT-RECOVERY-DESIGN.md`; for the live
-entry this supersedes `execution-entry.md` (keep both, this is the fresher state).
+> **This document contains stale completion claims.** M4 was NOT accepted as passed.
+> External audit found: build crashes on args.writeCanon, no post-build invariant
+> guard, ledger entries all PENDING, validators fail. See execution-state.json for
+> current state.
 
-## 0. One-line state
+## 0. One-line state (CORRECTED)
 
-M0 (docs archive) → M1 (canon safety net) → M2 (a/b/c/d field-level canon recovery) →
-M3 (tiering + 12 metadata gaps) → **M4 (acceptance) DONE**. All committed locally, **not
-pushed**. Next is **M5 (per-row verification/disposition)** — freshly unblocked because Yao
-added the missing PDFs. **Awaiting Yao's decision on M5 engine + dedup/merges + push.**
+M0 (docs archive) → M1 (canon safety net, TOOLS ONLY) → M2 (a/b/c/d field-level
+canon recovery, CHALLENGED) → M3 (tiering + 12 metadata gaps) → M4 (CHALLENGED, NOT
+PASSED). **R0 capability gate PASSED. R1 correction completed. Awaiting G1 review.**
+Next is M5 (per-row verification) AFTER R1 passes G1.
 
 ## 1. Branch / commit / canon
 

@@ -1,33 +1,24 @@
 ---
-status: active
+status: stale_superseded_by_execution_state
 owner: claude-code (coordinator)
 date: 2026-06-19
 ---
 
-# Execution Entry — current state & next action
+# Execution Entry — STALE, see execution-state.json
 
-> Live entry point. The static handoff prompt is `CLAUDE-CODE-TAKEOVER.md`; the
-> architecture is `PROJECT-RECOVERY-DESIGN.md`. This file is the **current-state**
-> companion: what is done, where things are, what to do next.
+> **This document is superseded.** See `docs/active/execution-state.json` for current state.
 
-## Where we are
+## Current State (corrected 2026-06-19)
 
-- **Branch:** `review` (Desktop worktree `/Users/panyao/Desktop/Biomimetic-design-library`).
-- **HEAD:** `4987c0a` — Phase 0 documentation archive (local; **not pushed**).
-- **Cloud baseline:** `origin/review@e4dc2d0` (3 local commits ahead: design, takeover, Phase 0).
-- **Canon:** frozen & untouched. All five destructive commits remain in history —
-  recovery is additive (no history rewrite).
+- **Branch:** `review` @ `382bb91` (20 commits ahead of origin)
+- **R0:** PASSED (OpenClaw capability, both MIMO slots, multimodal OCR, 3-worker)
+- **R1:** COMPLETED (build safety, ambiguity gate, ledger v2, diatom correction, validation)
+- **G1:** PENDING independent review
+- **M4:** NOT PASSED (external audit found tool failures, ledger PENDING, validators fail)
 
-## M0 — COMPLETE
+## Canonical Source
 
-- 176 docs archived (`docs/active/phase0-dispositions.json`, status `executed`).
-- Live ledgers: `docs/registries/` (decision-queue, boundary-do-not-register, refuted-log).
-- Standards: `docs/references/` (definitions, optimization-plan-v1, full-audit-plan, next-stage-approval-summary).
-- Operational docs: `docs/active/` (this set).
-- README/CLAUDE references fixed; `docs/README.md` index created.
-- Verified: 0 broken links, `git diff --check` clean, hygiene = baseline (1 failure: CLAUDE.md).
-
-## Next action — M1 (tool safety), awaiting authorization
+For current state, always read: `docs/active/execution-state.json`
 
 M1 implements tooling (regression tests, count guards, stable-identity + ambiguity,
 ledger writer, staging-only build). It is **not** started; it is the recommended hand-off.

@@ -1,0 +1,47 @@
+{
+  "baseline_commit": "e4dc2d0",
+  "current_commit": "382bb91",
+  "branch": "review",
+  "ahead_of_origin": 20,
+  "active_goal": "R1-correction",
+  "authorized_milestones": ["R0", "R1"],
+  "current_gate": "G1-pending-review",
+  "completed_phases": [
+    "R0-capability",
+    "R1-A-build-safety",
+    "R1-B-identity-ambiguity",
+    "R1-C-ledger-v2",
+    "R1-D-m2-correction",
+    "R1-E-validation-docs"
+  ],
+  "pending_phases": [],
+  "canon_writes": [
+    {
+      "commit": "382bb91",
+      "file": "prototypes_db/diatom-frustule.json",
+      "change": "mechanisms[4-13]: partial → needs_review (10 rows)",
+      "disposition": "corrective_downgrade",
+      "ledger_entry": true
+    }
+  ],
+  "validation_results": {
+    "validate_consistency": "1 error (pre-existing: 5 separation broken links)",
+    "check_chimera_strict": "0 violations",
+    "canon_metrics_guard": "GREEN",
+    "test_canon_safety": "6/6 PASSED",
+    "ledger_v2_validation": "628 warnings (v1 migration gaps), 0 errors"
+  },
+  "protected_user_assets": {
+    "tools/litextract": "modified (submodule, not staged)",
+    "docs/optimization-v1/_w1_doi_map.json": "untracked",
+    "docs/optimization-v1/_w2_doi_map.json": "untracked",
+    "docs/optimization-v1/_w3_doi_map.json": "untracked"
+  },
+  "openclaw_agents": {
+    "bmdl-text": {"model": "xiaomi/mimo-v2.5-pro", "fallback": "disabled", "workspace": "~/.openclaw/workspace-bmdl-text"},
+    "bmdl-visual": {"model": "xiaomi/mimo-v2.5", "fallback": "disabled", "workspace": "~/.openclaw/workspace-bmdl-visual"},
+    "bmdl-visual-2": {"model": "xiaomi-2/mimo-v2.5", "fallback": "disabled", "workspace": "~/.openclaw/workspace-bmdl-visual-2"}
+  },
+  "last_checkpoint": "2026-06-19T16:30:00Z",
+  "next_action": "Await G1 independent review"
+}
