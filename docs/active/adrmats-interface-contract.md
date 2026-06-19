@@ -1,6 +1,6 @@
 ---
 title: ADRMATS Interface Contract
-status: proposed
+status: binding/approved
 date: 2026-06-19
 author: claude-code (coordinator)
 decision_authority: Yao (2026-06-19)
@@ -44,12 +44,15 @@ The library returns a `BiomimeticDesignBrief` containing:
 
 | Attribution Level | Classification | Requirement |
 |-------------------|----------------|-------------|
-| `source + verified` | **FACT** | Direct PDF/patent quote + locator + scope match + 2+ independent sources |
+| `source + verified` | **FACT** | One direct source + quote + locator + scope match |
+| `source + corroborated` | **FACT** | ≥2 independent sources + quotes + locators + scope match (dual-source is the Core tier gate, not a row-grade) |
 | `source + partial` | **LEAD** | Direct source but narrower claim or single source |
 | `llm_inference` | **INFERENCE** | LLM-generated, no direct source backing |
 | `review_summary` | **LEAD** | From a review paper, not primary data |
 
-**Only `source + verified` qualifies as "fact" in the honesty ledger.**
+**`verified` = one direct source with quote+locator+scope. `corroborated` = ≥2 independent
+sources (this is the Core tier gate, not a row-grade distinction). Only `verified` or
+`corroborated` qualifies as "fact" in the honesty ledger.**
 
 ### 3.2 Performance Leads (`performance_leads`)
 
