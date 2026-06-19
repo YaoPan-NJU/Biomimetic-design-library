@@ -4,7 +4,7 @@
   "branch": "review",
   "active_goal": "G1-repair-and-signoff",
   "authorized_milestones": ["R0", "R1", "P0"],
-  "current_gate": "G1-pending-review",
+  "current_gate": "G2-ready-for-review",
   "completed_phases": [
     "R0-capability-v3-real-multimodal",
     "R1-A-build-safety",
@@ -47,9 +47,18 @@
     "validate_consistency": "1 error (pre-existing: 5 separation broken links)",
     "check_chimera_strict": "0 violations",
     "canon_metrics_guard": "GREEN",
+    "canon_integrity_check": "327 pre-existing refuted DOIs in canon (to be cleaned in P1a)",
     "test_canon_safety": "6/6 PASSED",
     "test_apply_recovery": "9/9 PASSED",
+    "test_invariant_guard": "7/7 PASSED (includes R1-D corruption regression)",
     "ledger_v2_validation": "PASSED (0 errors, 0 PENDING)"
+  },
+  "g2_candidates": {
+    "prototypes_processed": 24,
+    "total_entries": 78,
+    "dispositions": {"removed": 41, "downgraded": 29, "scope_caveat": 4, "unchanged": 4},
+    "clean_prototypes": 4,
+    "empty_shells": 0,
   },
   "protected_user_assets": {
     "tools/litextract": "modified (submodule, not staged) — deprecated markers withdrawn",
@@ -57,6 +66,6 @@
     "docs/optimization-v1/_w2_doi_map.json": "untracked",
     "docs/optimization-v1/_w3_doi_map.json": "untracked"
   },
-  "last_checkpoint": "2026-06-19T19:30:00Z",
-  "next_action": "Await G1 independent review"
+  "last_checkpoint": "2026-06-19T23:50:00Z",
+  "next_action": "Await G2 independent review"
 }
