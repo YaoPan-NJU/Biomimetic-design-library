@@ -16,6 +16,12 @@ The library remains a biomimetic water-treatment design reference for ADRMATS.
 It provides biological mechanisms, transferable design principles, evidence,
 and failure boundaries. It does not design or prescribe materials.
 
+Review is the permanent project mainline. Recovery restores a trustworthy
+review baseline; expansion supplies new review candidates. Neither activity is
+successful unless it improves the reliability, explainability, and boundary
+honesty of the ADRMATS calling library. Prototype count is therefore a catalogue
+goal, not an acceptance metric.
+
 ## 2. Confirmed Failure History
 
 The recovery must account for the following independently reproduced failures.
@@ -322,6 +328,72 @@ Every task specifies:
 - validation commands;
 - stop conditions;
 - prohibition on direct push and unreviewed evidence upgrades.
+
+### 10.3 Coordinator decision playbook
+
+The coordinator evaluates evidence with five questions, in order:
+
+1. Does the quoted source directly support the complete claim, rather than
+   merely mention the same topic?
+2. Does the source describe the same biological prototype, material class, and
+   application domain?
+3. Does the metric mean what the row claims: qmax, observed uptake, removal
+   percentage, rejection, system-level removal, selectivity, sensor response,
+   or a figure estimate?
+4. Are the quote, locator, source identity, and local file mapping sufficient
+   for another reviewer to reproduce the decision?
+5. Are the tested conditions and failure boundary represented honestly?
+
+If any answer is no, the record cannot be `verified`. A narrower supported claim
+may be `partial`; otherwise it remains `needs_review`, `knowledge_gap`, or
+`scope_mismatch`.
+
+Operational heuristics:
+
+- Latest is not the same as healthiest. Compare field evidence and accepted
+  decisions, not commit timestamps.
+- A report is not proof. Re-run checks against the exact committed tree named in
+  the report, preferably from a temporary detached worktree.
+- A quote must support the whole stored claim. Keyword overlap and DOI equality
+  only establish a candidate relationship.
+- Never confuse design inspiration with measured material performance. Keep
+  biological mechanism, engineered implementation, and test result ownership
+  explicit.
+- Review-table maxima, concentration-dependent uptake ranges, sensor LOD/Kd,
+  removal percentages, and system-scale percentages are not interchangeable
+  with adsorption qmax.
+- Exact duplicates and shared PDA/mussel or shell/HAp evidence must have one
+  ranking owner or an explicit duplicate exclusion.
+- Use hard DO-NOT only for directly supported failure constraints or clear
+  wrong-source/domain contamination. Unquoted engineering intuition stays soft
+  or a knowledge gap.
+- Pilot a worker on a small sample before a large batch. Reject the batch early
+  if the sample shows paraphrased quotes, weak locators, scope drift, or wrong
+  model routing.
+- Require workers to report unchanged, rejected, ambiguous, and failed items;
+  success-only reports conceal risk.
+- Recalculate all statistics from committed JSON. Never copy coverage numbers
+  from an earlier report.
+- Review diffs by semantic field counts and record identities, not only line
+  counts. JSON reformatting can hide destructive rewrites.
+- Validate after the final write and again against the commit object. A check
+  run before serialization does not validate the committed result.
+- Stage and commit explicit files. Avoid broad `git add -A` when unrelated
+  worker artifacts or ignored-source changes may be present.
+- Keep data recovery, evidence upgrades, schema changes, and documentation moves
+  in separate commits so each can be audited or reverted independently.
+
+OpenClaw acceptance uses a two-stage gate:
+
+1. Contract review: correct baseline, model, allowed files, report schema,
+   changed paths, and clean diff.
+2. Evidence review: reproduce a risk-based sample, including every hard DO-NOT,
+   every top-ranking value, every scanned/visual claim, every cross-prototype
+   ownership decision, and every status upgrade without a primary source.
+
+When uncertainty remains, the safe action is no canon change plus a precise
+decision-queue entry. Progress is measured by trustworthy dispositions, not by
+the number of upgraded rows.
 
 ## 11. Documentation Architecture
 
