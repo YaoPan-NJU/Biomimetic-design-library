@@ -1,5 +1,5 @@
 ---
-status: complete
+status: challenged/not_passed
 milestone: M1+M2+M3-partial+M4
 date: 2026-06-19
 owner: claude-code (coordinator)
@@ -29,7 +29,7 @@ replacement, no refuted-row resurrection, no history rewrite.
 | prototypes | 36 (core 24+2 deprecated, extended 9, exploratory 1) | lifecycle: 33 active, 2 deprecated, 1 parked |
 | performance_data | 418 rows; **384 graded (91%)**; 326 with quote (77%) | strong |
 | mechanisms | 771; graded 35 (4%); with quote 266 (34%) | honest post-rollback (inflation removed) |
-| recovery ledger | 1,204 entries | full audit trail |
+| recovery ledger | 1,204 entries (v1 migration, all PENDING) | archived to v1-migration file; active ledger contains only R1+ entries |
 
 The mechanism coverage is deliberately low: the `13dfdbf` keyword-upgrade had
 inflated it to 48%; the rollback returns the unsupported rows to `needs_review`.

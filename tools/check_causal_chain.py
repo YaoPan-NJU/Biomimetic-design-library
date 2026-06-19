@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Phase 5 验收：检查每个 active 原型的 causal_chain 合格率。"""
-import json, glob, os
+import json, glob, os, sys
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DB = os.path.join(REPO, 'prototypes_db')

@@ -1,8 +1,7 @@
 {
   "baseline_commit": "e4dc2d0",
-  "current_commit": "e66f674",
+  "tested_commit": "75345bf",
   "branch": "review",
-  "ahead_of_origin": 25,
   "active_goal": "G1-repair-and-signoff",
   "authorized_milestones": ["R0", "R1", "P0"],
   "current_gate": "G1-pending-review",
@@ -38,25 +37,19 @@
     "image_sha256": "ff687ab658005d4eb85ef577273f7d9194b2dc8235bc9cc0d562884aab75aca6"
   },
   "r1_fixes": {
-    "R1-A": "Removed --write-canon path; build always writes to staging",
-    "R1-B": "Ambiguity gate: multi-value fields rejected (no first-strongest-wins)",
-    "R1-C": "Ledger v2 validator reports PENDING entries as warnings",
+    "R1-A": "Removed --write-canon path; build always writes to staging; 6/6 tests pass",
+    "R1-B": "Strict identity matching (match count=1); multi-match rejected; SHA-256 IDs; correct levels; 9/9 tests pass",
+    "R1-C": "V1 archived (1204 PENDING → v1-migration.jsonl); active ledger has 16 R1+ entries (0 PENDING); per-field entries",
     "R1-D": "8 downgrades (not 9); ledger aligned; pre-M2-d partial preserved",
-    "R1-E": "check_causal_chain.py no longer writes to user dirs"
+    "R1-E": "check_causal_chain.py sys import fixed; m1-m4 report corrected to challenged"
   },
-  "v3_text_changes": [
-    "R1 status: 已尝试，G0/G1 未通过",
-    "§5/§6: 所有来源/PDF/OCR由OpenClaw，CC只看JSON/brief/scope/标签",
-    "P3: ranking→feature-match候选排序，性能值永不参与排序",
-    "Interface contract: verified=一份直接源+quote+locator+scope, corroborated=≥2源(Core tier gate)",
-    "Contract status: binding/approved"
-  ],
   "validation_results": {
     "validate_consistency": "1 error (pre-existing: 5 separation broken links)",
     "check_chimera_strict": "0 violations",
     "canon_metrics_guard": "GREEN",
     "test_canon_safety": "6/6 PASSED",
-    "ledger_v2_validation": "PASSED (warnings are v1 migration)"
+    "test_apply_recovery": "9/9 PASSED",
+    "ledger_v2_validation": "PASSED (0 errors, 0 PENDING)"
   },
   "protected_user_assets": {
     "tools/litextract": "modified (submodule, not staged) — deprecated markers withdrawn",
@@ -64,6 +57,6 @@
     "docs/optimization-v1/_w2_doi_map.json": "untracked",
     "docs/optimization-v1/_w3_doi_map.json": "untracked"
   },
-  "last_checkpoint": "2026-06-19T18:30:00Z",
+  "last_checkpoint": "2026-06-19T19:30:00Z",
   "next_action": "Await G1 independent review"
 }
