@@ -6,17 +6,19 @@ Copy the prompt below into Claude Code after starting it in this worktree:
 You are the principal coordinator for the Biomimetic Design Library recovery,
 review, and expansion programme.
 
-Repository worktree:
-/private/tmp/biomimetic-recovery-docs
+Repository worktree (2026-06-19 Yao authorization — replaces the earlier
+/private/tmp worktree):
+/Users/panyao/Desktop/Biomimetic-design-library
 
 Branch:
-codex/recovery-plan-20260619
+review (the permanent project mainline)
 
 Cloud baseline:
 origin/review@e4dc2d0
 
-Do not work directly in:
-/Users/panyao/Desktop/Biomimetic-design-library
+2026-06-19 amendment: the earlier `/private/tmp/biomimetic-recovery-docs`
+worktree and the `codex/recovery-plan-20260619` branch are OBSOLETE. Recovery is
+executed directly in the Desktop `review` worktree.
 
 That Desktop worktree contains user-owned uncommitted submodule and DOI-map
 changes. Preserve it exactly.
@@ -43,19 +45,21 @@ docs/active/PROJECT-RECOVERY-DESIGN.md
 
 Then read the current cloud records:
 
-docs/optimization-v1/COLLAB-HANDOFF.md
-docs/optimization-v1/CODEX-HANDOFF-PROMPT.md
-docs/optimization-v1/CLAUDE-CODE-TASK-64-68.md
-docs/optimization-v1/CLAUDE-CODE-TASK-69-73.md
-docs/optimization-v1/PLAN.md
-docs/optimization-v1/DEFINITIONS.md
-docs/optimization-v1/review-full-audit-decision-queue.md
-docs/optimization-v1/review-boundary-do-not-register.md
-docs/optimization-v1/refuted-log.md
-docs/optimization-v1/review-post-office-reconciliation.md
-docs/optimization-v1/review-openclaw-r01-structured-recovery.md
-docs/optimization-v1/review-qoderwork-session-report-20260618.md
-docs/optimization-v1/review-openclaw-candidate-audit-chitosan-diatom-20260618.md
+docs/registries/decision-queue.md
+docs/registries/boundary-do-not-register.md
+docs/registries/refuted-log.md
+docs/references/definitions.md
+docs/references/optimization-plan-v1.md
+docs/references/full-audit-plan.md
+docs/references/next-stage-approval-summary.md
+docs/archive/optimization-v1-2026-06/old-handoffs/COLLAB-HANDOFF.md
+docs/archive/optimization-v1-2026-06/old-handoffs/CODEX-HANDOFF-PROMPT.md
+docs/archive/optimization-v1-2026-06/task-history/CLAUDE-CODE-TASK-64-68.md
+docs/archive/optimization-v1-2026-06/task-history/CLAUDE-CODE-TASK-69-73.md
+docs/archive/optimization-v1-2026-06/evidence-reports/review-post-office-reconciliation.md
+docs/archive/optimization-v1-2026-06/evidence-reports/review-openclaw-r01-structured-recovery.md
+docs/archive/optimization-v1-2026-06/evidence-reports/review-qoderwork-session-report-20260618.md
+docs/archive/optimization-v1-2026-06/evidence-reports/review-openclaw-candidate-audit-chitosan-diatom-20260618.md
 
 Inspect the actual repository state:
 

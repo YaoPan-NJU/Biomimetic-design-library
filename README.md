@@ -40,7 +40,7 @@
 | 硬 DO-NOT（verified 边界）| **0 条**（边界尚未从 PDF 逐条核验）|
 | 校验错误 / chimera 违规 | 12 / 0（12 个 feature-mapping 缺失）|
 
-**整改进度**：Phase 0–9 已完成（基线、接口诚实度、策展、去污染、字段语义、因果链补全、PDF 核验、设计转译、接口排序修复、失效边界补全、打包总验收）。Task 69-73 完成原型扩展 24→36（激活 5 分离层 + 1 停放层 + 6 skeleton entry）。`review` 分支正在进行 PDF 级证据审计（performance_data 逐行核验 + 机制 ref_doi→PDF 匹配验证）。详见 `docs/optimization-v1/FINAL-report.md` 和 `docs/optimization-v1/COLLAB-HANDOFF.md`。
+**整改进度**：Phase 0–9 已完成（基线、接口诚实度、策展、去污染、字段语义、因果链补全、PDF 核验、设计转译、接口排序修复、失效边界补全、打包总验收）。Task 69-73 完成原型扩展 24→36（激活 5 分离层 + 1 停放层 + 6 skeleton entry）。`review` 分支正在进行 PDF 级证据审计（performance_data 逐行核验 + 机制 ref_doi→PDF 匹配验证）。详见 `docs/archive/optimization-v1-2026-06/phase-reports/FINAL-report.md` 和 `docs/archive/optimization-v1-2026-06/old-handoffs/COLLAB-HANDOFF.md`。
 
 > ⚠️ **当前边界输出全是 soft caution，没有 hard DO-NOT**。具体数值阈值（pH 值、浓度等）尚未从 PDF 中逐条提取核验，因此所有边界条件均为定性描述（`basis=llm_inferred`）。
 
@@ -60,10 +60,10 @@
 
 | 文档 | 用途 |
 |------|------|
-| `docs/optimization-v1/PLAN.md`（即 `优化方案_仿生库策展与接地_v1.md`）| 9 阶段执行手册 |
-| `docs/optimization-v1/DEFINITIONS.md` | 判定标准 / 字段 schema / 边界护栏 / 铁律（权威）|
-| `docs/optimization-v1/交接文档_HANDOFF.md` | 复核角色交接（含当前进度与失败模式教训）|
-| `docs/optimization-v1/coverage-gaps.md` | 策展后失去 direct evidence 的污染物（Boron / Co(II) 为真缺口）|
+| `docs/references/optimization-plan-v1.md`（即 `优化方案_仿生库策展与接地_v1.md`）| 9 阶段执行手册 |
+| `docs/references/definitions.md` | 判定标准 / 字段 schema / 边界护栏 / 铁律（权威）|
+| `docs/archive/optimization-v1-2026-06/old-handoffs/交接文档_HANDOFF.md` | 复核角色交接（含当前进度与失败模式教训）|
+| `docs/archive/optimization-v1-2026-06/phase-reports/coverage-gaps.md` | 策展后失去 direct evidence 的污染物（Boron / Co(II) 为真缺口）|
 | `docs/adrmats-integration-analysis.md` | 与 ADRMATS 的集成差距分析 |
 
 > ⚠️ **勿运行 `tools/build_prototypes_db.py`**：它从原始提取反向重建 canon，会冲掉整改成果。canon（`prototypes_db/*.json`）已冻结，只在其上直接编辑。
@@ -113,11 +113,16 @@ Biomimetic-design-library/
 ├── exports/                       # 导出产物
 │   └── adrmats_do_not.json        # 边界条件汇总（62 条）
 ├── docs/                          # 项目文档
+│   ├── README.md                  # 文档导航（见 docs/README.md）
 │   ├── design.md                  # 设计规范
 │   ├── ADRMATS_DELIVERY_PLAN.md   # 交付计划
 │   ├── ADRMATS_CALL_GUIDE.md      # 调用说明
 │   ├── SUPPORT_SCOPE_AND_RISKS.md # 支持范围与风险
-│   └── optimization-v1/           # 整改方案与报告
+│   ├── active/                    # 当前恢复操作文档（恢复设计、接手指南）
+│   ├── registries/                # 活跃机器账本（decision-queue / boundary / refuted）
+│   ├── references/               # 标准/计划（definitions、optimization-plan-v1）
+│   ├── imported/                  # 运行时资产（library-enhancement 原理库，被 biomimetic_context.py 读取）
+│   └── archive/                   # 历史归档（pre-optimization / optimization-v1-2026-06）
 ├── examples/adrmats_briefs/       # 真实接口输出示例
 ├── templates/                     # 模板
 ├── taxonomy/                      # 分类体系

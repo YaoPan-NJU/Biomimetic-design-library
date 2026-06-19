@@ -3,7 +3,7 @@
 status: proposed-for-user-review  
 date: 2026-06-19  
 cloud_baseline: `origin/review@e4dc2d0`  
-working_branch: `codex/recovery-plan-20260619`
+working_location: `/Users/panyao/Desktop/Biomimetic-design-library` on branch `review` (Yao directive 2026-06-19: the earlier `/private/tmp/biomimetic-recovery-docs` worktree + `codex/recovery-plan-20260619` branch requirement is OBSOLETE; recovery is performed directly in the Desktop `review` worktree)
 
 ## 1. Purpose
 
@@ -45,8 +45,12 @@ task files instructed workers to run it.
 
 1. Preserve Git history. Repair by additive commits; do not force-push or
    rewrite `review`.
-2. Work in isolated branches and worktrees. Do not touch the user's current
-   dirty Desktop worktree.
+2. Work in isolated branches and worktrees. (2026-06-19 amendment) Recovery now
+   executes directly in the Desktop `review` worktree at
+   `/Users/panyao/Desktop/Biomimetic-design-library` per Yao authorization. The
+   earlier "do not touch the Desktop worktree" rule is withdrawn; the worktree's
+   uncommitted assets — `tools/litextract` (submodule) and the three untracked
+   `_w1/_w2/_w3_doi_map.json` — are still preserved exactly and never staged.
 3. Treat `prototypes_db/*.json` as frozen canon. Never reconstruct canon by
    replacing complete files from extraction outputs or old commits.
 4. Restore fields, not files. Match records using stable identities and record

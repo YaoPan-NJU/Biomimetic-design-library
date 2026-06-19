@@ -21,7 +21,10 @@
 | `prototypes_db\separation\` | 分离/超疏水原型 JSON |
 | `tools\` | 验证/构建脚本 |
 | `tools\litextract\` | 文献提取子模块（已初始化） |
-| `docs\optimization-v1\` | 审计文档、决策队列、worklog |
+| `docs\archive\optimization-v1-2026-06\` | 归档：阶段报告、证据审计、旧交接、任务历史、生成日志（原 `docs\optimization-v1\` 已迁入） |
+| `docs\registries\` | 活跃机器账本：decision-queue、boundary-do-not-register、refuted-log |
+| `docs\references\` | 标准/计划：definitions、optimization-plan-v1、full-audit-plan |
+| `docs\active\` | 当前恢复操作文档（恢复设计、接手指南、本清单） |
 
 ## 当前工作阶段
 
@@ -44,7 +47,7 @@
 
 ### 审计批次输出规范
 
-每个批次输出一个 Markdown 文件到 `docs\optimization-v1\`，命名：`review-full-audit-openclaw-batch-XX-<scope>.md`
+每个批次输出一个 Markdown 文件到 `docs\archive\optimization-v1-2026-06\evidence-reports\`（恢复前的历史审计位置；新审计输出遵循 `docs\active\` 操作文档），命名：`review-full-audit-openclaw-batch-XX-<scope>.md`
 
 每项必须包含：`prototype_id`、`target_json`、`field_path`、`claim_summary`、`local source_file` 或 `missing_pdf`、`locator`、`quote`、`evidence_label`、`recommended_action`、`notes`
 
@@ -57,28 +60,28 @@
 
 ## 决策队列
 
-`docs\optimization-v1\review-full-audit-decision-queue.md` — 所有待审批项
+`docs\registries\decision-queue.md` — 所有待审批项
 
-`docs\optimization-v1\review-boundary-do-not-register.md` — 边界/DO-NOT 寄存器
+`docs\registries\boundary-do-not-register.md` — 边界/DO-NOT 寄存器
 
-`docs\optimization-v1\review-full-audit-worklog.md` — 工作日志
+`docs\archive\optimization-v1-2026-06\old-handoffs\review-full-audit-worklog.md` — 工作日志
 
-`docs\optimization-v1\review-sync-summary.md` — 同步摘要（最新状态）
+`docs\archive\optimization-v1-2026-06\old-handoffs\review-sync-summary.md` — 同步摘要（最新状态）
 
 ## 协调协议
 
-`docs\optimization-v1\review-openclaw-coordination.md` — 角色分工和输出规范
+`docs\archive\optimization-v1-2026-06\task-history\review-openclaw-coordination.md` — 角色分工和输出规范
 
-`docs\optimization-v1\review-openclaw-worker-prompts.md` — worker prompt 模板
+`docs\archive\optimization-v1-2026-06\task-history\review-openclaw-worker-prompts.md` — worker prompt 模板
 
-`docs\optimization-v1\review-openclaw-next-tasks.md` — 下一批任务
+`docs\archive\optimization-v1-2026-06\task-history\review-openclaw-next-tasks.md` — 下一批任务
 
 ## 协作协议（必读）
 
 **每次启动时，先读以下文件：**
-1. docs/optimization-v1/COLLABORATION-PROTOCOL.md  角色、权限、决策层级、工作流
-2. docs/optimization-v1/COLLAB-BOARD.md  当前任务板（你的任务在这里）
-3. docs/optimization-v1/COLLAB-HANDOFF.md  最近一次交接状态
+1. docs/archive/optimization-v1-2026-06/old-handoffs/COLLABORATION-PROTOCOL.md  角色、权限、决策层级、工作流
+2. docs/archive/optimization-v1-2026-06/old-handoffs/COLLAB-BOARD.md  当前任务板（你的任务在这里）
+3. docs/archive/optimization-v1-2026-06/old-handoffs/COLLAB-HANDOFF.md  最近一次交接状态
 
 **工作循环：**
 - 读取 BOARD.md 中 status=assigned 且 assigned_to=clcode 的任务
@@ -108,17 +111,17 @@
 - 4 个 enrichment 文件为空 {}（biomineralization-template, coral-skeleton, dna-aptamer, magnetic-bacteria）
 - 对照主 JSON 和源 PDF，为已验证的 mechanism 填充 causal_chain
 - **不要**机械同步；只从 source-backed 的主 JSON mechanism 中提取
-- 输出文件：docs/optimization-v1/review-clcode-enrichment-audit.md
+- 输出文件：docs/archive/optimization-v1-2026-06/task-history/review-clcode-enrichment-audit.md
 
 ### 任务 2：Missing PDF 路径验证
 - chitosan.json: 99 个 missing_pdf 项  检查路径是否有  2.pdf/ 3.pdf 后缀变体
 - 产出可操作的路径映射表
-- 输出文件：docs/optimization-v1/review-clcode-missing-pdf-paths.md
+- 输出文件：docs/archive/optimization-v1-2026-06/task-history/review-clcode-missing-pdf-paths.md
 
 ### 任务 3：Wrong-Source 二次验证
 - lotus-leaf.json：355 个 mechanisms 按实际生物来源分组
 - cellulose-nanocrystal.json：按材料类型分组（CNC/CNF/通用纤维素/复合材料）
-- 输出文件：docs/optimization-v1/review-clcode-wrong-source-deep.md
+- 输出文件：docs/archive/optimization-v1-2026-06/task-history/review-clcode-wrong-source-deep.md
 
 ### 任务 4：Patent OCR 辅助
 - 对扫描版专利的 visual_cache.json 做文本提取
@@ -126,7 +129,7 @@
 
 ### 协作方式
 - Qoder 会通过写文件或对话分配任务
-- 完成后产出审计文件到 docs/optimization-v1/review-clcode-*.md
+- 完成后产出审计文件到 docs/archive/optimization-v1-2026-06/task-history/review-clcode-*.md
 - Qoder 会 spot-check 后决定是否 accept
 - 有歧义标记 
 eeds_qoder_review，不要自行决定
@@ -137,7 +140,7 @@ eeds_qoder_review，不要自行决定
 Qoder 已完成第一层 wrong-source 清除、Scope 决策、边界规则写入。以下是你的新任务：
 
 ### Task 5: Metadata Fix Batch（25 项）
-参考 docs/optimization-v1/review-clcode-task1-decision-queue-summary.md Category D 列表：
+参考 docs/archive/optimization-v1-2026-06/task-history/review-clcode-task1-decision-queue-summary.md Category D 列表：
 - 修正 false precision（silk-fibroin: 86.24%→86%, 96.29%→96%）
 - 修正 verification_quote 为真实文本摘录而非标题（silk-fibroin）
 - 修正 source_file 路径（path normalization，参考 Task 3 报告）
@@ -159,7 +162,7 @@ eview-clcode-task6-remaining-wrongsource.md
 - 已删除的 wrong-source 项：status → pplied_package_b1
 - 已写入的 scope 决策项：status → pplied_scope_decision
 - 已写入的边界规则项：status → pplied_boundary
-参考：docs/optimization-v1/review-full-audit-decision-queue.md
+参考：docs/registries/decision-queue.md
 
 ### 执行约束
 - 最多 3 个并行子智能体
@@ -172,7 +175,7 @@ eview-clcode-task6-remaining-wrongsource.md
 ## 第三轮任务（2026-06-17 第三轮）
 
 ### Task 8: Path Normalization Sweep（最高优先级）
-参考 docs/optimization-v1/review-clcode-task3-missing-pdf-analysis.md：
+参考 docs/archive/optimization-v1-2026-06/task-history/review-clcode-task3-missing-pdf-analysis.md：
 - 扫描 仿生文献库/ 目录，查找所有  2.pdf、 3.pdf 后缀变体
 - 将 prototypes_db/**/*.json 中所有 source_file 路径与实际本地 PDF 做交叉匹配
 - 对能匹配的路径：直接修正 source_file 字段
@@ -187,8 +190,8 @@ Task 7 只更新了 9 项。现在补充更新其余 ~108 项：
 - 对照 Task 5 metadata fix（12 项）：status → pplied_metadata_fix
 - 无法匹配到已执行操作的项：保持 pending_yao
 参考文件：
-- docs/optimization-v1/review-full-audit-decision-queue.md
-- docs/optimization-v1/review-boundary-do-not-register.md（已标记 guard_rule 的 14 项）
+- docs/registries/decision-queue.md
+- docs/registries/boundary-do-not-register.md（已标记 guard_rule 的 14 项）
 
 ### Task 10: Lotus-Leaf Scope Assessment
 lotus-leaf 有 346 条剩余机制（Task 6 已移除 9 条膜/蒸馏）。现在评估：
@@ -212,7 +215,7 @@ eview-clcode-task10-lotus-scope-assessment.md
 家里 Codex 对账发现了几个需要修复的问题，同时进入逐原型验证升级阶段。
 
 ### Task 11: 对账修复（Codex 发现的问题）
-参考 `docs/optimization-v1/review-post-office-reconciliation.md`：
+参考 `docs/archive/optimization-v1-2026-06/evidence-reports/review-post-office-reconciliation.md`：
 
 1. **B03-CHL-001 清除**：chlorella-cell-wall 的 mechanisms[0]（Cheng2021 Pb2+ 作为染料去除机制）仍在 JSON 中，需要移除
 2. **Biomineralization scope review**：mechanisms[0] 的文字过于宽泛（"有机模板控制无机晶体生长方向/形态"），Wang2025 实际只支持 LanM@ZIF-8 稀土吸附。需要缩窄 mechanism 文字或标注 scope caveat
@@ -252,7 +255,7 @@ eview-clcode-task10-lotus-scope-assessment.md
 Yao 已完成 7 批人工审批（91 项 pending_yao），需要执行所有已审批决策。
 
 ### Task 14: Decision Queue 全量状态更新（最高优先级）
-参考 `docs/optimization-v1/review-full-audit-decision-queue.md`
+参考 `docs/registries/decision-queue.md`
 
 将以下已审批项从 `pending_yao` 更新为对应状态：
 
