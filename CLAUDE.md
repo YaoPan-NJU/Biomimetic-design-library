@@ -47,7 +47,7 @@
 
 ### 审计批次输出规范
 
-每个批次输出一个 Markdown 文件到 `docs\archive\optimization-v1-2026-06\evidence-reports\`（恢复前的历史审计位置；新审计输出遵循 `docs\active\` 操作文档），命名：`review-full-audit-openclaw-batch-XX-<scope>.md`
+每个批次输出一个 Markdown 文件；**新审计/证据报告的位置由 `docs/active/execution-roadmap.md`（operational runbook）规定**——`docs/archive/**` 仅用于历史追溯，**不得**作为新审计输出目录或硬编码输出路径。
 
 每项必须包含：`prototype_id`、`target_json`、`field_path`、`claim_summary`、`local source_file` 或 `missing_pdf`、`locator`、`quote`、`evidence_label`、`recommended_action`、`notes`
 
@@ -58,37 +58,34 @@
 - JSON 中 `source_file` 字段存储的是相对路径或家里绝对路径，批量操作时需注意路径适配
 - PDF 文件名中的空格和中文字符是正常的，不要修改文件名
 
-## 决策队列
+## 决策队列 / 寄存器（活跃）
 
-`docs\registries\decision-queue.md` — 所有待审批项
+`docs/registries/decision-queue.md` — 所有待审批项（活跃机器账本）
 
-`docs\registries\boundary-do-not-register.md` — 边界/DO-NOT 寄存器
+`docs/registries/boundary-do-not-register.md` — 边界/DO-NOT 寄存器（活跃）
 
-`docs\archive\optimization-v1-2026-06\old-handoffs\review-full-audit-worklog.md` — 工作日志
+`docs/registries/refuted-log.md` — 已移除的 wrong-source 行（不得复活）
 
-`docs\archive\optimization-v1-2026-06\old-handoffs\review-sync-summary.md` — 同步摘要（最新状态）
+> 历史 worklog / sync-summary 已迁入 `docs/archive/optimization-v1-2026-06/old-handoffs/`，仅作历史追溯，不再作为启动必读或当前状态入口。
 
 ## 协调协议
 
-`docs\archive\optimization-v1-2026-06\task-history\review-openclaw-coordination.md` — 角色分工和输出规范
+角色分工、worker prompt、模型路由、验收两阶段门等**当前**规范见 `docs/active/`：
+`model-routing-protocol.md`（协作与模型路由）、`evidence-quality-standard.md`（证据验收）、`execution-roadmap.md`（里程碑与 acceptance runbook）。
+（历史 `review-openclaw-coordination.md` / `worker-prompts.md` / `next-tasks.md` 已归档于 `docs/archive/.../task-history/`，仅供追溯。）
 
-`docs\archive\optimization-v1-2026-06\task-history\review-openclaw-worker-prompts.md` — worker prompt 模板
+## 启动入口（每次启动先读）
 
-`docs\archive\optimization-v1-2026-06\task-history\review-openclaw-next-tasks.md` — 下一批任务
+> **入口是 `docs/README.md`，随后 `docs/active/**`、`docs/registries/**`、`docs/references/**`。**
+> `docs/archive/**` 仅用于历史追溯，不是启动必读、不是新报告输出目录。
 
-## 协作协议（必读）
+1. `docs/README.md` — 文档总索引与目录布局
+2. `docs/active/execution-entry.md` — 当前状态与下一步（live entry point）
+3. `docs/active/PROJECT-RECOVERY-DESIGN.md` — 恢复架构（权威）
+4. `docs/active/recovery-master-plan.md`、`docs/active/canon-recovery-spec.md`、`docs/active/evidence-quality-standard.md`、`docs/active/model-routing-protocol.md`、`docs/active/execution-roadmap.md`
+5. `docs/registries/`（decision-queue、boundary-do-not-register、refuted-log）、`docs/references/`（definitions、optimization-plan-v1 等）
 
-**每次启动时，先读以下文件：**
-1. docs/archive/optimization-v1-2026-06/old-handoffs/COLLABORATION-PROTOCOL.md  角色、权限、决策层级、工作流
-2. docs/archive/optimization-v1-2026-06/old-handoffs/COLLAB-BOARD.md  当前任务板（你的任务在这里）
-3. docs/archive/optimization-v1-2026-06/old-handoffs/COLLAB-HANDOFF.md  最近一次交接状态
-
-**工作循环：**
-- 读取 BOARD.md 中 status=assigned 且 assigned_to=clcode 的任务
-- 执行任务，产出 review-clcode-*.md
-- 更新 BOARD.md 中对应任务的 status=done
-- 追加一条记录到 HANDOFF.md
-- 如果所有任务完成，检查是否还有 enrichment/path 类任务可自主推进
+**工作循环（恢复阶段）：** 读取 `execution-entry.md` 的当前状态 → 按 `execution-roadmap.md` 的里程碑推进 → 每个字段级 canon 改动写一条 `docs/registries/canon-recovery-ledger.jsonl` 条目 → 遇歧义/工具/canon 边界即停止并升级。
 
 
 ## 模型选择规则
@@ -103,6 +100,10 @@
 - **最多 3 个并行子智能体**，共享同一个 API key，超出会触发 429 限流
 - 之前的 OpenClaw 在 Batch 01 同时启动 5 个 worker 导致大面积 429 错误，引以为戒
 - 建议策略：1-2 个并行 + 1 个串行验收
+
+## 历史任务记录（2026-06-17，归档追溯用，非当前指令）
+
+> 以下"当前任务 / 下一批任务 / 第N轮"小节是 **2026-06-17 OpenClaw/Codex 协作期的历史任务分配**，对应输出已写入 `docs/archive/optimization-v1-2026-06/`。它们仅作历史追溯，**不是当前启动必读，不是新报告输出位置**。新审计/证据报告位置由 `docs/active/execution-roadmap.md` 规定。
 
 ## 当前任务（Qoder 分配  2026-06-17）
 

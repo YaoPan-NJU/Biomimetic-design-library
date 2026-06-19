@@ -20,6 +20,22 @@ outside this goal and are listed to set up the next authorization.
 | M4 v1 acceptance | blocked on M2/M3 |
 | M5 Full audit | blocked on M4 |
 
+## New report / audit-output location (runbook-defined)
+
+`docs/archive/**` is **historical traceability only** — never the output directory for new
+audit/evidence reports, and never the primary startup read. New audit and worker evidence
+reports go to a **staging area under `docs/active/`**, not the archive:
+
+- **Worker candidate evidence:** `docs/active/audit-candidates/<worker>-<scope>-<date>.md`
+  (one per dispatch; declared per the worker-report contract in `model-routing-protocol.md`).
+- **Coordinator acceptance records:** `docs/active/acceptance/<item-id>-<date>.md`.
+- **Canon-recovery ledger entries:** `docs/registries/canon-recovery-ledger.jsonl` (append-only;
+  schema `docs/active/canon-recovery-ledger.schema.json`).
+
+Only after a report is no longer current (superseded by a later milestone or a canon
+write) is it *moved* into `docs/archive/...` as historical traceability — and only then.
+Until that runbook rule is overridden, **nothing is written under `docs/archive/`** as new output.
+
 ## M1 — Tool safety (recommended next; REQUIRES implementing tools, not in-goal)
 
 1. Write **failing regression tests** reproducing destructive-build behaviour:
