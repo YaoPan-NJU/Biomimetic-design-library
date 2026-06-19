@@ -1,0 +1,110 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Canon Recovery Ledger v2",
+  "description": "Schema for the canon-recovery-ledger.jsonl. Each line is one JSON object. The existing 1,204 v1 entries are treated as untrusted migration input.",
+  "type": "object",
+  "required": ["id", "prototype_id", "field_path", "record_identity", "disposition", "basis", "applied_commit"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^R-.+",
+      "description": "Unique ledger entry ID. Format: R-{prototype_id}-{hash}"
+    },
+    "prototype_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Prototype identifier matching prototypes_db/{id}.json"
+    },
+    "field_path": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Dot/bracket path to the canon field, e.g. performance_data[0].verification_quote. Array indices are transient location hints, NOT identity."
+    },
+    "record_identity": {
+      "type": "object",
+      "description": "Stable identity of the matched record (design §6.2). Must include level and key.",
+      "properties": {
+        "level": {
+          "type": "string",
+          "enum": ["perf_1", "perf_2", "perf_3", "mech_1", "mech_2", "mech_3", "unknown"],
+          "description": "Identity match level per design §6.2"
+        },
+        "key": {
+          "type": "string",
+          "description": "Identity fingerprint or composite key"
+        },
+        "source_id": {
+          "type": "string",
+          "description": "Normalized DOI/patent/standard ID"
+        },
+        "parameter": {
+          "type": "string",
+          "description": "Normalized parameter name (perf only)"
+        },
+        "value": {
+          "type": "string",
+          "description": "Normalized numeric value (perf only)"
+        },
+        "material": {
+          "type": "string",
+          "description": "Normalized material (perf only)"
+        }
+      },
+      "required": ["level", "key"]
+    },
+    "disposition": {
+      "type": "string",
+      "enum": [
+        "restored",
+        "ambiguous",
+        "refuted",
+        "corrected",
+        "downgraded",
+        "removed",
+        "unchanged",
+        "scope_caveat"
+      ],
+      "description": "What happened to this field"
+    },
+    "basis": {
+      "type": "string",
+      "enum": [
+        "direct_quote",
+        "extraction",
+        "ambiguity_gate",
+        "correction",
+        "scope_review",
+        "none"
+      ],
+      "description": "Evidence basis for the disposition"
+    },
+    "applied_commit": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Git commit SHA where this change was applied, or 'PENDING' for unapplied v1 entries. R1+ entries must have a real commit SHA."
+    },
+    "source_file": {
+      "type": "string",
+      "description": "Repository-relative path to the source PDF/JSON"
+    },
+    "source_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$",
+      "description": "SHA-256 of the source file"
+    },
+    "quote": {
+      "type": "string",
+      "description": "Exact text excerpt from the source (not a title or paraphrase)"
+    },
+    "locator": {
+      "type": "string",
+      "description": "Reproducible page/section/figure locator in the source"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of when this entry was created"
+    }
+  },
+  "additionalProperties": false
+}
