@@ -85,6 +85,8 @@ scope/来源正确 ＞ 标签诚实 ＞ honesty_ledger 正确 ＞ design_transla
 
 内部/非可见字段（如未进 brief 的冗余镜像）不背负同等标准，登记即可。
 
+**所有 canon 行的最低安全底线**（适用于全部字段，包括非可见）：不得假 verified/wrong-source、不得复活 refuted、不得无身份应用、不得无源确定性数字。非可见字段只能降低完成密度，不能降低真实性标准。
+
 ---
 
 ## 5. 执行路线（Phase 与 Gate）
