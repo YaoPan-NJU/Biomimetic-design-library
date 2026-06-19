@@ -162,9 +162,9 @@ def apply_mech(pid, head_mech, hist_mech, refuted):
         best = min(entries, key=lambda e: e[2])
         head_mech[f] = best[0]
         changes.append({"field": f, "value": best[0], "commit": best[1], "level": best[2]})
-    # causal_chain: require single unambiguous source
+    # causal_chain: require single unambiguous source (value equality, not object identity)
     if causal_candidates:
-        unique_causal = set(id(e[0]) for e in causal_candidates)
+        unique_causal = set(json.dumps(e[0], sort_keys=True, ensure_ascii=False) for e in causal_candidates)
         if len(unique_causal) == 1:
             best_c = min(causal_candidates, key=lambda e: e[2])
             head_mech["causal_chain"] = best_c[0]

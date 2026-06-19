@@ -232,26 +232,21 @@ def test_default_build_preserves_canon_hash():
     print("PASS: canon tree hash preserved after default build")
 
 
-def test_write_canon_rejects_dirty_tree():
-    """R1-A: --write-canon must refuse to run when prototypes_db/ has uncommitted changes."""
+def test_write_canon_flag_removed():
+    """R1-A: --write-canon flag must no longer exist (argparse error)."""
     import subprocess
     result = subprocess.run(
         [sys.executable, '-X', 'utf8', os.path.join(HERE, 'build_prototypes_db.py'),
          '--write-canon'],
         capture_output=True, text=True, timeout=30
     )
-    # Should either fail with dirty-tree message or fail with some other guard error
-    # The key is it should NOT succeed and write to canon
     combined = result.stdout + result.stderr
-    if result.returncode == 0:
-        # If it somehow succeeded, check that it didn't actually write to canon
-        # (this would be a test infrastructure issue)
-        print("PASS: --write-canon ran (may have succeeded in clean-tree test env)")
-    else:
-        assert 'uncommitted' in combined or 'refused' in combined or 'invariant' in combined or \
-               'chimera' in combined or 'Error' in combined, \
-            f"--write-canon failed for unexpected reason: {combined[:300]}"
-        print("PASS: --write-canon correctly refused or failed on guard check")
+    # argparse should reject the unknown --write-canon argument
+    assert result.returncode != 0, \
+        f"--write-canon was accepted but should have been removed: {combined[:300]}"
+    assert 'unrecognized arguments' in combined or 'error' in combined.lower(), \
+        f"--write-canon rejected for unexpected reason: {combined[:300]}"
+    print("PASS: --write-canon flag correctly removed (argparse rejects it)")
 
 
 TESTS = [
@@ -260,7 +255,7 @@ TESTS = [
     test_stable_identity_rejects_index_match_and_flags_ambiguity,
     test_default_build_does_not_crash,
     test_default_build_preserves_canon_hash,
-    test_write_canon_rejects_dirty_tree,
+    test_write_canon_flag_removed,
 ]
 
 

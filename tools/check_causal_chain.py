@@ -105,16 +105,20 @@ def main():
     if no_qualified:
         print(f'    {[r["pid"] for r in no_qualified]}')
 
-    # Write output
-    out_path = os.path.join(REPO, 'docs', 'optimization-v1', 'phase5-chains.md')
-    with open(out_path, 'w', encoding='utf-8') as f:
-        f.write('# Phase 5 — Causal Chain 合格率\n\n')
-        f.write(f'| 原型 | 总机制 | 合格卡 | 未标basis |\n')
-        f.write(f'|------|--------|--------|----------|\n')
-        for r in results:
-            f.write(f'| {r["pid"]} | {r["total"]} | {r["qualified"]} | {r["unmarked_basis"]} |\n')
-        f.write(f'\n总计: {total_qualified}/{total_mechs} qualified\n')
-    print(f'\n输出: {out_path}')
+    # R1-E fix: no longer writes to user-owned docs/optimization-v1/
+    # Output is printed to stdout only (validators must not write to user dirs)
+    if '--out' in sys.argv:
+        idx = sys.argv.index('--out')
+        if idx + 1 < len(sys.argv):
+            out_path = sys.argv[idx + 1]
+            with open(out_path, 'w', encoding='utf-8') as f:
+                f.write('# Phase 5 — Causal Chain 合格率\n\n')
+                f.write(f'| 原型 | 总机制 | 合格卡 | 未标basis |\n')
+                f.write(f'|------|--------|--------|----------|\n')
+                for r in results:
+                    f.write(f'| {r["pid"]} | {r["total"]} | {r["qualified"]} | {r["unmarked_basis"]} |\n')
+                f.write(f'\n总计: {total_qualified}/{total_mechs} qualified\n')
+            print(f'\n输出: {out_path}')
 
 if __name__ == '__main__':
     main()

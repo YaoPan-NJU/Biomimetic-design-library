@@ -8,6 +8,7 @@ Usage:
 """
 import json
 import os
+import re
 import sys
 from collections import Counter
 
@@ -22,6 +23,11 @@ VALID_DISPOSITIONS = {
 }
 VALID_BASIS = {"direct_quote", "extraction", "ambiguity_gate", "correction", "scope_review", "none"}
 VALID_LEVELS = {"perf_1", "perf_2", "perf_3", "mech_1", "mech_2", "mech_3", "unknown"}
+
+# Legacy v1 values accepted as warnings (not errors) for PENDING migration entries
+LEGACY_DISPOSITIONS = {"replaced"}
+LEGACY_BASIS = {"review"}
+LEGACY_LEVELS = {"prototype", "exact_fingerprint"}
 
 
 def validate():
@@ -81,18 +87,31 @@ def validate():
             # Check applied_commit
             if entry["applied_commit"] == "PENDING":
                 stats["pending_count"] += 1
+                stats["warnings"].append(f"line {lineno}: PENDING entry (v1 migration, not yet applied)")
+
+            # Check ID stability: must match R-{prototype_id}-{hex_hash} pattern
+            if not eid.startswith(f"R-{pid}-"):
+                stats["warnings"].append(f"line {lineno}: ID '{eid}' does not follow R-{{pid}}-{{hash}} pattern")
+            elif not re.match(r"^R-.+-[0-9a-f]{6,}$", eid):
+                stats["warnings"].append(f"line {lineno}: ID '{eid}' hash portion is not a stable hex string")
 
             # Check disposition
             disp = entry.get("disposition", "")
             stats["disposition_counts"][disp] += 1
             if disp not in VALID_DISPOSITIONS:
-                stats["bad_disposition"].append(f"line {lineno}: invalid disposition '{disp}'")
+                if disp in LEGACY_DISPOSITIONS and entry["applied_commit"] == "PENDING":
+                    stats["warnings"].append(f"line {lineno}: legacy disposition '{disp}' in PENDING entry")
+                else:
+                    stats["bad_disposition"].append(f"line {lineno}: invalid disposition '{disp}'")
 
             # Check basis
             basis = entry.get("basis", "")
             stats["basis_counts"][basis] += 1
             if basis not in VALID_BASIS:
-                stats["bad_basis"].append(f"line {lineno}: invalid basis '{basis}'")
+                if basis in LEGACY_BASIS and entry["applied_commit"] == "PENDING":
+                    stats["warnings"].append(f"line {lineno}: legacy basis '{basis}' in PENDING entry")
+                else:
+                    stats["bad_basis"].append(f"line {lineno}: invalid basis '{basis}'")
 
             # Check record_identity
             ident = entry.get("record_identity", {})
@@ -102,7 +121,10 @@ def validate():
                 level = ident.get("level", "")
                 stats["level_counts"][level] += 1
                 if level not in VALID_LEVELS:
-                    stats["bad_level"].append(f"line {lineno}: invalid level '{level}'")
+                    if level in LEGACY_LEVELS and entry["applied_commit"] == "PENDING":
+                        stats["warnings"].append(f"line {lineno}: legacy level '{level}' in PENDING entry")
+                    else:
+                        stats["bad_level"].append(f"line {lineno}: invalid level '{level}'")
                 key = ident.get("key", "")
                 if not key:
                     stats["weak_identity"].append(f"line {lineno}: empty identity key")
@@ -185,14 +207,24 @@ def validate():
         for o in stats["orphan_entries"][:10]:
             print(f"  {o}")
         print()
+    if stats["warnings"]:
+        print(f"--- Warnings ({len(stats['warnings'])}) ---")
+        for w in stats["warnings"][:10]:
+            print(f"  {w}")
+        if len(stats["warnings"]) > 10:
+            print(f"  ... and {len(stats['warnings']) - 10} more")
+        print()
 
     total_issues = (len(stats["errors"]) + len(stats["missing_required"]) +
                     len(stats["bad_disposition"]) + len(stats["bad_basis"]) +
                     len(stats["bad_level"]))
-    if total_issues == 0 and stats["pending_count"] == 0:
+    total_warnings = stats["pending_count"] + len(stats["warnings"]) + len(stats["weak_identity"])
+    if total_issues == 0:
         print("✅ Ledger v2 validation PASSED")
     else:
-        print(f"⚠️  Ledger v2 validation: {total_issues} issues, {stats['pending_count']} PENDING entries")
+        print(f"❌ Ledger v2 validation: {total_issues} errors")
+    if total_warnings > 0:
+        print(f"⚠️  {total_warnings} warnings (including {stats['pending_count']} PENDING entries)")
         print("   (PENDING entries are expected for unapplied v1 migration input)")
 
     return 0 if total_issues == 0 else 1
