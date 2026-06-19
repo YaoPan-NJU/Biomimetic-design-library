@@ -2,11 +2,16 @@
 """
 M2 deterministic canon-recovery applier.
 
-Restores evidence fields present in git history but empty at HEAD, matched by stable
-identity (design §6.2). PURELY ADDITIVE: only fills empty fields, so no protected metric
-can decrease. Writes one ledger entry per restored field-group. Refuses refuted-row
-resurrection. causal_chain restoration requires strong identity (name + source), not a
-fingerprint-only match.
+R1-B corrected: Restores evidence fields present in git history but empty at HEAD,
+matched by stable identity (design §6.2). PURELY ADDITIVE: only fills empty fields,
+so no protected metric can decrease. Writes one ledger entry per restored field-group.
+Refuses refuted-row resurrection. causal_chain restoration requires strong identity
+(name + source), not a fingerprint-only match.
+
+R1-B ambiguity gate: when multiple history entries provide DIFFERENT values for the
+same field, the result is ambiguous — that field is rejected (not silently resolved
+by "first strongest wins"). Ledger entries with disposition "ambiguous" are written
+for each rejected field.
 
 Run the count-guard (--guard) after this; it must show no decreases (only increases).
 
@@ -91,54 +96,82 @@ def gather_history(pid):
 
 
 def apply_perf(pid, head_row, hist_perf, refuted):
-    """Fill empty perf evidence fields from best-identity history match. Returns (changes, ledger_entries)."""
+    """Fill empty perf evidence fields from history matches.
+
+    R1-B: when multiple history entries provide DIFFERENT values for the same field,
+    the result is ambiguous — reject that field (do not silently pick strongest).
+    Only fill when exactly one non-refuted history entry provides a value.
+
+    Returns (changes, ambiguous_fields).
+    """
     changes = []
-    best = {}  # field -> (value, commit, level)
+    ambiguous = []
+    candidates = {}  # field -> list of (value, commit, level)
     for hr in hist_perf:
         lvl = _identity_strength(head_row, hr, "perf")
         if lvl == 0:
             continue
         for f in PERF_FIELDS:
             if not _nonempty(head_row, f) and _nonempty(hr, f):
-                cur = best.get(f)
-                if cur is None or lvl < cur[2]:  # prefer strongest identity
-                    val = hr[f]
-                    if str(val) in refuted:
-                        continue
-                    best[f] = (val, hr["_commit"], lvl)
-    for f, (val, commit, lvl) in sorted(best.items()):
-        head_row[f] = val
-        changes.append({"field": f, "value": val, "commit": commit, "level": lvl})
-    return changes
+                val = hr[f]
+                if str(val) in refuted:
+                    continue
+                candidates.setdefault(f, []).append((val, hr["_commit"], lvl))
+    for f, entries in sorted(candidates.items()):
+        unique_vals = set(e[0] for e in entries)
+        if len(unique_vals) > 1:
+            ambiguous.append(f)
+            continue
+        # All entries agree on value; use the strongest identity
+        best = min(entries, key=lambda e: e[2])
+        head_row[f] = best[0]
+        changes.append({"field": f, "value": best[0], "commit": best[1], "level": best[2]})
+    return changes, ambiguous
 
 
 def apply_mech(pid, head_mech, hist_mech, refuted):
+    """Fill empty mechanism fields from history matches.
+
+    R1-B: when multiple history entries provide DIFFERENT values for the same field,
+    the result is ambiguous — reject that field. causal_chain also requires unambiguous
+    single-source match at L1/L2 identity.
+
+    Returns (changes, ambiguous_fields).
+    """
     changes = []
-    best = {}
-    causal_candidate = None
+    ambiguous = []
+    candidates = {}  # field -> list of (value, commit, level)
+    causal_candidates = []
     for hm in hist_mech:
         lvl = _identity_strength(head_mech, hm, "mech")
         if lvl == 0:
             continue
         for f in MECH_FIELDS:
             if not _nonempty(head_mech, f) and _nonempty(hm, f):
-                cur = best.get(f)
-                if cur is None or lvl < cur[2]:
-                    val = hm[f]
-                    if str(val) in refuted:
-                        continue
-                    best[f] = (val, hm["_commit"], lvl)
-        # causal_chain: require strong identity (L1/L2), HEAD empty
+                val = hm[f]
+                if str(val) in refuted:
+                    continue
+                candidates.setdefault(f, []).append((val, hm["_commit"], lvl))
         if lvl in (1, 2) and not _nonempty(head_mech, "causal_chain") and _nonempty(hm, "causal_chain"):
-            if causal_candidate is None or lvl < causal_candidate[2]:
-                causal_candidate = (hm["causal_chain"], hm["_commit"], lvl)
-    for f, (val, commit, lvl) in sorted(best.items()):
-        head_mech[f] = val
-        changes.append({"field": f, "value": val, "commit": commit, "level": lvl})
-    if causal_candidate:
-        head_mech["causal_chain"] = causal_candidate[0]
-        changes.append({"field": "causal_chain", "value": "<object>", "commit": causal_candidate[1], "level": causal_candidate[2]})
-    return changes
+            causal_candidates.append((hm["causal_chain"], hm["_commit"], lvl))
+    for f, entries in sorted(candidates.items()):
+        unique_vals = set(e[0] for e in entries)
+        if len(unique_vals) > 1:
+            ambiguous.append(f)
+            continue
+        best = min(entries, key=lambda e: e[2])
+        head_mech[f] = best[0]
+        changes.append({"field": f, "value": best[0], "commit": best[1], "level": best[2]})
+    # causal_chain: require single unambiguous source
+    if causal_candidates:
+        unique_causal = set(id(e[0]) for e in causal_candidates)
+        if len(unique_causal) == 1:
+            best_c = min(causal_candidates, key=lambda e: e[2])
+            head_mech["causal_chain"] = best_c[0]
+            changes.append({"field": "causal_chain", "value": "<object>", "commit": best_c[1], "level": best_c[2]})
+        else:
+            ambiguous.append("causal_chain")
+    return changes, ambiguous
 
 
 def ledger_entry(pid, field_path, rec_id_key, disposition, commit, basis, modality="text"):
@@ -187,7 +220,12 @@ def main():
         for i, row in enumerate(perf):
             if not isinstance(row, dict):
                 continue
-            ch = apply_perf(pid, row, hp, refuted)
+            ch, amb = apply_perf(pid, row, hp, refuted)
+            if amb:
+                for f in amb:
+                    ledger_lines.append(ledger_entry(pid, f"performance_data[{i}].{f}",
+                                                     _row_label(row), "ambiguous", "none",
+                                                     "ambiguity_gate"))
             if ch:
                 proto_changes["perf"] += len(ch)
                 for c in ch:
@@ -201,7 +239,12 @@ def main():
         for i, m in enumerate(mechs):
             if not isinstance(m, dict):
                 continue
-            ch = apply_mech(pid, m, hm, refuted)
+            ch, amb = apply_mech(pid, m, hm, refuted)
+            if amb:
+                for f in amb:
+                    ledger_lines.append(ledger_entry(pid, f"mechanisms[{i}].{f}",
+                                                     _row_label(m), "ambiguous", "none",
+                                                     "ambiguity_gate"))
             if ch:
                 proto_changes["mech"] += len(ch)
                 if any(c["field"] == "causal_chain" for c in ch):
