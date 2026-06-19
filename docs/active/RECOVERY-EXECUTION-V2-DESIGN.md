@@ -59,8 +59,9 @@ Confirmed blockers include:
   red;
 - live execution documents still describe stale milestone states.
 
-Therefore the next milestone is **R1 Correction**, not M5. No push, expansion, mass
-verification, duplicate deletion, or canon promotion is allowed before Gate G1.
+Therefore the next milestones are **R0 OpenClaw Capability Gate** followed by
+**R1 Correction**, not M5. No push, expansion, mass verification, duplicate deletion,
+or canon promotion is allowed before Gates G0 and G1.
 
 ## 3. Operating Architecture
 
@@ -110,6 +111,61 @@ scope, ownership, deletion, external-source, and release decisions.
 The coordinator may work continuously between gates. It must stop at a gate with a
 short evidence-backed report, exact commit IDs, validation output, and unresolved
 items.
+
+### 3.4 R0: Claude Code owns OpenClaw qualification
+
+Before R1, Claude Code must independently inspect, test, and, where safe, repair the
+OpenClaw execution path. Codex defines and reviews this gate; it does not operate or
+debug OpenClaw on Claude Code's behalf.
+
+R0 must prove all of the following:
+
+1. Claude Code can dispatch OpenClaw, monitor a running task, collect its artifacts,
+   retry or cancel it, and run up to three bounded workers without losing ownership;
+2. each of the two configured MIMO API-key slots works independently, with the actual
+   provider, model, and fallback state captured from runtime metadata;
+3. each key can run `mimo-v2.5-pro` on a text-only reasoning fixture;
+4. each key can run `mimo-v2.5` on a real image or rendered scanned-PDF page and
+   recover known pixel-only fields; a pong, model-name response, OCR text supplied in
+   the prompt, or successful request alone is not multimodal proof;
+5. Claude Code can select and switch the model per dispatch without modifying canon or
+   relying on an uncontrolled default;
+6. project files and media can be supplied through an explicit, reproducible workspace
+   boundary, using lean project-specific agents rather than a general agent with large
+   unrelated prompt context;
+7. no accepted test uses fallback to Google or any provider other than the intended
+   MIMO key and model; `fallbackUsed=true`, a mismatched provider/model, or unverifiable
+   routing fails the item;
+8. a maximum-three-worker orchestration fixture completes with unique task IDs,
+   isolated artifact paths, timeouts, and collected exit status.
+
+Claude Code may diagnose configuration, workspace, routing, gateway, and local-runtime
+problems and make the minimum reversible non-canon fix needed to pass R0. If the local
+embedded path is reliable, a broken gateway is not itself blocking, but the selected
+path and limitation must be documented. Secrets must never appear in prompts, logs,
+reports, Git diffs, or commits; reports identify keys only as masked slots such as
+`key_slot_1` and `key_slot_2`.
+
+If OpenClaw cannot read a source at its repository or literature-library path, Claude
+Code must resolve the access boundary itself. It may create a byte-identical, read-only
+task copy under a dedicated Biomimetic project workspace. Before dispatch it records
+the original absolute path, task-copy path, size, and SHA-256; after dispatch it proves
+the hash is unchanged and removes the task copy unless it is an explicitly registered
+cache artifact. It must never move, rename, overwrite, or delete the original. It must
+also never place API keys, `.env` files, credentials, or unrelated user files in the
+workspace, or use an unrecorded copy as evidence provenance. Rendered PDF pages receive
+the same source hash and page-number traceability. Workspace-access failure is a
+repairable runtime condition, not a reason for Claude Code to take over the PDF reading
+itself.
+
+R0 produces sanitized `docs/active/openclaw-capability-report.md` and
+`docs/active/openclaw-capability-report.json`. The machine-readable report contains one
+result per key/model/fixture plus the orchestration result, command shape with secrets
+removed, model/provider/runtime metadata, fallback status, artifact hashes, and failure
+notes. R0 passes only when both keys, both required model routes, genuine visual
+inspection, free per-dispatch switching, and orchestration control all pass. Otherwise
+Claude Code stops at Gate G0 with a diagnosis and correction proposal; it does not
+enter R1.
 
 ## 4. Long-Goal Model
 
@@ -465,6 +521,7 @@ or merges existing canon merely to reach a target count.
 
 | Gate | Trigger | Reviewer | Required decision |
 |---|---|---|---|
+| G0 | OpenClaw capability qualification complete | Codex | both key slots, both model routes, genuine visual inspection, and orchestration control pass |
 | G1 | R1 correction complete | Codex + Yao if scope changes | tools/ledger/recovery safe enough for M5 |
 | G2 | 9-item OpenClaw pilot complete | Codex | worker quality and routing acceptable |
 | G3 | first production M5 batch applied | Codex | scaling rules and sampling acceptable |
@@ -492,6 +549,8 @@ validation reruns.
 
 The V2 programme is complete when:
 
+- R0 proves both MIMO key slots, correct text/multimodal routing, model switching, and
+  Claude Code's bounded control of OpenClaw without unintended fallback;
 - M1 safety properties are enforced by integration tests, not comments;
 - the recovery ledger is machine-valid and traceable to real commits and sources;
 - every previous M2 change has an accepted, corrected, or rejected disposition;
@@ -507,6 +566,7 @@ The V2 programme is complete when:
 ## 14. Next Step After Approval
 
 After Yao approves this design, create a detailed implementation plan and the first
-long Goal for R1. That Goal may run continuously through R1-A to R1-E, use OpenClaw for
-read-only audits, and stop only at Gate G1. It must not enter M5 or expansion.
-
+long Goal beginning with R0. Claude Code first qualifies and, if necessary, repairs its
+own OpenClaw path, then stops at Gate G0 for Codex review. Only after G0 passes may a
+long Goal run continuously through R1-A to R1-E and stop at Gate G1. It must not enter
+M5 or expansion.
