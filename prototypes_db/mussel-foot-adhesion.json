@@ -2161,7 +2161,12 @@
       "source_tier": "literature",
       "examples": [
         "DOI: 10.1126/science.1145492"
-      ]
+      ],
+      "design_principle": "贻贝足丝蛋白 DOPA 的邻苯二酚基团通过双齿配位捕获软金属离子(Pb²⁺ logK~13, Cu²⁺ logK~12)，且在湿润表面保持粘附力",
+      "implementation_example": "PDA涂层(见polydopamine-coating) → 基底功能化 → 金属吸附；或 mussel-inspired hydrogel (PDA/PAM双网络) → 3D吸附柱",
+      "constraints": "DOPA氧化后螯合能力下降；pH>8时邻苯二酚去质子化；竞争配体(如EDTA)干扰",
+      "failure_modes": "氧化失活；高pH脱附；竞争离子降低选择性",
+      "evidence_tier": "fact (有 Liu2024 Pb 526.68mg/g 数据)"
     },
     {
       "idea": "利用酰胺肟基团对铀酰离子的高选择性配位，实现海水中 ppb 级铀的捕获",

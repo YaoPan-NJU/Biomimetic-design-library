@@ -562,7 +562,12 @@
       "material_handle": "单宁酸直接使用或固定化在载体上",
       "target_interaction": "多酚基团与金属离子形成配位络合物，与蛋白质形成氢键",
       "source_tier": "llm_inference",
-      "examples": []
+      "examples": [],
+      "design_principle": "单宁酸的邻苯二酚/邻苯三酚基团通过邻位-OH与金属离子形成五元螯合环，结合常数高(log K 8-15)，对软酸金属(Pb²⁺、Cu²⁺)选择性强",
+      "implementation_example": "单宁酸固定化在壳聚糖基质（TA/CS复合微球）或氨基功能化磁性纳米颗粒（TA@Fe₃O₄-NH₂）→ 磁分离回收",
+      "constraints": "水溶性单宁需固定化防止流失；碱性条件氧化降低活性；蛋白质共存时非特异性沉淀",
+      "failure_modes": "固定化后官能团减少；碱性氧化失活；有机溶剂洗脱不完全",
+      "evidence_tier": "lead (有 Mao2024 Cr(VI) 数据但缺其他金属 quote)"
     }
   ],
   "library_tier": "core",

@@ -1755,7 +1755,12 @@
       "source_tier": "literature",
       "examples": [
         "DOI: 10.1126/science.1145492"
-      ]
+      ],
+      "design_principle": "PDA 的邻苯二酚(-OH)和胺基(-NH₂)双功能基团：(1)邻苯二酚螯合软金属(Pb²⁺、Cu²⁺、UO₂²⁺)；(2)胺基提供正电荷吸附阴离子(如Cr₂O₇²⁻)；(3)通用粘附性可在任意基底表面成膜",
+      "implementation_example": "多巴胺盐酸盐(2 mg/mL)溶于 Tris-HCl(pH 8.5)，浸渍基底12-24h → PDA涂层 → 可进一步接枝功能分子(如EDTA、SH)",
+      "constraints": "涂层厚度控制(通常<100nm)；pH 8.5碱性条件；多巴胺成本较高；长期稳定性",
+      "failure_modes": "涂层不均匀；碱性条件限制基底选择；多次循环后涂层脱落",
+      "evidence_tier": "fact (有 CN114887602A 专利支撑 P 吸附)"
     }
   ],
   "library_tier": "core",

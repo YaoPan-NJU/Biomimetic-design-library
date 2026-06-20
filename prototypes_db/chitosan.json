@@ -4309,7 +4309,12 @@
       "material_handle": "壳聚糖直接使用或交联改性（如戊二醛、环氧氯丙烷）",
       "target_interaction": "氨基质子化后静电吸引阴离子，羟基配位金属离子",
       "source_tier": "llm_inference",
-      "examples": []
+      "examples": [],
+      "design_principle": "壳聚糖的-NH₂和-OH通过螯合配位、离子交换和静电吸引捕获重金属离子。pH<pKa(~6.3)时-NH₃⁺质子化释放金属（可再生）",
+      "implementation_example": "壳聚糖珠粒（NaOH凝固浴）→ 浸泡金属溶液 → pH 3-4 酸洗再生；或交联壳聚糖/沸石复合微球提高机械强度",
+      "constraints": "酸性条件(pH<3)吸附能力下降；水中溶解性需交联控制；机械强度低需复合增强",
+      "failure_modes": "强酸环境溶解；高盐竞争吸附；有机物堵塞孔道",
+      "evidence_tier": "lead (有性能数据但缺 verification_quote)"
     }
   ],
   "library_tier": "core",

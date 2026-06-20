@@ -1841,8 +1841,24 @@
     },
     "lotus-leaf": {
       "biomimetic_dimension": "功能仿生",
-      "features": [],
-      "applicability": {},
+      "features": [
+        "超疏水",
+        "油水分离",
+        "自清洁",
+        "微纳层次结构",
+        "Cassie-Baxter态"
+      ],
+      "applicability": {
+        "pH_range": [
+          4,
+          10
+        ],
+        "temp_range": [
+          0,
+          80
+        ],
+        "salinity": "any"
+      },
       "_status": "minimal_stub_pending_curation"
     },
     "metal-organic-framework": {
@@ -1860,8 +1876,22 @@
     },
     "shark-skin": {
       "biomimetic_dimension": "功能仿生",
-      "features": [],
-      "applicability": {},
+      "features": [
+        "抗污",
+        "微纳结构",
+        "减阻"
+      ],
+      "applicability": {
+        "pH_range": [
+          6,
+          8
+        ],
+        "temp_range": [
+          0,
+          40
+        ],
+        "salinity": "medium"
+      },
       "_status": "minimal_stub_pending_curation"
     },
     "starch-granule": {
@@ -1872,14 +1902,42 @@
     },
     "superhydrophobic-artificial": {
       "biomimetic_dimension": "功能仿生",
-      "features": [],
-      "applicability": {},
+      "features": [
+        "超疏水",
+        "油水分离",
+        "接触角>150°"
+      ],
+      "applicability": {
+        "pH_range": [
+          2,
+          12
+        ],
+        "temp_range": [
+          0,
+          100
+        ],
+        "salinity": "any"
+      },
       "_status": "minimal_stub_pending_curation"
     },
     "water-strider-leg": {
       "biomimetic_dimension": "功能仿生",
-      "features": [],
-      "applicability": {},
+      "features": [
+        "超疏水",
+        "油水分离",
+        "微纳结构"
+      ],
+      "applicability": {
+        "pH_range": [
+          5,
+          9
+        ],
+        "temp_range": [
+          0,
+          50
+        ],
+        "salinity": "low"
+      },
       "_status": "minimal_stub_pending_curation"
     },
     "diatom-inspired-porous": {

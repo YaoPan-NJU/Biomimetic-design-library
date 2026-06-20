@@ -692,7 +692,12 @@
       "material_handle": "鱼鳞热处理转化为羟基磷灰石",
       "target_interaction": "Ca²⁺ 配位 F⁻ 和重金属，PO₄³⁻ 捕获阳离子",
       "source_tier": "llm_inference",
-      "examples": []
+      "examples": [],
+      "design_principle": "鱼鳞热处理→羟基磷灰石(HAp, Ca₁₀(PO₄)₆(OH)₂)。Pb²⁺通过离子交换替换Ca²⁺形成更稳定的磷氯铅矿(Pb₁₀(PO₄)₆(OH)₂)，Ksp远小于HAp",
+      "implementation_example": "鱼鳞清洗→600°C煅烧2h→研磨→HAp粉末→直接用于柱吸附或压片成型",
+      "constraints": "煅烧温度影响晶相(>700°C分解)；酸性条件HAp溶解；竞争阳离子(Ca²⁺、Mg²⁺)干扰",
+      "failure_modes": "煅烧不完全残留有机物；酸性溶解；竞争离子降低容量",
+      "evidence_tier": "fact (有 CN114849640A 专利支撑)"
     }
   ],
   "library_tier": "core",

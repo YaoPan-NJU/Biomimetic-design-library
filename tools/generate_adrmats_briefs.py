@@ -109,6 +109,24 @@ def main():
             "water_quality": {"pH": 6, "temperature": 25, "salinity": "low"},
             "engineering_constraints": [],
             "test_name": "Pb(II) 重金属离子去除"
+        },
+        {
+            "pollutant": "Cr(VI)",
+            "water_quality": {"pH": 3, "temperature": 25, "salinity": "low"},
+            "engineering_constraints": ["酸性条件耐受"],
+            "test_name": "Cr(VI) 六价铬去除"
+        },
+        {
+            "pollutant": "Methylene Blue",
+            "water_quality": {"pH": 7, "temperature": 25, "salinity": "low"},
+            "engineering_constraints": [],
+            "test_name": "亚甲基蓝染料去除"
+        },
+        {
+            "pollutant": "oil-water",
+            "water_quality": {"pH": 7, "temperature": 25, "salinity": "medium"},
+            "engineering_constraints": ["超疏水/超亲油"],
+            "test_name": "油水分离"
         }
     ]
 
