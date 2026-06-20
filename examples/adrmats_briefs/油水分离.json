@@ -20,7 +20,128 @@
         "超疏水/超亲油"
       ]
     },
-    "candidates": [],
+    "candidates": [
+      {
+        "prototype_id": "lotus-leaf",
+        "organism": "Nelumbo nucifera",
+        "match": {
+          "reason": "Superhydrophobic surfaces enable selective oil/water separation",
+          "weight": 0.8,
+          "applicability_fit": "盐度 any",
+          "match_basis": "molecular_feature_inference",
+          "direct_evidence": false
+        },
+        "mechanism": {
+          "name": "超疏水材料构建基本原理 - Young方程/Wenzel模型/Cassie-Baxter模型",
+          "基本原理": "needs_review",
+          "key_structures": [],
+          "functional_groups": "",
+          "molecular_feature_links": [],
+          "attribution": {
+            "source": "literature",
+            "ref": "10.16865/j.cnki.1000-7555.2020.0282",
+            "verification_tier": "unverified",
+            "confidence": "normal"
+          }
+        },
+        "design_translation": {
+          "idea": "利用荷叶表面微纳层级结构实现超疏水自清洁，可启发油水分离膜设计",
+          "material_handle": "超疏水涂层、仿生微纳结构膜",
+          "design_principle": "",
+          "implementation_example": "",
+          "constraints": "",
+          "failure_modes": "",
+          "evidence_tier": "inference",
+          "source_tier": "llm_inference",
+          "material_realization_examples": [
+            "超疏水涂层、仿生微纳结构膜"
+          ]
+        },
+        "evidence_context": {
+          "performance_leads": []
+        }
+      },
+      {
+        "prototype_id": "superhydrophobic-artificial",
+        "organism": "Nelumbo nucifera",
+        "match": {
+          "reason": "Superhydrophobic surfaces enable selective oil/water separation",
+          "weight": 0.8,
+          "applicability_fit": "盐度 any",
+          "match_basis": "molecular_feature_inference",
+          "direct_evidence": false
+        },
+        "mechanism": {
+          "name": "超疏水材料构建基本原理 - Young方程/Wenzel模型/Cassie-Baxter模型",
+          "基本原理": "needs_review",
+          "key_structures": [],
+          "functional_groups": "",
+          "molecular_feature_links": [],
+          "attribution": {
+            "source": "literature",
+            "ref": "10.16865/j.cnki.1000-7555.2020.0282",
+            "verification_tier": "unverified",
+            "confidence": "normal"
+          }
+        },
+        "design_translation": {
+          "idea": "利用人工超疏水表面实现油水分离和自清洁，可启发抗污染膜设计",
+          "material_handle": "超疏水膜、涂层、织物",
+          "design_principle": "",
+          "implementation_example": "",
+          "constraints": "",
+          "failure_modes": "",
+          "evidence_tier": "inference",
+          "source_tier": "llm_inference",
+          "material_realization_examples": [
+            "超疏水膜、涂层、织物"
+          ]
+        },
+        "evidence_context": {
+          "performance_leads": []
+        }
+      },
+      {
+        "prototype_id": "water-strider-leg",
+        "organism": "Gerridae",
+        "match": {
+          "reason": "Superhydrophobic surfaces enable selective oil/water separation",
+          "weight": 0.8,
+          "applicability_fit": "盐度 any",
+          "match_basis": "molecular_feature_inference",
+          "direct_evidence": false
+        },
+        "mechanism": {
+          "name": "超疏水材料构建基本原理 - Young方程/Wenzel模型/Cassie-Baxter模型",
+          "基本原理": "needs_review",
+          "key_structures": [],
+          "functional_groups": "",
+          "molecular_feature_links": [],
+          "attribution": {
+            "source": "literature",
+            "ref": "10.16865/j.cnki.1000-7555.2020.0282",
+            "verification_tier": "unverified",
+            "confidence": "normal"
+          }
+        },
+        "design_translation": {
+          "idea": "利用水黾腿的微纳层级结构和超疏水性实现水面行走，可启发水面漂浮/分离材料",
+          "material_handle": "超疏水微结构表面",
+          "design_principle": "",
+          "implementation_example": "",
+          "constraints": "",
+          "failure_modes": "",
+          "evidence_tier": "inference",
+          "source_tier": "llm_inference",
+          "material_realization_examples": [
+            "超疏水微结构表面"
+          ]
+        },
+        "evidence_context": {
+          "performance_leads": []
+        }
+      }
+    ],
     "applicable_rules": [],
     "rule_based_cautions": {
       "do_not": [],
@@ -29,7 +150,11 @@
     "honesty_ledger": {
       "facts": [],
       "leads": [],
-      "inferences": []
+      "inferences": [
+        "lotus-leaf: 基于分子特征推断，非直接证据",
+        "superhydrophobic-artificial: 基于分子特征推断，非直接证据",
+        "water-strider-leg: 基于分子特征推断，非直接证据"
+      ]
     }
   }
 }

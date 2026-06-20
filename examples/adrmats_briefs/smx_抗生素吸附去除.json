@@ -55,9 +55,17 @@
           }
         },
         "design_translation": {
-          "idea": "生物低表面能蜡质层映射为含氟聚合物（C-F键）；生物微观乳突粗糙结构映射为膜多孔结构及纳米纤维/相分离孔结构。软约束建议：优先选择PVDF以平衡成本与综合性能，或采用ECTFE提升耐磨强度；推荐使用TEP、ATBC等绿色溶剂替代传统有毒溶剂以降低环境影响。",
-          "material_realization_examples": [],
-          "source_tier": "literature"
+          "idea": "利用植物单宁的多酚结构进行金属离子络合和蛋白质沉淀",
+          "material_handle": "单宁酸直接使用或固定化在载体上",
+          "design_principle": "单宁酸的邻苯二酚/邻苯三酚基团通过邻位-OH与金属离子形成五元螯合环，结合常数高(log K 8-15)，对软酸金属(Pb²⁺、Cu²⁺)选择性强",
+          "implementation_example": "单宁酸固定化在壳聚糖基质（TA/CS复合微球）或氨基功能化磁性纳米颗粒（TA@Fe₃O₄-NH₂）→ 磁分离回收",
+          "constraints": "水溶性单宁需固定化防止流失；碱性条件氧化降低活性；蛋白质共存时非特异性沉淀",
+          "failure_modes": "固定化后官能团减少；碱性氧化失活；有机溶剂洗脱不完全",
+          "evidence_tier": "lead (有 Mao2024 Cr(VI) 数据但缺其他金属 quote)",
+          "source_tier": "llm_inference",
+          "material_realization_examples": [
+            "单宁酸直接使用或固定化在载体上"
+          ]
         },
         "evidence_context": {
           "performance_leads": []
@@ -89,9 +97,17 @@
           }
         },
         "design_translation": {
-          "idea": "生物→材料映射：甲壳素/壳聚糖柔性网络→CTS聚合物基质提供成膜性与改性位点；天然沸石微孔结构→MZ无机骨架提供高比表面积与离子交换通道；La(OH)3特异性结合→仿生活性中心实现多分子层化学吸附；软约束建议：控制负载pH至11及60°C振荡条件以确保La(OH)3均匀成核，避免团聚；孔径设计需远大于La水合半径(0.452 nm)以保障传质效率。",
-          "material_realization_examples": [],
-          "source_tier": "literature"
+          "idea": "利用壳聚糖的氨基和羟基进行络合吸附，pH 响应控制吸附/脱附",
+          "material_handle": "壳聚糖直接使用或交联改性（如戊二醛、环氧氯丙烷）",
+          "design_principle": "壳聚糖的-NH₂和-OH通过螯合配位、离子交换和静电吸引捕获重金属离子。pH<pKa(~6.3)时-NH₃⁺质子化释放金属（可再生）",
+          "implementation_example": "壳聚糖珠粒（NaOH凝固浴）→ 浸泡金属溶液 → pH 3-4 酸洗再生；或交联壳聚糖/沸石复合微球提高机械强度",
+          "constraints": "酸性条件(pH<3)吸附能力下降；水中溶解性需交联控制；机械强度低需复合增强",
+          "failure_modes": "强酸环境溶解；高盐竞争吸附；有机物堵塞孔道",
+          "evidence_tier": "lead (有性能数据但缺 verification_quote)",
+          "source_tier": "llm_inference",
+          "material_realization_examples": [
+            "壳聚糖直接使用或交联改性（如戊二醛、环氧氯丙烷）"
+          ]
         },
         "evidence_context": {
           "performance_leads": []
@@ -123,9 +139,17 @@
           }
         },
         "design_translation": {
-          "idea": "生物微纳乳突映射为无机纳米粒子（如SiO2/ZnO/CuO）或相分离构建的粗糙结构；表皮蜡质映射为有机氟/有机硅/长链烷烃等低表面能修饰；自清洁机制映射为超疏水油水分离与抗细菌黏附；主动防御映射为掺杂抗菌纳米粒子或接枝杀菌基团。软约束建议：优先采用无机-有机复合策略以兼顾粗糙度与低表面能，使用多巴胺或壳聚糖等仿生/天然分子简化制备流程并提升环保性。",
-          "material_realization_examples": [],
-          "source_tier": "literature"
+          "idea": "利用 PDA 涂层的邻苯二酚和胺基双功能基团进行表面改性，实现普适性粘附和污染物捕获",
+          "material_handle": "多巴胺在弱碱性（pH 8.5）条件下自聚成 PDA 涂层",
+          "design_principle": "PDA 的邻苯二酚(-OH)和胺基(-NH₂)双功能基团：(1)邻苯二酚螯合软金属(Pb²⁺、Cu²⁺、UO₂²⁺)；(2)胺基提供正电荷吸附阴离子(如Cr₂O₇²⁻)；(3)通用粘附性可在任意基底表面成膜",
+          "implementation_example": "多巴胺盐酸盐(2 mg/mL)溶于 Tris-HCl(pH 8.5)，浸渍基底12-24h → PDA涂层 → 可进一步接枝功能分子(如EDTA、SH)",
+          "constraints": "涂层厚度控制(通常<100nm)；pH 8.5碱性条件；多巴胺成本较高；长期稳定性",
+          "failure_modes": "涂层不均匀；碱性条件限制基底选择；多次循环后涂层脱落",
+          "evidence_tier": "fact (有 CN114887602A 专利支撑 P 吸附)",
+          "source_tier": "literature",
+          "material_realization_examples": [
+            "多巴胺在弱碱性（pH 8.5）条件下自聚成 PDA 涂层"
+          ]
         },
         "evidence_context": {
           "performance_leads": []
@@ -155,9 +179,17 @@
           }
         },
         "design_translation": {
-          "idea": "生物→材料映射：生物微纳乳突映射为材料表面的微米骨架与纳米颗粒/纤维堆叠结构；生物蜡质层映射为氟/硅低表面能涂层或本征疏水聚合物修饰。软约束建议：优先采用涂覆或静电纺丝实现快速成型与柔性适配；针对强酸碱或高温工况需强化化学交联或选用无机-有机杂化体系；设计时需预留抗堵塞的宏观孔隙梯度以应对复杂乳液。",
-          "material_realization_examples": [],
-          "source_tier": "literature"
+          "idea": "利用荷叶表面微纳层级结构实现超疏水自清洁，可启发油水分离膜设计",
+          "material_handle": "超疏水涂层、仿生微纳结构膜",
+          "design_principle": "",
+          "implementation_example": "",
+          "constraints": "",
+          "failure_modes": "",
+          "evidence_tier": "inference",
+          "source_tier": "llm_inference",
+          "material_realization_examples": [
+            "超疏水涂层、仿生微纳结构膜"
+          ]
         },
         "evidence_context": {
           "performance_leads": []

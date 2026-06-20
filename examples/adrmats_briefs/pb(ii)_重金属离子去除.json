@@ -53,9 +53,17 @@
           }
         },
         "design_translation": {
-          "idea": "生物→材料映射：荷叶微乳突→浸涂/电纺构建微纳突起；鱼鳞定向结构→同步电喷射/电纺制备定向纳米纤维；贻贝足丝→PDA/单宁酸-Fe(III)配位沉积实现表面改性；壁虎刚毛→阵列化微结构或气凝胶多孔网络。软约束建议：优先采用无氟绿色改性剂；根据目标乳液类型（O/W或W/O）选择“除水型”或“除油型”润湿策略；引入光催化或动态键以提升抗污染与自修复能力。",
-          "material_realization_examples": [],
-          "source_tier": "literature"
+          "idea": "利用贻贝足丝蛋白 DOPA 的邻苯二酚基团进行表面功能化，通过双齿配位捕获软金属离子",
+          "material_handle": "聚多巴胺（PDA）涂层或多巴胺改性聚合物",
+          "design_principle": "贻贝足丝蛋白 DOPA 的邻苯二酚基团通过双齿配位捕获软金属离子(Pb²⁺ logK~13, Cu²⁺ logK~12)，且在湿润表面保持粘附力",
+          "implementation_example": "PDA涂层(见polydopamine-coating) → 基底功能化 → 金属吸附；或 mussel-inspired hydrogel (PDA/PAM双网络) → 3D吸附柱",
+          "constraints": "DOPA氧化后螯合能力下降；pH>8时邻苯二酚去质子化；竞争配体(如EDTA)干扰",
+          "failure_modes": "氧化失活；高pH脱附；竞争离子降低选择性",
+          "evidence_tier": "fact (有 Liu2024 Pb 526.68mg/g 数据)",
+          "source_tier": "literature",
+          "material_realization_examples": [
+            "聚多巴胺（PDA）涂层或多巴胺改性聚合物"
+          ]
         },
         "evidence_context": {
           "performance_leads": [
@@ -107,9 +115,17 @@
           }
         },
         "design_translation": {
-          "idea": "生物→材料映射：荷叶结构→SiO2/PDMS修饰纤维素织物/气凝胶；鱼鳞黏液→亲水纤维素基质构建水下超疏油表面；甲虫/Salvinia双面→Janus B-on-A非对称膜；软约束建议：依据Wenzel/Cassie-Baxter方程优化粗糙度比(r)与固液界面分数(fSL)，在突破压力与高通量间取得平衡。",
-          "material_realization_examples": [],
-          "source_tier": "literature"
+          "idea": "利用鱼鳞羟基磷灰石的多孔结构和 Ca/P 位点进行吸附",
+          "material_handle": "鱼鳞热处理转化为羟基磷灰石",
+          "design_principle": "鱼鳞热处理→羟基磷灰石(HAp, Ca₁₀(PO₄)₆(OH)₂)。Pb²⁺通过离子交换替换Ca²⁺形成更稳定的磷氯铅矿(Pb₁₀(PO₄)₆(OH)₂)，Ksp远小于HAp",
+          "implementation_example": "鱼鳞清洗→600°C煅烧2h→研磨→HAp粉末→直接用于柱吸附或压片成型",
+          "constraints": "煅烧温度影响晶相(>700°C分解)；酸性条件HAp溶解；竞争阳离子(Ca²⁺、Mg²⁺)干扰",
+          "failure_modes": "煅烧不完全残留有机物；酸性溶解；竞争离子降低容量",
+          "evidence_tier": "fact (有 CN114849640A 专利支撑)",
+          "source_tier": "llm_inference",
+          "material_realization_examples": [
+            "鱼鳞热处理转化为羟基磷灰石"
+          ]
         },
         "evidence_context": {
           "performance_leads": [
@@ -154,9 +170,17 @@
           }
         },
         "design_translation": {
-          "idea": "生物→材料映射: 牡蛎壳生物矿化CaCO₃ → 活性钙改性源(CaO)；花生壳多孔碳骨架 → 高分散载体与吸附基质；软约束建议: 优选高钙含量(>80%)生物废弃物替代化学试剂；控制热解温度750-850℃平衡CaO生成率与碳骨架完整性；实际应用中需监测进水pH，必要时辅以弱碱调节以保障沉淀效率",
-          "material_realization_examples": [],
-          "source_tier": "literature"
+          "idea": "利用牡蛎壳的方解石结构进行重金属固定和pH缓冲",
+          "material_handle": "牡蛎壳粉碎、煅烧或酸活化",
+          "design_principle": "",
+          "implementation_example": "",
+          "constraints": "",
+          "failure_modes": "",
+          "evidence_tier": "inference",
+          "source_tier": "llm_inference",
+          "material_realization_examples": [
+            "牡蛎壳粉碎、煅烧或酸活化"
+          ]
         },
         "evidence_context": {
           "performance_leads": []
@@ -186,9 +210,17 @@
           }
         },
         "design_translation": {
-          "idea": "生物硅藻分级孔道→硅藻土矿物结构模板；生物表面化学微环境→硅烷偶联剂水解缩合与有机酸接枝网络；软约束建议：优先采用低负载量修饰策略以维持孔道通透性与体系pH稳定，并在中性至弱碱性(pH 6-8)工况下运行以最大化配位吸附效能。",
-          "material_realization_examples": [],
-          "source_tier": "literature"
+          "idea": "利用硅藻土的多孔结构和表面硅羟基进行吸附和过滤",
+          "material_handle": "硅藻土直接使用或酸活化/改性处理",
+          "design_principle": "",
+          "implementation_example": "",
+          "constraints": "",
+          "failure_modes": "",
+          "evidence_tier": "inference",
+          "source_tier": "llm_inference",
+          "material_realization_examples": [
+            "硅藻土直接使用或酸活化/改性处理"
+          ]
         },
         "evidence_context": {
           "performance_leads": [
@@ -226,9 +258,17 @@
           }
         },
         "design_translation": {
-          "idea": "生物→材料映射：甲壳素/壳聚糖柔性网络→CTS聚合物基质提供成膜性与改性位点；天然沸石微孔结构→MZ无机骨架提供高比表面积与离子交换通道；La(OH)3特异性结合→仿生活性中心实现多分子层化学吸附；软约束建议：控制负载pH至11及60°C振荡条件以确保La(OH)3均匀成核，避免团聚；孔径设计需远大于La水合半径(0.452 nm)以保障传质效率。",
-          "material_realization_examples": [],
-          "source_tier": "literature"
+          "idea": "利用壳聚糖的氨基和羟基进行络合吸附，pH 响应控制吸附/脱附",
+          "material_handle": "壳聚糖直接使用或交联改性（如戊二醛、环氧氯丙烷）",
+          "design_principle": "壳聚糖的-NH₂和-OH通过螯合配位、离子交换和静电吸引捕获重金属离子。pH<pKa(~6.3)时-NH₃⁺质子化释放金属（可再生）",
+          "implementation_example": "壳聚糖珠粒（NaOH凝固浴）→ 浸泡金属溶液 → pH 3-4 酸洗再生；或交联壳聚糖/沸石复合微球提高机械强度",
+          "constraints": "酸性条件(pH<3)吸附能力下降；水中溶解性需交联控制；机械强度低需复合增强",
+          "failure_modes": "强酸环境溶解；高盐竞争吸附；有机物堵塞孔道",
+          "evidence_tier": "lead (有性能数据但缺 verification_quote)",
+          "source_tier": "llm_inference",
+          "material_realization_examples": [
+            "壳聚糖直接使用或交联改性（如戊二醛、环氧氯丙烷）"
+          ]
         },
         "evidence_context": {
           "performance_leads": [
@@ -287,9 +327,17 @@
           }
         },
         "design_translation": {
-          "idea": "生物→材料映射：甲壳素骨架→壳聚糖珠粒基底；细胞外基质三维网络→交联水凝胶珠粒；生物矿化通道→MOF/CS层级孔结构。软约束建议：建议引入无机材料复合以避免质量损失；针对工业应用优先选择化学或热再生，并引入磁性组分以简化固液分离。",
-          "material_realization_examples": [],
-          "source_tier": "literature"
+          "idea": "利用龙虾外骨骼的几丁质-蛋白质复合结构设计高强度吸附材料",
+          "material_handle": "几丁质提取、脱乙酰化或复合改性",
+          "design_principle": "",
+          "implementation_example": "",
+          "constraints": "",
+          "failure_modes": "",
+          "evidence_tier": "inference",
+          "source_tier": "llm_inference",
+          "material_realization_examples": [
+            "几丁质提取、脱乙酰化或复合改性"
+          ]
         },
         "evidence_context": {
           "performance_leads": [
@@ -329,9 +377,17 @@
           }
         },
         "design_translation": {
-          "idea": "生物→材料映射：蜗牛壳(CaCO₃)→提供钙基矿物骨架与微环境pH缓冲；骨灰(HAP)→提供Ca₁₀(PO₄)₆(OH)₂晶体相与金属离子交换位点；虾壳(壳聚糖)→构建亲水高分子网络与-NH₂/-OH络合中心。软约束建议：严格控pH于4-6防Cu沉淀；投加量锚定0.02g以平衡吸附容量与经济性；利用RSM模型动态适配水质波动与多参数交互。",
-          "material_realization_examples": [],
-          "source_tier": "literature"
+          "idea": "利用羟基磷灰石的钙磷结构进行重金属和氟离子吸附",
+          "material_handle": "合成羟基磷灰石粉末或涂层",
+          "design_principle": "",
+          "implementation_example": "",
+          "constraints": "",
+          "failure_modes": "",
+          "evidence_tier": "inference",
+          "source_tier": "llm_inference",
+          "material_realization_examples": [
+            "合成羟基磷灰石粉末或涂层"
+          ]
         },
         "evidence_context": {
           "performance_leads": []
@@ -363,9 +419,17 @@
           }
         },
         "design_translation": {
-          "idea": "生物EPS基质→合成高分子/水凝胶阴离子网络；生物成核机制→可控原位沉淀模板；金属硫化物NPs→多功能纳米吸附/催化材料；软约束建议：维持材料低pH稳定性，优化COD/SO₄²⁻比（0.67-2.0），通过微环境调控缓解长期金属毒性。",
-          "material_realization_examples": [],
-          "source_tier": "literature"
+          "idea": "利用硫酸盐还原菌的代谢产物（H₂S）沉淀重金属",
+          "material_handle": "SRB 培养、固定化或生物反应器",
+          "design_principle": "",
+          "implementation_example": "",
+          "constraints": "",
+          "failure_modes": "",
+          "evidence_tier": "inference",
+          "source_tier": "llm_inference",
+          "material_realization_examples": [
+            "SRB 培养、固定化或生物反应器"
+          ]
         },
         "evidence_context": {
           "performance_leads": []

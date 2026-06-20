@@ -238,6 +238,18 @@ class BiomimeticContext:
                     prototype_scores[pid]['weight'] += rule.get('weight', 0.5)
                     prototype_scores[pid]['reasons'].append(f"污染物类别匹配: {class_name}")
 
+        # 4. 按 use-case 匹配（油水分离、超润湿等）
+        use_case_to_prototype = self.matching_rules.get('use_case_to_prototype', {})
+        canonical_lower = pollutant_profile.get('canonical_name', '').lower()
+        for use_case, rule in use_case_to_prototype.items():
+            if use_case.lower() in canonical_lower or canonical_lower in use_case.lower():
+                for pid in rule.get('prototypes', []):
+                    if pid not in prototype_scores:
+                        prototype_scores[pid] = {'score': 0, 'weight': 0, 'features': [], 'interactions': [], 'reasons': []}
+                    prototype_scores[pid]['score'] += 1
+                    prototype_scores[pid]['weight'] += rule.get('weight', 0.5)
+                    prototype_scores[pid]['reasons'].append(rule.get('reason', f"Use-case匹配: {use_case}"))
+
         # 转换为候选列表
         for pid, score_info in prototype_scores.items():
             if score_info['score'] >= 1:  # 至少匹配 1 个特征
@@ -356,14 +368,34 @@ class BiomimeticContext:
                 sorted_mechs = sorted(mechs, key=lambda m: _verif_priority.get(m.get('verification', 'needs_review'), 2))
                 main_mech = sorted_mechs[0] if sorted_mechs else {}
 
-                # 获取设计转译
-                entries = proto.get('narrative', {}).get('entries', [])
-                design_mapping = ''
-                for e in entries:
-                    dm = e.get('sections', {}).get('design_mapping', '')
-                    if dm:
-                        design_mapping = dm
-                        break
+                # 获取设计转译（优先用 design_translation，回退到 narrative）
+                dt_entries = proto.get('design_translation', [])
+                if dt_entries:
+                    dt_first = dt_entries[0]
+                    design_idea = dt_first.get('idea', '')
+                    material_handle = dt_first.get('material_handle', '')
+                    design_principle = dt_first.get('design_principle', '')
+                    implementation_example = dt_first.get('implementation_example', '')
+                    constraints = dt_first.get('constraints', '')
+                    failure_modes = dt_first.get('failure_modes', '')
+                    evidence_tier = dt_first.get('evidence_tier', 'inference')
+                    source_tier = dt_first.get('source_tier', 'llm_inference')
+                else:
+                    entries = proto.get('narrative', {}).get('entries', [])
+                    design_mapping = ''
+                    for e in entries:
+                        dm = e.get('sections', {}).get('design_mapping', '')
+                        if dm:
+                            design_mapping = dm
+                            break
+                    design_idea = design_mapping[:200] if design_mapping else 'needs_review'
+                    material_handle = ''
+                    design_principle = ''
+                    implementation_example = ''
+                    constraints = ''
+                    failure_modes = ''
+                    evidence_tier = 'inference'
+                    source_tier = 'literature' if design_mapping else 'llm_inference'
 
                 brief_candidates.append({
                     'prototype_id': pid,
@@ -389,9 +421,15 @@ class BiomimeticContext:
                         }
                     },
                     'design_translation': {
-                        'idea': design_mapping[:200] if design_mapping else 'needs_review',
-                        'material_realization_examples': [],
-                        'source_tier': 'literature' if design_mapping else 'llm_inference'
+                        'idea': design_idea,
+                        'material_handle': material_handle,
+                        'design_principle': design_principle,
+                        'implementation_example': implementation_example,
+                        'constraints': constraints,
+                        'failure_modes': failure_modes,
+                        'evidence_tier': evidence_tier,
+                        'source_tier': source_tier,
+                        'material_realization_examples': [material_handle] if material_handle else []
                     },
                     'evidence_context': {
                         'performance_leads': self._get_performance_leads(proto, pollutant)

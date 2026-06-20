@@ -239,5 +239,45 @@
       ],
       "weight": 0.8
     }
+  },
+  "use_case_to_prototype": {
+    "油水分离": {
+      "prototypes": [
+        "lotus-leaf",
+        "superhydrophobic-artificial",
+        "water-strider-leg"
+      ],
+      "reason": "超疏水表面对油水混合物具有选择性透过能力，可实现油水分离",
+      "weight": 0.8
+    },
+    "oil-water separation": {
+      "prototypes": [
+        "lotus-leaf",
+        "superhydrophobic-artificial",
+        "water-strider-leg"
+      ],
+      "reason": "Superhydrophobic surfaces enable selective oil/water separation",
+      "weight": 0.8
+    },
+    "superwetting": {
+      "prototypes": [
+        "lotus-leaf",
+        "superhydrophobic-artificial",
+        "water-strider-leg",
+        "shark-skin"
+      ],
+      "reason": "超润湿表面（超疏水/超亲水）可用于油水分离和抗污",
+      "weight": 0.7
+    },
+    "超疏水": {
+      "prototypes": [
+        "lotus-leaf",
+        "superhydrophobic-artificial",
+        "water-strider-leg",
+        "shark-skin"
+      ],
+      "reason": "超疏水表面（接触角>150°）具有自清洁和油水分离能力",
+      "weight": 0.7
+    }
   }
 }
