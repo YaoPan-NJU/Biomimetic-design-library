@@ -965,7 +965,12 @@
       "material_handle": "硅藻土直接使用或酸活化/改性处理",
       "target_interaction": "硅羟基通过氢键和静电作用吸附污染物",
       "source_tier": "llm_inference",
-      "examples": []
+      "examples": [],
+      "design_principle": "硅藻壳的无定形SiO₂含丰富表面Si-OH，可通过氢键和静电吸引吸附金属离子，多孔结构提供高比表面积",
+      "implementation_example": "硅藻土→酸活化(HCl, 80°C)→洗涤干燥→直接使用；或表面改性(硅烷偶联剂)→功能化硅藻土",
+      "constraints": "天然硅藻土吸附容量有限需改性；酸性条件溶解；粉尘控制",
+      "failure_modes": "改性不均匀；酸性溶解；粉尘危害",
+      "evidence_tier": "lead"
     }
   ],
   "library_tier": "core",

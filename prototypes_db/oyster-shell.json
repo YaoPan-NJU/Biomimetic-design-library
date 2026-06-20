@@ -290,7 +290,12 @@
       "material_handle": "牡蛎壳粉碎、煅烧或酸活化",
       "target_interaction": "CaCO₃ 溶解提供 CO₃²⁻ 和 Ca²⁺，沉淀重金属碳酸盐",
       "source_tier": "llm_inference",
-      "examples": []
+      "examples": [],
+      "design_principle": "牡蛎壳方解石(CaCO₃)通过离子交换与Pb²⁺形成PbCO₃沉淀，煅烧后CaO具有更强的吸附能力和pH缓冲作用",
+      "implementation_example": "牡蛎壳清洗→800°C煅烧2h→研磨→CaO粉末→直接用于柱吸附；或酸活化(HCl)→CaCl₂溶液→再生",
+      "constraints": "煅烧能耗高；CaO在水中放热需控制；竞争阳离子(Ca²⁺、Mg²⁺)干扰",
+      "failure_modes": "煅烧不完全；CaO水化放热；竞争离子降低容量",
+      "evidence_tier": "inference"
     }
   ],
   "library_tier": "core",
