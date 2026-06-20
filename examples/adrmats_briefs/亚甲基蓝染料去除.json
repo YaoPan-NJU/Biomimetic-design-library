@@ -31,6 +31,7 @@
       {
         "prototype_id": "silk-fibroin",
         "organism": "Bombyx mori",
+        "candidate_honesty": "lead",
         "match": {
           "reason": "丝素蛋白对MB有吸附能力",
           "weight": 0.7,
@@ -64,6 +65,15 @@
             "丝素蛋白提取、再生或交联成型"
           ]
         },
+        "boundaries": [
+          {
+            "text": "丝素蛋白在强酸/强碱下水解",
+            "parameter": "pH",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          }
+        ],
         "evidence_context": {
           "performance_leads": [
             {
@@ -86,6 +96,7 @@
       {
         "prototype_id": "chlorella-cell-wall",
         "organism": "Chlorella vulgaris (小球藻)",
+        "candidate_honesty": "inference",
         "match": {
           "reason": "污染物类别匹配: 阳离子染料",
           "weight": 0.8,
@@ -119,6 +130,15 @@
             "藻类生物质或藻类生物炭"
           ]
         },
+        "boundaries": [
+          {
+            "text": "pH影响表面电荷和染料离子化状态",
+            "parameter": "pH",
+            "gate_level": "hard",
+            "basis": "from_source",
+            "verification": "corroborated"
+          }
+        ],
         "evidence_context": {
           "performance_leads": [
             {
@@ -141,6 +161,7 @@
       {
         "prototype_id": "chitosan",
         "organism": "Crustacea",
+        "candidate_honesty": "inference",
         "match": {
           "reason": "正电荷污染物可与带负电的吸附剂通过静电吸引结合",
           "weight": 0.675,
@@ -177,6 +198,36 @@
             "壳聚糖直接使用或交联改性（如戊二醛、环氧氯丙烷）"
           ]
         },
+        "boundaries": [
+          {
+            "text": "强酸性条件下氨基完全质子化，失去金属配位能力",
+            "parameter": "pH",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          },
+          {
+            "text": "高浓度Ca²⁺、Mg²⁺竞争配位位点",
+            "parameter": "competing_ion",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          },
+          {
+            "text": "强酸性条件下壳聚糖溶解，氨基完全质子化失去配位能力",
+            "parameter": "pH",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          },
+          {
+            "text": "碱性条件下氨基去质子化，对阴离子吸附能力下降",
+            "parameter": "pH",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          }
+        ],
         "evidence_context": {
           "performance_leads": [
             {
@@ -199,6 +250,7 @@
       {
         "prototype_id": "polydopamine-coating",
         "organism": "Mytilus edulis",
+        "candidate_honesty": "lead",
         "match": {
           "reason": "芳香环可通过π-π堆积作用与含芳香环的吸附剂结合",
           "weight": 0.6666666666666666,
@@ -235,6 +287,22 @@
             "多巴胺在弱碱性（pH 8.5）条件下自聚成 PDA 涂层"
           ]
         },
+        "boundaries": [
+          {
+            "text": "碱性条件下邻苯二酚氧化为醌，金属配位能力丧失",
+            "parameter": "pH",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          },
+          {
+            "text": "弱酸性以下DOPA自聚合速率极慢，涂层难以形成",
+            "parameter": "pH",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          }
+        ],
         "evidence_context": {
           "performance_leads": []
         }
@@ -242,6 +310,7 @@
       {
         "prototype_id": "plant-tannin",
         "organism": "Plant sources (单宁酸)",
+        "candidate_honesty": "inference",
         "match": {
           "reason": "芳香环可通过π-π堆积作用与含芳香环的吸附剂结合",
           "weight": 0.6666666666666666,
@@ -278,6 +347,7 @@
             "单宁酸直接使用或固定化在载体上"
           ]
         },
+        "boundaries": [],
         "evidence_context": {
           "performance_leads": []
         }

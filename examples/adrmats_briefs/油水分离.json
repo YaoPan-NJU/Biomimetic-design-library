@@ -24,6 +24,7 @@
       {
         "prototype_id": "lotus-leaf",
         "organism": "Nelumbo nucifera",
+        "candidate_honesty": "inference",
         "match": {
           "reason": "Superhydrophobic surfaces enable selective oil/water separation",
           "weight": 0.8,
@@ -57,6 +58,15 @@
             "超疏水涂层、仿生微纳结构膜"
           ]
         },
+        "boundaries": [
+          {
+            "text": "表面粗糙度和化学组成决定润湿性",
+            "parameter": "surface_roughness",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          }
+        ],
         "evidence_context": {
           "performance_leads": []
         }
@@ -64,6 +74,7 @@
       {
         "prototype_id": "superhydrophobic-artificial",
         "organism": "Nelumbo nucifera",
+        "candidate_honesty": "inference",
         "match": {
           "reason": "Superhydrophobic surfaces enable selective oil/water separation",
           "weight": 0.8,
@@ -97,6 +108,15 @@
             "超疏水膜、涂层、织物"
           ]
         },
+        "boundaries": [
+          {
+            "text": "表面粗糙度和涂层稳定性决定耐久性",
+            "parameter": "general",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          }
+        ],
         "evidence_context": {
           "performance_leads": []
         }
@@ -104,6 +124,7 @@
       {
         "prototype_id": "water-strider-leg",
         "organism": "Gerridae",
+        "candidate_honesty": "inference",
         "match": {
           "reason": "Superhydrophobic surfaces enable selective oil/water separation",
           "weight": 0.8,
@@ -137,6 +158,15 @@
             "超疏水微结构表面"
           ]
         },
+        "boundaries": [
+          {
+            "text": "微结构密度和蜡质层厚度影响承载力",
+            "parameter": "general",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          }
+        ],
         "evidence_context": {
           "performance_leads": []
         }

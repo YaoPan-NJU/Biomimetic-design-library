@@ -397,9 +397,21 @@ class BiomimeticContext:
                     evidence_tier = 'inference'
                     source_tier = 'literature' if design_mapping else 'llm_inference'
 
+                # Determine per-candidate honesty classification
+                has_direct = c.get('direct_evidence', False)
+                mech_verif = main_mech.get('verification', 'needs_review') or 'needs_review'
+                dt_tier = evidence_tier if dt_entries else 'inference'
+                if has_direct and mech_verif in ('verified', 'corroborated'):
+                    candidate_honesty = 'fact'
+                elif has_direct or dt_tier.startswith('fact'):
+                    candidate_honesty = 'lead'
+                else:
+                    candidate_honesty = 'inference'
+
                 brief_candidates.append({
                     'prototype_id': pid,
                     'organism': proto.get('organism', {}).get('scientific', '未知'),
+                    'candidate_honesty': candidate_honesty,
                     'match': {
                         'reason': c.get('reason', ''),
                         'weight': c.get('weight', 0.5),
@@ -431,6 +443,7 @@ class BiomimeticContext:
                         'source_tier': source_tier,
                         'material_realization_examples': [material_handle] if material_handle else []
                     },
+                    'boundaries': self._get_mechanism_boundaries(main_mech),
                     'evidence_context': {
                         'performance_leads': self._get_performance_leads(proto, pollutant)
                     }
@@ -504,6 +517,22 @@ class BiomimeticContext:
         parts.append(f"盐度 {salinity}")
 
         return ', '.join(parts)
+
+    def _get_mechanism_boundaries(self, mech: Dict) -> List[Dict]:
+        """获取机制的边界条件"""
+        boundaries = []
+        cc = mech.get('causal_chain', {})
+        if not cc:
+            return boundaries
+        for bc in cc.get('boundary_conditions', []):
+            boundaries.append({
+                'text': bc.get('text', ''),
+                'parameter': bc.get('parameter', ''),
+                'gate_level': bc.get('gate_level', 'soft'),
+                'basis': bc.get('basis', ''),
+                'verification': bc.get('verification', '')
+            })
+        return boundaries
 
     def _get_performance_leads(self, proto: Dict, pollutant: str) -> List[Dict]:
         """获取性能线索"""

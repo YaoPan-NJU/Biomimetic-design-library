@@ -32,6 +32,7 @@
       {
         "prototype_id": "mussel-foot-adhesion",
         "organism": "Mytilus spp.",
+        "candidate_honesty": "fact",
         "match": {
           "reason": "DOPA对Pb²⁺有强螯合能力",
           "weight": 0.9,
@@ -65,6 +66,36 @@
             "聚多巴胺（PDA）涂层或多巴胺改性聚合物"
           ]
         },
+        "boundaries": [
+          {
+            "text": "弱酸性以下自聚合速率极慢，涂层难以形成",
+            "parameter": "pH",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          },
+          {
+            "text": "涂层厚度随时间增加但活性位点密度下降",
+            "parameter": "other",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          },
+          {
+            "text": "弱酸性以下DOPA自聚合速率极慢，涂层难以形成",
+            "parameter": "pH",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          },
+          {
+            "text": "碱性条件下邻苯二酚氧化为醌，丧失双齿配位能力",
+            "parameter": "pH",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          }
+        ],
         "evidence_context": {
           "performance_leads": [
             {
@@ -94,6 +125,7 @@
       {
         "prototype_id": "fish-scale-hydroxyapatite",
         "organism": "Fish scales (鱼鳞)",
+        "candidate_honesty": "fact",
         "match": {
           "reason": "Pb²⁺可替换HAP中的Ca²⁺形成更稳定的磷氯铅矿",
           "weight": 0.9,
@@ -127,6 +159,15 @@
             "鱼鳞热处理转化为羟基磷灰石"
           ]
         },
+        "boundaries": [
+          {
+            "text": "酸性条件下HAp溶解，释放Ca²⁺，吸附能力下降",
+            "parameter": "pH",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          }
+        ],
         "evidence_context": {
           "performance_leads": [
             {
@@ -149,6 +190,7 @@
       {
         "prototype_id": "oyster-shell",
         "organism": "Ostreidae",
+        "candidate_honesty": "lead",
         "match": {
           "reason": "CaCO₃与Pb²⁺进行离子交换，形成PbCO₃",
           "weight": 0.8,
@@ -182,6 +224,22 @@
             "牡蛎壳粉碎、煅烧或酸活化"
           ]
         },
+        "boundaries": [
+          {
+            "text": "未煅烧的CaCO₃吸附容量远低于煅烧产物CaO",
+            "parameter": "other",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          },
+          {
+            "text": "未煅烧CaCO₃吸附容量远低于煅烧产物CaO",
+            "parameter": "other",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          }
+        ],
         "evidence_context": {
           "performance_leads": []
         }
@@ -189,6 +247,7 @@
       {
         "prototype_id": "diatom-frustule",
         "organism": "Bacillariophyta (硅藻门)",
+        "candidate_honesty": "lead",
         "match": {
           "reason": "硅藻壳对Pb²⁺有吸附能力",
           "weight": 0.7,
@@ -222,6 +281,15 @@
             "硅藻土直接使用或酸活化/改性处理"
           ]
         },
+        "boundaries": [
+          {
+            "text": "pH影响表面电荷和吸附性能",
+            "parameter": "pH",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          }
+        ],
         "evidence_context": {
           "performance_leads": [
             {
@@ -237,6 +305,7 @@
       {
         "prototype_id": "chitosan",
         "organism": "Crustacea",
+        "candidate_honesty": "fact",
         "match": {
           "reason": "壳聚糖的氨基和羟基可与Pb(II)形成配位键",
           "weight": 0.8,
@@ -270,6 +339,36 @@
             "壳聚糖直接使用或交联改性（如戊二醛、环氧氯丙烷）"
           ]
         },
+        "boundaries": [
+          {
+            "text": "强酸性条件下氨基完全质子化，失去金属配位能力",
+            "parameter": "pH",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          },
+          {
+            "text": "高浓度Ca²⁺、Mg²⁺竞争配位位点",
+            "parameter": "competing_ion",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          },
+          {
+            "text": "强酸性条件下壳聚糖溶解，氨基完全质子化失去配位能力",
+            "parameter": "pH",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          },
+          {
+            "text": "碱性条件下氨基去质子化，对阴离子吸附能力下降",
+            "parameter": "pH",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          }
+        ],
         "evidence_context": {
           "performance_leads": [
             {
@@ -306,6 +405,7 @@
       {
         "prototype_id": "lobster-exoskeleton",
         "organism": "Homarus americanus (美洲龙虾)",
+        "candidate_honesty": "lead",
         "match": {
           "reason": "龙虾外骨骼对Pb(II)有吸附能力",
           "weight": 0.7,
@@ -339,6 +439,22 @@
             "几丁质提取、脱乙酰化或复合改性"
           ]
         },
+        "boundaries": [
+          {
+            "text": "与壳聚糖相同的pH限制",
+            "parameter": "pH",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          },
+          {
+            "text": "与壳聚糖相同的pH限制，酸性下溶解",
+            "parameter": "pH",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          }
+        ],
         "evidence_context": {
           "performance_leads": [
             {
@@ -354,6 +470,7 @@
       {
         "prototype_id": "bone-structure",
         "organism": "Mammalian bone (哺乳动物骨骼)",
+        "candidate_honesty": "inference",
         "match": {
           "reason": "二价阳离子可与含羧基/羟基的吸附剂形成配位键",
           "weight": 0.85,
@@ -389,6 +506,22 @@
             "合成羟基磷灰石粉末或涂层"
           ]
         },
+        "boundaries": [
+          {
+            "text": "酸性条件下HAp开始溶解，释放Ca²⁺，配位/沉淀能力下降",
+            "parameter": "pH",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          },
+          {
+            "text": "酸性条件下HAp溶解，释放Ca²⁺，吸附能力下降",
+            "parameter": "pH",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          }
+        ],
         "evidence_context": {
           "performance_leads": []
         }
@@ -396,6 +529,7 @@
       {
         "prototype_id": "sulfate-reducing-bacteria",
         "organism": "Sulfate-Reducing Bacteria (SRB)",
+        "candidate_honesty": "inference",
         "match": {
           "reason": "软酸金属离子（如Hg²⁺、Pb²⁺）可与含硫/氮配体形成稳定配位键",
           "weight": 0.8,
@@ -431,6 +565,29 @@
             "SRB 培养、固定化或生物反应器"
           ]
         },
+        "boundaries": [
+          {
+            "text": "SRB是严格厌氧菌，有氧环境完全失活",
+            "parameter": "other",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          },
+          {
+            "text": "酸性条件下SRB活性显著下降",
+            "parameter": "pH",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          },
+          {
+            "text": "高浓度重金属对SRB有毒性",
+            "parameter": "other",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          }
+        ],
         "evidence_context": {
           "performance_leads": []
         }

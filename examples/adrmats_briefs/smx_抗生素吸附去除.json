@@ -32,6 +32,7 @@
       {
         "prototype_id": "plant-tannin",
         "organism": "Plant sources (单宁酸)",
+        "candidate_honesty": "inference",
         "match": {
           "reason": "芳香环可通过π-π堆积作用与含芳香环的吸附剂结合",
           "weight": 0.7,
@@ -67,6 +68,7 @@
             "单宁酸直接使用或固定化在载体上"
           ]
         },
+        "boundaries": [],
         "evidence_context": {
           "performance_leads": []
         }
@@ -74,6 +76,7 @@
       {
         "prototype_id": "chitosan",
         "organism": "Crustacea",
+        "candidate_honesty": "inference",
         "match": {
           "reason": "磺酰胺基可与吸附剂的极性基团形成氢键",
           "weight": 0.6999999999999998,
@@ -109,6 +112,36 @@
             "壳聚糖直接使用或交联改性（如戊二醛、环氧氯丙烷）"
           ]
         },
+        "boundaries": [
+          {
+            "text": "强酸性条件下氨基完全质子化，失去金属配位能力",
+            "parameter": "pH",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          },
+          {
+            "text": "高浓度Ca²⁺、Mg²⁺竞争配位位点",
+            "parameter": "competing_ion",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          },
+          {
+            "text": "强酸性条件下壳聚糖溶解，氨基完全质子化失去配位能力",
+            "parameter": "pH",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          },
+          {
+            "text": "碱性条件下氨基去质子化，对阴离子吸附能力下降",
+            "parameter": "pH",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          }
+        ],
         "evidence_context": {
           "performance_leads": []
         }
@@ -116,6 +149,7 @@
       {
         "prototype_id": "polydopamine-coating",
         "organism": "Mytilus edulis",
+        "candidate_honesty": "lead",
         "match": {
           "reason": "芳香环可通过π-π堆积作用与含芳香环的吸附剂结合",
           "weight": 0.675,
@@ -151,6 +185,22 @@
             "多巴胺在弱碱性（pH 8.5）条件下自聚成 PDA 涂层"
           ]
         },
+        "boundaries": [
+          {
+            "text": "碱性条件下邻苯二酚氧化为醌，金属配位能力丧失",
+            "parameter": "pH",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          },
+          {
+            "text": "弱酸性以下DOPA自聚合速率极慢，涂层难以形成",
+            "parameter": "pH",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          }
+        ],
         "evidence_context": {
           "performance_leads": []
         }
@@ -158,6 +208,7 @@
       {
         "prototype_id": "lotus-leaf",
         "organism": "Nelumbo nucifera",
+        "candidate_honesty": "inference",
         "match": {
           "reason": "非极性污染物与吸附剂的疏水表面通过疏水相互作用聚集",
           "weight": 0.6,
@@ -191,6 +242,15 @@
             "超疏水涂层、仿生微纳结构膜"
           ]
         },
+        "boundaries": [
+          {
+            "text": "表面粗糙度和化学组成决定润湿性",
+            "parameter": "surface_roughness",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          }
+        ],
         "evidence_context": {
           "performance_leads": []
         }
