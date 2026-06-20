@@ -45,7 +45,7 @@
 - lotus-leaf: no boundary visible
 - lotus-leaf: no honesty_ledger
 
-## BPA (brief_BPA.json)
+## BPA (bpa_内分泌干扰物去除.json)
 
 **Candidates**: 3, **Avg score**: 3.0/10
 
@@ -72,7 +72,7 @@
 - polydopamine-coating: no boundary visible
 - polydopamine-coating: no honesty_ledger
 
-## PFOA (brief_PFOA.json)
+## PFOA (pfoa_痕量吸附去除.json)
 
 **Candidates**: 3, **Avg score**: 3.0/10
 
@@ -99,7 +99,7 @@
 - polydopamine-coating: no boundary visible
 - polydopamine-coating: no honesty_ledger
 
-## Pb(II) (brief_Pb_II.json)
+## Pb(II) (pb(ii)_重金属离子去除.json)
 
 **Candidates**: 8, **Avg score**: 4.5/10
 
@@ -144,7 +144,7 @@
 - sulfate-reducing-bacteria: no boundary visible
 - sulfate-reducing-bacteria: no honesty_ledger
 
-## SMX (brief_SMX.json)
+## SMX (smx_抗生素吸附去除.json)
 
 **Candidates**: 3, **Avg score**: 3.0/10
 
@@ -286,10 +286,10 @@
 ## Dogfood Failure Taxonomy
 
 ### F1: Oil-water separation matching gap
-- **Issue**: `oil-water` is a use-case, not a molecular pollutant. Current matching architecture matches on molecular_features/interactions/pollutant_class, not use-cases.
-- **Impact**: oil-water brief returns 0 candidates despite lotus-leaf being a relevant prototype.
-- **Root cause**: `feature_matching_rules.json` has `疏水性→lotus-leaf` but `oil-water` doesn't map to any molecular feature.
-- **Fix**: Add use-case matching layer or map `oil-water` to `疏水性` molecular feature. Deferred — requires architectural decision.
+- **Issue**: `oil-water` is a use-case, not a molecular pollutant.
+- **Impact**: Was 0 candidates, now resolved.
+- **Root cause**: `feature_matching_rules.json` didn't have use-case matching.
+- **Fix**: ✅ RESOLVED — Added use_case_to_prototype matching rules + matching layer. Oil-water now returns 3 candidates.
 
 ### F2: Low honesty_ledger coverage
 - **Issue**: Most candidates lack honesty_ledger (facts/leads/inferences separation).

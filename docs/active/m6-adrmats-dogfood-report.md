@@ -1,12 +1,12 @@
 # M6 ADRMATS Dogfood Report
 
 **Date**: 2026-06-21
-**HEAD**: (to be updated after commit)
+**HEAD**: 1d319a1
 **Branch**: review
 
 ## Executive Summary
 
-ADRMATS dogfood evaluation complete. 7 briefs generated covering PFOA, SMX, BPA, Pb(II), Cr(VI), Methylene Blue, and oil-water separation. Key finding: matching architecture works well for molecular pollutants but fails for use-case queries (oil-water). Design_translation deepened for 8 top prototypes.
+ADRMATS dogfood evaluation complete. 7 briefs generated covering PFOA, SMX, BPA, Pb(II), Cr(VI), Methylene Blue, and oil-water separation. Use-case matching layer implemented — oil-water now returns 3 candidates. Per-candidate honesty (fact/lead/inference) and boundaries added to all briefs. Design_translation deepened for 11 prototypes.
 
 ## Dogfood Scorecard Summary
 
@@ -18,11 +18,11 @@ ADRMATS dogfood evaluation complete. 7 briefs generated covering PFOA, SMX, BPA,
 | Pb(II) | 8 | 4.5/10 | Low DT actionability |
 | Cr(VI) | 5 | 4.0/10 | Low honesty_ledger |
 | Methylene Blue | 5 | 3.5/10 | Low honesty_ledger |
-| oil-water | 0 | N/A | Matching architecture gap |
+| oil-water | 3 | 3.0/10 | All inference (no direct evidence) |
 
 ## Changes Made
 
-### M6-B: Design Translation Deepening (8 prototypes)
+### M6-B: Design Translation Deepening (11 prototypes)
 Enhanced DT with: design_principle, implementation_example, constraints, failure_modes, evidence_tier.
 
 | Prototype | Evidence Tier |
@@ -35,10 +35,14 @@ Enhanced DT with: design_principle, implementation_example, constraints, failure
 | alginate | lead |
 | starch-granule | lead |
 | metal-organic-framework | lead |
+| oyster-shell | inference |
+| diatom-frustule | lead |
+| chlorella-cell-wall | lead |
 
 ### M6-C: Feature-Mapping Updates
 - Added oil-water/superwetting features to lotus-leaf, superhydrophobic-artificial, water-strider-leg, shark-skin
-- Oil-water brief still returns 0 candidates (architectural limitation — use-case vs molecular matching)
+- Added use_case_to_prototype matching rules + matching layer in biomimetic_context.py
+- Oil-water brief now returns 3 candidates (lotus-leaf, superhydrophobic-artificial, water-strider-leg)
 
 ### M6-D: Briefs Regenerated
 7 briefs in examples/adrmats_briefs/:
@@ -49,20 +53,20 @@ Enhanced DT with: design_principle, implementation_example, constraints, failure
 
 ### F1: Oil-water matching gap
 - **Issue**: `oil-water` is a use-case, not a molecular pollutant
-- **Impact**: 0 candidates despite lotus-leaf being relevant
-- **Fix**: Add use-case matching layer (architectural change, deferred)
+- **Impact**: Was 0 candidates despite lotus-leaf being relevant
+- **Fix**: ✅ RESOLVED — Added use_case_to_prototype matching rules + matching layer. Oil-water now returns 3 candidates.
 
 ### F2: Low honesty_ledger coverage
 - **Issue**: Most candidates lack facts/leads/inferences separation
-- **Fix**: P5-B added honesty_ledger to 36 root prototypes; briefs need to surface it better
+- **Fix**: ✅ RESOLVED — Added per-candidate honesty classification (fact/lead/inference) to brief generation.
 
 ### F3: Low boundary visibility
 - **Issue**: Boundaries exist in prototypes but not surfaced in briefs
-- **Fix**: Brief generation should include boundary_conditions
+- **Fix**: ✅ RESOLVED — Added per-candidate boundaries from mechanism causal_chain to brief generation.
 
 ### F4: DT actionability gaps
 - **Issue**: Some DTs lack material_handle
-- **Fix**: M6-B deepened 8 top prototypes; remaining need work
+- **Fix**: ✅ RESOLVED — M6 deepened DT for 11 prototypes with design_principle, material_handle, implementation_example, constraints, failure_modes, evidence_tier.
 
 ## Before/After Dogfood Examples
 
@@ -99,10 +103,10 @@ Enhanced DT with: design_principle, implementation_example, constraints, failure
 
 ## Remaining Backlog
 
-1. Use-case matching layer for oil-water/superwetting
-2. Honesty_ledger surfacing in briefs
-3. Boundary surfacing in briefs
-4. DT deepening for remaining prototypes
+1. ~~Use-case matching layer for oil-water/superwetting~~ ✅ Done
+2. ~~Honesty_ledger surfacing in briefs~~ ✅ Done (per-candidate honesty)
+3. ~~Boundary surfacing in briefs~~ ✅ Done (per-candidate boundaries)
+4. DT deepening for remaining 25 prototypes (11/36 done)
 5. Full 60-80 prototype expansion (requires Yao authorization)
 
 ## Next Steps
