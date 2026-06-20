@@ -24,11 +24,27 @@
       "description": "珊瑚骨骼的文石型 CaCO₃ 通过 Ca²⁺ 位点吸附和共沉淀重金属碳酸盐",
       "source": "llm_inference",
       "causal_chain": {
-        "transferable_principle": "文石型 CaCO₃ 的 Ca²⁺ 位点可与重金属形成碳酸盐沉淀，用于重金属固定",
+        "transferable_principle": "珊瑚文石型 CaCO₃ 通过 Ca²⁺ 位点吸附和共沉淀重金属碳酸盐（placeholder）",
+        "pollutant_feature": {
+          "text": "未验证 — 需补充珊瑚骨架吸附文献",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "珊瑚骨骼的文石型 CaCO₃ 结构",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "Ca²⁺ 位点吸附和共沉淀重金属碳酸盐",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "placeholder — 需补充文献后方可用于设计决策",
+          "basis": "llm_inferred"
+        },
         "boundary_conditions": [
           {
-            "text": "当前无 verified 性能数据，design_translation 为 llm_inference。需补充珊瑚骨架吸附文献后方可用于设计决策",
-            "parameter": "literature_coverage",
+            "text": "placeholder 原型 — 无 verified 性能数据，design_translation 为 llm_inference",
+            "parameter": "prototype_status",
             "condition": {
               "operator": "qualitative",
               "value": null
@@ -53,7 +69,7 @@
     "n_verified": 0,
     "n_unverified": 0
   },
-  "coverage": "low",
+  "coverage": "none",
   "status": "active",
   "design_translation": [
     {
@@ -68,7 +84,14 @@
   "library_tier": "core",
   "lifecycle_status": "active",
   "honesty_ledger": {
-    "facts": [],
+    "facts": [
+      {
+        "type": "evidence_status",
+        "status": "placeholder",
+        "note": "Placeholder prototype — no verified adsorption data. Design translation is llm_inference only. Coral/CaCO3 adsorption literature needed.",
+        "basis": "yao_decision_2026_06_20"
+      }
+    ],
     "leads": [],
     "inferences": [
       {
@@ -86,5 +109,23 @@
     ],
     "generated_by": "P1d-补全",
     "note": "Empty shell prototype — mechanism is llm_inference placeholder with boundary_conditions"
-  }
+  },
+  "boundary_conditions": [
+    {
+      "text": "当前无 verified 性能数据，design_translation 为 llm_inference。需补充珊瑚骨架吸附文献后方可用于设计决策",
+      "parameter": "literature_coverage",
+      "condition": {
+        "operator": "qualitative",
+        "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+    }
+  ],
+  "scope_note": "Placeholder prototype — no verified adsorption data. Design translation is llm_inference only. Coral/CaCO3 adsorption literature needed.",
+  "evidence_status": "placeholder"
 }

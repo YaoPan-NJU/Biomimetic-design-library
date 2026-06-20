@@ -13,10 +13,26 @@
       "description": "此原型已废弃，功能合并至 silk-fibroin。保留此条仅为历史兼容。",
       "source": "llm_inference",
       "causal_chain": {
-        "transferable_principle": "此原型已废弃，不应作为设计参考。请使用 silk-fibroin。",
+        "transferable_principle": "此原型已废弃，合并至 silk-fibroin",
+        "pollutant_feature": {
+          "text": "已废弃 — 使用 silk-fibroin",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "蚕丝蛋白的氨基酸序列和 β-折叠结构",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "已废弃 — 合并至 silk-fibroin",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "已废弃 — 不应作为设计参考",
+          "basis": "llm_inferred"
+        },
         "boundary_conditions": [
           {
-            "text": "此原型已废弃（_dedup_superseded_by: silk-fibroin），不应作为设计决策依据",
+            "text": "background_only 原型 — 已废弃，合并至 silk-fibroin",
             "parameter": "prototype_status",
             "condition": {
               "operator": "qualitative",
@@ -53,7 +69,14 @@
     }
   ],
   "honesty_ledger": {
-    "facts": [],
+    "facts": [
+      {
+        "type": "evidence_status",
+        "status": "background_only",
+        "note": "Background-only prototype — superseded by silk-fibroin. Retained for historical reference only. Do not use for new design decisions.",
+        "basis": "yao_decision_2026_06_20"
+      }
+    ],
     "leads": [],
     "inferences": [
       {
@@ -66,5 +89,24 @@
     ],
     "generated_by": "P5-B-preflight",
     "note": "Auto-generated from verification labels + quote presence + source type"
-  }
+  },
+  "boundary_conditions": [
+    {
+      "text": "此原型已废弃（_dedup_superseded_by: silk-fibroin），不应作为设计决策依据",
+      "parameter": "prototype_status",
+      "condition": {
+        "operator": "qualitative",
+        "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+    }
+  ],
+  "scope_note": "Background-only prototype — superseded by silk-fibroin. Retained for historical reference only. Do not use for new design decisions.",
+  "evidence_status": "background_only",
+  "coverage": "none"
 }

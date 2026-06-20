@@ -21,11 +21,27 @@
       "description": "DNA 适配体通过三维构象特异性识别并结合目标污染物分子",
       "source": "llm_inference",
       "causal_chain": {
-        "transferable_principle": "核酸适配体的特异性识别能力可用于目标污染物的选择性捕获和检测",
+        "transferable_principle": "DNA 适配体的特异性识别能力可用于目标污染物的选择性捕获（placeholder）",
+        "pollutant_feature": {
+          "text": "未验证 — 需补充 DNA 适配体吸附文献",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "DNA 适配体的三维构象识别结构",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "适配体-目标分子特异性结合",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "placeholder — 需补充文献后方可用于设计决策",
+          "basis": "llm_inferred"
+        },
         "boundary_conditions": [
           {
-            "text": "当前无 verified 性能数据，design_translation 为 llm_inference。需补充 DNA 适配体吸附文献后方可用于设计决策",
-            "parameter": "literature_coverage",
+            "text": "placeholder 原型 — 无 verified 性能数据，design_translation 为 llm_inference",
+            "parameter": "prototype_status",
             "condition": {
               "operator": "qualitative",
               "value": null
@@ -50,7 +66,7 @@
     "n_verified": 0,
     "n_unverified": 0
   },
-  "coverage": "low",
+  "coverage": "none",
   "status": "needs_literature",
   "design_translation": [
     {
@@ -65,7 +81,14 @@
   "library_tier": "core",
   "lifecycle_status": "active",
   "honesty_ledger": {
-    "facts": [],
+    "facts": [
+      {
+        "type": "evidence_status",
+        "status": "placeholder",
+        "note": "Placeholder prototype — no verified adsorption data. DNA aptamer literature for pollutant capture needed.",
+        "basis": "yao_decision_2026_06_20"
+      }
+    ],
     "leads": [],
     "inferences": [
       {
@@ -83,5 +106,23 @@
     ],
     "generated_by": "P1d-补全",
     "note": "Empty shell prototype — mechanism is llm_inference placeholder with boundary_conditions"
-  }
+  },
+  "boundary_conditions": [
+    {
+      "text": "当前无 verified 性能数据，design_translation 为 llm_inference。需补充 DNA 适配体吸附文献后方可用于设计决策",
+      "parameter": "literature_coverage",
+      "condition": {
+        "operator": "qualitative",
+        "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+    }
+  ],
+  "scope_note": "Placeholder prototype — no verified adsorption data. DNA aptamer literature for pollutant capture needed.",
+  "evidence_status": "placeholder"
 }
