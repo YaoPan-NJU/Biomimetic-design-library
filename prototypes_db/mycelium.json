@@ -40,7 +40,32 @@
       "label_fix": "P1b: downgraded from verified — no verification_quote"
     }
   ],
-  "mechanisms": [],
+  "mechanisms": [
+    {
+      "name": "菌丝体几丁质/葡聚糖吸附",
+      "description": "真菌菌丝体的几丁质和葡聚糖提供羟基、氨基等官能团用于重金属吸附",
+      "source": "llm_inference",
+      "causal_chain": {
+        "transferable_principle": "菌丝体的多糖成分（几丁质、葡聚糖）含丰富官能团，可用于重金属生物吸附",
+        "boundary_conditions": [
+          {
+            "text": "现有性能数据仅为方法综述比较（Liu2021），无具体 qmax 值。需补充菌丝体吸附实验数据后方可用于设计决策",
+            "parameter": "literature_coverage",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
+    }
+  ],
   "narrative": {
     "entries": [
       {
@@ -107,8 +132,15 @@
         "basis": "needs_review"
       }
     ],
-    "inferences": [],
+    "inferences": [
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "菌丝体几丁质/葡聚糖吸附",
+        "basis": "llm_inference"
+      }
+    ],
     "generated_by": "P1c-auto",
-    "note": "Classification based on verification label + quote presence + source type"
+    "note": "Empty shell prototype — mechanism is llm_inference placeholder with boundary_conditions"
   }
 }

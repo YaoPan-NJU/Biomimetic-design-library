@@ -17,7 +17,32 @@
     "note": "测过的 pH/温度范围，不是适用范围。仅从 performance_data 中实际测试过的条件聚合。"
   },
   "performance_data": [],
-  "mechanisms": [],
+  "mechanisms": [
+    {
+      "name": "磁小体磁分离吸附",
+      "description": "磁性细菌的磁小体（Fe₃O₄ 纳米颗粒）提供磁分离能力，细菌表面官能团提供吸附位点",
+      "source": "llm_inference",
+      "causal_chain": {
+        "transferable_principle": "磁性纳米颗粒的磁分离 + 生物表面官能团吸附，可设计磁性生物吸附剂",
+        "boundary_conditions": [
+          {
+            "text": "当前无 verified 性能数据，design_translation 为 llm_inference。需补充磁性细菌吸附文献后方可用于设计决策",
+            "parameter": "literature_coverage",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
+    }
+  ],
   "narrative": {
     "entries": [
       {
@@ -90,9 +115,15 @@
         "index": 0,
         "idea": "利用磁性细菌的磁小体进行磁分离和污染物吸附",
         "basis": "llm_inference"
+      },
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "磁小体磁分离吸附",
+        "basis": "llm_inference"
       }
     ],
     "generated_by": "P1d-补全",
-    "note": "Empty shell prototype — design_translation is llm_inference only"
+    "note": "Empty shell prototype — mechanism is llm_inference placeholder with boundary_conditions"
   }
 }

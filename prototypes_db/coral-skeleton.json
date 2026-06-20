@@ -18,7 +18,32 @@
     "note": "测过的 pH/温度范围，不是适用范围。仅从 performance_data 中实际测试过的条件聚合。"
   },
   "performance_data": [],
-  "mechanisms": [],
+  "mechanisms": [
+    {
+      "name": "珊瑚文石结构重金属固定",
+      "description": "珊瑚骨骼的文石型 CaCO₃ 通过 Ca²⁺ 位点吸附和共沉淀重金属碳酸盐",
+      "source": "llm_inference",
+      "causal_chain": {
+        "transferable_principle": "文石型 CaCO₃ 的 Ca²⁺ 位点可与重金属形成碳酸盐沉淀，用于重金属固定",
+        "boundary_conditions": [
+          {
+            "text": "当前无 verified 性能数据，design_translation 为 llm_inference。需补充珊瑚骨架吸附文献后方可用于设计决策",
+            "parameter": "literature_coverage",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
+    }
+  ],
   "narrative": {
     "entries": []
   },
@@ -51,9 +76,15 @@
         "index": 0,
         "idea": "利用珊瑚骨骼的文石结构进行重金属固定",
         "basis": "llm_inference"
+      },
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "珊瑚文石结构重金属固定",
+        "basis": "llm_inference"
       }
     ],
     "generated_by": "P1d-补全",
-    "note": "Empty shell prototype — design_translation is llm_inference only"
+    "note": "Empty shell prototype — mechanism is llm_inference placeholder with boundary_conditions"
   }
 }
