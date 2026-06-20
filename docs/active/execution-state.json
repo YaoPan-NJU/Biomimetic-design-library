@@ -2,9 +2,17 @@
   "baseline_commit": "e4dc2d0",
   "tested_commit": "670a1b5",
   "branch": "review",
-  "active_goal": "v0.1-alpha-closure",
-  "authorized_milestones": ["R0", "R1", "P0", "P1", "P2", "P3", "P4"],
-  "current_gate": "G5-awaiting-yao-review",
+  "active_goal": "P5-B-preflight",
+  "authorized_milestones": [
+    "R0",
+    "R1",
+    "P0",
+    "P1",
+    "P2",
+    "P3",
+    "P4"
+  ],
+  "current_gate": "G6-pending",
   "completed_phases": [
     "R0-capability-v3-real-multimodal",
     "R1-A-build-safety",
@@ -19,7 +27,8 @@
     "P1d-design-translation",
     "P2-extended-audit",
     "P3-literature-extraction",
-    "P4-validation-documentation"
+    "P4-validation-documentation",
+    "P5-B-preflight"
   ],
   "pending_phases": [
     "G5-yao-review",
@@ -63,6 +72,6 @@
     "docs/optimization-v1/_w2_doi_map.json": "untracked",
     "docs/optimization-v1/_w3_doi_map.json": "untracked"
   },
-  "last_checkpoint": "2026-06-20T09:00:00Z",
-  "next_action": "Await G5 Yao review"
+  "last_checkpoint": "2026-06-20T15:00:00Z",
+  "next_action": "P5-B Phase 1: promote 4 Extended to Core (alginate, lotus-leaf, MOF, starch)"
 }
