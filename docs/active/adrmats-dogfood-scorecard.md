@@ -304,4 +304,4 @@
 ### F4: DT actionability gaps
 - **Issue**: Some design_translations lack material_handle or implementation_example.
 - **Impact**: Users cannot translate biological inspiration to material design.
-- **Fix**: M6-B deepened DT for 8 top prototypes. Remaining prototypes still need work.
+- **Fix**: M6 deepened DT for 11 prototypes (chitosan, plant-tannin, PDA, mussel, fish-scale, alginate, starch, MOF, oyster-shell, diatom, chlorella). Remaining 25 prototypes still need work.
