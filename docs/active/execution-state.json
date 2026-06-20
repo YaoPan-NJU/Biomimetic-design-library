@@ -4,7 +4,14 @@
   "branch": "review",
   "active_goal": "P5-B-completion",
   "authorized_milestones": [
-    "R0", "R1", "P0", "P1", "P2", "P3", "P4", "P5"
+    "R0",
+    "R1",
+    "P0",
+    "P1",
+    "P2",
+    "P3",
+    "P4",
+    "P5"
   ],
   "current_gate": "P5-B-complete",
   "completed_phases": [
@@ -46,7 +53,9 @@
     "qualified_causal_cards": 88,
     "boundary_conditions": 121,
     "honesty_ledgers": 36,
-    "refuted_entries_remaining": 0
+    "refuted_entries_remaining": 0,
+    "count_note": "total_prototypes=70 includes all directories (root 36 + separation 5 + enrichment 24 + materials_reference 4 + parked 1). Root canon prototypes = 36.",
+    "root_canon_prototypes": 36
   },
   "validation_results": {
     "validate_consistency": "0 errors, 171 warnings (documentation/instance-data, all pre-existing)",
@@ -74,5 +83,6 @@
     "docs/optimization-v1/": "untracked, excluded from commits"
   },
   "last_checkpoint": "2026-06-21T00:00:00Z",
-  "next_action": "Await Yao review of P5-B completion. Full 60-80 expansion requires explicit authorization."
+  "next_action": "Await Yao review of P5-B completion. Full 60-80 expansion requires explicit authorization.",
+  "git_status_note": ".claude/settings.local.json is a local-only user change, not part of canon commits. Untracked docs/active/NOTE-TO-CODEX-V3-RATIONALE.md and docs/optimization-v1/ are excluded from review."
 }

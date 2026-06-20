@@ -68,7 +68,8 @@ P5-B evidence completion batch is done. All validators pass green. The library i
 
 | Metric | Value |
 |--------|-------|
-| Total prototypes | 70 (36 root + 5 separation + 24 enrichment + 4 materials + 1 parked) |
+| Total prototypes (all dirs) | 70 (36 root + 5 separation + 24 enrichment + 4 materials + 1 parked) |
+| Root canon prototypes | 36 |
 | Core tier | 26 |
 | Extended tier | 9 |
 | Exploratory tier | 1 |
@@ -79,6 +80,12 @@ P5-B evidence completion batch is done. All validators pass green. The library i
 | Qualified causal cards | 88 |
 | Boundary conditions | 121 |
 | Honesty ledgers | 36 |
+
+## Worktree Status
+
+- `.claude/settings.local.json`: Local-only user change, not part of canon commits
+- `docs/active/NOTE-TO-CODEX-V3-RATIONALE.md`: Untracked, excluded from review
+- `docs/optimization-v1/`: Untracked, excluded from review
 
 ## Known Limitations
 
