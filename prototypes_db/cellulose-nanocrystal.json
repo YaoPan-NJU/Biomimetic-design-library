@@ -53,7 +53,48 @@
       "source_file": "仿生文献库/3rd/第A组-贻贝仿生/2024-Yuan-tannic-acid-cellulose-aerogel-heavy-metal-chromium.pdf"
     }
   ],
-  "mechanisms": [],
+  "mechanisms": [
+    {
+      "name": "纤维素纳米晶表面官能团吸附",
+      "description": "CNC/CNF的-OH和改性后-COOH/-NH₂提供吸附位点，高比表面积和高强度使其适合复合吸附材料设计。",
+      "source": "llm_inference",
+      "causal_chain": {
+        "transferable_principle": "纤维素纳米晶的-OH可通过化学改性引入-COOH/-NH₂等官能团，增强重金属/染料吸附能力",
+        "pollutant_feature": {
+          "text": "重金属阳离子、染料分子",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "纤维素纳米晶(CNC)/纳米纤维(CNF)的高结晶度棒状结构，表面含-OH",
+          "basis": "from_source"
+        },
+        "interaction": {
+          "text": "氢键、静电吸引（改性后）、范德华力",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "高比表面积+可改性表面官能团，可与多种吸附质相互作用",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "未改性CNC对重金属吸附容量有限，需化学改性才能达到实用水平",
+            "parameter": "modification_requirement",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
+    }
+  ],
   "engineering_constraints": [],
   "boundary_rules": [],
   "verification": "unverified",
@@ -72,7 +113,15 @@
         "basis": "needs_review_extraction"
       }
     ],
-    "inferences": [],
+    "inferences": [
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "纤维素纳米晶表面官能团吸附",
+        "basis": "llm_inference",
+        "causal_chain": "qualified"
+      }
+    ],
     "generated_by": "P3-extraction",
     "note": "Extracted from 2024-Yuan CNC paper via OpenClaw"
   },

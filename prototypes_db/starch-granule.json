@@ -923,7 +923,80 @@
       "source_file": "仿生文献库/论文/第8组-仿生材料/2022-Akinterinwa-starch-adsorption-adsorbent-heavy-metal-review 2.pdf"
     }
   ],
-  "mechanisms": [],
+  "mechanisms": [
+    {
+      "name": "淀粉颗粒羟基吸附与改性增强",
+      "description": "淀粉颗粒的-OH通过氢键和络合作用吸附污染物，改性后引入-COOH/-NH₂可显著增强重金属吸附容量。",
+      "source": "literature",
+      "ref_doi": "10.1016/j.ijbiomac.2022.06.060",
+      "causal_chain": {
+        "transferable_principle": "淀粉颗粒-OH通过氢键/络合吸附，改性（接枝、交联、酯化）引入新官能团可大幅增强吸附容量",
+        "pollutant_feature": {
+          "text": "重金属阳离子、染料、有机污染物",
+          "basis": "from_source"
+        },
+        "bio_structure": {
+          "text": "淀粉颗粒的半结晶结构（直链+支链淀粉），表面含丰富-OH",
+          "basis": "from_source"
+        },
+        "interaction": {
+          "text": "氢键、络合配位（改性后）、静电吸引（带电改性）、范德华力",
+          "basis": "from_source"
+        },
+        "why_it_works": {
+          "text": "天然来源丰富、成本低、可生物降解，-OH可进一步改性增强功能",
+          "basis": "from_source"
+        },
+        "boundary_conditions": [
+          {
+            "text": "天然淀粉吸附容量较低，需化学改性（接枝/交联/酯化）才能达到实用水平",
+            "parameter": "modification_requirement",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "from_source",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          },
+          {
+            "text": "淀粉基吸附剂在强酸/强碱条件下可能水解，需控制pH范围",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          },
+          {
+            "text": "验证数据覆盖pH 4-7范围，pH<4或>7的吸附行为未经验证",
+            "parameter": "pH",
+            "condition": {
+              "operator": "range",
+              "value": [
+                4,
+                7
+              ]
+            },
+            "basis": "from_source",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": "performance_data pH aggregation",
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
+    }
+  ],
   "engineering_constraints": [],
   "boundary_rules": [],
   "verification": "unverified",
@@ -938,11 +1011,441 @@
     "leads": [
       {
         "type": "performance",
-        "count": 61,
-        "basis": "needs_review_extraction"
+        "index": 0,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 1,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 2,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 3,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 4,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 5,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 6,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 7,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 8,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 9,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 10,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 11,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 12,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 13,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 14,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 15,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 16,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 17,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 18,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 19,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 20,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 21,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 22,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 23,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 24,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 25,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 26,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 27,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 28,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 29,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 30,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 31,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 32,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 33,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 34,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 35,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 36,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 37,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 38,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 39,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 40,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 41,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 42,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 43,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 44,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 45,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 46,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 47,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 48,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 49,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 50,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 51,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 52,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 53,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 54,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 55,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 56,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 57,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 58,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 59,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 60,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
       }
     ],
-    "inferences": [],
+    "inferences": [
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "淀粉颗粒羟基吸附与改性增强",
+        "basis": "literature",
+        "causal_chain": "qualified"
+      }
+    ],
     "generated_by": "P3-extraction",
     "note": "Extracted from 2022-Akinterinwa starch review PDF via OpenClaw"
   },
@@ -963,5 +1466,20 @@
         }
       ]
     }
-  ]
+  ],
+  "provenance_summary": {
+    "n_papers": 1,
+    "n_verified": 0,
+    "n_unverified": 61,
+    "note": "All performance rows have DOI but lack verification_quote. PDF access needed for quote extraction."
+  },
+  "tested_conditions": {
+    "tested_ph_range": [
+      4,
+      7
+    ],
+    "tested_temp_range": null,
+    "salinity": null,
+    "note": "pH 4-7 aggregated from performance_data rows. Beyond this range, adsorption behavior is unvalidated."
+  }
 }

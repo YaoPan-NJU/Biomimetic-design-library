@@ -233,7 +233,77 @@
       "source_file": "仿生文献库/论文/第8组-仿生材料/2022-唐-金属有机框架-MOF-吸附-重金属-综述 2.pdf"
     }
   ],
-  "mechanisms": [],
+  "mechanisms": [
+    {
+      "name": "MOF高比表面积孔道吸附",
+      "description": "MOF的高比表面积（通常>1000 m²/g）和可调孔径通过π-π堆积、氢键、静电作用和配位键吸附重金属和有机污染物。",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jece.2022.108298",
+      "causal_chain": {
+        "transferable_principle": "MOF的金属节点+有机配体框架提供高比表面积和可调孔径，通过多种相互作用吸附污染物",
+        "pollutant_feature": {
+          "text": "重金属离子、有机染料、药物残留",
+          "basis": "from_source"
+        },
+        "bio_structure": {
+          "text": "金属-有机框架的多孔晶体结构，含金属节点和有机配体",
+          "basis": "from_source"
+        },
+        "interaction": {
+          "text": "π-π堆积、氢键、静电作用、配位键、孔道限域效应",
+          "basis": "from_source"
+        },
+        "why_it_works": {
+          "text": "超高比表面积提供大量吸附位点，可调孔径实现分子筛分选择性",
+          "basis": "from_source"
+        },
+        "boundary_conditions": [
+          {
+            "text": "MOF水稳定性是关键限制，许多MOF在水中会降解",
+            "parameter": "water_stability",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "from_source",
+            "verification": "needs_review",
+            "gate_level": "hard",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          },
+          {
+            "text": "MOF合成成本高、规模化困难，限制实际水处理应用",
+            "parameter": "cost_scalability",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          },
+          {
+            "text": "性能数据中未记录pH/温度测试条件，适用范围未知",
+            "parameter": "tested_conditions",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
+    }
+  ],
   "engineering_constraints": [],
   "boundary_rules": [],
   "verification": "unverified",
@@ -248,11 +318,119 @@
     "leads": [
       {
         "type": "performance",
-        "count": 15,
-        "basis": "needs_review_extraction"
+        "index": 0,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 1,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 2,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 3,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 4,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 5,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 6,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 7,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 8,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 9,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 10,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 11,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 12,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 13,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
+      },
+      {
+        "type": "performance",
+        "index": 14,
+        "parameter": "Langmuir最大吸附容量 qmax",
+        "basis": "needs_review",
+        "note": "Has DOI but no verification_quote/locator. PDF not accessible in current environment."
       }
     ],
-    "inferences": [],
+    "inferences": [
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "MOF高比表面积孔道吸附",
+        "basis": "literature",
+        "causal_chain": "qualified"
+      }
+    ],
     "generated_by": "P3-extraction",
     "note": "Extracted from 2022-唐 MOF heavy metal review PDF via OpenClaw"
   },
@@ -273,5 +451,11 @@
         }
       ]
     }
-  ]
+  ],
+  "provenance_summary": {
+    "n_papers": 1,
+    "n_verified": 0,
+    "n_unverified": 15,
+    "note": "All performance rows have DOI but lack verification_quote. PDF access needed for quote extraction."
+  }
 }
