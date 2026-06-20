@@ -1,0 +1,35 @@
+{
+  "brief": {
+    "context": {
+      "water_quality": {
+        "pH": 7,
+        "temperature": 25,
+        "salinity": "medium"
+      },
+      "removal_target": {
+        "污染物": "oil-water"
+      },
+      "pollutant_profile": {
+        "canonical_name": "oil-water",
+        "pollutant_class": "未知",
+        "molecular_features": [],
+        "likely_interactions": [],
+        "profile_basis": "llm_inference"
+      },
+      "engineering_constraints": [
+        "超疏水/超亲油"
+      ]
+    },
+    "candidates": [],
+    "applicable_rules": [],
+    "rule_based_cautions": {
+      "do_not": [],
+      "cautions": []
+    },
+    "honesty_ledger": {
+      "facts": [],
+      "leads": [],
+      "inferences": []
+    }
+  }
+}

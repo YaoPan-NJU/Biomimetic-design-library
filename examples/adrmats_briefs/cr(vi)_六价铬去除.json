@@ -1,0 +1,303 @@
+{
+  "brief": {
+    "context": {
+      "water_quality": {
+        "pH": 3,
+        "temperature": 25,
+        "salinity": "low"
+      },
+      "removal_target": {
+        "污染物": "Cr(VI)"
+      },
+      "pollutant_profile": {
+        "canonical_name": "Cr(VI)",
+        "pollutant_class": "重金属",
+        "molecular_features": [
+          "六价铬",
+          "含氧阴离子",
+          "强氧化性"
+        ],
+        "likely_interactions": [
+          "静电吸引",
+          "还原沉淀",
+          "配位"
+        ],
+        "profile_basis": "database"
+      },
+      "engineering_constraints": [
+        "酸性条件耐受"
+      ]
+    },
+    "candidates": [
+      {
+        "prototype_id": "chitosan",
+        "organism": "Crustacea",
+        "match": {
+          "reason": "氨基在酸性条件下质子化带正电，可吸附Cr₂O₇²⁻阴离子",
+          "weight": 0.85,
+          "applicability_fit": "pH 3.0-7.0, 盐度 low_to_moderate",
+          "match_basis": "direct_pollutant_evidence",
+          "direct_evidence": true
+        },
+        "mechanism": {
+          "name": "金属离子络合机制 Metal ion complexation mechanism",
+          "基本原理": "壳聚糖的氨基对软酸金属（Hg²⁺、Pb²⁺、Cu²⁺）有高亲和力，形成稳定的五元或六元螯合环；Cu²⁺在Irving-Williams序列中稳定性最高（log K~8）",
+          "key_structures": [],
+          "functional_groups": "",
+          "molecular_feature_links": [],
+          "attribution": {
+            "source": "literature",
+            "ref": "10.1016/j.carbpol.2020.117000",
+            "verification_tier": "verified",
+            "confidence": "normal"
+          }
+        },
+        "design_translation": {
+          "idea": "生物→材料映射：甲壳素/壳聚糖柔性网络→CTS聚合物基质提供成膜性与改性位点；天然沸石微孔结构→MZ无机骨架提供高比表面积与离子交换通道；La(OH)3特异性结合→仿生活性中心实现多分子层化学吸附；软约束建议：控制负载pH至11及60°C振荡条件以确保La(OH)3均匀成核，避免团聚；孔径设计需远大于La水合半径(0.452 nm)以保障传质效率。",
+          "material_realization_examples": [],
+          "source_tier": "literature"
+        },
+        "evidence_context": {
+          "performance_leads": [
+            {
+              "pollutant": "Cr(VI)",
+              "material": "chitosan/PAAS (polyacrylic acid sodium) composite ENM",
+              "value": "7.7",
+              "unit": "mg/g",
+              "verification_tier": "needs_review"
+            },
+            {
+              "pollutant": "Cr(VI)",
+              "material": "Cellulose@PEI aerogel (CPA-2)",
+              "value": "Amino groups and carboxyl groups participate in cationic exchange with divalent metal ions; XPS confirms N 1s spectral changes after Cr adsorption",
+              "unit": null,
+              "verification_tier": "partial"
+            },
+            {
+              "pollutant": "Cr(VI)",
+              "material": "CNC(50%)/CS气凝胶",
+              "value": "67.377",
+              "unit": "mg/g",
+              "verification_tier": "partial"
+            },
+            {
+              "pollutant": "Cr(VI)",
+              "material": "Chitosan (crosslinked and non-crosslinked)",
+              "value": "78 (non-crosslinked), 50 (crosslinked)",
+              "unit": "mg/g",
+              "verification_tier": "partial"
+            },
+            {
+              "pollutant": "CR",
+              "material": "",
+              "value": "中性红98.82%，刚果红97.54%，活性黑-5 95.77%",
+              "unit": "%",
+              "verification_tier": "needs_review"
+            }
+          ]
+        }
+      },
+      {
+        "prototype_id": "iron-oxidizing-bacteria",
+        "organism": "Acidithiobacillus ferrooxidans",
+        "match": {
+          "reason": "生物FeOOH可催化还原Cr(VI)为Cr(III)",
+          "weight": 0.8,
+          "applicability_fit": "pH 3.0-7.5, 盐度 low_to_moderate",
+          "match_basis": "direct_pollutant_evidence",
+          "direct_evidence": true
+        },
+        "mechanism": {
+          "name": "施氏矿物As(III)吸附机制-表面沉淀",
+          "基本原理": "施氏矿物的高比表面积和表面羟基（-OH）提供大量配位位点；生物氧化As(III)→As(V)降低毒性并增强吸附",
+          "key_structures": [],
+          "functional_groups": "",
+          "molecular_feature_links": [],
+          "attribution": {
+            "source": "literature",
+            "ref": "10.7524/j.issn.0254-6108.2020070302",
+            "verification_tier": "verified",
+            "confidence": "normal"
+          }
+        },
+        "design_translation": {
+          "idea": "生物过程→材料合成：IOB氧化Fe(II)→生物Fe(III)氧化物→与Mn氧化物共沉淀→负载于高岭土→BKFMs复合材料。仿生设计启示：利用微生物的代谢能力在温和条件下合成高活性金属氧化物，避免高温焙烧，保留生物有机质的配位功能。",
+          "material_realization_examples": [],
+          "source_tier": "literature"
+        },
+        "evidence_context": {
+          "performance_leads": []
+        }
+      },
+      {
+        "prototype_id": "polydopamine-coating",
+        "organism": "Mytilus edulis",
+        "match": {
+          "reason": "PDA的还原性可将Cr(VI)还原为Cr(III)",
+          "weight": 0.7,
+          "applicability_fit": "pH 3.0-7.0, 盐度 moderate",
+          "match_basis": "direct_pollutant_evidence",
+          "direct_evidence": true
+        },
+        "mechanism": {
+          "name": "PDA吸附机制补充",
+          "基本原理": "PDA涂层同时含邻苯二酚（金属配位）和吲哚环（π-π堆积），可在单一表面上实现对芳香族污染物和金属离子的双重吸附",
+          "key_structures": [],
+          "functional_groups": "",
+          "molecular_feature_links": [],
+          "attribution": {
+            "source": "literature",
+            "ref": "10.13550/j.jxhg.20220633",
+            "verification_tier": "verified",
+            "confidence": "normal"
+          }
+        },
+        "design_translation": {
+          "idea": "生物微纳乳突映射为无机纳米粒子（如SiO2/ZnO/CuO）或相分离构建的粗糙结构；表皮蜡质映射为有机氟/有机硅/长链烷烃等低表面能修饰；自清洁机制映射为超疏水油水分离与抗细菌黏附；主动防御映射为掺杂抗菌纳米粒子或接枝杀菌基团。软约束建议：优先采用无机-有机复合策略以兼顾粗糙度与低表面能，使用多巴胺或壳聚糖等仿生/天然分子简化制备流程并提升环保性。",
+          "material_realization_examples": [],
+          "source_tier": "literature"
+        },
+        "evidence_context": {
+          "performance_leads": [
+            {
+              "pollutant": "Cr(VI)",
+              "material": "CNF-TA-PMMT-PEI",
+              "value": "456.62",
+              "unit": "mg/g",
+              "verification_tier": "verified"
+            }
+          ]
+        }
+      },
+      {
+        "prototype_id": "bone-structure",
+        "organism": "Mammalian bone (哺乳动物骨骼)",
+        "match": {
+          "reason": "金属离子与配体上的供电子原子（N/O/S）形成配位键",
+          "weight": 0.9,
+          "applicability_fit": "盐度 any",
+          "match_basis": "molecular_feature_inference",
+          "direct_evidence": false
+        },
+        "mechanism": {
+          "name": "HAp四种重金属吸附机制",
+          "基本原理": "HAp的Ca²⁺位点可被重金属离子交换取代，且磷酸根可与重金属形成难溶磷酸盐沉淀，实现双重去除机制",
+          "key_structures": [],
+          "functional_groups": "",
+          "molecular_feature_links": [],
+          "attribution": {
+            "source": "literature",
+            "ref": "10.1016/j.jtice.2024.105668",
+            "verification_tier": "verified",
+            "confidence": "normal"
+          }
+        },
+        "design_translation": {
+          "idea": "生物→材料映射：蜗牛壳(CaCO₃)→提供钙基矿物骨架与微环境pH缓冲；骨灰(HAP)→提供Ca₁₀(PO₄)₆(OH)₂晶体相与金属离子交换位点；虾壳(壳聚糖)→构建亲水高分子网络与-NH₂/-OH络合中心。软约束建议：严格控pH于4-6防Cu沉淀；投加量锚定0.02g以平衡吸附容量与经济性；利用RSM模型动态适配水质波动与多参数交互。",
+          "material_realization_examples": [],
+          "source_tier": "literature"
+        },
+        "evidence_context": {
+          "performance_leads": []
+        }
+      },
+      {
+        "prototype_id": "oyster-shell",
+        "organism": "Ostreidae",
+        "match": {
+          "reason": "污染物类别匹配: 重金属",
+          "weight": 0.9,
+          "applicability_fit": "pH 5.0-7.0, 盐度 moderate",
+          "match_basis": "molecular_feature_inference",
+          "direct_evidence": false
+        },
+        "mechanism": {
+          "name": "牡蛎壳改性吸附机制",
+          "基本原理": "煅烧牡蛎壳（CaO）在水中生成Ca(OH)₂，提供碱性环境和Ca²⁺，可与磷酸盐形成羟基磷灰石沉淀，同时重金属通过表面配位吸附",
+          "key_structures": [],
+          "functional_groups": "",
+          "molecular_feature_links": [],
+          "attribution": {
+            "source": "literature",
+            "ref": "10.16663/j.cnki.lskj.2021.02.025",
+            "verification_tier": "partial",
+            "confidence": "normal"
+          }
+        },
+        "design_translation": {
+          "idea": "生物→材料映射: 牡蛎壳生物矿化CaCO₃ → 活性钙改性源(CaO)；花生壳多孔碳骨架 → 高分散载体与吸附基质；软约束建议: 优选高钙含量(>80%)生物废弃物替代化学试剂；控制热解温度750-850℃平衡CaO生成率与碳骨架完整性；实际应用中需监测进水pH，必要时辅以弱碱调节以保障沉淀效率",
+          "material_realization_examples": [],
+          "source_tier": "literature"
+        },
+        "evidence_context": {
+          "performance_leads": []
+        }
+      }
+    ],
+    "applicable_rules": [],
+    "rule_based_cautions": {
+      "do_not": [],
+      "cautions": [
+        {
+          "prototype_id": "chitosan",
+          "mechanism_name": "金属离子络合机制 Metal ion complexation mechanism",
+          "parameter": "competing_ion",
+          "text": "高浓度Ca²⁺、Mg²⁺竞争配位位点",
+          "basis": "llm_inferred",
+          "verification": "needs_review",
+          "source_asset": null
+        },
+        {
+          "prototype_id": "chitosan",
+          "mechanism_name": "pH对氮污染物吸附的影响机制 pH effect on N-pollutants adsorption",
+          "parameter": "salinity",
+          "text": "高盐浓度下静电屏蔽效应减弱阴离子吸附",
+          "basis": "llm_inferred",
+          "verification": "needs_review",
+          "source_asset": null
+        },
+        {
+          "prototype_id": "iron-oxidizing-bacteria",
+          "mechanism_name": "施氏矿物As(III)吸附机制-表面沉淀",
+          "parameter": "competing_ion",
+          "text": "高浓度磷酸盐与砷酸盐竞争配位位点",
+          "basis": "llm_inferred",
+          "verification": "needs_review",
+          "source_asset": null
+        },
+        {
+          "prototype_id": "oyster-shell",
+          "mechanism_name": "牡蛎壳改性吸附机制",
+          "parameter": "other",
+          "text": "未煅烧的CaCO₃吸附容量远低于煅烧产物CaO",
+          "basis": "llm_inferred",
+          "verification": "needs_review",
+          "source_asset": null
+        },
+        {
+          "prototype_id": "oyster-shell",
+          "mechanism_name": "牡蛎壳改性吸附机制",
+          "parameter": "other",
+          "text": "未煅烧CaCO₃吸附容量远低于煅烧产物CaO",
+          "basis": "llm_inferred",
+          "verification": "needs_review",
+          "source_asset": "domain_knowledge"
+        }
+      ]
+    },
+    "honesty_ledger": {
+      "facts": [
+        "有 3 个原型对 Cr(VI) 有直接实验数据"
+      ],
+      "leads": [
+        "chitosan: 有直接实验数据，但未经独立核实",
+        "iron-oxidizing-bacteria: 有直接实验数据，但未经独立核实",
+        "polydopamine-coating: 有直接实验数据，但未经独立核实"
+      ],
+      "inferences": [
+        "bone-structure: 基于分子特征推断，非直接证据",
+        "oyster-shell: 基于分子特征推断，非直接证据"
+      ]
+    }
+  }
+}
