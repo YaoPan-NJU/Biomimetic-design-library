@@ -121,7 +121,8 @@ def validate_brief_structure(brief, test_name):
                             errors.append(f"candidate[{i}].mechanism.attribution 缺少 {field}")
 
                     # 检查 verification_tier 是否有效
-                    valid_tiers = ['verified', 'corroborated', 'single_source', 'unverified', 'needs_review']
+                    # partial = legitimate "lead" (not a fact), accepted in honesty_ledger.leads
+                    valid_tiers = ['verified', 'corroborated', 'single_source', 'unverified', 'needs_review', 'partial']
                     if attr.get('verification_tier') not in valid_tiers:
                         errors.append(f"candidate[{i}].mechanism.attribution.verification_tier 无效: {attr.get('verification_tier')}")
 

@@ -216,6 +216,11 @@ def validate_feature_mapping(feature_mapping_path: str, prototypes_dir: str) -> 
             item_path = os.path.join(prototypes_dir, item)
             if os.path.isdir(item_path):
                 prototype_dirs.add(item)
+                # Also scan nested subdirectories (e.g. separation/cactus-spine)
+                for sub in os.listdir(item_path):
+                    sub_path = os.path.join(item_path, sub)
+                    if os.path.isdir(sub_path) and os.path.exists(os.path.join(sub_path, 'prototype.md')):
+                        prototype_dirs.add(sub)
 
     # R1: 断链
     broken_links = metadata_ids - prototype_dirs
