@@ -1,0 +1,213 @@
+{
+  "brief": {
+    "context": {
+      "water_quality": {
+        "pH": 7,
+        "temperature": 25,
+        "salinity": "medium"
+      },
+      "removal_target": {
+        "污染物": "BPA"
+      },
+      "pollutant_profile": {
+        "canonical_name": "BPA（Bisphenol A）",
+        "pollutant_class": "内分泌干扰物/酚类化合物",
+        "molecular_features": [
+          "芳香环",
+          "酚羟基",
+          "疏水性",
+          "弱酸性"
+        ],
+        "likely_interactions": [
+          "氢键",
+          "π-π堆积",
+          "疏水分配",
+          "静电吸引"
+        ],
+        "profile_basis": "database"
+      },
+      "engineering_constraints": []
+    },
+    "candidates": [
+      {
+        "prototype_id": "chitosan",
+        "organism": "Crustacea",
+        "match": {
+          "reason": "污染物分子的极性基团与吸附剂的含氧/氮基团形成氢键",
+          "weight": 0.75,
+          "applicability_fit": "pH 3.0-7.0, 盐度 low_to_moderate",
+          "match_basis": "molecular_feature_inference",
+          "direct_evidence": false
+        },
+        "mechanism": {
+          "name": "金属离子络合机制 Metal ion complexation mechanism",
+          "基本原理": "壳聚糖的氨基对软酸金属（Hg²⁺、Pb²⁺、Cu²⁺）有高亲和力，形成稳定的五元或六元螯合环；Cu²⁺在Irving-Williams序列中稳定性最高（log K~8）",
+          "key_structures": [],
+          "functional_groups": "",
+          "molecular_feature_links": [],
+          "attribution": {
+            "source": "literature",
+            "ref": "10.1016/j.carbpol.2020.117000",
+            "verification_tier": "verified",
+            "confidence": "normal"
+          }
+        },
+        "design_translation": {
+          "idea": "生物→材料映射：甲壳素/壳聚糖柔性网络→CTS聚合物基质提供成膜性与改性位点；天然沸石微孔结构→MZ无机骨架提供高比表面积与离子交换通道；La(OH)3特异性结合→仿生活性中心实现多分子层化学吸附；软约束建议：控制负载pH至11及60°C振荡条件以确保La(OH)3均匀成核，避免团聚；孔径设计需远大于La水合半径(0.452 nm)以保障传质效率。",
+          "material_realization_examples": [],
+          "source_tier": "literature"
+        },
+        "evidence_context": {
+          "performance_leads": []
+        }
+      },
+      {
+        "prototype_id": "plant-tannin",
+        "organism": "Plant sources (单宁酸)",
+        "match": {
+          "reason": "芳香环可通过π-π堆积作用与含芳香环的吸附剂结合",
+          "weight": 0.7,
+          "applicability_fit": "pH 2.5-7.0, 盐度 low_to_moderate",
+          "match_basis": "molecular_feature_inference",
+          "direct_evidence": false
+        },
+        "mechanism": {
+          "name": "吸附机制",
+          "基本原理": "needs_review",
+          "key_structures": [],
+          "functional_groups": "",
+          "molecular_feature_links": [
+            "芳香环",
+            "酚羟基"
+          ],
+          "attribution": {
+            "source": "literature",
+            "ref": "10.1016/j.colsurfa.2021.126972",
+            "verification_tier": "partial",
+            "confidence": "normal"
+          }
+        },
+        "design_translation": {
+          "idea": "生物低表面能蜡质层映射为含氟聚合物（C-F键）；生物微观乳突粗糙结构映射为膜多孔结构及纳米纤维/相分离孔结构。软约束建议：优先选择PVDF以平衡成本与综合性能，或采用ECTFE提升耐磨强度；推荐使用TEP、ATBC等绿色溶剂替代传统有毒溶剂以降低环境影响。",
+          "material_realization_examples": [],
+          "source_tier": "literature"
+        },
+        "evidence_context": {
+          "performance_leads": [
+            {
+              "pollutant": "BPA",
+              "material": "T-PBC",
+              "value": "320.51",
+              "unit": "mg/g",
+              "verification_tier": "partial"
+            }
+          ]
+        }
+      },
+      {
+        "prototype_id": "polydopamine-coating",
+        "organism": "Mytilus edulis",
+        "match": {
+          "reason": "芳香环可通过π-π堆积作用与含芳香环的吸附剂结合",
+          "weight": 0.6666666666666666,
+          "applicability_fit": "pH 3.0-7.0, 盐度 moderate",
+          "match_basis": "molecular_feature_inference",
+          "direct_evidence": false
+        },
+        "mechanism": {
+          "name": "PDA吸附机制补充",
+          "基本原理": "PDA涂层同时含邻苯二酚（金属配位）和吲哚环（π-π堆积），可在单一表面上实现对芳香族污染物和金属离子的双重吸附",
+          "key_structures": [],
+          "functional_groups": "",
+          "molecular_feature_links": [
+            "芳香环",
+            "酚羟基",
+            "疏水性"
+          ],
+          "attribution": {
+            "source": "literature",
+            "ref": "10.13550/j.jxhg.20220633",
+            "verification_tier": "verified",
+            "confidence": "normal"
+          }
+        },
+        "design_translation": {
+          "idea": "生物微纳乳突映射为无机纳米粒子（如SiO2/ZnO/CuO）或相分离构建的粗糙结构；表皮蜡质映射为有机氟/有机硅/长链烷烃等低表面能修饰；自清洁机制映射为超疏水油水分离与抗细菌黏附；主动防御映射为掺杂抗菌纳米粒子或接枝杀菌基团。软约束建议：优先采用无机-有机复合策略以兼顾粗糙度与低表面能，使用多巴胺或壳聚糖等仿生/天然分子简化制备流程并提升环保性。",
+          "material_realization_examples": [],
+          "source_tier": "literature"
+        },
+        "evidence_context": {
+          "performance_leads": []
+        }
+      },
+      {
+        "prototype_id": "lotus-leaf",
+        "organism": "Nelumbo nucifera",
+        "match": {
+          "reason": "疏水性污染物可通过疏水分配作用与疏水表面结合",
+          "weight": 0.6,
+          "applicability_fit": "盐度 any",
+          "match_basis": "molecular_feature_inference",
+          "direct_evidence": false
+        },
+        "mechanism": {
+          "name": "超疏水材料构建基本原理 - Young方程/Wenzel模型/Cassie-Baxter模型",
+          "基本原理": "needs_review",
+          "key_structures": [],
+          "functional_groups": "",
+          "molecular_feature_links": [
+            "疏水性"
+          ],
+          "attribution": {
+            "source": "literature",
+            "ref": "10.16865/j.cnki.1000-7555.2020.0282",
+            "verification_tier": "unverified",
+            "confidence": "normal"
+          }
+        },
+        "design_translation": {
+          "idea": "生物→材料映射：生物微纳乳突映射为材料表面的微米骨架与纳米颗粒/纤维堆叠结构；生物蜡质层映射为氟/硅低表面能涂层或本征疏水聚合物修饰。软约束建议：优先采用涂覆或静电纺丝实现快速成型与柔性适配；针对强酸碱或高温工况需强化化学交联或选用无机-有机杂化体系；设计时需预留抗堵塞的宏观孔隙梯度以应对复杂乳液。",
+          "material_realization_examples": [],
+          "source_tier": "literature"
+        },
+        "evidence_context": {
+          "performance_leads": []
+        }
+      }
+    ],
+    "applicable_rules": [],
+    "rule_based_cautions": {
+      "do_not": [],
+      "cautions": [
+        {
+          "prototype_id": "chitosan",
+          "mechanism_name": "金属离子络合机制 Metal ion complexation mechanism",
+          "parameter": "competing_ion",
+          "text": "高浓度Ca²⁺、Mg²⁺竞争配位位点",
+          "basis": "llm_inferred",
+          "verification": "needs_review",
+          "source_asset": null
+        },
+        {
+          "prototype_id": "chitosan",
+          "mechanism_name": "pH对氮污染物吸附的影响机制 pH effect on N-pollutants adsorption",
+          "parameter": "salinity",
+          "text": "高盐浓度下静电屏蔽效应减弱阴离子吸附",
+          "basis": "llm_inferred",
+          "verification": "needs_review",
+          "source_asset": null
+        }
+      ]
+    },
+    "honesty_ledger": {
+      "facts": [],
+      "leads": [],
+      "inferences": [
+        "chitosan: 基于分子特征推断，非直接证据",
+        "plant-tannin: 基于分子特征推断，非直接证据",
+        "polydopamine-coating: 基于分子特征推断，非直接证据",
+        "lotus-leaf: 基于分子特征推断，非直接证据"
+      ]
+    }
+  }
+}

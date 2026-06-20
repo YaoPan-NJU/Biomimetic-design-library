@@ -1,18 +1,12 @@
 {
   "baseline_commit": "e4dc2d0",
-  "tested_commit": "670a1b5",
+  "tested_commit": "a74838a",
   "branch": "review",
-  "active_goal": "P5-B-preflight",
+  "active_goal": "P5-B-completion",
   "authorized_milestones": [
-    "R0",
-    "R1",
-    "P0",
-    "P1",
-    "P2",
-    "P3",
-    "P4"
+    "R0", "R1", "P0", "P1", "P2", "P3", "P4", "P5"
   ],
-  "current_gate": "G6-pending",
+  "current_gate": "P5-B-complete",
   "completed_phases": [
     "R0-capability-v3-real-multimodal",
     "R1-A-build-safety",
@@ -28,7 +22,8 @@
     "P2-extended-audit",
     "P3-literature-extraction",
     "P4-validation-documentation",
-    "P5-B-preflight"
+    "P5-B-preflight",
+    "P5-B-completion"
   ],
   "pending_phases": [
     "G5-yao-review",
@@ -36,42 +31,48 @@
   ],
   "library_statistics": {
     "total_prototypes": 70,
+    "root_prototypes": 36,
+    "separation_prototypes": 5,
+    "enrichment_prototypes": 24,
+    "materials_reference": 4,
+    "parked": 1,
     "core": 26,
-    "extended": 10,
+    "extended": 9,
     "exploratory": 1,
-    "active": 34,
+    "active": 33,
     "deprecated": 2,
-    "mechanisms": 1419,
-    "performance_data": 1012,
-    "engineering_constraints": 326,
-    "design_translation": 25,
-    "honesty_ledgers": 33,
-    "quotes_present": 452,
-    "locators_present": 861,
+    "mechanisms": 510,
+    "performance_data": 498,
+    "qualified_causal_cards": 88,
+    "boundary_conditions": 121,
+    "honesty_ledgers": 36,
     "refuted_entries_remaining": 0
   },
   "validation_results": {
-    "validate_consistency": "1 error (pre-existing: 5 separation broken links)",
+    "validate_consistency": "0 errors, 171 warnings (documentation/instance-data, all pre-existing)",
     "check_chimera_strict": "0 violations",
     "test_invariant_guard": "7/7 PASS",
-    "canon_metrics_guard": "GREEN",
-    "canon_metrics_integrity": "PASS",
-    "check_causal_chain": "19 prototypes without qualified causal card",
-    "check_boundary_guardrail": "issues found (pre-existing)",
-    "verify_adrmats_delivery": "2 pass, 4 fail (pre-existing: partial-tier)",
-    "check_translation_specificity": "1 fail (pre-existing)",
-    "test_interface_honesty": "3/3 PASS",
-    "check_repo_hygiene": "2 issues (pre-existing)",
-    "validate_ledger_v2": "PASS (0 errors, 0 PENDING)",
+    "canon_metrics_guard": "GREEN (no protected-metric decreases)",
+    "canon_metrics_integrity": "PASS (no duplicates, no refuted resurrection, no anomalies)",
+    "check_causal_chain": "88 qualified, 0 empty-basis, 0 prototypes without card",
+    "check_boundary_guardrail": "PASS (0 missing BC, 0 gate inconsistencies)",
+    "verify_adrmats_delivery": "6/6 PASS",
+    "validate_ledger_v2": "PASS (0 errors)",
     "test_canon_safety": "6/6 PASS",
     "test_apply_recovery": "9/9 PASS"
   },
-  "protected_user_assets": {
-    "tools/litextract": "modified (submodule, not staged)",
-    "docs/optimization-v1/_w1_doi_map.json": "untracked",
-    "docs/optimization-v1/_w2_doi_map.json": "untracked",
-    "docs/optimization-v1/_w3_doi_map.json": "untracked"
+  "p5b_changes": {
+    "boundary_fixes": "7 empty-shell prototypes fixed with in-place mechanisms + causal_chain + boundary_conditions",
+    "lotus_leaf_promotion": "Core tier with narrow scope (superwetting/oil-water separation/surface design)",
+    "litextract_security": "Submodule pointer updated to security fix (commit 525de71)",
+    "causal_cards_added": "5 active prototypes (alginate, CNC, MOF, starch-granule, mycelium) + 6 placeholder re-labeled",
+    "placeholder_labels": "6 prototypes labeled as placeholder/background_only (no deprecate/park/delete)",
+    "deep_evidence": "alginate/starch-granule/MOF honesty_ledger updated, boundary_conditions added based on tested conditions"
   },
-  "last_checkpoint": "2026-06-20T15:00:00Z",
-  "next_action": "P5-B Phase 1: promote 4 Extended to Core (alginate, lotus-leaf, MOF, starch)"
+  "protected_user_assets": {
+    "tools/litextract": "submodule, security fix landed",
+    "docs/optimization-v1/": "untracked, excluded from commits"
+  },
+  "last_checkpoint": "2026-06-21T00:00:00Z",
+  "next_action": "Await Yao review of P5-B completion. Full 60-80 expansion requires explicit authorization."
 }
