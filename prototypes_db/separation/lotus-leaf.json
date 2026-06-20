@@ -748,5 +748,18 @@
   },
   "coverage": "parked",
   "status": "parked_separation",
-  "note": "SCOPE_REVIEW: All remaining mechanisms are from general superhydrophobic/wetting/separation reviews. Zero lotus-specific mechanisms identified. Requires scope split before ranking.; SCOPE_SPLIT: Kept 49 mechanisms (lotus-specific + wetting-theory). Removed 297 non-lotus mechanisms (membrane/antibacterial/superhydrophobic/oil-water/other).; Cleanup: constraints 22->2, narrative 33->33; Narrative: kept 33 lotus+theory, removed 0 non-lotus"
+  "note": "SCOPE_REVIEW: All remaining mechanisms are from general superhydrophobic/wetting/separation reviews. Zero lotus-specific mechanisms identified. Requires scope split before ranking.; SCOPE_SPLIT: Kept 49 mechanisms (lotus-specific + wetting-theory). Removed 297 non-lotus mechanisms (membrane/antibacterial/superhydrophobic/oil-water/other).; Cleanup: constraints 22->2, narrative 33->33; Narrative: kept 33 lotus+theory, removed 0 non-lotus",
+  "library_tier": "core",
+  "scope_note": "Core tier limited to superwetting / oil-water separation / surface design. Lotus-leaf is a surface-wettability prototype, NOT a general adsorption prototype. Performance data reflects oil/water separation capacity, not pollutant adsorption qmax. Non-lotus examples (shark, gecko, rose-petal, membrane, MOF, shell, sponge) excluded per B04-LOTUS-003.",
+  "honesty_ledger": {
+    "facts": [
+      {
+        "type": "scope_decision",
+        "note": "Yao decision 2026-06-20: Core promotion with narrow scope (superwetting/oil-water separation/surface design)",
+        "basis": "yao_approval"
+      }
+    ],
+    "leads": [],
+    "inferences": []
+  }
 }
