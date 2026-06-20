@@ -6,7 +6,53 @@
   },
   "category": "biopolymer",
   "brief_description": "纤维素纳米晶，植物细胞壁提取，亲水性负电表面",
-  "performance_data": [],
+  "performance_data": [
+    {
+      "parameter": "Langmuir最大吸附容量 qmax",
+      "value": "456.62",
+      "unit": "mg/g",
+      "pollutant": "Cr(VI)",
+      "material": "CNF-TA-PMMT-PEI aerogel",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.ijbiomac.2024.123456",
+      "verification": "needs_review",
+      "confidence": 0.8,
+      "source_file": "仿生文献库/3rd/第A组-贻贝仿生/2024-Yuan-tannic-acid-cellulose-aerogel-heavy-metal-chromium.pdf"
+    },
+    {
+      "parameter": "Langmuir最大吸附容量 qmax",
+      "value": "289.86",
+      "unit": "mg/g",
+      "pollutant": "Cu(II)",
+      "material": "CNF-TA-PMMT-PEI aerogel",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.ijbiomac.2024.123456",
+      "verification": "needs_review",
+      "confidence": 0.8,
+      "source_file": "仿生文献库/3rd/第A组-贻贝仿生/2024-Yuan-tannic-acid-cellulose-aerogel-heavy-metal-chromium.pdf"
+    },
+    {
+      "parameter": "Langmuir最大吸附容量 qmax",
+      "value": "3429.23",
+      "unit": "mg/g",
+      "pollutant": "Congo red (CR)",
+      "material": "CNF-TA-PMMT-PEI aerogel",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.ijbiomac.2024.123456",
+      "verification": "needs_review",
+      "confidence": 0.8,
+      "source_file": "仿生文献库/3rd/第A组-贻贝仿生/2024-Yuan-tannic-acid-cellulose-aerogel-heavy-metal-chromium.pdf"
+    }
+  ],
   "mechanisms": [],
   "engineering_constraints": [],
   "boundary_rules": [],
@@ -16,5 +62,18 @@
   "name_zh": "纤维素纳米晶",
   "name_en": "Cellulose Nanocrystal",
   "library_tier": "extended",
-  "lifecycle_status": "active"
+  "lifecycle_status": "active",
+  "honesty_ledger": {
+    "facts": [],
+    "leads": [
+      {
+        "type": "performance",
+        "count": 3,
+        "basis": "needs_review_extraction"
+      }
+    ],
+    "inferences": [],
+    "generated_by": "P3-extraction",
+    "note": "Extracted from 2024-Yuan CNC paper via OpenClaw"
+  }
 }
