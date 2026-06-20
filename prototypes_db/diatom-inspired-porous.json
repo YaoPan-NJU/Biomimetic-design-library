@@ -7,7 +7,32 @@
   "category": "structural",
   "brief_description": "仿生硅藻多孔结构，介孔材料",
   "performance_data": [],
-  "mechanisms": [],
+  "mechanisms": [
+    {
+      "name": "硅藻多孔结构吸附（已废弃，合并至 diatom-frustule）",
+      "description": "此原型已废弃，功能合并至 diatom-frustule。保留此条仅为历史兼容。",
+      "source": "llm_inference",
+      "causal_chain": {
+        "transferable_principle": "此原型已废弃，不应作为设计参考。请使用 diatom-frustule。",
+        "boundary_conditions": [
+          {
+            "text": "此原型已废弃（_dedup_superseded_by: diatom-frustule），不应作为设计决策依据",
+            "parameter": "prototype_status",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
+    }
+  ],
   "engineering_constraints": [],
   "boundary_rules": [],
   "verification": "unverified",
@@ -30,7 +55,15 @@
   "honesty_ledger": {
     "facts": [],
     "leads": [],
-    "inferences": [],
+    "inferences": [
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "硅藻多孔结构吸附（已废弃，合并至 diatom-frustule）",
+        "basis": "llm_inference",
+        "note": "Deprecated prototype — placeholder mechanism for boundary guardrail compliance"
+      }
+    ],
     "generated_by": "P5-B-preflight",
     "note": "Auto-generated from verification labels + quote presence + source type"
   }
