@@ -1067,5 +1067,23 @@
   "name_zh": "海藻酸钠",
   "name_en": "Alginate",
   "library_tier": "extended",
-  "lifecycle_status": "active"
+  "lifecycle_status": "active",
+  "design_translation": [
+    {
+      "idea": "利用海藻酸盐的羧基/羟基官能团和蛋盒凝胶结构进行重金属和染料吸附",
+      "specific_functional_group": "-COOH, -OH (alginate backbone)",
+      "material_handle": "海藻酸盐水凝胶、气凝胶、复合微球",
+      "target_interaction": "离子交换、静电吸引、螯合配位",
+      "source_tier": "literature",
+      "source_doi": "10.1016/j.ijbiomac.2025.140801",
+      "examples": [
+        {
+          "material": "GO/SA aerogel",
+          "pollutant": "MB",
+          "qmax_mg_g": 1452,
+          "doi": "10.1016/j.ijbiomac.2025.140801"
+        }
+      ]
+    }
+  ]
 }

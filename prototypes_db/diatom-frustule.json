@@ -454,7 +454,39 @@
       "verification_quote": "550°C热处理可暴露硅藻土表面Si-OH基团，增强重金属吸附能力",
       "locator": "Section 2",
       "source_file": "仿生文献库/论文/第3组-多孔结构/2022-于-硅藻-硅藻土-吸附-综述 2.pdf",
-      "scope_note": "R1-D corrective downgrade: M2-d promoted without direct PDF review"
+      "scope_note": "R1-D corrective downgrade: M2-d promoted without direct PDF review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "550°C热处理",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "硅藻土多孔结构+表面Si-OH",
+          "basis": "from_source"
+        },
+        "interaction": {
+          "text": "表面Si-OH基团暴露增多，L碱位增加",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "与Ni²⁺/Ag⁺配位吸附增强，吸附性能提高1.71倍",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "pH影响表面电荷和吸附性能",
+            "parameter": "pH",
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            }
+          }
+        ],
+        "transferable_principle": "基于热处理——550°C表面Si-OH暴露的吸附/去除机制"
+      }
     },
     {
       "name": "接枝改性——丙烯酸/La³⁺静电吸附",
@@ -467,7 +499,39 @@
       "verification_quote": "丙烯酸接枝改性硅藻土通过La³⁺静电吸附机制去除磷酸盐",
       "locator": "Section 3",
       "source_file": "仿生文献库/论文/第3组-多孔结构/2022-于-硅藻-硅藻土-吸附-综述 2.pdf",
-      "scope_note": "R1-D corrective downgrade: M2-d promoted without direct PDF review"
+      "scope_note": "R1-D corrective downgrade: M2-d promoted without direct PDF review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "丙烯酸接枝改性",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "硅藻土多孔结构+表面Si-OH",
+          "basis": "from_source"
+        },
+        "interaction": {
+          "text": "—COO⁻基团引入，静电吸附位点增加",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "La³⁺吸附容量随pH增大而上升",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "pH影响表面电荷和吸附性能",
+            "parameter": "pH",
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            }
+          }
+        ],
+        "transferable_principle": "基于接枝改性——丙烯酸/La³⁺静电吸附的吸附/去除机制"
+      }
     },
     {
       "name": "复合改性——氨基功能化对直接蓝74",
@@ -480,7 +544,39 @@
       "verification_quote": "氨基功能化硅藻土对直接蓝74染料的吸附容量显著提升",
       "locator": "Section 3",
       "source_file": "仿生文献库/论文/第3组-多孔结构/2022-于-硅藻-硅藻土-吸附-综述 2.pdf",
-      "scope_note": "R1-D corrective downgrade: M2-d promoted without direct PDF review"
+      "scope_note": "R1-D corrective downgrade: M2-d promoted without direct PDF review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "氨基功能化改性",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "硅藻土多孔结构+表面Si-OH",
+          "basis": "from_source"
+        },
+        "interaction": {
+          "text": "引入-NH₂基团，增加吸附位点",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "直接蓝74染料吸附增强",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "pH影响表面电荷和吸附性能",
+            "parameter": "pH",
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            }
+          }
+        ],
+        "transferable_principle": "基于复合改性——氨基功能化对直接蓝74的吸附/去除机制"
+      }
     },
     {
       "name": "磷酸盐——零价铁/铁氧化物负载",
@@ -493,7 +589,39 @@
       "verification_quote": "零价铁/铁氧化物负载硅藻土可有效去除水中磷酸盐",
       "locator": "Section 3",
       "source_file": "仿生文献库/论文/第3组-多孔结构/2022-于-硅藻-硅藻土-吸附-综述 2.pdf",
-      "scope_note": "R1-D corrective downgrade: M2-d promoted without direct PDF review"
+      "scope_note": "R1-D corrective downgrade: M2-d promoted without direct PDF review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "零价铁/铁氧化物负载",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "硅藻土多孔结构+表面Si-OH",
+          "basis": "from_source"
+        },
+        "interaction": {
+          "text": "Fe⁰/Fe₃O₄纳米粒子沉积在硅藻土表面",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "磷酸盐吸附容量提升",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "pH影响表面电荷和吸附性能",
+            "parameter": "pH",
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            }
+          }
+        ],
+        "transferable_principle": "基于磷酸盐——零价铁/铁氧化物负载的吸附/去除机制"
+      }
     },
     {
       "name": "未来研究五大方向",
@@ -506,7 +634,39 @@
       "verification_quote": "硅藻土吸附材料未来研究方向包括多功能复合、再生利用等",
       "locator": "Section 4",
       "source_file": "仿生文献库/论文/第3组-多孔结构/2022-于-硅藻-硅藻土-吸附-综述 2.pdf",
-      "scope_note": "R1-D corrective downgrade: M2-d promoted without direct PDF review"
+      "scope_note": "R1-D corrective downgrade: M2-d promoted without direct PDF review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "多功能复合、再生利用等研究方向",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "硅藻土多孔结构+表面Si-OH",
+          "basis": "from_source"
+        },
+        "interaction": {
+          "text": "新型改性策略和复合材料开发",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "吸附性能和应用范围扩展",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "pH影响表面电荷和吸附性能",
+            "parameter": "pH",
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            }
+          }
+        ],
+        "transferable_principle": "基于未来研究五大方向的吸附/去除机制"
+      }
     },
     {
       "name": "离子强度影响",
@@ -517,7 +677,39 @@
       "verification": "needs_review",
       "verification_quote": "硅藻土吸附重金属以物理吸附为主，多孔结构提供大量吸附位点",
       "locator": "实验结果",
-      "scope_note": "R1-D corrective downgrade: M2-d promoted without direct PDF review"
+      "scope_note": "R1-D corrective downgrade: M2-d promoted without direct PDF review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "NaNO₃浓度增加",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "硅藻土多孔结构+表面Si-OH",
+          "basis": "from_source"
+        },
+        "interaction": {
+          "text": "竞争吸附位点",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "TC吸附量逐渐下降",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "pH影响表面电荷和吸附性能",
+            "parameter": "pH",
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            }
+          }
+        ],
+        "transferable_principle": "基于离子强度影响的吸附/去除机制"
+      }
     }
   ],
   "narrative": {
