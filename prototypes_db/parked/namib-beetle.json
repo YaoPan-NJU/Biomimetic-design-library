@@ -25,7 +25,39 @@
       "source": "literature",
       "ref_doi": "10.1002/adfm.202200359",
       "verification": "unverified",
-      "基本原理": "needs_review"
+      "基本原理": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "雾气/水蒸气",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "纳米比亚甲虫亲水凸起+疏水基底交替表面",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "亲水区域凝结水滴，疏水区域导流收集",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "润湿性梯度和表面拓扑实现定向集水",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "亲疏水比例和凸起间距影响集水效率",
+            "parameter": "general",
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            }
+          }
+        ],
+        "transferable_principle": "纳米比亚甲虫亲水凸起+疏水基底交替表面"
+      }
     }
   ],
   "narrative": {

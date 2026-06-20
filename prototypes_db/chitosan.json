@@ -2068,7 +2068,39 @@
       "source": "literature",
       "ref_doi": "10.13671/j.hjkxxb.2020.0407",
       "verification": "needs_review",
-      "基本原理": "壳聚糖表面的活性基团（-NH₂、-OH）与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移"
+      "基本原理": "壳聚糖表面的活性基团（-NH₂、-OH）与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "重金属离子和有机污染物",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖氨基(-NH₂)和羟基(-OH)官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "氨基和羟基提供丰富的吸附位点，可与多种污染物形成稳定配合物",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "pH影响氨基质子化状态和吸附容量",
+            "parameter": "general",
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            }
+          }
+        ],
+        "transferable_principle": "壳聚糖氨基(-NH₂)和羟基(-OH)官能团"
+      }
     },
     {
       "name": "金属离子络合机制 Metal ion complexation mechanism",

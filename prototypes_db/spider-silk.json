@@ -107,7 +107,39 @@
       "source": "literature",
       "ref_doi": "10.1002/advs.202103965",
       "verification": "needs_review",
-      "verification_quote": "(PEDOT-PSS), forming a composite ﬁber with a toughness of"
+      "verification_quote": "(PEDOT-PSS), forming a composite ﬁber with a toughness of",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "重金属和有机物",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "蜘蛛丝蛋白β-折叠结构和氨基酸序列",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "静电吸引、氢键、配位",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "丝蛋白氨基酸序列提供丰富官能团，β-折叠提供机械强度",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "氨基酸组成和pH影响吸附性能",
+            "parameter": "general",
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            }
+          }
+        ],
+        "transferable_principle": "蜘蛛丝蛋白β-折叠结构和氨基酸序列"
+      }
     },
     {
       "name": "静电纺丝纤维形貌调控因素",

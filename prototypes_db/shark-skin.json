@@ -24,7 +24,39 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1002/admi.202201425",
-      "verification": "unverified"
+      "verification": "unverified",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "湍流阻力和污染物附着",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "鲨鱼皮盾鳞微结构（riblet）",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "微结构减少湍流涡旋和污染物接触面积",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "riblet结构改变边界层流动，减少剪切应力和颗粒沉降",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "微结构尺寸需匹配目标流体雷诺数",
+            "parameter": "general",
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            }
+          }
+        ],
+        "transferable_principle": "鲨鱼皮盾鳞微结构（riblet）"
+      }
     },
     {
       "name": "细菌粘附的长程和短程相互作用距离阈值",

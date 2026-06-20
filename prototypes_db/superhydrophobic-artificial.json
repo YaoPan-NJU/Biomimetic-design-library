@@ -193,7 +193,39 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.16865/j.cnki.1000-7555.2020.0282",
-      "verification": "unverified"
+      "verification": "unverified",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "油水混合物和乳化油",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "微纳粗糙结构+低表面能涂层",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "Cassie-Baxter态截留空气层实现超疏水/超亲油选择性",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "表面张力差异和空气层阻隔实现选择性润湿",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "表面粗糙度和涂层稳定性决定耐久性",
+            "parameter": "general",
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            }
+          }
+        ],
+        "transferable_principle": "微纳粗糙结构+低表面能涂层"
+      }
     },
     {
       "name": "PTFE涂层不锈钢网膜超疏水性能 - Feng等2004",

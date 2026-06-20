@@ -25,7 +25,39 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1007/s40242-021-0010-4",
-      "verification": "unverified"
+      "verification": "unverified",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "雾气/水滴",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "仙人掌刺锥形微结构+梯度润湿性",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "毛细力驱动液体沿锥形尖端定向传输",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "锥形结构产生拉普拉斯压力梯度，驱动液体从尖端向基部运动",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "表面润湿性需匹配目标液体",
+            "parameter": "general",
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            }
+          }
+        ],
+        "transferable_principle": "仙人掌刺锥形微结构+梯度润湿性"
+      }
     },
     {
       "name": "静电纺丝纤维形貌调控因素",
