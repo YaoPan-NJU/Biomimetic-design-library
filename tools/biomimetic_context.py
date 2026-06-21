@@ -406,8 +406,14 @@ class BiomimeticContext:
                     # Boost coordination/chelation mechanisms for heavy-metal queries
                     match_reason = (c.get('reason', '') or '').lower()
                     if any(kw in match_reason for kw in ['螯合', '配位', 'chelat', 'coordination']):
-                        if any(kw in mech_name for kw in ['配位', '螯合', 'coordination', 'chelat', 'DOPA', 'dopa']):
-                            score += 5
+                        if any(kw in mech_name for kw in ['螯合', 'chelat']):
+                            score += 8  # Strong boost for chelation
+                        elif any(kw in mech_name for kw in ['配位', 'coordination', 'DOPA', 'dopa']):
+                            score += 5  # Moderate boost for coordination
+
+                    # Boost mechanisms that mention the pollutant class
+                    if pollutant_class and pollutant_class.lower() in mech_name:
+                        score += 3
 
                     # Check if mechanism has causal_chain
                     cc = m.get('causal_chain', {})

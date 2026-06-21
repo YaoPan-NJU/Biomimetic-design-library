@@ -32,7 +32,7 @@
       {
         "prototype_id": "mussel-foot-adhesion",
         "organism": "Mytilus spp.",
-        "candidate_honesty": "fact",
+        "candidate_honesty": "lead",
         "match": {
           "reason": "DOPA对Pb²⁺有强螯合能力",
           "weight": 0.9,
@@ -41,23 +41,23 @@
           "direct_evidence": true
         },
         "mechanism": {
-          "name": "PDA自聚合形成机制 PDA self-polymerization mechanism",
+          "name": "吸附机制-螯合作用 / Adsorption mechanism - chelation",
           "selected_mechanism_reason": "Query-conditioned scoring selected this mechanism for Pb(II) based on relevance to matched features/interactions",
           "selected_mechanism_alignment": {
             "query_pollutant": "Pb(II)",
             "query_class": "重金属",
-            "mechanism_keywords": "PDA自聚合形成机制 PDA self-polymerization mechanism",
+            "mechanism_keywords": "吸附机制-螯合作用 / Adsorption mechanism - chelation",
             "alignment_basis": "query_relevance_scoring"
           },
-          "基本原理": "PDA涂层可在几乎所有基底（金属、氧化物、聚合物、陶瓷）上形成均匀薄膜，保留邻苯二酚和胺基活性位点，同时提供粘附力",
+          "基本原理": "needs_review",
           "key_structures": [],
-          "functional_groups": "",
+          "functional_groups": "含氮基团（儿茶酚/胺基）",
           "molecular_feature_links": [],
           "attribution": {
-            "source": "literature",
-            "ref": "10.1039/d1cs00658d",
-            "verification_tier": "verified",
-            "confidence": "normal"
+            "source": "patent",
+            "ref": null,
+            "verification_tier": "needs_review",
+            "confidence": "low"
           }
         },
         "design_translation": {
@@ -75,36 +75,15 @@
         },
         "boundaries": [
           {
-            "text": "弱酸性以下自聚合速率极慢，涂层难以形成",
-            "parameter": "pH",
-            "gate_level": "soft",
-            "basis": "llm_inferred",
-            "verification": "needs_review"
-          },
-          {
-            "text": "涂层厚度随时间增加但活性位点密度下降",
+            "text": "适用条件需根据具体机制验证",
             "parameter": "other",
-            "gate_level": "soft",
-            "basis": "llm_inferred",
-            "verification": "needs_review"
-          },
-          {
-            "text": "弱酸性以下DOPA自聚合速率极慢，涂层难以形成",
-            "parameter": "pH",
-            "gate_level": "soft",
-            "basis": "llm_inferred",
-            "verification": "needs_review"
-          },
-          {
-            "text": "碱性条件下邻苯二酚氧化为醌，丧失双齿配位能力",
-            "parameter": "pH",
             "gate_level": "soft",
             "basis": "llm_inferred",
             "verification": "needs_review"
           }
         ],
-        "honesty_summary": "有直接实验数据且机制经验证",
-        "boundary_summary": "4 条软限制（caution）",
+        "honesty_summary": "有直接实验数据但机制未经独立核实",
+        "boundary_summary": "1 条软限制（caution）",
         "evidence_context": {
           "performance_leads": [
             {
@@ -341,7 +320,7 @@
       {
         "prototype_id": "chitosan",
         "organism": "Crustacea",
-        "candidate_honesty": "fact",
+        "candidate_honesty": "lead",
         "match": {
           "reason": "壳聚糖的氨基和羟基可与Pb(II)形成配位键",
           "weight": 0.8,
@@ -350,23 +329,23 @@
           "direct_evidence": true
         },
         "mechanism": {
-          "name": "金属离子络合机制 Metal ion complexation mechanism",
+          "name": "壳聚糖化学吸附的通用机理",
           "selected_mechanism_reason": "Query-conditioned scoring selected this mechanism for Pb(II) based on relevance to matched features/interactions",
           "selected_mechanism_alignment": {
             "query_pollutant": "Pb(II)",
             "query_class": "重金属",
-            "mechanism_keywords": "金属离子络合机制 Metal ion complexation mechanism",
+            "mechanism_keywords": "壳聚糖化学吸附的通用机理",
             "alignment_basis": "query_relevance_scoring"
           },
-          "基本原理": "壳聚糖的氨基对软酸金属（Hg²⁺、Pb²⁺、Cu²⁺）有高亲和力，形成稳定的五元或六元螯合环；Cu²⁺在Irving-Williams序列中稳定性最高（log K~8）",
+          "基本原理": "壳聚糖分子链上的氨基（-NH₂）可通过质子化带正电，与带负电的污染物（如染料、重金属阴离子）通过静电吸引结合",
           "key_structures": [],
-          "functional_groups": "",
+          "functional_groups": "羧基(-COOH)、羟基(-OH)、巯基(-SH)、氨基(-NH₂)",
           "molecular_feature_links": [],
           "attribution": {
             "source": "literature",
-            "ref": "10.1016/j.carbpol.2020.117000",
-            "verification_tier": "verified",
-            "confidence": "normal"
+            "ref": "10.13822/j.cnki.hxsj.2022008755",
+            "verification_tier": "needs_review",
+            "confidence": "low"
           }
         },
         "design_translation": {
@@ -384,36 +363,15 @@
         },
         "boundaries": [
           {
-            "text": "强酸性条件下氨基完全质子化，失去金属配位能力",
-            "parameter": "pH",
-            "gate_level": "soft",
-            "basis": "llm_inferred",
-            "verification": "needs_review"
-          },
-          {
-            "text": "高浓度Ca²⁺、Mg²⁺竞争配位位点",
-            "parameter": "competing_ion",
-            "gate_level": "soft",
-            "basis": "llm_inferred",
-            "verification": "needs_review"
-          },
-          {
-            "text": "强酸性条件下壳聚糖溶解，氨基完全质子化失去配位能力",
-            "parameter": "pH",
-            "gate_level": "soft",
-            "basis": "llm_inferred",
-            "verification": "needs_review"
-          },
-          {
-            "text": "碱性条件下氨基去质子化，对阴离子吸附能力下降",
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
             "parameter": "pH",
             "gate_level": "soft",
             "basis": "llm_inferred",
             "verification": "needs_review"
           }
         ],
-        "honesty_summary": "有直接实验数据且机制经验证",
-        "boundary_summary": "4 条软限制（caution）",
+        "honesty_summary": "有直接实验数据但机制未经独立核实",
+        "boundary_summary": "1 条软限制（caution）",
         "evidence_context": {
           "performance_leads": [
             {
