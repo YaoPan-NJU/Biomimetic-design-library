@@ -2,8 +2,8 @@
 
 **Date**: 2026-06-21
 **Total mechanisms**: 510
-**Qualified causal cards**: 88
-**Missing causal_chain**: 422
+**Qualified causal cards**: 510
+**Missing causal_chain**: 0
 
 | Prototype | Mechs | Perf | Qualified | Missing CC | Source-backed | DT Complete |
 |-----------|-------|------|-----------|------------|---------------|-------------|
@@ -43,6 +43,17 @@
 | silkworm-silk | 1 | 0 | 1 | 0 | 0 | ❌ |
 | starch-granule | 1 | 61 | 1 | 0 | 1 | ✅ |
 | sulfate-reducing-bacteria | 1 | 0 | 1 | 0 | 1 | ❌ |
+
+
+## Causal Chain Support Levels (Post-M8)
+
+| Level | Count | Description |
+|-------|-------|-------------|
+| Source-verified | 31 | Has from_source basis with locator |
+| Source-backed inferred | 415 | Has DOI/patent reference but llm_inferred basis |
+| Generic inferred | 64 | No DOI, llm_inferred, generic template text |
+
+**Evidence debt**: 415 source-backed entries need PDF/source extraction to upgrade from llm_inferred to from_source. 64 generic entries need source identification or demotion.
 
 ## Summary
 - Total mechanisms: 510
