@@ -28,19 +28,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "湍流阻力和污染物附着",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.14 / Section 6.3 text + Table 2"
         },
         "bio_structure": {
           "text": "鲨鱼皮盾鳞微结构（riblet）",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.14 / Section 6.3 text + Table 2"
         },
         "interaction": {
           "text": "微结构减少湍流涡旋和污染物接触面积",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.14 / Section 6.3 text + Table 2"
         },
         "why_it_works": {
           "text": "riblet结构改变边界层流动，减少剪切应力和颗粒沉降",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.14 / Section 6.3 text + Table 2"
         },
         "boundary_conditions": [
           {
@@ -55,7 +59,10 @@
             }
           }
         ],
-        "transferable_principle": "鲨鱼皮盾鳞微结构（riblet）"
+        "transferable_principle": "鲨鱼皮盾鳞微结构（riblet）",
+        "verification_quote": "Surfaces with moderate wettability present a conducive surface for bacteria attachment due to the formation of hydrogen bonds... Lee et al. demonstrated that bacteria adhered and grew on the hydrophilic surface with a water contact angle between 40° and 70°. Dou et al. showed enhanced adsorption of ",
+        "source_doi": "10.1002/admi.202201425",
+        "source_locator": "p.14 / Section 6.3 text + Table 2"
       }
     },
     {
