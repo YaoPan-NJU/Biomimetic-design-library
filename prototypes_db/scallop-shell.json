@@ -111,7 +111,42 @@
       "source": "literature",
       "ref_doi": "10.11759/hykx20221122001",
       "verification": "partial",
-      "verification_quote": "氧化钙的Ｏ−Ｈ 键也利于与刚果红分子发生氢键作用"
+      "verification_quote": "氧化钙的Ｏ−Ｈ 键也利于与刚果红分子发生氢键作用",
+      "causal_chain": {
+        "transferable_principle": "基于机制: 吸附机理增强因素",
+        "pollutant_feature": {
+          "text": "氢键作用 (Ca(OH)2的O-H键与刚果红分子)",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "吸附机理增强因素",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "氢键作用 (Ca(OH)2的O-H键与刚果红分子)",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "吸附机理增强因素",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     }
   ],
   "narrative": {

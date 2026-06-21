@@ -346,7 +346,42 @@
       "source": "literature",
       "ref_doi": "10.1016/j.colsurfa.2021.126972",
       "verification": "partial",
-      "verification_quote": "The fairly high adsorption capacity of TRGAA hydrogel toward MB should be attributed to the synergistic effect of distinctive chemical composition and porous layered structure."
+      "verification_quote": "The fairly high adsorption capacity of TRGAA hydrogel toward MB should be attributed to the synergistic effect of distinctive chemical composition and porous layered structure.",
+      "causal_chain": {
+        "transferable_principle": "基于机制: 吸附机制",
+        "pollutant_feature": {
+          "text": "π-π堆积（TA-rGO芳香环与MB芳香环）、氢键（MB氮原子与-COOH/-SO₃H）、静电作用（-COO⁻/-SO₃⁻与阳离子MB）",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "吸附机制",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "π-π堆积（TA-rGO芳香环与MB芳香环）、氢键（MB氮原子与-COOH/-SO₃H）、静电作用（-COO⁻/-SO₃⁻与阳离子MB）",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "吸附机制",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "吸附机理",
@@ -432,7 +467,42 @@
       "source": "literature",
       "ref_doi": "10.1016/j.indcrop.2022.116106",
       "verification": "partial",
-      "verification_quote": "FTIR test data show that DOLE contains a large number of hydroxyl groups, carbonyl groups and unsaturated functional groups, and a large number of lone electron pairs can coordinate with the empty d orbital of Fe, which leads to the formation of chemical adsorption of DOLE at X70 steel."
+      "verification_quote": "FTIR test data show that DOLE contains a large number of hydroxyl groups, carbonyl groups and unsaturated functional groups, and a large number of lone electron pairs can coordinate with the empty d orbital of Fe, which leads to the formation of chemical adsorption of DOLE at X70 steel.",
+      "causal_chain": {
+        "transferable_principle": "基于机制: 缓蚀机理",
+        "pollutant_feature": {
+          "text": "DOLE分子通过羟基、羰基和共轭环上的孤对电子与Fe空d轨道配位形成化学吸附，同时范德华力和静电作用贡献物理吸附，在X70钢表面形成保护性吸附膜，同时阻滞阴极（H+还原）和阳极（Fe溶解）反应",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "缓蚀机理",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "DOLE分子通过羟基、羰基和共轭环上的孤对电子与Fe空d轨道配位形成化学吸附，同时范德华力和静电作用贡献物理吸附，在X70钢表面形成保护性吸附膜，同时阻滞阴极（H+还原）和阳极（Fe溶解）反应",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "缓蚀机理",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "BPA吸附机理",
@@ -441,7 +511,42 @@
       "source": "literature",
       "ref_doi": "10.1016/j.matchemphys.2024.129770",
       "verification": "partial",
-      "verification_quote": "The adsorption of BPA was best fitted with the pseudo-second-order kinetic and Freundlich models."
+      "verification_quote": "The adsorption of BPA was best fitted with the pseudo-second-order kinetic and Freundlich models.",
+      "causal_chain": {
+        "transferable_principle": "基于机制: BPA吸附机理",
+        "pollutant_feature": {
+          "text": "Pore filling, hydrogen bonding, π-π interactions",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "BPA吸附机理",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "Pore filling, hydrogen bonding, π-π interactions",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "BPA吸附机理",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "Cr(VI)吸附机制总结",
@@ -450,7 +555,42 @@
       "source": "literature",
       "ref_doi": "10.1016/j.seppur.2024.127979",
       "verification": "partial",
-      "verification_quote": "The adsorption mechanism for Cr(VI) involved electrostatic interactions, reduction, and chelation."
+      "verification_quote": "The adsorption mechanism for Cr(VI) involved electrostatic interactions, reduction, and chelation.",
+      "causal_chain": {
+        "transferable_principle": "基于机制: Cr(VI)吸附机制总结",
+        "pollutant_feature": {
+          "text": "静电吸引 + 还原(Cr(VI)→Cr(III)) + 螯合",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "Cr(VI)吸附机制总结",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "静电吸引 + 还原(Cr(VI)→Cr(III)) + 螯合",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "Cr(VI)吸附机制总结",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "Cu(II)吸附机制总结",
@@ -459,7 +599,42 @@
       "source": "literature",
       "ref_doi": "10.1016/j.seppur.2024.127979",
       "verification": "partial",
-      "verification_quote": "For Cu(II), including chelation. FTIR, XPS and DFT calculations revealed the amine group of the PEI and the phenolic hydroxyl group on TA are the main adsorption sites."
+      "verification_quote": "For Cu(II), including chelation. FTIR, XPS and DFT calculations revealed the amine group of the PEI and the phenolic hydroxyl group on TA are the main adsorption sites.",
+      "causal_chain": {
+        "transferable_principle": "基于机制: Cu(II)吸附机制总结",
+        "pollutant_feature": {
+          "text": "螯合(-OH, -NH2) + 离子交换",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "Cu(II)吸附机制总结",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合(-OH, -NH2) + 离子交换",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "Cu(II)吸附机制总结",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "CR吸附机制总结",
@@ -468,7 +643,42 @@
       "source": "literature",
       "ref_doi": "10.1016/j.seppur.2024.127979",
       "verification": "partial",
-      "verification_quote": "For CR, adsorption through electrostatic attraction, π-π interactions, and Schiff base formation."
+      "verification_quote": "For CR, adsorption through electrostatic attraction, π-π interactions, and Schiff base formation.",
+      "causal_chain": {
+        "transferable_principle": "基于机制: CR吸附机制总结",
+        "pollutant_feature": {
+          "text": "静电吸引 + π-π堆叠 + 席夫碱反应 + 氢键",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "CR吸附机制总结",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "静电吸引 + π-π堆叠 + 席夫碱反应 + 氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "CR吸附机制总结",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     }
   ],
   "narrative": {

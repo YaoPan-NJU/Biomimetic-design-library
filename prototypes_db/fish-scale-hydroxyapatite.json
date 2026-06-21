@@ -542,7 +542,42 @@
       "source": "literature",
       "ref_doi": "10.1016/j.chemosphere.2021.131962",
       "verification": "needs_review",
-      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移"
+      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "causal_chain": {
+        "transferable_principle": "基于机制: 疏水相互作用证据",
+        "pollutant_feature": {
+          "text": "CIP溶解度最低在pH 7→最大吸附在pH 5-8→负相关→疏水作用主导",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "疏水相互作用证据",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "CIP溶解度最低在pH 7→最大吸附在pH 5-8→负相关→疏水作用主导",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "疏水相互作用证据",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "MICP化学反应机理",
@@ -550,7 +585,42 @@
       "functional_groups": "",
       "source": "patent",
       "ref_doi": null,
-      "verification": "unverified"
+      "verification": "unverified",
+      "causal_chain": {
+        "transferable_principle": "基于机制: MICP化学反应机理",
+        "pollutant_feature": {
+          "text": "脲酶水解尿素: CO(NH₂)₂+H₂O→NH₂COOH+NH₃; NH₂COOH+H₂O→NH₃+H₂CO₃; 最终产生CO₃²⁻+Ca²⁺→CaCO₃↓",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "MICP化学反应机理",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "脲酶水解尿素: CO(NH₂)₂+H₂O→NH₂COOH+NH₃; NH₂COOH+H₂O→NH₃+H₂CO₃; 最终产生CO₃²⁻+Ca²⁺→CaCO₃↓",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "MICP化学反应机理",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     }
   ],
   "narrative": {

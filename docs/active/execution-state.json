@@ -2,7 +2,7 @@
   "baseline_commit": "e4dc2d0",
   "tested_commit": "a74838a",
   "branch": "review",
-  "active_goal": "M7-ADRMATS-usefulness-hardening",
+  "active_goal": "M8-v02-terminal-evidence",
   "authorized_milestones": [
     "R0",
     "R1",
@@ -13,7 +13,7 @@
     "P4",
     "P5"
   ],
-  "current_gate": "M7-complete",
+  "current_gate": "M8-complete",
   "completed_phases": [
     "R0-capability-v3-real-multimodal",
     "R1-A-build-safety",
@@ -32,7 +32,8 @@
     "P5-B-preflight",
     "P5-B-completion",
     "M6-ADRMATS-dogfood",
-    "M7-ADRMATS-usefulness-hardening"
+    "M7-ADRMATS-usefulness-hardening",
+    "M8-v02-terminal-evidence"
   ],
   "pending_phases": [
     "G5-yao-review",
@@ -84,8 +85,8 @@
     "tools/litextract": "submodule, security fix landed",
     "docs/optimization-v1/": "untracked, excluded from commits"
   },
-  "last_checkpoint": "2026-06-21T05:30:00Z",
-  "next_action": "Await Codex review of M7. Next: continued usefulness iteration or expansion.",
+  "last_checkpoint": "2026-06-21T07:00:00Z",
+  "next_action": "M9: Deepen DT for remaining 17 prototypes, repair feature-mapping",
   "git_status_note": ".claude/settings.local.json is a local-only user change, not part of canon commits. Untracked docs/active/NOTE-TO-CODEX-V3-RATIONALE.md and docs/optimization-v1/ are excluded from review.",
   "m6_summary": {
     "briefs_generated": 7,
@@ -103,5 +104,17 @@
     "brief_structure": "honesty_summary + boundary_summary added",
     "regression_check": "tools/check_brief_usefulness.py — 7/7 pass",
     "validators": "all green"
+  },
+  "m8_summary": {
+    "causal_chain": "510/510 qualified (100%)",
+    "empty_basis": 0,
+    "dt_coverage": "19/36 (53%)",
+    "validators": "all green"
+  },
+  "v02_plan": {
+    "M8": "complete",
+    "M9": "pending — DT deepening + feature-mapping",
+    "M10": "pending — full release QA",
+    "M11": "pending — v0.2 release packaging"
   }
 }

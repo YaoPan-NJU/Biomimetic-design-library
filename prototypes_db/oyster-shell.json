@@ -224,7 +224,42 @@
       "source": "literature",
       "ref_doi": "10.13254/j.jare.2020.0504",
       "verification": "partial",
-      "verification_quote": "贝壳类废弃物修复重金属污染农田土壤的机理主要包括石灰效应、沉淀效应和吸附效应"
+      "verification_quote": "贝壳类废弃物修复重金属污染农田土壤的机理主要包括石灰效应、沉淀效应和吸附效应",
+      "causal_chain": {
+        "transferable_principle": "基于机制: 钝化机理",
+        "pollutant_feature": {
+          "text": "石灰效应, 沉淀效应, 物理吸附, 离子交换",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "钝化机理",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "石灰效应, 沉淀效应, 物理吸附, 离子交换",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "钝化机理",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     }
   ],
   "narrative": {

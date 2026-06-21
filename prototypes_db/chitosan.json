@@ -2202,7 +2202,42 @@
       "source": "literature",
       "ref_doi": "10.1016/j.carbpol.2020.117000",
       "verification": "needs_review",
-      "基本原理": "壳聚糖表面的活性基团（-NH₂、-OH）与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移"
+      "基本原理": "壳聚糖表面的活性基团（-NH₂、-OH）与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: pHpzc对吸附机制的影响 pHpzc effect on ）",
+        "pollutant_feature": {
+          "text": "CCS pHpzc=5.74, PACCS pHpzc=4.85; CCS最佳pH=6, PACCS最佳pH=5",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "pHpzc对吸附机制的影响 pHpzc effect on adsorption mechanism",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "表面沉淀机制 Surface precipitation mechanism",
@@ -2211,7 +2246,42 @@
       "source": "literature",
       "ref_doi": "10.1016/j.carbpol.2020.117000",
       "verification": "needs_review",
-      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合"
+      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 表面沉淀机制 Surface precipitation m）",
+        "pollutant_feature": {
+          "text": "仅Cr(III)观察到沉淀（因Cr(OH)3第一稳定常数远高于其他离子）；其他离子（Cu, Zn, Ni, Pb, Cd, Mn, Co）遵循络合、离子交换和静电机制",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "表面沉淀机制 Surface precipitation mechanism",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "FTIR表征——吸附前后对比",
@@ -2221,7 +2291,42 @@
       "ref_doi": "10.1016/j.molliq.2020.114523",
       "verification": "needs_review",
       "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合",
-      "verification_quote": "2854, 1641, 1383, and 1049 cm−1 also showed a marked decrease."
+      "verification_quote": "2854, 1641, 1383, and 1049 cm−1 also showed a marked decrease.",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: FTIR表征——吸附前后对比）",
+        "pollutant_feature": {
+          "text": "吸附后：3446→3429 cm⁻¹偏移(Pb与-COO⁻静电/配位)；2923/2854/1641/1383/1049 cm⁻¹峰强度显著降低→Pb与-COO⁻和-NHCOO⁻形成静电和配位键",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "FTIR表征——吸附前后对比",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "XPS表征——C 1s和N 1s",
@@ -2231,7 +2336,42 @@
       "ref_doi": "10.1016/j.molliq.2020.114523",
       "verification": "needs_review",
       "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合",
-      "verification_quote": "However, three N 1s peaks at 399."
+      "verification_quote": "However, three N 1s peaks at 399.",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: XPS表征——C 1s和N 1s）",
+        "pollutant_feature": {
+          "text": "C 1s：284.7(C-O)/286.55(C=O)/288.45(COO⁻)→吸附前后无显著变化→Pb不与C配位；N 1s：吸附前399.8 eV(-NH₂)→吸附后三峰399.55(-NH₂)/",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "XPS表征——C 1s和N 1s",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "制备方法",
@@ -2241,7 +2381,42 @@
       "ref_doi": "10.1016/j.molliq.2020.114523",
       "verification": "needs_review",
       "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合",
-      "verification_quote": "In this study, carboxylated chitosan (CYCS) and carboxylated nanocellulose (CNC) were used to"
+      "verification_quote": "In this study, carboxylated chitosan (CYCS) and carboxylated nanocellulose (CNC) were used to",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 制备方法）",
+        "pollutant_feature": {
+          "text": "羧基化壳聚糖(CYCS)+羧基化纳米纤维素(CNC)在CaCl₂溶液中螯合交联→形成水凝胶珠；CYCS通过壳聚糖羧甲基取代获得→取代度>60%；成本显著低于CMCS",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "制备方法",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "吸附机制——综合分析",
@@ -2255,7 +2430,42 @@
       "ref_doi": "10.1016/j.molliq.2020.114523",
       "verification": "needs_review",
       "基本原理": "壳聚糖分子链上的羟基（-OH）可与污染物形成氢键，或通过配位作用结合金属离子",
-      "verification_quote": "The stretching vibration peak of C-OH at"
+      "verification_quote": "The stretching vibration peak of C-OH at",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 吸附机制——综合分析）",
+        "pollutant_feature": {
+          "text": "化学吸附为主(PSO拟合+XPS证据)；-COO⁻与Pb²⁺静电吸引+配位；-NH₂孤对电子与Pb形成共价键；可能生成碳酸铅/氧化铅沉淀；三种官能团(-OH/-COO⁻/-NH₂)协同参与",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "吸附机制——综合分析",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "CS/GO复合物对MB吸附的π-π堆积机制",
@@ -2264,7 +2474,42 @@
       "source": "literature",
       "ref_doi": "10.3390/molecules26030594",
       "verification": "needs_review",
-      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合"
+      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: CS/GO复合物对MB吸附的π-π堆积机制）",
+        "pollutant_feature": {
+          "text": "MB通过π-π堆积与GO层相互作用，GO-COO-与阳离子MB的静电相互作用辅助吸附",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "CS/GO复合物对MB吸附的π-π堆积机制",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "壳聚糖对阴离子染料的吸附机制",
@@ -2273,7 +2518,42 @@
       "source": "literature",
       "ref_doi": "10.3390/molecules26030594",
       "verification": "needs_review",
-      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合"
+      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 壳聚糖对阴离子染料的吸附机制）",
+        "pollutant_feature": {
+          "text": "低pH时壳聚糖阳离子中心与阴离子染料的静电相互作用；中性pH时静电、范德华力和氢键共同作用",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "壳聚糖对阴离子染料的吸附机制",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "抗生素在CS/GO复合物上的吸附机制",
@@ -2282,7 +2562,42 @@
       "source": "literature",
       "ref_doi": "10.3390/molecules26030594",
       "verification": "needs_review",
-      "基本原理": "壳聚糖分子链上的氨基（-NH₂）可通过质子化带正电，与带负电的污染物（如染料、重金属阴离子）通过静电吸引结合"
+      "基本原理": "壳聚糖分子链上的氨基（-NH₂）可通过质子化带正电，与带负电的污染物（如染料、重金属阴离子）通过静电吸引结合",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 抗生素在CS/GO复合物上的吸附机制）",
+        "pollutant_feature": {
+          "text": "π-π电子供体-受体相互作用（苯环与碳表面）+氢键（-OH、C=O、-NH2与碳表面含氧基团）+疏水相互作用",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "抗生素在CS/GO复合物上的吸附机制",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "CS/GO水凝胶形成机制",
@@ -2291,7 +2606,42 @@
       "source": "literature",
       "ref_doi": "10.3390/molecules26030594",
       "verification": "needs_review",
-      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合"
+      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: CS/GO水凝胶形成机制）",
+        "pollutant_feature": {
+          "text": "壳聚糖-NH基团与GO-COOH基团反应形成-NHCO-连接基团，加上静电相互作用和氢键",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "CS/GO水凝胶形成机制",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "壳聚糖对阴离子染料吸附的pH依赖性",
@@ -2300,7 +2650,42 @@
       "source": "literature",
       "ref_doi": "10.3390/molecules26030594",
       "verification": "needs_review",
-      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合"
+      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 壳聚糖对阴离子染料吸附的pH依赖性）",
+        "pollutant_feature": {
+          "text": "低pH时壳聚糖-NH3+与阴离子染料静电吸引占主导；中性pH时静电+范德华力+氢键共同作用",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "壳聚糖对阴离子染料吸附的pH依赖性",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "壳聚糖吸附砷的机制 Arsenic adsorption mechanisms on chitosan",
@@ -2309,7 +2694,42 @@
       "source": "literature",
       "ref_doi": "10.1016/j.ijbiomac.2021.10.050",
       "verification": "needs_review",
-      "基本原理": "壳聚糖分子链上的氨基（-NH₂）可通过质子化带正电，与带负电的污染物（如染料、重金属阴离子）通过静电吸引结合"
+      "基本原理": "壳聚糖分子链上的氨基（-NH₂）可通过质子化带正电，与带负电的污染物（如染料、重金属阴离子）通过静电吸引结合",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 壳聚糖吸附砷的机制 Arsenic adsorption m）",
+        "pollutant_feature": {
+          "text": "As(V)通过静电相互作用吸附(阴离子砷酸盐与质子化氨基)；As(III)通过络合机制吸附(中性H3AsO3)；铁-壳聚糖复合材料涉及内球配合物形成",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "壳聚糖吸附砷的机制 Arsenic adsorption mechanisms on chitosa",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "壳聚糖-氧化铝复合材料的砷吸附机制 As adsorption on chitosan-alumina composite",
@@ -2318,7 +2738,42 @@
       "source": "literature",
       "ref_doi": "10.1016/j.ijbiomac.2021.10.050",
       "verification": "needs_review",
-      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合"
+      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 壳聚糖-氧化铝复合材料的砷吸附机制 As adsorptio）",
+        "pollutant_feature": {
+          "text": "氧化铝在复合珠表面产生正电荷，通过静电吸引吸附阴离子砷物种；复合物涉及络合和离子交换机制",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "壳聚糖-氧化铝复合材料的砷吸附机制 As adsorption on chitosan-alumin",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "壳聚糖基生物吸附剂的内球/外球吸附机制 Inner/outer sphere adsorption mechanisms",
@@ -2327,7 +2782,42 @@
       "source": "literature",
       "ref_doi": "10.1016/j.ijbiomac.2021.10.050",
       "verification": "needs_review",
-      "基本原理": "壳聚糖表面的活性基团（-NH₂、-OH）与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移"
+      "基本原理": "壳聚糖表面的活性基团（-NH₂、-OH）与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 壳聚糖基生物吸附剂的内球/外球吸附机制 Inner/oute）",
+        "pollutant_feature": {
+          "text": "外球机制：金属离子仅与复合物表面相互作用(受离子强度影响)；内球机制：金属离子扩散进入复合物内部形成配合物(不受离子强度影响)",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "壳聚糖基生物吸附剂的内球/外球吸附机制 Inner/outer sphere adsorption ",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "壳聚糖基吸附剂的氧化铝/二氧化钛嵌入机制 Al2O3/TiO2-impregnated chitosan arsenic removal mechanism",
@@ -2336,7 +2826,42 @@
       "source": "literature",
       "ref_doi": "10.1016/j.ijbiomac.2021.10.050",
       "verification": "needs_review",
-      "基本原理": "壳聚糖表面的活性基团（-NH₂、-OH）与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移"
+      "基本原理": "壳聚糖表面的活性基团（-NH₂、-OH）与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 壳聚糖基吸附剂的氧化铝/二氧化钛嵌入机制 Al2O3/TiO）",
+        "pollutant_feature": {
+          "text": "三步机制：扩散→氧化→吸附；As(III)先扩散至TiO2附近被氧化为As(V)，Al2O3接收砷酸盐离子使TiO2空出继续氧化",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "壳聚糖基吸附剂的氧化铝/二氧化钛嵌入机制 Al2O3/TiO2-impregnated chitos",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "pH对氮污染物吸附的影响机制 pH effect on N-pollutants adsorption",
@@ -2438,7 +2963,42 @@
       "source": "literature",
       "ref_doi": "10.1016/j.carbpol.2021.118625",
       "verification": "needs_review",
-      "基本原理": "壳聚糖分子链上的氨基（-NH₂）可通过质子化带正电，与带负电的污染物（如染料、重金属阴离子）通过静电吸引结合"
+      "基本原理": "壳聚糖分子链上的氨基（-NH₂）可通过质子化带正电，与带负电的污染物（如染料、重金属阴离子）通过静电吸引结合",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 酸浸碳/壳聚糖/FeCl3吸附机制 Acid-leached）",
+        "pollutant_feature": {
+          "text": "41.9 mg/g (Langmuir); 机制: H键、FeCl3引入Cl-与NO3-离子交换、酸性介质中质子化羟基/氨基/Fe静电作用",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "酸浸碳/壳聚糖/FeCl3吸附机制 Acid-leached carbon/chitosan/FeC",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "La3+掺入壳聚糖膜HSAB机制 La3+-chitosan HSAB mechanism",
@@ -2447,7 +3007,42 @@
       "source": "literature",
       "ref_doi": "10.1016/j.carbpol.2021.118625",
       "verification": "needs_review",
-      "基本原理": "壳聚糖分子链上的羟基（-OH）可与污染物形成氢键，或通过配位作用结合金属离子"
+      "基本原理": "壳聚糖分子链上的羟基（-OH）可与污染物形成氢键，或通过配位作用结合金属离子",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: La3+掺入壳聚糖膜HSAB机制 La3+-chitosan）",
+        "pollutant_feature": {
+          "text": "基于HSAB硬酸-硬碱静电吸引：-NH3+、-OH2+、La3+（硬酸）与NO3-（硬碱）作用",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "La3+掺入壳聚糖膜HSAB机制 La3+-chitosan HSAB mechanism",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "FS/CA仿荷叶超疏水ENM——油水分离",
@@ -2456,7 +3051,42 @@
       "source": "literature",
       "ref_doi": "10.1007/s10924-021-02312-1",
       "verification": "needs_review",
-      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物"
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: FS/CA仿荷叶超疏水ENM——油水分离）",
+        "pollutant_feature": {
+          "text": "水接触角~155°; 24h浸泡无水溶胀",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "FS/CA仿荷叶超疏水ENM——油水分离",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "环糊精宿主-客体包合——有机污染物选择性去除",
@@ -2466,7 +3096,42 @@
       "ref_doi": "10.1007/s10924-021-02312-1",
       "verification": "needs_review",
       "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合",
-      "verification_quote": "polycyclic aromatic hydrocarbons (PAH, including acenaph-            area along with high content of active CD for inclusion"
+      "verification_quote": "polycyclic aromatic hydrocarbons (PAH, including acenaph-            area along with high content of active CD for inclusion",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 环糊精宿主-客体包合——有机污染物选择性去除）",
+        "pollutant_feature": {
+          "text": "疏水空腔+亲水外表面→包合有机分子(PAH/药物/染料); 同时羧基/羰基→静电吸附金属离子",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "环糊精宿主-客体包合——有机污染物选择性去除",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "铁掺杂壳聚糖ENM——As(III)去除机理",
@@ -2476,7 +3141,42 @@
       "ref_doi": "10.1007/s10924-021-02312-1",
       "verification": "needs_review",
       "基本原理": "壳聚糖表面的活性基团（-NH₂、-OH）与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
-      "verification_quote": "iron oxide and As(III)."
+      "verification_quote": "iron oxide and As(III).",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 铁掺杂壳聚糖ENM——As(III)去除机理）",
+        "pollutant_feature": {
+          "text": "内球络合(iron oxide + As(III))",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "铁掺杂壳聚糖ENM——As(III)去除机理",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "Freeze drying mechanism and conditions",
@@ -2485,7 +3185,42 @@
       "source": "literature",
       "ref_doi": "10.1016/j.scitotenv.2021.150606",
       "verification": "needs_review",
-      "基本原理": "needs_review"
+      "基本原理": "needs_review",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: Freeze drying mechanism and co）",
+        "pollutant_feature": {
+          "text": "Liquid phase → gaseous phase via sublimation under vacuum at low temperature/pressure; avoids liquid",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "Freeze drying mechanism and conditions",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "Three main adsorption mechanisms",
@@ -2494,7 +3229,42 @@
       "source": "literature",
       "ref_doi": "10.1016/j.scitotenv.2021.150606",
       "verification": "needs_review",
-      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合"
+      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: Three main adsorption mechanis）",
+        "pollutant_feature": {
+          "text": "(1) Electrostatic interaction; (2) Complexation; (3) Ion exchange",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "Three main adsorption mechanisms",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "PEI-grafted cellulose aerogel - Cr(VI) removal mechanism",
@@ -2503,7 +3273,42 @@
       "source": "literature",
       "ref_doi": "10.1016/j.scitotenv.2021.150606",
       "verification": "needs_review",
-      "基本原理": "壳聚糖的氨基和羟基可与重金属离子形成配位键，实现特异性吸附"
+      "基本原理": "壳聚糖的氨基和羟基可与重金属离子形成配位键，实现特异性吸附",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: PEI-grafted cellulose aerogel ）",
+        "pollutant_feature": {
+          "text": "Amino groups and carboxyl groups participate in cationic exchange with divalent metal ions; XPS conf",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "PEI-grafted cellulose aerogel - Cr(VI) removal mec",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "电纺膜功能化——防污策略",
@@ -2512,7 +3317,42 @@
       "source": "literature",
       "ref_doi": "10.1007/s13762-021-03603-9",
       "verification": "needs_review",
-      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物"
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 电纺膜功能化——防污策略）",
+        "pollutant_feature": {
+          "text": "3种防污策略：(1)纳米材料掺杂→减少污染+降低能耗; (2)添加剂/分散剂→改善表面性能; (3)油酸/表面活性剂→疏水改性",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "电纺膜功能化——防污策略",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "电纺膜——优势与局限性总结",
@@ -2521,7 +3361,42 @@
       "source": "literature",
       "ref_doi": "10.1007/s13762-021-03603-9",
       "verification": "needs_review",
-      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合"
+      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 电纺膜——优势与局限性总结）",
+        "pollutant_feature": {
+          "text": "优势: 高比表面积; 高孔隙率; 可调孔径; 无需化学品; 高效省时; 局限: 机械强度差(需支撑); 污染问题; 静电积累; 纤维处理困难",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "电纺膜——优势与局限性总结",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "Mechanism of Microplastic Removal by Chitin/GO Sponges",
@@ -2530,7 +3405,42 @@
       "source": "literature",
       "ref_doi": "10.1016/j.ijbiomac.2021.08.047",
       "verification": "needs_review",
-      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合"
+      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: Mechanism of Microplastic Remo）",
+        "pollutant_feature": {
+          "text": "Hydrogen bonding, Electrostatic, π-π",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "Mechanism of Microplastic Removal by Chitin/GO Spo",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "壳聚糖基吸附剂重金属吸附机制",
@@ -2539,7 +3449,42 @@
       "source": "literature",
       "ref_doi": "10.1016/j.chemosphere.2021.130927",
       "verification": "needs_review",
-      "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合"
+      "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 壳聚糖基吸附剂重金属吸附机制）",
+        "pollutant_feature": {
+          "text": "物理吸附（范德华力）和化学吸附（配位键），准二级动力学模型拟合良好",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "壳聚糖基吸附剂重金属吸附机制",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "壳聚糖吸附金属离子的机理",
@@ -2548,7 +3493,42 @@
       "source": "literature",
       "ref_doi": "10.13550/j.jxhg.20210304",
       "verification": "needs_review",
-      "基本原理": "壳聚糖表面的活性基团（-NH₂、-OH）与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移"
+      "基本原理": "壳聚糖表面的活性基团（-NH₂、-OH）与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 壳聚糖吸附金属离子的机理）",
+        "pollutant_feature": {
+          "text": "物理吸附与化学吸附 (Physical and Chemical adsorption)",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "壳聚糖吸附金属离子的机理",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "Cr(VI)吸附机制——静电吸引",
@@ -2557,7 +3537,42 @@
       "source": "literature",
       "ref_doi": "10.1007/s11771-021-4724-8",
       "verification": "needs_review",
-      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合"
+      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: Cr(VI)吸附机制——静电吸引）",
+        "pollutant_feature": {
+          "text": "CrO₄²⁻/Cr₂O₇²⁻与壳聚糖质子化—NH₃⁺基团之间的静电吸引",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "Cr(VI)吸附机制——静电吸引",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "壳聚糖对Cr(VI)的两种主要吸附机制",
@@ -2566,7 +3581,42 @@
       "source": "literature",
       "ref_doi": "10.16865/j.cnki.1000-7555.2021.0165",
       "verification": "needs_review",
-      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合"
+      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 壳聚糖对Cr(VI)的两种主要吸附机制）",
+        "pollutant_feature": {
+          "text": "静电吸附机理和吸附-耦合还原机理",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "壳聚糖对Cr(VI)的两种主要吸附机制",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "壳聚糖材料特性",
@@ -2575,7 +3625,42 @@
       "source": "literature",
       "ref_doi": "10.14028/j.cnki.1003-3726.2021.02.007",
       "verification": "needs_review",
-      "基本原理": "壳聚糖分子链上的羟基（-OH）可与污染物形成氢键，或通过配位作用结合金属离子"
+      "基本原理": "壳聚糖分子链上的羟基（-OH）可与污染物形成氢键，或通过配位作用结合金属离子",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 壳聚糖材料特性）",
+        "pollutant_feature": {
+          "text": "壳聚糖：黏均分子量8.99×10⁵，脱乙酰度94%。甲壳素碱性条件下部分脱乙酰化产物。无毒、可生物降解、生物相容性。含大量-NH₂(酸性质子化→螯合金属)和-OH(吸附F⁻)",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "壳聚糖材料特性",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "壳聚糖-HAP复合的协同优势",
@@ -2584,7 +3669,42 @@
       "source": "literature",
       "ref_doi": "10.14028/j.cnki.1003-3726.2021.02.007",
       "verification": "needs_review",
-      "基本原理": "壳聚糖分子链上的羟基（-OH）可与污染物形成氢键，或通过配位作用结合金属离子"
+      "基本原理": "壳聚糖分子链上的羟基（-OH）可与污染物形成氢键，或通过配位作用结合金属离子",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 壳聚糖-HAP复合的协同优势）",
+        "pollutant_feature": {
+          "text": "壳聚糖表面正电荷→提高F⁻结合能力(增强静电吸引)。壳聚糖分子搭接缠绕→新孔隙+表面粗糙度↑→SSA↑(106.75→127.58 m²/g)。壳聚糖-NH₂和-OH双官能团→提供额外吸附位点。但过量",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "壳聚糖-HAP复合的协同优势",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "吸附机理综合分析",
@@ -2593,7 +3713,42 @@
       "source": "literature",
       "ref_doi": "10.14028/j.cnki.1003-3726.2021.02.007",
       "verification": "needs_review",
-      "基本原理": "壳聚糖分子链上的羟基（-OH）可与污染物形成氢键，或通过配位作用结合金属离子"
+      "基本原理": "壳聚糖分子链上的羟基（-OH）可与污染物形成氢键，或通过配位作用结合金属离子",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 吸附机理综合分析）",
+        "pollutant_feature": {
+          "text": "FTIR证据：3423→3432 cm⁻¹红移→HAP-OH与CS-NH₂化学键合。吸附后峰强减弱→结晶度降低。XRD：吸附后峰进一步减弱→F⁻进入晶格。E=7.64 kJ/mol→物理吸附为主。Ea",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "吸附机理综合分析",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "壳聚糖脱乙酰度对功能基团的影响",
@@ -2602,7 +3757,42 @@
       "source": "literature",
       "ref_doi": "10.14028/j.cnki.1003-3726.2021.02.007",
       "verification": "needs_review",
-      "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合"
+      "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 壳聚糖脱乙酰度对功能基团的影响）",
+        "pollutant_feature": {
+          "text": "脱乙酰度94%→意味着94%的N-乙酰基被去除→释放大量游离-NH₂。NH₂在酸性条件下质子化→正电荷→螯合金属离子+吸附阴离子(F⁻通过氢键/静电)",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "壳聚糖脱乙酰度对功能基团的影响",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "超疏水抗菌表面'双重保险'原理",
@@ -2611,7 +3801,42 @@
       "source": "literature",
       "ref_doi": "10.13550/j.jxhg.20201035",
       "verification": "needs_review",
-      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物"
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 超疏水抗菌表面'双重保险'原理）",
+        "pollutant_feature": {
+          "text": "疏水材料减少细菌黏附+抗菌材料主动杀菌，实现长效抗菌",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "超疏水抗菌表面'双重保险'原理",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "超疏水抗菌表面分类体系",
@@ -2621,7 +3846,42 @@
       "ref_doi": "10.13550/j.jxhg.20201035",
       "verification": "needs_review",
       "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
-      "verification_quote": "了无机、有机、无机-有机三类超疏水抗菌表面的制备方法，综述了其在油水分离、涂层防污、医疗卫生应用领"
+      "verification_quote": "了无机、有机、无机-有机三类超疏水抗菌表面的制备方法，综述了其在油水分离、涂层防污、医疗卫生应用领",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 超疏水抗菌表面分类体系）",
+        "pollutant_feature": {
+          "text": "三类：无机、有机、无机-有机",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "超疏水抗菌表面分类体系",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "铜基超疏水抗菌表面 — 花瓣状Cu2O",
@@ -2631,7 +3891,42 @@
       "ref_doi": "10.13550/j.jxhg.20201035",
       "verification": "needs_review",
       "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
-      "verification_quote": "易于扩散到菌膜，该铜箔对大肠杆菌抗菌效果较好，"
+      "verification_quote": "易于扩散到菌膜，该铜箔对大肠杆菌抗菌效果较好，",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 铜基超疏水抗菌表面 — 花瓣状Cu2O）",
+        "pollutant_feature": {
+          "text": "WCA 154°，对大肠杆菌抗菌效果较好",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "铜基超疏水抗菌表面 — 花瓣状Cu2O",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "铜纳米粒子超疏水抗菌表面",
@@ -2641,7 +3936,42 @@
       "ref_doi": "10.13550/j.jxhg.20201035",
       "verification": "needs_review",
       "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
-      "verification_quote": "璃表面，使其具有 164°的水接触角，对革兰氏阴性、                    半导体型光催化材料纳米 ZnO 具有耐高温、高"
+      "verification_quote": "璃表面，使其具有 164°的水接触角，对革兰氏阴性、                    半导体型光催化材料纳米 ZnO 具有耐高温、高",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 铜纳米粒子超疏水抗菌表面）",
+        "pollutant_feature": {
+          "text": "WCA 164°，对革兰氏阴性/阳性菌均有抗菌活性",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "铜纳米粒子超疏水抗菌表面",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "CuO/SiO2透明超疏水涂层",
@@ -2651,7 +3981,42 @@
       "ref_doi": "10.13550/j.jxhg.20201035",
       "verification": "needs_review",
       "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
-      "verification_quote": "性 SiO2 溶胶结合，喷涂后的玻璃在 300~2500 nm 范       生空穴-电子对，电子还原空气水分中溶解的氧，生"
+      "verification_quote": "性 SiO2 溶胶结合，喷涂后的玻璃在 300~2500 nm 范       生空穴-电子对，电子还原空气水分中溶解的氧，生",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: CuO/SiO2透明超疏水涂层）",
+        "pollutant_feature": {
+          "text": "300~2500 nm范围内透光率96.6%",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "CuO/SiO2透明超疏水涂层",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "纳米Ag棉织物超疏水抗菌",
@@ -2660,7 +4025,42 @@
       "source": "literature",
       "ref_doi": "10.13550/j.jxhg.20201035",
       "verification": "needs_review",
-      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物"
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 纳米Ag棉织物超疏水抗菌）",
+        "pollutant_feature": {
+          "text": "WCA 148.7°，良好抗菌性能",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "纳米Ag棉织物超疏水抗菌",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "中空多孔碳球封装纳米Ag超疏水抗菌",
@@ -2669,7 +4069,42 @@
       "source": "literature",
       "ref_doi": "10.13550/j.jxhg.20201035",
       "verification": "needs_review",
-      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物"
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 中空多孔碳球封装纳米Ag超疏水抗菌）",
+        "pollutant_feature": {
+          "text": "WCA 160.6°，大肠杆菌抑菌率96%，金黄色葡萄球菌抑菌率83%",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "中空多孔碳球封装纳米Ag超疏水抗菌",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "含氟季铵盐抗菌机理",
@@ -2679,7 +4114,42 @@
       "ref_doi": "10.13550/j.jxhg.20201035",
       "verification": "needs_review",
       "基本原理": "needs_review",
-      "verification_quote": "497 kJ/mol，含氟有机物具有较低的表面能和表面张                                 Fig."
+      "verification_quote": "497 kJ/mol，含氟有机物具有较低的表面能和表面张                                 Fig.",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 含氟季铵盐抗菌机理）",
+        "pollutant_feature": {
+          "text": "C-F键能497 kJ/mol，全氟烷基协同抗菌基团向表面迁移实现高效抗菌",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "含氟季铵盐抗菌机理",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "纳米Ag/硅烷棉织物超疏水抗菌",
@@ -2689,7 +4159,42 @@
       "ref_doi": "10.13550/j.jxhg.20201035",
       "verification": "needs_review",
       "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
-      "verification_quote": "物获得了 153°±2°的水接触角和优异的抗菌性能。"
+      "verification_quote": "物获得了 153°±2°的水接触角和优异的抗菌性能。",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 纳米Ag/硅烷棉织物超疏水抗菌）",
+        "pollutant_feature": {
+          "text": "WCA 153°±2°，优异抗菌性能",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "纳米Ag/硅烷棉织物超疏水抗菌",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "树枝状纳米银超疏水表面",
@@ -2698,7 +4203,42 @@
       "source": "literature",
       "ref_doi": "10.13550/j.jxhg.20201035",
       "verification": "needs_review",
-      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物"
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 树枝状纳米银超疏水表面）",
+        "pollutant_feature": {
+          "text": "WCA >150°，较好抗菌性",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "树枝状纳米银超疏水表面",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "Cu纳米线/PDMS超疏水表面",
@@ -2707,7 +4247,42 @@
       "source": "literature",
       "ref_doi": null,
       "verification": "needs_review",
-      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物"
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: Cu纳米线/PDMS超疏水表面）",
+        "pollutant_feature": {
+          "text": "拉伸、扭曲、砂纸磨损下仍具有超疏水性",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "Cu纳米线/PDMS超疏水表面",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "ZIF-8/PVDF超疏水抗菌涂层",
@@ -2717,7 +4292,42 @@
       "ref_doi": "10.13550/j.jxhg.20201035",
       "verification": "needs_review",
       "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
-      "verification_quote": "得涂层具有 160°的水接触角，对大肠杆菌有良好的"
+      "verification_quote": "得涂层具有 160°的水接触角，对大肠杆菌有良好的",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: ZIF-8/PVDF超疏水抗菌涂层）",
+        "pollutant_feature": {
+          "text": "WCA 160°，对大肠杆菌有良好抗菌活性",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "ZIF-8/PVDF超疏水抗菌涂层",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "pH响应型超疏水抗菌棉织物",
@@ -2726,7 +4336,42 @@
       "source": "literature",
       "ref_doi": "10.13550/j.jxhg.20201035",
       "verification": "needs_review",
-      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物"
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: pH响应型超疏水抗菌棉织物）",
+        "pollutant_feature": {
+          "text": "杀菌率>80%",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "pH响应型超疏水抗菌棉织物",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "超疏水医用纱布",
@@ -2736,7 +4381,42 @@
       "ref_doi": "10.13550/j.jxhg.20201035",
       "verification": "needs_review",
       "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
-      "verification_quote": "性纳米 Ag 和全氟癸烷硫醇，得到水接触角为 158°"
+      "verification_quote": "性纳米 Ag 和全氟癸烷硫醇，得到水接触角为 158°",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 超疏水医用纱布）",
+        "pollutant_feature": {
+          "text": "WCA 158°，对金黄色葡萄球菌和大肠杆菌抗菌作用显著",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "超疏水医用纱布",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "多巴胺黏附固定无机抗菌剂策略",
@@ -2745,7 +4425,42 @@
       "source": "literature",
       "ref_doi": "10.13550/j.jxhg.20201035",
       "verification": "needs_review",
-      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物"
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 多巴胺黏附固定无机抗菌剂策略）",
+        "pollutant_feature": {
+          "text": "多巴胺直接黏附固定无机抗菌剂可简化超疏水表面制备过程",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "多巴胺黏附固定无机抗菌剂策略",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "未来发展方向：多功能化智能化",
@@ -2754,7 +4469,42 @@
       "source": "literature",
       "ref_doi": "10.13550/j.jxhg.20201035",
       "verification": "needs_review",
-      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物"
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 未来发展方向：多功能化智能化）",
+        "pollutant_feature": {
+          "text": "阻燃+超疏水+抗菌、导电+超疏水+抗菌、自修复+超疏水、响应性+超疏水+抗菌",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "未来发展方向：多功能化智能化",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "无机-有机复合策略优势",
@@ -2764,7 +4514,42 @@
       "ref_doi": "10.13550/j.jxhg.20201035",
       "verification": "needs_review",
       "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
-      "verification_quote": "糙结构，同时结合无机材料的抗菌性实现超疏水抗"
+      "verification_quote": "糙结构，同时结合无机材料的抗菌性实现超疏水抗",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 无机-有机复合策略优势）",
+        "pollutant_feature": {
+          "text": "无机纳米粒子提供粗糙度+有机物提供低表面能/抗菌性，协同实现超疏水抗菌",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "无机-有机复合策略优势",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "pH对CR和Cu²⁺吸附的影响",
@@ -2774,7 +4559,42 @@
       "ref_doi": "10.1016/j.cej.2022.138934",
       "verification": "needs_review",
       "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合",
-      "verification_quote": "because of the evident differences in their sizes and physicochemical"
+      "verification_quote": "because of the evident differences in their sizes and physicochemical",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: pH对CR和Cu²⁺吸附的影响）",
+        "pollutant_feature": {
+          "text": "pHpzc=7.24。CR: pH 5-8去除率稳定→氢键主导(非静电)。pH 9-11去除率剧降→静电排斥。Cu²⁺: pH 2-6去除率递增→pH 6最佳→90%去除。pH<6:质子化–NH₂/–",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "pH对CR和Cu²⁺吸附的影响",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "吸附机制——CR的三重作用",
@@ -2783,7 +4603,42 @@
       "source": "literature",
       "ref_doi": "10.1016/j.cej.2022.138934",
       "verification": "needs_review",
-      "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合"
+      "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 吸附机制——CR的三重作用）",
+        "pollutant_feature": {
+          "text": "CR吸附于CE/CSA-1通过：(1)氢键(–NH₂/–SO₃与O/N官能团)。(2)静电作用(pH>7.24时)。(3)孔道捕获。ATR-FTIR证据：吸附后O-H/N-H峰变化→氢键形成。XPS：",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "吸附机制——CR的三重作用",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "吸附机制——Cu²⁺的配位作用",
@@ -2792,7 +4647,42 @@
       "source": "literature",
       "ref_doi": "10.1016/j.cej.2022.138934",
       "verification": "needs_review",
-      "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合"
+      "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 吸附机制——Cu²⁺的配位作用）",
+        "pollutant_feature": {
+          "text": "Cu²⁺通过与–OH和–NH₂的配位反应结合于CE/CSA-1。XPS：吸附后–OH和–NH/–NH₂峰消失→新峰Cu–O 532.1 eV和Cu–N 406.7 eV出现→配位反应直接证据",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "吸附机制——Cu²⁺的配位作用",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "二元体系中的Cu²⁺桥联对CR的影响",
@@ -2801,7 +4691,42 @@
       "source": "literature",
       "ref_doi": "10.1016/j.cej.2022.138934",
       "verification": "needs_review",
-      "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合"
+      "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 二元体系中的Cu²⁺桥联对CR的影响）",
+        "pollutant_feature": {
+          "text": "Cu²⁺不仅与吸附剂–OH/–NH₂反应，还与CR的–NH₂/–SO₃反应→CR桥接Cu²⁺。XPS：二元体系中–OH和–NH/–NH₂峰重新出现(比单体系Cu²⁺吸附后)→Cu²⁺同时与吸附剂和CR",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "二元体系中的Cu²⁺桥联对CR的影响",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "BET比表面积与孔体积(文中提及但数据在Table S1)",
@@ -2811,7 +4736,42 @@
       "ref_doi": "10.1016/j.cej.2022.138934",
       "verification": "needs_review",
       "基本原理": "壳聚糖表面的活性基团（-NH₂、-OH）与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
-      "verification_quote": "Here, a multifunctional biomass-based aerogel (CE/CSA) was synthesized using"
+      "verification_quote": "Here, a multifunctional biomass-based aerogel (CE/CSA) was synthesized using",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: BET比表面积与孔体积(文中提及但数据在Table S1)）",
+        "pollutant_feature": {
+          "text": "CE/CSA-x的SSA和孔体积比纯CEA和CSA略有增加。但CE/CSA-x吸附能力远高于CEA/CSA→推断孔填充不是关键吸附机制→官能团主导",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "BET比表面积与孔体积(文中提及但数据在Table S1)",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "Primary adsorption mechanism - complexation/chelation / 主要吸附机制-配位螯合",
@@ -2820,7 +4780,42 @@
       "source": "literature",
       "ref_doi": "10.1016/j.jece.2022.108048",
       "verification": "needs_review",
-      "基本原理": "壳聚糖分子链上的氨基（-NH₂）可通过质子化带正电，与带负电的污染物（如染料、重金属阴离子）通过静电吸引结合"
+      "基本原理": "壳聚糖分子链上的氨基（-NH₂）可通过质子化带正电，与带负电的污染物（如染料、重金属阴离子）通过静电吸引结合",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: Primary adsorption mechanism -）",
+        "pollutant_feature": {
+          "text": "Metal ion complexation (chelation/coordination) is the leading sorption mechanism; Cu2+ forms Cu-chi",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "Primary adsorption mechanism - complexation/chelat",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "Electrostatic interaction and pHpzc / 静电相互作用与零电点",
@@ -2829,7 +4824,42 @@
       "source": "literature",
       "ref_doi": "10.1016/j.jece.2022.108048",
       "verification": "needs_review",
-      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合"
+      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: Electrostatic interaction and ）",
+        "pollutant_feature": {
+          "text": "At pH > pHpzc, adsorbent surface deprotonated creating negative charge that attracts cations; at pH ",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "Electrostatic interaction and pHpzc / 静电相互作用与零电点",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "Ion-exchange mechanism / 离子交换机制",
@@ -2838,7 +4868,42 @@
       "source": "literature",
       "ref_doi": "10.1016/j.jece.2022.108048",
       "verification": "needs_review",
-      "基本原理": "壳聚糖骨架上的可交换阳离子（如H⁺、Na⁺）与溶液中的金属离子进行等当量交换"
+      "基本原理": "壳聚糖骨架上的可交换阳离子（如H⁺、Na⁺）与溶液中的金属离子进行等当量交换",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: Ion-exchange mechanism / 离子交换机）",
+        "pollutant_feature": {
+          "text": "At pH < pHpzc, positively charged Cu2+ exchanges with H+ ions on protonated adsorbent surface; slowe",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "Ion-exchange mechanism / 离子交换机制",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "MCM两大改性方向",
@@ -2848,7 +4913,42 @@
       "ref_doi": "10.13801/j.cnki.fhclxb.20211105.003",
       "verification": "needs_review",
       "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合",
-      "verification_quote": "本文从磁性纳米粒子改性和壳聚糖改性两个方面详细综述了优化 MCM 的研究进展，"
+      "verification_quote": "本文从磁性纳米粒子改性和壳聚糖改性两个方面详细综述了优化 MCM 的研究进展，",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: MCM两大改性方向）",
+        "pollutant_feature": {
+          "text": "磁性纳米粒子改性(修饰/替换Fe₃O₄) + 壳聚糖改性(分子印迹/接枝/螯合/烷基化)",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "MCM两大改性方向",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "MCM吸附机制汇总",
@@ -2858,7 +4958,42 @@
       "ref_doi": "10.13801/j.cnki.fhclxb.20211105.003",
       "verification": "needs_review",
       "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合",
-      "verification_quote": "能更好的通过离子交换、静电吸附、范德华力及                                                    发生静电吸附作用，有效、快速地分离印染废水"
+      "verification_quote": "能更好的通过离子交换、静电吸附、范德华力及                                                    发生静电吸附作用，有效、快速地分离印染废水",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: MCM吸附机制汇总）",
+        "pollutant_feature": {
+          "text": "离子交换、静电吸附、范德华力、氢键、络合、化学键合",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "MCM吸附机制汇总",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "壳聚糖化学吸附的通用机理",
@@ -2867,7 +5002,42 @@
       "source": "literature",
       "ref_doi": "10.13822/j.cnki.hxsj.2022008755",
       "verification": "needs_review",
-      "基本原理": "壳聚糖分子链上的氨基（-NH₂）可通过质子化带正电，与带负电的污染物（如染料、重金属阴离子）通过静电吸引结合"
+      "基本原理": "壳聚糖分子链上的氨基（-NH₂）可通过质子化带正电，与带负电的污染物（如染料、重金属阴离子）通过静电吸引结合",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 壳聚糖化学吸附的通用机理）",
+        "pollutant_feature": {
+          "text": "含配位原子(N、S、O)的基团（羧基、羟基、巯基、氨基）与重金属离子进行螯合",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "壳聚糖化学吸附的通用机理",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "吸附机制判断",
@@ -2876,7 +5046,42 @@
       "source": "literature",
       "ref_doi": "10.3969/j.issn.1001-9731.2022.10.023",
       "verification": "needs_review",
-      "基本原理": "壳聚糖表面的活性基团（-NH₂、-OH）与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移"
+      "基本原理": "壳聚糖表面的活性基团（-NH₂、-OH）与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 吸附机制判断）",
+        "pollutant_feature": {
+          "text": "化学吸附为主(chemisorption dominated)",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "吸附机制判断",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "CS对Cr(VI)选择性吸附机制",
@@ -2885,7 +5090,42 @@
       "source": "literature",
       "ref_doi": "10.3969/j.issn.1001-9731.2022.10.023",
       "verification": "needs_review",
-      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合"
+      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: CS对Cr(VI)选择性吸附机制）",
+        "pollutant_feature": {
+          "text": "壳聚糖-NH₂与Cr(VI)阴离子(CrO₄²⁻/HCrO₄⁻/Cr₂O₇²⁻)静电吸引",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "CS对Cr(VI)选择性吸附机制",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "壳聚糖的基本结构与吸附活性位点",
@@ -2894,7 +5134,42 @@
       "source": "literature",
       "ref_doi": "10.19817/j.cnki.issn1006-3536.2022.12.044",
       "verification": "needs_review",
-      "基本原理": "壳聚糖分子链上的羟基（-OH）可与污染物形成氢键，或通过配位作用结合金属离子"
+      "基本原理": "壳聚糖分子链上的羟基（-OH）可与污染物形成氢键，或通过配位作用结合金属离子",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 壳聚糖的基本结构与吸附活性位点）",
+        "pollutant_feature": {
+          "text": "β-(1→4)糖苷键骨架，含-NH₂和-OH活性官能团，可与重金属离子配位螯合",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "壳聚糖的基本结构与吸附活性位点",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "壳聚糖基吸附剂的三大未来研究方向",
@@ -2903,7 +5178,42 @@
       "source": "literature",
       "ref_doi": "10.19817/j.cnki.issn1006-3536.2022.12.044",
       "verification": "needs_review",
-      "基本原理": "壳聚糖表面的活性基团（-NH₂、-OH）与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移"
+      "基本原理": "壳聚糖表面的活性基团（-NH₂、-OH）与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 壳聚糖基吸附剂的三大未来研究方向）",
+        "pollutant_feature": {
+          "text": "1.新型无毒交联剂开发；2.解吸再生与金属回收研究(碳达峰碳中和)；3.吸附机理深入研究(响应面方法RSM)",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "壳聚糖基吸附剂的三大未来研究方向",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "Chitosan beads的六种吸附机制",
@@ -2912,7 +5222,42 @@
       "source": "literature",
       "ref_doi": "10.1007/s10311-023-01563-9",
       "verification": "needs_review",
-      "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合"
+      "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: Chitosan beads的六种吸附机制）",
+        "pollutant_feature": {
+          "text": "静电作用(electrostatic interaction)、络合(complexation)、氢键(hydrogen bonding)、酸碱作用(acid-base interaction)、配位",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "Chitosan beads的六种吸附机制",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "磁性壳聚糖的三大吸附机制分类",
@@ -2921,7 +5266,42 @@
       "source": "literature",
       "ref_doi": "10.1039/d2ra07112f",
       "verification": "needs_review",
-      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合"
+      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 磁性壳聚糖的三大吸附机制分类）",
+        "pollutant_feature": {
+          "text": "物理吸附(静电作用/范德华力)、化学吸附(离子交换/表面络合/氧化还原)、协同吸附",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "磁性壳聚糖的三大吸附机制分类",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "Cr(VI)的氧化还原吸附机制（VMCP案例）",
@@ -2930,7 +5310,42 @@
       "source": "literature",
       "ref_doi": "10.1039/d2ra07112f",
       "verification": "needs_review",
-      "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合"
+      "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: Cr(VI)的氧化还原吸附机制（VMCP案例））",
+        "pollutant_feature": {
+          "text": "Cr(VI)在正电荷VMCP表面吸附→还原为Cr(III)→与N原子配位",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "Cr(VI)的氧化还原吸附机制（VMCP案例）",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "磁性壳聚糖的五种制备方法",
@@ -2939,7 +5354,42 @@
       "source": "literature",
       "ref_doi": "10.1039/d2ra07112f",
       "verification": "needs_review",
-      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合"
+      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 磁性壳聚糖的五种制备方法）",
+        "pollutant_feature": {
+          "text": "共沉淀法、交联法、喷雾干燥法、光化学法、静电滴落法",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "磁性壳聚糖的五种制备方法",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "协同吸附案例：FFO@Sil@Chi-DTPA同时去除MB和Pb(II)",
@@ -2948,7 +5398,42 @@
       "source": "literature",
       "ref_doi": "10.1039/d2ra07112f",
       "verification": "needs_review",
-      "基本原理": "壳聚糖分子链上的氨基（-NH₂）可通过质子化带正电，与带负电的污染物（如染料、重金属阴离子）通过静电吸引结合"
+      "基本原理": "壳聚糖分子链上的氨基（-NH₂）可通过质子化带正电，与带负电的污染物（如染料、重金属阴离子）通过静电吸引结合",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 协同吸附案例：FFO@Sil@Chi-DTPA同时去除MB和）",
+        "pollutant_feature": {
+          "text": "Pb(II)通过-COOH静电吸引+H键+氨基络合；MB通过磺酸基增强Pb(II)吸附+Pb(II)作为阳离子桥增强MB吸附",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "协同吸附案例：FFO@Sil@Chi-DTPA同时去除MB和Pb(II)",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "吸附机制 Ad sorption mechanism",
@@ -2958,7 +5443,42 @@
       "ref_doi": "10.15898/j.ykcs.202208230155",
       "verification": "needs_review",
       "基本原理": "壳聚糖分子链上的氨基（-NH₂）可通过质子化带正电，与带负电的污染物（如染料、重金属阴离子）通过静电吸引结合",
-      "verification_quote": "adsorption properties and mechanisms on PSC and CCC."
+      "verification_quote": "adsorption properties and mechanisms on PSC and CCC.",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 吸附机制 Ad sorption mechanism）",
+        "pollutant_feature": {
+          "text": "主要通过静电吸引和含氮官能团(-NH, -NH2, C=N)与金属离子的螯合作用去除Pb2+和Cu2+",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "吸附机制 Ad sorption mechanism",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "XPS表征揭示吸附机制 XPS characterization revealing adsorption mechanism",
@@ -2968,7 +5488,42 @@
       "ref_doi": "10.15898/j.ykcs.202208230155",
       "verification": "needs_review",
       "基本原理": "壳聚糖分子链上的氨基（-NH₂）可通过质子化带正电，与带负电的污染物（如染料、重金属阴离子）通过静电吸引结合",
-      "verification_quote": "adsorption properties and mechanisms on PSC and CCC."
+      "verification_quote": "adsorption properties and mechanisms on PSC and CCC.",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: XPS表征揭示吸附机制 XPS characterizati）",
+        "pollutant_feature": {
+          "text": "XPS分析显示吸附前后功能团变化，吡咯中的-NH、壳聚糖中的-NH2和C=N是与Pb2+和Cu2+螯合的主要官能团",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "XPS表征揭示吸附机制 XPS characterization revealing adsorpt",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "吸附机理：螯合作用",
@@ -2977,7 +5532,42 @@
       "source": "literature",
       "ref_doi": "10.19965/j.cnki.iwt.2022-1185",
       "verification": "needs_review",
-      "基本原理": "壳聚糖分子链上的羟基（-OH）可与污染物形成氢键，或通过配位作用结合金属离子"
+      "基本原理": "壳聚糖分子链上的羟基（-OH）可与污染物形成氢键，或通过配位作用结合金属离子",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 吸附机理：螯合作用）",
+        "pollutant_feature": {
+          "text": "内部-OH和-COO⁻与Pb²⁺发生螯合作用",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "吸附机理：螯合作用",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "吸附机理：静电引力与去质子化",
@@ -2986,7 +5576,42 @@
       "source": "literature",
       "ref_doi": "10.19965/j.cnki.iwt.2022-1185",
       "verification": "needs_review",
-      "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合"
+      "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 吸附机理：静电引力与去质子化）",
+        "pollutant_feature": {
+          "text": "pH>3.86时凝胶表面去质子化呈负电性，-NH₂和-COO⁻增强螯合作用",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "吸附机理：静电引力与去质子化",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "壳聚糖与石墨烯复合的关键协同优势",
@@ -2995,7 +5620,42 @@
       "source": "literature",
       "ref_doi": "10.1016/j.rechem.2024.101332",
       "verification": "needs_review",
-      "基本原理": "壳聚糖分子链上的羟基（-OH）可与污染物形成氢键，或通过配位作用结合金属离子"
+      "基本原理": "壳聚糖分子链上的羟基（-OH）可与污染物形成氢键，或通过配位作用结合金属离子",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 壳聚糖与石墨烯复合的关键协同优势）",
+        "pollutant_feature": {
+          "text": "壳聚糖提供-OH/-NH₂螯合位点和生物相容性；石墨烯提供高比表面积和机械强度；复合后吸附性能显著提升",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "壳聚糖与石墨烯复合的关键协同优势",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "吸附剂-机理-目标污染物对应表",
@@ -3005,7 +5665,42 @@
       "ref_doi": "10.3390/molecules29184317",
       "verification": "needs_review",
       "基本原理": "壳聚糖的正电表面可与阴离子染料通过静电吸引结合，同时氨基和羟基可与染料分子形成氢键",
-      "verification_quote": "shown that MOFs are highly effective at absorbing volatile organic compounds (VOCs)"
+      "verification_quote": "shown that MOFs are highly effective at absorbing volatile organic compounds (VOCs)",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 吸附剂-机理-目标污染物对应表）",
+        "pollutant_feature": {
+          "text": "活化碳(物理吸附→有机物/染料/VOCs); 生物炭(物理吸附→有机污染物/营养物); 碳纳米管(物理吸附→有机污染物/气体); 壳聚糖纳米复合物(化学吸附→金属/染料); 环糊精聚合物(化学吸附→药",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "吸附剂-机理-目标污染物对应表",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "石墨烯复合物表面官能团",
@@ -3014,7 +5709,42 @@
       "source": "literature",
       "ref_doi": "10.3390/molecules29184317",
       "verification": "needs_review",
-      "基本原理": "壳聚糖分子链上的羟基（-OH）可与污染物形成氢键，或通过配位作用结合金属离子"
+      "基本原理": "壳聚糖分子链上的羟基（-OH）可与污染物形成氢键，或通过配位作用结合金属离子",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 石墨烯复合物表面官能团）",
+        "pollutant_feature": {
+          "text": "GO表面-OH, -COOH, -epoxy基团→静电相互作用/π-π堆叠/氢键",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "石墨烯复合物表面官能团",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "壳聚糖纳米复合物吸附机制",
@@ -3026,7 +5756,42 @@
       "source": "literature",
       "ref_doi": "10.3390/molecules29184317",
       "verification": "needs_review",
-      "基本原理": "壳聚糖分子链上的羟基（-OH）可与污染物形成氢键，或通过配位作用结合金属离子"
+      "基本原理": "壳聚糖分子链上的羟基（-OH）可与污染物形成氢键，或通过配位作用结合金属离子",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 壳聚糖纳米复合物吸附机制）",
+        "pollutant_feature": {
+          "text": "-NH₂/-OH高密度→螯合+静电+氢键→协同效应(壳聚糖+纳米粒子)",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "壳聚糖纳米复合物吸附机制",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "环糊精聚合物选择性吸附",
@@ -3035,7 +5800,42 @@
       "source": "literature",
       "ref_doi": "10.3390/molecules29184317",
       "verification": "needs_review",
-      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物"
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 环糊精聚合物选择性吸附）",
+        "pollutant_feature": {
+          "text": "环状寡糖→疏水内腔+亲水外壳→尺寸/形状选择性包合有机物",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "环糊精聚合物选择性吸附",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "选择性提升策略",
@@ -3045,7 +5845,42 @@
       "ref_doi": "10.3390/molecules29184317",
       "verification": "needs_review",
       "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
-      "verification_quote": "organic frameworks (MOFs) and molecularly imprinted polymers (MIPs), offer significant"
+      "verification_quote": "organic frameworks (MOFs) and molecularly imprinted polymers (MIPs), offer significant",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 选择性提升策略）",
+        "pollutant_feature": {
+          "text": "MIPs(模板空腔); 环糊精(疏水空腔包合); 功能化(-SH→Hg²⁺选择; -NH₂→酸性污染物选择); MOFs(可调孔径)",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "选择性提升策略",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "吸附机理类型汇总",
@@ -3055,7 +5890,42 @@
       "ref_doi": "10.3390/molecules29184317",
       "verification": "needs_review",
       "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合",
-      "verification_quote": "weak     van der Waals"
+      "verification_quote": "weak     van der Waals",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 吸附机理类型汇总）",
+        "pollutant_feature": {
+          "text": "Van der Waals力 + 氢键 + 静电相互作用 + 化学键(共价/离子) + 配位螯合 + 离子交换 + π-π堆叠 + 疏水相互作用 + 主客体包合(环糊精/杯芳烃) + 分子印迹特异性识",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "吸附机理类型汇总",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "有机改性凹凸棒土的作用 Effect of organic modification on attapulgite",
@@ -3064,7 +5934,42 @@
       "source": "patent",
       "ref_doi": null,
       "verification": "needs_review",
-      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物"
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 有机改性凹凸棒土的作用 Effect of organic ）",
+        "pollutant_feature": {
+          "text": "表面活性剂接枝到凹凸棒土表面，改善疏水性，提升重金属离子去除效果",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "有机改性凹凸棒土的作用 Effect of organic modification on atta",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "海藻酸钙微球吸附重金属的机制 Heavy metal adsorption mechanism of calcium alginate microspheres",
@@ -3073,7 +5978,42 @@
       "source": "patent",
       "ref_doi": null,
       "verification": "needs_review",
-      "基本原理": "壳聚糖的氨基和羟基可与重金属离子形成配位键，实现特异性吸附"
+      "基本原理": "壳聚糖的氨基和羟基可与重金属离子形成配位键，实现特异性吸附",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 海藻酸钙微球吸附重金属的机制 Heavy metal ads）",
+        "pollutant_feature": {
+          "text": "海藻酸钙中大量负电荷羧酸根离子能与Pb2+和Cd2+结合，生成藻酸重金属盐沉淀储存在囊腔内，与沸石活性点相互独立，削弱铅镉相互抑制性",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "海藻酸钙微球吸附重金属的机制 Heavy metal adsorption mechanism of",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "Fe3+改性活性炭吸附磺胺类抗生素的机制 Mechanism of Fe3+-modified activated carbon adsorbing sulfonamide antibiotics",
@@ -3082,7 +6022,42 @@
       "source": "patent",
       "ref_doi": null,
       "verification": "needs_review",
-      "基本原理": "壳聚糖表面的活性基团（-NH₂、-OH）与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移"
+      "基本原理": "壳聚糖表面的活性基团（-NH₂、-OH）与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: Fe3+改性活性炭吸附磺胺类抗生素的机制 Mechanism）",
+        "pollutant_feature": {
+          "text": "以化学吸附为主",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "Fe3+改性活性炭吸附磺胺类抗生素的机制 Mechanism of Fe3+-modified ac",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "PDA吸附机制-姜黄素",
@@ -3091,7 +6066,42 @@
       "source": "patent",
       "ref_doi": null,
       "verification": "needs_review",
-      "基本原理": "壳聚糖表面的活性基团（-NH₂、-OH）与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移"
+      "基本原理": "壳聚糖表面的活性基团（-NH₂、-OH）与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: PDA吸附机制-姜黄素）",
+        "pollutant_feature": {
+          "text": "重金属/有机污染物",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "PDA吸附机制-姜黄素",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "PDA吸附机制-番茄红素",
@@ -3100,7 +6110,42 @@
       "source": "patent",
       "ref_doi": null,
       "verification": "needs_review",
-      "基本原理": "壳聚糖表面的活性基团（-NH₂、-OH）与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移"
+      "基本原理": "壳聚糖表面的活性基团（-NH₂、-OH）与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: PDA吸附机制-番茄红素）",
+        "pollutant_feature": {
+          "text": "重金属/有机污染物",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "PDA吸附机制-番茄红素",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "吸附机制分析 adsorption mechanism",
@@ -3109,7 +6154,42 @@
       "source": "patent",
       "ref_doi": null,
       "verification": "needs_review",
-      "基本原理": "壳聚糖分子链上的氨基（-NH₂）可通过质子化带正电，与带负电的污染物（如染料、重金属阴离子）通过静电吸引结合"
+      "基本原理": "壳聚糖分子链上的氨基（-NH₂）可通过质子化带正电，与带负电的污染物（如染料、重金属阴离子）通过静电吸引结合",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 吸附机制分析 adsorption mechanism）",
+        "pollutant_feature": {
+          "text": "LS和CCS与环氧氯丙烷交联修饰氨基；SA和CCS的羧酸盐基团与Ca²⁺交联；CCS的氨基/羧基和PEI的亚胺基提供吸附位点；LS的磺酸基增强配位",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "吸附机制分析 adsorption mechanism",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "蛋盒结构交联机制 egg-box crosslinking mechanism",
@@ -3118,7 +6198,42 @@
       "source": "patent",
       "ref_doi": null,
       "verification": "needs_review",
-      "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合"
+      "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 蛋盒结构交联机制 egg-box crosslinking ）",
+        "pollutant_feature": {
+          "text": "海藻酸钠通过G单元羧基与Ca²⁺配位形成'蛋盒'结构三维网络凝胶",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "蛋盒结构交联机制 egg-box crosslinking mechanism",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "权利要求限定的材料组成",
@@ -3127,7 +6242,42 @@
       "source": "patent",
       "ref_doi": null,
       "verification": "needs_review",
-      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物"
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 权利要求限定的材料组成）",
+        "pollutant_feature": {
+          "text": "生物基聚合物0.1-10份+吸附剂0.01-5份+交联剂0.1-10份+增强剂0.01-5份+疏水改性剂0.01-5份",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "权利要求限定的材料组成",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "实施例3配方（循环测试对象）",
@@ -3136,7 +6286,42 @@
       "source": "patent",
       "ref_doi": null,
       "verification": "needs_review",
-      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物"
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 实施例3配方（循环测试对象））",
+        "pollutant_feature": {
+          "text": "纤维素纳米纤维2.0g+埃洛石1.5g+玻璃纤维0.25g+PEI-ECH 0.5g/100g水+MTMS疏水改性3min",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "实施例3配方（循环测试对象）",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "实施例5配方（壳聚糖基）",
@@ -3145,7 +6330,42 @@
       "source": "patent",
       "ref_doi": null,
       "verification": "needs_review",
-      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物"
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 实施例5配方（壳聚糖基））",
+        "pollutant_feature": {
+          "text": "壳聚糖2.0g+埃洛石0.5g+玻璃纤维0.25g+PEI-ECH 0.5g/100g水+MTMS疏水改性3min",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "实施例5配方（壳聚糖基）",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "制备方法核心流程",
@@ -3154,7 +6374,42 @@
       "source": "patent",
       "ref_doi": null,
       "verification": "needs_review",
-      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物"
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 制备方法核心流程）",
+        "pollutant_feature": {
+          "text": "四步法：混合→交联→冷冻干燥→疏水改性",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "制备方法核心流程",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "接触角测试",
@@ -3163,7 +6418,42 @@
       "source": "patent",
       "ref_doi": null,
       "verification": "needs_review",
-      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物"
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 接触角测试）",
+        "pollutant_feature": {
+          "text": "实施例1疏水改性后接触角显著增大",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "接触角测试",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "疏水改性剂种类",
@@ -3172,7 +6462,42 @@
       "source": "patent",
       "ref_doi": null,
       "verification": "needs_review",
-      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物"
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 疏水改性剂种类）",
+        "pollutant_feature": {
+          "text": "甲基三甲氧基硅烷、聚二甲基硅氧烷、十六烷基三乙氧基硅烷、1H,1H,2H,2H-全氟癸基三氯硅烷、三甲基氯硅烷中的任意一种或多种组合",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "疏水改性剂种类",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "实施例4-明胶-ZIF-8-TMCS疏水改性-吸附容量",
@@ -3181,7 +6506,42 @@
       "source": "patent",
       "ref_doi": null,
       "verification": "needs_review",
-      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物"
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 实施例4-明胶-ZIF-8-TMCS疏水改性-吸附容量）",
+        "pollutant_feature": {
+          "text": "81",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "实施例4-明胶-ZIF-8-TMCS疏水改性-吸附容量",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "实施例4-明胶-ZIF-8-TMCS疏水改性-接触角",
@@ -3190,7 +6550,42 @@
       "source": "patent",
       "ref_doi": null,
       "verification": "needs_review",
-      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物"
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 实施例4-明胶-ZIF-8-TMCS疏水改性-接触角）",
+        "pollutant_feature": {
+          "text": "138.25",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "实施例4-明胶-ZIF-8-TMCS疏水改性-接触角",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "实施例4-明胶-ZIF-8-TMCS疏水改性-抗压强度",
@@ -3199,7 +6594,42 @@
       "source": "patent",
       "ref_doi": null,
       "verification": "needs_review",
-      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物"
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 实施例4-明胶-ZIF-8-TMCS疏水改性-抗压强度）",
+        "pollutant_feature": {
+          "text": "0.32",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "实施例4-明胶-ZIF-8-TMCS疏水改性-抗压强度",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "吸附机制-π-π相互作用",
@@ -3208,7 +6638,42 @@
       "source": "patent",
       "ref_doi": null,
       "verification": "needs_review",
-      "基本原理": "壳聚糖表面的活性基团（-NH₂、-OH）与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移"
+      "基本原理": "壳聚糖表面的活性基团（-NH₂、-OH）与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 吸附机制-π-π相互作用）",
+        "pollutant_feature": {
+          "text": "偶氮基团带有π电子，可与油分子产生π-π相互作用，协同增加有机污染物捕获量",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "吸附机制-π-π相互作用",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "XPS分析-吸附机理",
@@ -3217,7 +6682,42 @@
       "source": "literature",
       "ref_doi": "10.1016/j.jhazmat.2020.124347",
       "verification": "needs_review",
-      "verification_quote": "adsorption shows two N 1s peaks, corresponding to ˭NH– (402 eV) and               mixing."
+      "verification_quote": "adsorption shows two N 1s peaks, corresponding to ˭NH– (402 eV) and               mixing.",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: XPS分析-吸附机理）",
+        "pollutant_feature": {
+          "text": "C 1s红移形成吸附剂-金属络合物；N 1s出现—NH—(402 eV)和—NH₂(406 eV)两个峰；吸附后出现Gd 4d特征峰(149 eV和143 eV)",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "XPS分析-吸附机理",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "吸附活性基团协同",
@@ -3226,7 +6726,42 @@
       "source": "literature",
       "ref_doi": "10.1016/j.jhazmat.2020.124347",
       "verification": "needs_review",
-      "verification_quote": "The acidified carbon nanotubes (MWCNT-COOH) have defects on the                        This thesis uses a step-by-step method, combined with CS through"
+      "verification_quote": "The acidified carbon nanotubes (MWCNT-COOH) have defects on the                        This thesis uses a step-by-step method, combined with CS through",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 吸附活性基团协同）",
+        "pollutant_feature": {
+          "text": "—NH₂(壳聚糖+PDA)、—OH(壳聚糖+GO+PDA)、—COOH(MWCNT-COOH)三类基团协同参与Gd(III)螯合",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "吸附活性基团协同",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "XPS吸附机理",
@@ -3235,7 +6770,42 @@
       "source": "literature",
       "ref_doi": "10.1016/j.jhazmat.2022.129112",
       "verification": "needs_review",
-      "verification_quote": "as a support for the in situ development of Cu nanoparticles, which showed excellent catalytic performance as"
+      "verification_quote": "as a support for the in situ development of Cu nanoparticles, which showed excellent catalytic performance as",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: XPS吸附机理）",
+        "pollutant_feature": {
+          "text": "N 1s峰从398.4/401.6 eV移至399.4 eV；O 1s峰从531.9/530.0 eV移至530.8/532.1 eV；C 1s峰C=N从284.2 eV移至285.5 eV；Cu 2",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "XPS吸附机理",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "CSBC吸附机制",
@@ -3244,7 +6814,42 @@
       "source": "literature",
       "ref_doi": "10.3390/toxics10090500",
       "verification": "needs_review",
-      "verification_quote": "Chitosan-Modified Biochar and             for enhanced electrostatic interactions and complexation between MO and CSBC."
+      "verification_quote": "Chitosan-Modified Biochar and             for enhanced electrostatic interactions and complexation between MO and CSBC.",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: CSBC吸附机制）",
+        "pollutant_feature": {
+          "text": "electrostatic interaction + surface complexation + pore filling",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "CSBC吸附机制",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "RHB吸附机制",
@@ -3253,7 +6858,42 @@
       "source": "literature",
       "ref_doi": "10.3390/toxics10090500",
       "verification": "needs_review",
-      "verification_quote": "by the electrostatic interactions between the positively charged surface (i."
+      "verification_quote": "by the electrostatic interactions between the positively charged surface (i.",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: RHB吸附机制）",
+        "pollutant_feature": {
+          "text": "electrostatic interaction between positively charged surface (H+) and MO- (SO3-)",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "RHB吸附机制",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "吸附机制-静电相互作用",
@@ -3262,7 +6902,42 @@
       "source": "literature",
       "ref_doi": "10.1016/j.molliq.2023.122763",
       "verification": "needs_review",
-      "verification_quote": "interaction between the MO anionic dye and the negatively charged               eluent to desorb MO dye from the chitosan-based nanocomposite."
+      "verification_quote": "interaction between the MO anionic dye and the negatively charged               eluent to desorb MO dye from the chitosan-based nanocomposite.",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 吸附机制-静电相互作用）",
+        "pollutant_feature": {
+          "text": "electrostatic interaction between anionic MO and chitosan-based nanocomposite surface (dominant mech",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "吸附机制-静电相互作用",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "吸附机制-π-π堆叠",
@@ -3271,7 +6946,42 @@
       "source": "literature",
       "ref_doi": "10.1016/j.molliq.2023.122763",
       "verification": "needs_review",
-      "verification_quote": "the π-π stacks interaction of chitosan-containing aromatics on chitosan-        ethanol solutions for 5 min."
+      "verification_quote": "the π-π stacks interaction of chitosan-containing aromatics on chitosan-        ethanol solutions for 5 min.",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 吸附机制-π-π堆叠）",
+        "pollutant_feature": {
+          "text": "π-π stacking between chitosan-containing aromatics and benzene ring of MO",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "吸附机制-π-π堆叠",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     },
     {
       "name": "吸附机制-配位作用",
@@ -3280,7 +6990,42 @@
       "source": "literature",
       "ref_doi": "10.1016/j.molliq.2023.122763",
       "verification": "needs_review",
-      "verification_quote": "coordination between the chitosan-based nanocomposite and MO mol­"
+      "verification_quote": "coordination between the chitosan-based nanocomposite and MO mol­",
+      "causal_chain": {
+        "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 吸附机制-配位作用）",
+        "pollutant_feature": {
+          "text": "coordination between N in MO and chitosan-based nanocomposite",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "壳聚糖骨架的-NH₂和-OH官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位、静电吸引、离子交换、氢键",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "吸附机制-配位作用",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "<",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ]
+      }
     }
   ],
   "narrative": {
