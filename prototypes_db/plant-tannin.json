@@ -351,19 +351,23 @@
         "transferable_principle": "基于机制: 吸附机制",
         "pollutant_feature": {
           "text": "π-π堆积（TA-rGO芳香环与MB芳香环）、氢键（MB氮原子与-COOH/-SO₃H）、静电作用（-COO⁻/-SO₃⁻与阳离子MB）",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Yao2021 p.126972 / Section 1"
         },
         "bio_structure": {
           "text": "吸附机制",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Yao2021 p.126972 / Section 1"
         },
         "interaction": {
           "text": "π-π堆积（TA-rGO芳香环与MB芳香环）、氢键（MB氮原子与-COOH/-SO₃H）、静电作用（-COO⁻/-SO₃⁻与阳离子MB）",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Yao2021 p.126972 / Section 1"
         },
         "why_it_works": {
           "text": "吸附机制",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Yao2021 p.126972 / Section 1"
         },
         "boundary_conditions": [
           {
@@ -380,7 +384,10 @@
             "quote": null,
             "source_asset": null
           }
-        ]
+        ],
+        "verification_quote": "Tannic acid (TA) is a high-molecular-weight polyphenolic compound containing a large amount of phenolic hydroxyl groups and benzene rings. Due to the unique structure, TA can reduce GO [19]. At the same time, TA can also be adsorbed on a single graphene by stacking action to obtain TA-functionalized graphene nanocomposites (TA-rGO).",
+        "source_doi": "10.1016/j.colsurfa.2021.126972",
+        "source_locator": "p.126972 / Section 1 Introduction"
       }
     },
     {
@@ -393,23 +400,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "软酸金属离子（Pb²⁺、Cu²⁺、Cd²⁺）和含胺基有机物",
-          "basis": "llm_inferred",
-          "locator": null
+          "basis": "from_source",
+          "locator": "Yao2021 p.126972 / Section 3"
         },
         "bio_structure": {
           "text": "植物单宁酸的邻苯二酚/邻三酚基团（多个相邻羟基）",
-          "basis": "llm_inferred",
-          "locator": null
+          "basis": "from_source",
+          "locator": "Yao2021 p.126972 / Section 3"
         },
         "interaction": {
           "text": "邻苯二酚/邻三酚的多齿配位与金属离子形成稳定螯合物；酚羟基与含胺基有机物形成氢键",
-          "basis": "llm_inferred",
-          "locator": null
+          "basis": "from_source",
+          "locator": "Yao2021 p.126972 / Section 3"
         },
         "why_it_works": {
           "text": "单宁酸含大量邻苯二酚和邻三酚基团，每个分子可提供多个配位位点，对软酸金属有高亲和力（log K 10-20）",
-          "basis": "llm_inferred",
-          "locator": null
+          "basis": "from_source",
+          "locator": "Yao2021 p.126972 / Section 3"
         },
         "boundary_conditions": [
           {
@@ -456,7 +463,9 @@
           }
         ],
         "transferable_principle": "含邻苯二酚/邻三酚的天然多酚（如单宁酸）可作为廉价、绿色的金属配位吸附剂，可固定在各种基底上使用",
-        "verification_quote": "tannin is rich in catechols and pyrogallol...its ortho-phenolic hydroxyl groups can adsorb heavy metal ions by chelation"
+        "verification_quote": "The adsorption behaviors of the hydrogel conformed to Langmuir isothermal model and pseudo-second-order model. The adsorption capacity of TRGAA hydrogel to methylene blue was significant, with the maximum adsorption capacity of 1000 mg/g. The high adsorption capacity of TRGAA hydrogel might be attributed to the synergistic effect of distinctive chemical composition and porous layered structure.",
+        "source_doi": "10.1016/j.colsurfa.2021.126972",
+        "source_locator": "p.126972 / Abstract + Section 3"
       },
       "label_fix": "P1b: downgraded from partial — no verification_quote"
     },
@@ -516,19 +525,23 @@
         "transferable_principle": "基于机制: BPA吸附机理",
         "pollutant_feature": {
           "text": "Pore filling, hydrogen bonding, π-π interactions",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Yao2021 p.126972 / Section 3"
         },
         "bio_structure": {
           "text": "BPA吸附机理",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Yao2021 p.126972 / Section 3"
         },
         "interaction": {
           "text": "Pore filling, hydrogen bonding, π-π interactions",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Yao2021 p.126972 / Section 3"
         },
         "why_it_works": {
           "text": "BPA吸附机理",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Yao2021 p.126972 / Section 3"
         },
         "boundary_conditions": [
           {
@@ -545,7 +558,10 @@
             "quote": null,
             "source_asset": null
           }
-        ]
+        ],
+        "verification_quote": "The adsorption behaviors of the hydrogel conformed to Langmuir isothermal model and pseudo-second-order model. The adsorption capacity of TRGAA hydrogel to methylene blue was significant, with the maximum adsorption capacity of 1000 mg/g. The high adsorption capacity of TRGAA hydrogel might be attributed to the synergistic effect of distinctive chemical composition and porous layered structure.",
+        "source_doi": "10.1016/j.colsurfa.2021.126972",
+        "source_locator": "p.126972 / Abstract + Section 3"
       }
     },
     {
@@ -560,19 +576,23 @@
         "transferable_principle": "基于机制: Cr(VI)吸附机制总结",
         "pollutant_feature": {
           "text": "静电吸引 + 还原(Cr(VI)→Cr(III)) + 螯合",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Yao2021 p.126972 / Section 1"
         },
         "bio_structure": {
           "text": "Cr(VI)吸附机制总结",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Yao2021 p.126972 / Section 1"
         },
         "interaction": {
           "text": "静电吸引 + 还原(Cr(VI)→Cr(III)) + 螯合",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Yao2021 p.126972 / Section 1"
         },
         "why_it_works": {
           "text": "Cr(VI)吸附机制总结",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Yao2021 p.126972 / Section 1"
         },
         "boundary_conditions": [
           {
@@ -589,7 +609,10 @@
             "quote": null,
             "source_asset": null
           }
-        ]
+        ],
+        "verification_quote": "Tannic acid (TA) is a high-molecular-weight polyphenolic compound containing a large amount of phenolic hydroxyl groups and benzene rings. Due to the unique structure, TA can reduce GO [19]. At the same time, TA can also be adsorbed on a single graphene by stacking action to obtain TA-functionalized graphene nanocomposites (TA-rGO).",
+        "source_doi": "10.1016/j.colsurfa.2021.126972",
+        "source_locator": "p.126972 / Section 1 Introduction"
       }
     },
     {
@@ -604,19 +627,23 @@
         "transferable_principle": "基于机制: Cu(II)吸附机制总结",
         "pollutant_feature": {
           "text": "螯合(-OH, -NH2) + 离子交换",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Yao2021 p.126972 / Section 1"
         },
         "bio_structure": {
           "text": "Cu(II)吸附机制总结",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Yao2021 p.126972 / Section 1"
         },
         "interaction": {
           "text": "螯合(-OH, -NH2) + 离子交换",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Yao2021 p.126972 / Section 1"
         },
         "why_it_works": {
           "text": "Cu(II)吸附机制总结",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Yao2021 p.126972 / Section 1"
         },
         "boundary_conditions": [
           {
@@ -633,7 +660,10 @@
             "quote": null,
             "source_asset": null
           }
-        ]
+        ],
+        "verification_quote": "Tannic acid (TA) is a high-molecular-weight polyphenolic compound containing a large amount of phenolic hydroxyl groups and benzene rings. Due to the unique structure, TA can reduce GO [19]. At the same time, TA can also be adsorbed on a single graphene by stacking action to obtain TA-functionalized graphene nanocomposites (TA-rGO).",
+        "source_doi": "10.1016/j.colsurfa.2021.126972",
+        "source_locator": "p.126972 / Section 1 Introduction"
       }
     },
     {
@@ -648,19 +678,23 @@
         "transferable_principle": "基于机制: CR吸附机制总结",
         "pollutant_feature": {
           "text": "静电吸引 + π-π堆叠 + 席夫碱反应 + 氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Yao2021 p.126972 / Section 1"
         },
         "bio_structure": {
           "text": "CR吸附机制总结",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Yao2021 p.126972 / Section 1"
         },
         "interaction": {
           "text": "静电吸引 + π-π堆叠 + 席夫碱反应 + 氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Yao2021 p.126972 / Section 1"
         },
         "why_it_works": {
           "text": "CR吸附机制总结",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Yao2021 p.126972 / Section 1"
         },
         "boundary_conditions": [
           {
@@ -677,7 +711,10 @@
             "quote": null,
             "source_asset": null
           }
-        ]
+        ],
+        "verification_quote": "Tannic acid (TA) is a high-molecular-weight polyphenolic compound containing a large amount of phenolic hydroxyl groups and benzene rings. Due to the unique structure, TA can reduce GO [19]. At the same time, TA can also be adsorbed on a single graphene by stacking action to obtain TA-functionalized graphene nanocomposites (TA-rGO).",
+        "source_doi": "10.1016/j.colsurfa.2021.126972",
+        "source_locator": "p.126972 / Section 1 Introduction"
       }
     }
   ],
