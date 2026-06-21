@@ -1,0 +1,247 @@
+{
+  "bpa_内分泌干扰物去除": {
+    "expected_candidates": [
+      "chitosan",
+      "plant-tannin",
+      "polydopamine-coating"
+    ],
+    "forbidden_normal": [
+      "lotus-leaf",
+      "shark-skin",
+      "bone-structure",
+      "water-strider-leg"
+    ],
+    "domain": "organic",
+    "expected_mechanism_keywords": {
+      "chitosan": [
+        "π-π",
+        "氢键",
+        "吸附",
+        "芳香"
+      ],
+      "plant-tannin": [
+        "BPA",
+        "吸附",
+        "酚"
+      ],
+      "polydopamine-coating": [
+        "PDA",
+        "吸附",
+        "粘附"
+      ]
+    }
+  },
+  "pfoa_痕量吸附去除": {
+    "expected_candidates": [
+      "chitosan",
+      "diatom-frustule",
+      "polydopamine-coating"
+    ],
+    "forbidden_normal": [
+      "lotus-leaf",
+      "shark-skin",
+      "bone-structure",
+      "water-strider-leg"
+    ],
+    "domain": "organic",
+    "expected_mechanism_keywords": {
+      "chitosan": [
+        "吸附",
+        "pH",
+        "极性",
+        "氢键",
+        "氨基"
+      ],
+      "diatom-frustule": [
+        "硅藻",
+        "Si-OH",
+        "吸附",
+        "热处理"
+      ],
+      "polydopamine-coating": [
+        "PDA",
+        "吸附",
+        "粘附",
+        "涂层",
+        "多巴胺",
+        "超疏水",
+        "抗菌",
+        "Cu",
+        "纳米"
+      ]
+    }
+  },
+  "pb(ii)_重金属离子去除": {
+    "expected_candidates": [
+      "mussel-foot-adhesion",
+      "fish-scale-hydroxyapatite",
+      "oyster-shell",
+      "chitosan"
+    ],
+    "forbidden_normal": [
+      "lotus-leaf",
+      "shark-skin",
+      "water-strider-leg"
+    ],
+    "domain": "heavy_metal",
+    "expected_mechanism_keywords": {
+      "mussel-foot-adhesion": [
+        "DOPA",
+        "PDA",
+        "螯合",
+        "配位",
+        "金属",
+        "自聚合",
+        "粘附"
+      ],
+      "fish-scale-hydroxyapatite": [
+        "HAp",
+        "磷灰石",
+        "离子交换",
+        "Pb",
+        "协同",
+        "吸附",
+        "羟基"
+      ],
+      "oyster-shell": [
+        "CaCO₃",
+        "离子交换",
+        "PbCO₃",
+        "牡蛎",
+        "改性",
+        "吸附",
+        "CaO"
+      ],
+      "chitosan": [
+        "螯合",
+        "配位",
+        "氨基",
+        "金属",
+        "吸附",
+        "络合"
+      ]
+    }
+  },
+  "cr(vi)_六价铬去除": {
+    "expected_candidates": [
+      "chitosan",
+      "iron-oxidizing-bacteria",
+      "polydopamine-coating"
+    ],
+    "forbidden_normal": [
+      "lotus-leaf",
+      "shark-skin",
+      "water-strider-leg"
+    ],
+    "domain": "heavy_metal",
+    "expected_mechanism_keywords": {
+      "chitosan": [
+        "吸附",
+        "Cr",
+        "氨基"
+      ],
+      "iron-oxidizing-bacteria": [
+        "铁氧化",
+        "施氏矿物",
+        "吸附"
+      ],
+      "polydopamine-coating": [
+        "PDA",
+        "吸附"
+      ]
+    }
+  },
+  "smx_抗生素吸附去除": {
+    "expected_candidates": [
+      "plant-tannin",
+      "chitosan",
+      "polydopamine-coating"
+    ],
+    "forbidden_normal": [
+      "lotus-leaf",
+      "shark-skin",
+      "bone-structure",
+      "water-strider-leg"
+    ],
+    "domain": "organic",
+    "expected_mechanism_keywords": {
+      "plant-tannin": [
+        "吸附",
+        "酚",
+        "SMX"
+      ],
+      "chitosan": [
+        "吸附",
+        "氢键"
+      ],
+      "polydopamine-coating": [
+        "PDA",
+        "吸附"
+      ]
+    }
+  },
+  "亚甲基蓝染料去除": {
+    "expected_candidates": [
+      "silk-fibroin",
+      "chlorella-cell-wall",
+      "chitosan"
+    ],
+    "forbidden_normal": [
+      "lotus-leaf",
+      "shark-skin",
+      "bone-structure",
+      "water-strider-leg"
+    ],
+    "domain": "dye",
+    "expected_mechanism_keywords": {
+      "silk-fibroin": [
+        "丝素",
+        "吸附",
+        "染料",
+        "蚕丝"
+      ],
+      "chlorella-cell-wall": [
+        "微藻",
+        "吸附",
+        "染料",
+        "藻",
+        "生物炭",
+        "细胞壁"
+      ],
+      "chitosan": [
+        "吸附",
+        "染料",
+        "壳聚糖"
+      ]
+    }
+  },
+  "油水分离": {
+    "expected_candidates": [
+      "lotus-leaf",
+      "superhydrophobic-artificial",
+      "water-strider-leg"
+    ],
+    "forbidden_normal": [
+      "chitosan",
+      "bone-structure",
+      "oyster-shell"
+    ],
+    "domain": "superwetting",
+    "expected_mechanism_keywords": {
+      "lotus-leaf": [
+        "超疏水",
+        "荷叶",
+        "油水"
+      ],
+      "superhydrophobic-artificial": [
+        "超疏水",
+        "油水"
+      ],
+      "water-strider-leg": [
+        "超疏水",
+        "水黾",
+        "油水"
+      ]
+    }
+  }
+}
