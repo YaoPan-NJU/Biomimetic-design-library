@@ -1,6 +1,6 @@
 {
   "baseline_commit": "e4dc2d0",
-  "tested_commit": "9a3f130",
+  "tested_commit": "1cf2e07",
   "branch": "review",
   "active_goal": "v02-rc-frozen-awaiting-yao",
   "authorized_milestones": [
@@ -89,7 +89,7 @@
   "git_status_note": "Local dirty files: .claude/settings.local.json, README.md, untracked docs. Excluded from review scope.",
   "m9_summary": {
     "mechanisms_upgraded": 103,
-    "from_source_total": "103/515 (20%)",
+    "from_source_total": "60/510 (12%)",
     "llm_inferred_remaining": 412,
     "pdfs_read": 25,
     "prototypes_touched": 20,
@@ -97,14 +97,14 @@
     "validators": "all green"
   },
   "m10_summary": {
-    "status": "accepted — v0.2 RC at 9a3f130",
+    "status": "accepted — v0.2 RC at 1cf2e07, M12 full audit complete",
     "validators_all_green": "15/15 passed",
     "briefs_frozen": "7 ADRMATS gold-set briefs verified",
-    "evidence_caveat": "103/515 from_source (20%), remaining 412 are source-backed inference"
+    "evidence_caveat": "60/510 from_source (12%), remaining 450 are source-backed inference"
   },
   "v02_plan": {
     "M8": "complete",
-    "M9": "accepted — 93/510 from_source (18%)",
+    "M9": "accepted — 60/510 from_source (12%)",
     "M10": "accepted — v0.2 RC frozen",
     "M11": "pending — v0.2 release (awaiting Yao)"
   }
