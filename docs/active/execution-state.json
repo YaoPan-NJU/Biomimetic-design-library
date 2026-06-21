@@ -113,13 +113,16 @@
     "validators": "all green"
   },
   "m9_summary": {
-    "mechanisms_upgraded": 42,
-    "prototypes_touched": 10,
-    "from_source_total": "59/510 (12%)",
-    "llm_inferred_remaining": 451,
-    "method": "keyword matching against litextract extraction JSONs",
-    "batches": 3,
-    "validators": "all green"
+    "mechanisms_upgraded": 60,
+    "prototypes_touched": 16,
+    "from_source_total": "60/510 (12%)",
+    "llm_inferred_remaining": 450,
+    "method": "keyword/character/quote matching against litextract extraction JSONs",
+    "batches": 5,
+    "label_inflation_fix": "applied — all 60 fully supported with quote+doi+locator",
+    "dt_deepening": "diatom-inspired-porous, silkworm-silk fixed",
+    "validators": "all green",
+    "natural_gate": "keyword matching exhausted — remaining 450 need PDF extraction"
   },
   "v02_plan": {
     "M8": "complete",
