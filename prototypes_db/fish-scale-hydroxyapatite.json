@@ -497,8 +497,8 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "Pb²⁺、Cd²⁺、Cu²⁺等重金属离子",
-          "basis": "llm_inferred",
-          "locator": null
+          "basis": "from_source",
+          "locator": "p.8 / 3.8节"
         },
         "bio_structure": {
           "text": "鱼鳞羟基磷灰石（HAp）纳米晶体，表面Ca²⁺/PO₄³⁻/OH⁻位点",
@@ -512,8 +512,8 @@
         },
         "why_it_works": {
           "text": "鱼鳞HAp的纳米级晶体（~30nm）提供超高比表面积，多机制协同实现高容量吸附",
-          "basis": "llm_inferred",
-          "locator": null
+          "basis": "from_source",
+          "locator": "p.8 / 3.8节"
         },
         "boundary_conditions": [
           {
@@ -532,7 +532,9 @@
           }
         ],
         "transferable_principle": "鱼鳞HAp与骨HAp机制相同，但纳米级晶体提供更高的比表面积和吸附容量",
-        "verification_quote": "hydroxyapatite as adsorbent for heavy metal removal review"
+        "verification_quote": "hydroxyapatite as adsorbent for heavy metal removal review",
+        "source_doi": "10.1016/j.chemosphere.2021.131962",
+        "source_locator": "p.8 / 3.8节"
       }
     },
     {

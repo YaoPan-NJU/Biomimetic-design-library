@@ -458,19 +458,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "550°C热处理",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.2 / Section 1.1"
         },
         "bio_structure": {
           "text": "硅藻土多孔结构+表面Si-OH",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.2 / Section 1.1"
         },
         "interaction": {
           "text": "表面Si-OH基团暴露增多，L碱位增加",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.2 / Section 1.1"
         },
         "why_it_works": {
           "text": "与Ni²⁺/Ag⁺配位吸附增强，吸附性能提高1.71倍",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.2 / Section 1.1"
         },
         "boundary_conditions": [
           {
@@ -485,7 +489,10 @@
             }
           }
         ],
-        "transferable_principle": "基于热处理——550°C表面Si-OH暴露的吸附/去除机制"
+        "transferable_principle": "基于热处理——550°C表面Si-OH暴露的吸附/去除机制",
+        "verification_quote": "经550℃煅烧后硅藻土的比表面积对比于原始硅藻土略有减小，但吸附性能却提高了1.71倍",
+        "source_doi": "10.19817/j.cnki.issn1006-3536.2022.01.060",
+        "source_locator": "p.2 / Section 1.1"
       }
     },
     {
