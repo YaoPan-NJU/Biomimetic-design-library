@@ -55,11 +55,11 @@
         "design_translation": {
           "idea": "利用丝素蛋白的 β-折叠结构和氨基酸侧链进行吸附",
           "material_handle": "丝素蛋白提取、再生或交联成型",
-          "design_principle": "",
-          "implementation_example": "",
-          "constraints": "",
-          "failure_modes": "",
-          "evidence_tier": "inference",
+          "design_principle": "丝素蛋白的β-折叠结晶区提供机械强度，无定形区的-NH₂、-COOH、-OH提供吸附位点。可通过再生/改性调控溶解性和功能化",
+          "implementation_example": "蚕丝脱胶→SF溶液→静电纺丝纳米纤维膜；或SF/壳聚糖复合微球→柱吸附",
+          "constraints": "SF水溶性需甲醇/乙醇处理交联；机械强度低于合成聚合物；成本高于壳聚糖",
+          "failure_modes": "未交联SF溶解；机械强度不足；交联后官能团减少",
+          "evidence_tier": "lead",
           "source_tier": "llm_inference",
           "material_realization_examples": [
             "丝素蛋白提取、再生或交联成型"
@@ -74,6 +74,8 @@
             "verification": "needs_review"
           }
         ],
+        "honesty_summary": "有直接实验数据但机制未经独立核实",
+        "boundary_summary": "1 条软限制（caution）",
         "evidence_context": {
           "performance_leads": [
             {
@@ -139,6 +141,8 @@
             "verification": "corroborated"
           }
         ],
+        "honesty_summary": "基于分子特征推断，非直接证据",
+        "boundary_summary": "1 条硬限制（DO-NOT）",
         "evidence_context": {
           "performance_leads": [
             {
@@ -228,6 +232,8 @@
             "verification": "needs_review"
           }
         ],
+        "honesty_summary": "基于分子特征推断，非直接证据",
+        "boundary_summary": "4 条软限制（caution）",
         "evidence_context": {
           "performance_leads": [
             {
@@ -303,6 +309,8 @@
             "verification": "needs_review"
           }
         ],
+        "honesty_summary": "有性能数据但缺乏 verification_quote",
+        "boundary_summary": "2 条软限制（caution）",
         "evidence_context": {
           "performance_leads": []
         }
@@ -348,6 +356,8 @@
           ]
         },
         "boundaries": [],
+        "honesty_summary": "基于分子特征推断，非直接证据",
+        "boundary_summary": "无已知边界条件",
         "evidence_context": {
           "performance_leads": []
         }

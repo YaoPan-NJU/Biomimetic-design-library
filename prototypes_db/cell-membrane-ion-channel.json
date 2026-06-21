@@ -629,7 +629,12 @@
       "material_handle": "仿生纳米通道膜或离子印迹聚合物",
       "target_interaction": "基于尺寸和电荷的离子选择性传输",
       "source_tier": "llm_inference",
-      "examples": []
+      "examples": [],
+      "design_principle": "生物离子通道（如水通道蛋白AQP、KcsA钾通道）通过亚纳米孔道实现高选择性离子/分子传输。仿生设计可在膜中嵌入选择性通道实现污染物分离",
+      "implementation_example": "AQP重组表达→脂质体/聚合物囊泡嵌入→仿生膜；或冠醚/环糊精分子嵌入聚合物基质→选择性通道",
+      "constraints": "蛋白质通道稳定性差需固定化；规模化困难；成本极高",
+      "failure_modes": "蛋白质变性失活；膜缺陷降低选择性；规模化成本不可控",
+      "evidence_tier": "inference"
     }
   ],
   "library_tier": "core",

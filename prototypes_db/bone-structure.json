@@ -218,7 +218,12 @@
       "material_handle": "合成羟基磷灰石粉末或涂层",
       "target_interaction": "Ca²⁺ 位点配位 F⁻、Pb²⁺，PO₄³⁻ 位点捕获阳离子",
       "source_tier": "llm_inference",
-      "examples": []
+      "examples": [],
+      "design_principle": "骨骼的羟基磷灰石(HAp)层通过离子交换（Pb²⁺替换Ca²⁺形成磷氯铅矿）和表面配位吸附重金属。层状结构提供高比表面积",
+      "implementation_example": "骨粉→600°C煅烧→HAp粉末→柱吸附或压片；或化学合成HAp纳米颗粒→涂层/复合材料",
+      "constraints": "酸性条件HAp溶解；竞争阳离子(Ca²⁺、Mg²⁺)干扰；煅烧温度影响晶相",
+      "failure_modes": "酸性溶解；竞争吸附；合成HAp不如天然骨粉多孔",
+      "evidence_tier": "fact"
     }
   ],
   "library_tier": "core",

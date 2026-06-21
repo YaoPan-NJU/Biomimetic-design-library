@@ -222,7 +222,12 @@
       "material_handle": "红树林生物质碳化或直接使用",
       "target_interaction": "酚羟基和羧基配位重金属离子，多孔结构物理截留",
       "source_tier": "llm_inference",
-      "examples": []
+      "examples": [],
+      "design_principle": "红树林根系的通气组织(aerenchyma)提供多孔结构，根表铁膜(iron plaque)含Fe(III)氧化物可吸附As、P等含氧阴离子。根际微生物群落可转化/沉淀重金属",
+      "implementation_example": "红树林根系废弃物→干燥研磨→直接使用；或根表铁膜模拟→FeOOH涂层多孔载体→吸附柱",
+      "constraints": "天然根系来源有限；铁膜脱落；微生物群落不稳定",
+      "failure_modes": "来源有限；铁膜脱落；微生物群落波动",
+      "evidence_tier": "lead"
     }
   ],
   "library_tier": "core",

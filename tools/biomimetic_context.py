@@ -444,6 +444,8 @@ class BiomimeticContext:
                         'material_realization_examples': [material_handle] if material_handle else []
                     },
                     'boundaries': self._get_mechanism_boundaries(main_mech),
+                    'honesty_summary': self._get_honesty_summary(candidate_honesty, c, main_mech),
+                    'boundary_summary': self._get_boundary_summary(self._get_mechanism_boundaries(main_mech)),
                     'evidence_context': {
                         'performance_leads': self._get_performance_leads(proto, pollutant)
                     }
@@ -533,6 +535,31 @@ class BiomimeticContext:
                 'verification': bc.get('verification', '')
             })
         return boundaries
+
+    def _get_honesty_summary(self, honesty: str, match_info: Dict, mech: Dict) -> str:
+        """生成候选的诚实度摘要"""
+        if honesty == 'fact':
+            return "有直接实验数据且机制经验证"
+        elif honesty == 'lead':
+            if match_info.get('direct_evidence'):
+                return "有直接实验数据但机制未经独立核实"
+            else:
+                return "有性能数据但缺乏 verification_quote"
+        else:
+            return "基于分子特征推断，非直接证据"
+
+    def _get_boundary_summary(self, boundaries: List[Dict]) -> str:
+        """生成边界条件摘要"""
+        if not boundaries:
+            return "无已知边界条件"
+        hard = [b for b in boundaries if b.get('gate_level') == 'hard']
+        soft = [b for b in boundaries if b.get('gate_level') == 'soft']
+        parts = []
+        if hard:
+            parts.append(f"{len(hard)} 条硬限制（DO-NOT）")
+        if soft:
+            parts.append(f"{len(soft)} 条软限制（caution）")
+        return '，'.join(parts) if parts else "无已知边界条件"
 
     def _get_performance_leads(self, proto: Dict, pollutant: str) -> List[Dict]:
         """获取性能线索"""

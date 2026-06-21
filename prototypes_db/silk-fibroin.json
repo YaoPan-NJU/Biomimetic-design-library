@@ -857,7 +857,12 @@
       "material_handle": "丝素蛋白提取、再生或交联成型",
       "target_interaction": "羟基和酚羟基配位金属离子，β-折叠提供结构稳定性",
       "source_tier": "llm_inference",
-      "examples": []
+      "examples": [],
+      "design_principle": "丝素蛋白的β-折叠结晶区提供机械强度，无定形区的-NH₂、-COOH、-OH提供吸附位点。可通过再生/改性调控溶解性和功能化",
+      "implementation_example": "蚕丝脱胶→SF溶液→静电纺丝纳米纤维膜；或SF/壳聚糖复合微球→柱吸附",
+      "constraints": "SF水溶性需甲醇/乙醇处理交联；机械强度低于合成聚合物；成本高于壳聚糖",
+      "failure_modes": "未交联SF溶解；机械强度不足；交联后官能团减少",
+      "evidence_tier": "lead"
     }
   ],
   "library_tier": "core",

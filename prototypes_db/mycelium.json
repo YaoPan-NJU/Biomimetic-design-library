@@ -133,7 +133,12 @@
       "material_handle": "真菌菌丝体培养、固定化或改性",
       "target_interaction": "氨基和羟基配位重金属离子，生物降解性好",
       "source_tier": "llm_inference",
-      "examples": []
+      "examples": [],
+      "design_principle": "真菌菌丝体细胞壁的几丁质(含-NH₂)和葡聚糖(含-OH)提供天然吸附官能团。发酵废弃物来源丰富，可作为低成本吸附剂",
+      "implementation_example": "真菌发酵→菌丝体收获→干燥→直接使用；或菌丝体/壳聚糖复合微球→增强机械强度",
+      "constraints": "吸附容量低于改性壳聚糖；机械强度低；微生物降解",
+      "failure_modes": "容量有限；机械破碎；生物降解限制再生",
+      "evidence_tier": "lead"
     }
   ],
   "library_tier": "core",

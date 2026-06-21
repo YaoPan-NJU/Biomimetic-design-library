@@ -832,7 +832,12 @@
       "material_handle": "IOB 培养生成施氏矿物，或合成类似结构",
       "target_interaction": "Fe-O/OH 位点吸附 As(V)、Cr(VI) 等阴离子重金属",
       "source_tier": "llm_inference",
-      "examples": []
+      "examples": [],
+      "design_principle": "铁氧化菌（如Leptothrix, Gallionella）分泌铁氧化酶催化Fe²⁺→Fe³⁺，生成施氏矿物（schwertmannite）等铁(氧氢)氧化物，通过表面-OH配位吸附As、Cr等含氧阴离子",
+      "implementation_example": "IOB培养→铁氧化→施氏矿物沉淀→过滤收集→直接使用；或IOB固定化在生物反应器中连续产矿物",
+      "constraints": "需要Fe²⁺底物供应；pH 3-7最适；矿物结晶度影响吸附容量",
+      "failure_modes": "Fe²⁺供应不足停止产矿物；pH过高矿物溶解；竞争阴离子(磷酸盐、硫酸盐)",
+      "evidence_tier": "lead"
     }
   ],
   "library_tier": "core",

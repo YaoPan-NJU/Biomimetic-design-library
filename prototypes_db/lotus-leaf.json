@@ -1720,7 +1720,12 @@
       "source_tier": "llm_inference",
       "source_doi": null,
       "examples": [],
-      "note": "source_doi removed — was in refuted-log as wrong_source"
+      "note": "source_doi removed — was in refuted-log as wrong_source",
+      "design_principle": "荷叶表面微米乳突+纳米蜡晶体形成层级结构，空气垫使水滴呈Cassie-Baxter态（接触角>150°，滚动角<10°）。超疏水表面对油水混合物具有选择性透过能力——水被排斥而油可渗透",
+      "implementation_example": "SiO₂/PDMS浸涂→超疏水涂层；或静电纺丝PCL/氟聚合物→微纳纤维膜→油水分离",
+      "constraints": "机械磨损破坏微纳结构→超疏水失效；强酸/碱腐蚀；有机溶剂溶胀",
+      "failure_modes": "机械磨损丧失超疏水性；油污堵塞孔道；长期使用涂层脱落",
+      "evidence_tier": "lead"
     }
   ],
   "honesty_ledger": {
