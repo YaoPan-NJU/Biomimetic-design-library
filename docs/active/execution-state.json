@@ -1,8 +1,8 @@
 {
   "baseline_commit": "e4dc2d0",
-  "tested_commit": "a74838a",
+  "tested_commit": "d5b28ac",
   "branch": "review",
-  "active_goal": "M8-v02-terminal-evidence",
+  "active_goal": "M9-evidence-uplift",
   "authorized_milestones": [
     "R0",
     "R1",
@@ -33,7 +33,8 @@
     "P5-B-completion",
     "M6-ADRMATS-dogfood",
     "M7-ADRMATS-usefulness-hardening",
-    "M8-v02-terminal-evidence"
+    "M8-v02-terminal-evidence",
+    "M9-evidence-uplift"
   ],
   "pending_phases": [
     "G5-yao-review",
@@ -85,8 +86,8 @@
     "tools/litextract": "submodule, security fix landed",
     "docs/optimization-v1/": "untracked, excluded from commits"
   },
-  "last_checkpoint": "2026-06-21T07:00:00Z",
-  "next_action": "M9: Deepen DT for remaining 17 prototypes, repair feature-mapping",
+  "last_checkpoint": "2026-06-21T14:30:00Z",
+  "next_action": "M9 batch 2: continue evidence uplift with semantic matching for remaining 451 llm_inferred mechanisms",
   "git_status_note": ".claude/settings.local.json is a local-only user change, not part of canon commits. Untracked docs/active/NOTE-TO-CODEX-V3-RATIONALE.md and docs/optimization-v1/ are excluded from review.",
   "m6_summary": {
     "briefs_generated": 7,
@@ -111,9 +112,18 @@
     "dt_coverage": "19/36 (53%)",
     "validators": "all green"
   },
+  "m9_summary": {
+    "mechanisms_upgraded": 42,
+    "prototypes_touched": 10,
+    "from_source_total": "59/510 (12%)",
+    "llm_inferred_remaining": 451,
+    "method": "keyword matching against litextract extraction JSONs",
+    "batches": 3,
+    "validators": "all green"
+  },
   "v02_plan": {
     "M8": "complete",
-    "M9": "pending — DT deepening + feature-mapping",
+    "M9": "in progress — evidence uplift batch 1-3 done, 451 mechanisms remaining",
     "M10": "pending — full release QA",
     "M11": "pending — v0.2 release packaging"
   }
