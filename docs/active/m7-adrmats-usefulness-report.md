@@ -1,7 +1,7 @@
 # M7 ADRMATS Usefulness Hardening Report
 
 **Date**: 2026-06-21
-**HEAD**: (to be updated after commit)
+**HEAD**: ae94431
 **Branch**: review
 
 ## Executive Summary
@@ -47,7 +47,7 @@ M7 usefulness hardening complete. Deepened DT for 8 more high-impact prototypes,
 | 油水分离 | 3 | 0 | 0 | 3 | 3 | 1/3 |
 
 ### Key Improvements from M6→M7
-1. **DT coverage**: 11→19 prototypes deepened (73% → 53% of root still pending)
+1. **DT coverage**: 19/36 root prototypes deepened (53% complete), 17/36 pending (47%)
 2. **honesty_summary**: Every candidate now has a human-readable explanation
 3. **boundary_summary**: Every candidate has a concise boundary count
 4. **Regression check**: Automated check prevents future quality regression
