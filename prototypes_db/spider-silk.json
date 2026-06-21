@@ -825,7 +825,9 @@
         "transferable_principle": "基于机制: 铀酰离子配位化学",
         "pollutant_feature": {
           "text": "UO2^2+线性对称[O=U=O]^2+, U-O键长1.76 Å, 4-6个配体在赤道面配位, 四方/五方/六方双锥",
-          "basis": "llm_inferred"
+          "basis": "llm_inferred",
+          "scope_caveat": "uranium/actinide-specific chemistry, not general adsorption",
+          "source_tier": "literature"
         },
         "bio_structure": {
           "text": "铀酰离子配位化学",
@@ -855,7 +857,9 @@
             "source_asset": null
           }
         ]
-      }
+      },
+      "scope_caveat": "RECLASSIFIED: uranium/actinide capture, not general spider-silk adsorption",
+      "boundary_note": "This mechanism describes UO2^2+ coordination chemistry specific to uranium recovery applications."
     },
     {
       "name": "酰胺肟配位模式",
@@ -954,7 +958,9 @@
         "transferable_principle": "基于机制: 双功能协同策略",
         "pollutant_feature": {
           "text": "三种机制：(1)第二配体提供额外配位位点 (2)增强AO碱性→更强U(VI)络合 (3)酸性基团解离碳酸盐→释放UO2^2+",
-          "basis": "llm_inferred"
+          "basis": "llm_inferred",
+          "scope_caveat": "uranium/actinide-specific, requires uranium-containing source",
+          "source_tier": "literature"
         },
         "bio_structure": {
           "text": "双功能协同策略",
@@ -984,7 +990,9 @@
             "source_asset": null
           }
         ]
-      }
+      },
+      "scope_caveat": "RECLASSIFIED: uranium-specific ligand and complexation mechanisms",
+      "boundary_note": "This mechanism is specific to uranium(VI) capture using amine/acid functional groups. Do not generalize to non-uranium pollutants."
     },
     {
       "name": "离子印迹策略——三种改进方向",
@@ -1040,7 +1048,9 @@
         "transferable_principle": "基于机制: 电化学提取三阶段机理",
         "pollutant_feature": {
           "text": "电迁移→电吸附→电化学沉积; UO2^2+→U(IV)还原沉淀→突破热力学平衡",
-          "basis": "llm_inferred"
+          "basis": "llm_inferred",
+          "scope_caveat": "uranium-specific electrochemical reduction, not general adsorption",
+          "source_tier": "literature"
         },
         "bio_structure": {
           "text": "电化学提取三阶段机理",
@@ -1070,7 +1080,9 @@
             "source_asset": null
           }
         ]
-      }
+      },
+      "scope_caveat": "RECLASSIFIED: uranium electrochemical deposition/reduction",
+      "boundary_note": "This mechanism requires electrochemical setup and is specific to U(VI)→U(IV) reduction. Not applicable to general spider-silk adsorption applications."
     },
     {
       "name": "MOF光催化协同机制",

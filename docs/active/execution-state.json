@@ -2,7 +2,7 @@
   "baseline_commit": "e4dc2d0",
   "tested_commit": "see latest REVIEW_REQUEST for final pushed HEAD",
   "branch": "review",
-  "active_goal": "v02-rc-frozen-awaiting-yao",
+  "active_goal": "v10-expansion-60-80",
   "authorized_milestones": [
     "R0",
     "R1",
@@ -16,9 +16,13 @@
     "M7",
     "M8",
     "M9",
-    "M10"
+    "M10",
+    "M11",
+    "M12",
+    "M13",
+    "M14"
   ],
-  "current_gate": "M13-v02-handoff-complete",
+  "current_gate": "G5-yao-accepted-v02-v10-authorized",
   "completed_phases": [
     "R0-capability-v3-real-multimodal",
     "R1-A-build-safety",
@@ -42,11 +46,12 @@
     "M9-evidence-uplift",
     "M10-v02-rc-packaging",
     "M12-full-pdf-evidence-audit",
-    "M13-v02-handoff-and-regression"
+    "M13-v02-handoff-and-regression",
+    "G5-yao-review"
   ],
   "pending_phases": [
-    "G5-yao-review",
-    "P5-expansion-to-60-80"
+    "M14-v10-expansion-wave1",
+    "M15-v10-expansion-wave2"
   ],
   "library_statistics": {
     "total_prototypes": 70,
@@ -97,8 +102,8 @@
     "tools/litextract": "submodule, security fix landed",
     "docs/optimization-v1/": "untracked, excluded"
   },
-  "last_checkpoint": "2026-06-21T15:30:00Z",
-  "next_action": "M13 complete \u2014 awaiting Yao review of v0.2 handoff package",
+  "last_checkpoint": "2026-06-22T07:15:00Z",
+  "next_action": "M14: v0.2 acceptance landing, spider-silk reclassification, v1 route selection, first 8-12 prototypes, evidence uplift",
   "git_status_note": "Local dirty files: .claude/settings.local.json, README.md, untracked docs. Excluded from review scope.",
   "m9_summary": {
     "mechanisms_upgraded": 103,
@@ -119,6 +124,16 @@
     "M8": "complete",
     "M9": "accepted \u2014 98/510 from_source (19%)",
     "M10": "accepted \u2014 v0.2 RC frozen",
-    "M11": "pending \u2014 v0.2 release (awaiting Yao)"
+    "M11": "accepted \u2014 v0.2 RC at 473327c",
+    "M12": "accepted \u2014 full PDF audit complete",
+    "M13": "accepted \u2014 handoff and regression complete",
+    "M14": "in progress \u2014 v10 expansion wave 1"
+  },
+  "yao_decisions": {
+    "accept_v02_rc": true,
+    "authorize_v10_expansion": true,
+    "evidence_uplift_412": true,
+    "spider_silk_uranium": "reclassify_not_remove",
+    "ocr_pipeline": "not_authorized_yet"
   }
 }
