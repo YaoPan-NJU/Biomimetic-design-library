@@ -67,6 +67,24 @@ def check_brief(filepath, case_name, gold_set):
         if dn.get('basis') != 'from_source':
             issues.append(f"INFERRED_HARD_DO_NOT: {dn.get('prototype_id','')} has basis={dn.get('basis','')}")
 
+    # 6. selected_mechanism_reason check
+    for c in candidates:
+        pid = c.get('prototype_id', '')
+        mech = c.get('mechanism', {})
+        reason = mech.get('selected_mechanism_reason', '')
+        if not reason:
+            issues.append(f"NO_MECHANISM_REASON: {pid} has empty selected_mechanism_reason")
+
+    # 7. Lane correctness: exploratory candidates should not be in evidence-backed lane
+    for c in candidates:
+        pid = c.get('prototype_id', '')
+        honesty = c.get('candidate_honesty', '')
+        dt = c.get('design_translation', {})
+        evidence_tier = dt.get('evidence_tier', '')
+        # If evidence_tier is 'inference' and honesty is 'fact', that's a mismatch
+        if honesty == 'fact' and evidence_tier == 'inference':
+            issues.append(f"LANE_MISMATCH: {pid} is fact-honesty but inference-evidence")
+
     return issues
 
 

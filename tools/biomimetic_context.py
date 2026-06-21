@@ -490,6 +490,13 @@ class BiomimeticContext:
                     },
                     'mechanism': {
                         'name': main_mech.get('name', '未知'),
+                        'selected_mechanism_reason': f"Query-conditioned scoring selected this mechanism for {pollutant} based on relevance to matched features/interactions",
+                        'selected_mechanism_alignment': {
+                            'query_pollutant': pollutant,
+                            'query_class': pollutant_class,
+                            'mechanism_keywords': main_mech.get('name', '')[:50],
+                            'alignment_basis': 'query_relevance_scoring'
+                        },
                         '基本原理': main_mech.get('基本原理', 'needs_review'),
                         'key_structures': main_mech.get('key_structures', []),
                         'functional_groups': main_mech.get('functional_groups', []),
