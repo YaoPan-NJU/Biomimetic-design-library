@@ -1078,7 +1078,10 @@
       "material_handle": "SLIPS 液体灌注多孔表面",
       "target_interaction": "超滑表面阻止污染物附着，实现自清洁",
       "source_tier": "llm_inference",
-      "examples": []
+      "examples": [],
+      "design_principle": "猪笼草口缘区的微纳结构+润滑液膜实现超滑表面(SLIPS)，液体在其上几乎无摩擦滑动。可用于设计抗污/自清洁表面",
+      "constraints": "润滑液流失需补充；不耐机械刮擦；成本高；不适用于吸附",
+      "implementation_example": "微纳结构基底→注入润滑液（全氟化油）→SLIPS表面"
     }
   ],
   "library_tier": "core",

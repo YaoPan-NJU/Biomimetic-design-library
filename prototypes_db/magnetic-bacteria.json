@@ -117,7 +117,10 @@
       "material_handle": "磁性细菌培养提取磁小体，或仿生合成磁性纳米粒子",
       "target_interaction": "Fe₃O₄ 表面羟基吸附重金属，磁性实现快速分离",
       "source_tier": "llm_inference",
-      "examples": []
+      "examples": [],
+      "design_principle": "磁性细菌的磁小体(Fe₃O₄纳米颗粒)提供磁分离能力，细菌表面官能团(-NH₂、-COOH)提供吸附位点",
+      "constraints": "活菌培养成本高；磁小体提取复杂；吸附容量低于纯壳聚糖",
+      "implementation_example": "磁性细菌培养→磁分离收集→直接使用或固定化"
     }
   ],
   "library_tier": "core",

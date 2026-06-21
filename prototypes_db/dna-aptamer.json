@@ -75,7 +75,10 @@
       "material_handle": "化学合成适配体，固定化在载体上",
       "target_interaction": "适配体与目标分子的特异性结合（Kd 纳摩尔级）",
       "source_tier": "llm_inference",
-      "examples": []
+      "examples": [],
+      "design_principle": "DNA适配体通过三维构象特异性识别并结合目标分子。可用于设计高选择性污染物捕获系统",
+      "constraints": "核酸酶降解；合成成本高；温度/pH敏感；规模化困难",
+      "implementation_example": "SELEX筛选→DNA合成→固定化在载体上→选择性吸附柱"
     }
   ],
   "library_tier": "core",

@@ -247,7 +247,10 @@
       "material_handle": "SRB 培养、固定化或生物反应器",
       "target_interaction": "S²⁻ 与重金属形成难溶硫化物（如 CuS、PbS）",
       "source_tier": "llm_inference",
-      "examples": []
+      "examples": [],
+      "design_principle": "硫酸盐还原菌(SRB)通过三步酶促反应将SO₄²⁻还原为H₂S，H₂S与重金属形成不溶性硫化物沉淀",
+      "constraints": "厌氧条件要求；H₂S有毒需控制；pH 5-8最适；碳源供应",
+      "implementation_example": "SRB培养→厌氧生物反应器→重金属沉淀→固液分离"
     }
   ],
   "library_tier": "core",

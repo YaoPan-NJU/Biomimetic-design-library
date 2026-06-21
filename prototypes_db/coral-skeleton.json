@@ -78,7 +78,10 @@
       "material_handle": "珊瑚骨骼粉末或合成文石",
       "target_interaction": "Ca²⁺ 位点吸附和共沉淀重金属碳酸盐",
       "source_tier": "llm_inference",
-      "examples": []
+      "examples": [],
+      "design_principle": "珊瑚骨骼文石型CaCO₃的Ca²⁺位点可与重金属形成碳酸盐沉淀。煅烧后CaO具有更强吸附能力",
+      "constraints": "煅烧能耗高；CaO水化放热；竞争阳离子干扰；珊瑚来源有限",
+      "implementation_example": "珊瑚骨骼→800°C煅烧→CaO粉末→柱吸附"
     }
   ],
   "library_tier": "core",
