@@ -63,8 +63,9 @@ Note: These prototypes have mechanisms but no directly cited PDFs in the library
 | Root prototypes | 36 |
 | PDF-backed prototypes | 26 |
 | Total mechanisms | 510 |
-| from_source | 60 (12%) |
-| llm_inferred | 450 (88%) |
+| from_source (root) | 98 (19%) |
+| llm_inferred (root) | 412 (81%) |
+| from_source (incl separation) | 102/514 (20%) |
 | Qualified causal cards | 510/510 |
 | ADRMATS briefs | 7/7 pass |
 | Validators | 15/15 green |
