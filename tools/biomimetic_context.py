@@ -403,6 +403,12 @@ class BiomimeticContext:
                     if pol in mech_name:
                         score += 5
 
+                    # Boost coordination/chelation mechanisms for heavy-metal queries
+                    match_reason = (c.get('reason', '') or '').lower()
+                    if any(kw in match_reason for kw in ['螯合', '配位', 'chelat', 'coordination']):
+                        if any(kw in mech_name for kw in ['配位', '螯合', 'coordination', 'chelat', 'DOPA', 'dopa']):
+                            score += 5
+
                     # Check if mechanism has causal_chain
                     cc = m.get('causal_chain', {})
                     if cc and cc.get('transferable_principle'):
