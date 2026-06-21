@@ -1,6 +1,6 @@
 {
   "baseline_commit": "e4dc2d0",
-  "tested_commit": "53ea000",
+  "tested_commit": "9a3f130",
   "branch": "review",
   "active_goal": "v02-rc-frozen-awaiting-yao",
   "authorized_milestones": [
@@ -48,8 +48,8 @@
     "deprecated": 2,
     "mechanisms": 510,
     "performance_data": 498,
-    "from_source": 93,
-    "llm_inferred": 417,
+    "from_source": 103,
+    "llm_inferred": 412,
     "qualified_causal_cards": 510,
     "boundary_conditions": 121,
     "honesty_ledgers": 36,
@@ -83,23 +83,23 @@
     "tools/litextract": "submodule, security fix landed",
     "docs/optimization-v1/": "untracked, excluded"
   },
-  "last_checkpoint": "2026-06-21T21:30:00Z",
-  "next_action": "Await Yao review of v0.2 RC. No further repo writes unless release-blocking issue.",
+  "last_checkpoint": "2026-06-21T22:45:00Z",
+  "next_action": "v0.2 RC final — awaiting Yao review. M9b/M10/M11 longrun complete.",
   "git_status_note": "Local dirty files: .claude/settings.local.json, README.md, untracked docs. Excluded from review scope.",
   "m9_summary": {
-    "mechanisms_upgraded": 93,
-    "from_source_total": "93/510 (18%)",
-    "llm_inferred_remaining": 417,
-    "pdfs_read": 10,
-    "prototypes_touched": 17,
-    "method": "10 PDFs + keyword matching + 7 single-mechanism D4 extractions",
+    "mechanisms_upgraded": 103,
+    "from_source_total": "103/515 (20%)",
+    "llm_inferred_remaining": 412,
+    "pdfs_read": 25,
+    "prototypes_touched": 20,
+    "method": "25 PDFs + keyword matching + 7 single-mechanism D4 extractions",
     "validators": "all green"
   },
   "m10_summary": {
-    "status": "accepted — v0.2 RC frozen at 53ea000",
+    "status": "accepted — v0.2 RC at 9a3f130",
     "validators_all_green": "15/15 passed",
     "briefs_frozen": "7 ADRMATS gold-set briefs verified",
-    "evidence_caveat": "93/510 from_source (18%), remaining 417 are source-backed inference"
+    "evidence_caveat": "103/515 from_source (20%), remaining 412 are source-backed inference"
   },
   "v02_plan": {
     "M8": "complete",
