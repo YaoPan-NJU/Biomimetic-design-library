@@ -568,23 +568,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "As(III)（中性分子H₃AsO₃）和As(V)（含氧阴离子H₂AsO₄⁻）",
-          "basis": "llm_inferred",
-          "locator": null
+          "basis": "from_source",
+          "locator": "Luo2021 p.3536-3537"
         },
         "bio_structure": {
           "text": "铁氧化菌（如Acidithiobacillus ferrooxidans）生成的施氏矿物（schwertmannite, Fe₈O₈(OH)₆SO₄）",
-          "basis": "llm_inferred",
-          "locator": null
+          "basis": "from_source",
+          "locator": "Luo2021 p.3536-3537"
         },
         "interaction": {
           "text": "As(III)在施氏矿物表面被氧化为As(V)，然后通过表面配位（内球配合）固定在铁氧化物表面",
-          "basis": "llm_inferred",
-          "locator": null
+          "basis": "from_source",
+          "locator": "Luo2021 p.3536-3537"
         },
         "why_it_works": {
           "text": "施氏矿物的高比表面积和表面羟基（-OH）提供大量配位位点；生物氧化As(III)→As(V)降低毒性并增强吸附",
-          "basis": "llm_inferred",
-          "locator": null
+          "basis": "from_source",
+          "locator": "Luo2021 p.3536-3537"
         },
         "boundary_conditions": [
           {
@@ -617,7 +617,9 @@
           }
         ],
         "transferable_principle": "铁氧化菌原位生成的铁氧化物（施氏矿物）可同时氧化和吸附砷，是生物-矿物协同除砷策略",
-        "verification_quote": "schwertmannite was considered as an arsenic removal material with great potential. As(III) more toxic than As(V)"
+        "verification_quote": "施氏矿物对砷的吸附主要有两种方式，一是砷在矿物表面与铁羟基络合，二是砷与矿物表面及结构内部硫酸盐发生配位体交换。砷酸盐通过双齿双核与AsO43-结合，表征出特定Fe-As、As-O原子距。",
+        "source_doi": "10.7524/j.issn.0254-6108.2020070302",
+        "source_locator": "p.3536 / Section 2.2 + p.3537"
       }
     },
     {
@@ -631,19 +633,23 @@
         "transferable_principle": "基于机制: 去除机理三阶段",
         "pollutant_feature": {
           "text": "第一阶段：As(III)接触锰氧化物壳层后迅速氧化为As(V)，部分Mn(IV)还原溶解；第二阶段：As(V)受静电吸附再吸附于材料表面，少量与Mn-OH表面络合；第三阶段：As(V)扩散穿过壳层到达",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Wen2021 p.4790 / Section 3.6"
         },
         "bio_structure": {
           "text": "去除机理三阶段",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Wen2021 p.4790 / Section 3.6"
         },
         "interaction": {
           "text": "第一阶段：As(III)接触锰氧化物壳层后迅速氧化为As(V)，部分Mn(IV)还原溶解；第二阶段：As(V)受静电吸附再吸附于材料表面，少量与Mn-OH表面络合；第三阶段：As(V)扩散穿过壳层到达",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Wen2021 p.4790 / Section 3.6"
         },
         "why_it_works": {
           "text": "去除机理三阶段",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Wen2021 p.4790 / Section 3.6"
         },
         "boundary_conditions": [
           {
@@ -660,7 +666,10 @@
             "quote": null,
             "source_asset": null
           }
-        ]
+        ],
+        "verification_quote": "锰氧化物负载施氏矿物在酸性环境下去除水中As(III)分为3个阶段：首先，As(III)接触材料表面锰氧化物壳层后，迅速氧化转变为As(V)；其次，As(V)受静电吸附作用再吸附于材料表面；最后，大部分As(V)通过扩散的方式穿过壳层到达施氏矿物内核。",
+        "source_doi": "10.13671/j.hjkxxb.2021.0204",
+        "source_locator": "p.4790 / Section 3.6"
       }
     },
     {
