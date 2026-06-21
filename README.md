@@ -4,13 +4,24 @@
 
 ---
 
-## 当前方向（2026-06-19, V3）
+## 当前方向（2026-06-21, v0.2 共识）
 
-本库是 ADRMATS 的仿生启发候选检索库（不设计材料、不按性能排名）。权威执行计划：docs/active/EXECUTION-PLAN-V3.md。
+本库是 ADRMATS 的**仿生候选匹配 + 证据检索 + 设计启发**模块，不是材料设计器，也不是按性能值排序的评价器。权威执行计划仍以 `docs/active/EXECUTION-PLAN-V3.md` 为基础，但 v0.2 前的完成定义已更新：
 
-路线：R0✓ → R1✓(G1待签) → P0 接口契约(已定=启发候选) → P1 修正(scope/标签/honesty_ledger/design_translation，按产品价值重排) → P2 Core v1 验收(诚实+有用门槛) → P3 分层扩库(60–80，count 非质量指标) → P4 全量审计 + push(仅 Yao)。
+> **v0.2 不是“字段齐 + validator 绿 + causal_chain 填满”。v0.2 的门槛是：brief 能让材料工程决策更好，且不会被 scope 错配、伪事实、软边界冒充 DO-NOT 所误导。**
 
-原则：诚实优先、scope 正确、不复活 refuted、每次 canon 改动有 ledger v2 处置、未经 Yao 批准不 push。
+当前共识：
+
+- `v0.2`：现有 **36 个 root prototypes** 做到 scope-correct、证据诚实、可审计、ADRMATS 可消费的终局状态。
+- `v1.0`：在 v0.2 稳固后，再按真实证据缺口扩展到 60–80 个原型。
+- 重金属吸附是当前最强、最接近 terminal verified 的子域。
+- 有机微污染物（BPA/PFOA/SMX/染料）和油水分离目前不能与重金属同等置信度展示；若缺少 source-backed 机制，只能作为 exploratory / inspiration，不得冒充事实候选。
+- feature/token 命中不能直接进入 evidence-backed candidate lane；必须与 query、selected mechanism、design_translation、boundary 语义闭合。
+- hard DO-NOT 只允许来自 source-backed 边界：`basis=from_source` + `verification=verified/corroborated` + source/quote/locator/scope match。LLM 推断、domain knowledge、needs_review 只能作为 soft caution。
+
+近期路线：M8 semantic correctness + gold-set usefulness gate → M9 ADRMATS payload finalization → M10 full QA → M11 v0.2 release packaging。
+
+原则：诚实优先、scope 正确、不复活 refuted、不用结构绿灯替代结果级有用性、不把 LLM inference 伪装成 PDF/source verified fact。
 
 ---
 
@@ -30,29 +41,39 @@
 
 ---
 
-## 当前状态（2026-06-18 · review 分支证据审计进行中）
+## 当前状态（2026-06-21 · review 分支 v0.2 前整改）
 
-> 主分支：`adsorption/dev`｜审计分支：`review`（即将合并回主分支）｜整改主题：**PDF 级证据审计 + 机制验证**
+> 分支：`review`｜当前工作主题：**从“结构完整/标签诚实”升级到“query-specific semantic correctness + result-level usefulness”**
 
-| 指标 | 数值 |
-|------|------|
-| active 原型（参与检索）| 36（含 6 个 pending_extraction）|
-| materials_reference（降级，不检索）| 0（已并入主库）|
-| parked（超范围停放）| 0（已激活）|
-| 机制总数 | 773 |
-| 机制已验证（partial/verified）| **265**（34% 覆盖率）|
-| 因果链卡（核心、可迁移原理）| 28 张（覆盖 24/24 原型）|
-| 其中 PDF 已核验 verified | 23 张 |
-| enrichment 因果链填充 | 471/478（98.5%）|
-| performance_data 已验证行 | 397/431（92%）|
-| boundary_conditions 总数 | 62 条 |
-| 工程约束 engineering_constraints | 210+（覆盖 19 个原型）|
-| 硬 DO-NOT（verified 边界）| **0 条**（边界尚未从 PDF 逐条核验）|
-| 校验错误 / chimera 违规 | 12 / 0（12 个 feature-mapping 缺失）|
+| 指标 | 当前判断 |
+|------|----------|
+| root canon prototypes | 36 |
+| 全目录 prototype 计数 | 70（含 root、separation、enrichment、materials_reference、parked）|
+| mechanisms | 510 |
+| performance_data | 498 |
+| honesty_ledgers | 36 |
+| refuted entries remaining | 0 |
+| chimera / known refuted 风险 | 当前 guard 下压低，但仍需持续验证 |
+| causal_chain | M8 已推进到 510/510 非空，但这**不等于终局验证**；必须区分 from_source 与 llm_inferred |
+| design_translation | M7 后约 19/36 深化，v0.2 需要 36/36 或明确 exploratory 限制 |
+| hard DO-NOT | 框架存在，但尚不能宣称完成；需要 source-backed gate 和真实 candidate blocking/downgrade |
+| validator 状态 | 结构性 validator 多数绿；但旧 validator 不能证明 scope 正确或 brief 有用 |
 
-**整改进度**：Phase 0–9 已完成（基线、接口诚实度、策展、去污染、字段语义、因果链补全、PDF 核验、设计转译、接口排序修复、失效边界补全、打包总验收）。Task 69-73 完成原型扩展 24→36（激活 5 分离层 + 1 停放层 + 6 skeleton entry）。`review` 分支正在进行 PDF 级证据审计（performance_data 逐行核验 + 机制 ref_doi→PDF 匹配验证）。详见 `docs/archive/optimization-v1-2026-06/phase-reports/FINAL-report.md` 和 `docs/archive/optimization-v1-2026-06/old-handoffs/COLLAB-HANDOFF.md`。
+已完成的真实进展：
 
-> ⚠️ **当前边界输出全是 soft caution，没有 hard DO-NOT**。具体数值阈值（pH 值、浓度等）尚未从 PDF 中逐条提取核验，因此所有边界条件均为定性描述（`basis=llm_inferred`）。
+- canon 去污染、refuted 清理、chimera guard、honesty ledger、boundary 框架、ADRMATS brief 生成链路已显著改善。
+- P5-B/M6/M7 已暴露并部分修复 ADRMATS 使用层问题：brief honesty/boundary 可见性、部分 design_translation、oil-water 匹配缺口、usefulness regression。
+- M8 的 510/510 causal_chain 是可用底材，但不能作为 v0.2 验收依据；需要继续做语义一致性、source-backed hard DO-NOT、gold-set usefulness gate。
+
+当前主要 blocker：
+
+1. **query 与 selected mechanism 尚未可靠绑定**：不能出现“候选因 A 特征命中，却展示 B 机制”的 brief。
+2. **DO-NOT 还不是 hard gate**：source-backed hard DO-NOT 必须影响 candidate 可用性，而不仅是文本提示。
+3. **validator 过浅**：字段存在检查不能证明 scope 正确、fact 真实或 design_translation 可执行。
+4. **弱域不能过度承诺**：有机微污染物和油水分离若缺少 source-backed 证据，应进入 exploratory/inspiration lane。
+5. **v0.2 需要 gold-set result gate**：用 8–12 个代表性查询度量 scope-correct precision、误导性 false positive、fact locator 完整性、hard DO-NOT 行为。
+
+v0.2 前不建议扩库到 60–80；扩库应由 gold-set 和证据缺口驱动，而不是按数量目标堆原型。
 
 ---
 
