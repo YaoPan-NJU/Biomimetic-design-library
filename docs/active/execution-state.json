@@ -1,10 +1,22 @@
 {
   "baseline_commit": "e4dc2d0",
-  "tested_commit": "0343465",
+  "tested_commit": "25456ce",
   "branch": "review",
   "active_goal": "v02-rc-frozen-awaiting-yao",
   "authorized_milestones": [
-    "R0", "R1", "P0", "P1", "P2", "P3", "P4", "P5", "M6", "M7", "M8", "M9", "M10"
+    "R0",
+    "R1",
+    "P0",
+    "P1",
+    "P2",
+    "P3",
+    "P4",
+    "P5",
+    "M6",
+    "M7",
+    "M8",
+    "M9",
+    "M10"
   ],
   "current_gate": "M10-v02-rc-accepted",
   "completed_phases": [
@@ -50,12 +62,11 @@
     "performance_data": 498,
     "from_source": 98,
     "llm_inferred": 412,
-    "count_note": "98 from_source out of 510 root mechanisms per check_causal_chain; 5 additional from separation directory",
+    "count_note": "98 from_source out of 510 root mechanisms per check_causal_chain; 5 additional from separation. Total 70 prototypes = 36 root + 5 separation + 24 enrichment + 4 materials + 1 parked.",
     "qualified_causal_cards": 510,
     "boundary_conditions": 121,
     "honesty_ledgers": 36,
     "refuted_entries_remaining": 0,
-    "count_note": "total_prototypes=70 includes all directories. Root canon prototypes = 36.",
     "root_canon_prototypes": 36
   },
   "validation_results": {
@@ -85,7 +96,7 @@
     "docs/optimization-v1/": "untracked, excluded"
   },
   "last_checkpoint": "2026-06-21T22:45:00Z",
-  "next_action": "v0.2 RC final — awaiting Yao review. M9b/M10/M11 longrun complete.",
+  "next_action": "v0.2 RC final \u2014 awaiting Yao review. M9b/M10/M11 longrun complete.",
   "git_status_note": "Local dirty files: .claude/settings.local.json, README.md, untracked docs. Excluded from review scope.",
   "m9_summary": {
     "mechanisms_upgraded": 103,
@@ -97,15 +108,15 @@
     "validators": "all green"
   },
   "m10_summary": {
-    "status": "accepted — v0.2 RC at 1cf2e07, M12 full audit complete",
+    "status": "accepted \u2014 v0.2 RC at 25456ce, M12 full audit complete",
     "validators_all_green": "15/15 passed",
     "briefs_frozen": "7 ADRMATS gold-set briefs verified",
     "evidence_caveat": "98/510 from_source (19%), remaining 412 are source-backed inference"
   },
   "v02_plan": {
     "M8": "complete",
-    "M9": "accepted — 98/510 from_source (19%)",
-    "M10": "accepted — v0.2 RC frozen",
-    "M11": "pending — v0.2 release (awaiting Yao)"
+    "M9": "accepted \u2014 98/510 from_source (19%)",
+    "M10": "accepted \u2014 v0.2 RC frozen",
+    "M11": "pending \u2014 v0.2 release (awaiting Yao)"
   }
 }

@@ -1,12 +1,12 @@
 # M12 PDF Audit Closure Report
 
 **Date**: 2026-06-22
-**HEAD**: 1cf2e07 (pushed to origin/review)
+**HEAD**: 25456ce (pushed to origin/review)
 **Branch**: review
 
 ## Executive Summary
 
-M12 full PDF evidence audit complete. 643 PDFs inventoried, 136 mechanisms across 26 PDF-backed prototypes validated, 8 INVALID findings fixed. 10 prototypes without PDF support are documented as background/exploratory.
+M12 full PDF evidence audit complete. 643 PDFs inventoried, 136 mechanisms across 27 PDF-backed prototypes validated, 8 INVALID findings fixed. 10 prototypes without PDF support are documented as background/exploratory.
 
 ## PDF Inventory
 
@@ -27,13 +27,13 @@ M12 full PDF evidence audit complete. 643 PDFs inventoried, 136 mechanisms acros
 | INVALID (fixed) | 8 |
 | MISSING_PDF | 18 |
 
-## 26 PDF-Backed Prototypes (Validated)
+## 27 PDF-Backed Prototypes (Validated)
 
 chitosan, mussel-foot-adhesion, polydopamine-coating, bone-structure, plant-tannin, diatom-frustule, fish-scale-hydroxyapatite, lotus-leaf, superhydrophobic-artificial, oyster-shell, scallop-shell, sulfate-reducing-bacteria, iron-oxidizing-bacteria, wood-xylem, starch-granule, alginate, cellulose-nanocrystal, coral-skeleton, magnetic-bacteria, mangrove-root, spider-silk, chlorella-cell-wall, namib-beetle, lobster-exoskeleton, cactus-spine, pitcher-plant-slippery-surface
 
 ## 10 Prototypes Without PDF Support (Background/Exploratory)
 
-biomineralization-template, dna-aptamer, metal-organic-framework, mycelium, diatom-inspired-porous, silkworm-silk, water-strider-leg, shark-skin, cell-membrane-ion-channel, lotus-leaf (partial)
+biomineralization-template, dna-aptamer, metal-organic-framework, mycelium, diatom-inspired-porous, silkworm-silk, water-strider-leg, shark-skin, cell-membrane-ion-channel, silk-fibroin
 
 Note: These prototypes have mechanisms but no directly cited PDFs in the library. They are labeled as background/exploratory in the ADRMATS briefs.
 
@@ -72,7 +72,7 @@ Note: These prototypes have mechanisms but no directly cited PDFs in the library
 
 ## Known Limitations
 
-1. 450 mechanisms (88%) remain source-backed inference
+1. 412 mechanisms (81%) remain source-backed inference
 2. 18 DOIs without corresponding PDFs in library
 3. 10 prototypes without PDF support (background/exploratory)
 4. Performance values are leads, not ranked facts
@@ -82,5 +82,5 @@ Note: These prototypes have mechanisms but no directly cited PDFs in the library
 
 1. Accept v0.2 RC with M12 audit findings?
 2. Authorize 60-80 expansion for v1.0?
-3. Additional evidence uplift for remaining 450 mechanisms?
+3. Additional evidence uplift for remaining 412 mechanisms?
 4. Spider-silk uranium mechanisms: reclassify or remove?
