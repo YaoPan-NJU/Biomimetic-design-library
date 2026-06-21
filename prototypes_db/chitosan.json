@@ -2072,19 +2072,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "重金属离子和有机污染物",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.6 / Section 3.2.3 共存阴离子的影响"
         },
         "bio_structure": {
           "text": "壳聚糖氨基(-NH₂)和羟基(-OH)官能团",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.6 / Section 3.2.3 共存阴离子的影响"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.6 / Section 3.2.3 共存阴离子的影响"
         },
         "why_it_works": {
           "text": "氨基和羟基提供丰富的吸附位点，可与多种污染物形成稳定配合物",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.6 / Section 3.2.3 共存阴离子的影响"
         },
         "boundary_conditions": [
           {
@@ -2099,7 +2103,10 @@
             }
           }
         ],
-        "transferable_principle": "壳聚糖氨基(-NH₂)和羟基(-OH)官能团"
+        "transferable_principle": "壳聚糖氨基(-NH₂)和羟基(-OH)官能团",
+        "verification_quote": "可能是La-MZ/CTS表面吸附活性的物质氢氧化镧通过与磷酸盐结合形成内球配合物进行除磷。由于氢氧化镧与NO3-、SO42-形成的物质一般为外球配合物，而Cl-的离子强度一般对以内球配合物形式为主的吸附过程无影响。",
+        "source_doi": "10.13671/j.hjkxxb.2020.0407",
+        "source_locator": "p.6 / Section 3.2.3 共存阴离子的影响"
       }
     },
     {
@@ -2130,8 +2137,8 @@
         },
         "why_it_works": {
           "text": "壳聚糖的氨基对软酸金属（Hg²⁺、Pb²⁺、Cu²⁺）有高亲和力，形成稳定的五元或六元螯合环；Cu²⁺在Irving-Williams序列中稳定性最高（log K~8）",
-          "basis": "llm_inferred",
-          "locator": null
+          "basis": "from_source",
+          "locator": "p.17 / Section 3.3 Mechanism"
         },
         "boundary_conditions": [
           {
@@ -2192,7 +2199,9 @@
           }
         ],
         "transferable_principle": "含-NH₂/-OH双齿配位位点的聚合物可按HSAB原理选择性捕获软酸金属离子，Ca²⁺/Mg²⁺竞争是主要干扰",
-        "verification_quote": "chelation, hydrogen bonds, van der Waals force and pi-pi stacking interaction"
+        "verification_quote": "chelation, hydrogen bonds, van der Waals force and pi-pi stacking interaction",
+        "source_doi": "10.1016/j.carbpol.2020.117000",
+        "source_locator": "p.17 / Section 3.3 Mechanism"
       }
     },
     {
@@ -2251,19 +2260,23 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 表面沉淀机制 Surface precipitation m）",
         "pollutant_feature": {
           "text": "仅Cr(III)观察到沉淀（因Cr(OH)3第一稳定常数远高于其他离子）；其他离子（Cu, Zn, Ni, Pb, Cd, Mn, Co）遵循络合、离子交换和静电机制",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.18 / Section 3.3 Mechanism"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.18 / Section 3.3 Mechanism"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.18 / Section 3.3 Mechanism"
         },
         "why_it_works": {
           "text": "表面沉淀机制 Surface precipitation mechanism",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.18 / Section 3.3 Mechanism"
         },
         "boundary_conditions": [
           {
@@ -2280,7 +2293,10 @@
             "quote": null,
             "source_asset": null
           }
-        ]
+        ],
+        "verification_quote": "However, precipitates of Cr(III) were found on the surface indicating surface precipitation mechanism for Cr(III). Since the first stability constant of Cr(OH)3 is much higher than for other ions, only Cr(III) precipitates were observed. The other ions, along with Cr(III) as well, followed complexat",
+        "source_doi": "10.1016/j.carbpol.2020.117000",
+        "source_locator": "p.18 / Section 3.3 Mechanism"
       }
     },
     {
@@ -2699,19 +2715,23 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 壳聚糖吸附砷的机制 Arsenic adsorption m）",
         "pollutant_feature": {
           "text": "As(V)通过静电相互作用吸附(阴离子砷酸盐与质子化氨基)；As(III)通过络合机制吸附(中性H3AsO3)；铁-壳聚糖复合材料涉及内球配合物形成",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.11 / Section 8"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.11 / Section 8"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.11 / Section 8"
         },
         "why_it_works": {
           "text": "壳聚糖吸附砷的机制 Arsenic adsorption mechanisms on chitosa",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.11 / Section 8"
         },
         "boundary_conditions": [
           {
@@ -2728,7 +2748,10 @@
             "quote": null,
             "source_asset": null
           }
-        ]
+        ],
+        "verification_quote": "The adsorption mechanism of arsenic depends upon the type of arsenic species present in the water system. Arsenic an arsenate, being charged species, is adsorbed through electrostatic interaction mechanism whereas the arsenite, being neutral species, preferably through complex formation",
+        "source_doi": "10.1016/j.ijbiomac.2021.10.050",
+        "source_locator": "p.11 / Section 8"
       }
     },
     {
@@ -2743,19 +2766,23 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 壳聚糖-氧化铝复合材料的砷吸附机制 As adsorptio）",
         "pollutant_feature": {
           "text": "氧化铝在复合珠表面产生正电荷，通过静电吸引吸附阴离子砷物种；复合物涉及络合和离子交换机制",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.13 / Section 10"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.13 / Section 10"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.13 / Section 10"
         },
         "why_it_works": {
           "text": "壳聚糖-氧化铝复合材料的砷吸附机制 As adsorption on chitosan-alumin",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.13 / Section 10"
         },
         "boundary_conditions": [
           {
@@ -2772,7 +2799,10 @@
             "quote": null,
             "source_asset": null
           }
-        ]
+        ],
+        "verification_quote": "The alumina produces a positive charge on the surface of the composite beads and uptakes the negatively charged arsenic species through electrostatic attraction. Hence, the complexation and ion-exchange mechanisms are involved in the binding of arsenic in the chitosan-based composites",
+        "source_doi": "10.1016/j.ijbiomac.2021.10.050",
+        "source_locator": "p.13 / Section 10"
       }
     },
     {
@@ -2787,19 +2817,23 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 壳聚糖基生物吸附剂的内球/外球吸附机制 Inner/oute）",
         "pollutant_feature": {
           "text": "外球机制：金属离子仅与复合物表面相互作用(受离子强度影响)；内球机制：金属离子扩散进入复合物内部形成配合物(不受离子强度影响)",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.14 / Section 11"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.14 / Section 11"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.14 / Section 11"
         },
         "why_it_works": {
           "text": "壳聚糖基生物吸附剂的内球/外球吸附机制 Inner/outer sphere adsorption ",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.14 / Section 11"
         },
         "boundary_conditions": [
           {
@@ -2816,7 +2850,10 @@
             "quote": null,
             "source_asset": null
           }
-        ]
+        ],
+        "verification_quote": "In the outer-sphere adsorption mechanism, metal ions interact only with the surface of the composite and adsorb on it. While in the inner sphere adsorption mechanism, the metal ions diffuse into the composite and form complexes inside it",
+        "source_doi": "10.1016/j.ijbiomac.2021.10.050",
+        "source_locator": "p.14 / Section 11"
       }
     },
     {
@@ -2831,19 +2868,23 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 壳聚糖基吸附剂的氧化铝/二氧化钛嵌入机制 Al2O3/TiO）",
         "pollutant_feature": {
           "text": "三步机制：扩散→氧化→吸附；As(III)先扩散至TiO2附近被氧化为As(V)，Al2O3接收砷酸盐离子使TiO2空出继续氧化",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.14 / Section 11"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.14 / Section 11"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.14 / Section 11"
         },
         "why_it_works": {
           "text": "壳聚糖基吸附剂的氧化铝/二氧化钛嵌入机制 Al2O3/TiO2-impregnated chitos",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.14 / Section 11"
         },
         "boundary_conditions": [
           {
@@ -2860,7 +2901,10 @@
             "quote": null,
             "source_asset": null
           }
-        ]
+        ],
+        "verification_quote": "The whole mechanism of arsenic removal could be divided into three steps i.e., diffusion, oxidation, and adsorption. First, arsenite diffuses near TiO2, where it gets oxidized into arsenate. The Al2O3... receives the arsenate ions and make the TiO2 free for the oxidation of residual arsenite ions",
+        "source_doi": "10.1016/j.ijbiomac.2021.10.050",
+        "source_locator": "p.14 / Section 11"
       }
     },
     {
@@ -2968,19 +3012,23 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 酸浸碳/壳聚糖/FeCl3吸附机制 Acid-leached）",
         "pollutant_feature": {
           "text": "41.9 mg/g (Langmuir); 机制: H键、FeCl3引入Cl-与NO3-离子交换、酸性介质中质子化羟基/氨基/Fe静电作用",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.8 / Section 4.4 Chitosan-metal complexes"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.8 / Section 4.4 Chitosan-metal complexes"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.8 / Section 4.4 Chitosan-metal complexes"
         },
         "why_it_works": {
           "text": "酸浸碳/壳聚糖/FeCl3吸附机制 Acid-leached carbon/chitosan/FeC",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.8 / Section 4.4 Chitosan-metal complexes"
         },
         "boundary_conditions": [
           {
@@ -2997,7 +3045,10 @@
             "quote": null,
             "source_asset": null
           }
-        ]
+        ],
+        "verification_quote": "maximum adsorption value based on the Langmuir model obtained 41.9 mg/g. In addition to hydrogen bonding... ion exchange between chloride ions from the insertion of FeCl3 and nitrate ions... Fe, protonated hydroxyl, and amino groups in acidic media contribute to electrostatic interaction",
+        "source_doi": "10.1016/j.carbpol.2021.118625",
+        "source_locator": "p.8 / Section 4.4 Chitosan-metal complexes"
       }
     },
     {
@@ -3012,19 +3063,23 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: La3+掺入壳聚糖膜HSAB机制 La3+-chitosan）",
         "pollutant_feature": {
           "text": "基于HSAB硬酸-硬碱静电吸引：-NH3+、-OH2+、La3+（硬酸）与NO3-（硬碱）作用",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.10 / Section 4.4 Chitosan-metal complexes & Fig.5"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.10 / Section 4.4 Chitosan-metal complexes & Fig.5"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.10 / Section 4.4 Chitosan-metal complexes & Fig.5"
         },
         "why_it_works": {
           "text": "La3+掺入壳聚糖膜HSAB机制 La3+-chitosan HSAB mechanism",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.10 / Section 4.4 Chitosan-metal complexes & Fig.5"
         },
         "boundary_conditions": [
           {
@@ -3041,7 +3096,10 @@
             "quote": null,
             "source_asset": null
           }
-        ]
+        ],
+        "verification_quote": "adsorption mainly occurred through hard acid-hard base electrostatic attraction based on the HSAB principle... -NH3+, -OH2+, and La3+ ions are as hard acids and NO3− ions as hard bases",
+        "source_doi": "10.1016/j.carbpol.2021.118625",
+        "source_locator": "p.10 / Section 4.4 Chitosan-metal complexes & Fig.5"
       }
     },
     {
@@ -3234,19 +3292,23 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: Three main adsorption mechanis）",
         "pollutant_feature": {
           "text": "(1) Electrostatic interaction; (2) Complexation; (3) Ion exchange",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.1 / Highlights"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.1 / Highlights"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.1 / Highlights"
         },
         "why_it_works": {
           "text": "Three main adsorption mechanisms",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.1 / Highlights"
         },
         "boundary_conditions": [
           {
@@ -3263,7 +3325,10 @@
             "quote": null,
             "source_asset": null
           }
-        ]
+        ],
+        "verification_quote": "Main adsorption mechanisms for the removal of heavy metals were ion exchange, electrostatic interaction and complexation",
+        "source_doi": "10.1016/j.scitotenv.2021.150606",
+        "source_locator": "p.1 / Highlights"
       }
     },
     {
@@ -3278,19 +3343,23 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: PEI-grafted cellulose aerogel ）",
         "pollutant_feature": {
           "text": "Amino groups and carboxyl groups participate in cationic exchange with divalent metal ions; XPS conf",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.15 / Section 7 / Fig. 4-5"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.15 / Section 7 / Fig. 4-5"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.15 / Section 7 / Fig. 4-5"
         },
         "why_it_works": {
           "text": "PEI-grafted cellulose aerogel - Cr(VI) removal mec",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.15 / Section 7 / Fig. 4-5"
         },
         "boundary_conditions": [
           {
@@ -3307,7 +3376,10 @@
             "quote": null,
             "source_asset": null
           }
-        ]
+        ],
+        "verification_quote": "The main functional groups involved in the adsorption process were amino groups and carboxyl groups which are expected to participate in cationic exchange with the divalent metal ions",
+        "source_doi": "10.1016/j.scitotenv.2021.150606",
+        "source_locator": "p.15 / Section 7 / Fig. 4-5"
       }
     },
     {
@@ -3410,19 +3482,23 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: Mechanism of Microplastic Remo）",
         "pollutant_feature": {
           "text": "Hydrogen bonding, Electrostatic, π-π",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.5 / Section 2.3"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.5 / Section 2.3"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.5 / Section 2.3"
         },
         "why_it_works": {
           "text": "Mechanism of Microplastic Removal by Chitin/GO Spo",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.5 / Section 2.3"
         },
         "boundary_conditions": [
           {
@@ -3439,7 +3515,10 @@
             "quote": null,
             "source_asset": null
           }
-        ]
+        ],
+        "verification_quote": "Sponges efficiently adsorb microplastics with different functional groups mainly through hydrogen bonding, electrostatic interactions, and π-π interactions.",
+        "source_doi": "10.1016/j.ijbiomac.2021.08.047",
+        "source_locator": "p.5 / Section 2.3"
       }
     },
     {
@@ -4785,19 +4864,23 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: Primary adsorption mechanism -）",
         "pollutant_feature": {
           "text": "Metal ion complexation (chelation/coordination) is the leading sorption mechanism; Cu2+ forms Cu-chi",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.13 / 5. Adsorption mechanism"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.13 / 5. Adsorption mechanism"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.13 / 5. Adsorption mechanism"
         },
         "why_it_works": {
           "text": "Primary adsorption mechanism - complexation/chelat",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.13 / 5. Adsorption mechanism"
         },
         "boundary_conditions": [
           {
@@ -4814,7 +4897,10 @@
             "quote": null,
             "source_asset": null
           }
-        ]
+        ],
+        "verification_quote": "Metal ion complexation (also known as chelation/coordination) is the leading sorption mechanism to remove Cu2+ by chitosan-based adsorbents. It is a chemisorption process that refers to the coordination interactions between lone pair electrons comprising functional groups (-NH2, -OH, -COOH, etc.) of",
+        "source_doi": "10.1016/j.jece.2022.108048",
+        "source_locator": "p.13 / 5. Adsorption mechanism"
       }
     },
     {
@@ -4829,19 +4915,23 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: Electrostatic interaction and ）",
         "pollutant_feature": {
           "text": "At pH > pHpzc, adsorbent surface deprotonated creating negative charge that attracts cations; at pH ",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.14 / 5. Adsorption mechanism"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.14 / 5. Adsorption mechanism"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.14 / 5. Adsorption mechanism"
         },
         "why_it_works": {
           "text": "Electrostatic interaction and pHpzc / 静电相互作用与零电点",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.14 / 5. Adsorption mechanism"
         },
         "boundary_conditions": [
           {
@@ -4858,7 +4948,10 @@
             "quote": null,
             "source_asset": null
           }
-        ]
+        ],
+        "verification_quote": "At pH > pHpzc, the hydrogen-containing functional groups on the adsorbent surface are deprotonated owing to excessive concentration of hydroxyl ions, creating a negatively charged adsorbent surface that attracts cations",
+        "source_doi": "10.1016/j.jece.2022.108048",
+        "source_locator": "p.14 / 5. Adsorption mechanism"
       }
     },
     {
@@ -4873,19 +4966,23 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: Ion-exchange mechanism / 离子交换机）",
         "pollutant_feature": {
           "text": "At pH < pHpzc, positively charged Cu2+ exchanges with H+ ions on protonated adsorbent surface; slowe",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.14 / 5. Adsorption mechanism"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.14 / 5. Adsorption mechanism"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.14 / 5. Adsorption mechanism"
         },
         "why_it_works": {
           "text": "Ion-exchange mechanism / 离子交换机制",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.14 / 5. Adsorption mechanism"
         },
         "boundary_conditions": [
           {
@@ -4902,7 +4999,10 @@
             "quote": null,
             "source_asset": null
           }
-        ]
+        ],
+        "verification_quote": "At pH < pHpzc, the adsorbent surface is protonated, thus increasing the number of H+ ions on the adsorbent surface, and positively charged Cu2+ ions exchange these H+ ions",
+        "source_doi": "10.1016/j.jece.2022.108048",
+        "source_locator": "p.14 / 5. Adsorption mechanism"
       }
     },
     {
@@ -5448,19 +5548,23 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 吸附机制 Ad sorption mechanism）",
         "pollutant_feature": {
           "text": "主要通过静电吸引和含氮官能团(-NH, -NH2, C=N)与金属离子的螯合作用去除Pb2+和Cu2+",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.11 / RESULTS部分"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.11 / RESULTS部分"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.11 / RESULTS部分"
         },
         "why_it_works": {
           "text": "吸附机制 Ad sorption mechanism",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.11 / RESULTS部分"
         },
         "boundary_conditions": [
           {
@@ -5477,7 +5581,10 @@
             "quote": null,
             "source_asset": null
           }
-        ]
+        ],
+        "verification_quote": "The pH results showed that the removal mechanisms of Pb2+ and Cu2+ by PSC and CCC mainly included electrostatic attraction. The functional groups of adsorbents before and after adsorption were analyzed through X-ray photoelectron spectroscopy (XPS). The results of XPS showed that complexation was an",
+        "source_doi": "10.15898/j.ykcs.202208230155",
+        "source_locator": "p.11 / RESULTS部分"
       }
     },
     {
@@ -5493,19 +5600,23 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: XPS表征揭示吸附机制 XPS characterizati）",
         "pollutant_feature": {
           "text": "XPS分析显示吸附前后功能团变化，吡咯中的-NH、壳聚糖中的-NH2和C=N是与Pb2+和Cu2+螯合的主要官能团",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.15 / Section 7 / Fig. 4-5"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.15 / Section 7 / Fig. 4-5"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.15 / Section 7 / Fig. 4-5"
         },
         "why_it_works": {
           "text": "XPS表征揭示吸附机制 XPS characterization revealing adsorpt",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.15 / Section 7 / Fig. 4-5"
         },
         "boundary_conditions": [
           {
@@ -5522,7 +5633,10 @@
             "quote": null,
             "source_asset": null
           }
-        ]
+        ],
+        "verification_quote": "The main functional groups involved in the adsorption process were amino groups and carboxyl groups which are expected to participate in cationic exchange with the divalent metal ions",
+        "source_doi": "10.1016/j.scitotenv.2021.150606",
+        "source_locator": "p.15 / Section 7 / Fig. 4-5"
       }
     },
     {
@@ -5939,19 +6053,23 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 有机改性凹凸棒土的作用 Effect of organic ）",
         "pollutant_feature": {
           "text": "表面活性剂接枝到凹凸棒土表面，改善疏水性，提升重金属离子去除效果",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.1 / 摘要"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.1 / 摘要"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.1 / 摘要"
         },
         "why_it_works": {
           "text": "有机改性凹凸棒土的作用 Effect of organic modification on atta",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.1 / 摘要"
         },
         "boundary_conditions": [
           {
@@ -5968,7 +6086,9 @@
             "quote": null,
             "source_asset": null
           }
-        ]
+        ],
+        "verification_quote": "有机改性使用的表面活性剂接枝到凹凸棒土的表面，改善其疏水性；有机改性凹凸棒土对污水中重金属离子的去除效果好",
+        "source_locator": "p.1 / 摘要"
       }
     },
     {
@@ -5983,19 +6103,23 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 海藻酸钙微球吸附重金属的机制 Heavy metal ads）",
         "pollutant_feature": {
           "text": "海藻酸钙中大量负电荷羧酸根离子能与Pb2+和Cd2+结合，生成藻酸重金属盐沉淀储存在囊腔内，与沸石活性点相互独立，削弱铅镉相互抑制性",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.4 / [0010]"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.4 / [0010]"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.4 / [0010]"
         },
         "why_it_works": {
           "text": "海藻酸钙微球吸附重金属的机制 Heavy metal adsorption mechanism of",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.4 / [0010]"
         },
         "boundary_conditions": [
           {
@@ -6012,7 +6136,9 @@
             "quote": null,
             "source_asset": null
           }
-        ]
+        ],
+        "verification_quote": "海藻酸钙中有大量负电荷的羧酸根离子能与Pb2+和Cd2+结合，生成藻酸的重金属盐沉淀被储存在囊腔内与沸石活性点相互独立，削弱铅镉的相互抑制性，增大在两种重金属共存时海藻酸钙交联沸石微球的吸附饱和容量",
+        "source_locator": "p.4 / [0010]"
       }
     },
     {
@@ -6027,19 +6153,23 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: Fe3+改性活性炭吸附磺胺类抗生素的机制 Mechanism）",
         "pollutant_feature": {
           "text": "以化学吸附为主",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.4 / [0011]"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.4 / [0011]"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.4 / [0011]"
         },
         "why_it_works": {
           "text": "Fe3+改性活性炭吸附磺胺类抗生素的机制 Mechanism of Fe3+-modified ac",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.4 / [0011]"
         },
         "boundary_conditions": [
           {
@@ -6056,7 +6186,9 @@
             "quote": null,
             "source_asset": null
           }
-        ]
+        ],
+        "verification_quote": "改性活性炭对磺胺类抗生素的吸附以化学吸附为主",
+        "source_locator": "p.4 / [0011]"
       }
     },
     {
@@ -6159,19 +6291,23 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 吸附机制分析 adsorption mechanism）",
         "pollutant_feature": {
           "text": "LS和CCS与环氧氯丙烷交联修饰氨基；SA和CCS的羧酸盐基团与Ca²⁺交联；CCS的氨基/羧基和PEI的亚胺基提供吸附位点；LS的磺酸基增强配位",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.6 / 段落[0052]"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.6 / 段落[0052]"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.6 / 段落[0052]"
         },
         "why_it_works": {
           "text": "吸附机制分析 adsorption mechanism",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.6 / 段落[0052]"
         },
         "boundary_conditions": [
           {
@@ -6188,7 +6324,10 @@
             "quote": null,
             "source_asset": null
           }
-        ]
+        ],
+        "verification_quote": "这表明木质素磺酸钠、海藻酸钠和羧化壳聚糖都与环氧氯丙烷发生交联反应以修饰氨基。海藻酸钠和羧化壳聚糖中的羧酸盐基团从1421cm‑1迁移至1409cm‑1，木质素磺酸钠中磺酸基团从1045cm‑1迁移至1021cm‑1反应后，表明羧酸基团和磺酸基团参与了与Ca2+的交联",
+        "source_doi": "patent:CN117654453A",
+        "source_locator": "p.6 / 段落[0052]"
       }
     },
     {
@@ -6203,19 +6342,23 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 蛋盒结构交联机制 egg-box crosslinking ）",
         "pollutant_feature": {
           "text": "海藻酸钠通过G单元羧基与Ca²⁺配位形成'蛋盒'结构三维网络凝胶",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.3 / 段落[0003]"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.3 / 段落[0003]"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.3 / 段落[0003]"
         },
         "why_it_works": {
           "text": "蛋盒结构交联机制 egg-box crosslinking mechanism",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.3 / 段落[0003]"
         },
         "boundary_conditions": [
           {
@@ -6232,7 +6375,10 @@
             "quote": null,
             "source_asset": null
           }
-        ]
+        ],
+        "verification_quote": "海藻酸钠(SA)是一种源自海藻的无毒、生物相容性、可再生和低成本的多糖。它含有丰富的羧酸盐基团(COOH)，可与金属离子螯合形成复杂的'蛋盒'结构，并可用作吸附剂以去除水环境中的染料。此外，海藻酸钠可以在钙离子的作用下产生水凝胶",
+        "source_doi": "patent:CN117654453A",
+        "source_locator": "p.3 / 段落[0003]"
       }
     },
     {
