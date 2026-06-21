@@ -1,7 +1,7 @@
 # M12 PDF Audit Closure Report
 
 **Date**: 2026-06-22
-**HEAD**: 25456ce (pushed to origin/review)
+**HEAD**: see latest REVIEW_REQUEST or execution-state.json for final pushed SHA
 **Branch**: review
 
 ## Executive Summary

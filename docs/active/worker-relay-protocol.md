@@ -45,4 +45,4 @@ CC must NOT write REVIEW_REQUEST into `codex-outbox/`.
 - Max 3 parallel subagents (API key limit)
 - No new prototypes, no 60-80 expansion
 - No prototype delete/merge/park/rename without ASK_YAO
-- No git push without explicit user request
+- No force-push/history rewrite; push only at batch/review boundaries when authorized by Yao/Codex directive
