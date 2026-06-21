@@ -2319,19 +2319,23 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: FTIR表征——吸附前后对比）",
         "pollutant_feature": {
           "text": "吸附后：3446→3429 cm⁻¹偏移(Pb与-COO⁻静电/配位)；2923/2854/1641/1383/1049 cm⁻¹峰强度显著降低→Pb与-COO⁻和-NHCOO⁻形成静电和配位键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Xu2021 p.2-4 / Section 3.1"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Xu2021 p.2-4 / Section 3.1"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Xu2021 p.2-4 / Section 3.1"
         },
         "why_it_works": {
           "text": "FTIR表征——吸附前后对比",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Xu2021 p.2-4 / Section 3.1"
         },
         "boundary_conditions": [
           {
@@ -2348,7 +2352,10 @@
             "quote": null,
             "source_asset": null
           }
-        ]
+        ],
+        "verification_quote": "The broad absorption band at 3429 cm-1 corresponded to the stretching vibration of -O-H and -NH2. At 3446 cm-1 shifted to 3429 cm-1, possibly implying electrostatic and coordination bonding between Pb(II) and -COO-. The bands at 2923, 2854, 1641, 1383, and 1049 cm-1 also showed a marked decrease.",
+        "source_doi": "10.1016/j.molliq.2020.114523",
+        "source_locator": "p.2-4 / Section 3.1, Fig.2-3"
       }
     },
     {
@@ -2364,19 +2371,23 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: XPS表征——C 1s和N 1s）",
         "pollutant_feature": {
           "text": "C 1s：284.7(C-O)/286.55(C=O)/288.45(COO⁻)→吸附前后无显著变化→Pb不与C配位；N 1s：吸附前399.8 eV(-NH₂)→吸附后三峰399.55(-NH₂)/",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Xu2021 p.4 / Section 3.1"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Xu2021 p.4 / Section 3.1"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Xu2021 p.4 / Section 3.1"
         },
         "why_it_works": {
           "text": "XPS表征——C 1s和N 1s",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Xu2021 p.4 / Section 3.1"
         },
         "boundary_conditions": [
           {
@@ -2393,7 +2404,10 @@
             "quote": null,
             "source_asset": null
           }
-        ]
+        ],
+        "verification_quote": "The C 1s spectra showed no noticeable changes before and after Pb(II) adsorption. In the N 1s spectrum, only one peak at 399.8 eV before adsorption; after adsorption, N 1s peaks at 399.55, 400.2, and 400.7 eV showed lead ions bound to N atoms. XPS confirmed hydroxyl, carboxyl, and amino groups involved in adsorption.",
+        "source_doi": "10.1016/j.molliq.2020.114523",
+        "source_locator": "p.4 / Section 3.1, Fig.5c-d"
       }
     },
     {
@@ -2409,19 +2423,23 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 制备方法）",
         "pollutant_feature": {
           "text": "羧基化壳聚糖(CYCS)+羧基化纳米纤维素(CNC)在CaCl₂溶液中螯合交联→形成水凝胶珠；CYCS通过壳聚糖羧甲基取代获得→取代度>60%；成本显著低于CMCS",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Xu2021 p.2 / Section 2.2"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Xu2021 p.2 / Section 2.2"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Xu2021 p.2 / Section 2.2"
         },
         "why_it_works": {
           "text": "制备方法",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Xu2021 p.2 / Section 2.2"
         },
         "boundary_conditions": [
           {
@@ -2438,7 +2456,10 @@
             "quote": null,
             "source_asset": null
           }
-        ]
+        ],
+        "verification_quote": "5.0 g of CYCS and 1.25 g of CNC were completely dissolved in 100 mL of distilled water. The mixture was added to 2% CaCl2 solution to form hydrogel beads. CYCS carboxymethyl substitution degree exceeds 60%, containing carboxyl, hydroxyl, and amine groups.",
+        "source_doi": "10.1016/j.molliq.2020.114523",
+        "source_locator": "p.2 / Section 2.2"
       }
     },
     {
@@ -2458,19 +2479,23 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 吸附机制——综合分析）",
         "pollutant_feature": {
           "text": "化学吸附为主(PSO拟合+XPS证据)；-COO⁻与Pb²⁺静电吸引+配位；-NH₂孤对电子与Pb形成共价键；可能生成碳酸铅/氧化铅沉淀；三种官能团(-OH/-COO⁻/-NH₂)协同参与",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Xu2021 p.8 / Section 3.7"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Xu2021 p.8 / Section 3.7"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Xu2021 p.8 / Section 3.7"
         },
         "why_it_works": {
           "text": "吸附机制——综合分析",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Xu2021 p.8 / Section 3.7"
         },
         "boundary_conditions": [
           {
@@ -2487,7 +2512,10 @@
             "quote": null,
             "source_asset": null
           }
-        ]
+        ],
+        "verification_quote": "Pb(II) adsorption by CYCS/CNC could be via electrostatic interactions between Pb(II) and the carboxyl groups, and chemical activity of hydroxyl and amino groups. PSO model better described the mechanism, implying chemical adsorption. Langmuir model indicated monolayer adsorption.",
+        "source_doi": "10.1016/j.molliq.2020.114523",
+        "source_locator": "p.8 / Section 3.7 + Fig.9"
       }
     },
     {
