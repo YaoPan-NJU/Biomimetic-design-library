@@ -6,7 +6,7 @@
 
 ## Executive Summary
 
-M12 full PDF evidence audit complete. 643 PDFs inventoried, 136 mechanisms across 27 PDF-backed prototypes validated, 8 INVALID findings fixed. 10 prototypes without PDF support are documented as background/exploratory.
+M12 full PDF evidence audit complete. 643 PDFs inventoried, 136 mechanisms across 26 PDF-backed prototypes validated, 8 INVALID findings fixed. 10 prototypes without PDF support are documented as background/exploratory.
 
 ## PDF Inventory
 
@@ -27,7 +27,7 @@ M12 full PDF evidence audit complete. 643 PDFs inventoried, 136 mechanisms acros
 | INVALID (fixed) | 8 |
 | MISSING_PDF | 18 |
 
-## 27 PDF-Backed Prototypes (Validated)
+## 26 PDF-Backed Prototypes (Validated)
 
 chitosan, mussel-foot-adhesion, polydopamine-coating, bone-structure, plant-tannin, diatom-frustule, fish-scale-hydroxyapatite, lotus-leaf, superhydrophobic-artificial, oyster-shell, scallop-shell, sulfate-reducing-bacteria, iron-oxidizing-bacteria, wood-xylem, starch-granule, alginate, cellulose-nanocrystal, coral-skeleton, magnetic-bacteria, mangrove-root, spider-silk, chlorella-cell-wall, namib-beetle, lobster-exoskeleton, cactus-spine, pitcher-plant-slippery-surface
 
