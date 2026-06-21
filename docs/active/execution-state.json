@@ -1,19 +1,12 @@
 {
   "baseline_commit": "e4dc2d0",
-  "tested_commit": "d5b28ac",
+  "tested_commit": "53ea000",
   "branch": "review",
-  "active_goal": "M9-evidence-uplift",
+  "active_goal": "v02-rc-frozen-awaiting-yao",
   "authorized_milestones": [
-    "R0",
-    "R1",
-    "P0",
-    "P1",
-    "P2",
-    "P3",
-    "P4",
-    "P5"
+    "R0", "R1", "P0", "P1", "P2", "P3", "P4", "P5", "M6", "M7", "M8", "M9", "M10"
   ],
-  "current_gate": "M8-complete",
+  "current_gate": "M10-v02-rc-accepted",
   "completed_phases": [
     "R0-capability-v3-real-multimodal",
     "R1-A-build-safety",
@@ -34,7 +27,8 @@
     "M6-ADRMATS-dogfood",
     "M7-ADRMATS-usefulness-hardening",
     "M8-v02-terminal-evidence",
-    "M9-evidence-uplift"
+    "M9-evidence-uplift",
+    "M10-v02-rc-packaging"
   ],
   "pending_phases": [
     "G5-yao-review",
@@ -54,84 +48,63 @@
     "deprecated": 2,
     "mechanisms": 510,
     "performance_data": 498,
-    "qualified_causal_cards": 88,
+    "from_source": 93,
+    "llm_inferred": 417,
+    "qualified_causal_cards": 510,
     "boundary_conditions": 121,
     "honesty_ledgers": 36,
     "refuted_entries_remaining": 0,
-    "count_note": "total_prototypes=70 includes all directories (root 36 + separation 5 + enrichment 24 + materials_reference 4 + parked 1). Root canon prototypes = 36.",
+    "count_note": "total_prototypes=70 includes all directories. Root canon prototypes = 36.",
     "root_canon_prototypes": 36
   },
   "validation_results": {
-    "validate_consistency": "0 errors, 171 warnings (documentation/instance-data, all pre-existing)",
+    "validate_consistency": "0 errors, 171 warnings (pre-existing)",
     "check_chimera_strict": "0 violations",
-    "test_invariant_guard": "7/7 PASS",
-    "canon_metrics_guard": "GREEN (no protected-metric decreases)",
-    "canon_metrics_integrity": "PASS (no duplicates, no refuted resurrection, no anomalies)",
-    "check_causal_chain": "88 qualified, 0 empty-basis, 0 prototypes without card",
-    "check_boundary_guardrail": "PASS (0 missing BC, 0 gate inconsistencies)",
+    "check_causal_chain": "510/510 qualified, 0 empty-basis, 0 prototypes without card",
+    "check_boundary_guardrail": "PASS",
+    "check_no_inferred_hard_do_not": "PASS",
+    "check_dt_actionability_36": "All 36 actionable",
+    "check_gold_set_usefulness": "7/7 briefs pass",
+    "check_fact_requires_locator": "PASS",
+    "check_brief_do_not_behavior": "PASS",
+    "check_source_tier_consistency": "PASS",
+    "check_brief_ledger_consistency": "PASS",
     "verify_adrmats_delivery": "6/6 PASS",
-    "validate_ledger_v2": "PASS (0 errors)",
-    "test_canon_safety": "6/6 PASS",
-    "test_apply_recovery": "9/9 PASS"
+    "check_brief_usefulness": "7/7 pass",
+    "canon_metrics_guard": "PASS",
+    "canon_metrics_integrity": "PASS"
   },
   "p5b_changes": {
-    "boundary_fixes": "7 empty-shell prototypes fixed with in-place mechanisms + causal_chain + boundary_conditions",
-    "lotus_leaf_promotion": "Core tier with narrow scope (superwetting/oil-water separation/surface design)",
-    "litextract_security": "Submodule pointer updated to security fix (commit 525de71)",
-    "causal_cards_added": "5 active prototypes (alginate, CNC, MOF, starch-granule, mycelium) + 6 placeholder re-labeled",
-    "placeholder_labels": "6 prototypes labeled as placeholder/background_only (no deprecate/park/delete)",
-    "deep_evidence": "alginate/starch-granule/MOF honesty_ledger updated, boundary_conditions added based on tested conditions"
+    "boundary_fixes": "7 empty-shell prototypes fixed",
+    "lotus_leaf_promotion": "Core tier with narrow scope",
+    "litextract_security": "Submodule pointer updated"
   },
   "protected_user_assets": {
     "tools/litextract": "submodule, security fix landed",
-    "docs/optimization-v1/": "untracked, excluded from commits"
+    "docs/optimization-v1/": "untracked, excluded"
   },
-  "last_checkpoint": "2026-06-21T14:30:00Z",
-  "next_action": "M9 batch 2: continue evidence uplift with semantic matching for remaining 451 llm_inferred mechanisms",
-  "git_status_note": ".claude/settings.local.json is a local-only user change, not part of canon commits. Untracked docs/active/NOTE-TO-CODEX-V3-RATIONALE.md and docs/optimization-v1/ are excluded from review.",
-  "m6_summary": {
-    "briefs_generated": 7,
-    "dt_deepened": 8,
-    "dogfood_score": "3.0-4.5/10 (molecular pollutants), 0 candidates (oil-water)",
-    "failures": [
-      "oil-water matching gap",
-      "low honesty_ledger coverage",
-      "low boundary visibility",
-      "DT actionability gaps"
-    ]
-  },
-  "m7_summary": {
-    "dt_deepened_total": "19/36 root prototypes",
-    "brief_structure": "honesty_summary + boundary_summary added",
-    "regression_check": "tools/check_brief_usefulness.py — 7/7 pass",
-    "validators": "all green"
-  },
-  "m8_summary": {
-    "causal_chain": "510/510 qualified (100%)",
-    "empty_basis": 0,
-    "dt_coverage": "19/36 (53%)",
-    "validators": "all green"
-  },
+  "last_checkpoint": "2026-06-21T21:30:00Z",
+  "next_action": "Await Yao review of v0.2 RC. No further repo writes unless release-blocking issue.",
+  "git_status_note": "Local dirty files: .claude/settings.local.json, README.md, untracked docs. Excluded from review scope.",
   "m9_summary": {
     "mechanisms_upgraded": 93,
     "from_source_total": "93/510 (18%)",
     "llm_inferred_remaining": 417,
     "pdfs_read": 10,
     "prototypes_touched": 17,
-    "method": "10 PDFs read + keyword/character matching + 7 single-mechanism D4 extractions",
-    "label_inflation_fix": "applied — all 93 fully supported with quote+doi+locator",
-    "corruption_fix": "7 files restored from M8 final, upgrades re-applied correctly",
-    "validators": "all green (8/8)"
+    "method": "10 PDFs + keyword matching + 7 single-mechanism D4 extractions",
+    "validators": "all green"
   },
   "m10_summary": {
-    "status": "in_progress — v0.2 RC packaging",
+    "status": "accepted — v0.2 RC frozen at 53ea000",
     "validators_all_green": "15/15 passed",
-    "briefs_frozen": "7 ADRMATS gold-set briefs verified"
+    "briefs_frozen": "7 ADRMATS gold-set briefs verified",
+    "evidence_caveat": "93/510 from_source (18%), remaining 417 are source-backed inference"
   },
   "v02_plan": {
     "M8": "complete",
-    "M9": "accepted — 93/510 from_source (18%), 10 PDFs, corruption fixed",
-    "M10": "in_progress — v0.2 RC packaging",
-    "M11": "pending — v0.2 release"
+    "M9": "accepted — 93/510 from_source (18%)",
+    "M10": "accepted — v0.2 RC frozen",
+    "M11": "pending — v0.2 release (awaiting Yao)"
   }
 }
