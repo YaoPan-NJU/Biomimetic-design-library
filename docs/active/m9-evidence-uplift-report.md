@@ -1,12 +1,12 @@
 # M9 Evidence Uplift Report
 
 **Date**: 2026-06-21
-**HEAD**: 44eff95
+**HEAD**: a743433
 **Branch**: review
 
 ## Executive Summary
 
-M9 evidence uplift assessment for 12 ADRMATS-visible priority candidates. 191 causal chains identified as upgradeable from llm_inferred to from_source (have DOI but lack quote/locator). PDF access needed for actual upgrades. Current state documented honestly.
+M9 evidence uplift: used existing litextract extraction JSONs (557 paper-level, 4 prototype-level aggregated) to upgrade mechanism causal_chain basis from llm_inferred to from_source. **42 mechanisms upgraded across 10 prototypes** using real PDF quotes/locators. All validators pass.
 
 ## Evidence State — Priority Candidates
 
@@ -50,17 +50,45 @@ M9 evidence uplift assessment for 12 ADRMATS-visible priority candidates. 191 ca
 
 Overlap DOIs indicate mechanisms that share references with performance data having quotes. These are the highest-priority upgrade targets.
 
-## Honest Assessment
+## Actual Uplift Results
 
-### What M9 Achieved
-- Documented evidence state for all 12 priority candidates
-- Identified 191 upgradeable causal chains with DOI references
-- Mapped DOI overlap between perf quotes and mechanism references
+### Batch 1: 31 mechanisms (4 prototypes, D4 keyword matching)
+| Prototype | Upgraded | Total | from_source |
+|-----------|----------|-------|-------------|
+| chitosan | 22 | 110 | 23 |
+| mussel-foot-adhesion | 8 | 55 | 9 |
+| polydopamine-coating | 1 | 35 | 2 |
+| silk-fibroin | 0 | 17 | 2 |
 
-### What M9 Cannot Do Without PDF Access
-- Actual quote/locator extraction for causal chain upgrades
-- Verification that specific mechanism claims are supported by specific perf quotes
-- Upgrade llm_inferred to from_source basis
+### Batch 2: 10 mechanisms (8 prototypes, brief-visible priority)
+| Prototype | Upgraded | Mechanism |
+|-----------|----------|-----------|
+| bone-structure | 2 | HAp heavy metal mechanisms |
+| chitosan | 2 | CS/GO π-π, chemical adsorption |
+| diatom-frustule | 1 | thermal treatment Si-OH |
+| fish-scale-hydroxyapatite | 1 | eight-fold synergy |
+| lobster-exoskeleton | 1 | chitosan beads mechanisms |
+| oyster-shell | 1 | oyster shell modification |
+| sulfate-reducing-bacteria | 1 | SRB enzymatic mechanism |
+| silk-fibroin | 1 | MO electrostatic adsorption |
+
+### Batch 3: 1 mechanism (all-items matching)
+| Prototype | Upgraded | Mechanism |
+|-----------|----------|-----------|
+| shark-skin (separation) | 1 | surface wettability on bacterial adhesion |
+
+### Overall Stats
+- **Total mechanisms with causal_chain**: 510
+- **from_source**: 59 (12%)
+- **llm_inferred**: 451 (88%)
+- **Prototypes with at least 1 from_source mechanism**: 12
+
+### Remaining Gap
+451 mechanisms remain llm_inferred because:
+1. Extraction D4 items use different terminology than mechanism names
+2. Some prototypes have empty causal_chain sub-fields (placeholder mechanisms from P5-B)
+3. Some mechanisms are characterization/preparation methods without matching extraction items
+4. Need deeper PDF reading with semantic matching (not just keyword overlap)
 
 ### Evidence Quality by Domain
 - **Heavy metals (Pb, Cu, Cr)**: Strongest — chitosan, mussel, PDA, fish-scale have perf quotes
@@ -70,11 +98,23 @@ Overlap DOIs indicate mechanisms that share references with performance data hav
 
 ## Recommendation
 
-1. Use OpenClaw for PDF extraction on top 20 high-impact causal chains (chitosan, mussel, PDA)
-2. Upgrade where quote/locator supports the claim
-3. Demote to inference where no supporting quote found
-4. This is M10 work (full QA) or a dedicated evidence extraction sprint
+1. Continue evidence uplift with semantic matching (not just keyword overlap) for remaining 451 mechanisms
+2. Focus on brief-visible mechanisms first (24 still llm_inferred in ADRMATS briefs)
+3. Use OpenClaw for deeper PDF extraction on high-impact targets
+4. Consider lowering threshold or using embedding-based matching for better coverage
 
 ## Validation Results
 
-All validators pass (same as M8 final state).
+| Validator | Result |
+|-----------|--------|
+| validate_consistency | ✅ 0 errors, 171 warnings (pre-existing) |
+| check_chimera --strict | ✅ 0 violations |
+| check_causal_chain | ✅ 510/510 qualified, 0 empty-basis |
+| check_boundary_guardrail | ✅ PASS |
+| check_gold_set_usefulness | ✅ 7/7 briefs pass |
+| check_no_inferred_hard_do_not | ✅ PASS |
+| check_dt_actionability_36 | ✅ PASS |
+| check_fact_requires_locator | ✅ PASS |
+| check_brief_do_not_behavior | ✅ PASS |
+| check_source_tier_consistency | ✅ PASS |
+| check_brief_ledger_consistency | ✅ PASS |
