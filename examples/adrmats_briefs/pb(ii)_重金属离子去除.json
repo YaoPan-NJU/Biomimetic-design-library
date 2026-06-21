@@ -313,7 +313,7 @@
       {
         "prototype_id": "chitosan",
         "organism": "Crustacea",
-        "candidate_honesty": "fact",
+        "candidate_honesty": "lead",
         "match": {
           "reason": "壳聚糖的氨基和羟基可与Pb(II)形成配位键",
           "weight": 0.8,
@@ -322,16 +322,16 @@
           "direct_evidence": true
         },
         "mechanism": {
-          "name": "金属离子络合机制 Metal ion complexation mechanism",
-          "基本原理": "壳聚糖的氨基对软酸金属（Hg²⁺、Pb²⁺、Cu²⁺）有高亲和力，形成稳定的五元或六元螯合环；Cu²⁺在Irving-Williams序列中稳定性最高（log K~8）",
+          "name": "协同吸附案例：FFO@Sil@Chi-DTPA同时去除MB和Pb(II)",
+          "基本原理": "壳聚糖分子链上的氨基（-NH₂）可通过质子化带正电，与带负电的污染物（如染料、重金属阴离子）通过静电吸引结合",
           "key_structures": [],
           "functional_groups": "",
           "molecular_feature_links": [],
           "attribution": {
             "source": "literature",
-            "ref": "10.1016/j.carbpol.2020.117000",
-            "verification_tier": "verified",
-            "confidence": "normal"
+            "ref": "10.1039/d2ra07112f",
+            "verification_tier": "needs_review",
+            "confidence": "low"
           }
         },
         "design_translation": {
@@ -349,36 +349,15 @@
         },
         "boundaries": [
           {
-            "text": "强酸性条件下氨基完全质子化，失去金属配位能力",
-            "parameter": "pH",
-            "gate_level": "soft",
-            "basis": "llm_inferred",
-            "verification": "needs_review"
-          },
-          {
-            "text": "高浓度Ca²⁺、Mg²⁺竞争配位位点",
-            "parameter": "competing_ion",
-            "gate_level": "soft",
-            "basis": "llm_inferred",
-            "verification": "needs_review"
-          },
-          {
-            "text": "强酸性条件下壳聚糖溶解，氨基完全质子化失去配位能力",
-            "parameter": "pH",
-            "gate_level": "soft",
-            "basis": "llm_inferred",
-            "verification": "needs_review"
-          },
-          {
-            "text": "碱性条件下氨基去质子化，对阴离子吸附能力下降",
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
             "parameter": "pH",
             "gate_level": "soft",
             "basis": "llm_inferred",
             "verification": "needs_review"
           }
         ],
-        "honesty_summary": "有直接实验数据且机制经验证",
-        "boundary_summary": "4 条软限制（caution）",
+        "honesty_summary": "有直接实验数据但机制未经独立核实",
+        "boundary_summary": "1 条软限制（caution）",
         "evidence_context": {
           "performance_leads": [
             {
@@ -491,8 +470,8 @@
           "direct_evidence": false
         },
         "mechanism": {
-          "name": "HAp四种重金属吸附机制",
-          "基本原理": "HAp的Ca²⁺位点可被重金属离子交换取代，且磷酸根可与重金属形成难溶磷酸盐沉淀，实现双重去除机制",
+          "name": "HAp膜重金属去除性能",
+          "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
           "key_structures": [],
           "functional_groups": "",
           "molecular_feature_links": [
@@ -501,8 +480,8 @@
           "attribution": {
             "source": "literature",
             "ref": "10.1016/j.jtice.2024.105668",
-            "verification_tier": "verified",
-            "confidence": "normal"
+            "verification_tier": "needs_review",
+            "confidence": "low"
           }
         },
         "design_translation": {
@@ -520,22 +499,15 @@
         },
         "boundaries": [
           {
-            "text": "酸性条件下HAp开始溶解，释放Ca²⁺，配位/沉淀能力下降",
-            "parameter": "pH",
-            "gate_level": "soft",
-            "basis": "llm_inferred",
-            "verification": "needs_review"
-          },
-          {
-            "text": "酸性条件下HAp溶解，释放Ca²⁺，吸附能力下降",
-            "parameter": "pH",
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
             "gate_level": "soft",
             "basis": "llm_inferred",
             "verification": "needs_review"
           }
         ],
         "honesty_summary": "有性能数据但缺乏 verification_quote",
-        "boundary_summary": "2 条软限制（caution）",
+        "boundary_summary": "1 条软限制（caution）",
         "evidence_context": {
           "performance_leads": []
         }

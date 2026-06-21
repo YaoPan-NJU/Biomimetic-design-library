@@ -46,14 +46,14 @@
           "direct_evidence": false
         },
         "mechanism": {
-          "name": "金属离子络合机制 Metal ion complexation mechanism",
-          "基本原理": "壳聚糖的氨基对软酸金属（Hg²⁺、Pb²⁺、Cu²⁺）有高亲和力，形成稳定的五元或六元螯合环；Cu²⁺在Irving-Williams序列中稳定性最高（log K~8）",
+          "name": "pH对氮污染物吸附的影响机制 pH effect on N-pollutants adsorption",
+          "基本原理": "壳聚糖在酸性条件下氨基质子化带正电（pKa~6.3），与带负电的污染物通过库仑引力结合；在中性至碱性条件下，游离氨基通过配位作用结合金属离子",
           "key_structures": [],
           "functional_groups": "",
           "molecular_feature_links": [],
           "attribution": {
             "source": "literature",
-            "ref": "10.1016/j.carbpol.2020.117000",
+            "ref": "10.1016/j.carbpol.2021.118625",
             "verification_tier": "verified",
             "confidence": "normal"
           }
@@ -73,21 +73,7 @@
         },
         "boundaries": [
           {
-            "text": "强酸性条件下氨基完全质子化，失去金属配位能力",
-            "parameter": "pH",
-            "gate_level": "soft",
-            "basis": "llm_inferred",
-            "verification": "needs_review"
-          },
-          {
-            "text": "高浓度Ca²⁺、Mg²⁺竞争配位位点",
-            "parameter": "competing_ion",
-            "gate_level": "soft",
-            "basis": "llm_inferred",
-            "verification": "needs_review"
-          },
-          {
-            "text": "强酸性条件下壳聚糖溶解，氨基完全质子化失去配位能力",
+            "text": "强酸性条件下壳聚糖溶解，失去吸附能力",
             "parameter": "pH",
             "gate_level": "soft",
             "basis": "llm_inferred",
@@ -95,6 +81,20 @@
           },
           {
             "text": "碱性条件下氨基去质子化，对阴离子吸附能力下降",
+            "parameter": "pH",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          },
+          {
+            "text": "高盐浓度下静电屏蔽效应减弱阴离子吸附",
+            "parameter": "salinity",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          },
+          {
+            "text": "强酸性条件下壳聚糖溶解，氨基完全质子化失去配位能力",
             "parameter": "pH",
             "gate_level": "soft",
             "basis": "llm_inferred",
@@ -160,60 +160,6 @@
         }
       },
       {
-        "prototype_id": "lotus-leaf",
-        "organism": "Nelumbo nucifera",
-        "candidate_honesty": "inference",
-        "match": {
-          "reason": "疏水性污染物可通过疏水分配作用与疏水表面结合",
-          "weight": 0.6,
-          "applicability_fit": "盐度 any",
-          "match_basis": "molecular_feature_inference",
-          "direct_evidence": false
-        },
-        "mechanism": {
-          "name": "超疏水材料构建基本原理 - Young方程/Wenzel模型/Cassie-Baxter模型",
-          "基本原理": "needs_review",
-          "key_structures": [],
-          "functional_groups": "",
-          "molecular_feature_links": [
-            "疏水性"
-          ],
-          "attribution": {
-            "source": "literature",
-            "ref": "10.16865/j.cnki.1000-7555.2020.0282",
-            "verification_tier": "unverified",
-            "confidence": "normal"
-          }
-        },
-        "design_translation": {
-          "idea": "利用荷叶表面微纳层级结构实现超疏水自清洁，可启发油水分离膜设计",
-          "material_handle": "超疏水涂层、仿生微纳结构膜",
-          "design_principle": "荷叶表面微米乳突+纳米蜡晶体形成层级结构，空气垫使水滴呈Cassie-Baxter态（接触角>150°，滚动角<10°）。超疏水表面对油水混合物具有选择性透过能力——水被排斥而油可渗透",
-          "implementation_example": "SiO₂/PDMS浸涂→超疏水涂层；或静电纺丝PCL/氟聚合物→微纳纤维膜→油水分离",
-          "constraints": "机械磨损破坏微纳结构→超疏水失效；强酸/碱腐蚀；有机溶剂溶胀",
-          "failure_modes": "机械磨损丧失超疏水性；油污堵塞孔道；长期使用涂层脱落",
-          "evidence_tier": "lead",
-          "source_tier": "llm_inference",
-          "material_realization_examples": [
-            "超疏水涂层、仿生微纳结构膜"
-          ]
-        },
-        "boundaries": [
-          {
-            "text": "表面粗糙度和化学组成决定润湿性",
-            "parameter": "surface_roughness",
-            "gate_level": "soft",
-            "basis": "llm_inferred",
-            "verification": "needs_review"
-          }
-        ],
-        "honesty_summary": "基于分子特征推断，非直接证据",
-        "boundary_summary": "1 条软限制（caution）",
-        "evidence_context": {
-          "performance_leads": []
-        }
-      },
-      {
         "prototype_id": "polydopamine-coating",
         "organism": "Mytilus edulis",
         "candidate_honesty": "lead",
@@ -225,8 +171,8 @@
           "direct_evidence": false
         },
         "mechanism": {
-          "name": "PDA吸附机制补充",
-          "基本原理": "PDA涂层同时含邻苯二酚（金属配位）和吲哚环（π-π堆积），可在单一表面上实现对芳香族污染物和金属离子的双重吸附",
+          "name": "Cu纳米线/PDMS超疏水表面",
+          "基本原理": "needs_review",
           "key_structures": [],
           "functional_groups": "",
           "molecular_feature_links": [
@@ -234,9 +180,9 @@
           ],
           "attribution": {
             "source": "literature",
-            "ref": "10.13550/j.jxhg.20220633",
-            "verification_tier": "verified",
-            "confidence": "normal"
+            "ref": null,
+            "verification_tier": "needs_review",
+            "confidence": "low"
           }
         },
         "design_translation": {
@@ -254,22 +200,15 @@
         },
         "boundaries": [
           {
-            "text": "碱性条件下邻苯二酚氧化为醌，金属配位能力丧失",
-            "parameter": "pH",
-            "gate_level": "soft",
-            "basis": "llm_inferred",
-            "verification": "needs_review"
-          },
-          {
-            "text": "弱酸性以下DOPA自聚合速率极慢，涂层难以形成",
-            "parameter": "pH",
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
             "gate_level": "soft",
             "basis": "llm_inferred",
             "verification": "needs_review"
           }
         ],
         "honesty_summary": "有性能数据但缺乏 verification_quote",
-        "boundary_summary": "2 条软限制（caution）",
+        "boundary_summary": "1 条软限制（caution）",
         "evidence_context": {
           "performance_leads": []
         }
