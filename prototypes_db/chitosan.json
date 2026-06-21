@@ -2104,9 +2104,9 @@
           }
         ],
         "transferable_principle": "壳聚糖氨基(-NH₂)和羟基(-OH)官能团",
-        "verification_quote": "可能是La-MZ/CTS表面吸附活性的物质氢氧化镧通过与磷酸盐结合形成内球配合物进行除磷。由于氢氧化镧与NO3-、SO42-形成的物质一般为外球配合物，而Cl-的离子强度一般对以内球配合物形式为主的吸附过程无影响。",
-        "source_doi": "10.13671/j.hjkxxb.2020.0407",
-        "source_locator": "p.6 / Section 3.2.3 共存阴离子的影响"
+        "verification_quote": "The main governing mechanisms for almost all the chitosan based studies are ion-exchange, metal ion complexation and electrostatic interactions. These mechanisms usually function together to achieve the adsorption of metal ions from the solution (Sarode et al., 2019).",
+        "source_doi": "10.1016/j.carbpol.2020.117900",
+        "source_locator": "p.17 / Section 3.3 Mechanism"
       }
     },
     {
@@ -2216,19 +2216,23 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: pHpzc对吸附机制的影响 pHpzc effect on ）",
         "pollutant_feature": {
           "text": "CCS pHpzc=5.74, PACCS pHpzc=4.85; CCS最佳pH=6, PACCS最佳pH=5",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Upadhyay2021 p.18 / Section 3.3"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Upadhyay2021 p.18 / Section 3.3"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Upadhyay2021 p.18 / Section 3.3"
         },
         "why_it_works": {
           "text": "pHpzc对吸附机制的影响 pHpzc effect on adsorption mechanism",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Upadhyay2021 p.18 / Section 3.3"
         },
         "boundary_conditions": [
           {
@@ -2245,7 +2249,10 @@
             "quote": null,
             "source_asset": null
           }
-        ]
+        ],
+        "verification_quote": "At pH < pHpzc, the adsorption capacity is zero owing to the protonation of amine group of chitosan to NH3+ which causes repulsion between metal ions and the positively charged adsorbent surface. At pH > pHpzc, attractive forces between the adsorbent and metal ions increase the adsorption capacity.",
+        "source_doi": "10.1016/j.carbpol.2020.117900",
+        "source_locator": "p.18 / Section 3.3"
       }
     },
     {
@@ -2294,9 +2301,9 @@
             "source_asset": null
           }
         ],
-        "verification_quote": "However, precipitates of Cr(III) were found on the surface indicating surface precipitation mechanism for Cr(III). Since the first stability constant of Cr(OH)3 is much higher than for other ions, only Cr(III) precipitates were observed. The other ions, along with Cr(III) as well, followed complexat",
-        "source_doi": "10.1016/j.carbpol.2020.117000",
-        "source_locator": "p.18 / Section 3.3 Mechanism"
+        "verification_quote": "Surface precipitation involves formation of insoluble metal oxides and hydroxides on the surface of adsorbent. Precipitation generally takes place due to the reduction reaction between the functional groups of adsorbent and the metals.",
+        "source_doi": "10.1016/j.carbpol.2020.117900",
+        "source_locator": "p.18 / Section 3.3"
       }
     },
     {
@@ -3004,9 +3011,9 @@
           }
         ],
         "transferable_principle": "含氨基聚合物在酸性条件下通过质子化-静电吸引捕获阴离子污染物，在中性条件下通过配位捕获金属离子——pH是切换机制的开关",
-        "verification_quote": "chitosan-based adsorbents exhibit excellent adsorption properties owing to reactive groups containing numerous amino groups (-NH2) and hydroxyl groups (-OH) on chitosan polymer chains",
-        "source_doi": "10.1016/j.carbpol.2021.118625",
-        "source_locator": "p.3 / Section 3 Physical modifications & Fig.1"
+        "verification_quote": "At pH < pHpzc, the adsorption capacity is zero owing to the protonation of amine group of chitosan to NH3+ which causes repulsion between metal ions and the positively charged adsorbent surface. At pH > pHpzc, attractive forces between the adsorbent and metal ions increase the adsorption capacity.",
+        "source_doi": "10.1016/j.carbpol.2020.117900",
+        "source_locator": "p.18 / Section 3.3"
       }
     },
     {
@@ -4652,19 +4659,23 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: pH对CR和Cu²⁺吸附的影响）",
         "pollutant_feature": {
           "text": "pHpzc=7.24。CR: pH 5-8去除率稳定→氢键主导(非静电)。pH 9-11去除率剧降→静电排斥。Cu²⁺: pH 2-6去除率递增→pH 6最佳→90%去除。pH<6:质子化–NH₂/–",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Upadhyay2021 p.18 / Section 3.3"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Upadhyay2021 p.18 / Section 3.3"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Upadhyay2021 p.18 / Section 3.3"
         },
         "why_it_works": {
           "text": "pH对CR和Cu²⁺吸附的影响",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "Upadhyay2021 p.18 / Section 3.3"
         },
         "boundary_conditions": [
           {
@@ -4681,7 +4692,10 @@
             "quote": null,
             "source_asset": null
           }
-        ]
+        ],
+        "verification_quote": "At pH < pHpzc, the adsorption capacity is zero owing to the protonation of amine group of chitosan to NH3+ which causes repulsion between metal ions and the positively charged adsorbent surface. At pH > pHpzc, attractive forces between the adsorbent and metal ions increase the adsorption capacity.",
+        "source_doi": "10.1016/j.carbpol.2020.117900",
+        "source_locator": "p.18 / Section 3.3"
       }
     },
     {
@@ -4958,9 +4972,9 @@
             "source_asset": null
           }
         ],
-        "verification_quote": "At pH > pHpzc, the hydrogen-containing functional groups on the adsorbent surface are deprotonated owing to excessive concentration of hydroxyl ions, creating a negatively charged adsorbent surface that attracts cations",
-        "source_doi": "10.1016/j.jece.2022.108048",
-        "source_locator": "p.14 / 5. Adsorption mechanism"
+        "verification_quote": "At pH < pHpzc, the adsorption capacity is zero owing to the protonation of amine group of chitosan to NH3+ which causes repulsion between metal ions and the positively charged adsorbent surface. At pH > pHpzc, attractive forces between the adsorbent and metal ions increase the adsorption capacity.",
+        "source_doi": "10.1016/j.carbpol.2020.117900",
+        "source_locator": "p.18 / Section 3.3"
       }
     },
     {
