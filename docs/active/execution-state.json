@@ -113,21 +113,25 @@
     "validators": "all green"
   },
   "m9_summary": {
-    "mechanisms_upgraded": 60,
-    "prototypes_touched": 16,
-    "from_source_total": "60/510 (12%)",
-    "llm_inferred_remaining": 450,
-    "method": "keyword/character/quote matching against litextract extraction JSONs",
-    "batches": 5,
-    "label_inflation_fix": "applied — all 60 fully supported with quote+doi+locator",
-    "dt_deepening": "diatom-inspired-porous, silkworm-silk fixed",
-    "validators": "all green",
-    "natural_gate": "keyword matching exhausted — remaining 450 need PDF extraction"
+    "mechanisms_upgraded": 93,
+    "from_source_total": "93/510 (18%)",
+    "llm_inferred_remaining": 417,
+    "pdfs_read": 10,
+    "prototypes_touched": 17,
+    "method": "10 PDFs read + keyword/character matching + 7 single-mechanism D4 extractions",
+    "label_inflation_fix": "applied — all 93 fully supported with quote+doi+locator",
+    "corruption_fix": "7 files restored from M8 final, upgrades re-applied correctly",
+    "validators": "all green (8/8)"
+  },
+  "m10_summary": {
+    "status": "in_progress — v0.2 RC packaging",
+    "validators_all_green": "15/15 passed",
+    "briefs_frozen": "7 ADRMATS gold-set briefs verified"
   },
   "v02_plan": {
     "M8": "complete",
-    "M9": "in progress — evidence uplift batch 1-3 done, 451 mechanisms remaining",
-    "M10": "pending — full release QA",
-    "M11": "pending — v0.2 release packaging"
+    "M9": "accepted — 93/510 from_source (18%), 10 PDFs, corruption fixed",
+    "M10": "in_progress — v0.2 RC packaging",
+    "M11": "pending — v0.2 release"
   }
 }
