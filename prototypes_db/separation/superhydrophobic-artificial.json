@@ -183,19 +183,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "油水混合物和乳化油",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.3 / 段落[0004]"
         },
         "bio_structure": {
           "text": "微纳粗糙结构+低表面能涂层",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.3 / 段落[0004]"
         },
         "interaction": {
           "text": "Cassie-Baxter态截留空气层实现超疏水/超亲油选择性",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.3 / 段落[0004]"
         },
         "why_it_works": {
           "text": "表面张力差异和空气层阻隔实现选择性润湿",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.3 / 段落[0004]"
         },
         "boundary_conditions": [
           {
@@ -210,7 +214,10 @@
             }
           }
         ],
-        "transferable_principle": "微纳粗糙结构+低表面能涂层"
+        "transferable_principle": "微纳粗糙结构+低表面能涂层",
+        "verification_quote": "具有疏水性的材料对油水分离具有很好的效果，但由于玻璃纤维的内部空间结构对油的存储能力不足，且抗压能力较差很难实现循环利用，因此开发具有疏水性、对石油具有良好储存性能和具有良好抗压能力的材料是解决油水分离吸附材料的关键",
+        "source_doi": "patent:CN113244892B",
+        "source_locator": "p.3 / 段落[0004]"
       }
     },
     {

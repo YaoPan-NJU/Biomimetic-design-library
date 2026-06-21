@@ -29,19 +29,23 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "雾气/水蒸气",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.18 / Section 5.1 Principles of Janus membranes"
         },
         "bio_structure": {
           "text": "纳米比亚甲虫亲水凸起+疏水基底交替表面",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.18 / Section 5.1 Principles of Janus membranes"
         },
         "interaction": {
           "text": "亲水区域凝结水滴，疏水区域导流收集",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.18 / Section 5.1 Principles of Janus membranes"
         },
         "why_it_works": {
           "text": "润湿性梯度和表面拓扑实现定向集水",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "locator": "p.18 / Section 5.1 Principles of Janus membranes"
         },
         "boundary_conditions": [
           {
@@ -56,7 +60,10 @@
             }
           }
         ],
-        "transferable_principle": "纳米比亚甲虫亲水凸起+疏水基底交替表面"
+        "transferable_principle": "纳米比亚甲虫亲水凸起+疏水基底交替表面",
+        "verification_quote": "The Namib beetle has a hydrophilic side to collect water from fog and a hydrophobic side to direct the water to the beetle's mouth.",
+        "source_doi": "10.1007/s11783-021-1515-2",
+        "source_locator": "p.18 / Section 5.1 Principles of Janus membranes"
       }
     }
   ],
