@@ -102,8 +102,8 @@
     "tools/litextract": "submodule, security fix landed",
     "docs/optimization-v1/": "untracked, excluded"
   },
-  "last_checkpoint": "2026-06-22T14:15:00Z",
-  "next_action": "V1-A evidence uplift blocked on PDF access. Next: either access PDFs on office machine or proceed with scope hygiene on non-PDF-dependent prototypes.",
+  "last_checkpoint": "2026-06-22T15:00:00Z",
+  "next_action": "V1-A: continue uplift (39 remaining with visual_cache), or proceed with scope hygiene for prototypes without PDF access",
   "git_status_note": "Local dirty files: .claude/settings.local.json, README.md, untracked docs. Excluded from review scope.",
   "m9_summary": {
     "mechanisms_upgraded": 103,
@@ -154,16 +154,17 @@
     "validators": "all 8 pass (0 errors, 171 pre-existing warnings)"
   },
   "v1a_evidence_uplift": {
-    "status": "blocked_on_pdf_access",
-    "reason": "Literature PDF library not accessible on this Mac (office Windows machine)",
-    "llm_inferred_remaining": 412,
-    "from_source_current": "98/510 (19%)",
-    "top_targets": [
-      "chitosan (67)",
-      "mussel-foot-adhesion (47)",
-      "polydopamine-coating (30)",
-      "spider-silk (22)",
-      "silk-fibroin (16)"
-    ]
+    "status": "in_progress",
+    "waves_completed": 4,
+    "total_upgraded": 74,
+    "from_source_start": 98,
+    "from_source_current": 172,
+    "llm_inferred_start": 412,
+    "llm_inferred_current": 338,
+    "percentage_start": "19.2%",
+    "percentage_current": "33.7%",
+    "remaining_with_visual_cache": 39,
+    "remaining_without_visual_cache": 299,
+    "method": "visual_cache DOI matching + keyword extraction"
   }
 }
