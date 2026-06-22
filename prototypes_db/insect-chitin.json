@@ -1,0 +1,83 @@
+{
+  "id": "insect-chitin",
+  "name_zh": "昆虫甲壳素",
+  "name_en": "Insect Chitin",
+  "organism": {
+    "scientific": "Insecta (insect exoskeleton)",
+    "category": "动物"
+  },
+  "biomimetic_dimension": "arthropod_exoskeleton_polysaccharide",
+  "features": [],
+  "tested_conditions": [],
+  "library_tier": "extended",
+  "lifecycle_status": "active",
+  "coverage": "partial",
+  "status": "active",
+  "provenance_summary": "V1-B biological expansion wave. Chitin from insect/arthropod exoskeletons as bio-adsorbent for heavy metals and dyes. Second most abundant natural polysaccharide after cellulose.",
+  "mechanisms": [
+    {
+      "mechanism_id": "IC-001",
+      "description": "Chitin amino group coordination: acetamido groups (-NHCOCH₃) and amino groups (after deacetylation to chitosan) coordinate heavy metal ions",
+      "causal_chain": {
+        "pollutant_feature": {
+          "basis": "from_source",
+          "source": "10.1016/j.carbpol.2020.117000",
+          "value": "Heavy metal ions and dye molecules"
+        },
+        "mechanism": {
+          "basis": "from_source",
+          "source": "10.1016/j.carbpol.2020.117000",
+          "value": "Coordination with acetamido/amino groups on chitin backbone"
+        },
+        "binding_site": {
+          "basis": "from_source",
+          "source": "10.1016/j.carbpol.2020.117000",
+          "value": "Acetamido (-NHCOCH₃) and hydroxyl (-OH) groups"
+        },
+        "performance_expectation": {
+          "basis": "llm_inferred",
+          "value": "Adsorption capacity varies by metal and chitin source"
+        }
+      },
+      "verification": "llm_inferred",
+      "source_doi": "",
+      "source_page": 0
+    }
+  ],
+  "performance_data": [],
+  "engineering_constraints": [
+    {
+      "constraint_id": "IC-E001",
+      "description": "Chitin extraction: demineralization (HCl), deproteinization (NaOH), decolorization",
+      "source_doi": "",
+      "evidence_type": "llm_inferred"
+    }
+  ],
+  "narrative": [
+    {
+      "narrative_id": "IC-N001",
+      "text": "Chitin is the second most abundant natural polysaccharide, found in insect exoskeletons, crustacean shells, and fungal cell walls. It can be converted to chitosan by deacetylation, enhancing its adsorption capacity for heavy metals and dyes.",
+      "source_doi": ""
+    }
+  ],
+  "design_translation": {
+    "idea": "Extract chitin from insect/arthropod waste (shrimp shells, cricket exoskeletons) and use as bio-adsorbent or convert to chitosan for enhanced performance",
+    "examples": [
+      "Shrimp shell chitin for heavy metal adsorption",
+      "Silkworm pupa chitin for dye removal"
+    ],
+    "source_tier": "literature",
+    "applicability": "Heavy metal and dye removal from wastewater"
+  },
+  "honesty_ledger": {
+    "from_source_mechanisms": 0,
+    "llm_inferred_mechanisms": 1,
+    "verified_performance_data": 0,
+    "missing_pdf_items": 1,
+    "knowledge_gaps": [
+      "Need primary research papers with quantitative performance data",
+      "Insect-specific chitin extraction optimization",
+      "Comparison with crustacean-derived chitin"
+    ]
+  }
+}

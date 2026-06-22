@@ -1,0 +1,152 @@
+{
+  "id": "plant-lignocellulosic-architecture",
+  "name_zh": "植物木质纤维素结构",
+  "name_en": "Plant Lignocellulosic Architecture",
+  "organism": {
+    "scientific": "Oryza sativa/Camellia oleifera",
+    "category": "植物"
+  },
+  "biomimetic_dimension": "lignocellulosic_biomineralization",
+  "features": [],
+  "tested_conditions": [],
+  "library_tier": "extended",
+  "lifecycle_status": "active",
+  "coverage": "partial",
+  "status": "active",
+  "provenance_summary": "V1-B biological expansion wave. Plant lignocellulosic architecture from agricultural waste, with silica biomineralization providing enhanced adsorption sites for heavy metals.",
+  "mechanisms": [
+    {
+      "mechanism_id": "PDB-001",
+      "description": "Ion exchange: Cd²⁺ displaces Na⁺, K⁺, Ca²⁺ from biochar surface sites; XPS confirms Na⁺ peak weakens after adsorption",
+      "causal_chain": {
+        "pollutant_feature": {
+          "basis": "from_source",
+          "source": "10.1016/j.jclepro.2020.125390",
+          "value": "Cd²⁺ heavy metal cation"
+        },
+        "mechanism": {
+          "basis": "from_source",
+          "source": "10.1016/j.jclepro.2020.125390",
+          "value": "Ion exchange: Cd²⁺ displaces Na⁺, K⁺, Ca²⁺ from biochar surface"
+        },
+        "binding_site": {
+          "basis": "from_source",
+          "source": "10.1016/j.jclepro.2020.125390",
+          "value": "Carboxyl, hydroxyl, silicate groups on biochar surface"
+        },
+        "performance_expectation": {
+          "basis": "from_source",
+          "source": "10.1016/j.jclepro.2020.125390",
+          "value": "qm = 211.49 mg/g for Cd (silicate-modified biochar)"
+        }
+      },
+      "verification": "partial",
+      "verification_quote": "The intensity of Na⁺ peak becomes weaker after Cd adsorption, possibly implying that ion exchange of Cd²⁺ with Na⁺ contributes to the adsorption process.",
+      "source_doi": "10.1016/j.jclepro.2020.125390",
+      "source_page": 5,
+      "source_file": "仿生文献库/3rd/第B组-新方向/B2-生物矿化模板/2021-Cai-shell-biochar-cadmium-adsorption.pdf"
+    },
+    {
+      "mechanism_id": "PDB-002",
+      "description": "Surface precipitation: CdCO₃, CdSiO₃, Cd₂SiO₄ formation on biochar surface",
+      "causal_chain": {
+        "pollutant_feature": {
+          "basis": "from_source",
+          "source": "10.1016/j.jclepro.2020.125390",
+          "value": "Cd²⁺ in aqueous solution"
+        },
+        "mechanism": {
+          "basis": "from_source",
+          "source": "10.1016/j.jclepro.2020.125390",
+          "value": "Surface precipitation: CdCO₃, CdSiO₃, Cd₂SiO₄ formation"
+        },
+        "binding_site": {
+          "basis": "from_source",
+          "source": "10.1016/j.jclepro.2020.125390",
+          "value": "Carbonate and silicate surface groups"
+        },
+        "performance_expectation": {
+          "basis": "from_source",
+          "source": "10.1016/j.jclepro.2020.125390",
+          "value": "Enhanced at pH > 5"
+        }
+      },
+      "verification": "partial",
+      "verification_quote": "The bands at ~449 cm⁻¹, 561 cm⁻¹, 1041 cm⁻¹ and 1456 cm⁻¹ disappear, indicating these functional groups react with Cd and probably form Cd-silicate precipitates.",
+      "source_doi": "10.1016/j.jclepro.2020.125390",
+      "source_page": 5,
+      "source_file": "仿生文献库/3rd/第B组-新方向/B2-生物矿化模板/2021-Cai-shell-biochar-cadmium-adsorption.pdf"
+    }
+  ],
+  "performance_data": [
+    {
+      "perf_id": "PDB-P001",
+      "pollutant": "Cd(II)",
+      "adsorbent": "Silicate-modified oiltea camellia shell biochar",
+      "qmax_mg_g": 211.49,
+      "model": "Langmuir",
+      "pH": 7.0,
+      "temperature_K": 298,
+      "source_doi": "10.1016/j.jclepro.2020.125390",
+      "source_page": 4,
+      "verification": "partial",
+      "verification_quote": "For silicate-modified biochar, the qm values are between 120-211 mg/g.",
+      "source_file": "仿生文献库/3rd/第B组-新方向/B2-生物矿化模板/2021-Cai-shell-biochar-cadmium-adsorption.pdf"
+    },
+    {
+      "perf_id": "PDB-P002",
+      "pollutant": "Cd(II)",
+      "adsorbent": "Pristine oiltea camellia shell biochar",
+      "qmax_mg_g": 62.18,
+      "model": "Langmuir",
+      "pH": 7.0,
+      "temperature_K": 298,
+      "source_doi": "10.1016/j.jclepro.2020.125390",
+      "source_page": 4,
+      "verification": "partial",
+      "verification_quote": "For pristine biochar, the qm is ~62.2 mg/g.",
+      "source_file": "仿生文献库/3rd/第B组-新方向/B2-生物矿化模板/2021-Cai-shell-biochar-cadmium-adsorption.pdf"
+    }
+  ],
+  "engineering_constraints": [
+    {
+      "constraint_id": "PDB-E001",
+      "description": "Pyrolysis: 500°C under N₂ (80 mL/min) for 120 min",
+      "source_doi": "10.1016/j.jclepro.2020.125390",
+      "evidence_type": "from_source"
+    },
+    {
+      "constraint_id": "PDB-E002",
+      "description": "Production cost: ~0.67 USD/kg (raw), ~1.44 USD/kg (Si-modified)",
+      "source_doi": "10.1016/j.jclepro.2020.125390",
+      "evidence_type": "from_source"
+    }
+  ],
+  "narrative": [
+    {
+      "narrative_id": "PDB-N001",
+      "text": "Plant-derived biochar converts agricultural waste into carbonaceous adsorbent via pyrolysis. Surface modification with silicate, phosphoric acid, or alkali enhances adsorption capacity. Low-cost and sustainable approach for heavy metal removal.",
+      "source_doi": "10.1016/j.jclepro.2020.125390"
+    }
+  ],
+  "design_translation": {
+    "idea": "Pyrolyze agricultural waste (rice straw, oiltea shell, walnut shell) at 500°C to create biochar adsorbent, with optional surface modification for enhanced performance",
+    "examples": [
+      "Silicate-modified oiltea shell biochar: 211 mg/g for Cd",
+      "Walnut shell biochar for tetracycline removal"
+    ],
+    "source_tier": "literature",
+    "applicability": "Heavy metal and organic pollutant removal from wastewater; soil remediation"
+  },
+  "honesty_ledger": {
+    "from_source_mechanisms": 2,
+    "llm_inferred_mechanisms": 0,
+    "verified_performance_data": 2,
+    "missing_pdf_items": 0,
+    "knowledge_gaps": [
+      "Long-term stability and regeneration cycles",
+      "Competitive adsorption in multi-metal systems",
+      "Scale-up to industrial production"
+    ]
+  }
+}

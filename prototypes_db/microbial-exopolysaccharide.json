@@ -1,0 +1,83 @@
+{
+  "id": "microbial-exopolysaccharide",
+  "name_zh": "微生物胞外多糖",
+  "name_en": "Microbial Exopolysaccharide",
+  "organism": {
+    "scientific": "Bacteria/Fungi (EPS-producing)",
+    "category": "微生物"
+  },
+  "biomimetic_dimension": "microbial_biopolymer",
+  "features": [],
+  "tested_conditions": [],
+  "library_tier": "extended",
+  "lifecycle_status": "active",
+  "coverage": "partial",
+  "status": "active",
+  "provenance_summary": "V1-B biological expansion wave. Microbial exopolysaccharides (EPS) produced by bacteria and fungi as bio-adsorbents for heavy metals and dyes. Rich in functional groups for pollutant binding.",
+  "mechanisms": [
+    {
+      "mechanism_id": "MEP-001",
+      "description": "EPS functional group binding: carboxyl, hydroxyl, and sulfate groups on exopolysaccharides coordinate heavy metal ions and cationic dyes",
+      "causal_chain": {
+        "pollutant_feature": {
+          "basis": "from_source",
+          "source": "10.1016/j.carbpol.2021.118625",
+          "value": "Heavy metal ions and cationic dyes"
+        },
+        "mechanism": {
+          "basis": "from_source",
+          "source": "10.1016/j.carbpol.2021.118625",
+          "value": "Coordination with carboxyl, hydroxyl, sulfate groups on EPS"
+        },
+        "binding_site": {
+          "basis": "from_source",
+          "source": "10.1016/j.carbpol.2021.118625",
+          "value": "Carboxyl (-COOH), hydroxyl (-OH), sulfate (-OSO₃H) groups"
+        },
+        "performance_expectation": {
+          "basis": "llm_inferred",
+          "value": "EPS can bind significant amounts of heavy metals"
+        }
+      },
+      "verification": "llm_inferred",
+      "source_doi": "",
+      "source_page": 0
+    }
+  ],
+  "performance_data": [],
+  "engineering_constraints": [
+    {
+      "constraint_id": "MEP-E001",
+      "description": "EPS production: microbial fermentation, yield depends on species and conditions",
+      "source_doi": "",
+      "evidence_type": "llm_inferred"
+    }
+  ],
+  "narrative": [
+    {
+      "narrative_id": "MEP-N001",
+      "text": "Microbial exopolysaccharides are natural biopolymers secreted by bacteria and fungi. They contain abundant functional groups (carboxyl, hydroxyl, sulfate) that can bind heavy metals and dyes. Production is scalable via fermentation.",
+      "source_doi": ""
+    }
+  ],
+  "design_translation": {
+    "idea": "Produce exopolysaccharides via microbial fermentation and use as bio-adsorbents for heavy metals and dyes",
+    "examples": [
+      "Xanthan gum for heavy metal adsorption",
+      "Dextran-based hydrogel for dye removal"
+    ],
+    "source_tier": "literature",
+    "applicability": "Heavy metal and dye removal from wastewater"
+  },
+  "honesty_ledger": {
+    "from_source_mechanisms": 0,
+    "llm_inferred_mechanisms": 1,
+    "verified_performance_data": 0,
+    "missing_pdf_items": 1,
+    "knowledge_gaps": [
+      "Need primary research papers with quantitative performance data",
+      "EPS-specific adsorption capacity comparison",
+      "Production cost analysis"
+    ]
+  }
+}

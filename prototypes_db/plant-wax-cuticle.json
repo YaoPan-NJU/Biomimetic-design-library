@@ -1,0 +1,83 @@
+{
+  "id": "plant-wax-cuticle",
+  "name_zh": "植物蜡质表皮",
+  "name_en": "Plant Wax Cuticle",
+  "organism": {
+    "scientific": "Nelumbo nucifera/Oryza sativa",
+    "category": "植物"
+  },
+  "biomimetic_dimension": "superhydrophobic_surface",
+  "features": [],
+  "tested_conditions": [],
+  "library_tier": "extended",
+  "lifecycle_status": "active",
+  "coverage": "partial",
+  "status": "active",
+  "provenance_summary": "V1-B biological expansion wave. Plant epicuticular wax structures providing superhydrophobicity and self-cleaning properties, biomimetically applied for oil-water separation and anti-fouling surfaces.",
+  "mechanisms": [
+    {
+      "mechanism_id": "PWC-001",
+      "description": "Epicuticular wax crystal structure: micro/nano hierarchical wax crystals on plant leaf surfaces create superhydrophobic surface (WCA >150°) via Cassie-Baxter state",
+      "causal_chain": {
+        "pollutant_feature": {
+          "basis": "from_source",
+          "source": "10.1002/adfm.202200359",
+          "value": "Oil and water-based pollutants"
+        },
+        "mechanism": {
+          "basis": "from_source",
+          "source": "10.1002/adfm.202200359",
+          "value": "Superhydrophobicity from hierarchical micro/nano wax crystal structure"
+        },
+        "binding_site": {
+          "basis": "from_source",
+          "source": "10.1002/adfm.202200359",
+          "value": "Epicuticular wax crystals (long-chain alkanes, esters, fatty acids)"
+        },
+        "performance_expectation": {
+          "basis": "llm_inferred",
+          "value": "WCA >150°, oil-water separation efficiency >95%"
+        }
+      },
+      "verification": "llm_inferred",
+      "source_doi": "",
+      "source_page": 0
+    }
+  ],
+  "performance_data": [],
+  "engineering_constraints": [
+    {
+      "constraint_id": "PWC-E001",
+      "description": "Wax extraction: solvent extraction or thermal separation from plant leaves",
+      "source_doi": "",
+      "evidence_type": "llm_inferred"
+    }
+  ],
+  "narrative": [
+    {
+      "narrative_id": "PWC-N001",
+      "text": "Plant epicuticular wax creates superhydrophobic surfaces through hierarchical micro/nano structures. This natural design inspires oil-water separation membranes and anti-fouling coatings.",
+      "source_doi": ""
+    }
+  ],
+  "design_translation": {
+    "idea": "Mimic plant epicuticular wax hierarchical structure for superhydrophobic oil-water separation and anti-fouling applications",
+    "examples": [
+      "Lotus leaf-inspired superhydrophobic coating",
+      "Rice leaf-inspired directional water transport"
+    ],
+    "source_tier": "literature",
+    "applicability": "Oil-water separation, anti-fouling surfaces, self-cleaning materials"
+  },
+  "honesty_ledger": {
+    "from_source_mechanisms": 0,
+    "llm_inferred_mechanisms": 1,
+    "verified_performance_data": 0,
+    "missing_pdf_items": 1,
+    "knowledge_gaps": [
+      "Need primary research papers with quantitative performance data",
+      "Wax composition and structure optimization",
+      "Durability under repeated use"
+    ]
+  }
+}

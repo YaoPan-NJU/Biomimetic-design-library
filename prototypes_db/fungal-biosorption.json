@@ -1,0 +1,84 @@
+{
+  "id": "fungal-biosorption",
+  "name_zh": "真菌生物吸附",
+  "name_en": "Fungal Biosorption",
+  "organism": {
+    "scientific": "Aspergillus niger",
+    "category": "真菌"
+  },
+  "biomimetic_dimension": "microbial_biosorption",
+  "features": [],
+  "tested_conditions": [],
+  "library_tier": "extended",
+  "lifecycle_status": "active",
+  "coverage": "partial",
+  "status": "active",
+  "provenance_summary": "V1-B biological expansion wave. Fungal biosorption using living or dead fungal biomass for heavy metal and dye removal. Cell wall components (chitin, glucan, mannoprotein) provide abundant binding sites.",
+  "mechanisms": [
+    {
+      "mechanism_id": "FB-001",
+      "description": "Fungal cell wall biosorption: chitin, glucan, and mannoprotein in fungal cell wall provide amino, carboxyl, hydroxyl, and phosphate groups for heavy metal coordination",
+      "causal_chain": {
+        "pollutant_feature": {
+          "basis": "from_source",
+          "source": "10.1016/j.biortech.2012.01.015",
+          "value": "Heavy metal ions (Pb²⁺, Cu²⁺, Cd²⁺, Zn²⁺, Cr³⁺)"
+        },
+        "mechanism": {
+          "basis": "from_source",
+          "source": "10.1016/j.biortech.2012.01.015",
+          "value": "Coordination and electrostatic interaction with cell wall functional groups"
+        },
+        "binding_site": {
+          "basis": "from_source",
+          "source": "10.1016/j.biortech.2012.01.015",
+          "value": "Amino (-NH₂), carboxyl (-COOH), hydroxyl (-OH), phosphate groups on fungal cell wall"
+        },
+        "performance_expectation": {
+          "basis": "llm_inferred",
+          "value": "Biosorption capacity varies by species and metal: typically 10-200 mg/g"
+        }
+      },
+      "verification": "llm_inferred",
+      "source_doi": "",
+      "source_page": 0
+    }
+  ],
+  "performance_data": [],
+  "engineering_constraints": [
+    {
+      "constraint_id": "FB-E001",
+      "description": "Fungal biomass can be obtained as waste from fermentation industry (antibiotic, enzyme production)",
+      "source_doi": "",
+      "evidence_type": "llm_inferred"
+    }
+  ],
+  "narrative": [
+    {
+      "narrative_id": "FB-N001",
+      "text": "Fungal biosorption exploits the natural metal-binding capacity of fungal cell walls. Both living and dead biomass can be used, with dead biomass avoiding toxicity limitations. Fungal biomass is abundantly available as waste from biotechnology industries.",
+      "source_doi": ""
+    }
+  ],
+  "design_translation": {
+    "idea": "Use fungal biomass (living or dead) from fermentation industry waste as low-cost biosorbent for heavy metal removal from wastewater",
+    "examples": [
+      "Aspergillus niger for Pb²⁺ biosorption",
+      "Saccharomyces cerevisiae for Cu²⁺ biosorption",
+      "Penicillium chrysogenum for dye biosorption"
+    ],
+    "source_tier": "literature",
+    "applicability": "Heavy metal and dye removal from industrial wastewater"
+  },
+  "honesty_ledger": {
+    "from_source_mechanisms": 0,
+    "llm_inferred_mechanisms": 1,
+    "verified_performance_data": 0,
+    "missing_pdf_items": 1,
+    "knowledge_gaps": [
+      "Need primary research papers with quantitative performance data",
+      "Species-specific biosorption capacity comparison",
+      "Regeneration and reuse cycles data"
+    ]
+  }
+}

@@ -1953,6 +1953,191 @@
       "applicability": {},
       "_status": "deprecated_superseded_by_silk-fibroin",
       "_dedup_superseded_by": "silk-fibroin"
+    },
+    "bacterial-cellulose": {
+      "applicability": {
+        "pH_range": [
+          3,
+          10
+        ],
+        "temp_range": [
+          0,
+          80
+        ],
+        "salinity": "low"
+      },
+      "features": [
+        "3D纳米纤维网络",
+        "超亲水性",
+        "水下超疏油性",
+        "抗菌防污"
+      ],
+      "biomimetic_dimension": "microbial_polysaccharide_membrane",
+      "organism": {
+        "scientific": "Acetobacter xylinum",
+        "category": "微生物"
+      }
+    },
+    "bird-feather-keratin": {
+      "applicability": {
+        "pH_range": [
+          3,
+          10
+        ],
+        "temp_range": [
+          0,
+          60
+        ],
+        "salinity": "low"
+      },
+      "features": [
+        "巯基配位",
+        "角蛋白生物聚合物",
+        "农业废弃物"
+      ],
+      "biomimetic_dimension": "keratin_biopolymer",
+      "organism": {
+        "scientific": "Aves (bird feathers)",
+        "category": "动物"
+      }
+    },
+    "fungal-biosorption": {
+      "applicability": {
+        "pH_range": [
+          3,
+          8
+        ],
+        "temp_range": [
+          15,
+          40
+        ],
+        "salinity": "low"
+      },
+      "features": [
+        "真菌细胞壁吸附",
+        "几丁质/葡聚糖",
+        "工业废弃物利用"
+      ],
+      "biomimetic_dimension": "microbial_biosorption",
+      "organism": {
+        "scientific": "Aspergillus/Penicillium/Trichoderma",
+        "category": "真菌"
+      }
+    },
+    "insect-chitin": {
+      "applicability": {
+        "pH_range": [
+          3,
+          10
+        ],
+        "temp_range": [
+          0,
+          80
+        ],
+        "salinity": "low"
+      },
+      "features": [
+        "乙酰氨基配位",
+        "节肢动物外骨骼多糖",
+        "脱乙酰化为壳聚糖"
+      ],
+      "biomimetic_dimension": "arthropod_exoskeleton_polysaccharide",
+      "organism": {
+        "scientific": "Insecta (insect exoskeleton)",
+        "category": "动物"
+      }
+    },
+    "microbial-exopolysaccharide": {
+      "applicability": {
+        "pH_range": [
+          3,
+          10
+        ],
+        "temp_range": [
+          0,
+          80
+        ],
+        "salinity": "moderate"
+      },
+      "features": [
+        "微生物胞外多糖",
+        "羧基/羟基/硫酸基",
+        "发酵可规模化"
+      ],
+      "biomimetic_dimension": "microbial_biopolymer",
+      "organism": {
+        "scientific": "Bacteria/Fungi (EPS-producing)",
+        "category": "微生物"
+      }
+    },
+    "plant-lignocellulosic-architecture": {
+      "applicability": {
+        "pH_range": [
+          3,
+          10
+        ],
+        "temp_range": [
+          0,
+          80
+        ],
+        "salinity": "low"
+      },
+      "features": [
+        "木质纤维素结构",
+        "硅酸盐改性",
+        "农业废弃物"
+      ],
+      "biomimetic_dimension": "lignocellulosic_biomineralization",
+      "organism": {
+        "scientific": "Oryza sativa/Camellia oleifera",
+        "category": "植物"
+      }
+    },
+    "plant-wax-cuticle": {
+      "applicability": {
+        "pH_range": [
+          1,
+          14
+        ],
+        "temp_range": [
+          0,
+          100
+        ],
+        "salinity": "high"
+      },
+      "features": [
+        "微纳层级蜡晶结构",
+        "超疏水性",
+        "自清洁"
+      ],
+      "biomimetic_dimension": "superhydrophobic_surface",
+      "organism": {
+        "scientific": "Nelumbo nucifera/Oryza sativa",
+        "category": "植物"
+      }
+    },
+    "rice-husk-phytolith": {
+      "applicability": {
+        "pH_range": [
+          3,
+          10
+        ],
+        "temp_range": [
+          0,
+          80
+        ],
+        "salinity": "low"
+      },
+      "features": [
+        "植硅体生物矿化",
+        "稻壳硅微结构",
+        "高比表面积"
+      ],
+      "biomimetic_dimension": "phytolith_biomineralization",
+      "organism": {
+        "scientific": "Oryza sativa (rice husk)",
+        "category": "植物"
+      }
     }
   },
   "mechanism_feature_bridge": {

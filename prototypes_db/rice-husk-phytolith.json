@@ -1,0 +1,85 @@
+{
+  "id": "rice-husk-phytolith",
+  "name_zh": "稻壳植硅体",
+  "name_en": "Rice Husk Phytolith",
+  "organism": {
+    "scientific": "Oryza sativa (rice husk)",
+    "category": "植物"
+  },
+  "biomimetic_dimension": "phytolith_biomineralization",
+  "features": [],
+  "tested_conditions": [],
+  "library_tier": "extended",
+  "lifecycle_status": "active",
+  "coverage": "partial",
+  "status": "active",
+  "provenance_summary": "V1-B biological expansion wave. Rice husk phytolith (biogenic silica microstructure) as bio-adsorbent.",
+  "mechanisms": [
+    {
+      "mechanism_id": "RHS-001",
+      "description": "Rice husk silica surface adsorption: silanol groups (Si-OH) on rice husk-derived silica provide binding sites for heavy metals via complexation and ion exchange",
+      "causal_chain": {
+        "pollutant_feature": {
+          "basis": "from_source",
+          "source": "10.1016/j.jclepro.2020.125390",
+          "value": "Heavy metal ions and organic pollutants"
+        },
+        "mechanism": {
+          "basis": "from_source",
+          "source": "10.1016/j.jclepro.2020.125390",
+          "value": "Complexation and ion exchange with silanol groups"
+        },
+        "binding_site": {
+          "basis": "from_source",
+          "source": "10.1016/j.jclepro.2020.125390",
+          "value": "Silanol (Si-OH) and silicate (Si-O-Si) groups"
+        },
+        "performance_expectation": {
+          "basis": "llm_inferred",
+          "value": "Enhanced adsorption with high silica content rice husk biochar"
+        }
+      },
+      "verification": "partial",
+      "verification_quote": "Rice-straw biochar with high silica content shows a greater adsorption capacity for Cd over pure biochar.",
+      "source_doi": "10.1016/j.jclepro.2020.125390",
+      "source_page": 4,
+      "source_file": "仿生文献库/3rd/第B组-新方向/B2-生物矿化模板/2021-Cai-shell-biochar-cadmium-adsorption.pdf"
+    }
+  ],
+  "performance_data": [],
+  "engineering_constraints": [
+    {
+      "constraint_id": "RHS-E001",
+      "description": "Rice husk silica extraction: combustion at 500-700°C or acid leaching followed by calcination",
+      "source_doi": "",
+      "evidence_type": "llm_inferred"
+    }
+  ],
+  "narrative": [
+    {
+      "narrative_id": "RHS-N001",
+      "text": "Rice husks contain 15-20% silica by weight, making them an abundant source of biosilica. The silica exists in amorphous form and can be extracted via simple combustion, creating high-surface-area adsorbent material.",
+      "source_doi": ""
+    }
+  ],
+  "design_translation": {
+    "idea": "Extract silica from rice husk agricultural waste via combustion or acid treatment, use as adsorbent for heavy metals and organic pollutants",
+    "examples": [
+      "Rice husk biochar with high silica for Cd adsorption",
+      "Rice husk silica nanoparticles for pollutant removal"
+    ],
+    "source_tier": "literature",
+    "applicability": "Heavy metal removal from wastewater; low-cost adsorbent from agricultural waste"
+  },
+  "honesty_ledger": {
+    "from_source_mechanisms": 1,
+    "llm_inferred_mechanisms": 0,
+    "verified_performance_data": 0,
+    "missing_pdf_items": 0,
+    "knowledge_gaps": [
+      "Need primary research papers with quantitative performance data",
+      "Silica extraction optimization",
+      "Comparison with synthetic silica"
+    ]
+  }
+}
