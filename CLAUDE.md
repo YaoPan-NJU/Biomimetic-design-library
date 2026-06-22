@@ -1,5 +1,19 @@
 # Biomimetic Design Library — Claude Code Project Guide
 
+## 当前权威覆盖（2026-06-22，优先级高于下方历史审计规则）
+
+- \`v0.2\` 已接受并打 tag；V1-A 已在 \`1106089\` 接受。
+- 当前阶段是 **V1-B：按 ADRMATS 域缺口扩充生物/仿生原型**，目标是从现有 36 个 root prototypes 继续向 v1.0 推进。
+- 下方“不要修改 \`prototypes_db/*.json\` / 不要提交 git / 24 个原型 / 全量证据审计 Batch 09”等内容是历史审计阶段规则；若与本节冲突，以本节为准。
+- V1-B 允许在通过准入门槛时创建新的 root prototype、修改 \`prototypes_db/*.json\`、\`prototypes/<id>/prototype.md\`、\`feature-mapping.json\`、\`docs/active/**\`，并做安全 checkpoint commit/push。
+- **身份门槛：root prototype 必须是生物来源/仿生机制/可迁移自然结构**，能回答“ADRMATS 可以从哪个生物机制借设计原则”。不得把通用合成材料类别作为 root prototype，例如 generic biochar、hydrogel、silica、nanofiber membrane、graphene oxide、magnetic adsorbent、polydopamine composite。
+- 合成材料、工程材料、制备路线可作为已有/新增生物原型的 \`material_realization_examples\`、implementation handle 或 performance evidence；不能单独冒充 biological prototype。
+- 新 root prototype 准入门槛：至少 1 个 fully grounded from-source mechanism（真实 DOI/专利/标准 + quote + locator + scope match）、honesty ledger、至少 1 个 boundary/boundary note、actionable design_translation、source mapping、相关 domain/gold-set 行为。
+- 不得引用或复活 \`docs/registries/refuted-log.md\` 中的来源；遇到 refuted DOI 的候选必须降级、隔离或重新取证。
+- 计量口径：对外区分“挂引文/locator 的机制数”和“全因果链完全接地的比例”；不要把前者表述为“已验证率”。verified 层数量需单独报告。
+- 模型路由：PDF/OCR/多模态/图像页读取用 \`mimo-v2.5\` 子 agent 或 OpenClaw；文本推理、source-to-claim、JSON/schema 工作用 \`mimo-v2.5-pro\`。
+- 仍然禁止：\`git add -A\`、force-push、history rewrite、无授权删除/merge/park/rename 已接受原型、证据标签膨胀、修改 \`tools/litextract\` / \`*_doi_map.json\` / \`docs/optimization-v1\` / \`.claude/settings.local.json\`。
+
 ## 项目概述
 
 仿生吸附设计库策展与接地（curation & grounding）项目。目标：对 `prototypes_db/` 中的 24 个仿生吸附原型做全量证据审计，确保每条性能数据、机制、工程约束都有 PDF 级文献支撑。
