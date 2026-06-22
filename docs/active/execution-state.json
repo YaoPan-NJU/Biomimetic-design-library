@@ -102,8 +102,8 @@
     "tools/litextract": "submodule, security fix landed",
     "docs/optimization-v1/": "untracked, excluded"
   },
-  "last_checkpoint": "2026-06-22T15:00:00Z",
-  "next_action": "V1-A: continue uplift (39 remaining with visual_cache), or proceed with scope hygiene for prototypes without PDF access",
+  "last_checkpoint": "2026-06-22T16:00:00Z",
+  "next_action": "V1-A: from_source 184/510 (36.1%), 153 visible llm_inferred marked lead_inference. Continue uplift or submit V1-A REVIEW_REQUEST.",
   "git_status_note": "Local dirty files: .claude/settings.local.json, README.md, untracked docs. Excluded from review scope.",
   "m9_summary": {
     "mechanisms_upgraded": 103,
@@ -154,17 +154,16 @@
     "validators": "all 8 pass (0 errors, 171 pre-existing warnings)"
   },
   "v1a_evidence_uplift": {
-    "status": "in_progress",
-    "waves_completed": 4,
-    "total_upgraded": 74,
+    "status": "significant_progress",
+    "waves_completed": 5,
+    "total_upgraded": 86,
     "from_source_start": 98,
-    "from_source_current": 172,
+    "from_source_current": 184,
     "llm_inferred_start": 412,
-    "llm_inferred_current": 338,
+    "llm_inferred_current": 326,
     "percentage_start": "19.2%",
-    "percentage_current": "33.7%",
-    "remaining_with_visual_cache": 39,
-    "remaining_without_visual_cache": 299,
-    "method": "visual_cache DOI matching + keyword extraction"
+    "percentage_current": "36.1%",
+    "visible_llm_inferred_marked": 153,
+    "method": "visual_cache DOI matching + keyword/formula/number extraction"
   }
 }
