@@ -50,14 +50,15 @@
 - **Codex / Qoder**：范围控制、验收抽查、决策队列/边界寄存器维护、worklog、GitHub checkpoint
 - **Yao**：最终审批决策
 
-### 硬性限制
+### 当前硬性限制（V1-B 生物/仿生扩展阶段）
 
-1. **不要修改 `prototypes_db/*.json`** — 除非 Yao 已审批对应决策队列项
-2. **不要运行 `tools/build_prototypes_db.py`** — 审计期间不构建
-3. **不要升级 `verification`、`hard_do_not`、`soft_boundary` 状态** — 需 Yao 审批
-4. **不要提交 git** — 除非明确要求
-5. 缺 PDF、扫描专利、OCR 不确定、LLM 推断内容 → 标为 `missing_pdf` / `needs_human_decision` / `knowledge_gap` / `inferred_only`
-6. 只有明确来源错配或直接文献支持的边界 → 才可建议 `wrong_source` 或 `hard_do_not`
+1. **允许修改 `prototypes_db/*.json`**，但仅限已授权的 V1-B 生物/仿生扩展或既有原型证据卫生；新增 root prototype 必须满足上方“当前权威覆盖”的生物身份门槛与准入门槛。
+2. **不要运行 `tools/build_prototypes_db.py`** — 它会从旧提取反向重建 canon，可能冲掉整改成果。
+3. **不要把通用材料类别作为 root prototype**：biochar、hydrogel、silica、nanofiber membrane、graphene oxide、magnetic adsorbent、polydopamine composite 等只能作为 material_realization_examples / implementation handle / performance evidence。
+4. **不要升级 `verification`、`hard_do_not`、`soft_boundary` 状态** — 除非 Codex/Yao 明确授权。
+5. **允许安全 checkpoint commit/push**，但禁止 `git add -A`、force-push、history rewrite；提交前必须排除本地设置、会话日志、`docs/optimization-v1`、受保护工具/映射资产。
+6. 缺 PDF、扫描专利、OCR 不确定、LLM 推断内容 → 标为 `missing_pdf` / `needs_human_decision` / `knowledge_gap` / `inferred_only`，不得证据膨胀。
+7. 只有明确来源错配或直接文献支持的边界 → 才可建议 `wrong_source` 或 `hard_do_not`。
 
 ### 审计批次输出规范
 
