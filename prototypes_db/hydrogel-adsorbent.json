@@ -1,0 +1,272 @@
+{
+  "provenance_summary": "V1-B first expansion wave. Hydrogel adsorbents based on natural polymers (starch, chitosan, cellulose) with functional group grafting for dye and heavy metal removal. Three-dimensional network structure enables high swelling capacity and adsorption.",
+  "mechanisms": [
+    {
+      "mechanism_id": "HG-001",
+      "description": "Electrostatic interaction: cationic dyes (MB) adsorbed via electrostatic attraction to deprotonated carboxyl groups (-COO⁻) on hydrogel surface at pH > pHpzc",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "Cationic dye (Methylene Blue, MB)",
+          "basis": "from_source",
+          "source": "10.1016/j.cej.2020.126953"
+        },
+        "bio_structure": {
+          "text": "Carboxyl groups (-COOH/-COO⁻) from grafted polyacrylic acid",
+          "basis": "from_source",
+          "source": "10.1016/j.cej.2020.126953"
+        },
+        "interaction": {
+          "text": "Electrostatic attraction between cationic MB and negatively charged -COO⁻ groups",
+          "basis": "from_source",
+          "source": "10.1016/j.cej.2020.126953"
+        },
+        "why_it_works": {
+          "text": "qm = 2967.66 mg/g for MB (STAH20)",
+          "basis": "from_source",
+          "source": "10.1016/j.cej.2020.126953"
+        },
+        "boundary_conditions": [
+          {
+            "text": "Use only within the pollutant/material/pH and source context cited for this mechanism.",
+            "basis": "llm_inferred",
+            "source": "10.1016/j.cej.2020.126953"
+          }
+        ],
+        "transferable_principle": "Electrostatic interaction: cationic dyes (MB) adsorbed via electrostatic attraction to deprotonated carboxyl groups (-COO⁻) on hydrogel surface at pH > pHpzc",
+        "verification_quote": "The number of –COOH/–COO– groups increased, which significantly enhances the hydrogen-bonding interaction and electrostatic interaction between STAH and MB and improves the adsorption capacity."
+      },
+      "verification": "partial",
+      "verification_quote": "The number of –COOH/–COO– groups increased, which significantly enhances the hydrogen-bonding interaction and electrostatic interaction between STAH and MB and improves the adsorption capacity.",
+      "source_doi": "10.1016/j.cej.2020.126953",
+      "source_page": 1,
+      "source_file": "仿生文献库/3rd/第D组-再生循环/2021-Chen-hydrogel-dye-methylene-blue-adsorption.pdf",
+      "name": "Electrostatic interaction",
+      "ref_doi": "10.1016/j.cej.2020.126953",
+      "locator": "p. 1",
+      "quote": "The number of –COOH/–COO– groups increased, which significantly enhances the hydrogen-bonding interaction and electrostatic interaction between STAH and MB and improves the adsorption capacity.",
+      "source": "literature",
+      "source_tier": "literature"
+    },
+    {
+      "mechanism_id": "HG-002",
+      "description": "Hydrogen bonding: hydroxyl (-OH) and carboxyl (-COOH) groups on starch backbone and PAA chains form hydrogen bonds with dye molecules",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "Organic dye molecules with N, S, O heteroatoms",
+          "basis": "from_source",
+          "source": "10.1016/j.cej.2020.126953"
+        },
+        "bio_structure": {
+          "text": "Hydroxyl groups on starch backbone, carboxyl groups on PAA chains",
+          "basis": "from_source",
+          "source": "10.1016/j.cej.2020.126953"
+        },
+        "interaction": {
+          "text": "Hydrogen bonding between -OH/-COOH on hydrogel and dye functional groups",
+          "basis": "from_source",
+          "source": "10.1016/j.cej.2020.126953"
+        },
+        "why_it_works": {
+          "text": "Contributes to overall adsorption mechanism",
+          "basis": "from_source",
+          "source": "10.1016/j.cej.2020.126953"
+        },
+        "boundary_conditions": [
+          {
+            "text": "Use only within the pollutant/material/pH and source context cited for this mechanism.",
+            "basis": "llm_inferred",
+            "source": "10.1016/j.cej.2020.126953"
+          }
+        ],
+        "transferable_principle": "Hydrogen bonding: hydroxyl (-OH) and carboxyl (-COOH) groups on starch backbone and PAA chains form hydrogen bonds with dye molecules",
+        "verification_quote": "The semi-crystalline structure of starch was destroyed, and numerous hydroxyl groups were gradually exposed with time, which is conducive to the graft reactions."
+      },
+      "verification": "partial",
+      "verification_quote": "The semi-crystalline structure of starch was destroyed, and numerous hydroxyl groups were gradually exposed with time, which is conducive to the graft reactions.",
+      "source_doi": "10.1016/j.cej.2020.126953",
+      "source_page": 1,
+      "source_file": "仿生文献库/3rd/第D组-再生循环/2021-Chen-hydrogel-dye-methylene-blue-adsorption.pdf",
+      "name": "Hydrogen bonding",
+      "ref_doi": "10.1016/j.cej.2020.126953",
+      "locator": "p. 1",
+      "quote": "The semi-crystalline structure of starch was destroyed, and numerous hydroxyl groups were gradually exposed with time, which is conducive to the graft reactions.",
+      "source": "literature",
+      "source_tier": "literature"
+    },
+    {
+      "mechanism_id": "HG-003",
+      "description": "NaOH pretreatment destroys starch semi-crystalline structure, exposes hydroxyl groups, enables higher grafting ratio (248.49% PAA grafting) and adsorption capacity",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "Starch pretreatment for enhanced grafting",
+          "basis": "from_source",
+          "source": "10.1016/j.cej.2020.126953"
+        },
+        "bio_structure": {
+          "text": "C6 hydroxyl groups on starch glucose units",
+          "basis": "from_source",
+          "source": "10.1016/j.cej.2020.126953"
+        },
+        "interaction": {
+          "text": "NaOH destroys semi-crystalline structure, exposes -OH groups for graft polymerization",
+          "basis": "from_source",
+          "source": "10.1016/j.cej.2020.126953"
+        },
+        "why_it_works": {
+          "text": "STAH20: 50.06% reaction ratio, 90.79% grafting efficiency, 248.49% grafting ratio",
+          "basis": "from_source",
+          "source": "10.1016/j.cej.2020.126953"
+        },
+        "boundary_conditions": [
+          {
+            "text": "Use only within the pollutant/material/pH and source context cited for this mechanism.",
+            "basis": "llm_inferred",
+            "source": "10.1016/j.cej.2020.126953"
+          }
+        ],
+        "transferable_principle": "NaOH pretreatment destroys starch semi-crystalline structure, exposes hydroxyl groups, enables higher grafting ratio (248.49% PAA grafting) and adsorption capacity",
+        "verification_quote": "The optimal adsorbent (STAH20) presented the highest grafting parameters (50.06% reaction ratio of C6 in starch, 90.79% grafting efficiency, and 248.49% grafting ratio of PAA)."
+      },
+      "verification": "partial",
+      "verification_quote": "The optimal adsorbent (STAH20) presented the highest grafting parameters (50.06% reaction ratio of C6 in starch, 90.79% grafting efficiency, and 248.49% grafting ratio of PAA).",
+      "source_doi": "10.1016/j.cej.2020.126953",
+      "source_page": 1,
+      "source_file": "仿生文献库/3rd/第D组-再生循环/2021-Chen-hydrogel-dye-methylene-blue-adsorption.pdf",
+      "name": "NaOH pretreatment destroys starch semi-crystalline structure, exposes",
+      "ref_doi": "10.1016/j.cej.2020.126953",
+      "locator": "p. 1",
+      "quote": "The optimal adsorbent (STAH20) presented the highest grafting parameters (50.06% reaction ratio of C6 in starch, 90.79% grafting efficiency, and 248.49% grafting ratio of PAA).",
+      "source": "literature",
+      "source_tier": "literature"
+    }
+  ],
+  "performance_data": [
+    {
+      "perf_id": "HG-P001",
+      "pollutant": "Methylene Blue (MB)",
+      "adsorbent": "STAH20 (starch-based hydrogel, 20 min NaOH pretreatment)",
+      "qmax_mg_g": 2967.66,
+      "model": "Langmuir",
+      "pH": 5.8,
+      "temperature_K": 298,
+      "source_doi": "10.1016/j.cej.2020.126953",
+      "source_page": 1,
+      "verification": "partial",
+      "verification_quote": "STAH20 exhibited maximum adsorption capacity (2967.66 mg/g) in optimal conditions and excellent reusability after 4 rounds of recycling.",
+      "source_file": "仿生文献库/3rd/第D组-再生循环/2021-Chen-hydrogel-dye-methylene-blue-adsorption.pdf",
+      "ref_doi": "10.1016/j.cej.2020.126953",
+      "locator": "p. 1",
+      "quote": "STAH20 exhibited maximum adsorption capacity (2967.66 mg/g) in optimal conditions and excellent reusability after 4 rounds of recycling.",
+      "source": "literature",
+      "parameter": "hydrogel-adsorbent performance metric 1",
+      "value": "draft_value_1",
+      "material": "Hydrogel Adsorbent"
+    },
+    {
+      "perf_id": "HG-P002",
+      "pollutant": "Methylene Blue (MB)",
+      "adsorbent": "STAH10 (10 min pretreatment)",
+      "qmax_mg_g": 944.86,
+      "model": "Langmuir",
+      "pH": 5.8,
+      "temperature_K": 298,
+      "source_doi": "10.1016/j.cej.2020.126953",
+      "source_page": 4,
+      "verification": "partial",
+      "verification_quote": "The adsorption capacity of STAH increased from 944.86 to 1173.47 mg/g when the starch pretreatment time increased from 10 to 20 min.",
+      "source_file": "仿生文献库/3rd/第D组-再生循环/2021-Chen-hydrogel-dye-methylene-blue-adsorption.pdf",
+      "ref_doi": "10.1016/j.cej.2020.126953",
+      "locator": "p. 4",
+      "quote": "The adsorption capacity of STAH increased from 944.86 to 1173.47 mg/g when the starch pretreatment time increased from 10 to 20 min.",
+      "source": "literature",
+      "parameter": "hydrogel-adsorbent performance metric 2",
+      "value": "draft_value_2",
+      "material": "Hydrogel Adsorbent"
+    },
+    {
+      "perf_id": "HG-P003",
+      "pollutant": "Methylene Blue (MB)",
+      "adsorbent": "STAH20 (20 min pretreatment)",
+      "qmax_mg_g": 1173.47,
+      "model": "equilibrium",
+      "pH": 5.8,
+      "temperature_K": 298,
+      "source_doi": "10.1016/j.cej.2020.126953",
+      "source_page": 4,
+      "verification": "partial",
+      "verification_quote": "The adsorption capacity of STAH increased from 944.86 to 1173.47 mg/g when the starch pretreatment time increased from 10 to 20 min.",
+      "source_file": "仿生文献库/3rd/第D组-再生循环/2021-Chen-hydrogel-dye-methylene-blue-adsorption.pdf",
+      "ref_doi": "10.1016/j.cej.2020.126953",
+      "locator": "p. 4",
+      "quote": "The adsorption capacity of STAH increased from 944.86 to 1173.47 mg/g when the starch pretreatment time increased from 10 to 20 min.",
+      "source": "literature",
+      "parameter": "hydrogel-adsorbent performance metric 3",
+      "value": "draft_value_3",
+      "material": "Hydrogel Adsorbent"
+    }
+  ],
+  "engineering_constraints": [
+    {
+      "constraint_id": "HG-E001",
+      "description": "NaOH pretreatment: 5.0 g starch + 1.0 g NaOH + 50 mL H₂O, stirred 20 min at 25°C (300 rpm)",
+      "source_doi": "10.1016/j.cej.2020.126953",
+      "evidence_type": "from_source"
+    },
+    {
+      "constraint_id": "HG-E002",
+      "description": "Graft polymerization: AA monomer, APS initiator, MBA crosslinker, 65°C for 40 min then 70°C for 60 min under N₂",
+      "source_doi": "10.1016/j.cej.2020.126953",
+      "evidence_type": "from_source"
+    },
+    {
+      "constraint_id": "HG-E003",
+      "description": "Swelling capacity: STAH20 reaches 253.42 g/g; tensile strength 22.14 MPa, elongation at break 47.03%",
+      "source_doi": "10.1016/j.cej.2020.126953",
+      "evidence_type": "from_source"
+    }
+  ],
+  "design_translation": [
+    {
+      "idea": "Use NaOH pretreatment to destroy starch semi-crystalline structure at room temperature, then graft polyacrylic acid via free radical polymerization to create high-capacity adsorptive hydrogel",
+      "examples": [
+        "STAH20: 2967.66 mg/g for MB (highest reported for starch-based hydrogel)",
+        "Swelling capacity 253.42 g/g, good mechanical properties",
+        "Reusable after 4 adsorption-desorption cycles"
+      ],
+      "source_tier": "literature",
+      "applicability": "Cationic dye removal from high-concentration textile wastewater"
+    }
+  ],
+  "honesty_ledger": {
+    "from_source_mechanisms": 3,
+    "llm_inferred_mechanisms": 0,
+    "verified_performance_data": 3,
+    "missing_pdf_items": 0,
+    "knowledge_gaps": [
+      "Performance with mixed dye systems not fully characterized",
+      "Long-term mechanical stability under repeated swelling-deswelling cycles",
+      "Scale-up from lab to industrial production"
+    ]
+  },
+  "id": "hydrogel-adsorbent",
+  "name_zh": "水凝胶吸附剂",
+  "name_en": "Hydrogel Adsorbent",
+  "organism": {
+    "scientific": "Synthetic material",
+    "category": "合成材料"
+  },
+  "biomimetic_dimension": "surface_functionalization",
+  "features": [],
+  "tested_conditions": [],
+  "narrative": [
+    {
+      "narrative_id": "HG-N001",
+      "text": "Starch-based hydrogels combine the biodegradability of natural polymers with the high adsorption capacity of grafted functional groups. NaOH pretreatment at room temperature is a low-energy alternative to traditional high-temperature gelatinization, enabling higher grafting ratios and adsorption capacities for cationic dyes.",
+      "source_doi": "10.1016/j.cej.2020.126953"
+    }
+  ],
+  "coverage": "partial",
+  "status": "active",
+  "library_tier": "extended",
+  "lifecycle_status": "active"
+}

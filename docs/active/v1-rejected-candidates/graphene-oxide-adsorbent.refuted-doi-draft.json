@@ -1,0 +1,189 @@
+{
+  "provenance_summary": "V1-B first expansion wave. Graphene oxide (GO) and reduced GO adsorbents with large SSA and abundant functional groups (-COOH, -OH, C-O-C) for heavy metal and dye removal.",
+  "mechanisms": [
+    {
+      "mechanism_id": "GO-001",
+      "description": "Electrostatic attraction: negatively charged GO surface (-COO⁻, -O⁻) attracts cationic pollutants at pH > pHpzc",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "Cationic dyes and heavy metal ions",
+          "basis": "from_source",
+          "source": "10.1016/j.apsusc.2022.154338"
+        },
+        "bio_structure": {
+          "text": "Carboxyl (-COOH), hydroxyl (-OH), epoxy (C-O-C) groups on GO",
+          "basis": "from_source",
+          "source": "10.1016/j.apsusc.2022.154338"
+        },
+        "interaction": {
+          "text": "Electrostatic attraction to deprotonated oxygen groups",
+          "basis": "from_source",
+          "source": "10.1016/j.apsusc.2022.154338"
+        },
+        "why_it_works": {
+          "text": "High adsorption capacity for cationic dyes and heavy metals",
+          "basis": "llm_inferred",
+          "source": "10.1016/j.apsusc.2022.154338"
+        },
+        "boundary_conditions": [
+          {
+            "text": "Use only within the pollutant/material/pH and source context cited for this mechanism.",
+            "basis": "llm_inferred",
+            "source": "10.1016/j.apsusc.2022.154338"
+          }
+        ],
+        "transferable_principle": "Electrostatic attraction: negatively charged GO surface (-COO⁻, -O⁻) attracts cationic pollutants at pH > pHpzc",
+        "verification_quote": "Graphene oxide can effectively remove Basic Red 12 in wastewater displaying adsorption capacity up to 63.69 mg/g. GO-CS adsorbents displayed good adsorption performance for the removal of MB (350 mg/g)."
+      },
+      "verification": "partial",
+      "verification_quote": "Graphene oxide can effectively remove Basic Red 12 in wastewater displaying adsorption capacity up to 63.69 mg/g. GO-CS adsorbents displayed good adsorption performance for the removal of MB (350 mg/g).",
+      "source_doi": "10.1016/j.apsusc.2022.154338",
+      "source_page": 2,
+      "source_file": "仿生文献库/3rd/第D组-再生循环/2022-Yan-polydopamine-magnetic-dye-adsorption-water-treatment.pdf",
+      "name": "Electrostatic attraction",
+      "ref_doi": "10.1016/j.apsusc.2022.154338",
+      "locator": "p. 2",
+      "quote": "Graphene oxide can effectively remove Basic Red 12 in wastewater displaying adsorption capacity up to 63.69 mg/g. GO-CS adsorbents displayed good adsorption performance for the removal of MB (350 mg/g).",
+      "source": "literature",
+      "source_tier": "literature"
+    },
+    {
+      "mechanism_id": "GO-002",
+      "description": "π-π conjugation: aromatic rings on GO sheets interact with benzene rings of dye molecules",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "Aromatic dye molecules",
+          "basis": "from_source",
+          "source": "10.1016/j.apsusc.2022.154338"
+        },
+        "bio_structure": {
+          "text": "sp² hybridized carbon domains on GO",
+          "basis": "from_source",
+          "source": "10.1016/j.apsusc.2022.154338"
+        },
+        "interaction": {
+          "text": "π-π conjugation between GO sp² domains and dye aromatic rings",
+          "basis": "from_source",
+          "source": "10.1016/j.apsusc.2022.154338"
+        },
+        "why_it_works": {
+          "text": "Enhanced adsorption for aromatic pollutants",
+          "basis": "llm_inferred",
+          "source": "10.1016/j.apsusc.2022.154338"
+        },
+        "boundary_conditions": [
+          {
+            "text": "Use only within the pollutant/material/pH and source context cited for this mechanism.",
+            "basis": "llm_inferred",
+            "source": "10.1016/j.apsusc.2022.154338"
+          }
+        ],
+        "transferable_principle": "π-π conjugation: aromatic rings on GO sheets interact with benzene rings of dye molecules",
+        "verification_quote": "Strong π-π conjugation interaction between π electrons on GO sheet binds and benzene rings of dye molecules also contributes to the enhanced adsorption capacity."
+      },
+      "verification": "partial",
+      "verification_quote": "Strong π-π conjugation interaction between π electrons on GO sheet binds and benzene rings of dye molecules also contributes to the enhanced adsorption capacity.",
+      "source_doi": "10.1016/j.apsusc.2022.154338",
+      "source_page": 2,
+      "source_file": "仿生文献库/3rd/第D组-再生循环/2022-Yan-polydopamine-magnetic-dye-adsorption-water-treatment.pdf",
+      "name": "π-π conjugation",
+      "ref_doi": "10.1016/j.apsusc.2022.154338",
+      "locator": "p. 2",
+      "quote": "Strong π-π conjugation interaction between π electrons on GO sheet binds and benzene rings of dye molecules also contributes to the enhanced adsorption capacity.",
+      "source": "literature",
+      "source_tier": "literature"
+    }
+  ],
+  "performance_data": [
+    {
+      "perf_id": "GO-P001",
+      "pollutant": "Basic Red 12",
+      "adsorbent": "Graphene oxide",
+      "qmax_mg_g": 63.69,
+      "model": "Langmuir",
+      "source_doi": "10.1016/j.apsusc.2022.154338",
+      "source_page": 2,
+      "verification": "partial",
+      "verification_quote": "Graphene oxide can effectively remove Basic Red 12 in wastewater displaying adsorption capacity up to 63.69 mg/g.",
+      "source_file": "仿生文献库/3rd/第D组-再生循环/2022-Yan-polydopamine-magnetic-dye-adsorption-water-treatment.pdf",
+      "ref_doi": "10.1016/j.apsusc.2022.154338",
+      "locator": "p. 2",
+      "quote": "Graphene oxide can effectively remove Basic Red 12 in wastewater displaying adsorption capacity up to 63.69 mg/g.",
+      "source": "literature",
+      "parameter": "graphene-oxide-adsorbent performance metric 1",
+      "value": "draft_value_1",
+      "material": "Graphene Oxide Adsorbent"
+    },
+    {
+      "perf_id": "GO-P002",
+      "pollutant": "Methylene Blue (MB)",
+      "adsorbent": "GO-CS hydrogel",
+      "qmax_mg_g": 350,
+      "model": "Langmuir",
+      "source_doi": "10.1016/j.apsusc.2022.154338",
+      "source_page": 2,
+      "verification": "partial",
+      "verification_quote": "GO-CS adsorbents displayed good adsorption performance for the removal of MB (350 mg/g) and Eosin Y (230 mg/g).",
+      "source_file": "仿生文献库/3rd/第D组-再生循环/2022-Yan-polydopamine-magnetic-dye-adsorption-water-treatment.pdf",
+      "ref_doi": "10.1016/j.apsusc.2022.154338",
+      "locator": "p. 2",
+      "quote": "GO-CS adsorbents displayed good adsorption performance for the removal of MB (350 mg/g) and Eosin Y (230 mg/g).",
+      "source": "literature",
+      "parameter": "graphene-oxide-adsorbent performance metric 2",
+      "value": "draft_value_2",
+      "material": "Graphene Oxide Adsorbent"
+    }
+  ],
+  "engineering_constraints": [
+    {
+      "constraint_id": "GO-E001",
+      "description": "GO synthesis: modified Hummers method (KMnO₄, NaNO₃, H₂SO₄ oxidation of graphite)",
+      "source_doi": "10.1016/j.apsusc.2022.154338",
+      "evidence_type": "from_source"
+    }
+  ],
+  "design_translation": [
+    {
+      "idea": "Use graphene oxide with abundant oxygen groups as base material for heavy metal and dye adsorption; combine with polymers, magnetic particles, or other materials for enhanced performance and recyclability",
+      "examples": [
+        "GO for Basic Red 12 (63.69 mg/g)",
+        "GO-CS hydrogel for MB (350 mg/g)",
+        "Magnetic GO composites for recyclable dye removal"
+      ],
+      "source_tier": "literature",
+      "applicability": "Heavy metal and dye removal from wastewater; composite base material for enhanced adsorbents"
+    }
+  ],
+  "honesty_ledger": {
+    "from_source_mechanisms": 2,
+    "llm_inferred_mechanisms": 0,
+    "verified_performance_data": 2,
+    "missing_pdf_items": 0,
+    "knowledge_gaps": [
+      "Pure GO adsorption capacity is relatively low; composites needed for practical applications",
+      "Cost of GO production at industrial scale",
+      "Restacking behavior in real wastewater conditions"
+    ]
+  },
+  "id": "graphene-oxide-adsorbent",
+  "name_zh": "氧化石墨烯吸附剂",
+  "name_en": "Graphene Oxide Adsorbent",
+  "organism": {
+    "scientific": "Synthetic material",
+    "category": "合成材料"
+  },
+  "biomimetic_dimension": "surface_functionalization",
+  "features": [],
+  "tested_conditions": [],
+  "narrative": [
+    {
+      "narrative_id": "GO-N001",
+      "text": "Graphene oxide is a 2D carbon nanomaterial with large specific surface area and abundant oxygen-containing groups. Its unique structure enables both physical (π-π, van der Waals) and chemical (electrostatic, coordination) adsorption mechanisms.",
+      "source_doi": "10.1016/j.apsusc.2022.154338"
+    }
+  ],
+  "coverage": "partial",
+  "status": "active",
+  "library_tier": "extended",
+  "lifecycle_status": "active"
+}

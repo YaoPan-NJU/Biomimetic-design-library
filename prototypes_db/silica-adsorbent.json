@@ -1,0 +1,110 @@
+{
+  "provenance_summary": "V1-B first expansion wave. Silica-based adsorbents synthesized via biomimetic approaches (near-neutral pH, room temperature, aqueous) inspired by biological silicification in diatoms and sponges.",
+  "mechanisms": [
+    {
+      "mechanism_id": "SI-001",
+      "description": "Biomimetic silica formation: organic molecules (peptides, polyamines) catalyze silica condensation at near-neutral pH and room temperature, creating hierarchical porous structures",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "Silica precursor (silicic acid)",
+          "basis": "from_source",
+          "source": "10.1039/c0cc05648k"
+        },
+        "bio_structure": {
+          "text": "Peptide/polyamine active sites for silicic acid condensation",
+          "basis": "from_source",
+          "source": "10.1039/c0cc05648k"
+        },
+        "interaction": {
+          "text": "Organic-catalyzed silica condensation at mild conditions",
+          "basis": "from_source",
+          "source": "10.1039/c0cc05648k"
+        },
+        "why_it_works": {
+          "text": "Hierarchical porous silica with controlled morphology",
+          "basis": "llm_inferred",
+          "source": "10.1039/c0cc05648k"
+        },
+        "boundary_conditions": [
+          {
+            "text": "Use only within the pollutant/material/pH and source context cited for this mechanism.",
+            "basis": "llm_inferred",
+            "source": "10.1039/c0cc05648k"
+          }
+        ],
+        "transferable_principle": "Biomimetic silica formation: organic molecules (peptides, polyamines) catalyze silica condensation at near-neutral pH and room temperature, creating hierarchical porous structures",
+        "verification_quote": "Biosilica exhibits hierarchical organisation of particles and pores over several length scales ranging from tens of nanometres to tens or hundreds of micrometres."
+      },
+      "verification": "partial",
+      "verification_quote": "Biosilica exhibits hierarchical organisation of particles and pores over several length scales ranging from tens of nanometres to tens or hundreds of micrometres.",
+      "source_doi": "10.1039/c0cc05648k",
+      "source_page": 2,
+      "source_file": "仿生文献库/2nd/第9组-仿生方法论/2011-Patwardhan-biomimetic-bioinspired-silica-developments.pdf",
+      "name": "Biomimetic silica formation",
+      "ref_doi": "10.1039/c0cc05648k",
+      "locator": "p. 2",
+      "quote": "Biosilica exhibits hierarchical organisation of particles and pores over several length scales ranging from tens of nanometres to tens or hundreds of micrometres.",
+      "source": "literature",
+      "source_tier": "literature"
+    }
+  ],
+  "performance_data": [],
+  "engineering_constraints": [
+    {
+      "constraint_id": "SI-E001",
+      "description": "Biomimetic synthesis: near-neutral pH, room temperature (<40°C), all-aqueous environment",
+      "source_doi": "10.1039/c0cc05648k",
+      "evidence_type": "from_source"
+    },
+    {
+      "constraint_id": "SI-E002",
+      "description": "Silicic acid precursor: <200 μM in natural waters, non-toxic",
+      "source_doi": "10.1039/c0cc05648k",
+      "evidence_type": "from_source"
+    }
+  ],
+  "design_translation": [
+    {
+      "idea": "Use biomolecules (peptides, polyamines) to catalyze silica condensation at mild conditions for creating hierarchical porous adsorbents",
+      "examples": [
+        "Diatom-inspired silica with controlled pore architecture",
+        "Silica-polymer composites for heavy metal adsorption",
+        "Scale-up proven for industrial manufacturing"
+      ],
+      "source_tier": "literature",
+      "applicability": "Heavy metal adsorption, catalysis, drug delivery, sensor applications"
+    }
+  ],
+  "honesty_ledger": {
+    "from_source_mechanisms": 1,
+    "llm_inferred_mechanisms": 0,
+    "verified_performance_data": 0,
+    "missing_pdf_items": 0,
+    "knowledge_gaps": [
+      "Specific adsorption capacity data for heavy metals not available in this review",
+      "Need more primary research papers with quantitative performance data",
+      "Cost comparison with conventional silica synthesis"
+    ]
+  },
+  "id": "silica-adsorbent",
+  "name_zh": "硅基吸附剂",
+  "name_en": "Silica Adsorbent",
+  "organism": {
+    "scientific": "Synthetic material",
+    "category": "合成材料"
+  },
+  "biomimetic_dimension": "surface_functionalization",
+  "features": [],
+  "tested_conditions": [],
+  "narrative": [
+    {
+      "narrative_id": "SI-N001",
+      "text": "Biological systems produce silica at scales >6.7×10⁹ tonnes of silicon per year under mild conditions, achieving superior control over materials produced. Biomimetic approaches use peptides, polyamines, and proteins to catalyze silica formation at near-neutral pH and room temperature.",
+      "source_doi": "10.1039/c0cc05648k"
+    }
+  ],
+  "coverage": "partial",
+  "status": "active",
+  "library_tier": "extended",
+  "lifecycle_status": "active"
+}

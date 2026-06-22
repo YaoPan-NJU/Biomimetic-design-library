@@ -1,0 +1,143 @@
+{
+  "provenance_summary": "V1-B first expansion wave. Polydopamine (PDA) composites inspired by mussel adhesive proteins, used as universal surface coating for enhanced adsorption of heavy metals and dyes.",
+  "mechanisms": [
+    {
+      "mechanism_id": "PDC-001",
+      "description": "Mussel-inspired PDA coating: dopamine self-polymerizes under alkaline conditions to form adherent polydopamine film with abundant -OH and -NH₂ groups for metal coordination",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "Heavy metal ions and cationic dyes",
+          "basis": "from_source",
+          "source": "10.1016/j.apsusc.2022.154338"
+        },
+        "bio_structure": {
+          "text": "Phenolic -OH and amine -NH₂ groups on PDA",
+          "basis": "from_source",
+          "source": "10.1016/j.apsusc.2022.154338"
+        },
+        "interaction": {
+          "text": "PDA coating provides -OH and -NH₂ groups for coordination and electrostatic interaction",
+          "basis": "from_source",
+          "source": "10.1016/j.apsusc.2022.154338"
+        },
+        "why_it_works": {
+          "text": "Enhanced adsorption capacity vs unmodified substrate",
+          "basis": "from_source",
+          "source": "10.1016/j.apsusc.2022.154338"
+        },
+        "boundary_conditions": [
+          {
+            "text": "Use only within the pollutant/material/pH and source context cited for this mechanism.",
+            "basis": "llm_inferred",
+            "source": "10.1016/j.apsusc.2022.154338"
+          }
+        ],
+        "transferable_principle": "Mussel-inspired PDA coating: dopamine self-polymerizes under alkaline conditions to form adherent polydopamine film with abundant -OH and -NH₂ groups for metal coordination",
+        "verification_quote": "Dopamine (DA), one kind of mussel-inspired adhesive protein, which can be easily attach onto various substrates firmly by oxidation and self-polymerization to form polydopamine (PDA) coating under basic reaction conditions."
+      },
+      "verification": "partial",
+      "verification_quote": "Dopamine (DA), one kind of mussel-inspired adhesive protein, which can be easily attach onto various substrates firmly by oxidation and self-polymerization to form polydopamine (PDA) coating under basic reaction conditions.",
+      "source_doi": "10.1016/j.apsusc.2022.154338",
+      "source_page": 2,
+      "source_file": "仿生文献库/3rd/第D组-再生循环/2022-Yan-polydopamine-magnetic-dye-adsorption-water-treatment.pdf",
+      "name": "Mussel-inspired PDA coating",
+      "ref_doi": "10.1016/j.apsusc.2022.154338",
+      "locator": "p. 2",
+      "quote": "Dopamine (DA), one kind of mussel-inspired adhesive protein, which can be easily attach onto various substrates firmly by oxidation and self-polymerization to form polydopamine (PDA) coating under basic reaction conditions.",
+      "source": "literature",
+      "source_tier": "literature"
+    }
+  ],
+  "performance_data": [
+    {
+      "perf_id": "PDC-P001",
+      "pollutant": "Methylene Blue (MB)",
+      "adsorbent": "PP-PDA (polydopamine-modified pomelo peel)",
+      "qmax_mg_g": 434.78,
+      "model": "Langmuir",
+      "source_doi": "10.1016/j.apsusc.2022.154338",
+      "source_page": 2,
+      "verification": "partial",
+      "verification_quote": "Zhan et al. prepared a polydopamine modified pomelo peel (PP-PDA) adsorbent which exhibited maximum adsorption capacities of 434.78 mg/g towards MB.",
+      "source_file": "仿生文献库/3rd/第D组-再生循环/2022-Yan-polydopamine-magnetic-dye-adsorption-water-treatment.pdf",
+      "ref_doi": "10.1016/j.apsusc.2022.154338",
+      "locator": "p. 2",
+      "quote": "Zhan et al. prepared a polydopamine modified pomelo peel (PP-PDA) adsorbent which exhibited maximum adsorption capacities of 434.78 mg/g towards MB.",
+      "source": "literature",
+      "parameter": "polydopamine-composite performance metric 1",
+      "value": "draft_value_1",
+      "material": "Polydopamine Composite"
+    },
+    {
+      "perf_id": "PDC-P002",
+      "pollutant": "Methylene Blue (MB)",
+      "adsorbent": "Fe₃O₄/PDA-Fe³⁺ (magnetic polydopamine composite)",
+      "qmax_mg_g": 608.8,
+      "model": "Langmuir",
+      "source_doi": "10.1016/j.apsusc.2022.154338",
+      "source_page": 2,
+      "verification": "partial",
+      "verification_quote": "Chen and co-workers successfully fabricated a magnetic polydopamine composite (Fe3O4/PDA-Fe3+) that illustrated high adsorption ability for MB with adsorption capacity of 608.8 mg/g.",
+      "source_file": "仿生文献库/3rd/第D组-再生循环/2022-Yan-polydopamine-magnetic-dye-adsorption-water-treatment.pdf",
+      "ref_doi": "10.1016/j.apsusc.2022.154338",
+      "locator": "p. 2",
+      "quote": "Chen and co-workers successfully fabricated a magnetic polydopamine composite (Fe3O4/PDA-Fe3+) that illustrated high adsorption ability for MB with adsorption capacity of 608.8 mg/g.",
+      "source": "literature",
+      "parameter": "polydopamine-composite performance metric 2",
+      "value": "draft_value_2",
+      "material": "Polydopamine Composite"
+    }
+  ],
+  "engineering_constraints": [
+    {
+      "constraint_id": "PDC-E001",
+      "description": "Dopamine polymerization: 500 mg DA in Tris buffer (pH 8.5), stirred 24h at room temperature",
+      "source_doi": "10.1016/j.apsusc.2022.154338",
+      "evidence_type": "from_source"
+    }
+  ],
+  "design_translation": [
+    {
+      "idea": "Use dopamine self-polymerization to create universal PDA coating on any substrate, providing abundant functional groups for heavy metal and dye adsorption",
+      "examples": [
+        "PP-PDA for MB (434.78 mg/g)",
+        "Fe₃O₄/PDA-Fe³⁺ for MB (608.8 mg/g)",
+        "PDA coating on magnetic GO for recyclable adsorbent"
+      ],
+      "source_tier": "literature",
+      "applicability": "Universal surface functionalization for adsorption, catalysis, and biomedical applications"
+    }
+  ],
+  "honesty_ledger": {
+    "from_source_mechanisms": 1,
+    "llm_inferred_mechanisms": 0,
+    "verified_performance_data": 2,
+    "missing_pdf_items": 0,
+    "knowledge_gaps": [
+      "PDA coating thickness control and optimization",
+      "Long-term stability of PDA coating in harsh conditions",
+      "Cost comparison with other surface modification methods"
+    ]
+  },
+  "id": "polydopamine-composite",
+  "name_zh": "聚多巴胺复合材料",
+  "name_en": "Polydopamine Composite",
+  "organism": {
+    "scientific": "Synthetic material",
+    "category": "合成材料"
+  },
+  "biomimetic_dimension": "surface_functionalization",
+  "features": [],
+  "tested_conditions": [],
+  "narrative": [
+    {
+      "narrative_id": "PDC-N001",
+      "text": "Polydopamine (PDA) is a mussel-inspired polymer that can coat virtually any surface under mild alkaline conditions. The catechol and amine groups on PDA provide versatile chemistry for further functionalization and direct pollutant binding.",
+      "source_doi": "10.1016/j.apsusc.2022.154338"
+    }
+  ],
+  "coverage": "partial",
+  "status": "active",
+  "library_tier": "extended",
+  "lifecycle_status": "active"
+}

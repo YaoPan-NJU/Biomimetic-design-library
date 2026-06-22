@@ -4,6 +4,30 @@
 
 仿生吸附设计库策展与接地（curation & grounding）项目。目标：对 `prototypes_db/` 中的 24 个仿生吸附原型做全量证据审计，确保每条性能数据、机制、工程约束都有 PDF 级文献支撑。
 
+## 当前权威覆盖（2026-06-22）
+
+本文件早期章节保留了恢复/审计阶段的历史约束；若与本节冲突，以本节和最新
+Codex/Yao relay directive 为准。
+
+- v0.2 RC 已由 Yao 接受并以 `v0.2` tag 冻结为回退基线。
+- V1-A（现有 36 个 root prototypes 的证据卫生与去注水）已由 Codex 接受。
+- 当前阶段是 **V1-B first expansion wave**：Yao/Codex 已授权从 36 个 root prototypes
+  向 60–80 个 root prototypes 扩展。
+- 因此，下面旧规则“不要修改 `prototypes_db/*.json`”“不要提交 git”不适用于
+  已授权的 V1-B 扩展宏批次。
+- Claude Code 可以在 V1-B admission gate 内创建新的 root prototype JSON，并修改
+  `prototypes_db/*.json`、相关 `docs/active` 状态文件，然后按安全 checkpoint commit/push。
+- V1-B 新原型准入门槛：每个新 root prototype 至少需要 1 条 `from_source`
+  mechanism（quote + locator + scope match）、honesty ledger、至少 1 条 boundary /
+  boundary note、可执行 `design_translation`、source mapping，并通过相关 validator。
+- 禁止 placeholder / pure-inference prototype 入库；本地来源不足的候选必须放入
+  literature-needed / search-terms 队列，而不是编造。
+- 多模态/OCR/PDF 页面视觉任务必须使用 `mimo-v2.5` subagent 或 OpenClaw worker；
+  文本推理、JSON/code、source-to-claim 判断使用 `mimo-v2.5-pro`。
+- 仍然禁止：未授权的 delete/merge/park/rename、force-push、history rewrite、
+  `git add -A`、证据标签注水、修改 protected assets（`tools/litextract`,
+  `*_doi_map.json`, `docs/optimization-v1`, `.claude/settings.local.json`）。
+
 ## 关键路径（办公室 Windows 环境）
 
 | 路径 | 说明 |
