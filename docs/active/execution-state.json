@@ -102,8 +102,8 @@
     "tools/litextract": "submodule, security fix landed",
     "docs/optimization-v1/": "untracked, excluded"
   },
-  "last_checkpoint": "2026-06-22T07:15:00Z",
-  "next_action": "M14: v0.2 acceptance landing, spider-silk reclassification, v1 route selection, first 8-12 prototypes, evidence uplift",
+  "last_checkpoint": "2026-06-22T14:00:00Z",
+  "next_action": "M14-E: evidence uplift for remaining prototypes, then M14-D: v1.0 expansion wave 1",
   "git_status_note": "Local dirty files: .claude/settings.local.json, README.md, untracked docs. Excluded from review scope.",
   "m9_summary": {
     "mechanisms_upgraded": 103,
@@ -115,19 +115,19 @@
     "validators": "all green"
   },
   "m10_summary": {
-    "status": "v0.2 RC complete, M12+M13 pass \u2014 see latest REVIEW_REQUEST for HEAD",
+    "status": "v0.2 RC complete, M12+M13 pass — see latest REVIEW_REQUEST for HEAD",
     "validators_all_green": "15/15 passed",
     "briefs_frozen": "7 ADRMATS gold-set briefs verified",
     "evidence_caveat": "98/510 from_source (19%), remaining 412 are source-backed inference"
   },
   "v02_plan": {
     "M8": "complete",
-    "M9": "accepted \u2014 98/510 from_source (19%)",
-    "M10": "accepted \u2014 v0.2 RC frozen",
-    "M11": "accepted \u2014 v0.2 RC at 473327c",
-    "M12": "accepted \u2014 full PDF audit complete",
-    "M13": "accepted \u2014 handoff and regression complete",
-    "M14": "in progress \u2014 v10 expansion wave 1"
+    "M9": "accepted — 98/510 from_source (19%)",
+    "M10": "accepted — v0.2 RC frozen",
+    "M11": "accepted — v0.2 RC at 473327c",
+    "M12": "accepted — full PDF audit complete",
+    "M13": "accepted — handoff and regression complete",
+    "M14": "in progress — v10 expansion wave 1"
   },
   "yao_decisions": {
     "accept_v02_rc": true,
@@ -135,5 +135,20 @@
     "evidence_uplift_412": true,
     "spider_silk_uranium": "reclassify_not_remove",
     "ocr_pipeline": "not_authorized_yet"
+  },
+  "v1a_debloat": {
+    "status": "complete",
+    "mechanisms_reclassified": 184,
+    "prototypes_touched": [
+      "superhydrophobic-artificial",
+      "water-strider-leg",
+      "lotus-leaf",
+      "shark-skin",
+      "pitcher-plant-slippery-surface"
+    ],
+    "reclassification_types": {
+      "background_only_surface_physics": 163,
+      "background_only_liquid_repellent": 21
+    }
   }
 }
