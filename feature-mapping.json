@@ -2138,6 +2138,90 @@
         "scientific": "Oryza sativa (rice husk)",
         "category": "植物"
       }
+    },
+    "algae-polysaccharide": {
+      "applicability": {
+        "pH_range": [
+          3,
+          10
+        ],
+        "temp_range": [
+          0,
+          80
+        ],
+        "salinity": "moderate"
+      },
+      "features": [
+        "藻类多糖"
+      ],
+      "biomimetic_dimension": "algal_biopolymer",
+      "organism": {
+        "scientific": "Brown algae",
+        "category": "藻类"
+      }
+    },
+    "microbial-biomineralization": {
+      "applicability": {
+        "pH_range": [
+          6,
+          9
+        ],
+        "temp_range": [
+          15,
+          40
+        ],
+        "salinity": "low"
+      },
+      "features": [
+        "微生物矿化"
+      ],
+      "biomimetic_dimension": "microbial_mineral_precipitation",
+      "organism": {
+        "scientific": "Sporosarcina pasteurii",
+        "category": "微生物"
+      }
+    },
+    "plant-gum": {
+      "applicability": {
+        "pH_range": [
+          3,
+          10
+        ],
+        "temp_range": [
+          0,
+          80
+        ],
+        "salinity": "low"
+      },
+      "features": [
+        "植物胶"
+      ],
+      "biomimetic_dimension": "plant_biopolymer",
+      "organism": {
+        "scientific": "Acacia senegal",
+        "category": "植物"
+      }
+    },
+    "bacterial-surfactant": {
+      "applicability": {
+        "pH_range": [
+          4,
+          10
+        ],
+        "temp_range": [
+          0,
+          60
+        ],
+        "salinity": "moderate"
+      },
+      "features": [
+        "细菌表面活性剂"
+      ],
+      "biomimetic_dimension": "microbial_amphiphilic_biopolymer",
+      "organism": {
+        "scientific": "Pseudomonas aeruginosa",
+        "category": "微生物"
+      }
     }
   },
   "mechanism_feature_bridge": {
