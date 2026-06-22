@@ -1,11 +1,10 @@
 # Biomimetic Design Library — Claude Code Project Guide
 
-## 当前权威覆盖（2026-06-22，优先级高于下方历史审计规则）
+## 当前权威状态（2026-06-22）
 
 - \`v0.2\` 已接受并打 tag；V1-A 已在 \`1106089\` 接受。
 - 当前阶段是 **V1-B：按 ADRMATS 域缺口扩充生物/仿生原型**，目标是从现有 36 个 root prototypes 继续向 v1.0 推进。
-- 下方“不要修改 \`prototypes_db/*.json\` / 不要提交 git / 24 个原型 / 全量证据审计 Batch 09”等内容是历史审计阶段规则；若与本节冲突，以本节为准。
-- V1-B 允许在通过准入门槛时创建新的 root prototype、修改 \`prototypes_db/*.json\`、\`prototypes/<id>/prototype.md\`、\`feature-mapping.json\`、\`docs/active/**\`，并做安全 checkpoint commit/push。
+- V1-B 已由 Yao/Codex 授权：允许在通过准入门槛时创建新的生物/仿生 root prototype，允许修改 `prototypes_db/*.json`、`prototypes/<id>/prototype.md`、`feature-mapping.json`、`docs/active/**`，并做安全 checkpoint commit/push。
 - **身份门槛：root prototype 必须是生物来源/仿生机制/可迁移自然结构**，能回答“ADRMATS 可以从哪个生物机制借设计原则”。不得把通用合成材料类别作为 root prototype，例如 generic biochar、hydrogel、silica、nanofiber membrane、graphene oxide、magnetic adsorbent、polydopamine composite。
 - 合成材料、工程材料、制备路线可作为已有/新增生物原型的 \`material_realization_examples\`、implementation handle 或 performance evidence；不能单独冒充 biological prototype。
 - 新 root prototype 准入门槛：至少 1 个 fully grounded from-source mechanism（真实 DOI/专利/标准 + quote + locator + scope match）、honesty ledger、至少 1 个 boundary/boundary note、actionable design_translation、source mapping、相关 domain/gold-set 行为。
@@ -16,7 +15,7 @@
 
 ## 项目概述
 
-仿生吸附设计库策展与接地（curation & grounding）项目。目标：对 `prototypes_db/` 中的 24 个仿生吸附原型做全量证据审计，确保每条性能数据、机制、工程约束都有 PDF 级文献支撑。
+仿生吸附设计库策展与接地（curation & grounding）项目。当前基线为 36 个已接受 root prototypes；正在执行 V1-B 生物/仿生扩展，目标是按 ADRMATS 域缺口补充高质量、可迁移、来源接地的新生物原型。
 
 ## 关键路径（办公室 Windows 环境）
 
@@ -42,7 +41,7 @@
 
 ## 当前工作阶段
 
-**全量证据审计（Full Evidence Audit）** — Batch 09 已完成，等待 Yao 审批决策队列。
+**V1-B 生物/仿生扩展** — V1-A 已接受；当前任务是在生物身份门槛和证据准入门槛下扩充新 root prototypes，并保持 validator 绿色。
 
 ### 执行模型
 
