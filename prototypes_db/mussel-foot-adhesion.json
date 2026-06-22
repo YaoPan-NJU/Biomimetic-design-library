@@ -1461,15 +1461,16 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.ccr.2023.215234",
-      "verification": "needs_review",
+      "verification": "partial",
       "基本原理": "酰胺肟基团（-C(=NOH)NH₂）对铀酰离子有极高的选择性和亲和力，可在海水中ppb级浓度下有效捕获铀",
       "source_file": "仿生文献库/2nd/第10组-设计原则/2024-Liu-function-oriented-design-principles-adsorbent-uranium.pdf",
       "causal_chain": {
         "pollutant_feature": {
           "text": "UO₂²⁺（铀酰离子），线性构型，含两个强U=O键",
-          "basis": "llm_inferred",
+          "basis": "from_source",
           "locator": null,
-          "quote": null
+          "quote": null,
+          "source": "10.1016/j.ccr.2023.215234"
         },
         "bio_structure": {
           "text": "PDA表面的邻苯二酚基团和酰胺肟基团",
@@ -1549,7 +1550,10 @@
         ],
         "transferable_principle": "酰胺肟功能化可在海水条件下选择性捕获铀酰离子，可迁移到任何含酰胺肟基团的吸附材料",
         "verification_quote": "function-oriented design principles for uranium adsorbent"
-      }
+      },
+      "verification_quote": ". It has a strictly linear and symmetrical [O = U = O]2+\narrangement, with short U-O bond length of 1.76 Å [19]. A triple bond is \nconstructed by one σ-bond plus two π-bonds between 5f and 6d hybrid \norbitals of U and 2p orbitals of oxido groups. When coordinating with \norganic electron donor ligands, four or more ligands may be bound to \nUO2\n2+ in",
+      "source_page": 2,
+      "source_doi": "10.1016/j.ccr.2023.215234"
     },
     {
       "name": "酰胺肟配位模式",
@@ -3647,13 +3651,14 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.13550/j.jxhg.20220633",
-      "verification": "needs_review",
-      "verification_quote": "与 CS 相比，DCS   脂红结构中萘环上的 π 电子之间形成 π-π 相互作用",
+      "verification": "partial",
+      "verification_quote": "DCS\n分子链中引入了大量的苯醌、氨基和羟基，增加了\n静电吸引和氢键作用等；此外，PDA 的芳香环结构\n是一个共轭体系，含有丰富的π 电子云[22]，能与胭\n脂红结构中萘环上的π 电子之间形成π-π 相互作用\n力，最终导致吸附胭脂红分子的pH 适用区间有所",
       "causal_chain": {
         "transferable_principle": "基于机制: PDA吸附机制补充",
         "pollutant_feature": {
           "text": "π-π interaction (π-π 相互作用)",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "source": "10.13550/j.jxhg.20220633"
         },
         "bio_structure": {
           "text": "PDA吸附机制补充",
@@ -3683,7 +3688,9 @@
             "source_asset": null
           }
         ]
-      }
+      },
+      "source_page": 5,
+      "source_doi": "10.13550/j.jxhg.20220633"
     }
   ],
   "narrative": {

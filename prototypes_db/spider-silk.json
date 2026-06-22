@@ -823,14 +823,15 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.ccr.2023.215234",
-      "verification": "needs_review",
+      "verification": "partial",
       "causal_chain": {
         "transferable_principle": "基于机制: 铀酰离子配位化学",
         "pollutant_feature": {
           "text": "UO2^2+线性对称[O=U=O]^2+, U-O键长1.76 Å, 4-6个配体在赤道面配位, 四方/五方/六方双锥",
-          "basis": "llm_inferred",
+          "basis": "from_source",
           "scope_caveat": "uranium/actinide-specific chemistry, not general adsorption",
-          "source_tier": "literature"
+          "source_tier": "literature",
+          "source": "10.1016/j.ccr.2023.215234"
         },
         "bio_structure": {
           "text": "铀酰离子配位化学",
@@ -862,7 +863,10 @@
         ]
       },
       "scope_caveat": "RECLASSIFIED: uranium/actinide capture, not general spider-silk adsorption",
-      "boundary_note": "This mechanism describes UO2^2+ coordination chemistry specific to uranium recovery applications."
+      "boundary_note": "This mechanism describes UO2^2+ coordination chemistry specific to uranium recovery applications.",
+      "verification_quote": ". It has a strictly linear and symmetrical [O = U = O]2+\narrangement, with short U-O bond length of 1.76 Å [19]. A triple bond is \nconstructed by one σ-bond plus two π-bonds between 5f and 6d hybrid \norbitals of U and 2p orbitals of oxido groups. When coordinating with \norganic electron donor ligands, four or more ligands may be bound to \nUO2\n2+ in",
+      "source_page": 2,
+      "source_doi": "10.1016/j.ccr.2023.215234"
     },
     {
       "name": "酰胺肟配位模式",

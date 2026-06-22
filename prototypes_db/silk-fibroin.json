@@ -599,14 +599,15 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1007/s10924-022-02741-6",
-      "verification": "needs_review",
+      "verification": "partial",
       "基本原理": "needs_review",
-      "verification_quote": "philicity. Flux for FeOOH-SNF (WCA = 29°), AlOOH-                  of 158°. The researchers found that water and ­Na2CO3 deg-",
+      "verification_quote": "and separating oil from water. With adsorption efficiencies of greater than 90% for copper ions, 93.75% for lead \nions, and adsorption capacities of 88.5 mg/g for acid-yellow 11, and 74.63 mg/g for naphthol orange, functionalized silk \ncomposites can be employed to discard pollutants. This review emphasizes the characteristics of functionalized sil",
       "causal_chain": {
         "transferable_principle": "基于机制: Na₂CO₃脱胶丝纤维——超疏水油水分离",
         "pollutant_feature": {
           "text": "WCA 158°(Na₂CO₃脱胶); 分离效率: 柴油>75%, 汽油>90%, 机油>80% (10次循环后)",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "source": "10.1007/s10924-022-02741-6"
         },
         "bio_structure": {
           "text": "Na₂CO₃脱胶丝纤维——超疏水油水分离",
@@ -636,7 +637,9 @@
             "source_asset": null
           }
         ]
-      }
+      },
+      "source_page": 1,
+      "source_doi": "10.1007/s10924-022-02741-6"
     },
     {
       "name": "丝素仿生层级结构设计原则",
@@ -644,14 +647,15 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1007/s10924-022-02741-6",
-      "verification": "needs_review",
+      "verification": "partial",
       "基本原理": "needs_review",
-      "verification_quote": "Fig. 6  Different forms of materials made using silk composites    such as aspartic acid, glutamic acid, lysine, and arginine, on",
+      "verification_quote": "in, which gives the fiber mechani-\ncal strength. The mechanical strength is primarily due to \nthe β-sheet crystallite structure in fibroin having hydrogen \nbonding. Sericin, having molecular weight varying from 24 \nto 400 kDa with serine and glycine being the most prominent \namino acid groups, is hydrophilic in nature that binds the \nfibers togethe",
       "causal_chain": {
         "transferable_principle": "基于机制: 丝素仿生层级结构设计原则",
         "pollutant_feature": {
           "text": "丝素为天然嵌段共聚物→疏水区(Gly/Ala)+亲水区(Asp/Glu/Lys/Arg)→自组装→β-sheet结晶+无定形区→层级结构",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "source": "10.1007/s10924-022-02741-6"
         },
         "bio_structure": {
           "text": "丝素仿生层级结构设计原则",
@@ -681,7 +685,9 @@
             "source_asset": null
           }
         ]
-      }
+      },
+      "source_page": 4,
+      "source_doi": "10.1007/s10924-022-02741-6"
     },
     {
       "name": "吸附机制——静电作用",
@@ -689,13 +695,14 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1039/d1va00047k",
-      "verification": "needs_review",
+      "verification": "partial",
       "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
       "causal_chain": {
         "transferable_principle": "基于机制: 吸附机制——静电作用",
         "pollutant_feature": {
           "text": "pH升高→COO⁻形成→负电荷密度增加→静电吸引阳离子MB→去除率从7.93%升至94-96%",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "source": "10.1039/d1va00047k"
         },
         "bio_structure": {
           "text": "吸附机制——静电作用",
@@ -725,7 +732,10 @@
             "source_asset": null
           }
         ]
-      }
+      },
+      "verification_quote": "were investigated as novel methylene blue (MB) adsorbents, with good\nremoval eﬃciencies of 86% and 96%, respectively. The inﬂuences of pH, contact time, concentration\nand adsorbent dose on the dye adsorption were systematically examined. The MB adsorption kinetics\nvalidated the pseudo-second-order model with the preferable linear ﬁt for both the S",
+      "source_page": 1,
+      "source_doi": "10.1039/d1va00047k"
     },
     {
       "name": "吸附机制",
@@ -961,13 +971,14 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1039/d1va00047k",
-      "verification": "unverified",
+      "verification": "partial",
       "source_file": "仿生文献库/3rd/第B组-新方向/B3-蚕丝蛋白/2022-Prasad-silk-fibroin-heavy-metal-adsorption-water-treatment.pdf",
       "causal_chain": {
         "pollutant_feature": {
           "text": "阳离子染料（MB、CV）和重金属离子",
-          "basis": "llm_inferred",
-          "locator": null
+          "basis": "from_source",
+          "locator": null,
+          "source": "10.1039/d1va00047k"
         },
         "bio_structure": {
           "text": "丝素蛋白的β-折叠结构和表面羧基/氨基",
@@ -1002,7 +1013,10 @@
         ],
         "transferable_principle": "丝素蛋白的β-折叠结构提供力学稳定性，表面羧基/氨基提供吸附活性，是可降解的生物吸附剂",
         "verification_quote": "Biosilica/Silk Fibroin/Polyurethane biocomposite for Cu²⁺ and Cr⁶⁺ removal"
-      }
+      },
+      "verification_quote": "r pH\nlevels, negatively charged –COO ions are easily formed as\na result of the dissociation of the –COOH groups on the surface\nof the adsorbent. Electrostatic forces readily attract the cationic\nFig. 2\nSEM images of (a) pure silk ﬁbroin, (b) pristine GO, and (c and d) the SF/GO blend ﬁlm.\nFig. 3\nTGA graphs of the pure SF and SF/GO blend ﬁlms.\n288 |",
+      "source_page": 4,
+      "source_doi": "10.1039/d1va00047k"
     },
     {
       "name": "脱胶蚕丝的超疏水性",
