@@ -20,24 +20,39 @@
       "description": "Keratin cysteine coordination: cysteine-rich keratin provides thiol (-SH) groups for heavy metal coordination, especially for soft metals like Hg²⁺, Ag⁺, Pb²⁺",
       "causal_chain": {
         "pollutant_feature": {
+          "text": "Heavy metal ions (Hg²⁺, Ag⁺, Pb²⁺, Cu²⁺)",
           "basis": "from_source",
-          "source": "10.1016/j.ijbiomac.2021.08.047",
-          "value": "Heavy metal ions (Hg²⁺, Ag⁺, Pb²⁺, Cu²⁺)"
+          "source": "10.1016/j.ijbiomac.2021.08.047"
         },
-        "mechanism": {
+        "bio_structure": {
+          "text": "Cysteine thiol groups, amino groups, carboxyl groups",
           "basis": "from_source",
-          "source": "10.1016/j.ijbiomac.2021.08.047",
-          "value": "Coordination with thiol (-SH) and amino (-NH₂) groups on keratin"
+          "source": "10.1016/j.ijbiomac.2021.08.047"
         },
-        "binding_site": {
+        "interaction": {
+          "text": "Coordination with thiol (-SH) and amino (-NH₂) groups on keratin",
           "basis": "from_source",
-          "source": "10.1016/j.ijbiomac.2021.08.047",
-          "value": "Cysteine thiol groups, amino groups, carboxyl groups"
+          "source": "10.1016/j.ijbiomac.2021.08.047"
         },
-        "performance_expectation": {
+        "why_it_works": {
+          "text": "High affinity for soft heavy metals due to thiol groups",
           "basis": "llm_inferred",
-          "value": "High affinity for soft heavy metals due to thiol groups"
-        }
+          "source": ""
+        },
+        "boundary_conditions": [
+          {
+            "text": "Acidic to neutral pH",
+            "parameter": "pH",
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            }
+          }
+        ],
+        "transferable_principle": "Keratin cysteine thiol groups provide high-affinity binding for soft heavy metals"
       },
       "verification": "llm_inferred",
       "source_doi": "",

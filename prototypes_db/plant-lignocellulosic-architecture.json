@@ -20,25 +20,52 @@
       "description": "Ion exchange: Cd²⁺ displaces Na⁺, K⁺, Ca²⁺ from biochar surface sites; XPS confirms Na⁺ peak weakens after adsorption",
       "causal_chain": {
         "pollutant_feature": {
+          "text": "Cd²⁺ heavy metal cation",
           "basis": "from_source",
-          "source": "10.1016/j.jclepro.2020.125390",
-          "value": "Cd²⁺ heavy metal cation"
+          "source": "10.1016/j.jclepro.2020.125390"
         },
-        "mechanism": {
+        "bio_structure": {
+          "text": "Carboxyl, hydroxyl, silicate groups on biochar surface",
           "basis": "from_source",
-          "source": "10.1016/j.jclepro.2020.125390",
-          "value": "Ion exchange: Cd²⁺ displaces Na⁺, K⁺, Ca²⁺ from biochar surface"
+          "source": "10.1016/j.jclepro.2020.125390"
         },
-        "binding_site": {
+        "interaction": {
+          "text": "Ion exchange: Cd²⁺ displaces Na⁺, K⁺, Ca²⁺ from biochar surface",
           "basis": "from_source",
-          "source": "10.1016/j.jclepro.2020.125390",
-          "value": "Carboxyl, hydroxyl, silicate groups on biochar surface"
+          "source": "10.1016/j.jclepro.2020.125390"
         },
-        "performance_expectation": {
+        "why_it_works": {
+          "text": "qm = 211.49 mg/g for Cd (silicate-modified biochar)",
           "basis": "from_source",
-          "source": "10.1016/j.jclepro.2020.125390",
-          "value": "qm = 211.49 mg/g for Cd (silicate-modified biochar)"
-        }
+          "source": "10.1016/j.jclepro.2020.125390"
+        },
+        "boundary_conditions": [
+          {
+            "text": "Acidic to neutral pH",
+            "parameter": "pH",
+            "basis": "from_source",
+            "verification": "corroborated",
+            "gate_level": "hard",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "locator": "10.1016/j.jclepro.2020.125390"
+          },
+          {
+            "text": "Pyrolysis conditions",
+            "parameter": "temperature",
+            "basis": "from_source",
+            "verification": "corroborated",
+            "gate_level": "hard",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "locator": "10.1016/j.jclepro.2020.125390"
+          }
+        ],
+        "transferable_principle": "Plant lignocellulosic structure with silica biomineralization provides enhanced adsorption sites"
       },
       "verification": "partial",
       "verification_quote": "The intensity of Na⁺ peak becomes weaker after Cd adsorption, possibly implying that ion exchange of Cd²⁺ with Na⁺ contributes to the adsorption process.",
@@ -51,25 +78,52 @@
       "description": "Surface precipitation: CdCO₃, CdSiO₃, Cd₂SiO₄ formation on biochar surface",
       "causal_chain": {
         "pollutant_feature": {
+          "text": "Cd²⁺ in aqueous solution",
           "basis": "from_source",
-          "source": "10.1016/j.jclepro.2020.125390",
-          "value": "Cd²⁺ in aqueous solution"
+          "source": "10.1016/j.jclepro.2020.125390"
         },
-        "mechanism": {
+        "bio_structure": {
+          "text": "Carbonate and silicate surface groups",
           "basis": "from_source",
-          "source": "10.1016/j.jclepro.2020.125390",
-          "value": "Surface precipitation: CdCO₃, CdSiO₃, Cd₂SiO₄ formation"
+          "source": "10.1016/j.jclepro.2020.125390"
         },
-        "binding_site": {
+        "interaction": {
+          "text": "Surface precipitation: CdCO₃, CdSiO₃, Cd₂SiO₄ formation",
           "basis": "from_source",
-          "source": "10.1016/j.jclepro.2020.125390",
-          "value": "Carbonate and silicate surface groups"
+          "source": "10.1016/j.jclepro.2020.125390"
         },
-        "performance_expectation": {
+        "why_it_works": {
+          "text": "Enhanced at pH > 5",
           "basis": "from_source",
-          "source": "10.1016/j.jclepro.2020.125390",
-          "value": "Enhanced at pH > 5"
-        }
+          "source": "10.1016/j.jclepro.2020.125390"
+        },
+        "boundary_conditions": [
+          {
+            "text": "Acidic to neutral pH",
+            "parameter": "pH",
+            "basis": "from_source",
+            "verification": "corroborated",
+            "gate_level": "hard",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "locator": "10.1016/j.jclepro.2020.125390"
+          },
+          {
+            "text": "Pyrolysis conditions",
+            "parameter": "temperature",
+            "basis": "from_source",
+            "verification": "corroborated",
+            "gate_level": "hard",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "locator": "10.1016/j.jclepro.2020.125390"
+          }
+        ],
+        "transferable_principle": "Plant lignocellulosic structure with silica biomineralization provides enhanced adsorption sites"
       },
       "verification": "partial",
       "verification_quote": "The bands at ~449 cm⁻¹, 561 cm⁻¹, 1041 cm⁻¹ and 1456 cm⁻¹ disappear, indicating these functional groups react with Cd and probably form Cd-silicate precipitates.",

@@ -20,24 +20,39 @@
       "description": "EPS functional group binding: carboxyl, hydroxyl, and sulfate groups on exopolysaccharides coordinate heavy metal ions and cationic dyes",
       "causal_chain": {
         "pollutant_feature": {
+          "text": "Heavy metal ions and cationic dyes",
           "basis": "from_source",
-          "source": "10.1016/j.carbpol.2021.118625",
-          "value": "Heavy metal ions and cationic dyes"
+          "source": "10.1016/j.carbpol.2021.118625"
         },
-        "mechanism": {
+        "bio_structure": {
+          "text": "Carboxyl (-COOH), hydroxyl (-OH), sulfate (-OSO₃H) groups",
           "basis": "from_source",
-          "source": "10.1016/j.carbpol.2021.118625",
-          "value": "Coordination with carboxyl, hydroxyl, sulfate groups on EPS"
+          "source": "10.1016/j.carbpol.2021.118625"
         },
-        "binding_site": {
+        "interaction": {
+          "text": "Coordination with carboxyl, hydroxyl, sulfate groups on EPS",
           "basis": "from_source",
-          "source": "10.1016/j.carbpol.2021.118625",
-          "value": "Carboxyl (-COOH), hydroxyl (-OH), sulfate (-OSO₃H) groups"
+          "source": "10.1016/j.carbpol.2021.118625"
         },
-        "performance_expectation": {
+        "why_it_works": {
+          "text": "EPS can bind significant amounts of heavy metals",
           "basis": "llm_inferred",
-          "value": "EPS can bind significant amounts of heavy metals"
-        }
+          "source": ""
+        },
+        "boundary_conditions": [
+          {
+            "text": "Acidic to neutral pH",
+            "parameter": "pH",
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            }
+          }
+        ],
+        "transferable_principle": "Microbial EPS carboxyl/hydroxyl/sulfate groups coordinate heavy metals and dyes"
       },
       "verification": "llm_inferred",
       "source_doi": "",

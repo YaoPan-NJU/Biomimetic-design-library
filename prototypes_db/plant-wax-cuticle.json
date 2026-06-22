@@ -20,24 +20,39 @@
       "description": "Epicuticular wax crystal structure: micro/nano hierarchical wax crystals on plant leaf surfaces create superhydrophobic surface (WCA >150°) via Cassie-Baxter state",
       "causal_chain": {
         "pollutant_feature": {
+          "text": "Oil and water-based pollutants",
           "basis": "from_source",
-          "source": "10.1002/adfm.202200359",
-          "value": "Oil and water-based pollutants"
+          "source": "10.1002/adfm.202200359"
         },
-        "mechanism": {
+        "bio_structure": {
+          "text": "Epicuticular wax crystals (long-chain alkanes, esters, fatty acids)",
           "basis": "from_source",
-          "source": "10.1002/adfm.202200359",
-          "value": "Superhydrophobicity from hierarchical micro/nano wax crystal structure"
+          "source": "10.1002/adfm.202200359"
         },
-        "binding_site": {
+        "interaction": {
+          "text": "Superhydrophobicity from hierarchical micro/nano wax crystal structure",
           "basis": "from_source",
-          "source": "10.1002/adfm.202200359",
-          "value": "Epicuticular wax crystals (long-chain alkanes, esters, fatty acids)"
+          "source": "10.1002/adfm.202200359"
         },
-        "performance_expectation": {
+        "why_it_works": {
+          "text": "WCA >150°, oil-water separation efficiency >95%",
           "basis": "llm_inferred",
-          "value": "WCA >150°, oil-water separation efficiency >95%"
-        }
+          "source": ""
+        },
+        "boundary_conditions": [
+          {
+            "text": "Superhydrophobic surface required",
+            "parameter": "wettability",
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            }
+          }
+        ],
+        "transferable_principle": "Epicuticular wax hierarchical micro/nano structure creates superhydrophobic surface for oil-water separation"
       },
       "verification": "llm_inferred",
       "source_doi": "",

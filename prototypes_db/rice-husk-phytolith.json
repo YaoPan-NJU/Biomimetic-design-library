@@ -20,24 +20,39 @@
       "description": "Rice husk silica surface adsorption: silanol groups (Si-OH) on rice husk-derived silica provide binding sites for heavy metals via complexation and ion exchange",
       "causal_chain": {
         "pollutant_feature": {
+          "text": "Heavy metal ions and organic pollutants",
           "basis": "from_source",
-          "source": "10.1016/j.jclepro.2020.125390",
-          "value": "Heavy metal ions and organic pollutants"
+          "source": "10.1016/j.jclepro.2020.125390"
         },
-        "mechanism": {
+        "bio_structure": {
+          "text": "Silanol (Si-OH) and silicate (Si-O-Si) groups",
           "basis": "from_source",
-          "source": "10.1016/j.jclepro.2020.125390",
-          "value": "Complexation and ion exchange with silanol groups"
+          "source": "10.1016/j.jclepro.2020.125390"
         },
-        "binding_site": {
+        "interaction": {
+          "text": "Complexation and ion exchange with silanol groups",
           "basis": "from_source",
-          "source": "10.1016/j.jclepro.2020.125390",
-          "value": "Silanol (Si-OH) and silicate (Si-O-Si) groups"
+          "source": "10.1016/j.jclepro.2020.125390"
         },
-        "performance_expectation": {
+        "why_it_works": {
+          "text": "Enhanced adsorption with high silica content rice husk biochar",
           "basis": "llm_inferred",
-          "value": "Enhanced adsorption with high silica content rice husk biochar"
-        }
+          "source": ""
+        },
+        "boundary_conditions": [
+          {
+            "text": "Thermal extraction conditions",
+            "parameter": "temperature",
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            }
+          }
+        ],
+        "transferable_principle": "Rice husk phytolith biogenic silica microstructure provides high surface area for adsorption"
       },
       "verification": "partial",
       "verification_quote": "Rice-straw biochar with high silica content shows a greater adsorption capacity for Cd over pure biochar.",

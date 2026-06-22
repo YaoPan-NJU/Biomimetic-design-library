@@ -20,24 +20,39 @@
       "description": "Chitin amino group coordination: acetamido groups (-NHCOCH₃) and amino groups (after deacetylation to chitosan) coordinate heavy metal ions",
       "causal_chain": {
         "pollutant_feature": {
+          "text": "Heavy metal ions and dye molecules",
           "basis": "from_source",
-          "source": "10.1016/j.carbpol.2020.117000",
-          "value": "Heavy metal ions and dye molecules"
+          "source": "10.1016/j.carbpol.2020.117000"
         },
-        "mechanism": {
+        "bio_structure": {
+          "text": "Acetamido (-NHCOCH₃) and hydroxyl (-OH) groups",
           "basis": "from_source",
-          "source": "10.1016/j.carbpol.2020.117000",
-          "value": "Coordination with acetamido/amino groups on chitin backbone"
+          "source": "10.1016/j.carbpol.2020.117000"
         },
-        "binding_site": {
+        "interaction": {
+          "text": "Coordination with acetamido/amino groups on chitin backbone",
           "basis": "from_source",
-          "source": "10.1016/j.carbpol.2020.117000",
-          "value": "Acetamido (-NHCOCH₃) and hydroxyl (-OH) groups"
+          "source": "10.1016/j.carbpol.2020.117000"
         },
-        "performance_expectation": {
+        "why_it_works": {
+          "text": "Adsorption capacity varies by metal and chitin source",
           "basis": "llm_inferred",
-          "value": "Adsorption capacity varies by metal and chitin source"
-        }
+          "source": ""
+        },
+        "boundary_conditions": [
+          {
+            "text": "Acidic to neutral pH",
+            "parameter": "pH",
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            }
+          }
+        ],
+        "transferable_principle": "Arthropod exoskeleton chitin provides acetamido and hydroxyl groups for pollutant binding"
       },
       "verification": "llm_inferred",
       "source_doi": "",

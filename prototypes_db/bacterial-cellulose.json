@@ -20,25 +20,52 @@
       "description": "3D nanofiber network: BC ultrafine nanofibers (10-100 nm) form interconnected porous structure acting as ideal barrier matrix, allowing water molecules to pass while blocking pollutants",
       "causal_chain": {
         "pollutant_feature": {
+          "text": "Soluble dyes and insoluble oils in water",
           "basis": "from_source",
-          "source": "10.1016/j.memsci.2020.118982",
-          "value": "Soluble dyes and insoluble oils in water"
+          "source": "10.1016/j.memsci.2020.118982"
         },
-        "mechanism": {
+        "bio_structure": {
+          "text": "BC nanofiber surface with hydroxyl groups",
           "basis": "from_source",
-          "source": "10.1016/j.memsci.2020.118982",
-          "value": "Physical sieving via 3D nanofiber network with mesopores (~31 nm)"
+          "source": "10.1016/j.memsci.2020.118982"
         },
-        "binding_site": {
+        "interaction": {
+          "text": "Physical sieving via 3D nanofiber network with mesopores (~31 nm)",
           "basis": "from_source",
-          "source": "10.1016/j.memsci.2020.118982",
-          "value": "BC nanofiber surface with hydroxyl groups"
+          "source": "10.1016/j.memsci.2020.118982"
         },
-        "performance_expectation": {
+        "why_it_works": {
+          "text": "Water flux 1149.3 L/m²/h at 0.1 MPa",
           "basis": "from_source",
-          "source": "10.1016/j.memsci.2020.118982",
-          "value": "Water flux 1149.3 L/m²/h at 0.1 MPa"
-        }
+          "source": "10.1016/j.memsci.2020.118982"
+        },
+        "boundary_conditions": [
+          {
+            "text": "Acidic to neutral pH",
+            "parameter": "pH",
+            "basis": "from_source",
+            "verification": "corroborated",
+            "gate_level": "hard",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "locator": "10.1016/j.memsci.2020.118982"
+          },
+          {
+            "text": "Moderate temperature",
+            "parameter": "temperature",
+            "basis": "from_source",
+            "verification": "corroborated",
+            "gate_level": "hard",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "locator": "10.1016/j.memsci.2020.118982"
+          }
+        ],
+        "transferable_principle": "3D nanofiber network from microbial fermentation provides hierarchical porous structure for filtration and adsorption"
       },
       "verification": "partial",
       "verification_quote": "The ultrafine nanofibers (lateral dimension range from 10 to 100 nm) and unique three-dimensional (3D) interconnected porous structure that can act as an ideal barrier supporting matrix, allowing some molecules to pass through smoothly while blocking others.",
@@ -51,25 +78,52 @@
       "description": "Superhydrophilicity and underwater superoleophobicity: water trapped in membrane pores forms continuous phase providing strong repelling force, reducing foulant adhesion",
       "causal_chain": {
         "pollutant_feature": {
+          "text": "Oil and organic foulants",
           "basis": "from_source",
-          "source": "10.1016/j.memsci.2020.118982",
-          "value": "Oil and organic foulants"
+          "source": "10.1016/j.memsci.2020.118982"
         },
-        "mechanism": {
+        "bio_structure": {
+          "text": "Hydroxyl-rich BC surface + PDA coating",
           "basis": "from_source",
-          "source": "10.1016/j.memsci.2020.118982",
-          "value": "Superhydrophilic surface traps water layer, creating underwater superoleophobicity that repels oils"
+          "source": "10.1016/j.memsci.2020.118982"
         },
-        "binding_site": {
+        "interaction": {
+          "text": "Superhydrophilic surface traps water layer, creating underwater superoleophobicity that repels oils",
           "basis": "from_source",
-          "source": "10.1016/j.memsci.2020.118982",
-          "value": "Hydroxyl-rich BC surface + PDA coating"
+          "source": "10.1016/j.memsci.2020.118982"
         },
-        "performance_expectation": {
+        "why_it_works": {
+          "text": "Flux recovery ratio ~96.9%, superior anti-fouling",
           "basis": "from_source",
-          "source": "10.1016/j.memsci.2020.118982",
-          "value": "Flux recovery ratio ~96.9%, superior anti-fouling"
-        }
+          "source": "10.1016/j.memsci.2020.118982"
+        },
+        "boundary_conditions": [
+          {
+            "text": "Acidic to neutral pH",
+            "parameter": "pH",
+            "basis": "from_source",
+            "verification": "corroborated",
+            "gate_level": "hard",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "locator": "10.1016/j.memsci.2020.118982"
+          },
+          {
+            "text": "Moderate temperature",
+            "parameter": "temperature",
+            "basis": "from_source",
+            "verification": "corroborated",
+            "gate_level": "hard",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "locator": "10.1016/j.memsci.2020.118982"
+          }
+        ],
+        "transferable_principle": "3D nanofiber network from microbial fermentation provides hierarchical porous structure for filtration and adsorption"
       },
       "verification": "partial",
       "verification_quote": "The high mechanical strength and superhydrophilicity that can help to prolong the life of the membrane without fouling. Since the water trapped in the membrane pores can form a continuous phase providing a strong repelling force, which is essential for reducing the foulant adhesion.",

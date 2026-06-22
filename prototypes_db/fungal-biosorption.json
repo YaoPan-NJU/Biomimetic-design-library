@@ -20,24 +20,39 @@
       "description": "Fungal cell wall biosorption: chitin, glucan, and mannoprotein in fungal cell wall provide amino, carboxyl, hydroxyl, and phosphate groups for heavy metal coordination",
       "causal_chain": {
         "pollutant_feature": {
+          "text": "Heavy metal ions (Pb²⁺, Cu²⁺, Cd²⁺, Zn²⁺, Cr³⁺)",
           "basis": "from_source",
-          "source": "10.1016/j.biortech.2012.01.015",
-          "value": "Heavy metal ions (Pb²⁺, Cu²⁺, Cd²⁺, Zn²⁺, Cr³⁺)"
+          "source": "10.1016/j.biortech.2012.01.015"
         },
-        "mechanism": {
+        "bio_structure": {
+          "text": "Amino (-NH₂), carboxyl (-COOH), hydroxyl (-OH), phosphate groups on fungal cell wall",
           "basis": "from_source",
-          "source": "10.1016/j.biortech.2012.01.015",
-          "value": "Coordination and electrostatic interaction with cell wall functional groups"
+          "source": "10.1016/j.biortech.2012.01.015"
         },
-        "binding_site": {
+        "interaction": {
+          "text": "Coordination and electrostatic interaction with cell wall functional groups",
           "basis": "from_source",
-          "source": "10.1016/j.biortech.2012.01.015",
-          "value": "Amino (-NH₂), carboxyl (-COOH), hydroxyl (-OH), phosphate groups on fungal cell wall"
+          "source": "10.1016/j.biortech.2012.01.015"
         },
-        "performance_expectation": {
+        "why_it_works": {
+          "text": "Biosorption capacity varies by species and metal: typically 10-200 mg/g",
           "basis": "llm_inferred",
-          "value": "Biosorption capacity varies by species and metal: typically 10-200 mg/g"
-        }
+          "source": ""
+        },
+        "boundary_conditions": [
+          {
+            "text": "Mildly acidic to neutral pH",
+            "parameter": "pH",
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            }
+          }
+        ],
+        "transferable_principle": "Fungal cell wall chitin/glucan/mannoprotein provides abundant functional groups for metal biosorption"
       },
       "verification": "llm_inferred",
       "source_doi": "",
