@@ -963,14 +963,15 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.ccr.2023.215234",
-      "verification": "needs_review",
+      "verification": "partial",
       "causal_chain": {
         "transferable_principle": "基于机制: 双功能协同策略",
         "pollutant_feature": {
           "text": "三种机制：(1)第二配体提供额外配位位点 (2)增强AO碱性→更强U(VI)络合 (3)酸性基团解离碳酸盐→释放UO2^2+",
-          "basis": "llm_inferred",
+          "basis": "from_source",
           "scope_caveat": "uranium/actinide-specific, requires uranium-containing source",
-          "source_tier": "literature"
+          "source_tier": "literature",
+          "source": "10.1016/j.ccr.2023.215234"
         },
         "bio_structure": {
           "text": "双功能协同策略",
@@ -1002,7 +1003,10 @@
         ]
       },
       "scope_caveat": "RECLASSIFIED: uranium-specific ligand and complexation mechanisms",
-      "boundary_note": "This mechanism is specific to uranium(VI) capture using amine/acid functional groups. Do not generalize to non-uranium pollutants."
+      "boundary_note": "This mechanism is specific to uranium(VI) capture using amine/acid functional groups. Do not generalize to non-uranium pollutants.",
+      "verification_quote": "ormation of \npoly(acrylonitrile) (PAN) to poly(amidoxime) (PAO), the functionalities \nof both open-chain amidoxime and cyclic imide dioxime were formed; \ntherefore, how to primaril",
+      "source_page": 4,
+      "source_doi": "10.1016/j.ccr.2023.215234"
     },
     {
       "name": "离子印迹策略——三种改进方向",
@@ -1053,14 +1057,15 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.ccr.2023.215234",
-      "verification": "needs_review",
+      "verification": "partial",
       "causal_chain": {
         "transferable_principle": "基于机制: 电化学提取三阶段机理",
         "pollutant_feature": {
           "text": "电迁移→电吸附→电化学沉积; UO2^2+→U(IV)还原沉淀→突破热力学平衡",
-          "basis": "llm_inferred",
+          "basis": "from_source",
           "scope_caveat": "uranium-specific electrochemical reduction, not general adsorption",
-          "source_tier": "literature"
+          "source_tier": "literature",
+          "source": "10.1016/j.ccr.2023.215234"
         },
         "bio_structure": {
           "text": "电化学提取三阶段机理",
@@ -1092,7 +1097,10 @@
         ]
       },
       "scope_caveat": "RECLASSIFIED: uranium electrochemical deposition/reduction",
-      "boundary_note": "This mechanism requires electrochemical setup and is specific to U(VI)→U(IV) reduction. Not applicable to general spider-silk adsorption applications."
+      "boundary_note": "This mechanism requires electrochemical setup and is specific to U(VI)→U(IV) reduction. Not applicable to general spider-silk adsorption applications.",
+      "verification_quote": "active metal with the reduction potentials of 0.327 v for UO2\n2+/U4+ and \n0.411 v for UO2\n2+/UO2 (vs. standard hydrogen electrode), respectively \n[116]. UO2\n2+ can be reduced and",
+      "source_page": 10,
+      "source_doi": "10.1016/j.ccr.2023.215234"
     },
     {
       "name": "MOF光催化协同机制",

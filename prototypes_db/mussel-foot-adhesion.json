@@ -1650,12 +1650,13 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.ccr.2023.215234",
-      "verification": "needs_review",
+      "verification": "partial",
       "causal_chain": {
         "transferable_principle": "基于机制: 双功能协同策略",
         "pollutant_feature": {
           "text": "三种机制：(1)第二配体提供额外配位位点 (2)增强AO碱性→更强U(VI)络合 (3)酸性基团解离碳酸盐→释放UO2^2+",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "source": "10.1016/j.ccr.2023.215234"
         },
         "bio_structure": {
           "text": "双功能协同策略",
@@ -1685,7 +1686,10 @@
             "source_asset": null
           }
         ]
-      }
+      },
+      "verification_quote": "ormation of \npoly(acrylonitrile) (PAN) to poly(amidoxime) (PAO), the functionalities \nof both open-chain amidoxime and cyclic imide dioxime were formed; \ntherefore, how to primaril",
+      "source_page": 4,
+      "source_doi": "10.1016/j.ccr.2023.215234"
     },
     {
       "name": "离子印迹策略——三种改进方向",
@@ -1736,7 +1740,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.ccr.2023.215234",
-      "verification": "needs_review",
+      "verification": "partial",
       "active_features": [
         {
           "type": "process_feature",
@@ -1753,7 +1757,8 @@
         "transferable_principle": "基于机制: 电化学提取三阶段机理",
         "pollutant_feature": {
           "text": "电迁移→电吸附→电化学沉积; UO2^2+→U(IV)还原沉淀→突破热力学平衡",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "source": "10.1016/j.ccr.2023.215234"
         },
         "bio_structure": {
           "text": "电化学提取三阶段机理",
@@ -1783,7 +1788,10 @@
             "source_asset": null
           }
         ]
-      }
+      },
+      "verification_quote": "active metal with the reduction potentials of 0.327 v for UO2\n2+/U4+ and \n0.411 v for UO2\n2+/UO2 (vs. standard hydrogen electrode), respectively \n[116]. UO2\n2+ can be reduced and",
+      "source_page": 10,
+      "source_doi": "10.1016/j.ccr.2023.215234"
     },
     {
       "name": "MOF光催化协同机制",
@@ -2308,7 +2316,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1021/acsnano.5c01252",
-      "verification": "needs_review",
+      "verification": "partial",
       "active_features": [
         {
           "type": "functional_group",
@@ -2316,12 +2324,13 @@
           "evidence": "Detected in mechanism: CO2响应润湿性反转机制 CO2-responsive wettability reversal m"
         }
       ],
-      "verification_quote": "Stimuli-responsive reversal of superwettability.",
+      "verification_quote": "ty reversal and switchable separation\nperformance of a dual CO2- and photothermal-responsive membrane for double emulsions. Adapted with permission from ref 86. Copyright\n2024, Wil",
       "causal_chain": {
         "transferable_principle": "基于机制: CO2响应润湿性反转机制 CO2-responsive wettability reversal m",
         "pollutant_feature": {
           "text": "含氨基聚合物经CO2暴露质子化增强亲水性（水合增强）；去除CO2去质子化恢复中性态，聚合物链塌缩恢复疏水",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "source": "10.1021/acsnano.5c01252"
         },
         "bio_structure": {
           "text": "CO2响应润湿性反转机制 CO2-responsive wettability reversal mechanism",
@@ -2351,7 +2360,9 @@
             "source_asset": null
           }
         ]
-      }
+      },
+      "source_page": 6,
+      "source_doi": "10.1021/acsnano.5c01252"
     },
     {
       "name": "电响应润湿性反转机制 Electro-responsive wettability reversal mechanism",
