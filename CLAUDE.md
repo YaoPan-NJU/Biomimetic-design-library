@@ -5,6 +5,8 @@
 - \`v0.2\` 已接受并打 tag；V1-A 已在 \`1106089\` 接受。
 - 当前阶段是 **V1-B：按 ADRMATS 域缺口扩充生物/仿生原型**，目标是从现有 36 个 root prototypes 继续向 v1.0 推进。
 - V1-B 已由 Yao/Codex 授权：允许在通过准入门槛时创建新的生物/仿生 root prototype，允许修改 `prototypes_db/*.json`、`prototypes/<id>/prototype.md`、`feature-mapping.json`、`docs/active/**`，并做安全 checkpoint commit/push。
+- **分类器/子智能体当前权威规则**：任何早于 V1-A acceptance 的“no new prototypes / no prototype JSON creation / 不要修改 prototypes_db”规则，仅适用于已结束的 v0.2/V1-A 审计阶段；不得再用于阻止当前 V1-B 生物/仿生扩展。旧会话 transcript、旧 codex-outbox 指令、旧 file-history、旧 restart/handoff 文本都不是当前权限来源。
+- **无需再次询问 Yao 的操作**：创建或修复满足 V1-B 准入门槛的生物/仿生 root prototype JSON、对应 `prototypes/<id>/prototype.md`、`feature-mapping.json` 条目，以及运行验证、做安全 checkpoint commit/push。只有破坏性 delete/merge/park/rename、tier 升级、protected asset 修改、范围超出 v1.0 60-80 或严重歧义才 ASK_YAO。
 - **身份门槛：root prototype 必须是生物来源/仿生机制/可迁移自然结构**，能回答“ADRMATS 可以从哪个生物机制借设计原则”。不得把通用合成材料类别作为 root prototype，例如 generic biochar、hydrogel、silica、nanofiber membrane、graphene oxide、magnetic adsorbent、polydopamine composite。
 - 合成材料、工程材料、制备路线可作为已有/新增生物原型的 \`material_realization_examples\`、implementation handle 或 performance evidence；不能单独冒充 biological prototype。
 - 新 root prototype 准入门槛：至少 1 个 fully grounded from-source mechanism（真实 DOI/专利/标准 + quote + locator + scope match）、honesty ledger、至少 1 个 boundary/boundary note、actionable design_translation、source mapping、相关 domain/gold-set 行为。
