@@ -15,6 +15,38 @@
 - 模型路由：PDF/OCR/多模态/图像页读取用 \`mimo-v2.5\` 子 agent 或 OpenClaw；文本推理、source-to-claim、JSON/schema 工作用 \`mimo-v2.5-pro\`。
 - 仍然禁止：\`git add -A\`、force-push、history rewrite、无授权删除/merge/park/rename 已接受原型、证据标签膨胀、修改 \`tools/litextract\` / \`*_doi_map.json\` / \`docs/optimization-v1\` / \`.claude/settings.local.json\`。
 
+## 证据提升规则（V1-A/V1-B 共用）
+
+**目标**：将 llm_inferred 机制升级为 from_source，需满足以下所有条件：
+
+### 必需字段（每个 from_source 升级必须包含）
+1. **source**：真实 DOI、专利号或标准号（不得为空）
+2. **locator**：精确页码（page N），可选附加 figure/table/section 引用
+3. **quote**：短引文（≤200 字符），从源文本中提取
+4. **scope_match**：声明中的 2+ 个关键词必须出现在引文中
+
+### 质量标准
+- **精确页码**：必须是 visual_cache 中的实际页码（page N），不得使用模糊定位（如 "visual_cache page text match"）
+- **短引文**：≤200 字符，从源文本中直接提取，不得是长段 OCR 块
+- **范围匹配**：声明中的至少 2 个关键词必须出现在引文中
+- **语义完整**：不得用长 OCR 块替换 causal_chain 中的语义文本字段
+
+### 允许的匹配方法
+- 关键词匹配（2+ 字符中文、3+ 字符英文）
+- 化学式/分子式匹配
+- 数值+单位匹配
+- 专有名词匹配
+
+### 禁止的操作
+- 用长 OCR 块替换 causal_chain 语义文本字段
+- 使用模糊定位器（如 "visual_cache page text match"）
+- 单关键词匹配（容易误匹配）
+- 证据标签膨胀（不得将 llm_inferred 标为 from_source 而不满足上述条件）
+
+### 模型路由
+- PDF/OCR/视觉提取：使用 mimo-v2.5 子智能体
+- 文本推理/来源匹配：使用 mimo-v2.5-pro
+
 ## 项目概述
 
 仿生吸附设计库策展与接地（curation & grounding）项目。当前基线为 36 个已接受 root prototypes；正在执行 V1-B 生物/仿生扩展，目标是按 ADRMATS 域缺口补充高质量、可迁移、来源接地的新生物原型。
