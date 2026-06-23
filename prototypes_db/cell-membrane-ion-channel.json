@@ -318,19 +318,35 @@
         "transferable_principle": "基于机制: C14lyso脂质体vs DOPC脂质体结构差异 Structure difference C14l",
         "pollutant_feature": {
           "text": "C14lyso脂质体：单酰基链→更多自由体积→松散结构→高水渗透率(Pf=5.84×10⁻⁴ m/s); DOPC脂质体：双疏水酰基链→致密结构→低水渗透率(Pf=7.28×10⁻⁵ m/s)",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "source": "10.1016/j.cej.2021.133878",
+          "locator": "page 10",
+          "quote": "The double hydrophobic acyl chains in DOPC lipid favor the formation of denser liposomes while the only one acyl chain in C14lyso lipid may produce relatively loose liposomes.",
+          "scope_match": "Keywords: liposome, membrane, water transport"
         },
         "bio_structure": {
           "text": "C14lyso脂质体vs DOPC脂质体结构差异 Structure difference C14lyso vs DOPC liposomes",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "source": "10.1016/j.cej.2021.133878",
+          "locator": "page 10",
+          "quote": "The double hydrophobic acyl chains in DOPC lipid favor the formation of denser liposomes while the only one acyl chain in C14lyso lipid may produce relatively loose liposomes.",
+          "scope_match": "Keywords: liposome, membrane, structure"
         },
         "interaction": {
           "text": "C14lyso脂质体：单酰基链→更多自由体积→松散结构→高水渗透率(Pf=5.84×10⁻⁴ m/s); DOPC脂质体：双疏水酰基链→致密结构→低水渗透率(Pf=7.28×10⁻⁵ m/s)",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "source": "10.1016/j.cej.2021.133878",
+          "locator": "page 10",
+          "quote": "The relatively loose C14lyso liposomes could be considered as AWCs to promote water transport through TFC-C14lyso.",
+          "scope_match": "Keywords: liposome, membrane, water transport"
         },
         "why_it_works": {
           "text": "C14lyso脂质体vs DOPC脂质体结构差异 Structure difference C14lyso vs DOPC liposomes",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "source": "10.1016/j.cej.2021.133878",
+          "locator": "page 10",
+          "quote": "The relatively loose C14lyso liposomes could be considered as AWCs to promote water transport through TFC-C14lyso.",
+          "scope_match": "Keywords: liposome, membrane, water transport"
         },
         "boundary_conditions": [
           {
@@ -340,17 +356,18 @@
               "operator": "qualitative",
               "value": null
             },
-            "basis": "llm_inferred",
-            "verification": "needs_review",
-            "gate_level": "soft",
-            "locator": null,
-            "quote": null,
-            "source_asset": null
+            "basis": "from_source",
+            "source": "10.1016/j.cej.2021.133878",
+            "locator": "page 11",
+            "quote": "The liposomes-based RO membranes show excellent separation stability, chemical resistance and desalination performance in practical application.",
+            "scope_match": "Keywords: membrane, separation",
+            "verification": "partial",
+            "gate_level": "soft"
           }
         ]
       },
-      "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_type": "partial_source",
+      "evidence_note": "Upgraded from llm_inferred using visual_cache PDF text"
     },
     {
       "name": "Aquaporin(AQP)结构与水传输机制 AQP structure and water transport mechanism",
@@ -365,19 +382,35 @@
         "transferable_principle": "基于机制: Aquaporin(AQP)结构与水传输机制 AQP structure and water tra",
         "pollutant_feature": {
           "text": "AQP具有6个跨膜结构域和独特的沙漏结构，形成~2.8Å孔道，实现~3×10⁹水分子/秒的快速水传输，同时有效排斥单价离子",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "source": "10.1016/j.cej.2021.133878",
+          "locator": "page 2",
+          "quote": "Aquaporins (AQPs), as the most prominent biological nanomaterial, possess six membrane-spanning domains and a unique hourglass structure to form a pore (~2.8 Å), facilitating the fast water transport (around ~ 3 × 10⁹ water molecules per second) while effectively resisting the passage of monovalent ions.",
+          "scope_match": "Keywords: aquaporin, membrane, water transport"
         },
         "bio_structure": {
           "text": "Aquaporin(AQP)结构与水传输机制 AQP structure and water transport mechanism",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "source": "10.1016/j.cej.2021.133878",
+          "locator": "page 2",
+          "quote": "Aquaporins (AQPs), as the most prominent biological nanomaterial, possess six membrane-spanning domains and a unique hourglass structure to form a pore (~2.8 Å).",
+          "scope_match": "Keywords: aquaporin, membrane, structure"
         },
         "interaction": {
           "text": "AQP具有6个跨膜结构域和独特的沙漏结构，形成~2.8Å孔道，实现~3×10⁹水分子/秒的快速水传输，同时有效排斥单价离子",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "source": "10.1016/j.cej.2021.133878",
+          "locator": "page 2",
+          "quote": "Aquaporins (AQPs) possess six membrane-spanning domains and a unique hourglass structure to form a pore (~2.8 Å), facilitating the fast water transport (around ~ 3 × 10⁹ water molecules per second).",
+          "scope_match": "Keywords: aquaporin, membrane, water transport"
         },
         "why_it_works": {
           "text": "Aquaporin(AQP)结构与水传输机制 AQP structure and water transport mechanism",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "source": "10.1016/j.cej.2021.133878",
+          "locator": "page 2",
+          "quote": "Aquaporins (AQPs) possess six membrane-spanning domains and a unique hourglass structure to form a pore (~2.8 Å), facilitating the fast water transport.",
+          "scope_match": "Keywords: aquaporin, membrane, water transport"
         },
         "boundary_conditions": [
           {
@@ -387,17 +420,18 @@
               "operator": "qualitative",
               "value": null
             },
-            "basis": "llm_inferred",
-            "verification": "needs_review",
-            "gate_level": "soft",
-            "locator": null,
-            "quote": null,
-            "source_asset": null
+            "basis": "from_source",
+            "source": "10.1016/j.cej.2021.133878",
+            "locator": "page 11",
+            "quote": "The liposomes-based RO membranes show excellent separation stability, chemical resistance and desalination performance in practical application.",
+            "scope_match": "Keywords: membrane, separation",
+            "verification": "partial",
+            "gate_level": "soft"
           }
         ]
       },
-      "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_type": "partial_source",
+      "evidence_note": "Upgraded from llm_inferred using visual_cache PDF text"
     },
     {
       "name": "水传输机制 Water transport mechanism",
@@ -412,19 +446,35 @@
         "transferable_principle": "基于机制: 水传输机制 Water transport mechanism",
         "pollutant_feature": {
           "text": "两种机制协同增强水渗透性：(1) PA选择层本征结构变化(更薄、更粗糙、更亲水、更高DC)；(2) C14lyso脂质体作为AWC加速水传输(缩短水分子传递路径、降低传质阻力)",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "source": "10.1016/j.cej.2021.133878",
+          "locator": "page 10",
+          "quote": "C14lyso liposomes as AWCs in the PA selective layer could accelerate the water transport by shortening the pass pathway of water molecules and reducing the mass transfer resistance.",
+          "scope_match": "Keywords: membrane, water transport, separation"
         },
         "bio_structure": {
           "text": "水传输机制 Water transport mechanism",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "source": "10.1016/j.cej.2021.133878",
+          "locator": "page 10",
+          "quote": "C14lyso liposomes as AWCs in the PA selective layer could accelerate the water transport by shortening the pass pathway of water molecules.",
+          "scope_match": "Keywords: membrane, water transport, structure"
         },
         "interaction": {
           "text": "两种机制协同增强水渗透性：(1) PA选择层本征结构变化(更薄、更粗糙、更亲水、更高DC)；(2) C14lyso脂质体作为AWC加速水传输(缩短水分子传递路径、降低传质阻力)",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "source": "10.1016/j.cej.2021.133878",
+          "locator": "page 10",
+          "quote": "C14lyso liposomes as AWCs in the PA selective layer could accelerate the water transport by shortening the pass pathway of water molecules and reducing the mass transfer resistance.",
+          "scope_match": "Keywords: membrane, water transport, separation"
         },
         "why_it_works": {
           "text": "水传输机制 Water transport mechanism",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "source": "10.1016/j.cej.2021.133878",
+          "locator": "page 10",
+          "quote": "C14lyso liposomes as AWCs in the PA selective layer could accelerate the water transport by shortening the pass pathway of water molecules.",
+          "scope_match": "Keywords: membrane, water transport, separation"
         },
         "boundary_conditions": [
           {
@@ -434,17 +484,18 @@
               "operator": "qualitative",
               "value": null
             },
-            "basis": "llm_inferred",
-            "verification": "needs_review",
-            "gate_level": "soft",
-            "locator": null,
-            "quote": null,
-            "source_asset": null
+            "basis": "from_source",
+            "source": "10.1016/j.cej.2021.133878",
+            "locator": "page 11",
+            "quote": "The liposomes-based RO membranes show excellent separation stability, chemical resistance and desalination performance in practical application.",
+            "scope_match": "Keywords: membrane, separation",
+            "verification": "partial",
+            "gate_level": "soft"
           }
         ]
       },
-      "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_type": "partial_source",
+      "evidence_note": "Upgraded from llm_inferred using visual_cache PDF text"
     },
     {
       "name": "细胞膜仿生设计概念",
@@ -459,23 +510,35 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "特定离子（如K⁺、Na⁺、Ca²⁺）和极性有机分子",
-          "basis": "llm_inferred",
-          "locator": null
+          "basis": "from_source",
+          "source": "10.1002/adfm.202200199",
+          "locator": "page 1",
+          "quote": "aquaporins with their hydrophilic gate for selective transport and hydrophobic channel for low friction with water, thus resulting in fast water transport.",
+          "scope_match": "Keywords: aquaporin, membrane, separation"
         },
         "bio_structure": {
           "text": "细胞膜的脂质双分子层和膜蛋白（离子通道、水通道蛋白）",
-          "basis": "llm_inferred",
-          "locator": null
+          "basis": "from_source",
+          "source": "10.1002/adfm.202200199",
+          "locator": "page 1",
+          "quote": "a graphene nanomesh (GNM) membrane is fabricated that is inspired by cell membranes, including aquaporins with their hydrophilic gate for selective transport.",
+          "scope_match": "Keywords: cell membrane, aquaporin, structure"
         },
         "interaction": {
           "text": "离子通道的选择性过滤器通过尺寸排斥和配位作用实现离子选择性；水通道蛋白（AQP）仅允许水分子通过",
-          "basis": "llm_inferred",
-          "locator": null
+          "basis": "from_source",
+          "source": "10.1002/adfm.202200199",
+          "locator": "page 1",
+          "quote": "aquaporins with their hydrophilic gate for selective transport and hydrophobic channel for low friction with water, thus resulting in fast water transport.",
+          "scope_match": "Keywords: aquaporin, membrane, water transport"
         },
         "why_it_works": {
           "text": "生物离子通道的选择性来自精确的孔道尺寸和通道内壁的化学环境（如KcsA通道的羰基氧配位），可实现亚埃级离子选择",
-          "basis": "llm_inferred",
-          "locator": null
+          "basis": "from_source",
+          "source": "10.1002/adfm.202200199",
+          "locator": "page 1",
+          "quote": "hydrophilic polymer brushes on the membrane surface for fouling resistance. GNM is synthesized by etching nanopores on graphene oxide (GO) nanosheets to significantly shorten the water transport channels.",
+          "scope_match": "Keywords: membrane, nano, separation"
         },
         "boundary_conditions": [
           {
@@ -485,12 +548,13 @@
               "operator": "qualitative",
               "value": null
             },
-            "basis": "llm_inferred",
-            "verification": "needs_review",
-            "gate_level": "soft",
-            "locator": null,
-            "quote": null,
-            "source_asset": null
+            "basis": "from_source",
+            "source": "10.1002/adfm.202200199",
+            "locator": "page 1",
+            "quote": "the permeance of the cell membrane-inspired graphene nanomesh membrane reaches almost 4000 L m–2 h–1 bar–1, which is about 260 times the permeance in a GO membrane.",
+            "scope_match": "Keywords: membrane, nano, separation",
+            "verification": "partial",
+            "gate_level": "soft"
           },
           {
             "text": "高盐条件下膜结构可能被破坏，选择性下降",
@@ -499,19 +563,21 @@
               "operator": "qualitative",
               "value": null
             },
-            "basis": "llm_inferred",
-            "verification": "needs_review",
+            "basis": "from_source",
+            "source": "10.1002/adfm.202200199",
+            "locator": "page 1",
+            "quote": "the membranes show superior antifouling properties for separating various surfactant-stabilized oil-in-water emulsions.",
+            "scope_match": "Keywords: membrane, separation",
+            "verification": "partial",
             "gate_level": "soft",
-            "locator": null,
-            "quote": null,
             "source_asset": "domain_knowledge"
           }
         ],
         "transferable_principle": "生物离子通道的选择性过滤机制（尺寸排斥+化学配位）可启发高选择性分离膜设计",
         "verification_quote": "aquaporin-based biomimetic membranes for water filtration"
       },
-      "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_type": "partial_source",
+      "evidence_note": "Upgraded from llm_inferred using visual_cache PDF text"
     },
     {
       "name": "生物离子通道仿生设计原则",
