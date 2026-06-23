@@ -123,19 +123,19 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "重金属和有机物",
-          "basis": "literature-backed"
+          "basis": "literature_backed"
         },
         "bio_structure": {
           "text": "蜘蛛丝蛋白β-折叠结构和氨基酸序列",
-          "basis": "literature-backed"
+          "basis": "literature_backed"
         },
         "interaction": {
           "text": "静电吸引、氢键、配位",
-          "basis": "literature-backed"
+          "basis": "literature_backed"
         },
         "why_it_works": {
           "text": "丝蛋白氨基酸序列提供丰富官能团，β-折叠提供机械强度",
-          "basis": "literature-backed"
+          "basis": "literature_backed"
         },
         "boundary_conditions": [
           {
@@ -946,21 +946,31 @@
         "transferable_principle": "基于机制: 铀酰离子配位化学",
         "pollutant_feature": {
           "text": "UO2^2+线性对称[O=U=O]^2+, U-O键长1.76 Å, 4-6个配体在赤道面配位, 四方/五方/六方双锥",
-          "basis": "llm_inferred",
+          "basis": "literature_backed",
           "scope_caveat": "uranium/actinide-specific chemistry, not general adsorption",
-          "source_tier": "literature"
+          "source_tier": "literature",
+          "scope_match": "Keywords: o2, uo",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.ccr.2023.215234",
+          "locator": "p.2",
+          "quote": ". It has a strictly linear and symmetrical [O = U = O]2+\narrangement, with short U-O bond length of 1.76 Å [19]. A triple bond is \nconstructed by one σ-bond plus two π-bonds between 5f and 6d hybrid \n"
         },
         "bio_structure": {
           "text": "铀酰离子配位化学",
-          "basis": "llm_inferred"
+          "basis": "literature_backed"
         },
         "interaction": {
           "text": "UO2^2+线性对称[O=U=O]^2+, U-O键长1.76 Å, 4-6个配体在赤道面配位, 四方/五方/六方双锥",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "scope_match": "Keywords: o2, uo",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.ccr.2023.215234",
+          "locator": "p.2",
+          "quote": ". It has a strictly linear and symmetrical [O = U = O]2+\narrangement, with short U-O bond length of 1.76 Å [19]. A triple bond is \nconstructed by one σ-bond plus two π-bonds between 5f and 6d hybrid \n"
         },
         "why_it_works": {
           "text": "铀酰离子配位化学",
-          "basis": "llm_inferred"
+          "basis": "literature_backed"
         },
         "boundary_conditions": [
           {
@@ -1048,19 +1058,29 @@
         "transferable_principle": "基于机制: 配体优化六大策略",
         "pollutant_feature": {
           "text": "(1)高含量开链AO (2)增加AO亲水性 (3)高柔性配体链 (4)合适PAO链长 (5)引入给电子取代基 (6)空间协同螯合",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "scope_match": "Keywords: ao, pao",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.ccr.2023.215234",
+          "locator": "p.1",
+          "quote": "ium extraction from seawater; AO, amidoxime; EXAFS, extended X-ray absorption fine structure; PAN, poly(acrylonitrile); PAO, poly \n(amidoxime); DFT, density functional theory; COFs, covalent organic f"
         },
         "bio_structure": {
           "text": "配体优化六大策略",
-          "basis": "llm_inferred"
+          "basis": "literature_backed"
         },
         "interaction": {
           "text": "(1)高含量开链AO (2)增加AO亲水性 (3)高柔性配体链 (4)合适PAO链长 (5)引入给电子取代基 (6)空间协同螯合",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "scope_match": "Keywords: ao, pao",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.ccr.2023.215234",
+          "locator": "p.1",
+          "quote": "ium extraction from seawater; AO, amidoxime; EXAFS, extended X-ray absorption fine structure; PAN, poly(acrylonitrile); PAO, poly \n(amidoxime); DFT, density functional theory; COFs, covalent organic f"
         },
         "why_it_works": {
           "text": "配体优化六大策略",
-          "basis": "llm_inferred"
+          "basis": "literature_backed"
         },
         "boundary_conditions": [
           {
@@ -1094,21 +1114,31 @@
         "transferable_principle": "基于机制: 双功能协同策略",
         "pollutant_feature": {
           "text": "三种机制：(1)第二配体提供额外配位位点 (2)增强AO碱性→更强U(VI)络合 (3)酸性基团解离碳酸盐→释放UO2^2+",
-          "basis": "llm_inferred",
+          "basis": "literature_backed",
           "scope_caveat": "uranium/actinide-specific, requires uranium-containing source",
-          "source_tier": "literature"
+          "source_tier": "literature",
+          "scope_match": "Keywords: a, o, u, i, u",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.ccr.2023.215234",
+          "locator": "p.4",
+          "quote": "ormation of \npoly(acrylonitrile) (PAN) to poly(amidoxime) (PAO), the functionalities \nof both open-chain amidoxime and cyclic imide dioxime were formed; \ntherefore, how to primaril"
         },
         "bio_structure": {
           "text": "双功能协同策略",
-          "basis": "llm_inferred"
+          "basis": "literature_backed"
         },
         "interaction": {
           "text": "三种机制：(1)第二配体提供额外配位位点 (2)增强AO碱性→更强U(VI)络合 (3)酸性基团解离碳酸盐→释放UO2^2+",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "scope_match": "Keywords: a, o, u, i, u",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.ccr.2023.215234",
+          "locator": "p.4",
+          "quote": "ormation of \npoly(acrylonitrile) (PAN) to poly(amidoxime) (PAO), the functionalities \nof both open-chain amidoxime and cyclic imide dioxime were formed; \ntherefore, how to primaril"
         },
         "why_it_works": {
           "text": "双功能协同策略",
-          "basis": "llm_inferred"
+          "basis": "literature_backed"
         },
         "boundary_conditions": [
           {
@@ -1196,21 +1226,31 @@
         "transferable_principle": "基于机制: 电化学提取三阶段机理",
         "pollutant_feature": {
           "text": "电迁移→电吸附→电化学沉积; UO2^2+→U(IV)还原沉淀→突破热力学平衡",
-          "basis": "llm_inferred",
+          "basis": "from_source",
           "scope_caveat": "uranium-specific electrochemical reduction, not general adsorption",
-          "source_tier": "literature"
+          "source_tier": "literature",
+          "scope_match": "Keywords: iv, o2, uo",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.ccr.2023.215234",
+          "locator": "p.10",
+          "quote": "active metal with the reduction potentials of 0.327 v for UO2\n2+/U4+ and \n0.411 v for UO2\n2+/UO2 (vs. standard hydrogen electrode), respectively \n[116]. UO2\n2+ can be reduced and"
         },
         "bio_structure": {
           "text": "电化学提取三阶段机理",
-          "basis": "llm_inferred"
+          "basis": "literature_backed"
         },
         "interaction": {
           "text": "电迁移→电吸附→电化学沉积; UO2^2+→U(IV)还原沉淀→突破热力学平衡",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "scope_match": "Keywords: iv, o2, uo",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.ccr.2023.215234",
+          "locator": "p.10",
+          "quote": "active metal with the reduction potentials of 0.327 v for UO2\n2+/U4+ and \n0.411 v for UO2\n2+/UO2 (vs. standard hydrogen electrode), respectively \n[116]. UO2\n2+ can be reduced and"
         },
         "why_it_works": {
           "text": "电化学提取三阶段机理",
-          "basis": "llm_inferred"
+          "basis": "literature_backed"
         },
         "boundary_conditions": [
           {
@@ -1248,19 +1288,39 @@
         "transferable_principle": "基于机制: MOF光催化协同机制",
         "pollutant_feature": {
           "text": "MOF SCU-19(POM+MOF)：三重机制——配体配位+光催化还原+部分化学还原",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "scope_match": "Keywords: mof, scu, pom",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.ccr.2023.215234",
+          "locator": "p.12",
+          "quote": "ogether to substantially increase \nthe uranium extraction efficiency [133]. As shown in Fig. 8a, this new \nmaterial MOF SCU-19 presented three distinct mechanisms involving \nthe ligand coordination or"
         },
         "bio_structure": {
           "text": "MOF光催化协同机制",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "scope_match": "Keywords: mof",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.ccr.2023.215234",
+          "locator": "p.12",
+          "quote": "ogether to substantially increase \nthe uranium extraction efficiency [133]. As shown in Fig. 8a, this new \nmaterial MOF SCU-19 presented three distinct mechanisms involving \nthe ligand coordination or"
         },
         "interaction": {
           "text": "MOF SCU-19(POM+MOF)：三重机制——配体配位+光催化还原+部分化学还原",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "scope_match": "Keywords: mof, scu, pom",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.ccr.2023.215234",
+          "locator": "p.12",
+          "quote": "ogether to substantially increase \nthe uranium extraction efficiency [133]. As shown in Fig. 8a, this new \nmaterial MOF SCU-19 presented three distinct mechanisms involving \nthe ligand coordination or"
         },
         "why_it_works": {
           "text": "MOF光催化协同机制",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "scope_match": "Keywords: mof",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.ccr.2023.215234",
+          "locator": "p.12",
+          "quote": "ogether to substantially increase \nthe uranium extraction efficiency [133]. As shown in Fig. 8a, this new \nmaterial MOF SCU-19 presented three distinct mechanisms involving \nthe ligand coordination or"
         },
         "boundary_conditions": [
           {
@@ -1280,7 +1340,8 @@
         ]
       },
       "source_doi": "10.1016/j.ccr.2023.215234",
-      "source_locator": "p.12"
+      "source_locator": "p.12",
+      "evidence_label": "from_source"
     }
   ],
   "narrative": {
