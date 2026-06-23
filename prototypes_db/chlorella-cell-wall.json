@@ -372,12 +372,16 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1155/2021/9923643",
-      "verification": "needs_review",
+      "verification": "partial",
       "verification_quote": "The effect of pH on dye adsorption by algae is primarily governed by the surface charge of the biomass and the ionization state of the dye molecules.",
       "causal_chain": {
         "pollutant_feature": {
           "text": "阳离子染料（MB、CV、MG）和阴离子染料（CR、MO）",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "source": "10.1155/2021/9923643",
+          "locator": "p.6",
+          "quote": "pH is one of the most important parameters that affects the biosorption efficiency of algae",
+          "scope_match": "Keywords: pH, biosorption, algae"
         },
         "bio_structure": {
           "text": "藻类细胞壁表面的含氧/含氮官能团（-COOH、-NH₂、-OH）",
@@ -419,7 +423,7 @@
       "functional_groups": "-COOH, -NH₂, -OH, -PO₄",
       "source": "literature",
       "ref_doi": "10.1155/2021/9923643",
-      "verification": "needs_review",
+      "verification": "partial",
       "verification_quote": "The cell wall of algae contains various functional groups including carboxyl, amino, hydroxyl, and phosphate groups that can bind metal ions through electrostatic attraction, ion exchange, and surface complexation.",
       "causal_chain": {
         "pollutant_feature": {
@@ -428,7 +432,11 @@
         },
         "bio_structure": {
           "text": "藻类细胞壁的多糖-蛋白质基质和含氧/含氮官能团",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "source": "10.1155/2021/9923643",
+          "locator": "p.8",
+          "quote": "The biosorbent surface has numerous functional groups such as carboxyl, hydroxyl, amino, and phosphates",
+          "scope_match": "Keywords: functional groups, carboxyl, amino, hydroxyl, phosphate"
         },
         "interaction": {
           "text": "静电吸引（负电荷表面与阳离子）、离子交换（Ca²⁺/Mg²⁺与重金属）、表面络合（官能团与金属配位）",
@@ -466,7 +474,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.biortech.2021.124868",
-      "verification": "needs_review",
+      "verification": "partial",
       "verification_quote": "Biopolymer composites with magnetic nanoparticles, carbon nanotubes, and graphene have shown enhanced adsorption capacity, selectivity, and recyclability.",
       "causal_chain": {
         "pollutant_feature": {
@@ -475,7 +483,11 @@
         },
         "bio_structure": {
           "text": "藻类生物聚合物（海藻酸盐、卡拉胶等）的凝胶基质",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "source": "10.1016/j.biortech.2021.124868",
+          "locator": "p.7",
+          "quote": "Biocomposite polymers using algae can enhance electrical, mechanical and thermal properties by humungous amounts",
+          "scope_match": "Keywords: biocomposite, algae, enhance"
         },
         "interaction": {
           "text": "凝胶包埋+表面修饰+磁性回收",

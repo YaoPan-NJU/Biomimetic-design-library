@@ -24,7 +24,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1002/adfm.202200359",
-      "verification": "unverified",
+      "verification": "partial",
       "基本原理": "needs_review",
       "causal_chain": {
         "pollutant_feature": {
@@ -33,7 +33,11 @@
         },
         "bio_structure": {
           "text": "纳米比亚甲虫亲水凸起+疏水基底交替表面",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "source": "10.1002/adfm.202200359",
+          "locator": "p.2",
+          "quote": "The Namib desert beetle’s bumpy surface is  randomly distributed with wax-coated hydrophobic areas and  hydrophilic wax-free parts (Figure 2a–c)",
+          "scope_match": "Keywords: Namib beetle, hydrophobic, hydrophilic"
         },
         "interaction": {
           "text": "亲水区域凝结水滴，疏水区域导流收集",
@@ -60,7 +64,9 @@
         "verification_quote": "The Namib beetle has a hydrophilic side to collect water from fog and a hydrophobic side to direct the water to the beetle's mouth.",
         "source_doi": "10.1007/s11783-021-1515-2",
         "source_locator": "p.18 / Section 5.1 Principles of Janus membranes"
-      }
+      },
+      "verification_quote": "The Namib desert beetle’s bumpy surface is  randomly distributed with wax-coated hydrophobic areas and  hydrophilic wax-free parts (Figure 2a–c)",
+      "source_locator": "p.2"
     }
   ],
   "narrative": {

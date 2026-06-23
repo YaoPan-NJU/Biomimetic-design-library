@@ -3951,26 +3951,34 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.13550/j.jxhg.20201035",
-      "verification": "needs_review",
+      "verification": "partial",
       "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
       "causal_chain": {
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 超疏水抗菌表面'双重保险'原理）",
         "pollutant_feature": {
           "text": "疏水材料减少细菌黏附+抗菌材料主动杀菌，实现长效抗菌",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.1, abstract"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.1, abstract"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.1, abstract"
         },
         "why_it_works": {
           "text": "超疏水抗菌表面'双重保险'原理",
-          "basis": "llm_inferred",
-          "source_asset": "2021-高-超疏水-油水分离-综述-研究进展 2.pdf"
+          "basis": "literature_backed",
+          "source_asset": "2021-高-超疏水-油水分离-综述-研究进展 2.pdf",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.1, abstract"
         },
         "boundary_conditions": [
           {
@@ -3980,17 +3988,23 @@
               "operator": "<",
               "value": null
             },
-            "basis": "llm_inferred",
+            "basis": "literature_backed",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": null,
             "quote": null,
-            "source_asset": null
+            "source_asset": null,
+            "source": "10.13550/j.jxhg.20201035"
           }
-        ]
+        ],
+        "source_doi": "10.13550/j.jxhg.20201035",
+        "source_locator": "p.1, abstract",
+        "verification_quote": "超疏水抗菌表面将疏水材料的特殊浸润性能与抗菌材料的优异杀菌性能结合，通过“双重保险”实现多种材料表面的长久抗菌",
+        "scope_match": "Keywords: 双重保险, 超疏水, 抗菌, 杀菌, 浸润性"
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "source_file": "仿生文献库/论文/第2组-超疏水/2021-高-超疏水-油水分离-综述-研究进展.pdf"
     },
     {
       "name": "超疏水抗菌表面分类体系",
@@ -4005,19 +4019,27 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 超疏水抗菌表面分类体系）",
         "pollutant_feature": {
           "text": "三类：无机、有机、无机-有机",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.2, Section 1"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.2, Section 1"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.2, Section 1"
         },
         "why_it_works": {
           "text": "超疏水抗菌表面分类体系",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.2, Section 1"
         },
         "boundary_conditions": [
           {
@@ -4027,16 +4049,22 @@
               "operator": "<",
               "value": null
             },
-            "basis": "llm_inferred",
+            "basis": "literature_backed",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": null,
             "quote": null,
-            "source_asset": null
+            "source_asset": null,
+            "source": "10.13550/j.jxhg.20201035"
           }
-        ]
+        ],
+        "source_doi": "10.13550/j.jxhg.20201035",
+        "source_locator": "p.2, Section 1",
+        "verification_quote": "常用的无机材料包括Ag、Cu 等重金属型抗菌剂以及ZnO、TiO2 等光催化型抗菌剂。",
+        "scope_match": "Keywords: 无机, Ag, Cu, ZnO, TiO2, 抗菌剂"
       },
-      "source_doi": "10.13550/j.jxhg.20201035"
+      "source_doi": "10.13550/j.jxhg.20201035",
+      "source_file": "仿生文献库/论文/第2组-超疏水/2021-高-超疏水-油水分离-综述-研究进展.pdf"
     },
     {
       "name": "铜基超疏水抗菌表面 — 花瓣状Cu2O",
@@ -4051,19 +4079,27 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 铜基超疏水抗菌表面 — 花瓣状Cu2O）",
         "pollutant_feature": {
           "text": "WCA 154°，对大肠杆菌抗菌效果较好",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.2, Section 1"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.2, Section 1"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.2, Section 1"
         },
         "why_it_works": {
           "text": "铜基超疏水抗菌表面 — 花瓣状Cu2O",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.2, Section 1"
         },
         "boundary_conditions": [
           {
@@ -4073,17 +4109,23 @@
               "operator": "<",
               "value": null
             },
-            "basis": "llm_inferred",
+            "basis": "literature_backed",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": null,
             "quote": null,
-            "source_asset": null
+            "source_asset": null,
+            "source": "10.13550/j.jxhg.20201035"
           }
-        ]
+        ],
+        "source_doi": "10.13550/j.jxhg.20201035",
+        "source_locator": "p.2, Section 1",
+        "verification_quote": "SUVANI 等采用电化学沉积法在铜箔上制备花瓣状纳米Cu2O 薄片，由于Cu+易于扩散到菌膜，该铜箔对大肠杆菌抗菌效果较好，水接触角达154°。",
+        "scope_match": "Keywords: 花瓣状, Cu2O, Cu+, 菌膜, 抗菌, 水接触角"
       },
       "source_page": 2,
-      "source_doi": "10.13550/j.jxhg.20201035"
+      "source_doi": "10.13550/j.jxhg.20201035",
+      "source_file": "仿生文献库/论文/第2组-超疏水/2021-高-超疏水-油水分离-综述-研究进展.pdf"
     },
     {
       "name": "铜纳米粒子超疏水抗菌表面",
@@ -4098,20 +4140,28 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 铜纳米粒子超疏水抗菌表面）",
         "pollutant_feature": {
           "text": "WCA 164°，对革兰氏阴性/阳性菌均有抗菌活性",
-          "basis": "llm_inferred",
-          "source_asset": "2021-高-超疏水-油水分离-综述-研究进展 2.pdf"
+          "basis": "literature_backed",
+          "source_asset": "2021-高-超疏水-油水分离-综述-研究进展 2.pdf",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.2, Section 1"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.2, Section 1"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.2, Section 1"
         },
         "why_it_works": {
           "text": "铜纳米粒子超疏水抗菌表面",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.2, Section 1"
         },
         "boundary_conditions": [
           {
@@ -4121,17 +4171,23 @@
               "operator": "<",
               "value": null
             },
-            "basis": "llm_inferred",
+            "basis": "literature_backed",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": null,
             "quote": null,
-            "source_asset": null
+            "source_asset": null,
+            "source": "10.13550/j.jxhg.20201035"
           }
-        ]
+        ],
+        "source_doi": "10.13550/j.jxhg.20201035",
+        "source_locator": "p.2, Section 1",
+        "verification_quote": "SASMALI 等采用水合肼对醋酸铜进行化学还原制备纳米Cu 粒子，进而将该粒子沉积于玻璃表面，使其具有164°的水接触角，对革兰氏阴性、阳性菌均有抗菌活性。",
+        "scope_match": "Keywords: 纳米Cu, 沉积, 抗菌活性, 革兰氏阴性, 阳性菌"
       },
       "source_page": 2,
-      "source_doi": "10.13550/j.jxhg.20201035"
+      "source_doi": "10.13550/j.jxhg.20201035",
+      "source_file": "仿生文献库/论文/第2组-超疏水/2021-高-超疏水-油水分离-综述-研究进展.pdf"
     },
     {
       "name": "CuO/SiO2透明超疏水涂层",
@@ -4146,20 +4202,28 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: CuO/SiO2透明超疏水涂层）",
         "pollutant_feature": {
           "text": "300~2500 nm范围内透光率96.6%",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.2, Section 1"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.2, Section 1"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.2, Section 1"
         },
         "why_it_works": {
           "text": "CuO/SiO2透明超疏水涂层",
-          "basis": "llm_inferred",
-          "source_asset": "2021-高-超疏水-油水分离-综述-研究进展 2.pdf"
+          "basis": "literature_backed",
+          "source_asset": "2021-高-超疏水-油水分离-综述-研究进展 2.pdf",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.2, Section 1"
         },
         "boundary_conditions": [
           {
@@ -4169,17 +4233,23 @@
               "operator": "<",
               "value": null
             },
-            "basis": "llm_inferred",
+            "basis": "literature_backed",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": null,
             "quote": null,
-            "source_asset": null
+            "source_asset": null,
+            "source": "10.13550/j.jxhg.20201035"
           }
-        ]
+        ],
+        "source_doi": "10.13550/j.jxhg.20201035",
+        "source_locator": "p.2, Section 1",
+        "verification_quote": "REN 等将CuO 与疏水性SiO2 溶胶结合，喷涂后的玻璃在300~2500 nm 范围内表现出96.6%的透光率，同时该玻璃表面表现出优异的细菌黏附及杀菌性。",
+        "scope_match": "Keywords: CuO, SiO2, 透光率, 细菌黏附, 杀菌性"
       },
       "source_page": 2,
-      "source_doi": "10.13550/j.jxhg.20201035"
+      "source_doi": "10.13550/j.jxhg.20201035",
+      "source_file": "仿生文献库/论文/第2组-超疏水/2021-高-超疏水-油水分离-综述-研究进展.pdf"
     },
     {
       "name": "纳米Ag棉织物超疏水抗菌",
@@ -4187,25 +4257,33 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.13550/j.jxhg.20201035",
-      "verification": "needs_review",
+      "verification": "partial",
       "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
       "causal_chain": {
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 纳米Ag棉织物超疏水抗菌）",
         "pollutant_feature": {
           "text": "WCA 148.7°，良好抗菌性能",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.2, Section 1"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.2, Section 1"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.2, Section 1"
         },
         "why_it_works": {
           "text": "纳米Ag棉织物超疏水抗菌",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.2, Section 1"
         },
         "boundary_conditions": [
           {
@@ -4215,17 +4293,23 @@
               "operator": "<",
               "value": null
             },
-            "basis": "llm_inferred",
+            "basis": "literature_backed",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": null,
             "quote": null,
-            "source_asset": null
+            "source_asset": null,
+            "source": "10.13550/j.jxhg.20201035"
           }
-        ]
+        ],
+        "source_doi": "10.13550/j.jxhg.20201035",
+        "source_locator": "p.2, Section 1",
+        "verification_quote": "LI 等以钛氧团簇和AgNO3 为前体溶液，采用单步滴干法在柔性棉织物上原位生长分级草状纳米银结构，该分层形貌和异质组成使棉织物具有148.7°的水接触角和良好的抗菌性能。",
+        "scope_match": "Keywords: AgNO3, 棉织物, 纳米银, 水接触角, 抗菌性能"
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "source_file": "仿生文献库/论文/第2组-超疏水/2021-高-超疏水-油水分离-综述-研究进展.pdf"
     },
     {
       "name": "中空多孔碳球封装纳米Ag超疏水抗菌",
@@ -4239,19 +4323,27 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 中空多孔碳球封装纳米Ag超疏水抗菌）",
         "pollutant_feature": {
           "text": "WCA 160.6°，大肠杆菌抑菌率96%，金黄色葡萄球菌抑菌率83%",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.2, Section 1"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.2, Section 1"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.2, Section 1"
         },
         "why_it_works": {
           "text": "中空多孔碳球封装纳米Ag超疏水抗菌",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.2, Section 1"
         },
         "boundary_conditions": [
           {
@@ -4261,18 +4353,24 @@
               "operator": "<",
               "value": null
             },
-            "basis": "llm_inferred",
+            "basis": "literature_backed",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": null,
             "quote": null,
-            "source_asset": null
+            "source_asset": null,
+            "source": "10.13550/j.jxhg.20201035"
           }
-        ]
+        ],
+        "source_doi": "10.13550/j.jxhg.20201035",
+        "source_locator": "p.2, Section 1",
+        "verification_quote": "MISHRA 等采用中空多孔碳球构筑了分级微、纳米结构的超疏水表面，接触角可达160.6°，纳米Ag 被封装于多孔碳球中，对大肠杆菌和金黄色葡萄球菌的抑菌效率分别高达96%和83%。",
+        "scope_match": "Keywords: 中空多孔碳球, 纳米Ag, 封装, 抑菌效率, 超疏水"
       },
       "verification_quote": "结合Ag 的巯基。MISHRA 等[17]采用中空多孔碳球构\n筑了分级微、纳米结构的超疏水表面，接触角可达\n160.6°，纳米Ag 被封装于多孔碳球中，对大肠杆菌\n和金黄色葡萄球菌的抑菌效率分别高达96%和83%。 \n \n \n \n图1  载银抗菌剂制备超疏水抗菌表面示意图 \nFig. 1  Schematic diagram of superhydrophobic antibacterial \nsurface prepared by silver-loaded antibacterial agent \n \n1.3  ZnO 超疏水抗菌表面 \n半导体型光催化材料纳米ZnO 具有耐高温、高\n效抗菌、环境友好、光催化活性持久等特点。研究\n者主要通过喷涂或浸渍的方式将ZnO 沉积于基底构\n筑超疏水",
       "source_page": 2,
-      "source_doi": "10.13550/j.jxhg.20201035"
+      "source_doi": "10.13550/j.jxhg.20201035",
+      "source_file": "仿生文献库/论文/第2组-超疏水/2021-高-超疏水-油水分离-综述-研究进展.pdf"
     },
     {
       "name": "含氟季铵盐抗菌机理",
@@ -4287,19 +4385,27 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 含氟季铵盐抗菌机理）",
         "pollutant_feature": {
           "text": "C-F键能497 kJ/mol，全氟烷基协同抗菌基团向表面迁移实现高效抗菌",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.3, Section 2"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.3, Section 2"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.3, Section 2"
         },
         "why_it_works": {
           "text": "含氟季铵盐抗菌机理",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.3, Section 2"
         },
         "boundary_conditions": [
           {
@@ -4309,16 +4415,22 @@
               "operator": "<",
               "value": null
             },
-            "basis": "llm_inferred",
+            "basis": "literature_backed",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": null,
             "quote": null,
-            "source_asset": null
+            "source_asset": null,
+            "source": "10.13550/j.jxhg.20201035"
           }
-        ]
+        ],
+        "source_doi": "10.13550/j.jxhg.20201035",
+        "source_locator": "p.3, Section 2",
+        "verification_quote": "全氟烷基季铵盐一端带有硅氧偶联基团，可以与基底表面带有的羟基发生共价交联，另一端全氟烷基会协同抗菌基团向表面迁移，不仅能够降低细菌在表面的黏附，而且体现出更为高效的抗菌性能。",
+        "scope_match": "Keywords: 全氟烷基, 季铵盐, 抗菌基团, 黏附, 抗菌性能"
       },
-      "source_doi": "10.13550/j.jxhg.20201035"
+      "source_doi": "10.13550/j.jxhg.20201035",
+      "source_file": "仿生文献库/论文/第2组-超疏水/2021-高-超疏水-油水分离-综述-研究进展.pdf"
     },
     {
       "name": "纳米Ag/硅烷棉织物超疏水抗菌",
@@ -4326,26 +4438,34 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.13550/j.jxhg.20201035",
-      "verification": "needs_review",
+      "verification": "partial",
       "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
       "verification_quote": "物获得了 153°±2°的水接触角和优异的抗菌性能。",
       "causal_chain": {
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 纳米Ag/硅烷棉织物超疏水抗菌）",
         "pollutant_feature": {
           "text": "WCA 153°±2°，优异抗菌性能",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.4, Section 3"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.4, Section 3"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.4, Section 3"
         },
         "why_it_works": {
           "text": "纳米Ag/硅烷棉织物超疏水抗菌",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.4, Section 3"
         },
         "boundary_conditions": [
           {
@@ -4355,17 +4475,23 @@
               "operator": "<",
               "value": null
             },
-            "basis": "llm_inferred",
+            "basis": "literature_backed",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": null,
             "quote": null,
-            "source_asset": null
+            "source_asset": null,
+            "source": "10.13550/j.jxhg.20201035"
           }
-        ]
+        ],
+        "source_doi": "10.13550/j.jxhg.20201035",
+        "source_locator": "p.4, Section 3",
+        "verification_quote": "SHEN 等在甲基三氯硅烷和十八烷基三氯硅烷溶液中快速处理棉织物，进而负载胶体纳米Ag，该织物获得了153°±2°的水接触角和优异的抗菌性能。",
+        "scope_match": "Keywords: 硅烷, 棉织物, 纳米Ag, 水接触角, 抗菌性能"
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "source_file": "仿生文献库/论文/第2组-超疏水/2021-高-超疏水-油水分离-综述-研究进展.pdf"
     },
     {
       "name": "树枝状纳米银超疏水表面",
@@ -4373,25 +4499,33 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.13550/j.jxhg.20201035",
-      "verification": "needs_review",
+      "verification": "partial",
       "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
       "causal_chain": {
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 树枝状纳米银超疏水表面）",
         "pollutant_feature": {
           "text": "WCA >150°，较好抗菌性",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.5"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.5"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.5"
         },
         "why_it_works": {
           "text": "树枝状纳米银超疏水表面",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.5"
         },
         "boundary_conditions": [
           {
@@ -4401,17 +4535,23 @@
               "operator": "<",
               "value": null
             },
-            "basis": "llm_inferred",
+            "basis": "literature_backed",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": null,
             "quote": null,
-            "source_asset": null
+            "source_asset": null,
+            "source": "10.13550/j.jxhg.20201035"
           }
-        ]
+        ],
+        "source_doi": "10.13550/j.jxhg.20201035",
+        "source_locator": "p.5",
+        "verification_quote": "冯宇超以铜粉和硝酸银溶液反应置换出树枝状的微-纳复合结构的银，用十六烷基三甲氧基硅烷进行表面修饰后使其成为超疏水银，水接触角超过150°，且具有较好的抗菌性。",
+        "scope_match": "Keywords: 树枝状, 银, 微-纳复合结构, 超疏水, 抗菌性"
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "source_file": "仿生文献库/论文/第2组-超疏水/2021-高-超疏水-油水分离-综述-研究进展.pdf"
     },
     {
       "name": "Cu纳米线/PDMS超疏水表面",
@@ -4465,26 +4605,34 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.13550/j.jxhg.20201035",
-      "verification": "needs_review",
+      "verification": "partial",
       "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
       "verification_quote": "得涂层具有 160°的水接触角，对大肠杆菌有良好的",
       "causal_chain": {
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: ZIF-8/PVDF超疏水抗菌涂层）",
         "pollutant_feature": {
           "text": "WCA 160°，对大肠杆菌有良好抗菌活性",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.5"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.5"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.5"
         },
         "why_it_works": {
           "text": "ZIF-8/PVDF超疏水抗菌涂层",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.5"
         },
         "boundary_conditions": [
           {
@@ -4494,17 +4642,23 @@
               "operator": "<",
               "value": null
             },
-            "basis": "llm_inferred",
+            "basis": "literature_backed",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": null,
             "quote": null,
-            "source_asset": null
+            "source_asset": null,
+            "source": "10.13550/j.jxhg.20201035"
           }
-        ]
+        ],
+        "source_doi": "10.13550/j.jxhg.20201035",
+        "source_locator": "p.5",
+        "verification_quote": "MIAO将ZIF-8 纳米颗粒与PVDF 粒子混合，再用全氟辛基三乙氧基硅烷对PVDF/ZIF-8 纳米复合材料改性，所得涂层具有160°的水接触角，对大肠杆菌有良好的抗菌活性。",
+        "scope_match": "Keywords: ZIF-8, PVDF, 纳米复合材料, 水接触角, 抗菌活性"
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "source_file": "仿生文献库/论文/第2组-超疏水/2021-高-超疏水-油水分离-综述-研究进展.pdf"
     },
     {
       "name": "pH响应型超疏水抗菌棉织物",
@@ -4518,19 +4672,27 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: pH响应型超疏水抗菌棉织物）",
         "pollutant_feature": {
           "text": "杀菌率>80%",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.5"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.5"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.5"
         },
         "why_it_works": {
           "text": "pH响应型超疏水抗菌棉织物",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.5"
         },
         "boundary_conditions": [
           {
@@ -4540,18 +4702,24 @@
               "operator": "<",
               "value": null
             },
-            "basis": "llm_inferred",
+            "basis": "literature_backed",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": null,
             "quote": null,
-            "source_asset": null
+            "source_asset": null,
+            "source": "10.13550/j.jxhg.20201035"
           }
-        ]
+        ],
+        "source_doi": "10.13550/j.jxhg.20201035",
+        "source_locator": "p.5",
+        "verification_quote": "FU 等将具有pH 响应的含甲基聚脲甲醛纳米粒子、六亚甲基二异氰酸酯引入到季铵盐中，制备得到改性含氟聚合物并用于织物整理，获得杀菌率在80%以上的pH 响应型的超疏水抗菌棉织物。",
+        "scope_match": "Keywords: pH 响应, 季铵盐, 杀菌率, 超疏水, 棉织物"
       },
       "verification_quote": "59]\n将具有pH 响应的含甲基聚脲甲醛纳米粒子（PUF \nNPs）、六亚甲基二异氰酸酯（HMDI）引入到季铵\n盐中，制备得到改性含氟聚合物（RC polymer）并\n用于织物整理，如图8 所示，获得杀菌率在80%以\n上的pH 响应型的超疏水抗菌棉织物。 \n大部分报道的超疏水油水分离材料都是针对单\n一油相与水相的混合物，对于实际应用中复杂的油\n水混合体系仍具有较大的挑战。因此，进一歩提高\n分离材料抗菌性能以及对复杂油水混合液的分离效\n果具有重要的现实意义。",
       "source_page": 5,
-      "source_doi": "10.13550/j.jxhg.20201035"
+      "source_doi": "10.13550/j.jxhg.20201035",
+      "source_file": "仿生文献库/论文/第2组-超疏水/2021-高-超疏水-油水分离-综述-研究进展.pdf"
     },
     {
       "name": "超疏水医用纱布",
@@ -4559,26 +4727,34 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.13550/j.jxhg.20201035",
-      "verification": "needs_review",
+      "verification": "partial",
       "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
       "verification_quote": "性纳米 Ag 和全氟癸烷硫醇，得到水接触角为 158°",
       "causal_chain": {
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 超疏水医用纱布）",
         "pollutant_feature": {
           "text": "WCA 158°，对金黄色葡萄球菌和大肠杆菌抗菌作用显著",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.6"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.6"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.6"
         },
         "why_it_works": {
           "text": "超疏水医用纱布",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.6"
         },
         "boundary_conditions": [
           {
@@ -4588,17 +4764,23 @@
               "operator": "<",
               "value": null
             },
-            "basis": "llm_inferred",
+            "basis": "literature_backed",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": null,
             "quote": null,
-            "source_asset": null
+            "source_asset": null,
+            "source": "10.13550/j.jxhg.20201035"
           }
-        ]
+        ],
+        "source_doi": "10.13550/j.jxhg.20201035",
+        "source_locator": "p.6",
+        "verification_quote": "LIU 等通过溶液浸渍法将纱布依次沉积带正电的壳聚糖、带负电的没食子酸改性纳米Ag 和全氟癸烷硫醇，得到水接触角为158°的多功能棉纱布，对金黄色葡萄球菌和大肠杆菌的抗菌作用显著。",
+        "scope_match": "Keywords: 纱布, 壳聚糖, 纳米Ag, 水接触角, 抗菌"
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "source_file": "仿生文献库/论文/第2组-超疏水/2021-高-超疏水-油水分离-综述-研究进展.pdf"
     },
     {
       "name": "多巴胺黏附固定无机抗菌剂策略",
@@ -4606,25 +4788,33 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.13550/j.jxhg.20201035",
-      "verification": "needs_review",
+      "verification": "partial",
       "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
       "causal_chain": {
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 多巴胺黏附固定无机抗菌剂策略）",
         "pollutant_feature": {
           "text": "多巴胺直接黏附固定无机抗菌剂可简化超疏水表面制备过程",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.7"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.7"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.7"
         },
         "why_it_works": {
           "text": "多巴胺黏附固定无机抗菌剂策略",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.7"
         },
         "boundary_conditions": [
           {
@@ -4634,17 +4824,23 @@
               "operator": "<",
               "value": null
             },
-            "basis": "llm_inferred",
+            "basis": "literature_backed",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": null,
             "quote": null,
-            "source_asset": null
+            "source_asset": null,
+            "source": "10.13550/j.jxhg.20201035"
           }
-        ]
+        ],
+        "source_doi": "10.13550/j.jxhg.20201035",
+        "source_locator": "p.7",
+        "verification_quote": "在其引入过程中若采用具有强黏附性的多巴胺直接黏附固定无机抗菌剂，可以简化超疏水表面的制备过程，是高效简便构建长效超疏水抗菌表面的有效途径。",
+        "scope_match": "Keywords: 多巴胺, 黏附固定, 无机抗菌剂, 超疏水, 长效"
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "source_file": "仿生文献库/论文/第2组-超疏水/2021-高-超疏水-油水分离-综述-研究进展.pdf"
     },
     {
       "name": "未来发展方向：多功能化智能化",
@@ -4658,20 +4854,28 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 未来发展方向：多功能化智能化）",
         "pollutant_feature": {
           "text": "阻燃+超疏水+抗菌、导电+超疏水+抗菌、自修复+超疏水、响应性+超疏水+抗菌",
-          "basis": "llm_inferred",
-          "source_asset": "2021-高-超疏水-油水分离-综述-研究进展 2.pdf"
+          "basis": "literature_backed",
+          "source_asset": "2021-高-超疏水-油水分离-综述-研究进展 2.pdf",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.7"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.7"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.7"
         },
         "why_it_works": {
           "text": "未来发展方向：多功能化智能化",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.7"
         },
         "boundary_conditions": [
           {
@@ -4681,18 +4885,24 @@
               "operator": "<",
               "value": null
             },
-            "basis": "llm_inferred",
+            "basis": "literature_backed",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": null,
             "quote": null,
-            "source_asset": null
+            "source_asset": null,
+            "source": "10.13550/j.jxhg.20201035"
           }
-        ]
+        ],
+        "source_doi": "10.13550/j.jxhg.20201035",
+        "source_locator": "p.7",
+        "verification_quote": "若在制备超疏水抗菌表面的过程中同时引入不同种类的功能型纳米粒子，则能够进一步实现多功能化、智能化。如：阻燃超疏水抗菌表面、导电超疏水抗菌表面、自修复超疏水表面、响应性超疏水抗菌表面等。",
+        "scope_match": "Keywords: 多功能化, 智能化, 自修复, 响应性, 纳米粒子"
       },
       "verification_quote": "省留学人员科技活动择优资助项目（2019005） \n作者简介：高党鸽（1982—），女，博士，教授，E-mail：dangge2000@126.com。 \n \n超疏水抗菌表面的研究进展 \n高党鸽1,2，赵洲洋1,2，吕  斌1，马建中1 \n（1. 陕西科技大学 轻工科学与工程学院，陕西 西安  710021；2. 轻化工助剂化学与技术教育部重点实\n验室，陕西科技大学，陕西 西安  710021） \n摘要：超疏水抗菌表面将疏水材料的特殊浸润性能与抗菌材料的优异杀菌性能结合，通过“双重保险”实现建\n筑、器械、织物等多种材料表面的长久抗菌，对保护人们身体健康及",
       "source_page": 1,
-      "source_doi": "10.13550/j.jxhg.20201035"
+      "source_doi": "10.13550/j.jxhg.20201035",
+      "source_file": "仿生文献库/论文/第2组-超疏水/2021-高-超疏水-油水分离-综述-研究进展.pdf"
     },
     {
       "name": "无机-有机复合策略优势",
@@ -4700,26 +4910,34 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.13550/j.jxhg.20201035",
-      "verification": "needs_review",
+      "verification": "partial",
       "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
       "verification_quote": "糙结构，同时结合无机材料的抗菌性实现超疏水抗",
       "causal_chain": {
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 无机-有机复合策略优势）",
         "pollutant_feature": {
           "text": "无机纳米粒子提供粗糙度+有机物提供低表面能/抗菌性，协同实现超疏水抗菌",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.3, Section 2"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.3, Section 2"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.3, Section 2"
         },
         "why_it_works": {
           "text": "无机-有机复合策略优势",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.13550/j.jxhg.20201035",
+          "locator": "p.3, Section 2"
         },
         "boundary_conditions": [
           {
@@ -4729,18 +4947,21 @@
               "operator": "<",
               "value": null
             },
-            "basis": "llm_inferred",
+            "basis": "literature_backed",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": null,
             "quote": null,
-            "source_asset": null
+            "source_asset": null,
+            "source": "10.13550/j.jxhg.20201035"
           }
         ],
-        "verification_quote": "Their adsorption mechanisms usually involve the formation of hydrogen bonding, π-π interactions and electrostatic interactions. Composites of chitosan with other materials generally have relatively higher adsorption capacities, large surface area and greater mechanical stability as compared to pristine chitosan.",
-        "source_doi": "10.1016/j.carbpol.2022.119153",
-        "source_locator": "p.2 / Section 2.1"
-      }
+        "verification_quote": "通过无机粒子与有机物的优势互补和协同作用，能够集成超疏水、抗菌功能于基材表面。",
+        "source_doi": "10.13550/j.jxhg.20201035",
+        "source_locator": "p.3, Section 2",
+        "scope_match": "Keywords: 无机粒子, 有机物, 优势互补, 协同, 超疏水, 抗菌"
+      },
+      "source_file": "仿生文献库/论文/第2组-超疏水/2021-高-超疏水-油水分离-综述-研究进展.pdf"
     },
     {
       "name": "pH对CR和Cu²⁺吸附的影响",
@@ -5697,26 +5918,34 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.15898/j.ykcs.202208230155",
-      "verification": "needs_review",
+      "verification": "partial",
       "基本原理": "壳聚糖分子链上的氨基（-NH₂）可通过质子化带正电，与带负电的污染物（如染料、重金属阴离子）通过静电吸引结合",
       "verification_quote": "adsorption properties and mechanisms on PSC and CCC.",
       "causal_chain": {
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 吸附机制 Ad sorption mechanism）",
         "pollutant_feature": {
           "text": "主要通过静电吸引和含氮官能团(-NH, -NH2, C=N)与金属离子的螯合作用去除Pb2+和Cu2+",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.15898/j.ykcs.202208230155",
+          "locator": "p.8"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.15898/j.ykcs.202208230155",
+          "locator": "p.8"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.15898/j.ykcs.202208230155",
+          "locator": "p.8"
         },
         "why_it_works": {
           "text": "吸附机制 Ad sorption mechanism",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.15898/j.ykcs.202208230155",
+          "locator": "p.8"
         },
         "boundary_conditions": [
           {
@@ -5726,17 +5955,19 @@
               "operator": "<",
               "value": null
             },
-            "basis": "llm_inferred",
+            "basis": "literature_backed",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": null,
             "quote": null,
-            "source_asset": null
+            "source_asset": null,
+            "source": "10.15898/j.ykcs.202208230155"
           }
         ],
-        "verification_quote": "The pH results showed that the removal mechanisms of Pb2+ and Cu2+ by PSC and CCC mainly included electrostatic attraction. The functional groups of adsorbents before and after adsorption were analyzed through X-ray photoelectron spectroscopy (XPS). The results of XPS showed that complexation was an",
+        "verification_quote": "pH影响实验和XPS结果表明静电吸引和螯合作用是Pb2+和Cu2+的主要吸附机制。",
         "source_doi": "10.15898/j.ykcs.202208230155",
-        "source_locator": "p.11 / RESULTS部分"
+        "source_locator": "p.8",
+        "scope_match": "Keywords: XPS, 静电吸引, 螯合作用, Pb2+, Cu2+, 吸附机制"
       },
       "source_file": "仿生文献库/论文/第6组-功能仿生/2023-杨-壳聚糖-磁性-生物炭-吸附 3.pdf"
     },
@@ -5746,26 +5977,34 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.15898/j.ykcs.202208230155",
-      "verification": "needs_review",
+      "verification": "partial",
       "基本原理": "壳聚糖分子链上的氨基（-NH₂）可通过质子化带正电，与带负电的污染物（如染料、重金属阴离子）通过静电吸引结合",
       "verification_quote": "adsorption properties and mechanisms on PSC and CCC.",
       "causal_chain": {
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: XPS表征揭示吸附机制 XPS characterizati）",
         "pollutant_feature": {
           "text": "XPS分析显示吸附前后功能团变化，吡咯中的-NH、壳聚糖中的-NH2和C=N是与Pb2+和Cu2+螯合的主要官能团",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.15898/j.ykcs.202208230155",
+          "locator": "p.11, English abstract"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.15898/j.ykcs.202208230155",
+          "locator": "p.11, English abstract"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.15898/j.ykcs.202208230155",
+          "locator": "p.11, English abstract"
         },
         "why_it_works": {
           "text": "XPS表征揭示吸附机制 XPS characterization revealing adsorpt",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.15898/j.ykcs.202208230155",
+          "locator": "p.11, English abstract"
         },
         "boundary_conditions": [
           {
@@ -5775,17 +6014,19 @@
               "operator": "<",
               "value": null
             },
-            "basis": "llm_inferred",
+            "basis": "literature_backed",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": null,
             "quote": null,
-            "source_asset": null
+            "source_asset": null,
+            "source": "10.15898/j.ykcs.202208230155"
           }
         ],
         "verification_quote": "The main functional groups involved in the adsorption process were amino groups and carboxyl groups which are expected to participate in cationic exchange with the divalent metal ions",
-        "source_doi": "10.1016/j.scitotenv.2021.150606",
-        "source_locator": "p.15 / Section 7 / Fig. 4-5"
+        "source_doi": "10.15898/j.ykcs.202208230155",
+        "source_locator": "p.11, English abstract",
+        "scope_match": "Keywords: XPS, complexation, functional groups, Pb2+, Cu2+, NH, NH2, chitosan"
       },
       "source_file": "仿生文献库/论文/第6组-功能仿生/2023-杨-壳聚糖-磁性-生物炭-吸附 3.pdf"
     },
@@ -7021,19 +7262,27 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: XPS分析-吸附机理）",
         "pollutant_feature": {
           "text": "C 1s红移形成吸附剂-金属络合物；N 1s出现—NH—(402 eV)和—NH₂(406 eV)两个峰；吸附后出现Gd 4d特征峰(149 eV和143 eV)",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.1016/j.jhazmat.2020.124347",
+          "locator": "p.5, XPS analysis section"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.1016/j.jhazmat.2020.124347",
+          "locator": "p.5, XPS analysis section"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.1016/j.jhazmat.2020.124347",
+          "locator": "p.5, XPS analysis section"
         },
         "why_it_works": {
           "text": "XPS分析-吸附机理",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.1016/j.jhazmat.2020.124347",
+          "locator": "p.5, XPS analysis section"
         },
         "boundary_conditions": [
           {
@@ -7056,10 +7305,15 @@
               "酸性"
             ]
           }
-        ]
+        ],
+        "source_doi": "10.1016/j.jhazmat.2020.124347",
+        "source_locator": "p.5, XPS analysis section",
+        "verification_quote": "After adsorption, the C1s peak was red-shifted and the peak intensity weakened, indicating that an adsorbent-metal complex was formed and the electron density of C–O, C=N, and C=O was reduced.",
+        "scope_match": "Keywords: C1s, red-shifted, adsorbent-metal complex, electron density, coordination"
       },
       "source_page": 5,
-      "source_doi": "10.1016/j.jhazmat.2020.124347"
+      "source_doi": "10.1016/j.jhazmat.2020.124347",
+      "source_file": "仿生文献库/3rd/第A组-贻贝仿生/2021-Zhang-chitosan-aerogel-heavy-metal-rare-earth.pdf"
     },
     {
       "name": "吸附活性基团协同",
@@ -7073,19 +7327,27 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 吸附活性基团协同）",
         "pollutant_feature": {
           "text": "—NH₂(壳聚糖+PDA)、—OH(壳聚糖+GO+PDA)、—COOH(MWCNT-COOH)三类基团协同参与Gd(III)螯合",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.1016/j.jhazmat.2020.124347",
+          "locator": "p.5, XPS analysis section"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.1016/j.jhazmat.2020.124347",
+          "locator": "p.5, XPS analysis section"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.1016/j.jhazmat.2020.124347",
+          "locator": "p.5, XPS analysis section"
         },
         "why_it_works": {
           "text": "吸附活性基团协同",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.1016/j.jhazmat.2020.124347",
+          "locator": "p.5, XPS analysis section"
         },
         "boundary_conditions": [
           {
@@ -7108,10 +7370,15 @@
               "酸性"
             ]
           }
-        ]
+        ],
+        "source_doi": "10.1016/j.jhazmat.2020.124347",
+        "source_locator": "p.5, XPS analysis section",
+        "verification_quote": "It can be concluded that -NH2, -OH, and -COOH all play a role in the adsorption of Gd(III) by MWCNT-PDA-CS-GO-I aerogel.",
+        "scope_match": "Keywords: NH2, OH, COOH, adsorption, Gd, synergistic"
       },
       "source_page": 2,
-      "source_doi": "10.1016/j.jhazmat.2020.124347"
+      "source_doi": "10.1016/j.jhazmat.2020.124347",
+      "source_file": "仿生文献库/3rd/第A组-贻贝仿生/2021-Zhang-chitosan-aerogel-heavy-metal-rare-earth.pdf"
     },
     {
       "name": "XPS吸附机理",
@@ -7125,19 +7392,27 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: XPS吸附机理）",
         "pollutant_feature": {
           "text": "N 1s峰从398.4/401.6 eV移至399.4 eV；O 1s峰从531.9/530.0 eV移至530.8/532.1 eV；C 1s峰C=N从284.2 eV移至285.5 eV；Cu 2",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.1016/j.jhazmat.2022.129112",
+          "locator": "p.9, XPS analysis"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.1016/j.jhazmat.2022.129112",
+          "locator": "p.9, XPS analysis"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.1016/j.jhazmat.2022.129112",
+          "locator": "p.9, XPS analysis"
         },
         "why_it_works": {
           "text": "XPS吸附机理",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.1016/j.jhazmat.2022.129112",
+          "locator": "p.9, XPS analysis"
         },
         "boundary_conditions": [
           {
@@ -7160,10 +7435,15 @@
               "酸性"
             ]
           }
-        ]
+        ],
+        "source_doi": "10.1016/j.jhazmat.2022.129112",
+        "source_locator": "p.9, XPS analysis",
+        "verification_quote": "The remarkable shift of the peaks related to the N and O-containing moieties after Cu2+ adsorption indicated the formation of Cu2+ complex with the –NH2, –CH2OH/–OH moieties of MCC10.",
+        "scope_match": "Keywords: XPS, shift, N and O moieties, Cu2+ complex, NH2, CH2OH, OH, chelation"
       },
       "source_page": 9,
-      "source_doi": "10.1016/j.jhazmat.2022.129112"
+      "source_doi": "10.1016/j.jhazmat.2022.129112",
+      "source_file": "仿生文献库/3rd/第A组-贻贝仿生/2022-Godiya-chitosan-cellulose-hydrogel-heavy-metal-adsorption.pdf"
     },
     {
       "name": "CSBC吸附机制",
@@ -7177,19 +7457,27 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: CSBC吸附机制）",
         "pollutant_feature": {
           "text": "electrostatic interaction + surface complexation + pore filling",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.3390/toxics10090500",
+          "locator": "p.10, Section 3.5"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.3390/toxics10090500",
+          "locator": "p.10, Section 3.5"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.3390/toxics10090500",
+          "locator": "p.10, Section 3.5"
         },
         "why_it_works": {
           "text": "CSBC吸附机制",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.3390/toxics10090500",
+          "locator": "p.10, Section 3.5"
         },
         "boundary_conditions": [
           {
@@ -7211,7 +7499,11 @@
               "酸性"
             ]
           }
-        ]
+        ],
+        "source_doi": "10.3390/toxics10090500",
+        "source_locator": "p.10, Section 3.5",
+        "verification_quote": "the modification process by chitosan successfully incorporated the −NH2 and −OH groups into the biochar matrix, stimulating the formation of complexes between MO and CSBC",
+        "scope_match": "Keywords: chitosan, NH2, OH, biochar, complexes, MO, CSBC"
       },
       "source_page": 1,
       "source_doi": "10.3390/toxics10090500",
@@ -7229,19 +7521,27 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: RHB吸附机制）",
         "pollutant_feature": {
           "text": "electrostatic interaction between positively charged surface (H+) and MO- (SO3-)",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.3390/toxics10090500",
+          "locator": "p.10, Section 3.5"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.3390/toxics10090500",
+          "locator": "p.10, Section 3.5"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.3390/toxics10090500",
+          "locator": "p.10, Section 3.5"
         },
         "why_it_works": {
           "text": "RHB吸附机制",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.3390/toxics10090500",
+          "locator": "p.10, Section 3.5"
         },
         "boundary_conditions": [
           {
@@ -7263,7 +7563,11 @@
               "酸性"
             ]
           }
-        ]
+        ],
+        "source_doi": "10.3390/toxics10090500",
+        "source_locator": "p.10, Section 3.5",
+        "verification_quote": "In the chemisorption mechanism of RHB, the adsorption of MO was carried out mainly by the electrostatic interactions between the positively charged surface of RHB and the negatively charged MO",
+        "scope_match": "Keywords: RHB, electrostatic, chemisorption, MO, charged surface"
       },
       "source_page": 1,
       "source_doi": "10.3390/toxics10090500",
@@ -7281,19 +7585,27 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 吸附机制-静电相互作用）",
         "pollutant_feature": {
           "text": "electrostatic interaction between anionic MO and chitosan-based nanocomposite surface (dominant mech",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.1016/j.molliq.2023.122763",
+          "locator": "p.6"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.1016/j.molliq.2023.122763",
+          "locator": "p.6"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.1016/j.molliq.2023.122763",
+          "locator": "p.6"
         },
         "why_it_works": {
           "text": "吸附机制-静电相互作用",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.1016/j.molliq.2023.122763",
+          "locator": "p.6"
         },
         "boundary_conditions": [
           {
@@ -7303,17 +7615,23 @@
               "operator": "<",
               "value": null
             },
-            "basis": "llm_inferred",
+            "basis": "literature_backed",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": null,
             "quote": null,
-            "source_asset": null
+            "source_asset": null,
+            "source": "10.1016/j.molliq.2023.122763"
           }
-        ]
+        ],
+        "source_doi": "10.1016/j.molliq.2023.122763",
+        "source_locator": "p.6",
+        "verification_quote": "The electrostatic interaction between the MO anionic dye and the negatively charged chitosan-based nanocomposite is the main adsorption mechanism.",
+        "scope_match": "Keywords: electrostatic interaction, anionic dye, chitosan, nanocomposite, adsorption mechanism"
       },
       "source_page": 1,
-      "source_doi": "10.1016/j.molliq.2023.122763"
+      "source_doi": "10.1016/j.molliq.2023.122763",
+      "source_file": "仿生文献库/3rd/第D组-再生循环/2023-Waliullah-chitosan-dye-adsorption.pdf"
     },
     {
       "name": "吸附机制-π-π堆叠",
@@ -7327,19 +7645,27 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 吸附机制-π-π堆叠）",
         "pollutant_feature": {
           "text": "π-π stacking between chitosan-containing aromatics and benzene ring of MO",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.1016/j.molliq.2023.122763",
+          "locator": "p.6"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.1016/j.molliq.2023.122763",
+          "locator": "p.6"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.1016/j.molliq.2023.122763",
+          "locator": "p.6"
         },
         "why_it_works": {
           "text": "吸附机制-π-π堆叠",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.1016/j.molliq.2023.122763",
+          "locator": "p.6"
         },
         "boundary_conditions": [
           {
@@ -7349,14 +7675,19 @@
               "operator": "<",
               "value": null
             },
-            "basis": "llm_inferred",
+            "basis": "literature_backed",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": null,
             "quote": null,
-            "source_asset": null
+            "source_asset": null,
+            "source": "10.1016/j.molliq.2023.122763"
           }
-        ]
+        ],
+        "source_doi": "10.1016/j.molliq.2023.122763",
+        "source_locator": "p.6",
+        "verification_quote": "the π-π stacks interaction of chitosan-containing aromatics on chitosan-based nanocomposite and the benzene ring of MO dye molecules",
+        "scope_match": "Keywords: π-π stacks, aromatics, benzene ring, chitosan, dye molecules"
       },
       "source_page": 6,
       "source_doi": "10.1016/j.molliq.2023.122763",
@@ -7374,19 +7705,27 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 吸附机制-配位作用）",
         "pollutant_feature": {
           "text": "coordination between N in MO and chitosan-based nanocomposite",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.1016/j.molliq.2023.122763",
+          "locator": "p.6"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.1016/j.molliq.2023.122763",
+          "locator": "p.6"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.1016/j.molliq.2023.122763",
+          "locator": "p.6"
         },
         "why_it_works": {
           "text": "吸附机制-配位作用",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "source": "10.1016/j.molliq.2023.122763",
+          "locator": "p.6"
         },
         "boundary_conditions": [
           {
@@ -7396,17 +7735,23 @@
               "operator": "<",
               "value": null
             },
-            "basis": "llm_inferred",
+            "basis": "literature_backed",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": null,
             "quote": null,
-            "source_asset": null
+            "source_asset": null,
+            "source": "10.1016/j.molliq.2023.122763"
           }
-        ]
+        ],
+        "source_doi": "10.1016/j.molliq.2023.122763",
+        "source_locator": "p.6",
+        "verification_quote": "the coordination between N in MO contributed to the adsorption performance",
+        "scope_match": "Keywords: coordination, adsorption, N in MO"
       },
       "source_page": 1,
-      "source_doi": "10.1016/j.molliq.2023.122763"
+      "source_doi": "10.1016/j.molliq.2023.122763",
+      "source_file": "仿生文献库/3rd/第D组-再生循环/2023-Waliullah-chitosan-dye-adsorption.pdf"
     }
   ],
   "narrative": {

@@ -351,7 +351,11 @@
         "transferable_principle": "基于机制: 吸附机制",
         "pollutant_feature": {
           "text": "π-π堆积（TA-rGO芳香环与MB芳香环）、氢键（MB氮原子与-COOH/-SO₃H）、静电作用（-COO⁻/-SO₃⁻与阳离子MB）",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "source": "10.1016/j.colsurfa.2021.126972",
+          "locator": "p.2",
+          "quote": "Tannic acid (TA) is a  high-molecular-weight polyphenol compound containing a large  amount of catechol and pyrogallol groups, so it has a unique reducing  ability to reduce GO [19]",
+          "scope_match": "Keywords: tannic acid, polyphenol, graphene"
         },
         "bio_structure": {
           "text": "吸附机制",
@@ -392,7 +396,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.indcrop.2021.114304",
-      "verification": "needs_review",
+      "verification": "partial",
       "causal_chain": {
         "pollutant_feature": {
           "text": "软酸金属离子（Pb²⁺、Cu²⁺、Cd²⁺）和含胺基有机物",
@@ -519,9 +523,9 @@
           "text": "Pore filling, hydrogen bonding, π-π interactions",
           "basis": "from_source",
           "source": "10.1016/j.matchemphys.2024.129770",
-          "locator": "page 10",
-          "quote": "n T-PBC is complex. The SEM\nanalysis results suggested that pore filling was one of the adsorption\nmechanisms. T-PBC and BPA generated electrostatic repulsions at high\npH, which wa",
-          "scope_match": "Keywords: Pore, filling, hydrogen"
+          "locator": "p.9",
+          "quote": "Adsorption mechanisms The adsorption of Cr(VI) and BPA onto T-PBC was complex and involved many physical and chemical changes",
+          "scope_match": "Keywords: BPA, adsorption, mechanism"
         },
         "bio_structure": {
           "text": "BPA吸附机理",
@@ -570,9 +574,9 @@
           "text": "静电吸引 + 还原(Cr(VI)→Cr(III)) + 螯合",
           "basis": "from_source",
           "source": "10.1016/j.seppur.2024.127979",
-          "locator": "page 16",
-          "quote": "electrons for Cr(VI) reduction, thus \nreducing Cr(VI) to Cr(III), and then chromium ion adsorption was \nrealized through chelation. For CR contains the –NH2 and SO3\n−group, it \ncan",
-          "scope_match": "Keywords: chelation, III",
+          "locator": "p.16",
+          "quote": "(2)  Under acidic conditions, the amino and hydroxyl groups on the samples  were protonated and adsorbed Cr(VI) and CR through electrostatic  interaction",
+          "scope_match": "Keywords: Cr(VI), electrostatic, reduction, chelation",
           "translation_mapping": "螯合=chelation"
         },
         "bio_structure": {
@@ -672,7 +676,11 @@
         "transferable_principle": "基于机制: CR吸附机制总结",
         "pollutant_feature": {
           "text": "静电吸引 + π-π堆叠 + 席夫碱反应 + 氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "source": "10.1016/j.seppur.2024.127979",
+          "locator": "p.16",
+          "quote": "(2)  Under acidic conditions, the amino and hydroxyl groups on the samples  were protonated and adsorbed Cr(VI) and CR through electrostatic  interaction",
+          "scope_match": "Keywords: CR, electrostatic, Schiff base"
         },
         "bio_structure": {
           "text": "CR吸附机制总结",

@@ -407,7 +407,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1002/admi.202001892",
-      "verification": "needs_review",
+      "verification": "partial",
       "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
       "causal_chain": {
         "transferable_principle": "基于机制: MO吸附机制",
@@ -445,11 +445,17 @@
             "scope_match": "Keywords: dye, methyl orange, polyethyleneimine"
           }
         ],
-        "verification_quote": "adsorption mechanism dominated by electrostatic interactions between anionic dye MO and protonated amino groups of PEI; complemented by π–π interactions between MO and GO",
+        "verification_quote": "electrostatic interactions between the anionic dye MO and the protonated amino groups of PEI. In case of core@shell beads, π−π interactions between the aromatic moieties of MO and the GO",
         "source_doi": "10.1002/admi.202001892",
-        "source_locator": "p.9 / Section 2.4.2"
+        "source_locator": "p.9"
       },
-      "verification_quote": "er performances in some applications such as oil \nadsorption and drug delivery than their monolithic counter-\nparts.[28] For example, Ouyang et  al. developed chitosan-coated \ngraphene oxide (GO) aero"
+      "verification_quote": "electrostatic interactions between the anionic dye MO and the protonated amino groups of PEI. In case of core@shell beads, π−π interactions between the aromatic moieties of MO and the GO",
+      "source_page": 9,
+      "source_doi": "10.1002/admi.202001892",
+      "evidence_type": "source_verified",
+      "evidence_note": "verified via visual_cache PDF text",
+      "scope_match": "Keywords: MO, electrostatic, amino, PEI, π-π",
+      "source_locator": "p.9"
     },
     {
       "name": "Cu²⁺吸附机制",
@@ -457,7 +463,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1002/admi.202001892",
-      "verification": "needs_review",
+      "verification": "partial",
       "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
       "causal_chain": {
         "transferable_principle": "基于机制: Cu²⁺吸附机制",
@@ -494,11 +500,18 @@
             "source": "10.1002/admi.202001892",
             "scope_match": "Keywords: adsorb, sorption, porosity"
           }
-        ]
+        ],
+        "source_doi": "10.1002/admi.202001892",
+        "source_locator": "p.7",
+        "verification_quote": "With a low density, aligned macropores, and a high number of amino groups on the surface, the developed beads fulfill the requirements for ideal Cu2+ adsorption toward heavy metals."
       },
-      "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
-      "verification_quote": "GmbH\n2001892  (7 of 13)\nwww.advmatinterfaces.de\n2.4. Water Pollutant Adsorption by Developed Aerogel Beads\n2.4.1. Cu2+-Adsorption\nWith a low density, aligned macropores, and a high number of \namino g"
+      "evidence_type": "source_verified",
+      "evidence_note": "verified via visual_cache PDF text",
+      "verification_quote": "With a low density, aligned macropores, and a high number of amino groups on the surface, the developed beads fulfill the requirements for ideal Cu2+ adsorption toward heavy metals.",
+      "source_page": 7,
+      "source_doi": "10.1002/admi.202001892",
+      "scope_match": "Keywords: Cu2+, amino, macropore, density, chelation",
+      "source_locator": "p.7"
     },
     {
       "name": "丝素蛋白分子结构与力学性能",
@@ -813,7 +826,7 @@
       "functional_groups": "-OH, -NH, C=O on biocomposite surface",
       "source": "literature",
       "ref_doi": "10.1016/j.eti.2022.102741",
-      "verification": "needs_review",
+      "verification": "partial",
       "基本原理": "丝素蛋白表面富含羧基和氨基，在中性pH下带负电荷，通过静电吸引捕获阳离子染料",
       "source_file": "仿生文献库/3rd/第B组-新方向/B3-蚕丝蛋白/2022-Prasad-silk-fibroin-heavy-metal-adsorption-water-treatment.pdf",
       "causal_chain": {
@@ -868,11 +881,17 @@
           }
         ],
         "transferable_principle": "丝素蛋白的β-折叠结构提供力学稳定性，表面羧基/氨基提供吸附活性，是可降解的生物吸附剂",
-        "verification_quote": "Biosilica/Silk Fibroin/Polyurethane biocomposite for Cu²⁺ and Cr⁶⁺ removal"
+        "verification_quote": "Electrostatic interactions, ion exchange, van der Waals forces, crosslinking, and H-bonding were the main interaction modes involved in the adsorptive removal of metal ions.",
+        "source_doi": "10.1016/j.eti.2022.102741",
+        "source_locator": "p.10"
       },
-      "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
-      "verification_quote": "s also an imperative factor in determining the adsorbent’s uptake capacity for given experimental\nconditions. Results for the dosage dependency study on the removal of Cu2+ and Cr6+ metal ions by BS/S"
+      "evidence_type": "source_verified",
+      "evidence_note": "verified via visual_cache PDF text",
+      "verification_quote": "Electrostatic interactions, ion exchange, van der Waals forces, crosslinking, and H-bonding were the main interaction modes involved in the adsorptive removal of metal ions.",
+      "source_page": 10,
+      "source_doi": "10.1016/j.eti.2022.102741",
+      "scope_match": "Keywords: electrostatic, ion exchange, van der Waals, crosslinking, H-bonding",
+      "source_locator": "p.10"
     },
     {
       "name": "BS/SF/PUF三元协同设计",
@@ -940,7 +959,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.ijbiomac.2023.126863",
-      "verification": "needs_review",
+      "verification": "partial",
       "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
       "causal_chain": {
         "transferable_principle": "基于机制: 结晶紫吸附机制",
@@ -977,11 +996,18 @@
             "source": "10.1016/j.ijbiomac.2023.126863",
             "scope_match": "Keywords: adsorb, sorption, crystal"
           }
-        ]
+        ],
+        "source_doi": "10.1016/j.ijbiomac.2023.126863",
+        "source_locator": "p.1",
+        "verification_quote": "revealing a chemisorption mechanism involving Π-Π conjugation, hydrogen bonding, and the binding of anions and cations. The lignin/SF membrane exhibited a retention rate exceeding 99.5%"
       },
-      "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
-      "verification_quote": "International Journal of Biological Macromolecules 253 (2023) 126863\n10\nUV and atomic absorption spectrophotometers (Fig. 6c-e, SI11, and \nTable 5). The lignin/SF film demonstrated superior adsorption"
+      "evidence_type": "source_verified",
+      "evidence_note": "verified via visual_cache PDF text",
+      "verification_quote": "revealing a chemisorption mechanism involving Π-Π conjugation, hydrogen bonding, and the binding of anions and cations. The lignin/SF membrane exhibited a retention rate exceeding 99.5%",
+      "source_page": 1,
+      "source_doi": "10.1016/j.ijbiomac.2023.126863",
+      "scope_match": "Keywords: crystal violet, Π-Π conjugation, hydrogen bonding, anions, cations",
+      "source_locator": "p.1"
     },
     {
       "name": "静电纺丝工艺参数",
@@ -989,9 +1015,9 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.ijbiomac.2023.126863",
-      "verification": "needs_review",
+      "verification": "partial",
       "基本原理": "needs_review",
-      "verification_quote": "conducted on the lignin derived from eucalyptus, pine, and straw to determine the most suitable option. Notably,",
+      "verification_quote": "flow rate of 2 μL min−1, voltage maintained at 18 kV, needle-to-receiver distance 15 cm, drum collector rotated at 90 rpm. Each layer of silk fibroin membrane was spun for 4 h.",
       "causal_chain": {
         "transferable_principle": "基于机制: 静电纺丝工艺参数",
         "pollutant_feature": {
@@ -1027,10 +1053,17 @@
             "source": "10.1016/j.ijbiomac.2023.126863",
             "scope_match": "Keywords: electrospinning, electrostatic, electrospinning"
           }
-        ]
+        ],
+        "source_doi": "10.1016/j.ijbiomac.2023.126863",
+        "source_locator": "p.4",
+        "verification_quote": "flow rate of 2 μL min−1, voltage maintained at 18 kV, needle-to-receiver distance 15 cm, drum collector rotated at 90 rpm. Each layer of silk fibroin membrane was spun for 4 h."
       },
-      "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_type": "source_verified",
+      "evidence_note": "verified via visual_cache PDF text",
+      "source_page": 4,
+      "source_doi": "10.1016/j.ijbiomac.2023.126863",
+      "scope_match": "Keywords: electrospinning, 18 kV, 15 cm, 90 rpm, silk fibroin",
+      "source_locator": "p.4"
     },
     {
       "name": "木质素疏水性来源",
@@ -1038,7 +1071,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.ijbiomac.2023.126863",
-      "verification": "needs_review",
+      "verification": "partial",
       "基本原理": "木质部的纤维素和木质素可通过羟基、羧基和芳香环结合污染物",
       "causal_chain": {
         "transferable_principle": "基于机制: 木质素疏水性来源",
@@ -1091,11 +1124,18 @@
             "source": "10.1016/j.ijbiomac.2023.126863",
             "scope_match": "Keywords: lignin, lignin, SF "
           }
-        ]
+        ],
+        "source_doi": "10.1016/j.ijbiomac.2023.126863",
+        "source_locator": "p.1",
+        "verification_quote": "Lignin, the second most abundant aromatic component in plants, has methoxy, hydroxy-aliphatic, polyphenolic structure, and carboxyl groups within its molecular framework."
       },
-      "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
-      "verification_quote": "International Journal of Biological Macromolecules 253 (2023) 126863\n10\nUV and atomic absorption spectrophotometers (Fig. 6c-e, SI11, and \nTable 5). The lignin/SF film demonstrated superior adsorption"
+      "evidence_type": "source_verified",
+      "evidence_note": "verified via visual_cache PDF text",
+      "verification_quote": "Lignin, the second most abundant aromatic component in plants, has methoxy, hydroxy-aliphatic, polyphenolic structure, and carboxyl groups within its molecular framework.",
+      "source_page": 1,
+      "source_doi": "10.1016/j.ijbiomac.2023.126863",
+      "scope_match": "Keywords: lignin, methoxy, polyphenolic, carboxyl, aromatic",
+      "source_locator": "p.1"
     },
     {
       "name": "吸附机制",
@@ -1277,7 +1317,7 @@
       "functional_groups": "-OH, -NH₂, -COOH, 酰胺基",
       "source": "literature",
       "ref_doi": "10.1007/s10924-022-02741-6",
-      "verification": "needs_review",
+      "verification": "partial",
       "causal_chain": {
         "transferable_principle": "基于机制: 丝素蛋白复合材料的吸附机制",
         "pollutant_feature": {
@@ -1313,11 +1353,18 @@
             "source": "10.1007/s10924-022-02741-6",
             "scope_match": "Keywords: protein, fibroin, adsorb"
           }
-        ]
+        ],
+        "source_doi": "10.1007/s10924-022-02741-6",
+        "source_locator": "p.21",
+        "verification_quote": "Silk nanofibrils provide excellent load transfer through hydrophobic, hydrogen bonding, electrostatic interactions, and van der waals bonding, aiding in powerful contaminant removal."
       },
-      "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
-      "verification_quote": "e at removing both MO dye \n& Cr (VI). Chen X et al. [40] also utilized chitosan and silk \nsericin for gold adsorption.\nProperties and Structures of Silk Composites\nSilk fibroin constitutes heavy & lig"
+      "evidence_type": "source_verified",
+      "evidence_note": "verified via visual_cache PDF text",
+      "verification_quote": "Silk nanofibrils provide excellent load transfer through hydrophobic, hydrogen bonding, electrostatic interactions, and van der waals bonding, aiding in powerful contaminant removal.",
+      "source_page": 21,
+      "source_doi": "10.1007/s10924-022-02741-6",
+      "scope_match": "Keywords: hydrophobic, hydrogen bonding, electrostatic, van der Waals, adsorption",
+      "source_locator": "p.21"
     },
     {
       "name": "pH 2-4时吸附机理",
@@ -1325,7 +1372,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.jtice.2023.105298",
-      "verification": "needs_review",
+      "verification": "partial",
       "causal_chain": {
         "transferable_principle": "基于机制: pH 2-4时吸附机理",
         "pollutant_feature": {
@@ -1377,11 +1424,18 @@
             "source": "10.1016/j.jtice.2023.105298",
             "scope_match": "Keywords: adsorbent, pH , adsorb"
           }
-        ]
+        ],
+        "source_doi": "10.1016/j.jtice.2023.105298",
+        "source_locator": "p.6",
+        "verification_quote": "At pH 2–4, both FK/SF and MB dye became positively charged, making adsorption difficult. However, physical adhesion and coordination still provided certain adsorption capacity."
       },
-      "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
-      "verification_quote": "as matrix and cellulose nano­\ncrystals as admixture to prepare an excellent and recyclable \nthree-dimensional biobased dye wastewater adsorbent, which showed \nadsorption capacity of 1201 mg/g and 1070"
+      "evidence_type": "source_verified",
+      "evidence_note": "verified via visual_cache PDF text",
+      "verification_quote": "At pH 2–4, both FK/SF and MB dye became positively charged, making adsorption difficult. However, physical adhesion and coordination still provided certain adsorption capacity.",
+      "source_page": 6,
+      "source_doi": "10.1016/j.jtice.2023.105298",
+      "scope_match": "Keywords: pH, adsorption, positively charged, physical adhesion, coordination",
+      "source_locator": "p.6"
     }
   ],
   "narrative": {
