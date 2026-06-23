@@ -111,8 +111,7 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "重金属和有机物",
-          "basis": "from_source",
-          "source": "10.1002/advs.202103965"
+          "basis": "llm_inferred"
         },
         "bio_structure": {
           "text": "蜘蛛丝蛋白β-折叠结构和氨基酸序列",
@@ -471,23 +470,19 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "蛋白质、微生物等生物污损物",
-          "basis": "from_source",
-          "locator": "Wang2024 p.1 / Abstract"
+          "basis": "llm_inferred"
         },
         "bio_structure": {
           "text": "蜘蛛丝蛋白的β-折叠纳米晶体和无定形链段",
-          "basis": "from_source",
-          "locator": "Wang2024 p.1 / Abstract"
+          "basis": "llm_inferred"
         },
         "interaction": {
           "text": "亲水性表面排斥蛋白质吸附；力学弹性防止微裂纹藏污",
-          "basis": "from_source",
-          "locator": "Wang2024 p.1 / Abstract"
+          "basis": "llm_inferred"
         },
         "why_it_works": {
           "text": "蜘蛛丝的超亲水性和力学弹性使其具有天然抗污性能",
-          "basis": "from_source",
-          "locator": "p.9 / Section 3.3.2"
+          "basis": "llm_inferred"
         },
         "boundary_conditions": [
           {
@@ -856,10 +851,9 @@
         "transferable_principle": "基于机制: 铀酰离子配位化学",
         "pollutant_feature": {
           "text": "UO2^2+线性对称[O=U=O]^2+, U-O键长1.76 Å, 4-6个配体在赤道面配位, 四方/五方/六方双锥",
-          "basis": "from_source",
+          "basis": "llm_inferred",
           "scope_caveat": "uranium/actinide-specific chemistry, not general adsorption",
-          "source_tier": "literature",
-          "source": "10.1016/j.ccr.2023.215234"
+          "source_tier": "literature"
         },
         "bio_structure": {
           "text": "铀酰离子配位化学",
@@ -952,8 +946,7 @@
         "transferable_principle": "基于机制: 配体优化六大策略",
         "pollutant_feature": {
           "text": "(1)高含量开链AO (2)增加AO亲水性 (3)高柔性配体链 (4)合适PAO链长 (5)引入给电子取代基 (6)空间协同螯合",
-          "basis": "from_source",
-          "source": "10.1016/j.ccr.2023.215234"
+          "basis": "llm_inferred"
         },
         "bio_structure": {
           "text": "配体优化六大策略",
@@ -998,10 +991,9 @@
         "transferable_principle": "基于机制: 双功能协同策略",
         "pollutant_feature": {
           "text": "三种机制：(1)第二配体提供额外配位位点 (2)增强AO碱性→更强U(VI)络合 (3)酸性基团解离碳酸盐→释放UO2^2+",
-          "basis": "from_source",
+          "basis": "llm_inferred",
           "scope_caveat": "uranium/actinide-specific, requires uranium-containing source",
-          "source_tier": "literature",
-          "source": "10.1016/j.ccr.2023.215234"
+          "source_tier": "literature"
         },
         "bio_structure": {
           "text": "双功能协同策略",
@@ -1094,10 +1086,9 @@
         "transferable_principle": "基于机制: 电化学提取三阶段机理",
         "pollutant_feature": {
           "text": "电迁移→电吸附→电化学沉积; UO2^2+→U(IV)还原沉淀→突破热力学平衡",
-          "basis": "from_source",
+          "basis": "llm_inferred",
           "scope_caveat": "uranium-specific electrochemical reduction, not general adsorption",
-          "source_tier": "literature",
-          "source": "10.1016/j.ccr.2023.215234"
+          "source_tier": "literature"
         },
         "bio_structure": {
           "text": "电化学提取三阶段机理",
@@ -1146,8 +1137,7 @@
         "transferable_principle": "基于机制: MOF光催化协同机制",
         "pollutant_feature": {
           "text": "MOF SCU-19(POM+MOF)：三重机制——配体配位+光催化还原+部分化学还原",
-          "basis": "from_source",
-          "source": "10.1016/j.ccr.2023.215234"
+          "basis": "llm_inferred"
         },
         "bio_structure": {
           "text": "MOF光催化协同机制",

@@ -31,23 +31,19 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "软酸金属离子（Cu²⁺、Pb²⁺、Cd²⁺、Zn²⁺、Hg²⁺）",
-          "basis": "from_source",
-          "locator": "p.2 / Fig.2; Section 2.1"
+          "basis": "llm_inferred"
         },
         "bio_structure": {
           "text": "SRB细胞内的硫酸盐还原酶系统（DSR/APS还原酶）和细胞外聚合物（EPS）",
-          "basis": "from_source",
-          "locator": "Kumar2021 p.111555 / Abstract + Sec.1"
+          "basis": "llm_inferred"
         },
         "interaction": {
           "text": "SRB将SO₄²⁻还原为S²⁻（硫化物），S²⁻与软酸金属离子形成极难溶的金属硫化物（如HgS Ksp=10⁻⁵²、PbS Ksp=10⁻²⁸）",
-          "basis": "from_source",
-          "locator": "Kumar2021 p.111555 / Abstract + Sec.1"
+          "basis": "llm_inferred"
         },
         "why_it_works": {
           "text": "生物硫化物沉淀是去除软酸金属最有效的方法之一——金属硫化物溶度积极低，且SRB可在厌氧条件下持续产S²⁻",
-          "basis": "from_source",
-          "locator": "p.2 / Fig.2; Section 2.1"
+          "basis": "llm_inferred"
         },
         "boundary_conditions": [
           {
