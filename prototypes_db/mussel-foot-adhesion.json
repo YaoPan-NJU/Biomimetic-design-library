@@ -979,7 +979,7 @@
       "name": "PDA自聚合形成机制 PDA self-polymerization mechanism",
       "description": "氧化条件下羟基自发去质子化形成多巴胺醌，经亲核分子内环化变为leukodopaminechrome，再经进一步氧化重排形成5,6-二羟基吲哚或5,6-吲哚醌，最终通过2,3,4,7位分支反应交联形成类真黑素聚合物PDA",
       "functional_groups": "",
-      "source": "literature",
+      "source": "10.1039/d1cs00658d",
       "ref_doi": "10.1039/d1cs00658d",
       "verification": "verified",
       "基本原理": "PDA涂层可在几乎所有基底（金属、氧化物、聚合物、陶瓷）上形成均匀薄膜，保留邻苯二酚和胺基活性位点，同时提供粘附力",
@@ -996,7 +996,7 @@
         }
       ],
       "source_file": "仿生文献库/2nd/第12组-仿生案例/2007-Lee-mussel-inspired-surface-chemistry-coatings.pdf",
-      "verification_quote": "dopamine self-polymerization into thin, surface-adherent polydopamine films onto a wide range of inorganic and organic materials",
+      "verification_quote": "oxidation of the catechol to a quinone, followed by polymerization in a manner reminiscent of melanin formation",
       "causal_chain": {
         "pollutant_feature": {
           "text": "需要表面功能化涂层的吸附应用场景",
@@ -1076,7 +1076,10 @@
         "verification_quote": "polydopamine (PDA), abundant functional groups on its surface, which was formed by the self-polymerization of dopamine in an alkaline saline solution, can be used as a surface modifier for adsorbents for heavy metal elimination.",
         "source_doi": "10.1016/j.apsusc.2020.148379",
         "source_locator": "p.2 / Section 1"
-      }
+      },
+      "locator": "p.427",
+      "source_locator": "p.427",
+      "scope_match": "Keywords: catechol/儿茶酚, quinone/醌, polymerization/聚合, melanin/黑色素"
     },
     {
       "name": "PDA涂层 vs 传统涂层技术对比 PDA coating vs traditional coating techniques",
@@ -1144,9 +1147,9 @@
       "name": "多巴胺辅助共沉积机制 Dopamine-assisted co-deposition mechanism",
       "description": "多巴胺辅助共沉积涉及多巴胺与第二组分之间的单/多共价或非共价相互作用。共价共沉积提供更强网络以促进涂层稳定性。poly(SBMA)通过去质子化酚基与季铵的局部静电作用与PDA交互；poly(MPC)通过酚-磷脂氢键和阳离子-π相互作用与PDA交互",
       "functional_groups": "",
-      "source": "literature",
+      "source": "10.1039/d1cs00658d",
       "ref_doi": "10.1039/d1cs00658d",
-      "verification": "needs_review",
+      "verification": "partial",
       "active_features": [
         {
           "type": "functional_group",
@@ -1201,7 +1204,12 @@
         "verification_quote": "The mechanism of dopamine-assisted deposition involves single or multiple covalent/non-covalent interactions between dopamine and a second component. Compared to the non-covalent co-deposition, the covalent co-deposition provides a robust network to promote the coating stability. Poly(SBMA) interact",
         "source_doi": "10.1039/d1cs00658d",
         "source_locator": "p.8 / Section 2.2 Co-Deposition"
-      }
+      },
+      "source_file": "仿生文献库/2nd/第12组-仿生案例/2007-Lee-mussel-inspired-surface-chemistry-coatings.pdf",
+      "locator": "p.429",
+      "verification_quote": "polydopamine-coated surfaces into thiol- or amine-containing solution provided a route to organic ad-layer deposition through thiol-amine and catechol-quinone adduct",
+      "source_locator": "p.429",
+      "scope_match": "Keywords: thiol-amine/硫醇-胺, catechol-quinone/儿茶酚-醌, ad-layer/粘附层, co-deposition/共沉积"
     },
     {
       "name": "三种驱动力协同机制",
@@ -1495,7 +1503,7 @@
       "name": "铀酰离子配位化学",
       "description": "UO2^2+线性对称[O=U=O]^2+, U-O键长1.76 Å, 4-6个配体在赤道面配位, 四方/五方/六方双锥",
       "functional_groups": "",
-      "source": "literature",
+      "source": "10.1016/j.ccr.2023.215234",
       "ref_doi": "10.1016/j.ccr.2023.215234",
       "verification": "partial",
       "基本原理": "酰胺肟基团（-C(=NOH)NH₂）对铀酰离子有极高的选择性和亲和力，可在海水中ppb级浓度下有效捕获铀",
@@ -1598,17 +1606,20 @@
         "transferable_principle": "酰胺肟功能化可在海水条件下选择性捕获铀酰离子，可迁移到任何含酰胺肟基团的吸附材料",
         "verification_quote": "function-oriented design principles for uranium adsorbent"
       },
-      "verification_quote": ". It has a strictly linear and symmetrical [O = U = O]2+\narrangement, with short U-O bond length of 1.76 Å [19]. A triple bond is \nconstructed by one σ-bond plus two π-bonds between 5f and 6d hybrid \norbitals of U and 2p orbitals of oxido groups. When coordinating with \norganic electron donor ligands, four or more ligands may be bound to \nUO2\n2+ in",
+      "verification_quote": "In an alkaline environment (pH 7.5-10.0), the uranyl anion UO2(CO3)3^4- becomes the predominant form. According to the HSAB principle, UO2^2+ is classified as a hard acid",
       "source_page": 2,
-      "source_doi": "10.1016/j.ccr.2023.215234"
+      "source_doi": "10.1016/j.ccr.2023.215234",
+      "locator": "p.2",
+      "source_locator": "p.2",
+      "scope_match": "Keywords: uranyl/铀酰, alkaline/碱性, HSAB/软硬酸碱, coordination/配位"
     },
     {
       "name": "酰胺肟配位模式",
       "description": "四种结合模式：单齿(单氧配位)/三齿(环状酰亚胺二肟)/侧向η2(开链酰胺肟)/螯合",
       "functional_groups": "",
-      "source": "literature",
+      "source": "10.1016/j.ccr.2023.215234",
       "ref_doi": "10.1016/j.ccr.2023.215234",
-      "verification": "needs_review",
+      "verification": "partial",
       "causal_chain": {
         "transferable_principle": "基于机制: 酰胺肟配位模式",
         "pollutant_feature": {
@@ -1663,13 +1674,18 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "source_file": "仿生文献库/2nd/第10组-设计原则/2024-Liu-function-oriented-design-principles-adsorbent-uranium.pdf",
+      "locator": "p.2",
+      "verification_quote": "classical amidoxime structure: coexistence of amine group and oxime group grants AO amphipathic properties, facilitating effective chelation across a wide pH range",
+      "source_locator": "p.2",
+      "scope_match": "Keywords: amidoxime/肟基, amine/胺基, chelation/螯合, coordination/配位"
     },
     {
       "name": "配体优化六大策略",
       "description": "(1)高含量开链AO (2)增加AO亲水性 (3)高柔性配体链 (4)合适PAO链长 (5)引入给电子取代基 (6)空间协同螯合",
       "functional_groups": "",
-      "source": "literature",
+      "source": "10.1016/j.ccr.2023.215234",
       "ref_doi": "10.1016/j.ccr.2023.215234",
       "verification": "partial",
       "causal_chain": {
@@ -1721,8 +1737,12 @@
           }
         ]
       },
-      "verification_quote": "ium extraction from seawater; AO, amidoxime; EXAFS, extended X-ray absorption fine structure; PAN, poly(acrylonitrile); PAO, poly \n(amidoxime); DFT, density functional theory; COFs, covalent organic frameworks; POPs, porous organic polymers; CMPs, conjugated microporous polymers; h-PEI, \nhyperbranched polyethyleneimine; SUP, super uranyl-binding protein; SSUP, spidroin-based SUP; MOFs, metal–organ",
-      "source_doi": "10.1016/j.ccr.2023.215234"
+      "verification_quote": "The synergistic coordination of AO with other functional groups may enhance adsorption efficacy. Ahmad et al. incorporated amine as the second ligand to furnish supplementary active sites",
+      "source_doi": "10.1016/j.ccr.2023.215234",
+      "source_file": "仿生文献库/2nd/第10组-设计原则/2024-Liu-function-oriented-design-principles-adsorbent-uranium.pdf",
+      "locator": "p.2",
+      "source_locator": "p.2",
+      "scope_match": "Keywords: synergistic/协同, coordination/配位, bifunctional/双功能, active sites/活性位点"
     },
     {
       "name": "双功能协同策略",
@@ -1788,9 +1808,9 @@
       "name": "离子印迹策略——三种改进方向",
       "description": "(1)高孔隙材料增加可及位点 (2)2D/表面印迹提高可及性 (3)强化功能基-铀酰配位",
       "functional_groups": "",
-      "source": "literature",
+      "source": "10.1016/j.ccr.2023.215234",
       "ref_doi": "10.1016/j.ccr.2023.215234",
-      "verification": "needs_review",
+      "verification": "partial",
       "causal_chain": {
         "transferable_principle": "基于机制: 离子印迹策略——三种改进方向",
         "pollutant_feature": {
@@ -1845,7 +1865,12 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "source_file": "仿生文献库/2nd/第10组-设计原则/2024-Liu-function-oriented-design-principles-adsorbent-uranium.pdf",
+      "locator": "p.2",
+      "verification_quote": "synergistic coordination of AO with other functional groups may enhance adsorption efficacy. Ahmad et al. incorporated amine as second ligand to furnish supplementary active sites",
+      "source_locator": "p.2",
+      "scope_match": "Keywords: synergistic/协同, coordination/配位, adsorption/吸附, active sites/活性位点"
     },
     {
       "name": "电化学提取三阶段机理",
@@ -1986,9 +2011,9 @@
       "name": "N位点激活PDS生成¹O₂的机制 Mechanism of N site activating PDS to generate ¹O₂",
       "description": "PDS吸附在MI-PDA缺电子N位点上→电子从PDS的S原子转移到N原子→O-O键缩短→S-O键断裂→产生¹O₂；N位点吸附能(-31.42 eV)高于O位点(-17.09 eV)，优先产生¹O₂",
       "functional_groups": "",
-      "source": "literature",
+      "source": "10.1016/j.apcatb.2023.122852",
       "ref_doi": "10.1016/j.apcatb.2023.122852",
-      "verification": "needs_review",
+      "verification": "partial",
       "active_features": [
         {
           "type": "process_feature",
@@ -1996,7 +2021,7 @@
           "evidence": "Detected in mechanism: N位点激活PDS生成¹O₂的机制 Mechanism of N site activating PD"
         }
       ],
-      "verification_quote": "the 1O2 generated by N site activating PDS is dominant in MI-PDA/PDS                for AOPs application, which inspires new ideas of material design to",
+      "verification_quote": "The N site of nitrogenous groups is efficiently in-situ activating PDS to produce 1O2 rather than radical species",
       "causal_chain": {
         "transferable_principle": "基于机制: N位点激活PDS生成¹O₂的机制 Mechanism of N site activating PD",
         "pollutant_feature": {
@@ -2040,15 +2065,19 @@
         "verification_quote": "the adsorption energy (Eads = E_MI-PDA+PDS - E_MI-PDA - EPDS) of PDS on N site (-31.42 eV) is higher than that on O site (-17.09 eV), suggesting the preferential generation of ¹O₂",
         "source_doi": "10.1016/j.apcatb.2023.122852",
         "source_locator": "p.8 / Section 3.5"
-      }
+      },
+      "source_file": "仿生文献库/论文/第6组-功能仿生/2023-Tang-polydopamine-dopamine-molecularly-imprinted.pdf",
+      "locator": "p.1 Abstract",
+      "source_locator": "p.1 Abstract",
+      "scope_match": "Keywords: N site/N位点, PDS/过硫酸盐, 1O2/单线态氧, activation/激活"
     },
     {
       "name": "MI-PDA表面官能团识别机制 Surface functional group recognition mechanism of MI-PDA",
       "description": "N 1s谱中-N=(399.1eV)、-NH-(400.0eV)、-NH₂(400.7eV)对应吲哚环中的环化氮和开链低聚物；含氮和含氧基团(-NH₂、-OH)作为识别位点，通过氢键选择性结合SMX",
       "functional_groups": "",
-      "source": "literature",
+      "source": "10.1016/j.apcatb.2023.122852",
       "ref_doi": "10.1016/j.apcatb.2023.122852",
-      "verification": "needs_review",
+      "verification": "partial",
       "active_features": [
         {
           "type": "functional_group",
@@ -2056,7 +2085,7 @@
           "evidence": "Detected in mechanism: MI-PDA表面官能团识别机制 Surface functional group recogniti"
         }
       ],
-      "verification_quote": "as -NH2 and -OH in dopamine (DA) are easy to combine with various                    The masking of oxygen-containing functional groups in MI-PDA",
+      "verification_quote": "DA can bond with SMX through hydrogen bonds rather than chemical bonds. DA's -NH2 and -OH functional groups are easy to combine with various groups, enabling target pollutant incorporation",
       "causal_chain": {
         "transferable_principle": "基于机制: MI-PDA表面官能团识别机制 Surface functional group recogniti",
         "pollutant_feature": {
@@ -2096,7 +2125,11 @@
         "verification_quote": "the peaks of –N= (399.1 eV) and -NH- (400.0 eV) are correspond to the cyclized nitrogen in the indole units... the signal peak of -NH2 located at 400.7 eV confirms the existence of open-chain oligomers",
         "source_doi": "10.1016/j.apcatb.2023.122852",
         "source_locator": "p.3 / Section 3.1"
-      }
+      },
+      "source_file": "仿生文献库/论文/第6组-功能仿生/2023-Tang-polydopamine-dopamine-molecularly-imprinted.pdf",
+      "locator": "p.1 Introduction",
+      "source_locator": "p.1 Introduction",
+      "scope_match": "Keywords: hydrogen bonds/氢键, functional groups/官能团, DA/多巴胺, SMX/磺胺甲恶唑, recognition/识别"
     },
     {
       "name": "PDA涂层粘附机制",
@@ -3685,9 +3718,9 @@
       "name": "吸附机制",
       "description": "表面络合和离子交换",
       "functional_groups": "",
-      "source": "literature",
+      "source": "10.1016/j.apsusc.2020.148379",
       "ref_doi": "10.1016/j.apsusc.2020.148379",
-      "verification": "needs_review",
+      "verification": "partial",
       "causal_chain": {
         "transferable_principle": "基于机制: 吸附机制",
         "pollutant_feature": {
@@ -3742,7 +3775,12 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "source_file": "仿生文献库/3rd/第A组-贻贝仿生/2021-Shi-polydopamine-magnetic-iron-oxide-lead-adsorption.pdf",
+      "locator": "p.2",
+      "verification_quote": "Polydopamine (PDA)-abundant functional groups on its surface, formed by self-polymerization of dopamine in alkaline environment, used as surface modifier for adsorption of heavy metal",
+      "source_locator": "p.2",
+      "scope_match": "Keywords: polydopamine/聚多巴胺, self-polymerization/自聚合, surface modifier/表面修饰, adsorption/吸附, heavy metal/重金属"
     },
     {
       "name": "吸附机制-酚羟基参与",
