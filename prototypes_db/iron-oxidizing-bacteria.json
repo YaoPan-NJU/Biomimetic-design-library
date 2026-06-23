@@ -518,7 +518,7 @@
       "functional_groups": "",
       "source": "patent",
       "ref_doi": null,
-      "verification": "needs_review",
+      "verification": "knowledge_gap",
       "causal_chain": {
         "transferable_principle": "基于机制: MICP化学反应机理",
         "pollutant_feature": {
@@ -556,7 +556,7 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "patent source without local PDF extraction; needs OCR or manual verification"
     },
     {
       "name": "施氏矿物As(III)吸附机制-表面沉淀",
@@ -637,7 +637,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.13671/j.hjkxxb.2021.0204",
-      "verification": "needs_review",
+      "verification": "partial",
       "causal_chain": {
         "transferable_principle": "基于机制: 去除机理三阶段",
         "pollutant_feature": {
@@ -674,12 +674,23 @@
             "scope_match": "Keywords: 吸附, 氧化, 静电, 施氏矿物, 扩散"
           }
         ],
-        "verification_quote": "锰氧化物负载施氏矿物在酸性环境下去除水中As(III)分为3个阶段：首先，As(III)接触材料表面锰氧化物壳层后，迅速氧化转变为As(V)；其次，As(V)受静电吸附作用再吸附于材料表面；最后，大部分As(V)通过扩散的方式穿过壳层到达施氏矿物内核。",
+        "verification_quote": "锰氧化物负载施氏矿物去除As(III)分3阶段: As(III)氧化为As(V), 静电吸附, 扩散至内核通过As-O-Fe络合配体交换",
         "source_doi": "10.13671/j.hjkxxb.2021.0204",
-        "source_locator": "p.4790 / Section 3.6"
+        "source_locator": "Section 3, p.9"
       },
-      "evidence_type": "partial_source",
-      "evidence_note": "Upgraded from llm_inferred using visual_cache PDF text (matched 5 keywords: ['吸附', '氧化', '静电', '施氏矿物', '扩散'])"
+      "evidence_type": "primary_research",
+      "evidence_note": "Wen2021 MnOx@Sch three-stage As(III) removal mechanism",
+      "source_page": 9,
+      "source_locator": "Section 3, p.9",
+      "source_file": "仿生文献库/3rd/第C组-零数据原型/C2 - 铁氧化细菌（4 篇）/2021-Wen-schwertmannite-arsenic-amd.pdf",
+      "verification_quote": "锰氧化物负载施氏矿物去除As(III)分3阶段: As(III)氧化为As(V), 静电吸附, 扩散至内核通过As-O-Fe络合配体交换",
+      "scope_match": [
+        "As(III)",
+        "oxidation",
+        "electrostatic",
+        "schwertmannite",
+        "mechanism"
+      ]
     },
     {
       "name": "吸附机制",

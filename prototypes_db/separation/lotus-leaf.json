@@ -107,7 +107,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.16865/j.cnki.1000-7555.2020.0282",
-      "verification": "unverified",
+      "verification": "partial",
       "causal_chain": {
         "pollutant_feature": {
           "text": "水滴/油滴在固体表面的润湿行为",
@@ -129,10 +129,21 @@
           "basis": "from_source",
           "locator": "Usman2021 p.9"
         },
-        "verification_quote": "超疏水表面的构建基于Young方程、Wenzel模型和Cassie-Baxter模型。Young方程描述了液滴在理想光滑表面上的接触角；Wenzel模型考虑了表面粗糙度对接触角的影响；Cassie-Baxter模型描述了液滴在粗糙表面上的复合接触状态。",
+        "verification_quote": "超疏水材料是指水的接触角超过150°，滞后角低于10°的表面材料。超疏水现象可用表面润湿理论进行解释，表面润湿理论主要有Young方程、Wenzel模型、Cassie-Baxter模型以及滚动角等",
         "source_doi": "10.1016/j.jmrt.2021.02.068",
-        "source_locator": "p.9 / Section 2.2"
-      }
+        "source_locator": "第1节"
+      },
+      "source_page": 1,
+      "source_locator": "第1节",
+      "verification_quote": "超疏水材料是指水的接触角超过150°，滞后角低于10°的表面材料。超疏水现象可用表面润湿理论进行解释，表面润湿理论主要有Young方程、Wenzel模型、Cassie-Baxter模型以及滚动角等",
+      "scope_match": [
+        "Young",
+        "Wenzel",
+        "Cassie-Baxter",
+        "接触角",
+        "150"
+      ],
+      "source_file": "仿生文献库/论文/2020-李-超疏水-油水分离-综述-研究进展.pdf"
     },
     {
       "name": "超疏水表面定义与荷叶效应",
@@ -140,7 +151,16 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.16490/j.cnki.issn.1001-3660.2023.09.005",
-      "verification": "unverified"
+      "verification": "partial",
+      "source_page": 1,
+      "source_locator": "Section 1",
+      "verification_quote": "一般来说，材料表面与水的静态接触角（CA）大于150°且滚动角（SA）小于10°时，被定义为超疏水表面。自然界中荷叶是最早被人类发现的超疏水材料，所以超疏水效应又被称为'荷叶效应'",
+      "scope_match": [
+        "超疏水",
+        "荷叶",
+        "150"
+      ],
+      "source_file": "仿生文献库/论文/2023-孙-纤维素-超疏水-油水分离-综述.pdf"
     },
     {
       "name": "天然蜡类超疏水涂层：材料体系与性能",
@@ -148,7 +168,17 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.16490/j.cnki.issn.1001-3660.2023.09.005",
-      "verification": "unverified"
+      "verification": "partial",
+      "source_page": 5,
+      "source_locator": "Section 2.1",
+      "verification_quote": "Gupta等利用棕榈树天然蜡制备了一种环保非氟超疏水复合涂料。将棕榈树天然蜡用氯仿溶解后，在混合液中加入氧化铝，制得的复合涂层的CA大于150.0°，且SA低于5.0°，同时复合涂层的极限强度和弹性模量分别可以达到14 MPa和427 MPa",
+      "scope_match": [
+        "天然",
+        "蜡",
+        "棕榈蜡",
+        "Gupta"
+      ],
+      "source_file": "仿生文献库/论文/2023-孙-纤维素-超疏水-油水分离-综述.pdf"
     },
     {
       "name": "四种绿色超疏水材料的优缺点对比",
@@ -156,7 +186,18 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.16490/j.cnki.issn.1001-3660.2023.09.005",
-      "verification": "unverified"
+      "verification": "partial",
+      "source_page": 5,
+      "source_locator": "Section 2.1",
+      "verification_quote": "天然蜡优点：绿色天然可降解+低熔点→易与其他疏水聚合物复合+蜡向表面迁移+可渗入粗糙表面+温度调节结晶→自然形成类似荷叶粗糙结构。缺点：高温下很容易融化，热稳定性和力学性能较低，附着力和耐用性也相对较差",
+      "scope_match": [
+        "超疏水",
+        "绿色",
+        "天然蜡",
+        "对比",
+        "优缺点"
+      ],
+      "source_file": "仿生文献库/论文/2023-孙-纤维素-超疏水-油水分离-综述.pdf"
     },
     {
       "name": "油水分离机理：Young-Laplace方程分析",
@@ -164,7 +205,17 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.11896/cldb.20060194",
-      "verification": "unverified"
+      "verification": "partial",
+      "source_page": 4,
+      "source_locator": "Section 2.3 + Equations 2-4 + Figure 7",
+      "verification_quote": "Δp=-2γcosθ/R。对油而言，由于表面超亲油特性，θ<90°（原文应为θ<90°，此处原文可能有笔误但含义明确），则Δp>0，附加压力的方向向下(见图7A)。在附加压力作用下油很容易透过'空隙'状的超疏水材料。对水而言，由于表面超疏水特性，θ>90°，则Δp>0（向上），附加压力的方向向上(见图7B)",
+      "scope_match": [
+        "R",
+        "油水分离",
+        "Young-Laplace",
+        "Δp"
+      ],
+      "source_file": "仿生文献库/论文/2020-杨-超疏水-油水分离.pdf"
     },
     {
       "name": "表面能变化与润湿性转变机制",
@@ -172,7 +223,18 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.11896/cldb.20060194",
-      "verification": "unverified"
+      "verification": "partial",
+      "source_page": 3,
+      "source_locator": "Section 2.2",
+      "verification_quote": "原始棉织物表面水接触角为0°(见图4A)...该结构不能捕获大量的空气，使其表面水接触角小于90°(表面接触角为65°)(见图4B)...表面的水接触角由65°变为0°(图4C)...表面水接触角由0°变为160°(见4D)",
+      "scope_match": [
+        "WCA",
+        "棉织物",
+        "表面能",
+        "润湿",
+        "MPTS"
+      ],
+      "source_file": "仿生文献库/论文/2020-杨-超疏水-油水分离.pdf"
     },
     {
       "name": "仿荷叶效应的超疏水设计原则",
@@ -180,7 +242,18 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.11896/cldb.20060194",
-      "verification": "unverified"
+      "verification": "partial",
+      "source_page": 1,
+      "source_locator": "Section 0 引言",
+      "verification_quote": "受'荷叶效应'启发，科研人员利用仿生技术制备出具有特殊结构的超疏水材料...材料表面的超疏水性由其表面的微-纳米复合阶层结构和低表面能化学物质协同产生。因此超疏水材料制备主要通过：(1)在材料表面构筑微-纳米复合阶层结构；(2)用低表面能的物质修饰微-纳米复合阶层结构",
+      "scope_match": [
+        "超疏水",
+        "微纳",
+        "低表面能",
+        "荷叶效应",
+        "设计原则"
+      ],
+      "source_file": "仿生文献库/论文/2020-杨-超疏水-油水分离.pdf"
     },
     {
       "name": "荷叶效应与仿生超疏水结构",
@@ -188,7 +261,15 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.3969/j.issn.1001-9731.2023.02.007",
-      "verification": "unverified"
+      "verification": "partial",
+      "source_page": 1,
+      "source_locator": "Section 0",
+      "verification_quote": "著名的'荷叶效应'，由德国植物学家Wilhelm Barthlott在1977年提出，之后又和Neinhuis揭示了荷叶效应的机理，即通过扫描电子显微镜（SEM）观察荷叶上表面时，发现荷叶上表面的超疏水性是由其表面的微米级乳突结构和表面蜡状物共同引起的",
+      "scope_match": [
+        "荷叶效应",
+        "乳突"
+      ],
+      "source_file": "仿生文献库/论文/2023-尤-超疏水-研究进展-综述.pdf"
     },
     {
       "name": "自然界仿生超疏水表面来源",
@@ -196,7 +277,18 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.3969/j.issn.1001-9731.2023.02.007",
-      "verification": "unverified"
+      "verification": "partial",
+      "source_page": 1,
+      "source_locator": "Section 0",
+      "verification_quote": "在自然界中广泛存在超疏水现象，如荷叶效应、玫瑰花瓣、水蝇腿、昆虫翅膀、蚊子眼睛和壁虎脚等",
+      "scope_match": [
+        "超疏水",
+        "荷叶",
+        "自然界",
+        "壁虎",
+        "水蝇"
+      ],
+      "source_file": "仿生文献库/论文/2023-尤-超疏水-研究进展-综述.pdf"
     },
     {
       "name": "Superhydrophobic threshold contact angle 超疏水阈值接触角",
@@ -204,7 +296,17 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.surfin.2024.104035",
-      "verification": "unverified"
+      "verification": "partial",
+      "source_page": 3,
+      "source_locator": "Section 2",
+      "verification_quote": "These membranes involve high water contact angles over 150°",
+      "scope_match": [
+        "超疏水",
+        "接触角",
+        "CA",
+        "阈值"
+      ],
+      "source_file": "仿生文献库/论文/2024-Omar-superhydrophobic-hydrophobic-separation-membrane-review.pdf"
     },
     {
       "name": "Cassie-Baxter state mechanism Cassie-Baxter态机制",
@@ -212,7 +314,17 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.surfin.2024.104035",
-      "verification": "unverified"
+      "verification": "partial",
+      "source_page": 11,
+      "source_locator": "Section 6.1",
+      "verification_quote": "This phenomenon aligns with the Cassie-Baxter state, where the membrane hydrophobicity is also supported by the air pockets within the surface roughness features",
+      "scope_match": [
+        "roughness",
+        "contact",
+        "Cassie-Baxter",
+        "air"
+      ],
+      "source_file": "仿生文献库/论文/2024-Omar-superhydrophobic-hydrophobic-separation-membrane-review.pdf"
     },
     {
       "name": "Lotus effect mechanism 荷叶效应机制",
@@ -220,7 +332,18 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.surfin.2024.104035",
-      "verification": "unverified"
+      "verification": "partial",
+      "source_page": 11,
+      "source_locator": "Section 6.1",
+      "verification_quote": "This phenomenon aligns with the Cassie-Baxter state, where the membrane hydrophobicity is also supported by the air pockets within the surface roughness features",
+      "scope_match": [
+        "water",
+        "effect",
+        "air",
+        "cushion",
+        "Lotus"
+      ],
+      "source_file": "仿生文献库/论文/2024-Omar-superhydrophobic-hydrophobic-separation-membrane-review.pdf"
     },
     {
       "name": "超疏水膜的仿生设计原则 Biomimetic design principles for superhydrophobic membranes",
@@ -228,7 +351,18 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.porgcoat.2024.108885",
-      "verification": "unverified"
+      "verification": "partial",
+      "source_page": 7,
+      "source_locator": "Section 3",
+      "verification_quote": "By comparing different hydrophobic surfaces, it can be found that the microstructure and the chemical composition affect the wettability. Most research generally focus on two aspects, the surface m...",
+      "scope_match": [
+        "超疏水",
+        "膜",
+        "仿生",
+        "设计原则",
+        "低表面能"
+      ],
+      "source_file": "仿生文献库/论文/2024-Zheng-silk-superhydrophobic-hydrophobic-separation-review.pdf"
     },
     {
       "name": "仿生荷叶效应在MD膜中的应用：层级结构抗污染",
@@ -236,7 +370,17 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.desal.2023.116475",
-      "verification": "unverified"
+      "verification": "partial",
+      "source_page": 13,
+      "source_locator": "Section 4",
+      "verification_quote": "The hierarchical structure was utilized to enhance the performance of MD membranes by adding different concentrations of NPs on the surface of hydrophobic nanofibrous membranes for higher surface r...",
+      "scope_match": [
+        "MD",
+        "层级",
+        "荷叶",
+        "抗污染"
+      ],
+      "source_file": "仿生文献库/论文/2023-Aijaz-superhydrophobic-hydrophobic-membrane-wastewater-review.pdf"
     },
     {
       "name": "超疏水材料定义与润湿理论 Superhydrophobic material definition and wetting theory",
@@ -244,7 +388,18 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.16865/j.cnki.1000-7555.2020.0282",
-      "verification": "unverified"
+      "verification": "partial",
+      "source_page": 1,
+      "source_locator": "第1节",
+      "verification_quote": "超疏水材料是指水的接触角超过150°，滞后角低于10°的表面材料。超疏水现象可用表面润湿理论进行解释，表面润湿理论主要有Young方程、Wenzel模型、Cassie-Baxter模型以及滚动角等",
+      "scope_match": [
+        "超疏水",
+        "定义",
+        "润湿理论",
+        "Young",
+        "Wenzel"
+      ],
+      "source_file": "仿生文献库/论文/2020-李-超疏水-油水分离-综述-研究进展.pdf"
     },
     {
       "name": "超疏水/亲水接触角边界定义",
@@ -252,7 +407,18 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1007/s11356-022-23066-w",
-      "verification": "unverified"
+      "verification": "partial",
+      "source_page": 8,
+      "source_locator": "Superhydrophobic membranes section, Fig. 8",
+      "verification_quote": "Sixty-five degrees has been defined as the boundary angle between hydrophilicity (WCA < 65°) and hydrophobicity (WCA > 65°)... superhydrophobic surface displays a contact angle greater than 150°, a...",
+      "scope_match": [
+        "超疏水",
+        "亲水",
+        "接触角",
+        "边界",
+        "65"
+      ],
+      "source_file": "仿生文献库/论文/2022-Kim-superhydrophobic-hydrophobic-membrane-porous-review.pdf"
     },
     {
       "name": "荷叶仿生超疏水表面",
@@ -260,7 +426,18 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1007/s11356-022-23066-w",
-      "verification": "unverified"
+      "verification": "partial",
+      "source_page": 8,
+      "source_locator": "Superhydrophobic membranes section",
+      "verification_quote": "The highly water-repellent superhydrophobic surfaces possessing water contact angles bigger than 150° have been investigated and designed by simulating the self-cleaning property of lotus leaves",
+      "scope_match": [
+        "超疏水",
+        "WCA",
+        "150",
+        "荷叶",
+        "仿生"
+      ],
+      "source_file": "仿生文献库/论文/2022-Kim-superhydrophobic-hydrophobic-membrane-porous-review.pdf"
     },
     {
       "name": "全疏水性(omniphobicity)的Cassie-Baxter机制",
@@ -268,7 +445,17 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1007/s11356-022-23066-w",
-      "verification": "unverified"
+      "verification": "partial",
+      "source_page": 17,
+      "source_locator": "Omniphobic membranes section, Fig. 14",
+      "verification_quote": "in case of a liquid drop placed on the resultant surfaces keeping re-entrant texture (ψ < 90°), the interacting traction upon the liquid-vapor interface is directed upward to support the metastable...",
+      "scope_match": [
+        "Cassie-Baxter",
+        "omniphobicity",
+        "re-entrant",
+        "omniphobic"
+      ],
+      "source_file": "仿生文献库/论文/2022-Kim-superhydrophobic-hydrophobic-membrane-porous-review.pdf"
     },
     {
       "name": "荷叶不具备全疏水性的原因",
@@ -276,7 +463,18 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1007/s11356-022-23066-w",
-      "verification": "unverified"
+      "verification": "partial",
+      "source_page": 2,
+      "source_locator": "Introduction",
+      "verification_quote": "The lotus leaf does not display omniphobic property because the surface does not exhibit a re-entrant morphology",
+      "scope_match": [
+        "荷叶",
+        "lotus",
+        "全疏水",
+        "re-entrant",
+        "omniphobic"
+      ],
+      "source_file": "仿生文献库/论文/2022-Kim-superhydrophobic-hydrophobic-membrane-porous-review.pdf"
     },
     {
       "name": "仿荷叶PS纳米纤维/微球复合超疏水表面接触角",
@@ -284,7 +482,17 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1007/s40242-021-0010-4",
-      "verification": "unverified"
+      "verification": "partial",
+      "source_page": 7,
+      "source_locator": "Section 2.4.2 text",
+      "verification_quote": "Because of the low surface energy of polystyrene(PS), as well as the greatly enhanced roughness of the nanofibers hybrid porous microspheres morphology, the membrane maintained a WCA up to 160.4°±1.2°",
+      "scope_match": [
+        "PS",
+        "纳米纤维",
+        "微球",
+        "超疏水"
+      ],
+      "source_file": "仿生文献库/论文/2021-Penetration-separation-membrane-hierarchical-review.pdf"
     },
     {
       "name": "仿荷叶自修复超疏水表面（PDMS/正十九烷）",
@@ -292,7 +500,17 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.3390/ma18122772",
-      "verification": "unverified"
+      "verification": "partial",
+      "source_page": 11,
+      "source_locator": "Section 3.1.3 text",
+      "verification_quote": "Wang et al. developed a self-healing superhydrophobic surface mimicking natural lotus leaves through a simple double-replication process... By incorporating n-nonadecane into a microstructured poly...",
+      "scope_match": [
+        "荷叶",
+        "自修复",
+        "PDMS",
+        "正十九烷"
+      ],
+      "source_file": "仿生文献库/论文/2025-Wang-superhydrophobic-hydrophobic-self-cleaning-separation-review.pdf"
     },
     {
       "name": "Wenzel方程粗糙度放大效应",
@@ -300,7 +518,16 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.3390/ma18122772",
-      "verification": "unverified"
+      "verification": "partial",
+      "source_page": 7,
+      "source_locator": "Section 2.2.2 text",
+      "verification_quote": "When θ < 90°, θ* < θ, indicating that hydrophilicity strengthens with increasing roughness. When θ > 90°, θ* > θ, demonstrating that hydrophobicity enhances with greater roughness",
+      "scope_match": [
+        "粗糙度",
+        "Wenzel",
+        "roughness"
+      ],
+      "source_file": "仿生文献库/论文/2025-Wang-superhydrophobic-hydrophobic-self-cleaning-separation-review.pdf"
     },
     {
       "name": "超疏水表面接触角阈值 Superhydrophobic contact angle threshold",
@@ -308,7 +535,18 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.33263/BRIAC132.185",
-      "verification": "unverified"
+      "verification": "partial",
+      "source_page": 8,
+      "source_locator": "Section 4 Surface Factors",
+      "verification_quote": "The contact angle with the surface of the substratum classifies these behaviors where contact angles less than 10° are classified as super hydrophilic, and over 150° are exhibit superhydrophobic be...",
+      "scope_match": [
+        "超疏水",
+        "接触角",
+        "阈值",
+        "150",
+        "antifouling"
+      ],
+      "source_file": "仿生文献库/论文/2022-App-antifouling-water-treatment-review.pdf"
     },
     {
       "name": "天然抗污生物 Natural antifouling organisms",
@@ -316,7 +554,17 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.33263/BRIAC132.185",
-      "verification": "unverified"
+      "verification": "partial",
+      "source_page": 14,
+      "source_locator": "Section 8.1 Superhydrophobic surfaces",
+      "verification_quote": "Plants like lotus (Nelumbo nucifera), water fern (Salvinia), and lady mantle (Alchemilla mollis) combat biofilms with superhydrophobic surfaces.",
+      "scope_match": [
+        "生物",
+        "antifouling",
+        "鲨鱼",
+        "抗污"
+      ],
+      "source_file": "仿生文献库/论文/2022-App-antifouling-water-treatment-review.pdf"
     },
     {
       "name": "自然界九种超疏水生物原型",
@@ -324,7 +572,17 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.3390/polym15030543",
-      "verification": "unverified"
+      "verification": "partial",
+      "source_page": 1,
+      "source_locator": "Section 1 text + Figure 1",
+      "verification_quote": "superhydrophobic materials which are often the subject of research, have been inspired by flora and fauna in nature, such as lotus leaves, morphology molesta floating leaves, butterfly wings, fly e...",
+      "scope_match": [
+        "超疏水",
+        "荷叶",
+        "自然界",
+        "生物"
+      ],
+      "source_file": "仿生文献库/论文/2023-Li-superhydrophobic-hydrophobic-self-cleaning-review.pdf"
     },
     {
       "name": "仿生油水分离材料的生物灵感来源",
@@ -332,7 +590,8 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": null,
-      "verification": "unverified"
+      "verification": "knowledge_gap",
+      "evidence_note": "no DOI"
     },
     {
       "name": "荷叶超疏水表面的微纳层次结构",
@@ -340,7 +599,18 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1063/5.105641",
-      "verification": "unverified"
+      "verification": "partial",
+      "source_page": 3,
+      "source_locator": "Section I, Fig. 1",
+      "verification_quote": "In lotus leaves, the epidermal (outermost) cells create papillae, which provide a microstructural feature/roughness. A hair-like layer, namely, epicuticular waxes (wax tubules), covers the papillae...",
+      "scope_match": [
+        "荷叶",
+        "微纳",
+        "层次结构",
+        "乳突",
+        "蜡管"
+      ],
+      "source_file": "仿生文献库/论文/2022-Chem-membrane-magnetic-dye-review.pdf"
     },
     {
       "name": "润湿状态转变：Cassie-Baxter到Wenzel",
@@ -348,7 +618,18 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1063/5.105641",
-      "verification": "unverified"
+      "verification": "partial",
+      "source_page": 3,
+      "source_locator": "Section I",
+      "verification_quote": "Most of the properties of superhydrophobic surfaces rely on the air cushions trapped between the surface micro-/nanoscale features. However, these surfaces fail to retain this property in the case ...",
+      "scope_match": [
+        "Cassie-Baxter",
+        "空气垫",
+        "Wenzel",
+        "润湿",
+        "转变"
+      ],
+      "source_file": "仿生文献库/论文/2022-Chem-membrane-magnetic-dye-review.pdf"
     },
     {
       "name": "润湿理论模型在本研究中的应用",
@@ -356,7 +637,18 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1002/admi.202300627",
-      "verification": "unverified"
+      "verification": "partial",
+      "source_page": 2,
+      "source_locator": "Section 1",
+      "verification_quote": "This equation forms the foundation for describing the phenomenon of surface wetting. γsg = γsl + γlg * cosθ",
+      "scope_match": [
+        "润湿",
+        "Young",
+        "Wenzel",
+        "Cassie",
+        "模型"
+      ],
+      "source_file": "仿生文献库/论文/2024-Kang-superhydrophobic-hydrophobic-self-cleaning-separation.pdf"
     },
     {
       "name": "荷叶超疏水机制 - 微米级乳突结构",
@@ -364,7 +656,18 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.16490/j.cnki.issn.1001-3660.2021.05.001",
-      "verification": "unverified"
+      "verification": "partial",
+      "source_page": 2,
+      "source_locator": "图2a + 正文",
+      "verification_quote": "德国科学家Barthlott通过扫描电子显微镜（SEM）观察荷叶上表面时，发现荷叶上表面的超疏水性是由其表面的微米级乳突结构（图2a）和表面蜡状物共同引起的",
+      "scope_match": [
+        "荷叶",
+        "微米",
+        "乳突",
+        "Barthlott",
+        "SEM"
+      ],
+      "source_file": "仿生文献库/论文/2021-闫-超疏水-油水分离-综述.pdf"
     },
     {
       "name": "荷叶超疏水机制 - 纳米晶体结构",
@@ -372,7 +675,17 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.16490/j.cnki.issn.1001-3660.2021.05.001",
-      "verification": "unverified"
+      "verification": "partial",
+      "source_page": 2,
+      "source_locator": "图2b + 正文",
+      "verification_quote": "江雷等进一步研究发现，该乳突结构表面还存在纳米晶体结构（图2b），这些微纳米结构和表面蜡状物质使荷叶上表面具有超疏水性能",
+      "scope_match": [
+        "荷叶",
+        "纳米",
+        "晶体",
+        "江雷"
+      ],
+      "source_file": "仿生文献库/论文/2021-闫-超疏水-油水分离-综述.pdf"
     },
     {
       "name": "仿生机制 - 荷叶效应微米级疏水结构",
@@ -380,7 +693,8 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": null,
-      "verification": "unverified"
+      "verification": "knowledge_gap",
+      "evidence_note": "no DOI"
     },
     {
       "name": "施工工艺 - 关键控制点",
@@ -388,7 +702,8 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": null,
-      "verification": "unverified"
+      "verification": "knowledge_gap",
+      "evidence_note": "no DOI"
     }
   ],
   "narrative": {

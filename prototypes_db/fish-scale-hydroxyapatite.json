@@ -539,7 +539,7 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.chemosphere.2021.131962",
-      "verification": "needs_review",
+      "verification": "partial",
       "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
       "causal_chain": {
         "transferable_principle": "基于机制: 疏水相互作用证据",
@@ -575,10 +575,23 @@
             "source_asset": null,
             "source": "10.1016/j.chemosphere.2021.131962"
           }
-        ]
+        ],
+        "verification_quote": "pore diameter centered at 1.49 nm which fits into the ciprofloxacin molecular dimension, making it an ideal adsorbent due to molecular pore-filling",
+        "source_locator": "Section 3, p.4"
       },
-      "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_type": "primary_research",
+      "evidence_note": "Dou2021 fish-scale-derived DPBC hydrophobic porous biochar for CIP adsorption",
+      "source_page": 4,
+      "source_locator": "Section 3, p.4",
+      "source_file": "仿生文献库/论文/第4组-生物矿化/2021-Dou-hydrophobic-porous-biochar-adsorption.pdf",
+      "verification_quote": "pore diameter centered at 1.49 nm which fits into the ciprofloxacin molecular dimension, making it an ideal adsorbent due to molecular pore-filling",
+      "scope_match": [
+        "pore",
+        "CIP",
+        "adsorbent",
+        "molecular",
+        "dimension"
+      ]
     },
     {
       "name": "MICP化学反应机理",
@@ -586,7 +599,7 @@
       "functional_groups": "",
       "source": "patent",
       "ref_doi": null,
-      "verification": "unverified",
+      "verification": "knowledge_gap",
       "causal_chain": {
         "transferable_principle": "基于机制: MICP化学反应机理",
         "pollutant_feature": {
@@ -623,7 +636,7 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "no DOI or source_file; cannot trace to extraction evidence"
     }
   ],
   "narrative": {

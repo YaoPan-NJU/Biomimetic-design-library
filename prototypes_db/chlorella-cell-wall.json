@@ -385,15 +385,27 @@
         },
         "bio_structure": {
           "text": "藻类细胞壁表面的含氧/含氮官能团（-COOH、-NH₂、-OH）",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "source": "10.1155/2021/9923643",
+          "locator": "p.8",
+          "quote": "The presence of the heteropolysaccharide and lipid compound on the cell wall of algae contains many functional groups such as amino, carboxyl, hydroxyl, and phosphate groups",
+          "scope_match": "Keywords: cell wall, algae, functional groups, amino, carboxyl, hydroxyl, phosphate"
         },
         "interaction": {
           "text": "静电吸引+表面络合+氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "source": "10.1155/2021/9923643",
+          "locator": "p.6",
+          "quote": "At lower pH, the biosorbent surface had more positively charged sites, which were favorable to the adsorption of dye anions due to the electrostatic attraction",
+          "scope_match": "Keywords: pH, biosorbent surface, electrostatic attraction, dye anions"
         },
         "why_it_works": {
           "text": "藻类细胞壁富含官能团，可通过多种机制吸附染料分子",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "source": "10.1155/2021/9923643",
+          "locator": "p.8",
+          "quote": "The presence of the heteropolysaccharide and lipid compound on the cell wall of algae contains many functional groups such as amino, carboxyl, hydroxyl, and phosphate groups",
+          "scope_match": "Keywords: cell wall, functional groups, amino, carboxyl"
         },
         "boundary_conditions": [
           {
@@ -428,7 +440,11 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "重金属阳离子（Pb²⁺、Cu²⁺、Cd²⁺、Zn²⁺等）",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "source": "10.1155/2021/9923643",
+          "locator": "p.8",
+          "quote": "Alginate has an important role in adsorption by brown algae through binding to pollutant ions. Generally, metal ions such as K+, Na+, Ca2+, and Mg2+ are obtained from seawater",
+          "scope_match": "Keywords: alginate, brown algae, metal ions, adsorption"
         },
         "bio_structure": {
           "text": "藻类细胞壁的多糖-蛋白质基质和含氧/含氮官能团",
@@ -440,11 +456,19 @@
         },
         "interaction": {
           "text": "静电吸引（负电荷表面与阳离子）、离子交换（Ca²⁺/Mg²⁺与重金属）、表面络合（官能团与金属配位）",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "source": "10.1155/2021/9923643",
+          "locator": "p.8",
+          "quote": "The presence of the heteropolysaccharide and lipid compound on the cell wall of algae contains many functional groups such as amino, carboxyl, hydroxyl, and phosphate groups",
+          "scope_match": "Keywords: functional groups, amino, carboxyl, hydroxyl, phosphate"
         },
         "why_it_works": {
           "text": "藻类细胞壁富含多种官能团，可通过多种机制同时吸附多种重金属",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "source": "10.1155/2021/9923643",
+          "locator": "p.8",
+          "quote": "The presence of the heteropolysaccharide and lipid compound on the cell wall of algae contains many functional groups responsible for causing strong attractive force between dyes and the cell wall",
+          "scope_match": "Keywords: functional groups, attractive force, dyes, cell wall"
         },
         "boundary_conditions": [
           {
@@ -1031,7 +1055,7 @@
   "provenance_summary": {
     "n_papers": 6,
     "n_verified": 4,
-    "n_unverified": 5
+    "n_unverified": 26
   },
   "coverage": "normal",
   "status": "active",
@@ -1061,25 +1085,38 @@
   "library_tier": "core",
   "lifecycle_status": "active",
   "honesty_ledger": {
-    "facts": [],
-    "leads": [
+    "facts": [
       {
         "type": "mechanism",
         "index": 0,
         "name": "pH对藻类染料吸附的影响 Effect of pH on algal dye adsorption",
-        "basis": "needs_review"
+        "basis": "verified_with_quote"
       },
       {
         "type": "mechanism",
         "index": 1,
         "name": "藻类生物吸附的静电吸引和络合机制 Electrostatic attraction and complexation i",
-        "basis": "needs_review"
+        "basis": "verified_with_quote"
       },
+      {
+        "type": "mechanism",
+        "index": 7,
+        "name": "微藻吸附Pb²⁺的两阶段机制 Two-stage adsorption mechanism for Pb²⁺ by mi",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "mechanism",
+        "index": 10,
+        "name": "藻类细胞壁功能基团与生物吸附 Algal cell wall functional groups and biosorp",
+        "basis": "verified_with_quote"
+      }
+    ],
+    "leads": [
       {
         "type": "mechanism",
         "index": 2,
         "name": "生物聚合物与其他材料的复合策略 Biopolymer composite strategies",
-        "basis": "needs_review"
+        "basis": "partial_with_quote"
       },
       {
         "type": "mechanism",
@@ -1107,12 +1144,6 @@
       },
       {
         "type": "mechanism",
-        "index": 7,
-        "name": "微藻吸附Pb²⁺的两阶段机制 Two-stage adsorption mechanism for Pb²⁺ by mi",
-        "basis": "needs_review"
-      },
-      {
-        "type": "mechanism",
         "index": 8,
         "name": "海藻酸盐固定化微藻机制 Alginate immobilization mechanism for microalgae",
         "basis": "needs_review"
@@ -1121,12 +1152,6 @@
         "type": "mechanism",
         "index": 9,
         "name": "藻类去除有机污染物的五种机制 Five mechanisms of organic pollutant removal ",
-        "basis": "needs_review"
-      },
-      {
-        "type": "mechanism",
-        "index": 10,
-        "name": "藻类细胞壁功能基团与生物吸附 Algal cell wall functional groups and biosorp",
         "basis": "needs_review"
       },
       {

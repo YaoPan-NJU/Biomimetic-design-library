@@ -66,9 +66,13 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.jtice.2024.105668",
-      "verification": "needs_review",
+      "verification": "partial",
       "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
-      "verification_quote": "where adsorbate molecules transfer through the liquid film surrounding                      maximum adsorption capacity of Pb (II) using HAp-bentonite composite",
+      "source_file": "仿生文献库/论文/第4组-生物矿化/2024-Jaffar-membrane-hydroxyapatite-adsorption-adsorbent-review 2.pdf",
+      "source_page": 11,
+      "source_locator": "Section 4.1",
+      "verification_quote": "chitosan/hydroxyapatite (Cs/HAp) composite nanofiber membrane... maximum removal capacity for Pb(II), Co(II), and Ni(II) was 296.7, 180.2, and 213.8 mg/g",
+      "scope_match": ["HAp", "membrane", "Pb(II)", "removal capacity"],
       "causal_chain": {
         "transferable_principle": "基于机制: HAp膜重金属去除性能",
         "pollutant_feature": {
@@ -103,9 +107,9 @@
             "source_asset": null
           }
         ],
-        "verification_quote": "HAP with general formula Ca10(PO4)6(OH)2 is an available and low-cost adsorbent to remove metals with the high-efficiency removal. HAP has been used as an adsorbent in the removal of Sr, Zn, Co, Cd ions in various environments, including electrolyte solutions.",
+        "verification_quote": "chitosan/hydroxyapatite (Cs/HAp) composite nanofiber membrane... maximum removal capacity for Pb(II), Co(II), and Ni(II) was 296.7, 180.2, and 213.8 mg/g",
         "source_doi": "10.1016/j.jtice.2024.105668",
-        "source_locator": "Jaffar2024 p.11 / Section 4.1"
+        "source_locator": "Section 4.1, p.11"
       }
     },
     {
@@ -177,9 +181,13 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.jtice.2024.105668",
-      "verification": "needs_review",
+      "verification": "partial",
       "基本原理": "needs_review",
-      "verification_quote": "can significantly impact the overall economics of the treatment process.           separation technique (TIPS), electrospinning, reverse thermal separa-",
+      "source_file": "仿生文献库/论文/第4组-生物矿化/2024-Jaffar-membrane-hydroxyapatite-adsorption-adsorbent-review 2.pdf",
+      "source_page": 11,
+      "source_locator": "Section 4.1",
+      "verification_quote": "Several methods were used to produce HAp-based polymeric membrane, such as NIPS, TIPS, electrospinning",
+      "scope_match": ["HAp", "membrane", "NIPS", "TIPS", "electrospinning"],
       "causal_chain": {
         "transferable_principle": "基于机制: HAp膜制备方法",
         "pollutant_feature": {
@@ -214,9 +222,9 @@
             "source_asset": null
           }
         ],
-        "verification_quote": "The studies on thermodynamic show the adsorption process was physical and spontaneous. The pseudo-second-order model showed the experimental data of Zn (II) and Cu (II) ions were best described.",
+        "verification_quote": "Several methods were used to produce HAp-based polymeric membrane, such as NIPS, TIPS, electrospinning",
         "source_doi": "10.1016/j.jtice.2024.105668",
-        "source_locator": "Jaffar2024 p.11 / Section 4.1"
+        "source_locator": "Section 4.1, p.11"
       }
     },
     {
@@ -225,9 +233,13 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.jtice.2024.105668",
-      "verification": "needs_review",
+      "verification": "partial",
       "基本原理": "needs_review",
-      "verification_quote": "ester (CE), Polysulfone (PSf), polyethersulfone (PES), polytetrafluoro-            content, the maximum adsorption capacity was reported at 150 mg/g. A",
+      "source_file": "仿生文献库/论文/第4组-生物矿化/2024-Jaffar-membrane-hydroxyapatite-adsorption-adsorbent-review 2.pdf",
+      "source_page": 11,
+      "source_locator": "Section 4",
+      "verification_quote": "Organic membranes: PA, CA, CE, PSf, PES, PTFE, PVDF, PP, PAN... Inorganic: metal oxides Al2O3, SiO2, TiO2, ZrO2",
+      "scope_match": ["membrane", "organic", "inorganic", "PA", "PVDF"],
       "causal_chain": {
         "transferable_principle": "基于机制: HAp膜类型与制备技术",
         "pollutant_feature": {
@@ -262,9 +274,9 @@
             "source_asset": null
           }
         ],
-        "verification_quote": "The studies on thermodynamic show the adsorption process was physical and spontaneous. The pseudo-second-order model showed the experimental data of Zn (II) and Cu (II) ions were best described.",
+        "verification_quote": "Organic membranes: PA, CA, CE, PSf, PES, PTFE, PVDF, PP, PAN... Inorganic: metal oxides Al2O3, SiO2, TiO2, ZrO2",
         "source_doi": "10.1016/j.jtice.2024.105668",
-        "source_locator": "Jaffar2024 p.11 / Section 4.1"
+        "source_locator": "Section 4, p.11"
       }
     }
   ],
@@ -359,28 +371,27 @@
         "index": 1,
         "parameter": "投加量对Cu去除率的影响",
         "basis": "verified_with_quote"
-      }
-    ],
-    "leads": [
+      },
       {
         "type": "mechanism",
         "index": 0,
         "name": "HAp膜重金属去除性能",
-        "basis": "needs_review"
+        "basis": "partial_evidence"
       },
       {
         "type": "mechanism",
         "index": 2,
         "name": "HAp膜制备方法",
-        "basis": "needs_review"
+        "basis": "partial_evidence"
       },
       {
         "type": "mechanism",
         "index": 3,
         "name": "HAp膜类型与制备技术",
-        "basis": "needs_review"
+        "basis": "partial_evidence"
       }
     ],
+    "leads": [],
     "inferences": [],
     "generated_by": "P1c-auto",
     "note": "Classification based on verification label + quote presence + source type"
