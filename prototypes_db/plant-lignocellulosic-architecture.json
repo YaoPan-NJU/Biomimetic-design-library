@@ -29,7 +29,12 @@
         },
         "interaction": {
           "text": "Ion exchange: Cd²⁺ displaces Na⁺, K⁺, Ca²⁺ from biochar surface",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "scope_match": "Keywords: cd, exchange, io, ion, na",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.jclepro.2020.125390",
+          "locator": "p.5",
+          "quote": "The intensity of Na⁺ peak becomes weaker after Cd adsorption, possibly implying that ion exchange of Cd²⁺ with Na⁺ contributes to the adsorption process."
         },
         "why_it_works": {
           "text": "qm = 211.49 mg/g for Cd (silicate-modified biochar)",
@@ -81,11 +86,21 @@
         },
         "bio_structure": {
           "text": "Carbonate and silicate surface groups",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "scope_match": "Keywords: ca, groups, silicate",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.jclepro.2020.125390",
+          "locator": "p.5",
+          "quote": "The bands at ~449 cm⁻¹, 561 cm⁻¹, 1041 cm⁻¹ and 1456 cm⁻¹ disappear, indicating these functional groups react with Cd and probably form Cd-silicate precipitates."
         },
         "interaction": {
           "text": "Surface precipitation: CdCO₃, CdSiO₃, Cd₂SiO₄ formation",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "scope_match": "Keywords: cd, si",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.jclepro.2020.125390",
+          "locator": "p.5",
+          "quote": "The bands at ~449 cm⁻¹, 561 cm⁻¹, 1041 cm⁻¹ and 1456 cm⁻¹ disappear, indicating these functional groups react with Cd and probably form Cd-silicate precipitates."
         },
         "why_it_works": {
           "text": "Enhanced at pH > 5",
