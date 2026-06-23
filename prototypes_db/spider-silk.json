@@ -591,8 +591,8 @@
       "locator": "p.7, Section 3.2.2",
       "verification_quote": "Viscous mineral oils are known to adhere to membranes and increase fouling; meanwhile, high surfactant concentrations can form a firm layer on the oil-water interface, preventing oil droplets from coalescing by electrostatic repulsion.",
       "scope_match": "Keywords: viscous, fouling, surfactant, electrostatic repulsion, coalescing",
-      "evidence_type": "source_verified",
-      "evidence_note": "verified via visual_cache PDF text",
+      "evidence_type": "lead_inference",
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
       "causal_chain": {
         "transferable_principle": "基于机制: 纳米乳液分离挑战——粘度+表面活性剂",
         "pollutant_feature": {
@@ -627,9 +627,7 @@
             "source_asset": null
           }
         ]
-      },
-      "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      }
     },
     {
       "name": "Cr(VI) XPS吸附机制",
@@ -746,8 +744,8 @@
       "locator": "p.4",
       "verification_quote": "The contact angle of CNF mixed with PEI (CNF/PEI) on the PTFE plate is 118.5°, while that of the GO droplet is 121.7°. Droplets A and B made contact on the hydrophobic PTFE plate to form a liquid-liquid interface with contact attraction without mixing",
       "scope_match": "Keywords: CNF, PEI, PTFE, contact angle, 118.5, 121.7, hydrophobic",
-      "evidence_type": "source_verified",
-      "evidence_note": "verified via visual_cache PDF text",
+      "evidence_type": "lead_inference",
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
       "causal_chain": {
         "transferable_principle": "基于机制: 纤维形成——疏水基底",
         "pollutant_feature": {
@@ -782,9 +780,7 @@
             "source_asset": null
           }
         ]
-      },
-      "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      }
     },
     {
       "name": "专化-协同机制 Specialization and cooperation mechanism",
@@ -901,8 +897,8 @@
       "locator": "p.2",
       "verification_quote": "The beetles in the Namib desert could capture water from the fog flow efficiently by exposing its back, which consists of alternated hydrophobic and hydrophilic parts. Fog vapor deposed on the hydrophilic peaks, forming fast-growing droplets.",
       "scope_match": "Keywords: Namib, beetle, fog, hydrophilic, hydrophobic, bump",
-      "evidence_type": "source_verified",
-      "evidence_note": "verified via visual_cache PDF text",
+      "evidence_type": "lead_inference",
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
       "causal_chain": {
         "transferable_principle": "基于机制: 纳米布沙漠甲虫雾水收集机制",
         "pollutant_feature": {
@@ -937,9 +933,7 @@
             "source_asset": null
           }
         ]
-      },
-      "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      }
     },
     {
       "name": "铀酰离子配位化学",
@@ -989,7 +983,8 @@
       "boundary_note": "This mechanism describes UO2^2+ coordination chemistry specific to uranium recovery applications.",
       "verification_quote": ". It has a strictly linear and symmetrical [O = U = O]2+\narrangement, with short U-O bond length of 1.76 Å [19]. A triple bond is \nconstructed by one σ-bond plus two π-bonds between 5f and 6d hybrid \norbitals of U and 2p orbitals of oxido groups. When coordinating with \norganic electron donor ligands, four or more ligands may be bound to \nUO2\n2+ in",
       "source_page": 2,
-      "source_doi": "10.1016/j.ccr.2023.215234"
+      "source_doi": "10.1016/j.ccr.2023.215234",
+      "source_locator": "p.2"
     },
     {
       "name": "酰胺肟配位模式",
@@ -1004,8 +999,8 @@
       "locator": "p.2",
       "verification_quote": "four main possible binding motifs between amidoximes and UO2 2+: monodentate, tridentate (cyclic imide dioxime), side-on η2-bound, and chelating coordination",
       "scope_match": "Keywords: amidoxime, monodentate, tridentate, chelating, uranyl",
-      "evidence_type": "source_verified",
-      "evidence_note": "verified via visual_cache PDF text",
+      "evidence_type": "lead_inference",
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
       "causal_chain": {
         "transferable_principle": "基于机制: 酰胺肟配位模式",
         "pollutant_feature": {
@@ -1040,9 +1035,7 @@
             "source_asset": null
           }
         ]
-      },
-      "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      }
     },
     {
       "name": "配体优化六大策略",
@@ -1087,7 +1080,8 @@
         ]
       },
       "verification_quote": "ium extraction from seawater; AO, amidoxime; EXAFS, extended X-ray absorption fine structure; PAN, poly(acrylonitrile); PAO, poly \n(amidoxime); DFT, density functional theory; COFs, covalent organic frameworks; POPs, porous organic polymers; CMPs, conjugated microporous polymers; h-PEI, \nhyperbranched polyethyleneimine; SUP, super uranyl-binding protein; SSUP, spidroin-based SUP; MOFs, metal–organ",
-      "source_doi": "10.1016/j.ccr.2023.215234"
+      "source_doi": "10.1016/j.ccr.2023.215234",
+      "source_locator": "p.1"
     },
     {
       "name": "双功能协同策略",
@@ -1137,7 +1131,8 @@
       "boundary_note": "This mechanism is specific to uranium(VI) capture using amine/acid functional groups. Do not generalize to non-uranium pollutants.",
       "verification_quote": "ormation of \npoly(acrylonitrile) (PAN) to poly(amidoxime) (PAO), the functionalities \nof both open-chain amidoxime and cyclic imide dioxime were formed; \ntherefore, how to primaril",
       "source_page": 4,
-      "source_doi": "10.1016/j.ccr.2023.215234"
+      "source_doi": "10.1016/j.ccr.2023.215234",
+      "source_locator": "p.4"
     },
     {
       "name": "离子印迹策略——三种改进方向",
@@ -1152,8 +1147,8 @@
       "locator": "p.8",
       "verification_quote": "three main striving directions: (1) increase accessible binding sites by highly porous materials, (2) improve site accessibility by 2D or surface imprinting; (3) strengthen coordination with uranyl",
       "scope_match": "Keywords: accessible, porous materials, 2D, surface imprinting, uranyl, coordination",
-      "evidence_type": "source_verified",
-      "evidence_note": "verified via visual_cache PDF text",
+      "evidence_type": "lead_inference",
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
       "causal_chain": {
         "transferable_principle": "基于机制: 离子印迹策略——三种改进方向",
         "pollutant_feature": {
@@ -1188,9 +1183,7 @@
             "source_asset": null
           }
         ]
-      },
-      "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      }
     },
     {
       "name": "电化学提取三阶段机理",
@@ -1240,7 +1233,8 @@
       "boundary_note": "This mechanism requires electrochemical setup and is specific to U(VI)→U(IV) reduction. Not applicable to general spider-silk adsorption applications.",
       "verification_quote": "active metal with the reduction potentials of 0.327 v for UO2\n2+/U4+ and \n0.411 v for UO2\n2+/UO2 (vs. standard hydrogen electrode), respectively \n[116]. UO2\n2+ can be reduced and",
       "source_page": 10,
-      "source_doi": "10.1016/j.ccr.2023.215234"
+      "source_doi": "10.1016/j.ccr.2023.215234",
+      "source_locator": "p.10"
     },
     {
       "name": "MOF光催化协同机制",
@@ -1285,7 +1279,8 @@
           }
         ]
       },
-      "source_doi": "10.1016/j.ccr.2023.215234"
+      "source_doi": "10.1016/j.ccr.2023.215234",
+      "source_locator": "p.12"
     }
   ],
   "narrative": {
