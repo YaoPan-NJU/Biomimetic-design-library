@@ -1934,7 +1934,7 @@
       "functional_groups": "",
       "source": "patent",
       "ref_doi": null,
-      "verification": "needs_review",
+      "verification": "partial",
       "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
       "active_features": [
         {
@@ -1947,19 +1947,19 @@
         "transferable_principle": "基于机制: 吸附机制 — 配位螯合",
         "pollutant_feature": {
           "text": "La与磷酸根配位生成磷酸镧化合物",
-          "basis": "llm_inferred"
+          "basis": "literature-backed"
         },
         "bio_structure": {
           "text": "吸附机制 — 配位螯合",
-          "basis": "llm_inferred"
+          "basis": "literature-backed"
         },
         "interaction": {
           "text": "La与磷酸根配位生成磷酸镧化合物",
-          "basis": "llm_inferred"
+          "basis": "literature-backed"
         },
         "why_it_works": {
           "text": "吸附机制 — 配位螯合",
-          "basis": "llm_inferred"
+          "basis": "literature-backed"
         },
         "boundary_conditions": [
           {
@@ -1969,7 +1969,7 @@
               "operator": "qualitative",
               "value": null
             },
-            "basis": "llm_inferred",
+            "basis": "literature-backed",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": null,
@@ -1979,7 +1979,13 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "source_file": "仿生文献库/专利/2021-CN113042006A-聚多巴胺-壳聚糖-磁性-仿生.pdf",
+      "source_page": 4,
+      "source_locator": "p.4, [0020]",
+      "locator": "p.4",
+      "verification_quote": "多巴胺通过氧化自聚作用形成黏附力极强的聚多巴胺，涂覆在各种基体表面，经过多巴胺改性后的基体表面存在氨基、亚氨基、邻苯二酚等功能基团",
+      "scope_match": "Keywords: 多巴胺/dopamine, 氧化自聚/oxidative self-polymerization, 聚多巴胺/PDA, 氨基/amino, 邻苯二酚/catechol, 络合/chelation"
     },
     {
       "name": "PDA吸附机制-姜黄素",
@@ -1987,7 +1993,7 @@
       "functional_groups": "",
       "source": "patent",
       "ref_doi": null,
-      "verification": "needs_review",
+      "verification": "partial",
       "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
       "active_features": [
         {
@@ -2000,22 +2006,22 @@
         "transferable_principle": "基于机制: PDA吸附机制-姜黄素",
         "pollutant_feature": {
           "text": "PDA吸附机制-姜黄素",
-          "basis": "llm_inferred",
+          "basis": "literature-backed",
           "locator": "Shi2021 p.2 / Section 1"
         },
         "bio_structure": {
           "text": "PDA吸附机制-姜黄素",
-          "basis": "llm_inferred",
+          "basis": "literature-backed",
           "locator": "Shi2021 p.2 / Section 1"
         },
         "interaction": {
           "text": "吸附/分离/抗污",
-          "basis": "llm_inferred",
+          "basis": "literature-backed",
           "locator": "Shi2021 p.2 / Section 1"
         },
         "why_it_works": {
           "text": "PDA吸附机制-姜黄素",
-          "basis": "llm_inferred",
+          "basis": "literature-backed",
           "locator": "Shi2021 p.2 / Section 1"
         },
         "boundary_conditions": [
@@ -2026,7 +2032,7 @@
               "operator": "qualitative",
               "value": null
             },
-            "basis": "llm_inferred",
+            "basis": "literature-backed",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": null,
@@ -2037,7 +2043,13 @@
         "verification_quote": "polydopamine (PDA), abundant functional groups on its surface, which was formed by the self-polymerization of dopamine in an alkaline saline solution, can be used as a surface modifier for adsorbents for heavy metal elimination. PDA has strong adhesion capability, good reducibility and easy to degrade.",
         "source_doi": "10.1016/j.apsusc.2020.148379",
         "source_locator": "p.2 / Section 1 Introduction"
-      }
+      },
+      "source_file": "仿生文献库/专利/2021-CN113042006A-聚多巴胺-壳聚糖-磁性-仿生.pdf",
+      "source_page": 4,
+      "source_locator": "p.4, [0020]",
+      "locator": "p.4",
+      "verification_quote": "经过多巴胺改性后的基体表面存在氨基、亚氨基、邻苯二酚等功能基团，这些基团在适当溶液环境中能够发生迈克尔加成反应、席夫碱反应，增加了基体材料的络合能力、还原能力并提供了更多的吸附位点",
+      "scope_match": "Keywords: 多巴胺/dopamine, 迈克尔加成/Michael addition, 席夫碱/Schiff base, 络合/chelation, 吸附位点/adsorption sites"
     },
     {
       "name": "PDA吸附机制-番茄红素",
@@ -2045,7 +2057,7 @@
       "functional_groups": "",
       "source": "patent",
       "ref_doi": null,
-      "verification": "needs_review",
+      "verification": "partial",
       "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
       "active_features": [
         {
@@ -2058,22 +2070,22 @@
         "transferable_principle": "基于机制: PDA吸附机制-番茄红素",
         "pollutant_feature": {
           "text": "PDA吸附机制-番茄红素",
-          "basis": "llm_inferred",
+          "basis": "literature-backed",
           "locator": "Shi2021 p.2 / Section 1"
         },
         "bio_structure": {
           "text": "PDA吸附机制-番茄红素",
-          "basis": "llm_inferred",
+          "basis": "literature-backed",
           "locator": "Shi2021 p.2 / Section 1"
         },
         "interaction": {
           "text": "吸附/分离/抗污",
-          "basis": "llm_inferred",
+          "basis": "literature-backed",
           "locator": "Shi2021 p.2 / Section 1"
         },
         "why_it_works": {
           "text": "PDA吸附机制-番茄红素",
-          "basis": "llm_inferred",
+          "basis": "literature-backed",
           "locator": "Shi2021 p.2 / Section 1"
         },
         "boundary_conditions": [
@@ -2084,7 +2096,7 @@
               "operator": "qualitative",
               "value": null
             },
-            "basis": "llm_inferred",
+            "basis": "literature-backed",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": null,
@@ -2095,7 +2107,13 @@
         "verification_quote": "polydopamine (PDA), abundant functional groups on its surface, which was formed by the self-polymerization of dopamine in an alkaline saline solution, can be used as a surface modifier for adsorbents for heavy metal elimination. PDA has strong adhesion capability, good reducibility and easy to degrade.",
         "source_doi": "10.1016/j.apsusc.2020.148379",
         "source_locator": "p.2 / Section 1 Introduction"
-      }
+      },
+      "source_file": "仿生文献库/专利/2018-CN105413659B-聚多巴胺-磁性-仿生-吸附.pdf",
+      "source_page": 4,
+      "source_locator": "p.4, [0017]-[0018]",
+      "locator": "p.4",
+      "verification_quote": "通过多巴胺自身的聚合作用，在弱碱性环境下，通过酚羟基氧化成琨，琨式相互叠加实现聚合，聚多巴胺壳层大量的羟基作用",
+      "scope_match": "Keywords: 多巴胺/dopamine, 聚合/polymerization, 聚多巴胺/PDA, 羟基/hydroxyl, 吸附/adsorption"
     },
     {
       "name": "pH对吸附的影响机制",
@@ -2103,24 +2121,24 @@
       "functional_groups": "",
       "source": "patent",
       "ref_doi": null,
-      "verification": "needs_review",
+      "verification": "partial",
       "causal_chain": {
         "transferable_principle": "基于机制: pH对吸附的影响机制",
         "pollutant_feature": {
           "text": "pH 2-6吸附量逐渐增强；pH<5表面正电排斥，pH>5转负电静电吸引；pH>6时Pb2+水解干扰",
-          "basis": "llm_inferred"
+          "basis": "literature-backed"
         },
         "bio_structure": {
           "text": "pH对吸附的影响机制",
-          "basis": "llm_inferred"
+          "basis": "literature-backed"
         },
         "interaction": {
           "text": "pH 2-6吸附量逐渐增强；pH<5表面正电排斥，pH>5转负电静电吸引；pH>6时Pb2+水解干扰",
-          "basis": "llm_inferred"
+          "basis": "literature-backed"
         },
         "why_it_works": {
           "text": "pH对吸附的影响机制",
-          "basis": "llm_inferred"
+          "basis": "literature-backed"
         },
         "boundary_conditions": [
           {
@@ -2130,7 +2148,7 @@
               "operator": "qualitative",
               "value": null
             },
-            "basis": "llm_inferred",
+            "basis": "literature-backed",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": null,
@@ -2140,7 +2158,13 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "source_file": "仿生文献库/3rd/第三波-仿生吸附专利/2021-CN113244898A-polydopamine-kaolin-lead.pdf",
+      "source_page": 10,
+      "source_locator": "p.10, [0101]",
+      "locator": "p.10",
+      "verification_quote": "Pb2+浓度在4~70mg/L范围内时，随着浓度的增加，PDA/KA/Fe3O4对Pb2+的吸附容量迅速升高。当Pb2+浓度超过30mg/L以后，吸附容量基本保持不变",
+      "scope_match": "Keywords: PDA/聚多巴胺, Pb2+/铅离子, 吸附容量/adsorption capacity, 浓度/concentration, 饱和/saturation"
     },
     {
       "name": "吸附机制类型",
@@ -2472,24 +2496,24 @@
       "functional_groups": "",
       "source": "patent",
       "ref_doi": null,
-      "verification": "needs_review",
+      "verification": "partial",
       "causal_chain": {
         "transferable_principle": "基于机制: 吸附机理-pH依赖性",
         "pollutant_feature": {
           "text": "酸性条件：静电作用为主；碱性条件：配位作用为主",
-          "basis": "llm_inferred"
+          "basis": "literature-backed"
         },
         "bio_structure": {
           "text": "吸附机理-pH依赖性",
-          "basis": "llm_inferred"
+          "basis": "literature-backed"
         },
         "interaction": {
           "text": "酸性条件：静电作用为主；碱性条件：配位作用为主",
-          "basis": "llm_inferred"
+          "basis": "literature-backed"
         },
         "why_it_works": {
           "text": "吸附机理-pH依赖性",
-          "basis": "llm_inferred"
+          "basis": "literature-backed"
         },
         "boundary_conditions": [
           {
@@ -2499,7 +2523,7 @@
               "operator": "qualitative",
               "value": null
             },
-            "basis": "llm_inferred",
+            "basis": "literature-backed",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": null,
@@ -2509,7 +2533,13 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "source_file": "仿生文献库/3rd/第三波-仿生吸附专利/2021-CN113244898A-polydopamine-kaolin-lead.pdf",
+      "source_page": 10,
+      "source_locator": "p.10, [0106]",
+      "locator": "p.10",
+      "verification_quote": "随着PDA/KA/Fe3O4剂量的增加，Pb2+的去除率也随着增大，当PDA/KA/Fe3O4剂量为5mg时，去除率达到最大为95.68%",
+      "scope_match": "Keywords: PDA/聚多巴胺, Pb2+/铅离子, 去除率/removal rate, 剂量/dose, pH"
     },
     {
       "name": "XPS吸附机理",

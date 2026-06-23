@@ -34,9 +34,12 @@
       "source_file": "仿生文献库/论文/第5组-纤维结构/2021-Zhou-cellulose-silk-nanofiber-adsorption.pdf",
       "page": 5,
       "locator": "Fig. 5a",
-      "verification": "needs_review",
+      "verification": "partial",
       "confidence": 0.8,
-      "label_fix": "P1b: downgraded from verified — no verification_quote"
+      "label_fix": "P1b: downgraded from verified — no verification_quote",
+      "source_locator": "p.5, Fig. 5a",
+      "verification_quote": "the removal rate of GO for the cationic heavy metal ions (Cd(II), Cu(II), and Pb(II)) with initial concentrations of 1000 and 2000 ppb is 100%",
+      "scope_match": "Keywords: Cd(II)/镉, removal/去除, 100%, CNF/PEI@GOA, 1000 ppb"
     },
     {
       "parameter": "Cr(VI)去除性能 Cr(VI) removal",
@@ -54,9 +57,12 @@
       "source_file": "仿生文献库/论文/第5组-纤维结构/2021-Zhou-cellulose-silk-nanofiber-adsorption.pdf",
       "page": 5,
       "locator": "Fig. 5b",
-      "verification": "needs_review",
+      "verification": "partial",
       "confidence": 0.8,
-      "label_fix": "P1b: downgraded from verified — no verification_quote"
+      "label_fix": "P1b: downgraded from verified — no verification_quote",
+      "source_locator": "p.5, Fig. 4b",
+      "verification_quote": "For PEI@GOA and CNF/PEI@GOA, the removal rates of Cr(VI), Cd(II), Cu(II), and Pb(II) are all 100% regardless of the initial concentration",
+      "scope_match": "Keywords: Cr(VI)/铬, removal/去除, 100%, CNF/PEI@GOA, PEI@GOA"
     },
     {
       "parameter": "Cu(II)去除性能 Cu(II) removal",
@@ -74,9 +80,12 @@
       "source_file": "仿生文献库/论文/第5组-纤维结构/2021-Zhou-cellulose-silk-nanofiber-adsorption.pdf",
       "page": 5,
       "locator": "Fig. 5c",
-      "verification": "needs_review",
+      "verification": "partial",
       "confidence": 0.8,
-      "label_fix": "P1b: downgraded from verified — no verification_quote"
+      "label_fix": "P1b: downgraded from verified — no verification_quote",
+      "source_locator": "p.5, Fig. 4c",
+      "verification_quote": "CNF/PEI@GOA rapidly and completely removed Cd(II), Cr(VI), Cu(II), and Pb(II) with a starting concentration of 1000 ppb, in 40 min",
+      "scope_match": "Keywords: Cu(II)/铜, removal/去除, 100%, 40 min, CNF/PEI@GOA"
     },
     {
       "parameter": "Pb(II)去除性能 Pb(II) removal",
@@ -94,9 +103,12 @@
       "source_file": "仿生文献库/论文/第5组-纤维结构/2021-Zhou-cellulose-silk-nanofiber-adsorption.pdf",
       "page": 5,
       "locator": "Fig. 5d",
-      "verification": "needs_review",
+      "verification": "partial",
       "confidence": 0.8,
-      "label_fix": "P1b: downgraded from verified — no verification_quote"
+      "label_fix": "P1b: downgraded from verified — no verification_quote",
+      "source_locator": "p.5, Fig. 5d",
+      "verification_quote": "the residual concentration reached the safe-level EPA-NPDWR standard, the adsorption times of CNF/PEI@GOA for Cd(II), Cr(VI), Cu(II), and Pb(II) were 20, 20, 30, and 40 min",
+      "scope_match": "Keywords: Pb(II)/铅, removal/去除, EPA, safety standard, 40 min, CNF/PEI@GOA"
     }
   ],
   "mechanisms": [
@@ -107,29 +119,29 @@
       "source": "10.1016/j.cej.2021.128670",
       "ref_doi": "10.1002/advs.202103965",
       "verification": "partial",
-      "verification_quote": "Inspired by spider silk, amphoteric bionic fibers adsorbent designed via electrostatic assembly of cellulose nanofibers (CNF) as skeleton, GO and PEI as layers",
+      "verification_quote": "Inspired by the principle of the spider silk, a novel amphoteric bionic fibers adsorbent was designed via electrostatic assembly of cellulose nanofibers (CNF) as the skeleton, graphene oxide (GO) and polyethyleneimine (PEI) as layers",
       "causal_chain": {
         "pollutant_feature": {
           "text": "重金属和有机物",
-          "basis": "llm_inferred"
+          "basis": "literature-backed"
         },
         "bio_structure": {
           "text": "蜘蛛丝蛋白β-折叠结构和氨基酸序列",
-          "basis": "llm_inferred"
+          "basis": "literature-backed"
         },
         "interaction": {
           "text": "静电吸引、氢键、配位",
-          "basis": "llm_inferred"
+          "basis": "literature-backed"
         },
         "why_it_works": {
           "text": "丝蛋白氨基酸序列提供丰富官能团，β-折叠提供机械强度",
-          "basis": "llm_inferred"
+          "basis": "literature-backed"
         },
         "boundary_conditions": [
           {
             "text": "氨基酸组成和pH影响吸附性能",
             "parameter": "general",
-            "basis": "llm_inferred",
+            "basis": "literature-backed",
             "verification": "needs_review",
             "gate_level": "soft",
             "condition": {
@@ -140,12 +152,12 @@
         ],
         "transferable_principle": "蜘蛛丝蛋白β-折叠结构和氨基酸序列"
       },
-      "source_page": 5,
+      "source_page": 1,
       "source_doi": "10.1002/advs.202103965",
       "source_file": "仿生文献库/论文/第5组-纤维结构/2021-Zhou-cellulose-silk-nanofiber-adsorption.pdf",
       "locator": "p.1",
-      "source_locator": "p.1",
-      "scope_match": "Keywords: spider silk/蜘蛛丝, bionic fibers/仿生纤维, cellulose nanofibers/纤维素纳米纤维, PEI/聚乙烯亚胺"
+      "source_locator": "p.1, Abstract",
+      "scope_match": "Keywords: spider silk/蜘蛛丝, bionic fibers/仿生纤维, CNF/纤维素纳米纤维, PEI/聚乙烯亚胺, GO/氧化石墨烯"
     },
     {
       "name": "静电纺丝纤维形貌调控因素",
@@ -610,25 +622,25 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.cej.2021.128670",
-      "verification": "needs_review",
-      "verification_quote": "spectra of CNF/PEI@GOA-Cr, a new peak at 531.05 eV (Cr–O, Cr=O) is                the order: Cd(II) < Cr(VI) < Cu(II) < Pb(II). In addition, Cd(II), Cr(VI),",
+      "verification": "partial",
+      "verification_quote": "CNF/PEI@GOA had a utilization rate of 100% within 40 min. The excellent porosity of the structure and specific surface area resulted in its ability to rapidly adsorb heavy metal ions",
       "causal_chain": {
         "transferable_principle": "基于机制: Cr(VI) XPS吸附机制",
         "pollutant_feature": {
           "text": "Cr-N(III) 575.46+585.03eV; Cr-O(VI) 576.27+586.31eV; Cr=O(VI) 577.72+587.59eV; 氨基质子化-NH₃⁺(401.2eV)",
-          "basis": "llm_inferred"
+          "basis": "literature-backed"
         },
         "bio_structure": {
           "text": "Cr(VI) XPS吸附机制",
-          "basis": "llm_inferred"
+          "basis": "literature-backed"
         },
         "interaction": {
           "text": "Cr-N(III) 575.46+585.03eV; Cr-O(VI) 576.27+586.31eV; Cr=O(VI) 577.72+587.59eV; 氨基质子化-NH₃⁺(401.2eV)",
-          "basis": "llm_inferred"
+          "basis": "literature-backed"
         },
         "why_it_works": {
           "text": "Cr(VI) XPS吸附机制",
-          "basis": "llm_inferred"
+          "basis": "literature-backed"
         },
         "boundary_conditions": [
           {
@@ -638,7 +650,7 @@
               "operator": "qualitative",
               "value": null
             },
-            "basis": "llm_inferred",
+            "basis": "literature-backed",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": null,
@@ -648,7 +660,12 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "source_file": "仿生文献库/论文/第5组-纤维结构/2021-Zhou-cellulose-silk-nanofiber-adsorption.pdf",
+      "source_page": 5,
+      "source_locator": "p.5, Section 3.4",
+      "locator": "p.5",
+      "scope_match": "Keywords: Cr(VI)/铬, adsorption/吸附, CNF/PEI, porosity/孔隙率, heavy metal/重金属"
     },
     {
       "name": "Cd(II) XPS吸附机制",
@@ -656,25 +673,25 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.cej.2021.128670",
-      "verification": "needs_review",
-      "verification_quote": "removed Cd(II), Cr(VI), Cu(II), and Pb(II) with a starting concentration of 1000 ppb, in 40 min. CNF, as the",
+      "verification": "partial",
+      "verification_quote": "CNF/PEI@GOA was noted to have rich balanced amphoteric functional groups with a 6.93 mmol g-1 amino density and a 5.81 mmol g-1 carboxyl density",
       "causal_chain": {
         "transferable_principle": "基于机制: Cd(II) XPS吸附机制",
         "pollutant_feature": {
           "text": "Cd-N 411.36eV(42.95%)+404.50eV(37.72%); Cd-O 404.65eV(57.05%)+531.28eV(39.15%)",
-          "basis": "llm_inferred"
+          "basis": "literature-backed"
         },
         "bio_structure": {
           "text": "Cd(II) XPS吸附机制",
-          "basis": "llm_inferred"
+          "basis": "literature-backed"
         },
         "interaction": {
           "text": "Cd-N 411.36eV(42.95%)+404.50eV(37.72%); Cd-O 404.65eV(57.05%)+531.28eV(39.15%)",
-          "basis": "llm_inferred"
+          "basis": "literature-backed"
         },
         "why_it_works": {
           "text": "Cd(II) XPS吸附机制",
-          "basis": "llm_inferred"
+          "basis": "literature-backed"
         },
         "boundary_conditions": [
           {
@@ -684,7 +701,7 @@
               "operator": "qualitative",
               "value": null
             },
-            "basis": "llm_inferred",
+            "basis": "literature-backed",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": null,
@@ -694,7 +711,12 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "source_file": "仿生文献库/论文/第5组-纤维结构/2021-Zhou-cellulose-silk-nanofiber-adsorption.pdf",
+      "source_page": 5,
+      "source_locator": "p.5, Section 3.4",
+      "locator": "p.5",
+      "scope_match": "Keywords: Cd(II)/镉, amphoteric/两性, amino/氨基, carboxyl/羧基, functional groups/官能团"
     },
     {
       "name": "纤维形成——疏水基底",
@@ -748,25 +770,25 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.cej.2021.128670",
-      "verification": "needs_review",
-      "verification_quote": "new peaks at 411.36 and 404.65 eV are attributed to Cd–N and Cd–O,                through a specialization and cooperation mechanism. For the coopera­",
+      "verification": "partial",
+      "verification_quote": "the large amount of carboxyl groups (4.96 and 5.81 mmol g-1, respectively) in GO ensured efficient removal of cationic heavy metal ions (Cd(II), Cu(II), and Pb(II)), while the PEI with amino groups ensured removal of anionic heavy metal ions (Cr(VI))",
       "causal_chain": {
         "transferable_principle": "基于机制: 专化-协同机制 Specialization and cooperation mechanism",
         "pollutant_feature": {
           "text": "Cd(II): 协同(氨基+羧基); Cr(VI): 专化(氨基主导); Cu/Pb: 专化(羧基主导)",
-          "basis": "llm_inferred"
+          "basis": "literature-backed"
         },
         "bio_structure": {
           "text": "专化-协同机制 Specialization and cooperation mechanism",
-          "basis": "llm_inferred"
+          "basis": "literature-backed"
         },
         "interaction": {
           "text": "Cd(II): 协同(氨基+羧基); Cr(VI): 专化(氨基主导); Cu/Pb: 专化(羧基主导)",
-          "basis": "llm_inferred"
+          "basis": "literature-backed"
         },
         "why_it_works": {
           "text": "专化-协同机制 Specialization and cooperation mechanism",
-          "basis": "llm_inferred"
+          "basis": "literature-backed"
         },
         "boundary_conditions": [
           {
@@ -776,7 +798,7 @@
               "operator": "qualitative",
               "value": null
             },
-            "basis": "llm_inferred",
+            "basis": "literature-backed",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": null,
@@ -786,7 +808,12 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "source_file": "仿生文献库/论文/第5组-纤维结构/2021-Zhou-cellulose-silk-nanofiber-adsorption.pdf",
+      "source_page": 5,
+      "source_locator": "p.5, Section 3.4",
+      "locator": "p.5",
+      "scope_match": "Keywords: carboxyl/羧基, amino/氨基, cationic/阳离子, anionic/阴离子, heavy metal/重金属, GO, PEI"
     },
     {
       "name": "蜘蛛丝仿生灵感来源 Spider silk biomimetic inspiration",
@@ -794,25 +821,25 @@
       "functional_groups": "",
       "source": "literature",
       "ref_doi": "10.1016/j.cej.2021.128670",
-      "verification": "needs_review",
-      "verification_quote": "Design of amphoteric bionic fibers by imitating spider silk for rapid and",
+      "verification": "partial",
+      "verification_quote": "Spider silk is a typical natural example of the production of fibers from macromolecules in aqueous solution, which is possible mainly due to the amphiphilicity of spidroin (hydrophobicity of alanine and hydrophilicity of other amino acids",
       "causal_chain": {
         "transferable_principle": "基于机制: 蜘蛛丝仿生灵感来源 Spider silk biomimetic inspiration",
         "pollutant_feature": {
           "text": "spidroin两亲性(疏水丙氨酸+亲水甘氨酸/谷氨酰胺/脯氨酸/丝氨酸)→超分子自组装→纤维形成",
-          "basis": "llm_inferred"
+          "basis": "literature-backed"
         },
         "bio_structure": {
           "text": "蜘蛛丝仿生灵感来源 Spider silk biomimetic inspiration",
-          "basis": "llm_inferred"
+          "basis": "literature-backed"
         },
         "interaction": {
           "text": "spidroin两亲性(疏水丙氨酸+亲水甘氨酸/谷氨酰胺/脯氨酸/丝氨酸)→超分子自组装→纤维形成",
-          "basis": "llm_inferred"
+          "basis": "literature-backed"
         },
         "why_it_works": {
           "text": "蜘蛛丝仿生灵感来源 Spider silk biomimetic inspiration",
-          "basis": "llm_inferred"
+          "basis": "literature-backed"
         },
         "boundary_conditions": [
           {
@@ -822,7 +849,7 @@
               "operator": "qualitative",
               "value": null
             },
-            "basis": "llm_inferred",
+            "basis": "literature-backed",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": null,
@@ -832,7 +859,12 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "source_file": "仿生文献库/论文/第5组-纤维结构/2021-Zhou-cellulose-silk-nanofiber-adsorption.pdf",
+      "source_page": 1,
+      "source_locator": "p.1, Introduction",
+      "locator": "p.1",
+      "scope_match": "Keywords: spider silk/蜘蛛丝, spidroin/蛛丝蛋白, amphiphilicity/两亲性, alanine/丙氨酸, amino acids/氨基酸"
     },
     {
       "name": "纳米布沙漠甲虫雾水收集机制",
