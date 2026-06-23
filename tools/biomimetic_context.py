@@ -733,6 +733,254 @@ class BiomimeticContext:
 
         return {'do_not': unique_do_not, 'cautions': unique_cautions}
 
+    # ============================================================
+    # ROUND 4: ADRMATS ADAPTER CAPABILITIES
+    # ============================================================
+
+    def get_do_not_list(self, prototype_id: str) -> List[Dict[str, Any]]:
+        """Extract source-backed hard DO-NOT rules from a prototype.
+
+        Returns list of dicts with: rule_id, description, source, gate_level
+        """
+        proto = self.prototypes.get(prototype_id, {})
+        if not proto:
+            return []
+
+        do_nots = []
+
+        # Check boundary_rules
+        for bc in proto.get('boundary_rules', []):
+            if bc.get('type') == 'hard_do_not' or bc.get('gate_level') == 'hard':
+                do_nots.append({
+                    'rule_id': bc.get('rule_id', ''),
+                    'description': bc.get('description', ''),
+                    'source': bc.get('source_doi', ''),
+                    'gate_level': 'hard'
+                })
+
+        # Check causal_chain boundary_conditions
+        for m in proto.get('mechanisms', []):
+            cc = m.get('causal_chain', {})
+            if not isinstance(cc, dict):
+                continue
+            for bc in cc.get('boundary_conditions', []):
+                if isinstance(bc, dict) and bc.get('gate_level') == 'hard':
+                    do_nots.append({
+                        'rule_id': f"{m.get('mechanism_id', '')}_bc",
+                        'description': bc.get('text', ''),
+                        'source': bc.get('source', ''),
+                        'gate_level': 'hard'
+                    })
+
+        return do_nots
+
+    def decompose_design_translation(self, prototype_id: str) -> Dict[str, Any]:
+        """Decompose design_translation into ADRMATS-consumable structure.
+
+        Returns dict with: idea, examples, source_tier, applicability,
+        transferable_principles, implementation_handles, limitations
+        """
+        proto = self.prototypes.get(prototype_id, {})
+        if not proto:
+            return {'status': 'not_found'}
+
+        dt = proto.get('design_translation', {})
+        # Handle list format (take first element)
+        if isinstance(dt, list) and dt:
+            dt = dt[0]
+        if not dt or not isinstance(dt, dict):
+            return {'status': 'missing', 'error': 'No design_translation found'}
+
+        result = {
+            'idea': dt.get('idea', ''),
+            'examples': dt.get('examples', []),
+            'source_tier': dt.get('source_tier', 'unknown'),
+            'applicability': dt.get('applicability', ''),
+            'status': 'structured'
+        }
+
+        # Extract transferable principles from mechanisms
+        principles = []
+        for m in proto.get('mechanisms', []):
+            cc = m.get('causal_chain', {})
+            if isinstance(cc, dict):
+                tp = cc.get('transferable_principle', '')
+                if tp and tp.strip():
+                    principles.append(tp)
+        result['transferable_principles'] = principles
+
+        # Extract implementation handles from material_realization_examples
+        handles = []
+        for mre in proto.get('material_realization_examples', []):
+            if isinstance(mre, dict):
+                handles.append({
+                    'material': mre.get('material', ''),
+                    'method': mre.get('method', ''),
+                    'performance': mre.get('performance', '')
+                })
+        result['implementation_handles'] = handles
+
+        # Identify limitations from boundary_conditions
+        limitations = []
+        for m in proto.get('mechanisms', []):
+            cc = m.get('causal_chain', {})
+            if isinstance(cc, dict):
+                for bc in cc.get('boundary_conditions', []):
+                    if isinstance(bc, dict):
+                        limitations.append(bc.get('text', ''))
+        result['limitations'] = limitations[:5]
+
+        return result
+
+    def get_charge_state_context(self, prototype_id: str) -> Dict[str, Any]:
+        """Extract charge_state and pKa context for ion-dependent adsorption.
+
+        Returns dict with: has_charge_state, pka_values, ion_dependence,
+        ph_sensitive, charge_mechanisms
+        """
+        proto = self.prototypes.get(prototype_id, {})
+        if not proto:
+            return {'has_charge_state': False}
+
+        result = {
+            'has_charge_state': False,
+            'pka_values': [],
+            'ion_dependence': [],
+            'ph_sensitive': False,
+            'charge_mechanisms': []
+        }
+
+        charge_terms = ['amino', 'amine', 'carboxyl', 'carboxylic', 'hydroxyl',
+                       'thiol', 'phosphate', 'sulfate', 'protonat', 'deprotonat',
+                       'pka', 'ph sensitive', 'ionic', 'electrostatic',
+                       '氨基', '羧基', '羟基', '巯基', '磷酸', '质子化']
+        ph_terms = ['ph', 'ph dependent', 'ph effect', 'acidic', 'alkaline', 'basic']
+
+        for m in proto.get('mechanisms', []):
+            cc = m.get('causal_chain', {})
+            if not isinstance(cc, dict):
+                continue
+
+            desc = m.get('description', '')
+            bio = cc.get('bio_structure', {})
+            bio_text = bio.get('text', '') if isinstance(bio, dict) else ''
+            interaction = cc.get('interaction', {})
+            interaction_text = interaction.get('text', '') if isinstance(interaction, dict) else ''
+
+            combined = f"{desc} {bio_text} {interaction_text}".lower()
+
+            if any(term in combined for term in charge_terms):
+                result['has_charge_state'] = True
+                result['charge_mechanisms'].append({
+                    'mechanism_id': m.get('mechanism_id', ''),
+                    'description': desc[:100],
+                    'charge_terms': [t for t in charge_terms if t in combined]
+                })
+
+            if any(term in combined for term in ph_terms):
+                result['ph_sensitive'] = True
+
+            import re
+            pka_matches = re.findall(r'pka\s*[=~≈]\s*(\d+\.?\d*)', combined)
+            result['pka_values'].extend(pka_matches)
+
+        return result
+
+    def compute_relevance_score(self, prototype_id: str, query: str) -> Dict[str, Any]:
+        """Compute relevance score for a prototype against a query.
+
+        Returns dict with: score (0-1), matched_keywords, is_relevant,
+        excluded_reason (if not relevant)
+        """
+        import re
+
+        proto = self.prototypes.get(prototype_id, {})
+        if not proto:
+            return {'score': 0, 'is_relevant': False}
+
+        query_lower = query.lower()
+        query_keywords = set(re.findall(r'[a-z]{3,}|[一-鿿]{2,}', query_lower))
+
+        # Get prototype keywords
+        name_zh = proto.get('name_zh', '')
+        name_en = proto.get('name_en', '')
+        organism = proto.get('organism', {})
+        if isinstance(organism, dict):
+            organism_text = organism.get('scientific', '')
+        else:
+            organism_text = str(organism)
+
+        mech_texts = []
+        for m in proto.get('mechanisms', []):
+            desc = m.get('description', '')
+            cc = m.get('causal_chain', {})
+            if isinstance(cc, dict):
+                for key in ['pollutant_feature', 'bio_structure', 'interaction', 'why_it_works']:
+                    val = cc.get(key, {})
+                    if isinstance(val, dict):
+                        mech_texts.append(val.get('text', ''))
+
+        all_text = f"{name_zh} {name_en} {organism_text} {' '.join(mech_texts)}".lower()
+        proto_keywords = set(re.findall(r'[a-z]{3,}|[一-鿿]{2,}', all_text))
+
+        matched = query_keywords & proto_keywords
+        score = len(matched) / max(len(query_keywords), 1)
+
+        # Off-scope exclusion
+        excluded = False
+        excluded_reason = ''
+        surface_terms = ['superhydrophobic', 'wetting', 'contact angle', 'wca',
+                        '超疏水', '润湿', '接触角']
+        if any(term in query_lower for term in ['adsorption', '吸附', 'removal', '去除']):
+            if any(term in all_text for term in surface_terms):
+                if not any(term in all_text for term in ['adsorption', '吸附', 'removal', '去除']):
+                    excluded = True
+                    excluded_reason = 'surface_physics_off_scope'
+
+        return {
+            'score': round(score, 3),
+            'matched_keywords': list(matched)[:10],
+            'is_relevant': score > 0.1 and not excluded,
+            'excluded_reason': excluded_reason
+        }
+
+    def gate_mechanisms_by_query(self, prototype_id: str, query: str, min_score: float = 0.1) -> List[int]:
+        """Filter mechanisms by relevance to query.
+
+        Returns list of relevant mechanism indices.
+        """
+        import re
+
+        proto = self.prototypes.get(prototype_id, {})
+        if not proto:
+            return []
+
+        query_lower = query.lower()
+        query_kw = set(re.findall(r'[a-z]{3,}|[一-鿿]{2,}', query_lower))
+
+        relevant = []
+        for i, m in enumerate(proto.get('mechanisms', [])):
+            desc = m.get('description', '')
+            cc = m.get('causal_chain', {})
+            if isinstance(cc, dict):
+                texts = []
+                for key in ['pollutant_feature', 'bio_structure', 'interaction', 'why_it_works']:
+                    val = cc.get(key, {})
+                    if isinstance(val, dict):
+                        texts.append(val.get('text', ''))
+                mech_text = f"{desc} {' '.join(texts)}".lower()
+            else:
+                mech_text = desc.lower()
+
+            mech_kw = set(re.findall(r'[a-z]{3,}|[一-鿿]{2,}', mech_text))
+            overlap = query_kw & mech_kw
+            score = len(overlap) / max(len(query_kw), 1)
+
+            if score >= min_score:
+                relevant.append(i)
+
+        return relevant
+
 
 def main():
     """测试接口"""
