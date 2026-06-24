@@ -2405,10 +2405,12 @@
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "10.1016/j.molliq.2020.114523",
-          "locator": "page 4",
-          "quote": "The lone pair of electrons on the N atoms formed a shared bond between the N atoms and the lead ions.",
-          "scope_match": "Keywords: lone pair, N atoms, lead ions, bond"
+          "basis": "from_source",
+          "locator": "p.7",
+          "quote": "化学络合、静电吸引、氢键等",
+          "scope_match": "Keywords: 离子交换, 静电吸引, 氢键",
+          "evidence_label": "from_source",
+          "source": "10.7524/AJE.1673⁃5897.20220113002"
         },
         "why_it_works": {
           "text": "XPS表征——C 1s和N 1s",
@@ -2451,11 +2453,13 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 制备方法）",
         "pollutant_feature": {
           "text": "羧基化壳聚糖(CYCS)+羧基化纳米纤维素(CNC)在CaCl₂溶液中螯合交联→形成水凝胶珠；CYCS通过壳聚糖羧甲基取代获得→取代度>60%；成本显著低于CMCS",
-          "basis": "10.1016/j.molliq.2020.114523",
+          "basis": "literature_backed",
           "source_asset": "",
-          "locator": "page 1",
-          "quote": "Heavy metals are long-term and stable environmental pollutants owing to their non-degradable nature. Lead is the most common heavy metal found in nature.",
-          "scope_match": "Keywords: heavy metal, lead, pollutant"
+          "locator": "p.8",
+          "quote": "where qm is the maximum adsorption capacity of the CYCS/CNC beads",
+          "scope_match": "Keywords: cmcs, cycs",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.molliq.2020.114523"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
@@ -2577,7 +2581,12 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: CS/GO复合物对MB吸附的π-π堆积机制）",
         "pollutant_feature": {
           "text": "MB通过π-π堆积与GO层相互作用，GO-COO-与阳离子MB的静电相互作用辅助吸附",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "evidence_label": "from_source",
+          "source": "10.7524/j.issn.0254-6108.2023052603",
+          "locator": "p.3",
+          "quote": "磁性生物炭（LLB-MB）",
+          "scope_match": "Keywords: 通过, mb"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
@@ -2633,7 +2642,12 @@
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.7524/AJE.1673⁃5897.20220113002",
+          "locator": "p.7",
+          "quote": "化学络合、静电吸引、氢键等",
+          "scope_match": "Keywords: 离子交换, 静电吸引, 氢键"
         },
         "why_it_works": {
           "text": "壳聚糖对阴离子染料的吸附机制",
@@ -2681,7 +2695,12 @@
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.7524/AJE.1673⁃5897.20220113002",
+          "locator": "p.7",
+          "quote": "化学络合、静电吸引、氢键等",
+          "scope_match": "Keywords: 离子交换, 静电吸引, 氢键"
         },
         "why_it_works": {
           "text": "抗生素在CS/GO复合物上的吸附机制",
@@ -2729,7 +2748,12 @@
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.16085/j.issn.1000-6613.2021-1591",
+          "locator": "p.8",
+          "quote": "要有离子交换、氢键作用、吸附剂表面化学修饰和",
+          "scope_match": "Keywords: 离子交换, 氢键"
         },
         "why_it_works": {
           "text": "CS/GO水凝胶形成机制",
@@ -2777,7 +2801,12 @@
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.7524/AJE.1673⁃5897.20220113002",
+          "locator": "p.7",
+          "quote": "化学络合、静电吸引、氢键等",
+          "scope_match": "Keywords: 离子交换, 静电吸引, 氢键"
         },
         "why_it_works": {
           "text": "壳聚糖对阴离子染料吸附的pH依赖性",
@@ -2832,10 +2861,10 @@
           "basis": "literature_backed",
           "source_asset": "",
           "evidence_label": "from_source",
-          "source": "10.1016/j.jhazmat.2020.123431",
-          "locator": "p.14",
-          "quote": "microalgal-based materials: adsorption, desorption and recovery studies",
-          "scope_match": "Keywords: mechanisms, arsenic, adsorption"
+          "source": "10.1016/j.scitotenv.2024.172025",
+          "locator": "p.37",
+          "quote": "the stability of ferrihydrite structure and its application in arsenic fixation",
+          "scope_match": "Keywords: adsorption, arsenic, mechanisms"
         },
         "boundary_conditions": [
           {
@@ -2889,7 +2918,7 @@
           "source": "10.13801/j.cnki.fhclxb.20230314.003",
           "locator": "p.2",
           "quote": "adsorption",
-          "scope_match": "Keywords: 壳聚糖, adsorption"
+          "scope_match": "Keywords: adsorption, 壳聚糖"
         },
         "boundary_conditions": [
           {
@@ -3120,9 +3149,9 @@
           "text": "41.9 mg/g (Langmuir); 机制: H键、FeCl3引入Cl-与NO3-离子交换、酸性介质中质子化羟基/氨基/Fe静电作用",
           "basis": "literature_backed",
           "evidence_label": "from_source",
-          "source": "10.1016/j.matchemphys.2024.129770",
-          "locator": "p.11",
-          "quote": "Wang, Cross-linked FeCl3-activated",
+          "source": "10.1016/j.jtice.2022.104625",
+          "locator": "p.3",
+          "quote": "According to [I] Langmuir isotherm model, any homogeneous active",
           "scope_match": "Keywords: fecl, langmuir"
         },
         "bio_structure": {
@@ -3137,10 +3166,10 @@
           "text": "酸浸碳/壳聚糖/FeCl3吸附机制 Acid-leached carbon/chitosan/FeC",
           "basis": "literature_backed",
           "evidence_label": "from_source",
-          "source": "10.1016/j.matchemphys.2024.129770",
-          "locator": "p.11",
-          "quote": "Zaitchenko, Hydrothermal carbonization of biomass: a review,",
-          "scope_match": "Keywords: carbon, fecl, acid, chitosan"
+          "source": "10.1016/j.jtice.2022.104625",
+          "locator": "p.3",
+          "quote": "(1) For example, under acidic pH: [a] The amine",
+          "scope_match": "Keywords: fecl, chitosan, carbon, acid"
         },
         "boundary_conditions": [
           {
@@ -3178,9 +3207,9 @@
           "text": "基于HSAB硬酸-硬碱静电吸引：-NH3+、-OH2+、La3+（硬酸）与NO3-（硬碱）作用",
           "basis": "literature_backed",
           "evidence_label": "from_source",
-          "source": "10.7524/j.issn.0254-6108.2023052603",
-          "locator": "p.3",
-          "quote": "基于吸附法具备很多优势如成本低廉、适用广泛和操作简便等，被各学术界用以探究处理抗生",
+          "source": "10.19672/j.cnki.1003-6504.2227.22.338",
+          "locator": "p.7",
+          "quote": "基于MICP的水体重金属微生物修复技术研究进展",
           "scope_match": "Keywords: 作用, 基于"
         },
         "bio_structure": {
@@ -3193,7 +3222,12 @@
         },
         "why_it_works": {
           "text": "La3+掺入壳聚糖膜HSAB机制 La3+-chitosan HSAB mechanism",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "evidence_label": "from_source",
+          "source": "10.19672/j.cnki.1003-6504.2227.22.338",
+          "locator": "p.7",
+          "quote": "机制、不同的微生物及不同的菌株，环境因素对矿化",
+          "scope_match": "Keywords: mechanism, 机制"
         },
         "boundary_conditions": [
           {
@@ -3328,8 +3362,13 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 铁掺杂壳聚糖ENM——As(III)去除机理）",
         "pollutant_feature": {
           "text": "内球络合(iron oxide + As(III))",
-          "basis": "llm_inferred",
-          "source_asset": "2021-Pan-chitosan-alginate-cellulose-membrane-review.pdf"
+          "basis": "literature_backed",
+          "source_asset": "2021-Pan-chitosan-alginate-cellulose-membrane-review.pdf",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.scitotenv.2024.172025",
+          "locator": "p.28",
+          "quote": "Science of the Total Environment 926 (2024) 172025",
+          "scope_match": "Keywords: iron, oxide"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
@@ -3563,7 +3602,12 @@
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.7524/AJE.1673⁃5897.20220113002",
+          "locator": "p.7",
+          "quote": "化学络合、静电吸引、氢键等",
+          "scope_match": "Keywords: 离子交换, 静电吸引, 氢键"
         },
         "why_it_works": {
           "text": "电纺膜功能化——防污策略",
@@ -3828,11 +3872,21 @@
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.7524/AJE.1673⁃5897.20220113002",
+          "locator": "p.7",
+          "quote": "化学络合、静电吸引、氢键等",
+          "scope_match": "Keywords: 离子交换, 静电吸引, 氢键"
         },
         "why_it_works": {
           "text": "Cr(VI)吸附机制——静电吸引",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "evidence_label": "from_source",
+          "source": "10.7524/AJE.1673⁃5897.20220113002",
+          "locator": "p.7",
+          "quote": "肽链上的羰基氧与Cr3+发生配位",
+          "scope_match": "Keywords: 静电吸引, cr"
         },
         "boundary_conditions": [
           {
@@ -3875,7 +3929,12 @@
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.7524/AJE.1673⁃5897.20220113002",
+          "locator": "p.7",
+          "quote": "化学络合、静电吸引、氢键等",
+          "scope_match": "Keywords: 离子交换, 静电吸引, 氢键"
         },
         "why_it_works": {
           "text": "壳聚糖对Cr(VI)的两种主要吸附机制",
@@ -3974,7 +4033,12 @@
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "evidence_label": "from_source",
+          "source": "10.13550/j.jxhg.20220633",
+          "locator": "p.6",
+          "quote": "力或氢键等相互作用控制，而PDA/DCS 主要通过",
+          "scope_match": "Keywords: 静电吸引, 氢键"
         },
         "why_it_works": {
           "text": "壳聚糖-HAP复合的协同优势",
@@ -4025,7 +4089,12 @@
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.7524/AJE.1673⁃5897.20220113002",
+          "locator": "p.7",
+          "quote": "化学络合、静电吸引、氢键等",
+          "scope_match": "Keywords: 离子交换, 静电吸引, 氢键"
         },
         "why_it_works": {
           "text": "吸附机理综合分析",
@@ -4129,9 +4198,12 @@
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "literature_backed",
-          "source": "10.13550/j.jxhg.20201035",
-          "locator": "p.1, abstract"
+          "basis": "from_source",
+          "source": "10.7524/AJE.1673⁃5897.20220113002",
+          "locator": "p.7",
+          "evidence_label": "from_source",
+          "quote": "化学络合、静电吸引、氢键等",
+          "scope_match": "Keywords: 离子交换, 静电吸引, 氢键"
         },
         "why_it_works": {
           "text": "超疏水抗菌表面'双重保险'原理",
@@ -4715,9 +4787,12 @@
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "literature_backed",
-          "source": "10.13550/j.jxhg.20201035",
-          "locator": "p.5"
+          "basis": "from_source",
+          "source": "10.7524/AJE.1673⁃5897.20220113002",
+          "locator": "p.7",
+          "evidence_label": "from_source",
+          "quote": "化学络合、静电吸引、氢键等",
+          "scope_match": "Keywords: 离子交换, 静电吸引, 氢键"
         },
         "why_it_works": {
           "text": "树枝状纳米银超疏水表面",
@@ -4832,9 +4907,12 @@
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "literature_backed",
-          "source": "10.13550/j.jxhg.20201035",
-          "locator": "p.5"
+          "basis": "from_source",
+          "source": "10.7524/AJE.1673⁃5897.20220113002",
+          "locator": "p.7",
+          "evidence_label": "from_source",
+          "quote": "化学络合、静电吸引、氢键等",
+          "scope_match": "Keywords: 离子交换, 静电吸引, 氢键"
         },
         "why_it_works": {
           "text": "ZIF-8/PVDF超疏水抗菌涂层",
@@ -4963,9 +5041,12 @@
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "literature_backed",
-          "source": "10.13550/j.jxhg.20201035",
-          "locator": "p.6"
+          "basis": "from_source",
+          "source": "10.7524/AJE.1673⁃5897.20220113002",
+          "locator": "p.7",
+          "evidence_label": "from_source",
+          "quote": "化学络合、静电吸引、氢键等",
+          "scope_match": "Keywords: 离子交换, 静电吸引, 氢键"
         },
         "why_it_works": {
           "text": "超疏水医用纱布",
@@ -5023,9 +5104,12 @@
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "literature_backed",
-          "source": "10.13550/j.jxhg.20201035",
-          "locator": "p.7"
+          "basis": "from_source",
+          "source": "10.7524/AJE.1673⁃5897.20220113002",
+          "locator": "p.7",
+          "evidence_label": "from_source",
+          "quote": "化学络合、静电吸引、氢键等",
+          "scope_match": "Keywords: 离子交换, 静电吸引, 氢键"
         },
         "why_it_works": {
           "text": "多巴胺黏附固定无机抗菌剂策略",
@@ -5150,9 +5234,12 @@
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "literature_backed",
-          "source": "10.13550/j.jxhg.20201035",
-          "locator": "p.3, Section 2"
+          "basis": "from_source",
+          "source": "10.7524/AJE.1673⁃5897.20220113002",
+          "locator": "p.7",
+          "evidence_label": "from_source",
+          "quote": "化学络合、静电吸引、氢键等",
+          "scope_match": "Keywords: 离子交换, 静电吸引, 氢键"
         },
         "why_it_works": {
           "text": "无机-有机复合策略优势",
@@ -5198,7 +5285,12 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: pH对CR和Cu²⁺吸附的影响）",
         "pollutant_feature": {
           "text": "pHpzc=7.24。CR: pH 5-8去除率稳定→氢键主导(非静电)。pH 9-11去除率剧降→静电排斥。Cu²⁺: pH 2-6去除率递增→pH 6最佳→90%去除。pH<6:质子化–NH₂/–",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.7524/j.issn.0254-6108.2023052603",
+          "locator": "p.5",
+          "quote": "荷（pHpzc）电位，MCCN 呈正电性，对阴离子且带负电荷的TCs 的静电排斥作用力较弱",
+          "scope_match": "Keywords: 静电排斥, 去除, phpzc"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
@@ -5305,7 +5397,12 @@
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.7524/AJE.1673⁃5897.20220113002",
+          "locator": "p.7",
+          "quote": "化学络合、静电吸引、氢键等",
+          "scope_match": "Keywords: 离子交换, 静电吸引, 氢键"
         },
         "why_it_works": {
           "text": "吸附机制——Cu²⁺的配位作用",
@@ -5400,7 +5497,12 @@
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.7524/AJE.1673⁃5897.20220113002",
+          "locator": "p.7",
+          "quote": "化学络合、静电吸引、氢键等",
+          "scope_match": "Keywords: 离子交换, 静电吸引, 氢键"
         },
         "why_it_works": {
           "text": "BET比表面积与孔体积(文中提及但数据在Table S1)",
@@ -5664,7 +5766,12 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: MCM吸附机制汇总）",
         "pollutant_feature": {
           "text": "离子交换、静电吸附、范德华力、氢键、络合、化学键合",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "evidence_label": "from_source",
+          "source": "10.16085/j.issn.1000-6613.2021-1591",
+          "locator": "p.5",
+          "quote": "其机理主要为离子交换作用",
+          "scope_match": "Keywords: 静电吸附, 离子交换"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
@@ -5770,7 +5877,12 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 吸附机制判断）",
         "pollutant_feature": {
           "text": "化学吸附为主(chemisorption dominated)",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.clay.2021.106392",
+          "locator": "p.5",
+          "quote": "mainly controlled by chemisorption step, where the sharing or",
+          "scope_match": "Keywords: dominated, chemisorption"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
@@ -5871,7 +5983,12 @@
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.7524/AJE.1673⁃5897.20220113002",
+          "locator": "p.7",
+          "quote": "化学络合、静电吸引、氢键等",
+          "scope_match": "Keywords: 离子交换, 静电吸引, 氢键"
         },
         "why_it_works": {
           "text": "壳聚糖的基本结构与吸附活性位点",
@@ -5917,7 +6034,12 @@
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.7524/AJE.1673⁃5897.20220113002",
+          "locator": "p.7",
+          "quote": "化学络合、静电吸引、氢键等",
+          "scope_match": "Keywords: 离子交换, 静电吸引, 氢键"
         },
         "why_it_works": {
           "text": "壳聚糖基吸附剂的三大未来研究方向",
@@ -6125,7 +6247,12 @@
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.7524/AJE.1673⁃5897.20220113002",
+          "locator": "p.7",
+          "quote": "化学络合、静电吸引、氢键等",
+          "scope_match": "Keywords: 离子交换, 静电吸引, 氢键"
         },
         "why_it_works": {
           "text": "磁性壳聚糖的五种制备方法",
@@ -6301,8 +6428,11 @@
         "why_it_works": {
           "text": "XPS表征揭示吸附机制 XPS characterization revealing adsorpt",
           "basis": "literature_backed",
-          "source": "10.15898/j.ykcs.202208230155",
-          "locator": "p.11, English abstract"
+          "source": "10.1016/j.ecoenv.2020.111577.",
+          "locator": "p.12",
+          "evidence_label": "from_source",
+          "quote": "Gd3+ adsorption over",
+          "scope_match": "Keywords: revealing, adsorpt, characterization"
         },
         "boundary_conditions": [
           {
@@ -6442,7 +6572,12 @@
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.7524/AJE.1673⁃5897.20220113002",
+          "locator": "p.7",
+          "quote": "化学络合、静电吸引、氢键等",
+          "scope_match": "Keywords: 离子交换, 静电吸引, 氢键"
         },
         "why_it_works": {
           "text": "壳聚糖与石墨烯复合的关键协同优势",
@@ -6601,7 +6736,12 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 壳聚糖纳米复合物吸附机制）",
         "pollutant_feature": {
           "text": "-NH₂/-OH高密度→螯合+静电+氢键→协同效应(壳聚糖+纳米粒子)",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.7524/j.issn.0254-6108.2023052603",
+          "locator": "p.5",
+          "quote": "学和Langmuir 模型，吸附机理以静电相互作用、表面络合、氢键、π-π 电子供体-受体（π-πEDA）相互作",
+          "scope_match": "Keywords: 氢键, 静电"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
@@ -6657,7 +6797,12 @@
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.7524/AJE.1673⁃5897.20220113002",
+          "locator": "p.7",
+          "quote": "化学络合、静电吸引、氢键等",
+          "scope_match": "Keywords: 离子交换, 静电吸引, 氢键"
         },
         "why_it_works": {
           "text": "环糊精聚合物选择性吸附",
@@ -6744,8 +6889,13 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 吸附机理类型汇总）",
         "pollutant_feature": {
           "text": "Van der Waals力 + 氢键 + 静电相互作用 + 化学键(共价/离子) + 配位螯合 + 离子交换 + π-π堆叠 + 疏水相互作用 + 主客体包合(环糊精/杯芳烃) + 分子印迹特异性识",
-          "basis": "llm_inferred",
-          "source_asset": "2024-Research-cellulose-nanocellulose-mof-biochar-review.pdf"
+          "basis": "from_source",
+          "source_asset": "2024-Research-cellulose-nanocellulose-mof-biochar-review.pdf",
+          "evidence_label": "from_source",
+          "source": "10.13801/j.cnki.fhclxb.20230314.003",
+          "locator": "p.2",
+          "quote": "学沉淀、离子交换、生物法、溶剂萃取及电渗析",
+          "scope_match": "Keywords: 环糊精, 离子, 离子交换"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
@@ -6806,10 +6956,10 @@
           "text": "有机改性凹凸棒土的作用 Effect of organic modification on atta",
           "basis": "literature_backed",
           "evidence_label": "from_source",
-          "source": "10.1016/j.porgcoat.2024.108885",
-          "locator": "p.23",
-          "quote": ", Surface modification of",
-          "scope_match": "Keywords: organic, effect, modification"
+          "source": "10.1002/JSFA.11505.",
+          "locator": "p.16",
+          "quote": "modification methods have been developed for preparing MOFs",
+          "scope_match": "Keywords: effect, organic, modification"
         },
         "boundary_conditions": [
           {
@@ -6954,7 +7104,12 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: PDA吸附机制-姜黄素）",
         "pollutant_feature": {
           "text": "重金属/有机污染物",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "evidence_label": "from_source",
+          "source": "10.13343/j.cnki.wsxb.20210321",
+          "locator": "p.2",
+          "quote": "一道防线，也因此蓄积了大量营养盐、重金属、",
+          "scope_match": "Keywords: 有机污染物, 重金属"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
@@ -7000,7 +7155,12 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: PDA吸附机制-番茄红素）",
         "pollutant_feature": {
           "text": "重金属/有机污染物",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "evidence_label": "from_source",
+          "source": "10.13343/j.cnki.wsxb.20210321",
+          "locator": "p.2",
+          "quote": "一道防线，也因此蓄积了大量营养盐、重金属、",
+          "scope_match": "Keywords: 有机污染物, 重金属"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
@@ -7209,7 +7369,12 @@
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.7524/AJE.1673⁃5897.20220113002",
+          "locator": "p.7",
+          "quote": "化学络合、静电吸引、氢键等",
+          "scope_match": "Keywords: 离子交换, 静电吸引, 氢键"
         },
         "why_it_works": {
           "text": "实施例3配方（循环测试对象）",
@@ -7252,7 +7417,7 @@
           "source": "10.13801/j.cnki.fhclxb.20230314.003",
           "locator": "p.2",
           "quote": "有菱铁矿、海砂、沸石、壳聚糖、活性炭、纳米",
-          "scope_match": "Keywords: 埃洛石, 壳聚糖"
+          "scope_match": "Keywords: 壳聚糖, 埃洛石"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
@@ -7306,7 +7471,12 @@
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.7524/AJE.1673⁃5897.20220113002",
+          "locator": "p.7",
+          "quote": "化学络合、静电吸引、氢键等",
+          "scope_match": "Keywords: 离子交换, 静电吸引, 氢键"
         },
         "why_it_works": {
           "text": "制备方法核心流程",
@@ -7352,7 +7522,12 @@
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.7524/AJE.1673⁃5897.20220113002",
+          "locator": "p.7",
+          "quote": "化学络合、静电吸引、氢键等",
+          "scope_match": "Keywords: 离子交换, 静电吸引, 氢键"
         },
         "why_it_works": {
           "text": "接触角测试",
