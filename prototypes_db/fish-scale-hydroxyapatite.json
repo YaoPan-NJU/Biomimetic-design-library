@@ -501,7 +501,12 @@
         },
         "bio_structure": {
           "text": "鱼鳞羟基磷灰石（HAp）纳米晶体，表面Ca²⁺/PO₄³⁻/OH⁻位点",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "evidence_label": "from_source",
+          "source": "10.7524/AJE.1673⁃5897.20220113002",
+          "locator": "p.7",
+          "quote": "表面吸附Surface adsorption",
+          "scope_match": "Keywords: 表面"
         },
         "interaction": {
           "text": "离子交换（Ca²⁺↔Pb²⁺）、表面配位（-OH与金属离子）、共沉淀（磷酸盐沉淀）、静电吸引",
@@ -510,7 +515,7 @@
           "source": "10.7524/AJE.1673⁃5897.20220113002",
           "locator": "p.7",
           "quote": "离子交换Ion exchange",
-          "scope_match": "Keywords: 静电吸引, 共沉淀, 离子交换"
+          "scope_match": "Keywords: 离子交换, 静电吸引, 共沉淀"
         },
         "why_it_works": {
           "text": "鱼鳞HAp的纳米级晶体（~30nm）提供超高比表面积，多机制协同实现高容量吸附",
@@ -611,27 +616,37 @@
           "text": "脲酶水解尿素: CO(NH₂)₂+H₂O→NH₂COOH+NH₃; NH₂COOH+H₂O→NH₃+H₂CO₃; 最终产生CO₃²⁻+Ca²⁺→CaCO₃↓",
           "basis": "literature_backed",
           "evidence_label": "from_source",
-          "source": "10.19672/j.cnki.1003-6504.2227.22.338",
-          "locator": "p.2",
-          "quote": "酶将溶液中的尿素分解成NH3和NH2COOH（式（1）），",
-          "scope_match": "Keywords: cooh, caco"
+          "source": "10.3390/microorganisms10122411",
+          "locator": "p.10",
+          "quote": "CO(NH2)2 + H2O →NH2COOH + NH3",
+          "scope_match": "Keywords: caco, cooh"
         },
         "bio_structure": {
           "text": "MICP化学反应机理",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "evidence_label": "from_source",
+          "source": "10.3390/microorganisms10122411",
+          "locator": "p.10",
+          "quote": "Microbially Induced-Carbonate Precipitation (MICP)",
+          "scope_match": "Keywords: micp"
         },
         "interaction": {
           "text": "脲酶水解尿素: CO(NH₂)₂+H₂O→NH₂COOH+NH₃; NH₂COOH+H₂O→NH₃+H₂CO₃; 最终产生CO₃²⁻+Ca²⁺→CaCO₃↓",
           "basis": "literature_backed",
           "evidence_label": "from_source",
-          "source": "10.19672/j.cnki.1003-6504.2227.22.338",
-          "locator": "p.2",
-          "quote": "酶将溶液中的尿素分解成NH3和NH2COOH（式（1）），",
-          "scope_match": "Keywords: cooh, caco"
+          "source": "10.3390/microorganisms10122411",
+          "locator": "p.10",
+          "quote": "CO(NH2)2 + H2O →NH2COOH + NH3",
+          "scope_match": "Keywords: caco, cooh"
         },
         "why_it_works": {
           "text": "MICP化学反应机理",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "evidence_label": "from_source",
+          "source": "10.3390/microorganisms10122411",
+          "locator": "p.10",
+          "quote": "Microbially Induced-Carbonate Precipitation (MICP)",
+          "scope_match": "Keywords: micp"
         },
         "boundary_conditions": [
           {
