@@ -21,7 +21,12 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "Soluble dyes and insoluble oils in water",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "scope_match": "Keywords: and, so",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.memsci.2020.118982",
+          "locator": "p.2",
+          "quote": "The ultrafine nanofibers (lateral dimension range from 10 to 100 nm) and unique three-dimensional (3D) interconnected porous structure that can act as an ideal barrier supporting matrix, allowing some"
         },
         "bio_structure": {
           "text": "BC nanofiber surface with hydroxyl groups",
@@ -77,7 +82,12 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "Oil and organic foulants",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "scope_match": "Keywords: and, foulants",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.memsci.2020.118982",
+          "locator": "p.2",
+          "quote": "The high mechanical strength and superhydrophilicity that can help to prolong the life of the membrane without fouling. Since the water trapped in the membrane pores can form a continuous phase provid"
         },
         "bio_structure": {
           "text": "Hydroxyl-rich BC surface + PDA coating",

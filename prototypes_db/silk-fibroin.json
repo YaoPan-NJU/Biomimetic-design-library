@@ -490,8 +490,8 @@
         "transferable_principle": "基于机制: Cu²⁺吸附机制",
         "pollutant_feature": {
           "text": "PEI氨基(-NH₂)螯合Cu²⁺→化学吸附；中心发散孔道→快速扩散→活性位点可及；低密度+高孔隙→快速传质",
-          "basis": "literature_backed",
-          "scope_match": "Keywords: p, e, i, h, cu",
+          "basis": "from_source",
+          "scope_match": "Keywords: cu, adsorption, amino",
           "evidence_label": "from_source",
           "source": "10.1002/admi.202001892",
           "locator": "p.7",
@@ -499,12 +499,17 @@
         },
         "bio_structure": {
           "text": "Cu²⁺吸附机制",
-          "basis": "literature_backed"
+          "basis": "from_source",
+          "scope_match": "Keywords: cu, adsorption",
+          "evidence_label": "from_source",
+          "source": "10.1002/admi.202001892",
+          "locator": "p.7",
+          "quote": "With a low density, aligned macropores, and a high number of amino groups on the surface, the developed beads fulfill the requirements for ideal Cu2+ adsorption toward heavy metals."
         },
         "interaction": {
           "text": "PEI氨基(-NH₂)螯合Cu²⁺→化学吸附；中心发散孔道→快速扩散→活性位点可及；低密度+高孔隙→快速传质",
-          "basis": "literature_backed",
-          "scope_match": "Keywords: p, e, i, h, cu",
+          "basis": "from_source",
+          "scope_match": "Keywords: cu, adsorption, amino",
           "evidence_label": "from_source",
           "source": "10.1002/admi.202001892",
           "locator": "p.7",
@@ -512,7 +517,12 @@
         },
         "why_it_works": {
           "text": "Cu²⁺吸附机制",
-          "basis": "literature_backed"
+          "basis": "from_source",
+          "scope_match": "Keywords: cu, adsorption",
+          "evidence_label": "from_source",
+          "source": "10.1002/admi.202001892",
+          "locator": "p.7",
+          "quote": "With a low density, aligned macropores, and a high number of amino groups on the surface, the developed beads fulfill the requirements for ideal Cu2+ adsorption toward heavy metals."
         },
         "boundary_conditions": [
           {
@@ -1241,8 +1251,8 @@
         },
         "interaction": {
           "text": "静电吸引（负电表面与阳离子）、配位（-COOH/-NH₂与金属离子）",
-          "basis": "literature_backed",
-          "scope_match": "Keywords: cooh, o, o, h, h",
+          "basis": "from_source",
+          "scope_match": "Keywords: cooh, electrostatic",
           "evidence_label": "from_source",
           "source": "10.1039/d1va00047k",
           "locator": "p.4",
