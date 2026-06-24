@@ -21,20 +21,39 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "Oil and water-based pollutants",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "evidence_label": "from_source",
+          "source": "10.3390/jmse10040534",
+          "locator": "p.16",
+          "quote": "Despite this high value, it cannot efﬁciently separate oil/water mixtures",
+          "scope_match": "Keywords: based, water"
         },
         "bio_structure": {
           "text": "Epicuticular wax crystals (long-chain alkanes, esters, fatty acids)",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.3390/jmse10040534",
+          "locator": "p.16",
+          "quote": "Silane compounds with short- and long-alkyl chains were",
+          "scope_match": "Keywords: acids, long, chain"
         },
         "interaction": {
           "text": "Superhydrophobicity from hierarchical micro/nano wax crystal structure",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.3390/jmse10040534",
+          "locator": "p.16",
+          "quote": "of which was coated with hierarchical micro/nanostructures",
+          "scope_match": "Keywords: micro, nano, superhydrophobicity, structure, hierarchical"
         },
         "why_it_works": {
           "text": "WCA >150°, oil-water separation efficiency >95%",
-          "basis": "llm_inferred",
-          "source": ""
+          "basis": "from_source",
+          "source": "10.3390/jmse10040534",
+          "evidence_label": "from_source",
+          "locator": "p.16",
+          "quote": "this type of mesh, a separation efﬁciency >99% was achieved for kerosene–water mixtures",
+          "scope_match": "Keywords: water, separation"
         },
         "boundary_conditions": [
           {

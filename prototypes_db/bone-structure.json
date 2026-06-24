@@ -72,7 +72,12 @@
       "source_page": 11,
       "source_locator": "Section 4.1",
       "verification_quote": "chitosan/hydroxyapatite (Cs/HAp) composite nanofiber membrane... maximum removal capacity for Pb(II), Co(II), and Ni(II) was 296.7, 180.2, and 213.8 mg/g",
-      "scope_match": ["HAp", "membrane", "Pb(II)", "removal capacity"],
+      "scope_match": [
+        "HAp",
+        "membrane",
+        "Pb(II)",
+        "removal capacity"
+      ],
       "causal_chain": {
         "transferable_principle": "基于机制: HAp膜重金属去除性能",
         "pollutant_feature": {
@@ -187,7 +192,13 @@
       "source_page": 11,
       "source_locator": "Section 4.1",
       "verification_quote": "Several methods were used to produce HAp-based polymeric membrane, such as NIPS, TIPS, electrospinning",
-      "scope_match": ["HAp", "membrane", "NIPS", "TIPS", "electrospinning"],
+      "scope_match": [
+        "HAp",
+        "membrane",
+        "NIPS",
+        "TIPS",
+        "electrospinning"
+      ],
       "causal_chain": {
         "transferable_principle": "基于机制: HAp膜制备方法",
         "pollutant_feature": {
@@ -239,12 +250,23 @@
       "source_page": 11,
       "source_locator": "Section 4",
       "verification_quote": "Organic membranes: PA, CA, CE, PSf, PES, PTFE, PVDF, PP, PAN... Inorganic: metal oxides Al2O3, SiO2, TiO2, ZrO2",
-      "scope_match": ["membrane", "organic", "inorganic", "PA", "PVDF"],
+      "scope_match": [
+        "membrane",
+        "organic",
+        "inorganic",
+        "PA",
+        "PVDF"
+      ],
       "causal_chain": {
         "transferable_principle": "基于机制: HAp膜类型与制备技术",
         "pollutant_feature": {
           "text": "聚合物膜：NIPS/静电纺丝/TIPS/干压缩；有机材料：PA/CA/CE/PSf/PES/PTFE/PVDF/PP/PAN；无机材料：Al₂O₃/SiO₂/TiO₂/ZrO₂+黏土；陶瓷膜：多孔(支",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.3390/polym14245439",
+          "locator": "p.17",
+          "quote": "The TIPS method has many advantages over the NIPS method such as easy control, higher",
+          "scope_match": "Keywords: ptfe, tips, pvdf, nips"
         },
         "bio_structure": {
           "text": "HAp膜类型与制备技术",
@@ -252,7 +274,12 @@
         },
         "interaction": {
           "text": "聚合物膜：NIPS/静电纺丝/TIPS/干压缩；有机材料：PA/CA/CE/PSf/PES/PTFE/PVDF/PP/PAN；无机材料：Al₂O₃/SiO₂/TiO₂/ZrO₂+黏土；陶瓷膜：多孔(支",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.3390/polym14245439",
+          "locator": "p.17",
+          "quote": "The TIPS method has many advantages over the NIPS method such as easy control, higher",
+          "scope_match": "Keywords: ptfe, tips, pvdf, nips"
         },
         "why_it_works": {
           "text": "HAp膜类型与制备技术",

@@ -21,20 +21,39 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "Heavy metal ions and cationic dyes",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.jwpe.2022.102884",
+          "locator": "p.3",
+          "quote": "viable for cationic metal attachment [20]",
+          "scope_match": "Keywords: heavy, cationic, ions, metal"
         },
         "bio_structure": {
           "text": "Carboxyl (-COOH), hydroxyl (-OH), sulfate (-OSO₃H) groups",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.jwpe.2022.102884",
+          "locator": "p.3",
+          "quote": "protons convert phosphate, carboxyl, and sulfate groups into neutral,",
+          "scope_match": "Keywords: sulfate, groups, hydroxyl, carboxyl"
         },
         "interaction": {
           "text": "Coordination with carboxyl, hydroxyl, sulfate groups on EPS",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.jwpe.2022.102884",
+          "locator": "p.3",
+          "quote": "and hydroxyl-carboxyl groups interact in coordination with heavy metal",
+          "scope_match": "Keywords: sulfate, groups, hydroxyl, coordination, carboxyl"
         },
         "why_it_works": {
           "text": "EPS can bind significant amounts of heavy metals",
-          "basis": "llm_inferred",
-          "source": ""
+          "basis": "from_source",
+          "source": "10.1016/j.jwpe.2022.102884",
+          "evidence_label": "from_source",
+          "locator": "p.3",
+          "quote": "Recent research outcomes on bacterial biosorption of heavy metals",
+          "scope_match": "Keywords: heavy, significant, metals, bind"
         },
         "boundary_conditions": [
           {

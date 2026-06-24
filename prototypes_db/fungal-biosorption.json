@@ -21,20 +21,39 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "Heavy metal ions (Pb²⁺, Cu²⁺, Cd²⁺, Zn²⁺, Cr³⁺)",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.jwpe.2022.102884",
+          "locator": "p.3",
+          "quote": "In ion exchange mechanism, metal cations bind to a vacant site,",
+          "scope_match": "Keywords: ions, heavy, metal"
         },
         "bio_structure": {
           "text": "Amino (-NH₂), carboxyl (-COOH), hydroxyl (-OH), phosphate groups on fungal cell wall",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.jwpe.2022.102884",
+          "locator": "p.3",
+          "quote": "these groups are present on bacterial cell wall",
+          "scope_match": "Keywords: amino, groups, wall, hydroxyl, cell"
         },
         "interaction": {
           "text": "Coordination and electrostatic interaction with cell wall functional groups",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.jwpe.2022.102884",
+          "locator": "p.3",
+          "quote": "these groups are present on bacterial cell wall",
+          "scope_match": "Keywords: interaction, groups, wall, functional, coordination"
         },
         "why_it_works": {
           "text": "Biosorption capacity varies by species and metal: typically 10-200 mg/g",
-          "basis": "llm_inferred",
-          "source": ""
+          "basis": "from_source",
+          "source": "10.1016/j.jwpe.2022.102884",
+          "evidence_label": "from_source",
+          "locator": "p.3",
+          "quote": "Recent research outcomes on bacterial biosorption of heavy metals",
+          "scope_match": "Keywords: biosorption, capacity, metal, species"
         },
         "boundary_conditions": [
           {

@@ -21,20 +21,39 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "Heavy metal ions (Hg²⁺, Ag⁺, Pb²⁺, Cu²⁺)",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1007/s10853-026-12899-2",
+          "locator": "p.12",
+          "quote": "capture metal ions and form metal–ligand complexes",
+          "scope_match": "Keywords: ions, heavy, metal"
         },
         "bio_structure": {
           "text": "Cysteine thiol groups, amino groups, carboxyl groups",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1007/s10853-026-12899-2",
+          "locator": "p.12",
+          "quote": "Ligand groups such as amines(–NH2), thiols (–SH),",
+          "scope_match": "Keywords: amino, groups, carboxyl, cysteine, thiol"
         },
         "interaction": {
           "text": "Coordination with thiol (-SH) and amino (-NH₂) groups on keratin",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1007/s10853-026-12899-2",
+          "locator": "p.12",
+          "quote": "Ligand groups such as amines(–NH2), thiols (–SH),",
+          "scope_match": "Keywords: amino, groups, coordination, thiol"
         },
         "why_it_works": {
           "text": "High affinity for soft heavy metals due to thiol groups",
-          "basis": "llm_inferred",
-          "source": ""
+          "basis": "from_source",
+          "source": "10.1007/s10853-026-12899-2",
+          "evidence_label": "from_source",
+          "locator": "p.12",
+          "quote": "agents for their affinity towards heavy metals:",
+          "scope_match": "Keywords: heavy, groups, metals, soft, high"
         },
         "boundary_conditions": [
           {
