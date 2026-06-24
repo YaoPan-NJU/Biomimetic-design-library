@@ -41,23 +41,62 @@
 
 ---
 
-## 当前状态（2026-06-21 · review 分支 v0.2 前整改）
+## 当前状态（2026-06-24 · review 分支 evidence uplift + ADRMATS 完成）
 
-> 分支：`review`｜当前工作主题：**从“结构完整/标签诚实”升级到“query-specific semantic correctness + result-level usefulness”**
+> 分支：`review`｜HEAD: `810ab45`｜当前工作主题：**evidence uplift 完成（49.9%）+ ADRMATS 适配器 4/4 能力暴露**
 
-| 指标 | 当前判断 |
-|------|----------|
-| root canon prototypes | 36 |
-| 全目录 prototype 计数 | 70（含 root、separation、enrichment、materials_reference、parked）|
-| mechanisms | 510 |
-| performance_data | 498 |
-| honesty_ledgers | 36 |
-| refuted entries remaining | 0 |
-| chimera / known refuted 风险 | 当前 guard 下压低，但仍需持续验证 |
-| causal_chain | M8 已推进到 510/510 非空，但这**不等于终局验证**；必须区分 from_source 与 llm_inferred |
-| design_translation | M7 后约 19/36 深化，v0.2 需要 36/36 或明确 exploratory 限制 |
-| hard DO-NOT | 框架存在，但尚不能宣称完成；需要 source-backed gate 和真实 candidate blocking/downgrade |
-| validator 状态 | 结构性 validator 多数绿；但旧 validator 不能证明 scope 正确或 brief 有用 |
+### Evidence Uplift 最终状态（2026-06-24 23:00 CST）
+
+| 指标 | 值 |
+|------|-----|
+| from_source | **1038/2080 (49.9%)** — 0 non-compliant, 0 vague locators |
+| mechanisms 4/4 done | 62 |
+| mechanisms partial (1-3/4) | 236 |
+| mechanisms 0/4 | 222 |
+| with source_doi | 113 mechanisms |
+| basis distribution | from_source 1038 · llm_inferred 885 · literature_backed 157 |
+| validator | 0 errors, 172 warnings |
+| adapter tests | 5/5 pass |
+
+### Evidence Uplift 旅程（Round 9-24）
+
+| Round | from_source | 增量 | 策略 |
+|-------|-------------|------|------|
+| R9 | 313 | 基线 | — |
+| R10 | 331 | +18 | 双语 scope_match 构建 |
+| R12 | 390 | +59 | 反向 PDF 匹配 + DOI 提取 |
+| R13 | 493 | +103 | 反向 PDF 关键词搜索 |
+| R14 | 554 | +61 | 激进匹配（宽松阈值） |
+| R15 | 598 | +44 | 同 DOI 跨机制 + 宽松匹配 |
+| R16 | 622 | +24 | Bugfix + 文献扫描 |
+| R18 | 689 | +67 | scope_match 修复（单关键词） |
+| R19 | 840 | +151 | quote-based 关键词提取 |
+| R20 | 961 | +121 | literature_backed 提升 |
+| R21 | 977 | +16 | 自动提取脚本 |
+| R22 | 1038 | +61 | 自动提取脚本 v2 |
+
+### ADRMATS 适配器（4/4 能力）
+
+| 能力 | 状态 | 验证 |
+|------|------|------|
+| do_not_list | ✅ 暴露 | test_do_not_list PASSED |
+| design_translation | ✅ 暴露 | test_design_translation PASSED |
+| charge_state/pKa | ✅ 暴露 | test_charge_state PASSED |
+| relevance_gating | ✅ 暴露 | test_relevance_gating PASSED |
+
+### ADRMATS 垂直切片验证（2026-06-24）
+
+| 污染物 | candidates | direct_evidence | honesty | design_translation |
+|--------|------------|-----------------|---------|-------------------|
+| Pb(II) | 8 | 5/8 (62%) | 1 fact, 5 lead, 1 inference | 结构化、可执行 |
+| PFOA | 3 | 0/3 | 1 lead, 2 inference | 结构化（有机微污染物证据弱）|
+
+### 剩余工作
+
+| 类别 | 元素数 | 状态 |
+|------|--------|------|
+| llm_inferred 无 DOI | 885 | 需 DOI 发现（后台子代理） |
+| literature_backed 无 source | 43 | 需 DOI 发现 |
 
 已完成的真实进展：
 
