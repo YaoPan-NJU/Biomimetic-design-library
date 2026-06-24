@@ -483,6 +483,21 @@ class BiomimeticContext:
                 else:
                     candidate_honesty = 'inference'
 
+                # Get charge_state context
+                charge_state = self.get_charge_state_context(pid)
+
+                # Get relevance gating (do_not_list compatibility)
+                do_not_list = self.get_do_not_list(pid)
+                query_lower = pollutant.lower()
+                is_excluded = False
+                exclusion_reason = ''
+                for dnl in do_not_list:
+                    dnl_text = (dnl.get('text', '') or '').lower()
+                    if any(kw in dnl_text for kw in query_lower.split()):
+                        is_excluded = True
+                        exclusion_reason = dnl.get('text', '')
+                        break
+
                 brief_candidates.append({
                     'prototype_id': pid,
                     'organism': proto.get('organism', {}).get('scientific', '未知'),
@@ -530,6 +545,12 @@ class BiomimeticContext:
                     'boundary_summary': self._get_boundary_summary(self._get_mechanism_boundaries(main_mech)),
                     'evidence_context': {
                         'performance_leads': self._get_performance_leads(proto, pollutant)
+                    },
+                    'charge_state': charge_state,
+                    'relevance_gating': {
+                        'is_excluded': is_excluded,
+                        'exclusion_reason': exclusion_reason,
+                        'do_not_list': do_not_list
                     }
                 })
 
