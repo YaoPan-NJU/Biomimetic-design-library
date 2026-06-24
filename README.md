@@ -41,24 +41,24 @@
 
 ---
 
-## 当前状态（2026-06-24 · review 分支 evidence uplift + ADRMATS 完成）
+## 当前状态（2026-06-25 · review 分支 V1-A 完成 + Round 30 质量提升）
 
-> 分支：`review`｜HEAD: `810ab45`｜当前工作主题：**evidence uplift 完成（49.9%）+ ADRMATS 适配器 4/4 能力暴露**
+> 分支：`review`｜HEAD: `8c48fea`｜当前工作主题：**V1-A 证据提升完成 (50.7%) + ADRMATS 完成 + Round 30 质量扫描**
 
-### Evidence Uplift 最终状态（2026-06-24 23:00 CST）
+### Evidence Uplift 最终状态（2026-06-25 13:40 CST）
 
 | 指标 | 值 |
 |------|-----|
-| from_source | **1038/2080 (49.9%)** — 0 non-compliant, 0 vague locators |
+| from_source | **1055/2080 (50.7%)** — 0 non-compliant, 0 vague locators |
 | mechanisms 4/4 done | 62 |
 | mechanisms partial (1-3/4) | 236 |
 | mechanisms 0/4 | 222 |
 | with source_doi | 113 mechanisms |
-| basis distribution | from_source 1038 · llm_inferred 885 · literature_backed 157 |
+| basis distribution | from_source 1055 · llm_inferred 960 · literature_backed 65 |
 | validator | 0 errors, 172 warnings |
 | adapter tests | 5/5 pass |
 
-### Evidence Uplift 旅程（Round 9-24）
+### Evidence Uplift 旅程（Round 9-27）
 
 | Round | from_source | 增量 | 策略 |
 |-------|-------------|------|------|
@@ -74,6 +74,8 @@
 | R20 | 961 | +121 | literature_backed 提升 |
 | R21 | 977 | +16 | 自动提取脚本 |
 | R22 | 1038 | +61 | 自动提取脚本 v2 |
+| R26 | 1049 | +11 | 跨元素提升 (Track A) |
+| R27 | 1055 | +6 | literature_backed→from_source (Track B) |
 
 ### ADRMATS 适配器（4/4 能力）
 
