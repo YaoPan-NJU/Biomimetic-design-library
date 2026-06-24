@@ -51,25 +51,30 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "多种污染物（重金属、染料、有机物）",
-          "basis": "literature_backed",
+          "basis": "from_source",
           "evidence_label": "from_source",
-          "source": "10.19965/j.cnki.iwt.2021-1137",
-          "locator": "p.3",
-          "quote": "可用于废水中染料、抗生素等的吸附去除",
+          "source": "10.13550/j.jxhg.20220633",
+          "locator": "p.1",
+          "quote": "复杂，包括有机染料、重金属、各种添加剂等，对",
           "scope_match": "Keywords: 染料, 重金属"
         },
         "bio_structure": {
           "text": "龙虾外骨骼的几丁质-矿物复合结构，脱矿后提取几丁质/壳聚糖",
           "basis": "literature_backed",
           "evidence_label": "from_source",
-          "source": "10.19965/j.cnki.iwt.2021-1137",
-          "locator": "p.3",
-          "quote": "物、壳聚糖、树脂、藻类、微生物、活性污泥等",
+          "source": "10.13550/j.jxhg.20220633",
+          "locator": "p.1",
+          "quote": "聚多巴胺改性双醛壳聚糖的制备及其吸附性能",
           "scope_match": "Keywords: 壳聚糖"
         },
         "interaction": {
           "text": "与chitosan相同：氨基配位、羟基氢键、静电吸引",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "evidence_label": "from_source",
+          "source": "10.13550/j.jxhg.20220633",
+          "locator": "p.1",
+          "quote": "modified dialdehyde chitosan",
+          "scope_match": "Keywords: chitosan"
         },
         "why_it_works": {
           "text": "龙虾外骨骼是壳聚糖的天然来源之一，吸附机制与壳聚糖相同",

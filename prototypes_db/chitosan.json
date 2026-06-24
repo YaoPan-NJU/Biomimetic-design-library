@@ -2138,10 +2138,10 @@
           "text": "氨基和羟基与金属离子形成配位键（N,O-螯合），遵循HSAB原理和Irving-Williams序列",
           "basis": "literature_backed",
           "evidence_label": "from_source",
-          "source": "10.15898/j.ykcs.202208230155.",
-          "locator": "p.7",
-          "quote": "与金属离子螯合作用，即金属离子与N 原子形成共",
-          "scope_match": "Keywords: 螯合"
+          "source": "10.1016/j.jece.2023.111360",
+          "locator": "p.2",
+          "quote": "According to HSAB theory [21],",
+          "scope_match": "Keywords: hsab"
         },
         "why_it_works": {
           "text": "壳聚糖的氨基对软酸金属（Hg²⁺、Pb²⁺、Cu²⁺）有高亲和力，形成稳定的五元或六元螯合环；Cu²⁺在Irving-Williams序列中稳定性最高（log K~8）",
@@ -2223,7 +2223,12 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: pHpzc对吸附机制的影响 pHpzc effect on ）",
         "pollutant_feature": {
           "text": "pHpzc值取决于具体壳聚糖改性方式",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.cej.2020.126953",
+          "locator": "p.11",
+          "quote": "pHpzc value of STAH20",
+          "scope_match": "Keywords: phpzc"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
@@ -2240,13 +2245,13 @@
         },
         "why_it_works": {
           "text": "pHpzc对吸附机制的影响 pHpzc effect on adsorption mechanism",
-          "basis": "literature_backed",
+          "basis": "from_source",
           "source_asset": "",
           "evidence_label": "from_source",
-          "source": "10.7524/AJE.1673⁃5897.20220113002",
-          "locator": "p.7",
-          "quote": "吸附条件Adsorption conditions",
-          "scope_match": "Keywords: mechanism, adsorption"
+          "source": "10.1016/j.cej.2020.126953",
+          "locator": "p.11",
+          "quote": "The effect of adsorption/desorption cycles on the equili­",
+          "scope_match": "Keywords: adsorption, mechanism, effect, phpzc"
         },
         "boundary_conditions": [
           {
@@ -2305,7 +2310,7 @@
           "source": "10.7524/AJE.1673⁃5897.20220113002",
           "locator": "p.7",
           "quote": "Oxidation, co- precipitation",
-          "scope_match": "Keywords: precipitation, mechanism, surface"
+          "scope_match": "Keywords: precipitation, surface, mechanism"
         },
         "boundary_conditions": [
           {
@@ -2468,11 +2473,11 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 制备方法）",
         "pollutant_feature": {
           "text": "羧基化壳聚糖(CYCS)+羧基化纳米纤维素(CNC)在CaCl₂溶液中螯合交联→形成水凝胶珠；CYCS通过壳聚糖羧甲基取代获得→取代度>60%；成本显著低于CMCS",
-          "basis": "literature_backed",
+          "basis": "from_source",
           "source_asset": "",
-          "locator": "p.8",
-          "quote": "where qm is the maximum adsorption capacity of the CYCS/CNC beads",
-          "scope_match": "Keywords: cmcs, cycs",
+          "locator": "p.1",
+          "quote": "(CYCS), which has as derivative CMCS, was used as the basic material",
+          "scope_match": "Keywords: cycs, cmcs",
           "evidence_label": "from_source",
           "source": "10.1016/j.molliq.2020.114523"
         },
@@ -2606,8 +2611,8 @@
           "evidence_label": "from_source",
           "source": "10.7524/j.issn.0254-6108.2023052603",
           "locator": "p.3",
-          "quote": "磁性生物炭（LLB-MB）",
-          "scope_match": "Keywords: 通过, mb"
+          "quote": "（poplar wood biochar modified with Fe3O4, MPBC），通过TEM、SEM、FT-IR 和XPS 等手段对MPBC 进",
+          "scope_match": "Keywords: 通过"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
@@ -2892,10 +2897,10 @@
           "basis": "literature_backed",
           "source_asset": "",
           "evidence_label": "from_source",
-          "source": "10.7524/AJE.1673⁃5897.20220113002",
-          "locator": "p.7",
-          "quote": "吸附条件Adsorption conditions",
-          "scope_match": "Keywords: adsorption"
+          "source": "10.1016/j.jhazmat.2022.130377",
+          "locator": "p.14",
+          "quote": "Precipitation of arsenic sulphide from acidic water in a fixed-film bioreactor",
+          "scope_match": "Keywords: adsorption, mechanisms, arsenic"
         },
         "boundary_conditions": [
           {
@@ -2952,9 +2957,9 @@
           "source_asset": "2021-Ayub-chitosan-adsorption-biosorption-removal-review.pdf",
           "evidence_label": "from_source",
           "source": "10.7524/AJE.1673⁃5897.20220113002",
-          "locator": "p.7",
-          "quote": "吸附条件Adsorption conditions",
-          "scope_match": "Keywords: adsorption"
+          "locator": "p.13",
+          "quote": "The adsorption capacity is 89",
+          "scope_match": "Keywords: adsorption, 壳聚糖, chitosan"
         },
         "boundary_conditions": [
           {
@@ -3046,14 +3051,19 @@
           "text": "三步机制：扩散→氧化→吸附；As(III)先扩散至TiO2附近被氧化为As(V)，Al2O3接收砷酸盐离子使TiO2空出继续氧化",
           "basis": "literature_backed",
           "evidence_label": "from_source",
-          "source": "10.16085/j.issn.1000-6613.2021-0391",
-          "locator": "p.6",
-          "quote": "李若男等：纤维素纳米纤维及其改性产物吸附重金属的研究进展",
-          "scope_match": "Keywords: 吸附, 氧化"
+          "source": "10.16085/j.issn.1000-6613.2021-1614",
+          "locator": "p.1",
+          "quote": "介孔金属有机框架材料吸附水中重金属离子研究进展",
+          "scope_match": "Keywords: 吸附"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "evidence_label": "from_source",
+          "source": "10.16085/j.issn.1000-6613.2021-1614",
+          "locator": "p.1",
+          "quote": "摘要：介孔金属有机框架材料（介孔MOFs）相较于传统吸附剂具有孔径大、孔隙率可调、比表面积大、官能团",
+          "scope_match": "Keywords: 官能团"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
@@ -3193,7 +3203,7 @@
           "source": "10.1016/j.jtice.2022.104625",
           "locator": "p.3",
           "quote": "According to [I] Langmuir isotherm model, any homogeneous active",
-          "scope_match": "Keywords: langmuir, fecl"
+          "scope_match": "Keywords: fecl, langmuir"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
@@ -3210,7 +3220,7 @@
           "source": "10.1016/j.jtice.2022.104625",
           "locator": "p.3",
           "quote": "(1) For example, under acidic pH: [a] The amine",
-          "scope_match": "Keywords: carbon, chitosan, acid, fecl"
+          "scope_match": "Keywords: acid, carbon, fecl, chitosan"
         },
         "boundary_conditions": [
           {
@@ -3248,14 +3258,19 @@
           "text": "基于HSAB硬酸-硬碱静电吸引：-NH3+、-OH2+、La3+（硬酸）与NO3-（硬碱）作用",
           "basis": "literature_backed",
           "evidence_label": "from_source",
-          "source": "10.19672/j.cnki.1003-6504.2227.22.338",
-          "locator": "p.7",
-          "quote": "基于MICP的水体重金属微生物修复技术研究进展",
-          "scope_match": "Keywords: 作用, 基于"
+          "source": "10.7524/j.issn.0254-6108.2023052603",
+          "locator": "p.5",
+          "quote": "学和Langmuir 模型，吸附机理以静电相互作用、表面络合、氢键、π-π 电子供体-受体（π-πEDA）相互作",
+          "scope_match": "Keywords: 作用"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "evidence_label": "from_source",
+          "source": "10.7524/j.issn.0254-6108.2023052603",
+          "locator": "p.5",
+          "quote": "而其表面官能团（—COOH、—C=O、—OH）和表面离子则通过π-π 作用、氢键、表面络合、静电",
+          "scope_match": "Keywords: 官能团"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
@@ -3270,9 +3285,9 @@
           "text": "La3+掺入壳聚糖膜HSAB机制 La3+-chitosan HSAB mechanism",
           "basis": "literature_backed",
           "evidence_label": "from_source",
-          "source": "10.19672/j.cnki.1003-6504.2227.22.338",
-          "locator": "p.7",
-          "quote": "机制、不同的微生物及不同的菌株，环境因素对矿化",
+          "source": "10.7524/j.issn.0254-6108.2023052603",
+          "locator": "p.5",
+          "quote": "作用等机制吸附TCs，这些作用力均是化学性的",
           "scope_match": "Keywords: mechanism, 机制"
         },
         "boundary_conditions": [
@@ -3551,10 +3566,10 @@
           "basis": "literature_backed",
           "source_asset": "",
           "evidence_label": "from_source",
-          "source": "10.1016/j.scitotenv.2022.158817",
+          "source": "10.1016/j.seppur.2025.134756",
           "locator": "p.20",
-          "quote": "explained the adsorption of Cd2+ and",
-          "scope_match": "Keywords: main, three, adsorption, mechanisms"
+          "quote": "reflect chemisorption mechanisms governed by charge transfer, surface",
+          "scope_match": "Keywords: three, adsorption, mechanisms, main"
         },
         "boundary_conditions": [
           {
@@ -3867,12 +3882,12 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 壳聚糖吸附金属离子的机理）",
         "pollutant_feature": {
           "text": "物理吸附与化学吸附 (Physical and Chemical adsorption)",
-          "basis": "literature_backed",
+          "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.7524/AJE.1673⁃5897.20220113002",
-          "locator": "p.7",
-          "quote": "吸附条件Adsorption conditions",
-          "scope_match": "Keywords: chemical, adsorption"
+          "locator": "p.6",
+          "quote": "化学吸附Chemical adsorption",
+          "scope_match": "Keywords: physical, chemical, adsorption"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
@@ -3946,8 +3961,8 @@
           "evidence_label": "from_source",
           "source": "10.7524/AJE.1673⁃5897.20220113002",
           "locator": "p.7",
-          "quote": "肽链上的羰基氧与Cr3+发生配位",
-          "scope_match": "Keywords: 静电吸引, cr"
+          "quote": "化学络合、静电吸引、氢键等",
+          "scope_match": "Keywords: 静电吸引"
         },
         "boundary_conditions": [
           {
@@ -4740,10 +4755,10 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: 含氟季铵盐抗菌机理）",
         "pollutant_feature": {
           "text": "C-F键能497 kJ/mol，全氟烷基协同抗菌基团向表面迁移实现高效抗菌",
-          "basis": "literature_backed",
+          "basis": "from_source",
           "source": "10.13550/j.jxhg.20201035",
-          "locator": "p.3, Section 2",
-          "scope_match": "Keywords: mol, c, j",
+          "locator": "p.3",
+          "scope_match": "Keywords: mol, 键能, 49, 497, 497 ",
           "evidence_label": "from_source",
           "quote": "料的 \n表面能低，用于基材表面可以有效地阻止细菌等微\n生物的黏附，赋予表面自去污性及抗菌性[20]。使  \n用较多的低表面能材料包含有机氟和有机硅两大\n系列[21-22]。 \n2.1  含有机氟超疏水抗菌表面 \n氟原子具有强电负性，C—F 键能较强，为  \n497 kJ/mol，含氟有机物具有较低的表面能和表面张\n力。将氟元素引入抗菌材料中不仅能降低细菌在材\n料表面的黏附，而且氟元素会协同抗菌基团"
         },
@@ -4761,9 +4776,12 @@
         },
         "why_it_works": {
           "text": "含氟季铵盐抗菌机理",
-          "basis": "literature_backed",
+          "basis": "from_source",
           "source": "10.13550/j.jxhg.20201035",
-          "locator": "p.3, Section 2"
+          "locator": "p.3",
+          "evidence_label": "from_source",
+          "quote": "料的 \n表面能低，用于基材表面可以有效地阻止细菌等微\n生物的黏附，赋予表面自去污性及抗菌性[20]。使  \n用较多的低表面能材料包含有机氟和有机硅两大\n系列[21-22]。 \n2.1  含有机氟超疏水抗菌表面 \n氟原子具有强电负性，C—F 键能较强，为  \n497 kJ/mol，含氟有机物具有较低的表面能和表面张\n力。将氟元素引入抗菌材料中不仅能降低细菌在材\n料表面的黏附，而且氟元素会协同抗菌基团",
+          "scope_match": "Keywords: 含氟, 季铵, 季铵盐, 铵盐, 抗菌"
         },
         "boundary_conditions": [
           {
@@ -4952,7 +4970,7 @@
           "source": "10.13550/j.jxhg.20201035",
           "locator": "p.5",
           "quote": "一种氢氧化铜纳米线，通过机械剥离将纳米线转移",
-          "scope_match": "Keywords: 纳米线, pdms"
+          "scope_match": "Keywords: pdms, 纳米线"
         },
         "boundary_conditions": [
           {
@@ -5540,15 +5558,20 @@
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "evidence_label": "from_source",
+          "source": "10.19672/j.cnki.1003-6504.2227.22.338",
+          "locator": "p.1",
+          "quote": "的修复方法主要有化学沉淀、混凝、膜过滤、离子交换",
+          "scope_match": "Keywords: 离子交换"
         },
         "why_it_works": {
           "text": "二元体系中的Cu²⁺桥联对CR的影响",
           "basis": "literature_backed",
           "evidence_label": "from_source",
-          "source": "10.16085/j.issn.1000-6613.2021-1614",
-          "locator": "p.12",
-          "quote": "pH 的影响，它们在水体中最常见的形态包括M",
+          "source": "10.19672/j.cnki.1003-6504.2227.22.338",
+          "locator": "p.1",
+          "quote": "化中的研究进展，并分析了重金属浓度、尿素浓度、钙源及其浓度、pH值、温度和生物矿物形态等对MICP的影响",
           "scope_match": "Keywords: 的影响"
         },
         "boundary_conditions": [
@@ -5655,13 +5678,13 @@
         },
         "why_it_works": {
           "text": "Primary adsorption mechanism - complexation/chelat",
-          "basis": "literature_backed",
+          "basis": "from_source",
           "source_asset": "",
           "evidence_label": "from_source",
-          "source": "10.1016/j.cej.2021.130509",
-          "locator": "p.6",
-          "quote": "Lewis acid that exhibit strong ligand adsorption with anions",
-          "scope_match": "Keywords: complexation, mechanism, adsorption"
+          "source": "10.1016/j.ijbiomac.2023.123916",
+          "locator": "p.12",
+          "quote": "adsorption mechanism of heavy metals: kinetic models and isothermal",
+          "scope_match": "Keywords: complexation, adsorption, primary, mechanism, chelat"
         },
         "boundary_conditions": [
           {
@@ -5697,13 +5720,13 @@
         "transferable_principle": "壳聚糖的-NH₂/-OH通过螯合/静电吸引/离子交换吸附污染物（基于: Electrostatic interaction and ）",
         "pollutant_feature": {
           "text": "At pH > pHpzc, adsorbent surface deprotonated creating negative charge that attracts cations; at pH ",
-          "basis": "literature_backed",
+          "basis": "from_source",
           "source_asset": "",
           "evidence_label": "from_source",
-          "source": "10.1016/j.biortech.2023.129213",
-          "locator": "p.6",
-          "quote": "charges (pHPZC) of about 5",
-          "scope_match": "Keywords: charge, cations, adsorbent, surface, negative"
+          "source": "10.1016/j.molliq.2023.122854",
+          "locator": "p.4",
+          "quote": "surface of FCA was deprotonated and taken more negative charge, which",
+          "scope_match": "Keywords: surface, cations, deprotonated, negative, adsorbent"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
@@ -5888,9 +5911,9 @@
           "text": "螯合配位、静电吸引、离子交换、氢键",
           "basis": "literature_backed",
           "evidence_label": "from_source",
-          "source": "10.13344/j.microbiol.china.210271",
-          "locator": "p.7",
-          "quote": "与金属离子的配位、络合、离子交换、物理吸",
+          "source": "10.13801/j.cnki.fhclxb.20230314.003",
+          "locator": "p.14",
+          "quote": "学吸附、静电和离子交换作用吸附废水中的铀，",
           "scope_match": "Keywords: 离子交换"
         },
         "why_it_works": {
@@ -6048,14 +6071,19 @@
           "basis": "literature_backed",
           "source_asset": "2022-张-壳聚糖-纤维素-纳米纤维素-吸附.pdf",
           "evidence_label": "from_source",
-          "source": "10.7524/AJE.1673⁃5897.20220113002",
-          "locator": "p.7",
-          "quote": "化学络合、静电吸引、氢键等",
-          "scope_match": "Keywords: 静电吸引"
+          "source": "10.19965/j.cnki.iwt.2021-1137",
+          "locator": "p.2",
+          "quote": "近年来，天然生物材料（如农业废弃物、壳聚糖、树",
+          "scope_match": "Keywords: 壳聚糖"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "evidence_label": "from_source",
+          "source": "10.19965/j.cnki.iwt.2021-1137",
+          "locator": "p.2",
+          "quote": "由于化学吸附剂表面官能团数量有限，无法",
+          "scope_match": "Keywords: 官能团"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
@@ -6497,7 +6525,7 @@
           "locator": "p.7",
           "evidence_label": "from_source",
           "quote": "吸附条件Adsorption conditions",
-          "scope_match": "Keywords: mechanism, sorption"
+          "scope_match": "Keywords: sorption, mechanism"
         },
         "boundary_conditions": [
           {
@@ -6558,11 +6586,11 @@
         "why_it_works": {
           "text": "XPS表征揭示吸附机制 XPS characterization revealing adsorpt",
           "basis": "literature_backed",
-          "source": "10.7524/AJE.1673⁃5897.20220113002",
-          "locator": "p.7",
+          "source": "10.1016/j.seppur.2023.124144",
+          "locator": "p.30",
           "evidence_label": "from_source",
-          "quote": "吸附条件Adsorption conditions",
-          "scope_match": "Keywords: adsorpt"
+          "quote": "Tb-MOFs: identifying the adsorption mechanism through experimental and",
+          "scope_match": "Keywords: characterization, adsorpt"
         },
         "boundary_conditions": [
           {
@@ -6767,20 +6795,30 @@
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "evidence_label": "from_source",
+          "source": "10.16085/j.issn.1000-6613.2021-1591",
+          "locator": "p.5",
+          "quote": "阴离子，主要是同生物炭中的含氮官能团形成共轭",
+          "scope_match": "Keywords: 官能团"
         },
         "interaction": {
           "text": "螯合配位、静电吸引、离子交换、氢键",
-          "basis": "llm_inferred"
+          "basis": "literature_backed",
+          "evidence_label": "from_source",
+          "source": "10.16085/j.issn.1000-6613.2021-1591",
+          "locator": "p.5",
+          "quote": "其机理主要为离子交换作用",
+          "scope_match": "Keywords: 离子交换"
         },
         "why_it_works": {
           "text": "吸附剂-机理-目标污染物对应表",
           "basis": "literature_backed",
           "evidence_label": "from_source",
-          "source": "10.16085/j.issn.1000-6613.2021-1614",
-          "locator": "p.12",
-          "quote": "吸附剂对重金属离子的吸附",
-          "scope_match": "Keywords: 吸附剂, 机理"
+          "source": "10.16085/j.issn.1000-6613.2021-1591",
+          "locator": "p.5",
+          "quote": "其机理主要为离子交换作用",
+          "scope_match": "Keywords: 机理, 吸附剂"
         },
         "boundary_conditions": [
           {
@@ -7251,9 +7289,9 @@
           "text": "重金属/有机污染物",
           "basis": "literature_backed",
           "evidence_label": "from_source",
-          "source": "10.7524/AJE.1673⁃5897.20220113002",
-          "locator": "p.7",
-          "quote": "李林等：微生物吸附去除重金属效率与应用研究综述",
+          "source": "10.11862/CJIC.2021.068",
+          "locator": "p.2",
+          "quote": "主要水污染物包括重金属离子[2]、染料[3]、含",
           "scope_match": "Keywords: 重金属"
         },
         "bio_structure": {
@@ -7307,9 +7345,9 @@
           "text": "重金属/有机污染物",
           "basis": "literature_backed",
           "evidence_label": "from_source",
-          "source": "10.7524/AJE.1673⁃5897.20220113002",
-          "locator": "p.7",
-          "quote": "李林等：微生物吸附去除重金属效率与应用研究综述",
+          "source": "10.11862/CJIC.2021.068",
+          "locator": "p.2",
+          "quote": "主要水污染物包括重金属离子[2]、染料[3]、含",
           "scope_match": "Keywords: 重金属"
         },
         "bio_structure": {
@@ -7383,7 +7421,7 @@
           "source": "10.7524/AJE.1673⁃5897.20220113002",
           "locator": "p.7",
           "quote": "吸附条件Adsorption conditions",
-          "scope_match": "Keywords: mechanism, adsorption"
+          "scope_match": "Keywords: adsorption, mechanism"
         },
         "boundary_conditions": [
           {
@@ -7572,7 +7610,7 @@
           "source": "10.13801/j.cnki.fhclxb.20230314.003",
           "locator": "p.2",
           "quote": "有菱铁矿、海砂、沸石、壳聚糖、活性炭、纳米",
-          "scope_match": "Keywords: 埃洛石, 壳聚糖"
+          "scope_match": "Keywords: 壳聚糖, 埃洛石"
         },
         "bio_structure": {
           "text": "壳聚糖骨架的-NH₂和-OH官能团",
