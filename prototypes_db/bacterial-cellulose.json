@@ -30,15 +30,30 @@
         },
         "bio_structure": {
           "text": "BC nanofiber surface with hydroxyl groups",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.memsci.2020.118982",
+          "locator": "p.2",
+          "quote": "can produce more active sites, new functional groups with different",
+          "scope_match": "Keywords: groups,  n, na, an, er"
         },
         "interaction": {
           "text": "Physical sieving via 3D nanofiber network with mesopores (~31 nm)",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.memsci.2020.118982",
+          "locator": "p.2",
+          "quote": "endow BC with great feasibility in the application of membrane ultra­",
+          "scope_match": "Keywords: si, ic, ica, ca, in"
         },
         "why_it_works": {
           "text": "Water flux 1149.3 L/m²/h at 0.1 MPa",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.memsci.2020.118982",
+          "locator": "p.2",
+          "quote": "the flux measurement, each membrane was initially filtrated by DI water",
+          "scope_match": "Keywords: water, flux, at, ate, ater"
         },
         "boundary_conditions": [
           {
@@ -82,16 +97,21 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "Oil and organic foulants",
-          "basis": "literature_backed",
-          "scope_match": "Keywords: and, foulants",
+          "basis": "from_source",
+          "scope_match": "Keywords: oil, il,  a,  an,  and",
           "evidence_label": "from_source",
           "source": "10.1016/j.memsci.2020.118982",
-          "locator": "p.2",
-          "quote": "The high mechanical strength and superhydrophilicity that can help to prolong the life of the membrane without fouling. Since the water trapped in the membrane pores can form a continuous phase provid"
+          "locator": "p.1",
+          "quote": "dyes and insoluble oils"
         },
         "bio_structure": {
           "text": "Hydroxyl-rich BC surface + PDA coating",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.memsci.2020.118982",
+          "locator": "p.6",
+          "quote": "the surface of the BC/PDA/RGO-2 in water, and the oil drops slide off",
+          "scope_match": "Keywords: surface, pda, dr, dro, ro"
         },
         "interaction": {
           "text": "Superhydrophilic surface traps water layer, creating underwater superoleophobicity that repels oils",
@@ -104,7 +124,12 @@
         },
         "why_it_works": {
           "text": "Flux recovery ratio ~96.9%, superior anti-fouling",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.memsci.2020.118982",
+          "locator": "p.6",
+          "quote": "Anti-fouling property",
+          "scope_match": "Keywords: anti, fouling, er, ti, pe"
         },
         "boundary_conditions": [
           {
