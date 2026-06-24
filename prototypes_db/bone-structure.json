@@ -150,19 +150,39 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "Pb²⁺、Cd²⁺、Cu²⁺、Zn²⁺等二价重金属离子",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.11862/CJIC.2021.068",
+          "locator": "p.4",
+          "quote": "[Cd(tipo)(HCOO)(H2O)]NO3·DMF",
+          "scope_match": "Keywords: cd, tipo"
         },
         "bio_structure": {
           "text": "羟基磷灰石（HAp, Ca₁₀(PO₄)₆(OH)₂）的晶体结构和表面Ca²⁺/OH⁻位点",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.11862/CJIC.2021.068",
+          "locator": "p.4",
+          "quote": "a Existence form of Cr􀃱ion was not clearly indicated in the paper",
+          "scope_match": "Keywords: ca, ap"
         },
         "interaction": {
           "text": "表面离子交换（Ca²⁺↔Pb²⁺/Cd²⁺）、表面配位（OH⁻与金属离子）、共沉淀（磷酸盐沉淀）",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.11862/CJIC.2021.068",
+          "locator": "p.13",
+          "quote": "材料对Cd􀃭、Pb􀃭及Cr􀃱离子的去除能力",
+          "scope_match": "Keywords: pb, cd"
         },
         "why_it_works": {
           "text": "HAp的Ca²⁺位点可被重金属离子交换取代，且磷酸根可与重金属形成难溶磷酸盐沉淀，实现双重去除机制",
-          "basis": "llm_inferred"
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.3390/polym14245439",
+          "locator": "p.7",
+          "quote": "The most signiﬁcant problem of MD is that it still has limited applications at the",
+          "scope_match": "Keywords: ca, ap"
         },
         "boundary_conditions": [
           {
