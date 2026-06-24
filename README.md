@@ -41,24 +41,24 @@
 
 ---
 
-## 当前状态（2026-06-25 · review 分支 V1-A 完成 + Round 30 质量提升）
+## 当前状态（2026-06-25 · review 分支 V1-A Evidence Uplift 完成）
 
-> 分支：`review`｜HEAD: `8c48fea`｜当前工作主题：**V1-A 证据提升完成 (50.7%) + ADRMATS 完成 + Round 30 质量扫描**
+> 分支：`review`｜HEAD: `cb8e09c`｜当前工作主题：**V1-A Evidence Uplift 完成 (59.6%) + ADRMATS 4/4 完成**
 
-### Evidence Uplift 最终状态（2026-06-25 13:40 CST）
+### Evidence Uplift 最终状态（2026-06-25 15:26 CST）
 
 | 指标 | 值 |
 |------|-----|
-| from_source | **1055/2080 (50.7%)** — 0 non-compliant, 0 vague locators |
+| from_source | **1239/2080 (59.6%)** — 0 non-compliant, 0 vague locators |
 | mechanisms 4/4 done | 62 |
 | mechanisms partial (1-3/4) | 236 |
 | mechanisms 0/4 | 222 |
 | with source_doi | 113 mechanisms |
-| basis distribution | from_source 1055 · llm_inferred 960 · literature_backed 65 |
+| basis distribution | from_source 1239 · llm_inferred 716 · literature_backed 125 |
 | validator | 0 errors, 172 warnings |
 | adapter tests | 5/5 pass |
 
-### Evidence Uplift 旅程（Round 9-27）
+### Evidence Uplift 旅程（Round 9-35）
 
 | Round | from_source | 增量 | 策略 |
 |-------|-------------|------|------|
@@ -76,6 +76,12 @@
 | R22 | 1038 | +61 | 自动提取脚本 v2 |
 | R26 | 1049 | +11 | 跨元素提升 (Track A) |
 | R27 | 1055 | +6 | literature_backed→from_source (Track B) |
+| R30 | 971 | -84 | 质量扫描（清理劣质 scope_match）|
+| R31 | 1032 | +61 | 关键词扩展匹配 |
+| R32 | 1052 | +20 | literature_backed 升级 |
+| R33 | 1229 | +177 | 跨原型 PDF 匹配 |
+| R34 | 1235 | +6 | 激进跨原型匹配 |
+| R35 | 1239 | +4 | 最终冲刺
 
 ### ADRMATS 适配器（4/4 能力）
 
