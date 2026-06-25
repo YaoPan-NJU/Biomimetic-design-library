@@ -220,14 +220,36 @@
               "平面结构",
               "水溶性"
             ],
-            "mechanism_functional_groups": "",
-            "mechanism_key_structures": [],
-            "feature_binding_score": 0
+            "mechanism_functional_groups": [
+              "羧基 carboxyl (-COOH)",
+              "氨基 amino (-NH₂)",
+              "羟基 hydroxyl (-OH)",
+              "磷酸基 -PO₄"
+            ],
+            "mechanism_key_structures": [
+              "藻类细胞壁多糖-蛋白质基质",
+              "pH响应表面电荷",
+              "静电吸引+络合+氢键"
+            ],
+            "feature_binding_score": 2
           },
           "基本原理": "needs_review",
-          "key_structures": [],
-          "functional_groups": "",
-          "molecular_feature_links": [],
+          "key_structures": [
+            "藻类细胞壁多糖-蛋白质基质",
+            "pH响应表面电荷",
+            "静电吸引+络合+氢键"
+          ],
+          "functional_groups": [
+            "羧基 carboxyl (-COOH)",
+            "氨基 amino (-NH₂)",
+            "羟基 hydroxyl (-OH)",
+            "磷酸基 -PO₄"
+          ],
+          "molecular_feature_links": [
+            "芳香环",
+            "正电荷",
+            "水溶性"
+          ],
           "attribution": {
             "source": "literature",
             "ref": "10.1155/2021/9923643",
@@ -424,13 +446,31 @@
               "平面结构",
               "水溶性"
             ],
-            "mechanism_functional_groups": "",
-            "mechanism_key_structures": [],
-            "feature_binding_score": 2
+            "mechanism_functional_groups": [
+              "氨基 amino (-NH₂)",
+              "羟基 hydroxyl (-OH)",
+              "羧基 carboxyl (-COOH)"
+            ],
+            "mechanism_key_structures": [
+              "壳聚糖-NH₂/-OH",
+              "GO表面-OH/-COOH/-epoxy",
+              "氢键",
+              "π-π堆叠"
+            ],
+            "feature_binding_score": 4
           },
           "基本原理": "壳聚糖分子链上的羟基（-OH）可与污染物形成氢键，或通过配位作用结合金属离子",
-          "key_structures": [],
-          "functional_groups": "",
+          "key_structures": [
+            "壳聚糖-NH₂/-OH",
+            "GO表面-OH/-COOH/-epoxy",
+            "氢键",
+            "π-π堆叠"
+          ],
+          "functional_groups": [
+            "氨基 amino (-NH₂)",
+            "羟基 hydroxyl (-OH)",
+            "羧基 carboxyl (-COOH)"
+          ],
           "molecular_feature_links": [
             "正电荷",
             "水溶性"
@@ -450,7 +490,7 @@
           "constraints": "酸性条件(pH<3)吸附能力下降；水中溶解性需交联控制；机械强度低需复合增强",
           "failure_modes": "强酸环境溶解；高盐竞争吸附；有机物堵塞孔道",
           "evidence_tier": "lead (有性能数据但缺 verification_quote)",
-          "source_tier": "literature",
+          "source_tier": "llm_inference",
           "material_realization_examples": [
             "壳聚糖直接使用或交联改性（如戊二醛、环氧氯丙烷）"
           ]
@@ -717,13 +757,31 @@
               "平面结构",
               "水溶性"
             ],
-            "mechanism_functional_groups": "",
-            "mechanism_key_structures": [],
+            "mechanism_functional_groups": [
+              "邻苯二酚 catechol (-OH)",
+              "胺基 amine (-NH₂)",
+              "吲哚环 indole"
+            ],
+            "mechanism_key_structures": [
+              "PDA邻苯二酚螯合",
+              "胺基静电吸附",
+              "π-π堆叠",
+              "席夫碱反应"
+            ],
             "feature_binding_score": 0
           },
           "基本原理": "needs_review",
-          "key_structures": [],
-          "functional_groups": "",
+          "key_structures": [
+            "PDA邻苯二酚螯合",
+            "胺基静电吸附",
+            "π-π堆叠",
+            "席夫碱反应"
+          ],
+          "functional_groups": [
+            "邻苯二酚 catechol (-OH)",
+            "胺基 amine (-NH₂)",
+            "吲哚环 indole"
+          ],
           "molecular_feature_links": [
             "芳香环",
             "平面结构"

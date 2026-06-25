@@ -613,7 +613,7 @@ class BiomimeticContext:
                         '基本原理': main_mech.get('基本原理', 'needs_review'),
                         'key_structures': main_mech.get('key_structures', []),
                         'functional_groups': main_mech.get('functional_groups', []),
-                        'molecular_feature_links': c.get('molecular_feature_links', []),
+                        'molecular_feature_links': c.get('molecular_feature_links', []) or main_mech.get('molecular_feature_links', []),
                         'attribution': {
                             'source': main_mech.get('source', 'unknown'),
                             'ref': main_mech.get('ref_doi', main_mech.get('ref', '')),

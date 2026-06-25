@@ -140,7 +140,13 @@
     {
       "name": "HAp四种重金属吸附机制",
       "description": "(1)离子交换：HAp表面Ca²⁺/PO₄³⁻与重金属离子交换；(2)表面配合：污染物与HAp表面官能团形成化学键；(3)溶解-再沉淀：HAp溶解→释放PO₄³⁻→与重金属形成更难溶磷酸盐沉淀；(4)静电吸附：HAp表面正电荷与阴离子型重金属静电吸引",
-      "functional_groups": "",
+      "functional_groups": [
+        "羟基 -OH",
+        "磷酸根 PO₄³⁻",
+        "Ca²⁺位点",
+        "含氧阴离子吸附",
+        "表面配合还原"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.jtice.2024.105668",
       "verification": "verified",
@@ -218,7 +224,21 @@
         "verification_quote": "The four mechanisms (ion exchange, surface complexation, dissolution-reprecipitation, electrostatic adsorption) are described in the Jaffar 2024 review, Section 3.3, Figure 6.",
         "source_doi": "10.1016/j.jtice.2024.105668",
         "source_locator": "Jaffar2024 p.9-10 / Section 3.3, Fig.6"
-      }
+      },
+      "key_structures": [
+        "HAp六方晶体Ca₁₀(PO₄)₆(OH)₂",
+        "Ca²⁺/PO₄³⁻离子交换",
+        "溶解-再沉淀",
+        "表面配合"
+      ],
+      "molecular_feature_links": [
+        "六价铬",
+        "含氧阴离子",
+        "强氧化性",
+        "静电吸引",
+        "还原沉淀",
+        "配位"
+      ]
     },
     {
       "name": "HAp膜制备方法",

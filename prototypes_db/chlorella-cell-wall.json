@@ -369,7 +369,12 @@
     {
       "name": "pH对藻类染料吸附的影响 Effect of pH on algal dye adsorption",
       "description": "pH影响藻类表面电荷和染料离子化状态：低pH时表面正电荷利于阴离子染料吸附，高pH时表面负电荷利于阳离子染料吸附",
-      "functional_groups": "",
+      "functional_groups": [
+        "羧基 carboxyl (-COOH)",
+        "氨基 amino (-NH₂)",
+        "羟基 hydroxyl (-OH)",
+        "磷酸基 -PO₄"
+      ],
       "source": "literature",
       "ref_doi": "10.1155/2021/9923643",
       "verification": "partial",
@@ -427,7 +432,17 @@
         "verification_quote": "The effect of pH on dye adsorption by algae is primarily governed by the surface charge of the biomass",
         "source_doi": "10.1155/2021/9923643",
         "source_locator": "p.6 / Section 5.1"
-      }
+      },
+      "key_structures": [
+        "藻类细胞壁多糖-蛋白质基质",
+        "pH响应表面电荷",
+        "静电吸引+络合+氢键"
+      ],
+      "molecular_feature_links": [
+        "芳香环",
+        "正电荷",
+        "水溶性"
+      ]
     },
     {
       "name": "藻类生物吸附的静电吸引和络合机制 Electrostatic attraction and complexation in algal biosorption",
@@ -577,7 +592,7 @@
         },
         "why_it_works": {
           "text": "生物炭表面含氧官能团可还原Cr(VI)为低毒Cr(III)，磁性Fe₃O₄实现固液分离",
-          "basis": "literature_backed",
+          "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.16085/j.issn.1000-6613.2021-1591",
           "locator": "p.5",

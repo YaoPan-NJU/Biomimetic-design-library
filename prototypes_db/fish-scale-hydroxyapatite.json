@@ -487,7 +487,11 @@
     {
       "name": "八重协同吸附机制",
       "description": "疏水+π-π+π-π EDA+阳离子交换+氢键+孔填充+静电+阳阳-π",
-      "functional_groups": "",
+      "functional_groups": [
+        "羟基 -OH",
+        "磷酸根 PO₄³⁻",
+        "Ca²⁺位点"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.chemosphere.2021.131962",
       "verification": "verified",
@@ -541,7 +545,17 @@
         "verification_quote": "hydroxyapatite as adsorbent for heavy metal removal review",
         "source_doi": "10.1016/j.chemosphere.2021.131962",
         "source_locator": "p.8 / 3.8节"
-      }
+      },
+      "key_structures": [
+        "HAp纳米晶体(~30nm)",
+        "离子交换Ca²⁺↔Pb²⁺",
+        "阳离子交换",
+        "疏水+π-π+氢键+孔填充+静电"
+      ],
+      "molecular_feature_links": [
+        "二价阳离子",
+        "软酸"
+      ]
     },
     {
       "name": "疏水相互作用证据",
@@ -614,7 +628,7 @@
         "transferable_principle": "基于机制: MICP化学反应机理",
         "pollutant_feature": {
           "text": "脲酶水解尿素: CO(NH₂)₂+H₂O→NH₂COOH+NH₃; NH₂COOH+H₂O→NH₃+H₂CO₃; 最终产生CO₃²⁻+Ca²⁺→CaCO₃↓",
-          "basis": "literature_backed",
+          "basis": "llm_inferred",
           "evidence_label": "from_source",
           "source": "10.1016/j.ese.2021.100096",
           "locator": "p.2",
@@ -632,7 +646,7 @@
         },
         "interaction": {
           "text": "脲酶水解尿素: CO(NH₂)₂+H₂O→NH₂COOH+NH₃; NH₂COOH+H₂O→NH₃+H₂CO₃; 最终产生CO₃²⁻+Ca²⁺→CaCO₃↓",
-          "basis": "literature_backed",
+          "basis": "llm_inferred",
           "evidence_label": "from_source",
           "source": "10.1016/j.ese.2021.100096",
           "locator": "p.2",

@@ -1040,15 +1040,15 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "需要表面功能化涂层的吸附应用场景",
-          "basis": "literature-backed"
+          "basis": "llm_inferred"
         },
         "bio_structure": {
           "text": "多巴胺（DOPA前体）在弱碱性条件下（pH 8.5）自聚成聚多巴胺（PDA）涂层",
-          "basis": "literature-backed"
+          "basis": "llm_inferred"
         },
         "interaction": {
           "text": "DOPA氧化为醌→分子间交联（Michael加成/Schiff碱/π-π堆积）→形成均匀、厚度可控的PDA涂层",
-          "basis": "literature_backed",
+          "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.1039/d1cs00658d",
           "locator": "p.426, left column",
@@ -1057,7 +1057,7 @@
         },
         "why_it_works": {
           "text": "PDA涂层可在几乎所有基底（金属、氧化物、聚合物、陶瓷）上形成均匀薄膜，保留邻苯二酚和胺基活性位点，同时提供粘附力",
-          "basis": "literature-backed"
+          "basis": "llm_inferred"
         },
         "boundary_conditions": [
           {
@@ -1238,7 +1238,7 @@
         "transferable_principle": "基于机制: 多巴胺辅助共沉积机制 Dopamine-assisted co-deposition mechani",
         "pollutant_feature": {
           "text": "多巴胺辅助共沉积涉及多巴胺与第二组分之间的单/多共价或非共价相互作用。共价共沉积提供更强网络以促进涂层稳定性。poly(SBMA)通过去质子化酚基与季铵的局部静电作用与PDA交互；poly(MPC)通",
-          "basis": "literature_backed",
+          "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.1039/d1cs00658d",
           "locator": "p.426, left column",
@@ -1256,7 +1256,7 @@
         },
         "interaction": {
           "text": "多巴胺辅助共沉积涉及多巴胺与第二组分之间的单/多共价或非共价相互作用。共价共沉积提供更强网络以促进涂层稳定性。poly(SBMA)通过去质子化酚基与季铵的局部静电作用与PDA交互；poly(MPC)通",
-          "basis": "literature_backed",
+          "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.1039/d1cs00658d",
           "locator": "p.426, left column",
@@ -1891,7 +1891,11 @@
     {
       "name": "双功能协同策略",
       "description": "三种机制：(1)第二配体提供额外配位位点 (2)增强AO碱性→更强U(VI)络合 (3)酸性基团解离碳酸盐→释放UO2^2+",
-      "functional_groups": "",
+      "functional_groups": [
+        "邻苯二酚 catechol (-OH)",
+        "胺基 amine (-NH₂)",
+        "DOPA 3,4-二羟基苯丙氨酸"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.ccr.2023.215234",
       "verification": "partial",
@@ -1956,7 +1960,18 @@
       "source_page": 4,
       "source_doi": "10.1016/j.ccr.2023.215234",
       "source_locator": "p.4",
-      "evidence_label": "from_source"
+      "evidence_label": "from_source",
+      "key_structures": [
+        "PDA邻苯二酚双齿配位",
+        "胺基络合",
+        "金属配位",
+        "Michael加成"
+      ],
+      "molecular_feature_links": [
+        "二价阳离子",
+        "软酸",
+        "可与含硫/氮配体配位"
+      ]
     },
     {
       "name": "离子印迹策略——三种改进方向",
@@ -2213,7 +2228,7 @@
         },
         "interaction": {
           "text": "PDS吸附在MI-PDA缺电子N位点上→电子从PDS的S原子转移到N原子→O-O键缩短→S-O键断裂→产生¹O₂；N位点吸附能(-31.42 eV)高于O位点(-17.09 eV)，优先产生¹O₂",
-          "basis": "literature-backed"
+          "basis": "llm_inferred"
         },
         "why_it_works": {
           "text": "N位点激活PDS生成¹O₂的机制 Mechanism of N site activating PDS to generate ¹O₂",

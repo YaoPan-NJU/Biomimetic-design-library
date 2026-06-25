@@ -56,14 +56,36 @@
               "高电荷密度",
               "可与含硫/氮配体配位"
             ],
-            "mechanism_functional_groups": "",
-            "mechanism_key_structures": [],
-            "feature_binding_score": 0
+            "mechanism_functional_groups": [
+              "邻苯二酚 catechol (-OH)",
+              "胺基 amine (-NH₂)",
+              "DOPA 3,4-二羟基苯丙氨酸"
+            ],
+            "mechanism_key_structures": [
+              "PDA邻苯二酚双齿配位",
+              "胺基络合",
+              "金属配位",
+              "Michael加成"
+            ],
+            "feature_binding_score": 2
           },
           "基本原理": "needs_review",
-          "key_structures": [],
-          "functional_groups": "",
-          "molecular_feature_links": [],
+          "key_structures": [
+            "PDA邻苯二酚双齿配位",
+            "胺基络合",
+            "金属配位",
+            "Michael加成"
+          ],
+          "functional_groups": [
+            "邻苯二酚 catechol (-OH)",
+            "胺基 amine (-NH₂)",
+            "DOPA 3,4-二羟基苯丙氨酸"
+          ],
+          "molecular_feature_links": [
+            "二价阳离子",
+            "软酸",
+            "可与含硫/氮配体配位"
+          ],
           "attribution": {
             "source": "literature",
             "ref": "10.1016/j.ccr.2023.215234",
@@ -238,14 +260,35 @@
               "高电荷密度",
               "可与含硫/氮配体配位"
             ],
-            "mechanism_functional_groups": "",
-            "mechanism_key_structures": [],
-            "feature_binding_score": 0
+            "mechanism_functional_groups": [
+              "羟基 -OH",
+              "磷酸根 PO₄³⁻",
+              "Ca²⁺位点"
+            ],
+            "mechanism_key_structures": [
+              "HAp纳米晶体(~30nm)",
+              "离子交换Ca²⁺↔Pb²⁺",
+              "阳离子交换",
+              "疏水+π-π+氢键+孔填充+静电"
+            ],
+            "feature_binding_score": 1
           },
           "基本原理": "鱼鳞HAp的纳米级晶体（~30nm）提供超高比表面积，多机制协同实现高容量吸附",
-          "key_structures": [],
-          "functional_groups": "",
-          "molecular_feature_links": [],
+          "key_structures": [
+            "HAp纳米晶体(~30nm)",
+            "离子交换Ca²⁺↔Pb²⁺",
+            "阳离子交换",
+            "疏水+π-π+氢键+孔填充+静电"
+          ],
+          "functional_groups": [
+            "羟基 -OH",
+            "磷酸根 PO₄³⁻",
+            "Ca²⁺位点"
+          ],
+          "molecular_feature_links": [
+            "二价阳离子",
+            "软酸"
+          ],
           "attribution": {
             "source": "literature",
             "ref": "10.1016/j.chemosphere.2021.131962",
@@ -261,7 +304,7 @@
           "constraints": "煅烧温度影响晶相(>700°C分解)；酸性条件HAp溶解；竞争阳离子(Ca²⁺、Mg²⁺)干扰",
           "failure_modes": "煅烧不完全残留有机物；酸性溶解；竞争离子降低容量",
           "evidence_tier": "fact (有 CN114849640A 专利支撑)",
-          "source_tier": "literature",
+          "source_tier": "llm_inference",
           "material_realization_examples": [
             "鱼鳞热处理转化为羟基磷灰石"
           ]
@@ -331,12 +374,12 @@
           "direct_evidence": true
         },
         "mechanism": {
-          "name": "钝化机理",
+          "name": "牡蛎壳改性吸附机制",
           "selected_mechanism_reason": "Query-conditioned scoring selected this mechanism for Pb(II) based on relevance to matched features/interactions",
           "selected_mechanism_alignment": {
             "query_pollutant": "Pb(II)",
             "query_class": "重金属",
-            "mechanism_keywords": "钝化机理",
+            "mechanism_keywords": "牡蛎壳改性吸附机制",
             "alignment_basis": "query_relevance_scoring",
             "query_features": [
               "二价阳离子",
@@ -344,17 +387,45 @@
               "高电荷密度",
               "可与含硫/氮配体配位"
             ],
-            "mechanism_functional_groups": "",
-            "mechanism_key_structures": [],
-            "feature_binding_score": 0
+            "mechanism_functional_groups": [
+              "CaCO₃碳酸根",
+              "CaO/Ca(OH)₂",
+              "Ca²⁺位点",
+              "含氧阴离子吸附",
+              "碱性环境还原"
+            ],
+            "mechanism_key_structures": [
+              "方解石CaCO₃层状结构",
+              "煅烧CaO碱性释放",
+              "羟基磷灰石沉淀",
+              "离子交换"
+            ],
+            "feature_binding_score": 2
           },
-          "基本原理": "needs_review",
-          "key_structures": [],
-          "functional_groups": "",
-          "molecular_feature_links": [],
+          "基本原理": "煅烧牡蛎壳（CaO）在水中生成Ca(OH)₂，提供碱性环境和Ca²⁺，可与磷酸盐形成羟基磷灰石沉淀，同时重金属通过表面配位吸附",
+          "key_structures": [
+            "方解石CaCO₃层状结构",
+            "煅烧CaO碱性释放",
+            "羟基磷灰石沉淀",
+            "离子交换"
+          ],
+          "functional_groups": [
+            "CaCO₃碳酸根",
+            "CaO/Ca(OH)₂",
+            "Ca²⁺位点",
+            "含氧阴离子吸附",
+            "碱性环境还原"
+          ],
+          "molecular_feature_links": [
+            "六价铬",
+            "含氧阴离子",
+            "强氧化性",
+            "静电吸引",
+            "还原沉淀"
+          ],
           "attribution": {
             "source": "literature",
-            "ref": "10.13254/j.jare.2020.0504",
+            "ref": "10.16663/j.cnki.lskj.2021.02.025",
             "verification_tier": "partial",
             "confidence": "normal"
           }
@@ -374,7 +445,14 @@
         },
         "boundaries": [
           {
-            "text": "适用条件需根据具体机制验证",
+            "text": "未煅烧的CaCO₃吸附容量远低于煅烧产物CaO",
+            "parameter": "other",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          },
+          {
+            "text": "未煅烧CaCO₃吸附容量远低于煅烧产物CaO",
             "parameter": "other",
             "gate_level": "soft",
             "basis": "llm_inferred",
@@ -382,7 +460,7 @@
           }
         ],
         "honesty_summary": "有直接实验数据但机制未经独立核实",
-        "boundary_summary": "1 条软限制（caution）",
+        "boundary_summary": "2 条软限制（caution）",
         "evidence_context": {
           "performance_leads": []
         },
@@ -435,14 +513,42 @@
               "高电荷密度",
               "可与含硫/氮配体配位"
             ],
-            "mechanism_functional_groups": "",
-            "mechanism_key_structures": [],
+            "mechanism_functional_groups": [
+              "硅羟基 Si-OH",
+              "L碱位点",
+              "表面羟基配合",
+              "多孔吸附"
+            ],
+            "mechanism_key_structures": [
+              "非晶态SiO₂多孔骨架",
+              "550°C煅烧暴露裸露Si-OH",
+              "层级多孔(大孔300-500nm+介孔2-50nm)"
+            ],
             "feature_binding_score": 0
           },
           "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
-          "key_structures": [],
-          "functional_groups": "",
-          "molecular_feature_links": [],
+          "key_structures": [
+            "非晶态SiO₂多孔骨架",
+            "550°C煅烧暴露裸露Si-OH",
+            "层级多孔(大孔300-500nm+介孔2-50nm)"
+          ],
+          "functional_groups": [
+            "硅羟基 Si-OH",
+            "L碱位点",
+            "表面羟基配合",
+            "多孔吸附"
+          ],
+          "molecular_feature_links": [
+            "二价阳离子",
+            "软酸",
+            "可与含硫/氮配体配位",
+            "配位",
+            "静电吸引",
+            "离子交换",
+            "长链全氟烷基",
+            "疏水性",
+            "两亲性"
+          ],
           "attribution": {
             "source": "literature",
             "ref": "10.19817/j.cnki.issn1006-3536.2022.01.060",
@@ -541,14 +647,32 @@
               "高电荷密度",
               "可与含硫/氮配体配位"
             ],
-            "mechanism_functional_groups": "",
-            "mechanism_key_structures": [],
-            "feature_binding_score": 3
+            "mechanism_functional_groups": [
+              "氨基 amino (-NH₂)",
+              "羟基 hydroxyl (-OH)",
+              "质子化氨基 -NH₃⁺"
+            ],
+            "mechanism_key_structures": [
+              "壳聚糖β-(1→4)糖苷键骨架",
+              "六重协同(静电/络合/氢键/酸碱/配位/离子交换)"
+            ],
+            "feature_binding_score": 8
           },
           "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合",
-          "key_structures": [],
-          "functional_groups": "",
-          "molecular_feature_links": [],
+          "key_structures": [
+            "壳聚糖β-(1→4)糖苷键骨架",
+            "六重协同(静电/络合/氢键/酸碱/配位/离子交换)"
+          ],
+          "functional_groups": [
+            "氨基 amino (-NH₂)",
+            "羟基 hydroxyl (-OH)",
+            "质子化氨基 -NH₃⁺"
+          ],
+          "molecular_feature_links": [
+            "二价阳离子",
+            "软酸",
+            "可与含硫/氮配体配位"
+          ],
           "attribution": {
             "source": "literature",
             "ref": "10.1007/s10311-023-01563-9",
@@ -564,7 +688,7 @@
           "constraints": "酸性条件(pH<3)吸附能力下降；水中溶解性需交联控制；机械强度低需复合增强",
           "failure_modes": "强酸环境溶解；高盐竞争吸附；有机物堵塞孔道",
           "evidence_tier": "lead (有性能数据但缺 verification_quote)",
-          "source_tier": "literature",
+          "source_tier": "llm_inference",
           "material_realization_examples": [
             "壳聚糖直接使用或交联改性（如戊二醛、环氧氯丙烷）"
           ]
@@ -845,14 +969,40 @@
               "高电荷密度",
               "可与含硫/氮配体配位"
             ],
-            "mechanism_functional_groups": "",
-            "mechanism_key_structures": [],
+            "mechanism_functional_groups": [
+              "乙酰氨基 -NHCOCH₃",
+              "氨基 amino (-NH₂)",
+              "羟基 hydroxyl (-OH)",
+              "含氮配体"
+            ],
+            "mechanism_key_structures": [
+              "几丁质-蛋白质复合结构",
+              "脱乙酰化→壳聚糖",
+              "六重协同吸附"
+            ],
             "feature_binding_score": 0
           },
           "基本原理": "龙虾外骨骼是壳聚糖的天然来源之一，吸附机制与壳聚糖相同",
-          "key_structures": [],
-          "functional_groups": "",
-          "molecular_feature_links": [],
+          "key_structures": [
+            "几丁质-蛋白质复合结构",
+            "脱乙酰化→壳聚糖",
+            "六重协同吸附"
+          ],
+          "functional_groups": [
+            "乙酰氨基 -NHCOCH₃",
+            "氨基 amino (-NH₂)",
+            "羟基 hydroxyl (-OH)",
+            "含氮配体"
+          ],
+          "molecular_feature_links": [
+            "二价阳离子",
+            "软酸",
+            "可与含硫/氮配体配位",
+            "配位",
+            "静电吸引",
+            "离子交换",
+            "络合"
+          ],
           "attribution": {
             "source": "literature",
             "ref": "10.1007/s10311-023-01563-9",
@@ -952,13 +1102,35 @@
               "高电荷密度",
               "可与含硫/氮配体配位"
             ],
-            "mechanism_functional_groups": "",
-            "mechanism_key_structures": [],
+            "mechanism_functional_groups": [
+              "羟基 -OH",
+              "磷酸根 PO₄³⁻",
+              "Ca²⁺位点",
+              "含氧阴离子吸附",
+              "表面配合还原"
+            ],
+            "mechanism_key_structures": [
+              "HAp六方晶体Ca₁₀(PO₄)₆(OH)₂",
+              "Ca²⁺/PO₄³⁻离子交换",
+              "溶解-再沉淀",
+              "表面配合"
+            ],
             "feature_binding_score": 1
           },
           "基本原理": "HAp的Ca²⁺位点可被重金属离子交换取代，且磷酸根可与重金属形成难溶磷酸盐沉淀，实现双重去除机制",
-          "key_structures": [],
-          "functional_groups": "",
+          "key_structures": [
+            "HAp六方晶体Ca₁₀(PO₄)₆(OH)₂",
+            "Ca²⁺/PO₄³⁻离子交换",
+            "溶解-再沉淀",
+            "表面配合"
+          ],
+          "functional_groups": [
+            "羟基 -OH",
+            "磷酸根 PO₄³⁻",
+            "Ca²⁺位点",
+            "含氧阴离子吸附",
+            "表面配合还原"
+          ],
           "molecular_feature_links": [
             "二价阳离子"
           ],
