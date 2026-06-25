@@ -2,7 +2,8 @@
 title: 交接 — 办公室(Windows/CC) → 家里(mac mini/Codex)
 date: 2026-06-25
 branch: review
-status: v0.2 已验收（待 push）→ 家里继续 v1.0
+status: v0.2 已验收并 push → 家里继续 v1.0
+head: d4e923d
 prepared_by: Cowork（acting reviewer，代 Yao 复核）
 ---
 
