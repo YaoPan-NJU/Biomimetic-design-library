@@ -4,24 +4,59 @@
 
 ---
 
-## 当前方向（2026-06-21, v0.2 共识）
+## v0.2 交付状态（2026-06-25）
 
-本库是 ADRMATS 的**仿生候选匹配 + 证据检索 + 设计启发**模块，不是材料设计器，也不是按性能值排序的评价器。权威执行计划仍以 `docs/active/EXECUTION-PLAN-V3.md` 为基础，但 v0.2 前的完成定义已更新：
+> **分支：`v0.2`**｜已验收并推送｜下一版本：`v1.0`（证据获取 + 原型扩展）
 
-> **v0.2 不是“字段齐 + validator 绿 + causal_chain 填满”。v0.2 的门槛是：brief 能让材料工程决策更好，且不会被 scope 错配、伪事实、软边界冒充 DO-NOT 所误导。**
+### 数据规模
 
-当前共识：
+| 指标 | 值 |
+|------|-----|
+| 活跃原型 | **44** |
+| 机制总数 | **520**（520/520 因果链合格） |
+| 性能数据 | **502** |
+| from_source 元素 | **1277/2080 (61.4%)** |
+| 边界规则 | 546 条（21 hard DO-NOT + 525 soft caution） |
+| 污染物画像 | 28 种（7 重金属 + 21 新兴有机污染物） |
 
-- `v0.2`：现有 **36 个 root prototypes** 做到 scope-correct、证据诚实、可审计、ADRMATS 可消费的终局状态。
-- `v1.0`：在 v0.2 稳固后，再按真实证据缺口扩展到 60–80 个原型。
-- 重金属吸附是当前最强、最接近 terminal verified 的子域。
-- 有机微污染物（BPA/PFOA/SMX/染料）和油水分离目前不能与重金属同等置信度展示；若缺少 source-backed 机制，只能作为 exploratory / inspiration，不得冒充事实候选。
-- feature/token 命中不能直接进入 evidence-backed candidate lane；必须与 query、selected mechanism、design_translation、boundary 语义闭合。
-- hard DO-NOT 只允许来自 source-backed 边界：`basis=from_source` + `verification=verified/corroborated` + source/quote/locator/scope match。LLM 推断、domain knowledge、needs_review 只能作为 soft caution。
+### G1–G8 验收门
 
-近期路线：M8 semantic correctness + gold-set usefulness gate → M9 ADRMATS payload finalization → M10 full QA → M11 v0.2 release packaging。
+| Gate | 状态 | 详情 |
+|------|------|------|
+| **G1** Validator | ✅ **10/10 PASS** | 所有数据层 validator 绿色 |
+| **G2** 机制绑定 | ✅ **7/7 PASS** | 0 errors, 0 warnings |
+| **G3** DO-NOT 硬门 | ✅ **PASS** | 0 inferred hard DO-NOT |
+| **G4** Gold-set 结果 | ✅ **7/7 PASS** | 28 queries |
+| **G5** Dogfood 评分 | ✅ **PASS** | 有机 6.0/10, 重金属 6.6-6.8/10 |
+| **G6** PFOA 诚实切片 | ✅ **3/3 inference** | +21 有机污染物全部 exploratory |
+| **G7** 验收报告 | ✅ **Done** | acceptance/ 下完整文档 |
+| **G8** Phase E | ✅ **21/21** | 污染物画像 + 别名 + gold-set + backlog |
 
-原则：诚实优先、scope 正确、不复活 refuted、不用结构绿灯替代结果级有用性、不把 LLM inference 伪装成 PDF/source verified fact。
+### 证据诚实化
+
+- **149 条降级**（108 from_source→llm_inferred + 41 basis→llm_inferred），**0 膨胀**
+- 所有降级方向保守（向下、可逆），由 Cowork 独立核验
+- `literature_backed→from_source = 0`（反膨胀确认）
+
+### 核心能力
+
+- **ADRMATS brief 生成**：7 个 gold-set brief，0 errors, 0 warnings
+- **机制绑定**：15 个原型的 `functional_groups`/`key_structures`/`molecular_feature_links` 已补全
+- **因果链质量**：520/520 机制有合格因果链卡片（含有意义的结构-功能描述）
+- **跨平台兼容**：`.gitattributes` 统一 LF 行尾
+
+### 原则
+
+- 诚实优先、scope 正确、不复活 refuted
+- 不用结构绿灯替代结果级有用性
+- 不把 LLM inference 伪装成 PDF/source verified fact
+- hard DO-NOT 只允许 source-backed 边界
+
+### v1.0 路线
+
+1. **新兴污染物文献获取**：为 7 种高优先级污染物（BPA/PFOA/BDE-209/DDT/PCP/Nonylphenol/TCDD）获取 source-backed 吸附证据
+2. **原型扩展**：从 44 向 60–80 推进，按真实证据缺口驱动
+3. **因果链深度**：757 条文本已从占位符升级为结构描述，需进一步从 PDF 提取精确引文
 
 ---
 
@@ -41,86 +76,30 @@
 
 ---
 
-## 当前状态（2026-06-25 · review 分支 V1-A Evidence Uplift 完成）
+## v0.2 验收报告
 
-> 分支：`review`｜HEAD: `cb8e09c`｜当前工作主题：**V1-A Evidence Uplift 完成 (59.6%) + ADRMATS 4/4 完成**
+完整的验收报告、变更摘要、决策队列见 `docs/active/acceptance/` 目录。
 
-### Evidence Uplift 最终状态（2026-06-25 15:26 CST）
+### 关键文档
 
-| 指标 | 值 |
-|------|-----|
-| from_source | **1239/2080 (59.6%)** — 0 non-compliant, 0 vague locators |
-| mechanisms 4/4 done | 62 |
-| mechanisms partial (1-3/4) | 236 |
-| mechanisms 0/4 | 222 |
-| with source_doi | 113 mechanisms |
-| basis distribution | from_source 1239 · llm_inferred 716 · literature_backed 125 |
-| validator | 0 errors, 172 warnings |
-| adapter tests | 5/5 pass |
+| 文档 | 内容 |
+|------|------|
+| `docs/active/acceptance/v0.2-acceptance-20260625.md` | G1–G8 验收门全绿 |
+| `docs/active/acceptance/v0.2-change-digest-20260625.md` | 149 条降级详情 |
+| `docs/active/acceptance/v0.2-decision-queue-20260625.md` | 决策队列清零 |
+| `docs/active/acceptance/pfoa-honest-slice-20260625.md` | PFOA 诚实切片 |
+| `docs/active/acceptance/emerging-pollutant-evidence-backlog-20260625.md` | 21 种新兴污染物 backlog |
+| `docs/active/HANDOFF-office-to-home-20260625.md` | 办公室→家里交接文档 |
 
-### Evidence Uplift 旅程（Round 9-35）
+### v1.0 已完成改进（本分支额外包含）
 
-| Round | from_source | 增量 | 策略 |
-|-------|-------------|------|------|
-| R9 | 313 | 基线 | — |
-| R10 | 331 | +18 | 双语 scope_match 构建 |
-| R12 | 390 | +59 | 反向 PDF 匹配 + DOI 提取 |
-| R13 | 493 | +103 | 反向 PDF 关键词搜索 |
-| R14 | 554 | +61 | 激进匹配（宽松阈值） |
-| R15 | 598 | +44 | 同 DOI 跨机制 + 宽松匹配 |
-| R16 | 622 | +24 | Bugfix + 文献扫描 |
-| R18 | 689 | +67 | scope_match 修复（单关键词） |
-| R19 | 840 | +151 | quote-based 关键词提取 |
-| R20 | 961 | +121 | literature_backed 提升 |
-| R21 | 977 | +16 | 自动提取脚本 |
-| R22 | 1038 | +61 | 自动提取脚本 v2 |
-| R26 | 1049 | +11 | 跨元素提升 (Track A) |
-| R27 | 1055 | +6 | literature_backed→from_source (Track B) |
-| R30 | 971 | -84 | 质量扫描（清理劣质 scope_match）|
-| R31 | 1032 | +61 | 关键词扩展匹配 |
-| R32 | 1052 | +20 | literature_backed 升级 |
-| R33 | 1229 | +177 | 跨原型 PDF 匹配 |
-| R34 | 1235 | +6 | 激进跨原型匹配 |
-| R35 | 1239 | +4 | 最终冲刺
-
-### ADRMATS 适配器（4/4 能力）
-
-| 能力 | 状态 | 验证 |
-|------|------|------|
-| do_not_list | ✅ 暴露 | test_do_not_list PASSED |
-| design_translation | ✅ 暴露 | test_design_translation PASSED |
-| charge_state/pKa | ✅ 暴露 | test_charge_state PASSED |
-| relevance_gating | ✅ 暴露 | test_relevance_gating PASSED |
-
-### ADRMATS 垂直切片验证（2026-06-24）
-
-| 污染物 | candidates | direct_evidence | honesty | design_translation |
-|--------|------------|-----------------|---------|-------------------|
-| Pb(II) | 8 | 5/8 (62%) | 1 fact, 5 lead, 1 inference | 结构化、可执行 |
-| PFOA | 3 | 0/3 | 1 lead, 2 inference | 结构化（有机微污染物证据弱）|
-
-### 剩余工作
-
-| 类别 | 元素数 | 状态 |
-|------|--------|------|
-| llm_inferred 无 DOI | 885 | 需 DOI 发现（后台子代理） |
-| literature_backed 无 source | 43 | 需 DOI 发现 |
-
-已完成的真实进展：
-
-- canon 去污染、refuted 清理、chimera guard、honesty ledger、boundary 框架、ADRMATS brief 生成链路已显著改善。
-- P5-B/M6/M7 已暴露并部分修复 ADRMATS 使用层问题：brief honesty/boundary 可见性、部分 design_translation、oil-water 匹配缺口、usefulness regression。
-- M8 的 510/510 causal_chain 是可用底材，但不能作为 v0.2 验收依据；需要继续做语义一致性、source-backed hard DO-NOT、gold-set usefulness gate。
-
-当前主要 blocker：
-
-1. **query 与 selected mechanism 尚未可靠绑定**：不能出现“候选因 A 特征命中，却展示 B 机制”的 brief。
-2. **DO-NOT 还不是 hard gate**：source-backed hard DO-NOT 必须影响 candidate 可用性，而不仅是文本提示。
-3. **validator 过浅**：字段存在检查不能证明 scope 正确、fact 真实或 design_translation 可执行。
-4. **弱域不能过度承诺**：有机微污染物和油水分离若缺少 source-backed 证据，应进入 exploratory/inspiration lane。
-5. **v0.2 需要 gold-set result gate**：用 8–12 个代表性查询度量 scope-correct precision、误导性 false positive、fact locator 完整性、hard DO-NOT 行为。
-
-v0.2 前不建议扩库到 60–80；扩库应由 gold-set 和证据缺口驱动，而不是按数量目标堆原型。
+| 改进项 | 前 | 后 |
+|--------|----|----|
+| 机制绑定 (G2) | 15 warnings | 0 errors, 0 warnings |
+| 因果链合格率 | 467/520 | 520/520 |
+| 因果链文本质量 | 757 条占位符 | 0 占位符（全部有意义描述） |
+| from_source 诚实重分类 | 1239/2080 | 1277/2080 (+38) |
+| 跨平台行尾 | 缺失 | `.gitattributes` LF 统一 |
 
 ---
 
