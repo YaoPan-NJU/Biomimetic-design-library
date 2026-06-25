@@ -1,0 +1,461 @@
+[
+  {
+    "rank": 1,
+    "zh": "六氟环氧丙烷二聚酸",
+    "en": "Hexafluoropropylene Oxide Dimer Acid",
+    "canonical_name": "HFPO-DA (GenX)",
+    "cas": "13252-13-6",
+    "pollutant_class": "PFAS_ether_carboxylate",
+    "wos_adsorption_hits": 33,
+    "molecular_features": [
+      "全氟醚羧酸尾",
+      "羧酸头基",
+      "C-F键"
+    ],
+    "likely_interactions": [
+      "疏水",
+      "静电(阴离子)",
+      "界面/CMC"
+    ],
+    "charge_state_note": "pKa<1，中性pH阴离子",
+    "expected_library_lane": "exploratory_unless_source_found",
+    "source_note": "",
+    "wos_query": "TS=(\n  (  \"Hexafluoropropylene oxide dimer acid\" OR \n  \"HFPO-DA\" OR \n  \"HFPO dimer acid\" OR \n  \"HFPO-Dimer\" OR \n  \"HFPO-TA\" OR\n  \"Perfluoro-2-propoxypropanoic acid\" OR \n  \"GenX\") \n  AND \n  (\"Adsorp*\" OR \"Sorption\" OR \"Remov*\" OR \"Uptake\" OR \"Separat*\" OR \"Interfacial\")\n  AND \n  (\"Mechanis*\" OR \"Interac*\" OR \"Function* group*\" OR \"Hydrophob*\" OR \"Electrostat*\" OR \"Hydrogen bond*\" OR \"Surface chemistr*\" OR \"Active site*\" OR \"DFT\" OR \"Density functional theory\" OR \"Molecular dynamic*\" OR \"Binding energy\" OR \"pKa\" OR \"Physicochemical\")\n)\nNOT TS=(\"Toxic*\" OR \"Bioaccumul*\" OR \"Health\" OR \"Liver\" OR \"Animal\" OR \"Mouse\" OR \"Rat\" OR \"Degrad*\" OR \"Photolys*\" OR \"Oxidat*\" OR \"Transport\" OR \"Epidemiol*\" OR \"Metaboli*\" OR \"Kinetics\")"
+  },
+  {
+    "rank": 2,
+    "zh": "全氟辛酸",
+    "en": "PFOA",
+    "canonical_name": "PFOA",
+    "cas": "335-67-1",
+    "pollutant_class": "PFAS_carboxylate",
+    "wos_adsorption_hits": 275,
+    "molecular_features": [
+      "C7F15全氟尾",
+      "羧酸头基",
+      "C-F键"
+    ],
+    "likely_interactions": [
+      "疏水",
+      "静电(阴离子)",
+      "胶束/CMC"
+    ],
+    "charge_state_note": "pKa~2-3，中性pH阴离子",
+    "expected_library_lane": "exploratory_unless_source_found",
+    "source_note": "",
+    "wos_query": "TS=(\n  (\n    \"Perfluorooctanoic acid\" OR \"PFOA\" OR \"Pentadecafluorooctanoic acid\" OR \n    \"Perfluorocaprylic acid\" OR \"Ammonium perfluorooctanoate\" OR \"APFO\" OR \n    \"335-67-1\" OR \"3825-26-1\"\n  ) \n  AND \n  (\"Adsorp*\" OR \"Sorption\" OR \"Remov*\" OR \"Uptake\" OR \"Separat*\" OR \"Interfacial\")\n  AND \n  (\n    \"Mechanis*\" OR \"Interac*\" OR \"Function* group*\" OR \"Active site*\" OR \n    \"Hydrophob*\" OR \"Electrostat*\" OR \"Hydrogen bond*\" OR \"Surface chemistr*\" OR \n    \"DFT\" OR \"Density functional theory\" OR \"Molecular dynamic*\" OR \"Binding energy\" OR \n    \"pKa\" OR \"Physicochemical\" OR \n    \"Critical micelle concentration\" OR \"CMC\" OR \"Micell*\" OR \"Aggregat*\" OR \n    \"LogKow\" OR \"Kow\" OR \"Octanol-water\" OR \"Solubility\" OR \n    \"Molecular dimension*\" OR \"Molecular size\" OR \"Steric\"\n  )\n)\nNOT TS=(\"Toxic*\" OR \"Bioaccumul*\" OR \"Health\" OR \"Liver\" OR \"Animal\" OR \"Mouse\" OR \"Rat\" OR \"Degrad*\" OR \"Photolys*\" OR \"Oxidat*\" OR \"Transport\" OR \"Epidemiol*\" OR \"Metaboli*\" OR \"Kinetics\" OR \"Cataly*\")"
+  },
+  {
+    "rank": 3,
+    "zh": "全氟丁烷磺酸",
+    "en": "PFBS",
+    "canonical_name": "PFBS",
+    "cas": "375-73-5",
+    "pollutant_class": "PFAS_sulfonate_short",
+    "wos_adsorption_hits": 67,
+    "molecular_features": [
+      "短全氟尾",
+      "磺酸头基"
+    ],
+    "likely_interactions": [
+      "疏水",
+      "静电(阴离子)"
+    ],
+    "charge_state_note": "磺酸，全程阴离子",
+    "expected_library_lane": "exploratory_unless_source_found",
+    "source_note": "",
+    "wos_query": "TS=(\n  (\n    \"Perfluorobutane sulfon*\" OR PFBS OR \"Perfluorobutanesulfonic acid\" OR \"nonafluorobutane-1-sulfonic acid\"\n  ) \n  AND \n  (\"Adsorp*\" OR \"Sorption\" OR \"Remov*\" OR \"Uptake\" OR \"Separat*\" OR \"Interfacial\")\n  AND \n  (\n    \"Mechanis*\" OR \"Interac*\" OR \"Function* group*\" OR \"Active site*\" OR \n    \"Hydrophob*\" OR \"Electrostat*\" OR \"Hydrogen bond*\" OR \"Surface chemistr*\" OR \n    \"DFT\" OR \"Density functional theory\" OR \"Molecular dynamic*\" OR \"Binding energy\" OR \n    \"pKa\" OR \"Physicochemical\" OR \n    \"Critical micelle concentration\" OR \"CMC\" OR \"Micell*\" OR \"Aggregat*\" OR \n    \"LogKow\" OR \"Kow\" OR \"Octanol-water\" OR \"Solubility\" OR \n    \"Molecular dimension*\" OR \"Molecular size\" OR \"Steric\"\n  )\n)\nNOT TS=(\"Toxic*\" OR \"Bioaccumul*\" OR \"Health\" OR \"Liver\" OR \"Animal\" OR \"Mouse\" OR \"Rat\" OR \"Degrad*\" OR \"Photolys*\" OR \"Oxidat*\" OR \"Transport\" OR \"Epidemiol*\" OR \"Metaboli*\" OR \"Kinetics\" OR \"Cataly*\")"
+  },
+  {
+    "rank": 4,
+    "zh": "双酚A",
+    "en": "BPA",
+    "canonical_name": "BPA",
+    "cas": "80-05-7",
+    "pollutant_class": "bisphenol_EDC",
+    "wos_adsorption_hits": 1416,
+    "molecular_features": [
+      "双酚芳环",
+      "两个酚羟基"
+    ],
+    "likely_interactions": [
+      "π-π",
+      "疏水",
+      "氢键"
+    ],
+    "charge_state_note": "pKa~9.6/10.2，中性pH中性分子",
+    "expected_library_lane": "exploratory_unless_source_found",
+    "source_note": "",
+    "wos_query": "TS=(\n  (\n    \"Bisphenol A\" OR BPA\n  ) \n  AND \n  (\"Adsorp*\" OR \"Sorption\" OR \"Remov*\" OR \"Uptake\" OR \"Separat*\" OR \"Interfacial\")\n  AND \n  (\n    \"Mechanis*\" OR \"Interac*\" OR \"Function* group*\" OR \"Active site*\" OR \n    \"Hydrophob*\" OR \"Electrostat*\" OR \"Hydrogen bond*\" OR \"Surface chemistr*\" OR \n    \"DFT\" OR \"Density functional theory\" OR \"Molecular dynamic*\" OR \"Binding energy\" OR \n    \"pKa\" OR \"Physicochemical\" OR \n    \"Critical micelle concentration\" OR \"CMC\" OR \"Micell*\" OR \"Aggregat*\" OR \n    \"LogKow\" OR \"Kow\" OR \"Octanol-water\" OR \"Solubility\" OR \n    \"Molecular dimension*\" OR \"Molecular size\" OR \"Steric\"\n  )\n)\nNOT TS=(\"Toxic*\" OR \"Bioaccumul*\" OR \"Health\" OR \"Liver\" OR \"Animal\" OR \"Mouse\" OR \"Rat\" OR \"Degrad*\" OR \"Photolys*\" OR \"Oxidat*\" OR \"Transport\" OR \"Epidemiol*\" OR \"Metaboli*\" OR \"Kinetics\" OR \"Cataly*\")"
+  },
+  {
+    "rank": 5,
+    "zh": "2,6-二氯苯酚",
+    "en": "2,6-Dichlorophenol",
+    "canonical_name": "2,6-Dichlorophenol",
+    "cas": "87-65-0",
+    "pollutant_class": "chlorophenol",
+    "wos_adsorption_hits": 13,
+    "molecular_features": [
+      "酚羟基",
+      "2邻位Cl"
+    ],
+    "likely_interactions": [
+      "π-π",
+      "疏水",
+      "氢键",
+      "静电"
+    ],
+    "charge_state_note": "pKa~6.8，中性pH部分解离",
+    "expected_library_lane": "exploratory_unless_source_found",
+    "source_note": "",
+    "wos_query": "TS=(\n  (\n   \"2,6-Dichlorophenol\" OR \"2,6-DCP\" OR \"2,6-dichloro-phenol\" OR \"Phenol, 2,6-dichloro-\" OR \"1-Hydroxy-2,6-dichlorobenzene\" OR \"87-65-0\"\n  ) \n  AND \n  (\"Adsorp*\" OR \"Sorption\" OR \"Remov*\" OR \"Uptake\" OR \"Separat*\" OR \"Interfacial\")\n  AND \n  (\n    \"Mechanis*\" OR \"Interac*\" OR \"Function* group*\" OR \"Active site*\" OR \n    \"Hydrophob*\" OR \"Electrostat*\" OR \"Hydrogen bond*\" OR \"Surface chemistr*\" OR \n    \"DFT\" OR \"Density functional theory\" OR \"Molecular dynamic*\" OR \"Binding energy\" OR \n    \"pKa\" OR \"Physicochemical\" OR \n    \"Critical micelle concentration\" OR \"CMC\" OR \"Micell*\" OR \"Aggregat*\" OR \n    \"LogKow\" OR \"Kow\" OR \"Octanol-water\" OR \"Solubility\" OR \n    \"Molecular dimension*\" OR \"Molecular size\" OR \"Steric\"\n  )\n)\nNOT TS=(\"Toxic*\" OR \"Bioaccumul*\" OR \"Health\" OR \"Liver\" OR \"Animal\" OR \"Mouse\" OR \"Rat\" OR \"Degrad*\" OR \"Photolys*\" OR \"Oxidat*\" OR \"Transport\" OR \"Epidemiol*\" OR \"Metaboli*\" OR \"Kinetics\" OR \"Cataly*\")"
+  },
+  {
+    "rank": 6,
+    "zh": "五氯苯酚",
+    "en": "Pentachlorophenol",
+    "canonical_name": "Pentachlorophenol",
+    "cas": "87-86-5",
+    "pollutant_class": "chlorophenol",
+    "wos_adsorption_hits": 171,
+    "molecular_features": [
+      "酚羟基",
+      "5个Cl"
+    ],
+    "likely_interactions": [
+      "π-π",
+      "疏水",
+      "静电(阴离子)",
+      "卤键"
+    ],
+    "charge_state_note": "pKa~4.7，中性pH阴离子",
+    "expected_library_lane": "exploratory_unless_source_found",
+    "source_note": "",
+    "wos_query": "TS=(\n  (\n  \"Pentachlorophenol\" OR \"2,3,4,5,6-pentachlorophenol\" OR \"perchlorophenol\" OR \"87-86-5\"\n  ) \n  AND \n  (\"Adsorp*\" OR \"Sorption\" OR \"Remov*\" OR \"Uptake\" OR \"Separat*\" OR \"Interfacial\")\n  AND \n  (\n    \"Mechanis*\" OR \"Interac*\" OR \"Function* group*\" OR \"Active site*\" OR \n    \"Hydrophob*\" OR \"Electrostat*\" OR \"Hydrogen bond*\" OR \"Surface chemistr*\" OR \n    \"DFT\" OR \"Density functional theory\" OR \"Molecular dynamic*\" OR \"Binding energy\" OR \n    \"pKa\" OR \"Physicochemical\" OR \n    \"Critical micelle concentration\" OR \"CMC\" OR \"Micell*\" OR \"Aggregat*\" OR \n    \"LogKow\" OR \"Kow\" OR \"Octanol-water\" OR \"Solubility\" OR \n    \"Molecular dimension*\" OR \"Molecular size\" OR \"Steric\"\n  )\n)\nNOT TS=(\"Toxic*\" OR \"Bioaccumul*\" OR \"Health\" OR \"Liver\" OR \"Animal\" OR \"Mouse\" OR \"Rat\" OR \"Degrad*\" OR \"Photolys*\" OR \"Oxidat*\" OR \"Transport\" OR \"Epidemiol*\" OR \"Metaboli*\" OR \"Kinetics\" OR \"Cataly*\")"
+  },
+  {
+    "rank": 7,
+    "zh": "奥克立林",
+    "en": "Octocrylene",
+    "canonical_name": "Octocrylene",
+    "cas": "6197-30-4",
+    "pollutant_class": "UV_filter_ester",
+    "wos_adsorption_hits": 8,
+    "molecular_features": [
+      "二苯基丙烯酸酯",
+      "长支链酯"
+    ],
+    "likely_interactions": [
+      "π-π",
+      "强疏水"
+    ],
+    "charge_state_note": "非离子，强亲脂",
+    "expected_library_lane": "exploratory_unless_source_found",
+    "source_note": "医学、生物学较多",
+    "wos_query": "TS=(\"6197-30-4\" OR \"Octocrylene\" OR \"2-ethylhexyl 2-cyano-3,3-diphenylacrylate\") \nAND TS=(adsorp* OR sorp* OR \"solid phase extraction\" OR \"dispersive solid-phase extraction\" OR \"removal efficiency\" OR \"uptake capacity\" OR \"isotherm\" OR \"kinetic\" OR \"intraparticle diffusion\")\nAND TS=(material* OR biochar* OR carbon OR \"activated carbon\" OR \"nanotube\" OR \"graphene\" OR polymer* OR resin* OR composite* OR \"framework\" OR \"MOF\" OR \"COF\" OR zeolite OR \"porous\")\nNOT TS=(\"Optical Coherence Tomography\" OR bioaccumul* OR toxic* OR lethal OR \"acute toxicity\" OR \"chronic toxicity\" OR gene* OR genomic* OR transcriptom* OR \"gene expression\" OR enzyme* OR protein* OR fish OR zebra* OR coral OR \"risk assessment\" OR \"trophic\" OR liver OR serum OR plasma OR clinical OR patient OR \"in vivo\" OR \"in vitro\")"
+  },
+  {
+    "rank": 8,
+    "zh": "短链氯化石蜡",
+    "en": "Alkanes",
+    "canonical_name": "SCCPs",
+    "cas": "85535-84-8",
+    "pollutant_class": "chlorinated_paraffin",
+    "wos_adsorption_hits": null,
+    "molecular_features": [
+      "C10-13氯代烷",
+      "多Cl"
+    ],
+    "likely_interactions": [
+      "疏水",
+      "范德华",
+      "卤键"
+    ],
+    "charge_state_note": "非离子；机理可借氯代烷/TCE/PCE",
+    "expected_library_lane": "exploratory_unless_source_found",
+    "source_note": "短链氯化石蜡的专门吸附机理研究可能确实不多。如果结果很少，建议**“借用”**同类物的研究。\n\n请将第一行检索词改为通用的氯代烃，机理是通用的： TS=(\"Chlorinated alkane*\" OR \"Chlorinated hydrocarbon*\" OR \"Trichloroethylene\" OR \"TCE\" OR \"PCE\")\n\n这类小分子氯代烃的吸附研究非常多，其关于 C-Cl 键与材料表面作用 的规律完全适用于 SCCPs，LLM 可以进行迁移学习。",
+    "wos_query": "TS=(\"Short-chain chlorinated paraffin*\" OR \"Short chain chlorinated paraffin*\" OR \"Alkanes, C10-13, chloro\" OR \"C10-13 chlorinated alkane*\" OR \"85535-84-8\") \nAND \nTS=(adsorp* OR sorp* OR \"removal\" OR \"uptake\" OR \"retention\")\nAND \nTS=(\"mechanism\" OR \"interaction\" OR \"functional group*\" OR \"hydrophobicity\" OR \"lipophilicity\" OR \"surface chemistr*\" OR \"binding site*\" OR \"pore structure\" OR \"electrostatic\" OR \"van der Waals\" OR \"halogen bond*\" OR \"DFT\" OR \"molecular dynamic*\")\nNOT \nTS=(\"sub-bituminous\" OR \"combustion\" OR \"spherical carbon\" OR \"coal\" OR \"power plant\")"
+  },
+  {
+    "rank": 9,
+    "zh": "多氯联苯-209",
+    "en": "PCB-209",
+    "canonical_name": "PCB-209",
+    "cas": "2051-24-3",
+    "pollutant_class": "PCB",
+    "wos_adsorption_hits": 2,
+    "molecular_features": [
+      "十氯联苯",
+      "两芳环"
+    ],
+    "likely_interactions": [
+      "π-π",
+      "强疏水",
+      "卤键"
+    ],
+    "charge_state_note": "非离子，极强亲脂",
+    "expected_library_lane": "exploratory_unless_source_found",
+    "source_note": "",
+    "wos_query": "TS=(\n  (\n    \"PCB-209\" OR \"PCB 209\" OR \"Decachlorobiphenyl\" OR \"2,2',3,3',4,4',5,5',6,6'-Decachlorobiphenyl\"\n  ) \n  AND \n  (\"Adsorp*\" OR \"Sorption\" OR \"Remov*\" OR \"Uptake\" OR \"Separat*\" OR \"Interfacial\")\n  AND \n  (\n    \"Mechanis*\" OR \"Interac*\" OR \"Function* group*\" OR \"Active site*\" OR \n    \"Hydrophob*\" OR \"Electrostat*\" OR \"Hydrogen bond*\" OR \"Surface chemistr*\" OR \n    \"DFT\" OR \"Density functional theory\" OR \"Molecular dynamic*\" OR \"Binding energy\" OR \n    \"pKa\" OR \"Physicochemical\" OR \n    \"Critical micelle concentration\" OR \"CMC\" OR \"Micell*\" OR \"Aggregat*\" OR \n    \"LogKow\" OR \"Kow\" OR \"Octanol-water\" OR \"Solubility\" OR \n    \"Molecular dimension*\" OR \"Molecular size\" OR \"Steric\"\n  )\n)\nNOT TS=(\"Toxic*\" OR \"Bioaccumul*\" OR \"Health\" OR \"Liver\" OR \"Animal\" OR \"Mouse\" OR \"Rat\" OR \"Degrad*\" OR \"Photolys*\" OR \"Oxidat*\" OR \"Transport\" OR \"Epidemiol*\" OR \"Metaboli*\" OR \"Kinetics\" OR \"Cataly*\")"
+  },
+  {
+    "rank": 10,
+    "zh": "β-六氯环己烷",
+    "en": "β-Hexachlorocyclohexane",
+    "canonical_name": "β-HCH",
+    "cas": "319-85-7",
+    "pollutant_class": "organochlorine",
+    "wos_adsorption_hits": 9,
+    "molecular_features": [
+      "六氯环己烷"
+    ],
+    "likely_interactions": [
+      "疏水",
+      "范德华",
+      "卤键"
+    ],
+    "charge_state_note": "非离子",
+    "expected_library_lane": "exploratory_unless_source_found",
+    "source_note": "",
+    "wos_query": "TS=(\n  (\n    \"beta-hexachlorocyclohexane\" OR \"beta-HCH\" OR \"beta-BHC\"\n  ) \n  AND \n  (\"Adsorp*\" OR \"Sorption\" OR \"Remov*\" OR \"Uptake\" OR \"Separat*\" OR \"Interfacial\")\n  AND \n  (\n    \"Mechanis*\" OR \"Interac*\" OR \"Function* group*\" OR \"Active site*\" OR \n    \"Hydrophob*\" OR \"Electrostat*\" OR \"Hydrogen bond*\" OR \"Surface chemistr*\" OR \n    \"DFT\" OR \"Density functional theory\" OR \"Molecular dynamic*\" OR \"Binding energy\" OR \n    \"pKa\" OR \"Physicochemical\" OR \n    \"Critical micelle concentration\" OR \"CMC\" OR \"Micell*\" OR \"Aggregat*\" OR \n    \"LogKow\" OR \"Kow\" OR \"Octanol-water\" OR \"Solubility\" OR \n    \"Molecular dimension*\" OR \"Molecular size\" OR \"Steric\"\n  )\n)\nNOT TS=(\"Toxic*\" OR \"Bioaccumul*\" OR \"Health\" OR \"Liver\" OR \"Animal\" OR \"Mouse\" OR \"Rat\" OR \"Degrad*\" OR \"Photolys*\" OR \"Oxidat*\" OR \"Transport\" OR \"Epidemiol*\" OR \"Metaboli*\" OR \"Kinetics\" OR \"Cataly*\")"
+  },
+  {
+    "rank": 11,
+    "zh": "硫丹",
+    "en": "Endosulfan",
+    "canonical_name": "Endosulfan",
+    "cas": "115-29-7",
+    "pollutant_class": "organochlorine_pesticide",
+    "wos_adsorption_hits": 8,
+    "molecular_features": [
+      "氯代双环",
+      "亚硫酸酯"
+    ],
+    "likely_interactions": [
+      "疏水",
+      "卤键"
+    ],
+    "charge_state_note": "非离子",
+    "expected_library_lane": "exploratory_unless_source_found",
+    "source_note": "",
+    "wos_query": "TS=(\n  (\n    Endosulfan\n  ) \n  AND \n  (\"Adsorp*\" OR \"Sorption\" OR \"Remov*\" OR \"Uptake\" OR \"Separat*\" OR \"Interfacial\")\n  AND \n  (\n    \"Mechanis*\" OR \"Interac*\" OR \"Function* group*\" OR \"Active site*\" OR \n    \"Hydrophob*\" OR \"Electrostat*\" OR \"Hydrogen bond*\" OR \"Surface chemistr*\" OR \n    \"DFT\" OR \"Density functional theory\" OR \"Molecular dynamic*\" OR \"Binding energy\" OR \n    \"pKa\" OR \"Physicochemical\" OR \n    \"Critical micelle concentration\" OR \"CMC\" OR \"Micell*\" OR \"Aggregat*\" OR \n    \"LogKow\" OR \"Kow\" OR \"Octanol-water\" OR \"Solubility\" OR \n    \"Molecular dimension*\" OR \"Molecular size\" OR \"Steric\"\n  )\n)\nNOT TS=(\"Toxic*\" OR \"Bioaccumul*\" OR \"Health\" OR \"Liver\" OR \"Animal\" OR \"Mouse\" OR \"Rat\" OR \"Degrad*\" OR \"Photolys*\" OR \"Oxidat*\" OR \"Transport\" OR \"Epidemiol*\" OR \"Metaboli*\" OR \"Kinetics\" OR \"Cataly*\")"
+  },
+  {
+    "rank": 12,
+    "zh": "壬基酚",
+    "en": "Nonylphenol",
+    "canonical_name": "Nonylphenol",
+    "cas": "104-40-5",
+    "pollutant_class": "alkylphenol_EDC",
+    "wos_adsorption_hits": 152,
+    "molecular_features": [
+      "酚羟基",
+      "C9支链"
+    ],
+    "likely_interactions": [
+      "π-π",
+      "强疏水",
+      "氢键"
+    ],
+    "charge_state_note": "pKa~10.7，中性pH中性分子",
+    "expected_library_lane": "exploratory_unless_source_found",
+    "source_note": "",
+    "wos_query": "TS=(\"Nonylphenol\" OR \"4-Nonylphenol\" OR \"4-NP\" OR \"nonyl phenol\") \nAND TS=(\"Adsorp*\" OR \"Sorp*\" OR \"Biosorp*\" OR \"Chemisorp*\" OR \"Physisorp*\") \nAND TS=(\"Mechanis*\" OR \"Interaction\" OR \"Binding energy\" OR \"DFT\" OR \"Density functional theory\" OR \"Molecular dynamic*\" OR \"Simulation\" OR \"Active site*\" OR \"Functional group*\" OR \"Hydrogen bond*\" OR \"Hydrophob*\" OR \"Pi-pi\" OR \"Electrostatic\" OR \"Van der Waals\" OR \"Surface chemistry\" OR \"Zeta potential\" OR \"pKa\" OR \"LogKow\" OR \"Molecular size\" OR \"Steric effect\")\nNOT TS=(\"Toxic*\" OR \"Bioaccumul*\" OR \"Biodegrad*\" OR \"Degrad*\" OR \"Oxidat*\" OR \"Photolys*\" OR \"Cataly*\" OR \"Fenton\" OR \"Metaboli*\" OR \"Sensor*\" OR \"Detect*\" OR \"Monitor*\" OR \"Survey\" OR \"Occurrence\" OR \"Risk assessment\" OR \"Detergent formulation\" OR \"Emulsion\")"
+  },
+  {
+    "rank": 13,
+    "zh": "三氯甲烷",
+    "en": "Trichloromethane",
+    "canonical_name": "Trichloromethane (Chloroform)",
+    "cas": "67-66-3",
+    "pollutant_class": "chlorinated_solvent",
+    "wos_adsorption_hits": 26,
+    "molecular_features": [
+      "三氯甲烷小分子"
+    ],
+    "likely_interactions": [
+      "疏水",
+      "弱范德华"
+    ],
+    "charge_state_note": "非离子，小分子挥发性",
+    "expected_library_lane": "exploratory_unless_source_found",
+    "source_note": "多数是做溶剂",
+    "wos_query": "TI=(\n  (\"Trichloromethane\" OR \"Chloroform\" OR \"CHCl3\") \n  AND \n  (\"Adsorp*\" OR \"Sorb*\" OR \"Remov*\" OR \"Captur*\" OR \"Separat*\")\n)\nAND\nTS=(\n  \"Mechanis*\" OR \"Interaction\" OR \"Function* group*\" OR \"Active site*\" OR \n  \"Hydrophob*\" OR \"Surface chemistr*\" OR \"DFT\" OR \"Binding energy\" OR \n  \"Pore structure\" OR \"Selectivity\"\n)\nNOT TS=(\"Toxic*\" OR \"Degrad*\" OR \"Cataly*\" OR \"Photolys*\" OR \"Synthesis\")"
+  },
+  {
+    "rank": 14,
+    "zh": "罗红霉素",
+    "en": "Roxithromycin",
+    "canonical_name": "Roxithromycin",
+    "cas": "80214-83-1",
+    "pollutant_class": "macrolide_antibiotic",
+    "wos_adsorption_hits": 10,
+    "molecular_features": [
+      "大环内酯",
+      "多羟基",
+      "叔胺"
+    ],
+    "likely_interactions": [
+      "氢键",
+      "疏水",
+      "静电(质子化胺)"
+    ],
+    "charge_state_note": "碱性pKa~9，酸性pH阳离子",
+    "expected_library_lane": "exploratory_unless_source_found",
+    "source_note": "生物学多",
+    "wos_query": "TS=(\"Roxithromycin\")\nAND\nTS=(\"Adsorp*\" OR \"Sorption\" OR \"Remov*\" OR \"Separat*\" OR \"Interfacial\")\nAND\nTS=(\"Mechanis*\" OR \"Interac*\" OR \"Isotherm*\" OR \"Kinetics\" OR \"Thermodynamic*\" OR \"Surface chemistr*\" OR \"Function* group*\" OR \"Electrostat*\" OR \"Hydrophob*\" OR \"Bond*\" OR \"pKa\" OR \"pH effect\" OR \"DFT\" OR \"Site energy\")\nNOT\nTS=(\"Plasma\" OR \"Serum\" OR \"Clinical\" OR \"Patient*\" OR \"Pharmacokinet*\" OR \"Drug delivery\" OR \"Tablet*\" OR \"Formulation\" OR \"In vivo\" OR \"Rat\" OR \"Rats\" OR \"Mouse\" OR \"Mice\")\nNOT\nTI=(\"Degrad*\" OR \"Photolys*\" OR \"Oxidat*\" OR \"Cataly*\" OR \"Fenton\" OR \"Ozonation\" OR \"Combustion\")"
+  },
+  {
+    "rank": 15,
+    "zh": "六氯丁二烯",
+    "en": "Hexachlorobutadiene",
+    "canonical_name": "Hexachlorobutadiene (HCBD)",
+    "cas": "87-68-3",
+    "pollutant_class": "chlorinated_diene",
+    "wos_adsorption_hits": 4,
+    "molecular_features": [
+      "六氯丁二烯"
+    ],
+    "likely_interactions": [
+      "疏水",
+      "卤键",
+      "范德华"
+    ],
+    "charge_state_note": "非离子",
+    "expected_library_lane": "exploratory_unless_source_found",
+    "source_note": "",
+    "wos_query": "TS=(\n  (\"Hexachlorobutadiene\" OR \"HCBD\" OR \"Perchlorobutadiene\" OR \"87-68-3\") \n  AND \n  (\"Adsorp*\" OR \"Sorption\" OR \"Sorbent\" OR \"Remov*\" OR \"Uptake\" OR \"Partition*\" OR \"Kow\" OR \"Hydrophob*\" OR \"Surface\" OR \"Porous\" OR \"Activated carbon\" OR \"Biochar\" OR \"Resin\" OR \"Zeolite\" OR \"MOF\" OR \"Material*\")\n)\nNOT TS=(\"Toxic*\" OR \"Liver\" OR \"Renal\" OR \"Mouse\" OR \"Rat\" OR \"Rabbit\" OR \"Fish\" OR \"Bioaccumul*\" OR \"Gene\" OR \"Genome\" OR \"Clinic*\" OR \"Epidemiol*\" OR \"Occupational exposure\")"
+  },
+  {
+    "rank": 16,
+    "zh": "十溴二苯醚",
+    "en": "Decabromodiphenyl ether",
+    "canonical_name": "Decabromodiphenyl ether (BDE-209)",
+    "cas": "1163-19-5",
+    "pollutant_class": "PBDE",
+    "wos_adsorption_hits": 236,
+    "molecular_features": [
+      "二苯醚",
+      "10个Br"
+    ],
+    "likely_interactions": [
+      "π-π",
+      "强疏水",
+      "卤键"
+    ],
+    "charge_state_note": "非离子，极强亲脂",
+    "expected_library_lane": "exploratory_unless_source_found",
+    "source_note": "降解偏多",
+    "wos_query": "TS=(\n  (\"Decabromodiphenyl ether\" OR \"BDE-209\" OR \"Deca-BDE\" OR \"PBDE-209\") \n  AND \n  (\"Adsorp*\" OR \"Sorb*\" OR \"Remov*\" OR \"Interac*\" OR \"Bind*\" OR \"Uptake\") \n  AND \n  (\"Mechanis*\" OR \"Surface\" OR \"Hydrophob*\" OR \"Bond*\" OR \"Electrostat*\" OR \"Pore\" OR \"Isotherm\" OR \"Kinetics\" OR \"Capacity\" OR \"Site*\")\n)\nNOT TS=(\"Rat\" OR \"Mouse\" OR \"Fish\" OR \"Liver\" OR \"Tissue\" OR \"Blood\" OR \"Serum\" OR \"Patient*\" OR \"Epidemiol*\" OR \"Trophic\")"
+  },
+  {
+    "rank": 17,
+    "zh": "2,3,7,8-四氯二苯并-p-二噁英",
+    "en": "TCDD",
+    "canonical_name": "TCDD",
+    "cas": "1746-01-6",
+    "pollutant_class": "dioxin",
+    "wos_adsorption_hits": 122,
+    "molecular_features": [
+      "平面二噁英",
+      "氯代芳环"
+    ],
+    "likely_interactions": [
+      "π-π",
+      "电子供受体(EDA)",
+      "强疏水"
+    ],
+    "charge_state_note": "非离子，平面分子",
+    "expected_library_lane": "exploratory_unless_source_found",
+    "source_note": "",
+    "wos_query": "TS=(\n  (\"2,3,7,8-Tetrachlorodibenzo-p-dioxin\" OR \"TCDD\" OR \"1746-01-6\" OR \"polychlorinated dibenzo-p-dioxins\" OR \"PCDDs\") \n  AND \n  (\"Adsorp*\" OR \"Sorption\" OR \"Remov*\" OR \"Uptake\" OR \"Capture\" OR \"Sequestration\")\n  AND \n  (\"Mechanis*\" OR \"Interac*\" OR \"Function* group*\" OR \"Hydrophob*\" OR \"Electrostat*\" OR \"Hydrogen bond*\" OR \"Surface chemistr*\" OR \"Active site*\" OR \"DFT\" OR \"Density functional theory\" OR \"Molecular dynamic*\" OR \"Binding energy\" OR \"pi-pi\" OR \"stacking\" OR \"electron donor-acceptor\" OR \"EDA\" OR \"dispersion force\" OR \"halogen bond*\")\n)\nNOT TS=(\n  \"Toxic*\" OR \"Bioaccumul*\" OR \"Health\" OR \"Liver\" OR \"Animal\" OR \"Mouse\" OR \"Rat\" OR \"Epidemiol*\" OR \"Metaboli*\" OR \"Photocataly*\" OR \"Biodegrad*\" OR \"Decomposition\" OR \"Catalytic degrad*\" OR \"Risk assessment\" OR \"Clinical\"\n)"
+  },
+  {
+    "rank": 18,
+    "zh": "滴滴涕",
+    "en": "DDT",
+    "canonical_name": "DDT",
+    "cas": "50-29-3",
+    "pollutant_class": "organochlorine_pesticide",
+    "wos_adsorption_hits": 230,
+    "molecular_features": [
+      "二氯二苯",
+      "三氯乙基"
+    ],
+    "likely_interactions": [
+      "π-π",
+      "疏水",
+      "卤键"
+    ],
+    "charge_state_note": "非离子",
+    "expected_library_lane": "exploratory_unless_source_found",
+    "source_note": "",
+    "wos_query": "TS=(\n  (\"DDT\" OR \"Dichlorodiphenyltrichloroethane\" OR \"p,p'-DDT\") \n  AND \n  (\"Adsorp*\" OR \"Sorption\" OR \"Remov*\" OR \"Uptake\" OR \"Interfacial\" OR \"Captur*\")\n  AND \n  (\n   \"Mechanis*\" OR \"Interac*\" OR \"Function* group*\" OR \"Hydrophob*\" OR \n   \"Electrostat*\" OR \"Hydrogen bond*\" OR \"Surface chemistr*\" OR \"Active site*\" OR \n   \"pi-pi\" OR \"stacking\" OR \"Halogen bond*\" OR \"Electron-donor-acceptor\" OR\n   \"DFT\" OR \"Density functional theory\" OR \"Molecular dynamic*\" OR \"Binding energy\" OR \"Simulat*\" OR\n   \"Kow\" OR \"Octanol-water\" OR \"Partition coefficient\"\n  )\n)\nNOT TS=(\"Photocataly*\" OR \"Degrad*\" OR \"Oxidat*\" OR \"Metaboli*\" OR \"Bioaccumul*\" OR \"Epidemiol*\" OR \"Liver\" OR \"Tissue\" OR \"Blood\" OR \"Clinical\")"
+  },
+  {
+    "rank": 19,
+    "zh": "滴滴伊",
+    "en": "DDE",
+    "canonical_name": "DDE",
+    "cas": "72-55-9",
+    "pollutant_class": "organochlorine_metabolite",
+    "wos_adsorption_hits": 12,
+    "molecular_features": [
+      "二氯二苯",
+      "二氯乙烯"
+    ],
+    "likely_interactions": [
+      "π-π",
+      "疏水",
+      "卤键"
+    ],
+    "charge_state_note": "非离子",
+    "expected_library_lane": "exploratory_unless_source_found",
+    "source_note": "",
+    "wos_query": "TS=(\n  (\"p,p'-DDE\" OR \"o,p'-DDE\" OR \"Dichlorodiphenyldichloroethylene\" OR \"2,2-bis(4-chlorophenyl)-1,1-dichloroethylene\" OR (\"DDE\" AND (\"Persistent organic pollutant\" OR \"Pesticide\" OR \"Organochlorine\")))\n  AND\n  (\"Adsorbent*\" OR \"Sorbent*\" OR \"Material*\" OR \"Biochar\" OR \"Activated carbon\" OR \"Carbon nanotube*\" OR \"Graphene\" OR \"MOF\" OR \"COF\" OR \"Composite\" OR \"Polymer\" OR \"Resin\" OR \"Nanomaterial*\")\n  AND\n  (\"DFT\" OR \"Density functional theory\" OR \"Molecular dynamic*\" OR \"Interaction mechanism\" OR \"Binding energy\" OR \"Adsorption energy\" OR \"Pi-pi\" OR \"Hydrophobic*\" OR \"Electrostatic\" OR \"Hydrogen bond*\" OR \"Functional group*\" OR \"Surface chemistr*\" OR \"Active site*\" OR \"HOMO\" OR \"LUMO\" OR \"Frontier orbital\" OR \"Dipole moment\" OR \"Octanol-water partition\")\n)\nNOT TS=(\"Protein*\" OR \"Enzyme*\" OR \"Receptor*\" OR \"Gene*\" OR \"DNA\" OR \"RNA\" OR \"Serum\" OR \"Blood\" OR \"Plasma\" OR \"Tissue\" OR \"Cell\" OR \"In vivo\" OR \"Rat\" OR \"Mouse\" OR \"Rabbit\" OR \"Clinical\" OR \"Hospital\" OR \"Patient\" OR \"Dietary\")"
+  },
+  {
+    "rank": 20,
+    "zh": "狄氏剂",
+    "en": "Dieldrin",
+    "canonical_name": "Dieldrin",
+    "cas": "60-57-1",
+    "pollutant_class": "organochlorine_pesticide",
+    "wos_adsorption_hits": 53,
+    "molecular_features": [
+      "氯代双环",
+      "环氧"
+    ],
+    "likely_interactions": [
+      "疏水",
+      "卤键",
+      "氢键(环氧)"
+    ],
+    "charge_state_note": "非离子",
+    "expected_library_lane": "exploratory_unless_source_found",
+    "source_note": "",
+    "wos_query": "TS=(\n  (Dieldrin OR \"60-57-1\") \n  AND \n  (\"Adsorp*\" OR \"Sorption\" OR \"Uptake\" OR \"Interfacial\" OR \"Surface interact*\" OR \"Porous material*\")\n  AND \n  (\"Mechanis*\" OR \"Interac*\" OR \"Function* group*\" OR \"Hydrophob*\" OR \"Electrostat*\" OR \"Hydrogen bond*\" OR \"Pi-pi\" OR \"Van der Waals\" OR \"Active site*\" OR \"DFT\" OR \"Density functional theory\" OR \"Molecular dynamic*\" OR \"Binding energy\" OR \"QSAR\" OR \"QSPR\" OR \"Thermodynamic*\" OR \"Isotherm*\" OR \"Dipole\" OR \"Epoxide\")\n)\nNOT TS=(\"Toxic*\" OR \"Bioaccumul*\" OR \"Health\" OR \"Liver\" OR \"Animal\" OR \"Mouse\" OR \"Rat\" OR \"Biodegrad*\" OR \"Photolys*\" OR \"Metaboli*\" OR \"Epidemiol*\" OR \"Clinic*\" OR \"Risk assessment\")"
+  },
+  {
+    "rank": 21,
+    "zh": "全氟己烷磺酸",
+    "en": "PFHxS",
+    "canonical_name": "PFHxS",
+    "cas": "355-46-4",
+    "pollutant_class": "PFAS_sulfonate",
+    "wos_adsorption_hits": 33,
+    "molecular_features": [
+      "C6全氟尾",
+      "磺酸头基"
+    ],
+    "likely_interactions": [
+      "疏水",
+      "静电(阴离子)"
+    ],
+    "charge_state_note": "磺酸，全程阴离子",
+    "expected_library_lane": "exploratory_unless_source_found",
+    "source_note": "",
+    "wos_query": "TS=(\n  (\n    \"Perfluorohexane sulfonate\" OR \"PFHxS\" OR \"Perfluorohexanesulfonic acid\" OR \n    \"Tridecafluorohexane-1-sulfonic acid\" OR \"Perfluorohexanesulfonate\" OR \n    \"355-46-4\" OR \"3871-99-6\"\n  ) \n  AND \n  (\n    \"Adsorp*\" OR \"Sorption\" OR \"Remov*\" OR \"Uptake\" OR \"Separat*\" OR \"Interfacial\"\n  )\n  AND \n  (\n    \"Mechanis*\" OR \"Interac*\" OR \"Function* group*\" OR \"Hydrophob*\" OR \n    \"Electrostat*\" OR \"Hydrogen bond*\" OR \"Surface chemistr*\" OR \"Active site*\" OR \n    \"DFT\" OR \"Density functional theory\" OR \"Molecular dynamic*\" OR \n    \"Binding energy\" OR \"Isotherm*\" OR \"Thermodynamic*\" OR \"Pore*\"\n  )\n)\nNOT TS=(\n  \"Toxic*\" OR \"Bioaccumul*\" OR \"Health\" OR \"Liver\" OR \"Animal\" OR \"Mouse\" OR \n  \"Rat\" OR \"Epidemiol*\" OR \"Metaboli*\" OR \"Photolys*\" OR \"Bio-degrad*\" OR \"Microbial degrad*\"\n)"
+  }
+]

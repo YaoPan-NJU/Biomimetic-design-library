@@ -25,7 +25,18 @@ ADRMATS 对抗设计模块的仿生启发检索接口
 
 import json
 import os
+import re
 from typing import Dict, List, Optional, Any
+
+
+def _extract_keywords(text):
+    """Extract meaningful keywords from Chinese/English text."""
+    if not text:
+        return set()
+    text = text.lower()
+    parts = re.split(r'[/,，、（）()\s\-→。；：「」【】《》]+', text)
+    stop_words = {'的', '和', '与', '对', '在', '是', '有', '为', '等', '及', 'a', 'an', 'the', 'of', 'to', 'in', 'for', 'and'}
+    return {p.strip() for p in parts if len(p.strip()) >= 2 and p.strip() not in stop_words}
 
 
 def get_project_root():
@@ -382,6 +393,23 @@ class BiomimeticContext:
                 _verif_priority = {'verified': 0, 'corroborated': 1, 'needs_review': 3}
 
                 # Query-conditioned mechanism scoring
+                # Get query features for binding check
+                _query_features = [f.lower() for f in pollutant_profile.get('molecular_features', [])]
+                _query_interactions = [i.lower() for i in pollutant_profile.get('likely_interactions', [])]
+                _query_all_text = ' '.join(_query_features + _query_interactions)
+                _query_keywords = _extract_keywords(_query_all_text)
+                # Also add split-by-slash keywords
+                for _feat in _query_features:
+                    for _part in _feat.split('/'):
+                        _part = _part.strip()
+                        if len(_part) >= 2:
+                            _query_keywords.add(_part)
+                for _inter in _query_interactions:
+                    for _part in _inter.split('/'):
+                        _part = _part.strip()
+                        if len(_part) >= 2:
+                            _query_keywords.add(_part)
+
                 def _mech_score(m):
                     score = 0
                     # Verification priority (0-3)
@@ -397,6 +425,25 @@ class BiomimeticContext:
                     for inter in c.get('matched_interactions', []):
                         if inter.lower() in mech_name:
                             score += 2
+
+                    # Check functional_groups / key_structures overlap with query features (keyword-based)
+                    fg_raw = m.get('functional_groups', '')
+                    fg_text = (fg_raw if isinstance(fg_raw, str) else ' '.join(fg_raw)).lower()
+                    ks_raw = m.get('key_structures', [])
+                    ks_text = (' '.join(ks_raw) if isinstance(ks_raw, list) else str(ks_raw)).lower()
+                    cc = m.get('causal_chain', {})
+                    cc_text = (cc.get('transferable_principle', '') or '').lower()
+                    mech_all_text = fg_text + ' ' + ks_text + ' ' + mech_name + ' ' + cc_text
+                    mech_kw = _extract_keywords(mech_all_text)
+                    _fg_match = len(_query_keywords & mech_kw)
+                    # Also check direct substring for longer features
+                    for qf in _query_features:
+                        if len(qf) >= 3 and qf in mech_all_text:
+                            _fg_match += 1
+                    for qi in _query_interactions:
+                        if len(qi) >= 2 and qi in mech_all_text:
+                            _fg_match += 1
+                    score += _fg_match * 4  # Strong boost for feature binding
 
                     # Check if mechanism mentions the pollutant
                     pol = pollutant.lower()
@@ -443,6 +490,24 @@ class BiomimeticContext:
                 else:
                     main_mech = {}
 
+                # Compute feature binding score for selected mechanism
+                _fg_raw = main_mech.get('functional_groups', '')
+                _fg_text = (_fg_raw if isinstance(_fg_raw, str) else ' '.join(_fg_raw)).lower()
+                _ks_raw = main_mech.get('key_structures', [])
+                _ks_text = (' '.join(_ks_raw) if isinstance(_ks_raw, list) else str(_ks_raw)).lower()
+                _cc_raw = main_mech.get('causal_chain', {})
+                _cc_text = (_cc_raw.get('transferable_principle', '') or '').lower()
+                _mech_name_text = (main_mech.get('name', '') or '').lower()
+                _mech_all = _fg_text + ' ' + _ks_text + ' ' + _mech_name_text + ' ' + _cc_text
+                _mech_kw = _extract_keywords(_mech_all)
+                _fg_match = len(_query_keywords & _mech_kw)
+                for qf in _query_features:
+                    if len(qf) >= 3 and qf in _mech_all:
+                        _fg_match += 1
+                for qi in _query_interactions:
+                    if len(qi) >= 2 and qi in _mech_all:
+                        _fg_match += 1
+
                 # 获取设计转译（优先用 design_translation，回退到 narrative）
                 dt_entries = proto.get('design_translation', [])
                 if dt_entries:
@@ -476,12 +541,33 @@ class BiomimeticContext:
                 has_direct = c.get('direct_evidence', False)
                 mech_verif = main_mech.get('verification', 'needs_review') or 'needs_review'
                 dt_tier = evidence_tier if dt_entries else 'inference'
+
+                # Organic domain gating: if pollutant is organic and candidate has no
+                # direct organic adsorption evidence, force inference/exploratory
+                _organic_classes = ('有机物', '有机污染物', 'PFAS', '抗生素', '染料', '内分泌干扰物',
+                                    '酚类', '药物', '农药', 'chloro', 'phenol', 'PCB', 'PBDE',
+                                    'dioxin', 'organ', 'macrolide', 'UV_filter', 'alkyl',
+                                    'bisphenol', 'paraffin', 'solvent')
+                is_organic_pollutant = any(cls.lower() in pollutant_class.lower() for cls in _organic_classes)
+
                 if has_direct and mech_verif in ('verified', 'corroborated'):
                     candidate_honesty = 'fact'
                 elif has_direct or dt_tier.startswith('fact'):
                     candidate_honesty = 'lead'
                 else:
                     candidate_honesty = 'inference'
+
+                # Override: organic pollutant without direct evidence → always inference
+                if is_organic_pollutant and not has_direct:
+                    candidate_honesty = 'inference'
+
+                # Determine lane
+                if candidate_honesty == 'fact':
+                    lane = 'fact'
+                elif candidate_honesty == 'lead':
+                    lane = 'lead'
+                else:
+                    lane = 'exploratory'
 
                 # Get charge_state context
                 charge_state = self.get_charge_state_context(pid)
@@ -502,6 +588,8 @@ class BiomimeticContext:
                     'prototype_id': pid,
                     'organism': proto.get('organism', {}).get('scientific', '未知'),
                     'candidate_honesty': candidate_honesty,
+                    'lane': lane,
+                    'domain_caveat': 'organic micropollutant evidence weak' if (is_organic_pollutant and not has_direct) else '',
                     'match': {
                         'reason': c.get('reason', ''),
                         'weight': c.get('weight', 0.5),
@@ -516,7 +604,11 @@ class BiomimeticContext:
                             'query_pollutant': pollutant,
                             'query_class': pollutant_class,
                             'mechanism_keywords': main_mech.get('name', '')[:50],
-                            'alignment_basis': 'query_relevance_scoring'
+                            'alignment_basis': 'query_relevance_scoring',
+                            'query_features': pollutant_profile.get('molecular_features', []),
+                            'mechanism_functional_groups': main_mech.get('functional_groups', []),
+                            'mechanism_key_structures': main_mech.get('key_structures', []),
+                            'feature_binding_score': _fg_match
                         },
                         '基本原理': main_mech.get('基本原理', 'needs_review'),
                         'key_structures': main_mech.get('key_structures', []),

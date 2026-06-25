@@ -91,16 +91,25 @@
       "source_doi": ""
     }
   ],
-  "design_translation": {
-    "idea": "Use fungal biomass (living or dead) from fermentation industry waste as low-cost biosorbent for heavy metal removal from wastewater",
-    "examples": [
-      "Aspergillus niger for Pb²⁺ biosorption",
-      "Saccharomyces cerevisiae for Cu²⁺ biosorption",
-      "Penicillium chrysogenum for dye biosorption"
-    ],
-    "source_tier": "literature",
-    "applicability": "Heavy metal and dye removal from industrial wastewater"
-  },
+  "design_translation": [
+    {
+      "idea": "Use fungal biomass (living or dead) from fermentation industry waste as low-cost biosorbent for heavy metal removal from wastewater",
+      "material_handle": "Aspergillus niger for Pb²⁺ biosorption",
+      "design_principle": "Fungal cell wall contains chitin, glucan, and mannoprotein with amino, carboxyl, and hydroxyl groups for metal biosorption",
+      "implementation_example": "Aspergillus niger for Pb²⁺ biosorption; Saccharomyces cerevisiae for Cu²⁺ biosorption; Penicillium chrysogenum for dye biosorption",
+      "constraints": "Biosorption capacity varies with fungal species and growth conditions; regeneration may degrade biomass",
+      "failure_modes": "",
+      "evidence_tier": "inference",
+      "source_tier": "llm_inference",
+      "material_realization_examples": [
+        "Aspergillus niger for Pb²⁺ biosorption",
+        "Saccharomyces cerevisiae for Cu²⁺ biosorption",
+        "Penicillium chrysogenum for dye biosorption"
+      ],
+      "specific_functional_group": "chitin, glucan, mannoprotein (amino, carboxyl, hydroxyl)",
+      "target_interaction": "metal biosorption via functional group coordination"
+    }
+  ],
   "honesty_ledger": {
     "from_source_mechanisms": 0,
     "llm_inferred_mechanisms": 1,

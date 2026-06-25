@@ -455,7 +455,7 @@
               "operator": "qualitative",
               "value": null
             },
-            "basis": "from_source",
+            "basis": "llm_inferred",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": "page 2",
@@ -532,7 +532,7 @@
               "operator": "qualitative",
               "value": null
             },
-            "basis": "from_source",
+            "basis": "llm_inferred",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": "page 7",
@@ -609,7 +609,7 @@
               "operator": "qualitative",
               "value": null
             },
-            "basis": "from_source",
+            "basis": "llm_inferred",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": "page 5",
@@ -675,7 +675,7 @@
               "operator": "qualitative",
               "value": null
             },
-            "basis": "from_source",
+            "basis": "llm_inferred",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": "page 27",
@@ -746,7 +746,7 @@
               "operator": "qualitative",
               "value": null
             },
-            "basis": "from_source",
+            "basis": "llm_inferred",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": "page 1",
@@ -817,7 +817,7 @@
               "operator": "qualitative",
               "value": null
             },
-            "basis": "from_source",
+            "basis": "llm_inferred",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": "page 5",
@@ -835,14 +835,18 @@
     },
     {
       "name": "吸附机制——静电作用",
-      "description": "pH升高→COO⁻形成→负电荷密度增加→静电吸引阳离子MB→去除率从7.93%升至94-96%",
-      "functional_groups": "",
+      "description": "pH升高→COO⁻形成→负电荷密度增加→静电吸引 阳离子亚甲基蓝(MB, Methylene Blue)→去除率从7.93%升至94-96%。丝素蛋白羧基(-COO⁻)与阳离子染料静电吸引，羟基(-OH)和氨基(-NH₂)辅助氢键 作用。",
+      "functional_groups": [
+        "羧基 carboxyl (-COO⁻)",
+        "羟基 hydroxyl (-OH)",
+        "氨基 amino (-NH₂)"
+      ],
       "source": "literature",
       "ref_doi": "10.1039/d1va00047k",
       "verification": "partial",
       "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
       "causal_chain": {
-        "transferable_principle": "基于机制: 吸附机制——静电作用",
+        "transferable_principle": "丝素蛋白羧基(-COO⁻)在碱性条件下与阳离子染料亚甲基蓝(MB)通过 静电吸引 结合，羟基和氨基辅助 氢键 作用，实现高效吸附去除。",
         "pollutant_feature": {
           "text": "pH升高→COO⁻形成→负电荷密度增加→静电吸引阳离子MB→去除率从7.93%升至94-96%",
           "basis": "from_source",
@@ -886,7 +890,7 @@
               "operator": "qualitative",
               "value": null
             },
-            "basis": "from_source",
+            "basis": "llm_inferred",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": "page 2",
@@ -901,7 +905,13 @@
       "source_page": 1,
       "source_doi": "10.1039/d1va00047k",
       "source_locator": "p.1",
-      "evidence_label": "from_source"
+      "evidence_label": "from_source",
+      "key_structures": [
+        "静电吸引",
+        "氢键",
+        "羧基-COO⁻",
+        "阳离子染料吸附"
+      ]
     },
     {
       "name": "吸附机制",
@@ -957,7 +967,7 @@
               "operator": "qualitative",
               "value": null
             },
-            "basis": "from_source",
+            "basis": "llm_inferred",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": "page 6",
@@ -1035,7 +1045,7 @@
               "operator": "qualitative",
               "value": null
             },
-            "basis": "from_source",
+            "basis": "llm_inferred",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": "page 4",
@@ -1084,7 +1094,7 @@
               "operator": "qualitative",
               "value": null
             },
-            "basis": "from_source",
+            "basis": "llm_inferred",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": "page 10",
@@ -1151,7 +1161,7 @@
               "operator": "qualitative",
               "value": null
             },
-            "basis": "from_source",
+            "basis": "llm_inferred",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": "page 4",
@@ -1226,7 +1236,7 @@
               "operator": "qualitative",
               "value": null
             },
-            "basis": "from_source",
+            "basis": "llm_inferred",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": "page 10",
@@ -1292,7 +1302,7 @@
               "operator": "qualitative",
               "value": null
             },
-            "basis": "from_source",
+            "basis": "llm_inferred",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": "page 9",
@@ -1364,7 +1374,7 @@
               "operator": "qualitative",
               "value": null
             },
-            "basis": "from_source",
+            "basis": "llm_inferred",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": "page 1",
@@ -1432,7 +1442,7 @@
               "operator": "qualitative",
               "value": null
             },
-            "basis": "from_source",
+            "basis": "llm_inferred",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": "page 2",
@@ -1482,7 +1492,7 @@
               "operator": "qualitative",
               "value": null
             },
-            "basis": "from_source",
+            "basis": "llm_inferred",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": "page 6",
@@ -1557,7 +1567,7 @@
               "operator": "qualitative",
               "value": null
             },
-            "basis": "from_source",
+            "basis": "llm_inferred",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": "page 2",

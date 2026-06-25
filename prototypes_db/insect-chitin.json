@@ -91,15 +91,24 @@
       "source_doi": ""
     }
   ],
-  "design_translation": {
-    "idea": "Extract chitin from insect/arthropod waste (shrimp shells, cricket exoskeletons) and use as bio-adsorbent or convert to chitosan for enhanced performance",
-    "examples": [
-      "Shrimp shell chitin for heavy metal adsorption",
-      "Silkworm pupa chitin for dye removal"
-    ],
-    "source_tier": "literature",
-    "applicability": "Heavy metal and dye removal from wastewater"
-  },
+  "design_translation": [
+    {
+      "idea": "Extract chitin from insect/arthropod waste (shrimp shells, cricket exoskeletons) and use as bio-adsorbent or convert to chitosan for enhanced performance",
+      "material_handle": "Shrimp shell chitin for heavy metal adsorption",
+      "design_principle": "Chitin (poly-β-(1→4)-N-acetyl-D-glucosamine) provides amino and hydroxyl groups for metal ion chelation and dye adsorption",
+      "implementation_example": "Shrimp shell chitin for heavy metal adsorption; Silkworm pupa chitin for dye removal",
+      "constraints": "Chitin insolubility limits processing; deacetylation to chitosan improves adsorption but adds processing cost",
+      "failure_modes": "",
+      "evidence_tier": "inference",
+      "source_tier": "llm_inference",
+      "material_realization_examples": [
+        "Shrimp shell chitin for heavy metal adsorption",
+        "Silkworm pupa chitin for dye removal"
+      ],
+      "specific_functional_group": "N-acetylglucosamine (amino, hydroxyl)",
+      "target_interaction": "metal ion chelation and dye adsorption"
+    }
+  ],
   "honesty_ledger": {
     "from_source_mechanisms": 0,
     "llm_inferred_mechanisms": 1,

@@ -227,16 +227,25 @@
       "source_doi": "10.1016/j.memsci.2020.118982"
     }
   ],
-  "design_translation": {
-    "idea": "Use bacterial cellulose from Acetobacter fermentation as bio-based ultrafiltration membrane, modified with mussel-inspired PDA and graphene oxide for enhanced anti-fouling and dye/oil rejection",
-    "examples": [
-      "BC/PDA/RGO membrane: 1149.3 L/m²/h flux, 96.9% flux recovery",
-      "Dye rejection and oil-water separation",
-      "Superhydrophilic/underwater superoleophobic surface"
-    ],
-    "source_tier": "literature",
-    "applicability": "Water purification: dye removal, oil-water separation, anti-fouling filtration"
-  },
+  "design_translation": [
+    {
+      "idea": "Use bacterial cellulose from Acetobacter fermentation as bio-based ultrafiltration membrane, modified with mussel-inspired PDA and graphene oxide for enhanced anti-fouling and dye/oil rejection",
+      "material_handle": "BC/PDA/RGO membrane: 1149.3 L/m²/h flux, 96.9% flux recovery",
+      "design_principle": "Bacterial cellulose nanofiber network provides high surface area and hydroxyl groups for metal ion adsorption and water treatment",
+      "implementation_example": "BC/PDA/RGO membrane: 1149.3 L/m²/h flux, 96.9% flux recovery; Dye rejection and oil-water separation; Superhydrophilic/underwater superoleophobic surface",
+      "constraints": "Production cost of bacterial fermentation; mechanical strength in wet state",
+      "failure_modes": "",
+      "evidence_tier": "inference",
+      "source_tier": "llm_inference",
+      "material_realization_examples": [
+        "BC/PDA/RGO membrane: 1149.3 L/m²/h flux, 96.9% flux recovery",
+        "Dye rejection and oil-water separation",
+        "Superhydrophilic/underwater superoleophobic surface"
+      ],
+      "specific_functional_group": "hydroxyl (-OH), nanofiber network",
+      "target_interaction": "metal ion coordination, hydrogen bonding"
+    }
+  ],
   "honesty_ledger": {
     "from_source_mechanisms": 2,
     "llm_inferred_mechanisms": 0,

@@ -33,6 +33,8 @@
         "prototype_id": "chitosan",
         "organism": "Crustacea",
         "candidate_honesty": "inference",
+        "lane": "exploratory",
+        "domain_caveat": "organic micropollutant evidence weak",
         "match": {
           "reason": "污染物分子的极性基团与吸附剂的含氧/氮基团形成氢键",
           "weight": 0.75,
@@ -41,21 +43,30 @@
           "direct_evidence": false
         },
         "mechanism": {
-          "name": "CS/GO复合物对MB吸附的π-π堆积机制",
+          "name": "石墨烯复合物表面官能团",
           "selected_mechanism_reason": "Query-conditioned scoring selected this mechanism for BPA based on relevance to matched features/interactions",
           "selected_mechanism_alignment": {
             "query_pollutant": "BPA",
             "query_class": "内分泌干扰物/酚类化合物",
-            "mechanism_keywords": "CS/GO复合物对MB吸附的π-π堆积机制",
-            "alignment_basis": "query_relevance_scoring"
+            "mechanism_keywords": "石墨烯复合物表面官能团",
+            "alignment_basis": "query_relevance_scoring",
+            "query_features": [
+              "芳香环",
+              "酚羟基",
+              "疏水性",
+              "弱酸性"
+            ],
+            "mechanism_functional_groups": "",
+            "mechanism_key_structures": [],
+            "feature_binding_score": 2
           },
-          "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合",
+          "基本原理": "壳聚糖分子链上的羟基（-OH）可与污染物形成氢键，或通过配位作用结合金属离子",
           "key_structures": [],
           "functional_groups": "",
           "molecular_feature_links": [],
           "attribution": {
             "source": "literature",
-            "ref": "10.3390/molecules26030594",
+            "ref": "10.3390/molecules29184317",
             "verification_tier": "needs_review",
             "confidence": "low"
           }
@@ -86,12 +97,219 @@
         "boundary_summary": "1 条软限制（caution）",
         "evidence_context": {
           "performance_leads": []
+        },
+        "charge_state": {
+          "has_charge_state": true,
+          "pka_values": [],
+          "ion_dependence": [],
+          "ph_sensitive": true,
+          "charge_mechanisms": [
+            {
+              "mechanism_id": "",
+              "description": "La(OH)3与磷酸盐结合形成内球配合物进行除磷",
+              "charge_terms": [
+                "氨基",
+                "羟基",
+                "磷酸"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "主机制：壳聚糖自由-NH2和-OH上的孤对电子捐赠给缺电子金属阳离子的D轨道形成络合物/螯合物；桥模型（多氨基链间/链内络合）和 pendant模型（氨基悬挂式附着）",
+              "charge_terms": [
+                "氨基",
+                "羟基"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "羧基化壳聚糖(CYCS)+羧基化纳米纤维素(CNC)在CaCl₂溶液中螯合交联→形成水凝胶珠；CYCS通过壳聚糖羧甲基取代获得→取代度>60%；成本显著低于CMCS",
+              "charge_terms": [
+                "羧基"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "As(V)通过静电相互作用吸附(阴离子砷酸盐与质子化氨基)；As(III)通过络合机制吸附(中性H3AsO3)；铁-壳聚糖复合材料涉及内球配合物形成",
+              "charge_terms": [
+                "氨基",
+                "质子化"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "低pH适合去除硝酸盐（正电荷表面静电吸引负电NO3-）；高pH适合去除氨（去质子化活性基团）",
+              "charge_terms": [
+                "氨基",
+                "羟基",
+                "质子化"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "41.9 mg/g (Langmuir); 机制: H键、FeCl3引入Cl-与NO3-离子交换、酸性介质中质子化羟基/氨基/Fe静电作用",
+              "charge_terms": [
+                "氨基",
+                "羟基",
+                "质子化"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "疏水空腔+亲水外表面→包合有机分子(PAH/药物/染料); 同时羧基/羰基→静电吸附金属离子",
+              "charge_terms": [
+                "羧基"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "(1) Electrostatic interaction; (2) Complexation; (3) Ion exchange",
+              "charge_terms": [
+                "electrostatic"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "Amino groups and carboxyl groups participate in cationic exchange with divalent metal ions; XPS conf",
+              "charge_terms": [
+                "amino",
+                "carboxyl",
+                "ionic"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "Hydrogen bonding, Electrostatic, π-π",
+              "charge_terms": [
+                "electrostatic"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "CrO₄²⁻/Cr₂O₇²⁻与壳聚糖质子化—NH₃⁺基团之间的静电吸引",
+              "charge_terms": [
+                "质子化"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "壳聚糖：黏均分子量8.99×10⁵，脱乙酰度94%。甲壳素碱性条件下部分脱乙酰化产物。无毒、可生物降解、生物相容性。含大量-NH₂(酸性质子化→螯合金属)和-OH(吸附F⁻)",
+              "charge_terms": [
+                "质子化"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "脱乙酰度94%→意味着94%的N-乙酰基被去除→释放大量游离-NH₂。NH₂在酸性条件下质子化→正电荷→螯合金属离子+吸附阴离子(F⁻通过氢键/静电)",
+              "charge_terms": [
+                "质子化"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "pHpzc=7.24。CR: pH 5-8去除率稳定→氢键主导(非静电)。pH 9-11去除率剧降→静电排斥。Cu²⁺: pH 2-6去除率递增→pH 6最佳→90%去除。pH<6:质子化–NH₂/–",
+              "charge_terms": [
+                "质子化"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "At pH > pHpzc, adsorbent surface deprotonated creating negative charge that attracts cations; at pH ",
+              "charge_terms": [
+                "protonat",
+                "deprotonat",
+                "electrostatic"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "At pH < pHpzc, positively charged Cu2+ exchanges with H+ ions on protonated adsorbent surface; slowe",
+              "charge_terms": [
+                "protonat"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "含配位原子(N、S、O)的基团（羧基、羟基、巯基、氨基）与重金属离子进行螯合",
+              "charge_terms": [
+                "氨基",
+                "羧基",
+                "羟基",
+                "巯基"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "静电作用(electrostatic interaction)、络合(complexation)、氢键(hydrogen bonding)、酸碱作用(acid-base interaction)、配位",
+              "charge_terms": [
+                "electrostatic"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "Pb(II)通过-COOH静电吸引+H键+氨基络合；MB通过磺酸基增强Pb(II)吸附+Pb(II)作为阳离子桥增强MB吸附",
+              "charge_terms": [
+                "氨基"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "pH>3.86时凝胶表面去质子化呈负电性，-NH₂和-COO⁻增强螯合作用",
+              "charge_terms": [
+                "质子化"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "LS和CCS与环氧氯丙烷交联修饰氨基；SA和CCS的羧酸盐基团与Ca²⁺交联；CCS的氨基/羧基和PEI的亚胺基提供吸附位点；LS的磺酸基增强配位",
+              "charge_terms": [
+                "氨基",
+                "羧基"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "海藻酸钠通过G单元羧基与Ca²⁺配位形成'蛋盒'结构三维网络凝胶",
+              "charge_terms": [
+                "羧基"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "electrostatic interaction + surface complexation + pore filling",
+              "charge_terms": [
+                "electrostatic"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "electrostatic interaction between positively charged surface (H+) and MO- (SO3-)",
+              "charge_terms": [
+                "electrostatic"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "electrostatic interaction between anionic MO and chitosan-based nanocomposite surface (dominant mech",
+              "charge_terms": [
+                "ionic",
+                "electrostatic"
+              ]
+            }
+          ]
+        },
+        "relevance_gating": {
+          "is_excluded": false,
+          "exclusion_reason": "",
+          "do_not_list": []
         }
       },
       {
         "prototype_id": "plant-tannin",
         "organism": "Plant sources (单宁酸)",
         "candidate_honesty": "inference",
+        "lane": "exploratory",
+        "domain_caveat": "organic micropollutant evidence weak",
         "match": {
           "reason": "芳香环可通过π-π堆积作用与含芳香环的吸附剂结合",
           "weight": 0.7,
@@ -100,13 +318,22 @@
           "direct_evidence": false
         },
         "mechanism": {
-          "name": "BPA吸附机理",
+          "name": "吸附机制",
           "selected_mechanism_reason": "Query-conditioned scoring selected this mechanism for BPA based on relevance to matched features/interactions",
           "selected_mechanism_alignment": {
             "query_pollutant": "BPA",
             "query_class": "内分泌干扰物/酚类化合物",
-            "mechanism_keywords": "BPA吸附机理",
-            "alignment_basis": "query_relevance_scoring"
+            "mechanism_keywords": "吸附机制",
+            "alignment_basis": "query_relevance_scoring",
+            "query_features": [
+              "芳香环",
+              "酚羟基",
+              "疏水性",
+              "弱酸性"
+            ],
+            "mechanism_functional_groups": "",
+            "mechanism_key_structures": [],
+            "feature_binding_score": 0
           },
           "基本原理": "needs_review",
           "key_structures": [],
@@ -117,7 +344,7 @@
           ],
           "attribution": {
             "source": "literature",
-            "ref": "10.1016/j.matchemphys.2024.129770",
+            "ref": "10.1016/j.colsurfa.2021.126972",
             "verification_tier": "partial",
             "confidence": "normal"
           }
@@ -156,12 +383,41 @@
               "verification_tier": "partial"
             }
           ]
+        },
+        "charge_state": {
+          "has_charge_state": true,
+          "pka_values": [],
+          "ion_dependence": [],
+          "ph_sensitive": false,
+          "charge_mechanisms": [
+            {
+              "mechanism_id": "",
+              "description": "单宁的邻苯二酚基团通过螯合作用与重金属离子形成五元环螯合物；石墨烯提供π共轭结构和三维多孔传质通道；含氧官能团（—OH、—C=O）作为吸附活性位点",
+              "charge_terms": [
+                "羟基"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "DOLE分子通过羟基、羰基和共轭环上的孤对电子与Fe空d轨道配位形成化学吸附，同时范德华力和静电作用贡献物理吸附，在X70钢表面形成保护性吸附膜，同时阻滞阴极（H+还原）和阳极（Fe溶解）反应",
+              "charge_terms": [
+                "羟基"
+              ]
+            }
+          ]
+        },
+        "relevance_gating": {
+          "is_excluded": false,
+          "exclusion_reason": "",
+          "do_not_list": []
         }
       },
       {
         "prototype_id": "polydopamine-coating",
         "organism": "Mytilus edulis",
-        "candidate_honesty": "lead",
+        "candidate_honesty": "inference",
+        "lane": "exploratory",
+        "domain_caveat": "organic micropollutant evidence weak",
         "match": {
           "reason": "芳香环可通过π-π堆积作用与含芳香环的吸附剂结合",
           "weight": 0.6666666666666666,
@@ -170,15 +426,24 @@
           "direct_evidence": false
         },
         "mechanism": {
-          "name": "PDA吸附机制补充",
+          "name": "CR吸附机制总结",
           "selected_mechanism_reason": "Query-conditioned scoring selected this mechanism for BPA based on relevance to matched features/interactions",
           "selected_mechanism_alignment": {
             "query_pollutant": "BPA",
             "query_class": "内分泌干扰物/酚类化合物",
-            "mechanism_keywords": "PDA吸附机制补充",
-            "alignment_basis": "query_relevance_scoring"
+            "mechanism_keywords": "CR吸附机制总结",
+            "alignment_basis": "query_relevance_scoring",
+            "query_features": [
+              "芳香环",
+              "酚羟基",
+              "疏水性",
+              "弱酸性"
+            ],
+            "mechanism_functional_groups": "",
+            "mechanism_key_structures": [],
+            "feature_binding_score": 0
           },
-          "基本原理": "PDA涂层同时含邻苯二酚（金属配位）和吲哚环（π-π堆积），可在单一表面上实现对芳香族污染物和金属离子的双重吸附",
+          "基本原理": "needs_review",
           "key_structures": [],
           "functional_groups": "",
           "molecular_feature_links": [
@@ -188,8 +453,8 @@
           ],
           "attribution": {
             "source": "literature",
-            "ref": "10.13550/j.jxhg.20220633",
-            "verification_tier": "verified",
+            "ref": "10.1016/j.seppur.2024.127979",
+            "verification_tier": "partial",
             "confidence": "normal"
           }
         },
@@ -208,24 +473,45 @@
         },
         "boundaries": [
           {
-            "text": "碱性条件下邻苯二酚氧化为醌，金属配位能力丧失",
-            "parameter": "pH",
-            "gate_level": "soft",
-            "basis": "llm_inferred",
-            "verification": "needs_review"
-          },
-          {
-            "text": "弱酸性以下DOPA自聚合速率极慢，涂层难以形成",
-            "parameter": "pH",
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
             "gate_level": "soft",
             "basis": "llm_inferred",
             "verification": "needs_review"
           }
         ],
-        "honesty_summary": "有性能数据但缺乏 verification_quote",
-        "boundary_summary": "2 条软限制（caution）",
+        "honesty_summary": "基于分子特征推断，非直接证据",
+        "boundary_summary": "1 条软限制（caution）",
         "evidence_context": {
           "performance_leads": []
+        },
+        "charge_state": {
+          "has_charge_state": true,
+          "pka_values": [],
+          "ion_dependence": [],
+          "ph_sensitive": true,
+          "charge_mechanisms": [
+            {
+              "mechanism_id": "",
+              "description": "La与磷酸根配位生成磷酸镧化合物",
+              "charge_terms": [
+                "磷酸"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "phenolic hydroxyl groups participate in adsorption (C-O and O 1s binding energy shifts)",
+              "charge_terms": [
+                "hydroxyl",
+                "羟基"
+              ]
+            }
+          ]
+        },
+        "relevance_gating": {
+          "is_excluded": false,
+          "exclusion_reason": "",
+          "do_not_list": []
         }
       }
     ],

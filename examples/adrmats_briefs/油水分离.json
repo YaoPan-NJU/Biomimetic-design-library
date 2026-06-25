@@ -25,6 +25,8 @@
         "prototype_id": "lotus-leaf",
         "organism": "Nelumbo nucifera",
         "candidate_honesty": "inference",
+        "lane": "exploratory",
+        "domain_caveat": "",
         "match": {
           "reason": "Superhydrophobic surfaces enable selective oil/water separation",
           "weight": 0.8,
@@ -39,7 +41,11 @@
             "query_pollutant": "oil-water",
             "query_class": "未知",
             "mechanism_keywords": "超疏水材料构建基本原理 - Young方程/Wenzel模型/Cassie-Baxter模型",
-            "alignment_basis": "query_relevance_scoring"
+            "alignment_basis": "query_relevance_scoring",
+            "query_features": [],
+            "mechanism_functional_groups": "",
+            "mechanism_key_structures": [],
+            "feature_binding_score": 0
           },
           "基本原理": "needs_review",
           "key_structures": [],
@@ -78,12 +84,35 @@
         "boundary_summary": "1 条软限制（caution）",
         "evidence_context": {
           "performance_leads": []
+        },
+        "charge_state": {
+          "has_charge_state": true,
+          "pka_values": [],
+          "ion_dependence": [],
+          "ph_sensitive": true,
+          "charge_mechanisms": [
+            {
+              "mechanism_id": "",
+              "description": "天然蜡优点：绿色可降解+低熔点易复合+蜡向表面迁移改善疏水+可渗入粗糙/多孔表面+温度结晶形成荷叶粗糙结构+可分散于有机溶剂+可熔融涂覆。缺点：高温融化+热稳定性低+力学性能低+附着力差+耐用性差。脂",
+              "charge_terms": [
+                "羧基",
+                "羟基"
+              ]
+            }
+          ]
+        },
+        "relevance_gating": {
+          "is_excluded": false,
+          "exclusion_reason": "",
+          "do_not_list": []
         }
       },
       {
         "prototype_id": "superhydrophobic-artificial",
         "organism": "Nelumbo nucifera",
         "candidate_honesty": "inference",
+        "lane": "exploratory",
+        "domain_caveat": "",
         "match": {
           "reason": "Superhydrophobic surfaces enable selective oil/water separation",
           "weight": 0.8,
@@ -98,7 +127,11 @@
             "query_pollutant": "oil-water",
             "query_class": "未知",
             "mechanism_keywords": "超疏水材料构建基本原理 - Young方程/Wenzel模型/Cassie-Baxter模型",
-            "alignment_basis": "query_relevance_scoring"
+            "alignment_basis": "query_relevance_scoring",
+            "query_features": [],
+            "mechanism_functional_groups": "",
+            "mechanism_key_structures": [],
+            "feature_binding_score": 0
           },
           "基本原理": "needs_review",
           "key_structures": [],
@@ -137,12 +170,34 @@
         "boundary_summary": "1 条软限制（caution）",
         "evidence_context": {
           "performance_leads": []
+        },
+        "charge_state": {
+          "has_charge_state": true,
+          "pka_values": [],
+          "ion_dependence": [],
+          "ph_sensitive": true,
+          "charge_mechanisms": [
+            {
+              "mechanism_id": "",
+              "description": "在高离子浓度环境下依然保持很好的疏水性和吸附性",
+              "charge_terms": [
+                "ionic"
+              ]
+            }
+          ]
+        },
+        "relevance_gating": {
+          "is_excluded": false,
+          "exclusion_reason": "",
+          "do_not_list": []
         }
       },
       {
         "prototype_id": "water-strider-leg",
         "organism": "Gerridae",
         "candidate_honesty": "inference",
+        "lane": "exploratory",
+        "domain_caveat": "",
         "match": {
           "reason": "Superhydrophobic surfaces enable selective oil/water separation",
           "weight": 0.8,
@@ -157,7 +212,11 @@
             "query_pollutant": "oil-water",
             "query_class": "未知",
             "mechanism_keywords": "超疏水材料构建基本原理 - Young方程/Wenzel模型/Cassie-Baxter模型",
-            "alignment_basis": "query_relevance_scoring"
+            "alignment_basis": "query_relevance_scoring",
+            "query_features": [],
+            "mechanism_functional_groups": "",
+            "mechanism_key_structures": [],
+            "feature_binding_score": 0
           },
           "基本原理": "needs_review",
           "key_structures": [],
@@ -196,6 +255,18 @@
         "boundary_summary": "1 条软限制（caution）",
         "evidence_context": {
           "performance_leads": []
+        },
+        "charge_state": {
+          "has_charge_state": false,
+          "pka_values": [],
+          "ion_dependence": [],
+          "ph_sensitive": true,
+          "charge_mechanisms": []
+        },
+        "relevance_gating": {
+          "is_excluded": false,
+          "exclusion_reason": "",
+          "do_not_list": []
         }
       }
     ],

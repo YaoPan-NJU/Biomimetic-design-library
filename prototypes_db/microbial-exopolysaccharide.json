@@ -91,15 +91,24 @@
       "source_doi": ""
     }
   ],
-  "design_translation": {
-    "idea": "Produce exopolysaccharides via microbial fermentation and use as bio-adsorbents for heavy metals and dyes",
-    "examples": [
-      "Xanthan gum for heavy metal adsorption",
-      "Dextran-based hydrogel for dye removal"
-    ],
-    "source_tier": "literature",
-    "applicability": "Heavy metal and dye removal from wastewater"
-  },
+  "design_translation": [
+    {
+      "idea": "Produce exopolysaccharides via microbial fermentation and use as bio-adsorbents for heavy metals and dyes",
+      "material_handle": "Microbial exopolysaccharide hydrogel (xanthan, dextran, pullulan)",
+      "design_principle": "Carboxyl, hydroxyl, and sulfate groups on exopolysaccharides coordinate heavy metal ions and cationic dyes via electrostatic attraction and complexation",
+      "implementation_example": "Xanthan gum for heavy metal adsorption; Dextran-based hydrogel for dye removal",
+      "constraints": "Production cost depends on microbial fermentation efficiency; mechanical strength may need crosslinking enhancement",
+      "failure_modes": "Low mechanical strength in wet state; competitive adsorption from co-existing ions",
+      "evidence_tier": "inference",
+      "source_tier": "llm_inference",
+      "material_realization_examples": [
+        "Xanthan gum for heavy metal adsorption",
+        "Dextran-based hydrogel for dye removal"
+      ],
+      "specific_functional_group": "carboxyl, hydroxyl, sulfate groups",
+      "target_interaction": "electrostatic attraction and complexation with metal ions and cationic dyes"
+    }
+  ],
   "honesty_ledger": {
     "from_source_mechanisms": 0,
     "llm_inferred_mechanisms": 1,

@@ -73,6 +73,9 @@ def main():
 
         for i, t in enumerate(translations):
             total_translations += 1
+            if not isinstance(t, dict):
+                results.append({'pid': pid, 'index': i, 'status': 'SKIP', 'issues': [f'not a dict: {type(t).__name__}'], 'idea': str(t)[:60]})
+                continue
             issues = check_translation(pid, t)
 
             if issues:

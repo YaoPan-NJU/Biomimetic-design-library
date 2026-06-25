@@ -91,15 +91,24 @@
       "source_doi": ""
     }
   ],
-  "design_translation": {
-    "idea": "Extract keratin from bird feather waste and use as bio-adsorbent for heavy metals, especially soft metals with high thiol affinity",
-    "examples": [
-      "Chicken feather keratin for Hg²⁺ removal",
-      "Keratin nanofiber membrane for heavy metal filtration"
-    ],
-    "source_tier": "literature",
-    "applicability": "Heavy metal removal from wastewater; sustainable waste valorization"
-  },
+  "design_translation": [
+    {
+      "idea": "Extract keratin from bird feather waste and use as bio-adsorbent for heavy metals, especially soft metals with high thiol affinity",
+      "material_handle": "Chicken feather keratin for Hg²⁺ removal",
+      "design_principle": "Keratin protein contains disulfide bonds and amino acid residues (cysteine, serine) for heavy metal coordination",
+      "implementation_example": "Chicken feather keratin for Hg²⁺ removal; Keratin nanofiber membrane for heavy metal filtration",
+      "constraints": "Keratin solubility requires chemical pretreatment; limited adsorption capacity without modification",
+      "failure_modes": "",
+      "evidence_tier": "inference",
+      "source_tier": "llm_inference",
+      "material_realization_examples": [
+        "Chicken feather keratin for Hg²⁺ removal",
+        "Keratin nanofiber membrane for heavy metal filtration"
+      ],
+      "specific_functional_group": "disulfide bonds, amino groups (cysteine, serine)",
+      "target_interaction": "heavy metal chelation"
+    }
+  ],
   "honesty_ledger": {
     "from_source_mechanisms": 0,
     "llm_inferred_mechanisms": 1,

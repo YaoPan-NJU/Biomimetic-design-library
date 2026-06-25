@@ -22,7 +22,13 @@ def main():
             issues.append(f"{pid}: no design_translation")
             continue
 
-        first = dt[0]
+        if isinstance(dt, dict):
+            first = dt
+        elif isinstance(dt, list) and len(dt) > 0:
+            first = dt[0]
+        else:
+            issues.append(f"{pid}: design_translation is empty or invalid type")
+            continue
         for field in REQUIRED_DT_FIELDS:
             val = first.get(field, '')
             if not val or val == 'needs_review':

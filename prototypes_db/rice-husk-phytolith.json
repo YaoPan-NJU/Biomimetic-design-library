@@ -94,15 +94,24 @@
       "source_doi": ""
     }
   ],
-  "design_translation": {
-    "idea": "Extract silica from rice husk agricultural waste via combustion or acid treatment, use as adsorbent for heavy metals and organic pollutants",
-    "examples": [
-      "Rice husk biochar with high silica for Cd adsorption",
-      "Rice husk silica nanoparticles for pollutant removal"
-    ],
-    "source_tier": "literature",
-    "applicability": "Heavy metal removal from wastewater; low-cost adsorbent from agricultural waste"
-  },
+  "design_translation": [
+    {
+      "idea": "Extract silica from rice husk agricultural waste via combustion or acid treatment, use as adsorbent for heavy metals and organic pollutants",
+      "material_handle": "Rice husk biochar with high silica for Cd adsorption",
+      "design_principle": "Rice husk phytolith (amorphous SiO₂) provides silanol groups (Si-OH) for metal ion adsorption and phosphate removal",
+      "implementation_example": "Rice husk biochar with high silica for Cd adsorption; Rice husk silica nanoparticles for pollutant removal",
+      "constraints": "Low adsorption capacity without activation; high-temperature calcination needed for optimal performance",
+      "failure_modes": "",
+      "evidence_tier": "inference",
+      "source_tier": "llm_inference",
+      "material_realization_examples": [
+        "Rice husk biochar with high silica for Cd adsorption",
+        "Rice husk silica nanoparticles for pollutant removal"
+      ],
+      "specific_functional_group": "silanol groups (Si-OH), amorphous SiO₂",
+      "target_interaction": "metal ion adsorption and phosphate removal via silanol coordination"
+    }
+  ],
   "honesty_ledger": {
     "from_source_mechanisms": 1,
     "llm_inferred_mechanisms": 0,

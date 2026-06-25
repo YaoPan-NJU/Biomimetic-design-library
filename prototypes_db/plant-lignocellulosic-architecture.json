@@ -225,15 +225,24 @@
       "source_doi": "10.1016/j.jclepro.2020.125390"
     }
   ],
-  "design_translation": {
-    "idea": "Pyrolyze agricultural waste (rice straw, oiltea shell, walnut shell) at 500°C to create biochar adsorbent, with optional surface modification for enhanced performance",
-    "examples": [
-      "Silicate-modified oiltea shell biochar: 211 mg/g for Cd",
-      "Walnut shell biochar for tetracycline removal"
-    ],
-    "source_tier": "literature",
-    "applicability": "Heavy metal and organic pollutant removal from wastewater; soil remediation"
-  },
+  "design_translation": [
+    {
+      "idea": "Pyrolyze agricultural waste (rice straw, oiltea shell, walnut shell) at 500°C to create biochar adsorbent, with optional surface modification for enhanced performance",
+      "material_handle": "Lignocellulosic composite (cellulose + lignin + hemicellulose)",
+      "design_principle": "Lignocellulosic architecture provides multiple functional groups (hydroxyl, carboxyl, phenolic) for metal ion and dye adsorption",
+      "implementation_example": "Silicate-modified oiltea shell biochar: 211 mg/g for Cd; Walnut shell biochar for tetracycline removal",
+      "constraints": "Structural rigidity may limit adsorption capacity; pretreatment may be needed",
+      "failure_modes": "Low adsorption capacity without chemical modification",
+      "evidence_tier": "inference",
+      "source_tier": "llm_inference",
+      "material_realization_examples": [
+        "Silicate-modified oiltea shell biochar: 211 mg/g for Cd",
+        "Walnut shell biochar for tetracycline removal"
+      ],
+      "specific_functional_group": "hydroxyl, carboxyl, phenolic groups",
+      "target_interaction": "metal ion and dye adsorption via functional group coordination"
+    }
+  ],
   "honesty_ledger": {
     "from_source_mechanisms": 2,
     "llm_inferred_mechanisms": 0,

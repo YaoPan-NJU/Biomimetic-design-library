@@ -14,10 +14,12 @@
     "domain": "organic",
     "expected_mechanism_keywords": {
       "chitosan": [
-        "π-π",
-        "氢键",
         "吸附",
-        "芳香"
+        "吸附机制",
+        "表面",
+        "官能团",
+        "氨基",
+        "羟基"
       ],
       "plant-tannin": [
         "BPA",
@@ -86,12 +88,12 @@
     "domain": "heavy_metal",
     "expected_mechanism_keywords": {
       "mussel-foot-adhesion": [
-        "DOPA",
-        "PDA",
         "螯合",
         "配位",
-        "金属",
-        "自聚合",
+        "DOPA",
+        "PDA",
+        "协同",
+        "吸附",
         "粘附"
       ],
       "fish-scale-hydroxyapatite": [
@@ -104,13 +106,13 @@
         "羟基"
       ],
       "oyster-shell": [
-        "CaCO₃",
-        "离子交换",
-        "PbCO₃",
-        "牡蛎",
-        "改性",
+        "钝化",
         "吸附",
-        "CaO"
+        "CaCO",
+        "牡蛎",
+        "壳",
+        "改性",
+        "机理"
       ],
       "chitosan": [
         "螯合",
@@ -195,10 +197,14 @@
     "domain": "dye",
     "expected_mechanism_keywords": {
       "silk-fibroin": [
-        "丝素",
         "吸附",
+        "静电",
+        "COO",
+        "methylene",
+        "MB",
+        "carboxyl",
         "染料",
-        "蚕丝"
+        "丝素"
       ],
       "chlorella-cell-wall": [
         "微藻",
@@ -210,8 +216,11 @@
       ],
       "chitosan": [
         "吸附",
-        "染料",
-        "壳聚糖"
+        "壳聚糖",
+        "表面",
+        "官能团",
+        "石墨烯",
+        "复合"
       ]
     }
   },
@@ -243,5 +252,383 @@
         "油水"
       ]
     }
+  },
+  "HFPO-DA (GenX)_六氟环氧丙烷二聚酸去除": {
+    "expected_candidates": [],
+    "forbidden_normal": [
+      "lotus-leaf",
+      "shark-skin",
+      "bone-structure",
+      "water-strider-leg"
+    ],
+    "domain": "organic",
+    "expected_library_lane": "exploratory",
+    "pollutant_class": "PFAS_ether_carboxylate",
+    "molecular_features": [
+      "全氟醚羧酸尾",
+      "羧酸头基",
+      "C-F键"
+    ],
+    "expected_mechanism_keywords": {},
+    "note": "Emerging pollutant from ADRMATS target list. No direct library evidence expected."
+  },
+  "PFOA_全氟辛酸去除": {
+    "expected_candidates": [],
+    "forbidden_normal": [
+      "lotus-leaf",
+      "shark-skin",
+      "bone-structure",
+      "water-strider-leg"
+    ],
+    "domain": "organic",
+    "expected_library_lane": "exploratory",
+    "pollutant_class": "PFAS_carboxylate",
+    "molecular_features": [
+      "C7F15全氟尾",
+      "羧酸头基",
+      "C-F键"
+    ],
+    "expected_mechanism_keywords": {},
+    "note": "Emerging pollutant from ADRMATS target list. No direct library evidence expected."
+  },
+  "PFBS_全氟丁烷磺酸去除": {
+    "expected_candidates": [],
+    "forbidden_normal": [
+      "lotus-leaf",
+      "shark-skin",
+      "bone-structure",
+      "water-strider-leg"
+    ],
+    "domain": "organic",
+    "expected_library_lane": "exploratory",
+    "pollutant_class": "PFAS_sulfonate_short",
+    "molecular_features": [
+      "短全氟尾",
+      "磺酸头基"
+    ],
+    "expected_mechanism_keywords": {},
+    "note": "Emerging pollutant from ADRMATS target list. No direct library evidence expected."
+  },
+  "BPA_双酚A去除": {
+    "expected_candidates": [],
+    "forbidden_normal": [
+      "lotus-leaf",
+      "shark-skin",
+      "bone-structure",
+      "water-strider-leg"
+    ],
+    "domain": "organic",
+    "expected_library_lane": "exploratory",
+    "pollutant_class": "bisphenol_EDC",
+    "molecular_features": [
+      "双酚芳环",
+      "两个酚羟基"
+    ],
+    "expected_mechanism_keywords": {},
+    "note": "Emerging pollutant from ADRMATS target list. No direct library evidence expected."
+  },
+  "2,6-Dichlorophenol_2,6-二氯苯酚去除": {
+    "expected_candidates": [],
+    "forbidden_normal": [
+      "lotus-leaf",
+      "shark-skin",
+      "bone-structure",
+      "water-strider-leg"
+    ],
+    "domain": "organic",
+    "expected_library_lane": "exploratory",
+    "pollutant_class": "chlorophenol",
+    "molecular_features": [
+      "酚羟基",
+      "2邻位Cl"
+    ],
+    "expected_mechanism_keywords": {},
+    "note": "Emerging pollutant from ADRMATS target list. No direct library evidence expected."
+  },
+  "Pentachlorophenol_五氯苯酚去除": {
+    "expected_candidates": [],
+    "forbidden_normal": [
+      "lotus-leaf",
+      "shark-skin",
+      "bone-structure",
+      "water-strider-leg"
+    ],
+    "domain": "organic",
+    "expected_library_lane": "exploratory",
+    "pollutant_class": "chlorophenol",
+    "molecular_features": [
+      "酚羟基",
+      "5个Cl"
+    ],
+    "expected_mechanism_keywords": {},
+    "note": "Emerging pollutant from ADRMATS target list. No direct library evidence expected."
+  },
+  "Octocrylene_奥克立林去除": {
+    "expected_candidates": [],
+    "forbidden_normal": [
+      "lotus-leaf",
+      "shark-skin",
+      "bone-structure",
+      "water-strider-leg"
+    ],
+    "domain": "organic",
+    "expected_library_lane": "exploratory",
+    "pollutant_class": "UV_filter_ester",
+    "molecular_features": [
+      "二苯基丙烯酸酯",
+      "长支链酯"
+    ],
+    "expected_mechanism_keywords": {},
+    "note": "Emerging pollutant from ADRMATS target list. No direct library evidence expected."
+  },
+  "SCCPs_短链氯化石蜡去除": {
+    "expected_candidates": [],
+    "forbidden_normal": [
+      "lotus-leaf",
+      "shark-skin",
+      "bone-structure",
+      "water-strider-leg"
+    ],
+    "domain": "organic",
+    "expected_library_lane": "exploratory",
+    "pollutant_class": "chlorinated_paraffin",
+    "molecular_features": [
+      "C10-13氯代烷",
+      "多Cl"
+    ],
+    "expected_mechanism_keywords": {},
+    "note": "Emerging pollutant from ADRMATS target list. No direct library evidence expected."
+  },
+  "PCB-209_多氯联苯-209去除": {
+    "expected_candidates": [],
+    "forbidden_normal": [
+      "lotus-leaf",
+      "shark-skin",
+      "bone-structure",
+      "water-strider-leg"
+    ],
+    "domain": "organic",
+    "expected_library_lane": "exploratory",
+    "pollutant_class": "PCB",
+    "molecular_features": [
+      "十氯联苯",
+      "两芳环"
+    ],
+    "expected_mechanism_keywords": {},
+    "note": "Emerging pollutant from ADRMATS target list. No direct library evidence expected."
+  },
+  "β-HCH_β-六氯环己烷去除": {
+    "expected_candidates": [],
+    "forbidden_normal": [
+      "lotus-leaf",
+      "shark-skin",
+      "bone-structure",
+      "water-strider-leg"
+    ],
+    "domain": "organic",
+    "expected_library_lane": "exploratory",
+    "pollutant_class": "organochlorine",
+    "molecular_features": [
+      "六氯环己烷"
+    ],
+    "expected_mechanism_keywords": {},
+    "note": "Emerging pollutant from ADRMATS target list. No direct library evidence expected."
+  },
+  "Endosulfan_硫丹去除": {
+    "expected_candidates": [],
+    "forbidden_normal": [
+      "lotus-leaf",
+      "shark-skin",
+      "bone-structure",
+      "water-strider-leg"
+    ],
+    "domain": "organic",
+    "expected_library_lane": "exploratory",
+    "pollutant_class": "organochlorine_pesticide",
+    "molecular_features": [
+      "氯代双环",
+      "亚硫酸酯"
+    ],
+    "expected_mechanism_keywords": {},
+    "note": "Emerging pollutant from ADRMATS target list. No direct library evidence expected."
+  },
+  "Nonylphenol_壬基酚去除": {
+    "expected_candidates": [],
+    "forbidden_normal": [
+      "lotus-leaf",
+      "shark-skin",
+      "bone-structure",
+      "water-strider-leg"
+    ],
+    "domain": "organic",
+    "expected_library_lane": "exploratory",
+    "pollutant_class": "alkylphenol_EDC",
+    "molecular_features": [
+      "酚羟基",
+      "C9支链"
+    ],
+    "expected_mechanism_keywords": {},
+    "note": "Emerging pollutant from ADRMATS target list. No direct library evidence expected."
+  },
+  "Trichloromethane (Chloroform)_三氯甲烷去除": {
+    "expected_candidates": [],
+    "forbidden_normal": [
+      "lotus-leaf",
+      "shark-skin",
+      "bone-structure",
+      "water-strider-leg"
+    ],
+    "domain": "organic",
+    "expected_library_lane": "exploratory",
+    "pollutant_class": "chlorinated_solvent",
+    "molecular_features": [
+      "三氯甲烷小分子"
+    ],
+    "expected_mechanism_keywords": {},
+    "note": "Emerging pollutant from ADRMATS target list. No direct library evidence expected."
+  },
+  "Roxithromycin_罗红霉素去除": {
+    "expected_candidates": [],
+    "forbidden_normal": [
+      "lotus-leaf",
+      "shark-skin",
+      "bone-structure",
+      "water-strider-leg"
+    ],
+    "domain": "organic",
+    "expected_library_lane": "exploratory",
+    "pollutant_class": "macrolide_antibiotic",
+    "molecular_features": [
+      "大环内酯",
+      "多羟基",
+      "叔胺"
+    ],
+    "expected_mechanism_keywords": {},
+    "note": "Emerging pollutant from ADRMATS target list. No direct library evidence expected."
+  },
+  "Hexachlorobutadiene (HCBD)_六氯丁二烯去除": {
+    "expected_candidates": [],
+    "forbidden_normal": [
+      "lotus-leaf",
+      "shark-skin",
+      "bone-structure",
+      "water-strider-leg"
+    ],
+    "domain": "organic",
+    "expected_library_lane": "exploratory",
+    "pollutant_class": "chlorinated_diene",
+    "molecular_features": [
+      "六氯丁二烯"
+    ],
+    "expected_mechanism_keywords": {},
+    "note": "Emerging pollutant from ADRMATS target list. No direct library evidence expected."
+  },
+  "Decabromodiphenyl ether (BDE-209)_十溴二苯醚去除": {
+    "expected_candidates": [],
+    "forbidden_normal": [
+      "lotus-leaf",
+      "shark-skin",
+      "bone-structure",
+      "water-strider-leg"
+    ],
+    "domain": "organic",
+    "expected_library_lane": "exploratory",
+    "pollutant_class": "PBDE",
+    "molecular_features": [
+      "二苯醚",
+      "10个Br"
+    ],
+    "expected_mechanism_keywords": {},
+    "note": "Emerging pollutant from ADRMATS target list. No direct library evidence expected."
+  },
+  "TCDD_2,3,7,8-四氯二苯并-p-二噁英去除": {
+    "expected_candidates": [],
+    "forbidden_normal": [
+      "lotus-leaf",
+      "shark-skin",
+      "bone-structure",
+      "water-strider-leg"
+    ],
+    "domain": "organic",
+    "expected_library_lane": "exploratory",
+    "pollutant_class": "dioxin",
+    "molecular_features": [
+      "平面二噁英",
+      "氯代芳环"
+    ],
+    "expected_mechanism_keywords": {},
+    "note": "Emerging pollutant from ADRMATS target list. No direct library evidence expected."
+  },
+  "DDT_滴滴涕去除": {
+    "expected_candidates": [],
+    "forbidden_normal": [
+      "lotus-leaf",
+      "shark-skin",
+      "bone-structure",
+      "water-strider-leg"
+    ],
+    "domain": "organic",
+    "expected_library_lane": "exploratory",
+    "pollutant_class": "organochlorine_pesticide",
+    "molecular_features": [
+      "二氯二苯",
+      "三氯乙基"
+    ],
+    "expected_mechanism_keywords": {},
+    "note": "Emerging pollutant from ADRMATS target list. No direct library evidence expected."
+  },
+  "DDE_滴滴伊去除": {
+    "expected_candidates": [],
+    "forbidden_normal": [
+      "lotus-leaf",
+      "shark-skin",
+      "bone-structure",
+      "water-strider-leg"
+    ],
+    "domain": "organic",
+    "expected_library_lane": "exploratory",
+    "pollutant_class": "organochlorine_metabolite",
+    "molecular_features": [
+      "二氯二苯",
+      "二氯乙烯"
+    ],
+    "expected_mechanism_keywords": {},
+    "note": "Emerging pollutant from ADRMATS target list. No direct library evidence expected."
+  },
+  "Dieldrin_狄氏剂去除": {
+    "expected_candidates": [],
+    "forbidden_normal": [
+      "lotus-leaf",
+      "shark-skin",
+      "bone-structure",
+      "water-strider-leg"
+    ],
+    "domain": "organic",
+    "expected_library_lane": "exploratory",
+    "pollutant_class": "organochlorine_pesticide",
+    "molecular_features": [
+      "氯代双环",
+      "环氧"
+    ],
+    "expected_mechanism_keywords": {},
+    "note": "Emerging pollutant from ADRMATS target list. No direct library evidence expected."
+  },
+  "PFHxS_全氟己烷磺酸去除": {
+    "expected_candidates": [],
+    "forbidden_normal": [
+      "lotus-leaf",
+      "shark-skin",
+      "bone-structure",
+      "water-strider-leg"
+    ],
+    "domain": "organic",
+    "expected_library_lane": "exploratory",
+    "pollutant_class": "PFAS_sulfonate",
+    "molecular_features": [
+      "C6全氟尾",
+      "磺酸头基"
+    ],
+    "expected_mechanism_keywords": {},
+    "note": "Emerging pollutant from ADRMATS target list. No direct library evidence expected."
   }
 }
