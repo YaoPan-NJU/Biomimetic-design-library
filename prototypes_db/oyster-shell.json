@@ -154,7 +154,13 @@
     {
       "name": "牡蛎壳改性吸附机制",
       "description": "CaCO₃在800℃缺氧条件下分解为CaO→CaO负载在花生壳生物炭上→CaO在含磷废水中释放Ca²⁺和OH⁻→OH⁻使水体呈弱碱性→Ca²⁺与磷酸盐在碱性条件下生成羟基磷灰石沉淀",
-      "functional_groups": "",
+      "functional_groups": [
+        "CaCO₃碳酸根",
+        "CaO/Ca(OH)₂",
+        "Ca²⁺位点",
+        "含氧阴离子吸附",
+        "碱性环境还原"
+      ],
       "source": "literature",
       "ref_doi": "10.16663/j.cnki.lskj.2021.02.025",
       "verification": "partial",
@@ -223,12 +229,29 @@
         "source_locator": "p.2 / 3节 结果与讨论"
       },
       "evidence_type": "partial_source",
-      "evidence_note": "Upgraded from llm_inferred using visual_cache PDF text (matched 7 keywords: ['吸附', '牡蛎', '水', '生物炭', '改性'])"
+      "evidence_note": "Upgraded from llm_inferred using visual_cache PDF text (matched 7 keywords: ['吸附', '牡蛎', '水', '生物炭', '改性'])",
+      "key_structures": [
+        "方解石CaCO₃层状结构",
+        "煅烧CaO碱性释放",
+        "羟基磷灰石沉淀",
+        "离子交换"
+      ],
+      "molecular_feature_links": [
+        "六价铬",
+        "含氧阴离子",
+        "强氧化性",
+        "静电吸引",
+        "还原沉淀"
+      ]
     },
     {
       "name": "钝化机理",
       "description": "石灰效应, 沉淀效应, 物理吸附, 离子交换",
-      "functional_groups": "",
+      "functional_groups": [
+        "CaCO₃碳酸根",
+        "Ca²⁺/Mg²⁺位点",
+        "碳酸盐沉淀"
+      ],
       "source": "literature",
       "ref_doi": "10.13254/j.jare.2020.0504",
       "verification": "partial",
@@ -245,7 +268,7 @@
           "scope_match": "Keywords: 离子, 离子交, 离子交换, 子交, 子交换"
         },
         "bio_structure": {
-          "text": "钝化机理",
+          "text": "钝化功能结构",
           "basis": "llm_inferred"
         },
         "interaction": {
@@ -258,7 +281,7 @@
           "scope_match": "Keywords: 离子, 离子交, 离子交换, 子交, 子交换"
         },
         "why_it_works": {
-          "text": "钝化机理",
+          "text": "表面活性位点与目标物相互作用",
           "basis": "llm_inferred"
         },
         "boundary_conditions": [
@@ -278,7 +301,17 @@
           }
         ]
       },
-      "source_locator": "p.1"
+      "source_locator": "p.1",
+      "key_structures": [
+        "石灰效应(liming)",
+        "沉淀效应",
+        "物理吸附",
+        "离子交换"
+      ],
+      "molecular_feature_links": [
+        "二价阳离子",
+        "可与含硫/氮配体配位"
+      ]
     }
   ],
   "narrative": {

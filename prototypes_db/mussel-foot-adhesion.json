@@ -906,7 +906,7 @@
           "scope_match": "Keywords: peg, ethylene"
         },
         "bio_structure": {
-          "text": "两性离子水合能力 vs PEG Zwitterion hydration capacity vs PEG",
+          "text": "两性离子水合能力 vs PEG Zwitterion hydration capacity vs PEG功能结构",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.1016/j.ccr.2023.215234",
@@ -924,7 +924,7 @@
           "scope_match": "Keywords: peg, ethylene"
         },
         "why_it_works": {
-          "text": "两性离子水合能力 vs PEG Zwitterion hydration capacity vs PEG",
+          "text": "静电相互作用驱动吸附",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.1016/j.ccr.2023.215234",
@@ -974,7 +974,7 @@
           "basis": "llm_inferred"
         },
         "bio_structure": {
-          "text": "磷酸胆碱仿生机制 Phosphorylcholine biomimetic mechanism",
+          "text": "磷酸胆碱仿生膜结构",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.1002/chem.202502643",
@@ -987,7 +987,7 @@
           "basis": "llm_inferred"
         },
         "why_it_works": {
-          "text": "磷酸胆碱仿生机制 Phosphorylcholine biomimetic mechanism",
+          "text": "表面活性位点与目标物相互作用",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.1002/chem.202502643",
@@ -1040,15 +1040,15 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "需要表面功能化涂层的吸附应用场景",
-          "basis": "literature-backed"
+          "basis": "llm_inferred"
         },
         "bio_structure": {
           "text": "多巴胺（DOPA前体）在弱碱性条件下（pH 8.5）自聚成聚多巴胺（PDA）涂层",
-          "basis": "literature-backed"
+          "basis": "llm_inferred"
         },
         "interaction": {
           "text": "DOPA氧化为醌→分子间交联（Michael加成/Schiff碱/π-π堆积）→形成均匀、厚度可控的PDA涂层",
-          "basis": "literature_backed",
+          "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.1039/d1cs00658d",
           "locator": "p.426, left column",
@@ -1057,7 +1057,7 @@
         },
         "why_it_works": {
           "text": "PDA涂层可在几乎所有基底（金属、氧化物、聚合物、陶瓷）上形成均匀薄膜，保留邻苯二酚和胺基活性位点，同时提供粘附力",
-          "basis": "literature-backed"
+          "basis": "llm_inferred"
         },
         "boundary_conditions": [
           {
@@ -1164,7 +1164,7 @@
           "scope_match": "Keywords: ag, sam"
         },
         "bio_structure": {
-          "text": "PDA涂层 vs 传统涂层技术对比 PDA coating vs traditional coating techniques",
+          "text": "PDA涂层 vs 传统涂层技术对比 PDA coating vs traditional coating techniq",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.1016/j.cej.2021.130509",
@@ -1182,7 +1182,7 @@
           "scope_match": "Keywords: ag, sam"
         },
         "why_it_works": {
-          "text": "PDA涂层 vs 传统涂层技术对比 PDA coating vs traditional coating techniques",
+          "text": "疏水相互作用驱动分配",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.1016/j.cej.2021.130509",
@@ -1238,7 +1238,7 @@
         "transferable_principle": "基于机制: 多巴胺辅助共沉积机制 Dopamine-assisted co-deposition mechani",
         "pollutant_feature": {
           "text": "多巴胺辅助共沉积涉及多巴胺与第二组分之间的单/多共价或非共价相互作用。共价共沉积提供更强网络以促进涂层稳定性。poly(SBMA)通过去质子化酚基与季铵的局部静电作用与PDA交互；poly(MPC)通",
-          "basis": "literature_backed",
+          "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.1039/d1cs00658d",
           "locator": "p.426, left column",
@@ -1246,7 +1246,7 @@
           "scope_match": "Keywords: po, ol, ly, A)"
         },
         "bio_structure": {
-          "text": "多巴胺辅助共沉积机制 Dopamine-assisted co-deposition mechanism",
+          "text": "多巴胺辅助共沉积功能结构",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.1039/d1cs00658d",
@@ -1256,7 +1256,7 @@
         },
         "interaction": {
           "text": "多巴胺辅助共沉积涉及多巴胺与第二组分之间的单/多共价或非共价相互作用。共价共沉积提供更强网络以促进涂层稳定性。poly(SBMA)通过去质子化酚基与季铵的局部静电作用与PDA交互；poly(MPC)通",
-          "basis": "literature_backed",
+          "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.1039/d1cs00658d",
           "locator": "p.426, left column",
@@ -1264,7 +1264,7 @@
           "scope_match": "Keywords: po, ol, ly, A)"
         },
         "why_it_works": {
-          "text": "多巴胺辅助共沉积机制 Dopamine-assisted co-deposition mechanism",
+          "text": "静电相互作用驱动吸附",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.1039/d1cs00658d",
@@ -1326,7 +1326,7 @@
           "scope_match": "Keywords: 氢键, 静电吸引"
         },
         "bio_structure": {
-          "text": "三种驱动力协同机制",
+          "text": "三种驱动力协同功能结构",
           "basis": "llm_inferred"
         },
         "interaction": {
@@ -1339,7 +1339,7 @@
           "scope_match": "Keywords: 氢键, 静电吸引"
         },
         "why_it_works": {
-          "text": "三种驱动力协同机制",
+          "text": "静电相互作用驱动吸附",
           "basis": "llm_inferred"
         },
         "boundary_conditions": [
@@ -1381,7 +1381,7 @@
           "scope_match": "Keywords: 结果一致, 结果一"
         },
         "bio_structure": {
-          "text": "染料絮凝实验——盐浓度效应确认静电机制",
+          "text": "染料絮凝实验——盐浓度效应确认静电功能结构",
           "basis": "llm_inferred"
         },
         "interaction": {
@@ -1394,7 +1394,7 @@
           "scope_match": "Keywords: 结果一致, 结果一"
         },
         "why_it_works": {
-          "text": "染料絮凝实验——盐浓度效应确认静电机制",
+          "text": "静电相互作用驱动吸附",
           "basis": "llm_inferred"
         },
         "boundary_conditions": [
@@ -1444,7 +1444,7 @@
           "evidence_label": "from_source"
         },
         "bio_structure": {
-          "text": "疏水改性方法分类",
+          "text": "疏水改性方法分类，微纳粗糙结构+低表面能涂层",
           "basis": "from_source",
           "source": "10.1016/j.carbpol.2022.120242",
           "locator": "page 1",
@@ -1462,7 +1462,7 @@
           "evidence_label": "from_source"
         },
         "why_it_works": {
-          "text": "疏水改性方法分类",
+          "text": "表面活性位点与目标物相互作用",
           "basis": "from_source",
           "source": "10.1016/j.carbpol.2022.120242",
           "locator": "page 1",
@@ -1521,7 +1521,7 @@
           "evidence_label": "from_source"
         },
         "bio_structure": {
-          "text": "CVD法均匀性问题",
+          "text": "CVD法均匀性问题功能结构",
           "basis": "from_source",
           "source": "10.1016/j.carbpol.2022.120242",
           "locator": "p.2",
@@ -1538,7 +1538,7 @@
           "scope_match": "Keywords: porous, structure"
         },
         "why_it_works": {
-          "text": "CVD法均匀性问题",
+          "text": "表面活性位点与目标物相互作用",
           "basis": "from_source",
           "source": "10.1016/j.carbpol.2022.120242",
           "locator": "p.2",
@@ -1585,7 +1585,7 @@
           "scope_match": "Keywords: superhydrophobic, hydrophobic"
         },
         "bio_structure": {
-          "text": "疏水改性材料分布统计",
+          "text": "疏水改性材料分布统计，微纳粗糙结构+低表面能涂层",
           "basis": "from_source",
           "source": "10.1016/j.carbpol.2022.120242",
           "locator": "page 1",
@@ -1601,7 +1601,7 @@
           "scope_match": "Keywords: superhydrophobic, hydrophobic"
         },
         "why_it_works": {
-          "text": "疏水改性材料分布统计",
+          "text": "表面活性位点与目标物相互作用",
           "basis": "from_source",
           "source": "10.1016/j.carbpol.2022.120242",
           "locator": "page 1",
@@ -1766,7 +1766,7 @@
           "scope_match": "Keywords: coordination, chelating, amidoxime, amidoxime"
         },
         "bio_structure": {
-          "text": "酰胺肟配位模式",
+          "text": "含配位原子(N/O/S)的官能团",
           "basis": "from_source",
           "source": "10.1016/j.ccr.2023.215234",
           "locator": "page 3",
@@ -1782,7 +1782,7 @@
           "scope_match": "Keywords: coordination, chelating, amidoxime, amidoxime"
         },
         "why_it_works": {
-          "text": "酰胺肟配位模式",
+          "text": "配位/螯合作用固定目标物",
           "basis": "from_source",
           "source": "10.1016/j.ccr.2023.215234",
           "locator": "page 3",
@@ -1835,7 +1835,7 @@
           "scope_match": "Keywords: consequently, gigatons, carbon"
         },
         "bio_structure": {
-          "text": "配体优化六大策略",
+          "text": "配体优化六大功能结构",
           "basis": "from_source",
           "source": "10.1016/j.ccr.2023.215234",
           "locator": "page 1",
@@ -1853,7 +1853,7 @@
           "evidence_label": "from_source"
         },
         "why_it_works": {
-          "text": "配体优化六大策略",
+          "text": "配位/螯合作用固定目标物",
           "basis": "from_source",
           "source": "10.1016/j.ccr.2023.215234",
           "locator": "page 1",
@@ -1891,7 +1891,11 @@
     {
       "name": "双功能协同策略",
       "description": "三种机制：(1)第二配体提供额外配位位点 (2)增强AO碱性→更强U(VI)络合 (3)酸性基团解离碳酸盐→释放UO2^2+",
-      "functional_groups": "",
+      "functional_groups": [
+        "邻苯二酚 catechol (-OH)",
+        "胺基 amine (-NH₂)",
+        "DOPA 3,4-二羟基苯丙氨酸"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.ccr.2023.215234",
       "verification": "partial",
@@ -1907,7 +1911,7 @@
           "scope_match": "Keywords: o2, oxide"
         },
         "bio_structure": {
-          "text": "双功能协同策略",
+          "text": "双功能协同表面官能团",
           "basis": "from_source",
           "source": "10.1016/j.ccr.2023.215234",
           "locator": "page 10",
@@ -1925,7 +1929,7 @@
           "evidence_label": "from_source"
         },
         "why_it_works": {
-          "text": "双功能协同策略",
+          "text": "配位/螯合作用固定目标物",
           "basis": "from_source",
           "source": "10.1016/j.ccr.2023.215234",
           "locator": "page 10",
@@ -1956,7 +1960,18 @@
       "source_page": 4,
       "source_doi": "10.1016/j.ccr.2023.215234",
       "source_locator": "p.4",
-      "evidence_label": "from_source"
+      "evidence_label": "from_source",
+      "key_structures": [
+        "PDA邻苯二酚双齿配位",
+        "胺基络合",
+        "金属配位",
+        "Michael加成"
+      ],
+      "molecular_feature_links": [
+        "二价阳离子",
+        "软酸",
+        "可与含硫/氮配体配位"
+      ]
     },
     {
       "name": "离子印迹策略——三种改进方向",
@@ -1976,7 +1991,7 @@
           "scope_match": "Keywords: ion imprinting, uranyl, coordinate, UO2"
         },
         "bio_structure": {
-          "text": "离子印迹策略——三种改进方向",
+          "text": "离子印迹表面结构",
           "basis": "from_source",
           "source": "10.1016/j.ccr.2023.215234",
           "locator": "page 8",
@@ -1992,7 +2007,7 @@
           "scope_match": "Keywords: ion imprinting, uranyl, coordinate, UO2"
         },
         "why_it_works": {
-          "text": "离子印迹策略——三种改进方向",
+          "text": "配位/螯合作用固定目标物",
           "basis": "from_source",
           "source": "10.1016/j.ccr.2023.215234",
           "locator": "page 8",
@@ -2058,7 +2073,7 @@
           "scope_match": "Keywords: o2, oxide"
         },
         "bio_structure": {
-          "text": "电化学提取三阶段机理",
+          "text": "电化学提取三阶段功能结构",
           "basis": "from_source",
           "source": "10.1016/j.ccr.2023.215234",
           "locator": "page 1",
@@ -2076,7 +2091,7 @@
           "evidence_label": "from_source"
         },
         "why_it_works": {
-          "text": "电化学提取三阶段机理",
+          "text": "表面活性位点与目标物相互作用",
           "basis": "from_source",
           "source": "10.1016/j.ccr.2023.215234",
           "locator": "page 1",
@@ -2128,7 +2143,7 @@
           "scope_match": "Keywords: consequently, gigatons, carbon"
         },
         "bio_structure": {
-          "text": "MOF光催化协同机制",
+          "text": "MOF光催化协同功能结构",
           "basis": "from_source",
           "source": "10.1016/j.ccr.2023.215234",
           "locator": "page 12",
@@ -2146,7 +2161,7 @@
           "evidence_label": "from_source"
         },
         "why_it_works": {
-          "text": "MOF光催化协同机制",
+          "text": "配位/螯合作用固定目标物",
           "basis": "from_source",
           "source": "10.1016/j.ccr.2023.215234",
           "locator": "page 12",
@@ -2203,7 +2218,7 @@
           "scope_match": "Keywords: PDS, PDA, PDS"
         },
         "bio_structure": {
-          "text": "N位点激活PDS生成¹O₂的机制 Mechanism of N site activating PDS to generate ¹O₂",
+          "text": "N位点激活PDS生成¹O₂的机制 Mechanism of N site activating PDS to gener",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.1016/j.apcatb.2023.122852",
@@ -2213,10 +2228,10 @@
         },
         "interaction": {
           "text": "PDS吸附在MI-PDA缺电子N位点上→电子从PDS的S原子转移到N原子→O-O键缩短→S-O键断裂→产生¹O₂；N位点吸附能(-31.42 eV)高于O位点(-17.09 eV)，优先产生¹O₂",
-          "basis": "literature-backed"
+          "basis": "llm_inferred"
         },
         "why_it_works": {
-          "text": "N位点激活PDS生成¹O₂的机制 Mechanism of N site activating PDS to generate ¹O₂",
+          "text": "表面活性位点与目标物相互作用",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.1016/j.apcatb.2023.122852",
@@ -2280,7 +2295,7 @@
           "scope_match": "Keywords: smx, SMX"
         },
         "bio_structure": {
-          "text": "MI-PDA表面官能团识别机制 Surface functional group recognition mechanism of MI-PDA",
+          "text": "MI-PDA表面官能团识别机制 Surface functional group recognition mechani",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.1016/j.apcatb.2023.122852",
@@ -2298,7 +2313,7 @@
           "scope_match": "Keywords: smx, SMX"
         },
         "why_it_works": {
-          "text": "MI-PDA表面官能团识别机制 Surface functional group recognition mechanism of MI-PDA",
+          "text": "氢键相互作用增强吸附",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.1016/j.apcatb.2023.122852",
@@ -2454,7 +2469,7 @@
           "scope_match": "Keywords: wca, nas"
         },
         "bio_structure": {
-          "text": "PDA-ODA超疏水棉花织物接触角",
+          "text": "PDA-ODA超疏水棉花织物接触角，微纳粗糙结构+低表面能涂层",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.1016/j.jece.2021.105709",
@@ -2472,7 +2487,7 @@
           "scope_match": "Keywords: wca, nas"
         },
         "why_it_works": {
-          "text": "PDA-ODA超疏水棉花织物接触角",
+          "text": "微纳粗糙结构+低表面能→空气层阻隔→超疏水",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.1016/j.jece.2021.105709",
@@ -2514,7 +2529,7 @@
           "basis": "llm_inferred"
         },
         "bio_structure": {
-          "text": "PDA微胶囊自修复超疏水棉花织物",
+          "text": "PDA微胶囊自修复超疏水棉花织物，微纳粗糙结构+低表面能涂层",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.1016/j.cej.2020.127837",
@@ -2527,7 +2542,7 @@
           "basis": "llm_inferred"
         },
         "why_it_works": {
-          "text": "PDA微胶囊自修复超疏水棉花织物",
+          "text": "微纳粗糙结构+低表面能→空气层阻隔→超疏水",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.1016/j.cej.2020.127837",
@@ -2574,7 +2589,7 @@
           "scope_match": "Keywords: wca, nas"
         },
         "bio_structure": {
-          "text": "PDA-TA/硼砂阻燃超疏水棉花织物",
+          "text": "PDA-TA/硼砂阻燃超疏水棉花织物，微纳粗糙结构+低表面能涂层",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.1016/j.cej.2020.127837",
@@ -2592,7 +2607,7 @@
           "scope_match": "Keywords: wca, nas"
         },
         "why_it_works": {
-          "text": "PDA-TA/硼砂阻燃超疏水棉花织物",
+          "text": "微纳粗糙结构+低表面能→空气层阻隔→超疏水",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.1016/j.cej.2020.127837",
@@ -2641,7 +2656,7 @@
           "basis": "llm_inferred"
         },
         "bio_structure": {
-          "text": "超疏水PDA涂层棉花织物耐久性测试",
+          "text": "超疏水PDA涂层棉花织物耐久性测试，微纳粗糙结构+低表面能涂层",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.3788/CJL231364",
@@ -2654,7 +2669,7 @@
           "basis": "llm_inferred"
         },
         "why_it_works": {
-          "text": "超疏水PDA涂层棉花织物耐久性测试",
+          "text": "微纳粗糙结构+低表面能→空气层阻隔→超疏水",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.3788/CJL231364",
@@ -2701,7 +2716,7 @@
           "scope_match": "Keywords: 吸附容量, 附容量"
         },
         "bio_structure": {
-          "text": "PLA非织造织物超疏水磁性油水分离",
+          "text": "PLA非织造织物超疏水磁性油水分离，微纳粗糙结构+低表面能涂层",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.7524/j.issn.0254-6108.2023052603",
@@ -2719,7 +2734,7 @@
           "scope_match": "Keywords: 吸附容量, 附容量"
         },
         "why_it_works": {
-          "text": "PLA非织造织物超疏水磁性油水分离",
+          "text": "微纳粗糙结构+低表面能→空气层阻隔→超疏水",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.7524/j.issn.0254-6108.2023052603",
@@ -2762,7 +2777,7 @@
           "basis": "llm_inferred"
         },
         "bio_structure": {
-          "text": "氨水诱导超疏水/超亲油PVDF膜 Ammonia-water induced superhydrophobic PVDF membrane",
+          "text": "氨水诱导超疏水/超亲油PVDF膜 Ammonia-water induced superhydrophobic PVDF membrane，微纳粗糙结构+低表面能涂层",
           "basis": "from_source",
           "source": "10.1021/acsnano.5c01252",
           "locator": "page 3",
@@ -2780,7 +2795,7 @@
           "evidence_label": "from_source"
         },
         "why_it_works": {
-          "text": "氨水诱导超疏水/超亲油PVDF膜 Ammonia-water induced superhydrophobic PVDF membrane",
+          "text": "微纳粗糙结构+低表面能→空气层阻隔→超疏水",
           "basis": "from_source",
           "source": "10.1021/acsnano.5c01252",
           "locator": "page 3",
@@ -2839,7 +2854,7 @@
           "scope_match": "Keywords: o2, mno"
         },
         "bio_structure": {
-          "text": "CO2响应润湿性反转机制 CO2-responsive wettability reversal mechanism",
+          "text": "CO2响应润湿性反转功能结构",
           "basis": "from_source",
           "source": "10.1021/acsnano.5c01252",
           "locator": "page 6",
@@ -2857,7 +2872,7 @@
           "evidence_label": "from_source"
         },
         "why_it_works": {
-          "text": "CO2响应润湿性反转机制 CO2-responsive wettability reversal mechanism",
+          "text": "疏水相互作用驱动分配",
           "basis": "from_source",
           "source": "10.1021/acsnano.5c01252",
           "locator": "page 8",
@@ -2908,7 +2923,7 @@
           "scope_match": "Keywords: wettability, superhydrophilic, hydrophilic, hydrophilicity, superhydrophobic"
         },
         "bio_structure": {
-          "text": "电响应润湿性反转机制 Electro-responsive wettability reversal mechanism",
+          "text": "电响应润湿性反转表面结构",
           "basis": "from_source",
           "source": "10.1021/acsnano.5c01252",
           "locator": "page 8",
@@ -2924,7 +2939,7 @@
           "scope_match": "Keywords: wettability, superhydrophilic, hydrophilic, hydrophilicity, superhydrophobic"
         },
         "why_it_works": {
-          "text": "电响应润湿性反转机制 Electro-responsive wettability reversal mechanism",
+          "text": "疏水相互作用驱动分配",
           "basis": "from_source",
           "source": "10.1021/acsnano.5c01252",
           "locator": "page 8",
@@ -2973,7 +2988,7 @@
           "scope_match": "Keywords: wettability, superhydrophilic, hydrophilic, hydrophilicity, superhydrophobic"
         },
         "bio_structure": {
-          "text": "光热响应润湿性反转机制 Photothermal-responsive wettability reversal mechanism",
+          "text": "光热响应润湿性反转机制 Photothermal-responsive wettability reversal mec",
           "basis": "from_source",
           "source": "10.1021/acsnano.5c01252",
           "locator": "page 8",
@@ -2989,7 +3004,7 @@
           "scope_match": "Keywords: wettability, superhydrophilic, hydrophilic, hydrophilicity, superhydrophobic"
         },
         "why_it_works": {
-          "text": "光热响应润湿性反转机制 Photothermal-responsive wettability reversal mechanism",
+          "text": "疏水相互作用驱动分配",
           "basis": "from_source",
           "source": "10.1021/acsnano.5c01252",
           "locator": "page 8",
@@ -3038,7 +3053,7 @@
           "scope_match": "Keywords: wettability, superhydrophilic, hydrophilic, hydrophilicity"
         },
         "bio_structure": {
-          "text": "pH响应润湿性反转机制 pH-responsive wettability reversal mechanism",
+          "text": "pH响应润湿性反转功能结构",
           "basis": "from_source",
           "source": "10.1021/acsnano.5c01252",
           "locator": "page 8",
@@ -3054,7 +3069,7 @@
           "scope_match": "Keywords: wettability, superhydrophilic, hydrophilic, hydrophilicity"
         },
         "why_it_works": {
-          "text": "pH响应润湿性反转机制 pH-responsive wettability reversal mechanism",
+          "text": "疏水相互作用驱动分配",
           "basis": "from_source",
           "source": "10.1021/acsnano.5c01252",
           "locator": "page 8",
@@ -3111,7 +3126,7 @@
           "scope_match": "Keywords: destabilize, membranes"
         },
         "bio_structure": {
-          "text": "Janus膜电荷聚合物协同破乳 Janus membrane with charged polymers for demulsification",
+          "text": "Janus膜电荷聚合物协同破乳 Janus membrane with charged polymers for dem",
           "basis": "from_source",
           "source": "10.1021/acsnano.5c01252",
           "locator": "p.8",
@@ -3128,7 +3143,7 @@
           "scope_match": "Keywords: destabilize, membranes"
         },
         "why_it_works": {
-          "text": "Janus膜电荷聚合物协同破乳 Janus membrane with charged polymers for demulsification",
+          "text": "疏水相互作用驱动分配",
           "basis": "from_source",
           "source": "10.1021/acsnano.5c01252",
           "locator": "p.8",
@@ -3178,7 +3193,7 @@
           "scope_match": "Keywords: membrane, superhydrophobic, hydrophobic, hydrophobicity, membranes"
         },
         "bio_structure": {
-          "text": "传统膜疏水/水下亲油致命缺陷 Traditional membrane hydrophobic/underwater oleophilic drawbacks",
+          "text": "传统膜疏水/水下亲油致命缺陷 Traditional membrane hydrophobic/underwater oleophilic drawbacks，微纳粗糙结构+低表面能涂层",
           "basis": "from_source",
           "source": "10.1021/acsnano.5c01252",
           "locator": "page 8",
@@ -3194,7 +3209,7 @@
           "scope_match": "Keywords: membrane, superhydrophobic, hydrophobic, hydrophobicity, membranes"
         },
         "why_it_works": {
-          "text": "传统膜疏水/水下亲油致命缺陷 Traditional membrane hydrophobic/underwater oleophilic drawbacks",
+          "text": "表面活性位点与目标物相互作用",
           "basis": "from_source",
           "source": "10.1021/acsnano.5c01252",
           "locator": "page 8",
@@ -3243,7 +3258,7 @@
           "scope_match": "Keywords: 疏水, 亲水"
         },
         "bio_structure": {
-          "text": "PNIPAM刷温度响应润湿性切换",
+          "text": "PNIPAM刷温度响应润湿性切换功能结构",
           "basis": "llm_inferred"
         },
         "interaction": {
@@ -3256,7 +3271,7 @@
           "scope_match": "Keywords: 疏水, 亲水"
         },
         "why_it_works": {
-          "text": "PNIPAM刷温度响应润湿性切换",
+          "text": "疏水相互作用驱动分配",
           "basis": "llm_inferred"
         },
         "boundary_conditions": [
@@ -3293,7 +3308,7 @@
           "basis": "llm_inferred"
         },
         "bio_structure": {
-          "text": "亲疏水刷仿鲨鱼皮水减阻率",
+          "text": "亲疏水刷仿鲨鱼皮水减阻率，微纳粗糙结构+低表面能涂层",
           "basis": "llm_inferred"
         },
         "interaction": {
@@ -3301,7 +3316,7 @@
           "basis": "llm_inferred"
         },
         "why_it_works": {
-          "text": "亲疏水刷仿鲨鱼皮水减阻率",
+          "text": "疏水相互作用驱动分配",
           "basis": "llm_inferred"
         },
         "boundary_conditions": [
@@ -3343,7 +3358,7 @@
           "scope_match": "Keywords: 转速, min, 室温"
         },
         "bio_structure": {
-          "text": "PPFEMA刷疏水减阻最大减阻率",
+          "text": "PPFEMA刷疏水减阻最大减阻率，微纳粗糙结构+低表面能涂层",
           "basis": "llm_inferred"
         },
         "interaction": {
@@ -3356,7 +3371,7 @@
           "scope_match": "Keywords: 转速, min, 室温"
         },
         "why_it_works": {
-          "text": "PPFEMA刷疏水减阻最大减阻率",
+          "text": "表面活性位点与目标物相互作用",
           "basis": "llm_inferred"
         },
         "boundary_conditions": [
@@ -3393,7 +3408,7 @@
           "basis": "llm_inferred"
         },
         "bio_structure": {
-          "text": "超疏水表面+响应刷边界滑移调控",
+          "text": "超疏水表面+响应刷边界滑移调控，微纳粗糙结构+低表面能涂层",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.13550/j.jxhg.20201035",
@@ -3406,7 +3421,7 @@
           "basis": "llm_inferred"
         },
         "why_it_works": {
-          "text": "超疏水表面+响应刷边界滑移调控",
+          "text": "微纳粗糙结构+低表面能→空气层阻隔→超疏水",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.13550/j.jxhg.20201035",
@@ -3460,7 +3475,7 @@
           "scope_match": "Keywords: pdms, pfpe, pftcs, zno"
         },
         "bio_structure": {
-          "text": "NP-GLIDE涂层设计原理",
+          "text": "NP-GLIDE涂层设计表面结构",
           "basis": "llm_inferred"
         },
         "interaction": {
@@ -3473,7 +3488,7 @@
           "scope_match": "Keywords: pdms, pfpe, pftcs, zno"
         },
         "why_it_works": {
-          "text": "NP-GLIDE涂层设计原理",
+          "text": "疏水相互作用驱动分配",
           "basis": "llm_inferred"
         },
         "boundary_conditions": [
@@ -3515,7 +3530,7 @@
           "scope_match": "Keywords: 亲水, 疏水"
         },
         "bio_structure": {
-          "text": "聚合物刷减阻性能对比（亲水vs疏水）",
+          "text": "聚合物刷减阻，微纳粗糙结构+低表面能涂层",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.3788/CJL231364",
@@ -3533,7 +3548,7 @@
           "scope_match": "Keywords: 亲水, 疏水"
         },
         "why_it_works": {
-          "text": "聚合物刷减阻性能对比（亲水vs疏水）",
+          "text": "疏水相互作用驱动分配",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.3788/CJL231364",
@@ -3587,7 +3602,7 @@
           "scope_match": "Keywords: 厚度, 氏阴, 氏阴性, 氏阴性细"
         },
         "bio_structure": {
-          "text": "聚合物刷防雾涂层厚度与亲水性关系",
+          "text": "聚合物刷防雾涂层厚度与亲水性关系功能结构",
           "basis": "llm_inferred"
         },
         "interaction": {
@@ -3600,7 +3615,7 @@
           "scope_match": "Keywords: 厚度, 氏阴, 氏阴性, 氏阴性细"
         },
         "why_it_works": {
-          "text": "聚合物刷防雾涂层厚度与亲水性关系",
+          "text": "疏水相互作用驱动分配",
           "basis": "llm_inferred"
         },
         "boundary_conditions": [
@@ -3644,7 +3659,7 @@
           "basis": "llm_inferred"
         },
         "bio_structure": {
-          "text": "吸附机制-螯合作用 / Adsorption mechanism - chelation",
+          "text": "吸附机制表面活性位点",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.1016/j.seppur.2024.127979",
@@ -3657,7 +3672,7 @@
           "basis": "llm_inferred"
         },
         "why_it_works": {
-          "text": "吸附机制-螯合作用 / Adsorption mechanism - chelation",
+          "text": "表面活性位点与目标物相互作用",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.1016/j.seppur.2024.127979",
@@ -3712,7 +3727,7 @@
           "basis": "llm_inferred"
         },
         "bio_structure": {
-          "text": "贻贝仿生启发机制 / Mussel-inspired biomimetic mechanism",
+          "text": "贻贝仿生启发表面结构",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.1016/j.bioactmat.2021.01.033",
@@ -3725,7 +3740,7 @@
           "basis": "llm_inferred"
         },
         "why_it_works": {
-          "text": "贻贝仿生启发机制 / Mussel-inspired biomimetic mechanism",
+          "text": "表面活性位点与目标物相互作用",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.1016/j.bioactmat.2021.01.033",
@@ -3784,7 +3799,7 @@
           "scope_match": "Keywords: fe, fe3, o4"
         },
         "bio_structure": {
-          "text": "聚多巴胺聚合机理 Polydopamine polymerization mechanism",
+          "text": "聚多巴胺聚合功能结构",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.1016/j.ccr.2026.217609",
@@ -3802,7 +3817,7 @@
           "scope_match": "Keywords: fe, fe3, o4"
         },
         "why_it_works": {
-          "text": "聚多巴胺聚合机理 Polydopamine polymerization mechanism",
+          "text": "配位/螯合作用固定目标物",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.1016/j.ccr.2026.217609",
@@ -3861,7 +3876,7 @@
           "basis": "llm_inferred"
         },
         "bio_structure": {
-          "text": "铀吸附机制 Uranium adsorption mechanism",
+          "text": "铀吸附机制 Uranium adsorption mechanism表面活性位点",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.3390/nano12142324",
@@ -3874,7 +3889,7 @@
           "basis": "llm_inferred"
         },
         "why_it_works": {
-          "text": "铀吸附机制 Uranium adsorption mechanism",
+          "text": "表面活性位点与目标物相互作用",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.3390/nano12142324",
@@ -3917,7 +3932,7 @@
           "basis": "llm_inferred"
         },
         "bio_structure": {
-          "text": "贻贝仿生改性机制 / Mussel-inspired biomimetic modification mechanism",
+          "text": "贻贝仿生改性表面结构",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.1016/j.cej.2021.134425",
@@ -3930,7 +3945,7 @@
           "basis": "llm_inferred"
         },
         "why_it_works": {
-          "text": "贻贝仿生改性机制 / Mussel-inspired biomimetic modification mechanism",
+          "text": "表面活性位点与目标物相互作用",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.1016/j.cej.2021.134425",
@@ -3979,7 +3994,7 @@
           "basis": "llm_inferred"
         },
         "bio_structure": {
-          "text": "仿贻贝聚多巴胺改性机制 / Mussel-inspired PDA modification mechanism",
+          "text": "仿贻贝聚多巴胺改性膜结构",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.1016/j.cej.2021.134425",
@@ -3992,7 +4007,7 @@
           "basis": "llm_inferred"
         },
         "why_it_works": {
-          "text": "仿贻贝聚多巴胺改性机制 / Mussel-inspired PDA modification mechanism",
+          "text": "表面活性位点与目标物相互作用",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.1016/j.cej.2021.134425",
@@ -4037,7 +4052,7 @@
       "causal_chain": {
         "transferable_principle": "基于机制: PDA吸附机制-姜黄素",
         "pollutant_feature": {
-          "text": "PDA吸附机制-姜黄素",
+          "text": "目标污染物",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.1016/j.cej.2020.127837",
@@ -4046,7 +4061,7 @@
           "scope_match": "Keywords: pda, design"
         },
         "bio_structure": {
-          "text": "PDA吸附机制-姜黄素",
+          "text": "PDA吸附机制表面活性位点",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.1016/j.cej.2020.127837",
@@ -4064,7 +4079,7 @@
           "scope_match": "Keywords: 吸附, 分离, 相比, 相比较"
         },
         "why_it_works": {
-          "text": "PDA吸附机制-姜黄素",
+          "text": "表面活性位点与目标物相互作用",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.1016/j.cej.2020.127837",
@@ -4109,7 +4124,7 @@
       "causal_chain": {
         "transferable_principle": "基于机制: PDA吸附机制-番茄红素",
         "pollutant_feature": {
-          "text": "PDA吸附机制-番茄红素",
+          "text": "目标污染物",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.1016/j.cej.2020.127837",
@@ -4118,7 +4133,7 @@
           "scope_match": "Keywords: pda, design"
         },
         "bio_structure": {
-          "text": "PDA吸附机制-番茄红素",
+          "text": "PDA吸附机制表面活性位点",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.1016/j.cej.2020.127837",
@@ -4136,7 +4151,7 @@
           "scope_match": "Keywords: 吸附, 分离, 相比, 相比较"
         },
         "why_it_works": {
-          "text": "PDA吸附机制-番茄红素",
+          "text": "表面活性位点与目标物相互作用",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.1016/j.cej.2020.127837",
@@ -4184,7 +4199,7 @@
           "evidence_label": "from_source"
         },
         "bio_structure": {
-          "text": "吸附机制类型",
+          "text": "吸附机制类型表面活性位点",
           "basis": "from_source",
           "source": "10.1016/j.jece.2021.105709",
           "locator": "page 4",
@@ -4202,7 +4217,7 @@
           "evidence_label": "from_source"
         },
         "why_it_works": {
-          "text": "吸附机制类型",
+          "text": "表面活性位点与目标物相互作用",
           "basis": "from_source",
           "source": "10.1016/j.jece.2021.105709",
           "locator": "page 4",
@@ -4252,7 +4267,7 @@
           "scope_match": "Keywords: surface, adsorption, sorption, ion exchange"
         },
         "bio_structure": {
-          "text": "吸附机制",
+          "text": "吸附机制表面活性位点",
           "basis": "from_source",
           "source": "10.1016/j.apsusc.2020.148379",
           "locator": "page 9",
@@ -4268,7 +4283,7 @@
           "scope_match": "Keywords: surface, adsorption, sorption, ion exchange"
         },
         "why_it_works": {
-          "text": "吸附机制",
+          "text": "表面活性位点与目标物相互作用",
           "basis": "from_source",
           "source": "10.1016/j.apsusc.2020.148379",
           "locator": "page 9",
@@ -4323,7 +4338,7 @@
           "evidence_label": "from_source"
         },
         "bio_structure": {
-          "text": "吸附机制-酚羟基参与",
+          "text": "吸附机制表面活性位点",
           "basis": "from_source",
           "source": "10.1016/j.cej.2020.127837",
           "locator": "page 1",
@@ -4341,7 +4356,7 @@
           "evidence_label": "from_source"
         },
         "why_it_works": {
-          "text": "吸附机制-酚羟基参与",
+          "text": "表面活性位点与目标物相互作用",
           "basis": "from_source",
           "source": "10.1016/j.cej.2020.127837",
           "locator": "page 1",
@@ -4393,7 +4408,7 @@
           "scope_match": "Keywords: gd, bionic"
         },
         "bio_structure": {
-          "text": "XPS分析-吸附机理",
+          "text": "XPS分析表面活性位点",
           "basis": "from_source",
           "source": "10.1016/j.jhazmat.2020.124347",
           "locator": "page 5",
@@ -4411,7 +4426,7 @@
           "evidence_label": "from_source"
         },
         "why_it_works": {
-          "text": "XPS分析-吸附机理",
+          "text": "表面活性位点与目标物相互作用",
           "basis": "from_source",
           "source": "10.1016/j.jhazmat.2020.124347",
           "locator": "page 5",
@@ -4464,7 +4479,7 @@
           "evidence_label": "from_source"
         },
         "bio_structure": {
-          "text": "吸附活性基团协同",
+          "text": "吸附活性基团协同表面活性位点",
           "basis": "from_source",
           "source": "10.1016/j.jhazmat.2020.124347",
           "locator": "page 5",
@@ -4482,7 +4497,7 @@
           "evidence_label": "from_source"
         },
         "why_it_works": {
-          "text": "吸附活性基团协同",
+          "text": "配位/螯合作用固定目标物",
           "basis": "from_source",
           "source": "10.1016/j.jhazmat.2020.124347",
           "locator": "page 5",
@@ -4528,7 +4543,7 @@
           "basis": "llm_inferred"
         },
         "bio_structure": {
-          "text": "吸附机理-pH依赖性",
+          "text": "吸附机理表面活性位点",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.19674/j.cnki.issn1000-6923.2021.0325",
@@ -4541,7 +4556,7 @@
           "basis": "llm_inferred"
         },
         "why_it_works": {
-          "text": "吸附机理-pH依赖性",
+          "text": "静电相互作用驱动吸附",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.19674/j.cnki.issn1000-6923.2021.0325",
@@ -4589,7 +4604,7 @@
           "scope_match": "Keywords: cu, tion"
         },
         "bio_structure": {
-          "text": "XPS吸附机理",
+          "text": "XPS吸附机理表面活性位点",
           "basis": "from_source",
           "source": "10.1016/j.jhazmat.2022.129112",
           "locator": "page 9",
@@ -4607,7 +4622,7 @@
           "evidence_label": "from_source"
         },
         "why_it_works": {
-          "text": "XPS吸附机理",
+          "text": "表面活性位点与目标物相互作用",
           "basis": "from_source",
           "source": "10.1016/j.jhazmat.2022.129112",
           "locator": "page 9",
@@ -4658,7 +4673,7 @@
           "scope_match": "Keywords: patterns, 由图, 可见"
         },
         "bio_structure": {
-          "text": "PDA吸附机制补充",
+          "text": "PDA吸附机制补充表面活性位点",
           "basis": "from_source",
           "source": "10.13550/j.jxhg.20220633",
           "locator": "page 4",
@@ -4676,7 +4691,7 @@
           "evidence_label": "from_source"
         },
         "why_it_works": {
-          "text": "PDA吸附机制补充",
+          "text": "π-π堆积相互作用",
           "basis": "from_source",
           "source": "10.13550/j.jxhg.20220633",
           "locator": "page 4",

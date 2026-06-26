@@ -62,14 +62,34 @@
               "两亲性",
               "化学稳定性"
             ],
-            "mechanism_functional_groups": "",
-            "mechanism_key_structures": [],
-            "feature_binding_score": 2
+            "mechanism_functional_groups": [
+              "氨基 amino (-NH₂)",
+              "羟基 hydroxyl (-OH)",
+              "羧基 carboxyl (-COOH)"
+            ],
+            "mechanism_key_structures": [
+              "壳聚糖-NH₂氢键",
+              "静电作用(pH>7.24)",
+              "孔道捕获"
+            ],
+            "feature_binding_score": 3
           },
           "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合",
-          "key_structures": [],
-          "functional_groups": "",
-          "molecular_feature_links": [],
+          "key_structures": [
+            "壳聚糖-NH₂氢键",
+            "静电作用(pH>7.24)",
+            "孔道捕获"
+          ],
+          "functional_groups": [
+            "氨基 amino (-NH₂)",
+            "羟基 hydroxyl (-OH)",
+            "羧基 carboxyl (-COOH)"
+          ],
+          "molecular_feature_links": [
+            "长链全氟烷基",
+            "羧酸基团",
+            "疏水性"
+          ],
           "attribution": {
             "source": "literature",
             "ref": "10.1016/j.cej.2022.138934",
@@ -85,7 +105,7 @@
           "constraints": "酸性条件(pH<3)吸附能力下降；水中溶解性需交联控制；机械强度低需复合增强",
           "failure_modes": "强酸环境溶解；高盐竞争吸附；有机物堵塞孔道",
           "evidence_tier": "lead (有性能数据但缺 verification_quote)",
-          "source_tier": "literature",
+          "source_tier": "llm_inference",
           "material_realization_examples": [
             "壳聚糖直接使用或交联改性（如戊二醛、环氧氯丙烷）"
           ]
@@ -338,14 +358,42 @@
               "两亲性",
               "化学稳定性"
             ],
-            "mechanism_functional_groups": "",
-            "mechanism_key_structures": [],
+            "mechanism_functional_groups": [
+              "硅羟基 Si-OH",
+              "L碱位点",
+              "表面羟基配合",
+              "多孔吸附"
+            ],
+            "mechanism_key_structures": [
+              "非晶态SiO₂多孔骨架",
+              "550°C煅烧暴露裸露Si-OH",
+              "层级多孔(大孔300-500nm+介孔2-50nm)"
+            ],
             "feature_binding_score": 0
           },
           "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
-          "key_structures": [],
-          "functional_groups": "",
-          "molecular_feature_links": [],
+          "key_structures": [
+            "非晶态SiO₂多孔骨架",
+            "550°C煅烧暴露裸露Si-OH",
+            "层级多孔(大孔300-500nm+介孔2-50nm)"
+          ],
+          "functional_groups": [
+            "硅羟基 Si-OH",
+            "L碱位点",
+            "表面羟基配合",
+            "多孔吸附"
+          ],
+          "molecular_feature_links": [
+            "二价阳离子",
+            "软酸",
+            "可与含硫/氮配体配位",
+            "配位",
+            "静电吸引",
+            "离子交换",
+            "长链全氟烷基",
+            "疏水性",
+            "两亲性"
+          ],
           "attribution": {
             "source": "literature",
             "ref": "10.19817/j.cnki.issn1006-3536.2022.01.060",
@@ -437,13 +485,31 @@
               "两亲性",
               "化学稳定性"
             ],
-            "mechanism_functional_groups": "",
-            "mechanism_key_structures": [],
+            "mechanism_functional_groups": [
+              "邻苯二酚 catechol (-OH)",
+              "胺基 amine (-NH₂)",
+              "吲哚环 indole"
+            ],
+            "mechanism_key_structures": [
+              "PDA邻苯二酚螯合",
+              "胺基静电吸附",
+              "π-π堆叠",
+              "席夫碱反应"
+            ],
             "feature_binding_score": 0
           },
           "基本原理": "needs_review",
-          "key_structures": [],
-          "functional_groups": "",
+          "key_structures": [
+            "PDA邻苯二酚螯合",
+            "胺基静电吸附",
+            "π-π堆叠",
+            "席夫碱反应"
+          ],
+          "functional_groups": [
+            "邻苯二酚 catechol (-OH)",
+            "胺基 amine (-NH₂)",
+            "吲哚环 indole"
+          ],
           "molecular_feature_links": [
             "疏水性"
           ],

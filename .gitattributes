@@ -1,0 +1,14 @@
+# Normalize all text files to LF on commit (fixes Windows↔macOS drift)
+* text=auto eol=lf
+
+# Explicit binary files
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.xls binary
+*.xlsx binary
+*.zip binary
+*.tar.gz binary

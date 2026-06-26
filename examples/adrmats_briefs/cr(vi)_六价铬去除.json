@@ -55,14 +55,36 @@
               "含氧阴离子",
               "强氧化性"
             ],
-            "mechanism_functional_groups": "",
-            "mechanism_key_structures": [],
-            "feature_binding_score": 2
+            "mechanism_functional_groups": [
+              "氨基 amino (-NH₂)",
+              "羟基 hydroxyl (-OH)",
+              "质子化氨基 -NH₃⁺"
+            ],
+            "mechanism_key_structures": [
+              "壳聚糖-NH₂质子化",
+              "Cr(VI)→Cr(III)还原",
+              "N原子配位",
+              "静电吸引Cr₂O₇²⁻"
+            ],
+            "feature_binding_score": 3
           },
           "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合",
-          "key_structures": [],
-          "functional_groups": "",
-          "molecular_feature_links": [],
+          "key_structures": [
+            "壳聚糖-NH₂质子化",
+            "Cr(VI)→Cr(III)还原",
+            "N原子配位",
+            "静电吸引Cr₂O₇²⁻"
+          ],
+          "functional_groups": [
+            "氨基 amino (-NH₂)",
+            "羟基 hydroxyl (-OH)",
+            "质子化氨基 -NH₃⁺"
+          ],
+          "molecular_feature_links": [
+            "六价铬",
+            "含氧阴离子",
+            "强氧化性"
+          ],
           "attribution": {
             "source": "literature",
             "ref": "10.1039/d2ra07112f",
@@ -78,7 +100,7 @@
           "constraints": "酸性条件(pH<3)吸附能力下降；水中溶解性需交联控制；机械强度低需复合增强",
           "failure_modes": "强酸环境溶解；高盐竞争吸附；有机物堵塞孔道",
           "evidence_tier": "lead (有性能数据但缺 verification_quote)",
-          "source_tier": "literature",
+          "source_tier": "llm_inference",
           "material_realization_examples": [
             "壳聚糖直接使用或交联改性（如戊二醛、环氧氯丙烷）"
           ]
@@ -365,14 +387,33 @@
               "含氧阴离子",
               "强氧化性"
             ],
-            "mechanism_functional_groups": "",
-            "mechanism_key_structures": [],
+            "mechanism_functional_groups": [
+              "表面羟基 -OH (Fe-OH)",
+              "硫酸根 SO₄²⁻",
+              "Fe-O/OH位点"
+            ],
+            "mechanism_key_structures": [
+              "施氏矿物Fe₈O₈(OH)₆SO₄",
+              "双齿内球配合物",
+              "单配位表面位点"
+            ],
             "feature_binding_score": 1
           },
           "基本原理": "needs_review",
-          "key_structures": [],
-          "functional_groups": "",
-          "molecular_feature_links": [],
+          "key_structures": [
+            "施氏矿物Fe₈O₈(OH)₆SO₄",
+            "双齿内球配合物",
+            "单配位表面位点"
+          ],
+          "functional_groups": [
+            "表面羟基 -OH (Fe-OH)",
+            "硫酸根 SO₄²⁻",
+            "Fe-O/OH位点"
+          ],
+          "molecular_feature_links": [
+            "六价铬",
+            "含氧阴离子"
+          ],
           "attribution": {
             "source": "literature",
             "ref": "10.3390/min15080868",
@@ -388,7 +429,7 @@
           "constraints": "需要Fe²⁺底物供应；pH 3-7最适；矿物结晶度影响吸附容量",
           "failure_modes": "Fe²⁺供应不足停止产矿物；pH过高矿物溶解；竞争阴离子(磷酸盐、硫酸盐)",
           "evidence_tier": "lead",
-          "source_tier": "literature",
+          "source_tier": "llm_inference",
           "material_realization_examples": [
             "IOB 培养生成施氏矿物，或合成类似结构"
           ]
@@ -446,14 +487,39 @@
               "含氧阴离子",
               "强氧化性"
             ],
-            "mechanism_functional_groups": "",
-            "mechanism_key_structures": [],
+            "mechanism_functional_groups": [
+              "邻苯二酚 catechol (-OH)",
+              "胺基 amine (-NH₂)",
+              "吲哚环 indole"
+            ],
+            "mechanism_key_structures": [
+              "PDA邻苯二酚螯合",
+              "胺基静电吸附",
+              "π-π堆叠",
+              "Cr(VI)→Cr(III)还原"
+            ],
             "feature_binding_score": 0
           },
           "基本原理": "needs_review",
-          "key_structures": [],
-          "functional_groups": "",
-          "molecular_feature_links": [],
+          "key_structures": [
+            "PDA邻苯二酚螯合",
+            "胺基静电吸附",
+            "π-π堆叠",
+            "Cr(VI)→Cr(III)还原"
+          ],
+          "functional_groups": [
+            "邻苯二酚 catechol (-OH)",
+            "胺基 amine (-NH₂)",
+            "吲哚环 indole"
+          ],
+          "molecular_feature_links": [
+            "六价铬",
+            "含氧阴离子",
+            "强氧化性",
+            "静电吸引",
+            "还原沉淀",
+            "配位"
+          ],
           "attribution": {
             "source": "literature",
             "ref": "10.1016/j.seppur.2024.127979",
@@ -551,14 +617,43 @@
               "含氧阴离子",
               "强氧化性"
             ],
-            "mechanism_functional_groups": "",
-            "mechanism_key_structures": [],
-            "feature_binding_score": 0
+            "mechanism_functional_groups": [
+              "羟基 -OH",
+              "磷酸根 PO₄³⁻",
+              "Ca²⁺位点",
+              "含氧阴离子吸附",
+              "表面配合还原"
+            ],
+            "mechanism_key_structures": [
+              "HAp六方晶体Ca₁₀(PO₄)₆(OH)₂",
+              "Ca²⁺/PO₄³⁻离子交换",
+              "溶解-再沉淀",
+              "表面配合"
+            ],
+            "feature_binding_score": 1
           },
           "基本原理": "HAp的Ca²⁺位点可被重金属离子交换取代，且磷酸根可与重金属形成难溶磷酸盐沉淀，实现双重去除机制",
-          "key_structures": [],
-          "functional_groups": "",
-          "molecular_feature_links": [],
+          "key_structures": [
+            "HAp六方晶体Ca₁₀(PO₄)₆(OH)₂",
+            "Ca²⁺/PO₄³⁻离子交换",
+            "溶解-再沉淀",
+            "表面配合"
+          ],
+          "functional_groups": [
+            "羟基 -OH",
+            "磷酸根 PO₄³⁻",
+            "Ca²⁺位点",
+            "含氧阴离子吸附",
+            "表面配合还原"
+          ],
+          "molecular_feature_links": [
+            "六价铬",
+            "含氧阴离子",
+            "强氧化性",
+            "静电吸引",
+            "还原沉淀",
+            "配位"
+          ],
           "attribution": {
             "source": "literature",
             "ref": "10.1016/j.jtice.2024.105668",
@@ -648,14 +743,42 @@
               "含氧阴离子",
               "强氧化性"
             ],
-            "mechanism_functional_groups": "",
-            "mechanism_key_structures": [],
-            "feature_binding_score": 0
+            "mechanism_functional_groups": [
+              "CaCO₃碳酸根",
+              "CaO/Ca(OH)₂",
+              "Ca²⁺位点",
+              "含氧阴离子吸附",
+              "碱性环境还原"
+            ],
+            "mechanism_key_structures": [
+              "方解石CaCO₃层状结构",
+              "煅烧CaO碱性释放",
+              "羟基磷灰石沉淀",
+              "离子交换"
+            ],
+            "feature_binding_score": 1
           },
           "基本原理": "煅烧牡蛎壳（CaO）在水中生成Ca(OH)₂，提供碱性环境和Ca²⁺，可与磷酸盐形成羟基磷灰石沉淀，同时重金属通过表面配位吸附",
-          "key_structures": [],
-          "functional_groups": "",
-          "molecular_feature_links": [],
+          "key_structures": [
+            "方解石CaCO₃层状结构",
+            "煅烧CaO碱性释放",
+            "羟基磷灰石沉淀",
+            "离子交换"
+          ],
+          "functional_groups": [
+            "CaCO₃碳酸根",
+            "CaO/Ca(OH)₂",
+            "Ca²⁺位点",
+            "含氧阴离子吸附",
+            "碱性环境还原"
+          ],
+          "molecular_feature_links": [
+            "六价铬",
+            "含氧阴离子",
+            "强氧化性",
+            "静电吸引",
+            "还原沉淀"
+          ],
           "attribution": {
             "source": "literature",
             "ref": "10.16663/j.cnki.lskj.2021.02.025",
