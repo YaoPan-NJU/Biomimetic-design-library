@@ -388,8 +388,28 @@ class BiomimeticContext:
             if pid in self.prototypes:
                 proto = self.prototypes[pid]
 
+                # --- 占位符/背景原型过滤 ---
+                proto_scope = (proto.get('scope_note', '') or '').lower()
+                proto_ev_status = (proto.get('evidence_status', '') or '').lower()
+                proto_status = (proto.get('status', '') or '').lower()
+
+                is_placeholder = 'placeholder' in proto_scope or proto_ev_status == 'placeholder'
+                is_background = 'background' in proto_scope or proto_ev_status == 'background_only' or 'surface physics' in proto_scope
+                is_parked = proto_status in ('parked_separation', 'needs_literature')
+
+                if is_placeholder:
+                    continue  # 占位符原型：完全跳过
+                if is_parked and not is_background:
+                    continue  # needs_literature 非背景原型：跳过
+                # 背景原型：保留但在 brief 中标记
+                # --- 过滤结束 ---
+
                 # 获取机制（按 query relevance + verification 综合评分）
                 mechs = proto.get('mechanisms', [])
+                # 过滤掉 brief_visibility=hidden 的机制
+                mechs = [m for m in mechs if m.get('brief_visibility', 'visible') != 'hidden']
+                if not mechs:
+                    continue  # 所有机制都隐藏，跳过此原型
                 _verif_priority = {'verified': 0, 'corroborated': 1, 'needs_review': 3}
 
                 # Query-conditioned mechanism scoring
@@ -589,6 +609,11 @@ class BiomimeticContext:
                     'organism': proto.get('organism', {}).get('scientific', '未知'),
                     'candidate_honesty': candidate_honesty,
                     'lane': lane,
+                    'prototype_status': {
+                        'is_background': is_background,
+                        'is_placeholder': False,  # placeholders already filtered
+                        'scope_note': proto.get('scope_note', ''),
+                    },
                     'domain_caveat': 'organic micropollutant evidence weak' if (is_organic_pollutant and not has_direct) else '',
                     'match': {
                         'reason': c.get('reason', ''),

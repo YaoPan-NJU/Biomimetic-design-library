@@ -253,5 +253,19 @@
       "Competitive adsorption in multi-metal systems",
       "Scale-up to industrial production"
     ]
-  }
+  },
+  "boundary_rules": [
+    {
+      "rule": "Acidic to neutral pH",
+      "source_mechanism": "Ion exchange Cd adsorption",
+      "gate_level": "hard",
+      "basis": "from_source"
+    },
+    {
+      "rule": "Pyrolysis conditions",
+      "source_mechanism": "Ion exchange Cd adsorption",
+      "gate_level": "hard",
+      "basis": "from_source"
+    }
+  ]
 }

@@ -256,5 +256,19 @@
       "Scale-up from lab to industrial membrane production",
       "Cost comparison with commercial polymer membranes"
     ]
-  }
+  },
+  "boundary_rules": [
+    {
+      "rule": "Acidic to neutral pH",
+      "source_mechanism": "3D nanofiber network filtration",
+      "gate_level": "hard",
+      "basis": "from_source"
+    },
+    {
+      "rule": "Moderate temperature",
+      "source_mechanism": "3D nanofiber network filtration",
+      "gate_level": "hard",
+      "basis": "from_source"
+    }
+  ]
 }
