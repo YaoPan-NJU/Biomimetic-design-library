@@ -141,7 +141,7 @@
               "operator": "qualitative",
               "value": null
             },
-            "verification_method": "pending_retry"
+            "verification_method": "pdf_error_retry_pending"
           }
         ],
         "transferable_principle": "基于超疏水材料构建基本原理 - Young方程/Wenzel模型的吸附/去除机制"
@@ -189,7 +189,7 @@
               "operator": "qualitative",
               "value": null
             },
-            "verification_method": "pending_retry"
+            "verification_method": "pdf_error_retry_pending"
           }
         ],
         "transferable_principle": "基于超疏水表面定义与荷叶效应的吸附/去除机制"
@@ -242,7 +242,7 @@
               "operator": "qualitative",
               "value": null
             },
-            "verification_method": "pending_retry"
+            "verification_method": "pdf_error_retry_pending"
           }
         ],
         "transferable_principle": "基于天然蜡类超疏水涂层：材料体系与性能的吸附/去除机制"
@@ -290,7 +290,7 @@
               "operator": "qualitative",
               "value": null
             },
-            "verification_method": "pending_retry"
+            "verification_method": "pdf_error_retry_pending"
           }
         ],
         "transferable_principle": "基于四种绿色超疏水材料的优缺点对比的吸附/去除机制"
@@ -338,7 +338,7 @@
               "operator": "qualitative",
               "value": null
             },
-            "verification_method": "pending_retry"
+            "verification_method": "pdf_error_retry_pending"
           }
         ],
         "transferable_principle": "基于油水分离机理：Young-Laplace方程分析的吸附/去除机制"
@@ -386,7 +386,7 @@
               "operator": "qualitative",
               "value": null
             },
-            "verification_method": "pending_retry"
+            "verification_method": "pdf_error_retry_pending"
           }
         ],
         "transferable_principle": "基于表面能变化与润湿性转变机制的吸附/去除机制"
@@ -434,7 +434,7 @@
               "operator": "qualitative",
               "value": null
             },
-            "verification_method": "pending_retry"
+            "verification_method": "pdf_error_retry_pending"
           }
         ],
         "transferable_principle": "基于仿荷叶效应的超疏水设计原则的吸附/去除机制"
@@ -482,7 +482,7 @@
               "operator": "qualitative",
               "value": null
             },
-            "verification_method": "pending_retry"
+            "verification_method": "pdf_error_retry_pending"
           }
         ],
         "transferable_principle": "基于荷叶效应与仿生超疏水结构的吸附/去除机制"
@@ -530,7 +530,7 @@
               "operator": "qualitative",
               "value": null
             },
-            "verification_method": "pending_retry"
+            "verification_method": "pdf_error_retry_pending"
           }
         ],
         "transferable_principle": "基于自然界仿生超疏水表面来源的吸附/去除机制"
@@ -670,14 +670,17 @@
           {
             "text": "表面粗糙度和化学组成决定润湿性",
             "parameter": "surface_roughness",
-            "basis": "llm_inferred",
+            "basis": "from_source",
             "verification": "needs_review",
             "gate_level": "soft",
             "condition": {
               "operator": "qualitative",
               "value": null
             },
-            "verification_method": "pdf_error"
+            "verification_method": "pdf_visual_reading",
+            "source": "10.1016/j.surfin.2024.104035",
+            "quote": "Properly engineered surface roughness and low surface energy are pivotal in ensuring high wetting and fouling resistance properties on the membrane surface.",
+            "locator": "Section 6"
           }
         ],
         "transferable_principle": "基于Lotus effect mechanism 荷叶效应机制的吸附/去除机制"
@@ -728,7 +731,7 @@
               "operator": "qualitative",
               "value": null
             },
-            "verification_method": "pending_retry"
+            "verification_method": "pdf_error_retry_pending"
           }
         ],
         "transferable_principle": "基于超疏水膜的仿生设计原则 Biomimetic design 的吸附/去除机制"
@@ -824,7 +827,7 @@
               "operator": "qualitative",
               "value": null
             },
-            "verification_method": "pending_retry"
+            "verification_method": "pdf_error_retry_pending"
           }
         ],
         "transferable_principle": "基于超疏水材料定义与润湿理论 Superhydrophobic 的吸附/去除机制"
@@ -1424,7 +1427,7 @@
               "operator": "qualitative",
               "value": null
             },
-            "verification_method": "pending_retry"
+            "verification_method": "pdf_error_retry_pending"
           }
         ],
         "transferable_principle": "基于荷叶超疏水表面的微纳层次结构的吸附/去除机制"
@@ -1472,7 +1475,7 @@
               "operator": "qualitative",
               "value": null
             },
-            "verification_method": "pending_retry"
+            "verification_method": "pdf_error_retry_pending"
           }
         ],
         "transferable_principle": "基于润湿状态转变：Cassie-Baxter到Wenzel的吸附/去除机制"
@@ -1571,7 +1574,7 @@
               "operator": "qualitative",
               "value": null
             },
-            "verification_method": "pending_retry"
+            "verification_method": "pdf_error_retry_pending"
           }
         ],
         "transferable_principle": "基于荷叶超疏水机制 - 微米级乳突结构的吸附/去除机制"
@@ -1627,7 +1630,7 @@
               "operator": "qualitative",
               "value": null
             },
-            "verification_method": "pending_retry"
+            "verification_method": "pdf_error_retry_pending"
           }
         ],
         "transferable_principle": "基于荷叶超疏水机制 - 纳米晶体结构的吸附/去除机制"

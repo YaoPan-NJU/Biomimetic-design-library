@@ -646,7 +646,7 @@
             "locator": null,
             "quote": null,
             "source_asset": null,
-            "verification_method": "pdf_error"
+            "verification_method": "pdf_not_found"
           }
         ]
       },
@@ -1151,13 +1151,14 @@
               "operator": "qualitative",
               "value": null
             },
-            "basis": "llm_inferred",
+            "basis": "from_source",
             "verification": "needs_review",
             "gate_level": "soft",
-            "locator": null,
-            "quote": null,
+            "locator": "Section 3.3 Biomimetic membranes",
+            "quote": "While aquaporins and other protein nanochannels can be synthesized using established bioprocessing techniques, they are prone to denaturation and loss of functionality, and the channels often face stability challenges during membrane synthesis and utilization and may not offer the optimal pore-loading efficiency and functionality.",
             "source_asset": null,
-            "verification_method": "pdf_error"
+            "verification_method": "pdf_visual_reading",
+            "source": "10.1039/d4va00378k"
           }
         ]
       },

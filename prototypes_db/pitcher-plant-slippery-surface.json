@@ -853,13 +853,14 @@
               "operator": "qualitative",
               "value": null
             },
-            "basis": "llm_inferred",
+            "basis": "from_source",
             "verification": "needs_review",
             "gate_level": "soft",
-            "locator": null,
-            "quote": null,
+            "locator": "Section Lubricant, right column",
+            "quote": "with the increase in the channel flow rate, there was a slight difference in the loss of lubricant",
             "source_asset": "domain_knowledge",
-            "verification_method": "pdf_error"
+            "verification_method": "pdf_visual_reading",
+            "source": "10.1007/s42242-021-00133-8"
           }
         ],
         "transferable_principle": "猪笼草的SLIPS策略（液体灌注光滑表面）可迁移到任何需要抗污/自清洁的表面，关键在于微结构锁液+低表面能",
@@ -928,7 +929,7 @@
             "locator": null,
             "quote": null,
             "source_asset": null,
-            "verification_method": "pdf_not_found"
+            "verification_method": "pdf_error"
           }
         ]
       },
