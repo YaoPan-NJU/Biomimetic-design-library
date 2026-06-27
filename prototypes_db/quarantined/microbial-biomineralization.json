@@ -2,7 +2,10 @@
   "id": "microbial-biomineralization",
   "name_zh": "微生物诱导矿化",
   "name_en": "Microbial Biomineralization",
-  "organism": {"scientific": "Sporosarcina pasteurii, Bacillus subtilis", "category": "微生物"},
+  "organism": {
+    "scientific": "Sporosarcina pasteurii, Bacillus subtilis",
+    "category": "微生物"
+  },
   "biomimetic_dimension": "microbial_mineral_precipitation",
   "library_tier": "extended",
   "lifecycle_status": "active",
@@ -15,12 +18,40 @@
       "name": "MICP heavy metal immobilization",
       "description": "Bacteria catalyze urea hydrolysis producing CO₃²⁻ and NH₄⁺, which precipitate heavy metals as insoluble carbonates",
       "causal_chain": {
-        "pollutant_feature": {"text": "Heavy metal ions (Pb²⁺, Cd²⁺, Cu²⁺, Zn²⁺)", "basis": "from_source", "source": "10.1016/j.watres.2021.117000"},
-        "bio_structure": {"text": "Bacterial urease enzyme and cell surface", "basis": "from_source", "source": "10.1016/j.watres.2021.117000"},
-        "interaction": {"text": "Urea hydrolysis produces CO₃²⁻ that precipitates heavy metals as carbonates", "basis": "from_source", "source": "10.1016/j.watres.2021.117000"},
-        "why_it_works": {"text": "Microbial urease catalysis is highly efficient and can be controlled", "basis": "from_source", "source": "10.1016/j.watres.2021.117000"},
+        "pollutant_feature": {
+          "text": "Heavy metal ions (Pb²⁺, Cd²⁺, Cu²⁺, Zn²⁺)",
+          "basis": "from_source",
+          "source": "10.1016/j.watres.2021.117000"
+        },
+        "bio_structure": {
+          "text": "Bacterial urease enzyme and cell surface",
+          "basis": "from_source",
+          "source": "10.1016/j.watres.2021.117000"
+        },
+        "interaction": {
+          "text": "Urea hydrolysis produces CO₃²⁻ that precipitates heavy metals as carbonates",
+          "basis": "from_source",
+          "source": "10.1016/j.watres.2021.117000"
+        },
+        "why_it_works": {
+          "text": "Microbial urease catalysis is highly efficient and can be controlled",
+          "basis": "from_source",
+          "source": "10.1016/j.watres.2021.117000"
+        },
         "boundary_conditions": [
-          {"text": "Aqueous environment with urea substrate", "parameter": "medium", "basis": "from_source", "verification": "corroborated", "gate_level": "hard", "condition": {"operator": "qualitative", "value": null}, "locator": "10.1016/j.watres.2021.117000"}
+          {
+            "text": "Aqueous environment with urea substrate",
+            "parameter": "medium",
+            "basis": "from_source",
+            "verification": "corroborated",
+            "gate_level": "hard",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "locator": "10.1016/j.watres.2021.117000",
+            "verification_method": "keyword_match"
+          }
         ],
         "transferable_principle": "Microbial urease catalysis produces carbonate ions for heavy metal precipitation and immobilization"
       }
@@ -28,14 +59,24 @@
   ],
   "performance_data": [],
   "engineering_constraints": [
-    {"constraint_id": "MB-E001", "description": "Bacterial culture: Sporosarcina pasteurii in urea-rich medium at 30°C", "evidence_type": "from_source"}
+    {
+      "constraint_id": "MB-E001",
+      "description": "Bacterial culture: Sporosarcina pasteurii in urea-rich medium at 30°C",
+      "evidence_type": "from_source"
+    }
   ],
   "narrative": [
-    {"narrative_id": "MB-N001", "text": "Microbially induced carbonate precipitation (MICP) uses bacterial urease to catalyze urea hydrolysis, producing carbonate ions that precipitate heavy metals as insoluble carbonates. This biomineralization process is used for soil remediation and wastewater treatment."}
+    {
+      "narrative_id": "MB-N001",
+      "text": "Microbially induced carbonate precipitation (MICP) uses bacterial urease to catalyze urea hydrolysis, producing carbonate ions that precipitate heavy metals as insoluble carbonates. This biomineralization process is used for soil remediation and wastewater treatment."
+    }
   ],
   "design_translation": {
     "idea": "Use bacteria (Sporosarcina pasteurii) to catalyze urea hydrolysis for heavy metal precipitation and immobilization",
-    "examples": ["MICP for Pb²⁺ removal from wastewater", "Biocementation of contaminated soil"],
+    "examples": [
+      "MICP for Pb²⁺ removal from wastewater",
+      "Biocementation of contaminated soil"
+    ],
     "source_tier": "literature",
     "applicability": "Heavy metal removal from wastewater and soil remediation"
   },
@@ -44,6 +85,9 @@
     "llm_inferred_mechanisms": 0,
     "verified_performance_data": 0,
     "missing_pdf_items": 0,
-    "knowledge_gaps": ["Need quantitative performance data", "Scale-up from lab to field"]
+    "knowledge_gaps": [
+      "Need quantitative performance data",
+      "Scale-up from lab to field"
+    ]
   }
 }

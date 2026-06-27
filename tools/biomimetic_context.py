@@ -727,6 +727,8 @@ class BiomimeticContext:
     def _get_applicability(self, proto: Dict) -> str:
         """获取原型的适用条件"""
         tested = proto.get('tested_conditions', {})
+        if not isinstance(tested, dict):
+            tested = {}
         ph = tested.get('tested_ph_range', [])
         temp = tested.get('tested_temp_range', [])
         salinity = tested.get('salinity', 'any')

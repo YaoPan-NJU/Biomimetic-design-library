@@ -164,6 +164,26 @@ def build_mech_prompt(row):
     )
 
 
+def build_bc_prompt(bc_text, parameter, gate_level, mechanism_name):
+    return (
+        "Find evidence for this boundary condition in the PDF page images below.\n\n"
+        f"BOUNDARY CONDITION:\n"
+        f"- Text: {bc_text}\n"
+        f"- Parameter: {parameter}\n"
+        f"- Gate Level: {gate_level}\n"
+        f"- Parent Mechanism: {mechanism_name}\n\n"
+        "Find the EXACT text in the PDF that supports or describes this boundary condition. "
+        "Extract the quote VERBATIM from the PDF. Note page number and location.\n\n"
+        "Respond with this JSON object:\n"
+        '{"found": true, "quote": "exact text from PDF", "page": 0, '
+        '"locator": "Table X / Figure Y / Section Z / p.N", "quality": "reliable"}\n\n'
+        'If not found in the PDF:\n'
+        '{"found": false, "quote": "", "page": 0, "locator": "", "quality": "not_found"}\n\n'
+        "Rules: Quote must be exactly as written in the PDF. Do not generate or infer. "
+        "Look for parameter ranges, conditions, limitations, or constraints."
+    )
+
+
 def parse_json_response(text):
     """Robustly extract JSON from model response (handles reasoning text)."""
     text = text.strip()
@@ -212,6 +232,10 @@ def parse_json_response(text):
 def verify_row_with_api(client_pool, row, pdf_path, field='performance_data', max_pages=15):
     if field == 'performance_data':
         user_prompt = build_perf_prompt(row)
+    elif field == 'boundary_conditions':
+        user_prompt = build_bc_prompt(
+            row.get('text', ''), row.get('parameter', ''),
+            row.get('gate_level', 'soft'), row.get('name', ''))
     else:
         user_prompt = build_mech_prompt(row)
     
@@ -236,15 +260,36 @@ def verify_row_with_api(client_pool, row, pdf_path, field='performance_data', ma
             response = client.chat.completions.create(
                 model=MIMO_MODEL,
                 messages=messages,
-                max_tokens=4096,
-                temperature=0
+                max_tokens=8192,
+                temperature=0,
+                extra_body={"enable_thinking": False},
             )
 
-            result_text = response.choices[0].message.content.strip()
+            # If finish_reason is length, retry with larger max_tokens
+            finish_reason = response.choices[0].finish_reason if response.choices else ''
+            result_text = response.choices[0].message.content.strip() if response.choices else ''
             parsed = parse_json_response(result_text)
 
             if parsed:
                 return parsed
+
+            # Retry with larger max_tokens if truncated
+            if finish_reason == 'length' and attempt < 2:
+                print(f" [truncated, retrying with 16384 tokens]", end='', flush=True)
+                try:
+                    response = client.chat.completions.create(
+                        model=MIMO_MODEL,
+                        messages=messages,
+                        max_tokens=16384,
+                        temperature=0,
+                        extra_body={"enable_thinking": False},
+                    )
+                    result_text = response.choices[0].message.content.strip()
+                    parsed = parse_json_response(result_text)
+                    if parsed:
+                        return parsed
+                except Exception as e2:
+                    print(f" [retry-16k failed: {str(e2)[:40]}]", end='', flush=True)
 
             return {'found': False, 'quality': 'parse_error', 'raw': result_text[:300]}
 
@@ -256,43 +301,181 @@ def verify_row_with_api(client_pool, row, pdf_path, field='performance_data', ma
                 return {'found': False, 'quality': 'error', 'error': str(e)}
 
 
+def find_pdf_by_doi(doi, pdf_root=None):
+    """用 DOI 匹配本地 PDF。先检查 visual_cache 中的 DOI，再模糊匹配文件名。"""
+    if not doi:
+        return None
+    root = Path(pdf_root) if pdf_root else PDF_ROOT
+    doi_norm = doi.lower().strip()
+
+    # 策略1：搜索 visual_cache.json 中的 DOI 字段
+    for cache_file in glob.glob(str(root / '**/*_visual_cache.json'), recursive=True):
+        try:
+            with open(cache_file, 'r', encoding='utf-8') as f:
+                cache = json.load(f)
+            meta = cache.get('stage0', {}).get('metadata', {})
+            cache_doi = str(meta.get('doi', '') or '').lower().strip()
+            if cache_doi and doi_norm in cache_doi:
+                pdf_path = cache_file.replace('_visual_cache.json', '.pdf')
+                if os.path.exists(pdf_path):
+                    return pdf_path
+        except:
+            continue
+
+    # 策略2：用 Crossref API 获取标题，然后模糊匹配文件名
+    try:
+        import urllib.request
+        url = f"https://api.crossref.org/works/{doi_norm}"
+        req = urllib.request.Request(url, headers={'User-Agent': 'BMDL-Verify/1.0'})
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            data = json.loads(resp.read())
+        title = data['message']['title'][0].lower()
+        author = data['message'].get('author', [{}])[0].get('family', '').lower()
+        year = str(data['message'].get('published', {}).get('date-parts', [[None]])[0][0])
+
+        all_pdfs = glob.glob(str(root / '**/*.pdf'), recursive=True)
+        for p in all_pdfs:
+            pbn = os.path.basename(p).lower()
+            if year in pbn and author in pbn:
+                return p
+        title_words = [w for w in title.split() if len(w) > 3][:3]
+        for p in all_pdfs:
+            pbn = os.path.basename(p).lower()
+            if all(w in pbn for w in title_words):
+                return p
+    except Exception as e:
+        print(f"  [DOI match] Crossref fallback failed for {doi}: {e}")
+
+    return None
+
+
+def verify_boundary_conditions(json_path, client_pool, target_mech_indices=None):
+    """验证机制中的 boundary_conditions（仅 basis=llm_inferred 的）。"""
+    with open(json_path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+
+    pid = data.get('id', Path(json_path).stem)
+    mechanisms = data.get('mechanisms', [])
+
+    stats = {'verified': 0, 'not_found': 0, 'no_pdf': 0, 'errors': 0, 'skipped': 0}
+    pdf_cache = {}
+
+    for mi, mech in enumerate(mechanisms):
+        if target_mech_indices and mi not in target_mech_indices:
+            continue
+
+        cc = mech.get('causal_chain', {})
+        bcs = cc.get('boundary_conditions', [])
+        mech_name = mech.get('name', '')
+
+        source_file = str(mech.get('source_file') or '').strip()
+        doi = str(mech.get('ref_doi') or '').strip()
+
+        pdf_path = None
+        if source_file:
+            pdf_path = find_pdf(source_file)
+        if not pdf_path and doi:
+            pdf_path = find_pdf_by_doi(doi)
+
+        if not pdf_path:
+            for bc in bcs:
+                if bc.get('basis') == 'llm_inferred':
+                    stats['no_pdf'] += 1
+            continue
+
+        if pdf_path not in pdf_cache:
+            print(f"\n  PDF: {os.path.basename(pdf_path)} (mech[{mi}] {mech_name[:40]})")
+            pdf_cache[pdf_path] = True
+
+        for bi, bc in enumerate(bcs):
+            if bc.get('basis') != 'llm_inferred':
+                stats['skipped'] += 1
+                continue
+
+            bc_text = bc.get('text', '')
+            parameter = bc.get('parameter', '')
+            gate_level = bc.get('gate_level', 'soft')
+
+            label = bc_text[:60] if bc_text else parameter
+            print(f"  [{pid}] mech[{mi}] bc[{bi}] {label}...", end='', flush=True)
+
+            result = verify_row_with_api(client_pool,
+                                         {'text': bc_text, 'parameter': parameter,
+                                          'name': mech_name, 'gate_level': gate_level},
+                                         pdf_path, field='boundary_conditions')
+
+            if result.get('found') and result.get('quote'):
+                bc['basis'] = 'from_source'
+                bc['source'] = doi or os.path.basename(pdf_path)
+                bc['quote'] = result['quote']
+                bc['locator'] = result.get('locator', f"p.{result.get('page', '?')}")
+                bc['verification_method'] = 'pdf_visual_reading'
+                stats['verified'] += 1
+                print(f" ✅ from_source (p.{result.get('page', '?')})")
+            elif result.get('quality') == 'not_found':
+                bc['verification_method'] = 'pdf_not_found'
+                stats['not_found'] += 1
+                print(f" NOT_FOUND")
+            else:
+                bc['verification_method'] = 'pdf_error'
+                stats['errors'] += 1
+                print(f" ERROR: {result.get('error', '')[:60]}")
+
+            time.sleep(0.5)
+
+        # 每 5 条 checkpoint
+        total_processed = stats['verified'] + stats['not_found'] + stats['errors']
+        if total_processed > 0 and total_processed % 5 == 0:
+            with open(json_path, 'w', encoding='utf-8', newline='\n') as f:
+                json.dump(data, f, ensure_ascii=False, indent=2)
+                f.write('\n')
+            print(f"\n  [checkpoint: {stats['verified']} verified, {stats['not_found']} not_found, {stats['errors']} errors]", flush=True)
+
+    # 最终写入
+    with open(json_path, 'w', encoding='utf-8', newline='\n') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+        f.write('\n')
+
+    return {'prototype': pid, **stats}
+
+
 def verify_prototype(json_path, client_pool, field='performance_data'):
     with open(json_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
-    
+
     pid = data.get('id', json_path.stem)
     items = data.get(field, [])
-    
+
     verified = 0
     not_found = 0
     skipped_no_pdf = 0
     already_done = 0
     errors = 0
-    
+
     pdf_cache = {}
-    
+
     for i, item in enumerate(items):
         v = item.get('verification', 'unverified')
         if v not in ('needs_review', 'unverified', 'missing_pdf'):
             already_done += 1
             continue
-        
+
         source_file = item.get('source_file', '')
         pdf_path = find_pdf(source_file)
-        
+
         if not pdf_path:
             skipped_no_pdf += 1
             continue
-        
+
         if pdf_path not in pdf_cache:
             print(f"\n  PDF: {os.path.basename(pdf_path)}")
             pdf_cache[pdf_path] = True
-        
+
         label = item.get('parameter', item.get('name', ''))[:60]
         print(f"  [{i+1}/{len(items)}] {label}...", end='', flush=True)
 
         result = verify_row_with_api(client_pool, item, pdf_path, field)
-        
+
         if result.get('found') and result.get('quote'):
             item['verification_quote'] = result['quote']
             item['source_locator'] = result.get('locator', f"p.{result.get('page', '?')}")
@@ -309,7 +492,7 @@ def verify_prototype(json_path, client_pool, field='performance_data'):
         else:
             errors += 1
             print(f" ERROR: {result.get('error', 'unknown')[:60]}")
-        
+
         time.sleep(0.5)
 
         if (verified + not_found + errors) % 5 == 0:
@@ -321,7 +504,7 @@ def verify_prototype(json_path, client_pool, field='performance_data'):
     with open(json_path, 'w', encoding='utf-8', newline='\n') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
         f.write('\n')
-    
+
     return {
         'prototype': pid, 'field': field, 'total': len(items),
         'already_done': already_done, 'verified': verified,
@@ -330,43 +513,47 @@ def verify_prototype(json_path, client_pool, field='performance_data'):
 
 
 def main():
-    targets = sys.argv[1:] if len(sys.argv) > 1 else ['chitosan']
+    import argparse
+    parser = argparse.ArgumentParser(description='Multimodal PDF verification')
+    parser.add_argument('targets', nargs='*', default=['chitosan'])
+    parser.add_argument('--field', choices=['performance_data', 'mechanisms', 'boundary_conditions'],
+                        default='boundary_conditions')
+    args = parser.parse_args()
+
     api_keys = load_api_keys()
     client_pool = make_client_pool(api_keys)
-    
-    print(f"=== Multimodal Verification ===")
-    print(f"Targets: {', '.join(targets)}")
-    print(f"Model: {MIMO_MODEL}")
+
+    print(f"=== Multimodal Verification ({args.field}) ===")
+    print(f"Targets: {', '.join(args.targets)}")
+    print(f"Model: {MIMO_MODEL} (multimodal)")
     print(f"Keys: {len(api_keys)}")
     print(f"PDFs: {len(glob.glob(str(PDF_ROOT / '**/*.pdf'), recursive=True))} files")
     print()
-    
+
     all_results = []
-    for target in targets:
+    for target in args.targets:
         json_path = DB_DIR / f'{target}.json'
         if not json_path.exists():
             print(f"SKIP: {json_path} not found")
             continue
-        
-        print(f"\n--- {target} performance_data ---")
-        r = verify_prototype(json_path, client_pool, 'performance_data')
-        all_results.append(r)
-        print(f"\n  Result: {r['verified']} verified, {r['already_done']} done, "
-              f"{r['not_found']} not found, {r['no_pdf']} no PDF, {r['errors']} errors")
-        
-        print(f"\n--- {target} mechanisms ---")
-        r2 = verify_prototype(json_path, client_pool, 'mechanisms')
-        all_results.append(r2)
-        print(f"\n  Result: {r2['verified']} verified, {r2['already_done']} done, "
-              f"{r2['not_found']} not found, {r2['no_pdf']} no PDF, {r2['errors']} errors")
-    
+
+        if args.field == 'boundary_conditions':
+            r = verify_boundary_conditions(json_path, client_pool)
+            all_results.append(r)
+            print(f"\n  Result: {r['verified']} verified, {r['not_found']} not_found, "
+                  f"{r['no_pdf']} no_pdf, {r['skipped']} skipped, {r['errors']} errors")
+        else:
+            print(f"\n--- {target} {args.field} ---")
+            r = verify_prototype(json_path, client_pool, args.field)
+            all_results.append(r)
+            print(f"\n  Result: {r['verified']} verified, {r['already_done']} done, "
+                  f"{r['not_found']} not found, {r['no_pdf']} no PDF, {r['errors']} errors")
+
     total_new = sum(r['verified'] for r in all_results)
-    total_done = sum(r['already_done'] for r in all_results)
-    total_nf = sum(r['not_found'] for r in all_results)
-    total_err = sum(r['errors'] for r in all_results)
+    total_nf = sum(r.get('not_found', 0) for r in all_results)
+    total_err = sum(r.get('errors', 0) for r in all_results)
     print(f"\n=== SUMMARY ===")
     print(f"  New verified: {total_new}")
-    print(f"  Previously done: {total_done}")
     print(f"  Not found: {total_nf}")
     print(f"  Errors: {total_err}")
 

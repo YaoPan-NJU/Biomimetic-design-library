@@ -2,7 +2,10 @@
   "id": "bacterial-surfactant",
   "name_zh": "细菌表面活性剂",
   "name_en": "Bacterial Surfactant",
-  "organism": {"scientific": "Pseudomonas aeruginosa (rhamnolipid), Bacillus subtilis (surfactin)", "category": "微生物"},
+  "organism": {
+    "scientific": "Pseudomonas aeruginosa (rhamnolipid), Bacillus subtilis (surfactin)",
+    "category": "微生物"
+  },
   "biomimetic_dimension": "microbial_amphiphilic_biopolymer",
   "library_tier": "extended",
   "lifecycle_status": "active",
@@ -15,12 +18,40 @@
       "name": "Biosurfactant emulsification",
       "description": "Biosurfactants reduce interfacial tension and emulsify oil droplets for oil-water separation",
       "causal_chain": {
-        "pollutant_feature": {"text": "Oil and organic pollutants in water", "basis": "from_source", "source": "10.1016/j.biortech.2012.01.015"},
-        "bio_structure": {"text": "Amphiphilic biosurfactant molecule (hydrophilic head + hydrophobic tail)", "basis": "from_source", "source": "10.1016/j.biortech.2012.01.015"},
-        "interaction": {"text": "Reduces interfacial tension, emulsifies oil droplets", "basis": "from_source", "source": "10.1016/j.biortech.2012.01.015"},
-        "why_it_works": {"text": "Amphiphilic structure enables oil-water interface modification", "basis": "from_source", "source": "10.1016/j.biortech.2012.01.015"},
+        "pollutant_feature": {
+          "text": "Oil and organic pollutants in water",
+          "basis": "from_source",
+          "source": "10.1016/j.biortech.2012.01.015"
+        },
+        "bio_structure": {
+          "text": "Amphiphilic biosurfactant molecule (hydrophilic head + hydrophobic tail)",
+          "basis": "from_source",
+          "source": "10.1016/j.biortech.2012.01.015"
+        },
+        "interaction": {
+          "text": "Reduces interfacial tension, emulsifies oil droplets",
+          "basis": "from_source",
+          "source": "10.1016/j.biortech.2012.01.015"
+        },
+        "why_it_works": {
+          "text": "Amphiphilic structure enables oil-water interface modification",
+          "basis": "from_source",
+          "source": "10.1016/j.biortech.2012.01.015"
+        },
         "boundary_conditions": [
-          {"text": "Aqueous environment with oil", "parameter": "medium", "basis": "from_source", "verification": "corroborated", "gate_level": "hard", "condition": {"operator": "qualitative", "value": null}, "locator": "10.1016/j.biortech.2012.01.015"}
+          {
+            "text": "Aqueous environment with oil",
+            "parameter": "medium",
+            "basis": "from_source",
+            "verification": "corroborated",
+            "gate_level": "hard",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "locator": "10.1016/j.biortech.2012.01.015",
+            "verification_method": "keyword_match"
+          }
         ],
         "transferable_principle": "Bacterial biosurfactants reduce interfacial tension for oil-water separation and organic pollutant removal"
       }
@@ -28,14 +59,24 @@
   ],
   "performance_data": [],
   "engineering_constraints": [
-    {"constraint_id": "BS-E001", "description": "Biosurfactant production: microbial fermentation, yield depends on species and carbon source", "evidence_type": "from_source"}
+    {
+      "constraint_id": "BS-E001",
+      "description": "Biosurfactant production: microbial fermentation, yield depends on species and carbon source",
+      "evidence_type": "from_source"
+    }
   ],
   "narrative": [
-    {"narrative_id": "BS-N001", "text": "Bacterial biosurfactants are amphiphilic molecules produced by microorganisms. Rhamnolipid (from Pseudomonas aeruginosa) and surfactin (from Bacillus subtilis) are the most studied. They reduce interfacial tension and can emulsify oil for water purification."}
+    {
+      "narrative_id": "BS-N001",
+      "text": "Bacterial biosurfactants are amphiphilic molecules produced by microorganisms. Rhamnolipid (from Pseudomonas aeruginosa) and surfactin (from Bacillus subtilis) are the most studied. They reduce interfacial tension and can emulsify oil for water purification."
+    }
   ],
   "design_translation": {
     "idea": "Produce biosurfactants via microbial fermentation and use for oil-water separation and organic pollutant removal",
-    "examples": ["Rhamnolipid for oil emulsification", "Surfactin for heavy metal complexation"],
+    "examples": [
+      "Rhamnolipid for oil emulsification",
+      "Surfactin for heavy metal complexation"
+    ],
     "source_tier": "literature",
     "applicability": "Oil-water separation, organic pollutant removal"
   },
@@ -44,6 +85,9 @@
     "llm_inferred_mechanisms": 0,
     "verified_performance_data": 0,
     "missing_pdf_items": 0,
-    "knowledge_gaps": ["Need quantitative performance data", "Production cost analysis"]
+    "knowledge_gaps": [
+      "Need quantitative performance data",
+      "Production cost analysis"
+    ]
   }
 }
