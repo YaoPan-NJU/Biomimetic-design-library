@@ -159,11 +159,18 @@
       "canonical_name": "PFOA（Perfluorooctanoic acid）",
       "pollutant_class": "PFASs（全氟和多氟烷基物质）",
       "molecular_features": [
-        "长链全氟烷基",
-        "羧酸基团",
-        "疏水性",
         "两亲性",
-        "化学稳定性"
+        "化学稳定性",
+        "可电离",
+        "可配位",
+        "大分子",
+        "弱酸性",
+        "氟碳链",
+        "水溶性",
+        "疏水性",
+        "羧酸基团",
+        "芳香环",
+        "长链全氟烷基"
       ],
       "likely_interactions": [
         "疏水分配",
@@ -171,7 +178,9 @@
         "静电吸引",
         "孔道限域"
       ],
-      "profile_basis": "database"
+      "profile_basis": "database",
+      "literature_evidence_count": 3182,
+      "literature_paper_count": 275
     },
     "PFOS": {
       "canonical_name": "PFOS（Perfluorooctanesulfonic acid）",
@@ -195,10 +204,15 @@
       "canonical_name": "BPA（Bisphenol A）",
       "pollutant_class": "内分泌干扰物/酚类化合物",
       "molecular_features": [
-        "芳香环",
-        "酚羟基",
+        "内分泌干扰",
+        "可电离",
+        "可配位",
+        "大分子",
+        "弱酸性",
+        "水溶性",
         "疏水性",
-        "弱酸性"
+        "芳香环",
+        "酚羟基"
       ],
       "likely_interactions": [
         "氢键",
@@ -206,7 +220,9 @@
         "疏水分配",
         "静电吸引"
       ],
-      "profile_basis": "database"
+      "profile_basis": "database",
+      "literature_evidence_count": 11788,
+      "literature_paper_count": 1416
     },
     "SMX": {
       "canonical_name": "SMX（Sulfamethoxazole）",
@@ -229,11 +245,18 @@
       "canonical_name": "TC（Tetracycline）",
       "pollutant_class": "抗生素",
       "molecular_features": [
+        "二甲氨基",
+        "可电离",
+        "可配位",
+        "大分子",
+        "弱碱性",
+        "弱酸性",
+        "氯代",
+        "水溶性",
+        "疏水性",
         "芳香环",
         "酚羟基",
-        "酰胺基",
-        "二甲氨基",
-        "弱碱性"
+        "酰胺基"
       ],
       "likely_interactions": [
         "氢键",
@@ -241,7 +264,9 @@
         "静电吸引",
         "配位"
       ],
-      "profile_basis": "database"
+      "profile_basis": "database",
+      "literature_evidence_count": 1220,
+      "literature_paper_count": 122
     },
     "CIP": {
       "canonical_name": "CIP（Ciprofloxacin）",
@@ -421,6 +446,12 @@
       "canonical_name": "PFBS",
       "pollutant_class": "PFAS_sulfonate_short",
       "molecular_features": [
+        "可电离",
+        "可配位",
+        "大分子",
+        "弱酸性",
+        "氟碳链",
+        "疏水性",
         "短全氟尾",
         "磺酸头基"
       ],
@@ -430,14 +461,23 @@
       ],
       "charge_state_note": "磺酸，全程阴离子",
       "profile_basis": "database",
-      "source_note": ""
+      "source_note": "",
+      "literature_evidence_count": 871,
+      "literature_paper_count": 67
     },
     "2,6-Dichlorophenol": {
       "canonical_name": "2,6-Dichlorophenol",
       "pollutant_class": "chlorophenol",
       "molecular_features": [
-        "酚羟基",
-        "2邻位Cl"
+        "2邻位Cl",
+        "可电离",
+        "可配位",
+        "弱酸性",
+        "氯代",
+        "水溶性",
+        "疏水性",
+        "芳香环",
+        "酚羟基"
       ],
       "likely_interactions": [
         "π-π",
@@ -447,7 +487,9 @@
       ],
       "charge_state_note": "pKa~6.8，中性pH部分解离",
       "profile_basis": "database",
-      "source_note": ""
+      "source_note": "",
+      "literature_evidence_count": 188,
+      "literature_paper_count": 13
     },
     "Pentachlorophenol": {
       "canonical_name": "Pentachlorophenol",
@@ -501,8 +543,12 @@
       "canonical_name": "PCB-209",
       "pollutant_class": "PCB",
       "molecular_features": [
+        "两芳环",
         "十氯联苯",
-        "两芳环"
+        "可配位",
+        "氯代",
+        "疏水性",
+        "芳香环"
       ],
       "likely_interactions": [
         "π-π",
@@ -511,7 +557,9 @@
       ],
       "charge_state_note": "非离子，极强亲脂",
       "profile_basis": "database",
-      "source_note": ""
+      "source_note": "",
+      "literature_evidence_count": 19,
+      "literature_paper_count": 2
     },
     "β-HCH": {
       "canonical_name": "β-HCH",
@@ -609,8 +657,12 @@
       "canonical_name": "Decabromodiphenyl ether (BDE-209)",
       "pollutant_class": "PBDE",
       "molecular_features": [
+        "10个Br",
         "二苯醚",
-        "10个Br"
+        "可配位",
+        "氯代",
+        "疏水性",
+        "芳香环"
       ],
       "likely_interactions": [
         "π-π",
@@ -619,14 +671,24 @@
       ],
       "charge_state_note": "非离子，极强亲脂",
       "profile_basis": "database",
-      "source_note": "降解偏多"
+      "source_note": "降解偏多",
+      "literature_evidence_count": 19,
+      "literature_paper_count": 2
     },
     "TCDD": {
       "canonical_name": "TCDD",
       "pollutant_class": "dioxin",
       "molecular_features": [
+        "可电离",
+        "可配位",
+        "大分子",
         "平面二噁英",
-        "氯代芳环"
+        "弱酸性",
+        "氯代",
+        "氯代芳环",
+        "水溶性",
+        "疏水性",
+        "芳香环"
       ],
       "likely_interactions": [
         "π-π",
@@ -635,14 +697,23 @@
       ],
       "charge_state_note": "非离子，平面分子",
       "profile_basis": "database",
-      "source_note": ""
+      "source_note": "",
+      "literature_evidence_count": 1220,
+      "literature_paper_count": 122
     },
     "DDT": {
       "canonical_name": "DDT",
       "pollutant_class": "organochlorine_pesticide",
       "molecular_features": [
+        "三氯乙基",
         "二氯二苯",
-        "三氯乙基"
+        "可电离",
+        "可配位",
+        "大分子",
+        "弱酸性",
+        "水溶性",
+        "疏水性",
+        "芳香环"
       ],
       "likely_interactions": [
         "π-π",
@@ -651,14 +722,20 @@
       ],
       "charge_state_note": "非离子",
       "profile_basis": "database",
-      "source_note": ""
+      "source_note": "",
+      "literature_evidence_count": 1747,
+      "literature_paper_count": 230
     },
     "DDE": {
       "canonical_name": "DDE",
       "pollutant_class": "organochlorine_metabolite",
       "molecular_features": [
+        "二氯乙烯",
         "二氯二苯",
-        "二氯乙烯"
+        "可电离",
+        "可配位",
+        "疏水性",
+        "芳香环"
       ],
       "likely_interactions": [
         "π-π",
@@ -667,14 +744,23 @@
       ],
       "charge_state_note": "非离子",
       "profile_basis": "database",
-      "source_note": ""
+      "source_note": "",
+      "literature_evidence_count": 152,
+      "literature_paper_count": 12
     },
     "Dieldrin": {
       "canonical_name": "Dieldrin",
       "pollutant_class": "organochlorine_pesticide",
       "molecular_features": [
+        "可电离",
+        "可配位",
+        "大分子",
+        "弱酸性",
         "氯代双环",
-        "环氧"
+        "水溶性",
+        "环氧",
+        "疏水性",
+        "芳香环"
       ],
       "likely_interactions": [
         "疏水",
@@ -683,14 +769,23 @@
       ],
       "charge_state_note": "非离子",
       "profile_basis": "database",
-      "source_note": ""
+      "source_note": "",
+      "literature_evidence_count": 578,
+      "literature_paper_count": 53
     },
     "PFHxS": {
       "canonical_name": "PFHxS",
       "pollutant_class": "PFAS_sulfonate",
       "molecular_features": [
         "C6全氟尾",
-        "磺酸头基"
+        "可电离",
+        "可配位",
+        "大分子",
+        "弱酸性",
+        "氟碳链",
+        "疏水性",
+        "磺酸头基",
+        "芳香环"
       ],
       "likely_interactions": [
         "疏水",
@@ -698,7 +793,9 @@
       ],
       "charge_state_note": "磺酸，全程阴离子",
       "profile_basis": "database",
-      "source_note": ""
+      "source_note": "",
+      "literature_evidence_count": 428,
+      "literature_paper_count": 33
     }
   }
 }

@@ -1,0 +1,194 @@
+{
+  "pollutant_name": "多氯联苯-209（PCB-209）",
+  "paper_count": 2,
+  "total_ki": 19,
+  "empty_papers": 0,
+  "skipped_low_confidence": 0,
+  "ki_by_domain": {
+    "D4_adsorption_mechanism": 10,
+    "D1_adsorption_performance": 4,
+    "D11_pollutant_property": 3,
+    "D12_occurrence_pattern": 2
+  },
+  "properties": {
+    "PCBs的环境危害性": [
+      {
+        "value": "PCBs是持久性有机污染物（POPs），具有生物累积性，可通过食物链传播，对人类和生态系统（如虎鲸种群）构成威胁，与心血管疾病相关",
+        "unit": null,
+        "ref_doi": "10.1016/j.scitotenv.2024.171586",
+        "source_file": "Photodegradation of polychlorinated biphenyls in waternitrogen-doped silica and airnitrogen-doped silica systems Kinetics, mechanism and quantitative structure activity relationship (QSAR) analysis.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "污染物分子静电势分布": [
+      {
+        "value": "六氯苯和十氯联苯苯环内部因连接高电负性氯原子而呈浅黄色（电子被吸引）；苯和联苯的苯环外部主要为中性，氢原子带弱正电荷（浅蓝色）。",
+        "unit": null,
+        "ref_doi": "10.3390/cryst13020266",
+        "source_file": "Quantum Chemical Studies on the Adsorption of Hexachlorobenzene, Decachlorobiphenyl, Benzene, and Biphenyl by BN-Doped Graphene and C-Doped Hexagonal Boron Nitride Modified with β-Cyclodextrin.pdf",
+        "confidence": 0.8,
+        "low_confidence": false
+      }
+    ],
+    "污染物的环境持久性（POPs属性）": [
+      {
+        "value": "六氯苯和十氯联苯被列为持久性有机污染物（POPs），在全球范围内被《斯德哥尔摩公约》禁用。它们通过‘蚱蜢效应’进入生态系统，具有生物放大和生物蓄积性，可能损害神经、生殖和免疫系统，严重时可致癌。",
+        "unit": null,
+        "ref_doi": "10.3390/cryst13020266",
+        "source_file": "Quantum Chemical Studies on the Adsorption of Hexachlorobenzene, Decachlorobiphenyl, Benzene, and Biphenyl by BN-Doped Graphene and C-Doped Hexagonal Boron Nitride Modified with β-Cyclodextrin.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ]
+  },
+  "removal_mechanisms": [
+    {
+      "mechanism": "氢键",
+      "evidence_count": 3,
+      "key_references": [
+        "10.3390/cryst13020266"
+      ],
+      "details": [
+        {
+          "parameter": "氢键数量与平均键长",
+          "value": "4个氢键，平均键长2.94 Å",
+          "ref_doi": "10.3390/cryst13020266"
+        },
+        {
+          "parameter": "氢键数量与平均键长",
+          "value": "6个氢键，平均键长约2.96 Å",
+          "ref_doi": "10.3390/cryst13020266"
+        },
+        {
+          "parameter": "主导吸附作用类型",
+          "value": "非共价相互作用（包括疏水作用、范德华力、π-π作用、氢键）是自发物理吸附的关键。β-环糊精内腔的疏水性通过C-H键的屏蔽效应，与芳香污染物形成主-客体包合物。",
+          "ref_doi": "10.3390/cryst13020266"
+        }
+      ]
+    },
+    {
+      "mechanism": "吸附",
+      "evidence_count": 3,
+      "key_references": [
+        "10.3390/cryst13020266"
+      ],
+      "details": [
+        {
+          "parameter": "吸附能与污染物疏水性相关性",
+          "value": "吸附能与污染物的疏水性相关。对CC_BN1_BCD，对六氯苯和十氯联苯的吸附能大于对苯和联苯。",
+          "ref_doi": "10.3390/cryst13020266"
+        },
+        {
+          "parameter": "主导吸附作用类型",
+          "value": "非共价相互作用（包括疏水作用、范德华力、π-π作用、氢键）是自发物理吸附的关键。β-环糊精内腔的疏水性通过C-H键的屏蔽效应，与芳香污染物形成主-客体包合物。",
+          "ref_doi": "10.3390/cryst13020266"
+        },
+        {
+          "parameter": "掺杂度对吸附能的影响",
+          "value": "随着碳掺杂（C-doping）数量增加（从CC_BN1到CC_BN2或从h-BN_CC1到h-BN_CC2），有利于联苯衍生物的吸附，但会削弱对苯和六氯苯的吸附。",
+          "ref_doi": "10.3390/cryst13020266"
+        }
+      ]
+    },
+    {
+      "mechanism": "光降解",
+      "evidence_count": 2,
+      "key_references": [
+        "10.1016/j.scitotenv.2024.171586"
+      ],
+      "details": [
+        {
+          "parameter": "光降解反应路径",
+          "value": "四条反应路径：I. 脱氯；II. 羟基取代；III. 羟基加成；IV. C-C桥键断裂",
+          "ref_doi": "10.1016/j.scitotenv.2024.171586"
+        },
+        {
+          "parameter": "影响光降解速率的关键结构因素",
+          "value": "Cl原子取代位置（尤其是3号位N3）和PCBs的有效吸收波长范围是影响光降解速率的主要因素",
+          "ref_doi": "10.1016/j.scitotenv.2024.171586"
+        }
+      ]
+    },
+    {
+      "mechanism": "疏水",
+      "evidence_count": 2,
+      "key_references": [
+        "10.3390/cryst13020266"
+      ],
+      "details": [
+        {
+          "parameter": "吸附能与污染物疏水性相关性",
+          "value": "吸附能与污染物的疏水性相关。对CC_BN1_BCD，对六氯苯和十氯联苯的吸附能大于对苯和联苯。",
+          "ref_doi": "10.3390/cryst13020266"
+        },
+        {
+          "parameter": "主导吸附作用类型",
+          "value": "非共价相互作用（包括疏水作用、范德华力、π-π作用、氢键）是自发物理吸附的关键。β-环糊精内腔的疏水性通过C-H键的屏蔽效应，与芳香污染物形成主-客体包合物。",
+          "ref_doi": "10.3390/cryst13020266"
+        }
+      ]
+    },
+    {
+      "mechanism": "π-π",
+      "evidence_count": 1,
+      "key_references": [
+        "10.3390/cryst13020266"
+      ],
+      "details": [
+        {
+          "parameter": "主导吸附作用类型",
+          "value": "非共价相互作用（包括疏水作用、范德华力、π-π作用、氢键）是自发物理吸附的关键。β-环糊精内腔的疏水性通过C-H键的屏蔽效应，与芳香污染物形成主-客体包合物。",
+          "ref_doi": "10.3390/cryst13020266"
+        }
+      ]
+    }
+  ],
+  "adsorption_performance": {
+    "best_materials": [
+      {
+        "material": "GO",
+        "qmax_mg_g": null,
+        "qmax_avg": null,
+        "evidence_count": 1,
+        "ref_dois": [
+          "10.3390/cryst13020266"
+        ]
+      },
+      {
+        "material": "graphene",
+        "qmax_mg_g": null,
+        "qmax_avg": null,
+        "evidence_count": 1,
+        "ref_dois": [
+          "10.3390/cryst13020266"
+        ]
+      }
+    ],
+    "total_performance_ki": 4
+  },
+  "engineering_constraints": [],
+  "occurrence_patterns": [
+    {
+      "parameter": "PCBs环境浓度范围（全球）",
+      "value": "亚洲 62–4700 pg/g，非洲 17.4–4700 pg/g，北美 0.1–10 μg/g，南美 0.19–254 ng/g，大洋洲 0.3–23 ng/g",
+      "ref_doi": "10.1016/j.scitotenv.2024.171586"
+    },
+    {
+      "parameter": "特定水体PCBs浓度超标案例",
+      "value": "中国江苏长江水体中PCBs浓度可达1.5 mg/L，远超中国健康标准（2 × 10⁻⁵ mg/L，GB3838-2002）",
+      "ref_doi": "10.1016/j.scitotenv.2024.171586"
+    }
+  ],
+  "molecular_features_for_biomimetic_matching": [
+    "可配位",
+    "氯代",
+    "疏水性",
+    "芳香环"
+  ],
+  "recommended_biomimetic_prototypes": [
+    "lotus-leaf",
+    "plant-tannin",
+    "polydopamine-coating"
+  ]
+}

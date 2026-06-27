@@ -1,0 +1,1519 @@
+{
+  "pollutant_name": "全氟丁烷磺酸（PFBS）",
+  "paper_count": 67,
+  "total_ki": 871,
+  "empty_papers": 0,
+  "skipped_low_confidence": 1,
+  "ki_by_domain": {
+    "D1_adsorption_performance": 358,
+    "D4_adsorption_mechanism": 185,
+    "D11_pollutant_property": 97,
+    "D5_engineering_constraint": 96,
+    "D12_occurrence_pattern": 64,
+    "D2_material_structure": 41,
+    "D6_pollutant_application": 23,
+    "D9_comparison_review": 4,
+    "D7_synthesis_method": 2,
+    "D8_characterization": 1
+  },
+  "properties": {
+    "C-F单键键能": [
+      {
+        "value": "~485",
+        "unit": "kJ/mol",
+        "ref_doi": "10.1016/j.wroa.2023.100175",
+        "source_file": "Molecular framework for designing Fluoroclay with enhanced affinity for per- and polyfluoroalkyl substances.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "C-F键能": [
+      {
+        "value": "536",
+        "unit": "kJ/mol",
+        "ref_doi": "10.3390/chemengineering9040083",
+        "source_file": "Molecular Dynamics Simulation of PFAS Adsorption on Graphene for Enhanced Water Purification  .pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "Gibbs自由能转移公式": [
+      {
+        "value": "ΔG_tr = -f{ n * φ + δ }",
+        "unit": "kJ/mol",
+        "ref_doi": "10.1021/acs.est.5c03457",
+        "source_file": "hydrophobic-ion-pairing-as-a-pretreatment-to-enhance-the-removal-of-short-chain-per-and-polyfluoroalkyl-substances-by.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "Log D 值": [
+      {
+        "value": "3.82",
+        "unit": null,
+        "ref_doi": "10.1016/j.jwpe.2024.106231",
+        "source_file": "The effect of biochar in a specialty adsorbent on enhanced PFAS removal from surface water.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PFAS 污染物特性-持久性": [
+      {
+        "value": "高持久性和迁移性，短链PFAS更甚",
+        "unit": null,
+        "ref_doi": "10.1016/j.jwpe.2023.103616",
+        "source_file": "PFAS removal from water by adsorption with alginate-encapsulated plant albumin and rice straw-derived biochar.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PFAS 污染物特性-生物累积性与毒性": [
+      {
+        "value": "具有毒性和生物累积性，与健康负面影响相关",
+        "unit": null,
+        "ref_doi": "10.1016/j.jwpe.2023.103616",
+        "source_file": "PFAS removal from water by adsorption with alginate-encapsulated plant albumin and rice straw-derived biochar.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PFAS 物理化学性质 - 链长与疏水性": [
+      {
+        "value": "PFAS分子包含疏水性的全氟碳链（-CF2-）和极性的亲水头基（如磺酸基-SO3-或羧基-COO-），表现出两亲性。碳链越长，分子整体疏水性越强，在水-固相分配中越倾向于吸附到固体表面。",
+        "unit": null,
+        "ref_doi": "10.1016/j.envpol.2025.127254",
+        "source_file": "Sorption dynamics of six per-and polyfluoroalkyl substances in estuarine sediments The role of particle size distribution and salinity in low organic carbon sediments.pdf",
+        "confidence": 0.8,
+        "low_confidence": false
+      }
+    ],
+    "PFAS 结构特征（官能团）": [
+      {
+        "value": "PFOA含有羧基（-COOH）头基和全氟辛基链；PFBS含有磺酸基（-SO3H）头基和全氟丁基链；PFOS含有磺酸基（-SO3- K+）头基和全氟辛基链。",
+        "unit": null,
+        "ref_doi": "10.1021/acs.langmuir.4c02566",
+        "source_file": "aggregation-not-micellization-perfluorooctanoic-acid-perfluorobutanesulfonic-acid-and-potassium.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PFASs 疏水性与环境归宿关系": [
+      {
+        "value": "短链 PFASs (如 PFBA) 亲水、难吸附、难沉积；强疏水性 PFASs (如 PFDoA) 主要随颗粒物迁移并沉积",
+        "unit": null,
+        "ref_doi": "10.1016/j.envpol.2017.04.091",
+        "source_file": "Characterization of occurrence, sources and sinks of perfluoroalkyl and polyfluoroalkyl substances (PFASs) in a tropical urban catchment.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PFASs 长链与短链划分标准": [
+      {
+        "value": "Long-chain: PFCAs with >7 carbons, PFSAs with >6 carbons; Short-chain: PFCAs with ≤7 carbons, PFSAs with ≤6 carbons",
+        "unit": null,
+        "ref_doi": "10.1016/j.envpol.2017.04.091",
+        "source_file": "Characterization of occurrence, sources and sinks of perfluoroalkyl and polyfluoroalkyl substances (PFASs) in a tropical urban catchment.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PFASs吸附亲和力排序": [
+      {
+        "value": "PFOS > PFOA > PFBS",
+        "unit": null,
+        "ref_doi": "10.1016/j.scitotenv.2014.12.017",
+        "source_file": "Sorption behaviour of perfluoroalkyl substances in soils  .pdf",
+        "confidence": 0.9,
+        "low_confidence": false
+      }
+    ],
+    "PFAS分子性质与截留率的相关性": [
+      {
+        "value": "截留率与PFAS的范德华半径（Å）、LogKow、分子量（Da）、最大投影面积（Å）存在正相关。长链PFAS（范德华半径>4 Å，分子量>500 Da，最大投影面积>8 Å）的截留率变化不大，表明空间位阻效应主导其保留机制。Ca²⁺浓度和pH会调节这种相关性强度。",
+        "unit": null,
+        "ref_doi": "10.1016/j.jhazmat.2025.140666",
+        "source_file": "Unraveling the synergistic impact of calcium ions and pH on the rejection of per- and perfluoroalkyl substances by nanofiltration in complex water matrices.pdf",
+        "confidence": 0.85,
+        "low_confidence": false
+      }
+    ],
+    "PFAS分子性质（logDow pH7）示例 - PFOS": [
+      {
+        "value": "3.05",
+        "unit": null,
+        "ref_doi": "10.1016/j.cej.2024.155456",
+        "source_file": "A FAIR comparison of activated carbon, biochar, cyclodextrins, polymers, resins, and metal organic frameworks for the adsorption of per- and polyfluorinated substances.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PFAS分子性质（摩尔体积）示例 - PFOS": [
+      {
+        "value": "1.88",
+        "unit": "cm³ mol⁻¹ / 100",
+        "ref_doi": "10.1016/j.cej.2024.155456",
+        "source_file": "A FAIR comparison of activated carbon, biochar, cyclodextrins, polymers, resins, and metal organic frameworks for the adsorption of per- and polyfluorinated substances.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PFAS分子特性 - 官能团与链长": [
+      {
+        "value": "研究涉及的PFAS分子具有磺酸基（-SO₃H）或羧基（-COOH）官能团，以及长链（8个碳原子，如PFOS、PFOA）或短链（4个碳原子，如PFBS、PFBA）结构。",
+        "unit": null,
+        "ref_doi": "10.1021/acsomega.4c06612",
+        "source_file": "ab-initio-investigation-of-per-and-poly-fluoroalkyl-substance-(pfas)-adsorption-on-zerovalent-iron-(fe0).pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PFAS分子特性（PFOS与PFBS）": [
+      {
+        "value": "PFOS含有8个碳的氟碳链和磺酸基头基；PFBS含有4个碳的氟碳链和磺酸基头基。",
+        "unit": null,
+        "ref_doi": "10.1039/d4lf00228h",
+        "source_file": "Investigation into the adhesion properties of PFAS on model surfaces.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PFAS分子量和化学式": [
+      {
+        "value": "GenX: 330 g/mol, PFBS: 300 g/mol, PFNA: 464 g/mol, PFOA: 414 g/mol, PFHxS: 400 g/mol, PFOS: 500 g/mol",
+        "unit": "g/mol",
+        "ref_doi": "10.3390/chemengineering9040083",
+        "source_file": "Molecular Dynamics Simulation of PFAS Adsorption on Graphene for Enhanced Water Purification  .pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PFAS分类（按官能团和碳链长度）": [
+      {
+        "value": "Perfluoroalkyl carboxylic acids (PFCAs, e.g., PFBA, PFHxA, PFOA); Perfluoroalkyl sulfonic acids (PFSAs, e.g., PFBS, PFHxS, PFOS); Fluorotelomer substances (FTS, e.g., 4:2 FTS, 6:2 FTS, 8:2 FTS).",
+        "unit": null,
+        "ref_doi": "10.1021/acs.est.5c03457",
+        "source_file": "hydrophobic-ion-pairing-as-a-pretreatment-to-enhance-the-removal-of-short-chain-per-and-polyfluoroalkyl-substances-by.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PFAS在2,2,2-三氟乙醇-水中的分配系数 LogD_FW": [
+      {
+        "value": "-2.24",
+        "unit": null,
+        "ref_doi": "10.1016/j.wroa.2023.100175",
+        "source_file": "Molecular framework for designing Fluoroclay with enhanced affinity for per- and polyfluoroalkyl substances.pdf",
+        "confidence": 0.9,
+        "low_confidence": false
+      }
+    ],
+    "PFAS在土壤/沉积物中的吸附分配系数（log Koc）与链长的关系": [
+      {
+        "value": "对于C3至C10 PFCAs，每增加一个-CF2-基团，log Koc增加0.60；对于C4、C6、C8 PFSAs，每增加一个-CF2-基团，log Koc增加0.83。",
+        "unit": null,
+        "ref_doi": "10.1002/wer.10990",
+        "source_file": "Water Environment Research - 2024 - Li - Per- and poly-fluoroalkyl substances removal in multi-barrier advanced water purification system for indirect potable reuse.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PFAS在辛醇-水中的分配系数 LogD_OW": [
+      {
+        "value": "-3.84",
+        "unit": null,
+        "ref_doi": "10.1016/j.wroa.2023.100175",
+        "source_file": "Molecular framework for designing Fluoroclay with enhanced affinity for per- and polyfluoroalkyl substances.pdf",
+        "confidence": 0.9,
+        "low_confidence": false
+      }
+    ],
+    "PFAS官能团对去除的影响": [
+      {
+        "value": "相同碳链长度下，PFSA（全氟烷基磺酸）的截留率高于PFCA（全氟烷基羧酸）。原因可能是磺酸基负电性更强，与Ca²⁺桥接作用更强，更易形成PFSA-Ca²⁺-HA絮体被截留。同时，PFSA的膜吸附量也大于PFCA。",
+        "unit": null,
+        "ref_doi": "10.1016/j.jhazmat.2025.140666",
+        "source_file": "Unraveling the synergistic impact of calcium ions and pH on the rejection of per- and perfluoroalkyl substances by nanofiltration in complex water matrices.pdf",
+        "confidence": 0.9,
+        "low_confidence": false
+      }
+    ],
+    "PFAS持久性": [
+      {
+        "value": "“forever chemicals”，在环境中持久存在，抵抗降解，具有生物累积性",
+        "unit": null,
+        "ref_doi": "10.1016/j.watres.2024.121458",
+        "source_file": "Experimental and density functional theory investigation of surface-modified biopolymer for improved adsorption of mixtures of per-and polyfluoroalkyl substances in water.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PFAS环境与健康属性": [
+      {
+        "value": "已被证实具有生物累积潜力，并与血液中PFAS存在可能导致癌症等严重健康问题存在关联。",
+        "unit": null,
+        "ref_doi": "10.1016/j.fluid.2023.113928",
+        "source_file": "Perfluorinated pollutants in water Diffusion coefficient of perfluorosulfonic acids by molecular dynamics simulations.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PFAS环境持久性": [
+      {
+        "value": "PFAS是新兴和普遍污染物，由于C-F键强，环境半衰期未知",
+        "unit": null,
+        "ref_doi": "10.1080/03067319.2022.2070016",
+        "source_file": "Sorption of Per- and Polyfluoroalkyl Substances  PFAS  using Polyethylene  PE  microplastics as adsorbent  Grand Canonical Monte Carlo and Molecular Dynamics (GCMC-MD) studies.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PFAS环境持久性与生物累积性": [
+      {
+        "value": "由于氟碳骨架受到强C-F键保护，PFAS对自然和生物降解具有抵抗性，能在环境中积累并迁移至水源。已被关联到多种内分泌疾病和软组织癌症。",
+        "unit": null,
+        "ref_doi": "10.1039/d4lf00228h",
+        "source_file": "Investigation into the adhesion properties of PFAS on model surfaces.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PFAS电荷状态": [
+      {
+        "value": "在pH < 3.7时为分子态，pH > 3.7时为阴离子",
+        "unit": null,
+        "ref_doi": "10.3390/chemengineering9040083",
+        "source_file": "Molecular Dynamics Simulation of PFAS Adsorption on Graphene for Enhanced Water Purification  .pdf",
+        "confidence": 0.8,
+        "low_confidence": false
+      }
+    ],
+    "PFAS疏水性与分子几何结构": [
+      {
+        "value": "PFAS因全氟碳链的紧密立体结构和较大的分子几何形状而具有疏水性和疏油性，这源于强而稳定的C-F键。",
+        "unit": null,
+        "ref_doi": "10.1039/d4lf00228h",
+        "source_file": "Investigation into the adhesion properties of PFAS on model surfaces.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PFAS的持久性": [
+      {
+        "value": "持久性合成有机污染物",
+        "unit": null,
+        "ref_doi": "10.1021/acsestengg.3c00515",
+        "source_file": "evaluation-of-a-porous-membrane-as-a-mass-transfer-efficient-structure-for-the-adsorption-of-per-and-polyfluoroalkyl.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PFAS类别与数量": [
+      {
+        "value": "超过9000种",
+        "unit": "种",
+        "ref_doi": "10.1021/acsestengg.3c00515",
+        "source_file": "evaluation-of-a-porous-membrane-as-a-mass-transfer-efficient-structure-for-the-adsorption-of-per-and-polyfluoroalkyl.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PFBA 和 PFBS 的性质特点": [
+      {
+        "value": "Poorly sorbing, difficult to degrade, difficult to remove by conventional water treatment; concentrations bound to increase",
+        "unit": null,
+        "ref_doi": "10.1016/j.envpol.2017.04.091",
+        "source_file": "Characterization of occurrence, sources and sinks of perfluoroalkyl and polyfluoroalkyl substances (PFASs) in a tropical urban catchment.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PFBA的疏水性/链长特性": [
+      {
+        "value": "短链C4羧酸盐",
+        "unit": null,
+        "ref_doi": "10.1016/j.ces.2025.122126",
+        "source_file": "Impact of coexisting nitrate and sulfate ions on per- and polyfluoroalkyl substances removal by anion exchange resins.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PFBS 环境特性": [
+      {
+        "value": "PFBS exhibits no significant persistence or bioaccumulation potential. It can be rapidly excreted via physiological metabolism within a short time frame, and its degradation products are non-toxic.",
+        "unit": null,
+        "ref_doi": "10.1016/j.colsurfa.2025.139045",
+        "source_file": "Synergistic interfacial optimization of cationic-anionic fluorocarbon-hydrocarbon surfactants via multiscale simulation and experiment.pdf",
+        "confidence": 0.9,
+        "low_confidence": false
+      }
+    ],
+    "PFBSO3H的电离能": [
+      {
+        "value": "真空: 13.34 eV; 溶剂中（考虑库仑作用）: ~10.10 eV",
+        "unit": "eV",
+        "ref_doi": "10.1021/jp056748r",
+        "source_file": "perfluorobutane-sulfonic-acid-hydration-and-interactions-with-o2-adsorbed-on-pt3.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PFBSO3H自由分子中的键长": [
+      {
+        "value": "Ox-Hx: 0.972 Å, S-Ox: 1.619 Å, S-C: 1.878 Å, S-Oy: 1.452 Å, S-Oz: 1.444 Å",
+        "unit": "Å",
+        "ref_doi": "10.1021/jp056748r",
+        "source_file": "perfluorobutane-sulfonic-acid-hydration-and-interactions-with-o2-adsorbed-on-pt3.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PFBS⁻分子结构": [
+      {
+        "value": "全氟丁基磺酸钾，阴离子，包含磺酸基团和氟碳链",
+        "unit": null,
+        "ref_doi": "10.1107/S205322962400528X",
+        "source_file": "Acta Crystallographica Section C - 2024 - Chen - Interfacial behaviour of short‐chain fluorocarbon surfactants at the.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PFBS⁻电荷分布": [
+      {
+        "value": "负电荷主要分布在磺酸基团的O原子上",
+        "unit": null,
+        "ref_doi": "10.1107/S205322962400528X",
+        "source_file": "Acta Crystallographica Section C - 2024 - Chen - Interfacial behaviour of short‐chain fluorocarbon surfactants at the.pdf",
+        "confidence": 0.8,
+        "low_confidence": false
+      }
+    ],
+    "PFBS的生物毒性与环境持久性描述": [
+      {
+        "value": "生物毒性、环境持久性污染物，常规水处理工艺难以有效去除",
+        "unit": null,
+        "ref_doi": "10.1007/s11270-024-07056-x",
+        "source_file": "Effect of Different Valence Ions and Coexistence of Cations and Humic Acid on the Separation of Perfluorobutyl Sulfonic Acid by Nanofiltration.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PFBS的疏水性/链长特性": [
+      {
+        "value": "短链C4磺酸盐",
+        "unit": null,
+        "ref_doi": "10.1016/j.ces.2025.122126",
+        "source_file": "Impact of coexisting nitrate and sulfate ions on per- and polyfluoroalkyl substances removal by anion exchange resins.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PFBS的辛醇-水分配系数 logKow": [
+      {
+        "value": "1.82",
+        "unit": null,
+        "ref_doi": "10.1021/acsestwater.3c00191",
+        "source_file": "losses-of-ultrashort-and-short-chain-pfas-to-polypropylene-materials.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PFBS碳氟链长度": [
+      {
+        "value": "0.64",
+        "unit": "nm",
+        "ref_doi": "10.1016/j.chemosphere.2014.08.080",
+        "source_file": "Effect of humic acid on the sorption of perfluorooctane sulfonate (PFOS) and perfluorobutane sulfonate (PFBS) on boehmite.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PFCs 的环境特性（持久性、生物累积性、毒性）": [
+      {
+        "value": "持久性、生物累积性和毒性",
+        "unit": null,
+        "ref_doi": "10.1016/j.chemosphere.2019.06.191",
+        "source_file": "Theoretical studies of perfluorochemicals (PFCs) adsorption mechanism on the carbonaceous surface.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PFCs 的酸解离常数 pKa": [
+      {
+        "value": "<1.0",
+        "unit": null,
+        "ref_doi": "10.1016/j.chemosphere.2019.06.191",
+        "source_file": "Theoretical studies of perfluorochemicals (PFCs) adsorption mechanism on the carbonaceous surface.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PFHxS的电荷状态（推断）": [
+      {
+        "value": "在地下水常见pH（约6-8）下，主要以阴离子形式存在。",
+        "unit": null,
+        "ref_doi": "10.1016/j.cej.2018.05.006",
+        "source_file": "Competitive adsorption of perfluoroalkyl substances on anion exchange resins in simulated AFFF-impacted groundwater.pdf",
+        "confidence": 0.5,
+        "low_confidence": true
+      }
+    ],
+    "PFOA pKa (表面 pKa)": [
+      {
+        "value": "未明确给出数值，但指出在pH < pKa时为中性分子态",
+        "unit": null,
+        "ref_doi": "10.1021/acs.langmuir.4c02566",
+        "source_file": "aggregation-not-micellization-perfluorooctanoic-acid-perfluorobutanesulfonic-acid-and-potassium.pdf",
+        "confidence": 0.8,
+        "low_confidence": false
+      }
+    ],
+    "PFOA的疏水性/链长特性": [
+      {
+        "value": "长链C8羧酸盐",
+        "unit": null,
+        "ref_doi": "10.1016/j.ces.2025.122126",
+        "source_file": "Impact of coexisting nitrate and sulfate ions on per- and polyfluoroalkyl substances removal by anion exchange resins.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PFOA酸解离常数 pKa": [
+      {
+        "value": "-0.5",
+        "unit": null,
+        "ref_doi": "10.1016/j.seppur.2025.136051",
+        "source_file": "Enhanced removal of per- and polyfluoroalkyl substances (PFAS) by NH2-functionalized MOF with ex-situ grown layered double hydroxides Mechanistic insights and adsorption behavior.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "-0.21",
+        "unit": null,
+        "ref_doi": "10.1021/acs.est.4c12093",
+        "source_file": "analyzing-the-release-of-per-and-polyfluoroalkyl-substances-from-spent-granular-activated-carbons-by-standard-leaching.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PFOS与PFBS的分子尺寸对比": [
+      {
+        "value": "PFOS分子尺寸大于NF膜孔径，PFBS分子尺寸小于NF膜孔径",
+        "unit": null,
+        "ref_doi": "10.1016/j.cej.2017.09.061",
+        "source_file": "Perfluorooctane sulfonate and perfluorobutane sulfonate removal from water by nanofiltration membrane The roles of solute concentration, ionic strength, and macromolecular organic foulants.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PFOS与PFBS的疏水性对比": [
+      {
+        "value": "PFOS疏水性强于PFBS",
+        "unit": null,
+        "ref_doi": "10.1016/j.cej.2017.09.061",
+        "source_file": "Perfluorooctane sulfonate and perfluorobutane sulfonate removal from water by nanofiltration membrane The roles of solute concentration, ionic strength, and macromolecular organic foulants.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PFOS临界胶束浓度 CMC": [
+      {
+        "value": "8",
+        "unit": "mM",
+        "ref_doi": "10.1016/j.chemosphere.2014.08.080",
+        "source_file": "Effect of humic acid on the sorption of perfluorooctane sulfonate (PFOS) and perfluorobutane sulfonate (PFBS) on boehmite.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PFOS的疏水性/链长特性": [
+      {
+        "value": "长链C8磺酸盐",
+        "unit": null,
+        "ref_doi": "10.1016/j.ces.2025.122126",
+        "source_file": "Impact of coexisting nitrate and sulfate ions on per- and polyfluoroalkyl substances removal by anion exchange resins.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PFOS碳氟链长度": [
+      {
+        "value": "1.14",
+        "unit": "nm",
+        "ref_doi": "10.1016/j.chemosphere.2014.08.080",
+        "source_file": "Effect of humic acid on the sorption of perfluorooctane sulfonate (PFOS) and perfluorobutane sulfonate (PFBS) on boehmite.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PFOS酸解离常数 pKa": [
+      {
+        "value": "0.14",
+        "unit": null,
+        "ref_doi": "10.1021/acs.est.4c12093",
+        "source_file": "analyzing-the-release-of-per-and-polyfluoroalkyl-substances-from-spent-granular-activated-carbons-by-standard-leaching.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PFPrA/PFBA/PFBS的pKa": [
+      {
+        "value": "0.1–1.3",
+        "unit": null,
+        "ref_doi": "10.1021/acsestwater.3c00191",
+        "source_file": "losses-of-ultrashort-and-short-chain-pfas-to-polypropylene-materials.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "air/water 分配系数 log10(Kaw)": [
+      {
+        "value": "-4.5 至 -2.6",
+        "unit": null,
+        "ref_doi": "10.1063/5.0300171",
+        "source_file": "Adsorption of short-chain perfluoroalkyl substances (PFAS) on functionalized activated carbon from first principles.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "log Koc of PFOA": [
+      {
+        "value": "1.89–2.63",
+        "unit": null,
+        "ref_doi": "10.1039/d4va00093e",
+        "source_file": "Surfactant-enhanced coagulation and flocculation improves the removal of perfluoroalkyl substances from surface water.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "log Koc of PFOS": [
+      {
+        "value": "2.4–3.7",
+        "unit": null,
+        "ref_doi": "10.1039/d4va00093e",
+        "source_file": "Surfactant-enhanced coagulation and flocculation improves the removal of perfluoroalkyl substances from surface water.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "pKa": [
+      {
+        "value": "0.4",
+        "unit": null,
+        "ref_doi": "10.1016/j.scitotenv.2021.149191",
+        "source_file": "Efficient adsorptive removal of short-chain perfluoroalkyl acids using reed straw-derived biochar (RESCA).pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "pKa (PFOA)": [
+      {
+        "value": "~0.5-3.8 (文献引用范围)",
+        "unit": null,
+        "ref_doi": "10.1016/j.watres.2020.116534",
+        "source_file": "Enhanced adsorption of per- and polyfluoroalkyl substances (PFAS) by edible, nutrient-amended montmorillonite clays.pdf",
+        "confidence": 0.8,
+        "low_confidence": false
+      }
+    ],
+    "pKa of PFOS": [
+      {
+        "value": "-3.27",
+        "unit": null,
+        "ref_doi": "10.1021/acsami.1c14043",
+        "source_file": "rapid-removal-of-perfluoroalkanesulfonates-from-water-by-β-cyclodextrin-covalent-organic-frameworks.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "pKa 值": [
+      {
+        "value": "0.7",
+        "unit": null,
+        "ref_doi": "10.1016/j.jwpe.2024.106231",
+        "source_file": "The effect of biochar in a specialty adsorbent on enhanced PFAS removal from surface water.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "-3.94",
+        "unit": null,
+        "ref_doi": "10.1063/5.0300171",
+        "source_file": "Adsorption of short-chain perfluoroalkyl substances (PFAS) on functionalized activated carbon from first principles.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "0.85",
+        "unit": null,
+        "ref_doi": "10.1063/5.0300171",
+        "source_file": "Adsorption of short-chain perfluoroalkyl substances (PFAS) on functionalized activated carbon from first principles.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "0.52",
+        "unit": null,
+        "ref_doi": "10.1063/5.0300171",
+        "source_file": "Adsorption of short-chain perfluoroalkyl substances (PFAS) on functionalized activated carbon from first principles.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "全氟化合物环境危害": [
+      {
+        "value": "长链全氟物质具有生物毒性且抗自然降解，法规限制使用",
+        "unit": null,
+        "ref_doi": "10.1107/S205322962400528X",
+        "source_file": "Acta Crystallographica Section C - 2024 - Chen - Interfacial behaviour of short‐chain fluorocarbon surfactants at the.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "全氟化合物相对毒性顺序": [
+      {
+        "value": "PFOS > PFBS; PFOA > PFBA; 磺酸类 > 羧酸类（相同碳链长度下）",
+        "unit": null,
+        "ref_doi": "10.1016/j.ecoenv.2021.112613",
+        "source_file": "Perfluorinated compounds disrupted osmoregulation in Oryzias melastigma during acclimation to hypoosmotic environment.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "全氟化合物类型与结构": [
+      {
+        "value": "PFBS: C4碳链，磺酸基团；PFOS: C8碳链，磺酸基团；PFOA: C8碳链，羧酸基团；PFDoA: C12碳链，羧酸基团",
+        "unit": null,
+        "ref_doi": "10.1016/j.ecoenv.2021.112613",
+        "source_file": "Perfluorinated compounds disrupted osmoregulation in Oryzias melastigma during acclimation to hypoosmotic environment.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "全氟及多氟烷基物质（PFAS）一般性质": [
+      {
+        "value": "具有化学惰性、同时疏水和亲脂特性、低表面张力、高密度、低介电常数、高溶解气体能力。",
+        "unit": null,
+        "ref_doi": "10.1016/j.fluid.2023.113928",
+        "source_file": "Perfluorinated pollutants in water Diffusion coefficient of perfluorosulfonic acids by molecular dynamics simulations.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "分子量 (MW)": [
+      {
+        "value": "414.07",
+        "unit": "g/mol",
+        "ref_doi": "10.1016/j.jwpe.2024.106231",
+        "source_file": "The effect of biochar in a specialty adsorbent on enhanced PFAS removal from surface water.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "分配系数 Kd (PFDA)": [
+      {
+        "value": "22",
+        "unit": "L/kg",
+        "ref_doi": "10.3390/environments12010020",
+        "source_file": "Air Bubbling Assisted Soil Washing to Treat PFAS in High Organic Content Soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "分配系数 Kd (PFOA)": [
+      {
+        "value": "1.2",
+        "unit": "L/kg",
+        "ref_doi": "10.3390/environments12010020",
+        "source_file": "Air Bubbling Assisted Soil Washing to Treat PFAS in High Organic Content Soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "分配系数 Kd (PFOS)": [
+      {
+        "value": "6.5",
+        "unit": "L/kg",
+        "ref_doi": "10.3390/environments12010020",
+        "source_file": "Air Bubbling Assisted Soil Washing to Treat PFAS in High Organic Content Soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "官能团 pKa 值": [
+      {
+        "value": "4.2",
+        "unit": null,
+        "ref_doi": "10.1063/5.0300171",
+        "source_file": "Adsorption of short-chain perfluoroalkyl substances (PFAS) on functionalized activated carbon from first principles.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "9.9",
+        "unit": null,
+        "ref_doi": "10.1063/5.0300171",
+        "source_file": "Adsorption of short-chain perfluoroalkyl substances (PFAS) on functionalized activated carbon from first principles.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "4.6",
+        "unit": null,
+        "ref_doi": "10.1063/5.0300171",
+        "source_file": "Adsorption of short-chain perfluoroalkyl substances (PFAS) on functionalized activated carbon from first principles.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "9.3",
+        "unit": null,
+        "ref_doi": "10.1063/5.0300171",
+        "source_file": "Adsorption of short-chain perfluoroalkyl substances (PFAS) on functionalized activated carbon from first principles.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "5.2",
+        "unit": null,
+        "ref_doi": "10.1063/5.0300171",
+        "source_file": "Adsorption of short-chain perfluoroalkyl substances (PFAS) on functionalized activated carbon from first principles.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "水溶性": [
+      {
+        "value": "570",
+        "unit": "mg/L (25°C)",
+        "ref_doi": "10.1007/s11356-015-6019-9",
+        "source_file": "Sorption of perfluoroalkyl substances in sewage sludge.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "水溶性 (PFOA vs PFOS)": [
+      {
+        "value": "PFOA > PFOS",
+        "unit": null,
+        "ref_doi": "10.1016/j.watres.2020.116534",
+        "source_file": "Enhanced adsorption of per- and polyfluoroalkyl substances (PFAS) by edible, nutrient-amended montmorillonite clays.pdf",
+        "confidence": 0.8,
+        "low_confidence": false
+      }
+    ],
+    "污染物pKa值": [
+      {
+        "value": "pKa1=2.0, pKa2=6.8",
+        "unit": null,
+        "ref_doi": "10.1007/s11356-022-20949-w",
+        "source_file": "Intercalating negatively charged pillars into graphene oxide sheets to enhance sulfonamide pharmaceutical removal from water.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "污染物分子结构差异对吸附的影响": [
+      {
+        "value": "PFHxS (C6) 比 PFBS (C4) 有更长的全氟烷基链，导致更强的疏水相互作用，从而吸附容量更高。",
+        "unit": null,
+        "ref_doi": "10.1016/j.cej.2024.151173",
+        "source_file": "A multilayer adsorption of perfluorohexanesulfonic and perfluorobutanesulfonic acids on bio-based polyurethanechitosan foam Advanced interpretation of the adsorption mechanism.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "污染物官能团": [
+      {
+        "value": "疏水C-F链、亲水磺酸基或羧基",
+        "unit": null,
+        "ref_doi": "10.1016/j.apsusc.2022.154224",
+        "source_file": "Adsorption of three perfluoroalkyl sulfonate compounds from environmental water and human serum samples using cationic porous covalent organic framework as adsorbents and detection combination with MALDI-TOF MS.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "污染物性质-碳链长度与疏水性关系 property: chain length vs. hydrophobicity": [
+      {
+        "value": "较长碳链的PFSAs（PFOS, PFHxS）疏水性更高，更易被吸附去除",
+        "unit": null,
+        "ref_doi": "10.1016/j.chemosphere.2020.125951",
+        "source_file": "Removal of perfluoroalkanesulfonic acids (PFSAs) from synthetic and natural groundwater by electrocoagulation.pdf",
+        "confidence": 0.8,
+        "low_confidence": false
+      }
+    ],
+    "污染物物理化学性质": [
+      {
+        "value": "分子式: C4HF9O3S; 分子量: 300.10 g/mol; pKa: -3.27; logKow: 1.38; 水中溶解度 (Cs): 570 mg/L",
+        "unit": null,
+        "ref_doi": "10.1016/j.colsurfa.2025.137137",
+        "source_file": "Novel findings about per-and polyfluoroalkyl substances adsorption on a β-cyclodextrin (β-CD) based adsorbent using the statistical mechanics formalism.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "分子式: C5HF11O3S; 分子量: 350.10 g/mol; pKa: -3.27; logKow: 2.13; 水中溶解度 (Cs): 200 mg/L",
+        "unit": null,
+        "ref_doi": "10.1016/j.colsurfa.2025.137137",
+        "source_file": "Novel findings about per-and polyfluoroalkyl substances adsorption on a β-cyclodextrin (β-CD) based adsorbent using the statistical mechanics formalism.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "分子式: C6HF13O3S; 分子量: 400.11 g/mol; pKa: -3.27; logKow: 2.82; 水中溶解度 (Cs): 68 mg/L",
+        "unit": null,
+        "ref_doi": "10.1016/j.colsurfa.2025.137137",
+        "source_file": "Novel findings about per-and polyfluoroalkyl substances adsorption on a β-cyclodextrin (β-CD) based adsorbent using the statistical mechanics formalism.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "污染物特性 (PFAS)": [
+      {
+        "value": "具有极端环境持久性和生物累积性；分子中多个C-F键导致降解性可忽略。",
+        "unit": null,
+        "ref_doi": "10.1016/j.seppur.2025.132797",
+        "source_file": "One-step synthesis of reduced graphene oxideactivated carbon composite for efficient removal of per- and polyfluoroalkyl substances from drinking water Adsorption mechanisms and DFT study.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "污染物特性概述 Pollutant properties overview": [
+      {
+        "value": "短链PFAAs：高溶解度、高迁移性、易在植物中富集、可结合血清白蛋白等蛋白",
+        "unit": null,
+        "ref_doi": "10.1016/j.scitotenv.2021.149191",
+        "source_file": "Efficient adsorptive removal of short-chain perfluoroalkyl acids using reed straw-derived biochar (RESCA).pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "污染物电荷状态 (环境pH下)": [
+      {
+        "value": "阴离子",
+        "unit": null,
+        "ref_doi": "10.1016/j.apsusc.2022.154224",
+        "source_file": "Adsorption of three perfluoroalkyl sulfonate compounds from environmental water and human serum samples using cationic porous covalent organic framework as adsorbents and detection combination with MALDI-TOF MS.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "溶剂化自由能": [
+      {
+        "value": "-0.41",
+        "unit": "eV",
+        "ref_doi": "10.1063/5.0300171",
+        "source_file": "Adsorption of short-chain perfluoroalkyl substances (PFAS) on functionalized activated carbon from first principles.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "电荷状态 (PFOA, PFOS)": [
+      {
+        "value": "主要以阴离子形式存在",
+        "unit": null,
+        "ref_doi": "10.1016/j.watres.2020.116534",
+        "source_file": "Enhanced adsorption of per- and polyfluoroalkyl substances (PFAS) by edible, nutrient-amended montmorillonite clays.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "电荷状态/官能团 (PFOA, PFOS, PFDA, PFBS)": [
+      {
+        "value": "均为阴离子型PFAS，含有磺酸基（-SO₃⁻）或羧酸基（-COO⁻）官能团。",
+        "unit": null,
+        "ref_doi": "10.3390/environments12010020",
+        "source_file": "Air Bubbling Assisted Soil Washing to Treat PFAS in High Organic Content Soils.pdf",
+        "confidence": 0.9,
+        "low_confidence": false
+      }
+    ],
+    "短链PFAS相对于长链的环境行为差异": [
+      {
+        "value": "与长链PFAS相比，短链PFAS在固体表面的吸附可能性更低，因此主要存在于水相中。这导致它们在水中的迁移性更高，增加了水生生物和人类的暴露风险。短链和长链PFAS与吸附介质的相互作用方式不同，因此表现出不同的去除效率。",
+        "unit": null,
+        "ref_doi": "10.1016/j.seppur.2023.124548",
+        "source_file": "The effect of green sorption media pretreatment on nanofiltration during water treatment for long- and short-chain per- and polyfluoroalkyl substances (PFAS) removal.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "碳-氟键键能": [
+      {
+        "value": "544",
+        "unit": "kJ/mol",
+        "ref_doi": "10.1016/j.seppur.2025.136051",
+        "source_file": "Enhanced removal of per- and polyfluoroalkyl substances (PFAS) by NH2-functionalized MOF with ex-situ grown layered double hydroxides Mechanistic insights and adsorption behavior.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "辛醇水分配系数 logKow": [
+      {
+        "value": "4.49",
+        "unit": null,
+        "ref_doi": "10.1007/s11356-015-6019-9",
+        "source_file": "Sorption of perfluoroalkyl substances in sewage sludge.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "长链与短链PFAS的定义": [
+      {
+        "value": "长链PFAS：对于全氟羧酸（PFCAs）≥8个碳原子，对于全氟烷磺酸（PFSAs）≥6个碳原子。短链PFAS：碳链短于上述定义。",
+        "unit": null,
+        "ref_doi": "10.1016/j.seppur.2023.124548",
+        "source_file": "The effect of green sorption media pretreatment on nanofiltration during water treatment for long- and short-chain per- and polyfluoroalkyl substances (PFAS) removal.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ]
+  },
+  "removal_mechanisms": [
+    {
+      "mechanism": "吸附",
+      "evidence_count": 98,
+      "key_references": [
+        "10.1016/j.watres.2017.04.057",
+        "10.1016/j.jwpe.2024.106231",
+        "10.1021/acsestwater.3c00191",
+        "10.1007/s11356-022-20949-w",
+        "10.1016/j.watres.2024.121458"
+      ],
+      "details": [
+        {
+          "parameter": "PFOS在聚酰胺膜上的吸附机理",
+          "value": "静电作用与疏水作用的混合， pH和IS控制主导机制。低pH(pH<IEP)时，静电吸引（磺酸头基与正电胺基）主导；高pH(pH>IEP)时，疏水作用（全氟碳链）主导。",
+          "ref_doi": "10.1021/acsestengg.3c00515"
+        },
+        {
+          "parameter": "生物炭在 PFAS 去除中的关键作用因素",
+          "value": "(1) 形貌结构和孔隙尺寸限制 PFAS 迁移性；(2) 高比表面积和正电荷增强吸附；(3) 非极性芳环的高疏水性促进疏水相互作用。",
+          "ref_doi": "10.1016/j.jwpe.2024.106231"
+        },
+        {
+          "parameter": "PFAS 链长对吸附行为的影响",
+          "value": "长链 PFAS (PFOA, PFOS) 比短链 PFAS (PFBA, PFBS) 更疏水 (LogD >1.0)，更易通过疏水作用被吸附；短链 PFAS 主要依赖静电作用，且容易被长链 PFAS 竞争置换。",
+          "ref_doi": "10.1016/j.jwpe.2024.106231"
+        }
+      ]
+    },
+    {
+      "mechanism": "疏水",
+      "evidence_count": 58,
+      "key_references": [
+        "10.1016/j.watres.2017.04.057",
+        "10.1016/j.wroa.2023.100175",
+        "10.1016/j.jwpe.2024.106231",
+        "10.1021/acsestwater.3c00191",
+        "10.1007/s11356-022-20949-w"
+      ],
+      "details": [
+        {
+          "parameter": "PFOS在聚酰胺膜上的吸附机理",
+          "value": "静电作用与疏水作用的混合， pH和IS控制主导机制。低pH(pH<IEP)时，静电吸引（磺酸头基与正电胺基）主导；高pH(pH>IEP)时，疏水作用（全氟碳链）主导。",
+          "ref_doi": "10.1021/acsestengg.3c00515"
+        },
+        {
+          "parameter": "PFAS 去除的主要机理",
+          "value": "疏水相互作用 (Hydrophobic interactions) 和静电相互作用 (Electrostatic interactions)",
+          "ref_doi": "10.1016/j.jwpe.2024.106231"
+        },
+        {
+          "parameter": "生物炭在 PFAS 去除中的关键作用因素",
+          "value": "(1) 形貌结构和孔隙尺寸限制 PFAS 迁移性；(2) 高比表面积和正电荷增强吸附；(3) 非极性芳环的高疏水性促进疏水相互作用。",
+          "ref_doi": "10.1016/j.jwpe.2024.106231"
+        }
+      ]
+    },
+    {
+      "mechanism": "静电",
+      "evidence_count": 49,
+      "key_references": [
+        "10.1016/j.jwpe.2024.106231",
+        "10.1021/acsestwater.3c00191",
+        "10.1007/s11356-022-20949-w",
+        "10.1016/j.watres.2024.121458",
+        "10.3390/chemengineering9040083"
+      ],
+      "details": [
+        {
+          "parameter": "PFOS在聚酰胺膜上的吸附机理",
+          "value": "静电作用与疏水作用的混合， pH和IS控制主导机制。低pH(pH<IEP)时，静电吸引（磺酸头基与正电胺基）主导；高pH(pH>IEP)时，疏水作用（全氟碳链）主导。",
+          "ref_doi": "10.1021/acsestengg.3c00515"
+        },
+        {
+          "parameter": "PFAS 去除的主要机理",
+          "value": "疏水相互作用 (Hydrophobic interactions) 和静电相互作用 (Electrostatic interactions)",
+          "ref_doi": "10.1016/j.jwpe.2024.106231"
+        },
+        {
+          "parameter": "PFAS 链长对吸附行为的影响",
+          "value": "长链 PFAS (PFOA, PFOS) 比短链 PFAS (PFBA, PFBS) 更疏水 (LogD >1.0)，更易通过疏水作用被吸附；短链 PFAS 主要依赖静电作用，且容易被长链 PFAS 竞争置换。",
+          "ref_doi": "10.1016/j.jwpe.2024.106231"
+        }
+      ]
+    },
+    {
+      "mechanism": "氢键",
+      "evidence_count": 18,
+      "key_references": [
+        "10.1016/j.cej.2024.151173",
+        "10.1107/S205322962400528X",
+        "10.1016/j.colsurfa.2025.137137",
+        "10.1007/s11356-022-20949-w",
+        "10.1039/d3ew00959a"
+      ],
+      "details": [
+        {
+          "parameter": "PFAS分子结构指纹 (Morgan Fingerprints) 对去除效率的影响",
+          "value": "关键Morgan指纹特征：fp_772 (磺酸基)、fp_39 (羧基)、fp_706 (亚甲基)、fp_281 (羟基) 显著影响去除效率。磺酸基和羧基因带强负电荷增强PFAS-树脂相互作用。羟基可通过氢键促进吸附。",
+          "ref_doi": "10.1021/acs.est.4c14223"
+        },
+        {
+          "parameter": "PFBS/CTAC 体系界面氢键数量",
+          "value": "随着CTAC比例增加，体系中表面活性剂头基形成的氢键数量逐渐减少。PFBS/CTAC=1:0时氢键数量最高。",
+          "ref_doi": "10.1016/j.colsurfa.2025.139045"
+        },
+        {
+          "parameter": "吸附机理",
+          "value": "疏水作用、静电作用和氢键共同作用",
+          "ref_doi": "10.1016/j.watres.2020.116534"
+        }
+      ]
+    },
+    {
+      "mechanism": "离子交换",
+      "evidence_count": 6,
+      "key_references": [
+        "10.1016/j.cej.2018.05.006",
+        "10.1039/d3ew00959a",
+        "10.1016/j.ces.2025.122126",
+        "10.1016/j.apsusc.2022.154224"
+      ],
+      "details": [
+        {
+          "parameter": "树脂类型对PFAS去除受共存离子影响的差异",
+          "value": "A33E (砷特异性) > A592E (PFAS特异性) ≥ A520E (硝酸盐特异性)",
+          "ref_doi": "10.1016/j.ces.2025.122126"
+        },
+        {
+          "parameter": "PFASs置换行为",
+          "value": "PFHxS可置换吸附在树脂上的短链PFASs（如PFBS， PFHxA， PFBA），但无法置换PFOS。",
+          "ref_doi": "10.1016/j.cej.2018.05.006"
+        },
+        {
+          "parameter": "PFASs竞争吸附机理",
+          "value": "PFASs之间的竞争吸附主要受疏水作用和分子尺寸（立体效应）控制，同时涉及与树脂季铵基团的离子交换（静电作用）。",
+          "ref_doi": "10.1016/j.cej.2018.05.006"
+        }
+      ]
+    },
+    {
+      "mechanism": "配位",
+      "evidence_count": 2,
+      "key_references": [
+        "10.1016/j.seppur.2025.136051",
+        "10.1016/j.ces.2025.122126"
+      ],
+      "details": [
+        {
+          "parameter": "树脂类型对PFAS去除受共存离子影响的差异",
+          "value": "A33E (砷特异性) > A592E (PFAS特异性) ≥ A520E (硝酸盐特异性)",
+          "ref_doi": "10.1016/j.ces.2025.122126"
+        },
+        {
+          "parameter": "去除机理：Lewis酸碱配位",
+          "value": "主导机理之一。PFAS的羧基/磺酸基与材料表面的Fe³⁺、Mg²⁺/Co²⁺金属中心发生配位。",
+          "ref_doi": "10.1016/j.seppur.2025.136051"
+        }
+      ]
+    },
+    {
+      "mechanism": "氧化",
+      "evidence_count": 1,
+      "key_references": [
+        "10.1016/j.ces.2025.122126"
+      ],
+      "details": [
+        {
+          "parameter": "树脂类型对PFAS去除受共存离子影响的差异",
+          "value": "A33E (砷特异性) > A592E (PFAS特异性) ≥ A520E (硝酸盐特异性)",
+          "ref_doi": "10.1016/j.ces.2025.122126"
+        }
+      ]
+    },
+    {
+      "mechanism": "膜分离",
+      "evidence_count": 1,
+      "key_references": [
+        "10.1016/j.jhazmat.2025.140666"
+      ],
+      "details": [
+        {
+          "parameter": "钙离子对PFAS去除的机理贡献",
+          "value": "Ca²⁺通过“离子桥接”作用，促进形成更致密的HA-Ca²⁺滤饼层，增强尺寸筛分效应；同时促进形成更大的PFAS-Ca²⁺-HA三元络合物，更难通过膜分离层。",
+          "ref_doi": "10.1016/j.jhazmat.2025.140666"
+        }
+      ]
+    }
+  ],
+  "adsorption_performance": {
+    "best_materials": [
+      {
+        "material": "GO",
+        "qmax_mg_g": 12133.0,
+        "qmax_avg": 2367.1,
+        "evidence_count": 13,
+        "ref_dois": [
+          "10.1016/j.chemosphere.2020.125951",
+          "10.1007/s11356-022-20949-w",
+          "10.1016/j.seppur.2025.132797",
+          "10.1016/j.watres.2024.121458"
+        ]
+      },
+      {
+        "material": "膜",
+        "qmax_mg_g": 8.26,
+        "qmax_avg": 3.7,
+        "evidence_count": 24,
+        "ref_dois": [
+          "10.1016/j.watres.2023.119947",
+          "10.1007/s11270-024-07056-x",
+          "10.1021/acsestengg.3c00515",
+          "10.1016/j.jenvman.2022.114703",
+          "10.1016/j.seppur.2021.119008"
+        ]
+      },
+      {
+        "material": "biochar",
+        "qmax_mg_g": 2896.0,
+        "qmax_avg": 2234.0,
+        "evidence_count": 10,
+        "ref_dois": [
+          "10.1016/j.jwpe.2024.106231",
+          "10.1016/j.cej.2024.155456",
+          "10.1080/09593330.2019.1680744",
+          "10.1016/j.jwpe.2023.103616"
+        ]
+      },
+      {
+        "material": "活性炭",
+        "qmax_mg_g": 24.6,
+        "qmax_avg": 13.2,
+        "evidence_count": 9,
+        "ref_dois": [
+          "10.1002/wer.10990",
+          "10.1016/j.watres.2017.04.057",
+          "10.1016/j.scitotenv.2020.139154"
+        ]
+      },
+      {
+        "material": "aerogel",
+        "qmax_mg_g": null,
+        "qmax_avg": null,
+        "evidence_count": 3,
+        "ref_dois": [
+          "10.1016/j.watres.2024.121458"
+        ]
+      },
+      {
+        "material": "resin",
+        "qmax_mg_g": null,
+        "qmax_avg": null,
+        "evidence_count": 7,
+        "ref_dois": [
+          "10.1016/j.jcis.2019.09.066",
+          "10.1016/j.cej.2024.155456",
+          "10.1016/j.ces.2025.122126"
+        ]
+      },
+      {
+        "material": "树脂",
+        "qmax_mg_g": null,
+        "qmax_avg": null,
+        "evidence_count": 10,
+        "ref_dois": [
+          "10.1016/j.cej.2018.05.006",
+          "10.1016/j.watres.2017.04.057",
+          "10.1021/acs.est.4c14223",
+          "10.1016/j.ces.2025.122126"
+        ]
+      },
+      {
+        "material": "PDA",
+        "qmax_mg_g": null,
+        "qmax_avg": null,
+        "evidence_count": 3,
+        "ref_dois": [
+          "10.1016/j.watres.2024.122931"
+        ]
+      },
+      {
+        "material": "membrane",
+        "qmax_mg_g": null,
+        "qmax_avg": null,
+        "evidence_count": 6,
+        "ref_dois": [
+          "10.1016/j.cej.2017.09.061",
+          "10.1016/j.seppur.2021.119008"
+        ]
+      },
+      {
+        "material": "石墨烯",
+        "qmax_mg_g": null,
+        "qmax_avg": null,
+        "evidence_count": 25,
+        "ref_dois": [
+          "10.3390/chemengineering9040083"
+        ]
+      },
+      {
+        "material": "生物炭",
+        "qmax_mg_g": null,
+        "qmax_avg": null,
+        "evidence_count": 10,
+        "ref_dois": [
+          "10.1016/j.scitotenv.2021.149191",
+          "10.1016/j.envpol.2025.127199",
+          "10.1002/rem.70041"
+        ]
+      },
+      {
+        "material": "alginate",
+        "qmax_mg_g": null,
+        "qmax_avg": null,
+        "evidence_count": 2,
+        "ref_dois": [
+          "10.1016/j.cej.2017.09.061",
+          "10.1016/j.jwpe.2023.103616"
+        ]
+      },
+      {
+        "material": "chitosan",
+        "qmax_mg_g": null,
+        "qmax_avg": null,
+        "evidence_count": 3,
+        "ref_dois": [
+          "10.1016/j.cej.2024.151173"
+        ]
+      }
+    ],
+    "total_performance_ki": 358
+  },
+  "engineering_constraints": [
+    {
+      "parameter": "BIPGEM 的组分构成",
+      "value": "沙子 (80%)，生物炭 (5%)，粘土 (5%)，珍珠岩 (5%)，零价铁 (5%) (体积比)",
+      "ref_doi": "10.1016/j.jwpe.2024.106231"
+    },
+    {
+      "parameter": "pH 和 TOC 对 PFAS 去除效率的联合影响",
+      "value": "在 pH 8.0-8.3 范围内，所有 5 种 PFAS 的去除效率增加；pH 超过 8.3 后下降。TOC 浓度增加会降低短链 PFAS (PFBA, PFBS) 的去除效率，但对长链 PFAS (PFOA, PFOS) 和 GenX 的影响呈凹形关系，在 TOC 5-10 mg/L 范围内，TOC 增加会降低它们的去除效率。",
+      "ref_doi": "10.1016/j.jwpe.2024.106231"
+    },
+    {
+      "parameter": "再生循环PFAS回收率",
+      "value": ">90",
+      "ref_doi": "10.1016/j.watres.2024.121458"
+    },
+    {
+      "parameter": "再生循环后吸附能力稳定性",
+      "value": "136.2 ± 9.8 到 204.8 ± 6.0 ng/mg",
+      "ref_doi": "10.1016/j.watres.2024.121458"
+    },
+    {
+      "parameter": "自来水基质成分",
+      "value": "Cl-: 24.8-30.2 mg/L; SO4^2-: 5.01-6.67 mg/L; TOC: 1.41-2.06 mg/L",
+      "ref_doi": "10.1016/j.watres.2024.121458"
+    },
+    {
+      "parameter": "Optimal coagulant dose for PFAS removal",
+      "value": "alum 60 mg/L or FeCl3 100 mg/L",
+      "ref_doi": "10.1039/d4va00093e"
+    },
+    {
+      "parameter": "溶液pH对去除率的影响",
+      "value": "去除率在pH 3时最高（约96.8%），随pH升高而降低，至pH 9时约62%。",
+      "ref_doi": "10.1016/j.seppur.2025.136051"
+    },
+    {
+      "parameter": "离子强度对吸附的影响",
+      "value": "去除率和平衡吸附容量随NaCl浓度增加而下降：从0 mM时的96.8% (322.7 mg/g) 降至30 mM时的66.9% (223.0 mg/g)。",
+      "ref_doi": "10.1016/j.seppur.2025.136051"
+    },
+    {
+      "parameter": "共存阴离子竞争强度",
+      "value": "竞争强度顺序：F⁻ > SO₄²⁻ > NO₃⁻ > Cl⁻。",
+      "ref_doi": "10.1016/j.seppur.2025.136051"
+    },
+    {
+      "parameter": "循环再生性能",
+      "value": "5次吸附-解吸循环后，PFOA去除率从96.8%保持至92.0%，容量保留率为92%。",
+      "ref_doi": "10.1016/j.seppur.2025.136051"
+    },
+    {
+      "parameter": "吸附剂最佳投加量",
+      "value": "15 mg (在500 mL 10 mg/L PFOA溶液中) 可实现约95%的去除率，为效率与容量的最佳平衡点。",
+      "ref_doi": "10.1016/j.seppur.2025.136051"
+    },
+    {
+      "parameter": "最优pH optimal pH",
+      "value": "7.0",
+      "ref_doi": "10.1016/j.chemosphere.2020.125951"
+    },
+    {
+      "parameter": "最优搅拌速度 optimal stirring speed",
+      "value": "400",
+      "ref_doi": "10.1016/j.chemosphere.2020.125951"
+    },
+    {
+      "parameter": "实验条件-电极材料 electrode material",
+      "value": "Al-Zn",
+      "ref_doi": "10.1016/j.chemosphere.2020.125951"
+    },
+    {
+      "parameter": "实验条件-反转周期 reversing period",
+      "value": "10",
+      "ref_doi": "10.1016/j.chemosphere.2020.125951"
+    },
+    {
+      "parameter": "树脂性质优化对短链PFAS去除效率的提升幅度",
+      "value": "相比仅优化实验条件，同时优化树脂性质使PFBS和GenX的去除效率分别提高了8.28和14.57个百分点。",
+      "ref_doi": "10.1021/acs.est.4c14223"
+    },
+    {
+      "parameter": "PFAS吸附的热力学驱动类型",
+      "value": "热力学熵驱动",
+      "ref_doi": "10.1016/j.wroa.2023.100175"
+    },
+    {
+      "parameter": "解吸率 Desorption yield",
+      "value": "<4",
+      "ref_doi": "10.1007/s11356-015-6019-9"
+    },
+    {
+      "parameter": "解吸率 Desorption yield",
+      "value": "15–19",
+      "ref_doi": "10.1007/s11356-015-6019-9"
+    },
+    {
+      "parameter": "解吸率 Desorption yield",
+      "value": "18–27",
+      "ref_doi": "10.1007/s11356-015-6019-9"
+    }
+  ],
+  "occurrence_patterns": [
+    {
+      "parameter": "PFAS在饮用水中的赋存浓度",
+      "value": "PFOA: 4.4 ng/L, PFOS: 8.1 ng/L",
+      "ref_doi": "10.1021/acsestengg.3c00515"
+    },
+    {
+      "parameter": "PFAS 环境浓度范围 (Florida 地表水)",
+      "value": "总 PFAS 高达 265 ng/L；其中 PFOS 在海牛组织中高达 166 ng/g (湿重)",
+      "ref_doi": "10.1016/j.jwpe.2024.106231"
+    },
+    {
+      "parameter": "PFAS 在地表水和饮用水中的环境检出",
+      "value": "在地表水中普遍检出，在45%的自来水中检出，在看似未受污染的流域也有检出。密苏里河上游总PFAS浓度高达12,920 ppt。",
+      "ref_doi": "10.1021/acs.langmuir.4c02566"
+    },
+    {
+      "parameter": "PFAS 生物富集",
+      "value": "PFAS生物富集因子(BCF) ≥ 1000。在密苏里河鱼体中PFAS浓度高达88 ng/g (88,000 ppt)，其中PFOS是主要成分。",
+      "ref_doi": "10.1021/acs.langmuir.4c02566"
+    },
+    {
+      "parameter": "硝酸盐的环境MCL标准",
+      "value": "10",
+      "ref_doi": "10.1016/j.ces.2025.122126"
+    },
+    {
+      "parameter": "硫酸盐的环境标准限值",
+      "value": "250",
+      "ref_doi": "10.1016/j.ces.2025.122126"
+    },
+    {
+      "parameter": "环境浓度 environmental concentration",
+      "value": "31.0",
+      "ref_doi": "10.1016/j.chemosphere.2020.125951"
+    },
+    {
+      "parameter": "环境浓度 environmental concentration",
+      "value": "0.80",
+      "ref_doi": "10.1016/j.chemosphere.2020.125951"
+    },
+    {
+      "parameter": "环境浓度 environmental concentration",
+      "value": "0.50",
+      "ref_doi": "10.1016/j.chemosphere.2020.125951"
+    },
+    {
+      "parameter": "环境浓度范围（松花江）",
+      "value": ">1.41 ng/L",
+      "ref_doi": "10.1016/j.chemosphere.2019.06.191"
+    },
+    {
+      "parameter": "环境浓度趋势（浑河）",
+      "value": "经过两座城市后浓度明显增加",
+      "ref_doi": "10.1016/j.chemosphere.2019.06.191"
+    },
+    {
+      "parameter": "PFBS在环境中的赋存描述",
+      "value": "广泛存在于湖泊、河流、海洋、自来水中",
+      "ref_doi": "10.1007/s11270-024-07056-x"
+    },
+    {
+      "parameter": "污泥有机质含量 OM",
+      "value": "62-77",
+      "ref_doi": "10.1007/s11356-015-6019-9"
+    },
+    {
+      "parameter": "污泥pH",
+      "value": "SL1~SL2: slightly basic; SL3: neutral; SL4: slightly acidic",
+      "ref_doi": "10.1007/s11356-015-6019-9"
+    },
+    {
+      "parameter": "污泥阳离子含量 Ca+Mg",
+      "value": "与pH呈负相关（R²=0.95），与溶解有机碳（DOC）呈正相关（R²=0.95）",
+      "ref_doi": "10.1007/s11356-015-6019-9"
+    },
+    {
+      "parameter": "污染物平均浓度相对大小",
+      "value": "PFASs平均浓度 > PBDEs和HBCDD平均浓度",
+      "ref_doi": "10.1016/j.scitotenv.2019.133810"
+    },
+    {
+      "parameter": "衬里填埋场渗滤液中更高浓度的污染物种类",
+      "value": "BDE-47, BDE-100, BDE-153, BDE-183, PFOA, PFNA, PFBS",
+      "ref_doi": "10.1016/j.scitotenv.2019.133810"
+    },
+    {
+      "parameter": "渗滤液中污染物浓度与COD的显著正相关关系",
+      "value": "PFNA (R=0.33), PFBS (R=0.37), BDE-47 (R=0.53), BDE-99 (R=0.51), BDE-100 (R=0.52), BDE-153 (R=0.46), BDE-154 (R=0.37), ΣPBDEs (R=0.44)",
+      "ref_doi": "10.1016/j.scitotenv.2019.133810"
+    },
+    {
+      "parameter": "渗滤液中与COD无相关性的污染物",
+      "value": "BDE-183, BDE-209",
+      "ref_doi": "10.1016/j.scitotenv.2019.133810"
+    },
+    {
+      "parameter": "BDE-209在渗滤液中的主要迁移机制",
+      "value": "物理磨损（abrasion of particles and fibres）而非溶解（dissolution）",
+      "ref_doi": "10.1016/j.scitotenv.2019.133810"
+    }
+  ],
+  "molecular_features_for_biomimetic_matching": [
+    "可电离",
+    "可配位",
+    "大分子",
+    "弱酸性",
+    "氟碳链",
+    "疏水性"
+  ],
+  "recommended_biomimetic_prototypes": [
+    "lotus-leaf",
+    "polydopamine-coating"
+  ]
+}

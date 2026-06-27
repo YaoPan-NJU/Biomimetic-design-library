@@ -1,0 +1,376 @@
+{
+  "pollutant_name": "罗红霉素",
+  "paper_count": 10,
+  "total_ki": 133,
+  "empty_papers": 0,
+  "skipped_low_confidence": 0,
+  "ki_by_domain": {
+    "D1_adsorption_performance": 58,
+    "D4_adsorption_mechanism": 19,
+    "D2_material_structure": 12,
+    "D7_synthesis_method": 10,
+    "D11_pollutant_property": 9,
+    "D5_engineering_constraint": 9,
+    "D6_pollutant_application": 9,
+    "D8_characterization": 4,
+    "D12_occurrence_pattern": 3
+  },
+  "properties": {
+    "Log Kow (疏水性参数)": [
+      {
+        "value": "详见context",
+        "unit": null,
+        "ref_doi": "10.1007/s40201-025-00966-w",
+        "source_file": "TiO2-modified activated carbon for pharmaceutical contaminant removal experimental and in-silico insights using density functional theory.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "ROX 溶解度 (相对比较)": [
+      {
+        "value": "水溶性低于CAP，辛醇/水分配系数 (XlogP) 高于CAP",
+        "unit": null,
+        "ref_doi": "10.1039/d0ew00117a",
+        "source_file": "Adsorption performance and mechanism of antibiotics from aqueous solutions on porous boron nitride-carbon nanosheets.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "大环内酯抗生素 (MACs) 的结构特征": [
+      {
+        "value": "由14、15或16个碳原子形成的大环内酯环，通过糖苷键连接糖分子。缺乏发色团，导致紫外响应非常弱。",
+        "unit": null,
+        "ref_doi": "10.1007/s00604-018-2728-3",
+        "source_file": "A hollow porous molecularly imprinted polymer as a sorbent for the extraction of 7 macrolide antibiotics prior to their determination by HPLC-MSMS.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "污染物分子量 MW": [
+      {
+        "value": "144",
+        "unit": "g/mol",
+        "ref_doi": "10.1016/j.seppur.2011.11.004",
+        "source_file": "Design, preparation and characterization of novel molecularly imprinted polymers for removal of potentially genotoxic 1,3-diisopropylurea from API solutions.pdf",
+        "confidence": 0.5,
+        "low_confidence": true
+      }
+    ],
+    "污染物官能团": [
+      {
+        "value": "脲基 (Urea group, -NH-C(=O)-NH-)",
+        "unit": null,
+        "ref_doi": "10.1016/j.seppur.2011.11.004",
+        "source_file": "Design, preparation and characterization of novel molecularly imprinted polymers for removal of potentially genotoxic 1,3-diisopropylurea from API solutions.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "污染物性质 logKow（氟喹诺酮类）": [
+      {
+        "value": "~1.03~0.28",
+        "unit": null,
+        "ref_doi": "10.1021/es903490h",
+        "source_file": "biodegradation-and-adsorption-of-antibiotics-in-the-activated-sludge-process.pdf",
+        "confidence": 0.8,
+        "low_confidence": false
+      }
+    ],
+    "污染物性质 pKa（氟喹诺酮类）": [
+      {
+        "value": "pKaCOOH = 3.01~6.26, pKaNH₃ = 7.65~10.58",
+        "unit": null,
+        "ref_doi": "10.1021/es903490h",
+        "source_file": "biodegradation-and-adsorption-of-antibiotics-in-the-activated-sludge-process.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "污染物持久性（脱水红霉素）": [
+      {
+        "value": "在实验条件下，淡水和咸水系统中均难去除（persistent）",
+        "unit": null,
+        "ref_doi": "10.1021/es903490h",
+        "source_file": "biodegradation-and-adsorption-of-antibiotics-in-the-activated-sludge-process.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "污染物类型与潜在危害": [
+      {
+        "value": "罗红霉素是一种半合成的14元环大环内酯抗生素，在医疗和兽医中广泛使用。其残留物可能沿食物链累积，对环境和人类健康构成潜在危害，并可能导致细菌耐药性增加。",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "Molecularly_Imprinted_Polymer_Microspheres_Prepared_by_Precipitation_Polymerization_for_the_Binding_and_Recognition_of_Roxithromycin.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ]
+  },
+  "removal_mechanisms": [
+    {
+      "mechanism": "吸附",
+      "evidence_count": 12,
+      "key_references": [
+        "10.1039/d0ew00117a",
+        "10.1021/es903490h",
+        "10.1016/j.memsci.2024.123411",
+        "10.1007/s40201-025-00966-w"
+      ],
+      "details": [
+        {
+          "parameter": "去除途径主导机制",
+          "value": "头孢氨苄和磺胺类以生物降解为主；氨苄西林、氟喹诺酮类、四环素、罗红霉素和甲氧苄啶以吸附为主",
+          "ref_doi": "10.1021/es903490h"
+        },
+        {
+          "parameter": "环境因素对吸附机理的影响（氟喹诺酮类）",
+          "value": "咸水中的二价阳离子（Ca2+, Mg2+）显著降低了三种氟喹诺酮类在活性污泥上的吸附",
+          "ref_doi": "10.1021/es903490h"
+        },
+        {
+          "parameter": "吸附机理（氟喹诺酮类）",
+          "value": "主要受静电力影响，而非疏水作用。其两性特征（pKaCOOH = 3.01~6.26, pKaNH₃ = 7.65~10.58）是关键。",
+          "ref_doi": "10.1021/es903490h"
+        }
+      ]
+    },
+    {
+      "mechanism": "氢键",
+      "evidence_count": 5,
+      "key_references": [
+        "10.1016/j.seppur.2011.11.004",
+        "10.1002/jssc.201500448",
+        "10.3866/PKU.WHXB201311272",
+        "10.1016/j.memsci.2024.123411"
+      ],
+      "details": [
+        {
+          "parameter": "污染物-功能单体相互作用机理",
+          "value": "氢键作用",
+          "ref_doi": "10.1002/jssc.201500448"
+        },
+        {
+          "parameter": "单体-模板预聚合相互作用类型",
+          "value": "氢键和离子键",
+          "ref_doi": null
+        },
+        {
+          "parameter": "吸附机制主导作用主导机理描述 Dominant adsorption mechanisms",
+          "value": "涉及配位键、π-π相互作用和氢键的协同作用",
+          "ref_doi": "10.1016/j.memsci.2024.123411"
+        }
+      ]
+    },
+    {
+      "mechanism": "疏水",
+      "evidence_count": 3,
+      "key_references": [
+        "10.1039/d0ew00117a",
+        "10.1021/es903490h",
+        "10.1007/s40201-025-00966-w"
+      ],
+      "details": [
+        {
+          "parameter": "吸附机理（氟喹诺酮类）",
+          "value": "主要受静电力影响，而非疏水作用。其两性特征（pKaCOOH = 3.01~6.26, pKaNH₃ = 7.65~10.58）是关键。",
+          "ref_doi": "10.1021/es903490h"
+        },
+        {
+          "parameter": "TiO₂与AC的协同作用机制",
+          "value": "AC通过疏水作用、π–π堆叠、范德华力吸附药物，预浓缩污染物；TiO₂在光照下产生活性氧物种（·OH, O₂•−）光催化降解污染物；AC作为电子受体，减少TiO₂电子-空穴复合，增强整体效率。",
+          "ref_doi": "10.1007/s40201-025-00966-w"
+        },
+        {
+          "parameter": "主要吸附机理",
+          "value": "孔填充效应（micropore-filling effect）是 BCN 吸附 CAP 的主要机理；疏水作用（hydrophobic interaction）和静电作用（electrostatic interaction）也是影响 MBCN 和 BCN 吸附容量的重要因素。",
+          "ref_doi": "10.1039/d0ew00117a"
+        }
+      ]
+    },
+    {
+      "mechanism": "π-π",
+      "evidence_count": 3,
+      "key_references": [
+        "10.1016/j.memsci.2024.123411"
+      ],
+      "details": [
+        {
+          "parameter": "吸附机理相互作用能 Interaction energy (DFT calculation)",
+          "value": "coordinate bond: -4.063; π-π interaction: -2.148; hydrogen bond: -3.432",
+          "ref_doi": "10.1016/j.memsci.2024.123411"
+        },
+        {
+          "parameter": "吸附机制主导作用主导机理描述 Dominant adsorption mechanisms",
+          "value": "涉及配位键、π-π相互作用和氢键的协同作用",
+          "ref_doi": "10.1016/j.memsci.2024.123411"
+        },
+        {
+          "parameter": "XPS位移证据 XPS evidence for mechanism",
+          "value": "C 1s峰（苯环）向高结合能位移（286.54→286.69 eV），Fe 2p峰向低结合能位移",
+          "ref_doi": "10.1016/j.memsci.2024.123411"
+        }
+      ]
+    },
+    {
+      "mechanism": "生物降解",
+      "evidence_count": 2,
+      "key_references": [
+        "10.1021/es903490h"
+      ],
+      "details": [
+        {
+          "parameter": "去除途径主导机制",
+          "value": "头孢氨苄和磺胺类以生物降解为主；氨苄西林、氟喹诺酮类、四环素、罗红霉素和甲氧苄啶以吸附为主",
+          "ref_doi": "10.1021/es903490h"
+        },
+        {
+          "parameter": "生物降解机理（头孢氨苄）",
+          "value": "β-内酰胺环不稳定，可被细菌中普遍存在的β-内酰胺酶裂解",
+          "ref_doi": "10.1021/es903490h"
+        }
+      ]
+    },
+    {
+      "mechanism": "静电",
+      "evidence_count": 2,
+      "key_references": [
+        "10.1039/d0ew00117a",
+        "10.1021/es903490h"
+      ],
+      "details": [
+        {
+          "parameter": "吸附机理（氟喹诺酮类）",
+          "value": "主要受静电力影响，而非疏水作用。其两性特征（pKaCOOH = 3.01~6.26, pKaNH₃ = 7.65~10.58）是关键。",
+          "ref_doi": "10.1021/es903490h"
+        },
+        {
+          "parameter": "主要吸附机理",
+          "value": "孔填充效应（micropore-filling effect）是 BCN 吸附 CAP 的主要机理；疏水作用（hydrophobic interaction）和静电作用（electrostatic interaction）也是影响 MBCN 和 BCN 吸附容量的重要因素。",
+          "ref_doi": "10.1039/d0ew00117a"
+        }
+      ]
+    },
+    {
+      "mechanism": "氧化",
+      "evidence_count": 2,
+      "key_references": [
+        "10.1007/s40201-025-00966-w"
+      ],
+      "details": [
+        {
+          "parameter": "DFT吸附能 (AC模型=GO)",
+          "value": "详见context",
+          "ref_doi": "10.1007/s40201-025-00966-w"
+        },
+        {
+          "parameter": "DFT吸附能 (TiO₂-AC模型=GO@TiO₂)",
+          "value": "详见context",
+          "ref_doi": "10.1007/s40201-025-00966-w"
+        }
+      ]
+    },
+    {
+      "mechanism": "配位",
+      "evidence_count": 2,
+      "key_references": [
+        "10.1016/j.memsci.2024.123411"
+      ],
+      "details": [
+        {
+          "parameter": "吸附机制主导作用主导机理描述 Dominant adsorption mechanisms",
+          "value": "涉及配位键、π-π相互作用和氢键的协同作用",
+          "ref_doi": "10.1016/j.memsci.2024.123411"
+        },
+        {
+          "parameter": "XPS位移证据 XPS evidence for mechanism",
+          "value": "C 1s峰（苯环）向高结合能位移（286.54→286.69 eV），Fe 2p峰向低结合能位移",
+          "ref_doi": "10.1016/j.memsci.2024.123411"
+        }
+      ]
+    }
+  ],
+  "adsorption_performance": {
+    "best_materials": [],
+    "total_performance_ki": 58
+  },
+  "engineering_constraints": [
+    {
+      "parameter": "工程约束（生物降解预测）",
+      "value": "基于 k1,specific、HRT 和 MLSS 可预测活性污泥系统对特定抗生素的生物降解去除效率",
+      "ref_doi": "10.1021/es903490h"
+    },
+    {
+      "parameter": "再生方法",
+      "value": "热处理、溶剂洗涤、或光催化自清洁（光照下）",
+      "ref_doi": "10.1007/s40201-025-00966-w"
+    },
+    {
+      "parameter": "保留因子 RSD",
+      "value": "0.32-0.97",
+      "ref_doi": "10.1016/j.talanta.2020.121140"
+    },
+    {
+      "parameter": "方法检出限 (LODs)",
+      "value": "3 - 17",
+      "ref_doi": "10.1007/s00604-018-2728-3"
+    },
+    {
+      "parameter": "方法回收率范围 (三个加标水平)",
+      "value": "88.0% - 117%",
+      "ref_doi": "10.1007/s00604-018-2728-3"
+    },
+    {
+      "parameter": "日内和日间精密度 (RSD)",
+      "value": "<10.7% (日内, n=6), 12.6% (日间, n=3)",
+      "ref_doi": "10.1007/s00604-018-2728-3"
+    },
+    {
+      "parameter": "循环再生性能 Regeneration performance",
+      "value": "10 cycles with no discernible performance deterioration",
+      "ref_doi": "10.1016/j.memsci.2024.123411"
+    },
+    {
+      "parameter": "pH适用范围 pH range for high removal efficiency",
+      "value": "3-10",
+      "ref_doi": "10.1016/j.memsci.2024.123411"
+    },
+    {
+      "parameter": "吸附剂再生性能",
+      "value": "6次循环后平衡吸附容量仍保持在初始容量的91.9%以上",
+      "ref_doi": "10.1039/d0ew00117a"
+    }
+  ],
+  "occurrence_patterns": [
+    {
+      "parameter": "污染物来源",
+      "value": "抗生素主要来自工业、医院和家庭，排入污水",
+      "ref_doi": "10.1021/es903490h"
+    },
+    {
+      "parameter": "环境浓度水平",
+      "value": "ng/L to µg/L (natural water, wastewater), µg/kg to mg/kg (soil, sludge)",
+      "ref_doi": "10.1021/es903490h"
+    },
+    {
+      "parameter": "抗生素在水环境中的赋存与关注",
+      "value": "抗生素在水生环境中的出现已引起公共卫生关注，医院和制药工业废水中细菌耐药性增加也是一个问题。",
+      "ref_doi": null
+    }
+  ],
+  "molecular_features_for_biomimetic_matching": [
+    "可电离",
+    "可配位",
+    "大分子",
+    "弱酸性",
+    "水溶性",
+    "疏水性",
+    "芳香环"
+  ],
+  "recommended_biomimetic_prototypes": [
+    "chitosan",
+    "lotus-leaf",
+    "plant-tannin",
+    "polydopamine-coating"
+  ]
+}
