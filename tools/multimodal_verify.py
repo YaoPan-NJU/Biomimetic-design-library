@@ -62,8 +62,27 @@ def load_api_keys():
     if not keys:
         print("ERROR: No valid MIMO_API_KEY found in .env")
         sys.exit(1)
-    print(f"  Loaded {len(keys)} API key(s)")
-    return keys
+    # Validate keys with a minimal API call
+    valid_keys = []
+    for i, key in enumerate(keys):
+        try:
+            from openai import OpenAI
+            client = OpenAI(api_key=key, base_url=MIMO_BASE_URL)
+            client.chat.completions.create(
+                model=MIMO_MODEL,
+                messages=[{'role': 'user', 'content': 'hi'}],
+                max_tokens=5,
+                temperature=0,
+            )
+            valid_keys.append(key)
+            print(f"  Key {i+1}: valid")
+        except Exception as e:
+            print(f"  Key {i+1}: INVALID ({str(e)[:60]})")
+    if not valid_keys:
+        print("ERROR: No valid API keys found")
+        sys.exit(1)
+    print(f"  Using {len(valid_keys)}/{len(keys)} valid key(s)")
+    return valid_keys
 
 
 def make_client_pool(api_keys):
@@ -265,7 +284,6 @@ def verify_row_with_api(client_pool, row, pdf_path, field='performance_data', ma
                 extra_body={"enable_thinking": False},
             )
 
-            # If finish_reason is length, retry with larger max_tokens
             finish_reason = response.choices[0].finish_reason if response.choices else ''
             result_text = response.choices[0].message.content.strip() if response.choices else ''
             parsed = parse_json_response(result_text)
@@ -273,8 +291,8 @@ def verify_row_with_api(client_pool, row, pdf_path, field='performance_data', ma
             if parsed:
                 return parsed
 
-            # Retry with larger max_tokens if truncated
-            if finish_reason == 'length' and attempt < 2:
+            # Only do truncation retry if we actually got a truncated response (not on error)
+            if finish_reason == 'length' and result_text and attempt < 2:
                 print(f" [truncated, retrying with 16384 tokens]", end='', flush=True)
                 try:
                     response = client.chat.completions.create(
@@ -289,14 +307,14 @@ def verify_row_with_api(client_pool, row, pdf_path, field='performance_data', ma
                     if parsed:
                         return parsed
                 except Exception as e2:
-                    print(f" [retry-16k failed: {str(e2)[:40]}]", end='', flush=True)
+                    print(f" [retry-16k:{str(e2)[:30]}]", end='', flush=True)
 
             return {'found': False, 'quality': 'parse_error', 'raw': result_text[:300]}
 
         except Exception as e:
             if attempt < 2:
-                print(f" [retry {attempt+1}/3: {str(e)[:40]}]", end='', flush=True)
-                time.sleep(2 ** attempt)
+                print(f" [r{attempt+1}:{str(e)[:30]}]", end='', flush=True)
+                time.sleep(1)
             else:
                 return {'found': False, 'quality': 'error', 'error': str(e)}
 
