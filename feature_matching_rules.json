@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "description": "feature-based 匹配规则数据化，用于 BiomimeticContext 接口",
-  "last_updated": "2026-06-08",
+  "last_updated": "2026-06-27",
   "molecular_feature_to_prototype": {
     "芳香环": {
       "prototypes": [
@@ -66,13 +66,6 @@
       "reason": "酰胺基可与吸附剂的极性基团形成氢键",
       "weight": 0.6
     },
-    "氯代烯烃": {
-      "prototypes": [
-        "polydopamine-coating"
-      ],
-      "reason": "氯代烃可通过疏水分配和孔道限域作用被吸附",
-      "weight": 0.6
-    },
     "平面结构": {
       "prototypes": [
         "polydopamine-coating",
@@ -87,6 +80,34 @@
       ],
       "reason": "水溶性污染物需要亲水性吸附剂",
       "weight": 0.5
+    },
+    "氟碳链": {
+      "prototypes": [
+        "lotus-leaf",
+        "superhydrophobic-artificial"
+      ],
+      "reason": "氟碳链具有强疏水性和低表面能，可与超疏水表面通过疏水分配作用结合",
+      "weight": 0.7,
+      "evidence_source": "PFOA/PFBS/PFHxS/HFPO-DA 提参聚合",
+      "evidence_count": 407
+    },
+    "弱酸性": {
+      "prototypes": [
+        "chitosan"
+      ],
+      "reason": "弱酸性污染物在低pH下可被质子化壳聚糖(-NH₃⁺)通过静电吸引吸附",
+      "weight": 0.5,
+      "evidence_source": "BPA/PCP/壬基酚 提参聚合",
+      "evidence_count": 150
+    },
+    "氯代": {
+      "prototypes": [
+        "polydopamine-coating"
+      ],
+      "reason": "氯代有机物（氯代烯烃+氯代芳香烃）可通过疏水分配和孔道限域作用被吸附",
+      "weight": 0.6,
+      "evidence_source": "TCDD/PCP/2,6-二氯苯酚/DDE 提参聚合",
+      "evidence_count": 300
     }
   },
   "interaction_to_prototype": {
