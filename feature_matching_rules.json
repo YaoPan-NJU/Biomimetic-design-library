@@ -108,6 +108,48 @@
       "weight": 0.6,
       "evidence_source": "TCDD/PCP/2,6-二氯苯酚/DDE 提参聚合",
       "evidence_count": 300
+    },
+    "内分泌干扰": {
+      "weight": 0.6,
+      "prototypes": [
+        "polydopamine-coating",
+        "plant-tannin"
+      ],
+      "reason": "内分泌干扰物多为含苯环结构，可通过 π-π 堆积被多巴胺/单宁吸附",
+      "evidence_source": "BPA提参聚合",
+      "evidence_count": 1416
+    },
+    "可电离": {
+      "weight": 0.5,
+      "prototypes": [
+        "chitosan",
+        "alginate"
+      ],
+      "reason": "可电离污染物在特定 pH 下带电荷，与壳聚糖/海藻酸的离子交换位点作用",
+      "evidence_source": "19种有机污染物提参聚合",
+      "evidence_count": 2877
+    },
+    "可配位": {
+      "weight": 0.7,
+      "prototypes": [
+        "chitosan",
+        "mussel-foot-adhesion",
+        "plant-tannin"
+      ],
+      "reason": "含 N/O 配位原子的污染物可与壳聚糖氨基、DOPA 邻苯二酚、单宁羟基配位",
+      "evidence_source": "20种有机污染物提参聚合",
+      "evidence_count": 2879
+    },
+    "大分子": {
+      "weight": 0.5,
+      "prototypes": [
+        "wood-xylem",
+        "bacterial-cellulose",
+        "starch-granule"
+      ],
+      "reason": "大分子污染物可通过体积排阻/孔径截留被多孔材料去除",
+      "evidence_source": "15种有机污染物提参聚合",
+      "evidence_count": 2839
     }
   },
   "interaction_to_prototype": {
