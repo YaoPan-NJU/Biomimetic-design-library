@@ -59,13 +59,17 @@
           {
             "text": "Thermal extraction conditions",
             "parameter": "temperature",
-            "basis": "llm_inferred",
+            "basis": "from_source",
             "verification": "needs_review",
             "gate_level": "soft",
             "condition": {
               "operator": "qualitative",
               "value": null
-            }
+            },
+            "source": "2021-Cai-shell-biochar-cadmium-adsorption.pdf",
+            "quote": "The sample was pyrolyzed at 500 °C for 120 min.",
+            "locator": "Section 2.2",
+            "verification_method": "pdf_visual_reading"
           }
         ],
         "transferable_principle": "Rice husk phytolith biogenic silica microstructure provides high surface area for adsorption"

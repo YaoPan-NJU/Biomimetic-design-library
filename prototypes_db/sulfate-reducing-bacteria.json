@@ -67,7 +67,8 @@
             "locator": null,
             "gate_level": "soft",
             "verification": "needs_review",
-            "quote": null
+            "quote": null,
+            "verification_method": "pdf_error"
           },
           {
             "text": "酸性条件下SRB活性显著下降",
@@ -81,7 +82,8 @@
             "gate_level": "soft",
             "locator": null,
             "quote": null,
-            "source_asset": null
+            "source_asset": null,
+            "verification_method": "pdf_error"
           },
           {
             "text": "高浓度重金属对SRB有毒性",
@@ -90,12 +92,14 @@
               "operator": "qualitative",
               "value": null
             },
-            "basis": "llm_inferred",
+            "basis": "from_source",
             "verification": "needs_review",
             "gate_level": "soft",
-            "locator": null,
-            "quote": null,
-            "source_asset": null
+            "locator": "Section 4.3",
+            "quote": "High metal concentration also inhibits SRB activity, thereby affecting not only sulfate reduction efficiency but also metal removal and recovery efficiencies",
+            "source_asset": null,
+            "source": "10.16581/j.cnki.issn1671-3206.20230927.002",
+            "verification_method": "pdf_visual_reading"
           }
         ],
         "transferable_principle": "利用微生物硫酸盐还原产生S²⁻进行金属硫化物沉淀，是厌氧条件下去除软酸金属的高效生物策略",
