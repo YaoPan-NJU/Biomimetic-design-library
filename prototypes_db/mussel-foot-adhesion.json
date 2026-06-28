@@ -890,7 +890,13 @@
     {
       "name": "两性离子水合能力 vs PEG Zwitterion hydration capacity vs PEG",
       "description": "两性离子通过静电作用可结合多达8个水分子，而PEG每个重复单元(-CH2CH2O-)仅能通过氢键结合1个水分子",
-      "functional_groups": "",
+      "functional_groups": [
+        "静电作用位点",
+        "PEG醚键",
+        "氢键位点",
+        "-S-（硫醚键）",
+        "-O-（醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.1039/d1cs00658d",
       "verification": "needs_review",
@@ -953,12 +959,17 @@
         "verification_quote": "PEG based polymers are composed of one oxygen atom in each repeat unit (–CH2CH2O–) which can bind only one water molecule through a hydrogen bond, while zwitterions can bind up to eight water molecules by forming electrostatic forces which is stronger than the hydrogen bonding in PEG/water systems.",
         "source_doi": "10.1039/d1cs00658d",
         "source_locator": "p.2 / Section 1.2 Zwitterion"
-      }
+      },
+      "key_structures": []
     },
     {
       "name": "磷酸胆碱仿生机制 Phosphorylcholine biomimetic mechanism",
       "description": "磷酸甜菜碱基两性离子聚合物被视为仿生抗污材料，因其具有通常存在于细胞膜外层的磷酸胆碱头基",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-PO₄³⁻（磷酸基）",
+        "-O-（醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.1039/d1cs00658d",
       "verification": "needs_review",
@@ -1016,12 +1027,25 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "key_structures": [
+        "膜结构",
+        "细胞膜双层"
+      ]
     },
     {
       "name": "PDA自聚合形成机制 PDA self-polymerization mechanism",
       "description": "氧化条件下羟基自发去质子化形成多巴胺醌，经亲核分子内环化变为leukodopaminechrome，再经进一步氧化重排形成5,6-二羟基吲哚或5,6-吲哚醌，最终通过2,3,4,7位分支反应交联形成类真黑素聚合物PDA",
-      "functional_groups": "",
+      "functional_groups": [
+        "PAM酰胺基",
+        "吲哚环",
+        "聚多巴胺（PDA）邻苯二酚/胺基",
+        "-OH（羟基）",
+        "-NH₂（氨基）",
+        "-S-（硫醚键）",
+        "邻苯二酚（catechol）",
+        "-O-（醚键）"
+      ],
       "source": "10.1039/d1cs00658d",
       "ref_doi": "10.1039/d1cs00658d",
       "verification": "partial",
@@ -1137,12 +1161,22 @@
       "source_locator": "p.426, left column",
       "scope_match": "Keywords: catechol/邻苯二酚, quinone/醌, polymerization/聚合, melanin/黑色素, dopamine/多巴胺",
       "source_page": 426,
-      "source_doi": "10.1039/d1cs00658d"
+      "source_doi": "10.1039/d1cs00658d",
+      "key_structures": [
+        "交联网络",
+        "涂层结构"
+      ]
     },
     {
       "name": "PDA涂层 vs 传统涂层技术对比 PDA coating vs traditional coating techniques",
       "description": "PDA可沉积于任何表面（有机/无机、亲水/疏水、块状/纤维状/颗粒状、金属/聚合物/活细胞），而SAM仅限贵金属表面（Cu/Pt/Ag/Au）通过巯基金属键或氧化物表面通过烷基硅烷；LbL需多步沉积且耗时费力",
-      "functional_groups": "",
+      "functional_groups": [
+        "硅烷偶联剂",
+        "聚多巴胺（PDA）邻苯二酚/胺基",
+        "-SH（巯基）",
+        "-S-（硫醚键）",
+        "-O-（醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.1039/d1cs00658d",
       "verification": "needs_review",
@@ -1221,12 +1255,29 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "key_structures": [
+        "疏水表面",
+        "涂层结构",
+        "纤维结构",
+        "亲水表面",
+        "颗粒结构"
+      ]
     },
     {
       "name": "多巴胺辅助共沉积机制 Dopamine-assisted co-deposition mechanism",
       "description": "多巴胺辅助共沉积涉及多巴胺与第二组分之间的单/多共价或非共价相互作用。共价共沉积提供更强网络以促进涂层稳定性。poly(SBMA)通过去质子化酚基与季铵的局部静电作用与PDA交互；poly(MPC)通过酚-磷脂氢键和阳离子-π相互作用与PDA交互",
-      "functional_groups": "",
+      "functional_groups": [
+        "PAM酰胺基",
+        "静电作用位点",
+        "-O-（醚键）",
+        "聚多巴胺（PDA）邻苯二酚/胺基",
+        "-NH₂（氨基）",
+        "氢键位点",
+        "-S-（硫醚键）",
+        "邻苯二酚（catechol）",
+        "季铵基团"
+      ],
       "source": "10.1039/d1cs00658d",
       "ref_doi": "10.1039/d1cs00658d",
       "verification": "partial",
@@ -1313,12 +1364,19 @@
       "source_locator": "p.426, left column",
       "scope_match": "Keywords: catechol/邻苯二酚, amine/胺, DOPA, lysine/赖氨酸, dopamine/多巴胺, adhesion/粘附",
       "source_page": 426,
-      "source_doi": "10.1039/d1cs00658d"
+      "source_doi": "10.1039/d1cs00658d",
+      "key_structures": [
+        "涂层结构"
+      ]
     },
     {
       "name": "三种驱动力协同机制",
       "description": "静电吸引/排斥(主导) + π-π堆积 + 氢键→协同或竞争效应→决定选择性吸附",
-      "functional_groups": "",
+      "functional_groups": [
+        "π-π堆积位点",
+        "静电作用位点",
+        "氢键位点"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.cej.2021.129237",
       "verification": "needs_review",
@@ -1376,12 +1434,15 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "key_structures": [
+        "吸附结构"
+      ]
     },
     {
       "name": "染料絮凝实验——盐浓度效应确认静电机制",
       "description": "KCl浓度从1→50→100mM: 絮凝量随盐浓度增加而降低→静电屏蔽效应→与ITC结果一致",
-      "functional_groups": "",
+      "functional_groups": [],
       "source": "literature",
       "ref_doi": "10.1016/j.cej.2021.129237",
       "verification": "needs_review",
@@ -1433,12 +1494,16 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "key_structures": []
     },
     {
       "name": "疏水改性方法分类",
       "description": "CVD, AHSM, Dip coating, Carbonization",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.carbpol.2022.120242",
       "verification": "partial",
@@ -1511,12 +1576,18 @@
       "source_page": 2,
       "source_doi": "10.1016/j.carbpol.2022.120242",
       "source_locator": "p.2",
-      "evidence_label": "from_source"
+      "evidence_label": "from_source",
+      "key_structures": [
+        "涂层结构"
+      ]
     },
     {
       "name": "CVD法均匀性问题",
       "description": "Uneven hydrophobic functionalization in 3D porous structure",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.carbpol.2022.120242",
       "verification": "partial",
@@ -1585,12 +1656,13 @@
       "source_page": 2,
       "source_doi": "10.1016/j.carbpol.2022.120242",
       "source_locator": "p.2",
-      "evidence_label": "from_source"
+      "evidence_label": "from_source",
+      "key_structures": []
     },
     {
       "name": "疏水改性材料分布统计",
       "description": "~70",
-      "functional_groups": "",
+      "functional_groups": [],
       "source": "literature",
       "ref_doi": "10.1016/j.carbpol.2022.120242",
       "verification": "needs_review",
@@ -1649,12 +1721,17 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "key_structures": []
     },
     {
       "name": "铀酰离子配位化学",
       "description": "UO2^2+线性对称[O=U=O]^2+, U-O键长1.76 Å, 4-6个配体在赤道面配位, 四方/五方/六方双锥",
-      "functional_groups": "",
+      "functional_groups": [
+        "-CONH-（酰胺键）",
+        "-O-（醚键）",
+        "配位/螯合位点"
+      ],
       "source": "10.1016/j.ccr.2023.215234",
       "ref_doi": "10.1016/j.ccr.2023.215234",
       "verification": "partial",
@@ -1771,12 +1848,18 @@
       "locator": "p.2",
       "source_locator": "p.2",
       "scope_match": "Keywords: uranyl/铀酰, alkaline/碱性, HSAB/软硬酸碱, coordination/配位",
-      "evidence_label": "from_source"
+      "evidence_label": "from_source",
+      "key_structures": [
+        "吸附结构"
+      ]
     },
     {
       "name": "酰胺肟配位模式",
       "description": "四种结合模式：单齿(单氧配位)/三齿(环状酰亚胺二肟)/侧向η2(开链酰胺肟)/螯合",
-      "functional_groups": "",
+      "functional_groups": [
+        "-CONH-（酰胺键）",
+        "配位/螯合位点"
+      ],
       "source": "10.1016/j.ccr.2023.215234",
       "ref_doi": "10.1016/j.ccr.2023.215234",
       "verification": "partial",
@@ -1841,12 +1924,16 @@
       "verification_quote": "classical amidoxime structure: coexistence of amine group and oxime group grants AO amphipathic properties, facilitating effective chelation across a wide pH range",
       "source_locator": "p.2",
       "scope_match": "Keywords: amidoxime/肟基, amine/胺基, chelation/螯合, coordination/配位",
-      "source_doi": "10.1016/j.ccr.2023.215234"
+      "source_doi": "10.1016/j.ccr.2023.215234",
+      "key_structures": []
     },
     {
       "name": "配体优化六大策略",
       "description": "(1)高含量开链AO (2)增加AO亲水性 (3)高柔性配体链 (4)合适PAO链长 (5)引入给电子取代基 (6)空间协同螯合",
-      "functional_groups": "",
+      "functional_groups": [
+        "-O-（醚键）",
+        "配位/螯合位点"
+      ],
       "source": "10.1016/j.ccr.2023.215234",
       "ref_doi": "10.1016/j.ccr.2023.215234",
       "verification": "partial",
@@ -1913,15 +2000,18 @@
       "locator": "p.2",
       "source_locator": "p.2",
       "scope_match": "Keywords: synergistic/协同, coordination/配位, bifunctional/双功能, active sites/活性位点",
-      "evidence_label": "from_source"
+      "evidence_label": "from_source",
+      "key_structures": []
     },
     {
       "name": "双功能协同策略",
       "description": "三种机制：(1)第二配体提供额外配位位点 (2)增强AO碱性→更强U(VI)络合 (3)酸性基团解离碳酸盐→释放UO2^2+",
       "functional_groups": [
+        "DOPA 3,4-二羟基苯丙氨酸",
         "邻苯二酚 catechol (-OH)",
+        "配位/螯合位点",
         "胺基 amine (-NH₂)",
-        "DOPA 3,4-二羟基苯丙氨酸"
+        "-O-（醚键）"
       ],
       "source": "literature",
       "ref_doi": "10.1016/j.ccr.2023.215234",
@@ -2004,7 +2094,9 @@
     {
       "name": "离子印迹策略——三种改进方向",
       "description": "(1)高孔隙材料增加可及位点 (2)2D/表面印迹提高可及性 (3)强化功能基-铀酰配位",
-      "functional_groups": "",
+      "functional_groups": [
+        "配位/螯合位点"
+      ],
       "source": "10.1016/j.ccr.2023.215234",
       "ref_doi": "10.1016/j.ccr.2023.215234",
       "verification": "partial",
@@ -2069,12 +2161,15 @@
       "verification_quote": "synergistic coordination of AO with other functional groups may enhance adsorption efficacy. Ahmad et al. incorporated amine as second ligand to furnish supplementary active sites",
       "source_locator": "p.2",
       "scope_match": "Keywords: synergistic/协同, coordination/配位, adsorption/吸附, active sites/活性位点",
-      "source_doi": "10.1016/j.ccr.2023.215234"
+      "source_doi": "10.1016/j.ccr.2023.215234",
+      "key_structures": []
     },
     {
       "name": "电化学提取三阶段机理",
       "description": "电迁移→电吸附→电化学沉积; UO2^2+→U(IV)还原沉淀→突破热力学平衡",
-      "functional_groups": "",
+      "functional_groups": [
+        "-O-（醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.ccr.2023.215234",
       "verification": "partial",
@@ -2152,12 +2247,19 @@
       "source_page": 10,
       "source_doi": "10.1016/j.ccr.2023.215234",
       "source_locator": "p.10",
-      "evidence_label": "from_source"
+      "evidence_label": "from_source",
+      "key_structures": [
+        "吸附结构"
+      ]
     },
     {
       "name": "MOF光催化协同机制",
       "description": "MOF SCU-19(POM+MOF)：三重机制——配体配位+光催化还原+部分化学还原",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）",
+        "配位/螯合位点"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.ccr.2023.215234",
       "verification": "partial",
@@ -2221,12 +2323,19 @@
       },
       "source_doi": "10.1016/j.ccr.2023.215234",
       "source_locator": "p.12",
-      "evidence_label": "from_source"
+      "evidence_label": "from_source",
+      "key_structures": [
+        "金属有机框架（MOF）"
+      ]
     },
     {
       "name": "N位点激活PDS生成¹O₂的机制 Mechanism of N site activating PDS to generate ¹O₂",
       "description": "PDS吸附在MI-PDA缺电子N位点上→电子从PDS的S原子转移到N原子→O-O键缩短→S-O键断裂→产生¹O₂；N位点吸附能(-31.42 eV)高于O位点(-17.09 eV)，优先产生¹O₂",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "聚多巴胺（PDA）邻苯二酚/胺基",
+        "-O-（醚键）"
+      ],
       "source": "10.1016/j.apcatb.2023.122852",
       "ref_doi": "10.1016/j.apcatb.2023.122852",
       "verification": "partial",
@@ -2298,12 +2407,23 @@
       "source_locator": "p.1, Abstract",
       "scope_match": "Keywords: N site/氮位点, PDS/过二硫酸盐, singlet oxygen/单线态氧, 1O2, activation/活化",
       "source_page": 1,
-      "source_doi": "10.1016/j.apcatb.2023.122852"
+      "source_doi": "10.1016/j.apcatb.2023.122852",
+      "key_structures": [
+        "吸附结构"
+      ]
     },
     {
       "name": "MI-PDA表面官能团识别机制 Surface functional group recognition mechanism of MI-PDA",
       "description": "N 1s谱中-N=(399.1eV)、-NH-(400.0eV)、-NH₂(400.7eV)对应吲哚环中的环化氮和开链低聚物；含氮和含氧基团(-NH₂、-OH)作为识别位点，通过氢键选择性结合SMX",
-      "functional_groups": "",
+      "functional_groups": [
+        "-NH-（亚氨基）",
+        "吲哚环",
+        "聚多巴胺（PDA）邻苯二酚/胺基",
+        "-OH（羟基）",
+        "氢键位点",
+        "-S-（硫醚键）",
+        "-O-（醚键）"
+      ],
       "source": "10.1016/j.apcatb.2023.122852",
       "ref_doi": "10.1016/j.apcatb.2023.122852",
       "verification": "partial",
@@ -2381,12 +2501,21 @@
       "source_locator": "p.1, Abstract",
       "scope_match": "Keywords: MI-PDA/分子印迹聚多巴胺, SMX/磺胺甲恶唑, nitrogenous/含氮, oxygenated/含氧, functional groups/官能团",
       "source_page": 1,
-      "source_doi": "10.1016/j.apcatb.2023.122852"
+      "source_doi": "10.1016/j.apcatb.2023.122852",
+      "key_structures": []
     },
     {
       "name": "PDA涂层粘附机制",
       "description": "金属配位、Michael加成、Schiff碱形成、氢键、π-π堆积五种相互作用",
-      "functional_groups": "",
+      "functional_groups": [
+        "聚多巴胺（PDA）邻苯二酚/胺基",
+        "配位/螯合位点",
+        "-S-（硫醚键）",
+        "氢键位点",
+        "π-π堆积位点",
+        "邻苯二酚（catechol）",
+        "-O-（醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.1039/d5su00041f",
       "verification": "verified",
@@ -2487,12 +2616,19 @@
         "verification_quote": "DOPA and lysine (amines) groups found in byssal plaque proteins...dopamine is a small-molecule compound that contains both functionalities"
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "key_structures": [
+        "涂层结构"
+      ]
     },
     {
       "name": "PDA-ODA超疏水棉花织物接触角",
       "description": "WCA 162°, WSA 7°",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "聚多巴胺（PDA）邻苯二酚/胺基",
+        "-O-（醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.1039/d5su00041f",
       "verification": "needs_review",
@@ -2553,12 +2689,18 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "key_structures": [
+        "接触角特征",
+        "超疏水表面"
+      ]
     },
     {
       "name": "PDA微胶囊自修复超疏水棉花织物",
       "description": "机械刺激后完全恢复超疏水性",
-      "functional_groups": "",
+      "functional_groups": [
+        "聚多巴胺（PDA）邻苯二酚/胺基"
+      ],
       "source": "literature",
       "ref_doi": "10.1039/d5su00041f",
       "verification": "needs_review",
@@ -2609,12 +2751,18 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "key_structures": [
+        "超疏水表面"
+      ]
     },
     {
       "name": "PDA-TA/硼砂阻燃超疏水棉花织物",
       "description": "WCA 153.3°±1.2°, WSA 9°±0.8°, 分离效率>98%",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "聚多巴胺（PDA）邻苯二酚/胺基"
+      ],
       "source": "literature",
       "ref_doi": "10.1039/d5su00041f",
       "verification": "needs_review",
@@ -2676,12 +2824,18 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "key_structures": [
+        "接触角特征",
+        "超疏水表面"
+      ]
     },
     {
       "name": "超疏水PDA涂层棉花织物耐久性测试",
       "description": "1000次胶带剥离/手指擦拭/刀片划痕/砂纸磨损/锤击后仍保持超疏水性",
-      "functional_groups": "",
+      "functional_groups": [
+        "聚多巴胺（PDA）邻苯二酚/胺基"
+      ],
       "source": "literature",
       "ref_doi": "10.1039/d5su00041f",
       "verification": "needs_review",
@@ -2739,12 +2893,18 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "key_structures": [
+        "涂层结构",
+        "超疏水表面"
+      ]
     },
     {
       "name": "PLA非织造织物超疏水磁性油水分离",
       "description": "WCA 151.7°, 吸附容量16-36倍自重",
-      "functional_groups": "",
+      "functional_groups": [
+        "PLA酯基"
+      ],
       "source": "literature",
       "ref_doi": "10.1039/d5su00041f",
       "verification": "needs_review",
@@ -2805,12 +2965,22 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "key_structures": [
+        "油水分离结构",
+        "吸附结构",
+        "接触角特征",
+        "超疏水表面"
+      ]
     },
     {
       "name": "氨水诱导超疏水/超亲油PVDF膜 Ammonia-water induced superhydrophobic PVDF membrane",
       "description": "油通量高达3400 L·m⁻²·h⁻¹ (重力驱动); 油纯度高达99.999%; 通量衰减率<5% (20次循环)",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）",
+        "PVDF氟碳基团"
+      ],
       "source": "literature",
       "ref_doi": "10.1021/acsnano.5c01252",
       "verification": "partial",
@@ -2871,12 +3041,20 @@
       "source_page": 4,
       "source_doi": "10.1021/acsnano.5c01252",
       "source_locator": "p.4",
-      "evidence_label": "from_source"
+      "evidence_label": "from_source",
+      "key_structures": [
+        "膜结构",
+        "超疏水表面"
+      ]
     },
     {
       "name": "CO2响应润湿性反转机制 CO2-responsive wettability reversal mechanism",
       "description": "含氨基聚合物经CO2暴露质子化增强亲水性（水合增强）；去除CO2去质子化恢复中性态，聚合物链塌缩恢复疏水",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）",
+        "-NH₂（氨基）"
+      ],
       "source": "literature",
       "ref_doi": "10.1021/acsnano.5c01252",
       "verification": "partial",
@@ -2949,12 +3127,18 @@
       "source_page": 6,
       "source_doi": "10.1021/acsnano.5c01252",
       "source_locator": "p.6",
-      "evidence_label": "from_source"
+      "evidence_label": "from_source",
+      "key_structures": [
+        "润湿结构"
+      ]
     },
     {
       "name": "电响应润湿性反转机制 Electro-responsive wettability reversal mechanism",
       "description": "电压诱导表面带电聚合物构象重组；施加电位改变聚合物链取向和离子化状态，暴露疏水或亲水部分调节润湿性",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.1021/acsnano.5c01252",
       "verification": "partial",
@@ -3015,12 +3199,20 @@
       },
       "evidence_type": "lead_inference",
       "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
-      "source_locator": "p.6"
+      "source_locator": "p.6",
+      "key_structures": [
+        "润湿结构"
+      ]
     },
     {
       "name": "光热响应润湿性反转机制 Photothermal-responsive wettability reversal mechanism",
       "description": "光吸收材料将光转化为热，触发热响应聚合物（如PNIPAM）塌缩脱水，润湿性从亲水转为疏水",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "PNIPAM酰胺基",
+        "-O-（醚键）",
+        "PAM酰胺基"
+      ],
       "source": "literature",
       "ref_doi": "10.1021/acsnano.5c01252",
       "verification": "partial",
@@ -3081,12 +3273,18 @@
       },
       "evidence_type": "lead_inference",
       "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
-      "source_locator": "p.6"
+      "source_locator": "p.6",
+      "key_structures": [
+        "润湿结构"
+      ]
     },
     {
       "name": "pH响应润湿性反转机制 pH-responsive wettability reversal mechanism",
       "description": "可离子化和可水解聚合物响应pH变化质子化/去质子化，改变水合状态，在亲水和疏水间切换",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.1021/acsnano.5c01252",
       "verification": "partial",
@@ -3147,12 +3345,18 @@
       },
       "evidence_type": "lead_inference",
       "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
-      "source_locator": "p.6"
+      "source_locator": "p.6",
+      "key_structures": [
+        "润湿结构"
+      ]
     },
     {
       "name": "Janus膜电荷聚合物协同破乳 Janus membrane with charged polymers for demulsification",
       "description": "超亲水侧带电聚合物链剥离表面活性剂层 destabilize 油滴；超疏水侧因界面压力差产生油芯吸力，促进油滴聚并和油渗透",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.1021/acsnano.5c01252",
       "verification": "partial",
@@ -3223,12 +3427,22 @@
         "source_doi": "10.1021/acsnano.5c01252",
         "source_locator": "p.9 / Section Janus Membranes for Oil Recovery from Oil-in-Water Emulsions"
       },
-      "source_locator": "p.8"
+      "source_locator": "p.8",
+      "key_structures": [
+        "膜结构",
+        "超亲水表面",
+        "超疏水表面",
+        "亲水表面",
+        "Janus双面结构"
+      ]
     },
     {
       "name": "传统膜疏水/水下亲油致命缺陷 Traditional membrane hydrophobic/underwater oleophilic drawbacks",
       "description": "低水渗透通量和严重油污染；需要高施加压力导致油更容易穿透膜孔；难以同时实现高水通量和高除油效率",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.1021/acsnano.5c01252",
       "verification": "partial",
@@ -3289,12 +3503,18 @@
       },
       "evidence_type": "lead_inference",
       "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
-      "source_locator": "p.2"
+      "source_locator": "p.2",
+      "key_structures": [
+        "膜结构"
+      ]
     },
     {
       "name": "PNIPAM刷温度响应润湿性切换",
       "description": "WCA从63°（25°C，亲水）切换到93°（40°C，疏水）",
-      "functional_groups": "",
+      "functional_groups": [
+        "PNIPAM酰胺基",
+        "PAM酰胺基"
+      ],
       "source": "literature",
       "ref_doi": "10.1021/acsnano.4c18335",
       "verification": "needs_review",
@@ -3346,12 +3566,18 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "key_structures": [
+        "润湿结构",
+        "接触角特征"
+      ]
     },
     {
       "name": "亲疏水刷仿鲨鱼皮水减阻率",
       "description": "疏水PFMA刷最高减阻率21.7%，超天然鲨鱼皮5.4%",
-      "functional_groups": "",
+      "functional_groups": [
+        "PFMA氟碳基团"
+      ],
       "source": "literature",
       "ref_doi": "10.1021/acsnano.4c18335",
       "verification": "needs_review",
@@ -3392,12 +3618,15 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "key_structures": []
     },
     {
       "name": "PPFEMA刷疏水减阻最大减阻率",
       "description": "52%（转速≤210 rpm）",
-      "functional_groups": "",
+      "functional_groups": [
+        "PPFEMA氟碳基团"
+      ],
       "source": "literature",
       "ref_doi": "10.1021/acsnano.4c18335",
       "verification": "needs_review",
@@ -3448,12 +3677,15 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "key_structures": []
     },
     {
       "name": "超疏水表面+响应刷边界滑移调控",
       "description": "滑移长度范围~87 μm可通过温度在LCST上下可逆调控",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.1021/acsnano.4c18335",
       "verification": "needs_review",
@@ -3504,12 +3736,19 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "key_structures": [
+        "疏水表面",
+        "超疏水表面"
+      ]
     },
     {
       "name": "NP-GLIDE涂层设计原理",
       "description": "PDMS或PFPE纳米储库通过微相分离形成，可持续补充表面保证全疏水性",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "PDMS硅氧烷"
+      ],
       "source": "literature",
       "ref_doi": "10.1021/acsnano.4c18335",
       "verification": "needs_review",
@@ -3567,12 +3806,19 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "key_structures": [
+        "涂层结构"
+      ]
     },
     {
       "name": "聚合物刷减阻性能对比（亲水vs疏水）",
       "description": "亲水POEGMA刷几乎无减阻效果，疏水PPFEMA刷最大减阻率52%",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）",
+        "PPFEMA氟碳基团"
+      ],
       "source": "literature",
       "ref_doi": "10.1021/acsnano.4c18335",
       "verification": "needs_review",
@@ -3633,12 +3879,13 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "key_structures": []
     },
     {
       "name": "聚合物刷防雾涂层厚度与亲水性关系",
       "description": "厚度<50 nm时强水合亲水；厚度>50 nm时趋于疏水自缔合",
-      "functional_groups": "",
+      "functional_groups": [],
       "source": "literature",
       "ref_doi": "10.1021/acsnano.4c18335",
       "verification": "needs_review",
@@ -3696,12 +3943,20 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "key_structures": [
+        "涂层结构"
+      ]
     },
     {
       "name": "吸附机制-螯合作用 / Adsorption mechanism - chelation",
       "description": "聚多巴胺结构中的含氮基团与重金属离子的鳌合作用",
-      "functional_groups": "含氮基团（儿茶酚/胺基）",
+      "functional_groups": [
+        "含氮基团（儿茶酚/胺基）",
+        "聚多巴胺（PDA）邻苯二酚/胺基",
+        "-O-（醚键）",
+        "配位/螯合位点"
+      ],
       "source": "patent",
       "ref_doi": null,
       "verification": "needs_review",
@@ -3760,12 +4015,19 @@
         "verification_quote": "利用聚多巴胺结构中的含氮基团与重金属离子的鳌合作用，富集废水中的重金属",
         "source_locator": "p.1 / 摘要",
         "source_doi": "patent-based"
-      }
+      },
+      "key_structures": [
+        "吸附结构"
+      ]
     },
     {
       "name": "贻贝仿生启发机制 / Mussel-inspired biomimetic mechanism",
       "description": "通过聚多巴胺自组装单分子层技术对聚酯纤维织物进行表面修饰，受贻贝足丝蛋白粘附机制启发",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "聚多巴胺（PDA）邻苯二酚/胺基",
+        "-O-（醚键）"
+      ],
       "source": "patent",
       "ref_doi": null,
       "verification": "needs_review",
@@ -3828,12 +4090,25 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "key_structures": [
+        "纤维结构"
+      ]
     },
     {
       "name": "聚多巴胺聚合机理 Polydopamine polymerization mechanism",
       "description": "多巴胺在弱碱性环境下通过酚羟基氧化成醌，醌式相互叠加实现聚合；聚多巴胺在Fe3O4外以羟基间氢键或物理堆积形式沉积，不涉及与Fe元素的配位作用",
-      "functional_groups": "",
+      "functional_groups": [
+        "PAM酰胺基",
+        "聚多巴胺（PDA）邻苯二酚/胺基",
+        "配位/螯合位点",
+        "-OH（羟基）",
+        "-NH₂（氨基）",
+        "氢键位点",
+        "-S-（硫醚键）",
+        "邻苯二酚（catechol）",
+        "-O-（醚键）"
+      ],
       "source": "patent",
       "ref_doi": null,
       "verification": "needs_review",
@@ -3906,12 +4181,20 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "key_structures": []
     },
     {
       "name": "铀吸附机制 Uranium adsorption mechanism",
       "description": "聚多巴胺壳层大量羟基为主要吸附位点，氨基主要参与苯环成环，仅部分氨基参与与铀的作用",
-      "functional_groups": "",
+      "functional_groups": [
+        "芳香环",
+        "聚多巴胺（PDA）邻苯二酚/胺基",
+        "-OH（羟基）",
+        "-NH₂（氨基）",
+        "-S-（硫醚键）",
+        "-O-（醚键）"
+      ],
       "source": "patent",
       "ref_doi": null,
       "verification": "needs_review",
@@ -3980,12 +4263,20 @@
         "verification_quote": "对于铀的吸附，本发明研究发现，主要是聚多巴胺壳层大量的羟基作用，氨基主要参与苯环成环，只是部分氨基参与了与铀的作用",
         "source_locator": "p.4 / 吸附原理[0018]",
         "source_doi": "patent-based"
-      }
+      },
+      "key_structures": [
+        "吸附结构"
+      ]
     },
     {
       "name": "贻贝仿生改性机制 / Mussel-inspired biomimetic modification mechanism",
       "description": "利用贻贝仿生学，通过多巴胺的氧化自聚作用，形成黏附力极强的聚多巴胺涂覆在磁性壳聚糖基体表面",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "壳聚糖氨基/羟基",
+        "聚多巴胺（PDA）邻苯二酚/胺基",
+        "-O-（醚键）"
+      ],
       "source": "patent",
       "ref_doi": null,
       "verification": "needs_review",
@@ -4036,12 +4327,17 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "key_structures": []
     },
     {
       "name": "仿贻贝聚多巴胺改性机制 / Mussel-inspired PDA modification mechanism",
       "description": "多巴胺自聚合形成聚多巴胺对PAO薄膜进行表面改性",
-      "functional_groups": "邻苯二酚(catechol)、亚胺/胺基团",
+      "functional_groups": [
+        "聚多巴胺（PDA）邻苯二酚/胺基",
+        "-O-（醚键）",
+        "邻苯二酚(catechol)、亚胺/胺基团"
+      ],
       "source": "patent",
       "ref_doi": null,
       "verification": "needs_review",
@@ -4099,12 +4395,17 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "key_structures": [
+        "膜结构"
+      ]
     },
     {
       "name": "PDA吸附机制-姜黄素",
       "description": null,
-      "functional_groups": "",
+      "functional_groups": [
+        "聚多巴胺（PDA）邻苯二酚/胺基"
+      ],
       "source": "patent",
       "ref_doi": null,
       "verification": "needs_review",
@@ -4172,12 +4473,17 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "key_structures": [
+        "吸附结构"
+      ]
     },
     {
       "name": "PDA吸附机制-番茄红素",
       "description": null,
-      "functional_groups": "",
+      "functional_groups": [
+        "聚多巴胺（PDA）邻苯二酚/胺基"
+      ],
       "source": "patent",
       "ref_doi": null,
       "verification": "needs_review",
@@ -4245,12 +4551,17 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "key_structures": [
+        "吸附结构"
+      ]
     },
     {
       "name": "吸附机制类型",
       "description": "physical mechanism",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.jece.2021.105709",
       "verification": "partial",
@@ -4316,12 +4627,17 @@
       "source_page": 1,
       "source_doi": "10.1016/j.jece.2021.105709",
       "source_locator": "p.1",
-      "evidence_label": "from_source"
+      "evidence_label": "from_source",
+      "key_structures": [
+        "吸附结构"
+      ]
     },
     {
       "name": "吸附机制",
       "description": "表面络合和离子交换",
-      "functional_groups": "",
+      "functional_groups": [
+        "离子交换位点"
+      ],
       "source": "10.1016/j.apsusc.2020.148379",
       "ref_doi": "10.1016/j.apsusc.2020.148379",
       "verification": "partial",
@@ -4386,12 +4702,20 @@
       "verification_quote": "Polydopamine (PDA)-abundant functional groups on its surface, formed by self-polymerization of dopamine in alkaline environment, used as surface modifier for adsorption of heavy metal",
       "source_locator": "p.2",
       "scope_match": "Keywords: polydopamine/聚多巴胺, self-polymerization/自聚合, surface modifier/表面修饰, adsorption/吸附, heavy metal/重金属",
-      "source_doi": "10.1016/j.apsusc.2020.148379"
+      "source_doi": "10.1016/j.apsusc.2020.148379",
+      "key_structures": [
+        "吸附结构"
+      ]
     },
     {
       "name": "吸附机制-酚羟基参与",
       "description": "phenolic hydroxyl groups participate in adsorption (C-O and O 1s binding energy shifts)",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）",
+        "-OH（羟基）",
+        "-SH（巯基）"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.cej.2020.127837",
       "verification": "partial",
@@ -4457,12 +4781,18 @@
       "source_page": 8,
       "source_doi": "10.1016/j.cej.2020.127837",
       "source_locator": "p.8",
-      "evidence_label": "from_source"
+      "evidence_label": "from_source",
+      "key_structures": [
+        "吸附结构"
+      ]
     },
     {
       "name": "XPS分析-吸附机理",
       "description": "C 1s红移形成吸附剂-金属络合物；N 1s出现—NH—(402 eV)和—NH₂(406 eV)两个峰；吸附后出现Gd 4d特征峰(149 eV和143 eV)",
-      "functional_groups": "",
+      "functional_groups": [
+        "-NH-（亚氨基）",
+        "-S-（硫醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.jhazmat.2020.124347",
       "verification": "partial",
@@ -4528,12 +4858,26 @@
       "source_page": 5,
       "source_doi": "10.1016/j.jhazmat.2020.124347",
       "source_locator": "p.5",
-      "evidence_label": "from_source"
+      "evidence_label": "from_source",
+      "key_structures": [
+        "吸附结构"
+      ]
     },
     {
       "name": "吸附活性基团协同",
       "description": "—NH₂(壳聚糖+PDA)、—OH(壳聚糖+GO+PDA)、—COOH(MWCNT-COOH)三类基团协同参与Gd(III)螯合",
-      "functional_groups": "",
+      "functional_groups": [
+        "-NH-（亚氨基）",
+        "-COOH（羧基）",
+        "MWCNT表面基团",
+        "壳聚糖氨基/羟基",
+        "聚多巴胺（PDA）邻苯二酚/胺基",
+        "配位/螯合位点",
+        "碳纳米管表面基团",
+        "GO羧基/羟基/环氧基",
+        "-OH（羟基）",
+        "-O-（醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.jhazmat.2020.124347",
       "verification": "partial",
@@ -4600,12 +4944,18 @@
       "source_page": 2,
       "source_doi": "10.1016/j.jhazmat.2020.124347",
       "source_locator": "p.2",
-      "evidence_label": "from_source"
+      "evidence_label": "from_source",
+      "key_structures": [
+        "吸附结构"
+      ]
     },
     {
       "name": "吸附机理-pH依赖性",
       "description": "酸性条件：静电作用为主；碱性条件：配位作用为主",
-      "functional_groups": "",
+      "functional_groups": [
+        "静电作用位点",
+        "配位/螯合位点"
+      ],
       "source": "patent",
       "ref_doi": null,
       "verification": "needs_review",
@@ -4656,12 +5006,18 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "key_structures": [
+        "吸附结构"
+      ]
     },
     {
       "name": "XPS吸附机理",
       "description": "N 1s峰从398.4/401.6 eV移至399.4 eV；O 1s峰从531.9/530.0 eV移至530.8/532.1 eV；C 1s峰C=N从284.2 eV移至285.5 eV；Cu 2p₃/₂峰932.5-933.7 eV",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.jhazmat.2022.129112",
       "verification": "partial",
@@ -4727,12 +5083,18 @@
       "source_page": 9,
       "source_doi": "10.1016/j.jhazmat.2022.129112",
       "source_locator": "p.9",
-      "evidence_label": "from_source"
+      "evidence_label": "from_source",
+      "key_structures": [
+        "吸附结构"
+      ]
     },
     {
       "name": "PDA吸附机制补充",
       "description": "π-π interaction (π-π 相互作用)",
-      "functional_groups": "",
+      "functional_groups": [
+        "聚多巴胺（PDA）邻苯二酚/胺基",
+        "-O-（醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.13550/j.jxhg.20220633",
       "verification": "partial",
@@ -4797,7 +5159,10 @@
       "source_page": 5,
       "source_doi": "10.13550/j.jxhg.20220633",
       "source_locator": "p.5",
-      "evidence_label": "from_source"
+      "evidence_label": "from_source",
+      "key_structures": [
+        "吸附结构"
+      ]
     }
   ],
   "narrative": {

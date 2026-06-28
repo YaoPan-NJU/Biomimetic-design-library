@@ -515,7 +515,12 @@
     {
       "name": "MICP化学反应机理",
       "description": "脲酶水解尿素: CO(NH₂)₂+H₂O→NH₂COOH+NH₃; NH₂COOH+H₂O→NH₃+H₂CO₃; 最终产生CO₃²⁻+Ca²⁺→CaCO₃↓",
-      "functional_groups": "",
+      "functional_groups": [
+        "-NH-（亚氨基）",
+        "-O-（醚键）",
+        "-COOH（羧基）",
+        "-OH（羟基）"
+      ],
       "source": "patent",
       "ref_doi": null,
       "verification": "knowledge_gap",
@@ -577,12 +582,16 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "patent source without local PDF extraction; needs OCR or manual verification"
+      "evidence_note": "patent source without local PDF extraction; needs OCR or manual verification",
+      "key_structures": []
     },
     {
       "name": "施氏矿物As(III)吸附机制-表面沉淀",
       "description": "双齿双核结合，形成Fe-As、As-O原子距特征",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.7524/j.issn.0254-6108.2020070302",
       "verification": "verified",
@@ -667,12 +676,19 @@
         "source_locator": "p.3536 / Section 2.2 + p.3537"
       },
       "evidence_type": "partial_source",
-      "evidence_note": "Upgraded from llm_inferred using visual_cache PDF text (matched 5 keywords: ['吸附', '表面', '氧化', '施氏矿物', '铁氧化'])"
+      "evidence_note": "Upgraded from llm_inferred using visual_cache PDF text (matched 5 keywords: ['吸附', '表面', '氧化', '施氏矿物', '铁氧化'])",
+      "key_structures": [
+        "吸附结构"
+      ]
     },
     {
       "name": "去除机理三阶段",
       "description": "第一阶段：As(III)接触锰氧化物壳层后迅速氧化为As(V)，部分Mn(IV)还原溶解；第二阶段：As(V)受静电吸附再吸附于材料表面，少量与Mn-OH表面络合；第三阶段：As(V)扩散穿过壳层到达施氏矿物内核，通过As-O-Fe络合和配体交换富集",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）",
+        "-OH（羟基）"
+      ],
       "source": "literature",
       "ref_doi": "10.13671/j.hjkxxb.2021.0204",
       "verification": "partial",
@@ -739,12 +755,18 @@
         "electrostatic",
         "schwertmannite",
         "mechanism"
+      ],
+      "key_structures": [
+        "吸附结构"
       ]
     },
     {
       "name": "吸附机制",
       "description": "内球络合、表面络合、氢键、氧化（Sb(III)/As(III)被部分氧化为Sb(V)/As(V)）",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "氢键位点"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.clay.2021.106392",
       "verification": "partial",
@@ -798,15 +820,20 @@
       },
       "source_doi": "10.1016/j.clay.2021.106392",
       "source_locator": "p.1",
-      "evidence_label": "from_source"
+      "evidence_label": "from_source",
+      "key_structures": [
+        "吸附结构"
+      ]
     },
     {
       "name": "Cu在施氏矿物表面配位模式",
       "description": "bidentate inner-sphere complexes with singly coordinated surface sites",
       "functional_groups": [
-        "表面羟基 -OH (Fe-OH)",
         "硫酸根 SO₄²⁻",
-        "Fe-O/OH位点"
+        "配位/螯合位点",
+        "Fe-O/OH位点",
+        "表面羟基 -OH (Fe-OH)",
+        "-O-（醚键）"
       ],
       "source": "literature",
       "ref_doi": "10.3390/min15080868",
@@ -888,7 +915,12 @@
     {
       "name": "砷在铁(氧氢)氧化物表面配位模式",
       "description": "binuclear bidentate corner-sharing (2C), mononuclear bidentate edge-sharing (2E), mononuclear monodentate corner-sharing (1V)",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）",
+        "配位/螯合位点",
+        "-SH（巯基）"
+      ],
       "source": "literature",
       "ref_doi": "10.3390/min15080868",
       "verification": "partial",
@@ -945,7 +977,8 @@
       "evidence_type": "partial_source",
       "evidence_note": "Upgraded from llm_inferred using visual_cache PDF text (matched 3 keywords: ['表面', '氧化', '砷'])",
       "source_locator": "p.14",
-      "evidence_label": "from_source"
+      "evidence_label": "from_source",
+      "key_structures": []
     }
   ],
   "narrative": {

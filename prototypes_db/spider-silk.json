@@ -115,7 +115,14 @@
     {
       "name": "蜘蛛丝增强策略：金属掺杂和CNT/石墨烯复合",
       "description": "ALD金属掺杂：通过金属配位键/共价键增强强度和韧性；f-CNTs机械剪切加载：韧性提高≈300%；SWCNTs/PEDOT-PSS涂层：韧性420 MJ/m³+导电率1077 S/cm；喂食石墨烯/CNT：蜘蛛产出增强力学性能的牵引丝",
-      "functional_groups": "",
+      "functional_groups": [
+        "石墨烯表面基团",
+        "配位/螯合位点",
+        "碳纳米管表面基团",
+        "-NH₂（氨基）",
+        "-S-（硫醚键）",
+        "-O-（醚键）"
+      ],
       "source": "10.1016/j.cej.2021.128670",
       "ref_doi": "10.1002/advs.202103965",
       "verification": "partial",
@@ -159,12 +166,16 @@
       "source_file": "仿生文献库/论文/第5组-纤维结构/2021-Zhou-cellulose-silk-nanofiber-adsorption.pdf",
       "locator": "p.1",
       "source_locator": "p.1, Abstract",
-      "scope_match": "Keywords: spider silk/蜘蛛丝, bionic fibers/仿生纤维, CNF/纤维素纳米纤维, PEI/聚乙烯亚胺, GO/氧化石墨烯"
+      "scope_match": "Keywords: spider silk/蜘蛛丝, bionic fibers/仿生纤维, CNF/纤维素纳米纤维, PEI/聚乙烯亚胺, GO/氧化石墨烯",
+      "key_structures": [
+        "涂层结构",
+        "β-折叠"
+      ]
     },
     {
       "name": "静电纺丝纤维形貌调控因素",
       "description": "溶液粘度、表面张力、溶剂、电导率、介电性能；电压、喂料速度、接收距离、喷丝头直径；温度、湿度、气体介质",
-      "functional_groups": "",
+      "functional_groups": [],
       "source": "10.1016/j.cej.2021.128670",
       "ref_doi": "10.1007/s40242-021-0010-4",
       "verification": "partial",
@@ -211,12 +222,18 @@
       "verification_quote": "Residual concentrations of Cd(II), Cr(VI), Cu(II), Pb(II) at 1000 ppb in 40 min. CNF ensured high swelling rate for amphoteric bionic fibers",
       "source_locator": "p.1",
       "scope_match": "Keywords: Cd(II)/镉, Cr(VI)/铬, Pb(II)/铅, heavy metal/重金属, adsorption/吸附",
-      "source_doi": "10.1016/j.cej.2021.128670"
+      "source_doi": "10.1016/j.cej.2021.128670",
+      "key_structures": [
+        "纤维结构",
+        "静电纺丝纤维"
+      ]
     },
     {
       "name": "PAN/热解PAN Janus织物润湿性",
       "description": "PAN侧超疏水，热解PAN侧超亲水",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）"
+      ],
       "source": "10.1016/j.cej.2021.128670",
       "ref_doi": "10.1007/s40242-021-0010-4",
       "verification": "partial",
@@ -283,12 +300,18 @@
       "verification_quote": "The formation of the stable chemical bonds by epichlorohydrin (ECH) with CNF, PEI and GO can accelerate the formation of the network fibers of CNF/PEI@GOA; however, GO only exists in the outer layer",
       "source_locator": "p.2",
       "scope_match": "Keywords: cellulose nanofibers/纤维素纳米纤维, PEI/聚乙烯亚胺, chemical bonds/化学键, graphene oxide/氧化石墨烯",
-      "source_doi": "10.1016/j.cej.2021.128670"
+      "source_doi": "10.1016/j.cej.2021.128670",
+      "key_structures": [
+        "润湿结构",
+        "超亲水表面",
+        "超疏水表面",
+        "Janus双面结构"
+      ]
     },
     {
       "name": "单向渗透三力竞争机制",
       "description": "静水压(HP)+毛细力(CF)+疏水力(HF)共同决定液滴渗透行为",
-      "functional_groups": "",
+      "functional_groups": [],
       "source": "10.1016/j.cej.2021.128670",
       "ref_doi": "10.1007/s40242-021-0010-4",
       "verification": "partial",
@@ -335,12 +358,15 @@
       "verification_quote": "CNF/PEI@GOA had a utilization rate of 100% within 40 min. The excellent porosity of the structure and specific surface area resulted in its ability to rapidly adsorb heavy metal ions",
       "source_locator": "p.5",
       "scope_match": "Keywords: adsorption/吸附, porosity/孔隙率, specific surface area/比表面积, heavy metal/重金属",
-      "source_doi": "10.1016/j.cej.2021.128670"
+      "source_doi": "10.1016/j.cej.2021.128670",
+      "key_structures": []
     },
     {
       "name": "PCL/Teflon AF核壳纤维超疏水/超疏油",
       "description": "超疏水且超疏油",
-      "functional_groups": "",
+      "functional_groups": [
+        "-O-（醚键）"
+      ],
       "source": "10.1016/j.cej.2021.128670",
       "ref_doi": "10.1007/s40242-021-0010-4",
       "verification": "partial",
@@ -397,12 +423,18 @@
       "verification_quote": "CNF/PEI@GOA was noted to have rich balanced amphoteric functional groups with a 6.93 mmol g-1 amino density and a 5.81 mmol g-1 carboxyl density",
       "source_locator": "p.5",
       "scope_match": "Keywords: amphoteric/两性, amino/氨基, carboxyl/羧基, functional groups/官能团, adsorption/吸附",
-      "source_doi": "10.1016/j.cej.2021.128670"
+      "source_doi": "10.1016/j.cej.2021.128670",
+      "key_structures": [
+        "纤维结构",
+        "超疏水表面"
+      ]
     },
     {
       "name": "Janus膜在膜蒸馏中的抗污染性能",
       "description": "全疏水Janus膜同时具备抗油污染和抗表面活性剂润湿能力",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）"
+      ],
       "source": "10.1016/j.cej.2021.128670",
       "ref_doi": "10.1007/s40242-021-0010-4",
       "verification": "partial",
@@ -469,12 +501,20 @@
       "verification_quote": "Inspired by the principle of spider silk, a novel amphoteric bionic fibers adsorbent was designed via electrostatic assembly of cellulose nanofibers (CNF) as the skeleton",
       "source_locator": "p.1",
       "scope_match": "Keywords: spider silk/蜘蛛丝, electrostatic assembly/静电组装, cellulose nanofibers/纤维素纳米纤维, bionic/仿生",
-      "source_doi": "10.1016/j.cej.2021.128670"
+      "source_doi": "10.1016/j.cej.2021.128670",
+      "key_structures": [
+        "膜结构",
+        "润湿结构",
+        "疏水表面",
+        "Janus双面结构"
+      ]
     },
     {
       "name": "Janus膜水下气泡单向传输",
       "description": "气泡从亲水向超疏水方向单向渗透",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）"
+      ],
       "source": "10.1016/j.cej.2021.128670",
       "ref_doi": "10.1007/s40242-021-0010-4",
       "verification": "partial",
@@ -531,12 +571,19 @@
       "verification_quote": "CNF/PEI@GOA had a utilization rate of 100% within 40 min. The excellent porosity of the structure and specific surface area resulted in its ability to rapidly adsorb heavy metal ions",
       "source_locator": "p.5",
       "scope_match": "Keywords: adsorption/吸附, porosity/孔隙率, heavy metal/重金属, nanofiber/纳米纤维",
-      "source_doi": "10.1016/j.cej.2021.128670"
+      "source_doi": "10.1016/j.cej.2021.128670",
+      "key_structures": [
+        "膜结构",
+        "超疏水表面",
+        "Janus双面结构"
+      ]
     },
     {
       "name": "Janus膜油水分离性能优势",
       "description": "双层Janus材料油水分离效率优于单层疏水/亲油膜",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）"
+      ],
       "source": "10.1016/j.cej.2021.128670",
       "ref_doi": "10.1007/s40242-021-0010-4",
       "verification": "partial",
@@ -603,12 +650,20 @@
       "verification_quote": "The formation of the stable chemical bonds by epichlorohydrin (ECH) with CNF, PEI and GO can accelerate the formation of the network fibers of CNF/PEI@GOA",
       "source_locator": "p.2",
       "scope_match": "Keywords: cellulose nanofibers/纤维素纳米纤维, PEI/聚乙烯亚胺, chemical bonds/化学键, network fibers/网络纤维",
-      "source_doi": "10.1016/j.cej.2021.128670"
+      "source_doi": "10.1016/j.cej.2021.128670",
+      "key_structures": [
+        "油水分离结构",
+        "膜结构",
+        "Janus双面结构"
+      ]
     },
     {
       "name": "抗污染机制 Antifouling mechanism",
       "description": "超亲水/水下超疏油→Cassie态→油滴不粘附→浮力上升→简单水冲洗恢复",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.seppur.2021.119824",
       "verification": "partial",
@@ -679,12 +734,18 @@
         "verification_quote": "following successful oil coalescence, larger oil droplets were efficiently rejected by the pores of skin layer; these rejected droplets then directly detached from the superhydrophilic surface without deposition or adhesion due to combined effects of size-sieving and superwetting",
         "source_doi": "10.1016/j.seppur.2021.119824",
         "source_locator": "p.9 / Section 3.3.2"
-      }
+      },
+      "key_structures": [
+        "Cassie-Baxter润湿态",
+        "水下超疏油表面",
+        "超亲水表面",
+        "涂层结构"
+      ]
     },
     {
       "name": "纳米乳液分离挑战——粘度+表面活性剂",
       "description": "高粘度油→粘附膜面→增加污染; 高表面活性剂→油水界面坚实层→静电排斥→阻止聚并",
-      "functional_groups": "",
+      "functional_groups": [],
       "source": "literature",
       "ref_doi": "10.1016/j.seppur.2021.119824",
       "verification": "partial",
@@ -731,12 +792,20 @@
             "verification_method": "unverifiable_generic_text"
           }
         ]
-      }
+      },
+      "key_structures": [
+        "膜结构"
+      ]
     },
     {
       "name": "Cr(VI) XPS吸附机制",
       "description": "Cr-N(III) 575.46+585.03eV; Cr-O(VI) 576.27+586.31eV; Cr=O(VI) 577.72+587.59eV; 氨基质子化-NH₃⁺(401.2eV)",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-NH-（亚氨基）",
+        "-O-（醚键）",
+        "-NH₂（氨基）"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.cej.2021.128670",
       "verification": "partial",
@@ -793,12 +862,18 @@
       "source_page": 5,
       "source_locator": "p.5, Section 3.4",
       "locator": "p.5",
-      "scope_match": "Keywords: Cr(VI)/铬, adsorption/吸附, CNF/PEI, porosity/孔隙率, heavy metal/重金属"
+      "scope_match": "Keywords: Cr(VI)/铬, adsorption/吸附, CNF/PEI, porosity/孔隙率, heavy metal/重金属",
+      "key_structures": [
+        "吸附结构"
+      ]
     },
     {
       "name": "Cd(II) XPS吸附机制",
       "description": "Cd-N 411.36eV(42.95%)+404.50eV(37.72%); Cd-O 404.65eV(57.05%)+531.28eV(39.15%)",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.cej.2021.128670",
       "verification": "partial",
@@ -845,12 +920,20 @@
       "source_page": 5,
       "source_locator": "p.5, Section 3.4",
       "locator": "p.5",
-      "scope_match": "Keywords: Cd(II)/镉, amphoteric/两性, amino/氨基, carboxyl/羧基, functional groups/官能团"
+      "scope_match": "Keywords: Cd(II)/镉, amphoteric/两性, amino/氨基, carboxyl/羧基, functional groups/官能团",
+      "key_structures": [
+        "吸附结构"
+      ]
     },
     {
       "name": "纤维形成——疏水基底",
       "description": "CNF/PEI在PTFE板接触角118.5°; GO接触角121.7°; 液-液界面接触吸引但不混合",
-      "functional_groups": "",
+      "functional_groups": [
+        "PTFE氟碳基团",
+        "-O-（醚键）",
+        "PEI胺基",
+        "GO羧基/羟基/环氧基"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.cej.2021.128670",
       "verification": "partial",
@@ -907,12 +990,21 @@
             "verification_method": "unverifiable_generic_text"
           }
         ]
-      }
+      },
+      "key_structures": [
+        "纤维结构",
+        "接触角特征"
+      ]
     },
     {
       "name": "专化-协同机制 Specialization and cooperation mechanism",
       "description": "Cd(II): 协同(氨基+羧基); Cr(VI): 专化(氨基主导); Cu/Pb: 专化(羧基主导)",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）",
+        "-COOH（羧基）",
+        "-NH₂（氨基）"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.cej.2021.128670",
       "verification": "partial",
@@ -979,12 +1071,17 @@
       "source_page": 5,
       "source_locator": "p.5, Section 3.4",
       "locator": "p.5",
-      "scope_match": "Keywords: carboxyl/羧基, amino/氨基, cationic/阳离子, anionic/阴离子, heavy metal/重金属, GO, PEI"
+      "scope_match": "Keywords: carboxyl/羧基, amino/氨基, cationic/阳离子, anionic/阴离子, heavy metal/重金属, GO, PEI",
+      "key_structures": []
     },
     {
       "name": "蜘蛛丝仿生灵感来源 Spider silk biomimetic inspiration",
       "description": "spidroin两亲性(疏水丙氨酸+亲水甘氨酸/谷氨酰胺/脯氨酸/丝氨酸)→超分子自组装→纤维形成",
-      "functional_groups": "",
+      "functional_groups": [
+        "-CONH-（酰胺键）",
+        "-O-（醚键）",
+        "-S-（硫醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.cej.2021.128670",
       "verification": "partial",
@@ -1051,12 +1148,16 @@
       "source_page": 1,
       "source_locator": "p.1, Introduction",
       "locator": "p.1",
-      "scope_match": "Keywords: spider silk/蜘蛛丝, spidroin/蛛丝蛋白, amphiphilicity/两亲性, alanine/丙氨酸, amino acids/氨基酸"
+      "scope_match": "Keywords: spider silk/蜘蛛丝, spidroin/蛛丝蛋白, amphiphilicity/两亲性, alanine/丙氨酸, amino acids/氨基酸",
+      "key_structures": [
+        "两亲性表面",
+        "纤维结构"
+      ]
     },
     {
       "name": "纳米布沙漠甲虫雾水收集机制",
       "description": "亲水凸起捕获雾滴，疏水凹槽定向运输",
-      "functional_groups": "",
+      "functional_groups": [],
       "source": "literature",
       "ref_doi": "10.1002/adfm.202200359",
       "verification": "partial",
@@ -1103,12 +1204,16 @@
             "verification_method": "pdf_not_found"
           }
         ]
-      }
+      },
+      "key_structures": []
     },
     {
       "name": "铀酰离子配位化学",
       "description": "UO2^2+线性对称[O=U=O]^2+, U-O键长1.76 Å, 4-6个配体在赤道面配位, 四方/五方/六方双锥",
-      "functional_groups": "",
+      "functional_groups": [
+        "-O-（醚键）",
+        "配位/螯合位点"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.ccr.2023.215234",
       "verification": "partial",
@@ -1165,12 +1270,16 @@
       "verification_quote": ". It has a strictly linear and symmetrical [O = U = O]2+\narrangement, with short U-O bond length of 1.76 Å [19]. A triple bond is \nconstructed by one σ-bond plus two π-bonds between 5f and 6d hybrid \norbitals of U and 2p orbitals of oxido groups. When coordinating with \norganic electron donor ligands, four or more ligands may be bound to \nUO2\n2+ in",
       "source_page": 2,
       "source_doi": "10.1016/j.ccr.2023.215234",
-      "source_locator": "p.2"
+      "source_locator": "p.2",
+      "key_structures": []
     },
     {
       "name": "酰胺肟配位模式",
       "description": "四种结合模式：单齿(单氧配位)/三齿(环状酰亚胺二肟)/侧向η2(开链酰胺肟)/螯合",
-      "functional_groups": "",
+      "functional_groups": [
+        "-CONH-（酰胺键）",
+        "配位/螯合位点"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.ccr.2023.215234",
       "verification": "partial",
@@ -1227,12 +1336,16 @@
             "verification_method": "pdf_not_found"
           }
         ]
-      }
+      },
+      "key_structures": []
     },
     {
       "name": "配体优化六大策略",
       "description": "(1)高含量开链AO (2)增加AO亲水性 (3)高柔性配体链 (4)合适PAO链长 (5)引入给电子取代基 (6)空间协同螯合",
-      "functional_groups": "",
+      "functional_groups": [
+        "-O-（醚键）",
+        "配位/螯合位点"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.ccr.2023.215234",
       "verification": "partial",
@@ -1284,12 +1397,16 @@
       },
       "verification_quote": "ium extraction from seawater; AO, amidoxime; EXAFS, extended X-ray absorption fine structure; PAN, poly(acrylonitrile); PAO, poly \n(amidoxime); DFT, density functional theory; COFs, covalent organic frameworks; POPs, porous organic polymers; CMPs, conjugated microporous polymers; h-PEI, \nhyperbranched polyethyleneimine; SUP, super uranyl-binding protein; SSUP, spidroin-based SUP; MOFs, metal–organ",
       "source_doi": "10.1016/j.ccr.2023.215234",
-      "source_locator": "p.1"
+      "source_locator": "p.1",
+      "key_structures": []
     },
     {
       "name": "双功能协同策略",
       "description": "三种机制：(1)第二配体提供额外配位位点 (2)增强AO碱性→更强U(VI)络合 (3)酸性基团解离碳酸盐→释放UO2^2+",
-      "functional_groups": "",
+      "functional_groups": [
+        "-O-（醚键）",
+        "配位/螯合位点"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.ccr.2023.215234",
       "verification": "partial",
@@ -1346,12 +1463,15 @@
       "verification_quote": "ormation of \npoly(acrylonitrile) (PAN) to poly(amidoxime) (PAO), the functionalities \nof both open-chain amidoxime and cyclic imide dioxime were formed; \ntherefore, how to primaril",
       "source_page": 4,
       "source_doi": "10.1016/j.ccr.2023.215234",
-      "source_locator": "p.4"
+      "source_locator": "p.4",
+      "key_structures": []
     },
     {
       "name": "离子印迹策略——三种改进方向",
       "description": "(1)高孔隙材料增加可及位点 (2)2D/表面印迹提高可及性 (3)强化功能基-铀酰配位",
-      "functional_groups": "",
+      "functional_groups": [
+        "配位/螯合位点"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.ccr.2023.215234",
       "verification": "partial",
@@ -1398,12 +1518,15 @@
             "verification_method": "pdf_not_found"
           }
         ]
-      }
+      },
+      "key_structures": []
     },
     {
       "name": "电化学提取三阶段机理",
       "description": "电迁移→电吸附→电化学沉积; UO2^2+→U(IV)还原沉淀→突破热力学平衡",
-      "functional_groups": "",
+      "functional_groups": [
+        "-O-（醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.ccr.2023.215234",
       "verification": "partial",
@@ -1460,12 +1583,19 @@
       "verification_quote": "active metal with the reduction potentials of 0.327 v for UO2\n2+/U4+ and \n0.411 v for UO2\n2+/UO2 (vs. standard hydrogen electrode), respectively \n[116]. UO2\n2+ can be reduced and",
       "source_page": 10,
       "source_doi": "10.1016/j.ccr.2023.215234",
-      "source_locator": "p.10"
+      "source_locator": "p.10",
+      "key_structures": [
+        "吸附结构"
+      ]
     },
     {
       "name": "MOF光催化协同机制",
       "description": "MOF SCU-19(POM+MOF)：三重机制——配体配位+光催化还原+部分化学还原",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）",
+        "配位/螯合位点"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.ccr.2023.215234",
       "verification": "partial",
@@ -1528,7 +1658,10 @@
       },
       "source_doi": "10.1016/j.ccr.2023.215234",
       "source_locator": "p.12",
-      "evidence_label": "from_source"
+      "evidence_label": "from_source",
+      "key_structures": [
+        "金属有机框架（MOF）"
+      ]
     }
   ],
   "narrative": {

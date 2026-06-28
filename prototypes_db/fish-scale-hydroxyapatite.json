@@ -488,9 +488,11 @@
       "name": "八重协同吸附机制",
       "description": "疏水+π-π+π-π EDA+阳离子交换+氢键+孔填充+静电+阳阳-π",
       "functional_groups": [
+        "离子交换位点",
         "羟基 -OH",
         "磷酸根 PO₄³⁻",
-        "Ca²⁺位点"
+        "Ca²⁺位点",
+        "氢键位点"
       ],
       "source": "literature",
       "ref_doi": "10.1016/j.chemosphere.2021.131962",
@@ -549,10 +551,14 @@
         "source_locator": "p.8 / 3.8节"
       },
       "key_structures": [
+        "疏水表面",
+        "吸附结构",
+        "纳米级结构",
+        "疏水+π-π+氢键+孔填充+静电",
+        "HAp羟基磷灰石晶体",
         "HAp纳米晶体(~30nm)",
-        "离子交换Ca²⁺↔Pb²⁺",
         "阳离子交换",
-        "疏水+π-π+氢键+孔填充+静电"
+        "离子交换Ca²⁺↔Pb²⁺"
       ],
       "molecular_feature_links": [
         "二价阳离子",
@@ -562,7 +568,9 @@
     {
       "name": "疏水相互作用证据",
       "description": "CIP溶解度最低在pH 7→最大吸附在pH 5-8→负相关→疏水作用主导",
-      "functional_groups": "",
+      "functional_groups": [
+        "疏水相互作用"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.chemosphere.2021.131962",
       "verification": "partial",
@@ -618,12 +626,20 @@
         "adsorbent",
         "molecular",
         "dimension"
+      ],
+      "key_structures": [
+        "吸附结构"
       ]
     },
     {
       "name": "MICP化学反应机理",
       "description": "脲酶水解尿素: CO(NH₂)₂+H₂O→NH₂COOH+NH₃; NH₂COOH+H₂O→NH₃+H₂CO₃; 最终产生CO₃²⁻+Ca²⁺→CaCO₃↓",
-      "functional_groups": "",
+      "functional_groups": [
+        "-NH-（亚氨基）",
+        "-O-（醚键）",
+        "-COOH（羧基）",
+        "-OH（羟基）"
+      ],
       "source": "patent",
       "ref_doi": null,
       "verification": "knowledge_gap",
@@ -684,7 +700,8 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "no DOI or source_file; cannot trace to extraction evidence"
+      "evidence_note": "no DOI or source_file; cannot trace to extraction evidence",
+      "key_structures": []
     }
   ],
   "narrative": {

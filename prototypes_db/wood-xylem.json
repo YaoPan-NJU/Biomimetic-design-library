@@ -91,7 +91,9 @@
     {
       "name": "吸附机制——分子态酚+静电排斥",
       "description": "pH<pKa时分子态酚占优→利于吸附；高pH酚酸根阴离子→与负电荷WAS-BC排斥",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.1038/s41598-021-82277-2",
       "verification": "partial",
@@ -147,12 +149,20 @@
         "verification_quote": "wood nanocellulose aerogel for pollutant capture",
         "source_file": "仿生文献库/论文/第4组-生物矿化/2021-Kumar-wood-shell-biochar-wastewater 2.pdf",
         "source_doi": "10.1038/s41598-021-82277-2"
-      }
+      },
+      "key_structures": [
+        "吸附结构"
+      ]
     },
     {
       "name": "共价交联网络的XPS证据",
       "description": "XPS C 1s确认C-N键形成→TMPTAP成功交联TCNF和GO。N 1s吸附后偏移：Pb²⁺@TCTGAs 399.2, Cu²⁺@ 399.2, Zn²⁺@ 399.4, Cd²⁺@ 399.2, Mn²⁺@ 399.1 eV(vs原始398.9 eV)→N孤对电子与金属离子形成配位键",
-      "functional_groups": "NH3+, -NH2, -NH- responsible for divalent metal cation adsorption (HSAB)",
+      "functional_groups": [
+        "-O-（醚键）",
+        "配位/螯合位点",
+        "NH3+, -NH2, -NH- responsible for divalent metal cation adsorption (HSAB)",
+        "GO羧基/羟基/环氧基"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.jhazmat.2021.125612",
       "verification": "partial",
@@ -215,12 +225,22 @@
       "source_page": 2,
       "source_doi": "10.1016/j.jhazmat.2021.125612",
       "source_locator": "p.2",
-      "evidence_label": "from_source"
+      "evidence_label": "from_source",
+      "key_structures": [
+        "交联网络",
+        "吸附结构"
+      ]
     },
     {
       "name": "吸附机制：氨基配位螯合",
       "description": "XPS确认N 1s偏移(398.9→399.1-399.4 eV)→N孤对电子与金属离子形成配位键。O 1s也偏移→含氧官能团参与吸附。EDX mapping确认Pb/Cu/Zn/Cd均匀分布。机制：NH3+/NH2/NH-基团与重金属离子螯合/配位",
-      "functional_groups": "NH3+, -NH2, -NH- → borderline base → complex borderline acids (Pb²⁺, Cu²⁺, Zn²⁺)",
+      "functional_groups": [
+        "NH3+, -NH2, -NH- → borderline base → complex borderline acids (Pb²⁺, Cu²⁺, Zn²⁺)",
+        "-NH₃⁺（质子化氨基）",
+        "配位/螯合位点",
+        "-NH₂（氨基）",
+        "-O-（醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.jhazmat.2021.125612",
       "verification": "partial",
@@ -277,12 +297,22 @@
       "source_page": 6,
       "source_doi": "10.1016/j.jhazmat.2021.125612",
       "source_locator": "p.6",
-      "evidence_label": "from_source"
+      "evidence_label": "from_source",
+      "key_structures": [
+        "吸附结构"
+      ]
     },
     {
       "name": "TCTGAs组分与合成工艺",
       "description": "TCNF(TEMPO氧化纤维素纳米纤维)+GO(改良Hummers法)+TMPTAP(三(2-氨基乙基)胺-聚丙二醇→交联剂+金属螯合配体)。Zr/BDC/OA比例不适用→但TCNF/GO/TMPTAP混合→超声分散→定向冷冻→冻干",
-      "functional_groups": "",
+      "functional_groups": [
+        "配位/螯合位点",
+        "GO羧基/羟基/环氧基",
+        "纤维素羟基",
+        "-NH₂（氨基）",
+        "-S-（硫醚键）",
+        "-O-（醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.jhazmat.2021.125612",
       "verification": "partial",
@@ -347,7 +377,13 @@
       "source_page": 2,
       "source_doi": "10.1016/j.jhazmat.2021.125612",
       "source_locator": "p.2",
-      "evidence_label": "from_source"
+      "evidence_label": "from_source",
+      "key_structures": [
+        "交联网络",
+        "纤维结构",
+        "纤维素纳米结构",
+        "纳米纤维网络"
+      ]
     }
   ],
   "narrative": {

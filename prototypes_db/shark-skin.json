@@ -21,7 +21,7 @@
     {
       "name": "表面润湿性对细菌粘附的影响规律",
       "description": "WCA 40°-70°或54°-130°最利于细菌粘附；超疏水和超亲水均抵抗粘附",
-      "functional_groups": "",
+      "functional_groups": [],
       "source": "literature",
       "ref_doi": "10.1002/admi.202201425",
       "verification": "unverified",
@@ -69,12 +69,24 @@
         "transferable_principle": "鲨鱼皮盾鳞微结构（riblet）"
       },
       "brief_visibility": "hidden",
-      "reclassification": "background_only_surface_physics"
+      "reclassification": "background_only_surface_physics",
+      "key_structures": [
+        "超亲水表面",
+        "润湿结构",
+        "接触角特征",
+        "超疏水表面"
+      ]
     },
     {
       "name": "细菌粘附的长程和短程相互作用距离阈值",
       "description": "长程>150 nm(van der Waals等)，短程<3 nm(氢键、静电、疏水等)",
-      "functional_groups": "",
+      "functional_groups": [
+        "范德华力",
+        "静电作用位点",
+        "疏水相互作用",
+        "-S-（硫醚键）",
+        "氢键位点"
+      ],
       "source": "literature",
       "ref_doi": "10.1002/admi.202201425",
       "verification": "unverified",
@@ -125,12 +137,17 @@
         ]
       },
       "brief_visibility": "hidden",
-      "reclassification": "background_only_surface_physics"
+      "reclassification": "background_only_surface_physics",
+      "key_structures": []
     },
     {
       "name": "超疏水表面接触角阈值 Superhydrophobic contact angle threshold",
       "description": "接触角>150°表现为超疏水行为；接触角<10°为超亲水",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）",
+        "-SH（巯基）"
+      ],
       "source": "literature",
       "ref_doi": "10.33263/BRIAC132.185",
       "verification": "unverified",
@@ -181,12 +198,22 @@
         ]
       },
       "brief_visibility": "hidden",
-      "reclassification": "background_only_surface_physics"
+      "reclassification": "background_only_surface_physics",
+      "key_structures": [
+        "超亲水表面",
+        "疏水表面",
+        "超疏水表面",
+        "接触角特征",
+        "亲水表面"
+      ]
     },
     {
       "name": "微生物表面润湿性偏好 Microorganism surface wettability preference",
       "description": "Ulva linza偏好疏水表面，Balanus Amphitrite偏好亲水表面",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.33263/BRIAC132.185",
       "verification": "unverified",
@@ -247,12 +274,20 @@
         ]
       },
       "brief_visibility": "hidden",
-      "reclassification": "background_only_surface_physics"
+      "reclassification": "background_only_surface_physics",
+      "key_structures": [
+        "亲水表面",
+        "润湿结构",
+        "疏水表面"
+      ]
     },
     {
       "name": "超疏水表面防污机制 Superhydrophobic surface antifouling mechanism",
       "description": "超疏水表面的抗污性能归因于截留的空气泡层，减少了细菌与表面之间的接触",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.33263/BRIAC132.185",
       "verification": "unverified",
@@ -303,12 +338,20 @@
         ]
       },
       "brief_visibility": "hidden",
-      "reclassification": "background_only_surface_physics"
+      "reclassification": "background_only_surface_physics",
+      "key_structures": [
+        "疏水表面",
+        "超疏水表面"
+      ]
     },
     {
       "name": "超疏水表面防污短暂性 Superhydrophobic surface antifouling short-lived",
       "description": "超疏水表面的抗污性能是短暂的（short-lived）",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）",
+        "-SH（巯基）"
+      ],
       "source": "literature",
       "ref_doi": "10.33263/BRIAC132.185",
       "verification": "unverified",
@@ -369,12 +412,16 @@
         ]
       },
       "brief_visibility": "hidden",
-      "reclassification": "background_only_surface_physics"
+      "reclassification": "background_only_surface_physics",
+      "key_structures": [
+        "疏水表面",
+        "超疏水表面"
+      ]
     },
     {
       "name": "超疏水性定义阈值",
       "description": "接触角>150°且滚动角<10°",
-      "functional_groups": "",
+      "functional_groups": [],
       "source": "literature",
       "ref_doi": "10.3390/polym15030543",
       "verification": "unverified",
@@ -425,12 +472,20 @@
         ]
       },
       "brief_visibility": "hidden",
-      "reclassification": "background_only_surface_physics"
+      "reclassification": "background_only_surface_physics",
+      "key_structures": [
+        "滚动角特征",
+        "接触角特征",
+        "超疏水表面"
+      ]
     },
     {
       "name": "PDMS '胶+粉'法通用性",
       "description": "17种以上颗粒均可制备超疏水表面",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "PDMS硅氧烷"
+      ],
       "source": "literature",
       "ref_doi": "10.3390/polym15030543",
       "verification": "unverified",
@@ -481,12 +536,17 @@
         ]
       },
       "brief_visibility": "hidden",
-      "reclassification": "background_only_surface_physics"
+      "reclassification": "background_only_surface_physics",
+      "key_structures": [
+        "疏水表面",
+        "颗粒结构",
+        "超疏水表面"
+      ]
     },
     {
       "name": "无氟透明超疏水涂层接触角",
       "description": "163°±2.1°",
-      "functional_groups": "",
+      "functional_groups": [],
       "source": "literature",
       "ref_doi": "10.3390/polym15030543",
       "verification": "unverified",
@@ -527,12 +587,20 @@
         ]
       },
       "brief_visibility": "hidden",
-      "reclassification": "background_only_surface_physics"
+      "reclassification": "background_only_surface_physics",
+      "key_structures": [
+        "涂层结构",
+        "接触角特征",
+        "超疏水表面"
+      ]
     },
     {
       "name": "巯基硅烷改性棉纤维超疏水纺织品接触角和滚动角",
       "description": "接触角159°，滚动角4°",
-      "functional_groups": "",
+      "functional_groups": [
+        "硅烷偶联剂",
+        "-SH（巯基）"
+      ],
       "source": "literature",
       "ref_doi": "10.3390/polym15030543",
       "verification": "unverified",
@@ -583,12 +651,21 @@
         ]
       },
       "brief_visibility": "hidden",
-      "reclassification": "background_only_surface_physics"
+      "reclassification": "background_only_surface_physics",
+      "key_structures": [
+        "纤维结构",
+        "滚动角特征",
+        "接触角特征",
+        "超疏水表面"
+      ]
     },
     {
       "name": "PDMS微柱阵列防冰性能",
       "description": "微柱间距与疏水性正相关，间距25μm时WCA达161.1°",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "PDMS硅氧烷"
+      ],
       "source": "literature",
       "ref_doi": "10.3390/polym15030543",
       "verification": "unverified",
@@ -649,12 +726,15 @@
         ]
       },
       "brief_visibility": "hidden",
-      "reclassification": "background_only_surface_physics"
+      "reclassification": "background_only_surface_physics",
+      "key_structures": [
+        "接触角特征"
+      ]
     },
     {
       "name": "超疏水防冰最佳延迟结冰时间",
       "description": "98±2.3 min",
-      "functional_groups": "",
+      "functional_groups": [],
       "source": "literature",
       "ref_doi": "10.3390/polym15030543",
       "verification": "unverified",
@@ -705,12 +785,17 @@
         ]
       },
       "brief_visibility": "hidden",
-      "reclassification": "background_only_surface_physics"
+      "reclassification": "background_only_surface_physics",
+      "key_structures": [
+        "超疏水表面"
+      ]
     },
     {
       "name": "透明无氟超疏水涂层防冰时间",
       "description": "483 s（空白对照15 s）",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.3390/polym15030543",
       "verification": "unverified",
@@ -751,12 +836,16 @@
         ]
       },
       "brief_visibility": "hidden",
-      "reclassification": "background_only_surface_physics"
+      "reclassification": "background_only_surface_physics",
+      "key_structures": [
+        "涂层结构",
+        "超疏水表面"
+      ]
     },
     {
       "name": "超疏水表面自清洁原理",
       "description": "粗糙低能表面上水滴可携带走污染物颗粒",
-      "functional_groups": "",
+      "functional_groups": [],
       "source": "literature",
       "ref_doi": "10.3390/polym15030543",
       "verification": "unverified",
@@ -807,12 +896,18 @@
         ]
       },
       "brief_visibility": "hidden",
-      "reclassification": "background_only_surface_physics"
+      "reclassification": "background_only_surface_physics",
+      "key_structures": [
+        "超疏水表面",
+        "疏水表面",
+        "颗粒结构",
+        "自清洁表面"
+      ]
     },
     {
       "name": "超疏水防腐蚀机制",
       "description": "微纳结构中空气膜隔离金属与腐蚀液，阻碍电化学反应",
-      "functional_groups": "",
+      "functional_groups": [],
       "source": "literature",
       "ref_doi": "10.3390/polym15030543",
       "verification": "unverified",
@@ -853,12 +948,16 @@
         ]
       },
       "brief_visibility": "hidden",
-      "reclassification": "background_only_surface_physics"
+      "reclassification": "background_only_surface_physics",
+      "key_structures": [
+        "膜结构",
+        "超疏水表面"
+      ]
     },
     {
       "name": "硅基超疏水材料五项核心优势",
       "description": "疏水基团丰富、可构建微纳结构、反应条件温和、UV/热抗性、低毒性",
-      "functional_groups": "",
+      "functional_groups": [],
       "source": "literature",
       "ref_doi": "10.3390/polym15030543",
       "verification": "unverified",
@@ -899,12 +998,15 @@
         ]
       },
       "brief_visibility": "hidden",
-      "reclassification": "background_only_surface_physics"
+      "reclassification": "background_only_surface_physics",
+      "key_structures": [
+        "超疏水表面"
+      ]
     },
     {
       "name": "硅基超疏水材料机械稳定性挑战",
       "description": "纳米级结构强度有限，耐磨性不足是工业化主要障碍",
-      "functional_groups": "",
+      "functional_groups": [],
       "source": "literature",
       "ref_doi": "10.3390/polym15030543",
       "verification": "unverified",
@@ -945,12 +1047,16 @@
         ]
       },
       "brief_visibility": "hidden",
-      "reclassification": "background_only_surface_physics"
+      "reclassification": "background_only_surface_physics",
+      "key_structures": [
+        "纳米级结构",
+        "超疏水表面"
+      ]
     },
     {
       "name": "自然界九种超疏水生物原型",
       "description": "荷叶、水鳖叶、蝴蝶翅膀、蝇眼、蝉翼、壁虎脚、鲨鱼皮、水黾腿、玫瑰花瓣",
-      "functional_groups": "",
+      "functional_groups": [],
       "source": "literature",
       "ref_doi": "10.3390/polym15030543",
       "verification": "unverified",
@@ -1001,7 +1107,10 @@
         ]
       },
       "brief_visibility": "hidden",
-      "reclassification": "background_only_surface_physics"
+      "reclassification": "background_only_surface_physics",
+      "key_structures": [
+        "超疏水表面"
+      ]
     }
   ],
   "narrative": {

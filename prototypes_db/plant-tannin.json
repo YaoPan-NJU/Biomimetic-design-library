@@ -342,7 +342,18 @@
     {
       "name": "吸附机制",
       "description": "π-π堆积（TA-rGO芳香环与MB芳香环）、氢键（MB氮原子与-COOH/-SO₃H）、静电作用（-COO⁻/-SO₃⁻与阳离子MB）",
-      "functional_groups": "",
+      "functional_groups": [
+        "-COOH（羧基）",
+        "静电作用位点",
+        "芳香环",
+        "-COO⁻（羧基阴离子）",
+        "-S-（硫醚键）",
+        "GO羧基/羟基/环氧基",
+        "-OH（羟基）",
+        "氢键位点",
+        "π-π堆积位点",
+        "-O-（醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.colsurfa.2021.126972",
       "verification": "partial",
@@ -396,12 +407,22 @@
         "source_locator": "Section 3.3.2 + Fig.4B"
       },
       "source_page": 6,
-      "source_locator": "Section 3.3.2 + Fig.4B"
+      "source_locator": "Section 3.3.2 + Fig.4B",
+      "key_structures": [
+        "吸附结构"
+      ]
     },
     {
       "name": "吸附机理",
       "description": "单宁的邻苯二酚基团通过螯合作用与重金属离子形成五元环螯合物；石墨烯提供π共轭结构和三维多孔传质通道；含氧官能团（—OH、—C=O）作为吸附活性位点",
-      "functional_groups": "",
+      "functional_groups": [
+        "石墨烯表面基团",
+        "配位/螯合位点",
+        "-OH（羟基）",
+        "邻苯二酚（catechol）",
+        "-O-（醚键）",
+        "-C=O（羰基）"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.indcrop.2021.114304",
       "verification": "partial",
@@ -490,12 +511,22 @@
       "label_fix": "P1b: downgraded from partial — no verification_quote",
       "source_page": 1,
       "source_locator": "Abstract",
-      "verification_quote": "The maximum Pb(II) adsorption capacity of TRGA reached 803.84 mg/g at pH 4, which was much higher than that of precious tannin based adsorbents."
+      "verification_quote": "The maximum Pb(II) adsorption capacity of TRGA reached 803.84 mg/g at pH 4, which was much higher than that of precious tannin based adsorbents.",
+      "key_structures": [
+        "吸附结构"
+      ]
     },
     {
       "name": "缓蚀机理",
       "description": "DOLE分子通过羟基、羰基和共轭环上的孤对电子与Fe空d轨道配位形成化学吸附，同时范德华力和静电作用贡献物理吸附，在X70钢表面形成保护性吸附膜，同时阻滞阴极（H+还原）和阳极（Fe溶解）反应",
-      "functional_groups": "",
+      "functional_groups": [
+        "范德华力",
+        "静电作用位点",
+        "配位/螯合位点",
+        "-OH（羟基）",
+        "-O-（醚键）",
+        "-C=O（羰基）"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.indcrop.2022.116106",
       "verification": "partial",
@@ -550,12 +581,20 @@
         "source_locator": "Abstract"
       },
       "source_page": 1,
-      "source_locator": "Abstract"
+      "source_locator": "Abstract",
+      "key_structures": [
+        "吸附结构",
+        "膜结构"
+      ]
     },
     {
       "name": "BPA吸附机理",
       "description": "Pore filling, hydrogen bonding, π-π interactions",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）",
+        "氢键位点"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.matchemphys.2024.129770",
       "verification": "partial",
@@ -619,12 +658,18 @@
         "source_locator": "Section 3.3"
       },
       "source_page": 8,
-      "source_locator": "Section 3.3"
+      "source_locator": "Section 3.3",
+      "key_structures": [
+        "吸附结构"
+      ]
     },
     {
       "name": "Cr(VI)吸附机制总结",
       "description": "静电吸引 + 还原(Cr(VI)→Cr(III)) + 螯合",
-      "functional_groups": "",
+      "functional_groups": [
+        "静电作用位点",
+        "配位/螯合位点"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.seppur.2024.127979",
       "verification": "partial",
@@ -688,12 +733,21 @@
         "source_doi": "10.1016/j.colsurfa.2021.126972",
         "source_locator": "p.126972 / Section 1 Introduction"
       },
-      "source_locator": "p.1"
+      "source_locator": "p.1",
+      "key_structures": [
+        "吸附结构"
+      ]
     },
     {
       "name": "Cu(II)吸附机制总结",
       "description": "螯合(-OH, -NH2) + 离子交换",
-      "functional_groups": "",
+      "functional_groups": [
+        "离子交换位点",
+        "配位/螯合位点",
+        "-OH（羟基）",
+        "-NH₂（氨基）",
+        "-O-（醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.seppur.2024.127979",
       "verification": "partial",
@@ -757,12 +811,18 @@
         "source_doi": "10.1016/j.colsurfa.2021.126972",
         "source_locator": "p.126972 / Section 1 Introduction"
       },
-      "source_locator": "p.1"
+      "source_locator": "p.1",
+      "key_structures": [
+        "吸附结构"
+      ]
     },
     {
       "name": "CR吸附机制总结",
       "description": "静电吸引 + π-π堆叠 + 席夫碱反应 + 氢键",
-      "functional_groups": "",
+      "functional_groups": [
+        "静电作用位点",
+        "氢键位点"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.seppur.2024.127979",
       "verification": "partial",
@@ -816,7 +876,10 @@
         "source_locator": "Abstract"
       },
       "source_page": 1,
-      "source_locator": "Abstract"
+      "source_locator": "Abstract",
+      "key_structures": [
+        "吸附结构"
+      ]
     }
   ],
   "narrative": {

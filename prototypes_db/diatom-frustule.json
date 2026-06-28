@@ -447,10 +447,14 @@
       "name": "热处理——550°C表面Si-OH暴露",
       "description": "SSA略有减小但吸附性能提高1.71倍→表面氢键减少→裸露Si-OH增多→L碱位增多→与Ni²⁺/Ag⁺配位增强",
       "functional_groups": [
-        "硅羟基 Si-OH",
-        "L碱位点",
         "表面羟基配合",
-        "多孔吸附"
+        "硅羟基 Si-OH",
+        "配位/螯合位点",
+        "多孔吸附",
+        "-OH（羟基）",
+        "L碱位点",
+        "氢键位点",
+        "-O-（醚键）"
       ],
       "source": "literature",
       "ref_doi": "10.19817/j.cnki.issn1006-3536.2022.01.060",
@@ -523,6 +527,7 @@
       },
       "key_structures": [
         "非晶态SiO₂多孔骨架",
+        "吸附结构",
         "550°C煅烧暴露裸露Si-OH",
         "层级多孔(大孔300-500nm+介孔2-50nm)"
       ],
@@ -541,7 +546,11 @@
     {
       "name": "接枝改性——丙烯酸/La³⁺静电吸附",
       "description": "pH 1-7范围内La³⁺吸附容量随pH增大而上升→—COO⁻与La³⁺静电作用随pH增大而加强",
-      "functional_groups": "",
+      "functional_groups": [
+        "静电作用位点",
+        "-O-（醚键）",
+        "-COO⁻（羧基阴离子）"
+      ],
       "source": "literature",
       "ref_doi": "10.19817/j.cnki.issn1006-3536.2022.01.060",
       "verification": "partial",
@@ -602,12 +611,19 @@
           }
         ],
         "transferable_principle": "基于接枝改性——丙烯酸/La³⁺静电吸附的吸附/去除机制"
-      }
+      },
+      "key_structures": [
+        "吸附结构"
+      ]
     },
     {
       "name": "复合改性——氨基功能化对直接蓝74",
       "description": "最佳吸附量363.30 mg/g(1200 mg/L初始浓度)→质子化氨基与阴离子染料静电吸引",
-      "functional_groups": "",
+      "functional_groups": [
+        "-NH₃⁺（质子化氨基）",
+        "静电作用位点",
+        "-NH₂（氨基）"
+      ],
       "source": "literature",
       "ref_doi": "10.19817/j.cnki.issn1006-3536.2022.01.060",
       "verification": "partial",
@@ -668,12 +684,17 @@
           }
         ],
         "transferable_principle": "基于复合改性——氨基功能化对直接蓝74的吸附/去除机制"
-      }
+      },
+      "key_structures": [
+        "吸附结构"
+      ]
     },
     {
       "name": "磷酸盐——零价铁/铁氧化物负载",
       "description": "吸附量37 mg/g；静电+络合+化学沉淀协同",
-      "functional_groups": "",
+      "functional_groups": [
+        "-PO₄³⁻（磷酸基）"
+      ],
       "source": "literature",
       "ref_doi": "10.19817/j.cnki.issn1006-3536.2022.01.060",
       "verification": "partial",
@@ -739,12 +760,15 @@
           }
         ],
         "transferable_principle": "基于磷酸盐——零价铁/铁氧化物负载的吸附/去除机制"
-      }
+      },
+      "key_structures": [
+        "吸附结构"
+      ]
     },
     {
       "name": "未来研究五大方向",
       "description": "(1)加强吸附机理(微观作用机制)→精准靶向改性；(2)提高吸附专一性(竞争离子)；(3)再生性能研究；(4)开发新改性方法；(5)低毒/无毒改性剂→绿色工艺",
-      "functional_groups": "",
+      "functional_groups": [],
       "source": "literature",
       "ref_doi": "10.19817/j.cnki.issn1006-3536.2022.01.060",
       "verification": "partial",
@@ -800,12 +824,17 @@
           }
         ],
         "transferable_principle": "基于未来研究五大方向的吸附/去除机制"
-      }
+      },
+      "key_structures": [
+        "吸附结构"
+      ]
     },
     {
       "name": "离子强度影响",
       "description": "物理吸附为主，硅羟基参与吸附",
-      "functional_groups": "",
+      "functional_groups": [
+        "-OH（羟基）"
+      ],
       "source": "literature",
       "ref_doi": "10.3969/j.issn.1000-6532.2024.04.015",
       "verification": "partial",
@@ -865,7 +894,10 @@
       "source_doi": "10.3969/j.issn.1000-6532.2024.04.015",
       "evidence_type": "partial_source",
       "evidence_note": "Upgraded from llm_inferred using visual_cache PDF text (matched 6 keywords: ['吸附=adsorption', '硅藻', '表面', '离子=ion', '孔'])",
-      "source_locator": "p.5"
+      "source_locator": "p.5",
+      "key_structures": [
+        "吸附结构"
+      ]
     }
   ],
   "narrative": {

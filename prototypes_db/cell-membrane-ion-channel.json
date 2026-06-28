@@ -322,7 +322,10 @@
     {
       "name": "C14lyso脂质体vs DOPC脂质体结构差异 Structure difference C14lyso vs DOPC liposomes",
       "description": "C14lyso脂质体：单酰基链→更多自由体积→松散结构→高水渗透率(Pf=5.84×10⁻⁴ m/s); DOPC脂质体：双疏水酰基链→致密结构→低水渗透率(Pf=7.28×10⁻⁵ m/s)",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.cej.2021.133878",
       "verification": "partial",
@@ -384,12 +387,16 @@
         ]
       },
       "evidence_type": "partial_source",
-      "evidence_note": "Upgraded from llm_inferred using visual_cache PDF text"
+      "evidence_note": "Upgraded from llm_inferred using visual_cache PDF text",
+      "key_structures": []
     },
     {
       "name": "Aquaporin(AQP)结构与水传输机制 AQP structure and water transport mechanism",
       "description": "AQP具有6个跨膜结构域和独特的沙漏结构，形成~2.8Å孔道，实现~3×10⁹水分子/秒的快速水传输，同时有效排斥单价离子",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.cej.2021.133878",
       "verification": "partial",
@@ -449,12 +456,18 @@
         ]
       },
       "evidence_type": "partial_source",
-      "evidence_note": "Upgraded from llm_inferred using visual_cache PDF text"
+      "evidence_note": "Upgraded from llm_inferred using visual_cache PDF text",
+      "key_structures": [
+        "膜结构"
+      ]
     },
     {
       "name": "水传输机制 Water transport mechanism",
       "description": "两种机制协同增强水渗透性：(1) PA选择层本征结构变化(更薄、更粗糙、更亲水、更高DC)；(2) C14lyso脂质体作为AWC加速水传输(缩短水分子传递路径、降低传质阻力)",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.cej.2021.133878",
       "verification": "partial",
@@ -508,12 +521,17 @@
         ]
       },
       "evidence_type": "partial_source",
-      "evidence_note": "Upgraded from llm_inferred using visual_cache PDF text"
+      "evidence_note": "Upgraded from llm_inferred using visual_cache PDF text",
+      "key_structures": []
     },
     {
       "name": "细胞膜仿生设计概念",
       "description": "双功能仿生：(1)水通道蛋白→疏水通道+最小水结合位点→快速选择性水传输→对应GNM疏水石墨烯纳米孔；(2)细胞膜外侧亲水聚合物刷→空间位阻+水合层→污染物排斥→对应壳聚糖修饰",
-      "functional_groups": "",
+      "functional_groups": [
+        "壳聚糖氨基/羟基",
+        "石墨烯表面基团",
+        "配位/螯合位点"
+      ],
       "source": "literature",
       "ref_doi": "10.1002/adfm.202200199",
       "verification": "verified",
@@ -588,12 +606,22 @@
         "verification_quote": "aquaporin-based biomimetic membranes for water filtration"
       },
       "evidence_type": "partial_source",
-      "evidence_note": "Upgraded from llm_inferred using visual_cache PDF text"
+      "evidence_note": "Upgraded from llm_inferred using visual_cache PDF text",
+      "key_structures": [
+        "离子通道",
+        "膜结构",
+        "细胞膜双层"
+      ]
     },
     {
       "name": "生物离子通道仿生设计原则",
       "description": "三类生物离子精确滤器(离子泵/离子交换器/离子通道)→核心选择性机制：(1)高精度孔径(水合自由能差异→脱水选择性)；(2)部分电荷氧配位(羰基/羟基)→捕获脱水离子+补偿脱水能量损失→快速跳跃传输",
-      "functional_groups": "",
+      "functional_groups": [
+        "离子交换位点",
+        "-OH（羟基）",
+        "配位/螯合位点",
+        "-C=O（羰基）"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.advmem.2022.100032",
       "verification": "needs_review",
@@ -651,12 +679,18 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "key_structures": [
+        "离子通道"
+      ]
     },
     {
       "name": "冠醚仿生离子通道——12-crown-4 Li⁺选择性",
       "description": "12-crown-4掺入聚降冰片烯网络→Li⁺/Mg²⁺渗透选择性10.1(反向选择)、Li⁺/Na⁺选择性2.3→冠醚腔径匹配+氧配位→人工离子通道",
-      "functional_groups": "",
+      "functional_groups": [
+        "-O-（醚键）",
+        "配位/螯合位点"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.advmem.2022.100032",
       "verification": "partial",
@@ -715,12 +749,20 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "key_structures": [
+        "离子通道"
+      ]
     },
     {
       "name": "功能化石墨烯纳米孔——模拟Na⁺通道",
       "description": "穿孔石墨烯(porous graphene)→晶格缺陷模拟离子配位能力→氧原子锚定在刚性孔边缘→比柔性冠醚更大的结合能(受限分子构象旋转)→单离子选择性",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "石墨烯表面基团",
+        "-O-（醚键）",
+        "配位/螯合位点"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.advmem.2022.100032",
       "verification": "partial",
@@ -779,12 +821,16 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "key_structures": []
     },
     {
       "name": "MOF纳米晶体——离子选择性膜",
       "description": "MOF孔径0.3-10nm可调→亚纳米通道(MIL-121/ZIF-8/UiO-66-X)→笼型窗口尺寸筛分+有机配体与目标离子配位效应→协同选择性",
-      "functional_groups": "",
+      "functional_groups": [
+        "-O-（醚键）",
+        "配位/螯合位点"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.advmem.2022.100032",
       "verification": "partial",
@@ -845,12 +891,21 @@
         ]
       },
       "evidence_type": "partial_source",
-      "evidence_note": "Upgraded from llm_inferred using visual_cache PDF text (matched 5 keywords: ['nano', 'membrane', 'ion', 'channel', 'MOF=MOF'])"
+      "evidence_note": "Upgraded from llm_inferred using visual_cache PDF text (matched 5 keywords: ['nano', 'membrane', 'ion', 'channel', 'MOF=MOF'])",
+      "key_structures": [
+        "膜结构",
+        "金属有机框架（MOF）",
+        "ZIF框架"
+      ]
     },
     {
       "name": "液晶膜——反常Cl⁻/SO₄²⁻选择性",
       "description": "柱状/双连续立方LC膜→SO₄²⁻(更大离子半径)渗透速率>Cl⁻(更小离子半径)→反常选择性→非单一尺寸筛分→尺寸+静电+氢键协同",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）",
+        "氢键位点"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.advmem.2022.100032",
       "verification": "needs_review",
@@ -908,12 +963,19 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "key_structures": [
+        "膜结构"
+      ]
     },
     {
       "name": "扩散速率调控——PVA减缓PIP扩散一个数量级",
       "description": "PVA引入水相→氢键+增粘→PIP扩散速率降低一个数量级→界面浓度分布均匀→孔径均匀化；无机盐→静电作用限制胺单体扩散；两性离子共聚物→调控扩散",
-      "functional_groups": "",
+      "functional_groups": [
+        "静电作用位点",
+        "PVA羟基",
+        "氢键位点"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.advmem.2022.100032",
       "verification": "needs_review",
@@ -971,12 +1033,16 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "key_structures": []
     },
     {
       "name": "界面单体分布调控——表面活性剂",
       "description": "SARIP(SDS调控界面聚合)→表面活性剂自组装促进胺单体在界面扩散均匀化→均匀亚纳米孔；阴离子表面活性剂→加速扩散(静电吸引PIP)；阳离子→抑制(排斥PIP)；非离子→乳液聚集体→窄孔径分布",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "静电作用位点"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.advmem.2022.100032",
       "verification": "partial",
@@ -1035,12 +1101,19 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "key_structures": []
     },
     {
       "name": "GO基2D层状膜——层间距调控",
       "description": "GO功能化(亲水-COOH/-OH/-环氧基)→分子插入层间调控间距：共价键/小功能团(0.3-0.7nm)、聚电解质静电(0.7-1nm)、纳米粒子/纳米纤维(>1nm)→尺寸选择性；离子选择性也可通过电荷增强实现",
-      "functional_groups": "carboxylic, hydroxy, epoxy groups",
+      "functional_groups": [
+        "carboxylic, hydroxy, epoxy groups",
+        "-COOH（羧基）",
+        "-O-（醚键）",
+        "GO羧基/羟基/环氧基",
+        "-OH（羟基）"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.advmem.2022.100032",
       "verification": "partial",
@@ -1099,12 +1172,18 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "key_structures": [
+        "膜结构",
+        "纤维结构",
+        "纳米纤维网络",
+        "纳米粒子"
+      ]
     },
     {
       "name": "水通道蛋白仿生膜制备挑战",
       "description": "水通道蛋白产量低、不稳定、疏水性；蛋白质变性；宿主膜兼容性；无缺陷规模化生产困难",
-      "functional_groups": "",
+      "functional_groups": [],
       "source": "literature",
       "ref_doi": "10.1039/d4va00378k",
       "verification": "needs_review",
@@ -1163,7 +1242,10 @@
         ]
       },
       "evidence_type": "lead_inference",
-      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified"
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "key_structures": [
+        "膜结构"
+      ]
     }
   ],
   "narrative": {

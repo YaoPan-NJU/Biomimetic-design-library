@@ -66,7 +66,10 @@
     {
       "name": "钝化机理",
       "description": "石灰效应, 沉淀效应, 物理吸附, 离子交换",
-      "functional_groups": "",
+      "functional_groups": [
+        "离子交换位点",
+        "-O-（醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.13254/j.jare.2020.0504",
       "verification": "partial",
@@ -122,12 +125,20 @@
         ],
         "transferable_principle": "扇贝壳文石型CaCO₃层状结构"
       },
-      "source_locator": "p.1"
+      "source_locator": "p.1",
+      "key_structures": [
+        "吸附结构",
+        "文石晶体"
+      ]
     },
     {
       "name": "吸附机理增强因素",
       "description": "氢键作用 (Ca(OH)2的O-H键与刚果红分子)",
-      "functional_groups": "",
+      "functional_groups": [
+        "-O-（醚键）",
+        "-OH（羟基）",
+        "氢键位点"
+      ],
       "source": "literature",
       "ref_doi": "10.11759/hykx20221122001",
       "verification": "partial",
@@ -179,7 +190,10 @@
           }
         ]
       },
-      "source_locator": "p.4"
+      "source_locator": "p.4",
+      "key_structures": [
+        "吸附结构"
+      ]
     }
   ],
   "narrative": {

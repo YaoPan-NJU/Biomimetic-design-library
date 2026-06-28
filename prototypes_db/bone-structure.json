@@ -63,7 +63,11 @@
     {
       "name": "HAp膜重金属去除性能",
       "description": "壳聚糖/HAp纳米纤维膜(静电纺丝)：Pb(II) 296.7 mg/g、Co(II) 180.2 mg/g、Ni(II) 213.8 mg/g，5次循环无明显下降；HAp/PU复合泡沫(50%HAp)：Pb(II) 150 mg/g；nHAp凝胶/玉米醇溶蛋白膜(10% nHAp)→机械性能最强；nHAp增至50%→Cu(II)从27.2增至67.8 mg/g",
-      "functional_groups": "",
+      "functional_groups": [
+        "-NH-（亚氨基）",
+        "壳聚糖氨基/羟基",
+        "-O-（醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.jtice.2024.105668",
       "verification": "partial",
@@ -136,17 +140,31 @@
         "verification_quote": "chitosan/hydroxyapatite (Cs/HAp) composite nanofiber membrane... maximum removal capacity for Pb(II), Co(II), and Ni(II) was 296.7, 180.2, and 213.8 mg/g",
         "source_doi": "10.1016/j.jtice.2024.105668",
         "source_locator": "Section 4.1, p.11"
-      }
+      },
+      "key_structures": [
+        "膜结构",
+        "凝胶结构",
+        "纳米纤维网络",
+        "HAp羟基磷灰石晶体",
+        "静电纺丝纤维",
+        "纤维结构"
+      ]
     },
     {
       "name": "HAp四种重金属吸附机制",
       "description": "(1)离子交换：HAp表面Ca²⁺/PO₄³⁻与重金属离子交换；(2)表面配合：污染物与HAp表面官能团形成化学键；(3)溶解-再沉淀：HAp溶解→释放PO₄³⁻→与重金属形成更难溶磷酸盐沉淀；(4)静电吸附：HAp表面正电荷与阴离子型重金属静电吸引",
       "functional_groups": [
+        "表面配合还原",
+        "离子交换位点",
+        "含氧阴离子吸附",
+        "沉淀反应位点",
+        "静电作用位点",
+        "-PO₄³⁻（磷酸基）",
         "羟基 -OH",
         "磷酸根 PO₄³⁻",
+        "-OH（羟基）",
         "Ca²⁺位点",
-        "含氧阴离子吸附",
-        "表面配合还原"
+        "-O-（醚键）"
       ],
       "source": "literature",
       "ref_doi": "10.1016/j.jtice.2024.105668",
@@ -231,10 +249,12 @@
         "source_locator": "Jaffar2024 p.9-10 / Section 3.3, Fig.6"
       },
       "key_structures": [
-        "HAp六方晶体Ca₁₀(PO₄)₆(OH)₂",
-        "Ca²⁺/PO₄³⁻离子交换",
         "溶解-再沉淀",
-        "表面配合"
+        "HAp六方晶体Ca₁₀(PO₄)₆(OH)₂",
+        "吸附结构",
+        "表面配合",
+        "HAp羟基磷灰石晶体",
+        "Ca²⁺/PO₄³⁻离子交换"
       ],
       "molecular_feature_links": [
         "六价铬",
@@ -248,7 +268,9 @@
     {
       "name": "HAp膜制备方法",
       "description": "聚合物膜：NIPS(非溶剂致相分离,最常用)、TIPS(热致相分离,高重现性,窄孔径)、静电纺丝(纳米纤维膜)；陶瓷膜：浆料浇注(最早)、挤出、粉末压制、相转化/烧结",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.jtice.2024.105668",
       "verification": "partial",
@@ -322,12 +344,25 @@
         "verification_quote": "Several methods were used to produce HAp-based polymeric membrane, such as NIPS, TIPS, electrospinning",
         "source_doi": "10.1016/j.jtice.2024.105668",
         "source_locator": "Section 4.1, p.11"
-      }
+      },
+      "key_structures": [
+        "膜结构",
+        "粉末结构",
+        "纳米纤维网络",
+        "HAp羟基磷灰石晶体",
+        "静电纺丝纤维",
+        "纤维结构"
+      ]
     },
     {
       "name": "HAp膜类型与制备技术",
       "description": "聚合物膜：NIPS/静电纺丝/TIPS/干压缩；有机材料：PA/CA/CE/PSf/PES/PTFE/PVDF/PP/PAN；无机材料：Al₂O₃/SiO₂/TiO₂/ZrO₂+黏土；陶瓷膜：多孔(支撑层)+刚性(分离层)；平板/中空纤维两种构型",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "PTFE氟碳基团",
+        "-O-（醚键）",
+        "PVDF氟碳基团"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.jtice.2024.105668",
       "verification": "partial",
@@ -401,7 +436,13 @@
         "verification_quote": "Organic membranes: PA, CA, CE, PSf, PES, PTFE, PVDF, PP, PAN... Inorganic: metal oxides Al2O3, SiO2, TiO2, ZrO2",
         "source_doi": "10.1016/j.jtice.2024.105668",
         "source_locator": "Section 4, p.11"
-      }
+      },
+      "key_structures": [
+        "膜结构",
+        "纤维结构",
+        "HAp羟基磷灰石晶体",
+        "静电纺丝纤维"
+      ]
     }
   ],
   "narrative": {

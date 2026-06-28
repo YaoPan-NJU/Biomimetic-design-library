@@ -404,7 +404,16 @@
     {
       "name": "MO吸附机制",
       "description": "主导：PEI质子化氨基(-NH₃⁺)与阴离子染料MO静电吸引；辅助(GO部分)：MO芳香环与GO的π-π堆叠",
-      "functional_groups": "",
+      "functional_groups": [
+        "-NH-（亚氨基）",
+        "-NH₃⁺（质子化氨基）",
+        "静电作用位点",
+        "芳香环",
+        "PEI胺基",
+        "GO羧基/羟基/环氧基",
+        "-NH₂（氨基）",
+        "-O-（醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.1002/admi.202001892",
       "verification": "partial",
@@ -477,12 +486,20 @@
       "evidence_note": "verified via visual_cache PDF text",
       "scope_match": "Keywords: MO, electrostatic, amino, PEI, π-π",
       "source_locator": "p.9",
-      "evidence_label": "from_source"
+      "evidence_label": "from_source",
+      "key_structures": [
+        "吸附结构"
+      ]
     },
     {
       "name": "Cu²⁺吸附机制",
       "description": "PEI氨基(-NH₂)螯合Cu²⁺→化学吸附；中心发散孔道→快速扩散→活性位点可及；低密度+高孔隙→快速传质",
-      "functional_groups": "",
+      "functional_groups": [
+        "-NH-（亚氨基）",
+        "-NH₂（氨基）",
+        "配位/螯合位点",
+        "PEI胺基"
+      ],
       "source": "literature",
       "ref_doi": "10.1002/admi.202001892",
       "verification": "partial",
@@ -554,12 +571,19 @@
       "source_page": 7,
       "source_doi": "10.1002/admi.202001892",
       "scope_match": "Keywords: Cu2+, amino, macropore, density, chelation",
-      "source_locator": "p.7"
+      "source_locator": "p.7",
+      "key_structures": [
+        "吸附结构"
+      ]
     },
     {
       "name": "丝素蛋白分子结构与力学性能",
       "description": "β-sheet结晶区提供机械强度，极限强度300-740 MPa；丝素为嵌段共聚物：疏水重复区(Gly/Ala/Ser 43-46%/25-30%/12%) + 亲水非重复区",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-SH（巯基）",
+        "丝素蛋白酰胺基"
+      ],
       "source": "literature",
       "ref_doi": "10.1007/s10924-022-02741-6",
       "verification": "partial",
@@ -626,16 +650,26 @@
       "source_page": 6,
       "source_doi": "10.1007/s10924-022-02741-6",
       "source_locator": "p.6",
-      "evidence_label": "from_source"
+      "evidence_label": "from_source",
+      "key_structures": [
+        "β-折叠"
+      ]
     },
     {
       "name": "丝素蛋白极性官能团——吸附活性位点",
       "description": "羟基(-OH)、氨基(-NH₂)、羧基(-COOH)、酰胺键(-CONH-)→金属离子螯合+染料静电吸附",
       "functional_groups": [
         "hydroxyl",
+        "-CONH-（酰胺键）",
+        "-COOH（羧基）",
+        "-O-（醚键）",
+        "配位/螯合位点",
+        "amide",
+        "丝素蛋白酰胺基",
+        "-NH₂（氨基）",
+        "-OH（羟基）",
         "amino",
-        "carboxyl",
-        "amide"
+        "carboxyl"
       ],
       "source": "literature",
       "ref_doi": "10.1007/s10924-022-02741-6",
@@ -694,12 +728,17 @@
       "source_page": 6,
       "source_doi": "10.1007/s10924-022-02741-6",
       "source_locator": "p.6",
-      "evidence_label": "from_source"
+      "evidence_label": "from_source",
+      "key_structures": [
+        "吸附结构"
+      ]
     },
     {
       "name": "Na₂CO₃脱胶丝纤维——超疏水油水分离",
       "description": "WCA 158°(Na₂CO₃脱胶); 分离效率: 柴油>75%, 汽油>90%, 机油>80% (10次循环后)",
-      "functional_groups": "",
+      "functional_groups": [
+        "-O-（醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.1007/s10924-022-02741-6",
       "verification": "partial",
@@ -765,12 +804,21 @@
       "source_page": 1,
       "source_doi": "10.1007/s10924-022-02741-6",
       "source_locator": "p.1",
-      "evidence_label": "from_source"
+      "evidence_label": "from_source",
+      "key_structures": [
+        "油水分离结构",
+        "纤维结构",
+        "接触角特征",
+        "超疏水表面"
+      ]
     },
     {
       "name": "丝素仿生层级结构设计原则",
       "description": "丝素为天然嵌段共聚物→疏水区(Gly/Ala)+亲水区(Asp/Glu/Lys/Arg)→自组装→β-sheet结晶+无定形区→层级结构",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-SH（巯基）"
+      ],
       "source": "literature",
       "ref_doi": "10.1007/s10924-022-02741-6",
       "verification": "partial",
@@ -837,14 +885,25 @@
       "source_page": 4,
       "source_doi": "10.1007/s10924-022-02741-6",
       "source_locator": "p.4",
-      "evidence_label": "from_source"
+      "evidence_label": "from_source",
+      "key_structures": [
+        "β-折叠"
+      ]
     },
     {
       "name": "吸附机制——静电作用",
       "description": "pH升高→COO⁻形成→负电荷密度增加→静电吸引 阳离子亚甲基蓝(MB, Methylene Blue)→去除率从7.93%升至94-96%。丝素蛋白羧基(-COO⁻)与阳离子染料静电吸引，羟基(-OH)和氨基(-NH₂)辅助氢键 作用。",
       "functional_groups": [
-        "羧基 carboxyl (-COO⁻)",
+        "-COOH（羧基）",
+        "静电作用位点",
+        "-COO⁻（羧基阴离子）",
+        "丝素蛋白酰胺基",
+        "-OH（羟基）",
+        "-NH₂（氨基）",
+        "氢键位点",
         "羟基 hydroxyl (-OH)",
+        "-O-（醚键）",
+        "羧基 carboxyl (-COO⁻)",
         "氨基 amino (-NH₂)"
       ],
       "source": "literature",
@@ -914,16 +973,26 @@
       "source_locator": "p.1",
       "evidence_label": "from_source",
       "key_structures": [
-        "静电吸引",
         "氢键",
+        "吸附结构",
         "羧基-COO⁻",
-        "阳离子染料吸附"
+        "阳离子染料吸附",
+        "静电吸引"
       ]
     },
     {
       "name": "吸附机制",
       "description": "多重机制协同: 静电作用+离子交换+范德华力+交联+氢键",
-      "functional_groups": "-OH, -NH, C=O on biocomposite surface",
+      "functional_groups": [
+        "范德华力",
+        "离子交换位点",
+        "-COOH（羧基）",
+        "静电作用位点",
+        "丝素蛋白酰胺基",
+        "-NH₂（氨基）",
+        "-OH, -NH, C=O on biocomposite surface",
+        "氢键位点"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.eti.2022.102741",
       "verification": "partial",
@@ -997,12 +1066,21 @@
       "source_doi": "10.1016/j.eti.2022.102741",
       "scope_match": "Keywords: electrostatic, ion exchange, van der Waals, crosslinking, H-bonding",
       "source_locator": "p.10",
-      "evidence_label": "from_source"
+      "evidence_label": "from_source",
+      "key_structures": [
+        "交联网络",
+        "吸附结构",
+        "丝素β-折叠",
+        "β-折叠"
+      ]
     },
     {
       "name": "BS/SF/PUF三元协同设计",
       "description": "BS(生物硅高比表面积)+SF(极性基团螯合)+PUF(多孔弹性基底)→三元协同→综合性能优于单一组分",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "配位/螯合位点"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.eti.2022.102741",
       "verification": "partial",
@@ -1067,12 +1145,15 @@
       },
       "source_doi": "10.1016/j.eti.2022.102741",
       "source_locator": "p.1",
-      "evidence_label": "from_source"
+      "evidence_label": "from_source",
+      "key_structures": []
     },
     {
       "name": "结晶紫吸附机制",
       "description": "π-π共轭 + 氢键 + 阴阳离子结合",
-      "functional_groups": "",
+      "functional_groups": [
+        "氢键位点"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.ijbiomac.2023.126863",
       "verification": "partial",
@@ -1124,12 +1205,17 @@
       "source_page": 1,
       "source_doi": "10.1016/j.ijbiomac.2023.126863",
       "scope_match": "Keywords: crystal violet, Π-Π conjugation, hydrogen bonding, anions, cations",
-      "source_locator": "p.1"
+      "source_locator": "p.1",
+      "key_structures": [
+        "吸附结构"
+      ]
     },
     {
       "name": "静电纺丝工艺参数",
       "description": "SF: 2μL/min, 18kV, 15cm, 90rpm, 4h/层; Lignin/PAN: 3μL/min, 18kV, 15cm, 90rpm, 2h/层",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.ijbiomac.2023.126863",
       "verification": "partial",
@@ -1191,12 +1277,17 @@
       "source_page": 4,
       "source_doi": "10.1016/j.ijbiomac.2023.126863",
       "scope_match": "Keywords: electrospinning, 18 kV, 15 cm, 90 rpm, silk fibroin",
-      "source_locator": "p.4"
+      "source_locator": "p.4",
+      "key_structures": [
+        "静电纺丝纤维"
+      ]
     },
     {
       "name": "木质素疏水性来源",
       "description": "木质素疏水性: 酚环+甲氧基; SF疏水性: 疏水嵌段",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.ijbiomac.2023.126863",
       "verification": "partial",
@@ -1269,12 +1360,23 @@
       "source_doi": "10.1016/j.ijbiomac.2023.126863",
       "scope_match": "Keywords: lignin, methoxy, polyphenolic, carboxyl, aromatic",
       "source_locator": "p.1",
-      "evidence_label": "from_source"
+      "evidence_label": "from_source",
+      "key_structures": []
     },
     {
       "name": "吸附机制",
       "description": "静电吸引为主：pH>6时SF和GO表面-COOH解离为-COO⁻，与阳离子MB通过静电作用结合",
-      "functional_groups": "",
+      "functional_groups": [
+        "-COOH（羧基）",
+        "静电作用位点",
+        "-COO⁻（羧基阴离子）",
+        "丝素蛋白酰胺基",
+        "GO羧基/羟基/环氧基",
+        "-OH（羟基）",
+        "-NH₂（氨基）",
+        "-S-（硫醚键）",
+        "-O-（醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.1039/d1va00047k",
       "verification": "partial",
@@ -1331,12 +1433,19 @@
       "verification_quote": "r pH\nlevels, negatively charged –COO ions are easily formed as\na result of the dissociation of the –COOH groups on the surface\nof the adsorbent. Electrostatic forces readily attract the cationic\nFig. 2\nSEM images of (a) pure silk ﬁbroin, (b) pristine GO, and (c and d) the SF/GO blend ﬁlm.\nFig. 3\nTGA graphs of the pure SF and SF/GO blend ﬁlms.\n288 |",
       "source_page": 4,
       "source_doi": "10.1039/d1va00047k",
-      "source_locator": "p.4"
+      "source_locator": "p.4",
+      "key_structures": [
+        "吸附结构",
+        "丝素β-折叠",
+        "β-折叠"
+      ]
     },
     {
       "name": "脱胶蚕丝的超疏水性",
       "description": "Na₂CO₃脱胶蚕丝: WCA=158°, OCA=0°; 水脱胶: WCA=153°; 原始蚕丝: WCA=103-110°",
-      "functional_groups": "",
+      "functional_groups": [
+        "-O-（醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.1007/s10924-022-02741-6",
       "verification": "partial",
@@ -1402,12 +1511,19 @@
       "source_page": 19,
       "source_doi": "10.1007/s10924-022-02741-6",
       "source_locator": "p.19",
-      "evidence_label": "from_source"
+      "evidence_label": "from_source",
+      "key_structures": [
+        "接触角特征",
+        "超疏水表面"
+      ]
     },
     {
       "name": "蚕丝蛋白油水分离材料汇总",
       "description": "纳米纤维丝膜: 油水分离效率99.91-99.97%; SiO₂/SF海绵: 油吸附70.9-160.8 g/g; 超疏水蚕丝海绵: 油回收率>50%（10次循环）",
-      "functional_groups": "",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）"
+      ],
       "source": "literature",
       "ref_doi": "10.1007/s10924-022-02741-6",
       "verification": "partial",
@@ -1472,12 +1588,28 @@
       "source_page": 23,
       "source_doi": "10.1007/s10924-022-02741-6",
       "source_locator": "p.23",
-      "evidence_label": "from_source"
+      "evidence_label": "from_source",
+      "key_structures": [
+        "油水分离结构",
+        "膜结构",
+        "超疏水表面",
+        "吸附结构",
+        "纳米纤维网络",
+        "纤维结构"
+      ]
     },
     {
       "name": "丝素蛋白复合材料的吸附机制",
       "description": "静电相互作用、氢键、配位/螯合、π-π堆积、离子交换",
-      "functional_groups": "-OH, -NH₂, -COOH, 酰胺基",
+      "functional_groups": [
+        "离子交换位点",
+        "静电作用位点",
+        "-OH, -NH₂, -COOH, 酰胺基",
+        "配位/螯合位点",
+        "丝素蛋白酰胺基",
+        "π-π堆积位点",
+        "氢键位点"
+      ],
       "source": "literature",
       "ref_doi": "10.1007/s10924-022-02741-6",
       "verification": "partial",
@@ -1528,12 +1660,17 @@
       "source_page": 21,
       "source_doi": "10.1007/s10924-022-02741-6",
       "scope_match": "Keywords: hydrophobic, hydrogen bonding, electrostatic, van der Waals, adsorption",
-      "source_locator": "p.21"
+      "source_locator": "p.21",
+      "key_structures": [
+        "吸附结构"
+      ]
     },
     {
       "name": "pH 2-4时吸附机理",
       "description": "物理吸附和配位辅助(两者均带正电)",
-      "functional_groups": "",
+      "functional_groups": [
+        "配位/螯合位点"
+      ],
       "source": "literature",
       "ref_doi": "10.1016/j.jtice.2023.105298",
       "verification": "partial",
@@ -1605,7 +1742,10 @@
       "source_doi": "10.1016/j.jtice.2023.105298",
       "scope_match": "Keywords: pH, adsorption, positively charged, physical adhesion, coordination",
       "source_locator": "p.6",
-      "evidence_label": "from_source"
+      "evidence_label": "from_source",
+      "key_structures": [
+        "吸附结构"
+      ]
     }
   ],
   "narrative": {
