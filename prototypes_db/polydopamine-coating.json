@@ -1835,7 +1835,7 @@
             "source_asset": null,
             "source": "10.13550/j.jxhg.20201035",
             "scope_match": "Keywords: verification_quote",
-            "verification_method": "pdf_not_found"
+            "verification_method": "pdf_error"
           }
         ]
       },
@@ -1886,7 +1886,7 @@
             "locator": null,
             "quote": null,
             "source_asset": null,
-            "verification_method": "pdf_not_found"
+            "verification_method": "pdf_error"
           }
         ]
       },
@@ -2085,7 +2085,7 @@
             "source_asset": null,
             "source": "10.1016/j.seppur.2023.123547",
             "scope_match": "Keywords: verification_quote",
-            "verification_method": "pdf_not_found"
+            "verification_method": "pdf_error"
           }
         ]
       },
@@ -2632,7 +2632,7 @@
             "source_asset": null,
             "source": "10.1016/j.apsusc.2020.148379",
             "scope_match": "Keywords: magnetic, Pb, adsorption, MnO2",
-            "verification_method": "pdf_not_found"
+            "verification_method": "pdf_error"
           }
         ]
       },
@@ -2901,13 +2901,14 @@
               "operator": "qualitative",
               "value": null
             },
-            "basis": "llm_inferred",
+            "basis": "from_source",
             "verification": "needs_review",
             "gate_level": "soft",
-            "locator": null,
-            "quote": null,
+            "locator": "Section [0095] / p.7/11",
+            "quote": "由于当pH值太高（大于6）时，Pb2+会水解形成Pb(OH)+、Pb(OH)2、Pb(OH)3-和其他物质，这会干扰材料对Pb2+吸附能力的准确性。因此，将吸附过程的pH控制在不超过6。",
             "source_asset": null,
-            "verification_method": "pdf_error"
+            "verification_method": "pdf_visual_reading",
+            "source": "2021-CN113244898A-polydopamine-kaolin-lead.pdf"
           }
         ]
       },

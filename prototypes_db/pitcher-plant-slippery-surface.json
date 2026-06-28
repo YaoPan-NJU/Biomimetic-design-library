@@ -155,7 +155,7 @@
             "locator": null,
             "quote": null,
             "source_asset": null,
-            "verification_method": "pdf_not_found"
+            "verification_method": "pdf_error"
           }
         ]
       },
@@ -273,7 +273,7 @@
             "locator": null,
             "quote": null,
             "source_asset": null,
-            "verification_method": "pdf_not_found"
+            "verification_method": "pdf_error"
           }
         ]
       },
@@ -923,13 +923,14 @@
               "operator": "qualitative",
               "value": null
             },
-            "basis": "llm_inferred",
+            "basis": "from_source",
             "verification": "needs_review",
             "gate_level": "soft",
-            "locator": null,
-            "quote": null,
+            "locator": "Section Types of water-repellent materials / p.509",
+            "quote": "Imitation alternate hydrophilic and hydrophobic surfaces modeled on desert beetles can be used for water collection, alleviating the shortage of water resources in arid areas [40–42] (see Fig. 2c).",
             "source_asset": null,
-            "verification_method": "pdf_error"
+            "verification_method": "pdf_visual_reading",
+            "source": "10.1007/s42242-021-00133-8"
           }
         ]
       },
@@ -1189,7 +1190,7 @@
             "locator": null,
             "quote": null,
             "source_asset": null,
-            "verification_method": "pdf_not_found"
+            "verification_method": "pdf_error"
           }
         ]
       },
