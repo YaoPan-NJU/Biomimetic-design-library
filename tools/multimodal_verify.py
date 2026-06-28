@@ -501,6 +501,11 @@ def verify_prototype(json_path, client_pool, field='performance_data'):
         pdf_path = find_pdf(source_file)
 
         if not pdf_path:
+            ref_doi = str(item.get('ref_doi', '') or '').strip()
+            if ref_doi:
+                pdf_path = find_pdf_by_doi(ref_doi)
+
+        if not pdf_path:
             skipped_no_pdf += 1
             continue
 
