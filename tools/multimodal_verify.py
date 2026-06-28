@@ -367,8 +367,12 @@ def find_pdf_by_doi(doi, pdf_root=None):
     return None
 
 
-def verify_boundary_conditions(json_path, client_pool, target_mech_indices=None):
-    """验证机制中的 boundary_conditions（仅 basis=llm_inferred 的）。"""
+def verify_boundary_conditions(json_path, client_pool, target_mech_indices=None, mode='llm_inferred'):
+    """验证机制中的 boundary_conditions。
+
+    mode='llm_inferred': 仅处理 basis=llm_inferred 的 BC
+    mode='keyword_match': 仅处理 basis=corroborated + verification_method=keyword_match 的 BC
+    """
     with open(json_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
@@ -397,8 +401,14 @@ def verify_boundary_conditions(json_path, client_pool, target_mech_indices=None)
 
         if not pdf_path:
             for bc in bcs:
-                if bc.get('basis') == 'llm_inferred':
-                    stats['no_pdf'] += 1
+                basis = bc.get('basis', '')
+                vm = bc.get('verification_method', '') or ''
+                if mode == 'keyword_match':
+                    if basis == 'corroborated' and vm == 'keyword_match':
+                        stats['no_pdf'] += 1
+                else:
+                    if basis == 'llm_inferred':
+                        stats['no_pdf'] += 1
             continue
 
         if pdf_path not in pdf_cache:
@@ -406,9 +416,18 @@ def verify_boundary_conditions(json_path, client_pool, target_mech_indices=None)
             pdf_cache[pdf_path] = True
 
         for bi, bc in enumerate(bcs):
-            if bc.get('basis') != 'llm_inferred':
-                stats['skipped'] += 1
-                continue
+            basis = bc.get('basis', '')
+            vm = bc.get('verification_method', '') or ''
+
+            # Filter based on mode
+            if mode == 'keyword_match':
+                if not (basis == 'corroborated' and vm == 'keyword_match'):
+                    stats['skipped'] += 1
+                    continue
+            else:
+                if basis != 'llm_inferred':
+                    stats['skipped'] += 1
+                    continue
 
             bc_text = bc.get('text', '')
             parameter = bc.get('parameter', '')
@@ -536,12 +555,15 @@ def main():
     parser.add_argument('targets', nargs='*', default=['chitosan'])
     parser.add_argument('--field', choices=['performance_data', 'mechanisms', 'boundary_conditions'],
                         default='boundary_conditions')
+    parser.add_argument('--mode', choices=['llm_inferred', 'keyword_match'],
+                        default='llm_inferred',
+                        help='BC filter mode: llm_inferred (default) or keyword_match')
     args = parser.parse_args()
 
     api_keys = load_api_keys()
     client_pool = make_client_pool(api_keys)
 
-    print(f"=== Multimodal Verification ({args.field}) ===")
+    print(f"=== Multimodal Verification ({args.field}, mode={args.mode}) ===")
     print(f"Targets: {', '.join(args.targets)}")
     print(f"Model: {MIMO_MODEL} (multimodal)")
     print(f"Keys: {len(api_keys)}")
@@ -556,7 +578,7 @@ def main():
             continue
 
         if args.field == 'boundary_conditions':
-            r = verify_boundary_conditions(json_path, client_pool)
+            r = verify_boundary_conditions(json_path, client_pool, mode=args.mode)
             all_results.append(r)
             print(f"\n  Result: {r['verified']} verified, {r['not_found']} not_found, "
                   f"{r['no_pdf']} no_pdf, {r['skipped']} skipped, {r['errors']} errors")
