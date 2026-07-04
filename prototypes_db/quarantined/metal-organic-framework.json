@@ -328,7 +328,7 @@
   "boundary_rules": [],
   "verification": "unverified",
   "source_status": "pending_extraction",
-  "notes": "Skeleton entry from markdown description. Awaiting literature extraction.",
+  "notes": "[QUARANTINED 2026-07-04] Skeleton entry from markdown description. Awaiting literature extraction.",
   "name_zh": "金属有机框架",
   "name_en": "Metal Organic Framework",
   "library_tier": "extended",
@@ -452,7 +452,13 @@
       }
     ],
     "generated_by": "P3-extraction",
-    "note": "Extracted from 2022-唐 MOF heavy metal review PDF via OpenClaw"
+    "note": "Extracted from 2022-唐 MOF heavy metal review PDF via OpenClaw",
+    "quarantine": {
+      "reason": "synthetic_material_misclassified_as_biological",
+      "note": "MOF (Metal-Organic Framework) is a synthetic material, not a biological prototype. organism.scientific was incorrectly set to Bombyx mori (silkworm). biomimetic_dimension is null. Isolated to quarantined/ during BMDL rebalance Stage 3.",
+      "date": "2026-07-04",
+      "by": "BMDL rebalance plan v3"
+    }
   },
   "design_translation": [
     {
