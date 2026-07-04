@@ -306,7 +306,10 @@ def main():
     print('\n4. 校验 feature-mapping ↔ prototypes_db 引用完整性...')
     r15_errors = 0
     fm = json.load(open(feature_mapping_path, encoding='utf-8'))
-    fm_ids = set(fm.get('prototype_metadata', {}).keys())
+    pm = fm.get('prototype_metadata', {})
+    # Skip quarantined entries from R15 check (they are intentionally moved out of primary)
+    fm_ids = {pid for pid, meta in pm.items()
+              if not str(meta.get('_status', '')).startswith('quarantined')}
     db_ids = set()
     if os.path.isdir(db_dir):
         for fn in os.listdir(db_dir):

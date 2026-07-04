@@ -2453,7 +2453,35 @@
       }
     ]
   },
-  "engineering_constraints": [],
+  "engineering_constraints": [
+    {
+      "constraint": "机械磨损破坏微纳结构导致超疏水性失效",
+      "value": null,
+      "unit": null,
+      "relevance": "high",
+      "explanation": "超疏水性依赖表面微纳分级粗糙度，物理磨损破坏结构后不可恢复",
+      "source": "literature_aggregate",
+      "ref_doi": null
+    },
+    {
+      "constraint": "不适用于需要水下浸润/亲水吸附的场景",
+      "value": null,
+      "unit": null,
+      "relevance": "high",
+      "explanation": "超疏水表面的设计目标是排斥水相，与需要水相接触吸附的应用矛盾",
+      "source": "domain_knowledge",
+      "ref_doi": null
+    },
+    {
+      "constraint": "强酸/强碱腐蚀微纳结构或有机溶剂溶胀涂层",
+      "value": null,
+      "unit": null,
+      "relevance": "medium",
+      "explanation": "蜡质涂层和微纳结构对强酸碱和有机溶剂敏感",
+      "source": "literature_aggregate",
+      "ref_doi": null
+    }
+  ],
   "provenance_summary": {
     "n_papers": 36,
     "n_verified": 0,

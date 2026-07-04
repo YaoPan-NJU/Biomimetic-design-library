@@ -1158,7 +1158,35 @@
       ]
     }
   ],
-  "engineering_constraints": [],
+  "engineering_constraints": [
+    {
+      "constraint": "不适用于强酸环境(pH<3)，羧基质子化导致螯合能力显著下降",
+      "value": "3",
+      "unit": "pH",
+      "relevance": "high",
+      "explanation": "pH<3时-COOH质子化，螯合能力丧失；凝胶结构在强酸中溶解",
+      "source": "literature_aggregate",
+      "ref_doi": null
+    },
+    {
+      "constraint": "高盐环境中竞争离子降低吸附容量",
+      "value": null,
+      "unit": null,
+      "relevance": "high",
+      "explanation": "Ca²⁺、Mg²⁺等二价阳离子与海藻酸盐竞争结合位点",
+      "source": "literature_aggregate",
+      "ref_doi": null
+    },
+    {
+      "constraint": "机械强度低，需复合增强才能用于柱式运行",
+      "value": null,
+      "unit": null,
+      "relevance": "medium",
+      "explanation": "海藻酸钙凝胶珠机械强度不足，需与壳聚糖/PVA复合",
+      "source": "literature_aggregate",
+      "ref_doi": null
+    }
+  ],
   "boundary_rules": [],
   "verification": "unverified",
   "source_status": "pending_extraction",

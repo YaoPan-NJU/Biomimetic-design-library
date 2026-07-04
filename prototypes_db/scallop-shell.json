@@ -211,7 +211,35 @@
       }
     ]
   },
-  "engineering_constraints": [],
+  "engineering_constraints": [
+    {
+      "constraint": "pH影响CaCO₃溶解和吸附容量，低pH导致壳体溶解",
+      "value": "6",
+      "unit": "pH",
+      "relevance": "high",
+      "explanation": "CaCO₃在酸性条件下溶解，释放Ca²⁺并破坏结构",
+      "source": "mechanism_context",
+      "ref_doi": null
+    },
+    {
+      "constraint": "煅烧能耗高，CaO水化放热需控制",
+      "value": null,
+      "unit": null,
+      "relevance": "high",
+      "explanation": "煅烧需800°C以上，CaO水化放热可能导致运行不稳定",
+      "source": "mechanism_context",
+      "ref_doi": null
+    },
+    {
+      "constraint": "竞争阳离子(Ca²⁺、Mg²⁺)干扰目标污染物吸附",
+      "value": null,
+      "unit": null,
+      "relevance": "medium",
+      "explanation": "与oyster-shell类似，高硬度水体竞争离子降低目标污染物容量",
+      "source": "literature_aggregate",
+      "ref_doi": null
+    }
+  ],
   "provenance_summary": {
     "n_papers": 3,
     "n_verified": 7,

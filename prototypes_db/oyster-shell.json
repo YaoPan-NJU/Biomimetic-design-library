@@ -373,7 +373,35 @@
       }
     ]
   },
-  "engineering_constraints": [],
+  "engineering_constraints": [
+    {
+      "constraint": "未煅烧的CaCO₃吸附容量远低于煅烧产物CaO，工程应用需煅烧活化",
+      "value": null,
+      "unit": null,
+      "relevance": "high",
+      "explanation": "CaCO₃比表面积低且活性位点少；煅烧后CaO具有更高反应活性",
+      "source": "mechanism_context",
+      "ref_doi": null
+    },
+    {
+      "constraint": "CaO在水中水化放热，需控制接触方式避免结构崩解",
+      "value": null,
+      "unit": null,
+      "relevance": "high",
+      "explanation": "CaO + H₂O → Ca(OH)₂ 放热反应，快速水化会导致颗粒崩解",
+      "source": "mechanism_context",
+      "ref_doi": null
+    },
+    {
+      "constraint": "竞争阳离子(Ca²⁺、Mg²⁺)显著干扰目标污染物吸附",
+      "value": null,
+      "unit": null,
+      "relevance": "high",
+      "explanation": "高硬度水体中Ca²⁺、Mg²⁺与目标金属离子竞争吸附位点",
+      "source": "literature_aggregate",
+      "ref_doi": null
+    }
+  ],
   "provenance_summary": {
     "n_papers": 6,
     "n_verified": 12,

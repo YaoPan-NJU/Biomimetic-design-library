@@ -1033,7 +1033,44 @@
       ]
     }
   ],
-  "engineering_constraints": [],
+  "engineering_constraints": [
+    {
+      "constraint": "天然淀粉吸附容量低，必须化学改性（接枝/交联/酯化）才能达到实用水平",
+      "value": null,
+      "unit": null,
+      "relevance": "high",
+      "explanation": "未改性淀粉的羟基密度和孔隙结构不足以提供工程级吸附容量",
+      "source": "literature_aggregate",
+      "ref_doi": null
+    },
+    {
+      "constraint": "不适用于强酸/强碱环境，淀粉糖苷键水解导致结构破坏",
+      "value": "2",
+      "unit": "pH",
+      "relevance": "high",
+      "explanation": "pH<2或pH>12时淀粉主链水解，颗粒结构丧失",
+      "source": "literature_aggregate",
+      "ref_doi": null
+    },
+    {
+      "constraint": "不适用于高温糊化环境(>65°C)，淀粉颗粒糊化失去多孔结构",
+      "value": "65",
+      "unit": "°C",
+      "relevance": "high",
+      "explanation": "淀粉在65°C以上发生糊化，颗粒结构破坏，吸附位点丧失",
+      "source": "literature_aggregate",
+      "ref_doi": null
+    },
+    {
+      "constraint": "微生物降解限制再生次数和使用寿命",
+      "value": null,
+      "unit": null,
+      "relevance": "medium",
+      "explanation": "淀粉是生物可降解高分子，环境中微生物可水解利用",
+      "source": "literature_aggregate",
+      "ref_doi": null
+    }
+  ],
   "boundary_rules": [],
   "verification": "unverified",
   "source_status": "pending_extraction",
