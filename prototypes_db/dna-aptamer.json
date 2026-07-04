@@ -64,7 +64,35 @@
   "narrative": {
     "entries": []
   },
-  "engineering_constraints": [],
+  "engineering_constraints": [
+    {
+      "constraint": "不适用于高温环境(>60°C)，DNA链热变性导致识别结构丧失",
+      "value": "60",
+      "unit": "°C",
+      "relevance": "high",
+      "explanation": "DNA aptamer 的三级结构在高温下变性，失去靶标识别能力",
+      "source": "domain_knowledge",
+      "ref_doi": null
+    },
+    {
+      "constraint": "不适用于核酸酶丰富的环境，DNA链被酶切降解",
+      "value": null,
+      "unit": null,
+      "relevance": "high",
+      "explanation": "环境中 DNase 会水解 DNA aptamer，导致功能丧失",
+      "source": "domain_knowledge",
+      "ref_doi": null
+    },
+    {
+      "constraint": "未接地前不得给高权重——当前 performance_data=0，match_weights=0",
+      "value": null,
+      "unit": null,
+      "relevance": "high",
+      "explanation": "BMDL rebalance Q3 decision: 保留为 root prototype 但标记 needs_literature / low-evidence",
+      "source": "bmdl_rebalance",
+      "ref_doi": null
+    }
+  ],
   "provenance_summary": {
     "n_papers": 0,
     "n_verified": 0,
@@ -112,7 +140,13 @@
       }
     ],
     "generated_by": "P1d-补全",
-    "note": "Empty shell prototype — mechanism is llm_inference placeholder with boundary_conditions"
+    "note": "Empty shell prototype — mechanism is llm_inference placeholder with boundary_conditions",
+    "boundary_notes": [
+      "DNA aptamer is synthetic but mimics natural nucleic acid recognition — classified as molecular_biomimetic (分子仿生)",
+      "Current evidence status: needs_literature — 0 performance_data, 0 match_weights",
+      "Must not receive high match_weights until grounded with from-source mechanism evidence",
+      "Temperature and nuclease stability are critical boundary conditions"
+    ]
   },
   "boundary_conditions": [
     {

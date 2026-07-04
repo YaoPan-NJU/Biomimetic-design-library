@@ -120,7 +120,7 @@
   "boundary_rules": [],
   "verification": "unverified",
   "source_status": "pending_extraction",
-  "notes": "Skeleton entry from markdown description. Awaiting literature extraction.",
+  "notes": "[QUARANTINED 2026-07-04] Downgraded to material_realization_example. Skeleton entry from markdown description. Awaiting literature extraction.",
   "name_zh": "纤维素纳米晶",
   "name_en": "Cellulose Nanocrystal",
   "library_tier": "extended",
@@ -144,7 +144,13 @@
       }
     ],
     "generated_by": "P3-extraction",
-    "note": "Extracted from 2024-Yuan CNC paper via OpenClaw"
+    "note": "Extracted from 2024-Yuan CNC paper via OpenClaw",
+    "quarantine": {
+      "reason": "downgraded_to_material_realization_example",
+      "note": "CNC (Cellulose Nanocrystal) is extracted from biomass but is a nanomaterial, not a biological prototype. organism.scientific is empty, biomimetic_dimension is null. Downgraded to material_realization_examples for plant-lignocellulosic-architecture / bacterial-cellulose. Performance data (3 entries) preserved as evidence.",
+      "date": "2026-07-04",
+      "by": "BMDL rebalance plan v3 - Q2 decision"
+    }
   },
   "design_translation": [
     {
