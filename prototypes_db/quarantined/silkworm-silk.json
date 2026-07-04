@@ -75,7 +75,7 @@
   "boundary_rules": [],
   "verification": "unverified",
   "source_status": "pending_extraction",
-  "notes": "Skeleton entry from markdown description. Awaiting literature extraction.",
+  "notes": "[QUARANTINED 2026-07-04] Deprecated, merged to silk-fibroin. Skeleton entry from markdown description. Awaiting literature extraction.",
   "name_zh": "蚕丝",
   "name_en": "Silkworm Silk",
   "library_tier": "core",
@@ -111,7 +111,13 @@
       }
     ],
     "generated_by": "P5-B-preflight",
-    "note": "Auto-generated from verification labels + quote presence + source type"
+    "note": "Auto-generated from verification labels + quote presence + source type",
+    "quarantine": {
+      "reason": "deprecated_duplicate",
+      "note": "Content merged into silk-fibroin. organism.scientific is empty, biomimetic_dimension is null. Isolated to quarantined/ during BMDL rebalance Stage 3.",
+      "date": "2026-07-04",
+      "by": "BMDL rebalance plan v3"
+    }
   },
   "boundary_conditions": [
     {
