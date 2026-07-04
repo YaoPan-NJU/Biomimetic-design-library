@@ -34,6 +34,11 @@
         "organism": "Plant sources (单宁酸)",
         "candidate_honesty": "inference",
         "lane": "exploratory",
+        "prototype_status": {
+          "is_background": false,
+          "is_placeholder": false,
+          "scope_note": ""
+        },
         "domain_caveat": "organic micropollutant evidence weak",
         "match": {
           "reason": "芳香环可通过π-π堆积作用与含芳香环的吸附剂结合",
@@ -129,14 +134,141 @@
         }
       },
       {
+        "prototype_id": "polydopamine-coating",
+        "organism": "Mytilus edulis",
+        "candidate_honesty": "inference",
+        "lane": "exploratory",
+        "prototype_status": {
+          "is_background": false,
+          "is_placeholder": false,
+          "scope_note": ""
+        },
+        "domain_caveat": "organic micropollutant evidence weak",
+        "match": {
+          "reason": "芳香环可通过π-π堆积作用与含芳香环的吸附剂结合",
+          "weight": 0.675,
+          "applicability_fit": "pH 3.0-7.0, 盐度 moderate",
+          "match_basis": "molecular_feature_inference",
+          "direct_evidence": false
+        },
+        "mechanism": {
+          "name": "CR吸附机制总结",
+          "selected_mechanism_reason": "Query-conditioned scoring selected this mechanism for SMX based on relevance to matched features/interactions",
+          "selected_mechanism_alignment": {
+            "query_pollutant": "SMX",
+            "query_class": "抗生素/磺胺类",
+            "mechanism_keywords": "CR吸附机制总结",
+            "alignment_basis": "query_relevance_scoring",
+            "query_features": [
+              "芳香环",
+              "磺酰胺基",
+              "异恶唑环",
+              "弱酸性"
+            ],
+            "mechanism_functional_groups": [
+              "邻苯二酚 catechol (-OH)",
+              "胺基 amine (-NH₂)",
+              "吲哚环 indole"
+            ],
+            "mechanism_key_structures": [
+              "PDA邻苯二酚螯合",
+              "胺基静电吸附",
+              "π-π堆叠",
+              "席夫碱反应"
+            ],
+            "feature_binding_score": 0
+          },
+          "基本原理": "needs_review",
+          "key_structures": [
+            "PDA邻苯二酚螯合",
+            "胺基静电吸附",
+            "π-π堆叠",
+            "席夫碱反应"
+          ],
+          "functional_groups": [
+            "邻苯二酚 catechol (-OH)",
+            "胺基 amine (-NH₂)",
+            "吲哚环 indole"
+          ],
+          "molecular_feature_links": [
+            "芳香环"
+          ],
+          "attribution": {
+            "source": "literature",
+            "ref": "10.1016/j.seppur.2024.127979",
+            "verification_tier": "partial",
+            "confidence": "normal"
+          }
+        },
+        "design_translation": {
+          "idea": "利用 PDA 涂层的邻苯二酚和胺基双功能基团进行表面改性，实现普适性粘附和污染物捕获",
+          "material_handle": "多巴胺在弱碱性（pH 8.5）条件下自聚成 PDA 涂层",
+          "design_principle": "PDA 的邻苯二酚(-OH)和胺基(-NH₂)双功能基团：(1)邻苯二酚螯合软金属(Pb²⁺、Cu²⁺、UO₂²⁺)；(2)胺基提供正电荷吸附阴离子(如Cr₂O₇²⁻)；(3)通用粘附性可在任意基底表面成膜",
+          "implementation_example": "多巴胺盐酸盐(2 mg/mL)溶于 Tris-HCl(pH 8.5)，浸渍基底12-24h → PDA涂层 → 可进一步接枝功能分子(如EDTA、SH)",
+          "constraints": "涂层厚度控制(通常<100nm)；pH 8.5碱性条件；多巴胺成本较高；长期稳定性",
+          "failure_modes": "涂层不均匀；碱性条件限制基底选择；多次循环后涂层脱落",
+          "evidence_tier": "fact (有 CN114887602A 专利支撑 P 吸附)",
+          "source_tier": "literature",
+          "material_realization_examples": [
+            "多巴胺在弱碱性（pH 8.5）条件下自聚成 PDA 涂层"
+          ]
+        },
+        "boundaries": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          }
+        ],
+        "honesty_summary": "基于分子特征推断，非直接证据",
+        "boundary_summary": "1 条软限制（caution）",
+        "evidence_context": {
+          "performance_leads": []
+        },
+        "charge_state": {
+          "has_charge_state": true,
+          "pka_values": [],
+          "ion_dependence": [],
+          "ph_sensitive": true,
+          "charge_mechanisms": [
+            {
+              "mechanism_id": "",
+              "description": "La与磷酸根配位生成磷酸镧化合物",
+              "charge_terms": [
+                "磷酸"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "phenolic hydroxyl groups participate in adsorption (C-O and O 1s binding energy shifts)",
+              "charge_terms": [
+                "hydroxyl"
+              ]
+            }
+          ]
+        },
+        "relevance_gating": {
+          "is_excluded": false,
+          "exclusion_reason": "",
+          "do_not_list": []
+        }
+      },
+      {
         "prototype_id": "chitosan",
         "organism": "Crustacea",
         "candidate_honesty": "inference",
         "lane": "exploratory",
+        "prototype_status": {
+          "is_background": false,
+          "is_placeholder": false,
+          "scope_note": ""
+        },
         "domain_caveat": "organic micropollutant evidence weak",
         "match": {
           "reason": "磺酰胺基可与吸附剂的极性基团形成氢键",
-          "weight": 0.6999999999999998,
+          "weight": 0.65,
           "applicability_fit": "pH 3.0-7.0, 盐度 low_to_moderate",
           "match_basis": "molecular_feature_inference",
           "direct_evidence": false
@@ -179,13 +311,14 @@
             "羧基 carboxyl (-COOH)"
           ],
           "molecular_feature_links": [
-            "磺酰胺基"
+            "磺酰胺基",
+            "弱酸性"
           ],
           "attribution": {
             "source": "literature",
             "ref": "10.1016/j.cej.2022.138934",
-            "verification_tier": "needs_review",
-            "confidence": "low"
+            "verification_tier": "partial",
+            "confidence": "normal"
           }
         },
         "design_translation": {
@@ -420,124 +553,6 @@
           "exclusion_reason": "",
           "do_not_list": []
         }
-      },
-      {
-        "prototype_id": "polydopamine-coating",
-        "organism": "Mytilus edulis",
-        "candidate_honesty": "inference",
-        "lane": "exploratory",
-        "domain_caveat": "organic micropollutant evidence weak",
-        "match": {
-          "reason": "芳香环可通过π-π堆积作用与含芳香环的吸附剂结合",
-          "weight": 0.675,
-          "applicability_fit": "pH 3.0-7.0, 盐度 moderate",
-          "match_basis": "molecular_feature_inference",
-          "direct_evidence": false
-        },
-        "mechanism": {
-          "name": "CR吸附机制总结",
-          "selected_mechanism_reason": "Query-conditioned scoring selected this mechanism for SMX based on relevance to matched features/interactions",
-          "selected_mechanism_alignment": {
-            "query_pollutant": "SMX",
-            "query_class": "抗生素/磺胺类",
-            "mechanism_keywords": "CR吸附机制总结",
-            "alignment_basis": "query_relevance_scoring",
-            "query_features": [
-              "芳香环",
-              "磺酰胺基",
-              "异恶唑环",
-              "弱酸性"
-            ],
-            "mechanism_functional_groups": [
-              "邻苯二酚 catechol (-OH)",
-              "胺基 amine (-NH₂)",
-              "吲哚环 indole"
-            ],
-            "mechanism_key_structures": [
-              "PDA邻苯二酚螯合",
-              "胺基静电吸附",
-              "π-π堆叠",
-              "席夫碱反应"
-            ],
-            "feature_binding_score": 0
-          },
-          "基本原理": "needs_review",
-          "key_structures": [
-            "PDA邻苯二酚螯合",
-            "胺基静电吸附",
-            "π-π堆叠",
-            "席夫碱反应"
-          ],
-          "functional_groups": [
-            "邻苯二酚 catechol (-OH)",
-            "胺基 amine (-NH₂)",
-            "吲哚环 indole"
-          ],
-          "molecular_feature_links": [
-            "芳香环"
-          ],
-          "attribution": {
-            "source": "literature",
-            "ref": "10.1016/j.seppur.2024.127979",
-            "verification_tier": "partial",
-            "confidence": "normal"
-          }
-        },
-        "design_translation": {
-          "idea": "利用 PDA 涂层的邻苯二酚和胺基双功能基团进行表面改性，实现普适性粘附和污染物捕获",
-          "material_handle": "多巴胺在弱碱性（pH 8.5）条件下自聚成 PDA 涂层",
-          "design_principle": "PDA 的邻苯二酚(-OH)和胺基(-NH₂)双功能基团：(1)邻苯二酚螯合软金属(Pb²⁺、Cu²⁺、UO₂²⁺)；(2)胺基提供正电荷吸附阴离子(如Cr₂O₇²⁻)；(3)通用粘附性可在任意基底表面成膜",
-          "implementation_example": "多巴胺盐酸盐(2 mg/mL)溶于 Tris-HCl(pH 8.5)，浸渍基底12-24h → PDA涂层 → 可进一步接枝功能分子(如EDTA、SH)",
-          "constraints": "涂层厚度控制(通常<100nm)；pH 8.5碱性条件；多巴胺成本较高；长期稳定性",
-          "failure_modes": "涂层不均匀；碱性条件限制基底选择；多次循环后涂层脱落",
-          "evidence_tier": "fact (有 CN114887602A 专利支撑 P 吸附)",
-          "source_tier": "literature",
-          "material_realization_examples": [
-            "多巴胺在弱碱性（pH 8.5）条件下自聚成 PDA 涂层"
-          ]
-        },
-        "boundaries": [
-          {
-            "text": "适用条件需根据具体机制验证",
-            "parameter": "other",
-            "gate_level": "soft",
-            "basis": "llm_inferred",
-            "verification": "needs_review"
-          }
-        ],
-        "honesty_summary": "基于分子特征推断，非直接证据",
-        "boundary_summary": "1 条软限制（caution）",
-        "evidence_context": {
-          "performance_leads": []
-        },
-        "charge_state": {
-          "has_charge_state": true,
-          "pka_values": [],
-          "ion_dependence": [],
-          "ph_sensitive": true,
-          "charge_mechanisms": [
-            {
-              "mechanism_id": "",
-              "description": "La与磷酸根配位生成磷酸镧化合物",
-              "charge_terms": [
-                "磷酸"
-              ]
-            },
-            {
-              "mechanism_id": "",
-              "description": "phenolic hydroxyl groups participate in adsorption (C-O and O 1s binding energy shifts)",
-              "charge_terms": [
-                "hydroxyl",
-                "羟基"
-              ]
-            }
-          ]
-        },
-        "relevance_gating": {
-          "is_excluded": false,
-          "exclusion_reason": "",
-          "do_not_list": []
-        }
       }
     ],
     "applicable_rules": [],
@@ -547,6 +562,15 @@
         {
           "prototype_id": "plant-tannin",
           "mechanism_name": "吸附机制",
+          "parameter": "other",
+          "text": "适用条件需根据具体机制验证",
+          "basis": "llm_inferred",
+          "verification": "needs_review",
+          "source_asset": null
+        },
+        {
+          "prototype_id": "polydopamine-coating",
+          "mechanism_name": "超疏水抗菌表面'双重保险'原理",
           "parameter": "other",
           "text": "适用条件需根据具体机制验证",
           "basis": "llm_inferred",
@@ -572,15 +596,6 @@
           "source_asset": null
         },
         {
-          "prototype_id": "polydopamine-coating",
-          "mechanism_name": "超疏水抗菌表面'双重保险'原理",
-          "parameter": "other",
-          "text": "适用条件需根据具体机制验证",
-          "basis": "llm_inferred",
-          "verification": "needs_review",
-          "source_asset": null
-        },
-        {
           "prototype_id": "lotus-leaf",
           "mechanism_name": "仿生油水分离材料的生物灵感来源",
           "parameter": "other",
@@ -596,8 +611,8 @@
       "leads": [],
       "inferences": [
         "plant-tannin: 基于分子特征推断，非直接证据",
-        "chitosan: 基于分子特征推断，非直接证据",
         "polydopamine-coating: 基于分子特征推断，非直接证据",
+        "chitosan: 基于分子特征推断，非直接证据",
         "lotus-leaf: 基于分子特征推断，非直接证据"
       ]
     }

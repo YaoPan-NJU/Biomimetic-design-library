@@ -34,6 +34,11 @@
         "organism": "Mytilus spp.",
         "candidate_honesty": "lead",
         "lane": "lead",
+        "prototype_status": {
+          "is_background": false,
+          "is_placeholder": false,
+          "scope_note": ""
+        },
         "domain_caveat": "",
         "match": {
           "reason": "DOPA对Pb²⁺有强螯合能力",
@@ -175,7 +180,6 @@
               "mechanism_id": "",
               "description": "多巴胺辅助共沉积涉及多巴胺与第二组分之间的单/多共价或非共价相互作用。共价共沉积提供更强网络以促进涂层稳定性。poly(SBMA)通过去质子化酚基与季铵的局部静电作用与PDA交互；poly(MPC)通",
               "charge_terms": [
-                "amine",
                 "质子化"
               ]
             },
@@ -205,7 +209,6 @@
               "mechanism_id": "",
               "description": "多巴胺在弱碱性环境下通过酚羟基氧化成醌，醌式相互叠加实现聚合；聚多巴胺在Fe3O4外以羟基间氢键或物理堆积形式沉积，不涉及与Fe元素的配位作用",
               "charge_terms": [
-                "amine",
                 "羟基"
               ]
             },
@@ -221,8 +224,7 @@
               "mechanism_id": "",
               "description": "phenolic hydroxyl groups participate in adsorption (C-O and O 1s binding energy shifts)",
               "charge_terms": [
-                "hydroxyl",
-                "羟基"
+                "hydroxyl"
               ]
             }
           ]
@@ -238,6 +240,11 @@
         "organism": "Fish scales (鱼鳞)",
         "candidate_honesty": "fact",
         "lane": "fact",
+        "prototype_status": {
+          "is_background": false,
+          "is_placeholder": false,
+          "scope_note": ""
+        },
         "domain_caveat": "",
         "match": {
           "reason": "Pb²⁺可替换HAP中的Ca²⁺形成更稳定的磷氯铅矿",
@@ -365,6 +372,11 @@
         "organism": "Ostreidae",
         "candidate_honesty": "lead",
         "lane": "lead",
+        "prototype_status": {
+          "is_background": false,
+          "is_placeholder": false,
+          "scope_note": ""
+        },
         "domain_caveat": "",
         "match": {
           "reason": "CaCO₃与Pb²⁺进行离子交换，形成PbCO₃",
@@ -491,6 +503,11 @@
         "organism": "Bacillariophyta (硅藻门)",
         "candidate_honesty": "lead",
         "lane": "lead",
+        "prototype_status": {
+          "is_background": false,
+          "is_placeholder": false,
+          "scope_note": ""
+        },
         "domain_caveat": "",
         "match": {
           "reason": "硅藻壳对Pb²⁺有吸附能力",
@@ -625,6 +642,11 @@
         "organism": "Crustacea",
         "candidate_honesty": "lead",
         "lane": "lead",
+        "prototype_status": {
+          "is_background": false,
+          "is_placeholder": false,
+          "scope_note": ""
+        },
         "domain_caveat": "",
         "match": {
           "reason": "壳聚糖的氨基和羟基可与Pb(II)形成配位键",
@@ -676,8 +698,8 @@
           "attribution": {
             "source": "literature",
             "ref": "10.1007/s10311-023-01563-9",
-            "verification_tier": "needs_review",
-            "confidence": "low"
+            "verification_tier": "partial",
+            "confidence": "normal"
           }
         },
         "design_translation": {
@@ -947,6 +969,11 @@
         "organism": "Homarus americanus (美洲龙虾)",
         "candidate_honesty": "lead",
         "lane": "lead",
+        "prototype_status": {
+          "is_background": false,
+          "is_placeholder": false,
+          "scope_note": ""
+        },
         "domain_caveat": "",
         "match": {
           "reason": "龙虾外骨骼对Pb(II)有吸附能力",
@@ -1080,6 +1107,11 @@
         "organism": "Mammalian bone (哺乳动物骨骼)",
         "candidate_honesty": "lead",
         "lane": "lead",
+        "prototype_status": {
+          "is_background": false,
+          "is_placeholder": false,
+          "scope_note": ""
+        },
         "domain_caveat": "",
         "match": {
           "reason": "二价阳离子可与含羧基/羟基的吸附剂形成配位键",
@@ -1202,6 +1234,11 @@
         "organism": "Sulfate-Reducing Bacteria (SRB)",
         "candidate_honesty": "inference",
         "lane": "exploratory",
+        "prototype_status": {
+          "is_background": false,
+          "is_placeholder": false,
+          "scope_note": ""
+        },
         "domain_caveat": "",
         "match": {
           "reason": "软酸金属离子（如Hg²⁺、Pb²⁺）可与含硫/氮配体形成稳定配位键",

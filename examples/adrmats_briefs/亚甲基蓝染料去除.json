@@ -33,6 +33,11 @@
         "organism": "Bombyx mori",
         "candidate_honesty": "lead",
         "lane": "lead",
+        "prototype_status": {
+          "is_background": false,
+          "is_placeholder": false,
+          "scope_note": ""
+        },
         "domain_caveat": "",
         "match": {
           "reason": "丝素蛋白对MB有吸附能力",
@@ -198,6 +203,11 @@
         "organism": "Chlorella vulgaris (小球藻)",
         "candidate_honesty": "inference",
         "lane": "exploratory",
+        "prototype_status": {
+          "is_background": false,
+          "is_placeholder": false,
+          "scope_note": ""
+        },
         "domain_caveat": "organic micropollutant evidence weak",
         "match": {
           "reason": "污染物类别匹配: 阳离子染料",
@@ -339,6 +349,84 @@
           "exclusion_reason": "",
           "do_not_list": [
             {
+              "rule_id": "",
+              "description": "",
+              "source": "",
+              "gate_level": "hard"
+            },
+            {
+              "rule_id": "",
+              "description": "",
+              "source": "",
+              "gate_level": "hard"
+            },
+            {
+              "rule_id": "",
+              "description": "",
+              "source": "",
+              "gate_level": "hard"
+            },
+            {
+              "rule_id": "",
+              "description": "",
+              "source": "",
+              "gate_level": "hard"
+            },
+            {
+              "rule_id": "",
+              "description": "",
+              "source": "",
+              "gate_level": "hard"
+            },
+            {
+              "rule_id": "",
+              "description": "",
+              "source": "",
+              "gate_level": "hard"
+            },
+            {
+              "rule_id": "",
+              "description": "",
+              "source": "",
+              "gate_level": "hard"
+            },
+            {
+              "rule_id": "",
+              "description": "",
+              "source": "",
+              "gate_level": "hard"
+            },
+            {
+              "rule_id": "",
+              "description": "",
+              "source": "",
+              "gate_level": "hard"
+            },
+            {
+              "rule_id": "",
+              "description": "",
+              "source": "",
+              "gate_level": "hard"
+            },
+            {
+              "rule_id": "",
+              "description": "",
+              "source": "",
+              "gate_level": "hard"
+            },
+            {
+              "rule_id": "",
+              "description": "",
+              "source": "",
+              "gate_level": "hard"
+            },
+            {
+              "rule_id": "",
+              "description": "",
+              "source": "",
+              "gate_level": "hard"
+            },
+            {
               "rule_id": "_bc",
               "description": "pH影响表面电荷和染料离子化状态",
               "source": "",
@@ -424,6 +512,11 @@
         "organism": "Crustacea",
         "candidate_honesty": "inference",
         "lane": "exploratory",
+        "prototype_status": {
+          "is_background": false,
+          "is_placeholder": false,
+          "scope_note": ""
+        },
         "domain_caveat": "organic micropollutant evidence weak",
         "match": {
           "reason": "正电荷污染物可与带负电的吸附剂通过静电吸引结合",
@@ -478,8 +571,8 @@
           "attribution": {
             "source": "literature",
             "ref": "10.3390/molecules29184317",
-            "verification_tier": "needs_review",
-            "confidence": "low"
+            "verification_tier": "partial",
+            "confidence": "normal"
           }
         },
         "design_translation": {
@@ -735,6 +828,11 @@
         "organism": "Mytilus edulis",
         "candidate_honesty": "inference",
         "lane": "exploratory",
+        "prototype_status": {
+          "is_background": false,
+          "is_placeholder": false,
+          "scope_note": ""
+        },
         "domain_caveat": "organic micropollutant evidence weak",
         "match": {
           "reason": "芳香环可通过π-π堆积作用与含芳香环的吸附剂结合",
@@ -837,8 +935,7 @@
               "mechanism_id": "",
               "description": "phenolic hydroxyl groups participate in adsorption (C-O and O 1s binding energy shifts)",
               "charge_terms": [
-                "hydroxyl",
-                "羟基"
+                "hydroxyl"
               ]
             }
           ]
@@ -854,6 +951,11 @@
         "organism": "Plant sources (单宁酸)",
         "candidate_honesty": "inference",
         "lane": "exploratory",
+        "prototype_status": {
+          "is_background": false,
+          "is_placeholder": false,
+          "scope_note": ""
+        },
         "domain_caveat": "organic micropollutant evidence weak",
         "match": {
           "reason": "芳香环可通过π-π堆积作用与含芳香环的吸附剂结合",

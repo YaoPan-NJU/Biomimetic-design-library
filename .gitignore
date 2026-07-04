@@ -19,12 +19,22 @@ __pycache__/
 
 # 文献库 (大量PDF, 不上传)
 仿生文献库/
+污染物文献/
 
 # 提取临时文件
 *_visual_cache.json
 tools/verify_report_*.json
 tools/litextract/outputs/
 outputs/
+
+# 污染物知识库 manifests (运行追踪文件，非知识库本体)
+pollutant_knowledge_base/manifests/
+# 污染物文献库 by_pollutant (大量论文JSON, 不上传)
+pollutant_knowledge_base/by_pollutant/
+
+# Claude Code session transcripts (临时会话记录)
+2026-*-this-session-is-being-continued-*.txt
+2026-*-local-command-caveatcaveat-*.txt
 
 # Build staging output (not canon)
 prototypes_db.staging/
