@@ -4,59 +4,93 @@
 
 ---
 
-## 回滚场景
+## 回滚优先级
 
-### 场景1：Production import 后查询异常
+### 一级回滚：环境变量切换（立即生效，零数据操作）
 
-**步骤**：
-1. 设置 ADRMATS 环境变量切回旧 schema：
-   ```bash
-   export BMDL_SCHEMA=bmdl_pre_stage7_backup
-   ```
-2. 重启 ADRMATS 服务
-3. 验证查询恢复正常
-4. 如果旧 schema 不可用（rename 方式），从逻辑备份恢复：
-   ```bash
-   # 从 stage7_production_backup.json 恢复
-   env -i HOME="$HOME" PATH="/usr/bin:/bin:/opt/homebrew/bin" .venv/bin/python -c "
-   import psycopg2, os, json
-   from dotenv import load_dotenv
-   load_dotenv('.env')
-   conn = psycopg2.connect(...)
-   # 重建 bmdl schema from backup JSON
-   "
-   ```
+如果 production cutover 后查询异常：
 
-### 场景2：match_export.json 需要回滚
+```bash
+# 切回旧 bmdl schema
+unset BMDL_SCHEMA
+# 或显式设置
+BMDL_SCHEMA=bmdl
+# 重启 ADRMATS 服务
+```
 
-**步骤**：
-1. BMDL repo 中恢复旧 baseline：
-   ```bash
-   cd /Users/panyao/Desktop/Biomimetic-design-library
-   cp docs/bmdl_rebalance/stage7_match_export_baseline_20260705.json adrmats_export/match_export.json
-   git checkout -- adrmats_export/match_export.json  # 或从 git 历史恢复
-   ```
-2. 重新生成 CSV
-3. 重新 import 到 staging 验证
+验证：
+```sql
+SELECT count(*) FROM bmdl.match_weights;  -- 应为 130（旧值）
+```
 
-### 场景3：ADRMATS bmdl_repository.py 回滚
+### 二级回滚：从逻辑备份恢复
 
-**步骤**：
+如果旧 `bmdl` schema 也被意外修改或损坏：
+
 ```bash
 cd /Users/panyao/Documents/ADRMATS
-git revert 5cb5902  # 回滚 BMDL_SCHEMA 环境变量补丁
+env -i HOME="$HOME" PATH="/usr/bin:/bin:/opt/homebrew/bin" .venv/bin/python -c "
+import psycopg2, os, json
+from dotenv import load_dotenv
+load_dotenv('.env')
+conn = psycopg2.connect(host=os.environ['POSTGRES_HOST'],port=os.environ['POSTGRES_PORT'],dbname=os.environ['POSTGRES_DB'],user=os.environ['POSTGRES_USER'],password=os.environ['POSTGRES_PASSWORD'])
+cur = conn.cursor()
+
+with open('/Users/panyao/Desktop/Biomimetic-design-library/docs/bmdl_rebalance/stage7_production_backup.json') as f:
+    backup = json.load(f)
+
+# 逐表恢复
+for table, data in backup.items():
+    cols = data['columns']
+    rows = data['rows']
+    if not rows: continue
+    placeholders = ','.join(['%s'] * len(cols))
+    col_str = ','.join(cols)
+    cur.execute(f'DELETE FROM bmdl.{table}')
+    for row in rows:
+        cur.execute(f'INSERT INTO bmdl.{table} ({col_str}) VALUES ({placeholders})', row)
+    conn.commit()
+    print(f'  {table}: {len(rows)} rows restored')
+conn.close()
+"
+```
+
+### 三级回滚：Git revert + 重新 import
+
+如果需要完全回滚到 Stage 7 之前的状态：
+
+```bash
+# BMDL repo
+cd /Users/panyao/Desktop/Biomimetic-design-library
+git revert 63cbcbe  # 回滚 release candidate export
+git push origin review
+
+# 从 git tag 恢复
+git checkout bmdl-pre-rebalance-20260704 -- adrmats_export/match_export.json
+
+# ADRMATS repo
+cd /Users/panyao/Documents/ADRMATS
+git revert 5cb5902  # 回滚 BMDL_SCHEMA 补丁
 git push origin main
+
+# 重新 import 到 bmdl_staging 验证
+cd /Users/panyao/Documents/ADRMATS
+env -i HOME="$HOME" PATH="/usr/bin:/bin:/opt/homebrew/bin" .venv/bin/python \
+  scripts/import_bmdl_to_rds.py --schema bmdl_staging --drop \
+  --source /Users/panyao/Desktop/Biomimetic-design-library
 ```
 
 ## 需要保留的文件/commit/tag
 
-| 文件/Tag | 用途 |
-|----------|------|
-| `docs/bmdl_rebalance/stage7_match_export_baseline_20260705.json` | 旧 match_export baseline |
-| `adrmats_export/match_export_stage5.json` | Stage 5 候选（与 RC 相同） |
+| 资源 | 用途 |
+|------|------|
+| `docs/bmdl_rebalance/stage7_match_export_baseline_20260705.json` | 旧 match_export baseline (130 rows, SHA256[:16]=`4c5ab4773e1d70e8`) |
+| `docs/bmdl_rebalance/stage7_production_backup.json` | production bmdl schema 逻辑备份（cutover 前生成） |
+| `adrmats_export/match_export_stage5.json` | Stage 5 候选 (SHA256[:16]=`f5585e72b0d8a320`) |
 | git tag `bmdl-pre-rebalance-20260704` | BMDL 重平衡前的 git tag |
 | ADRMATS commit `5cb5902` | BMDL_SCHEMA 补丁（可 revert） |
-| BMDL commit (pending) | Release candidate commit |
+| BMDL commit `4f420f5` | Release candidate export commit |
+| BMDL commit `63cbcbe` | Final report commit |
 
 ## 回滚验证
 
@@ -64,3 +98,4 @@ git push origin main
 1. `tools/validate_consistency.py` — 0 errors
 2. BPA query — 应返回旧的 exploratory 候选（无 plant-lignocellulosic）
 3. `match_weights` count — 应为 130（旧值）
+4. `BMDL_SCHEMA` 环境变量 — 未设置或设为 `bmdl`

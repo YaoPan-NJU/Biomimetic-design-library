@@ -9,7 +9,7 @@
 ## Import Command
 
 ```bash
-cd /Users/panyao/Qoder/ADRMATS
+cd /Users/panyao/Documents/ADRMATS
 env -i HOME="$HOME" PATH="/usr/bin:/bin:/opt/homebrew/bin" .venv/bin/python \
   scripts/import_bmdl_to_rds.py --schema bmdl_staging --drop \
   --source /Users/panyao/Desktop/Biomimetic-design-library

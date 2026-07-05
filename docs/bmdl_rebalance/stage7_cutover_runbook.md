@@ -1,7 +1,7 @@
 # Stage 7 Production Cutover Runbook
 
 **日期：** 2026-07-05
-**状态：** 待潘老师确认后执行
+**状态：** 待潘老师明确授权后执行
 
 ---
 
@@ -11,16 +11,18 @@
 
 ## 前置检查
 
-1. 确认 BMDL review 分支已 push 到 GitHub
+1. 确认 BMDL review 分支已 push 到 GitHub（commit `63cbcbe`）
 2. 确认 ADRMATS main 分支已 push（commit `5cb5902`）
 3. 确认 `bmdl_staging` schema 导入验证通过
 4. 确认 `tools/validate_consistency.py` 0 errors
-5. 确认 production `bmdl` schema 当前状态（逻辑备份）
+5. 确认 ADRMATS E2E smoke test 通过（包括医院废水 fallback 场景）
 
-## Fresh Logical Backup
+## 推荐方案：Candidate Schema + 环境变量切换（零 drop production）
+
+### Step 1: Fresh backup production `bmdl`
 
 ```bash
-cd /Users/panyao/Qoder/ADRMATS
+cd /Users/panyao/Documents/ADRMATS
 env -i HOME="$HOME" PATH="/usr/bin:/bin:/opt/homebrew/bin" .venv/bin/python -c "
 import psycopg2, os, json
 from dotenv import load_dotenv
@@ -40,57 +42,90 @@ conn.close()
 "
 ```
 
-## Final Import（需潘老师授权）
+### Step 2: Import release candidate into new timestamped schema
 
 ```bash
-cd /Users/panyao/Qoder/ADRMATS
-env -i HOME="$HOME" PATH="/usr/bin:/bin:/opt/homebrew/bin" .venv/bin/python scripts/import_bmdl_to_rds.py --schema bmdl --drop --source /Users/panyao/Desktop/Biomimetic-design-library
+cd /Users/panyao/Documents/ADRMATS
+env -i HOME="$HOME" PATH="/usr/bin:/bin:/opt/homebrew/bin" .venv/bin/python \
+  scripts/import_bmdl_to_rds.py \
+  --schema bmdl_stage7_rc \
+  --drop \
+  --source /Users/panyao/Desktop/Biomimetic-design-library
 ```
 
-**注意**：`--schema bmdl --drop` 会被 ETL 安全锁拦截（只有 `_staging` schema 可以 drop）。需要临时修改安全锁或手动执行 SQL。
+> 注：`bmdl_stage7_rc` 不含 `_staging`，ETL 安全锁会阻止 `--drop`。
+> 需要在 RDS 手动创建 schema 后用不带 `--drop` 导入，或临时使用 `bmdl_staging`。
+> 推荐：直接用已验证通过的 `bmdl_staging` schema（Step 3 切环境变量即可）。
 
-**推荐方式**：直接在 RDS 上执行 schema rename
+### Step 3: Set ADRMATS production env
+
+在 ADRMATS 的 `.env` 或系统环境中设置：
+
+```bash
+BMDL_SCHEMA=bmdl_staging
+```
+
+### Step 4: Restart ADRMATS
+
+```bash
+# 重启 ADRMATS 服务
+# 具体命令取决于部署方式
+```
+
+### Step 5: Run E2E smoke tests
+
+必须覆盖：
+- BPA 设计流程
+- PFOA 设计流程
+- 医院废水 fallback 场景（`_get_relevant_water_data` 三种场景）
+- MOF/quarantined 不出现
+- bone/oyster 不高权重霸榜
+
+### Step 6: Verify
+
+```sql
+SELECT count(*) FROM bmdl_staging.match_weights;  -- should be 132
+SELECT count(*) FROM bmdl_staging.biological_prototypes WHERE source_category='primary';  -- 40
+SELECT count(*) FROM bmdl_staging.match_weights WHERE lane='exploratory' AND weight::numeric > 0.3;  -- 0
+```
+
+### Rollback
+
+```bash
+# 切回旧 bmdl schema
+unset BMDL_SCHEMA
+# 或
+BMDL_SCHEMA=bmdl
+# 重启 ADRMATS
+```
+
+---
+
+## 可选方案：Schema Rename（更高风险，需人工确认）
+
+> ⚠️ 此方案涉及 schema rename，是不可逆操作，必须由潘老师明确授权。
 
 ```sql
 -- 1. 重命名当前 production schema
 ALTER SCHEMA bmdl RENAME TO bmdl_pre_stage7_backup;
+
 -- 2. 重命名 staging 为 production
 ALTER SCHEMA bmdl_staging RENAME TO bmdl;
+
 -- 3. 验证
-SELECT count(*) FROM bmdl.match_weights;  -- should be 132
+SELECT count(*) FROM bmdl.match_weights;  -- 132
 ```
 
-## 验证 SQL
+**风险**：rename 后如果发现问题，需要反向 rename 恢复。所有连接 bmdl schema的服务需要重启。
 
-```sql
--- 导入后验证
-SELECT count(*) FROM bmdl.biological_prototypes;  -- 48
-SELECT count(*) FROM bmdl.match_weights;          -- 132
-SELECT count(*) FROM bmdl.performance_data;       -- 1020
-SELECT count(*) FROM bmdl.biological_prototypes WHERE source_category='quarantined';  -- 8
-SELECT count(*) FROM bmdl.biological_prototypes WHERE source_category='primary';     -- 40
-SELECT count(*) FROM bmdl.match_weights WHERE lane='exploratory' AND weight > 0.3;   -- 0
-```
+---
 
 ## ADRMATS 环境变量
 
 | 场景 | 设置 | 说明 |
 |------|------|------|
-| Production (默认) | 不设 `BMDL_SCHEMA` | 读 `bmdl` schema |
-| Rollback | `BMDL_SCHEMA=bmdl_pre_stage7_backup` | 切回旧 schema |
-| Staging | `BMDL_SCHEMA=bmdl_staging` | 读 staging |
+| Production (推荐) | `BMDL_SCHEMA=bmdl_staging` | 指向 release candidate schema |
+| Rollback | 不设 或 `BMDL_SCHEMA=bmdl` | 切回旧 production schema |
+| 保持旧默认 | 不设 `BMDL_SCHEMA` | 默认读 `bmdl`（旧数据） |
 
-在 ADRMATS 的 `.env` 或系统环境中设置：
-```
-# Production (default)
-# BMDL_SCHEMA=bmdl
-
-# Rollback (if needed)
-# BMDL_SCHEMA=bmdl_pre_stage7_backup
-```
-
-## 潘老师需要确认
-
-- [ ] 逻辑备份已执行
-- [ ] Final import / schema rename 授权
-- [ ] ADRMATS E2E 回归测试授权
+路径说明：所有路径使用 canonical `/Users/panyao/Documents/ADRMATS`。
