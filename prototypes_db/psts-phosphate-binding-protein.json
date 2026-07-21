@@ -1,0 +1,309 @@
+{
+  "id": "psts-phosphate-binding-protein",
+  "name_zh": "PstS 磷酸盐结合蛋白",
+  "name_en": "PstS Phosphate-Binding Protein",
+  "organism": {
+    "scientific": "Escherichia coli（PstS 磷酸盐结合蛋白）",
+    "category": "微生物"
+  },
+  "biomimetic_dimension": "分子仿生",
+  "features": [
+    "分子筛分",
+    "特异性识别"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": null,
+    "note": "PstS/PBP 为大肠杆菌周质可溶结合蛋白（分子识别原型），本库无其吸附性能测试条件；performance_data 为空，故测试条件全空。"
+  },
+  "library_tier": "extended",
+  "lifecycle_status": "active",
+  "coverage": "partial",
+  "status": "active",
+  "provenance_summary": {
+    "n_papers": 3,
+    "n_verified": 7,
+    "n_unverified": 0,
+    "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与硬边界条数（PSTS-001 四要素+1 硬边界=5，PSTS-002 两要素=2）。机制接地限于 PstS/PBP 天然底物（磷酸根）与 PBP 家族几何识别原理；PFBS 磺酸根应用为设计转译（llm_inferred），无性能数据。quote 取自 PDB 沉积记录（SITE/HETNAM/COMPND）、PubMed 摘要（Wang 1994）与 Crossref 标题（Luecke & Quiocho 1990、Sci Rep 2014），可核验；未做全文 PDF 审计。候选 PDB 1PST 经 RCSB 核验为光合反应中心（非 PstS），已改正为 1PBP（E. coli PBP/PstS，Wang 1994）。"
+  },
+  "mechanisms": [
+    {
+      "mechanism_id": "PSTS-001",
+      "name": "预组织氢键给体阵列对四面体磷酸根的几何识别",
+      "description": "大肠杆菌 PstS/PBP 以预组织中性氢键给体阵列（Thr10、Ser38、Ser139 侧链羟基与骨架酰胺 NH，Asp56 起关键定位作用）识别四面体磷酸根 PO4；磷酸根埋藏于两结构域间裂隙，无金属离子直接配位氧阴离子（PDB 1PBP 非水配体仅 PO4）。1PBP 为 T141D 定点突变体，沉积记录第 141 位为工程化 Asp141，野生型该位为 Thr141",
+      "基本原理": "预组织的中性氢键给体阵列与四面体磷酸根几何互补，埋藏于两结构域间低介电裂隙以强化静电并排除水竞争，使磷酸根氧阴离子在无金属参与下被高特异性识别；给体阵列的电荷/质子化状态微调对磷酸根质子化形态的识别",
+      "source": "literature",
+      "ref_doi": "10.1038/347402a0",
+      "verification": "verified",
+      "verification_quote": "High specificity of a phosphate transport protein determined by hydrogen bonds",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "四面体磷酸根 PO4（含 H2PO4⁻/HPO4²⁻ 质子化形态，大肠杆菌 PstS/PBP 天然底物；PDB 1PBP 配体 PO4 即 PHOSPHATE ION；磷酸为细胞关键营养形态，与磺酸根/硫酸根头基同属 sp3 四面体氧阴离子，几何等构）",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1016/s0021-9258(17)31503-x",
+          "locator": "Abstract, p.25091",
+          "quote": "Phosphorous, primarily in the form of phosphate, is a critical nutrient for the life of a cell.",
+          "scope_match": "Keywords: phosphorous, phosphate, nutrient"
+        },
+        "bio_structure": {
+          "text": "大肠杆菌 PBP（PstS）为约 34.5 kDa 周质结合蛋白（PDB 1PBP 聚合物实体，E. coli taxid 562）；磷酸盐结合位点 SITE AC1 由 10 个残基构成：Ala9、Thr10、Phe11、Gly37、Ser38、Asp56、Arg135、Ser139、Gly140、Asp141（chain A），位于两结构域间裂隙，构成预组织氢键给体口袋。注：1PBP 为 T141D 定点突变体（COMPND 记 ENGINEERED: YES），沉积记录第 141 位为工程化 Asp141，野生型该位为 Thr141",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1016/s0021-9258(17)31503-x",
+          "locator": "PDB 1PBP, SITE AC1 / p.25091",
+          "quote": "SITE     1 AC1 10 ALA A   9  THR A  10  PHE A  11  GLY A  37",
+          "scope_match": "Keywords: AC1, ALA, THR"
+        },
+        "interaction": {
+          "text": "磷酸根四氧由预组织氢键给体阵列识别：Thr10、Ser38、Ser139 侧链羟基与骨架酰胺 NH 提供方向性氢键，Asp56 对磷酸根识别起关键作用（Wang 1994 摘要：both monobasic and dibasic phosphates ... with Asp56 playing a key role）；无金属离子直接配位氧阴离子（结构非水配体仅 PO4）",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1016/s0021-9258(17)31503-x",
+          "locator": "Abstract, p.25091",
+          "quote": "Both monobasic and dibasic phosphates are recognized by the phosphate-binding protein with Asp56 playing a key role.",
+          "scope_match": "Keywords: phosphates, recognized, Asp56"
+        },
+        "why_it_works": {
+          "text": "磷酸盐转运蛋白的高特异性由氢键决定（Luecke & Quiocho 1990 以 1.7 Å 野生型结构首次揭示氢键相互作用在赋予渗透酶高特异性中的关键作用，该特异性亦为其他磷酸盐转运系统共享）；预组织中性氢键给体阵列与四面体磷酸根几何互补、方向性匹配，使磷酸根与尺寸/几何失配的氧阴离子区分",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1038/347402a0",
+          "locator": "title, p.402",
+          "quote": "High specificity of a phosphate transport protein determined by hydrogen bonds",
+          "scope_match": "Keywords: specificity, phosphate, hydrogen bonds"
+        },
+        "boundary_conditions": [
+          {
+            "text": "质子化形态与给体电荷微调：野生型 PBP 同时识别单碱基磷酸（H2PO4⁻）与双碱基磷酸（HPO4²⁻）；在配体结合位点 Thr141 引入额外 Asp（T141D 突变）则将结合限制为仅单碱基磷酸（Wang 1994），表明给体阵列的电荷/质子化状态可微调对磷酸根质子化形态的识别",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "from_source",
+            "verification": "verified",
+            "gate_level": "hard",
+            "locator": "Abstract, p.25091",
+            "quote": "introduction of one additional Asp by mutagenesis of the Thr141 in the ligand-binding site restricts binding to only the monobasic phosphate",
+            "scope_match": "Keywords: Asp, Thr141, monobasic, phosphate",
+            "source_asset": null
+          },
+          {
+            "text": "预组织氢键阵列需维持于两结构域间裂隙的低介电微环境；给体若完全暴露于体相水，水分子氢键竞争将削弱磷酸根结合（定性，无数值阈值）",
+            "parameter": "wet_stability",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "预组织且与四面体氧阴离子几何互补的中性氢键给体阵列，配合埋藏低介电结构域裂隙，可在无金属或阳离子参与下通过方向性与几何匹配选择性识别该氧阴离子头基；给体阵列的电荷/质子化状态可微调对底物质子化形态的识别",
+        "verification_quote": "High specificity of a phosphate transport protein determined by hydrogen bonds"
+      },
+      "source_doi": "10.1038/347402a0",
+      "source_page": 402,
+      "source_locator": "PDB 1PBP / p.402（Luecke & Quiocho 1990）",
+      "source_file": "PDB 1PBP（RCSB 沉积数据；T141D 突变体，Wang 1994 JBC）/ Luecke & Quiocho 1990 Nature 347:402-406（标题接地；未做本地全文 PDF 审计）",
+      "functional_groups": [
+        "氢键给体（Thr/Ser 侧链羟基、骨架酰胺 NH）",
+        "定位天冬氨酸（Asp56）",
+        "埋藏低介电结构域裂隙"
+      ],
+      "key_structures": [
+        "识别结构"
+      ]
+    },
+    {
+      "mechanism_id": "PSTS-002",
+      "name": "四面体磷酸根识别的跨物种保守（原理先例）",
+      "description": "产气荚膜梭菌磷酸盐结合蛋白 PBP-1 以保守 Ser/Thr 氢键给体阵列识别四面体磷酸根（PDB 4Q8R SITE AC1：Ser11、Thr12、Ser13、Ser41、Ser59、Ser129 等），与大肠杆菌 PBP 几何保守，为预组织氢键给体阵列识别四面体氧阴离子在 PstS/PBP 家族内保守提供结构生物学先例",
+      "基本原理": "保守的中性氢键给体阵列识别四面体磷酸根，表明该几何识别原理在周质磷酸盐结合蛋白家族中普适，不依赖特定物种骨架",
+      "source": "literature",
+      "ref_doi": "10.1038/srep06636",
+      "verification": "verified",
+      "verification_quote": "Crystal structure of the phosphate-binding protein (PBP-1) of an ABC-type phosphate transporter from Clostridium perfringens",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "四面体磷酸根 PO4（产气荚膜梭菌 PBP-1 天然底物；PDB 4Q8R 配体 PO4 即 PHOSPHATE ION；PBP-1 为 ABC 型磷酸盐转运体的底物结合蛋白，与大肠杆菌 PBP 磷酸根底物几何同源）",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1038/srep06636",
+          "locator": "title (Sci Rep article 6636)",
+          "quote": "Crystal structure of the phosphate-binding protein (PBP-1) of an ABC-type phosphate transporter from Clostridium perfringens",
+          "scope_match": "Keywords: phosphate-binding, Clostridium perfringens, transporter"
+        },
+        "bio_structure": {
+          "text": "产气荚膜梭菌 PBP-1（约 27.3 kDa，PDB 4Q8R，C. perfringens taxid 1502）；磷酸盐结合位点 SITE AC1 由 Ser11、Thr12、Ser13、Gly40、Ser41、Ser59、Arg125、Ser129、Gly130、Thr131（chain A）构成，与大肠杆菌 PBP 给体阵列几何保守（均以 Ser/Thr 羟基给体为主）",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1038/srep06636",
+          "locator": "PDB 4Q8R, SITE AC1 (Sci Rep article 6636)",
+          "quote": "SITE     1 AC1 10 SER A  11  THR A  12  SER A  13  GLY A  40",
+          "scope_match": "Keywords: AC1, SER, THR"
+        },
+        "interaction": {
+          "text": "保守 Ser/Thr 羟基给体阵列与四面体磷酸根四氧形成方向性氢键（机理层结构生物学推断；4Q8R 标题与 SITE 记录未逐一列出氢键距离）",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "结合位点组成在物种间保守（大肠杆菌与产气荚膜梭菌 PBP 均以 Ser/Thr 富集给体阵列识别磷酸根），表明预组织氢键给体阵列几何识别四面体磷酸根的原理在 PstS/PBP 家族内普适（机理层推断）",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "该原理适用于几何相似的四面体氧阴离子（磷酸根及几何相似的磺酸根/硫酸根头基）；亲和力受氧阴离子电荷密度、质子化形态、尺寸与给体阵列几何匹配度影响（定性）",
+            "parameter": "competing_ion",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "预组织中性氢键给体阵列选择性识别四面体氧阴离子的原理在周质磷酸盐结合蛋白家族内保守，可脱离特定蛋白骨架移植",
+        "verification_quote": "Crystal structure of the phosphate-binding protein (PBP-1) of an ABC-type phosphate transporter from Clostridium perfringens"
+      },
+      "source_doi": "10.1038/srep06636",
+      "source_page": 6636,
+      "source_locator": "title (Sci Rep article 6636)",
+      "source_file": "Scientific Reports 4:6636（2014）/ PDB 4Q8R（RCSB 沉积数据；未做本地全文 PDF 审计）",
+      "functional_groups": [
+        "氢键给体（Ser/Thr 侧链羟基、骨架酰胺 NH）"
+      ],
+      "key_structures": [
+        "识别结构"
+      ]
+    }
+  ],
+  "performance_data": [],
+  "engineering_constraints": [
+    {
+      "constraint": "可溶蛋白形态",
+      "value": "PstS/PBP 为大肠杆菌周质可溶性结合蛋白（约 34.5 kDa），其识别基序需移植/固定于固体载体方可用作吸附",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "RCSB 1PBP：聚合物实体 molecular_weight 34.47 kDa，SOURCE 记 ESCHERICHIA COLI / TAXID 562",
+      "source": "literature",
+      "ref_doi": "10.1038/347402a0"
+    },
+    {
+      "constraint": "结构预组织依赖",
+      "value": "结合依赖两结构域间裂隙的预组织三级结构；变性或口袋溶剂化使氢键几何与低介电环境丧失",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "机理推断（基于 SITE AC1 埋藏结合位点与两结构域裂隙事实）",
+      "source": "llm_inference",
+      "ref_doi": null
+    },
+    {
+      "constraint": "四面体氧阴离子几何与给体电荷特异性",
+      "value": "结合位点与四面体磷酸根几何互补，对非四面体或尺寸失配阴离子匹配差；给体阵列电荷状态（如 T141D）切换对磷酸根质子化形态的识别",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "Wang 1994：野生型识别单碱基与双碱基磷酸，T141D 限制为仅单碱基磷酸（PubMed PMID 7929197 摘要）",
+      "source": "literature",
+      "ref_doi": "10.1016/s0021-9258(17)31503-x"
+    }
+  ],
+  "narrative": {
+    "entries": [
+      {
+        "source_file": "RCSB PDB 1PBP / Luecke & Quiocho 1990 Nature 347:402-406 (DOI 10.1038/347402a0) / Wang 1994 JBC 269:25091-25094 (DOI 10.1016/s0021-9258(17)31503-x)",
+        "paper_id": "1990-Luecke-Quiocho-PBP-phosphate-hydrogen-bonds",
+        "sections": {
+          "problem_definition": "磷（主要以磷酸根形式）是细胞的关键营养，细菌需从含多种化学相似氧阴离子的环境中高特异性捕获磷酸根。蛋白如何在无金属配位前提下选择性识别四面体磷酸根氧阴离子，是分子识别的基础问题。大肠杆菌高亲和磷酸盐主动转运系统（Pst/ABC permease）的初始受体 PstS（PBP）是该问题的经典结构模型。",
+          "biological_solution": "大肠杆菌周质 PBP（PstS）以预组织中性氢键给体阵列识别四面体磷酸根：磷酸根埋藏于两结构域间裂隙；磷酸盐结合位点 SITE AC1 由 Ala9、Thr10、Phe11、Gly37、Ser38、Asp56、Arg135、Ser139、Gly140、Asp141 构成（PDB 1PBP，chain A；1PBP 为 T141D 定点突变体，野生型第 141 位为 Thr141）。Thr10/Ser38/Ser139 侧链羟基与骨架酰胺 NH 提供方向性氢键，Asp56 对识别起关键作用（Wang 1994 摘要）。Luecke & Quiocho 1990 以 1.7 Å 野生型结构首次揭示'磷酸盐转运蛋白的高特异性由氢键决定'。同一位点同时识别单碱基（H2PO4⁻）与双碱基（HPO4²⁻）磷酸，而 T141D 突变将结合限制为仅单碱基磷酸，显示给体阵列电荷状态对底物质子化形态的微调。产气荚膜梭菌 PBP-1（PDB 4Q8R）以保守 Ser/Thr 给体阵列（Ser11/Thr12/Ser13/Ser41/Ser59/Ser129）识别磷酸根，表明该几何识别原理在 PBP 家族内保守。",
+          "key_features": "必须保留：① 与四面体氧阴离子几何互补的中性氢键给体阵列（Thr/Ser 羟基/骨架 NH）；② 埋藏低介电结构域裂隙（强化静电、排除水竞争）；③ 预组织（结合熵代价预先支付）；④ 给体阵列电荷/质子化状态可调（区分底物质子化形态）。可灵活调整：载体骨架、给体密度与取向、口袋疏水微环境、给体电荷。",
+          "design_mapping": "仿生映射：PstS/PBP 预组织氢键裂隙 → 四面体氧阴离子吸附位点。对 PFBS（全氟丁烷磺酸，C4F9SO3⁻），其磺酸根头基（SO3⁻）与四面体磷酸根几何相似，原理上可由预组织中性氢键给体阵列 + 低介电口袋识别。注意：此为设计转译/启发（llm_inferred），非 from_source 事实——磺酸根（-1）与磷酸根（-1/-2 依 pH）在电荷、尺寸、水合上不同，实际亲和力与选择性须实验验证。",
+          "explainability_anchors": "设计溯源：磷酸根几何识别与氢键特异性（PDB 1PBP，from_source；Luecke & Quiocho 1990、Wang 1994）+ PBP 家族保守（PDB 4Q8R，from_source）→ '预组织中性给体阵列 + 埋藏低介电裂隙 + 给体电荷可调'可迁移原理 → PFBS 磺酸根头基识别（llm_inferred 启发，须实验验证）。"
+        }
+      }
+    ]
+  },
+  "design_translation": [
+    {
+      "idea": "将 PstS/PBP 的'预组织中性氢键给体阵列 + 埋藏低介电结构域裂隙 + 给体电荷可调'移植到多孔固体载体，构建对四面体氧阴离子头基几何互补的识别位点，面向 PFBS 全氟丁烷磺酸的四面体 SO3⁻ 头基：以预组织几何匹配磺酸根三氧间距的脲/硫脲/酰胺/羟基类中性氢键给体阵列固定于孔壁，以 Asp56 型定位基团约束给体取向，并以疏水孔壁营造低介电微环境排除水竞争",
+      "specific_functional_group": "中性氢键给体（脲/硫脲、酰胺、羟基），按与四面体磺酸根三氧几何互补的方式预组织排布；羧基/酸性基团作给体定位约束（仿 Asp56）",
+      "material_handle": "在介孔二氧化硅或聚合物骨架上经硅烷偶联或表面引发聚合接枝脲/硫脲/酰胺单体，借分子印迹或刚性间隔臂控制给体间距与取向；引入羧基约束给体几何；孔壁以烃/氟碳链修饰降低局部介电常数",
+      "target_interaction": "中性给体与 PFBS 磺酸根头基氧的方向性氢键 + 低介电环境埋藏（强化静电并排除水竞争），全氟碳尾另贡献疏水/氟亲作用",
+      "source_tier": "llm_inference",
+      "evidence_tier": "inspiration（原理层外推：PstS/PBP 机制接地于天然底物磷酸根与 PBP 家族保守；PFBS 磺酸根转译为 llm_inferred，无直接 PFBS 结合证据）",
+      "examples": [],
+      "design_principle": "PstS/PBP 证明预组织中性氢键给体阵列与埋藏低介电裂隙可在无金属参与下几何选择性识别四面体磷酸根，且特异性由氢键决定（PDB 1PBP；Luecke & Quiocho 1990）；PFBS 磺酸根头基与四面体氧阴离子几何相似，原理上可外推",
+      "implementation_example": "脲/硫脲功能化、含羧基定位约束、具疏水孔壁的介孔二氧化硅或聚合物（无实验数据，仅为设计假设）",
+      "constraints": "磺酸根（-1）与磷酸根（-1/-2 依 pH）在电荷、尺寸、水合上不同，预组织给体对 PFBS 的亲和力与选择性须实验验证；水相中水竞争与共存阴离子（硫酸根、氯离子、天然磷酸根）干扰是关键挑战；PstS 识别对磷酸根质子化形态敏感，给体电荷须与目标头基匹配",
+      "failure_modes": "给体暴露于体相水被氢键竞争淬灭；预组织刚性强导致对磺酸根适配不足；环境中天然磷酸根与磺酸根头基几何相似造成竞争共吸附；氟碳尾非特异性吸附降低选择性",
+      "material_realization_examples": []
+    }
+  ],
+  "honesty_ledger": {
+    "facts": [
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "预组织氢键给体阵列对四面体磷酸根的几何识别",
+        "basis": "from_source_verified",
+        "note": "Luecke & Quiocho 1990 Nature 347:402-406（标题接地：高特异性由氢键决定，1.7 Å 野生型结构）+ Wang 1994 JBC 269:25091-25094（PubMed PMID 7929197 摘要接地：磷酸为关键营养、Asp56 关键作用、T141D 限制单碱基磷酸）+ PDB 1PBP 沉积记录（SITE AC1 残基、HETNAM PO4、COMPND PHOSPHATE-BINDING PROTEIN、E. coli taxid 562、1.90 Å；1PBP 为 T141D 突变体）。候选 PDB 1PST 经 RCSB 核验为光合反应中心（非 PstS），已改正为 1PBP。quote 逐字取自 PDB 沉积记录/PubMed 摘要/Crossref 标题，未做全文 PDF 审计"
+      },
+      {
+        "type": "mechanism",
+        "index": 1,
+        "name": "四面体磷酸根识别的跨物种保守（原理先例）",
+        "basis": "from_source_verified",
+        "note": "Sci Rep 2014（DOI 10.1038/srep06636，标题接地）+ PDB 4Q8R 沉积记录（SITE AC1 残基、HETNAM PO4、C. perfringens taxid 1502、1.65 Å）。interaction 与 why_it_works 为机理层 llm_inferred（标题/SITE 未列氢键距离），pollutant_feature 与 bio_structure 为 from_source"
+      }
+    ],
+    "leads": [],
+    "inferences": [
+      {
+        "type": "design_translation",
+        "index": 0,
+        "idea": "将 PstS/PBP 预组织氢键裂隙移植到多孔载体识别 PFBS 磺酸根头基",
+        "basis": "llm_inferred",
+        "label": "inspiration",
+        "note": "PFBS（C4F9SO3⁻）磺酸根头基与磷酸根同为四面体氧阴离子，但电荷（-1 对 -1/-2）、尺寸、水合不同；属原理层设计外推，无直接 PFBS 结合证据，亲和力与选择性须实验验证"
+      }
+    ],
+    "boundary_notes": [
+      "本原型天然底物为磷酸根（四面体氧阴离子）；机制 from_source 接地限于 PstS/PBP 天然底物与 PBP 家族几何识别原理",
+      "PFBS 全氟丁烷磺酸应用为设计转译（llm_inferred / inspiration），非 from_source 事实，不得用作 PFBS 的 direct evidence",
+      "无 PFBS 吸附性能数据（qmax 等）；严格未从外部污染物知识库搬运任何性能数值",
+      "1PBP 为 T141D 定点突变体，沉积记录第 141 位为工程化 Asp141，野生型为 Thr141；正文残基名沿用 PDB 沉积编号并已注明突变",
+      "边界 BC2（低介电微环境需求）、PSTS-002 的 interaction/why_it_works 及一切 PFBS 相关边界均为定性 llm_inferred，不带数值阈值，gate_level=soft"
+    ],
+    "missing_pdf_items": [
+      "Luecke & Quiocho 1990 Nature 347:402-406 全文 PDF（quote 取自 Crossref 标题）",
+      "Wang 1994 JBC 269:25091-25094 全文 PDF（quote 取自 PubMed PMID 7929197 摘要）",
+      "Sci Rep 2014（4:6636）全文 PDF（quote 取自 Crossref 标题与 PDB 4Q8R 沉积记录）"
+    ],
+    "generated_by": "manual-curation-2026-07-22",
+    "note": "诚实优先：机制接地限于 PstS/PBP 天然底物（磷酸根）与 PBP 家族原理；PFBS 应用全部为 inspiration/外推"
+  },
+  "boundary_rules": [
+    {
+      "rule": "质子化形态与给体电荷微调：野生型 PBP 识别单碱基与双碱基磷酸，T141D 将结合限制为仅单碱基磷酸",
+      "source_mechanism": "预组织氢键给体阵列对四面体磷酸根的几何识别",
+      "gate_level": "hard",
+      "basis": "from_source"
+    },
+    {
+      "rule": "预组织氢键阵列需维持于低介电结构域裂隙微环境，水竞争削弱结合（定性，无数值阈值）",
+      "source_mechanism": "预组织氢键给体阵列对四面体磷酸根的几何识别",
+      "gate_level": "soft",
+      "basis": "llm_inferred"
+    }
+  ]
+}

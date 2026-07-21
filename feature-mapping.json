@@ -1033,6 +1033,16 @@
       "design_hint": "在低极性孔壁预组织与酚羟基几何互补的阳离子/中性氢键给体锚阵列（胍基/脲/硫脲型）并构筑卤亲/疏水口袋；注意 BPA 双酚基序与 T4 单酚取向/位阻差异，特异性须按双酚几何在材料层构建（转译层启发，须实验验证）"
      }
     ]
+   },
+   "ROX": {
+    "prototypes": [
+     {
+      "id": "fcrn-ph-dependent-fc-recycling",
+      "weight": 0.7,
+      "mechanism_summary": "FcRn 以可滴定组氨酸随 pH 质子化/去质子化可逆切换对 IgG Fc 的亲和力（酸性结合、中性释放），并以酸性-中性双区室实现回收循环；启发 ROX（洛克沙胂，含砷酸根/酚氧负离子头基的可电离有机砷酚）的 pH 摆动吸附-再生",
+      "design_hint": "在载体上构筑含可滴定基团（咪唑/吡啶/胺/羧基，pKa 落于捕获与再生 pH 之间）的识别位点，捕获 pH 质子化吸附 ROX 头基、再生 pH 去质子化脱附，实现循环再生；识别内核须与 pH 门控耦合并实验验证"
+     }
+    ]
    }
   },
   "全氟化合物": {
@@ -1043,6 +1053,24 @@
       "weight": 0.4,
       "mechanism_summary": "HSA 脂肪酸位点以 Arg/Lys/Tyr 头基锚加疏水腔识别长链脂肪酸；PFOA/PFOS 作为脂肪酸类似物碰巧占据同位点（PDB 4E99 与肉豆蔻酸共享 Arg410/Tyr411 锚），属警示性而非有效 PFAS 识别原型",
       "design_hint": "警示性借鉴：单纯复制头基锚加疏水腔只得广谱两亲阴离子碰巧结合，PFAS 选择性须叠加氟亲识别与 C8 链长几何匹配等材料层策略另行构建"
+     },
+     {
+      "id": "fluoroacetate-dehalogenase",
+      "weight": 0.5,
+      "mechanism_summary": "FAcD 经 Asp 亲核体 SN2 攻击与卤素洞三氢键稳定离去氟离子，在温和水相催化断裂氟乙酸 C-F 键（天然机制为降解/转化）；该催化组合原理上启发 PFAS 全氟链脱氟，但 PFOA 的 C7 全氟尾与二碳氟乙酸在尺寸与结构上差异悬殊，转译仅限原理层，无性能证据。",
+      "design_hint": "取'羧基亲核体 + 卤素洞多氢键氟稳定化 + 隔水埋藏腔'三要素构建脱氟催化位点，借羧基识别残基锚定 PFOA 头基；工程化扩腔脱氟酶或合成仿生催化腔路线均须实验验证活性。"
+     },
+     {
+      "id": "kcsa-potassium-channel-selectivity-filter",
+      "weight": 0.4,
+      "mechanism_summary": "KcsA 选择性过滤器以预组织刚性主链羰基氧笼剥离离子水合壳、按尺寸-配位能匹配识别脱水 K⁺ 并排除更小 Na⁺；该'脱水选择性 + 几何配位'原理启发对水合 PFAS（PFOA 羧酸根）头基的部分去溶剂化-几何配位识别",
+      "design_hint": "构筑刚性、几何预组织的配位/氢键给体腔，部分去溶剂化并几何匹配 PFOA 羧酸根头基，以头基脱水能与配位能的平衡及尺寸匹配实现选择性（原理层，PFAS 为大型水合有机阴离子而非裸离子，须实验验证）"
+     },
+     {
+      "id": "lanmodulin-lanthanide-coordination",
+      "weight": 0.6,
+      "mechanism_summary": "Lanmodulin 以 EF-hand 预组织高密度羧酸配位几何对 Ln3+/Y3+ 实现皮摩尔亲和与 10^8 倍 Ln3+/Ca2+ 选择性，并经第二配位层氢键网络读出皮米级半径差异；'预组织多齿几何 + pH 门控可逆结合'原理启发 PFOA 羧酸根头基的预组织识别位点设计（PFOA 为有机阴离子，转译限原理层）",
+      "design_hint": "以预组织多齿配体（羧酸/膦酸/异羟肟酸）构筑与 PFOA 羧酸根头基互补的口袋，可选硬 Lewis 酸金属节点（Zr4+/Fe3+ 氧簇）桥联头基氧，并以 pH 摆动耦合吸附-再生"
      }
     ]
    },
@@ -1053,6 +1081,18 @@
       "weight": 0.55,
       "mechanism_summary": "NTCP 以疏水腔夹持甾体骨架加极性锚识别共轭头基的方式识别两亲性胆汁酸（PDB 7ZYI GCDC 双位点结合，Ser267 头基接触且为胆汁酸特异识别关键位）；全氟烷基磺酸 PFBS/PFOS 具阴离子头基加疏水尾链的同源两亲架构，原则上可被同类识别腔识别（转译层假设，无直接证据）",
       "design_hint": "仿 NTCP 识别腔：氟亲/疏水孔壁夹持全氟碳尾链加预组织阳离子/氢键给体锚定磺酸根头基加孔口至孔内极性梯度；链长 C4/C8 腔适配与磺酸根头基可替代性须实验验证"
+     },
+     {
+      "id": "psts-phosphate-binding-protein",
+      "weight": 0.6,
+      "mechanism_summary": "PstS/PBP 以预组织中性氢键给体阵列加埋藏低介电裂隙几何识别四面体磷酸根（PDB 1PBP SITE AC1，特异性由氢键决定，Asp56 关键）；全氟丁烷磺酸 PFBS 的磺酸根头基与四面体磷酸根几何相似，原则上可被同类预组织给体阵列识别（转译层假设，无直接证据）",
+      "design_hint": "仿 PstS 识别裂隙：与磺酸根三氧几何互补的预组织脲/硫脲/酰胺/羟基中性给体阵列加 Asp56 型羧基定位约束加疏水/低介电孔壁排除水竞争；磺酸根对磷酸根电荷/尺寸/水合差异与天然磷酸根竞争须实验验证"
+     },
+     {
+      "id": "sbp-sulfate-oxyanion-geometric-recognition",
+      "weight": 0.7,
+      "mechanism_summary": "SBP 以预组织中性氢键给体阵列（以主链酰胺 NH 为主的七个氢键）在完全埋藏的两域裂隙中纯氢键、无阳离子地几何识别四面体硫酸根 SO4²⁻，与 PFBS 磺酸根头基 SO3⁻ 四面体几何等构，启发磺酸根头基的几何识别",
+      "design_hint": "以脲/酰胺/羟基类中性给体按与磺酸根三氧几何互补预组织于低介电埋藏孔壁，以局域偶极而非阳离子基团稳定头基电荷"
      }
     ]
    }
@@ -1416,6 +1456,10 @@
     {
      "id": "magnetic-bacteria",
      "weight": 0.6
+    },
+    {
+     "id": "fluoroacetate-dehalogenase",
+     "weight": 0.8
     }
    ]
   },
@@ -1472,6 +1516,18 @@
     {
      "id": "ttr-halophenol-thyroxine-channel",
      "weight": 0.75
+    },
+    {
+     "id": "kcsa-potassium-channel-selectivity-filter",
+     "weight": 0.7
+    },
+    {
+     "id": "psts-phosphate-binding-protein",
+     "weight": 0.7
+    },
+    {
+     "id": "sbp-sulfate-oxyanion-geometric-recognition",
+     "weight": 0.7
     }
    ]
   },
@@ -1522,6 +1578,32 @@
     {
      "id": "ntcp-bile-acid-pfas-transporter",
      "weight": 0.75
+    },
+    {
+     "id": "fcrn-ph-dependent-fc-recycling",
+     "weight": 0.6
+    },
+    {
+     "id": "kcsa-potassium-channel-selectivity-filter",
+     "weight": 0.6
+    },
+    {
+     "id": "lanmodulin-lanthanide-coordination",
+     "weight": 0.8
+    },
+    {
+     "id": "psts-phosphate-binding-protein",
+     "weight": 0.75
+    }
+   ]
+  },
+  "pH 响应": {
+   "dimension": "功能特性",
+   "description": "pH 触发的可逆结合-释放，实现吸附-再生循环",
+   "prototypes": [
+    {
+     "id": "fcrn-ph-dependent-fc-recycling",
+     "weight": 0.85
     }
    ]
   }
@@ -2403,6 +2485,105 @@
    "organism": {
     "scientific": "Homo sapiens（人源钠-牛磺胆酸共转运多肽 NTCP，基因 SLC10A1）",
     "category": "动物"
+   }
+  },
+  "fcrn-ph-dependent-fc-recycling": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "pH 门控分子识别/回收原型，本库无吸附性能测试；天然 pH 门控区间为结合 pH 6.0-6.5、释放 pH 7.0-7.5（来源机制）。"
+   },
+   "features": [
+    "特异性识别",
+    "pH 响应"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Rattus norvegicus（大鼠新生 Fc 受体 FcRn/FCGRT，MHC I 类相关受体，识别 IgG Fc）",
+    "category": "动物"
+   }
+  },
+  "fluoroacetate-dehalogenase": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "酶催化降解/转化原型（氟乙酸水解脱氟，温和水相条件）；本库无吸附性能测试；performance_data 为空。"
+   },
+   "features": [
+    "催化降解"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Rhodopseudomonas palustris CGA009（RPA1163）；Burkholderia sp. FA1（氟乙酸脱卤酶 FAcD）",
+    "category": "微生物"
+   }
+  },
+  "kcsa-potassium-channel-selectivity-filter": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "KcsA 选择性过滤器为离子通道识别/选择性原型，本库无其吸附性能测试；applicability 全空，转译限原理层。"
+   },
+   "features": [
+    "分子筛分",
+    "特异性识别"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Streptomyces lividans（KcsA 钾离子通道）",
+    "category": "微生物"
+   }
+  },
+  "lanmodulin-lanthanide-coordination": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "Lanmodulin 为周质镧系结合蛋白（分子识别原型），本库无其吸附性能测试条件；performance_data 为空。天然金属结合具 pH 依赖性（结合态结构于 pH 7 测定，PDB 8FNS），本条目未记录定量 pH 范围。"
+   },
+   "features": [
+    "特异性识别"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Methylorubrum extorquens AM1（lanmodulin, LanM）",
+    "category": "微生物"
+   }
+  },
+  "psts-phosphate-binding-protein": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "PstS/PBP 为大肠杆菌周质可溶结合蛋白（分子识别原型），本库无吸附性能测试条件；performance_data 为空，测试条件全空。"
+   },
+   "features": [
+    "分子筛分",
+    "特异性识别"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Escherichia coli（PstS 磷酸盐结合蛋白）",
+    "category": "微生物"
+   }
+  },
+  "sbp-sulfate-oxyanion-geometric-recognition": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "分子识别原型，本库无吸附测试条件"
+   },
+   "features": [
+    "分子筛分"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Salmonella typhimurium（硫酸根结合蛋白 SBP）",
+    "category": "微生物"
    }
   }
  },

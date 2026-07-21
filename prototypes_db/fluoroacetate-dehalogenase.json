@@ -1,0 +1,362 @@
+{
+ "id": "fluoroacetate-dehalogenase",
+ "name_zh": "氟乙酸脱卤酶（Fluoroacetate Dehalogenase）",
+ "name_en": "Fluoroacetate Dehalogenase (FAcD, EC 3.8.1.3)",
+ "organism": {
+  "scientific": "Rhodopseudomonas palustris CGA009（RPA1163 氟乙酸脱卤酶）；同源原型 Burkholderia sp. FA1（FAcD）",
+  "category": "微生物"
+ },
+ "biomimetic_dimension": "分子仿生",
+ "features": [
+  "催化降解"
+ ],
+ "tested_conditions": {
+  "tested_ph_range": null,
+  "tested_temp_range": null,
+  "salinity": null,
+  "note": "氟乙酸脱卤酶为酶催化降解/转化原型（水解断裂 C-F 键），本库无其吸附性能测试条件；performance_data 为空，故测试条件全空。"
+ },
+ "library_tier": "extended",
+ "lifecycle_status": "active",
+ "coverage": "partial",
+ "status": "active",
+ "provenance_summary": {
+  "n_papers": 5,
+  "n_verified": 11,
+  "n_unverified": 0,
+  "note": "n_papers 计 Chan 2011 JACS（DOI 10.1021/ja200277d，经 PMC3101105 全文 XML 审计）与 PDB 沉积 1Y37、3R3U、3R3V、3R3Y（经 RCSB REST 与 Crossref 10.2210 系列 DOI 核验）。n_verified 计 from_source 四件套齐全的 causal_chain 要素与边界条数（FACD-001 四要素+2 边界=6，FACD-002 四要素+1 边界=5）。机制接地限于天然底物氟乙酸及卤代乙酸；PFAS 脱氟转译为设计启发（llm_inferred），无性能数据。"
+ },
+ "mechanisms": [
+  {
+   "mechanism_id": "FACD-001",
+   "name": "Asp-His-Asp 催化三联体对氟乙酸 C-F 键的 SN2 水解脱氟",
+   "description": "RPA1163 氟乙酸脱卤酶（α/β 水解酶折叠）以两阶段机制催化氟乙酸（FCH2COO⁻）水解脱氟：Asp110 侧链羧基对底物 C2 作 SN2 亲核攻击，直接排出氟离子，生成乙醇酰-Asp110 酯共价中间体；随后 His280/Asp134 活化水分子水解该酯键，释放产物乙醇酸并再生游离酶。催化三联体（Asp110 亲核体、His280 碱、Asp134 羧酸）埋藏于结构域界面，经长约 11 Å 的通道进入（RPA1163 编号；与 Burkholderia sp. FA1 FAcD 活性位点组成相同、排布保守）",
+   "基本原理": "羧基亲核体、咪唑碱活化的水分子与卤素稳定微环境共同构成水解型 C-F 断裂的催化装置：亲核攻击与氟离子离去在埋藏口袋内协同完成，酯中间体经水解闭合催化循环，全程在温和水相条件下进行",
+   "source": "literature",
+   "ref_doi": "10.1021/ja200277d",
+   "verification": "corroborated",
+   "verification_quote": "an aspartate nucleophile directly ejects the fluoride anion from the substrate",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "氟乙酸阴离子 FCH2COO⁻（FAcD 天然底物，EC 3.8.1.3；PDB 3R3V 为 RPA1163 Asp110Asn 突变体与氟乙酸的复合物，以失活亲核体捕获底物）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.2210/pdb3r3v/pdb",
+     "locator": "PDB 3R3V title (2011)",
+     "quote": "Crystal Structure of the Fluoroacetate Dehalogenase RPA1163 - Asp110Asn/Fluoroacetate",
+     "scope_match": "Keywords: Fluoroacetate, Dehalogenase, Asp110Asn"
+    },
+    "bio_structure": {
+     "text": "RPA1163 为 α/β 水解酶折叠，含保守催化三联体 Asp110（亲核体）、His280（碱）、Asp134（羧酸）；活性位点埋藏于结构域界面，仅经长约 11 Å 的通道可达（PDB 3R3U 为野生型无配体结构，1.6 Å）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1021/ja200277d",
+     "locator": "PMC3101105, Results: overall architecture (JACS 133:7461)",
+     "quote": "The conserved catalytic triad (Asp110 nucleophile, His280 base and Asp134 carboxylate) marks the active site location, which is buried in the domain interface",
+     "scope_match": "Keywords: catalytic triad, Asp110, His280"
+    },
+    "interaction": {
+     "text": "SN2 置换：Asp110 羧基氧对氟乙酸 C2 亲核攻击，直接排出氟离子（aspartate nucleophile directly ejects the fluoride anion），形成乙醇酰-Asp110 酯中间体；随后 His280/Asp134 活化水分子水解酯键释放乙醇酸。3R3V（Asp110Asn/氟乙酸）与 3R3Y（His280Asn/氟乙酸）突变体结构分别证实 Asp110 与 His280 的催化角色",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1021/ja200277d",
+     "locator": "PMC3101105, Introduction + Figure 1 (JACS 133:7461)",
+     "quote": "an aspartate nucleophile directly ejects the fluoride anion from the substrate",
+     "scope_match": "Keywords: nucleophile, fluoride, substrate"
+    },
+    "why_it_works": {
+     "text": "Chan 2011 以 1.15–1.80 Å 系列结构捕获脱氟反应全程快照：游离酶、酶-氟乙酸 Michaelis 复合物、乙醇酰-酶共价中间体、酶-产物复合物，证明脱氟经共价酯中间体的两阶段机制完成；亲核攻击与离去氟的稳定化在同一埋藏口袋内耦合，使强 C-F 键在温和生理条件下即可水解",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1021/ja200277d",
+     "locator": "PMC3101105, Abstract (JACS 133:7461)",
+     "quote": "capturing snapshots along the defluorination reaction: the free enzyme, enzyme-fluoroacetate Michaelis complex, glycolyl-enzyme covalent intermediate and enzyme-product complex",
+     "scope_match": "Keywords: defluorination, Michaelis, glycolyl-enzyme"
+    },
+    "boundary_conditions": [
+     {
+      "text": "底物尺寸/卤素特异性：FAcD 对较大卤代乙酸（氯乙酸、溴乙酸）活性显著低于氟乙酸，尽管其 C-X 键更弱；原因归结为克服空间位垒所需的能量升高",
+      "parameter": "substrate_halogen_size",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "corroborated",
+      "gate_level": "hard",
+      "locator": "PMC3101105, Discussion (JACS 133:7461)",
+      "quote": "the lower activity of FAcD towards larger haloacetates (despite their weaker C-X bonds) is likely caused by the increased energy barrier",
+      "scope_match": "Keywords: FAcD, haloacetates, C-X",
+      "source_asset": null
+     },
+     {
+      "text": "羧基头基识别依赖：底物羧基与活性位点残基结合（PDB 3R3V SITE AC1：Asn110、Arg111、Arg114、His155、Trp156、Tyr219，chain A）；天然底物为携带羧基的短链卤代乙酸",
+      "parameter": "substrate_headgroup",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "corroborated",
+      "gate_level": "hard",
+      "locator": "PDB 3R3V, SITE AC1 (deposition header, 2011)",
+      "quote": "SITE 1 AC1 6 ASN A 110 ARG A 111 ARG A 114 HIS A 155 SITE 2 AC1 6 TRP A 156 TYR A 219",
+      "scope_match": "Keywords: ASN A 110, TRP A 156, TYR A 219",
+      "source_asset": null
+     },
+     {
+      "text": "PFAS 外推未证实：PFOA 等全氟化合物的全氟烷基链在尺寸、位阻与多 C-F 键环境上与氟乙酸差异显著，FAcD 对 PFAS 的脱氟活性无文献证据，转译限原理层（定性，无数值阈值）",
+      "parameter": "pfas_extrapolation",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "scope_match": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "埋藏、预组织且隔水的水解酶口袋中，羧基亲核体（SN2 攻击）与稳定离去卤素的多氢键卤素洞协同，可在水相温和条件下断裂 C-F 键并经酯中间体完成催化循环；该'亲核体 + 离去基稳定化 + 隔水微环境'组合是可迁移的催化脱卤原理",
+    "verification_quote": "Proposed two-step reaction mechanism of fluoroacetate dehalogenases Catalysis involves the conserved aspartate-histidine-aspartate catalytic triad."
+   },
+   "source_doi": "10.1021/ja200277d",
+   "source_page": 7461,
+   "source_locator": "PMC3101105 (JACS 133:7461-7468)",
+   "source_file": "Chan 2011 JACS（PMC3101105 全文 XML 审计）+ RCSB PDB 3R3U/3R3V/3R3Y/1Y37 沉积记录（未做本地 PDF 审计）",
+   "functional_groups": [
+    "羧基亲核体（Asp110 侧链 COO⁻）",
+    "咪唑碱（His280）与羧酸（Asp134）电荷中继",
+    "卤素洞氢键给体（Arg111、Trp156、His155、Tyr219）"
+   ],
+   "key_structures": [
+    "催化结构"
+   ]
+  },
+  {
+   "mechanism_id": "FACD-002",
+   "name": "卤素洞三氢键对离去氟离子的稳定化与氟选择性",
+   "description": "活性位点卤素洞（His155、Trp156、Tyr219 等）提供三个氢键稳定离去氟离子，其空腔容积专为较小的氟原子裁剪，从而建立对氟化底物的选择性；His155 咪唑环具有柔性弹性可让出空间，His155Asn/Tyr219Phe 突变可扩大卤素洞并反转卤素偏好（氯乙酸活性升为氟乙酸的 8 倍）",
+   "基本原理": "预组织且几何互补的多氢键给体在低介电埋藏口袋中显著降低氟离子离去能垒；空腔容积与氟原子半径的匹配是卤素选择性的结构基础，单残基突变即可重编程该选择性",
+   "source": "literature",
+   "ref_doi": "10.1021/ja200277d",
+   "verification": "corroborated",
+   "verification_quote": "enzymatic defluorination requires a halide pocket that not only supplies three hydrogen bonds to stabilize the fluoride ion, but is also finely tailored for the smaller fluorine halogen atom",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "底物 C-F 键中的氟原子（断裂后以氟离子形式离去）；C-F 键是有机化学中最强的共价键，FAcD 是自然界少数能在温和水相条件下将其水解的酶",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1021/ja200277d",
+     "locator": "PMC3101105, Abstract (JACS 133:7461)",
+     "quote": "The carbon-fluorine bond is the strongest covalent bond in organic chemistry, yet fluoroacetate dehalogenases can readily hydrolyze this bond under mild physiological conditions.",
+     "scope_match": "Keywords: carbon-fluorine, dehalogenases, hydrolyze"
+    },
+    "bio_structure": {
+     "text": "卤素洞由 His155、Trp156、Tyr219 等残基构成（RPA1163 编号）；酶-产物复合物中底物羧基氧之一亦氢键结合于卤素洞（His155、Trp156、Tyr219），显示该口袋兼具离去氟稳定化与底物锚定功能",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1021/ja200277d",
+     "locator": "PMC3101105, Results: enzyme-product complex (JACS 133:7461)",
+     "quote": "one of the carboxylate oxygen atoms is hydrogen-bonded to the halide pocket (His155, Trp156 and Tyr219)",
+     "scope_match": "Keywords: halide pocket, His155, Tyr219"
+    },
+    "interaction": {
+     "text": "卤素洞提供三个氢键稳定离去氟离子（three hydrogen bonds to stabilize the fluoride ion），且空腔专为较小的氟原子裁剪以建立对氟化底物的选择性；Trp185 吲哚环在底物结合时摆入腔体遮蔽水分子，其 Cη2 与氟可接近至约 2.8 Å",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1021/ja200277d",
+     "locator": "PMC3101105, Abstract (JACS 133:7461)",
+     "quote": "enzymatic defluorination requires a halide pocket that not only supplies three hydrogen bonds to stabilize the fluoride ion, but is also finely tailored for the smaller fluorine halogen atom",
+     "scope_match": "Keywords: halide pocket, hydrogen bonds, fluoride ion"
+    },
+    "why_it_works": {
+     "text": "在三种卤代乙酸复合物中，仅 His155 具备让出卤素洞额外空间的弹性（ClAc/BrAc 复合物中咪唑环分别后退 0.30 Å 与 0.36 Å）；这种受控柔性使小氟原子获得最佳氢键几何，而较大卤素被挡在口袋外缘",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1021/ja200277d",
+     "locator": "PMC3101105, Results: halide pocket elasticity (JACS 133:7461)",
+     "quote": "only His155 has the elasticity to yield additional space in the halide pocket",
+     "scope_match": "Keywords: His155, halide pocket"
+    },
+    "boundary_conditions": [
+     {
+      "text": "卤素选择性的遗传可调性：His155Asn 突变扩大卤素洞、解除空间约束而不破坏静电环境，使氯乙酸转化数较野生型提高 4 倍，对氯乙酸活性达氟乙酸的 8 倍；选择性由口袋几何编码，可经突变重编程",
+      "parameter": "halogen_selectivity",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "corroborated",
+      "gate_level": "hard",
+      "locator": "PMC3101105, Results: His155Asn mutant (JACS 133:7461)",
+      "quote": "This enhances ClAc turnover 4-fold compared to WT, which contributes significantly to the 8-fold higher activity on ClAc than FAc",
+      "scope_match": "Keywords: ClAc, FAc, turnover",
+      "source_asset": null
+     },
+     {
+      "text": "水相氟离子稳定化的材料外推未证实：将卤素洞三氢键几何移植到合成载体以稳定 PFAS 脱氟过渡态属原理层设想，亲和力与催化性须实验验证（定性，无数值阈值）",
+      "parameter": "material_fluoride_stabilization",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "scope_match": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "与氟离子几何互补的预组织三氢键卤素洞，配合受控柔性残基对空腔容积的微调，可在埋藏低介电口袋中选择性稳定离去氟离子；'空腔几何编码卤素选择性'是可迁移的设计原理",
+    "verification_quote": "enzymatic defluorination requires a halide pocket that not only supplies three hydrogen bonds to stabilize the fluoride ion, but is also finely tailored for the smaller fluorine halogen atom"
+   },
+   "source_doi": "10.1021/ja200277d",
+   "source_page": 7461,
+   "source_locator": "PMC3101105 (JACS 133:7461-7468)",
+   "source_file": "Chan 2011 JACS（PMC3101105 全文 XML 审计）+ RCSB PDB 3R3Y（His280Asn/氟乙酸）沉积记录（未做本地 PDF 审计）",
+   "functional_groups": [
+    "卤素洞氢键给体（His155、Trp156、Tyr219）",
+    "色氨酸吲哚环（Trp185 动态隔水）"
+   ],
+   "key_structures": [
+    "催化结构"
+   ]
+  }
+ ],
+ "performance_data": [],
+ "engineering_constraints": [
+  {
+   "constraint": "天然底物尺寸与化学特异性",
+   "value": "天然底物为二碳单氟乙酸（FCH2COO⁻，EC 3.8.1.3）；C-F 键是有机化学中最强的共价键，FAcD 是自然界少数能在温和水相条件下水解该键的酶",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "Chan 2011 JACS 摘要（PMC3101105）逐字陈述 C-F 键最强与温和生理条件下水解",
+   "source": "literature",
+   "ref_doi": "10.1021/ja200277d"
+  },
+  {
+   "constraint": "可溶蛋白与埋藏活性位点",
+   "value": "α/β 水解酶折叠；活性位点埋藏于结构域界面，仅经长约 11 Å 的通道可达；PDB 1Y37 不对称单元含 A/B 链，RCSB 报告条目分子量 68.31 kDa；吸附应用需固定化或全细胞部署",
+   "unit": null,
+   "relevance": "medium",
+   "explanation": "PMC3101105 全文 'buried in the domain interface and accessible only via an 11 Å-long channel'；RCSB 1Y37 rcsb_entry_info（COMPND 记 CHAIN A, B）",
+   "source": "literature",
+   "ref_doi": "10.1021/ja200277d"
+  },
+  {
+   "constraint": "卤素洞对氟原子的空间适配",
+   "value": "卤素洞专为较小氟原子裁剪，对较大卤代乙酸活性显著下降（尽管其 C-X 键更弱）；His155Asn/Tyr219Phe 突变可扩大卤素洞并反转卤素偏好",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "Chan 2011 JACS 结果/讨论与突变体结构 3R3Y（His280Asn/氟乙酸）、6QKW（Tyr219Phe）",
+   "source": "literature",
+   "ref_doi": "10.1021/ja200277d"
+  }
+ ],
+ "narrative": {
+  "entries": [
+   {
+    "source_file": "Chan 2011 JACS (DOI 10.1021/ja200277d, PMC3101105) / RCSB PDB 3R3U, 3R3V, 3R3Y, 1Y37",
+    "paper_id": "2011-Chan-RPA1163-defluorination-reaction-coordinates",
+    "sections": {
+     "problem_definition": "C-F 键是有机化学中最强的共价键，生物体系中能断裂该键的酶极少。氟乙酸脱卤酶（FAcD，EC 3.8.1.3）可在温和生理条件下将氟乙酸水解为乙醇酸并释放氟离子，其分子机制是生物脱氟的基础问题，也是设计针对更复杂氟化有机物（含全氟化合物）脱氟体系的原理源头。",
+     "biological_solution": "Rhodopseudomonas palustris CGA009 的 RPA1163 为 α/β 水解酶折叠，催化三联体 Asp110（亲核体）、His280（碱）、Asp134（羧酸）埋藏于结构域界面，经约 11 Å 通道与溶剂相通（PMC3101105）。Chan 2011 以 1.15–1.80 Å 系列结构捕获游离酶、酶-氟乙酸 Michaelis 复合物、乙醇酰-酶共价中间体与酶-产物复合物四态：Asp110 对底物 C2 作 SN2 攻击直接排出氟离子，生成乙醇酰-Asp110 酯，再由 His280/Asp134 活化水分子水解酯键释放乙醇酸。卤素洞（His155、Trp156、Tyr219）提供三个氢键稳定离去氟离子，其空腔专为较小氟原子裁剪；His155 咪唑环具受控柔性，His155Asn/Tyr219Phe 突变可扩大空腔并使氯乙酸活性升至氟乙酸的 8 倍。同源酶 Burkholderia sp. FA1 FAcD（PDB 1Y37，1.5 Å）活性位点组成与排布高度保守。该酶执行的是降解/转化（水解脱氟），而非吸附。",
+     "key_features": "必须保留：① 羧基亲核体（SN2 攻击 C-F）；② 咪唑碱/羧酸电荷中继（活化水、水解酯中间体）；③ 多氢键卤素洞（稳定离去氟离子）；④ 与氟原子半径匹配的空腔几何（卤素选择性）；⑤ 埋藏隔水微环境。可灵活调整：蛋白骨架、口袋残基（可经突变重编程选择性）、载体形式。",
+     "design_mapping": "仿生映射：FAcD'羧基亲核体 + 卤素洞三氢键 + 隔水埋藏口袋'→ PFAS 局部 C-F 键活化与脱氟催化位点。PFOA（C7F15COO⁻）与氟乙酸同具羧基头基，原理上可借活性位点羧基识别残基锚定，但其 C7 全氟尾的尺寸、位阻与多 C-F 环境与二碳氟乙酸差异悬殊，FAcD 本身对 PFAS 无脱氟证据。注意：此为设计转译/启发（llm_inferred），非 from_source 事实；作者展望'新型脱氟酶实现更复杂氟化有机物的生物转化'（PMC3101105 摘要末句）为方向性陈述，不构成 PFAS 效能证据，实际活性须实验验证。",
+     "explainability_anchors": "设计溯源：氟乙酸 SN2 水解脱氟全程结构证据（PDB 3R3U/3R3V/3R3Y，PMC3101105，from_source）→ '亲核体 + 卤素稳定化 + 隔水微环境'可迁移催化原理 → PFAS 全氟链脱氟（llm_inferred 启发，尺寸/结构失配为明确软边界，须实验验证）。"
+    }
+   }
+  ]
+ },
+ "design_translation": [
+  {
+   "idea": "将 FAcD 的'羧基亲核体 SN2 攻击 + 卤素洞多氢键稳定离去氟离子 + 埋藏隔水口袋'催化组合移植为 PFAS 脱氟/转化体系：路径一为工程化脱氟酶，在 FAcD 骨架上经定向进化或理性突变（借鉴 His155Asn/Tyr219Phe 扩大卤素洞的策略）扩展底物腔以容纳更庞大的氟化底物（作者在摘要中展望新型脱氟酶实现更复杂氟化有机物的生物转化，但 PFAS 仍属推测）；路径二为合成仿生催化位点，在疏水微孔载体的预组织空腔内并置羧基类亲核位点与氟离子稳定化氢键给体（脲/硫脲、咪唑、吲哚 NH、硼酸），并借羧基识别残基锚定 PFOA 的头基",
+   "specific_functional_group": "羧基/羧酸酯亲核体（Asp-COO⁻ 仿生）+ 氟离子稳定化氢键给体阵列（脲/硫脲、咪唑、吲哚 NH、硼酸），按卤素洞三氢键几何预组织排布",
+   "material_handle": "路径一：全细胞或固定化 FAcD 突变体（定向进化扩腔）；路径二：在介孔二氧化硅/MOF/共价有机骨架孔壁经硅烷偶联或聚合接枝亲核单体与脲/硫脲单体，以刚性间隔臂控制亲核体与氢键给体间距，并以氟碳/烃孔壁营造低介电隔水微环境",
+   "target_interaction": "亲核体对 PFAS 局部 C-F 键的 SN2 攻击（须先克服极高的 C-F 键能）+ 氢键给体对离去氟离子的多齿稳定化 + 头基羧基锚定（PFOA 与天然底物氟乙酸同具 -COO⁻）",
+   "source_tier": "llm_inference",
+   "evidence_tier": "inspiration（原理层外推：FAcD 机制接地于天然底物氟乙酸及卤代乙酸突变体；PFAS 全氟链脱氟转译为 llm_inferred，无直接 PFAS 脱氟证据，作者展望仅为方向性陈述）",
+   "examples": [],
+   "design_principle": "FAcD 证明羧基亲核体与多氢键卤素洞在埋藏隔水口袋中可于温和水相条件断裂 C-F 键（PDB 3R3U/3R3V/3R3Y，PMC3101105）；且卤素选择性由口袋几何编码、可经单残基突变重编程（His155Asn 使氯乙酸活性达氟乙酸 8 倍），原理上为扩展至更复杂氟化底物提供改造起点",
+   "implementation_example": "扩腔突变 FAcD 固定化反应器，或脲/硫脲与羧基双功能化疏水介孔催化材料（无实验数据，仅为设计假设）",
+   "constraints": "PFAS 全氟烷基链的尺寸、位阻与多 C-F 键环境与氟乙酸差异悬殊，卤素洞对小氟原子的裁剪恰是对 PFAS 外推的主要失配点；C-F 键能高，无金属/光/热辅助的纯水相 SN2 脱氟能垒极高；PFOA 头基虽与氟乙酸同具羧基，但 C7 全氟尾难以进入天然活性位点通道（约 11 Å）",
+   "failure_modes": "亲核体暴露于体相水被淬灭或质子化失活；扩腔突变破坏卤素洞氢键几何导致氟离子稳定化丧失；全氟尾疏水非特异性吸附堵塞孔道；仅头基锚定而 C-F 键无法接近亲核体，退化为无催化吸附",
+   "material_realization_examples": []
+  }
+ ],
+ "honesty_ledger": {
+  "facts": [
+   {
+    "type": "mechanism",
+    "index": 0,
+    "name": "Asp-His-Asp 催化三联体对氟乙酸 C-F 键的 SN2 水解脱氟",
+    "basis": "from_source_corroborated",
+    "note": "Chan 2011 JACS（DOI 10.1021/ja200277d）经 PMC3101105 全文 XML 审计：催化三联体 Asp110/His280/Asp134（RPA1163 编号）、11 Å 通道、四态反应快照（游离酶/Michaelis 复合物/乙醇酰-酶共价中间体/产物复合物）；突变体结构 3R3V（Asp110Asn/氟乙酸，SITE AC1 记录结合残基）、3R3Y（His280Asn/氟乙酸）与野生型 3R3U、同源酶 1Y37（Burkholderia sp. FA1，1.5 Å）经 RCSB REST 与 Crossref 10.2210 系列 DOI 核验；quote 取自 PMC 全文 XML 与 PDB 沉积 TITLE/SITE 记录（逐字，≤200 字符）"
+   },
+   {
+    "type": "mechanism",
+    "index": 1,
+    "name": "卤素洞三氢键对离去氟离子的稳定化与氟选择性",
+    "basis": "from_source_corroborated",
+    "note": "Chan 2011 JACS（PMC3101105）：卤素洞 His155/Trp156/Tyr219 提供三个氢键稳定氟离子、空腔专为较小氟原子裁剪、His155 受控柔性（0.30/0.36 Å 后退）、His155Asn 突变使氯乙酸活性达氟乙酸 8 倍；quote 取自 PMC 全文 XML（逐字）"
+   }
+  ],
+  "leads": [],
+  "inferences": [
+   {
+    "type": "design_translation",
+    "index": 0,
+    "idea": "将 FAcD'羧基亲核体 + 卤素洞三氢键 + 隔水埋藏口袋'催化组合移植为 PFAS 脱氟/转化体系（工程化扩腔脱氟酶或合成仿生催化位点）",
+    "basis": "llm_inferred",
+    "label": "inspiration",
+    "note": "PFAS 全氟链与氟乙酸在尺寸、位阻、多 C-F 键环境上差异悬殊，FAcD 对 PFAS 无脱氟证据；作者摘要末句'新型脱氟酶实现更复杂氟化有机物生物转化'为方向性展望（from_source 陈述），不构成 PFAS 效能证据；属原理层设计外推，活性与选择性须实验验证"
+   }
+  ],
+  "boundary_notes": [
+   "本原型天然机制为酶催化降解/转化（氟乙酸水解脱氟生成乙醇酸与氟离子），非吸附机制；机制 from_source 接地限于天然底物氟乙酸及卤代乙酸突变体证据",
+   "PFAS 全氟化合物脱氟/转化应用为设计转译（llm_inferred / inspiration），非 from_source 事实，不得用作 PFAS 的 direct evidence",
+   "无 PFAS 脱氟性能数据（脱氟率、速率常数等）；严格未从外部污染物知识库搬运任何性能数值",
+   "底物尺寸/卤素特异性、羧基头基识别依赖、卤素选择性遗传可调性三条硬边界为 from_source；PFAS 外推与水相材料外推两条边界为定性 llm_inferred，不带数值阈值，gate_level=soft"
+  ],
+  "missing_pdf_items": [
+   "Chan 2011 JACS 印刷版 PDF（已用 PMC3101105 全文 XML 审计替代，quote 取自该 XML）",
+   "PDB 1Y37 主引文对应期刊论文（RCSB 主引文无 PMID/DOI，quote 取自 PDB 沉积 TITLE 与 Crossref 10.2210/pdb1y37/pdb 标题）",
+   "PDB 3R3U/3R3V/3R3Y 沉积记录本地 PDF 审计（quote 取自沉积 TITLE 与 SITE 记录，SITE 引用为列格式记录的单词空格归一化版本）"
+  ],
+  "generated_by": "subagent-bmdl-wave2-fluoroacetate-dehalogenase-2026-07-22",
+  "note": "诚实优先：机制接地限于 FAcD 天然底物（氟乙酸/卤代乙酸）；PFAS 脱氟应用全部为 inspiration/外推；候选 PDB 1SQE（金黄色葡萄球菌 PG130）与 3R8N（RCSB 无记录）经核验证伪后剔除，改用 1Y37/3R3U/3R3V/3R3Y"
+ },
+ "boundary_rules": [
+  {
+   "rule": "底物尺寸/卤素特异性：卤素洞专为较小氟原子裁剪，对较大卤代乙酸活性显著下降（尽管 C-X 键更弱），空间位垒升高是主因",
+   "source_mechanism": "Asp-His-Asp 催化三联体对氟乙酸 C-F 键的 SN2 水解脱氟",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "羧基头基识别依赖：底物结合依赖活性位点羧基识别残基（PDB 3R3V SITE AC1：Asn110/Arg111/Arg114/His155/Trp156/Tyr219），天然底物为携带羧基的短链卤代乙酸",
+   "source_mechanism": "Asp-His-Asp 催化三联体对氟乙酸 C-F 键的 SN2 水解脱氟",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "卤素选择性由口袋几何编码且遗传可调：His155Asn 扩大卤素洞使氯乙酸活性达氟乙酸 8 倍，选择性可经单残基突变重编程",
+   "source_mechanism": "卤素洞三氢键对离去氟离子的稳定化与氟选择性",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "PFAS 全氟烷基链外推未证实：PFOA 等全氟化合物的全氟链在尺寸、位阻与多 C-F 键环境上与氟乙酸差异显著，脱氟转译限原理层（定性，无数值阈值）",
+   "source_mechanism": "卤素洞三氢键对离去氟离子的稳定化与氟选择性",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  }
+ ]
+}

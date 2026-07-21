@@ -1,0 +1,328 @@
+{
+ "id": "fcrn-ph-dependent-fc-recycling",
+ "name_zh": "新生 Fc 受体 FcRn pH 依赖结合-释放回收",
+ "name_en": "Neonatal Fc Receptor (FcRn) pH-Dependent Binding-Release Recycling",
+ "organism": {
+  "scientific": "Rattus norvegicus（大鼠新生 Fc 受体 FcRn/FCGRT，MHC I 类相关受体，与 β2-微球蛋白结合，识别 IgG Fc）",
+  "category": "动物"
+ },
+ "biomimetic_dimension": "分子仿生",
+ "features": [
+  "特异性识别",
+  "pH 响应"
+ ],
+ "tested_conditions": {
+  "tested_ph_range": null,
+  "tested_temp_range": null,
+  "salinity": null,
+  "note": "FcRn 为 pH 门控分子识别/回收原型，本库无其吸附性能测试条件；performance_data 为空，故测试条件全空。天然 pH 门控区间为结合 pH 6.0-6.5、释放 pH 7.0-7.5（来源机制，非本库吸附测试）。"
+ },
+ "library_tier": "extended",
+ "lifecycle_status": "active",
+ "coverage": "partial",
+ "status": "active",
+ "provenance_summary": {
+  "n_papers": 4,
+  "n_verified": 9,
+  "n_unverified": 0,
+  "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与边界条数（FCRN-001 四要素+1 边界=5，FCRN-002 四要素=4）。机制接地限于 FcRn 天然底物（IgG Fc）的 pH 依赖结合-释放与回收循环；ROX/PFBS 应用为设计转译（llm_inferred），无性能数据。quote 取自 PDB 沉积记录（RCSB REST）与 PubMed/Crossref 题录摘要（可核验），未做全文 PDF 审计。候选 3HFM 经 RCSB 核验为 Hy/Hel-10 Fab-溶菌酶复合物，与 FcRn 无关，已剔除；改用 1FRT（Burmeister 1994）与 1I1A（Martin 2001）。"
+ },
+ "mechanisms": [
+  {
+   "mechanism_id": "FCRN-001",
+   "name": "组氨酸质子化介导的 pH 门控可逆结合-释放（分子开关）",
+   "description": "FcRn 经其 α2 与 β2-微球蛋白结构域界面识别 IgG Fc 的 Cγ2-Cγ3 界面；该界面两侧分布可滴定组氨酸（IgG Fc His310、His433 位于 CH2-CH3 交界，FcRn 重链 His250、His251）。酸性内体（pH 6.0-6.5）下组氨酸质子化形成可滴定盐桥，高亲和结合 Fc；中性血液（pH 7.0-7.5）下去质子化、盐桥断裂，亲和力下降约两个数量级并释放 Fc，构成 pH 门控的结合-释放分子开关",
+   "基本原理": "组氨酸侧链 pKa 落于内体酸性 pH 与血液中性 pH 之间，其质子化态在 FcRn-Fc 界面形成盐桥、去质子化态盐桥断裂，使结合亲和力随 pH 可逆切换约两个数量级，实现酸性结合、中性释放",
+   "source": "literature",
+   "ref_doi": "10.1021/bi00045a005",
+   "verification": "verified",
+   "verification_quote": "A soluble version of FcRn reproduces the physiological pH-dependent interaction with IgG, showing high-affinity binding at pH 6.0-6.5 but weak or no binding at pH 7.0-7.5.",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "IgG Fc 的 Cγ2-Cγ3 界面（FcRn 天然识别特征）含可滴定组氨酸：IgG Fc His310 与 His433 位于 CH2 与 CH3 结构域交界处，是 pH 依赖亲和转变的关键残基（EU 编号）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1021/bi00045a005",
+     "locator": "abstract, p.14649",
+     "quote": "we demonstrate that IgG histidines located at the junction between the CH2 and CH3 domains (residues 310 and 433) contribute to the pH-dependent affinity transition.",
+     "scope_match": "Keywords: IgG histidines, CH2, CH3, residues 310 and 433, pH-dependent"
+    },
+    "bio_structure": {
+     "text": "FcRn 以 α2 结构域与 β2-微球蛋白结构域（及糖链）与 Fc 的 Cγ2-Cγ3 界面相互作用；FcRn 重链 His250 与 His251 亦参与该界面的 pH 依赖相互作用（PDB 1I1A 为 2.8 Å 大鼠 FcRn/异二聚 Fc 复合物，PDB 1FRT 为大鼠 FcRn-Fc 复合物）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1016/S1097-2765(01)00230-1",
+     "locator": "PDB 1I1A / abstract, p.867",
+     "quote": "FcRn uses its alpha2 and beta2-microglobulin domains and carbohydrate to interact with the Fc C(gamma)2-C(gamma)3 interface",
+     "scope_match": "Keywords: FcRn, alpha2, beta2-microglobulin, Fc, C(gamma)2-C(gamma)3"
+    },
+    "interaction": {
+     "text": "酸性 pH（6.0-6.5）下组氨酸质子化，FcRn-Fc 界面形成可滴定盐桥，高亲和结合；中性 pH（7.0-7.5）下去质子化、盐桥断裂，亲和力随 pH 升高下降约两个数量级，结合转为弱或无结合。Martin 2001 结构揭示三个 confer pH 依赖结合的可滴定盐桥",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1021/bi00045a005",
+     "locator": "abstract, p.14649",
+     "quote": "We show that the affinity of FcRn for IgG is reduced about 2 orders of magnitude as the pH is raised from 6.0 to 7.0.",
+     "scope_match": "Keywords: affinity, FcRn, IgG, pH 6.0, 7.0, 2 orders of magnitude"
+    },
+    "why_it_works": {
+     "text": "三个可滴定盐桥 confer pH 依赖结合（Martin 2001）：组氨酸侧链 pKa 介于内体酸性 pH 与血液中性 pH 之间，质子化态成盐桥、去质子化态断盐桥，使亲和力可逆切换约两个数量级，从而实现酸性内体结合 Fc、中性血液释放 Fc 的可逆循环",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1016/S1097-2765(01)00230-1",
+     "locator": "abstract, p.867",
+     "quote": "three titratable salt bridges that confer pH-dependent binding, and can be used to guide rational design of therapeutic IgGs with longer serum half-lives.",
+     "scope_match": "Keywords: titratable salt bridges, pH-dependent binding, serum half-lives"
+    },
+    "boundary_conditions": [
+     {
+      "text": "pH 门控区间：高亲和结合于 pH 6.0-6.5，弱或无结合于 pH 7.0-7.5；亲和力随 pH 从 6.0 升至 7.0 下降约两个数量级（Raghavan 1995 经 SPR 测定的动力学/平衡常数）",
+      "parameter": "pH",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "abstract, p.14649",
+      "quote": "A soluble version of FcRn reproduces the physiological pH-dependent interaction with IgG, showing high-affinity binding at pH 6.0-6.5 but weak or no binding at pH 7.0-7.5.",
+      "scope_match": "Keywords: FcRn, pH-dependent, IgG, high-affinity binding, pH 6.0-6.5",
+      "source_asset": null
+     },
+     {
+      "text": "pH 门控针对 IgG Fc 蛋白界面的可滴定组氨酸；移植到小分子污染物识别须重新设计含可滴定基团的结合位点，门控 pKa 与结合几何均需重构（定性，无数值阈值）",
+      "parameter": "substrate_scope",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "在识别界面布置 pKa 落于捕获 pH 与再生 pH 之间的可滴定基团（如组氨酸咪唑基），使其质子化态形成、去质子化态断裂与靶标的盐桥/氢键相互作用，即可用 pH 摆动可逆切换结合亲和力（约两个数量级），实现酸性结合、中性释放",
+    "verification_quote": "A soluble version of FcRn reproduces the physiological pH-dependent interaction with IgG, showing high-affinity binding at pH 6.0-6.5 but weak or no binding at pH 7.0-7.5."
+   },
+   "source_doi": "10.1016/S1097-2765(01)00230-1",
+   "source_page": 867,
+   "source_locator": "PDB 1I1A / abstract, p.867",
+   "source_file": "RCSB PDB 1I1A（Martin 2001 Mol Cell 7:867-877）与 PDB 1FRT（Burmeister 1994 Nature 372:379-383）；Raghavan 1995 Biochemistry 34:14649-14657（SPR pH 依赖与组氨酸残基）。RCSB 沉积数据 + PubMed/Crossref 题录，未做本地全文 PDF 审计",
+   "functional_groups": [
+    "可滴定组氨酸（咪唑基，质子化盐桥）",
+    "酸性残基（Asp/Glu，盐桥对侧）",
+    "α2/β2-微球蛋白界面"
+   ],
+   "key_structures": [
+    "识别结构",
+    "动态响应结构"
+   ]
+  },
+  {
+   "mechanism_id": "FCRN-002",
+   "name": "内体-循环 pH 双区室回收循环（吸附-再生循环原型）",
+   "description": "FcRn 作为 β2-微球蛋白依赖性保护受体，在胞吞空泡（酸性）结合 IgG，将其重定向回循环、避免溶酶体分解代谢；饱和时未结合 IgG 进入溶酶体降解。酸性内体结合、中性血液释放的 pH 依赖门控驱动 IgG 回收循环并延长血清半衰期",
+   "基本原理": "酸性内体与中性血液构成天然 pH 双区室，FcRn 在其中以 pH 门控反复结合-释放 IgG，将其从分解代谢途径回收再利用，实现循环吸附-再生，延长 IgG 在体循环中的存续",
+   "source": "literature",
+   "ref_doi": "10.1073/pnas.93.11.5512",
+   "verification": "verified",
+   "verification_quote": "The protection receptor for IgG catabolism is the beta2-microglobulin-containing neonatal intestinal transport receptor.",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "IgG 是 FcRn 经胞吞回收的底物：在胞吞空泡（酸性）被 FcRn 结合态保护、回收至循环；未被结合（受体饱和时）则进入溶酶体分解代谢",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1073/pnas.93.11.5512",
+     "locator": "abstract, p.5512",
+     "quote": "specific IgG \"protection receptors\" (FcRp) that would bind IgG in pinocytic vacuoles and redirect its transport to the circulation",
+     "scope_match": "Keywords: protection receptors, IgG, pinocytic vacuoles, transport, circulation"
+    },
+    "bio_structure": {
+     "text": "FcRn 为含 β2-微球蛋白的新生肠转运/保护受体，是介导 IgG 免于分解代谢的保护受体（Junghans & Anderson 1996 将 Brambell 假设的 IgG 保护受体鉴定为该 β2-微球蛋白依赖性受体）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1073/pnas.93.11.5512",
+     "locator": "title, p.5512",
+     "quote": "The protection receptor for IgG catabolism is the beta2-microglobulin-containing neonatal intestinal transport receptor.",
+     "scope_match": "Keywords: protection receptor, IgG catabolism, beta2-microglobulin, transport"
+    },
+    "interaction": {
+     "text": "FcRn 在胞吞空泡（酸性）结合 IgG 并将其转运重定向回循环，从而保护 IgG 免于溶酶体分解代谢；当保护受体饱和时，过量未结合 IgG 进入非限制性溶酶体分解代谢",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1073/pnas.93.11.5512",
+     "locator": "abstract, p.5512",
+     "quote": "specific IgG \"protection receptors\" (FcRp) that would bind IgG in pinocytic vacuoles and redirect its transport to the circulation",
+     "scope_match": "Keywords: protection receptors, IgG, pinocytic vacuoles, redirect, circulation"
+    },
+    "why_it_works": {
+     "text": "pH 依赖的结合-释放（酸性内体结合、中性血液释放）使 FcRn 在酸性内体捕获 IgG、于中性血液释放，循环再利用，从而延长 IgG 血清半衰期（Martin 2001 指出该结构可用于理性设计更长血清半衰期的治疗性 IgG）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1016/S1097-2765(01)00230-1",
+     "locator": "abstract, p.867",
+     "quote": "three titratable salt bridges that confer pH-dependent binding, and can be used to guide rational design of therapeutic IgGs with longer serum half-lives.",
+     "scope_match": "Keywords: titratable salt bridges, pH-dependent binding, serum half-lives"
+    },
+    "boundary_conditions": [
+     {
+      "text": "天然回收循环依赖酸性内体-中性血液的胞内 pH 双区室与胞吞-再循环途径；体外吸附-再生须人为构建对应的 pH 摆动或双区室操作（定性，无数值阈值）",
+      "parameter": "compartmentalization",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "以 pH 双区室（酸性捕获、中性释放）驱动受体反复结合-释放底物并将其从降解途径回收，可构成循环式吸附-再生操作：在捕获 pH 吸附靶标、在再生 pH 脱附回收吸附剂与靶标，循环再利用",
+    "verification_quote": "The protection receptor for IgG catabolism is the beta2-microglobulin-containing neonatal intestinal transport receptor."
+   },
+   "source_doi": "10.1073/pnas.93.11.5512",
+   "source_page": 5512,
+   "source_locator": "title/abstract, p.5512",
+   "source_file": "Junghans & Anderson 1996 PNAS 93:5512-5516（保护受体/回收）；Martin 2001 Mol Cell 7:867-877（pH 门控与半衰期）。PubMed/Crossref 题录，未做本地全文 PDF 审计",
+   "functional_groups": [
+    "可滴定组氨酸（pH 门控回收）",
+    "β2-微球蛋白依赖性受体界面"
+   ],
+   "key_structures": [
+    "动态响应结构"
+   ]
+  }
+ ],
+ "performance_data": [],
+ "engineering_constraints": [
+  {
+   "constraint": "膜受体/可溶形态与三级结构依赖",
+   "value": "FcRn 为与 β2-微球蛋白非共价结合的 I 型 MHC I 类相关受体，其 pH 门控识别依赖完整 α2/β2-微球蛋白三级结构界面；用作吸附须将识别界面移植/固定于固体载体",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "RCSB 1FRT/1I1A：FcRn 以 α2 与 β2-微球蛋白结构域识别 Fc Cγ2-Cγ3 界面",
+   "source": "literature",
+   "ref_doi": "10.1016/S1097-2765(01)00230-1"
+  },
+  {
+   "constraint": "pH 摆动幅度决定脱附",
+   "value": "结合-释放需跨越约 pH 6.0→7.0 区间（亲和力变化约两个数量级）；再生阶段 pH 摆动幅度直接决定吸附-脱附循环效率",
+   "unit": "pH",
+   "relevance": "high",
+   "explanation": "Raghavan 1995 SPR：亲和力随 pH 6.0→7.0 下降约两个数量级",
+   "source": "literature",
+   "ref_doi": "10.1021/bi00045a005"
+  },
+  {
+   "constraint": "区室化/操作模式依赖",
+   "value": "天然回收依赖酸性内体-中性血液双区室与胞吞-再循环途径；体外须以批次 pH 摆动或双区室流动操作复现捕获-再生循环",
+   "unit": null,
+   "relevance": "medium",
+   "explanation": "机理推断（基于 Junghans 1996 保护受体/回收与 Martin 2001 pH 门控事实）",
+   "source": "llm_inference",
+   "ref_doi": null
+  }
+ ],
+ "narrative": {
+  "entries": [
+   {
+    "source_file": "RCSB PDB 1I1A / 1FRT；Martin 2001 Mol Cell (DOI 10.1016/S1097-2765(01)00230-1)；Raghavan 1995 Biochemistry (DOI 10.1021/bi00045a005)；Junghans & Anderson 1996 PNAS (DOI 10.1073/pnas.93.11.5512)",
+    "paper_id": "2001-Martin-FcRn-heterodimeric-Fc-pH",
+    "sections": {
+     "problem_definition": "新生哺乳动物需从初乳选择性吸收母源 IgG，并保护 IgG 免于溶酶体分解代谢以维持长血清半衰期。受体如何在酸性内体捕获 IgG、又在中性血液释放，实现可逆结合-释放的回收循环，是分子识别与动态响应的基础问题。",
+     "biological_solution": "新生 Fc 受体 FcRn（MHC I 类相关，与 β2-微球蛋白结合）以 pH 依赖方式识别 IgG Fc 的 Cγ2-Cγ3 界面（PDB 1I1A，2.8 Å 大鼠 FcRn/异二聚 Fc 复合物，标题 'CRYSTAL STRUCTURE OF THE NEONATAL FC RECEPTOR COMPLEXED WITH A HETERODIMERIC FC'；PDB 1FRT，大鼠 FcRn-Fc 复合物，Burmeister 1994）。该界面两侧分布可滴定组氨酸：IgG Fc His310、His433 位于 CH2-CH3 交界，FcRn 重链 His250、His251（Raghavan 1995）。酸性内体（pH 6.0-6.5）下组氨酸质子化形成可滴定盐桥，高亲和结合；中性血液（pH 7.0-7.5）下去质子化、盐桥断裂，亲和力下降约两个数量级并释放（Raghavan 1995 SPR；Martin 2001 揭示三个 confer pH 依赖结合的可滴定盐桥）。功能上，FcRn 作为 β2-微球蛋白依赖性保护受体，在胞吞空泡结合 IgG 并重定向回循环，保护 IgG 免于溶酶体分解代谢（Junghans & Anderson 1996），从而延长血清半衰期。",
+     "key_features": "必须保留：① 含 pKa 落于捕获 pH 与再生 pH 之间的可滴定基团（天然为组氨酸咪唑基）；② 质子化态形成、去质子化态断裂的可逆盐桥/氢键相互作用；③ 捕获 pH（酸性）与再生 pH（中性）之间的双区室 pH 摆动。可灵活调整：载体骨架、可滴定基团种类与排布、识别内核（针对具体靶标的结合位点）。",
+     "design_mapping": "仿生映射：FcRn pH 门控结合-释放回收循环 → pH 摆动吸附-再生。对 ROX（洛克沙胂，含砷酸根/酚氧负离子头基的可电离有机砷酚）与 PFBS（全氟丁烷磺酸，磺酸根头基），原理上可在载体上构筑含可滴定基团（咪唑/组胺、吡啶、胺/羧基）的识别位点，使其在捕获 pH 质子化形成与靶标头基的盐桥/氢键/阳离子作用而吸附，在再生 pH 去质子化释放，实现循环吸附-再生。注意：此为设计转译/启发（llm_inferred），非 from_source 事实——FcRn 天然识别的是 IgG Fc 蛋白域（非小分子氧阴离子），仅 pH 门控动态响应原理可迁移；实际对 ROX/PFBS 的识别内核须另行设计并与 pH 门控耦合，亲和力、选择性与循环稳定性须实验验证。",
+     "explainability_anchors": "设计溯源：FcRn 组氨酸质子化 pH 门控可逆结合-释放（PDB 1I1A/1FRT + Raghavan 1995，from_source）→ '可滴定基团 + pH 双区室摆动实现循环吸附-再生' 可迁移原理 → ROX/PFBS pH 摆动吸附-再生（llm_inferred 启发，须与识别内核耦合并实验验证）。"
+    }
+   }
+  ]
+ },
+ "design_translation": [
+  {
+   "idea": "将 FcRn 的'可滴定基团（组氨酸）随 pH 质子化/去质子化可逆切换亲和力、酸性结合-中性释放实现回收循环'的动态开关原理移植到吸附剂：在载体上构筑含可滴定基团（咪唑/组胺、吡啶、胺/羧基，pKa 落于捕获 pH 与再生 pH 之间）的识别位点，使其在捕获 pH（偏酸）质子化形成与 ROX 头基（砷酸根/酚氧负离子）或 PFBS 磺酸根的盐桥/氢键/阳离子作用而吸附，在再生 pH（偏中性或偏碱）去质子化释放靶标，实现 pH 摆动吸附-再生循环",
+   "specific_functional_group": "可滴定基团（咪唑/组胺、吡啶、仲/叔胺、羧基），其 pKa 介于捕获 pH 与再生 pH 之间，按与靶标头基几何互补的方式预组织排布",
+   "material_handle": "在介孔二氧化硅、聚合物或碳骨架上经硅烷偶联或表面引发聚合接枝含咪唑/吡啶/胺/羧基单体；可结合分子印迹或刚性间隔臂控制可滴定基团与识别内核的间距取向，并以批次 pH 摆动或双区室流动操作复现捕获-再生循环",
+   "target_interaction": "捕获 pH 下质子化可滴定基团与 ROX 砷酸根/酚氧负离子或 PFBS 磺酸根头基的方向性盐桥/氢键/阳离子-阴离子作用；再生 pH 下去质子化使相互作用断裂而脱附。对 ROX 另可利用其酚/砷酸基团的 pH 形态变化协同",
+   "source_tier": "llm_inference",
+   "evidence_tier": "inspiration（原理层外推：FcRn 机制接地于天然底物 IgG Fc 的 pH 依赖结合-释放与回收；ROX/PFBS 吸附-再生转译为 llm_inferred，无直接 ROX/PFBS 结合证据）",
+   "examples": [],
+   "design_principle": "FcRn 证明 pKa 落于捕获与再生 pH 之间的可滴定基团（组氨酸）可经质子化/去质子化可逆切换亲和力约两个数量级，并以酸性-中性双区室实现结合-释放回收循环（PDB 1I1A/1FRT，Raghavan 1995，Junghans 1996）；该 pH 门控动态响应原理可外推至小分子污染物的 pH 摆动吸附-再生",
+   "implementation_example": "咪唑/组胺或吡啶功能化介孔二氧化硅/聚合物，配 pH 摆动操作（无实验数据，仅为设计假设）",
+   "constraints": "FcRn 天然识别 IgG Fc 蛋白域而非小分子氧阴离子，仅 pH 门控动态响应原理可迁移，对 ROX/PFBS 的识别内核须另行设计并与 pH 门控耦合；可滴定基团 pKa、水相 pH 竞争、共存离子与循环稳定性须实验验证；脱附再生 pH 摆动幅度决定循环效率",
+   "failure_modes": "可滴定基团 pKa 与操作 pH 不匹配导致门控失效；识别内核与 pH 门控未耦合造成结合与释放不同步；水相中缓冲/共存离子削弱盐桥；反复 pH 摆动下载体或位点结构疲劳降解",
+   "material_realization_examples": []
+  }
+ ],
+ "honesty_ledger": {
+  "facts": [
+   {
+    "type": "mechanism",
+    "index": 0,
+    "name": "组氨酸质子化介导的 pH 门控可逆结合-释放（分子开关）",
+    "basis": "from_source_verified",
+    "note": "Raghavan 1995 Biochemistry（SPR：高亲和结合 pH 6.0-6.5、弱/无结合 pH 7.0-7.5，亲和力随 pH 6.0→7.0 降约两个数量级；IgG Fc His310/His433 与 FcRn 重链 His250/His251 参与）+ Martin 2001 Mol Cell（PDB 1I1A，α2/β2-微球蛋白识别 Fc Cγ2-Cγ3 界面，三个 confer pH 依赖的可滴定盐桥）+ Burmeister 1994（PDB 1FRT 大鼠 FcRn-Fc 复合物）；quote 取自 PubMed 摘要与 PDB 沉积记录（可核验），未做全文 PDF 审计"
+   },
+   {
+    "type": "mechanism",
+    "index": 1,
+    "name": "内体-循环 pH 双区室回收循环（吸附-再生循环原型）",
+    "basis": "from_source_verified",
+    "note": "Junghans & Anderson 1996 PNAS（标题与摘要直接陈述：保护受体为含 β2-微球蛋白的新生肠转运受体，在胞吞空泡结合 IgG 并重定向回循环，免于溶酶体分解代谢）+ Martin 2001（pH 门控与血清半衰期）；quote 取自标题/摘要，未做全文 PDF 审计"
+   }
+  ],
+  "leads": [],
+  "inferences": [
+   {
+    "type": "design_translation",
+    "index": 0,
+    "idea": "将 FcRn pH 门控可逆结合-释放回收原理移植到载体，构建 ROX/PFBS 的 pH 摆动吸附-再生",
+    "basis": "llm_inferred",
+    "label": "inspiration",
+    "note": "FcRn 天然识别 IgG Fc 蛋白域（非小分子氧阴离子），仅 pH 门控动态响应原理可迁移；对 ROX（洛克沙胂）/PFBS（全氟丁烷磺酸）的识别内核须另行设计并与 pH 门控耦合，属原理层设计外推，无直接 ROX/PFBS 结合证据，亲和力、选择性与循环稳定性须实验验证"
+   }
+  ],
+  "boundary_notes": [
+   "本原型天然底物为 IgG Fc（蛋白域）；机制 from_source 接地限于 FcRn 的 pH 依赖 Fc 结合-释放与回收循环",
+   "ROX/PFBS pH 门控吸附-再生应用为设计转译（llm_inferred / inspiration），非 from_source 事实，不得用作 ROX/PFBS 的 direct evidence",
+   "无 ROX/PFBS 吸附性能数据（qmax 等）；严格未从外部污染物知识库搬运任何性能数值",
+   "边界 BC（底物范围重构、区室化操作依赖）及一切 ROX/PFBS 相关边界均为定性 llm_inferred，不带数值阈值，gate_level=soft；pH 门控区间边界（pH 6.0-6.5 结合 / 7.0-7.5 释放）为 from_source 天然机制事实，gate_level=hard",
+   "候选 PDB 3HFM 经 RCSB 核验为 Hy/Hel-10 Fab-溶菌酶复合物（与 FcRn 无关），已剔除；改用 1FRT 与 1I1A"
+  ],
+  "missing_pdf_items": [
+   "Martin 2001 Mol Cell 全文 PDF（quote 取自 PubMed 摘要 PMID 11336709 与 PDB 1I1A 沉积记录）",
+   "Raghavan 1995 Biochemistry 全文 PDF（quote 取自 PubMed 摘要 PMID 7578107）",
+   "Junghans & Anderson 1996 PNAS 全文 PDF（quote 取自标题与 PubMed 摘要）",
+   "Burmeister 1994 Nature 全文 PDF（quote 取自 PDB 1FRT 沉积记录标题）"
+  ],
+  "generated_by": "manual-curation-2026-07-22",
+  "note": "诚实优先：机制接地限于 FcRn 天然底物（IgG Fc）的 pH 依赖结合-释放与回收；ROX/PFBS 应用全部为 inspiration/外推"
+ },
+ "boundary_rules": [
+  {
+   "rule": "pH 门控区间：高亲和结合于 pH 6.0-6.5，弱或无结合于 pH 7.0-7.5，亲和力随 pH 升高下降约两个数量级（天然 FcRn-Fc 机制）",
+   "source_mechanism": "组氨酸质子化介导的 pH 门控可逆结合-释放（分子开关）",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "pH 门控针对 IgG Fc 蛋白界面的可滴定组氨酸；移植到小分子污染物须重新设计含可滴定基团的识别位点（定性，无数值阈值）",
+   "source_mechanism": "组氨酸质子化介导的 pH 门控可逆结合-释放（分子开关）",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  },
+  {
+   "rule": "回收循环依赖酸性内体-中性血液双区室与胞吞-再循环途径；体外吸附-再生须人为构建对应 pH 摆动/双区室操作（定性，无数值阈值）",
+   "source_mechanism": "内体-循环 pH 双区室回收循环（吸附-再生循环原型）",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  }
+ ]
+}
