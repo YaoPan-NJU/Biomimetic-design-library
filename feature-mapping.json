@@ -1036,6 +1036,10 @@
         {
           "id": "spider-silk",
           "weight": 0.55
+        },
+        {
+          "id": "fabp4-fatty-acid-pfas-binding",
+          "weight": 0.65
         }
       ]
     },
@@ -1366,6 +1370,10 @@
         {
           "id": "moda-oxyanion-geometric-recognition",
           "weight": 0.7
+        },
+        {
+          "id": "fabp4-fatty-acid-pfas-binding",
+          "weight": 0.75
         }
       ]
     },
@@ -1421,6 +1429,23 @@
       "organism": {
         "scientific": "Escherichia coli / Azotobacter vinelandii（ModA 钼酸根结合蛋白）",
         "category": "微生物"
+      }
+    },
+    "fabp4-fatty-acid-pfas-binding": {
+      "applicability": {
+        "pH_range": null,
+        "temp_range": null,
+        "salinity": null,
+        "note": "FABP4 为胞内可溶结合蛋白原型，无吸附适用性测试数据，故全空"
+      },
+      "features": [
+        "疏水性",
+        "分子筛分"
+      ],
+      "biomimetic_dimension": "分子仿生",
+      "organism": {
+        "scientific": "Homo sapiens（人源 FABP4，脂肪细胞型脂肪酸结合蛋白）",
+        "category": "动物"
       }
     },
     "mussel-foot-adhesion": {
