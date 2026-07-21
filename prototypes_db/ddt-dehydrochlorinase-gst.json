@@ -1,368 +1,451 @@
 {
- "id": "ddt-dehydrochlorinase-gst",
- "name_zh": "DDT 脱氯化氢酶（谷胱甘肽 S-转移酶 GSTe2）",
- "name_en": "DDT-Dehydrochlorinase (Glutathione S-Transferase GSTe2)",
- "organism": {
-  "scientific": "Anopheles funestus（非洲疟蚊谷胱甘肽 S-转移酶 epsilon 2 GSTe2；双翅目蚊科）",
-  "category": "动物"
- },
- "biomimetic_dimension": "分子仿生",
- "features": [
-  "催化降解",
-  "分子筛分"
- ],
- "tested_conditions": {
-  "tested_ph_range": null,
-  "tested_temp_range": null,
-  "salinity": null,
-  "note": "DDT 脱氯化氢酶（GSTe2）为可溶性胞内酶（降解/转化原型兼桥基序读出动机原型），本库无其吸附性能测试条件；performance_data 为空，故测试条件全空。"
- },
- "library_tier": "extended",
- "lifecycle_status": "active",
- "coverage": "partial",
- "status": "active",
- "provenance_summary": {
-  "n_papers": 6,
-  "n_verified": 9,
-  "n_unverified": 0,
-  "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与边界条数（GST-DDT-001 四要素+1 边界=5，GST-DDT-002 三要素+1 边界=4）。机制接地限于 GSTe2/DDT 脱氯化氢天然机制（双分区活性位点、质子转移 β-消除、桥碳 C-H 与三氯甲基双基序底物特异性）；DDT 吸附识别转译为设计转译（llm_inferred），无性能数据。quote 取自 PDB 3ZML 沉积记录、Crossref/PubMed 摘要与文献标题（可核验），未做全文 PDF 审计。DDT 类似物 DDD/DDE 不被有效读取的具体方向未获逐字摘要核验，标 llm_inferred。"
- },
- "mechanisms": [
-  {
-   "mechanism_id": "GST-DDT-001",
-   "name": "GST 双分区活性位点催化 DDT 脱氯化氢（降解/转化）",
-   "description": "GSTe2 以谷胱甘肽 S-转移酶超家族典型的双分区活性位点催化 DDT 脱氯化氢：N 端 G 位结合谷胱甘肽 GSH（PDB 3ZML 配体 GSH A 1222，结合位点残基 Ser12、Pro14、Leu36、His41、His53、Thr54、Ile55、Pro56、Glu67、Ser68、His69、Phe108、Arg112，chain A，PDB 编号，SITE AC1），C 端 H 位构成疏水 DDT 结合腔；DDT 经质子转移（β-消除）脱去 HCl 生成 DDE，GSH 作为辅因子（碱）攫取桥碳质子，不作共轭底物",
-   "基本原理": "G 位预结合的 GSH 活化并攫取桥碳质子，H 位疏水腔结合并定向 DDT，蛋白环境与活性位点残基稳定 β-消除过渡态，使 DDT 在温和条件下脱氯化氢转化为 DDE",
-   "source": "literature",
-   "ref_doi": "10.1186/GB-2014-15-2-R27",
-   "verification": "corroborated",
-   "verification_quote": "Structural analysis reveals that the mutation confers resistance by enlarging the GSTe2 DDT-binding cavity, leading to increased DDT access and metabolism.",
-   "causal_chain": {
-    "pollutant_feature": {
-     "text": "DDT（1,1,1-三氯-2,2-双(对氯苯基)乙烷）是 DDT 脱氯化氢酶的天然底物，被 epsilon 类 GSTe2 代谢；Riveron 2014 证明 GSTe2 单点突变 L119F 赋予非洲疟蚊对 DDT 的高水平代谢抗性",
-     "basis": "from_source",
-     "evidence_label": "from_source",
-     "source": "10.1186/GB-2014-15-2-R27",
-     "locator": "Riveron 2014, Genome Biol 15:R27, abstract",
-     "quote": "the single amino acid change L119F in an upregulated glutathione S-transferase gene, GSTe2, confers high levels of metabolic resistance to DDT in the malaria vector Anopheles funestus",
-     "scope_match": "Keywords: GSTe2, metabolic resistance, DDT, Anopheles funestus"
-    },
-    "bio_structure": {
-     "text": "GSTe2 采用谷胱甘肽 S-转移酶超家族的双分区活性位点：N 端 G 位结合 GSH（PDB 3ZML 配体 GSH A 1222 的结合位点残基为 Ser12、Pro14、Leu36、His41、His53、Thr54、Ile55、Pro56、Glu67、Ser68、His69、Phe108、Arg112，chain A，PDB 编号，SITE AC1），C 端 H 位构成疏水 DDT 结合腔（Riveron 2014 记为 GSTe2 DDT-binding cavity）；G 位/H 位为 GST 超家族通用双分区命名（Yang 2019）",
-     "basis": "from_source",
-     "evidence_label": "from_source",
-     "source": "PDB 3ZML (10.2210/pdb3zml/pdb)",
-     "locator": "PDB 3ZML / REMARK 800, GSH A 1222 (SITE AC1)",
-     "quote": "BINDING SITE FOR RESIDUE GSH A 1222",
-     "scope_match": "Keywords: BINDING SITE, GSH, 1222"
-    },
-    "interaction": {
-     "text": "催化脱氯化氢 DDT→DDE+HCl 经质子转移机制进行：GSH 作为辅因子攫取桥碳质子，不作共轭底物；DDT 结合于 H 位疏水腔（Riveron 2014 记为 GSTe2 DDT-binding cavity）",
-     "basis": "from_source",
-     "evidence_label": "from_source",
-     "source": "10.1021/es405230j",
-     "locator": "Li 2014, Environ. Sci. Technol. 48:5008, abstract",
-     "quote": "the detoxifying reaction proceeds via a proton transfer mechanism where GSH acts as a cofactor rather than a conjugate",
-     "scope_match": "Keywords: detoxifying reaction, proton transfer mechanism, GSH, cofactor"
-    },
-    "why_it_works": {
-     "text": "蛋白环境与活性位点残基降低 β-消除能垒（Li 2014 QM/MM：Arg112、Glu116、Phe120 影响显著，Ile55 促进最强；编号为该文所用 epsilon 类 GSTe2 序列，Arg112/Ile55 与 3ZML PDB 编号一致）；L119F 突变扩大 GSTe2 的 DDT 结合腔，增加 DDT 进入与代谢，从而赋予抗性（Riveron 2014）",
-     "basis": "from_source",
-     "evidence_label": "from_source",
-     "source": "10.1186/GB-2014-15-2-R27",
-     "locator": "Riveron 2014, Genome Biol 15:R27, abstract",
-     "quote": "Structural analysis reveals that the mutation confers resistance by enlarging the GSTe2 DDT-binding cavity, leading to increased DDT access and metabolism.",
-     "scope_match": "Keywords: mutation, DDT-binding cavity, DDT access, metabolism"
-    },
-    "boundary_conditions": [
-     {
-      "text": "反应类型特异：催化为质子转移（β-消除）脱氯化氢，需可攫取的桥碳 C-H 与 β-氯离去基团；非脱氯化氢结构不被转化",
-      "parameter": "reaction_type",
-      "condition": {
-       "operator": "qualitative",
-       "value": null
-      },
-      "basis": "from_source",
-      "verification": "corroborated",
-      "gate_level": "hard",
-      "locator": "Li 2014, Environ. Sci. Technol. 48:5008, abstract",
-      "quote": "the detoxifying reaction proceeds via a proton transfer mechanism where GSH acts as a cofactor rather than a conjugate",
-      "scope_match": "Keywords: proton transfer mechanism, GSH, cofactor, detoxifying reaction",
-      "source_asset": null
-     },
-     {
-      "text": "可溶酶与辅因子依赖：GSTe2 为可溶性胞内酶（约 25.3 kDa），需 GSH 辅因子与近生理水相条件；变性或缺失 GSH 则催化丧失（定性，无数值阈值）",
-      "parameter": "cofactor_dependency",
-      "condition": {
-       "operator": "qualitative",
-       "value": null
-      },
-      "basis": "llm_inferred",
-      "verification": "needs_review",
-      "gate_level": "soft",
-      "locator": null,
-      "quote": null,
-      "scope_match": null,
-      "source_asset": null
-     },
-     {
-      "text": "降解/转化原型边界：天然机制为催化转化（DDT→DDE），非吸附富集；DDE 仍属持久性有机污染物，转化不等于无害；仿生转译限原理层（定性）",
-      "parameter": "mechanism_class",
-      "condition": {
-       "operator": "qualitative",
-       "value": null
-      },
-      "basis": "llm_inferred",
-      "verification": "needs_review",
-      "gate_level": "soft",
-      "locator": null,
-      "quote": null,
-      "scope_match": null,
-      "source_asset": null
-     }
-    ],
-    "transferable_principle": "双分区活性位点（G 位结合 GSH 辅因子加 H 位疏水腔结合底物）经质子转移/β-消除催化有机氯底物脱氯化氢；蛋白预组织与活性位点残基降低能垒，腔体几何调控底物进入与代谢",
-    "verification_quote": "Structural analysis reveals that the mutation confers resistance by enlarging the GSTe2 DDT-binding cavity, leading to increased DDT access and metabolism."
-   },
-   "source_doi": "10.1186/GB-2014-15-2-R27",
-   "source_page": "R27",
-   "source_locator": "PDB 3ZML / Riveron 2014, Genome Biol 15:R27",
-   "source_file": "PDB 3ZML（RCSB 沉积数据）/ Riveron 2014 Genome Biology（Crossref 摘要接地）/ Li 2014 ES&T（PubMed 摘要接地）；未做本地全文 PDF 审计",
-   "functional_groups": [
-    "谷胱甘肽 GSH 辅因子（巯基/碱）",
-    "疏水 DDT 结合腔（H 位）",
-    "活性位点残基（Arg112、Glu67、Ser68、His53、Ile55 等）"
-   ],
-   "key_structures": [
-    "催化结构",
-    "识别结构"
-   ]
+  "id": "ddt-dehydrochlorinase-gst",
+  "name_zh": "DDT-脱氯化氢酶（谷胱甘肽 S-转移酶 GST）",
+  "name_en": "DDT-Dehydrochlorinase (Glutathione S-Transferase, GST)",
+  "organism": {
+    "scientific": "Anopheles funestus / Musca domestica（冈比亚按蚊近缘种 GSTe2 抗性结构体系与家蝇 DDT-脱氯化氢酶酶学体系）",
+    "category": "动物"
   },
-  {
-   "mechanism_id": "GST-DDT-002",
-   "name": "底物特异性双基序读出（桥碳 C-H 与三氯甲基）",
-   "description": "DDT 脱氯化氢酶读出 DDT 的一对相邻结构基序（桥碳 C-H 与三氯甲基 -CCl3），二者齐备方能催化脱氯化氢；其类似物 DDD（二氯甲基 -CHCl2 取代 -CCl3）与 DDE（桥碳 C-H 已随脱氯化氢失去而成 C=C）各缺一个决定基，故不被有效读取。该双基序读出是双翅目 DDT 抗性的底物特异性基础，亦构成桥基序读出的分子识别动机原型",
-   "基本原理": "质子转移（β-消除）机制在化学上要求桥碳 C-H 被攫取、三氯甲基提供 β-氯离去基团；双基序缺一即不能完成消除，酶据此区分 DDT 与 DDD/DDE",
-   "source": "literature",
-   "ref_doi": "10.1021/es405230j",
-   "verification": "corroborated",
-   "verification_quote": "the detoxifying reaction proceeds via a proton transfer mechanism where GSH acts as a cofactor rather than a conjugate",
-   "causal_chain": {
-    "pollutant_feature": {
-     "text": "DDT（1,1,1-三氯-2,2-双(对氯苯基)乙烷）在相邻碳上同时携带桥碳 C-H 与三氯甲基 -CCl3，构成脱氯化氢（β-消除）反应的双结构决定基",
-     "basis": "from_source",
-     "evidence_label": "from_source",
-     "source": "10.1021/es405230j",
-     "locator": "Li 2014, Environ. Sci. Technol. 48:5008, abstract",
-     "quote": "organochlorine insecticide DDT, 1,1,1-trichloro-2,2-bis(p-chlorophenyl)ethane",
-     "scope_match": "Keywords: organochlorine, DDT, trichloro, chlorophenyl"
-    },
-    "bio_structure": {
-     "text": "H 位疏水腔几何与化学互补于 DDT 的桥区与三氯甲基，将桥碳 C-H 定向至 G 位 GSH 辅因子以完成质子转移（3ZML 未共结晶 DDT，腔体对双基序的读出为机理推断；DDT 结合腔事实见 Riveron 2014）",
-     "basis": "llm_inferred"
-    },
-    "interaction": {
-     "text": "脱氯化氢经质子转移机制：GSH 辅因子攫取桥碳 C-H（β-消除的质子转移步），三氯甲基提供 β-氯离去基团，两者协同完成 DDT→DDE 的消除",
-     "basis": "from_source",
-     "evidence_label": "from_source",
-     "source": "10.1021/es405230j",
-     "locator": "Li 2014, Environ. Sci. Technol. 48:5008, abstract",
-     "quote": "the detoxifying reaction proceeds via a proton transfer mechanism where GSH acts as a cofactor rather than a conjugate",
-     "scope_match": "Keywords: proton transfer mechanism, GSH, cofactor, detoxifying reaction"
-    },
-    "why_it_works": {
-     "text": "双基序读出解释类似物判别：DDD（二氯甲基 -CHCl2 取代 -CCl3）与 DDE（桥碳 C-H 已随脱氯化氢失去）各缺一个决定基，故不被有效读取（机理推断，基于质子转移反应化学与 DDT 结构；家蝇酶对 DDT 类似物脱氯化氢的类似物依赖性见 Kurihara 1988，其逐字摘要未获核验）",
-     "basis": "llm_inferred"
-    },
-    "boundary_conditions": [
-     {
-      "text": "类似物依赖的底物特异性：家蝇酶催化 DDT 类似物的脱氯化氢呈类似物依赖（Kurihara 1988 表征 DDT 类似物脱氯化氢机制）；底物须具备可攫取的桥碳 C-H 与 β-氯离去基团",
-      "parameter": "substrate_analog",
-      "condition": {
-       "operator": "qualitative",
-       "value": null
-      },
-      "basis": "from_source",
-      "verification": "corroborated",
-      "gate_level": "hard",
-      "locator": "Kurihara 1988, Agric. Biol. Chem., title",
-      "quote": "Dehydrochlorination Mechanism of DDT Analogs Catalyzed by Housefly Enzyme",
-      "scope_match": "Keywords: Dehydrochlorination, DDT Analogs, Housefly Enzyme",
-      "source_asset": null
-     },
-     {
-      "text": "双基序要求为定性判据：分子须同时具备可攫取的桥碳 C-H 与 β-卤素离去基团方可被脱氯化氢读取（无数值阈值）",
-      "parameter": "dual_motif",
-      "condition": {
-       "operator": "qualitative",
-       "value": null
-      },
-      "basis": "llm_inferred",
-      "verification": "needs_review",
-      "gate_level": "soft",
-      "locator": null,
-      "quote": null,
-      "scope_match": null,
-      "source_asset": null
-     }
-    ],
-    "transferable_principle": "酶通过读出底物的一对相邻结构基序（桥碳 C-H 与三氯甲基）实现类似物判别（DDT 对 DDD/DDE）；该双基序/双表位读出动机可转译为对目标分子相邻特征基团做形状与化学互补识别的材料设计",
-    "verification_quote": "the detoxifying reaction proceeds via a proton transfer mechanism where GSH acts as a cofactor rather than a conjugate"
-   },
-   "source_doi": "10.1021/es405230j",
-   "source_page": 5008,
-   "source_locator": "Li 2014, Environ. Sci. Technol. 48:5008 / Kurihara 1988 title",
-   "source_file": "Li 2014 ES&T（PubMed 摘要 24678828 接地）/ Kurihara, Ikemoto & Clark 1988 Agric. Biol. Chem.（Crossref 标题接地，类似物特异性方向未获逐字摘要）；未做本地全文 PDF 审计",
-   "functional_groups": [
-    "桥碳 C-H（可攫取质子）",
-    "三氯甲基 -CCl3（β-氯离去基团）"
-   ],
-   "key_structures": [
-    "识别结构",
-    "催化结构"
-   ]
-  }
- ],
- "performance_data": [],
- "engineering_constraints": [
-  {
-   "constraint": "可溶酶与辅因子依赖",
-   "value": "GSTe2 为可溶性胞内酶（约 25.3 kDa，PDB 3ZML），催化需 GSH 辅因子；其催化与识别基序须固定化或重构方可用于材料",
-   "unit": null,
-   "relevance": "high",
-   "explanation": "RCSB 3ZML：formula_weight 25.283 kDa，配体 GSH（G 位）；催化需 GSH 辅因子（Li 2014）",
-   "source": "literature",
-   "ref_doi": "10.1186/GB-2014-15-2-R27"
+  "biomimetic_dimension": "分子仿生",
+  "features": [
+    "特异性识别",
+    "催化降解"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": null,
+    "note": "DDT-脱氯化氢酶为降解/转化类可溶酶原型，本库无其吸附性能测试；performance_data 为空数组，故吸附测试条件全空。酶活测定条件（Lipke & Kearns 1959：磷酸缓冲液、GSH 辅因子）属酶学背景，非吸附测试。"
   },
-  {
-   "constraint": "降解/转化而非吸附",
-   "value": "天然机制为 β-消除催化转化（DDT→DDE+HCl），非吸附富集；且 DDE 仍属持久性有机污染物，转化不等于无害；仿生转译限原理层",
-   "unit": null,
-   "relevance": "high",
-   "explanation": "机理推断（基于脱氯化氢反应本质）",
-   "source": "llm_inference",
-   "ref_doi": null
+  "library_tier": "extended",
+  "lifecycle_status": "active",
+  "coverage": "partial",
+  "status": "active",
+  "provenance_summary": {
+    "n_papers": 5,
+    "n_verified": 14,
+    "n_unverified": 0,
+    "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与硬边界条数（DDTG-001 四要素+4 硬边界=8，DDTG-002 四要素+2 硬边界=6）。机制接地限于 GSTe2 与家蝇 DDT-脱氯化氢酶的天然底物 DDT（降解/转化机制，DDT 经 β-消除脱氯化氢生成 DDE）；DDT 吸附识别转译为 design_translation（llm_inferred/inspiration），无吸附性能数据。quote 逐字取自 PMC4054843（Riveron 2014 全文 XML）、RCSB PDB 3ZML/2IMI 沉积记录（含 SITE AC1 与 REMARK 800）、JBC 1959 存档 PDF（Lipke & Kearns，页级阅读）、PubMed 摘要 24678828（Li 2014 ES&T）与 Crossref 题录（Clark & Shamaan 1984、Wang 2008 仅标题），均可核验；Clark & Shamaan 1984 与 Wang 2008 全文未获取。JBC 1959 OCR 伪迹（下标数字、换行连字符）按印刷原文归一。"
   },
-  {
-   "constraint": "双基序几何/电子特异性",
-   "value": "识别与催化依赖桥碳 C-H 与三氯甲基双基序的互补；DDD（-CHCl2）/DDE（无桥碳 C-H）与 DDT 仅差一至两个原子，材料层面判别难度高",
-   "unit": null,
-   "relevance": "high",
-   "explanation": "机理推断（基于双基序读出与类似物特异性）",
-   "source": "llm_inference",
-   "ref_doi": null
-  }
- ],
- "narrative": {
-  "entries": [
-   {
-    "source_file": "RCSB PDB 3ZML / Riveron 2014 Genome Biology (DOI 10.1186/GB-2014-15-2-R27)",
-    "paper_id": "2014-Riveron-GSTe2-DDT-resistance-structure",
-    "sections": {
-     "problem_definition": "DDT 曾是核心有机氯杀虫剂，双翅目昆虫经代谢抗性（尤其 DDT 脱氯化氢）对其产生耐药。在分子层面，酶如何在结构高度相似的有机氯类似物（DDT/DDD/DDE）中专一读取 DDT 并催化其脱氯化氢，是分子识别与酶催化的基础问题。",
-     "biological_solution": "DDT 脱氯化氢酶本质为谷胱甘肽 S-转移酶（Clark & Shamaan 1984 证明家蝇 DDT 脱氯化氢酶即 GST；Lipke & Kearns 1959 最早表征 DDT 脱氯化氢酶）。非洲疟蚊 GSTe2（PDB 3ZML，1.64 Å）采用 GST 超家族双分区活性位点：N 端 G 位结合 GSH（配体 GSH A 1222，结合残基 Ser12/Pro14/Leu36/His41/His53/Thr54/Ile55/Pro56/Glu67/Ser68/His69/Phe108/Arg112，chain A），C 端 H 位构成疏水 DDT 结合腔。催化经质子转移（β-消除）机制：GSH 作为辅因子攫取桥碳质子，不作共轭底物，DDT 脱 HCl 生成 DDE（Li 2014 QM/MM）。底物特异性要求桥碳 C-H 与三氯甲基双基序，DDD（-CHCl2）/DDE（无桥碳 C-H）不被有效读取。Riveron 2014 证明 L119F 突变扩大 DDT 结合腔、增加 DDT 进入与代谢，赋予高水平 DDT 抗性。",
-     "key_features": "必须保留：① 双分区活性位点（G 位 GSH 辅因子加 H 位疏水腔）；② 质子转移/β-消除催化机制；③ 桥碳 C-H 与三氯甲基双基序读出。可灵活调整：载体骨架、腔体疏水微环境、是否保留催化（转译仅取识别动机）。",
-     "design_mapping": "仿生映射：GSTe2 双基序读出转为 DDT 选择性识别位点。对 DDT 及其类似物 DDD/DDE，取桥基序读出动机（非复制 β-消除催化），以形状与疏水互补孔腔识别 DDT 的双(氯苯基)加三氯甲基双基序，选择性吸附 DDT 而排除 DDD/DDE。注意：此为设计转译/启发（llm_inferred），非 from_source 事实，DDT/DDD/DDE 结构差异极小（一至两个原子），材料层面的判别能力须实验验证。",
-     "explainability_anchors": "设计溯源：DDT 脱氯化氢酶双基序读出（PDB 3ZML 加 Li 2014 加 Clark & Shamaan 1984，from_source）转为双分区活性位点与桥碳 C-H/三氯甲基双基序读出的可迁移原理，再转为 DDT 对 DDD/DDE 选择性识别（llm_inferred 启发，仅取识别动机、不复制催化，须实验验证）。"
+  "mechanisms": [
+    {
+      "mechanism_id": "DDTG-001",
+      "name": "GSTe2 双分区活性位点（G 位/H 位）与 DDT 脱氯化氢代谢（降解/转化）",
+      "description": "双翅目按蚊 epsilon 类谷胱甘肽 S-转移酶 GSTe2 代谢 DDT（1,1,1-三氯-2,2-双(对氯苯基)乙烷），产物为 DDE（1,1-二氯-2,2-双(对氯苯基)乙烯）。活性位点分两个子位点：G 位结合 GSH 辅因子（PDB 3ZML 中一分子 GSH 结合于 G 位），H 位为邻接 G 位的大而略开放的疏水底物口袋；DDT 以对接模型容纳于 H 位，二氯苯环被稳定、桥碳 Cα 指向谷胱甘肽硫醇盐。L119F 突变使 H4 螺旋 N 端弯折、扩大 H 位腔，抗性（119 F）等位基因对 DDT 的催化效率显著高于敏感（L119）等位基因（kcat/Km 316.3 对 92.0 µM−1·s−1）。Li 2014 QM/MM 计算（agGSTe2）支持脱毒经质子转移机制：其指数平均能垒 15.2 kcal/mol，较 GS-DDT 共轭机制低 27.6 kcal/mol，GSH 作辅因子（碱）而非共轭底物。家蝇 DDT-脱氯化氢酶活性经 Clark & Shamaan 1984 证明属于谷胱甘肽 S-转移酶。本条按天然机制如实标记为降解/转化。",
+      "基本原理": "疏水底物口袋（H 位）与辅因子结合位点（G 位）的组合使大体积疏水有机氯分子以近反应姿态被容纳；腔的形状与尺寸决定底物可及性与代谢效率，抗性突变经扩大 H 位腔提高 DDT 可及与代谢，构成双翅目代谢抗性的结构基础",
+      "source": "literature",
+      "ref_doi": "10.1186/gb-2014-15-2-r27",
+      "verification": "verified",
+      "verification_quote": "The active site of GSTe2 can be divided into two sub-sites. Firstly, there is the glutathione binding site, called the G-site, where one GSH molecule is bound.",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "DDT（1,1,1-三氯-2,2-双(对氯苯基)乙烷）是 DDT-脱氯化氢酶的天然底物：桥连叔碳（C-2）具 β-氢，脱氯化氢（β-消除）产物为 DDE（1,1-二氯-2,2-双(对氯苯基)乙烯）；Lipke & Kearns 1959 系统测定了家蝇 DDT-脱氯化氢酶对各类 DDT 类似物的底物与辅因子特异性，确立该酶的底物谱",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1016/S0021-9258(18)69878-3",
+          "locator": "Summary, p.2131",
+          "quote": "The specificity of 1,1,1-trichloro-2,2-bis(p-chlorophenyl)ethane (DDT) dehydrochlorinase for various analogues of DDT has been investigated.",
+          "scope_match": "Keywords: DDT, dehydrochlorinase, specificity, analogues"
+        },
+        "bio_structure": {
+          "text": "GSTe2 活性位点分两个子位点：G 位为谷胱甘肽结合位点（结合一分子 GSH），H 位为邻接 G 位的大而略开放的疏水腔（底物位），由 N 端结构域 loop 与 C 端结构域 H4/H8 螺旋构成。PDB 3ZML 为冈比亚按蚊近缘种（Anopheles funestus，taxonomy 62324）GSTe2 敏感/抗性等位基因晶体结构（1.639 Å；聚合物实体 1 记 GLUTATHIONE S-TRANSFERASE E2，单体 25.283 kDa、二聚体 51.18 kDa；非聚合物实体 2 为 GLUTATHIONE ×2，每亚基一分子，配体 GSH A/B 1222）；SITE AC1 记 G 位 GSH 结合残基为 Ser12、Pro14、Leu36、His41、His53、Thr54、Ile55、Pro56、Glu67、Ser68、His69、Phe108、Arg112（chain A，PDB 编号）；PDB 2IMI 为冈比亚按蚊（Anopheles gambiae）epsilon 类 GSTe2（Wang 2008, J Struct Biol, DOI 10.1016/j.jsb.2008.08.003，单体 24.88 kDa），二者架构同源",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1186/gb-2014-15-2-r27",
+          "locator": "Results (Structural analysis), Genome Biol 15:R27 (PMC4054843)",
+          "quote": "The active site of GSTe2 can be divided into two sub-sites. Firstly, there is the glutathione binding site, called the G-site, where one GSH molecule is bound.",
+          "scope_match": "Keywords: GSTe2, G-site, glutathione, GSH"
+        },
+        "interaction": {
+          "text": "DDT 对接于 H 位：两个氯代苯环被恰当稳定，桥连叔碳 Cα 最优定位并指向谷胱甘肽硫醇盐（Riveron 2014 GOLD 对接模型；DDT 或产物 DDE 与 GSTe2 的共结晶尝试未成功，结合姿态为模型而非晶体学直接观测）。化学层面反应为 β-消除脱氯化氢：桥连叔碳质子（C-2）释放，DDT 仅生成 DDE，净反应 DDT → DDE + HCl",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1186/gb-2014-15-2-r27",
+          "locator": "Results (Docking), Genome Biol 15:R27 (PMC4054843)",
+          "quote": "This includes the proper stabilization of the DDT chloride-phenyl rings and the optimal positioning of the DDT Cα, pointing towards the thiolate from glutathione",
+          "scope_match": "Keywords: DDT, chloride-phenyl, thiolate, glutathione"
+        },
+        "why_it_works": {
+          "text": "L119F 突变使 H4 螺旋 N 端显著弯折、扩大 H 位腔，DDT 更易以近反应姿态进入 H 位，提高 DDT 可及与代谢；重组酶动力学显示抗性等位基因（119 F）对 DDT 的催化效率显著高于敏感等位基因（L119）（kcat/Km 316.3 对 92.0 µM−1·s−1；以 DDE 生成速率计的 Vmax 为 60.8 对 3.75 µmol·min−1·mg−1）。Li 2014 QM/MM（agGSTe2，与 3ZML 同源）给出蛋白环境对反应能垒的强影响：Arg112、Glu116、Phe120 作用显著，Ile55 促进最强（Arg112、Ile55 编号与 3ZML SITE AC1 一致）；H4 螺旋位置与 DDT 结合腔的形状和尺寸是高代谢活性的关键因素",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1186/gb-2014-15-2-r27",
+          "locator": "Abstract, Genome Biol 15:R27 (PMC4054843)",
+          "quote": "Structural analysis reveals that the mutation confers resistance by enlarging the GSTe2 DDT-binding cavity, leading to increased DDT access and metabolism.",
+          "scope_match": "Keywords: GSTe2, DDT-binding cavity, metabolism"
+        },
+        "boundary_conditions": [
+          {
+            "text": "GSH 辅因子依赖：受试化合物中仅谷胱甘肽与半胱氨酰甘氨酸能引发反应，其余硫醇（半胱氨酸、BAL、同型半胱氨酸内酯等）、氧化型谷胱甘肽、S-乙酰谷胱甘肽等均不能引发脱氯化氢（Lipke & Kearns 1959 Summary 3）；催化依赖 GSH 辅因子",
+            "parameter": "cofactor",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "from_source",
+            "verification": "verified",
+            "gate_level": "hard",
+            "locator": "Summary, p.2131",
+            "quote": "Of the compounds tested, only glutathione and cysteinyl-glycine will initiate the reaction.",
+            "scope_match": "Keywords: glutathione, cysteinyl-glycine, reaction",
+            "source_asset": null
+          },
+          {
+            "text": "反应机制特异：脱毒反应经质子转移机制进行，GSH 作为辅因子（攫取桥碳质子的碱）而非共轭底物（Li 2014 QM/MM：质子转移机制能垒较 GS-DDT 共轭机制低 27.6 kcal/mol）",
+            "parameter": "reaction_mechanism",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "from_source",
+            "verification": "verified",
+            "gate_level": "hard",
+            "locator": "Li 2014, Environ. Sci. Technol. 48:5008, PubMed 24678828 abstract",
+            "quote": "the detoxifying reaction proceeds via a proton transfer mechanism where GSH acts as a cofactor rather than a conjugate",
+            "scope_match": "Keywords: proton transfer mechanism, GSH, cofactor, conjugate",
+            "source_asset": null
+          },
+          {
+            "text": "H 位腔几何门控：敏感等位基因（Uganda-GSTe2）的较小 H 位不允许 DDT 以该近反应构象被识别，导致 DDT 可及与代谢降低；抗性等位基因（Benin-GSTe2）扩大的 H 位是高水平代谢抗性的结构基础",
+            "parameter": "cavity_geometry",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "from_source",
+            "verification": "verified",
+            "gate_level": "hard",
+            "locator": "Results (Structural analysis), Genome Biol 15:R27 (PMC4054843)",
+            "quote": "In contrast, the smaller H-site of Uganda-GSTe2 does not allow DDT recognition in this conformation",
+            "scope_match": "Keywords: H-site, DDT recognition, GSTe2",
+            "source_asset": null
+          },
+          {
+            "text": "证据等级边界：DDT 或产物 DDE 与两种 GSTe2 等位基因的共结晶尝试均未成功，现有 DDT 结合姿态为 GOLD 分子对接模型（结合位点以 GSH 位点为中心定义），非晶体学直接观测；涉及结合姿态的推断按模型级证据对待",
+            "parameter": "evidence_level",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "from_source",
+            "verification": "verified",
+            "gate_level": "hard",
+            "locator": "Results (Docking), Genome Biol 15:R27 (PMC4054843)",
+            "quote": "Attempts to co-crystallize the substrate DDT or the product DDE with BN-GSTe2 and UG-GSTe2 were unsuccessful.",
+            "scope_match": "Keywords: DDT, DDE, GSTe2",
+            "source_asset": null
+          },
+          {
+            "text": "转译边界（定性，无数值阈值）：β-消除催化依赖完整三级结构的可溶酶与 G 位硫醇盐化学的配合，被动吸附材料无法复制该催化化学；固定化或变性若破坏预组织腔体则识别减弱",
+            "parameter": "catalysis_not_transferable",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "「疏水底物口袋（H 位）邻接辅因子极性位点（G 位）」的双分区活性位点架构，使大体积疏水有机氯底物以近反应姿态被容纳；腔的形状与尺寸决定底物可及与转化效率，腔体几何可独立于催化化学而作为分子识别原理移植",
+        "verification_quote": "The active site of GSTe2 can be divided into two sub-sites. Firstly, there is the glutathione binding site, called the G-site, where one GSH molecule is bound."
+      },
+      "source_doi": "10.1186/gb-2014-15-2-r27",
+      "source_page": null,
+      "source_locator": "PDB 3ZML（RCSB 沉积数据）与 Genome Biology 15:R27 全文（PMC4054843, p.R27）",
+      "source_file": "Genome Biology 15:R27（Riveron et al. 2014；PMC4054843 全文 XML，quote 逐字可核验）+ PDB 3ZML / 2IMI（RCSB 沉积数据；未做本地全文 PDF 审计）+ Li 2014 ES&T 48:5008-5016（PubMed 摘要 24678828 接地，全文未获取）",
+      "functional_groups": [
+        "G 位谷胱甘肽结合位点（硫醇盐稳定化的极性位点）",
+        "H 位疏水腔（芳香/卤亲接触面，H4/H8 螺旋腔壁）",
+        "活性位点残基（Arg112、Ile55、Glu116、Phe120 等，Li 2014 QM/MM；Arg112/Ile55 见于 3ZML SITE AC1）"
+      ],
+      "key_structures": [
+        "识别与催化结构"
+      ]
+    },
+    {
+      "mechanism_id": "DDTG-002",
+      "name": "DDT-脱氯化氢酶的底物桥基序读出（p,p'-取代双苯环与桥连叔碳 β-氢）",
+      "description": "Lipke & Kearns 1959 系统测定家蝇 DDT-脱氯化氢酶对 DDT 类似物的底物特异性：酶读出双重基序，其一为 p,p'-取代双苯环（未取代双苯环类似物完全不反应），其二为桥连叔碳（C-2）质子（β-消除必需；烯烃产物 DDE 无此氢而为终端产物）。环取代类似物活性序：p-Br 与 p-Cl 相当，p-F、CH3、CH3O、I 取代依次降低；烷取代类似物 TDE（即 DDD，1,1-二氯-2,2-双(对氯苯基)乙烷）降解约为 DDT 的 4 倍，表明读出基于桥基序而非 DDT 独有。该酶经 Clark & Shamaan 1984 证明为谷胱甘肽 S-转移酶，为 DDT 型分子识别提供结构基序读出原型。",
+      "基本原理": "酶活性位点对底物施加几何与电子约束：p,p'-取代双苯环提供结合互补，桥连叔碳 β-氢提供消除反应把手；缺失任一基序的类似物活性显著降低或消失；基序读出泛于 DDT 单一分子（DDD 反应更快），故选择性源于基序组合而非分子全等",
+      "source": "literature",
+      "ref_doi": "10.1016/S0021-9258(18)69878-3",
+      "verification": "verified",
+      "verification_quote": "Of the other p,p'-substituents tested, p-F-, CH3-, CH3O-, and I- react at lesser rates and the unsubstituted rings not at all.",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "DDT 类似物底物谱（家蝇 DDT-脱氯化氢酶，Lipke & Kearns 1959 Table I）：2,2-双(p-Cl)与双(p-Br)类似物初始速率相同；烷取代 TDE（DDD）约为 DDT 的 4 倍；p-F、CH3、CH3O、I 取代较低；未取代双苯环类似物为零；DDT 仅生成 DDE 一种产物",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1016/S0021-9258(18)69878-3",
+          "locator": "Results (Substrate structure), p.2129",
+          "quote": "Table I shows that the initial rates of the 2,2-bis(p-Cl) and -(p-Br) analogues of DDT are the same in the lipoprotein system.",
+          "scope_match": "Keywords: initial rates, analogues, DDT"
+        },
+        "bio_structure": {
+          "text": "家蝇 DDT-脱氯化氢酶的底物结合位点读出苯环 p,p'-取代模式：受试 p,p'-取代基中 p-F、CH3、CH3O、I 以较低速率反应，未取代双苯环完全不反应。该酶经证明为谷胱甘肽 S-转移酶（Clark & Shamaan 1984 标题：Evidence that DDT-dehydrochlorinase from the house fly is a glutathione S-transferase），其底物口袋对应 GST 双分区活性位点架构中的 H 位（见 DDTG-001）",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1016/S0021-9258(18)69878-3",
+          "locator": "Results, p.2129",
+          "quote": "Of the other p,p'-substituents tested, p-F-, CH3-, CH3O-, and I- react at lesser rates and the unsubstituted rings not at all.",
+          "scope_match": "Keywords: p,p'-substituents, unsubstituted rings"
+        },
+        "interaction": {
+          "text": "化学步骤为 β-消除脱氯化氢：底物桥连叔碳（C-2）质子释放（Lipke & Kearns 系列 Paper I 已证明质子释放发生于 DDT 的叔碳原子 C-2）；TDE 可经两条消除途径（脱氯化氢得 1-氯代乙烯衍生物，脱氢得 DDE），而 DDT 仅生成 DDE",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1016/S0021-9258(18)69878-3",
+          "locator": "Results (Paper I recap), p.2129",
+          "quote": "It was shown that proton liberation from the tertiary carbon atom of DDT (C-2) was not stimulated at alkaline pH",
+          "scope_match": "Keywords: proton liberation, tertiary carbon, DDT, C-2"
+        },
+        "why_it_works": {
+          "text": "基序读出的化学根据：DDT 仅生成 DDE（1,1-二氯-2,2-双(对氯苯基)乙烯），DDE 为终端烯烃产物，其桥碳已无 β-氢、不能继续 β-消除；p,p'-取代决定结合，桥 β-氢决定消除能否发生，二者组合构成「DDT 型结构」的读出基序。DDD（TDE）具相同双苯环基序且桥碳仍有一个氢，故可反应且更快",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1016/S0021-9258(18)69878-3",
+          "locator": "Results (Product identification), p.2129-2130",
+          "quote": "the 1,1-dichloroethylene (DDE) by dehydrogenation. DDT yields only the latter compound",
+          "scope_match": "Keywords: dichloroethylene, DDE, DDT"
+        },
+        "boundary_conditions": [
+          {
+            "text": "p,p'-取代双苯环为结合必要条件：受试 p,p'-取代类似物中 p-F、CH3、CH3O、I 取代速率低于 p-Cl，未取代双苯环类似物完全不反应",
+            "parameter": "ring_substitution",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "from_source",
+            "verification": "verified",
+            "gate_level": "hard",
+            "locator": "Results, p.2129",
+            "quote": "Of the other p,p'-substituents tested, p-F-, CH3-, CH3O-, and I- react at lesser rates and the unsubstituted rings not at all.",
+            "scope_match": "Keywords: p,p'-substituents, unsubstituted rings",
+            "source_asset": null
+          },
+          {
+            "text": "读出非 DDT 独有：烷取代类似物 TDE（DDD，1,1-二氯-2,2-双(对氯苯基)乙烷）降解约为 DDT 的 4 倍，p-Br 取代类似物与 DDT 相当；基序读出具跨类似物泛化性，对 DDT 的选择性须在材料设计层面另行构建",
+            "parameter": "substrate_scope",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "from_source",
+            "verification": "verified",
+            "gate_level": "hard",
+            "locator": "Summary, p.2131",
+            "quote": "The p-Br compound is degraded at the same rate and the 1,1-dichloroethane derivative approximately 4 times as fast as DDT.",
+            "scope_match": "Keywords: p-Br, dichloroethane, DDT",
+            "source_asset": null
+          },
+          {
+            "text": "转译边界（定性，无数值阈值）：桥基序读出在天然体系中与 β-消除催化及 GSH 辅因子化学耦合；吸附材料仅可借用基序识别原理，不能复制消除反应，捕获 DDT 而不转化 DDT",
+            "parameter": "readout_without_catalysis",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "活性位点对 DDT 型分子施加双重基序读出：p,p'-取代双苯环决定结合，桥连叔碳 β-氢决定化学步骤；该「双基序识别」可独立于消除催化而作为 DDT 型污染物选择性捕获的识别原理",
+        "verification_quote": "Of the other p,p'-substituents tested, p-F-, CH3-, CH3O-, and I- react at lesser rates and the unsubstituted rings not at all."
+      },
+      "source_doi": "10.1016/S0021-9258(18)69878-3",
+      "source_page": 2129,
+      "source_locator": "Results/Summary, p.2129-2131",
+      "source_file": "JBC 234:2129-2132（Lipke & Kearns 1959 Part II；经 Wayback Machine 存档的 JBC 全文 PDF 页级阅读，OCR 伪迹按印刷原文归一）+ Pestic Biochem Physiol 22:249-261（Clark & Shamaan 1984；Crossref 标题接地，全文未获取）",
+      "functional_groups": [
+        "p,p'-取代双苯环读出位（疏水口袋壁）",
+        "桥连叔碳 β-氢读出位（消除反应化学把手）"
+      ],
+      "key_structures": [
+        "识别结构"
+      ]
     }
-   }
+  ],
+  "performance_data": [],
+  "engineering_constraints": [
+    {
+      "constraint": "可溶酶形态",
+      "value": "GSTe2 为双翅目昆虫可溶性胞内酶；冈比亚按蚊近缘种 GSTe2 单体约 25.3 kDa（RCSB 3ZML 聚合物实体 1：25.283 kDa），冈比亚按蚊 GSTe2 约 24.9 kDa（RCSB 2IMI：24.88 kDa）；用作吸附须固定化或将识别原理移植于固体载体",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "RCSB 3ZML / 2IMI 聚合物实体 formula_weight",
+      "source": "literature",
+      "ref_doi": "10.1186/gb-2014-15-2-r27"
+    },
+    {
+      "constraint": "GSH 辅因子依赖",
+      "value": "仅谷胱甘肽与半胱氨酰甘氨酸能引发脱氯化氢反应，缺乏 GSH 辅因子时催化活性无从发起；催化功能不可脱离辅因子化学",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "Lipke & Kearns 1959 Summary 3（受试化合物中仅 glutathione 与 cysteinyl-glycine 引发反应）",
+      "source": "literature",
+      "ref_doi": "10.1016/S0021-9258(18)69878-3"
+    },
+    {
+      "constraint": "缺乏 DDT 复合物晶体结构",
+      "value": "DDT/DDE 与 GSTe2 的共结晶尝试未成功，现有 DDT 结合姿态为分子对接模型（以 GSH 位点为中心定义对接腔）；涉及结合姿态的设计论据按模型级证据对待",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "Riveron 2014 Results 明确陈述共结晶未成功（PMC4054843 全文）",
+      "source": "literature",
+      "ref_doi": "10.1186/gb-2014-15-2-r27"
+    },
+    {
+      "constraint": "催化不可直接转译",
+      "value": "β-消除脱氯化氢依赖 G 位硫醇盐化学与完整三级结构的配合，被动吸附材料无法复制；可提取的仅为 H 位腔几何与桥基序读出的识别原理",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "机理推断（基于 G/H 位点架构与辅因子依赖事实的外推）",
+      "source": "llm_inference",
+      "ref_doi": null
+    }
+  ],
+  "narrative": {
+    "entries": [
+      {
+        "source_file": "Genome Biology 15:R27（Riveron et al. 2014, DOI 10.1186/gb-2014-15-2-r27, PMC4054843）+ JBC 234:2129-2132（Lipke & Kearns 1959, DOI 10.1016/S0021-9258(18)69878-3）+ Li 2014 ES&T 48:5008（DOI 10.1021/es405230j, PubMed 24678828）+ PDB 3ZML/2IMI（RCSB 沉积数据）",
+        "paper_id": "2014-Riveron-GSTe2-DDT-resistance-structure",
+        "sections": {
+          "problem_definition": "DDT 是典型有机氯农药，双翅目昆虫（家蝇、按蚊）在长期选择下进化出代谢抗性：体内 DDT-脱氯化氢酶将 DDT 脱氯化氢转化为 DDE 而降低毒性。该酶学体系是自然界对有机氯分子进行酶促转化的经典案例，同时也是「如何从结构上识别 DDT 型分子」的分子识别问题。本库将其定位为降解/转化仿生原型（天然机制为降解/转化）与桥基序读出动机原型。",
+          "biological_solution": "按蚊 epsilon 类谷胱甘肽 S-转移酶 GSTe2 催化 DDT 的脱氯化氢代谢。Riveron 等（Genome Biology 2014）解析了冈比亚按蚊近缘种（An. funestus）GSTe2 敏感（UG）与抗性（BN）等位基因晶体结构（PDB 3ZML，GSH 复合物）：活性位点分两个子位点，G 位结合一分子 GSH（辅因子位，SITE AC1 记结合残基 Ser12/Pro14/Leu36/His41/His53/Thr54/Ile55/Pro56/Glu67/Ser68/His69/Phe108/Arg112，chain A），H 位为邻接 G 位的大而略开放的疏水底物口袋（由 N 端 loop 与 C 端 H4/H8 螺旋构成）。DDT 以对接模型容纳于 H 位，二氯苯环被稳定、桥碳 Cα 指向谷胱甘肽硫醇盐；L119F 突变弯折 H4 螺旋 N 端、扩大 H 位腔，抗性等位基因对 DDT 的催化效率显著更高（kcat/Km 316.3 对 92.0 µM−1·s−1），且作者明确指出 DDT/DDE 共结晶尝试未成功、结合姿态为对接模型。Li 等（2014 ES&T）对 agGSTe2 脱毒机制作 QM/MM 计算：质子转移机制指数平均能垒 15.2 kcal/mol，较 GS-DDT 共轭机制低 27.6 kcal/mol，支持 GSH 作辅因子（碱）而非共轭底物，Arg112/Glu116/Phe120/Ile55 等残基对反应影响显著。冈比亚按蚊 GSTe2（PDB 2IMI，Wang 2008）架构同源且具高 DDT 代谢活性。酶学层面，Lipke & Kearns（JBC 1959）系统测定了家蝇 DDT-脱氯化氢酶的底物与辅因子特异性：p,p'-取代双苯环为结合必要条件（未取代双苯环不反应），桥连叔碳（C-2）质子释放为消除步骤所需，DDT 仅生成 DDE，TDE（DDD）降解约为 DDT 的 4 倍，且仅谷胱甘肽与半胱氨酰甘氨酸能引发反应；Clark & Shamaan（1984）随后证明家蝇 DDT-脱氯化氢酶即谷胱甘肽 S-转移酶。",
+          "key_features": "必须保留：① 与双(对氯苯基)底物几何互补的 H 位疏水腔（腔形与尺寸决定底物可及性）；② 双基序读出（p,p'-取代双苯环 + 桥连叔碳 β-氢）；③ 双分区活性位点架构概念（底物口袋邻接辅因子位点）。可灵活调整：载体骨架、腔深与腔壁化学（芳香/卤亲修饰程度）、识别基团类型；催化化学与 GSH 辅因子依赖不可移植。",
+          "design_mapping": "仿生映射限于原理层：DDT-脱氯化氢酶的 H 位腔几何与双基序读出 → DDT 识别/吸附位点的形状互补与基序匹配原则。边界声明：天然机制为降解/转化（DDT → DDE + HCl 的 β-消除），设计转译仅取桥基序读出动机，不复制 β-消除催化与 GSH 辅因子化学（T8 合规）；DDT 结合姿态在来源中为对接模型而非晶体学观测；基序读出非 DDT 独有（DDD 反应更快），DDT 选择性须在材料层面另行构建。以上转译全部为 llm_inferred/inspiration，非 from_source 事实。",
+          "explainability_anchors": "设计溯源：DDT-脱氯化氢酶底物特异性图谱（Lipke & Kearns 1959，from_source，JBC 234:2129-2132）+ GSTe2 双分区活性位点架构与 L119F 腔体效应（Riveron 2014 / PDB 3ZML，from_source）+ 质子转移机制与关键残基（Li 2014，from_source）→「双基序读出 + H 位疏水腔几何」可迁移原理（from_source）→ DDT 识别位点设计（llm_inferred 启发，仅取读出不取催化，须实验验证）。"
+        }
+      }
+    ]
+  },
+  "design_translation": [
+    {
+      "idea": "将 DDT-脱氯化氢酶的「H 位疏水腔几何 + 双基序读出」移植到多孔载体，构建对 DDT 桥基序（p,p'-二氯双苯环 + 三氯甲基头）形状互补的识别位点：以芳香/卤亲腔壁匹配双(对氯苯基)骨架，仅做识别吸附，不复制 β-消除催化与 GSH 辅因子化学",
+      "specific_functional_group": "与双(对氯苯基)骨架形状互补的疏水芳香腔壁（芳环 π 面、卤亲接触面），辅以指向桥连叔碳区域的弱极性接触基团（C-H···π 或 C-H···Cl 型弱给体）；不含硫醇盐/亲核催化基团",
+      "material_handle": "以 DDT 或其不可水解结构类似物为模板的分子印迹：在介孔二氧化硅或交联聚合物骨架上以刚性芳香单体（如苯乙烯/二乙烯基苯类）与致孔剂构建形状互补腔体，控制腔深匹配双苯环加三氯甲基头的分子轮廓；印迹后彻底洗脱模板",
+      "target_interaction": "双(对氯苯基)环与芳香腔壁的范德华/π-π 形状互补接触 + 三氯甲基头与腔端的卤亲/弱极性接触 + 疏水埋藏排除水竞争；无共价转化",
+      "source_tier": "llm_inference",
+      "evidence_tier": "inspiration（原理层外推：GSTe2 对 DDT 的代谢与 H 位腔几何接地于 Riveron 2014 / PDB 3ZML，DDT-脱氯化氢酶底物特异性接地于 Lipke & Kearns 1959；转译为 DDT 识别/吸附为 llm_inferred，不复制催化，无吸附实验数据）",
+      "examples": [],
+      "design_principle": "DDT-脱氯化氢酶证明双基序读出（p,p'-取代双苯环 + 桥连叔碳 β-氢）与 H 位疏水腔几何可在酶活性位点内区分 DDT 型分子（Lipke & Kearns 1959；Riveron 2014 / PDB 3ZML）；其中腔体几何与基序识别可独立于消除催化移植到人工孔道",
+      "implementation_example": "DDT 模板分子印迹的芳香交联聚合物或介孔二氧化硅（无实验数据，仅为设计假设）",
+      "constraints": "基序读出非 DDT 独有（DDD/TDE 降解更快、p-Br 类似物相当），对 DDT 相对 DDD/DDE/其他有机氯的选择性须在腔体几何与模板策略层面另行构建；DDT 结合姿态在来源中为对接模型，腔体设计论据按模型级证据对待；水相中疏水腔的水竞争与天然有机质干扰是关键挑战；蛋白本身（可溶、约 25 kDa、依赖 GSH 辅因子）不可直接复制为吸附剂",
+      "failure_modes": "腔体对 DDT 型基序的泛化读出导致 DDD/DDE/甲氧滴滴涕等共存有机氯共吸附而降低选择性；印迹腔在水中坍塌或溶剂化使形状互补丧失；误引入亲核基团试图复制催化反而造成不可逆污染或副反应；模板残留造成假阳性",
+      "material_realization_examples": []
+    }
+  ],
+  "honesty_ledger": {
+    "facts": [
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "GSTe2 双分区活性位点（G 位/H 位）与 DDT 脱氯化氢代谢（降解/转化）",
+        "basis": "from_source_verified",
+        "note": "Riveron 2014（Genome Biology 15:R27，PMC4054843 全文 XML；PDB 3ZML 为其沉积结构，An. funestus GSTe2 + GSH，SITE AC1 记 G 位残基 Ser12-Pro14-Leu36-His41-His53-Thr54-Ile55-Pro56-Glu67-Ser68-His69-Phe108-Arg112 chain A；PDB 2IMI 为 An. gambiae GSTe2）：G/H 位点双分区、L119F 扩大 H 位腔、DDT 对接姿态（Cα 指向谷胱甘肽硫醇盐）、抗性/敏感等位基因 kcat/Km 316.3 对 92.0；Li 2014 ES&T（PubMed 24678828）QM/MM 质子转移机制、GSH 辅因子非共轭底物、Arg112/Glu116/Phe120/Ile55 关键残基；quote 逐字取自 PMC4054843 全文、PubMed 摘要与 RCSB 沉积记录，可核验；DDT/DDE 共结晶未成功为原文自述"
+      },
+      {
+        "type": "mechanism",
+        "index": 1,
+        "name": "DDT-脱氯化氢酶的底物桥基序读出（p,p'-取代双苯环与桥连叔碳 β-氢）",
+        "basis": "from_source_verified",
+        "note": "Lipke & Kearns 1959 JBC 234:2129-2132（DOI 10.1016/S0021-9258(18)69878-3，PMID 13673025；经 Wayback Machine 存档的 JBC 全文 PDF 页级阅读）：底物类似物速率表、p,p'-取代必要、C-2 叔碳质子释放、DDT 仅生成 DDE、辅因子仅谷胱甘肽/半胱氨酰甘氨酸；quote 逐字取自存档 PDF，OCR 伪迹（下标数字 CH3/CH3O、1,1 与换行连字符）按印刷原文归一；Clark & Shamaan 1984（Pestic Biochem Physiol 22:249-261）GST 身份仅 Crossref 标题接地"
+      }
+    ],
+    "leads": [],
+    "inferences": [
+      {
+        "type": "design_translation",
+        "index": 0,
+        "idea": "将 H 位腔几何与双基序读出移植到多孔载体识别 DDT（仅读出不取催化）",
+        "basis": "llm_inferred",
+        "label": "inspiration",
+        "note": "天然机制为降解/转化（β-消除），转译限于原理层的桥基序读出；DDT 结合姿态在来源中为对接模型；基序读出非 DDT 独有（DDD 反应更快）；无吸附实验数据，亲和力与选择性须实验验证"
+      },
+      {
+        "type": "fact_derivation",
+        "index": 0,
+        "name": "简报「DDD/DDE 不被读取」表述与 Lipke & Kearns 1959 原文的校正",
+        "basis": "llm_inferred",
+        "label": "brief_correction",
+        "note": "实测原文（Summary 1）：TDE（即 DDD，1,1-二氯-2,2-双(对氯苯基)乙烷）降解约为 DDT 的 4 倍，并非「不被读取」；DDE 为 DDT 脱氯化氢的烯烃终端产物（桥碳无 β-氢、不能继续消除），是产物而非底物。条目从原文不从简报表述"
+      },
+      {
+        "type": "fact_derivation",
+        "index": 1,
+        "name": "DDT → DDE + HCl 净反应式",
+        "basis": "llm_inferred",
+        "label": "stoichiometry_derivation",
+        "note": "由原文「DDT 仅生成 DDE」（产物鉴定）与脱氯化氢酶命名（脱去 HCl）组合得出的净化学计量；原文未以 'DDT → DDE + HCl' 单句陈述"
+      }
+    ],
+    "boundary_notes": [
+      "本原型天然机制为降解/转化（DDT 经 β-消除脱氯化氢生成 DDE），库中如实标记为降解/转化原型；设计转译限原理层，仅取桥基序读出，不复制催化",
+      "GSTe2 对 DDT 的代谢接地于 Riveron 2014 重组酶动力学与对接模型；DDT/DDT-GSTe2 共晶结构不存在（原文明确共结晶未成功），DDT 结合姿态为对接模型（from_source 硬边界）",
+      "家蝇 DDT-脱氯化氢酶的 GST 身份仅接地于 Clark & Shamaan 1984 标题（Crossref 可核验），全文未获取",
+      "无任何 DDT 吸附性能数据；performance_data 为空数组，严格未从外部污染物知识库搬运任何性能数值",
+      "一切 llm_inferred 边界均为定性、无数值阈值，gate_level=soft"
+    ],
+    "missing_pdf_items": [
+      "Clark & Shamaan 1984 Pestic Biochem Physiol 22:249-261 全文（quote 取自 Crossref 标题）",
+      "Lipke & Kearns 1959 Part I（JBC 234:2123-2128）全文（Part II 经 Wayback 存档 PDF 阅读，Part I 未阅读）",
+      "Li 2014 Environ. Sci. Technol. 48:5008-5016 全文（quote 取自 PubMed 摘要 24678828）",
+      "Wang et al. 2008 J Struct Biol（PDB 2IMI 引文）全文（题录取自 RCSB 引文与 Crossref）"
+    ],
+    "generated_by": "manual-curation-2026-07-22",
+    "note": "诚实优先：机制接地限于 GSTe2/DDT-脱氯化氢酶的天然底物 DDT 与降解/转化机制本身；DDT 吸附识别转译全部为 inspiration/外推，不复制催化。2026-07-22 复核：PMC4054843 全文 XML 与 Wayback 存档 JBC PDF（jbc.org/content/234/8/2129.full.pdf, 2020-03-25 快照）quote 逐字复验通过（Cα 按原文用希腊字母；JBC OCR 伪迹 1,1→1,l、CH3→CH, 等按印刷原文归一）；Li 2014 ES&T 摘要（PubMed 24678828）quote 逐字核验；PDB 3ZML（聚合物实体 GLUTATHIONE S-TRANSFERASE E2、配体 GLUTATHIONE ×2、种属 Anopheles funestus taxonomy 62324、单体 25.283 kDa、1.639 Å、SITE AC1 G 位残基）与 PDB 2IMI（An. gambiae GSTe2，Wang 2008 J Struct Biol，DOI 10.1016/j.jsb.2008.08.003，单体 24.88 kDa）经 RCSB REST/PDB 文件复验。本版整合并取代同日较早的两份草稿（DDTG 深度接地版与 GST-DDT 并行版），取其交集与各自已核验接地"
+  },
+  "boundary_rules": [
+    {
+      "rule": "GSH 辅因子依赖：仅谷胱甘肽与半胱氨酰甘氨酸能引发脱氯化氢反应",
+      "source_mechanism": "GSTe2 双分区活性位点（G 位/H 位）与 DDT 脱氯化氢代谢（降解/转化）",
+      "gate_level": "hard",
+      "basis": "from_source"
+    },
+    {
+      "rule": "反应机制特异：脱氯化氢经质子转移机制，GSH 作辅因子（碱）而非共轭底物（Li 2014 QM/MM）",
+      "source_mechanism": "GSTe2 双分区活性位点（G 位/H 位）与 DDT 脱氯化氢代谢（降解/转化）",
+      "gate_level": "hard",
+      "basis": "from_source"
+    },
+    {
+      "rule": "H 位腔几何门控 DDT 可及：敏感等位基因的较小 H 位不允许 DDT 以近反应构象被识别",
+      "source_mechanism": "GSTe2 双分区活性位点（G 位/H 位）与 DDT 脱氯化氢代谢（降解/转化）",
+      "gate_level": "hard",
+      "basis": "from_source"
+    },
+    {
+      "rule": "DDT/GSTe2 共晶结构不存在，现有结合姿态为对接模型（证据等级边界）",
+      "source_mechanism": "GSTe2 双分区活性位点（G 位/H 位）与 DDT 脱氯化氢代谢（降解/转化）",
+      "gate_level": "hard",
+      "basis": "from_source"
+    },
+    {
+      "rule": "p,p'-取代双苯环为底物结合必要条件，未取代双苯环类似物不反应",
+      "source_mechanism": "DDT-脱氯化氢酶的底物桥基序读出（p,p'-取代双苯环与桥连叔碳 β-氢）",
+      "gate_level": "hard",
+      "basis": "from_source"
+    },
+    {
+      "rule": "基序读出非 DDT 独有：DDD（TDE）降解快于 DDT，p-Br 类似物与 DDT 相当",
+      "source_mechanism": "DDT-脱氯化氢酶的底物桥基序读出（p,p'-取代双苯环与桥连叔碳 β-氢）",
+      "gate_level": "hard",
+      "basis": "from_source"
+    },
+    {
+      "rule": "转译限于桥基序读出，不复制 β-消除催化与 GSH 辅因子化学（定性，无数值阈值）",
+      "source_mechanism": "DDT-脱氯化氢酶的底物桥基序读出（p,p'-取代双苯环与桥连叔碳 β-氢）",
+      "gate_level": "soft",
+      "basis": "llm_inferred"
+    }
   ]
- },
- "design_translation": [
-  {
-   "idea": "将 DDT 脱氯化氢酶对桥碳 C-H 与三氯甲基 -CCl3 的双基序读出动机移植到多孔固体载体，构建对 DDT 双(氯苯基)加三氯甲基两个相邻特征基团形状与疏水互补的识别位点，面向 DDT 对其类似物 DDD/DDE 的选择性吸附；仅取桥基序读出动机，不复制 β-消除催化",
-   "specific_functional_group": "与 DDT 双(氯苯基)加三氯甲基形状互补的疏水腔壁（芳基/烷基疏水面），可选配弱卤键受体以识别氯取代基，按双基序间距预组织排布",
-   "material_handle": "以 DDT 分子印迹聚合物、形状互补的金属有机框架/共价有机框架孔腔或环糊精/杯芳烃空腔构筑结合位点，使空腔几何匹配 DDT 的双(氯苯基)加三氯甲基轮廓；借刚性间隔臂控制双基序识别位点间距",
-   "target_interaction": "形状与疏水互补主导，叠加可选的氯卤键作用，识别 DDT 的双基序；对 DDD（-CHCl2）/DDE（无桥碳 C-H）因轮廓/电子差异而弱结合",
-   "source_tier": "llm_inference",
-   "evidence_tier": "inspiration（原理层外推：GSTe2 机制接地于天然底物 DDT 的脱氯化氢；DDT 吸附识别转译为 llm_inferred，仅取识别动机、不复制催化，无直接 DDT 吸附证据）",
-   "examples": [],
-   "design_principle": "DDT 脱氯化氢酶经双基序读出（桥碳 C-H 与三氯甲基）区分 DDT 与 DDD/DDE（PDB 3ZML 加 Li 2014 加 Kurihara 1988）；该双表位读出动机原理上可外推为形状/化学互补的选择性吸附",
-   "implementation_example": "DDT 印迹聚合物或具形状互补疏水腔的多孔骨架（无实验数据，仅为设计假设）",
-   "constraints": "DDT/DDD/DDE 结构差异极小（一至两个原子），材料层面实现形状判别难度高；DDT 高疏水、水溶度极低，水相传质与非特异疏水吸附是关键挑战",
-   "failure_modes": "非特异疏水吸附使选择性丧失；空腔过刚或过柔均削弱双基序互补；DDE/DDD 共吸附降低 DDT 选择性",
-   "material_realization_examples": []
-  }
- ],
- "honesty_ledger": {
-  "facts": [
-   {
-    "type": "mechanism",
-    "index": 0,
-    "name": "GST 双分区活性位点催化 DDT 脱氯化氢（降解/转化）",
-    "basis": "from_source_corroborated",
-    "note": "PDB 3ZML（GSTe2，1.64 Å，GSH 配体 G 位，结合残基 SITE AC1：Ser12/Pro14/Leu36/His41/His53/Thr54/Ile55/Pro56/Glu67/Ser68/His69/Phe108/Arg112，chain A）加 Riveron 2014（GSTe2 代谢 DDT、L119F 扩大 DDT 结合腔赋予抗性）加 Li 2014 ES&T（QM/MM：质子转移机制、GSH 辅因子、Arg112/Glu116/Phe120/Ile55）加 Clark & Shamaan 1984（DDT 脱氯化氢酶即 GST）；quote 取自 PDB 沉积记录与 Crossref/PubMed 摘要/标题（可核验），未做全文 PDF 审计"
-   },
-   {
-    "type": "mechanism",
-    "index": 1,
-    "name": "底物特异性双基序读出（桥碳 C-H 与三氯甲基）",
-    "basis": "from_source_corroborated",
-    "note": "DDT 结构（1,1,1-三氯-2,2-双(对氯苯基)乙烷，Li 2014 逐字）加质子转移/β-消除机制（Li 2014）加 DDT 类似物脱氯化氢的家蝇酶类似物依赖（Kurihara 1988 标题）；双基序判别的结构基础接地于反应化学与底物结构"
-   }
-  ],
-  "leads": [],
-  "inferences": [
-   {
-    "type": "design_translation",
-    "index": 0,
-    "idea": "取双基序读出动机，以形状/疏水互补孔腔选择性吸附 DDT 而排除 DDD/DDE（不复制 β-消除催化）",
-    "basis": "llm_inferred",
-    "label": "inspiration",
-    "note": "DDT/DDD/DDE 结构差异极小（一至两个原子）；属原理层设计外推，仅取识别动机、不复制催化（T8 合规），判别能力须实验验证"
-   },
-   {
-    "type": "mechanism_detail",
-    "index": 1,
-    "idea": "DDD（-CHCl2）/DDE（无桥碳 C-H）不被有效读取的具体类似物判别方向",
-    "basis": "llm_inferred",
-    "label": "inspiration",
-    "note": "基于质子转移/β-消除反应化学与 DDT 结构的机理推断；Kurihara 1988 逐字摘要未获核验，未作 from_source"
-   }
-  ],
-  "boundary_notes": [
-   "本原型天然机制为 DDT 脱氯化氢（降解/转化），from_source 接地限于 GSTe2/DDT 天然底物机制（双分区活性位点、质子转移 β-消除、双基序底物特异性）",
-   "DDT 吸附识别转译为设计转译（llm_inferred / inspiration），仅取桥基序读出动机、不复制催化，不得用作 DDT 吸附的 direct evidence",
-   "无 DDT 吸附性能数据（qmax 等）；严格未从外部污染物知识库搬运任何性能数值",
-   "3ZML 未共结晶 DDT，H 位对双基序的读出为机理推断；DDT 结合腔事实见 Riveron 2014 摘要",
-   "G 位/H 位为 GST 超家族通用双分区命名，Yang 2019 接地取自水稻 tau 类 GST，仅作命名与通用架构佐证",
-   "边界（可溶酶/辅因子依赖、降解转化非吸附、DDD/DDE 判别方向）均为定性 llm_inferred，不带数值阈值，gate_level=soft"
-  ],
-  "missing_pdf_items": [
-   "Riveron 2014 Genome Biology 全文 PDF（quote 取自 Crossref 摘要与 PDB 沉积记录）",
-   "Li 2014 Environ. Sci. Technol. 全文 PDF（quote 取自 PubMed 摘要 24678828）",
-   "Clark & Shamaan 1984 Pestic. Biochem. Physiol. 全文 PDF（quote 取自 Crossref 标题）",
-   "Lipke & Kearns 1959 J. Biol. Chem. 全文 PDF（quote 取自 Crossref 标题）",
-   "Kurihara, Ikemoto & Clark 1988 Agric. Biol. Chem. 全文 PDF（Crossref 无摘要，类似物特异性方向未获逐字核验）",
-   "Yang 2019 Genes 全文 PDF（G-site/H-site 命名 quote 取自 PubMed 摘要 31878175）"
-  ],
-  "generated_by": "manual-curation-2026-07-22",
-  "note": "诚实优先：机制接地限于 GSTe2/DDT 脱氯化氢天然机制（降解/转化）；DDT 吸附识别应用全部为 inspiration/外推，仅取桥基序读出动机、不复制催化（T8 合规）"
- },
- "boundary_rules": [
-  {
-   "rule": "反应类型特异：脱氯化氢为质子转移（β-消除）反应，需可攫取的桥碳 C-H 与 β-氯离去基团，非脱氯化氢结构不被转化",
-   "source_mechanism": "GST 双分区活性位点催化 DDT 脱氯化氢（降解/转化）",
-   "gate_level": "hard",
-   "basis": "from_source"
-  },
-  {
-   "rule": "类似物依赖的底物特异性：家蝇酶催化 DDT 类似物脱氯化氢呈类似物依赖，底物须具备可攫取桥碳 C-H 与 β-氯离去基团（Kurihara 1988）",
-   "source_mechanism": "底物特异性双基序读出（桥碳 C-H 与三氯甲基）",
-   "gate_level": "hard",
-   "basis": "from_source"
-  },
-  {
-   "rule": "降解/转化原型边界：天然机制为催化转化（DDT→DDE），非吸附富集，仿生转译限原理层；DDD/DDE 不被有效读取的双基序判别为机理推断（定性）",
-   "source_mechanism": "GST 双分区活性位点催化 DDT 脱氯化氢（降解/转化）",
-   "gate_level": "soft",
-   "basis": "llm_inferred"
-  },
-  {
-   "rule": "可溶酶与 GSH 辅因子依赖，变性或缺失辅因子使催化丧失（定性，无数值阈值）",
-   "source_mechanism": "GST 双分区活性位点催化 DDT 脱氯化氢（降解/转化）",
-   "gate_level": "soft",
-   "basis": "llm_inferred"
-  }
- ]
 }
