@@ -1,0 +1,306 @@
+{
+  "id": "moda-oxyanion-geometric-recognition",
+  "name_zh": "ModA 氧阴离子几何识别蛋白",
+  "name_en": "ModA Oxyanion Geometric Recognition Protein",
+  "organism": {
+    "scientific": "Escherichia coli / Azotobacter vinelandii（ModA 钼酸根结合蛋白）",
+    "category": "微生物"
+  },
+  "biomimetic_dimension": "分子仿生",
+  "features": [
+    "分子筛分"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": null,
+    "note": "ModA 为周质结合蛋白（分子识别原型），本库无其吸附性能测试条件；performance_data 为空，故测试条件全空。"
+  },
+  "library_tier": "extended",
+  "lifecycle_status": "active",
+  "coverage": "partial",
+  "status": "active",
+  "provenance_summary": {
+    "n_papers": 3,
+    "n_verified": 7,
+    "n_unverified": 0,
+    "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与边界条数（MODA-001 四要素+1 边界=5，MODA-002 两要素=2）。机制接地限于 ModA 天然底物（钼酸根/钨酸根）与硫酸根结合蛋白原理；PFBS 应用为设计转译（llm_inferred），无性能数据。quote 取自 PDB 沉积记录与文献标题（可核验），未做全文 PDF 审计。"
+  },
+  "mechanisms": [
+    {
+      "mechanism_id": "MODA-001",
+      "name": "预组织氢键阵列对四面体钼酸根的几何识别",
+      "description": "ModA 以预组织中性氢键给体阵列识别四面体钼酸根 MoO4²⁻（Ser12、Ser39、Tyr170 侧链羟基 + Val152、Ala125 骨架酰胺 NH）；钼酸根埋藏于 N 与 C 结构域间的低介电裂隙，无金属离子或阳离子参与配位",
+      "基本原理": "预组织的中性氢键给体与四面体氧阴离子几何互补，埋藏低介电口袋强化静电并排除水竞争，使氧阴离子在无金属参与下被高选择性识别",
+      "source": "literature",
+      "ref_doi": "10.1038/nsb0997-703",
+      "verification": "corroborated",
+      "verification_quote": "MOLYBDATE ANION IS SEQUESTERED BETWEEN N-AND C-DOMAINS",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "四面体钼酸根 MoO4²⁻（ModA 天然底物；PDB 1AMF 配体 MOO 为中心 Mo 与 O1/O2/O3/O4 四氧四面体配位，与硫酸根/磺酸根头基几何等构）",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1038/nsb0997-703",
+          "locator": "PDB 1AMF / p.703",
+          "quote": "CRYSTAL STRUCTURE OF MODA, A MOLYBDATE TRANSPORT PROTEIN, COMPLEXED WITH MOLYBDATE",
+          "scope_match": "Keywords: molybdate, complexed, transport"
+        },
+        "bio_structure": {
+          "text": "ModA 将 MoO4²⁻ 埋藏于 N 与 C 结构域间的埋藏低介电裂隙；PDB 1AMF SITE 记录结合位点残基为 Ser12、Ser39、Ala125、Val152、Tyr170（chain A），构成预组织中性氢键给体口袋",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1038/nsb0997-703",
+          "locator": "PDB 1AMF, COMPND (p.703)",
+          "quote": "MOLYBDATE ANION IS SEQUESTERED BETWEEN N-AND C-DOMAINS",
+          "scope_match": "Keywords: molybdate, sequestered, domains"
+        },
+        "interaction": {
+          "text": "PDB 1AMF（chain A）坐标直测：Ser12 Oγ-H、Ser39 Oγ-H、Tyr170 Oη-H 侧链羟基（H···O 1.85–1.89 Å）与 Val152、Ala125 骨架酰胺 NH（N···O 2.89–3.06 Å）与钼酸根四氧形成氢键；无金属离子或阳离子侧链直接配位氧阴离子（结构非水配体仅 MOO）",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1038/nsb0997-703",
+          "locator": "PDB 1AMF, SITE MO4 (p.704)",
+          "quote": "SITE MO4 5 SER A 12 SER A 39 ALA A 125 VAL A 152 TYR A 170 (MOLYBDATE BINDING SITE)",
+          "scope_match": "Keywords: ser, ala, molybdate, binding"
+        },
+        "why_it_works": {
+          "text": "预组织中性氢键给体与埋藏低介电口袋对钼酸根提供特异性与电荷稳定化（Lawson 1997 在 Azotobacter vinelandii ModA 上证明阴离子结合位点的特异性与电荷稳定化，与 E. coli PDB 1AMF 埋藏氢键口袋一致）；中性氢键识别无需金属参与，选择性来自几何互补与氢键方向性",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1039/a704006g",
+          "locator": "title, p.3981",
+          "quote": "Protein ligands for molybdate. Specificity and charge stabilisation at the anion-binding sites of periplasmic and intracellular molybdate-binding proteins of Azotobacter vinelandii",
+          "scope_match": "Keywords: specificity, charge stabilisation, molybdate"
+        },
+        "boundary_conditions": [
+          {
+            "text": "底物几何特异性：结合位点与四面体氧阴离子几何互补，同位点结合钼酸根（PDB 1AMF）与钨酸根（PDB 1WOD）且几何保守；非四面体或尺寸显著失配的阴离子难以获得同等互补",
+            "parameter": "competing_ion",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "from_source",
+            "verification": "corroborated",
+            "gate_level": "hard",
+            "locator": "PDB 1WOD / p.703",
+            "quote": "CRYSTAL STRUCTURE OF MODA, A MOLYBDATE PROTEIN, COMPLEXED WITH TUNGSTATE",
+            "scope_match": "Keywords: molybdate, tungstate, complexed",
+            "source_asset": null
+          },
+          {
+            "text": "预组织氢键阵列需维持在低介电微环境；给体若完全暴露于体相水，水分子氢键竞争将削弱氧阴离子结合（定性，无数值阈值）",
+            "parameter": "wet_stability",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "预组织且与四面体氧阴离子几何互补的中性氢键给体阵列，配合埋藏低介电口袋，可在无金属或阳离子参与下通过方向性与几何匹配选择性识别该氧阴离子",
+        "verification_quote": "MOLYBDATE ANION IS SEQUESTERED BETWEEN N-AND C-DOMAINS"
+      },
+      "source_doi": "10.1038/nsb0997-703",
+      "source_page": 703,
+      "source_locator": "PDB 1AMF / p.703",
+      "source_file": "PDB 1AMF / 1WOD（RCSB 沉积数据；未做本地全文 PDF 审计）",
+      "functional_groups": [
+        "氢键给体（Ser/Thr/Tyr 侧链羟基、骨架酰胺 NH）",
+        "埋藏低介电口袋"
+      ],
+      "key_structures": [
+        "识别结构"
+      ]
+    },
+    {
+      "mechanism_id": "MODA-002",
+      "name": "四面体硫酸根的纯氢键结合（原理先例）",
+      "description": "鼠伤寒沙门氏菌硫酸根结合蛋白以纯氢键结合四面体硫酸根 SO4²⁻，无金属离子或阳离子参与，提供四面体氧阴离子几何可被预组织中性给体阵列识别的结构生物学先例",
+      "基本原理": "中性氢键给体阵列与四面体氧阴离子几何互补即可稳定结合二价氧阴离子，无需金属或阳离子",
+      "source": "literature",
+      "ref_doi": "10.1038/314257a0",
+      "verification": "verified",
+      "verification_quote": "Sulphate sequestered in the sulphate-binding protein of Salmonella typhimurium is bound solely by hydrogen bonds",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "四面体硫酸根 SO4²⁻（鼠伤寒沙门氏菌硫酸根结合蛋白天然底物；与钼酸根/磺酸根头基几何类似，同为 sp3 四面体氧阴离子）",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1038/314257a0",
+          "locator": "title, p.257",
+          "quote": "Sulphate sequestered in the sulphate-binding protein of Salmonella typhimurium is bound solely by hydrogen bonds",
+          "scope_match": "Keywords: sulphate, salmonella, hydrogen bonds"
+        },
+        "bio_structure": {
+          "text": "硫酸根结合蛋白阴离子结合位点由预组织中性氢键给体（骨架酰胺 NH 与侧链羟基）构成，与四面体硫酸根几何互补（机理层描述，1985 文标题未列具体给体残基）",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "硫酸根仅由氢键结合（bound solely by hydrogen bonds），无金属离子或带正电阳离子直接配位氧阴离子",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1038/314257a0",
+          "locator": "title, p.257",
+          "quote": "Sulphate sequestered in the sulphate-binding protein of Salmonella typhimurium is bound solely by hydrogen bonds",
+          "scope_match": "Keywords: sulphate, solely, hydrogen bonds"
+        },
+        "why_it_works": {
+          "text": "中性氢键给体提供与四面体氧阴离子几何互补的方向性相互作用；'仅由氢键结合'证明氢键阵列单独即可稳定结合二价四面体氧阴离子，构成 ModA 类几何识别的结构生物学先例（机理层推断）",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "该原理适用于几何相似的四面体氧阴离子（硫酸根/钼酸根/钨酸根）；亲和力受氧阴离子电荷密度、尺寸与给体阵列几何匹配度影响（定性）",
+            "parameter": "competing_ion",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "四面体氧阴离子可仅由与其几何互补的预组织中性氢键给体阵列选择性结合，无需金属或阳离子参与",
+        "verification_quote": "Sulphate sequestered in the sulphate-binding protein of Salmonella typhimurium is bound solely by hydrogen bonds"
+      },
+      "source_doi": "10.1038/314257a0",
+      "source_page": 257,
+      "source_locator": "title, p.257",
+      "source_file": "Nature 314:257-260（标题接地；未做本地全文 PDF 审计）",
+      "functional_groups": [
+        "氢键给体（骨架酰胺 NH、侧链羟基）"
+      ],
+      "key_structures": [
+        "识别结构"
+      ]
+    }
+  ],
+  "performance_data": [],
+  "engineering_constraints": [
+    {
+      "constraint": "可溶蛋白形态",
+      "value": "ModA 为大肠杆菌周质可溶性结合蛋白（约 25 kDa），其识别基序需移植/固定于固体载体方可用作吸附",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "RCSB 1AMF：molecular_weight 25.11 kDa，cellular_location periplasmic",
+      "source": "literature",
+      "ref_doi": "10.1038/nsb0997-703"
+    },
+    {
+      "constraint": "结构预组织依赖",
+      "value": "结合依赖 N 与 C 结构域间三级结构的预组织；变性或口袋溶剂化使氢键几何与低介电环境丧失",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "机理推断（基于 COMPND 埋藏口袋事实）",
+      "source": "llm_inference",
+      "ref_doi": null
+    },
+    {
+      "constraint": "四面体氧阴离子几何特异性",
+      "value": "结合位点与四面体氧阴离子（钼酸根/钨酸根）几何互补，对非四面体或尺寸失配阴离子匹配差",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "PDB 1AMF（钼酸根）与 1WOD（钨酸根）同位点几何保守",
+      "source": "literature",
+      "ref_doi": "10.1038/nsb0997-703"
+    }
+  ],
+  "narrative": {
+    "entries": [
+      {
+        "source_file": "RCSB PDB 1AMF / Hu 1997 Nat Struct Biol (DOI 10.1038/nsb0997-703)",
+        "paper_id": "1997-Hu-ModA-molybdate-crystal-structure",
+        "sections": {
+          "problem_definition": "钼是生物必需微量元素，细菌需从含高浓度硫酸根等化学相似氧阴离子的环境中特异性捕获微摩尔乃至更低浓度的钼酸根（MoO4²⁻）。蛋白如何在无金属配位的前提下选择性识别四面体氧阴离子，是分子识别的基础问题。",
+          "biological_solution": "大肠杆菌周质 ModA 蛋白以预组织中性氢键给体阵列识别四面体钼酸根：钼酸根埋藏于 N 与 C 结构域间的低介电裂隙（PDB 1AMF，COMPND 记 'MOLYBDATE ANION IS SEQUESTERED BETWEEN N-AND C-DOMAINS'）；MoO4²⁻ 四氧与 Ser12、Ser39、Tyr170 侧链羟基（H···O 1.85–1.89 Å）及 Val152、Ala125 骨架酰胺 NH（N···O 2.89–3.06 Å）形成氢键（PDB SITE 记录残基 SER 12/SER 39/ALA 125/VAL 152/TYR 170），无任何金属离子或阳离子参与。同一位点以保守几何结合钨酸根（PDB 1WOD），显示对四面体氧阴离子的几何选择性。硫酸根结合蛋白（Pflugrath & Quiocho 1985）证明四面体硫酸根可'仅由氢键结合'，为同类原理的先例。",
+          "key_features": "必须保留：① 与四面体氧阴离子几何互补的中性氢键给体阵列（羟基/骨架 NH）；② 埋藏低介电口袋（强化静电、排除水竞争）；③ 预组织（结合熵代价预先支付）。可灵活调整：载体骨架、给体密度与取向、口袋疏水微环境。",
+          "design_mapping": "仿生映射：ModA 预组织氢键口袋 → 四面体氧阴离子吸附位点。对 PFBS（全氟丁烷磺酸，C4F9SO3⁻），其磺酸根头基（SO3⁻）与四面体氧阴离子几何相似，原理上可由预组织中性氢键给体阵列 + 低介电口袋识别。注意：此为设计转译/启发（llm_inferred），非 from_source 事实——磺酸根（-1）与钼酸根（-2）在电荷、尺寸、水合上不同，实际亲和力与选择性须实验验证。",
+          "explainability_anchors": "设计溯源：钼酸根/钨酸根几何识别（PDB 1AMF/1WOD，from_source）→ '预组织中性给体阵列 + 埋藏低介电口袋'可迁移原理 → PFBS 磺酸根头基识别（llm_inferred 启发，须实验验证）。"
+        }
+      }
+    ]
+  },
+  "design_translation": [
+    {
+      "idea": "将 ModA 的'预组织中性氢键给体阵列 + 埋藏低介电口袋'移植到多孔固体载体，构建对四面体氧阴离子头基几何互补的识别位点，面向 PFBS 全氟丁烷磺酸的四面体 SO3⁻ 头基：以预组织几何匹配磺酸根三氧间距的脲/硫脲/酰胺/羟基类中性氢键给体阵列固定于孔壁，并以疏水孔壁营造低介电微环境以排除水竞争",
+      "specific_functional_group": "中性氢键给体（脲/硫脲、酰胺、羟基），按与四面体磺酸根三氧几何互补的方式预组织排布",
+      "material_handle": "在介孔二氧化硅或聚合物骨架上经硅烷偶联或表面引发聚合接枝脲/硫脲/酰胺单体，借分子印迹或刚性间隔臂控制给体间距与取向；孔壁以烃/氟碳链修饰降低局部介电常数",
+      "target_interaction": "中性给体与 PFBS 磺酸根头基氧的方向性氢键 + 低介电环境埋藏（强化静电并排除水竞争），全氟碳尾另贡献疏水/氟亲作用",
+      "source_tier": "llm_inference",
+      "evidence_tier": "inspiration（原理层外推：ModA 机制接地于天然底物钼酸根/钨酸根；PFBS 磺酸根转译为 llm_inferred，无直接 PFBS 结合证据）",
+      "examples": [],
+      "design_principle": "ModA 证明预组织中性氢键给体阵列与埋藏低介电口袋可在无金属参与下几何选择性识别四面体氧阴离子（PDB 1AMF/1WOD）；PFBS 磺酸根头基与四面体氧阴离子几何相似，原理上可外推",
+      "implementation_example": "脲/硫脲功能化介孔二氧化硅或具疏水孔壁的聚合物（无实验数据，仅为设计假设）",
+      "constraints": "磺酸根（-1）与钼酸根（-2）在电荷、尺寸、水合上不同，预组织给体对 PFBS 的亲和力与选择性须实验验证；水相中水竞争与共存阴离子（硫酸根、氯离子）干扰是关键挑战",
+      "failure_modes": "给体暴露于体相水被氢键竞争淬灭；预组织刚性强导致对磺酸根适配不足；氟碳尾非特异性吸附降低选择性",
+      "material_realization_examples": []
+    }
+  ],
+  "honesty_ledger": {
+    "facts": [
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "预组织氢键阵列对四面体钼酸根的几何识别",
+        "basis": "from_source_corroborated",
+        "note": "Hu 1997（E. coli PDB 1AMF 结构：钼酸根埋藏于 N/C 域间；SITE 记录残基 Ser12/Ser39/Ala125/Val152/Tyr170；坐标直测氢键距离）+ Lawson 1997（A. vinelandii ModA 阴离子位点特异性与电荷稳定化）；quote 取自 PDB 沉积记录与文献标题（可核验），未做全文 PDF 审计"
+      },
+      {
+        "type": "mechanism",
+        "index": 1,
+        "name": "四面体硫酸根的纯氢键结合（原理先例）",
+        "basis": "from_source_verified",
+        "note": "Pflugrath & Quiocho 1985 Nature 标题直接陈述'sulphate ... bound solely by hydrogen bonds'（DOI 10.1038/314257a0, p.257）；quote 取自标题，未做全文 PDF 审计"
+      }
+    ],
+    "leads": [],
+    "inferences": [
+      {
+        "type": "design_translation",
+        "index": 0,
+        "idea": "将 ModA 预组织氢键口袋移植到多孔载体识别 PFBS 磺酸根头基",
+        "basis": "llm_inferred",
+        "label": "inspiration",
+        "note": "PFBS（C4F9SO3⁻）磺酸根头基与钼酸根同为四面体氧阴离子，但电荷（-1 对 -2）、尺寸、水合不同；属原理层设计外推，无直接 PFBS 结合证据，亲和力与选择性须实验验证"
+      }
+    ],
+    "boundary_notes": [
+      "本原型天然底物为钼酸根/钨酸根（四面体氧阴离子）；机制 from_source 接地限于这些天然底物与硫酸根结合蛋白原理",
+      "PFBS 全氟丁烷磺酸应用为设计转译（llm_inferred / inspiration），非 from_source 事实，不得用作 PFBS 的 direct evidence",
+      "无 PFBS 吸附性能数据（qmax 等）；严格未从外部污染物知识库搬运任何性能数值",
+      "边界 BC2（低介电微环境需求）及一切 PFBS 相关边界均为定性 llm_inferred，不带数值阈值，gate_level=soft"
+    ],
+    "missing_pdf_items": [
+      "Hu 1997 Nat Struct Biol 全文 PDF（quote 取自 PDB 沉积记录与标题）",
+      "Pflugrath & Quiocho 1985 Nature 全文 PDF（quote 取自标题）",
+      "Lawson 1997 Dalton Trans 全文 PDF（quote 取自标题）"
+    ],
+    "generated_by": "manual-curation-2026-07-21",
+    "note": "诚实优先：机制接地限于 ModA 天然底物（钼酸根/钨酸根）与硫酸根原理；PFBS 应用全部为 inspiration/外推"
+  },
+  "boundary_rules": [
+    {
+      "rule": "底物几何特异性：结合位点与四面体氧阴离子（钼酸根/钨酸根）几何互补，非四面体或尺寸失配阴离子匹配差",
+      "source_mechanism": "预组织氢键阵列对四面体钼酸根的几何识别",
+      "gate_level": "hard",
+      "basis": "from_source"
+    },
+    {
+      "rule": "预组织氢键阵列需维持于低介电微环境，水竞争削弱结合（定性，无数值阈值）",
+      "source_mechanism": "预组织氢键阵列对四面体钼酸根的几何识别",
+      "gate_level": "soft",
+      "basis": "llm_inferred"
+    }
+  ]
+}

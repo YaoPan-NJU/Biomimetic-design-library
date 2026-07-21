@@ -1362,6 +1362,10 @@
         {
           "id": "diatom-frustule",
           "weight": 0.65
+        },
+        {
+          "id": "moda-oxyanion-geometric-recognition",
+          "weight": 0.7
         }
       ]
     },
@@ -1403,6 +1407,22 @@
     }
   },
   "prototype_metadata": {
+    "moda-oxyanion-geometric-recognition": {
+      "applicability": {
+        "pH_range": null,
+        "temp_range": null,
+        "salinity": null,
+        "note": "ModA 为分子识别蛋白原型，无吸附适用性测试数据，故全空"
+      },
+      "features": [
+        "分子筛分"
+      ],
+      "biomimetic_dimension": "分子仿生",
+      "organism": {
+        "scientific": "Escherichia coli / Azotobacter vinelandii（ModA 钼酸根结合蛋白）",
+        "category": "微生物"
+      }
+    },
     "mussel-foot-adhesion": {
       "applicability": {
         "pH_range": [
