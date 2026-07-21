@@ -1,0 +1,356 @@
+{
+ "id": "ttr-halophenol-thyroxine-channel",
+ "name_zh": "甲状腺素转运蛋白甲状腺素/卤酚结合通道",
+ "name_en": "Transthyretin Thyroxine / Halophenol Binding Channel",
+ "organism": {
+  "scientific": "Homo sapiens（人源甲状腺素转运蛋白 TTR）",
+  "category": "动物"
+ },
+ "biomimetic_dimension": "分子仿生",
+ "features": [
+  "分子筛分",
+  "疏水性"
+ ],
+ "tested_conditions": {
+  "tested_ph_range": null,
+  "tested_temp_range": null,
+  "salinity": null,
+  "note": "TTR 为血浆可溶性四聚体（分子识别原型），本库无其吸附性能测试条件；performance_data 为空，故测试条件全空。"
+ },
+ "library_tier": "extended",
+ "lifecycle_status": "active",
+ "coverage": "partial",
+ "status": "active",
+ "provenance_summary": {
+  "n_papers": 3,
+  "n_verified": 10,
+  "n_unverified": 0,
+  "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与硬边界条数（TTR-001 四要素+1 硬边界=5，TTR-002 四要素+1 硬边界=5）。机制接地限于 TTR 通道对天然配体甲状腺素（T4）、羟基化多氯联苯（OH-PCB）及卤代酚类竞争结合的晶体学与体外证据；BPA 与卤代酚的水相吸附应用为设计转译（llm_inferred/inspiration），无性能数据。quote 逐字取自 RCSB PDB 沉积记录（TITLE/HETNAM/SITE/REMARK）与 Crossref 核验的文献标题，未做全文 PDF 审计。"
+ },
+ "mechanisms": [
+  {
+   "mechanism_id": "TTR-001",
+   "name": "甲状腺素通道中酚羟基氢键锚簇与碘取代疏水容纳",
+   "description": "人源 TTR 四聚体在二聚体-二聚体界面（AC/BD）形成两条甲状腺激素通道。在人 TTR-T4 复合物（PDB 2ROX）中，配体甲状腺素（T44，3,5,3',5'-四碘-L-甲状腺原氨酸）位于通道内，其结合位点（SITE AC2/AC3）含 Lys15、Leu17、Glu54、Ala108、Ala109、Leu110；在人 TTR-OH-PCB 复合物（PDB 2G5U）同一通道的位点（SITE AC1/AC2）中另见 Ser117、Thr119，Lys15/Ser117/Thr119 构成通道口酚羟基极性锚簇，Leu17/Ala108/Ala109/Leu110 疏水壁容纳碘取代",
+   "基本原理": "通道口预组织的阳离子与氢键给体锚簇方向性锚定配体酚羟基，疏水通道壁按形状容纳卤素取代的联芳骨架；锚定与疏水容纳的组合使卤代酚型配体在无金属参与下被通道识别",
+   "source": "literature",
+   "ref_doi": "10.1107/S0907444996003046",
+   "verification": "corroborated",
+   "verification_quote": "TRANSTHYRETIN (ALSO CALLED PREALBUMIN) COMPLEX WITH THYROXINE (T4)",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "甲状腺素 T4（3,5,3',5'-四碘-L-甲状腺原氨酸）：酚羟基 + 四个碘取代的联苯醚骨架，为 TTR 天然配体；PDB 2ROX 中配体 T44 以两个分子分别位于 A 128 与 B 128 位，对应两条通道",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1107/S0907444996003046",
+     "locator": "PDB 2ROX, HETNAM / p.758",
+     "quote": "T44 3,5,3',5'-TETRAIODO-L-THYRONINE",
+     "scope_match": "Keywords: T44, tetraiodo, thyronine"
+    },
+    "bio_structure": {
+     "text": "人源 TTR 四聚体（COMPND 记二聚体链 A、B，生物组装为四聚体）在二聚体-二聚体界面形成两条甲状腺激素通道；PDB 2ROX SITE 记录示 T4（T44 A 128）结合位点残基为 LYS A 15、LEU A 17、GLU A 54、ALA A 108、ALA A 109、LEU A 110（链 B 的 SITE AC3 对称等同）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1107/S0907444996003046",
+     "locator": "PDB 2ROX, SITE AC2 (p.758)",
+     "quote": "SITE     1 AC2  6 LYS A  15  LEU A  17  GLU A  54  ALA A 108",
+     "scope_match": "Keywords: LYS, LEU, ALA"
+    },
+    "interaction": {
+     "text": "同一通道的配体位点同时含极性与疏水残基：人 TTR-OH-PCB 复合物（PDB 2G5U）SITE AC1（链 B 通道）列 LYS B 15、LEU B 17、LEU B 110、SER B 117、THR B 119，SITE AC2（链 A 通道）列 LYS A 15、LEU A 17、ALA A 108、LEU A 110、SER A 117；Lys15/Ser117/Thr119 构成酚羟基锚簇，Leu17/Ala108/Leu110 构成疏水壁。残基编号为 PDB 沉积编号，即人 TTR 成熟链编号（与文献 Lys15/Ser117/Thr119 一致，对应全长 UniProt P02766 有 +20 偏移，比对推断）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1016/j.chembiol.2004.10.009",
+     "locator": "PDB 2G5U, SITE AC1 (p.1719)",
+     "quote": "SITE     1 AC1  6 LYS B  15  LEU B  17  LEU B 110  SER B 117\nSITE     2 AC1  6 THR B 119  HOH B 251",
+     "scope_match": "Keywords: LYS, SER, THR"
+    },
+    "why_it_works": {
+     "text": "卤代酚型化合物可与 T4 强力竞争结合同一通道：Meerts 2000 体外实验显示溴代阻燃剂及其羟基代谢物、五氯苯酚等卤代酚类与人 TTR 的竞争性结合可达 T4 量级乃至更强，说明'酚羟基 + 卤素取代'是通道识别的充分基序，酚羟基锚簇与卤素疏水容纳共同决定亲和",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1093/toxsci/56.1.95",
+     "locator": "title, p.95",
+     "quote": "Potent Competitive Interactions of Some Brominated Flame Retardants and Related Compounds with Human Transthyretin in Vitro",
+     "scope_match": "Keywords: competitive, transthyretin, brominated"
+    },
+    "boundary_conditions": [
+     {
+      "text": "通道配体基序边界：TTR 通道优先结合卤代酚羟基型芳香配体（T4、OH-PCB、卤代酚），配体须具备可与锚簇成键的酚羟基及被疏水壁容纳的卤代芳环；PDB 2G5U 示羟基化多氯联苯占据同一通道",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "PDB 2G5U, TITLE (p.1719)",
+      "quote": "HUMAN TRANSTHYRETIN (TTR) COMPLEXED WITH HYDROXYLATED POLYCHLORINATED",
+      "scope_match": "Keywords: transthyretin, hydroxylated, polychlorinated",
+      "source_asset": null
+     },
+     {
+      "text": "BPA 双酚基序（两个酚羟基 + 异丙叉桥联双苯环）与 T4 的单链卤代联苯醚在通道内取向与位阻需求不同：仅一个酚羟基可同时够及锚簇，第二个苯环受通道几何约束，预期结合取向与卤代酚型配体有别（定性，无数值阈值）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "通道口预组织的阳离子/氢键给体锚簇（Lys15/Ser117/Thr119 型）方向性锚定酚羟基，配合按形状容纳卤素取代联芳骨架的疏水通道壁，可在无金属参与下按'酚羟基位点 + 卤素取代'模式识别卤代酚型配体",
+    "verification_quote": "TRANSTHYRETIN (ALSO CALLED PREALBUMIN) COMPLEX WITH THYROXINE (T4)"
+   },
+   "source_doi": "10.1107/S0907444996003046",
+   "source_page": 758,
+   "source_locator": "PDB 2ROX / p.758（辅以 PDB 2G5U SITE 锚簇记录）",
+   "source_file": "PDB 2ROX（RCSB 沉积数据；Wojtczak 1996 Acta Cryst D52:758-765）+ PDB 2G5U（RCSB 沉积数据）；未做本地全文 PDF 审计",
+   "functional_groups": [
+    "阳离子/氢键给体锚簇（Lys15、Ser117、Thr119 侧链）",
+    "疏水通道壁（Leu17、Ala108、Ala109、Leu110）"
+   ],
+   "key_structures": [
+    "识别结构"
+   ]
+  },
+  {
+   "mechanism_id": "TTR-002",
+   "name": "卤代酚与 PCB 羟基代谢物对 T4 通道的竞争性结合（内分泌干扰机制）",
+   "description": "羟基化多氯联苯（OH-PCB）等卤代酚型外源物模拟 T4 的酚羟基 + 卤素取代模式，竞争性结合同一 TTR 通道并置换 T4，是既有文献记载的内分泌干扰分子机制。PDB 2G5U 示 OH-PCB 配体 PCQ（3,5,3',5'-四氯联苯-4,4'-二醇）同时占据两条通道（PCQ A 240 与 PCQ B 239），位点残基含 Lys15/Ser117/Thr119 锚簇与疏水壁",
+   "基本原理": "卤代酚型外源物以与 T4 相同的酚羟基锚簇与卤素疏水容纳模式进入通道，其结合竞争 T4 的生理结合位点；通道对'卤代酚羟基'基序的模式识别本身不区分天然激素与外源污染物",
+   "source": "literature",
+   "ref_doi": "10.1016/j.chembiol.2004.10.009",
+   "verification": "verified",
+   "verification_quote": "Hydroxylated Polychlorinated Biphenyls Selectively Bind Transthyretin in Blood and Inhibit Amyloidogenesis: Rationalizing Rodent PCB Toxicity",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "羟基化多氯联苯代谢物：PDB 2G5U 配体 PCQ 为 3,5,3',5'-四氯联苯-4,4'-二醇，即双酚羟基 + 四氯取代联苯骨架的 OH-PCB，其酚羟基与氯取代模式模拟 T4 的酚羟基与碘取代",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1016/j.chembiol.2004.10.009",
+     "locator": "PDB 2G5U, HETNAM (p.1719)",
+     "quote": "PCQ 3,5,3',5'-TETRACHLORO-BIPHENYL-4,4'-DIOL",
+     "scope_match": "Keywords: PCQ, tetrachloro, biphenyl"
+    },
+    "bio_structure": {
+     "text": "TTR 两条通道可同时各结合一个 OH-PCB 分子：PDB 2G5U REMARK 800 记 PCQ B 239 与 PCQ A 240 的结合位点（SITE AC1/AC2），位点位于二聚体-二聚体界面的甲状腺激素通道内",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1016/j.chembiol.2004.10.009",
+     "locator": "PDB 2G5U, REMARK 800 (p.1719)",
+     "quote": "SITE_DESCRIPTION: BINDING SITE FOR RESIDUE PCQ B 239",
+     "scope_match": "Keywords: PCQ, binding site"
+    },
+    "interaction": {
+     "text": "PCQ 在链 A 通道的结合位点（SITE AC2）含 LYS A 15、LEU A 17、ALA A 108、LEU A 110、SER A 117；链 B 通道（SITE AC1）含 LYS B 15、SER B 117、THR B 119；酚羟基锚簇（Lys15/Ser117/Thr119）与疏水壁（Leu17/Ala108/Leu110）共同结合卤代联苯二醇，与 T4 结合位点重合",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1016/j.chembiol.2004.10.009",
+     "locator": "PDB 2G5U, SITE AC2 (p.1719)",
+     "quote": "SITE     1 AC2  6 LYS A  15  LEU A  17  ALA A 108  LEU A 110\nSITE     2 AC2  6 SER A 117  HOH A 291",
+     "scope_match": "Keywords: LYS, ALA, SER"
+    },
+    "why_it_works": {
+     "text": "OH-PCB 在血液中选择性结合 TTR 并抑制淀粉样纤维形成（Purkey 2004 标题陈述）：酚羟基与锚簇成键、卤素取代被疏水壁容纳的模式使卤代酚型外源物获得对 TTR 通道的高亲和，从而与 T4 竞争同一生理结合位点，构成卤代芳香污染物甲状腺毒性的分子基础",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1016/j.chembiol.2004.10.009",
+     "locator": "title, p.1719",
+     "quote": "Hydroxylated Polychlorinated Biphenyls Selectively Bind Transthyretin in Blood and Inhibit Amyloidogenesis: Rationalizing Rodent PCB Toxicity",
+     "scope_match": "Keywords: hydroxylated, transthyretin, selectively"
+    },
+    "boundary_conditions": [
+     {
+      "text": "竞争性置换边界：卤代酚羟基化合物（OH-PCB、五氯苯酚、溴代酚及 PBDE 羟基代谢物）与 T4 竞争结合同一通道，体外可强力置换 T4（Meerts 2000 竞争结合实验）；竞争亲和随卤素取代数与酚羟基可及性变化（定性）",
+      "parameter": "competing_ion",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "title, p.95",
+      "quote": "Potent Competitive Interactions of Some Brominated Flame Retardants and Related Compounds with Human Transthyretin in Vitro",
+      "scope_match": "Keywords: competitive, transthyretin, brominated",
+      "source_asset": null
+     },
+     {
+      "text": "通道锚簇暴露于体相水时受水分子氢键竞争削弱，且通道几何依赖四聚体四级结构的完整；蛋白解离或变性使通道消失（定性，无数值阈值）",
+      "parameter": "wet_stability",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "以'酚羟基氢键锚簇 + 卤素疏水口袋'为识别模式的通道会竞争性结合一切与 T4 模式相似的卤代酚/羟基化卤代芳烃；该模式可迁移为卤代酚与双酚类酚污染物的识别位点设计，但模式识别本身不提供对单一污染物的特异选择性",
+    "verification_quote": "Hydroxylated Polychlorinated Biphenyls Selectively Bind Transthyretin in Blood and Inhibit Amyloidogenesis: Rationalizing Rodent PCB Toxicity"
+   },
+   "source_doi": "10.1016/j.chembiol.2004.10.009",
+   "source_page": 1719,
+   "source_locator": "PDB 2G5U / p.1719（辅以 Meerts 2000 体外竞争实验）",
+   "source_file": "PDB 2G5U（RCSB 沉积数据；Purkey 2004 Chem Biol 11:1719-1728）+ Meerts 2000 Toxicol Sci 56:95-104（标题接地）；未做本地全文 PDF 审计",
+   "functional_groups": [
+    "酚羟基氢键锚簇（Lys15/Ser117/Thr119 型极性残基）",
+    "卤素/疏水口袋（Leu17/Ala108/Leu110 型疏水壁）"
+   ],
+   "key_structures": [
+    "识别结构"
+   ]
+  }
+ ],
+ "performance_data": [],
+ "engineering_constraints": [
+  {
+   "constraint": "四级结构依赖",
+   "value": "TTR 为血浆可溶性四聚体（单体约 13.9 kDa、128 残基），甲状腺激素通道由二聚体-二聚体界面围成；四聚体解离或蛋白变性使通道几何与锚簇排布丧失，用作吸附须固定化并维持通道构象",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "PDB 2ROX COMPND 记链 A、B 二聚体，SITE 记录跨链位点（AC2/AC3）示通道横跨亚基界面；四聚体生物组装为文献确立事实",
+   "source": "literature",
+   "ref_doi": "10.1107/S0907444996003046"
+  },
+  {
+   "constraint": "锚簇质子化状态依赖",
+   "value": "酚羟基锚定依赖 Lys15 ε-氨基等极性残基的质子化状态与氢键能力；极端 pH 下锚簇质子化改变将削弱酚羟基结合（定性，机理推断）",
+   "unit": null,
+   "relevance": "medium",
+   "explanation": "机理推断（基于锚簇极性残基化学的常识外推，无直接滴定数据）",
+   "source": "llm_inference",
+   "ref_doi": null
+  },
+  {
+   "constraint": "模式识别非特异性",
+   "value": "TTR 通道识别'卤代酚羟基'基序，不区分 T4、OH-PCB、卤代酚与 BPA 本身；对某一目标污染物的特异选择性须在材料设计层另行构建（如 BPA 双酚几何的二次约束）",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（基于 PDB 2ROX/2G5U 同位点结合不同卤代酚型配体的事实外推）",
+   "source": "llm_inference",
+   "ref_doi": null
+  }
+ ],
+ "narrative": {
+  "entries": [
+   {
+    "source_file": "PDB 2ROX·2G5U（RCSB 沉积数据）/ Wojtczak 1996 Acta Cryst D52:758（DOI 10.1107/S0907444996003046）/ Purkey 2004 Chem Biol 11:1719（DOI 10.1016/j.chembiol.2004.10.009）/ Meerts 2000 Toxicol Sci 56:95（DOI 10.1093/toxsci/56.1.95）",
+    "paper_id": "1996-Wojtczak-TTR-thyroxine-channel-structures",
+    "sections": {
+     "problem_definition": "甲状腺素（T4）疏水且低溶解度，血浆需要专一载体将其从甲状腺运至靶组织。TTR（甲状腺素转运蛋白，旧称前白蛋白）以四聚体承担该转运功能，其识别卤代酚型激素的分子机制也是理解卤代芳香污染物甲状腺毒性的结构基础。",
+     "biological_solution": "人源 TTR 四聚体在二聚体-二聚体界面形成两条甲状腺激素通道。Wojtczak 等解析了人 TTR-T4 复合物晶体结构（PDB 2ROX，分辨率 2.0 Å）：T4（配体 T44）位于通道内，结合位点残基含 Lys15、Leu17、Glu54、Ala108、Ala109、Leu110（SITE AC2/AC3 记录）。Purkey 等解析了人 TTR 与 OH-PCB 代谢物（PCQ，3,5,3',5'-四氯联苯-4,4'-二醇）的复合物（PDB 2G5U）：两个 PCQ 分子分别占据两条通道（PCQ A 240 与 PCQ B 239），位点残基含 Lys15、Ser117、Thr119 极性锚簇与 Leu17/Ala108/Leu110 疏水壁，表明卤代酚型外源物以与 T4 相同的锚簇-口袋模式竞争性占据通道。Meerts 等体外竞争实验显示五氯苯酚、溴代酚及 PBDE 羟基代谢物与 T4 强力竞争结合人 TTR，印证'酚羟基 + 卤素取代'是通道识别的充分基序。",
+     "key_features": "必须保留：① 通道口与酚羟基几何互补的阳离子/氢键给体锚簇（Lys15/Ser117/Thr119 型）；② 按形状容纳卤素取代联芳骨架的疏水口袋（Leu17/Ala108/Leu110 型）；③ 锚簇与口袋的预组织相对几何。可灵活调整：载体骨架、锚定基团化学（胍基/脲/硫脲/酰胺）、孔壁疏水与卤亲修饰程度、腔深与孔径。",
+     "design_mapping": "仿生映射：TTR 通道的'酚羟基锚簇 + 卤素疏水口袋' → 面向 BPA/卤代酚/OH-PCB 的识别位点。边界声明：这是设计转译/启发（llm_inferred），非 from_source 事实。TTR 天然底物为 T4，OH-PCB 与卤代酚的结合属毒理语境的竞争结合；BPA 双酚基序（两酚羟基 + 异丙叉桥）与 T4 单酚卤代联苯醚在通道内取向与位阻需求不同，仅一个酚羟基可锚定，亲和力与取向须实验验证。TTR 本身为模式识别器，不区分 T4/OH-PCB/卤代酚/BPA，对目标污染物的特异选择性须在材料层构建。",
+     "explainability_anchors": "设计溯源：T4 与人 TTR 通道结合模式（PDB 2ROX，from_source，Wojtczak 1996）+ OH-PCB 竞争占据同一通道（PDB 2G5U，from_source，Purkey 2004）+ 卤代酚竞争结合（Meerts 2000，from_source）→ '酚羟基锚簇 + 卤素疏水口袋'可迁移原理 → BPA/卤代酚吸附位点设计（llm_inferred 启发，须实验验证）。"
+    }
+   }
+  ]
+ },
+ "design_translation": [
+  {
+   "idea": "将 TTR 通道的'酚羟基氢键锚簇（Lys15/Ser117/Thr119 型阳离子与中性给体）+ 卤素/疏水口袋（Leu/Ala 型疏水壁）'双点识别基序移植到多孔吸附材料，面向 BPA（双酚 A）、卤代酚（五氯苯酚、溴代酚）与 OH-PCB 代谢物的酚羟基头基与卤代/双苯芳环：在孔壁预组织与酚羟基（及酚氧负离子）几何互补的阳离子与中性氢键给体锚阵列，并以低极性孔壁构成容纳卤代或双苯芳环的疏水/卤亲口袋",
+   "specific_functional_group": "胍基/胺基阳离子锚 + 脲/硫脲/酰胺中性氢键给体，按与酚羟基氧几何互补的方式预组织排布；孔壁烃链或氟碳链提供卤亲/疏水接触面",
+   "material_handle": "介孔二氧化硅或交联聚合物骨架经硅烷偶联/表面引发聚合接枝胍基或脲/硫脲单体；以分子印迹（BPA 或卤代酚为模板）或刚性间隔臂控制锚定基团间距与取向；孔壁以烃链/氟碳链修饰降低局部介电常数并营造卤亲微环境",
+   "target_interaction": "酚羟基/酚氧负离子与预组织给体阵列的方向性静电与氢键锚定 + 卤代或双苯芳环在疏水口袋内的范德华与卤键/疏水埋藏",
+   "source_tier": "llm_inference",
+   "evidence_tier": "inspiration（原理层外推：TTR 通道接地于 T4（PDB 2ROX）与 OH-PCB（PDB 2G5U）的结合模式及卤代酚竞争结合（Meerts 2000）；BPA 与卤代酚的水相吸附转译为 llm_inferred，无吸附实验数据）",
+   "examples": [],
+   "design_principle": "TTR 通道证明'酚羟基锚簇 + 卤素疏水口袋'的组合可在无金属参与下高亲和结合卤代酚型配体，且 OH-PCB 与卤代酚可竞争占据同一通道（PDB 2ROX/2G5U，Meerts 2000）；锚簇几何与口袋疏水性可独立于蛋白四级结构移植到人工孔道",
+   "implementation_example": "胍基/脲功能化、孔壁疏水修饰的介孔二氧化硅或以 BPA/卤代酚为模板的分子印迹聚合物（无实验数据，仅为设计假设）",
+   "constraints": "BPA 双酚基序与 T4 单酚在通道内取向与位阻不同（仅一个酚羟基可锚定，第二苯环受几何约束），锚簇几何须按 BPA 而非 T4 重新设计；TTR 模式识别不区分 BPA/卤代酚/T4，特异性须在材料层构建（如按双酚几何印迹）；水相中锚定基团的水合竞争与共存腐殖酸、无机阴离子干扰是关键挑战；蛋白本身不可直接复制（可溶四聚体、四级结构依赖），只提取设计原则",
+   "failure_modes": "按 T4 几何布置的锚簇与 BPA 双酚几何失配；锚定基团暴露于体相水被氢键竞争淬灭；疏水口袋对一切疏水芳烃非特异吸附降低选择性；卤素口袋对无卤素的 BPA 贡献缺失使结合弱于卤代酚；四聚体通道在固定化中解离",
+   "material_realization_examples": []
+  }
+ ],
+ "honesty_ledger": {
+  "facts": [
+   {
+    "type": "mechanism",
+    "index": 0,
+    "name": "甲状腺素通道中酚羟基氢键锚簇与碘取代疏水容纳",
+    "basis": "from_source_corroborated",
+    "note": "Wojtczak 1996（人 TTR-T4 复合物 PDB 2ROX：TITLE/HETNAM T44/SITE AC2·AC3 残基 Lys15/Leu17/Glu54/Ala108/Ala109/Leu110）+ PDB 2G5U SITE AC1·AC2 锚簇残基 Lys15/Ser117/Thr119（Purkey 2004）+ Meerts 2000 卤代酚竞争结合；quote 逐字取自 PDB 沉积记录与 Crossref 核验的文献标题，未做全文 PDF 审计"
+   },
+   {
+    "type": "mechanism",
+    "index": 1,
+    "name": "卤代酚与 PCB 羟基代谢物对 T4 通道的竞争性结合（内分泌干扰机制）",
+    "basis": "from_source_verified",
+    "note": "Purkey 2004 Chem Biol（PDB 2G5U：OH-PCB 配体 PCQ 占据两条通道 PCQ A 240/B 239；SITE 位点残基；标题陈述 OH-PCB 选择性结合 TTR）+ Meerts 2000 标题陈述卤代酚/溴代阻燃剂与 TTR 竞争结合；quote 取自 PDB 沉积记录与 Crossref 核验标题"
+   }
+  ],
+  "leads": [],
+  "inferences": [
+   {
+    "type": "design_translation",
+    "index": 0,
+    "idea": "将 TTR 通道'酚羟基锚簇 + 卤素疏水口袋'移植到多孔材料以吸附 BPA/卤代酚/OH-PCB",
+    "basis": "llm_inferred",
+    "label": "inspiration",
+    "note": "TTR 天然底物为 T4，OH-PCB 与卤代酚结合属毒理语境竞争结合；BPA 双酚基序与 T4 单酚取向/位阻不同，转译为 BPA 选择性吸附材料属原理层外推，无吸附实验数据，亲和力与选择性须实验验证"
+   },
+   {
+    "type": "boundary_inference",
+    "index": 0,
+    "name": "BPA 双酚基序与 T4 单酚在通道内取向/位阻差异（软边界）",
+    "basis": "llm_inferred",
+    "label": "structural_mismatch_hypothesis",
+    "note": "基于 TTR 通道几何（PDB 2ROX/2G5U 单酚型配体位点）与 BPA 分子几何（两酚羟基 + 异丙叉桥）的对比推断，无 TTR-BPA 复合物结构直接证据"
+   },
+   {
+    "type": "fact_derivation",
+    "index": 0,
+    "name": "残基编号对应：PDB 2ROX/2G5U 沉积编号 = 人 TTR 成熟链编号（文献 Lys15/Ser117/Thr119），较全长 UniProt P02766 偏移 +20",
+    "basis": "llm_inferred",
+    "label": "alignment_derivation",
+    "note": "由成熟 TTR 为 20 残基信号肽切除后的 128 残基链推断，非论文直接陈述"
+   }
+  ],
+  "boundary_notes": [
+   "本原型天然底物为甲状腺素 T4；OH-PCB 与卤代酚（五氯苯酚、溴代酚、PBDE 羟基代谢物）的通道结合为有文献记载的外源污染物-蛋白相互作用（内分泌干扰语境），机制 from_source 接地限于这些结合模式本身",
+   "将 TTR 通道机制转译为 BPA/卤代酚选择性吸附材料设计全部为 design_translation（llm_inferred/inspiration），不得用作 BPA 或卤代酚吸附的 direct evidence",
+   "TTR 通道为'卤代酚羟基'模式识别器，不区分 T4/OH-PCB/卤代酚/BPA；对单一污染物的特异选择性属转译层问题",
+   "无 BPA 或卤代酚吸附性能数据（qmax 等）；performance_data 为空，严格未从外部污染物知识库搬运任何性能数值（知识隔离红线）",
+   "BPA 双酚取向边界为定性 llm_inferred，不带数值阈值，gate_level=soft"
+  ],
+  "missing_pdf_items": [
+   "Wojtczak 1996 Acta Cryst D52:758-765 全文 PDF（quote 取自 PDB 2ROX 沉积记录与 Crossref 标题；正文氢键距离未核验）",
+   "Purkey 2004 Chem Biol 11:1719-1728 全文 PDF（quote 取自 PDB 2G5U 沉积记录与 Crossref 标题）",
+   "Meerts 2000 Toxicol Sci 56:95-104 全文 PDF（quote 取自 Crossref 核验标题；各卤代酚竞争亲和数值未核验）"
+  ],
+  "generated_by": "manual-curation-2026-07-21",
+  "note": "诚实优先：机制接地限于 TTR 通道对 T4/OH-PCB/卤代酚的结合模式（PDB 2ROX/2G5U + Wojtczak 1996 + Purkey 2004 + Meerts 2000）；一切 BPA 与卤代酚吸附材料转译为 inspiration/外推"
+ },
+ "boundary_rules": [
+  {
+   "rule": "通道配体基序：卤代酚羟基型芳香配体（T4/OH-PCB/卤代酚）优先占据 TTR 通道并竞争置换 T4，非酚羟基或非卤代类似物匹配差",
+   "source_mechanism": "卤代酚与 PCB 羟基代谢物对 T4 通道的竞争性结合（内分泌干扰机制）",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "BPA 双酚基序（两酚羟基 + 异丙叉桥）与 T4 单酚卤代联苯醚在通道内取向与位阻需求不同，预期仅单酚羟基可锚定（定性，无数值阈值）",
+   "source_mechanism": "甲状腺素通道中酚羟基氢键锚簇与碘取代疏水容纳",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  },
+  {
+   "rule": "通道锚簇受水分子氢键竞争削弱，通道几何依赖四聚体四级结构完整（定性，无数值阈值）",
+   "source_mechanism": "卤代酚与 PCB 羟基代谢物对 T4 通道的竞争性结合（内分泌干扰机制）",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  }
+ ]
+}

@@ -1,0 +1,358 @@
+{
+  "id": "lipocalin-hydrophobic-calyx",
+  "name_zh": "脂质运载蛋白疏水腔 calyx（含 SCP-2 固醇载体蛋白-2）",
+  "name_en": "Lipocalin Hydrophobic Calyx (incl. SCP-2 Sterol Carrier Protein-2)",
+  "organism": {
+    "scientific": "Mus musculus（鼠主尿蛋白 MUP） / Aedes aegypti（埃及伊蚊 SCP-2 固醇载体蛋白-2）",
+    "category": "动物"
+  },
+  "biomimetic_dimension": "分子仿生",
+  "features": [
+    "疏水性",
+    "分子筛分"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": null,
+    "note": "MUP 与 SCP-2 均为可溶性分子识别/转运蛋白（分子仿生原型），本库无其吸附性能测试条件；performance_data 为空，故测试条件全空。"
+  },
+  "library_tier": "extended",
+  "lifecycle_status": "active",
+  "coverage": "partial",
+  "status": "active",
+  "provenance_summary": {
+    "n_papers": 3,
+    "n_verified": 10,
+    "n_unverified": 0,
+    "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与硬边界条数（LCN-001 四要素+1 硬边界=5，LCN-002 四要素+1 硬边界=5）。机制接地限于脂运载蛋白 calyx 与 SCP-2 疏水腔对天然疏水配体（信息素 2-仲丁基噻唑、胆固醇、棕榈酸）的包结模式（PDB 1MUP/1PZ4 + Böcskei 1992 Nature + Dyer 2003 JBC + Flower 1996 Biochem J 摘要）；DDT 包结/吸附应用为设计转译（llm_inferred/inspiration），无性能数据。quote 逐字取自 RCSB PDB 沉积记录（TITLE/KEYWDS/HETNAM/SITE）与 PubMed 摘要（可核验），未做全文 PDF 审计。"
+  },
+  "mechanisms": [
+    {
+      "mechanism_id": "LCN-001",
+      "name": "鼠主尿蛋白 MUP-I 疏水 calyx 对信息素小疏水分子的包结",
+      "description": "脂运载蛋白（lipocalin）成员共享单一八链连续氢键反平行β桶，桶内围成内部配体结合位点（calyx）。鼠主尿蛋白 MUP-I（PDB 1MUP）在 calyx 内包结信息素配体 2-(仲丁基)噻唑（配体 TZL，chain A 第 167 位），calyx 壁由 SITE 记录残基 Leu44、Leu58、Phe60、Phe94、Ala107、Leu109、Leu120、Tyr124 构成，以脂肪族/芳香族疏水残基为主",
+      "基本原理": "八链β桶围成埋藏疏水 calyx，以范德华接触与体积/形状互补包结小疏水分子；calyx 对配体轮廓做尺寸/形状读出，预组织桶骨架使结合的组织化熵代价预先支付，化学特异性弱",
+      "source": "literature",
+      "ref_doi": "10.1038/360186a0",
+      "verification": "verified",
+      "verification_quote": "The results corroborate the role of these proteins in pheromone transport and elaborate the structural basis of ligand binding.",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "MUP-I 的天然配体为小疏水信息素分子；PDB 1MUP 中配体 TZL 即 2-(仲丁基)噻唑（2-(sec-butyl)thiazole，鼠尿信息素 2-仲丁基-4,5-二氢噻唑的沉积命名），位于 chain A 第 167 位，整体埋入 calyx 内部",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1038/360186a0",
+          "locator": "PDB 1MUP, HETNAM (chain A 167) / p.186",
+          "quote": "TZL 2-(SEC-BUTYL)THIAZOLE",
+          "scope_match": "Keywords: TZL, sec-butyl, thiazole"
+        },
+        "bio_structure": {
+          "text": "脂运载蛋白家族晶体结构高度保守，由单一八链连续氢键反平行β桶围成内部配体结合位点（calyx）（Flower 1996 Biochem J 318:1-14 摘要）；PDB 1MUP 为鼠主尿蛋白信息素结合结构（KEYWDS: PHEROMONE-BINDING；RCSB 条目分子量 19.72 kDa），calyx 埋于桶内",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1042/bj3180001",
+          "locator": "Abstract (Flower 1996 Biochem J 318:1-14), p.1",
+          "quote": "lipocalin crystal structures are highly conserved and comprise a single eight-stranded continuously hydrogen-bonded antiparallel beta-barrel, which encloses an internal ligand-binding site.",
+          "scope_match": "Keywords: beta-barrel, eight-stranded, ligand-binding"
+        },
+        "interaction": {
+          "text": "PDB 1MUP SITE LIG 记录 TZL 结合位点的衬壁残基为 Leu44、Leu58、Phe60、Phe94、Ala107、Leu109、Leu120、Tyr124（chain A），8 个残基中 7 个为脂肪族/芳香族疏水残基，信息素分子主要经范德华接触与形状互补被包结于疏水 calyx",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1038/360186a0",
+          "locator": "PDB 1MUP, SITE LIG / p.186",
+          "quote": "SITE LIG 8 LEU A 44 LEU A 58 PHE A 60 PHE A 94 ALA A 107 LEU A 109 LEU A 120 TYR A 124",
+          "scope_match": "Keywords: LEU, PHE, TYR"
+        },
+        "why_it_works": {
+          "text": "Böcskei 等 1992 以 X 射线晶体学测定鼠主尿蛋白（2.4 Å）与大鼠 alpha2u-球蛋白（2.8 Å）结构，结果确证这两类蛋白在信息素转运中的角色并阐明配体结合的结构性基础；脂运载蛋白普遍具有'结合一系列小疏水分子'的分子识别共性（Flower 1996 摘要）",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1038/360186a0",
+          "locator": "Abstract, p.186",
+          "quote": "The results corroborate the role of these proteins in pheromone transport and elaborate the structural basis of ligand binding.",
+          "scope_match": "Keywords: pheromone, transport, ligand binding"
+        },
+        "boundary_conditions": [
+          {
+            "text": "包结位点边界：结合发生于β桶围成的内部配体结合位点（calyx）之内，配体须进入体积与衬壁残基排布固定的埋藏腔，经与 calyx 壁的体积/形状互补被包结；轮廓超出 calyx 体积的分子无法进入",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "from_source",
+            "verification": "verified",
+            "gate_level": "hard",
+            "locator": "Abstract (Flower 1996 Biochem J 318:1-14), p.1",
+            "quote": "comprise a single eight-stranded continuously hydrogen-bonded antiparallel beta-barrel, which encloses an internal ligand-binding site",
+            "scope_match": "Keywords: beta-barrel, encloses, ligand-binding",
+            "source_asset": null
+          },
+          {
+            "text": "预组织β桶 calyx 依赖完整三级结构；变性或 calyx 完全溶剂化使疏水包结的几何与低介电环境丧失（定性，无数值阈值）",
+            "parameter": "wet_stability",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "八链β桶围成的埋藏疏水 calyx 以范德华接触与体积/形状互补包结小疏水分子，calyx 本身对配体轮廓做尺寸/形状读出，化学特异性弱、须由 calyx 壁功能化另行引入",
+        "verification_quote": "The results corroborate the role of these proteins in pheromone transport and elaborate the structural basis of ligand binding."
+      },
+      "source_doi": "10.1038/360186a0",
+      "source_page": 186,
+      "source_locator": "PDB 1MUP / p.186",
+      "source_file": "PDB 1MUP（RCSB 沉积记录：TITLE/KEYWDS/HETNAM/SITE）+ Nature 360:186-188 (1992) 摘要 + Flower 1996 Biochem J 318:1-14 摘要（未做本地全文 PDF 审计）",
+      "functional_groups": [
+        "疏水 calyx 壁残基（Leu/Phe/Ala/Tyr 范德华接触面）",
+        "八链β桶骨架"
+      ],
+      "key_structures": [
+        "识别结构"
+      ]
+    },
+    {
+      "mechanism_id": "LCN-002",
+      "name": "SCP-2 大疏水腔对固醇与脂肪酸的结合与转运",
+      "description": "SCP-2（固醇载体蛋白-2）以五链β片层与四个α螺旋层在界面围成大疏水腔。埃及伊蚊 SCP-2（PDB 1PZ4，1.35 Å）以该腔结合 C16 脂肪酸：棕榈酸配体（PLM，chain A 第 200 位）羧基端由连接第一α螺旋与第一β链的短 loop（SITE AC1 记录 Arg24、Gln25、Val26、Ile99、Phe105）协调，酰基链伸入蛋白内部疏水腔；SCP-2 已知亦结合胆固醇",
+      "基本原理": "α螺旋层/β片层界面疏水腔以范德华/疏水效应容纳疏水脂质的烃链，loop 极性残基辅助头基协调；腔具构象柔性、可容纳多种脂质，属混杂型疏水腔载体而非形状特异受体",
+      "source": "literature",
+      "ref_doi": "10.1074/jbc.M306214200",
+      "verification": "verified",
+      "verification_quote": "A large cavity exists at the interface of the layer alpha-helices and the beta-sheet, which serves as the fatty acid binding site.",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "SCP-2 天然底物为胆固醇与脂肪酸等疏水脂质（Dyer 2003 摘要明记埃及伊蚊 SCP-2 已知结合胆固醇）；PDB 1PZ4 为埃及伊蚊 SCP-2 与 C16 脂肪酸复合物，配体 PLM 即棕榈酸（palmitic acid，C16），位于 chain A 第 200 位",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1074/jbc.M306214200",
+          "locator": "Abstract, p.39085",
+          "quote": "Yellow fever mosquito sterol carrier protein (SCP-2) is known to bind to cholesterol.",
+          "scope_match": "Keywords: sterol carrier protein, SCP-2, cholesterol"
+        },
+        "bio_structure": {
+          "text": "SCP-2 折叠由五链β片层（链序 3-2-1-4-5）与覆盖其上的四个α螺旋层组成；大疏水腔存在于α螺旋层与β片层界面，充当脂肪酸结合位点（Dyer 2003 摘要）；PDB 1PZ4 KEYWDS 记 LIPID BINDING PROTEIN，条目分子量 13.11 kDa",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1074/jbc.M306214200",
+          "locator": "Abstract, p.39085",
+          "quote": "A large cavity exists at the interface of the layer alpha-helices and the beta-sheet, which serves as the fatty acid binding site.",
+          "scope_match": "Keywords: cavity, beta-sheet, fatty acid"
+        },
+        "interaction": {
+          "text": "棕榈酸羧基端由连接第一α螺旋与第一β链的短 loop 协调，酰基链深入蛋白内部（Dyer 2003 摘要）；PDB 1PZ4 SITE AC1 记录配体（chain A 第 200 位 PLM）结合位点残基为 Arg24、Gln25、Val26、Ile99、Phe105（另含两个水分子 HOH 412/422）",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1074/jbc.M306214200",
+          "locator": "PDB 1PZ4, SITE AC1 (chain A 200) / p.39085",
+          "quote": "SITE AC1 7 ARG A 24 GLN A 25 VAL A 26 ILE A 99 PHE A 105 HOH A 412 HOH A 422",
+          "scope_match": "Keywords: ARG, VAL, PHE"
+        },
+        "why_it_works": {
+          "text": "Dyer 等 2003 指出 SCP-2 家族结合口袋可呈现构象柔性以协调多种脂质，与 SCP-2 作为混杂型疏水脂质载体的功能一致；疏水腔的体积与低极性环境为烃链提供范德华/疏水驱动，腔的柔性拓宽了可容纳脂质的轮廓范围",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1074/jbc.M306214200",
+          "locator": "Abstract, p.39085",
+          "quote": "the binding pocket in the SCP-2 family of proteins may exhibit conformational flexibility to allow coordination of a variety of lipids.",
+          "scope_match": "Keywords: binding pocket, conformational flexibility, lipids"
+        },
+        "boundary_conditions": [
+          {
+            "text": "脂质混杂性边界：SCP-2 疏水腔可容纳多种脂质（胆固醇、脂肪酸等），结合口袋具构象柔性；该腔本身不提供对单一配体的形状特异识别，选择性须在腔几何与腔壁化学层面另行构建",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "from_source",
+            "verification": "verified",
+            "gate_level": "hard",
+            "locator": "Abstract, p.39085",
+            "quote": "may exhibit conformational flexibility to allow coordination of a variety of lipids.",
+            "scope_match": "Keywords: conformational flexibility, lipids",
+            "source_asset": null
+          },
+          {
+            "text": "DDT 包结匹配边界：疏水腔能否有效包结 DDT 的两个对氯苯环与四面体桥碳/三氯甲基骨架，取决于腔体积与腔壁几何同配体轮廓的匹配；腔过小或过大均不利包结（定性，无数值阈值）",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "α螺旋/β片层界面疏水腔以范德华/疏水效应容纳疏水脂质烃链（或疏水分子骨架），loop 极性基团可辅助头基协调；腔体积、腔壁化学与柔性共同决定可包结分子的轮廓容许范围",
+        "verification_quote": "A large cavity exists at the interface of the layer alpha-helices and the beta-sheet, which serves as the fatty acid binding site."
+      },
+      "source_doi": "10.1074/jbc.M306214200",
+      "source_page": 39085,
+      "source_locator": "PDB 1PZ4 / p.39085",
+      "source_file": "PDB 1PZ4（RCSB 沉积记录：TITLE/COMPND/SOURCE/KEYWDS/HETNAM/SITE）+ JBC 278:39085-39091 (2003) 摘要（未做本地全文 PDF 审计）",
+      "functional_groups": [
+        "疏水腔（α螺旋层/β片层界面，范德华/疏水接触面）",
+        "loop 极性残基（Arg24/Gln25，头基协调）"
+      ],
+      "key_structures": [
+        "识别结构",
+        "转运结构"
+      ]
+    }
+  ],
+  "performance_data": [],
+  "engineering_constraints": [
+    {
+      "constraint": "可溶蛋白形态",
+      "value": "MUP-I 为鼠尿可溶性蛋白（RCSB 1MUP 条目分子量 19.72 kDa），SCP-2 为可溶性脂质载体蛋白（RCSB 1PZ4 条目分子量 13.11 kDa）；用作吸附须固定化/移植于固体载体，或仅提取腔体设计原则",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "RCSB core/entry 1MUP 与 1PZ4 的 rcsb_entry_info.molecular_weight 字段",
+      "source": "literature",
+      "ref_doi": "10.1038/360186a0"
+    },
+    {
+      "constraint": "腔体完整性依赖",
+      "value": "包结依赖β桶（MUP）或α螺旋/β片层界面腔（SCP-2）的完整三级结构；变性或腔体溶剂化使疏水包结几何与低介电环境丧失",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "机理推断（基于 Flower 1996 与 Dyer 2003 所述埋藏腔结构事实的外推）",
+      "source": "llm_inference",
+      "ref_doi": null
+    },
+    {
+      "constraint": "混杂腔、化学特异性弱",
+      "value": "lipocalin calyx 与 SCP-2 腔以疏水包结与体积/形状读出结合，化学特异性弱（MUP 结合多种信息素，SCP-2 容纳多种脂质）；对 DDT 的选择性须在腔壁化学与腔几何层面构建",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "机理推断（基于 Dyer 2003 摘要 SCP-2 多种脂质容纳与 Flower 1996 摘要脂运载蛋白结合一系列小疏水分子的事实外推）",
+      "source": "llm_inference",
+      "ref_doi": null
+    }
+  ],
+  "narrative": {
+    "entries": [
+      {
+        "source_file": "Nature 360:186-188 (1992) / PDB 1MUP（Böcskei et al.，DOI 10.1038/360186a0）+ Flower 1996 Biochem J 318:1-14（DOI 10.1042/bj3180001）",
+        "paper_id": "1992-Bocskei-rodent-urinary-protein-pheromone-binding",
+        "sections": {
+          "problem_definition": "啮齿类尿液蛋白长期被认为负责信息素的结合与缓释，但分子层面的结合机制不明。雄性大鼠尿 alpha2u-球蛋白还参与透明液滴肾病（一种由多种工业化学品暴露引发的毒理综合征），提示这类蛋白的结合腔可容纳外源疏水小分子。脂运载蛋白如何以统一的结构基序识别一系列小疏水分子，是分子识别的基础问题。",
+          "biological_solution": "Böcskei 等测定了鼠主尿蛋白（2.4 Å，PDB 1MUP）与大鼠 alpha2u-球蛋白（2.8 Å）的晶体结构，结果确证其在信息素转运中的角色并阐明配体结合的结构性基础（摘要原文）。PDB 1MUP 中信息素配体 TZL（2-(sec-butyl)thiazole，chain A 第 167 位）埋入 calyx，SITE LIG 记录衬壁残基 Leu44/Leu58/Phe60/Phe94/Ala107/Leu109/Leu120/Tyr124，以疏水残基为主。Flower 1996 综述摘要指出脂运载蛋白晶体结构高度保守，由单一八链连续氢键反平行β桶围成内部配体结合位点，家族共性为结合一系列小疏水分子，并承担内源与外源化合物的清除转运。",
+          "key_features": "必须保留：① 八链β桶围成的埋藏疏水 calyx（范德华接触面）；② 腔体积与衬壁几何对配体轮廓的尺寸/形状读出；③ 骨架预组织。可灵活调整：载体骨架、腔壁疏水基团化学（芳环/烷基/卤代烃面）、腔口极性与腔深。",
+          "design_mapping": "仿生映射：lipocalin calyx 的'埋藏疏水腔 + 体积/形状读出包结'→ 面向 DDT（p,p'-DDT，1,1,1-三氯-2,2-双(4-氯苯基)乙烷，C14H9Cl5，XLogP 6.9，PubChem CID 3036）的疏水包结位点。边界声明：这是设计转译/启发（llm_inferred），非 from_source 事实——calyx 天然结合的是小信息素分子，DDT 轮廓更大（两氯苯环 + 四面体桥碳 + 三氯甲基），能否被同尺寸腔包结须实验验证；蛋白本身（可溶、约 19.7 kDa、构象依赖）不可直接复制为吸附剂，只提取设计原则。",
+          "explainability_anchors": "设计溯源：信息素 TZL 在 MUP calyx 内的疏水包结（PDB 1MUP，from_source，Böcskei 1992）+ 脂运载蛋白八链β桶 calyx 共性（Flower 1996，from_source）→ '埋藏疏水腔 + 体积/形状读出'可迁移原理 → DDT 疏水包结位点设计（llm_inferred 启发，须实验验证）。"
+        }
+      },
+      {
+        "source_file": "JBC 278:39085-39091 (2003) / PDB 1PZ4（Dyer et al.，DOI 10.1074/jbc.M306214200）",
+        "paper_id": "2003-Dyer-Aedes-SCP2-fatty-acid-complex",
+        "sections": {
+          "problem_definition": "昆虫不能自身合成固醇，须从食物获取并转运至组织；SCP-2 是参与胆固醇等脂质胞内转运的可溶载体，其结合腔如何容纳疏水脂质、能容纳哪些脂质，是理解昆虫脂质代谢与潜在杀虫靶点的结构基础。",
+          "biological_solution": "Dyer 等以 1.35 Å 分辨率测定埃及伊蚊 SCP-2 与 C16 脂肪酸（棕榈酸，PDB 1PZ4，配体 PLM 位于 chain A 第 200 位）的复合物结构（摘要原文）。蛋白折叠由五链β片层（链序 3-2-1-4-5）与四个α螺旋层组成，大疏水腔存在于螺旋层与片层界面、充当脂肪酸结合位点；脂肪酸羧基端由连接第一螺旋与第一链的短 loop 协调（SITE AC1 记录 Arg24/Gln25/Val26/Ile99/Phe105），酰基链伸入蛋白内部。摘要指出该家族结合口袋可呈现构象柔性以协调多种脂质，SCP-2 已知亦结合胆固醇。",
+          "key_features": "必须保留：① α螺旋/β片层界面的大疏水腔（烃链容纳面）；② loop 极性基团对头基的辅助协调（可选要素）；③ 腔的构象柔性带来的轮廓容许范围。可灵活调整：载体骨架、腔壁疏水/卤亲修饰、腔体积与开口。",
+          "design_mapping": "仿生映射：SCP-2 的'界面疏水腔 + 头基辅助协调 + 柔性轮廓容许'→ 疏水有机分子包结位点。边界声明：SCP-2 腔为混杂型脂质载体腔（摘要明记可协调多种脂质），本身不提供 DDT 特异识别；将 DDT（两氯苯环 + 四面体桥碳 + 三氯甲基轮廓）的包结归于 SCP-2 天然机制属外推（llm_inferred/inspiration），亲和力与选择性须实验验证。",
+          "explainability_anchors": "设计溯源：棕榈酸/胆固醇在 SCP-2 大疏水腔的结合模式（PDB 1PZ4 + Dyer 2003 摘要，from_source）→ '界面疏水腔 + 体积/柔性容许的轮廓包结'可迁移原理（from_source）→ DDT 疏水包结位点设计（llm_inferred 启发，须实验验证）。"
+        }
+      }
+    ]
+  },
+  "design_translation": [
+    {
+      "idea": "将脂运载蛋白（MUP）calyx 与 SCP-2 疏水腔的'埋藏疏水腔 + 体积/形状读出包结'移植到多孔固体载体，面向 DDT（p,p'-DDT，1,1,1-三氯-2,2-双(4-氯苯基)乙烷，C14H9Cl5，XLogP 6.9，PubChem CID 3036）：在孔壁或分子笼中构筑与 DDT 两对氯苯环 + 四面体桥碳 + 三氯甲基轮廓几何互补的疏水腔，以范德华与形状互补包结 DDT 疏水骨架，并收窄腔壁几何以读出 DDT 特征四面体桥碳轮廓",
+      "specific_functional_group": "疏水腔壁基团（芳香环、烷基链、氯代/氟代烃疏水面，提供与 DDT 氯代芳环骨架的范德华/卤亲接触）；腔口可设弱极性位点（羰基/酰胺）辅助取向，腔壁以疏水为主",
+      "material_handle": "以 DDT 或其结构类似物为模板的分子印迹疏水聚合物固定于介孔二氧化硅/交联聚合物骨架；或环糊精、杯芳烃、葫芦脲等大环主体与有机分子笼（共价有机笼）固定化；借模板/刚性骨架控制腔体积与腔壁几何匹配 DDT 轮廓",
+      "target_interaction": "DDT 氯代芳环骨架与疏水腔壁的范德华/疏水效应 + 形状互补包结（四面体桥碳与三氯甲基的轮廓读出）+ 腔内低介电环境排除水竞争",
+      "source_tier": "llm_inference",
+      "evidence_tier": "inspiration（原理层外推：lipocalin calyx 与 SCP-2 疏水腔对天然疏水配体的包结接地于 PDB 1MUP/1PZ4 与 Böcskei 1992/Dyer 2003/Flower 1996 摘要；DDT 包结/吸附转译为 llm_inferred，无此类蛋白或材料直接结合 DDT 的证据）",
+      "examples": [],
+      "design_principle": "MUP calyx（PDB 1MUP）与 SCP-2 腔（PDB 1PZ4）证明埋藏疏水腔以体积/形状互补与范德华接触包结小疏水分子，calyx/腔对配体轮廓做尺寸/形状读出；DDT 为高疏水有机氯分子（XLogP 6.9），其两苯环加四面体桥碳轮廓原则上可由几何匹配的腔读出",
+      "implementation_example": "DDT 分子印迹疏水聚合物，或固定化有机笼/大环主体的疏水腔介孔二氧化硅（无实验数据，仅为设计假设）",
+      "constraints": "DDT 水溶性极低，水相质量传递为主要工程瓶颈；腔壁疏水对一切疏水分子（天然有机质、多环芳烃、其他有机氯农药）为混杂作用力，选择性依赖腔几何/轮廓互补的精化；此类生物腔（MUP/SCP-2）本身为混杂载体，不提供 DDT 特异性，选择性须在材料层面构建",
+      "failure_modes": "腔体积/几何与 DDT 轮廓失配致包结失败或包结过紧难再生；腔壁疏水非特异吸附天然有机质与其他疏水污染物；分子印迹模板残留或腔体塌陷；腔被溶剂分子占据使 DDT 进入受动力学限制",
+      "material_realization_examples": []
+    }
+  ],
+  "honesty_ledger": {
+    "facts": [
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "鼠主尿蛋白 MUP-I 疏水 calyx 对信息素小疏水分子的包结",
+        "basis": "from_source_verified",
+        "note": "PDB 1MUP（RCSB 沉积记录：配体 TZL=2-(sec-butyl)thiazole 位于 chain A 第 167 位；SITE LIG 记录衬壁残基 Leu44/Leu58/Phe60/Phe94/Ala107/Leu109/Leu120/Tyr124）+ Böcskei 1992 Nature 360:186 摘要（信息素转运角色与配体结合结构基础）+ Flower 1996 Biochem J 318:1 摘要（八链β桶 calyx 共性）；quote 逐字取自 PDB 沉积记录与 PubMed 摘要（可核验），未做全文 PDF 审计"
+      },
+      {
+        "type": "mechanism",
+        "index": 1,
+        "name": "SCP-2 大疏水腔对固醇与脂肪酸的结合与转运",
+        "basis": "from_source_verified",
+        "note": "PDB 1PZ4（RCSB 沉积记录：埃及伊蚊 SCP-2，配体 PLM=棕榈酸位于 chain A 第 200 位；SITE AC1 记录 Arg24/Gln25/Val26/Ile99/Phe105）+ Dyer 2003 JBC 278:39085 摘要（界面大疏水腔、羧基 loop 协调、酰基链深入内部、多种脂质柔性容纳、已知结合胆固醇）；quote 逐字取自 PDB 沉积记录与 PubMed 摘要，未做全文 PDF 审计"
+      }
+    ],
+    "leads": [],
+    "inferences": [
+      {
+        "type": "design_translation",
+        "index": 0,
+        "idea": "将 lipocalin calyx/SCP-2 疏水腔的体积/形状读出包结移植到多孔载体以包结/吸附 DDT",
+        "basis": "llm_inferred",
+        "label": "inspiration",
+        "note": "calyx 天然包结的是小信息素分子（TZL），SCP-2 腔为混杂脂质载体腔；DDT 轮廓更大且含氯取代，能否被几何匹配腔有效包结、以及对 DDT 的选择性，均属原理层外推，无直接 DDT 结合证据，亲和力与选择性须实验验证"
+      }
+    ],
+    "boundary_notes": [
+      "本原型天然配体为小疏水分子（信息素 2-(仲丁基)噻唑、胆固醇、棕榈酸等脂质）；机制 from_source 接地限于这些天然配体在 calyx/疏水腔的包结模式",
+      "DDT 包结/吸附应用全部为 design_translation（llm_inferred/inspiration），不得用作 DDT 吸附的 direct evidence",
+      "lipocalin calyx 与 SCP-2 腔均为混杂型疏水腔（MUP 结合多种信息素，SCP-2 容纳多种脂质，均 from_source），本身不提供 DDT 特异选择性；区分 DDT 与 DDE/DDD/其他有机氯/多环芳烃属转译层问题",
+      "无 DDT 吸附性能数据（qmax 等）；performance_data 为空数组，严格未从姊妹项目 biomimetic-adsorbent-design 的 pollutant_knowledge_base 搬运任何性能数值（知识隔离红线）",
+      "DDT 分子式 C14H9Cl5 与 XLogP 6.9 取自 PubChem CID 3036（计算 XLogP），仅作转译层背景描述，不作吸附性能"
+    ],
+    "missing_pdf_items": [
+      "Böcskei 1992 Nature 360:186-188 全文 PDF（quote 取自 PubMed 摘要 PMID 1279439 与 PDB 1MUP 沉积记录）",
+      "Dyer 2003 JBC 278:39085-39091 全文 PDF（quote 取自 PubMed 摘要 PMID 12855689 与 PDB 1PZ4 沉积记录；腔内精确接触距离与残基-配体几何未核验）",
+      "Flower 1996 Biochem J 318:1-14 全文 PDF（quote 取自 PubMed 摘要 PMID 8761444）"
+    ],
+    "generated_by": "wave1-lipocalin-curation-2026-07-21",
+    "note": "诚实优先：机制接地限于 lipocalin calyx 与 SCP-2 疏水腔对天然疏水配体的包结模式（PDB 1MUP/1PZ4 + 三篇文献摘要）；一切 DDT 包结/吸附转译为 inspiration/外推"
+  },
+  "boundary_rules": [
+    {
+      "rule": "包结位点边界：结合发生于β桶围成的内部 calyx 之内，配体须进入体积与衬壁几何固定的埋藏腔并被形状/体积互补包结",
+      "source_mechanism": "鼠主尿蛋白 MUP-I 疏水 calyx 对信息素小疏水分子的包结",
+      "gate_level": "hard",
+      "basis": "from_source"
+    },
+    {
+      "rule": "脂质混杂性边界：SCP-2 疏水腔可容纳多种脂质且结合口袋具构象柔性，本身不提供对单一配体的形状特异识别",
+      "source_mechanism": "SCP-2 大疏水腔对固醇与脂肪酸的结合与转运",
+      "gate_level": "hard",
+      "basis": "from_source"
+    },
+    {
+      "rule": "DDT 轮廓匹配边界：疏水腔能否有效包结 DDT 取决于腔体积/腔壁几何同两氯苯环加四面体桥碳加三氯甲基轮廓的匹配（定性，无数值阈值）",
+      "source_mechanism": "SCP-2 大疏水腔对固醇与脂肪酸的结合与转运",
+      "gate_level": "soft",
+      "basis": "llm_inferred"
+    },
+    {
+      "rule": "预组织β桶 calyx 依赖完整三级结构，变性或腔体溶剂化削弱疏水包结（定性，无数值阈值）",
+      "source_mechanism": "鼠主尿蛋白 MUP-I 疏水 calyx 对信息素小疏水分子的包结",
+      "gate_level": "soft",
+      "basis": "llm_inferred"
+    }
+  ]
+}
