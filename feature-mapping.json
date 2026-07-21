@@ -1105,6 +1105,18 @@
       "weight": 0.7,
       "mechanism_summary": "脂运载蛋白（MUP）八链β桶疏水 calyx 与 SCP-2 α螺旋/β片层界面疏水腔以范德华与体积/形状互补包结小疏水配体（信息素、胆固醇、脂肪酸），原理上可读出 DDT 的二氯二苯基三氯乙烷疏水轮廓",
       "design_hint": "在介孔孔壁或固定化分子笼/大环主体中构筑与 DDT 轮廓几何互补的疏水腔（分子印迹或主体固定化），选择性依赖腔几何精化而非腔壁化学特异性"
+     },
+     {
+      "id": "ddt-dehydrochlorinase-gst",
+      "weight": 0.7,
+      "mechanism_summary": "GSTe2 DDT 脱氯化氢酶以双分区活性位点（G 位结合 GSH、H 位疏水腔结合 DDT）经质子转移（β-消除）催化 DDT→DDE，并对桥碳 C-H 与三氯甲基双基序做底物特异性读出，区分 DDT 与类似物 DDD/DDE。",
+      "design_hint": "取桥基序读出动机（非复制催化）：以形状与疏水互补孔腔识别 DDT 的双(氯苯基)加三氯甲基双基序，选择性吸附 DDT 而排除 DDD/DDE。"
+     },
+     {
+      "id": "lignin-peroxidase-white-rot",
+      "weight": 0.5,
+      "mechanism_summary": "LiP 经血红素中心一电子转移生成介体/底物自由基，非特异氧化降解顽固芳香聚合物木质素（天然机制为降解/转化）；原理上启发有机氯芳香污染物的氧化降解，但 DDT 高氯化/高疏水且底物类别与木质素差异显著，转译仅限原理层，无降解活性证据。",
+      "design_hint": "取'金属卟啉血红素仿中心 + 可再生小分子介体 relay + 表面自由基 relay 位点'三要素构建氧化降解催化体系，以 H2O2 绿色氧化剂驱动；固定化酶/全细胞或仿生非均相催化路线均须实验验证活性与产物毒性。"
      }
     ]
    }
@@ -1410,6 +1422,10 @@
     {
      "id": "iron-oxidizing-bacteria",
      "weight": 0.9
+    },
+    {
+     "id": "lignin-peroxidase-white-rot",
+     "weight": 0.6
     }
    ]
   },
@@ -1459,6 +1475,14 @@
     },
     {
      "id": "fluoroacetate-dehalogenase",
+     "weight": 0.8
+    },
+    {
+     "id": "ddt-dehydrochlorinase-gst",
+     "weight": 0.7
+    },
+    {
+     "id": "lignin-peroxidase-white-rot",
      "weight": 0.8
     }
    ]
@@ -1528,6 +1552,10 @@
     {
      "id": "sbp-sulfate-oxyanion-geometric-recognition",
      "weight": 0.7
+    },
+    {
+     "id": "ddt-dehydrochlorinase-gst",
+     "weight": 0.6
     }
    ]
   },
@@ -2583,6 +2611,40 @@
    "biomimetic_dimension": "分子仿生",
    "organism": {
     "scientific": "Salmonella typhimurium（硫酸根结合蛋白 SBP）",
+    "category": "微生物"
+   }
+  },
+  "ddt-dehydrochlorinase-gst": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "DDT 脱氯化氢酶（GSTe2）为可溶性胞内酶（降解/转化原型兼桥基序读出动机原型），本库无其吸附性能测试条件；performance_data 为空，故测试条件全空。"
+   },
+   "features": [
+    "催化降解",
+    "分子筛分"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Anopheles funestus（非洲疟蚊谷胱甘肽 S-转移酶 epsilon 2 GSTe2；双翅目蚊科）",
+    "category": "动物"
+   }
+  },
+  "lignin-peroxidase-white-rot": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "酶催化降解/转化原型（H2O2 驱动的血红素一电子自由基介体氧化木质素）；本库无吸附性能测试；performance_data 为空。天然功能处于酸性胞外环境（定性，Son 2021 标题）。"
+   },
+   "features": [
+    "催化降解",
+    "活性氧位点"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Phanerochaete chrysosporium（木质素过氧化物酶 LiP，同工酶 H2/H8；白腐真菌）",
     "category": "微生物"
    }
   }
