@@ -1,0 +1,358 @@
+{
+ "id": "nephron-capture-then-separate",
+ "name_zh": "肾单位先捕后分滤过-重吸收架构",
+ "name_en": "Nephron Capture-Then-Separate Filtration-Reabsorption Architecture",
+ "organism": {
+  "scientific": "Homo sapiens（人体肾单位，PDB 5ZYS 为 Mus musculus 源 nephrin-MAGI1 复合物）",
+  "category": "动物"
+ },
+ "biomimetic_dimension": "系统仿生",
+ "features": [
+  "分级分离"
+ ],
+ "tested_conditions": {
+  "tested_ph_range": null,
+  "tested_temp_range": null,
+  "salinity": null,
+  "note": "肾单位为人体肾脏生理系统架构原型（传质与分级分离），本库无其吸附性能测试条件；performance_data 为空，故测试条件全空。"
+ },
+ "library_tier": "extended",
+ "lifecycle_status": "active",
+ "coverage": "partial",
+ "status": "active",
+ "provenance_summary": {
+  "n_papers": 5,
+  "n_verified": 10,
+  "n_unverified": 0,
+  "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与边界条数（NEPH-001 四要素+1 边界=5，NEPH-002 四要素+1 边界=5）。机制接地限于人体肾单位生理天然系统（肾小球滤过+近端小管受体介导重吸收）与小鼠 nephrin-MAGI1 结构数据；PFOA/PFBS 分级吸附工艺为设计转译（llm_inferred），无性能数据。quote 取自 PubMed 摘要、RCSB 沉积记录与 Crossref 标题（可核验），未做全文 PDF 审计。"
+ },
+ "mechanisms": [
+  {
+   "mechanism_id": "NEPH-001",
+   "name": "尺寸/电荷选择性肾小球滤过屏障（第一级非特异捕获）",
+   "description": "肾小球毛细血管壁由窗孔内皮、肾小球基底膜（GBM）与足细胞裂隙膜（nephrin 为其核心结构蛋白）三层构成，对溶质呈高度尺寸与电荷选择性：水与小分子溶质高通量通过形成原尿，白蛋白等蛋白大分子与有形成分被阻留，完成肾单位先捕后分架构的第一级非特异捕获与尺寸分级",
+   "基本原理": "具有尺寸与电荷选择性的多层选择性屏障，可在不依赖分子特异识别的前提下实现小分子溶质的高通量非特异捕获与蛋白大分子干扰物的截留；细胞成分主导溶质阻留、GBM 主导水流阻力，二者的分工使通量与截留同时实现",
+   "source": "literature",
+   "ref_doi": "10.1152/physrev.00055.2006",
+   "verification": "corroborated",
+   "verification_quote": "The glomerular barrier is highly size and charge selective, in qualitative agreement with the classical studies performed 30 years ago.",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "血浆水与小分子溶质（尿素、葡萄糖、电解质、小分子有机阴离子等；肾小球滤过屏障的天然加工对象）：肾小球屏障对溶质呈高度尺寸与电荷选择性，水与小分子溶质通过屏障进入原尿，白蛋白等蛋白大分子与有形成分被阻留；小分子阴离子溶质随小分子溶质进入滤液。PFOA/PFBS 为小分子阴离子这一事实仅作设计转译背景，非本机制接地（且 PFAS 在血浆中与白蛋白结合，游离可滤过部分受限，其生理肾脏处置以肾小管重吸收为主）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1152/physrev.00055.2006",
+     "locator": "abstract (PMID 18391170), p.451",
+     "quote": "The glomerular barrier is highly size and charge selective, in qualitative agreement with the classical studies performed 30 years ago.",
+     "scope_match": "Keywords: glomerular, barrier, size, charge, selective"
+    },
+    "bio_structure": {
+     "text": "裂隙膜核心结构：nephrin 是足细胞裂隙膜的主要结构蛋白，其胞质段与支架蛋白 MAGI1 结合介导裂隙膜组装与信号；小鼠 nephrin 胞质肽（chain B，残基 1247-1256）与 MAGI1 PDZ2 结构域（chain A，残基 822-880）复合物已解析（PDB 5ZYS）。完整滤过屏障由窗孔毛细血管内皮、肾小球基底膜（GBM）与足细胞裂隙膜三部分组成（Deen 2004 标题即问 'What determines glomerular capillary permeability?'）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "PDB 5ZYS (DOI 10.2210/pdb5zys/pdb)",
+     "locator": "PDB 5ZYS, struct.title (deposited 2018)",
+     "quote": "Structure of Nephrin/MAGI1 complex",
+     "scope_match": "Keywords: Nephrin, MAGI1, complex"
+    },
+    "interaction": {
+     "text": "溶质过屏障受尺寸、电荷与形状三重限制：白蛋白尺度的大分子被三层屏障强烈阻留（其中细胞成分的贡献为主），水与小分子则高通量通过；GBM 与细胞表面的负电（聚阴离子）表面对阴离子大分子构成附加电荷阻留。三层结构共同决定毛细血管壁的整体通透功能",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1172/JCI23577",
+     "locator": "abstract (PMID 15545991), p.1412",
+     "quote": "are allowing a clearer understanding to emerge of how the 3 parts of the glomerular capillary wall jointly determine its functional properties.",
+     "scope_match": "Keywords: glomerular, capillary wall, parts, functional properties"
+    },
+    "why_it_works": {
+     "text": "屏障的功能分工：细胞成分（内皮、足细胞）在限制溶质通过上起主导作用，GBM 在水流阻力上起主导作用；该分工使高通量水与小分子溶质通过同蛋白大分子的有效阻留得以并存，完成第一级非特异捕获与尺寸分级（大分子干扰物在前级截除，目标小分子进入滤液）。滤液为稀溶液，其浓缩在肾单位由下游水重吸收完成，工程化时需另设等效浓缩环节",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1152/physrev.00055.2006",
+     "locator": "abstract (PMID 18391170), p.451",
+     "quote": "The cellular components are the key players in restricting solute transport, while the GBM is responsible for most of the resistance to water flow across the glomerular barrier.",
+     "scope_match": "Keywords: cellular, solute transport, resistance, water flow, glomerular, GBM"
+    },
+    "boundary_conditions": [
+     {
+      "text": "肾小球屏障按尺寸、电荷与形状限制溶质：白蛋白尺度大分子几乎被完全阻留，阴离子大分子所受限制强于同尺寸中性分子（电荷效应），小分子溶质与水高通量通过（定性，本条不设数值截断阈值）",
+      "parameter": "molecular_size_charge",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "corroborated",
+      "gate_level": "hard",
+      "locator": "abstract (PMID 18391170), p.451",
+      "quote": "discuss various methods of studying glomerular permeability, and analyze data concerning the restriction of solutes by size, charge, and shape.",
+      "scope_match": "Keywords: glomerular, permeability, restriction, solutes, size, charge, shape",
+      "source_asset": null
+     },
+     {
+      "text": "滤过屏障的尺寸/电荷选择性依赖内皮与足细胞细胞成分的活性及 GBM 聚阴离子电荷的维持（生理体系具自我修复）；转译为工程介质时，等效选择性层的化学与水力学稳定性须另行评估（定性，无数值阈值）",
+      "parameter": "barrier_stability",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "scope_match": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "具有尺寸/电荷选择性的多层结构选择性屏障，可在不依赖分子特异识别的前提下，实现小分子溶质的高通量非特异捕获与蛋白大分子干扰物的截留（尺寸分级）；其工程核心是在维持尺寸/电荷选择性的同时保证高通量",
+    "verification_quote": "The glomerular barrier is highly size and charge selective, in qualitative agreement with the classical studies performed 30 years ago."
+   },
+   "source_doi": "10.1152/physrev.00055.2006",
+   "source_page": 451,
+   "source_locator": "abstract (PMID 18391170), p.451",
+   "source_file": "PubMed PMID 18391170（Haraldsson 2008 摘要）/ PMID 15545991（Deen 2004 摘要）/ RCSB PDB 5ZYS 沉积记录（未做本地全文 PDF 审计）",
+   "functional_groups": [
+    "尺寸/电荷选择性多层屏障（窗孔内皮/GBM/足细胞裂隙膜）",
+    "GBM 与细胞表面聚阴离子电荷层"
+   ],
+   "key_structures": [
+    "膜结构"
+   ]
+  },
+  {
+   "mechanism_id": "NEPH-002",
+   "name": "近端小管 megalin/cubilin 受体介导选择性重吸收（第二级特异回收）",
+   "description": "近端小管上皮顶端内吞装置共定位的多配体内吞受体 megalin（LRP2）与 cubilin，以受体介导内吞回收原尿中滤过的白蛋白等蛋白与维生素结合蛋白类配体（内化、溶酶体处置、受体回用）；肾小球滤过与肾小管重吸收两级耦合，共同决定溶质的净排泄，构成先捕后分架构的第二级特异选择性回收",
+   "基本原理": "基于配体识别的特异回收单元置于非特异捕获下游，使捕获通量与选择性解耦；受体内吞兼具特异性与容量限制，净排泄为滤过与重吸收两级之差",
+   "source": "literature",
+   "ref_doi": "10.1038/nrm778",
+   "verification": "verified",
+   "verification_quote": "Megalin and cubilin: multifunctional endocytic receptors",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "进入原尿的蛋白大分子溶质（白蛋白、免疫球蛋白轻链、载脂蛋白 A-I、维生素结合蛋白、激素、酶等；近端小管重吸收系统的天然底物）：这些在肾小球正常滤过的蛋白由 cubilin/megalin 结合并回收。小分子溶质（葡萄糖、氨基酸、电解质、小分子有机阴离子）则由专一转运体经另一途径重吸收，属生理背景，本条仅以受体内吞重吸收接地",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1152/ajprenal.2001.280.4.F562",
+     "locator": "abstract (PMID 11249847), p.F562",
+     "quote": "Among the proteins normally filtered in the glomeruli, cubilin has been shown to bind albumin, immunoglobulin light chains, and apolipoprotein A-I.",
+     "scope_match": "Keywords: proteins, filtered, glomeruli, albumin, cubilin"
+    },
+    "bio_structure": {
+     "text": "近端小管上皮顶端内吞装置共定位的多配体内吞受体 megalin 与 cubilin：megalin 为约 600 kDa 的 LDL 受体家族跨膜蛋白（胞质段含 NPXY 基序，介导包被小窝聚集），cubilin 为约 460 kDa、无跨膜域的受体；二者以高亲和力相互结合并共定位",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1152/ajprenal.2001.280.4.F562",
+     "locator": "abstract (PMID 11249847), p.F562",
+     "quote": "The multiligand, endocytic receptors megalin and cubilin are colocalized in the renal proximal tubule.",
+     "scope_match": "Keywords: multiligand, endocytic, megalin, cubilin, renal proximal tubule"
+    },
+    "interaction": {
+     "text": "受体介导内吞：滤过配体与顶端 megalin/cubilin 结合，megalin 介导 cubilin 及其配体内化入包被囊泡，随后溶酶体处置，受体回用至顶端膜；该摄取途径实现物质从管腔到细胞（一个区室到另一个区室）的选择性转运",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1152/ajprenal.2001.280.4.F562",
+     "locator": "abstract (PMID 11249847), p.F562",
+     "quote": "it is highly conceivable that megalin mediates internalization of cubilin and its ligands.",
+     "scope_match": "Keywords: megalin, internalization, cubilin, ligands"
+    },
+    "why_it_works": {
+     "text": "顶端受体复合体紧邻滤液下游，滤过配体在滤过之后即被截获回收；生理稳态下，肾小球滤出的少量白蛋白由近端小管 megalin-cubulin 复合体重吸收并由小管细胞处置。滤过与重吸收两级耦合使溶质净排泄可调：第一级提供非特异捕获与分级，第二级提供特异选择性回收，捕获通量与选择性由此解耦",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1152/physrev.00055.2006",
+     "locator": "abstract (PMID 18391170), p.451",
+     "quote": "The small amounts of albumin filtered will be reabsorbed by the megalin-cubulin complex and degraded by the proximal tubular cells.",
+     "scope_match": "Keywords: albumin, filtered, reabsorbed, megalin, cubulin, proximal tubular"
+    },
+    "boundary_conditions": [
+     {
+      "text": "重吸收建立在 megalin/cubilin 的配体特异性之上且有容量限制（受体介导内吞）；megalin 缺陷小鼠自尿中丢失相应配体的蛋白与维生素，表明该级回收的选择性与生理必要性源自受体分子识别特异性（定性，无数值阈值）",
+      "parameter": "ligand_specificity_capacity",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "corroborated",
+      "gate_level": "hard",
+      "locator": "abstract (PMID 11249847), p.F562",
+      "quote": "Loss of these proteins and vitamins in the urine of megalin-deficient mice illustrates the physiological importance of this receptor.",
+      "scope_match": "Keywords: proteins, vitamins, urine, megalin-deficient, physiological importance",
+      "source_asset": null
+     },
+     {
+      "text": "转译为两级分离工艺时，捕获级与回收级须在流路与操作方式上解耦，且级间通量与容量需匹配；级联的具体设计参数（床层容积、流速、洗脱条件）须实验确定（定性，无数值阈值）",
+      "parameter": "stage_coupling",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "scope_match": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "将具有配体选择性的特异回收单元（受体/转运体介导）置于非特异捕获级下游，可使捕获通量与选择性解耦：前级保障处理量与分级，后级保障净回收的特异性，净输出为两级之差",
+    "verification_quote": "Megalin and cubilin: multifunctional endocytic receptors"
+   },
+   "source_doi": "10.1038/nrm778",
+   "source_page": 256,
+   "source_locator": "title, p.256",
+   "source_file": "PubMed PMID 11994745（Christensen & Birn 2002 标题/摘要）/ PMID 11249847（Christensen & Birn 2001 摘要）/ PMID 18391170（Haraldsson 2008 摘要；未做本地全文 PDF 审计）",
+   "functional_groups": [
+    "megalin（LRP2）多配体内吞受体（LDL 受体家族跨膜蛋白）",
+    "cubilin 辅受体（无跨膜域，经 megalin 介导内化）",
+    "顶端包被小窝/网格蛋白内吞装置"
+   ],
+   "key_structures": [
+    "识别结构"
+   ]
+  }
+ ],
+ "performance_data": [],
+ "engineering_constraints": [
+  {
+   "constraint": "滤过驱动力与面积依赖",
+   "value": "肾小球滤过由毛细血管静水压驱动并依赖大面积滤过表面；转译为吸附/分离工艺须提供等效驱动力（压差或浓度差）与传质面积",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（基于滤过为压力驱动高通量过程的生理事实，Haraldsson 2008 摘要讨论跨膜输运物理原理）",
+   "source": "llm_inference",
+   "ref_doi": null
+  },
+  {
+   "constraint": "屏障选择的细胞维持依赖",
+   "value": "屏障尺寸/电荷选择性依赖内皮与足细胞细胞成分活性及 GBM 聚阴离子电荷（Haraldsson 2008 摘要：cellular components are the key players in restricting solute transport）；工程介质须在水流剪切与化学环境下维持选择性层结构完整",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（基于 Haraldsson 2008 摘要细胞成分主导溶质阻留的陈述）",
+   "source": "llm_inference",
+   "ref_doi": null
+  },
+  {
+   "constraint": "受体重吸收特异性与容量限制",
+   "value": "重吸收建立在 megalin/cubilin 配体特异性之上且为容量限制（受体介导内吞）；转译的第二级回收单元须评估处理能力上限与配体竞争",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "Christensen & Birn 2001 摘要：megalin-deficient 小鼠尿中丢失蛋白与维生素，受体为正常小管蛋白重吸收所必需",
+   "source": "literature",
+   "ref_doi": "10.1152/ajprenal.2001.280.4.F562"
+  },
+  {
+   "constraint": "PFAS 生理处置背景（转译边界）",
+   "value": "PFAS 在血浆中与白蛋白结合，游离可滤过部分受限，其生理肾脏处置以肾小管转运体介导的重吸收为主；本条目的滤过级类比为架构级映射，转译限原理层（一般生理知识，本条目未联网逐条核验）",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（项目背景的一般生理知识，限定类比适用边界，防止将架构类比误读为 PFAS 肾脏滤过的字面描述）",
+   "source": "llm_inference",
+   "ref_doi": null
+  }
+ ],
+ "narrative": {
+  "entries": [
+   {
+    "source_file": "PubMed PMID 18391170 (Haraldsson, Nystrom & Deen 2008 Physiol Rev) / PMID 15545991 (Deen 2004 JCI) / PMID 11994745 (Christensen & Birn 2002) / PMID 11249847 (Christensen & Birn 2001) / RCSB PDB 5ZYS (Weng 2018 JASN)",
+    "paper_id": "2008-Haraldsson-glomerular-barrier-and-tubular-reabsorption",
+    "sections": {
+     "problem_definition": "肾脏需以高通量连续处理全身血液：在清除代谢废物与外源小分子的同时，几乎完全保留血浆蛋白与血细胞，并选择性回收有用溶质。若捕获与选择在同一识别步骤完成，通量与特异性难以兼顾。肾单位以先捕后分的两级架构解决该矛盾，构成系统级的传质与分级问题。",
+     "biological_solution": "第一级肾小球滤过：肾小球毛细血管壁由窗孔内皮、GBM 与足细胞裂隙膜构成（nephrin 为裂隙膜核心蛋白，小鼠 nephrin 胞质段-MAGI1 复合物结构见 PDB 5ZYS），对溶质呈高度尺寸与电荷选择性（Haraldsson 2008 摘要：The glomerular barrier is highly size and charge selective），水与小分子高通量通过形成原尿，白蛋白等大分子被阻留；三层结构共同决定毛细血管壁通透功能（Deen 2004）。第二级近端小管重吸收：顶端多配体内吞受体 megalin 与 cubilin 以受体介导内吞回收滤过的蛋白类配体（Haraldsson 2008：The small amounts of albumin filtered will be reabsorbed by the megalin-cubulin complex and degraded by the proximal tubular cells；Christensen & Birn 2001/2002）。溶质净排泄为两级之差，捕获通量与选择性由此解耦。",
+     "key_features": "必须保留：① 基于尺寸/电荷的高通量非特异捕获级（含大分子干扰物截留）；② 基于配体识别的特异回收级；③ 两级串联耦合与净输出级间解耦。可灵活调整：捕获级介质形态与孔径/电荷谱、回收级分子机制（受体内吞、转运体、印迹识别等皆可）、洗脱/回收方式。",
+     "design_mapping": "仿生映射：肾小球滤过 → 第一级非特异粗捕获（大孔阴离子交换/活性炭/疏水介质粗捕获 PFOA/PFBS 并截留胶体蛋白干扰物）；近端小管重吸收 → 第二级特异选择性回收（分子印迹或氟相亲/预组织正电阵列特异介质，自预捕获流中选择性吸附或梯度洗脱回收目标物）。注意：此为系统架构级转译（llm_inferred/inspiration），非 PFAS 肾脏滤过的字面描述（PFAS 在体内以白蛋白结合与肾小管转运体重吸收为主）；两级工艺须以实际水体实验数据验证，本条目不提供任何 PFOA/PFBS 吸附性能数值。",
+     "explainability_anchors": "设计溯源：肾单位滤过-重吸收两级架构（Haraldsson 2008、Deen 2004、Christensen & Birn 2001/2002、PDB 5ZYS，from_source）→ 可迁移原理'非特异捕获+特异回收串联，净输出为两级之差' → PFOA/PFBS 两级吸附工艺（llm_inferred 启发，须实验验证）。"
+    }
+   }
+  ]
+ },
+ "design_translation": [
+  {
+   "idea": "将肾单位'肾小球滤过+近端小管选择性重吸收'两级架构映射为 PFOA/PFBS 的两级吸附分离工艺：第一级仿肾小球非特异滤过，以高通量低选择性介质（大孔阴离子交换树脂、活性炭或疏水骨架）粗捕获水体中 PFOA/PFBS 等小分子溶质，同时截留胶体与蛋白等干扰选择性的组分，完成分级；第二级仿近端小管受体介导重吸收，以 PFOA/PFBS 特异介质（分子印迹、氟相亲氟碳链段或预组织正电/氢键阵列）自第一级流出/洗脱流中选择性吸附或梯度洗脱回收，完成特异选择性回收。净去除/回收由两级耦合决定",
+   "specific_functional_group": "第一级：季铵/叔胺阴离子交换基团与疏水骨架（非特异静电/疏水捕获）；第二级：PFOA/PFBS 特异识别位点（氟碳链氟相亲段、分子印迹空腔，或与羧酸根/磺酸根头基匹配的预组织正电/氢键阵列）",
+   "material_handle": "串联双柱/双床：第一级大孔阴离子交换或活性炭预柱（粗捕获与分级），第二级印迹或特异识别柱（选择性回收）；或分隔化流化床配合分段洗脱；第二级以 pH/离子强度/有机相梯度洗脱再生介质（类比受体-配体解离与受体回用）",
+   "target_interaction": "第一级非特异静电与疏水捕获；第二级对全氟烷基羧酸根/磺酸根头基的定向识别与全氟碳链氟亲作用，并以梯度洗脱释放回收",
+   "source_tier": "llm_inference",
+   "evidence_tier": "inspiration（系统架构级外推：肾单位滤过-重吸收机制接地于人体生理与小鼠 nephrin 结构；PFOA/PFBS 两级吸附工艺转译为 llm_inferred，本条目无任何 PFOA/PFBS 吸附性能数据）",
+   "examples": [],
+   "design_principle": "肾单位证明高通量的非特异捕获与高选择性的特异回收可经两级串联耦合、净输出取级间之差而兼顾（Haraldsson 2008；Christensen & Birn 2001/2002）；该架构原理可外推至吸附工艺设计",
+   "implementation_example": "大孔阴离子交换预柱+全氟特异印迹/洗脱双级床（设计假设，无实验数据）",
+   "constraints": "滤过类比为架构级而非 PFAS 肾脏生理的字面描述（PFAS 血浆中与白蛋白结合，生理处置以转运体介导重吸收为主）；第二级特异介质的选择性与洗脱回收率须实验验证；级间通量与容量匹配、第一级介质在复杂水质下的抗污与再生是关键工程问题；所有参数须实验确定",
+   "failure_modes": "第一级介质共吸附溶解性有机物造成污堵与容量消耗；第二级特异容量不足形成通量瓶颈；洗脱回收不完全导致介质衰减与回收率下降；级联峰展宽与稀释抵消分级收益",
+   "material_realization_examples": []
+  }
+ ],
+ "honesty_ledger": {
+  "facts": [
+   {
+    "type": "mechanism",
+    "index": 0,
+    "name": "尺寸/电荷选择性肾小球滤过屏障（第一级非特异捕获）",
+    "basis": "from_source_corroborated",
+    "note": "Haraldsson 2008 Physiol Rev 摘要（PMID 18391170：尺寸/电荷选择性、细胞成分主导溶质阻留、GBM 主导水流阻力、溶质按尺寸/电荷/形状受限）+ Deen 2004 JCI 摘要（PMID 15545991：毛细血管壁三部分共同决定功能）+ RCSB PDB 5ZYS 沉积记录（nephrin-MAGI1 裂隙膜复合物）；quote 取自 PubMed 摘要与 RCSB 沉积标题，逐字核验"
+   },
+   {
+    "type": "mechanism",
+    "index": 1,
+    "name": "近端小管 megalin/cubilin 受体介导选择性重吸收（第二级特异回收）",
+    "basis": "from_source_verified",
+    "note": "Christensen & Birn 2002 Nat Rev Mol Cell Biol 标题与摘要（PMID 11994745）+ Christensen & Birn 2001 Am J Physiol Renal Physiol 摘要（PMID 11249847：近端小管共定位、megalin 介导内化、滤过配体谱、缺陷小鼠尿丢失）；Haraldsson 2008 摘要接地滤过白蛋白经 megalin-cubulin 重吸收的两级耦合；quote 取自标题与 PubMed 摘要，逐字核验"
+   }
+  ],
+  "leads": [],
+  "inferences": [
+   {
+    "type": "design_translation",
+    "index": 0,
+    "idea": "肾单位滤过-重吸收两级架构 → PFOA/PFBS 非特异预捕获+特异选择性回收两级吸附工艺",
+    "basis": "llm_inferred",
+    "label": "inspiration",
+    "note": "架构级类比：PFAS 生理肾脏处置以白蛋白结合与肾小管转运体重吸收为主，滤过类比非字面机制；本条目无任何 PFOA/PFBS 吸附性能数据，级联介质、参数与效果须实验验证"
+   }
+  ],
+  "boundary_notes": [
+   "机制 from_source 接地限于人体肾单位生理天然系统（肾小球滤过+近端小管受体介导重吸收）与小鼠 nephrin-MAGI1 结构数据",
+   "PDB 5ZYS 仅为小鼠 nephrin 胞质肽（chain B，残基 1247-1256）与 MAGI1 PDZ2（chain A，残基 822-880）复合物，非 nephrin 胞外域全长结构；RCSB 'nephrin' 检索（5 条命中）未见 nephrin（NPHS1）胞外域实验结构，胞外滤过层面接地于生理文献",
+   "PFOA/PFBS 两级吸附工艺为 design_translation（llm_inference/inspiration），不得用作 PFOA/PFBS 的 direct evidence，无任何性能数据（performance_data 为空，严格未从外部污染物知识库搬运性能数值）",
+   "全部 llm_inferred 边界为定性、不带数值阈值，gate_level=soft、verification=needs_review"
+  ],
+  "missing_pdf_items": [
+   "Haraldsson, Nystrom & Deen 2008 Physiol Rev 88:451-487 全文 PDF（quote 取自 PubMed 摘要 PMID 18391170）",
+   "Deen 2004 J Clin Invest 114:1412-1414 全文 PDF（quote 取自 PubMed 摘要 PMID 15545991）",
+   "Christensen & Birn 2002 Nat Rev Mol Cell Biol 3:256-266 全文 PDF（quote 取自 PubMed 摘要 PMID 11994745 与 Crossref 标题）",
+   "Christensen & Birn 2001 Am J Physiol Renal Physiol 280:F562-F573 全文 PDF（quote 取自 PubMed 摘要 PMID 11249847）",
+   "Weng 2018 J Am Soc Nephrol 29:2362-2374 全文 PDF（quote 取自 RCSB PDB 5ZYS 沉积记录与 Crossref 标题）"
+  ],
+  "generated_by": "manual-curation-2026-07-22",
+  "note": "诚实优先：本原型为系统架构原型，PDB 接地限于 nephrin 胞质段复合物；污染物转译全部为 inspiration，未搬运任何性能数据"
+ },
+ "boundary_rules": [
+  {
+   "rule": "肾小球屏障按尺寸、电荷与形状限制溶质：白蛋白尺度大分子几乎完全阻留，小分子溶质与水高通量通过，阴离子大分子所受限制强于同尺寸中性分子",
+   "source_mechanism": "尺寸/电荷选择性肾小球滤过屏障（第一级非特异捕获）",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "滤过屏障选择性依赖细胞成分活性与 GBM 聚阴离子电荷维持；工程介质须维持选择性层结构完整（定性，无数值阈值）",
+   "source_mechanism": "尺寸/电荷选择性肾小球滤过屏障（第一级非特异捕获）",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  },
+  {
+   "rule": "近端小管重吸收建立在 megalin/cubilin 配体特异性之上且有容量限制；受体缺陷导致相应配体（蛋白、维生素）自尿丢失",
+   "source_mechanism": "近端小管 megalin/cubilin 受体介导选择性重吸收（第二级特异回收）",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "两级架构转译为工程工艺时须级间解耦与通量/容量匹配（定性，无数值阈值）",
+   "source_mechanism": "近端小管 megalin/cubilin 受体介导选择性重吸收（第二级特异回收）",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  }
+ ]
+}

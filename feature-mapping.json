@@ -1095,6 +1095,24 @@
       "weight": 0.7,
       "mechanism_summary": "OATP1B1/1B3 以'阴离子头基氢键锚 + 疏水腔'双要素识别两亲全氟烷基阴离子，有文献记载介导 8 碳 PFCA（PFOA）的肝窦摄取并参与其肠肝循环富集与长血清半衰期",
       "design_hint": "提取羧酸根头基阳离子/氢键锚与 C8 链匹配疏水/氟亲腔的识别基序，借鉴抗衡离子交换/pH 依赖释放-再生原理，构建 PFOA 水相向量富集'预富集→选择性截留→梯度/pH 释放'两级流程"
+     },
+     {
+      "id": "ecdysis-renewable-interface",
+      "weight": 0.6,
+      "mechanism_summary": "节肢动物蜕皮周期性整体蜕除几丁质-表皮蛋白复合表皮并以预成新层替代，物理移除旧表面附着物；启发牺牲式可剥落更新外层的抗污/吸附界面设计",
+      "design_hint": "在吸附材料表面设置可剥落/可溶解牺牲外层，饱和或污损后整层蜕除暴露新鲜功能层（原理层启发，更新频率与成本须实验验证）"
+     },
+     {
+      "id": "nephron-capture-then-separate",
+      "weight": 0.7,
+      "mechanism_summary": "肾单位'肾小球非特异滤过+近端小管受体介导重吸收'两级架构，启发 PFOA/PFBS 的非特异预捕获分级+特异选择性回收两级传质工艺",
+      "design_hint": "串联双级床：第一级大孔阴离子交换/活性炭粗捕获并截留大分子干扰物，第二级印迹或全氟特异识别介质选择性回收，梯度洗脱解耦捕获通量与选择性"
+     },
+     {
+      "id": "oat4-organic-anion-transporter",
+      "weight": 0.7,
+      "mechanism_summary": "OAT4 以阴离子头基阳离子/极性锚 + 有限容积疏水骨架口袋两点位构型识别硫酸结合型有机阴离子，其口袋容积窗口与交换再生逻辑启发对全氟烷基链长（C8/C4）的选择性识别",
+      "design_hint": "在多孔载体构建头基锚（季铵/胍/脲）+ 孔宽可控疏水孔道两点位，以竞争阴离子或 pH 切换交换驱动力实现再生"
      }
     ]
    },
@@ -1117,6 +1135,12 @@
       "weight": 0.7,
       "mechanism_summary": "SBP 以预组织中性氢键给体阵列（以主链酰胺 NH 为主的七个氢键）在完全埋藏的两域裂隙中纯氢键、无阳离子地几何识别四面体硫酸根 SO4²⁻，与 PFBS 磺酸根头基 SO3⁻ 四面体几何等构，启发磺酸根头基的几何识别",
       "design_hint": "以脲/酰胺/羟基类中性给体按与磺酸根三氧几何互补预组织于低介电埋藏孔壁，以局域偶极而非阳离子基团稳定头基电荷"
+     },
+     {
+      "id": "gpr43-ffar2-short-chain-fatty-acid-receptor",
+      "weight": 0.6,
+      "mechanism_summary": "FFAR2 以成对精氨酸离子锚识别短链脂肪酸羧酸根头基并以短链疏水腔分辨链长，启发对短链 PFAS 阴离子头基（最直接为短链全氟羧酸 PFBA 羧酸根，与丁酸根等构；PFBS 磺酸根为较松的阴离子类别类比）的识别。",
+      "design_hint": "在多孔载体构筑成对预组织胍基/脒基阳离子锚 + 匹配 C4 链长的疏水腔，识别短链 PFAS 阴离子头基；注意 PFBS 磺酸根与短链脂肪酸羧酸根头基差异，亲和力与选择性须实验验证。"
      }
     ]
    }
@@ -1482,6 +1506,10 @@
     {
      "id": "cactus-spine",
      "weight": 0.7
+    },
+    {
+     "id": "ecdysis-renewable-interface",
+     "weight": 0.75
     }
    ]
   },
@@ -1588,6 +1616,14 @@
     {
      "id": "ddt-dehydrochlorinase-gst",
      "weight": 0.6
+    },
+    {
+     "id": "gpr43-ffar2-short-chain-fatty-acid-receptor",
+     "weight": 0.5
+    },
+    {
+     "id": "oat4-organic-anion-transporter",
+     "weight": 0.6
     }
    ]
   },
@@ -1624,6 +1660,10 @@
     {
      "id": "pitcher-plant-slippery-surface",
      "weight": 0.95
+    },
+    {
+     "id": "ecdysis-renewable-interface",
+     "weight": 0.7
     }
    ]
   },
@@ -1666,6 +1706,14 @@
     {
      "id": "oatp-intestinal-hepatic-uptake",
      "weight": 0.7
+    },
+    {
+     "id": "gpr43-ffar2-short-chain-fatty-acid-receptor",
+     "weight": 0.7
+    },
+    {
+     "id": "oat4-organic-anion-transporter",
+     "weight": 0.8
     }
    ]
   },
@@ -1696,6 +1744,16 @@
     {
      "id": "oatp-intestinal-hepatic-uptake",
      "weight": 0.8
+    }
+   ]
+  },
+  "分级分离": {
+   "dimension": "功能特性",
+   "description": "非特异预捕获后接特异选择性回收的两级分离架构（肾单位肾小球滤过+近端小管重吸收）",
+   "prototypes": [
+    {
+     "id": "nephron-capture-then-separate",
+     "weight": 0.7
     }
    ]
   }
@@ -2775,6 +2833,73 @@
    "biomimetic_dimension": "分子仿生",
    "organism": {
     "scientific": "Homo sapiens（人源 OATP1B1/OATP1B3，SLCO1B1/SLCO1B3）",
+    "category": "动物"
+   }
+  },
+  "ecdysis-renewable-interface": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "蜕皮为节肢动物周期性体表更新生理过程（动态响应/结构原型），本库无吸附性能测试条件；performance_data 为空，故适用性全空。"
+   },
+   "features": [
+    "自清洁",
+    "抗生物污染"
+   ],
+   "biomimetic_dimension": "结构仿生",
+   "organism": {
+    "scientific": "Arthropoda：Manduca sexta（烟草天蛾，蜕皮内分泌生理模型）/ Ostrinia furnacalis（亚洲玉米螟，表皮蛋白 OfLCP30-C 结构，PDB 9L0P）",
+    "category": "动物"
+   }
+  },
+  "gpr43-ffar2-short-chain-fatty-acid-receptor": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "GPR43/FFAR2 为膜整合 GPCR（分子识别原型），本库无其吸附性能测试；performance_data 为空，测试条件全空。"
+   },
+   "features": [
+    "特异性识别",
+    "分子筛分"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Homo sapiens（人源 GPR43/FFAR2，游离脂肪酸受体 2，A 类 G 蛋白偶联受体）",
+    "category": "动物"
+   }
+  },
+  "nephron-capture-then-separate": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "肾单位为人体肾脏生理系统架构原型，本库无其吸附性能测试；pH/温度/盐度适用窗口全空。"
+   },
+   "features": [
+    "分级分离"
+   ],
+   "biomimetic_dimension": "系统仿生",
+   "organism": {
+    "scientific": "Homo sapiens（人体肾单位，PDB 5ZYS 为 Mus musculus nephrin-MAGI1 复合物）",
+    "category": "动物"
+   }
+  },
+  "oat4-organic-anion-transporter": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "OAT4 为肾近端小管膜转运体（分子识别/转运原型），本库无吸附性能测试；测试条件全空。"
+   },
+   "features": [
+    "特异性识别",
+    "分子筛分"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Homo sapiens（OAT4/SLC22A11）",
     "category": "动物"
    }
   }
