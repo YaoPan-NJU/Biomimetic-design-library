@@ -1,0 +1,452 @@
+{
+  "id": "ntcp-bile-acid-pfas-transporter",
+  "name_zh": "NTCP 胆汁酸转运体（钠-牛磺胆酸共转运多肽）",
+  "name_en": "NTCP Bile Acid Transporter (Sodium/Taurocholate Cotransporting Polypeptide, SLC10A1)",
+  "organism": {
+    "scientific": "Homo sapiens（人源钠-牛磺胆酸共转运多肽 NTCP，基因 SLC10A1）",
+    "category": "动物"
+  },
+  "biomimetic_dimension": "分子仿生",
+  "features": [
+    "特异性识别",
+    "疏水性"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": null,
+    "note": "NTCP 为肝细胞基底侧膜整合蛋白（分子识别/转运原型），本库无其吸附性能测试条件；performance_data 为空，故测试条件全空。"
+  },
+  "library_tier": "extended",
+  "lifecycle_status": "active",
+  "coverage": "partial",
+  "status": "active",
+  "provenance_summary": {
+    "n_papers": 5,
+    "n_verified": 15,
+    "n_unverified": 0,
+    "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与硬边界条数（NTCP-001 四要素+1 硬边界=5，NTCP-002 四要素+2 硬边界=6，NTCP-003 四要素=4）。机制接地限于 NTCP 天然底物（牛磺胆酸/甘氨鹅脱氧胆酸等结合型胆汁酸）与钠耦联转运机制本身；PFBS/PFOS 应用为设计转译（llm_inferred/inspiration），无性能数据。quote 逐字取自 PDB 7ZYI/7PQQ 沉积记录、PMC9242856 与 PMC9343345 开放获取全文 XML、PubMed 与 Crossref 摘要（均可核验），未做全文 PDF 审计。候选 PDB 6C9K 经 RCSB 实测为无关支架蛋白（DARP14），已改用 RCSB 检索确认的人源 NTCP 结构 7ZYI（底物结合）与 7PQQ（转运循环构象）。"
+  },
+  "mechanisms": [
+    {
+      "mechanism_id": "NTCP-001",
+      "name": "钠梯度驱动的胆汁酸交替接近摄取",
+      "description": "NTCP（SLC10A1）是肝脏胆汁酸的主要主动摄取系统，表达于肝细胞基底侧膜，属 SLC10 家族 10 跨膜螺旋转运体，具 core/panel 双结构域交替接近架构；两个保守钠位点 Na1（S105、N106、T123、E257）与 Na2（Q68、Q261）驱动次级主动转运（实验测定化学计量为 2 Na⁺ 对 1 胆汁酸）；内向态在胞质侧打开两亲性大腔（分子表面体积大于 1500 Å³，腔由 core 域保守极性残基 N103、N262、Q264、Q293 衬里，panel 域以疏水残基为主），构成底物通路的胞质侧部分",
+      "基本原理": "core 与 panel 双结构域的相对运动使底物与钠结合位点交替暴露于膜两侧；Na⁺ 沿电化学梯度下坡转运提供驱动力，经 S_out 至 S_in 的底物位移实现胆汁酸自门脉血入肝的上坡摄取（次级主动转运）",
+      "source": "literature",
+      "ref_doi": "10.1038/s41586-022-04723-z",
+      "verification": "verified",
+      "verification_quote": "Amino acid conservation, mutagenesis studies and the large volume of the cavity suggest that it is part of the substrate pathway on the cytoplasmic side.",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "胆汁酸盐（牛磺胆酸 TC、甘氨胆酸等结合型胆汁酸）为 NTCP 天然底物：NTCP 是肝脏主要的胆汁酸摄取系统，介导胆汁酸自门脉血浆摄入肝细胞质（肠肝循环的肝摄取环节）；人源 NTCP 对牛磺胆酸的摄取为钠依赖性，表观 Km 约 6 μM，亲和高于大鼠同源物（25 μM）",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1038/s41586-022-04723-z",
+          "locator": "Abstract, p.1015 (PMID 35545671)",
+          "quote": "Human Na+-taurocholate co-transporting polypeptide (NTCP) is the main bile salt uptake system in liver.",
+          "scope_match": "Keywords: taurocholate, bile salt, liver"
+        },
+        "bio_structure": {
+          "text": "NTCP 属 SLC10 家族，10 跨膜螺旋拓扑、core 与 panel 双结构域，遵循交替接近机制；钠位点 Na1 含 S105、N106、T123、E257 侧链，Na2 含 Q68、Q261（人源 NTCP 热稳定构建体 NTCP_EM）；PDB 7ZYI 坐标直测 Na⁺ 与 Q68 OE1 2.34 Å、E257 OE2 2.76 Å、S105 OG 2.76 Å、T123 OG1 3.17 Å 配位，与古菌 SLC10 同源物晶体结构所见的两个钠位点保守",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1038/s41586-022-04723-z",
+          "locator": "Results / p.1015-1020 (PMC9242856 全文 XML)",
+          "quote": "Sodium-binding sites 1 (Na1; including S105, N106, T123 and E257 sidechains) and 2 (Na2; including Q68 and Q261)",
+          "scope_match": "Keywords: Na1, S105, E257, Q68"
+        },
+        "interaction": {
+          "text": "core/panel 双结构域相对运动使底物与钠结合位点交替暴露于膜两侧；内向态胞质侧打开的大容积两亲性腔由 core 域保守极性残基 N103、N262、Q264、Q293 衬里，疏水残基主要位于 panel 域；开放孔构象中 TM6 与 TM9 间隙出现与 X 基序保守残基相邻的额外电子密度，对应底物分子结合于通道胞质侧（保守性、突变研究与腔容积共同提示其为底物通路的一部分）",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1038/s41586-022-04723-z",
+          "locator": "Results / p.1015-1020 (PMC9242856 全文 XML)",
+          "quote": "Amino acid conservation, mutagenesis studies and the large volume of the cavity suggest that it is part of the substrate pathway on the cytoplasmic side.",
+          "scope_match": "Keywords: cavity, substrate pathway, cytoplasmic"
+        },
+        "why_it_works": {
+          "text": "NTCP 的胆汁酸摄取严格钠依赖（次级主动转运）：两个钠离子沿电化学梯度下坡转运驱动胆汁酸自 S_out 向 S_in 位移（实验测定化学计量 2 Na⁺ 对 1 胆汁酸）；Na⁺ 被胆碱替代时摄取活性丧失，非胆汁酸类有机化合物可抑制该转运体（大鼠 Ntcp 克隆表征即证明严格钠依赖）",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1073/pnas.88.23.10629",
+          "locator": "Abstract, p.10629",
+          "quote": "The cloned transporter is strictly sodium-dependent and can be inhibited by various non-bile-acid organic compounds.",
+          "scope_match": "Keywords: sodium-dependent, bile-acid, compounds"
+        },
+        "boundary_conditions": [
+          {
+            "text": "摄取严格依赖胞外 Na⁺（钠梯度驱动次级主动转运）：热稳定人源 NTCP 构建体在钠条件下的荧光底物摄取为胆碱条件的约 4.5 倍（4.5±1.3 对 10.2±3.9），胆碱替代钠（Chol buffer）为 NTCP 功能测定的标准阴性对照",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "from_source",
+            "verification": "verified",
+            "gate_level": "hard",
+            "locator": "Results / p.1015-1020 (PMC9242856 全文 XML)",
+            "quote": "robust Na + -dependent uptake of the fluorescent substrate analogue tauro-nor-THCA-24-DBD (4.5 ± 1.3-fold increase in the sodium- over the choline-based condition)",
+            "scope_match": "Keywords: uptake, tauro-nor-THCA-24-DBD, choline-based",
+            "source_asset": null
+          },
+          {
+            "text": "交替接近构象循环依赖完整跨膜域三级结构与脂质膜环境；去垢剂增溶、载体固定化或变性改变构象平衡与钠位点、底物腔的预组织（定性，无数值阈值）",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "scope_match": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "两亲性底物通道加保守钠位点加双结构域交替接近的组合，可由钠梯度驱动两亲性阴离子底物的上坡摄取；静态吸附材料仅能借鉴两亲性通道识别原理，不可复制主动转运驱动力",
+        "verification_quote": "Amino acid conservation, mutagenesis studies and the large volume of the cavity suggest that it is part of the substrate pathway on the cytoplasmic side."
+      },
+      "source_doi": "10.1038/s41586-022-04723-z",
+      "source_page": 1015,
+      "source_locator": "Abstract p.1015 / Results p.1015-1020 (PMC9242856); PDB 7PQQ / 7ZYI",
+      "source_file": "Nature 606:1015-1020（Goutam 2022，PMC9242856 全文 XML）+ PDB 7PQQ/7ZYI（RCSB 沉积数据）；未做本地全文 PDF 审计",
+      "functional_groups": [
+        "腔衬极性残基（Asn103、Asn262、Gln264、Gln293）",
+        "钠配位侧链（Ser105、Asn106、Thr123、Glu257、Gln68、Gln261）",
+        "疏水性 panel 域腔壁"
+      ],
+      "key_structures": [
+        "转运结构"
+      ]
+    },
+    {
+      "mechanism_id": "NTCP-002",
+      "name": "两亲性胆汁酸盐识别腔（甾核疏水夹持与阴离子头基极性识别）",
+      "description": "人源野生型 NTCP 在跨膜通道内以 S_out 与 S_in 两个平行位点结合甘氨鹅脱氧胆酸 GCDC（报道 KM 约 0.6 μM，PDB 7ZYI，2.88 Å，共结合两个钠离子）：甾体多环骨架被 TM1、TM3b、TM6、TM9 的疏水壁夹持，甘氨共轭羧酸根亲水尾伸入通道水相亲水区；通道胞外侧以亲水残基为主，胞质侧腔由脂肪族与芳香族侧链衬里呈疏水表面，形成沿转运方向的显著表面极性梯度",
+      "基本原理": "底物的两亲架构（疏水多环骨架加亲水阴离子头基）与通道极性梯度匹配：疏水壁夹持骨架提供范德华容纳，极性残基方向性识别头基；亲水头基在前的进入取向使底物以正确朝向到达 S_out",
+      "source": "literature",
+      "ref_doi": "10.1038/s41422-022-00680-4",
+      "verification": "verified",
+      "verification_quote": "The bound substrate molecules are oriented in parallel and clamped between TM1, TM3b, TM6 and TM9",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "天然底物为结合型胆汁酸盐：甘氨鹅脱氧胆酸 GCDC（PDB 7ZYI 配体 CHO，HETNAM 记 'CHO GLYCOCHENODEOXYCHOLIC ACID'）是确证的 NTCP 底物（报道 KM 约 0.6 μM，100 μM GCDC 使牛磺胆酸摄取降低约八成），具甾体多环疏水骨架加甘氨共轭阴离子羧酸根头基的两亲架构；结构中以平行取向结合两个 GCDC 分子",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1038/s41422-022-00680-4",
+          "locator": "p.773-774 (PMC9343345 全文 XML) / PDB 7ZYI HETNAM",
+          "quote": "glyco-chenodeoxycholic acid (GCDC), a bona fide substrate of NTCP with a reported K M value of ~0.6 μM",
+          "scope_match": "Keywords: GCDC, substrate, 0.6 μM"
+        },
+        "bio_structure": {
+          "text": "贯穿膜的通道连接胞外环境、肝细胞质与基底侧膜内叶；通道胞外侧部分以亲水残基衬里为主，暴露于内叶与胞质的腔由脂肪族与芳香族侧链衬里呈疏水表面；底物位点分 S_out（近外叶边界）与 S_in（近胞质）；两个 GCDC 分子平行取向夹持于 TM1、TM3b、TM6 与 TM9 之间，甾骨架相互旋转约 90°",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1038/s41422-022-00680-4",
+          "locator": "p.773-774 (PMC9343345 全文 XML)",
+          "quote": "The bound substrate molecules are oriented in parallel and clamped between TM1, TM3b, TM6 and TM9",
+          "scope_match": "Keywords: substrate, clamped, TM1, TM6, TM9"
+        },
+        "interaction": {
+          "text": "PDB 7ZYI chain A 坐标直测（作者编号，与经典 NTCP 编号一致，经 S267F 遗传学证据交叉验证）：GCDC 头基羧酸根氧 OT1/OT2 距 SER267 OG 3.31 Å、GLN264 OE1 3.04 Å，酰胺羰基 O24 距 ASN262 OD1 3.15 Å，7α-羟基 O7 距 VAL202 CG1 3.05 Å、THR203 OG1 3.40 Å（头基极性识别）；甾体骨架被 ILE38、LEU31、LEU35、LEU104、LEU287、MET34、MET290、ILE291 烃基/硫醚侧链环绕（均 ≤4.0 Å，疏水夹持）；甘氨共轭尾伸入通道水相亲水区，有序度低、可采多种构象",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1038/s41422-022-00680-4",
+          "locator": "PDB 7ZYI chain A 坐标直测 / Fig. 1h legend, p.773-774 (PMC9343345)",
+          "quote": "Close-up view of TM helices clamping the polycyclic scaffold of bound GCDC molecules.",
+          "scope_match": "Keywords: TM helices, polycyclic scaffold, GCDC"
+        },
+        "why_it_works": {
+          "text": "两亲性决定进入取向与通过能力：较亲水的胆汁酸以多环两亲骨架在前、亲水头基在后的方式进入并经 NTCP 通道扩散，以正确朝向到达 S_out；纯疏水胆固醇进入水相通道在能量上高度不利、未见作为 NTCP 底物的报道，功能实验示 CHS 100 μM 不抑制而 GCDC 强抑制；头基区构象柔性（甘氨部分多构象）使 NTCP 可容纳带不同亲水取代基的胆汁酸盐（广谱特异性）",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1038/s41422-022-00680-4",
+          "locator": "p.775-776 (PMC9343345 全文 XML)",
+          "quote": "more hydrophilic bile acids can enter and diffuse through the NTCP tunnel with their polycyclic amphipathic scaffolds first, followed by the hydrophilic head groups",
+          "scope_match": "Keywords: bile acids, tunnel, amphipathic, head groups"
+        },
+        "boundary_conditions": [
+          {
+            "text": "Ser267 位是胆汁酸底物识别关键且特异的区域：C800T（Ser267 至 Phe）变异几乎完全丧失胆汁酸摄取功能，而非胆汁酸底物雌酮硫酸盐的转运功能完全正常；临床 S267F 突变与高胆酸血症相关；PDB 7ZYI 坐标直测 SER267 OG 与 GCDC 羧酸根直接接触（3.31 Å），结构与遗传学互证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "from_source",
+            "verification": "verified",
+            "gate_level": "hard",
+            "locator": "Abstract, p.7213 (PMID 14660639)",
+            "quote": "exhibited a near complete loss of function for bile acid uptake yet fully normal transport function for the non-bile acid substrate estrone sulfate",
+            "scope_match": "Keywords: bile acid uptake, estrone sulfate, loss of function",
+            "source_asset": null
+          },
+          {
+            "text": "亲水性阴离子头基是底物通过水相通道的必要条件：纯疏水固醇（胆固醇/CHS）进入水相通道在能量上高度不利，CHS 100 μM 不抑制 NTCP；具亲水头基的两亲性胆汁酸盐（如 GCDC）则呈显著抑制与高亲和",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "from_source",
+            "verification": "verified",
+            "gate_level": "hard",
+            "locator": "p.773-776 (PMC9343345 全文 XML)",
+            "quote": "which is probably energetically highly unfavorable given the hydrophobicity of cholesterol",
+            "scope_match": "Keywords: energetically, hydrophobicity, cholesterol",
+            "source_asset": null
+          },
+          {
+            "text": "全氟烷基磺酸 PFBS（C4）对 PFOS（C8）的链长适配：全氟碳尾链长与 NTCP 识别腔疏水壁表面积/腔深的匹配，以及磺酸根头基能否替代胆汁酸共轭羧酸根头基获得相似极性锚几何，均为未经实验验证的转译假设（定性）",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "scope_match": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "疏水壁夹持疏水骨架的通道腔加与阴离子头基几何互补的预组织极性锚（Ser267/Gln264/Asn262 型）加沿转运方向的亲水/疏水表面梯度，实现对两亲性阴离子的识别与取向；该原理可转译于疏水尾链加阴离子头基型两亲污染物的吸附位点设计",
+        "verification_quote": "The bound substrate molecules are oriented in parallel and clamped between TM1, TM3b, TM6 and TM9"
+      },
+      "source_doi": "10.1038/s41422-022-00680-4",
+      "source_page": 773,
+      "source_locator": "p.773-776 (PMC9343345) / PDB 7ZYI chain A",
+      "source_file": "Cell Res 32:773-776（Liu 2022，PMC9343345 全文 XML）+ PDB 7ZYI（RCSB 沉积数据，坐标直测）；未做本地全文 PDF 审计",
+      "functional_groups": [
+        "头基极性锚（Ser267、Gln264、Asn262、Thr203）",
+        "甾核疏水夹持壁（Ile38、Leu31、Leu35、Leu104、Leu287、Met34、Met290、Ile291）",
+        "亲水/疏水梯度通道（TM1、TM3b、TM6、TM9）"
+      ],
+      "key_structures": [
+        "识别结构",
+        "转运结构"
+      ]
+    },
+    {
+      "mechanism_id": "NTCP-003",
+      "name": "人源 NTCP 胆汁酸底物谱与头基共轭化学依赖",
+      "description": "人源 NTCP（349 氨基酸，计算分子量约 38 kD，与大鼠 Ntcp 同源约七成，基因定位 14 号染色体）介导钠依赖性牛磺胆酸摄取（表观 Km 约 6 μM），可被所有主要胆汁酸衍生物抑制；NTCP 同时转运非胆汁酸有机阴离子雌酮硫酸盐，且胆汁酸特异识别与非胆汁酸底物转运可由单点突变分离（S267F 特异丧失胆汁酸摄取）",
+      "基本原理": "NTCP 底物特异性为广谱胆汁酸盐型：识别依赖两亲骨架加阴离子头基架构而非单一胆汁酸分子；头基共轭化学（甘氨酸/牛磺酸共轭）与 267 位区域共同决定胆汁酸特异识别",
+      "source": "literature",
+      "ref_doi": "10.1172/JCI117091",
+      "verification": "verified",
+      "verification_quote": "Saturation kinetics indicated that the human NTCP has a higher affinity for taurocholate (apparent Km = 6 microM) than the previously cloned rat protein (apparent Km = 25 microM)",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "结合型胆汁酸盐（牛磺胆酸、甘氨胆酸等）为人源 NTCP 天然底物类：cRNA 注射的非洲爪蟾卵母细胞表达钠依赖性牛磺胆酸摄取，且摄取可被所有主要胆汁酸衍生物抑制（并受袢利尿剂与溴磺酞钠抑制），呈广谱胆汁酸盐底物谱",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1172/JCI117091",
+          "locator": "Abstract, p.1326 (PMID 8132774)",
+          "quote": "NTCP-mediated taurocholate uptake into oocytes was inhibited by all major bile acid derivatives (100 microM), bumetanide (500 microM), and bromosulphophthalein (100 microM)",
+          "scope_match": "Keywords: taurocholate, uptake, bile acid"
+        },
+        "bio_structure": {
+          "text": "人源 NTCP 由 349 氨基酸组成（计算分子量 38 kD），与大鼠 Ntcp 有约七成氨基酸同源，基因定位 14 号染色体；属 SLC10A1，为肝细胞基底侧膜的 10 跨膜螺旋整合膜蛋白",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1172/JCI117091",
+          "locator": "Abstract, p.1326 (PMID 8132774)",
+          "quote": "The human NTCP consists of 349 amino acids (calculated molecular mass of 38 kD) and exhibits 77% amino acid homology with the rat Ntcp.",
+          "scope_match": "Keywords: 349 amino acids, 38 kD, rat Ntcp"
+        },
+        "interaction": {
+          "text": "人源 NTCP 对牛磺胆酸的亲和高于大鼠同源物（表观 Km 6 μM 对 25 μM，卵母细胞表达体系饱和动力学）；NTCP 是门脉循环胆汁酸肝摄取的关键转运体，维持肠肝再循环与肝细胞功能",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1172/JCI117091",
+          "locator": "Abstract, p.1326 (PMID 8132774)",
+          "quote": "Saturation kinetics indicated that the human NTCP has a higher affinity for taurocholate (apparent Km = 6 microM) than the previously cloned rat protein (apparent Km = 25 microM)",
+          "scope_match": "Keywords: Saturation kinetics, taurocholate, Km"
+        },
+        "why_it_works": {
+          "text": "NTCP 为门脉循环胆汁酸肝摄取的关键转运体（肠肝循环的肝摄取环节），维持胆汁酸稳态与肝细胞功能；其功能多态性直接影响生理，S267F 变异（仅见于华裔美国人人群）特异丧失胆汁酸摄取",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1074/jbc.M305782200",
+          "locator": "Abstract, p.7213 (PMID 14660639)",
+          "quote": "The key transporter responsible for hepatic uptake of bile acids from portal circulation is Na+-taurocholate cotransporting polypeptide (NTCP, SLC10A1)",
+          "scope_match": "Keywords: hepatic uptake, bile acids, SLC10A1"
+        },
+        "boundary_conditions": [
+          {
+            "text": "底物特异性为广谱胆汁酸盐型：NTCP 转运/抑制多种结合型胆汁酸物种，并同时转运非胆汁酸有机阴离子（雌酮硫酸盐），该蛋白本身不提供区分单一胆汁酸物种的物种级特异性；PFBS/PFOS 相对其他有机阴离子的分辨属转译层问题（定性）",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "scope_match": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "两亲性底物阴离子转运体呈广谱骨架识别加可分离的头基特异性：骨架疏水容纳赋予广谱性，头基锚定区域（如 267 位区域）赋予头基类别的化学特异性；吸附选择性设计可独立调节头基锚几何以区分磺酸根、羧酸根与硫酸酯共轭头基",
+        "verification_quote": "Saturation kinetics indicated that the human NTCP has a higher affinity for taurocholate (apparent Km = 6 microM) than the previously cloned rat protein (apparent Km = 25 microM)"
+      },
+      "source_doi": "10.1172/JCI117091",
+      "source_page": 1326,
+      "source_locator": "Abstract, p.1326-1331 (PMID 8132774)",
+      "source_file": "J Clin Invest 93(3):1326-1331（Hagenbuch & Meier 1994，PubMed 摘要）+ J Biol Chem 279:7213-7222（Ho 2004，PubMed 摘要）；未做本地全文 PDF 审计",
+      "functional_groups": [
+        "阴离子头基识别区域（Ser267 区域等）"
+      ],
+      "key_structures": [
+        "识别结构",
+        "转运结构"
+      ]
+    }
+  ],
+  "performance_data": [],
+  "engineering_constraints": [
+    {
+      "constraint": "整合膜蛋白形态",
+      "value": "NTCP 为 10 跨膜螺旋整合膜蛋白（349 氨基酸，约 38 kD），识别依赖完整跨膜拓扑与脂质双层环境；用作吸附须固定化或将识别基序移植于固体载体",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "Hagenbuch & Meier 1994 JCI 摘要：人源 NTCP 349 氨基酸/38 kD；Liu 2022 Cell Res：野生型全长人源 NTCP 需纳米盘重构方可高分辨结构解析",
+      "source": "literature",
+      "ref_doi": "10.1172/JCI117091"
+    },
+    {
+      "constraint": "主动转运驱动力不可复制",
+      "value": "天然摄取由 Na⁺ 电化学梯度驱动（2 Na⁺ 对 1 胆汁酸，次级主动转运）；静态吸附材料不能复制主动蓄积，仅可借鉴识别腔原理",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "Hagenbuch 1991 PNAS：转运体严格钠依赖；Liu 2022 Cell Res：每一胆汁酸分子与两个钠离子共转运",
+      "source": "literature",
+      "ref_doi": "10.1073/pnas.88.23.10629"
+    },
+    {
+      "constraint": "识别腔头基特异性调谐",
+      "value": "腔内极性锚针对结合型胆汁酸羧酸根头基调谐（S267F 特异丧失胆汁酸摄取而不影响雌酮硫酸盐）；全氟烷基磺酸的磺酸根头基能否替代羧酸根头基获得等效锚定须实验验证",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "机理推断（基于 Ho 2004 JBC S267F 底物特异性事实与 PDB 7ZYI 头基接触的外推）",
+      "source": "llm_inference",
+      "ref_doi": null
+    }
+  ],
+  "narrative": {
+    "entries": [
+      {
+        "source_file": "Nature 606:1015-1020（Goutam et al. 2022，DOI 10.1038/s41586-022-04723-z，PMC9242856，PDB 7PQQ/7PQG）+ Cell Res 32:773-776（Liu et al. 2022，DOI 10.1038/s41422-022-00680-4，PMC9343345，PDB 7ZYI）",
+        "paper_id": "2022-Goutam-Liu-NTCP-bile-salt-transport-structures",
+        "sections": {
+          "problem_definition": "胆汁酸盐在肝与肠之间肠肝循环，肝细胞需自门脉血浆持续高效提取胆汁酸盐。NTCP（SLC10A1）是肝脏胆汁酸的主要主动摄取系统，表达于肝细胞基底侧膜，为钠依赖的次级主动转运体。NTCP 如何识别两亲性胆汁酸盐（甾体疏水核加阴离子共轭头基）并耦联钠梯度驱动上坡摄取，是胆汁酸稳态的分子基础；底物结合结构的长期缺失使其识别机制不明。本条目仅取其胆汁酸转运功能作仿生原型。",
+          "biological_solution": "2022 年两项人源 NTCP 冷冻电镜结构研究给出分子答案：（1）Goutam 等（Nature 606:1015，PDB 7PQQ/7PQG，3.3 Å）解析热稳定人源 NTCP 与构象特异纳米抗体复合物的转运循环构象，示 core/panel 双结构域交替接近、打开宽阔跨膜孔作为胆汁酸盐转运路径；Na1（S105、N106、T123、E257）与 Na2（Q68、Q261）钠位点结构保守；内向态胞质侧两亲性大腔（体积大于 1500 Å³）由 core 域保守极性残基 N103、N262、Q264、Q293 衬里，疏水残基位于 panel 域，构成底物通路的胞质侧部分。（2）Liu 等（Cell Res 32:773，PDB 7ZYI，2.88 Å）在纳米盘重构的野生型全长人源 NTCP 中解析两个甘氨鹅脱氧胆酸 GCDC（确证底物，KM 约 0.6 μM）分子与两个钠离子：底物以平行取向结合于 S_out 与 S_in 两位点，甾体骨架夹持于 TM1、TM3b、TM6、TM9 之间，甘氨共轭尾伸入通道水相亲水区；通道胞外侧亲水、胞质腔疏水，较亲水胆汁酸以骨架在前、头基在后的取向进入。坐标直测示头基羧酸根与 Ser267、Gln264、Asn262 极性接触，甾核被 Ile38、Leu31、Leu35、Leu104、Met34、Met290、Ile291、Leu287 疏水夹持。Ser267 位为胆汁酸识别关键且特异区域：S267F 突变特异丧失胆汁酸摄取（不影响雌酮硫酸盐转运），临床与高胆酸血症相关。转运化学计量为 2 Na⁺ 对 1 胆汁酸。",
+          "key_features": "必须保留：① 夹持疏水骨架的疏水腔壁（脂肪族/芳香族侧链，TM1/TM3b/TM6/TM9 几何）；② 与阴离子头基几何互补的预组织极性锚（Ser267/Gln264/Asn262 型）；③ 沿转运方向的亲水/疏水表面梯度（胞外侧亲水、胞质腔疏水）；④ 头基依赖的通过门控（纯疏水固醇不能通过水相通道）。可灵活调整：载体骨架、锚定基团化学（胍基/铵基/脲/硫脲替代 Ser/Gln/Asn）、腔深与疏水壁链长、孔口与孔径。",
+          "design_mapping": "仿生映射：NTCP 识别腔的疏水夹持加阴离子头基极性锚加极性梯度，对应全氟烷基磺酸（PFBS/PFOS）吸附位点设计。边界声明：此为设计转译/启发（llm_inferred），非 from_source 事实。NTCP 天然底物为结合型胆汁酸盐，本库无 NTCP 对全氟烷基磺酸直接结合/转运的 from_source 证据；全氟碳尾链（C4/C8）与甾体骨架在形状、刚性、氟亲性上不同，磺酸根头基与甘氨共轭羧酸根在几何与电荷分布上不同，亲和力与选择性须实验验证。NTCP 为动态转运体，吸附设计仅取静态识别腔原理，不取钠驱动主动转运驱动力。",
+          "explainability_anchors": "设计溯源：GCDC 双位点结合模式与 Ser267/Gln264/Asn262 头基接触（PDB 7ZYI，from_source，Liu 2022）加钠位点与底物通路（PDB 7PQQ，from_source，Goutam 2022）加 S267F 底物特异遗传学证据（Ho 2004 JBC，from_source），导出疏水夹持加阴离子头基锚加极性梯度的可迁移原理，再到 PFBS/PFOS 全氟烷基磺酸识别位点设计（llm_inferred 启发，须实验验证）。"
+        }
+      }
+    ]
+  },
+  "design_translation": [
+    {
+      "idea": "将 NTCP 胆汁酸识别腔的疏水壁夹持疏水骨架（TM1/TM3b/TM6/TM9 几何）加与阴离子共轭头基互补的极性锚（Ser267/Gln264/Asn262）加通道亲水/疏水梯度三要素移植到多孔固体载体，面向全氟烷基磺酸 PFBS/PFOS：以疏水/氟亲孔壁容纳全氟碳尾链，以预组织阳离子/氢键给体锚定磺酸根头基，并沿孔深构筑亲水至疏水的极性梯度以仿通道分区",
+      "specific_functional_group": "磺酸根头基锚定基团（胍基/铵基阳离子、脲/硫脲中性氢键给体），按与磺酸根三氧几何互补的方式预组织排布；孔壁烃链或全氟烷基链提供氟亲/疏水接触面以夹持全氟碳尾链",
+      "material_handle": "介孔二氧化硅或交联聚合物骨架经硅烷偶联/表面引发聚合接枝胍基、脲、硫脲单体；以分子印迹或刚性间隔臂控制锚定基团间距与取向；孔壁以烃链/氟碳链修饰并分区构筑孔口亲水、孔内疏水的极性梯度，仿 NTCP 通道胞外亲水、胞质疏水的表面分区",
+      "target_interaction": "磺酸根头基与预组织阳离子/氢键给体的方向性静电/氢键锚定，加全氟碳尾链与疏水/氟亲壁的范德华/氟亲接触，加疏水埋藏排除水竞争",
+      "source_tier": "llm_inference",
+      "evidence_tier": "inspiration（原理层外推：NTCP 胆汁酸识别机制接地于 PDB 7ZYI/7PQQ 与 Goutam 2022、Liu 2022、Ho 2004；PFBS/PFOS 全氟烷基磺酸转译为 llm_inferred，无 NTCP 对全氟烷基磺酸直接结合证据，无吸附实验数据）",
+      "examples": [],
+      "design_principle": "NTCP 证明疏水夹持加阴离子头基预组织极性锚加极性梯度通道可对疏水骨架加阴离子头基型两亲性阴离子实现特异性识别（PDB 7ZYI GCDC 双位点结合，S267F 特异丧失胆汁酸识别）；全氟烷基磺酸与甾体骨架形状不同，但阴离子头基加疏水尾链的两亲架构同源，原理可外推",
+      "implementation_example": "胍基/脲功能化、具氟亲孔壁与孔口/孔内极性梯度的介孔二氧化硅或交联聚合物（无实验数据，仅为设计假设）",
+      "constraints": "甾核（刚性稠环）与全氟碳链（线性、氟亲）形状与表面性质不同，腔壁几何须重新设计；磺酸根与共轭羧酸根电荷分布与氢键几何不同，锚定互补性须实验验证；水相中锚定基团水合竞争与共存阴离子（氯离子、硫酸根、腐殖酸）干扰是关键挑战；链长 PFBS（C4）对 PFOS（C8）的腔体适配未知；NTCP 为转运体，仿生取静态识别，不复制主动蓄积",
+      "failure_modes": "氟亲孔壁对一切全氟物种非特异吸附降低选择性；阳离子/脲锚暴露于体相水被氢键竞争淬灭；腔深与 C4/C8 尾链失配使锚定几何失效；共存有机阴离子（硫酸酯共轭甾体、脂肪酸盐）竞争阴离子锚；头基锚区能否区分磺酸根与羧酸根未经证实",
+      "material_realization_examples": []
+    }
+  ],
+  "honesty_ledger": {
+    "facts": [
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "钠梯度驱动的胆汁酸交替接近摄取",
+        "basis": "from_source_verified",
+        "note": "Goutam 2022 Nature（PDB 7PQQ/7PQG：转运循环构象、Na1/Na2 钠位点、胞质侧两亲性腔与底物通路）+ Hagenbuch 1991 PNAS（严格钠依赖的克隆表征）；quote 逐字取自 PMC9242856 全文 XML、PubMed 摘要与 Crossref 摘要（可核验），未做全文 PDF 审计"
+      },
+      {
+        "type": "mechanism",
+        "index": 1,
+        "name": "两亲性胆汁酸盐识别腔（甾核疏水夹持与头基极性识别）",
+        "basis": "from_source_verified",
+        "note": "Liu 2022 Cell Res（PDB 7ZYI：两个 GCDC 与两个 Na⁺ 共结合、S_out/S_in 双位点、通道极性分区）加坐标直测（SER267/Gln264/Asn262 头基接触 3.0-3.3 Å，疏水夹持 ≤4.0 Å）；残基编号为 PDB 7ZYI chain A 作者编号（与经典人源 NTCP 编号一致，经 S267F 遗传学证据交叉验证），坐标距离为直测非原文陈述"
+      },
+      {
+        "type": "mechanism",
+        "index": 2,
+        "name": "人源 NTCP 胆汁酸底物谱与头基共轭化学依赖",
+        "basis": "from_source_verified",
+        "note": "Hagenbuch & Meier 1994 JCI（人源 NTCP 克隆：349 aa/38 kD、Km 6 μM、所有主要胆汁酸衍生物抑制摄取）+ Ho 2004 JBC（S267F 特异丧失胆汁酸摄取而不影响雌酮硫酸盐）；quote 逐字取自 PubMed 摘要"
+      }
+    ],
+    "leads": [],
+    "inferences": [
+      {
+        "type": "design_translation",
+        "index": 0,
+        "idea": "将 NTCP 胆汁酸识别腔的疏水夹持加阴离子头基锚加极性梯度移植到多孔载体以识别全氟烷基磺酸 PFBS/PFOS",
+        "basis": "llm_inferred",
+        "label": "inspiration",
+        "note": "全氟烷基磺酸与结合型胆汁酸盐在阴离子两亲架构（疏水尾链加阴离子头基）上同源，但全氟碳尾链与甾体骨架在形状、刚性、氟亲性上不同，磺酸根与共轭羧酸根在几何与电荷分布上不同；本条目无 NTCP 对全氟烷基磺酸直接结合/转运的 from_source 证据，链长 C4/C8 腔适配与头基可替代性均未经验证，亲和力与选择性须实验验证"
+      }
+    ],
+    "boundary_notes": [
+      "本条目仅取 NTCP 的胆汁酸转运功能作仿生原型；天然底物为结合型胆汁酸盐（牛磺胆酸、甘氨鹅脱氧胆酸等），机制 from_source 接地限于这些底物与钠耦联转运机制本身",
+      "PFBS/PFOS 全氟烷基磺酸应用为设计转译（llm_inferred/inspiration），非 from_source 事实，不得用作 PFBS/PFOS 吸附的 direct evidence",
+      "无全氟烷基磺酸吸附性能数据（qmax 等）；严格未从外部污染物知识库搬运任何性能数值（知识隔离红线），performance_data 为空数组",
+      "一切全氟烷基磺酸相关边界（链长适配、头基可替代性）均为定性 llm_inferred，不带数值阈值，gate_level=soft",
+      "候选 PDB 6C9K 经 RCSB REST 实测为无关支架蛋白 DARP14（Liu/Gonen/Yeates，DOI 10.1073/pnas.1718825115），非 NTCP；已改用 Q14973 序列检索确认的人源 NTCP 实验结构 7ZYI（底物 GCDC 结合）与 7PQQ（转运循环构象）",
+      "表述限定于胆汁酸转运分子机制与胆汁酸两亲类似物识别；NTCP 的其他生物学角色不在本条目范围"
+    ],
+    "missing_pdf_items": [
+      "Goutam 2022 Nature 正文 PDF（quote 逐字取自 PMC9242856 开放获取全文 XML，可核验）",
+      "Liu 2022 Cell Res 正文 PDF（quote 逐字取自 PMC9343345 开放获取全文 XML）",
+      "Hagenbuch 1991 PNAS、Hagenbuch & Meier 1994 JCI、Ho 2004 JBC 正文 PDF（quote 取自 Crossref/PubMed 摘要）"
+    ],
+    "generated_by": "manual-curation-2026-07-22",
+    "note": "诚实优先：机制接地限于 NTCP 天然底物（结合型胆汁酸盐）与钠耦联转运机制；全氟烷基磺酸应用全部为 inspiration/外推"
+  },
+  "boundary_rules": [
+    {
+      "rule": "Ser267 位是胆汁酸底物识别关键且特异的区域：S267F 特异丧失胆汁酸摄取（不影响雌酮硫酸盐转运），临床与高胆酸血症相关；坐标示 SER267 与底物头基羧酸根直接接触",
+      "source_mechanism": "两亲性胆汁酸盐识别腔（甾核疏水夹持与阴离子头基极性识别）",
+      "gate_level": "hard",
+      "basis": "from_source"
+    },
+    {
+      "rule": "摄取严格依赖 Na⁺ 电化学梯度（2 Na⁺ 对 1 胆汁酸的次级主动转运），胆碱替代钠时摄取丧失",
+      "source_mechanism": "钠梯度驱动的胆汁酸交替接近摄取",
+      "gate_level": "hard",
+      "basis": "from_source"
+    },
+    {
+      "rule": "亲水性阴离子头基是底物通过水相转运通道的必要条件：纯疏水固醇（胆固醇/CHS）不能有效进入或抑制 NTCP",
+      "source_mechanism": "两亲性胆汁酸盐识别腔（甾核疏水夹持与阴离子头基极性识别）",
+      "gate_level": "hard",
+      "basis": "from_source"
+    },
+    {
+      "rule": "全氟烷基磺酸 PFBS（C4）对 PFOS（C8）链长与腔体适配、磺酸根头基替代共轭羧酸根头基的可行性为未经验证的转译假设（定性，无数值阈值）",
+      "source_mechanism": "两亲性胆汁酸盐识别腔（甾核疏水夹持与阴离子头基极性识别）",
+      "gate_level": "soft",
+      "basis": "llm_inferred"
+    }
+  ]
+}

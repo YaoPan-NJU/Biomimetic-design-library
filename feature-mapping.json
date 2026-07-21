@@ -1045,6 +1045,16 @@
       "design_hint": "警示性借鉴：单纯复制头基锚加疏水腔只得广谱两亲阴离子碰巧结合，PFAS 选择性须叠加氟亲识别与 C8 链长几何匹配等材料层策略另行构建"
      }
     ]
+   },
+   "PFBS": {
+    "prototypes": [
+     {
+      "id": "ntcp-bile-acid-pfas-transporter",
+      "weight": 0.55,
+      "mechanism_summary": "NTCP 以疏水腔夹持甾体骨架加极性锚识别共轭头基的方式识别两亲性胆汁酸（PDB 7ZYI GCDC 双位点结合，Ser267 头基接触且为胆汁酸特异识别关键位）；全氟烷基磺酸 PFBS/PFOS 具阴离子头基加疏水尾链的同源两亲架构，原则上可被同类识别腔识别（转译层假设，无直接证据）",
+      "design_hint": "仿 NTCP 识别腔：氟亲/疏水孔壁夹持全氟碳尾链加预组织阳离子/氢键给体锚定磺酸根头基加孔口至孔内极性梯度；链长 C4/C8 腔适配与磺酸根头基可替代性须实验验证"
+     }
+    ]
    }
   },
   "有机氯农药": {
@@ -1108,6 +1118,10 @@
     {
      "id": "ttr-halophenol-thyroxine-channel",
      "weight": 0.45
+    },
+    {
+     "id": "ntcp-bile-acid-pfas-transporter",
+     "weight": 0.6
     }
    ]
   },
@@ -1504,6 +1518,10 @@
     {
      "id": "hsa-fatty-acid-pfas-binding",
      "weight": 0.7
+    },
+    {
+     "id": "ntcp-bile-acid-pfas-transporter",
+     "weight": 0.75
     }
    ]
   }
@@ -2367,6 +2385,23 @@
    "biomimetic_dimension": "分子仿生",
    "organism": {
     "scientific": "Homo sapiens（人源甲状腺素转运蛋白 TTR）",
+    "category": "动物"
+   }
+  },
+  "ntcp-bile-acid-pfas-transporter": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "NTCP 为肝细胞基底侧膜整合蛋白（分子识别/转运原型），本库无吸附性能测试条件；performance_data 为空，测试条件全空。"
+   },
+   "features": [
+    "特异性识别",
+    "疏水性"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Homo sapiens（人源钠-牛磺胆酸共转运多肽 NTCP，基因 SLC10A1）",
     "category": "动物"
    }
   }
