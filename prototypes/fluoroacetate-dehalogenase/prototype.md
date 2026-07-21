@@ -46,7 +46,7 @@ evidence_level: low
 
 ## 4. 已报道性能数据
 
-[待补充]
+本库无本原型的吸附性能数据。氟乙酸脱卤酶为酶催化降解/转化原型（水解断裂 C-F 键），非吸附剂；performance_data 字段为空数组，不记录酶催化活性（转化数、米氏常数等动力学参数）或 PFAS 脱氟速率，亦未从任何外部污染物知识库搬运性能数值。
 
 ## 5. 适用场景
 
@@ -62,4 +62,8 @@ evidence_level: low
 
 ## 参考文献
 
-[待补充]
+1. Chan, H. K. Y., Yakunin, A. F., Edwards, A., Pai, E. F. Mapping the Reaction Coordinates of Enzymatic Defluorination. Journal of the American Chemical Society, 2011, 133(19): 7461–7468. DOI: 10.1021/ja200277d（全文审计经 PMC3101105）。
+2. PDB 3R3U — Crystal Structure of the Fluoroacetate Dehalogenase RPA1163 - WT/apo（1.6 Å）。RCSB 沉积 DOI: 10.2210/pdb3r3u/pdb。
+3. PDB 3R3V — Crystal Structure of the Fluoroacetate Dehalogenase RPA1163 - Asp110Asn/Fluoroacetate（1.5 Å）。RCSB 沉积 DOI: 10.2210/pdb3r3v/pdb。
+4. PDB 3R3Y — Crystal Structure of the Fluoroacetate Dehalogenase RPA1163 - His280Asn/Fluoroacetate（1.15 Å）。RCSB 沉积 DOI: 10.2210/pdb3r3y/pdb。
+5. PDB 1Y37 — Structure of Fluoroacetate Dehalogenase from Burkholderia sp. FA1（1.5 Å）。RCSB 沉积 DOI: 10.2210/pdb1y37/pdb。
