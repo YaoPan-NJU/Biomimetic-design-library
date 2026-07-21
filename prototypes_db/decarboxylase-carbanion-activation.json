@@ -1,0 +1,449 @@
+{
+ "id": "decarboxylase-carbanion-activation",
+ "name_zh": "OMPDC 乳清苷 5'-磷酸脱羧酶（羧酸头基活化原型）",
+ "name_en": "OMPDC Orotidine 5'-Monophosphate Decarboxylase (Carboxylate Headgroup Activation Prototype)",
+ "organism": {
+  "scientific": "Methanothermobacter thermautotrophicus / Saccharomyces cerevisiae（OMPDC 乳清苷 5'-磷酸脱羧酶，EC 4.1.1.23）",
+  "category": "微生物"
+ },
+ "biomimetic_dimension": "分子仿生",
+ "features": [
+  "催化降解",
+  "特异性识别"
+ ],
+ "tested_conditions": {
+  "tested_ph_range": null,
+  "tested_temp_range": null,
+  "salinity": null,
+  "note": "OMPDC 为胞内可溶性脱羧酶（分子催化原型），本库无其吸附性能测试条件；performance_data 为空，故测试条件全空。"
+ },
+ "library_tier": "extended",
+ "lifecycle_status": "active",
+ "coverage": "partial",
+ "status": "active",
+ "provenance_summary": {
+  "n_papers": 3,
+  "n_verified": 14,
+  "n_unverified": 0,
+  "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与硬边界条数（DCX-001 四要素+1 硬边界=5，DCX-002 四要素+1 硬边界=5，DCX-003 三要素+1 硬边界=4，合计 14）。机制接地限于 OMPDC 天然底物（乳清苷 5'-磷酸/乳清酸）与过渡态类似物 6-羟基尿苷 5'-磷酸、抑制剂 6-氮杂尿苷 5'-磷酸；PFOA 羧酸头基转译为设计转译（llm_inferred），无性能数据。quote 逐字取自 RCSB PDB 沉积记录与 PubMed 摘要（可核验）；PMC 禁止下载 PNAS 全文 XML，未做全文 PDF 审计，故为 extended。"
+ },
+ "mechanisms": [
+  {
+   "mechanism_id": "DCX-001",
+   "name": "活性位点交替电荷阵列对羧酸底物的基态去稳定化（静电应力）",
+   "description": "Methanothermobacter thermautotrophicus OMPDC（MtODCase）为 TIM 桶折叠同源二聚体（PDB 1DV7，KEYWDS: TIM barrel, dimer；配体游离态 1.8 Å，6-氮杂尿苷 5'-磷酸复合物 1DVJ 1.5 Å）；活性位点具独特交替电荷阵列（Lys-Asp-Lys-Asp）；抑制剂 6-azaUMP（配体 UP6）在 PDB 1DVJ 中与 ASP A 20、LYS A 42、LYS A 72、MET A 126、SER A 127、PRO A 180、GLN A 185、GLY A 202、ARG A 203 接触（chain A，PDB 编号）。量子力学/分子动力学计算表明催化能力几乎完全来自对底物反应部分的去稳定化（基态去稳定化），由磷酸与核糖基团的强结合补偿（Jencks Circe 效应）",
+   "基本原理": "预组织的交替电荷阵列对底物反应性羧酸部分施加静电应力（基态去稳定化），同时远端磷酸/核糖锚定基团被强结合而提供补偿，使羧酸头基以「锚定补偿的基态去稳定化」方式被活化并趋向脱羧",
+   "source": "literature",
+   "ref_doi": "10.1073/pnas.050417797",
+   "verification": "corroborated",
+   "verification_quote": "The remarkable catalytic power of orotidine 5'-monophosphate decarboxylase is almost exclusively achieved via destabilization of the reactive part of the substrate",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "羧酸底物乳清苷 5'-磷酸（OMP，OMPDC 天然底物，反应基团为嘧啶环 C-5 羧基）；PDB 1DVJ 共结晶抑制剂 6-azaUMP（6-氮杂尿苷 5'-磷酸，配体 UP6）占据同一活性位点，代表底物嘧啶环与头基的结合几何",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1073/pnas.050417797",
+     "locator": "abstract, p.2017",
+     "quote": "Orotidine 5'-monophosphate decarboxylase catalyzes the conversion of orotidine 5'-monophosphate to uridine 5'-monophosphate, the last step in biosynthesis of pyrimidine nucleotides.",
+     "scope_match": "Keywords: orotidine, monophosphate, uridine, pyrimidine"
+    },
+    "bio_structure": {
+     "text": "MtODCase 为 TIM 桶折叠二聚体（PDB 1DV7/1DVJ，KEYWDS: TIM barrel, dimer, LYASE）；活性位点具独特交替电荷阵列（Lys-Asp-Lys-Asp）；PDB 1DVJ SITE AC1 记录配体 UP6 接触残基（chain A，PDB 编号）：ASP 20、LYS 42、LYS 72、MET 126、SER 127、PRO 180、GLN 185、GLY 202、ARG 203（另有水分子介导接触）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1073/pnas.050417797",
+     "locator": "PDB 1DVJ, SITE AC1 / p.2017",
+     "quote": "SITE     1 AC1 16 ASP A  20  LYS A  42  LYS A  72  MET A 126",
+     "scope_match": "Keywords: ASP, LYS, AC1"
+    },
+    "interaction": {
+     "text": "抑制剂 6-azaUMP 与活性位点的结合揭示催化静电逻辑：OMPDC 的催化能力几乎完全来自对底物反应部分（嘧啶环 C-5 羧酸部分）的去稳定化，而由磷酸与核糖基团的强结合予以补偿；活性位点交替电荷阵列（Lys-Asp-Lys-Asp）即该静电应力的结构基础",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1073/pnas.050417797",
+     "locator": "abstract, p.2017",
+     "quote": "The remarkable catalytic power of orotidine 5'-monophosphate decarboxylase is almost exclusively achieved via destabilization of the reactive part of the substrate",
+     "scope_match": "Keywords: orotidine, decarboxylase, destabilization"
+    },
+    "why_it_works": {
+     "text": "Wu 等 2000 年以量子力学与分子动力学计算解析基态去稳定化与过渡态稳定化的相对贡献，结论与 Jencks 的 Circe 效应机制一致：酶以电荷阵列将底物羧酸部分置于静电不利环境（同时强结合磷酸核糖锚定部分），从而降低脱羧能垒",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1073/pnas.050417797",
+     "locator": "abstract, p.2017",
+     "quote": "The computational results are consistent with a catalytic mechanism that is characterized by Jencks's Circe effect.",
+     "scope_match": "Keywords: catalytic, mechanism, Circe"
+    },
+    "boundary_conditions": [
+     {
+      "text": "底物架构依赖：脱羧需要乳清苷 5'-磷酸的完整架构（嘧啶环 C-5 羧基 + 磷酸核糖基），磷酸核糖基经锚定嘧啶环于活性位点对催化贡献极大，游离羧酸头基或简单羧酸盐无法获得同等活化",
+      "parameter": "substrate_specificity",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "Miller 2000 abstract, p.2011",
+      "quote": "helping to explain the phosphoribosyl group's remarkably large contribution to catalysis despite its distance from the site of decarboxylation.",
+      "scope_match": "Keywords: phosphoribosyl, catalysis, decarboxylation",
+      "source_asset": null
+     },
+     {
+      "text": "预组织 TIM 桶活性位点与交替电荷阵列依赖完整三级结构；蛋白变性或活性位点完全溶剂化使静电应力与锚定几何丧失（定性，无数值阈值）",
+      "parameter": "structural_integrity",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "预组织的互补电荷/氢键阵列可以「远端锚定部分强结合 + 反应性头基静电活化（基态去稳定化，Circe 效应）」的策略高效催化转化羧酸底物；该「锚定补偿的头基活化」策略在原理层可外推至其他羧酸头基的活化与转化",
+    "verification_quote": "The remarkable catalytic power of orotidine 5'-monophosphate decarboxylase is almost exclusively achieved via destabilization of the reactive part of the substrate"
+   },
+   "source_doi": "10.1073/pnas.050417797",
+   "source_page": 2017,
+   "source_locator": "PDB 1DV7 / 1DVJ（RCSB 沉积数据）与 abstract, p.2017",
+   "source_file": "PDB 1DV7 / 1DVJ（RCSB 沉积数据）+ PNAS 97:2017-2022（PubMed 摘要；PMC 禁止下载全文 XML，未做全文 PDF 审计）",
+   "functional_groups": [
+    "交替电荷阵列（Lys/Asp 侧链，Lys-Asp-Lys-Asp）",
+    "氢键给体/受体（Ser/Gln 侧链、骨架基团）",
+    "TIM 桶骨架（活性位点位于桶一端）"
+   ],
+   "key_structures": [
+    "催化结构"
+   ]
+  },
+  {
+   "mechanism_id": "DCX-002",
+   "name": "过渡态电荷稳定化与质子递送（过渡态类似物结构证据）",
+   "description": "酿酒酵母重组 OMPDC（Miller 2000，TIM 桶折叠，配体结合位点近桶开口端）与提议的过渡态类似物 6-羟基尿苷 5'-磷酸（BMP）复合时，蛋白环运动几乎完全包埋配体；Lysine-93（酿酒酵母 OMPDC 编号）被锚定于优化与嘧啶环 C-6 发展负电荷之静电相互作用的位置，并递送取代产物 C-6 羧基的质子；活性位点对 O-2/O-4 的氢键协助离域过渡态负电荷。注意：Lysine-93 为酿酒酵母酶编号，与 PDB 1DV7/1DVJ 的 Methanothermobacter 酶编号（如 Lys 72）分属不同物种同源酶，此处不做跨物种编号换算",
+   "基本原理": "脱羧位点发展中的负电荷（碳负离子特征）经定位的阳离子残基静电稳定并经 O-2/O-4 氢键离域，同一残基随即递送质子完成产物生成，三者协同降低过渡态能量",
+   "source": "literature",
+   "ref_doi": "10.1073/pnas.030409797",
+   "verification": "corroborated",
+   "verification_quote": "Lysine-93 appears to be anchored in such a way as to optimize electrostatic interactions with developing negative charge at C-6 of the pyrimidine ring",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "羧酸底物 OMP 及其提议的过渡态类似物 6-羟基尿苷 5'-磷酸（BMP，以羟基取代 C-5 羧基）；酿酒酵母 OMPDC-BMP 复合物中配体几乎被环运动完全包埋，代表酶对脱羧过渡态的捕获几何",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1073/pnas.030409797",
+     "locator": "abstract, p.2011",
+     "quote": "The crystal structure of the recombinant Saccharomyces cerevisiae enzyme has been determined in the absence and presence of the proposed transition state analog 6-hydroxyuridine 5'-phosphate",
+     "scope_match": "Keywords: Saccharomyces, transition state analog, 6-hydroxyuridine"
+    },
+    "bio_structure": {
+     "text": "酿酒酵母 OMPDC 为 TIM 桶折叠，配体结合位点位于桶开口端附近；BMP 结合伴随蛋白环运动，几乎完全包埋配体，并与磷酸基、核呋喃糖基与嘧啶环形成众多有利相互作用",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1073/pnas.030409797",
+     "locator": "abstract, p.2011",
+     "quote": "Orotidine 5'-phosphate decarboxylase folds as a TIM-barrel with the ligand binding site near the open end of the barrel.",
+     "scope_match": "Keywords: TIM-barrel, ligand, barrel"
+    },
+    "interaction": {
+     "text": "Lysine-93（酿酒酵母 OMPDC 编号）被锚定于优化与嘧啶环 C-6 发展负电荷之静电相互作用的位置，并递送取代产物 C-6 羧基的质子，即脱羧位点「碳负离子特征」的静电稳定化与质子递送由同一残基协同完成",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1073/pnas.030409797",
+     "locator": "abstract, p.2011",
+     "quote": "Lysine-93 appears to be anchored in such a way as to optimize electrostatic interactions with developing negative charge at C-6 of the pyrimidine ring",
+     "scope_match": "Keywords: Lysine-93, electrostatic, negative charge"
+    },
+    "why_it_works": {
+     "text": "活性位点对嘧啶环 O-2 与 O-4 的氢键协助离域过渡态中的负电荷；磷酸核糖基锚定相互作用将嘧啶环固定于活性位点内，解释了磷酸核糖基虽远离脱羧位点却对催化贡献极大的实验事实",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1073/pnas.030409797",
+     "locator": "abstract, p.2011",
+     "quote": "In addition, H-bonds from the active site to O-2 and O-4 help to delocalize negative charge in the transition state.",
+     "scope_match": "Keywords: H-bonds, negative charge, transition state"
+    },
+    "boundary_conditions": [
+     {
+      "text": "已知酶中最大的速率增强作用于特异底物 OMP（乳清酸嘧啶环 + 磷酸核糖架构）；换作其他羧酸底物不复现同等催化效率",
+      "parameter": "substrate_specificity",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "abstract, p.2011",
+      "quote": "Orotidine 5'-phosphate decarboxylase produces the largest rate enhancement that has been reported for any enzyme.",
+      "scope_match": "Keywords: Orotidine, decarboxylase, rate enhancement",
+      "source_asset": null
+     },
+     {
+      "text": "质子给体（Lys）与电荷稳定残基的几何预组织须与脱羧过渡态电子结构匹配；几何失配使碳负离子稳定化与质子递送协同失效（定性，无数值阈值）",
+      "parameter": "geometric_preorganization",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "在羧酸反应位点以正确几何关系安置质子给体与静电稳定基团，同步完成过渡态电荷稳定化（含碳负离子特征）与质子递送，是高效脱羧的化学核心；该「电荷稳定 + 质子接力」头基活化逻辑在原理层可转译至羧酸头基化学",
+    "verification_quote": "Lysine-93 appears to be anchored in such a way as to optimize electrostatic interactions with developing negative charge at C-6 of the pyrimidine ring"
+   },
+   "source_doi": "10.1073/pnas.030409797",
+   "source_page": 2011,
+   "source_locator": "abstract, p.2011",
+   "source_file": "PNAS 97:2011-2016（PubMed 摘要接地；未做全文 PDF 审计）",
+   "functional_groups": [
+    "阳离子/质子给体（Lys-93 侧链铵基）",
+    "氢键给体/受体（活性位点对 O-2/O-4 的 H 键基团）",
+    "磷酸核糖锚定位点"
+   ],
+   "key_structures": [
+    "催化结构"
+   ]
+  },
+  {
+   "mechanism_id": "DCX-003",
+   "name": "催化效能定量基准与物理化学上限（proficiency）",
+   "description": "OMPDC 是迄今报道催化效能最高的酶：乳清酸在中性水溶液、室温下自发脱羧半衰期约 7800 万年，OMPDC 将反应速率提高 10^17 倍，估算对过渡态（变化底物）的结合解离常数小于 5×10⁻²⁴ M；而不同底物对应的 proficient 酶反应 kcat/Km 被限制在仅约 600 倍的窄范围内，提示酶催化效能存在共同物理化学上限",
+   "基本原理": "酶经接近热力学极限的过渡态结合降低过渡态能量而实现超大速率增强；以自发反应半衰期与酶促速率的对比定量定义催化效能（proficiency），为头基活化潜力提供可迁移的定量评价框架",
+   "source": "literature",
+   "ref_doi": "10.1126/science.7809611",
+   "verification": "verified",
+   "verification_quote": "Orotidine 5'-phosphate decarboxylase, an extremely proficient enzyme, enhances the rate of reaction by a factor of 10(17)",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "羧酸底物乳清酸/乳清苷 5'-磷酸：乳清酸在中性水溶液、室温下自发脱羧半衰期约 7800 万年，是定量标定 OMPDC 催化效能的基准反应",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1126/science.7809611",
+     "locator": "abstract, p.90",
+     "quote": "Orotic acid is decarboxylated with a half-time (t1/2) of 78 million years in neutral aqueous solution at room temperature",
+     "scope_match": "Keywords: Orotic acid, decarboxylated, half-time"
+    },
+    "bio_structure": {
+     "text": "1995 年动力学研究先于 OMPDC 结构解析（Methanothermobacter 酶结构见 2000 年 PDB 1DV7/1DVJ）；本要素结构基础未由该来源接地",
+     "basis": "llm_inferred"
+    },
+    "interaction": {
+     "text": "OMPDC 将乳清苷 5'-磷酸脱羧反应速率提高 10^17 倍，为迄今报道酶中最大速率增强",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1126/science.7809611",
+     "locator": "abstract, p.90",
+     "quote": "Orotidine 5'-phosphate decarboxylase, an extremely proficient enzyme, enhances the rate of reaction by a factor of 10(17)",
+     "scope_match": "Keywords: Orotidine, decarboxylase, proficient"
+    },
+    "why_it_works": {
+     "text": "估算 OMPDC 对变化底物（过渡态）的结合解离常数小于 5×10⁻²⁴ M，表明催化能力来自接近热力学极限的过渡态结合",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1126/science.7809611",
+     "locator": "abstract, p.90",
+     "quote": "is estimated to bind the altered substrate in the transition state with a dissociation constant of less than 5 x 10(-24) M",
+     "scope_match": "Keywords: transition state, dissociation constant, substrate"
+    },
+    "boundary_conditions": [
+     {
+      "text": "效能上限：不同底物对应的 proficient 酶反应 kcat/Km 被限制在仅约 600 倍差异的窄范围内，即酶催化效能存在共同物理化学上限；向非天然底物（如全氟羧酸）的外推不能预设同等效能",
+      "parameter": "kinetic_ceiling",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "abstract, p.90",
+      "quote": "Values of the second-order rate constant kcat/Km for the corresponding enzyme reactions are confined to a range of only 600-fold",
+      "scope_match": "Keywords: rate constant, kcat/Km, 600-fold",
+      "source_asset": null
+     },
+     {
+      "text": "10^17 速率增强与 <5×10⁻²⁴ M 过渡态结合系对天然底物 OMP、近中性水相条件测得；对其他羧酸头基与其他溶液环境的适用性须实验核验（定性，无数值阈值）",
+      "parameter": "scope_of_assay",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "以速率增强因子与过渡态结合常数对「自发反应极慢 → 酶促极快」的定量锚定，为羧酸头基的活化与转化潜力提供可迁移评价框架：头基反应无催化时动力学障碍越大，预组织活性位点的催化设计空间越大；proficient 酶 kcat/Km 约 600 倍收敛的共同上限则提示，向非天然底物外推不可预设等效率",
+    "verification_quote": "Orotidine 5'-phosphate decarboxylase, an extremely proficient enzyme, enhances the rate of reaction by a factor of 10(17)"
+   },
+   "source_doi": "10.1126/science.7809611",
+   "source_page": 90,
+   "source_locator": "abstract, p.90",
+   "source_file": "Science 267:90-93（PubMed 摘要接地；未做全文 PDF 审计）",
+   "functional_groups": [
+    "活性位点过渡态结合基团（电荷稳定/质子给体阵列，详见 DCX-001/002）"
+   ],
+   "key_structures": [
+    "催化结构"
+   ]
+  }
+ ],
+ "performance_data": [],
+ "engineering_constraints": [
+  {
+   "constraint": "底物架构依赖（磷酸核糖锚定）",
+   "value": "OMPDC 催化效能强依赖底物磷酸核糖基的锚定（对催化贡献极大，虽远离脱羧位点）；游离羧酸头基或简单羧酸盐无法获得同等活化",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "Miller 2000 摘要：磷酸核糖基-酶相互作用锚定嘧啶环于活性位点",
+   "source": "literature",
+   "ref_doi": "10.1073/pnas.030409797"
+  },
+  {
+   "constraint": "可溶蛋白/TIM 桶二聚体形态",
+   "value": "MtODCase 为可溶性 TIM 桶同源二聚体（PDB 1DV7 KEYWDS: TIM barrel, dimer；亚基约 227 残基），预组织活性位点依赖三级/四级结构；转化或吸附应用须固定化或将结构基序移植于固体载体",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "RCSB PDB 1DV7 沉积记录（KEYWDS、序列长 227 aa）",
+   "source": "literature",
+   "ref_doi": "10.1073/pnas.050417797"
+  },
+  {
+   "constraint": "反应化学非同源性（对全氟羧酸）",
+   "value": "全氟羧酸（如 PFOA）的脱羧化学与乳清苷脱羧不同源：全氟烷基链强吸电子改变碳负离子/过渡态电子结构，光化学/电化学/热脱羧路径与酶促路径完全不同；酶机制仅于「头基活化」原理层可迁移",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（基于底物电子结构差异）",
+   "source": "llm_inference",
+   "ref_doi": null
+  },
+  {
+   "constraint": "proficiency 定量基准不可迁移为性能预测",
+   "value": "10^17 速率增强与 <5×10⁻²⁴ M 过渡态结合为天然底物 OMP 的定量基准，不得用作任何非天然底物转化效率的预测值",
+   "unit": null,
+   "relevance": "medium",
+   "explanation": "Radzicka & Wolfenden 1995 摘要",
+   "source": "literature",
+   "ref_doi": "10.1126/science.7809611"
+  }
+ ],
+ "narrative": {
+  "entries": [
+   {
+    "source_file": "RCSB PDB 1DV7 / 1DVJ + Wu 2000 PNAS 97:2017-2022 (DOI 10.1073/pnas.050417797) + Miller 2000 PNAS 97:2011-2016 (DOI 10.1073/pnas.030409797) + Radzicka & Wolfenden 1995 Science 267:90-93 (DOI 10.1126/science.7809611)",
+    "paper_id": "2000-Wu-OMPDC-electrostatic-stress",
+    "sections": {
+     "problem_definition": "OMPDC（EC 4.1.1.23）催化乳清苷 5'-磷酸（OMP）脱羧生成尿苷 5'-磷酸，是嘧啶核苷酸从头合成的最后一步。乳清酸在中性水溶液、室温下自发脱羧极慢（半衰期约 7800 万年），而酶实现 10^17 倍速率增强，为迄今报道催化效能最高的酶。蛋白活性位点如何化学活化如此惰性的羧酸头基，是酶催化的核心问题，也是本原型的生物学依据。",
+     "biological_solution": "两项独立的晶体学研究共同勾勒答案：Wu 等 2000 解析 Methanothermobacter thermautotrophicus OMPDC 配体游离态（PDB 1DV7，1.8 Å）与 6-氮杂尿苷 5'-磷酸复合物（PDB 1DVJ，1.5 Å），酶为 TIM 桶折叠，活性位点具独特交替电荷阵列（Lys-Asp-Lys-Asp）；量子力学/分子动力学计算表明催化能力几乎完全来自对底物反应部分的去稳定化（基态去稳定化），由磷酸与核糖基团的强结合补偿，与 Jencks Circe 效应一致（PDB 1DVJ SITE AC1 记录配体接触残基 ASP 20/LYS 42/LYS 72/MET 126/SER 127/PRO 180/GLN 185/GLY 202/ARG 203，chain A）。Miller 等 2000 解析酿酒酵母 OMPDC 与提议过渡态类似物 6-羟基尿苷 5'-磷酸复合物：Lysine-93 被锚定于优化与嘧啶环 C-6 发展负电荷之静电作用的位置并递送取代 C-6 羧基的质子，活性位点对 O-2/O-4 的氢键离域过渡态负电荷。Radzicka 与 Wolfenden 1995 定量标定该效能：速率增强 10^17 倍，估算过渡态结合解离常数小于 5×10⁻²⁴ M；不同底物对应 proficient 酶的 kcat/Km 被限制在仅约 600 倍差异的窄范围内。",
+     "key_features": "必须保留：① 预组织的互补电荷/氢键阵列（Lys/Asp 交替电荷、活性位点 H 键给受体）；② 远端锚定部分强结合（磷酸/核糖类锚定基）+ 反应性头基静电活化（基态去稳定化）的双逻辑；③ 过渡态电荷稳定化与质子递送的几何协同。可灵活调整：载体骨架、阵列间距与取向、质子给体与电荷接力单元的耦合方式、外场形式（光/电/热）。",
+     "design_mapping": "仿生映射：OMPDC 活性位点 → 羧酸头基活化位点。对 PFOA（全氟辛酸，C7F15COO⁻），其羧酸根头基与 OMP 的 C-5 羧基同属羧酸头基，「锚定 + 静电活化 + 质子/电荷接力」原理在原则上可外推；但 PFOA 全氟烷基链强吸电子使其碳负离子/过渡态电子结构与脱羧路径与乳清酸不同源（光化学/电化学/热路径迥异），转译限于原理层外推（llm_inferred），不构成对 PFOA 脱羧或吸附的性能预测，路径须另行探索并实验验证。",
+     "explainability_anchors": "设计溯源：OMP/过渡态类似物结合与催化机制（PDB 1DV7/1DVJ、Wu 2000、Miller 2000，from_source）→ 10^17 效能与过渡态结合基准（Radzicka & Wolfenden 1995，from_source）→ 「锚定补偿的羧酸头基活化」可迁移原理 → PFOA 羧酸头基锚定与活化（llm_inferred 外推，须实验验证）。"
+    }
+   }
+  ]
+ },
+ "design_translation": [
+  {
+   "idea": "将 OMPDC 的「远端锚定部分强结合 + 反应性羧酸头基静电活化（基态去稳定化/Circe 效应）+ 过渡态电荷稳定化与质子递送」原理外推至 PFOA 全氟辛酸羧酸根头基：在多孔固体载体上预组织与羧酸根两氧几何互补的阳离子/氢键给体阵列完成锚定，并耦联质子给体/电荷接力单元，在光/电化学/热外场下探索羧酸头基活化路径（如锚定与极化后趋向脱羧）。明确限于原理层外推",
+   "specific_functional_group": "阳离子基团（胍基/铵基）与氢键给体（脲/硫脲/酰胺）按与羧酸根两氧几何互补的方式预组织排布，叠加广义酸型质子给体单元",
+   "material_handle": "在介孔二氧化硅或聚合物骨架上经硅烷偶联或表面引发聚合接枝胍基/脲/硫脲单体，借分子印迹或刚性间隔臂控制给体间距与取向；孔壁以烃链修饰降低局部介电常数；质子给体经电荷接力链（如咪唑/羧酸对）与锚定位点耦合",
+   "target_interaction": "阳离子/氢键给体与 PFOA 羧酸根头基氧的方向性静电/氢键锚定 + 低介电环境下的极化活化；全氟碳尾另贡献疏水/氟亲作用",
+   "source_tier": "llm_inference",
+   "evidence_tier": "inspiration（原理层外推：OMPDC 机制接地于天然底物乳清苷 5'-磷酸及其过渡态类似物；PFOA 全氟羧酸根转译为 llm_inferred，无直接 PFOA 脱羧或吸附证据）",
+   "examples": [],
+   "design_principle": "OMPDC 证明预组织电荷阵列可经基态去稳定化（Circe 效应）与过渡态电荷稳定/质子递送协同，高效活化羧酸头基（PDB 1DV7/1DVJ；Wu 2000、Miller 2000、Radzicka & Wolfenden 1995）；PFOA 羧酸根头基与 OMP 羧基同属羧酸头基，原理上可外推",
+   "implementation_example": "胍基/脲功能化介孔二氧化硅或具低介电孔壁的聚合物，耦联咪唑-羧酸电荷接力对（无实验数据，仅为设计假设）",
+   "constraints": "PFOA 全氟链强吸电子，碳负离子/过渡态电子结构与乳清酸不同源，脱羧路径（光/电/热）须另行探索；水相中水竞争与共存阴离子（硫酸根、氯离子、碳酸氢根）干扰锚定；proficiency 基准（10^17、<5×10⁻²⁴ M）不可移植为 PFOA 转化效率预测",
+   "failure_modes": "仅止于羧酸根锚定结合而无后续活化化学；质子给体与头基几何失配使电荷稳定/质子递送协同失效；全氟碳尾非特异性吸附降低选择性；外场条件与材料稳定性不兼容",
+   "material_realization_examples": []
+  }
+ ],
+ "honesty_ledger": {
+  "facts": [
+   {
+    "type": "mechanism",
+    "index": 0,
+    "name": "活性位点交替电荷阵列对羧酸底物的基态去稳定化（静电应力）",
+    "basis": "from_source_corroborated",
+    "note": "Wu 2000（PDB 1DV7/1DVJ 沉积记录：TIM 桶、二聚体、SITE AC1 配体接触残基；PubMed 摘要：交替电荷阵列、基态去稳定化、Circe 效应）；quote 取自 PDB 沉积记录与 PubMed 摘要（可核验），PMC 禁止下载 PNAS 全文 XML，未做全文 PDF 审计"
+   },
+   {
+    "type": "mechanism",
+    "index": 1,
+    "name": "过渡态电荷稳定化与质子递送（过渡态类似物结构证据）",
+    "basis": "from_source_corroborated",
+    "note": "Miller 2000 PubMed 摘要（酿酒酵母 OMPDC-BMP 复合物：Lysine-93 静电稳定 C-6 发展负电荷并递送质子；O-2/O-4 氢键离域过渡态负电荷）；残基编号为酿酒酵母酶编号，与 MtODCase PDB 编号不做换算；未做全文 PDF 审计"
+   },
+   {
+    "type": "mechanism",
+    "index": 2,
+    "name": "催化效能定量基准与物理化学上限（proficiency）",
+    "basis": "from_source_verified",
+    "note": "Radzicka & Wolfenden 1995 Science PubMed 摘要直接陈述：乳清酸自发脱羧 t1/2 约 7800 万年、10^17 速率增强、过渡态结合 KD < 5×10⁻²⁴ M、proficient 酶 kcat/Km 约 600 倍收敛；quote 取自摘要，未做全文 PDF 审计"
+   }
+  ],
+  "leads": [],
+  "inferences": [
+   {
+    "type": "design_translation",
+    "index": 0,
+    "idea": "将 OMPDC「锚定补偿的羧酸头基静电活化 + 过渡态电荷稳定/质子递送」外推至 PFOA 羧酸根头基的锚定与活化",
+    "basis": "llm_inferred",
+    "label": "inspiration",
+    "note": "PFOA 羧酸根与 OMP C-5 羧基同属羧酸头基，但全氟链强吸电子使脱羧化学不同源；属原理层设计外推，无直接 PFOA 脱羧或吸附证据，路径与效率须实验验证；无性能数值搬运"
+   }
+  ],
+  "boundary_notes": [
+   "本原型天然底物为乳清苷 5'-磷酸/乳清酸（嘧啶环 C-5 羧基 + 磷酸核糖架构）；机制 from_source 接地限于该天然底物、抑制剂 6-azaUMP 与过渡态类似物 6-羟基尿苷 5'-磷酸",
+   "PFOA 全氟辛酸羧酸头基应用为设计转译（llm_inferred / inspiration），非 from_source 事实，不得用作 PFOA 的 direct evidence",
+   "无 PFOA 吸附或脱氟/脱羧性能数据（qmax、速率等）；严格未从外部污染物知识库搬运任何性能数值",
+   "软边界（结构完整性、几何预组织、检测范围、PFOA 外推）均为定性 llm_inferred，不带数值阈值，gate_level=soft"
+  ],
+  "missing_pdf_items": [
+   "Wu 2000 PNAS 全文 PDF（quote 取自 PDB 沉积记录与 PubMed 摘要；PMC 标注该出版方不允许全文 XML 下载）",
+   "Miller 2000 PNAS 全文 PDF（quote 取自 PubMed 摘要）",
+   "Radzicka & Wolfenden 1995 Science 全文 PDF（quote 取自 PubMed 摘要）"
+  ],
+  "generated_by": "manual-curation-2026-07-22",
+  "note": "诚实优先：机制接地限于 OMPDC 天然底物与过渡态类似物；PFOA 应用全部为 inspiration/外推；候选 PDB 1DQH（简报给出）经 RCSB 核验为 5S rRNA 结构，已剔除并改用 1DV7/1DVJ"
+ },
+ "boundary_rules": [
+  {
+   "rule": "底物架构依赖：脱羧活化需要乳清苷 5'-磷酸完整架构（嘧啶环 C-5 羧基 + 磷酸核糖锚定），游离羧酸头基或简单羧酸盐无法获得同等催化效能",
+   "source_mechanism": "活性位点交替电荷阵列对羧酸底物的基态去稳定化（静电应力）",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "最大速率增强（10^17）作用于特异底物 OMP；proficient 酶 kcat/Km 被限制在仅约 600 倍差异的窄范围内，向非天然底物外推不可预设同等效率",
+   "source_mechanism": "催化效能定量基准与物理化学上限（proficiency）",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "预组织 TIM 桶活性位点与交替电荷阵列依赖完整三级结构，变性或溶剂化使静电活化丧失（定性，无数值阈值）",
+   "source_mechanism": "活性位点交替电荷阵列对羧酸底物的基态去稳定化（静电应力）",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  },
+  {
+   "rule": "PFOA 全氟羧酸脱羧化学与乳清苷脱羧不同源（全氟链强吸电子改变碳负离子/过渡态电子结构），转译仅限头基活化原理层",
+   "source_mechanism": "过渡态电荷稳定化与质子递送（过渡态类似物结构证据）",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  }
+ ]
+}

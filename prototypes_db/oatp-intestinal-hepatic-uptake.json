@@ -1,0 +1,367 @@
+{
+ "id": "oatp-intestinal-hepatic-uptake",
+ "name_zh": "OATP 有机阴离子转运多肽（肠肝循环向量摄取）",
+ "name_en": "OATP Organic Anion Transporting Polypeptides (Enterohepatic Vectorial Uptake)",
+ "organism": {
+  "scientific": "Homo sapiens（人源 OATP1B1/OATP1B3，SLCO1B1/SLCO1B3 肝窦膜摄取转运体）",
+  "category": "动物"
+ },
+ "biomimetic_dimension": "分子仿生",
+ "features": [
+  "特异性识别",
+  "向量传质"
+ ],
+ "tested_conditions": {
+  "tested_ph_range": null,
+  "tested_temp_range": null,
+  "salinity": null,
+  "note": "OATP1B1/1B3 为肝细胞窦膜整合膜转运蛋白（传质/向量摄取原型），本库无其吸附性能测试；performance_data 为空，故测试条件全空。"
+ },
+ "library_tier": "extended",
+ "lifecycle_status": "active",
+ "coverage": "partial",
+ "status": "active",
+ "provenance_summary": {
+  "n_papers": 2,
+  "n_verified": 9,
+  "n_unverified": 0,
+  "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与硬边界条数（OATP-001 四要素+1 硬边界=5，OATP-002 三要素+1 硬边界=4）。机制接地限于 OATP1B1/1B3 的结构与天然/参考底物（E1S 等两亲有机阴离子）识别-转运机制（Ciuta 2023，PDB 8PG0/8PHW）及 Zhao 2017 文献记载的 PFAS（含 C8 PFCA/PFOA）OATP 转运数据；PFOA 向量富集吸附转译为 design_translation（llm_inferred/inspiration），无吸附性能数据。quote 逐字取自 PMC10507018 开放获取全文 XML 与 PMC6075085 摘要 XML（可核验），Zhao 2017 正文 PDF 未取得。"
+ },
+ "mechanisms": [
+  {
+   "mechanism_id": "OATP-001",
+   "name": "MFS 折叠两亲阴离子识别与抗衡离子交换向量摄取机制",
+   "description": "人源 OATP1B1/1B3 为肝窦摄取转运体，采 MFS 折叠（12 条跨膜螺旋组成伪对称 N-bundle TM1-6 与 C-bundle TM7-12），两束间为大型中央底物结合腔；OATP1B1–E1S（雌酮-3-硫酸酯）复合物（PDB 8PHW）显示两亲有机阴离子结合于 C-bundle 约跨膜中部的漏斗形腔：硫酸根头基位于腔顶，与 Tyr422、Tyr425、Gln541、Asn544 形成氢键，并经 Arg633 与 Tyr422 的阳离子-π 作用间接稳定，甾体骨架由芳香/疏水口袋壁以范德华接触容纳；OATP1B3（PDB 8PG0）于保守签名基序结合碳酸氢根并含普遍存在于 pH 依赖型 OATP 的组氨酸残基，OATP 以胞内碳酸氢根为抗衡离子按交换模式（电中性或可能生电）经 rocker-switch 交替接入完成向量摄取，活性受酸性胞外 pH 增强",
+   "基本原理": "阴离子头基方向性锚定（氢键阵列 + 阳离子辅助稳定）与疏水口袋壁尾链容纳的双要素识别两亲有机阴离子；抗衡离子交换驱动的交替接入耦合极化膜定位的向量梯度，使底物可逆浓度梯度被摄入，构成细胞膜域层面的分子识别与传质一体化",
+   "source": "literature",
+   "ref_doi": "10.1038/s41467-023-41552-8",
+   "verification": "verified",
+   "verification_quote": "The OATP1B1 structure revealed an inward-open conformation with a large, central cavity exposed to the hepatocyte cytosol",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "两亲有机阴离子（OATP 天然/参考底物：胆汁酸、胆红素、雌酮-3-硫酸酯 E1S 及多种药物）；E1S 为'阴离子头基 + 疏水骨架'型两亲阴离子代表，与全氟烷基阴离子（阴离子头基 + 全氟/疏水尾链）结构同构；PDB 8PHW 中单个 E1S 分子结合于 OATP1B1 C 端半部的口袋",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/s41467-023-41552-8",
+     "locator": "Abstract/Results, article 5774 (PMC10507018)",
+     "quote": "A single estrone-3-sulfate molecule is bound in a pocket located in the C-terminal half of OATP1B1.",
+     "scope_match": "Keywords: estrone-3-sulfate, pocket, OATP1B1"
+    },
+    "bio_structure": {
+     "text": "OATP1B1/1B3 为 MFS 折叠整合膜蛋白：12 条跨膜螺旋形成伪对称 N-bundle（TM1-6）与 C-bundle（TM7-12），两束间大型中央腔在 inward-open 构象向肝细胞胞质侧开放；OATP1B1 结构（PDB 8PHW）呈 inward-open，人源 OATP1B3（PDB 8PG0）同采 inward-open 构象，并于保守签名基序结合碳酸氢根、含 pH 依赖型 OATP 普遍的组氨酸残基",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/s41467-023-41552-8",
+     "locator": "Results, article 5774 (PMC10507018)",
+     "quote": "OATP1B1 features a major facilitator superfamily (MFS) fold, characterized by 12 transmembrane (TM) helices forming two pseudo-symmetrical bundles",
+     "scope_match": "Keywords: MFS, transmembrane, bundles"
+    },
+    "interaction": {
+     "text": "E1S 复合物（PDB 8PHW）中，E1S 结合于 C-bundle 约跨膜中部的漏斗形腔（腔由 TM7-10 残基围成）：带负电硫酸根头基朝向腔顶，Tyr422、Tyr425、Gln541、Asn544 侧链与硫酸根形成氢键，Arg633 与 Tyr422 形成阳离子-π 作用间接稳定阴离子头基；口袋其余部分衬以芳香与疏水残基，与 E1S 甾体骨架形成范德华接触",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/s41467-023-41552-8",
+     "locator": "Results, article 5774 (PMC10507018)",
+     "quote": "The side chains of Tyr422, Tyr425, Gln541, and Asn544 form hydrogen bonds with the sulfate group of E1S.",
+     "scope_match": "Keywords: Tyr422, Tyr425, hydrogen bonds, sulfate"
+    },
+    "why_it_works": {
+     "text": "OATP 被推定以交换模式运行（电中性或可能生电），胞内碳酸氢根为被提议的内源性抗衡离子；OATP1B3 签名基序结合碳酸氢根，转运循环为'碳酸氢根释放→底物分子结合→切换为 inward-open 构象'的 rocker-switch 交替接入；多数 OATP 转运活性受酸性胞外 pH 增强（Disse 间隙偏酸），该抗衡离子交换与 pH 依赖为向量摄取提供驱动与调控基础",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/s41467-023-41552-8",
+     "locator": "Introduction/Results, article 5774 (PMC10507018)",
+     "quote": "OATP members are presumed to operate as either electroneutral or possibly electrogenic exchangers",
+     "scope_match": "Keywords: OATP, exchangers, electroneutral"
+    },
+    "boundary_conditions": [
+     {
+      "text": "底物谱边界：口袋形状与化学性质解释对多样有机阴离子的偏好（E1S、胆汁酸、药物等两亲阴离子均可结合）；识别依赖'阴离子头基锚定 + 疏水口袋壁'双要素耦合，缺少两亲双要素之一的底物匹配度下降",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "Abstract, article 5774 (PMC10507018)",
+      "quote": "The shape and chemical nature of the pocket rationalize the preference for diverse organic anions",
+      "scope_match": "Keywords: pocket, organic anions, preference",
+      "source_asset": null
+     },
+     {
+      "text": "向量性边界：方向性摄取依赖转运体的极化膜定位（窦膜）与跨膜抗衡离子/底物梯度；静态吸附剂上无膜与梯度，向量富集不可直接复现（定性，无数值阈值）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "两亲阴离子双要素识别（阴离子头基氢键锚定辅以阳离子稳定 + 疏水口袋壁尾链容纳）组合抗衡离子交换驱动的交替接入与极化定位，可逆浓度梯度在特定膜域高效摄取两亲有机阴离子；识别基序与梯度驱动释放-再生的逻辑可分离移植",
+    "verification_quote": "The OATP1B1 structure revealed an inward-open conformation with a large, central cavity exposed to the hepatocyte cytosol"
+   },
+   "source_doi": "10.1038/s41467-023-41552-8",
+   "source_page": 5774,
+   "source_locator": "PDB 8PG0 / 8PHW（RCSB 沉积数据）与 PMC10507018 全文 XML（article 5774）",
+   "source_file": "PDB 8PG0/8PHW（RCSB 沉积数据）+ Nat Commun 14:5774（PMC10507018 全文 XML；未做本地全文 PDF 页码审计）",
+   "functional_groups": [
+    "阴离子头基氢键锚（Tyr422/Tyr425/Gln541/Asn544 侧链，Arg633 阳离子-π 辅助）",
+    "疏水/芳香口袋壁（范德华容纳疏水/全氟化尾链）",
+    "保守签名基序碳酸氢根结合位点（组氨酸残基介导 pH 依赖）",
+    "MFS 折叠跨膜域（N-bundle TM1-6 / C-bundle TM7-12，inward-open 中央腔）"
+   ],
+   "key_structures": [
+    "识别结构",
+    "转运结构"
+   ]
+  },
+  {
+   "mechanism_id": "OATP-002",
+   "name": "文献记载的 OATP1B1/1B3 介导全氟烷基酸（含 C8 PFCA/PFOA）转运与肠肝循环贡献",
+   "description": "Zhao 等（2017）以 CHO 与 HEK293 表达系统证明人源 OATP1B1、OATP1B3 与 OATP2B1 可转运 PFBS、PFHxS、PFOS 与 8-9 碳全氟烷基羧酸（C8 即 PFOA、C9 即 PFNA）；PFAS 以钠依赖（NTCP）与钠非依赖（OATP）双路进入肝细胞；8-9 碳 PFCA 优先分布于啮齿类肝脏；OATP 与 NTCP、肠道 ASBT 共同构成这些全氟烷基酸的肠肝循环，贡献于人血清消除半衰期的延长",
+   "基本原理": "全氟烷基阴离子属两亲有机阴离子，肝窦摄取转运体（OATP1B1/1B3）识别其'阴离子头基 + 疏水/全氟尾链'双要素而介导肝摄取；肝摄取→胆汁排泄→肠道重吸收→门静脉回肝的循环环流使已排泄部分被反复回收，是长半衰期与肝优先分布的转运基础",
+   "source": "literature",
+   "ref_doi": "10.1093/toxsci/kfw236",
+   "verification": "verified",
+   "verification_quote": "We used CHO and HEK293 cells to demonstrate that human OATP1B1, OATP1B3, and OATP2B1 can transport PFBS, PFHxS, PFOS, and the 2 PFCAs (C8 and C9).",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "全氟烷基酸：全氟烷基磺酸 PFBS/PFHxS/PFOS 与 8-9 碳全氟烷基羧酸（perfluoroalkyl carboxylates with 8 and 9 carbons，即全氟辛酸 PFOA，C8；全氟壬酸 PFNA，C9；碳链数命名对应）；在 CHO/HEK293 表达系统中被证明为人源 OATP1B1/1B3/2B1 底物",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1093/toxsci/kfw236",
+     "locator": "Abstract, p.84 (PMC6075085)",
+     "quote": "We used CHO and HEK293 cells to demonstrate that human OATP1B1, OATP1B3, and OATP2B1 can transport PFBS, PFHxS, PFOS, and the 2 PFCAs (C8 and C9).",
+     "scope_match": "Keywords: OATP1B1, OATP1B3, PFOS, PFCAs"
+    },
+    "bio_structure": {
+     "text": "PFAS 经两条路线进入肝细胞：钠依赖路线（NTCP，钠/牛磺胆酸共转运多肽）与钠非依赖摄取转运体路线；人源 OATP1B1/1B3 构成钠非依赖的肝摄取路线，肠道 ASBT 参与 PFOS 的肠重吸收；双路线与转运体极化分布为肠肝循环提供转运基础",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1093/toxsci/kfw236",
+     "locator": "Abstract, p.84 (PMC6075085)",
+     "quote": "PFBS, PFHxS, and PFOS are transported into hepatocytes both in a sodium-dependent and a sodium-independent manner",
+     "scope_match": "Keywords: hepatocytes, sodium-dependent, sodium-independent"
+    },
+    "interaction": {
+     "text": "PFAS 被 OATP 识别的分子基础推断自与 E1S 结合模式的结构同构：阴离子头基（磺酸根/羧酸根）于腔顶获方向性锚定，全氟烷基尾链容纳于疏水口袋壁；Zhao 2017 为细胞转运数据、未提供 PFAS 结合姿态，Ciuta 2023 未解析 PFAS 复合物，本要素无直接结构证据",
+     "basis": "llm_inferred"
+    },
+    "why_it_works": {
+     "text": "肠肝循环维持长半衰期与肝富集：PFHxS 与 PFOS 的肠肝循环被认为贡献于其延长的消除半衰期；OATP 与 NTCP、ASBT 一道能够贡献于所测全氟烷基酸的肠肝循环与人血清消除半衰期延长；8-9 碳 PFCA 优先分布于啮齿类肝脏，与肝摄取转运体介导一致",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1093/toxsci/kfw236",
+     "locator": "Abstract/Conclusion, p.84 (PMC6075085)",
+     "quote": "OATPs also are capable of contributing to the enterohepatic circulation and extended human serum elimination half-lives of the tested perfluoroalkyl acids.",
+     "scope_match": "Keywords: OATPs, enterohepatic circulation, perfluoroalkyl"
+    },
+    "boundary_conditions": [
+     {
+      "text": "底物谱与分布：文献记载底物包括 PFBS、PFHxS、PFOS 与 8-9 碳 PFCA（含 PFOA）；8-9 碳 PFCA 优先分布于啮齿类肝脏，OATP 的转运贡献非限于单一链长",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "Abstract, p.84 (PMC6075085)",
+      "quote": "perfluoroalkyl carboxylates (PFCAs) with 8 and 9 carbons were shown to preferentially distribute to the liver of rodents",
+      "scope_match": "Keywords: PFCAs, liver, rodents",
+      "source_asset": null
+     },
+     {
+      "text": "机体层级边界：肠肝循环向量富集依赖肝-胆汁-肠道循环环流与多转运体极化分布（肝窦膜 OATP/NTCP、肠顶膜 ASBT），不可定量移植于单一静态吸附材料；材料层面借鉴限于识别基序与释放-再生原理（定性，无数值阈值）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "含 C8 PFCA（PFOA）在内的全氟烷基阴离子为 OATP1B1/1B3 底物的文献证据，表明'阴离子头基锚定 + 疏水腔'基序可在转运体层面捕获全氟烷基阴离子；肠肝循环环流进一步提供系统级'多级向量富集与释放-回输'参考架构",
+    "verification_quote": "We used CHO and HEK293 cells to demonstrate that human OATP1B1, OATP1B3, and OATP2B1 can transport PFBS, PFHxS, PFOS, and the 2 PFCAs (C8 and C9)."
+   },
+   "source_doi": "10.1093/toxsci/kfw236",
+   "source_page": 84,
+   "source_locator": "Abstract, p.84 (PMC6075085)",
+   "source_file": "Toxicol Sci 156(1):84-95（PMC6075085 题录-摘要 XML；正文 PDF 未取得）",
+   "functional_groups": [
+    "阴离子头基锚 + 疏水腔（PFAS 识别基序，推断与 E1S 结合模式同构）"
+   ],
+   "key_structures": [
+    "转运结构"
+   ]
+  }
+ ],
+ "performance_data": [],
+ "engineering_constraints": [
+  {
+   "constraint": "整合膜蛋白形态",
+   "value": "OATP1B3 为 12 次跨膜整合膜蛋白（PDB 8PG0 聚合物实体式量 77.48 kDa，含 Fab 片段复合物条目总重 127.78 kDa），胞外域具 N-糖基化位点（N134、N516）；功能依赖脂质双层环境，不可直接作可溶性吸附剂使用",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "RCSB 8PG0 条目数据（polymer_entity 1 formula_weight 77.479 kDa）+ Ciuta 2023 图注（糖基化位点 N134/N516）",
+   "source": "literature",
+   "ref_doi": "10.1038/s41467-023-41552-8"
+  },
+  {
+   "constraint": "转运依赖跨膜梯度与交替接入循环",
+   "value": "摄取依赖胞内碳酸氢根抗衡离子交换与 rocker-switch 交替接入构象循环；膜电位/梯度丧失或构象锁定（变性、固定化损伤）使转运失活",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（基于 Ciuta 2023 交换模式与交替接入描述）",
+   "source": "llm_inference",
+   "ref_doi": null
+  },
+  {
+   "constraint": "底物谱宽、固有特异性弱",
+   "value": "口袋容纳多样有机阴离子（E1S、胆汁酸、多种药物、PFBS/PFHxS/PFOS 与 8-9 碳 PFCA）；OATP 本身不提供 PFOA 特异选择性，选择性须在材料设计层面构建",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "Ciuta 2023（diverse organic anions 偏好）+ Zhao 2017（多种 PFAS 底物）",
+   "source": "literature",
+   "ref_doi": "10.1038/s41467-023-41552-8"
+  },
+  {
+   "constraint": "pH 依赖活性",
+   "value": "OATP 转运活性受酸性胞外 pH 增强（Disse 间隙偏酸），pH 依赖型 OATP 普遍的组氨酸残基参与；该性质既是结合-释放可逆调控的仿生抓手，也是对蛋白形态环境 pH 窗口的约束",
+   "unit": null,
+   "relevance": "medium",
+   "explanation": "Ciuta 2023（签名基序碳酸氢根与组氨酸残基、pH-dependent activity）",
+   "source": "literature",
+   "ref_doi": "10.1038/s41467-023-41552-8"
+  }
+ ],
+ "narrative": {
+  "entries": [
+   {
+    "source_file": "Nat Commun 14:5774（Ciuta et al. 2023，DOI 10.1038/s41467-023-41552-8，PMC10507018）+ Toxicol Sci 156(1):84-95（Zhao et al. 2017，DOI 10.1093/toxsci/kfw236，PMC6075085）",
+    "paper_id": "2023-Ciuta-OATP1B1-1B3-structure + 2017-Zhao-OATP-PFAS-disposition",
+    "sections": {
+     "problem_definition": "全氟辛酸（PFOA）等全氟烷基酸在人血清中的消除半衰期长达数年并优先分布至肝脏，是长期低剂量暴露的毒代动力学基础。肠肝循环（肝摄取→胆汁排泄→肠道重吸收→经门静脉回肝）被视为维持该长半衰期与肝富集的关键过程，但负责全氟烷基酸肝摄取的窦膜转运体分子身份曾长期不明。OATP1B1/OATP1B3（SLCO1B1/SLCO1B3）是肝细胞窦膜特异表达的摄取转运体，其生理功能为将两亲有机阴离子（胆汁酸、胆红素、多种药物）自血液摄入肝细胞；其底物识别与向量跨膜转运机制，构成本条目在分子识别与传质两个层面的生物原型。",
+     "biological_solution": "结构层面，Ciuta 等（2023）解析了人源 OATP1B1 与 OATP1B3 的冷冻电镜结构（PDB 8PHW/8PG0）：二者采主要易化子超家族（MFS）折叠，12 条跨膜螺旋形成伪对称 N-bundle（TM1-6）与 C-bundle（TM7-12），inward-open 构象下两束间为向胞质侧开放的大型中央腔。OATP1B1–雌酮-3-硫酸酯（E1S）复合物中，单个 E1S 分子结合于 C-bundle 约跨膜中部的漏斗形腔：带负电硫酸根头基朝向腔顶，与 Tyr422、Tyr425、Gln541、Asn544 形成氢键，并经 Arg633 与 Tyr422 的阳离子-π 作用间接稳定；甾体骨架伸入以芳香与疏水残基衬里的口袋壁，获得范德华接触。OATP1B3 结构为药物游离态，其保守签名基序结合一个碳酸氢根分子，并含普遍存在于 pH 依赖型 OATP 的组氨酸残基，提示胞内碳酸氢根作为抗衡离子、OATP 以交换模式（电中性或可能生电）经 rocker-switch 交替接入完成向量摄取，且转运活性受酸性胞外 pH 增强。转运层面，Zhao 等（2017）以 CHO 与 HEK293 表达系统证明人源 OATP1B1、OATP1B3 与 OATP2B1 可转运 PFBS、PFHxS、PFOS 与 8-9 碳全氟烷基羧酸（即 PFOA 与 PFNA）；8-9 碳 PFCA 已知优先分布于啮齿类肝脏；OATP 与钠依赖转运体 NTCP、肠道顶膜 ASBT 一道构成这些全氟烷基酸的肠肝循环，贡献于人血清消除半衰期的延长。",
+     "key_features": "必须保留：① 两亲阴离子双要素识别基序——阴离子头基（硫酸根/羧酸根）的氢键给体阵列（Tyr/Gln/Asn 型侧链）方向性锚定并辅以阳离子稳定（Arg633 型阳离子-π）；② 容纳疏水/全氟尾链的疏水/芳香口袋壁（范德华接触）；③ 向量传质架构——转运体极化膜定位 + 抗衡离子（碳酸氢根）交换驱动的交替接入循环，使摄取可逆浓度梯度进行；④ 组氨酸介导的 pH 依赖（酸性胞外 pH 增强活性），提供结合-释放的可逆调控抓手。可灵活调整：载体骨架、锚定基团化学、口袋壁疏水/氟亲程度、腔深与孔径、外加梯度或 pH 切换方式。",
+     "design_mapping": "仿生映射：OATP'阴离子头基锚定 + 疏水口袋壁 + 抗衡离子交换向量摄取' → 面向 PFOA 水相向量富集的吸附流程。PFOA 与 OATP 参考底物 E1S 结构同构（阴离子羧酸根头基 + 疏水全氟 C8 尾链），且其肝窦摄取有文献记载为 OATP1B1/1B3 介导（Zhao 2017）。边界声明：本原型天然机制类别为传质类（转运体介导的向量摄取与机体层级肠肝循环），向吸附材料的转译限原理层（llm_inferred/inspiration）——识别基序（头基锚 + C8 尾链匹配疏水腔）可原理移植于多孔载体，而'向量富集'的方向性源于转运体极化分布与肠肝循环环流，静态材料无法整体复现，须以工艺层级分级（预富集→选择性截留→梯度/pH 触发释放）逼近；无 PFOA 吸附实验数据，亲和力与选择性须实验验证。",
+     "explainability_anchors": "设计溯源：OATP1B1 E1S 结合模式（PDB 8PHW，阴离子头基氢键锚 + 疏水口袋壁，from_source）与 OATP1B3 碳酸氢根/抗衡离子交换交替接入机制（PDB 8PG0，from_source），及 Zhao 2017 记载 OATP1B1/1B3 转运 8 碳 PFCA（PFOA）并贡献肠肝循环（from_source）→ '两亲阴离子双要素识别 + 梯度驱动方向性富集-释放'可迁移原理 → PFOA 向量富集两级吸附流程设计（llm_inferred 启发，须实验验证）。"
+    }
+   }
+  ]
+ },
+ "design_translation": [
+  {
+   "idea": "提取 OATP1B1/1B3 的'阴离子头基氢键锚（辅以阳离子稳定）+ 疏水/芳香口袋壁尾链容纳'识别基序与'抗衡离子交换/pH 依赖交替接入'释放-再生原理，映射到 PFOA 水相向量富集吸附流程：（1）识别层面，在孔壁按与羧酸根头基二氧几何互补的方式预组织阳离子与中性氢键给体（胍基/脲/硫脲型），并以疏水或氟亲孔壁（烃链/全氟烷基链）经范德华接触容纳全氟 C8 尾链，仿 E1S 双要素结合模式；（2）传质层面，仿肠肝循环的机体层级向量富集逻辑，设置'非特异快速预富集（正电/疏水混合床截留大水相稀浓度 PFOA）→ 选择性截留（腔-锚几何识别位点）'两级，并借鉴碳酸氢根抗衡离子交换与组氨酸 pH 依赖，以阴离子梯度或温和 pH 切换实现可逆释放-再生",
+   "specific_functional_group": "羧酸根锚定基团（胍基/季铵阳离子、脲/硫脲中性氢键给体）按与 PFOA 羧酸根二氧几何互补的方式预组织排布；孔壁烃链或全氟烷基链提供疏水/氟亲尾链容纳面",
+   "material_handle": "介孔二氧化硅或交联聚合物骨架经硅烷偶联或表面引发聚合接枝胍基/脲/硫脲单体；以分子印迹或刚性间隔臂控制锚定基团间距与取向、调控孔径/腔深匹配全氟 C8 链长；孔壁烃基/氟碳链修饰降低局部极性；引入弱碱位点（咪唑/吡啶型）实现温和 pH 切换释放",
+   "target_interaction": "PFOA 羧酸根头基的方向性静电/氢键锚定 + 全氟 C8 尾链在疏水腔内的范德华/氟亲接触 + 疏水埋藏排除水竞争",
+   "source_tier": "llm_inference",
+   "evidence_tier": "inspiration（原理层外推：OATP1B1/1B3 结构与阴离子识别模式接地于 Ciuta 2023（PDB 8PG0/8PHW），OATP 对含 C8 PFCA（PFOA）的转运与肠肝循环贡献接地于 Zhao 2017；转译为 PFOA 向量富集吸附材料为 llm_inferred，无吸附实验数据）",
+   "examples": [],
+   "design_principle": "OATP1B1/1B3 证明'阴离子头基氢键锚 + 疏水口袋壁'可结合两亲有机阴离子（E1S），且对含 C8 PFCA（PFOA）在内的全氟烷基阴离子的转运有文献记载（Zhao 2017）；抗衡离子交换与 pH 依赖提供释放-再生抓手；肠肝循环环流提供系统级向量富集参考架构，识别基序与传质逻辑可分离移植于多孔材料",
+   "implementation_example": "胍基/脲功能化、具氟亲孔壁与 C8 链长匹配腔深的介孔二氧化硅或交联聚合物，前置正电/疏水预富集级并以 pH 切换再生（无实验数据，仅为设计假设）",
+   "constraints": "本原型为传质类，转译限原理层：方向性依赖机体极化转运体分布与肠肝循环环流，静态单一材料只能以分级流程与外加驱动逼近向量富集；OATP 底物谱宽（多样有机阴离子），本身不提供 PFOA 特异选择性，选择性须在腔几何与头基锚定层面另行构建；水相中锚定基团的水合竞争与共存阴离子（氯离子、硫酸根、腐殖酸）干扰是关键挑战",
+   "failure_modes": "胍基/脲锚暴露于体相水被氢键竞争淬灭；氟亲孔壁对一切全氟物种非特异吸附、更长链 PFCA（PFNA/PFOS）占据腔位而竞争强于 PFOA；腔深与 C8 链失配使锚定几何失效；pH 切换释放不完全或循环稳定性差；预富集级选择性缺乏导致共存有机阴离子毒化下游识别床",
+   "material_realization_examples": []
+  }
+ ],
+ "honesty_ledger": {
+  "facts": [
+   {
+    "type": "mechanism",
+    "index": 0,
+    "name": "MFS 折叠两亲阴离子识别与向量摄取机制（OATP1B1/1B3）",
+    "basis": "from_source_verified",
+    "note": "Ciuta 2023 Nat Commun 14:5774（PDB 8PG0 OATP1B3 药物游离态、碳酸氢根结合于保守签名基序；PDB 8PHW OATP1B1–E1S 复合物：E1S 结合于 C-bundle 漏斗形腔，硫酸根头基与 Tyr422/Tyr425/Gln541/Asn544 氢键、Arg633 阳离子-π 辅助，芳香/疏水口袋壁范德华接触；交换模式 + rocker-switch 交替接入）；quote 逐字取自 PMC10507018 开放获取全文 XML（可核验），未做本地全文 PDF 审计"
+   },
+   {
+    "type": "mechanism",
+    "index": 1,
+    "name": "文献记载的 OATP1B1/1B3 介导全氟烷基酸（含 C8 PFCA/PFOA）转运与肠肝循环贡献",
+    "basis": "from_source_verified",
+    "note": "Zhao 2017 Toxicol Sci 156:84-95 摘要直接陈述 OATP1B1/1B3/2B1 转运 PFBS/PFHxS/PFOS 与 8-9 碳 PFCA、OATP 贡献于肠肝循环与延长人血清消除半衰期；quote 逐字取自 PMC6075085 摘要 XML（p.84），正文 PDF 未取得"
+   }
+  ],
+  "leads": [],
+  "inferences": [
+   {
+    "type": "design_translation",
+    "index": 0,
+    "idea": "OATP 识别基序 + 抗衡离子交换释放原理 → PFOA 水相向量富集两级吸附流程",
+    "basis": "llm_inferred",
+    "label": "inspiration",
+    "note": "本原型为传质类（转运体介导向量摄取与机体层级肠肝循环），转译限原理层；无 PFOA 吸附性能数据，亲和力、选择性与再生性须实验验证"
+   },
+   {
+    "type": "fact_derivation",
+    "index": 0,
+    "name": "PFAS 结合姿态推断为与 E1S 结合模式同构",
+    "basis": "llm_inferred",
+    "label": "inference",
+    "note": "Zhao 2017 仅提供转运数据、无 PFAS 结合姿态，Ciuta 2023 未解析 PFAS 复合物；'全氟烷基阴离子头基于腔顶锚定、尾链入疏水口袋壁'为由 E1S 模式与两亲阴离子结构同构所作的推断，无结构直接证据"
+   },
+   {
+    "type": "fact_derivation",
+    "index": 1,
+    "name": "C8/C9 PFCA 即 PFOA/PFNA",
+    "basis": "llm_inferred",
+    "label": "definitional_derivation",
+    "note": "Zhao 2017 摘要写作 'PFCAs with 8 and 9 carbons' 与 'the 2 PFCAs (C8 and C9)'；全氟辛酸（PFOA）按命名即 C8 全氟烷基羧酸，该对应基于化学命名定义，非论文直接陈述"
+   }
+  ],
+  "boundary_notes": [
+   "本原型天然机制类别为转运体介导的两亲阴离子向量摄取（传质类）与机体层级肠肝循环；机制 from_source 接地限于 OATP1B1/1B3 结构、E1S 结合模式、抗衡离子交换机制与 Zhao 2017 PFAS 转运数据",
+   "PFOA 向量富集吸附转译全部为 design_translation（llm_inferred/inspiration），限原理层，不得用作 PFOA 吸附的 direct evidence；方向性在静态材料上不可整体复现",
+   "无 PFOA 吸附性能数据（qmax 等）；performance_data 为空数组，严格未从任何污染物知识库搬运性能数值",
+   "OATP 底物谱宽、不提供 PFOA 特异选择性；Km 等转运动力学数值未搬运（正文 PDF 未取得，且本库不记录转运体动力学性能数值）",
+   "两条软边界（向量性依赖极化膜与梯度、肠肝循环为机体层级现象）均为定性 llm_inferred，不带数值阈值，gate_level=soft"
+  ],
+  "missing_pdf_items": [
+   "Zhao 2017 正文 PDF（PMC6075085 efetch 仅返回题录-摘要 XML，BioC 全文接口未返回正文）；quote 全部取自摘要（p.84），转运动力学（Km 等）正文数据未取得",
+   "Ciuta 2023 正文 PDF 页码审计（quote 逐字取自 PMC10507018 全文 XML，locator 以文章号 5774 与 PMC 号标注）"
+  ],
+  "generated_by": "manual-curation-2026-07-22",
+  "note": "诚实优先：机制接地限于 OATP1B1/1B3 天然/参考底物识别与转运机制及 Zhao 2017 PFAS 转运文献记载；一切 PFOA 吸附转译为 inspiration/外推，传质原型的方向性不可移植已明确声明"
+ },
+ "boundary_rules": [
+  {
+   "rule": "两亲有机阴离子底物谱：口袋形状与化学性质解释对多样有机阴离子的偏好（E1S、胆汁酸、药物、PFAS）；识别依赖'阴离子头基锚定 + 疏水口袋壁'双要素",
+   "source_mechanism": "MFS 折叠两亲阴离子识别与向量摄取机制（OATP1B1/1B3）",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "文献记载底物范围：人源 OATP1B1/1B3/2B1 转运 PFBS/PFHxS/PFOS 与 8-9 碳 PFCA（含 PFOA）；8-9 碳 PFCA 优先分布于啮齿类肝脏",
+   "source_mechanism": "文献记载的 OATP1B1/1B3 介导全氟烷基酸（含 C8 PFCA/PFOA）转运与肠肝循环贡献",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "向量性依赖转运体极化膜定位与跨膜抗衡离子梯度（碳酸氢根交换）；静态吸附剂上方向性富集不可直接复现（定性，无数值阈值）",
+   "source_mechanism": "MFS 折叠两亲阴离子识别与向量摄取机制（OATP1B1/1B3）",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  },
+  {
+   "rule": "肠肝循环向量富集为机体层级现象（肝摄取→胆汁排泄→肠道重吸收→回肝），单一材料层面仅可借鉴识别基序与释放-再生原理（定性，无数值阈值）",
+   "source_mechanism": "文献记载的 OATP1B1/1B3 介导全氟烷基酸（含 C8 PFCA/PFOA）转运与肠肝循环贡献",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  }
+ ]
+}

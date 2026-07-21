@@ -1071,6 +1071,30 @@
       "weight": 0.6,
       "mechanism_summary": "Lanmodulin 以 EF-hand 预组织高密度羧酸配位几何对 Ln3+/Y3+ 实现皮摩尔亲和与 10^8 倍 Ln3+/Ca2+ 选择性，并经第二配位层氢键网络读出皮米级半径差异；'预组织多齿几何 + pH 门控可逆结合'原理启发 PFOA 羧酸根头基的预组织识别位点设计（PFOA 为有机阴离子，转译限原理层）",
       "design_hint": "以预组织多齿配体（羧酸/膦酸/异羟肟酸）构筑与 PFOA 羧酸根头基互补的口袋，可选硬 Lewis 酸金属节点（Zr4+/Fe3+ 氧簇）桥联头基氧，并以 pH 摆动耦合吸附-再生"
+     },
+     {
+      "id": "acidimicrobium-reductive-defluorination",
+      "weight": 0.6,
+      "mechanism_summary": "Acidimicrobium sp. A6 在厌氧还原条件下以铁还原为末端电子汇、铵/氢为电子供体，还原断裂 PFOA/PFOS 的 C-F 键并释放氟离子（Huang & Jaffe 2019），是自然界少数能攻击全氟烷基 C-F 键的微生物过程，启发原理层还原脱氟降解。",
+      "design_hint": "在严格厌氧/还原微环境中以低电位电子供体（类咕啉/还原态矿物/光生电子）配合末端电子受体（Fe(III)）驱动全氟烷基 C-F 键还原断裂；C-F 键能高、天然效率低，转译限原理层。"
+     },
+     {
+      "id": "decarboxylase-carbanion-activation",
+      "weight": 0.7,
+      "mechanism_summary": "OMPDC 经「远端磷酸核糖锚定强结合 + 羧酸头基静电基态去稳定化（Circe 效应）+ 过渡态电荷稳定化与质子递送」实现乳清苷 5'-磷酸脱羧 10^17 倍速率增强，是羧酸头基化学活化的原理原型。",
+      "design_hint": "固体载体上预组织阳离子/氢键给体阵列锚定 PFOA 羧酸根头基并耦联质子给体/电荷接力单元，于光/电/热外场探索头基活化路径；原理层外推，无性能预测。"
+     },
+     {
+      "id": "mscl-mechanosensitive-channel",
+      "weight": 0.4,
+      "mechanism_summary": "MscL 以膜张力阈值化触发闭态-开态可逆构象转换（T1/2≈11.8 dyn/cm，ΔE=18.6 kBT，张力撤除自发回闭）；该'刺激门控可逆开闭'原理启发 PFOA 吸附剂的'吸附态-释放态'双稳再生设计，而非提供 PFOA 分子识别",
+      "design_hint": "将识别内核（PFOA 羧酸根/全氟尾结合位点）耦合刺激响应门控外壳（pH 或温度切换），吸附工况处于结合态、再生刺激下切换为释放构象实现温和洗脱（原理层，外壳-内核耦合须实验验证）"
+     },
+     {
+      "id": "oatp-intestinal-hepatic-uptake",
+      "weight": 0.7,
+      "mechanism_summary": "OATP1B1/1B3 以'阴离子头基氢键锚 + 疏水腔'双要素识别两亲全氟烷基阴离子，有文献记载介导 8 碳 PFCA（PFOA）的肝窦摄取并参与其肠肝循环富集与长血清半衰期",
+      "design_hint": "提取羧酸根头基阳离子/氢键锚与 C8 链匹配疏水/氟亲腔的识别基序，借鉴抗衡离子交换/pH 依赖释放-再生原理，构建 PFOA 水相向量富集'预富集→选择性截留→梯度/pH 释放'两级流程"
      }
     ]
    },
@@ -1484,6 +1508,14 @@
     {
      "id": "lignin-peroxidase-white-rot",
      "weight": 0.8
+    },
+    {
+     "id": "acidimicrobium-reductive-defluorination",
+     "weight": 0.7
+    },
+    {
+     "id": "decarboxylase-carbanion-activation",
+     "weight": 0.8
     }
    ]
   },
@@ -1622,6 +1654,18 @@
     {
      "id": "psts-phosphate-binding-protein",
      "weight": 0.75
+    },
+    {
+     "id": "ddt-dehydrochlorinase-gst",
+     "weight": 0.75
+    },
+    {
+     "id": "decarboxylase-carbanion-activation",
+     "weight": 0.5
+    },
+    {
+     "id": "oatp-intestinal-hepatic-uptake",
+     "weight": 0.7
     }
    ]
   },
@@ -1632,6 +1676,26 @@
     {
      "id": "fcrn-ph-dependent-fc-recycling",
      "weight": 0.85
+    }
+   ]
+  },
+  "动态响应": {
+   "dimension": "功能特性",
+   "description": "刺激（天然为膜张力；转译可用 pH、温度、离子强度、氧化还原）门控的可逆构象开闭，实现吸附态-释放态切换与再生（MscL 闭态紧缩、开态扩张，Po 对张力阈值化陡 S 形依赖且张力撤除自发回闭）",
+   "prototypes": [
+    {
+     "id": "mscl-mechanosensitive-channel",
+     "weight": 0.7
+    }
+   ]
+  },
+  "向量传质": {
+   "dimension": "功能特性",
+   "description": "跨膜/跨相化学势梯度（抗衡离子交换、pH 梯度）驱动的方向性传质，实现两亲阴离子的向量捕获、富集与释放再生",
+   "prototypes": [
+    {
+     "id": "oatp-intestinal-hepatic-uptake",
+     "weight": 0.8
     }
    ]
   }
@@ -2646,6 +2710,72 @@
    "organism": {
     "scientific": "Phanerochaete chrysosporium（木质素过氧化物酶 LiP，同工酶 H2/H8；白腐真菌）",
     "category": "微生物"
+   }
+  },
+  "acidimicrobium-reductive-defluorination": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "Acidimicrobium sp. A6 为还原脱氟微生物原型（降解/转化类），本库无其吸附适用性测试数据，故全空"
+   },
+   "features": [
+    "催化降解"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Acidimicrobium sp. strain A6（铁还原偶联铵氧化自养菌；还原脱氟）",
+    "category": "微生物"
+   }
+  },
+  "decarboxylase-carbanion-activation": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "OMPDC 为胞内可溶性脱羧酶（分子催化原型），本库无其吸附性能测试条件；performance_data 为空，故测试条件全空。"
+   },
+   "features": [
+    "催化降解",
+    "特异性识别"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Methanothermobacter thermautotrophicus / Saccharomyces cerevisiae (OMPDC 乳清苷 5'-磷酸脱羧酶, EC 4.1.1.23)",
+    "category": "微生物"
+   }
+  },
+  "mscl-mechanosensitive-channel": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "MscL 为机械门控大电导通道（刺激门控可逆开闭/动态响应原型），本库无其吸附性能测试；applicability 全空，转译限原理层。"
+   },
+   "features": [
+    "动态响应"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Mycobacterium tuberculosis H37Ra / Escherichia coli（MscL 大电导机械敏感通道）",
+    "category": "微生物"
+   }
+  },
+  "oatp-intestinal-hepatic-uptake": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "OATP1B1/1B3 为肝细胞窦膜整合膜转运体（传质/向量摄取原型），本库无吸附性能测试，适用性条件全空"
+   },
+   "features": [
+    "特异性识别",
+    "向量传质"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Homo sapiens（人源 OATP1B1/OATP1B3，SLCO1B1/SLCO1B3）",
+    "category": "动物"
    }
   }
  },
