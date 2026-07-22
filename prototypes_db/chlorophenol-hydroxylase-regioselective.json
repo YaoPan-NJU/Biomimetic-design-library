@@ -1,0 +1,327 @@
+{
+ "id": "chlorophenol-hydroxylase-regioselective",
+ "name_zh": "氯酚羟化酶区域选择性芳香羟基化",
+ "name_en": "Chlorophenol Hydroxylase Regioselective Aromatic Hydroxylation",
+ "organism": {
+  "scientific": "Pseudomonas sp. CF600 / Cupriavidus necator JMP134 / Ralstonia pickettii（酚/氯酚羟化酶系：酚羟化酶组分 P2、TcpA 2,4,6-TCP 4-单加氧酶、HadA 黄素依赖氯酚单加氧酶）",
+  "category": "微生物"
+ },
+ "biomimetic_dimension": "分子仿生",
+ "features": [
+  "分子筛分",
+  "特异性识别"
+ ],
+ "tested_conditions": {
+  "tested_ph_range": null,
+  "tested_temp_range": null,
+  "salinity": null,
+  "note": "本原型为酚/氯酚羟化酶（降解/转化类酶，分子识别原型），本库无其吸附性能测试条件；performance_data 为空，故测试条件全空。天然机制为催化降解，转译仅取活性位几何/轮廓读取。"
+ },
+ "library_tier": "extended",
+ "lifecycle_status": "active",
+ "coverage": "partial",
+ "status": "active",
+ "provenance_summary": {
+  "n_papers": 3,
+  "n_verified": 7,
+  "n_unverified": 0,
+  "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与硬边界条数（CHRH-001 四要素+1 硬边界=5，CHRH-002 两要素=2）。机制接地限于酚/氯酚羟化酶区域选择性与取代模式依赖（PDB 1HQI/4G5E/6JHM + TftD/TcpA 标题）；2,6-DCP 双邻位氯阻碍机制与 2,6-DCP 形状识别转译为 llm_inferred/inspiration，2,6-DCP 专一羟化酶结构缺口已标注，无性能数据。quote 取自 PDB 沉积标题、PMID 摘要与 Crossref 核验的论文标题（可核验），未做全文 PDF 审计。n_unverified 按模板惯例记 0，llm_inferred 要素在 honesty_ledger.inferences 单列。"
+ },
+ "mechanisms": [
+  {
+   "mechanism_id": "CHRH-001",
+   "name": "氯酚/酚羟化酶区域选择性芳香羟基化的活性位基础",
+   "description": "氯酚降解菌进化出区域选择性芳香羟化酶以降解氯酚：Pseudomonas sp. CF600 酚羟化酶（含双铁中心的多组分加氧酶）催化酚及其甲基取代衍生物转化为儿茶酚（PDB 1HQI 以 NMR 解析其 90 氨基酸组分 P2）；Cupriavidus necator JMP134 的 TcpA 为 2,4,6-三氯酚 4-单加氧酶（PDB 4G5E），对 2,4,6-TCP 行 C-4 位区域选择性单加氧；Ralstonia pickettii 的 HadA 为黄素依赖氯酚单加氧酶（PDB 6JHM）。不同氯酚取代模式由结构与催化上可区分的单加氧酶分别处理（TftD 处理 2,4,5-TCP，TcpA 处理 2,4,6-TCP），说明活性位空间轮廓与底物取代模式互补是区域选择性的结构基础",
+   "基本原理": "羟化酶活性位的空间轮廓与底物氯酚的取代模式（氯原子在酚环上的位置）几何互补，决定羟基化的位置（区域选择性）与可及性；取代模式改变即需不同活性位结构，故活性位轮廓对取代模式的几何读取是区域选择性的来源",
+   "source": "literature",
+   "ref_doi": "10.1021/bi9619233",
+   "verification": "corroborated",
+   "verification_quote": "catalyzes the conversion of phenol and some of its methyl-substituted derivatives to catechol",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "2,4,6-三氯酚（2,4,6-TCP）是 Cupriavidus necator JMP134 氯酚羟化酶 TcpA 的天然底物；PDB 4G5E 条目以 '2,4,6-Trichlorophenol 4-monooxygenase' 命名，4-单加氧酶命名本身指明对 2,4,6-TCP 的 C-4 位区域选择性羟基化",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.3390/ijms13089769",
+     "locator": "PDB 4G5E / p.9769",
+     "quote": "2,4,6-Trichlorophenol 4-monooxygenase",
+     "scope_match": "Keywords: trichlorophenol, monooxygenase"
+    },
+    "bio_structure": {
+     "text": "酚羟化酶（Pseudomonas sp. CF600）为含双铁中心的多组分加氧酶，催化酚及其部分甲基取代衍生物转化为儿茶酚（芳香羟基化）；其组分 P2 为 90 氨基酸蛋白，PDB 1HQI 以 NMR 解析，是多组分加氧酶中首个被解析的结构。氯酚羟化酶 TcpA 属 FADH2 依赖单加氧酶系",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1021/bi9619233",
+     "locator": "PDB 1HQI / abstract p.495",
+     "quote": "catalyzes the conversion of phenol and some of its methyl-substituted derivatives to catechol",
+     "scope_match": "Keywords: phenol, catechol, methyl-substituted"
+    },
+    "interaction": {
+     "text": "TcpA 对 2,4,6-TCP 行 C-4 位区域选择性单加氧（4-monooxygenase）；HadA（Ralstonia pickettii）为黄素依赖单加氧酶，可催化多种毒物的脱硝与脱卤，代表氯酚芳香羟基化/脱卤的黄素单加氧酶活性位类型",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1002/cbic.201900413",
+     "locator": "PDB 6JHM / abstract p.3020",
+     "quote": "HadA is a flavin-dependent monooxygenase that can catalyze the denitration and dehalogenation of a wide variety of toxicants such as pesticides.",
+     "scope_match": "Keywords: flavin-dependent monooxygenase, dehalogenation, denitration"
+    },
+    "why_it_works": {
+     "text": "不同氯酚取代模式由结构与催化上可区分的单加氧酶分别处理：2,4,5-TCP 由 TftD（Burkholderia cepacia AC1100）4-单加氧，2,4,6-TCP 由 TcpA（Cupriavidus necator JMP134）4-单加氧；取代模式不同即需不同活性位结构，说明活性位轮廓与底物取代模式互补是区域选择性的结构基础",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.3390/ijms13089769",
+     "locator": "title, p.9769",
+     "quote": "2,4,5-TCP 4-Monooxygenase (TftD) from Burkholderia cepacia AC1100 and 2,4,6-TCP 4-Monooxygenase (TcpA) from Cupriavidus necator JMP134",
+     "scope_match": "Keywords: 2,4,5-TCP, 2,4,6-TCP, monooxygenase, TcpA"
+    },
+    "boundary_conditions": [
+     {
+      "text": "区域选择性与底物谱由酶活性位结构与底物氯酚取代模式共同决定：2,4,5-TCP 与 2,4,6-TCP 由结构/催化可区分的两种单加氧酶（TftD/TcpA）分别处理，取代模式改变即改变所需活性位轮廓",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "corroborated",
+      "gate_level": "hard",
+      "locator": "title, p.9769",
+      "quote": "2,4,5-TCP 4-Monooxygenase (TftD) from Burkholderia cepacia AC1100 and 2,4,6-TCP 4-Monooxygenase (TcpA) from Cupriavidus necator JMP134",
+      "scope_match": "Keywords: 2,4,5-TCP, 2,4,6-TCP, monooxygenase",
+      "source_asset": null
+     },
+     {
+      "text": "活性位轮廓的识别功能依赖预组织三级结构；变性或活性位溶剂化使轮廓互补丧失，水相中水分子竞争削弱底物结合（定性，无数值阈值）",
+      "parameter": "wet_stability",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "氯酚羟化酶以与底物取代模式互补的活性位空间轮廓实现区域选择性芳香羟基化；该活性位轮廓对取代模式（氯原子位置）的几何读取能力，可在原理层转译为对氯酚异构体取代模式（如 2,6-二氯取代）的形状选择性识别。转译限原理层：仅活性位几何/轮廓可迁移，双铁中心/FADH2 氧化还原催化机制不可复制",
+    "verification_quote": "catalyzes the conversion of phenol and some of its methyl-substituted derivatives to catechol"
+   },
+   "source_doi": "10.1021/bi9619233",
+   "source_page": 495,
+   "source_locator": "PDB 1HQI / 4G5E / 6JHM（RCSB 沉积数据）+ Biochemistry 36:495-504",
+   "source_file": "PDB 1HQI（酚羟化酶 P2）/ 4G5E（TcpA）/ 6JHM（HadA）RCSB 沉积数据 + 各 PMID 摘要（未做本地全文 PDF 审计）",
+   "functional_groups": [
+    "双铁中心多组分加氧酶活性位（不可转译催化）",
+    "FADH2/黄素单加氧酶活性位（不可转译催化）",
+    "活性位空间轮廓（可转译几何）"
+   ],
+   "key_structures": [
+    "识别结构",
+    "催化结构"
+   ]
+  },
+  {
+   "mechanism_id": "CHRH-002",
+   "name": "2,6-双邻位氯空间阻碍羟基化与 2,6-DCP 专一羟化酶结构缺口",
+   "description": "2,6-DCP 的酚羟基两侧（C-2、C-6）均被氯占据，常见的邻位/对位芳香羟基化位点受空间阻碍，故 2,6-DCP 在氯酚降解途径中趋于难羟基化、难降解。这是自然界氯酚羟化酶区域选择性的真实事实，但本库经 RCSB 检索未获 2,6-DCP 专一羟化酶的晶体结构（结构缺口；4G5E 为 TcpA/2,4,6-TCP 4-单加氧酶，5MA1 经核验为 PceA 还原脱卤酶而非羟化酶、已排除）；该阻碍机制为文献一致但本条未做全文 PDF 审计的推断",
+   "基本原理": "当酚羟基邻位被体积较大的氯原子双占据，羟化酶活性位难以在受阻的邻/对位完成羟基化，取代模式由此成为决定可降解性的几何门控；这为'活性位轮廓读取区分 2,6-二氯取代'提供天然依据",
+   "source": "literature",
+   "ref_doi": "10.3390/ijms13089769",
+   "verification": "corroborated",
+   "verification_quote": "2,4,5-TCP 4-Monooxygenase (TftD) from Burkholderia cepacia AC1100 and 2,4,6-TCP 4-Monooxygenase (TcpA) from Cupriavidus necator JMP134",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "氯酚异构体的取代模式（2,4,5-TCP 与 2,4,6-TCP）是可被羟化酶区分的结构特征；2,4,6-TCP 即含两个邻位氯（C-2、C-6）的氯酚，TcpA 仍对其 C-4 位区域选择性羟基化（4-monooxygenase），表明双邻位氯底物确为特定单加氧酶的天然底物",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.3390/ijms13089769",
+     "locator": "PDB 4G5E / p.9769",
+     "quote": "2,4,6-Trichlorophenol 4-monooxygenase",
+     "scope_match": "Keywords: trichlorophenol, monooxygenase"
+    },
+    "bio_structure": {
+     "text": "处理 2,4,6-TCP 的 TcpA 与处理 2,4,5-TCP 的 TftD 为两种 FADH2 依赖单加氧酶，结构与催化上可区分（PDB 4G5E 为 TcpA 晶体结构）；取代模式不同的氯酚需不同活性位结构",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.3390/ijms13089769",
+     "locator": "title, p.9769",
+     "quote": "2,4,5-TCP 4-Monooxygenase (TftD) from Burkholderia cepacia AC1100 and 2,4,6-TCP 4-Monooxygenase (TcpA) from Cupriavidus necator JMP134",
+     "scope_match": "Keywords: 2,4,5-TCP, 2,4,6-TCP, monooxygenase"
+    },
+    "interaction": {
+     "text": "2,6-DCP（2,6-二氯苯酚）酚羟基的两个邻位均被氯占据，进一步的邻/对位芳香羟基化受双邻位氯空间阻碍；这是 2,6-DCP 相对其他氯酚异构体更难被羟化酶降解的几何原因（文献一致，本条未做全文 PDF 审计）",
+     "basis": "llm_inferred"
+    },
+    "why_it_works": {
+     "text": "因双邻位氯阻塞羟化位点，2,6-DCP 成为氯酚羟化酶区域选择性的天然'难底物'；这一取代模式依赖的可及性差异，正是活性位轮廓读取可据以区分 2,6-二氯取代与其他氯酚异构体的天然依据（推断）",
+     "basis": "llm_inferred"
+    },
+    "boundary_conditions": [
+     {
+      "text": "2,6-DCP 专一羟化酶结构缺口：本库经 RCSB 检索（4G5E 为 TcpA/2,4,6-TCP 4-单加氧酶，5MA1 为 PceA 还原脱卤酶、非羟化酶）未获 2,6-DCP 专一羟化酶晶体结构；2,6-DCP 双邻位氯阻碍羟基化为推断，须实验核验（定性，无数值阈值）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "氯酚可降解性受酚羟基邻/对位取代模式的几何门控；2,6-双邻位氯使羟基化受阻，使'2,6-二氯取代模式'成为可被活性位轮廓读取区分的特征。转译为吸附识别时仅取此轮廓读取原理，不复制羟化催化",
+    "verification_quote": "2,4,5-TCP 4-Monooxygenase (TftD) from Burkholderia cepacia AC1100 and 2,4,6-TCP 4-Monooxygenase (TcpA) from Cupriavidus necator JMP134"
+   },
+   "source_doi": "10.3390/ijms13089769",
+   "source_page": 9769,
+   "source_locator": "PDB 4G5E / title, p.9769",
+   "source_file": "PDB 4G5E（TcpA，RCSB 沉积数据）+ Int J Mol Sci 13:9769-9784（标题/期刊接地；正文 PDF 未取得，未做本地全文 PDF 审计）",
+   "functional_groups": [
+    "FADH2 单加氧酶活性位（不可转译催化）",
+    "活性位空间轮廓（可转译几何）"
+   ],
+   "key_structures": [
+    "识别结构",
+    "催化结构"
+   ]
+  }
+ ],
+ "performance_data": [],
+ "engineering_constraints": [
+  {
+   "constraint": "催化机制不可转译",
+   "value": "酚羟化酶为含双铁中心的多组分加氧酶（需还原组分与 NADH），TcpA/HadA 为 FADH2/黄素依赖单加氧酶；这些氧化还原/催化机制不可复制，仅活性位空间轮廓的几何读取可转译为吸附识别",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "PDB 1HQI 摘要述双铁中心多组分加氧酶；PDB 4G5E/6JHM 为 FADH2/黄素依赖单加氧酶（机理推断：转译限活性位几何，approach-3 机制拆解）",
+   "source": "literature",
+   "ref_doi": "10.1021/bi9619233"
+  },
+  {
+   "constraint": "可溶/多组分蛋白形态",
+   "value": "酚羟化酶组分 P2 约 10.5 kDa（PDB 1HQI，NMR），TcpA、HadA 为可溶性酶；天然酶不可直接用作吸附剂，须提取设计原则",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "RCSB 1HQI：molecular_weight 10.5 kDa（条目 rcsb_entry_info）",
+   "source": "literature",
+   "ref_doi": "10.1021/bi9619233"
+  },
+  {
+   "constraint": "2,6-DCP 专一羟化酶结构缺口",
+   "value": "经 RCSB 检索未获 2,6-DCP 专一羟化酶晶体结构（4G5E 为 TcpA/2,4,6-TCP 4-单加氧酶，5MA1 经核验为 PceA 还原脱卤酶而非羟化酶、已排除）；2,6-DCP 双邻位氯阻碍羟基化的结构基础无直接结构接地",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "RCSB 检索与条目核验（4G5E/5MA1/1HQI/6JHM），属机制推断/结构缺口标注",
+   "source": "llm_inference",
+   "ref_doi": null
+  }
+ ],
+ "narrative": {
+  "entries": [
+   {
+    "source_file": "PDB 1HQI / 4G5E / 6JHM + Qian 1997 Biochemistry (DOI 10.1021/bi9619233) + Pongpamorn 2019 Chembiochem (DOI 10.1002/cbic.201900413) + Int J Mol Sci 2012 (DOI 10.3390/ijms13089769, PDB 4G5E)",
+    "paper_id": "2012-TcpA-TftD-chlorophenol-monooxygenase-regioselectivity",
+    "sections": {
+     "problem_definition": "氯酚类污染物（含 2,6-二氯苯酚 2,6-DCP）在环境中难降解，其生物降解的第一步常为区域选择性芳香羟基化：氯酚降解菌进化出酚/氯酚羟化酶，将酚或氯酚在特定位置羟基化以开环降解。问题在于，2,6-DCP 的酚羟基两侧（C-2、C-6）均被氯占据，常见羟化位点受空间阻碍，使其羟基化受阻、趋于难降解。理解羟化酶如何依底物取代模式实现区域选择性，是分子识别的基础问题。本原型天然机制类别为降解/转化（芳香羟基化为降解途径的一步）。",
+     "biological_solution": "三类结构接地：其一，Pseudomonas sp. CF600 酚羟化酶为含双铁中心的多组分加氧酶，催化酚及其甲基取代衍生物转化为儿茶酚（PDB 1HQI 以 NMR 解析其 90 氨基酸组分 P2，摘要述 'catalyzes the conversion of phenol and some of its methyl-substituted derivatives to catechol'），是多组分加氧酶中首个被解析的结构；其二，Cupriavidus necator JMP134 的 TcpA 为 2,4,6-三氯酚 4-单加氧酶（PDB 4G5E，对 2,4,6-TCP 行 C-4 位区域选择性单加氧，属 FADH2 依赖单加氧酶系）；其三，Ralstonia pickettii 的 HadA 为黄素依赖单加氧酶/氯酚单加氧酶（PDB 6JHM，摘要述可催化多种毒物的脱硝与脱卤）。关键的区域选择性结构证据：处理 2,4,5-TCP 的 TftD 与处理 2,4,6-TCP 的 TcpA 在结构与催化上可区分（Int J Mol Sci 2012 标题），说明氯酚取代模式不同即需不同活性位轮廓。对 2,6-DCP 本身，本库未检索到其专一羟化酶晶体结构（结构缺口），双邻位氯阻碍羟基化为文献一致但本条未做全文 PDF 审计的事实。",
+     "key_features": "必须保留：其一，与底物氯取代模式互补的活性位空间轮廓（区分氯原子在酚环上的位置，即 2,6-二氯取代与其他取代模式）；其二，酚羟基的极性锚定（氢键给/受体）；其三，预组织刚性轮廓（结合熵代价预先支付）。明确不转译：双铁中心/FADH2 的氧化还原催化机制、多组分电子传递。可灵活调整：载体骨架、轮廓构筑方式（印迹/刚性间隔臂/笼）、孔壁疏水微环境。",
+     "design_mapping": "仿生映射：氯酚羟化酶'依取代模式互补的活性位轮廓' 转为 对 2,6-DCP 取代模式的形状选择性识别腔。approach-3 机制拆解：仅取活性位几何/轮廓读取，不复制催化。对 2,6-DCP，构筑与 2,6-二氯取代（酚羟基两侧邻位氯）轮廓互补的刚性识别腔，使其余氯酚异构体（如 2,4-DCP、4-CP、2,4,6-TCP）因取代模式失配而被排除。注意：这是设计转译/启发（llm_inferred），非 from_source 事实；羟化酶对底物为催化降解，转译到吸附剂仅取形状/轮廓识别，且 2,6-DCP 阻碍机制与专一结构存在缺口，识别亲和力与选择性须实验验证。",
+     "explainability_anchors": "设计溯源：酚到儿茶酚芳香羟基化（PDB 1HQI，from_source）+ 2,4,6-TCP 的 C-4 区域选择性单加氧（PDB 4G5E TcpA，from_source）+ 取代模式依赖的酶结构区分（TftD/TcpA 标题，from_source）→ '活性位轮廓读取区分氯酚取代模式'可迁移原理 → 2,6-DCP 形状选择性识别腔（llm_inferred 启发，须实验验证；2,6-DCP 专一羟化酶结构缺口已标注）。"
+    }
+   }
+  ]
+ },
+ "design_translation": [
+  {
+   "idea": "将氯酚羟化酶'与底物取代模式互补的活性位空间轮廓'原理移植到刚性多孔载体，构建对 2,6-DCP 的 2,6-二氯取代模式形状互补的识别腔：以刚性壁材围出与酚羟基两侧邻位氯轮廓互补的空腔，区分 2,6-二氯取代与其他氯酚异构体（2,4-DCP、4-CP、2,4,6-TCP）。仅取轮廓读取，不复制羟化催化",
+   "specific_functional_group": "形状互补的刚性腔壁（芳香/烃类刚性壁材）+ 酚羟基氢键锚（脲/酰胺/吡啶类氢键受体或给体，锚定 2,6-DCP 的酚羟基）+ 轮廓内对应 2,6-二氯位置的疏水容纳区",
+   "material_handle": "以 2,6-DCP 为模板的分子印迹刚性交联聚合物，或刚性笼/MOF/POSS 构筑与 2,6-二氯取代轮廓互补的定形空腔；以刚性间隔臂固定腔形，孔壁以烃链营造低介电疏水微环境",
+   "target_interaction": "2,6-DCP 酚羟基的方向性氢键锚定 + 两个邻位氯与腔壁轮廓的形状/范德华互补 + 取代模式失配的异构体被空间排斥（非催化、非脱卤）",
+   "source_tier": "llm_inference",
+   "evidence_tier": "inspiration（原理层外推：酚/氯酚羟化酶区域选择性接地于 PDB 1HQI/4G5E/6JHM 与 TftD/TcpA 标题；将活性位轮廓读取转译为 2,6-DCP 形状选择性吸附为 llm_inferred，无 2,6-DCP 吸附或结合实验数据）",
+   "examples": [],
+   "design_principle": "氯酚羟化酶以与底物氯取代模式互补的活性位轮廓实现区域选择性（PDB 4G5E TcpA 对 2,4,6-TCP 的 C-4 单加氧；TftD/TcpA 因取代模式不同而结构可分）；该轮廓对取代模式的几何读取可在原理层移植为人工识别腔",
+   "implementation_example": "以 2,6-DCP 为模板的分子印迹刚性聚合物或具 2,6-二氯互补轮廓的刚性笼/MOF（无实验数据，仅为设计假设）",
+   "constraints": "羟化酶对氯酚为催化降解，转译到吸附剂仅取形状/轮廓识别、不复制催化；2,6-DCP 双邻位氯阻碍羟基化为文献一致但本条未做全文 PDF 审计的事实，且无 2,6-DCP 专一羟化酶结构可接地（结构缺口）；水相中水竞争、共存氯酚异构体与天然有机物干扰须实验排查",
+   "failure_modes": "腔形刚性过强导致对 2,6-DCP 适配不足；印迹模板洗脱后腔塌陷；对 2,4-DCP/2,4,6-TCP 等共存氯酚异构体的形状分辨不足而共吸附；酚羟基锚暴露于体相水被氢键竞争淬灭；将'降解'误作'吸附选择性'来源（催化不可转译）",
+   "material_realization_examples": []
+  }
+ ],
+ "honesty_ledger": {
+  "facts": [
+   {
+    "type": "mechanism",
+    "index": 0,
+    "name": "氯酚/酚羟化酶区域选择性芳香羟基化的活性位基础",
+    "basis": "from_source_corroborated",
+    "note": "PDB 1HQI（酚羟化酶 P2，Pseudomonas sp. CF600，NMR，酚到儿茶酚，Qian 1997 DOI 10.1021/bi9619233）+ PDB 4G5E（TcpA 2,4,6-TCP 4-单加氧酶，Cupriavidus necator JMP134，DOI 10.3390/ijms13089769）+ PDB 6JHM（HadA 黄素依赖氯酚单加氧酶，Ralstonia pickettii，DOI 10.1002/cbic.201900413）；quote 取自 PDB 沉积标题与各 PMID 摘要（逐字可核验），未做全文 PDF 审计"
+   },
+   {
+    "type": "mechanism",
+    "index": 1,
+    "name": "氯酚取代模式决定羟化酶需求（TftD/TcpA 区分）",
+    "basis": "from_source_corroborated",
+    "note": "Int J Mol Sci 2012 标题直接陈述 2,4,5-TCP 4-单加氧酶（TftD）与 2,4,6-TCP 4-单加氧酶（TcpA）的结构与催化差异（DOI 10.3390/ijms13089769, p.9769）；quote 取自 Crossref 核验的论文标题，未做全文 PDF 审计"
+   }
+  ],
+  "leads": [],
+  "inferences": [
+   {
+    "type": "mechanism",
+    "index": 1,
+    "idea": "2,6-DCP 双邻位氯空间阻碍芳香羟基化使其难降解",
+    "basis": "llm_inferred",
+    "label": "inference",
+    "note": "由氯酚羟化酶区域选择性与 2,6-DCP 结构（酚羟基两侧邻位氯）外推；文献一致但本条未做全文 PDF 审计，且无 2,6-DCP 专一羟化酶结构可接地（结构缺口）"
+   },
+   {
+    "type": "design_translation",
+    "index": 0,
+    "idea": "将活性位轮廓读取转译为 2,6-DCP 形状选择性识别腔",
+    "basis": "llm_inferred",
+    "label": "inspiration",
+    "note": "approach-3 机制拆解：仅取活性位几何/轮廓，不复制羟化催化；无 2,6-DCP 吸附/结合实验数据，亲和力与选择性须实验验证"
+   }
+  ],
+  "boundary_notes": [
+   "本原型天然机制类别为降解/转化（芳香羟基化为氯酚降解途径的一步）；机制 from_source 接地限于酚/氯酚羟化酶的区域选择性与取代模式依赖（PDB 1HQI/4G5E/6JHM + TftD/TcpA 标题）",
+   "转译限原理层（approach-3）：仅活性位空间轮廓的几何读取可转译为吸附识别，双铁中心/FADH2 氧化还原催化机制不可复制，不得声称吸附剂复制羟化催化",
+   "2,6-DCP 专一羟化酶结构缺口：经 RCSB 检索（4G5E=TcpA/2,4,6-TCP 4-单加氧酶；5MA1=PceA 还原脱卤酶、非羟化酶，已排除）未获 2,6-DCP 专一羟化酶结构；2,6-DCP 双邻位氯阻碍羟基化为推断（llm_inferred / needs_review）",
+   "无 2,6-DCP 吸附或结合性能数据；performance_data 为空，严格未从任何污染物知识库搬运 qmax/Kd/去除率等性能数值（知识隔离红线）",
+   "一切 2,6-DCP 相关边界为定性 llm_inferred，不带数值阈值，gate_level=soft"
+  ],
+  "missing_pdf_items": [
+   "Qian 1997 Biochemistry 全文 PDF（quote 取自 PDB 1HQI 沉积标题与 PMID 9012665 摘要）",
+   "Pongpamorn 2019 Chembiochem 全文 PDF（quote 取自 PDB 6JHM 沉积标题与 PMID 31231908 摘要）",
+   "Int J Mol Sci 2012（TcpA/TftD）全文 PDF（MDPI/PMC 访问受限；quote 取自 PDB 4G5E 沉积标题与 Crossref 核验的论文标题）",
+   "2,6-DCP 双邻位氯阻碍羟基化的专题文献全文（未做 PDF 审计，机制为推断）"
+  ],
+  "generated_by": "manual-curation-2026-07-22",
+  "note": "诚实优先：机制接地限于酚/氯酚羟化酶区域选择性与取代模式依赖（PDB 1HQI/4G5E/6JHM + TftD/TcpA 标题）；2,6-DCP 阻碍机制与 2,6-DCP 吸附转译全部为 inspiration/推断，2,6-DCP 专一羟化酶结构缺口已标注"
+ },
+ "boundary_rules": [
+  {
+   "rule": "氯酚取代模式决定所需羟化酶结构：2,4,5-TCP（TftD）与 2,4,6-TCP（TcpA）由结构/催化可区分的单加氧酶分别处理",
+   "source_mechanism": "氯酚/酚羟化酶区域选择性芳香羟基化的活性位基础",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "2,6-DCP 双邻位氯空间阻碍芳香羟基化，使其相对其他氯酚异构体难降解；无 2,6-DCP 专一羟化酶结构（结构缺口，推断）",
+   "source_mechanism": "2,6-双邻位氯空间阻碍羟基化与 2,6-DCP 专一羟化酶结构缺口",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  },
+  {
+   "rule": "仅活性位空间轮廓的几何读取可转译为吸附识别，羟化催化与辅因子机制不可复制；预组织轮廓须维持，水竞争削弱结合（定性，无数值阈值）",
+   "source_mechanism": "氯酚/酚羟化酶区域选择性芳香羟基化的活性位基础",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  }
+ ]
+}

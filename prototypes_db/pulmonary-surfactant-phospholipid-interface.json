@@ -1,0 +1,388 @@
+{
+ "id": "pulmonary-surfactant-phospholipid-interface",
+ "name_zh": "肺表面活性物质-磷脂界面分配",
+ "name_en": "Pulmonary Surfactant Phospholipid Interface Partitioning",
+ "organism": {
+  "scientific": "Homo sapiens / Sus scrofa（肺表面活性物质：DPPC 为主磷脂单层 + 表面活性剂蛋白 SP-B/SP-C；2DWF 为人源 SP-B，1SPF 为猪源 SP-C）",
+  "category": "动物"
+ },
+ "biomimetic_dimension": "功能仿生",
+ "features": [
+  "疏水性",
+  "抗生物污染"
+ ],
+ "tested_conditions": {
+  "tested_ph_range": null,
+  "tested_temp_range": null,
+  "salinity": null,
+  "note": "本原型为界面生物物理原型（肺表面活性物质磷脂-蛋白复合界面层），本库无其吸附适用性或吸附性能测试数据；performance_data 为空，故测试条件全空。"
+ },
+ "library_tier": "extended",
+ "lifecycle_status": "active",
+ "coverage": "partial",
+ "status": "active",
+ "provenance_summary": {
+  "n_papers": 3,
+  "n_verified": 10,
+  "n_unverified": 0,
+  "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与硬边界条数（PSI-001 四要素+1 硬边界=5，PSI-002 三要素+2 硬边界=5）。本原型为非蛋白界面原型，按形态学/功能证据层级接地：主证据为磷脂界面层吸附/覆盖与膜多形性（Pérez-Gil 2008、Goerke 1998 摘要级）与 PFOA-磷脂模型膜相互作用（Brüning 2014，DMPC 双层囊泡，摘要级）；RCSB PDB 1SPF/2DWF 沉积记录辅助说明 SP-B/SP-C 界面蛋白。quote 逐字取自 PubMed efetch 摘要与 RCSB 沉积记录（可核验），未做全文 PDF 审计。PFOA 界面捕获/NOM 抗污堵转译为 llm_inference/inspiration。"
+ },
+ "mechanisms": [
+  {
+   "mechanism_id": "PSI-001",
+   "name": "肺表面活性物质磷脂单层的动态界面屏障与表面张力调节",
+   "description": "肺表面活性物质在肺泡气液界面形成以 DPPC（二棕榈酰磷脂酰胆碱）为主、辅以疏水表面活性剂蛋白 SP-B/SP-C 的动态磷脂单层/膜网络：层状体分泌后快速吸附并高效覆盖整个呼吸表面，在呼吸压缩-膨胀循环中降低并调节表面张力，构成动态界面屏障，介导上皮表面分子的相遇与分配",
+   "基本原理": "动态两亲磷脂界面（疏水酰链域 + 水化极性头基面）经膜多形性与特异性脂质-脂质/脂质-蛋白相互作用组装，可快速吸附覆盖界面、降低表面张力并形成动态界面屏障，介导两亲分子在界面的相遇与分配",
+   "source": "literature",
+   "ref_doi": "10.1016/j.bbamem.2008.05.003",
+   "verification": "corroborated",
+   "verification_quote": "an excellent example of how dynamic membrane polymorphism governs some biological functions through specific lipid-lipid, lipid-protein and protein-protein interactions",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "PFOA（全氟辛酸）为典型两亲分子：疏水全氟碳尾链 + 极性羧酸根头基，与脂肪酸型脂质两亲物结构类似；其可作用于磷脂模型膜并使之刚化（Brüning 2014，DMPC 囊泡），表明其两亲性界面行为与磷脂界面相容",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1103/PhysRevE.89.040702",
+     "locator": "title / Phys Rev E 89, 040702 (2014)",
+     "quote": "Perfluorooctanoic acid rigidifies a model lipid membrane",
+     "scope_match": "Keywords: perfluorooctanoic, lipid, membrane"
+    },
+    "bio_structure": {
+     "text": "肺表面活性物质经层状体（LB）分泌后发展为膜基网络，快速高效覆盖整个呼吸表面（Pérez-Gil 2008）；界面膜为以 DPPC 为主的磷脂单层 + 疏水表面活性剂蛋白 SP-B/SP-C（人源 SP-B Mini-B 见 PDB 2DWF，猪源 SP-C 见 PDB 1SPF）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1016/j.bbamem.2008.05.003",
+     "locator": "Abstract, p.1676",
+     "quote": "Upon secretion of LBs, surfactant develops a membrane-based network that covers rapidly and efficiently the whole respiratory surface.",
+     "scope_match": "Keywords: surfactant, membrane-based network, respiratory surface"
+    },
+    "interaction": {
+     "text": "表面活性物质快速吸附至气-水界面发挥表面力学功能（Goerke 1998 综述；该综述同时明示吸附的分子机制尚未完全阐明）；SP-B/SP-C 作为疏水脂质结合蛋白辅助磷脂层的吸附/铺展与稳定（PDB 1SPF KEYWDS LIPOPROTEIN (SURFACE FILM)，PDB 2DWF KEYWDS Lipid associated protein / SURFACE ACTIVE PROTEIN）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1016/S0925-4439(98)00060-X",
+     "locator": "Abstract, p.79",
+     "quote": "we still do not understand the basic molecular mechanisms underlying surfactant's rapid adsorption to the air-water interface",
+     "scope_match": "Keywords: surfactant, adsorption, air-water interface"
+    },
+    "why_it_works": {
+     "text": "肺表面活性物质系统是动态膜多形性经由特异性脂质-脂质、脂质-蛋白、蛋白-蛋白相互作用治理生物功能的范例（Pérez-Gil 2008）：动态两亲界面（疏水酰链域 + 水化极性头基面）既降低表面张力，又构成介导上皮表面分子相遇与分配的界面屏障",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1016/j.bbamem.2008.05.003",
+     "locator": "Abstract, p.1676",
+     "quote": "an excellent example of how dynamic membrane polymorphism governs some biological functions through specific lipid-lipid, lipid-protein and protein-protein interactions",
+     "scope_match": "Keywords: membrane polymorphism, lipid-protein, interactions"
+    },
+    "boundary_conditions": [
+     {
+      "text": "界面功能依赖脂质-蛋白协同组装：SP-B/SP-C 为脂质结合/表面活性蛋白——SP-C 含富缬氨酸 α 螺旋（非极性溶剂中 NMR，PDB 1SPF，猪源），人源 SP-B Mini-B 构建体在 SDS 胶束中研究（PDB 2DWF）；纯磷脂界面缺乏蛋白介导的吸附/铺展辅助",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "corroborated",
+      "gate_level": "hard",
+      "locator": "PDB 2DWF, KEYWDS / deposited 2006",
+      "quote": "Mini-B, SP-B, Surfactant Protein B, Lipid associated protein, SURFACE ACTIVE PROTEIN",
+      "scope_match": "Keywords: SP-B, Lipid associated protein, SURFACE ACTIVE PROTEIN",
+      "source_asset": null
+     },
+     {
+      "text": "动态更新需求：界面层须在压缩-膨胀循环中保持快速吸附与动态重排；吸附的分子机制本身尚未完全阐明（Goerke 1998），静态或被污堵封闭的界面丧失动态屏障功能（定性，无数值阈值）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "scope_match": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "动态两亲磷脂界面层（疏水酰链域 + 水化极性头基面，疏水界面蛋白辅助）可快速吸附覆盖界面并介导两亲分子的界面相遇与分配，形成可动态更新的界面屏障",
+    "verification_quote": "an excellent example of how dynamic membrane polymorphism governs some biological functions through specific lipid-lipid, lipid-protein and protein-protein interactions"
+   },
+   "source_doi": "10.1016/j.bbamem.2008.05.003",
+   "source_page": 1676,
+   "source_locator": "Abstract, p.1676（Pérez-Gil 2008）/ Abstract, p.79（Goerke 1998）/ PDB 1SPF·2DWF（RCSB 沉积记录）",
+   "source_file": "BBA-Biomembranes 1778:1676-1695（Pérez-Gil 2008）+ BBA-Mol Basis Dis 1408:79-89（Goerke 1998），均 PubMed efetch 摘要逐字；RCSB PDB 1SPF/2DWF 沉积记录（未做本地全文 PDF 审计）",
+   "functional_groups": [
+    "磷脂极性头基（磷胆碱型水化面）",
+    "疏水酰链域",
+    "疏水表面活性剂蛋白（SP-B/SP-C 富缬氨酸疏水螺旋）"
+   ],
+   "key_structures": [
+    "界面结构"
+   ]
+  },
+  {
+   "mechanism_id": "PSI-002",
+   "name": "两亲性污染物向脂质界面疏水域的分配（碰巧疏水利用）",
+   "description": "两亲性 PFOA（全氟碳尾 + 羧酸根头）可分配入磷脂模型膜并产生类似胆固醇的膜凝聚与刚化效应（Brüning 2014，DMPC 双层囊泡），表明其全氟碳尾进入脂质界面疏水域；该分配由两亲性/疏水效应驱动，氟碳链入烃基酰链区属碰巧的疏水利用，而非氟特异性亲和",
+   "基本原理": "两亲磷脂界面的疏水域可经疏水效应富集两亲分子的疏水尾链；碰巧疏水利用提供两亲污染物的界面富集，但本身不提供氟特异性选择性",
+   "source": "literature",
+   "ref_doi": "10.1103/PhysRevE.89.040702",
+   "verification": "verified",
+   "verification_quote": "Similar to the effect evoked by cholesterol, we attribute the observed lipid bilayer stiffening to a condensing effect of the perfluorinated compound on the membrane.",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "PFOA 两亲结构：不同量的全氟辛酸作用于磷脂 DMPC（1,2-二肉豆蔻酰-sn-甘油-3-磷脂酰胆碱）囊泡双层（Brüning 2014），其两亲性是分配入脂质界面疏水域的界面基础",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1103/PhysRevE.89.040702",
+     "locator": "Abstract / Phys Rev E 89, 040702 (2014)",
+     "quote": "vesicles composed of the phospholipid 1,2-dimyristoyl-sn-glycero-3-phosphatidylcholine under the influence of varying amounts of perfluorooctanoic acid",
+     "scope_match": "Keywords: phospholipid, perfluorooctanoic acid, vesicles"
+    },
+    "bio_structure": {
+     "text": "模型脂质界面为 DMPC 磷脂双层囊泡（Brüning 2014）；双层疏水内部即酰链区，为两亲分子尾链的分配区域（酰链域为分配位点系磷脂双层通识结构解读，非来源逐字陈述）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1103/PhysRevE.89.040702",
+     "locator": "title / Phys Rev E 89, 040702 (2014)",
+     "quote": "Perfluorooctanoic acid rigidifies a model lipid membrane",
+     "scope_match": "Keywords: model lipid membrane, rigidifies"
+    },
+    "interaction": {
+     "text": "PFOA 在 DMPC 双层上产生类似胆固醇的膜凝聚/刚化效应：全氟化合物对膜起凝聚作用（Brüning 2014 摘要）；类胆固醇凝聚机制提示全氟碳尾插入双层疏水域（插入位点为机理层解读）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1103/PhysRevE.89.040702",
+     "locator": "Abstract / Phys Rev E 89, 040702 (2014)",
+     "quote": "Similar to the effect evoked by cholesterol, we attribute the observed lipid bilayer stiffening to a condensing effect of the perfluorinated compound on the membrane.",
+     "scope_match": "Keywords: cholesterol, lipid bilayer, stiffening, condensing"
+    },
+    "why_it_works": {
+     "text": "两亲性/疏水效应驱动全氟碳尾进入脂质界面疏水域：此为氟碳链进入烃基酰链区的碰巧疏水利用，而非氟特异性亲和（Brüning 2014 仅报道类胆固醇凝聚效应，未讨论氟特异性；驱动归属为机理层推断）",
+     "basis": "llm_inferred"
+    },
+    "boundary_conditions": [
+     {
+      "text": "证据范围边界：PFOA-脂质界面相互作用接地于 DMPC 双层囊泡模型实验（磷脂囊泡模型膜）；向 DPPC 气-水单层或吸附剂支撑脂质层的外推为推断",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "Abstract / Phys Rev E 89, 040702 (2014)",
+      "quote": "vesicles composed of the phospholipid 1,2-dimyristoyl-sn-glycero-3-phosphatidylcholine under the influence of varying amounts of perfluorooctanoic acid",
+      "scope_match": "Keywords: phospholipid, vesicles, perfluorooctanoic",
+      "source_asset": null
+     },
+     {
+      "text": "膜力学扰动：PFOA 对脂质双层产生类胆固醇膜凝聚/刚化，幅度随全氟化合物量变化；高负载分配改变界面力学，可能削弱界面层动态更新",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "Abstract / Phys Rev E 89, 040702 (2014)",
+      "quote": "Similar to the effect evoked by cholesterol, we attribute the observed lipid bilayer stiffening to a condensing effect of the perfluorinated compound on the membrane.",
+      "scope_match": "Keywords: cholesterol, lipid bilayer, stiffening, condensing",
+      "source_asset": null
+     },
+     {
+      "text": "选择性边界：分配由两亲性/疏水效应驱动（碰巧疏水利用），非氟特异性亲和；脂质疏水域非特异地接纳各类疏水/两亲分子，本身不区分 PFAS 链长、头基或其他疏水污染物（定性，无数值阈值）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "scope_match": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "两亲磷脂界面疏水域可经疏水效应（碰巧疏水利用）富集两亲分子的疏水尾链；该界面富集为两亲污染物提供界面捕获把手，但本身不提供氟特异性选择性，选择性须由头基锚定、链长几何或其他维度另行引入",
+    "verification_quote": "Similar to the effect evoked by cholesterol, we attribute the observed lipid bilayer stiffening to a condensing effect of the perfluorinated compound on the membrane."
+   },
+   "source_doi": "10.1103/PhysRevE.89.040702",
+   "source_page": 1,
+   "source_locator": "Abstract & title / Phys Rev E 89, 040702 (2014)",
+   "source_file": "Phys Rev E 89(4):040702（Brüning & Farago 2014；PubMed efetch 摘要逐字，未做本地全文 PDF 审计）",
+   "functional_groups": [
+    "磷脂双层疏水酰链域"
+   ],
+   "key_structures": [
+    "界面结构"
+   ]
+  }
+ ],
+ "performance_data": [],
+ "engineering_constraints": [
+  {
+   "constraint": "界面动态依赖性",
+   "value": "表面活性物质表面力学功能依赖其向气-水界面的快速吸附与铺展；吸附的分子机制本身尚未完全阐明（Goerke 1998 综述结论）",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "Goerke 1998 BBA 1408:79-89 摘要（PubMed efetch 逐字）：we still do not understand the basic molecular mechanisms underlying surfactant's rapid adsorption to the air-water interface",
+   "source": "literature",
+   "ref_doi": "10.1016/S0925-4439(98)00060-X"
+  },
+  {
+   "constraint": "脂质-蛋白协同组装",
+   "value": "界面功能需疏水表面活性剂蛋白 SP-B/SP-C 与磷脂层协同；SP-C 含富缬氨酸 α 螺旋（PDB 1SPF，猪源，非极性溶剂 NMR），SP-B Mini-B 为脂质结合/表面活性蛋白（PDB 2DWF，人源，SDS 胶束 NMR）",
+   "unit": null,
+   "relevance": "medium",
+   "explanation": "RCSB PDB 1SPF TITLE/KEYWDS（LIPOPROTEIN (SURFACE FILM)，deposited 1994）与 2DWF KEYWDS（Lipid associated protein, SURFACE ACTIVE PROTEIN，deposited 2006）",
+   "source": "literature",
+   "ref_doi": null
+  },
+  {
+   "constraint": "碰巧疏水利用（无氟特异性亲和）",
+   "value": "PFOA 向脂质界面的分配由两亲性/疏水效应驱动；氟碳链入烃基酰链区属碰巧疏水利用，单靠疏水域分配无法获得 PFAS 选择性",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（基于 Brüning 2014 类胆固醇凝聚效应的方向性外推；来源未讨论氟特异性）",
+   "source": "llm_inference",
+   "ref_doi": null
+  },
+  {
+   "constraint": "膜力学扰动",
+   "value": "PFOA 对脂质双层产生类胆固醇凝聚/刚化效应，幅度随全氟化合物量增加；高负载可能削弱界面层动态更新能力",
+   "unit": null,
+   "relevance": "medium",
+   "explanation": "Brüning & Farago 2014 Phys Rev E 89(4):040702 摘要（PubMed efetch 逐字）",
+   "source": "literature",
+   "ref_doi": "10.1103/PhysRevE.89.040702"
+  }
+ ],
+ "narrative": {
+  "entries": [
+   {
+    "source_file": "BBA-Biomembranes 1778:1676-1695（Pérez-Gil 2008，DOI 10.1016/j.bbamem.2008.05.003）+ BBA-Mol Basis Dis 1408:79-89（Goerke 1998，DOI 10.1016/S0925-4439(98)00060-X）+ Phys Rev E 89:040702（Brüning 2014，DOI 10.1103/PhysRevE.89.040702）+ RCSB PDB 1SPF/2DWF",
+    "paper_id": "2008-PerezGil-surfactant-membrane-films-and-2014-Bruning-PFOA-model-membrane",
+    "sections": {
+     "problem_definition": "肺泡气-液界面须被低表面张力膜层持续覆盖以维持呼吸，同时该界面是机体与外源物质接触的前沿。脂质-蛋白复合界面如何动态覆盖整个呼吸表面、调节表面张力并介导分子在界面的相遇与分配，是肺表面活性物质生物物理的基础问题。PFOA 作为两亲分子（全氟碳尾 + 羧酸根头），与脂质两亲物结构类似，其在磷脂界面的行为为两亲污染物-界面相互作用提供机理线索。",
+     "biological_solution": "肺表面活性物质以层状体分泌后，快速发展为覆盖整个呼吸表面的膜基网络（Pérez-Gil 2008 摘要）；界面膜为以 DPPC 为主的磷脂单层 + 疏水表面活性剂蛋白 SP-B/SP-C：SP-C 含富缬氨酸 α 螺旋（PDB 1SPF，非极性溶剂中 NMR，猪源），人源 SP-B Mini-B 构建体在 SDS 胶束中作为脂质结合/表面活性蛋白研究（PDB 2DWF）。表面活性物质快速吸附至气-水界面发挥表面力学功能（Goerke 1998 摘要；该综述亦明示吸附分子机制尚未完全阐明）。在污染物界面相互作用一侧，Brüning 2014 报道 PFOA 在 DMPC 磷脂囊泡双层上产生类似胆固醇的膜凝聚/刚化效应，表明两亲性 PFOA 可分配入脂质界面疏水域。",
+     "key_features": "必须保留：① 动态两亲磷脂界面（疏水酰链域 + 水化极性头基面）；② 快速吸附/界面覆盖与动态更新能力；③ 脂质-蛋白协同组装（疏水界面蛋白辅助磷脂层吸附与稳定）。可灵活调整：载体基底、脂质链组成与相态、界面固定化策略（支撑膜、聚合物垫层、锚定脂质层）。",
+     "design_mapping": "仿生映射：肺表面活性物质动态磷脂界面 → '两亲污染物界面捕获 + NOM 抗污堵'吸附界面设计（框架示例 5）。两亲性 PFOA 经全氟碳尾的疏水分配富集于界面疏水域；水化极性头基面抵抗 NOM/蛋白非特异性黏附。边界声明：此为设计转译/启发（llm_inferred），非 from_source 事实——PFOA-脂质界面证据来自 DMPC 双层囊泡模型实验，向气-水单层外推为推断；分配为碰巧疏水利用（疏水效应），非氟特异性亲和，单靠疏水域分配不提供 PFAS 选择性；NOM 抗污堵为转译假设，须实验验证。",
+     "explainability_anchors": "设计溯源：肺表面活性物质磷脂-蛋白界面在气-液界面的快速吸附/覆盖与动态膜多形性（Pérez-Gil 2008 / Goerke 1998 摘要 + PDB 1SPF/2DWF，from_source）+ 两亲性 PFOA 分配入并凝聚脂质膜（Brüning 2014，from_source）→ '动态两亲界面层：疏水域分配富集两亲污染物 + 水化头基层抗污堵'可迁移原理（机理层）→ PFOA 界面捕获/NOM 抗污堵材料设计（llm_inferred 启发，须实验验证）。"
+    }
+   }
+  ]
+ },
+ "design_translation": [
+  {
+   "idea": "将肺表面活性物质的'动态两亲磷脂界面层'（疏水酰链域 + 水化极性头基面，疏水界面蛋白辅助）转译为吸附剂界面设计：在多孔载体表面构建水化、可动态更新的两亲界面层，以疏水域接纳 PFOA 全氟碳尾的疏水分配实现两亲污染物界面捕获，以水化两性离子头基面抵抗 NOM/蛋白非特异性黏附，实现'界面捕获 + NOM 抗污堵'协同（框架示例 5）",
+   "specific_functional_group": "两性离子磷胆碱/磷酸甜菜碱型头基（水化抗污面）；磷脂酰链或接枝烃基长链（疏水分配域）；可选 SP-C 型富缬氨酸疏水短肽锚定稳定界面层",
+   "material_handle": "介孔二氧化硅或交联聚合物载体表面构建支撑脂质双层（SLB）/锚定双层脂质膜（tBLM），或磷脂-聚合物刷复合界面层；囊泡融合铺展或硅烷偶联引入磷胆碱头基；以链长与不饱和度调节脂链相态与流动性",
+   "target_interaction": "PFOA 全氟碳尾向疏水域的疏水分配与界面富集（碰巧疏水利用）+ 水化两性离子头基层对 NOM/蛋白的非特异性黏附抵抗",
+   "source_tier": "llm_inference",
+   "evidence_tier": "inspiration（原理层外推：表面活性物质界面吸附/覆盖与膜多形性接地于 Pérez-Gil 2008 / Goerke 1998 摘要与 PDB 1SPF/2DWF；PFOA-脂质膜分配-凝聚接地于 Brüning 2014 DMPC 囊泡实验；转译为吸附剂界面捕获与 NOM 抗污堵属 llm_inferred，无吸附实验数据）",
+   "examples": [],
+   "design_principle": "动态两亲磷脂界面可快速吸附覆盖气-液界面、介导两亲分子分配（PFOA 分配入并凝聚脂质膜，类胆固醇效应），且水化极性头基面天然抗非特异性黏附；两要素可分别移植到吸附剂界面",
+   "implementation_example": "支撑 DPPC/磷脂膜或磷胆碱-聚合物刷功能化介孔二氧化硅或水凝胶微球（无实验数据，仅为设计假设）",
+   "constraints": "PFOA 分配为疏水而非氟亲，单靠疏水域分配不提供 PFAS 选择性（其他疏水/两亲物种同样被非特异富集）；脂质层在流动水相中易溶脱/解吸，动态自更新须有能量输入机制（连续补给或聚合物锚定）；脂链相态（凝胶/液晶）随温度与组成改变，影响分配域流动性；NOM 抗污堵为转译假设，须在长时间尺度与真实水质下实验验证",
+   "failure_modes": "脂质层在流动水相溶脱/解吸导致界面贫化；疏水域非特异性富集 NOM 疏水组分造成竞争占位与反向污堵；高负载 PFOA 凝聚/刚化降低界面更新能力；水化头基层在阳离子桥联或高离子强度下对 NOM 沉积失效",
+   "material_realization_examples": []
+  }
+ ],
+ "honesty_ledger": {
+  "facts": [
+   {
+    "type": "mechanism",
+    "index": 0,
+    "name": "肺表面活性物质磷脂单层动态界面屏障与吸附覆盖",
+    "basis": "from_source_corroborated",
+    "note": "Pérez-Gil 2008 BBA 1778:1676-1695 摘要（膜基网络覆盖呼吸表面；动态膜多形性 + 脂质-脂质/脂质-蛋白/蛋白-蛋白相互作用）+ Goerke 1998 BBA 1408:79-89 摘要（快速吸附至气-水界面，并明示机制未完全阐明）+ RCSB PDB 1SPF（猪源 SP-C NMR，富缬氨酸 α 螺旋，KEYWDS LIPOPROTEIN (SURFACE FILM)）/2DWF（人源 SP-B Mini-B，SDS 胶束 NMR，KEYWDS Lipid associated protein / SURFACE ACTIVE PROTEIN）；quote 逐字取自 PubMed efetch 摘要与 RCSB REST 沉积记录，未做全文 PDF 审计"
+   },
+   {
+    "type": "mechanism",
+    "index": 1,
+    "name": "两亲性 PFOA 向脂质界面疏水域的分配（碰巧疏水利用）",
+    "basis": "from_source_verified",
+    "note": "Brüning & Farago 2014 Phys Rev E 89(4):040702：PFOA 在 DMPC 囊泡双层上产生类胆固醇凝聚/刚化效应（摘要逐字）；证据为双层囊泡模型膜，向气-水单层外推为推断；'分配入疏水酰链域'与'疏水而非氟亲'为机理层解读，非来源逐字陈述"
+   }
+  ],
+  "leads": [
+   {
+    "type": "literature_lead",
+    "name": "PFOA/PFAS 对肺表面活性物质（DPPC）气-水单层的直接表面压力实验证据",
+    "note": "Crossref 题录检索未得可直接核验的 PFOA-肺表面活性物质单层实验（检索返回为吸附材料或其他表面活性剂单层研究），未纳入 from_source；若后续取得可核验原文，可补强 PSI-002 的单层层面接地"
+   }
+  ],
+  "inferences": [
+   {
+    "type": "design_translation",
+    "index": 0,
+    "idea": "将肺表面活性物质动态两亲界面转译为吸附剂界面层，实现 PFOA 界面捕获与 NOM 抗污堵协同",
+    "basis": "llm_inferred",
+    "label": "inspiration",
+    "note": "生物原型功能为界面屏障与表面张力调节，非污染物去除；转译为吸附界面设计属原理层外推，无吸附实验数据；NOM 抗污堵为转译假设"
+   },
+   {
+    "type": "mechanism_interpretation",
+    "index": 0,
+    "name": "PFOA 氟碳链入脂质酰链区归因为疏水效应（碰巧疏水利用，非氟特异性亲和）",
+    "basis": "llm_inferred",
+    "label": "boundary_disclosure",
+    "note": "Brüning 2014 仅报道类胆固醇凝聚效应，未讨论氟特异性；驱动归属为机理层推断，用作选择性边界披露"
+   }
+  ],
+  "boundary_notes": [
+   "本原型天然功能为肺泡界面屏障与表面张力调节，非污染物捕获；一切 PFOA 界面捕获/NOM 抗污堵转译均为 design_translation（llm_inferred/inspiration），不得用作 PFOA 吸附的 direct evidence",
+   "PFOA-脂质界面相互作用的 from_source 证据限于 DMPC 双层囊泡模型（Brüning 2014）；向 DPPC 气-水单层或支撑脂质层的外推为推断",
+   "氟碳链入疏水域为碰巧疏水利用（疏水效应），非氟特异性亲和；该机制本身不提供 PFAS 选择性",
+   "无 PFOA 吸附性能数据（qmax 等）；严格未从任何外部污染物知识库搬运性能数值（知识隔离红线）",
+   "候选 PDB 2M6B 经 RCSB REST 核验为人甘氨酸受体 α1 跨膜域结构（Structure of full-length transmembrane domains of human glycine receptor alpha1），与肺表面活性物质无关，已剔除"
+  ],
+  "missing_pdf_items": [
+   "Pérez-Gil 2008 与 Goerke 1998 全文 PDF（quote 逐字取自 PubMed efetch 摘要，接地限于摘要级）",
+   "Brüning 2014 全文 PDF（quote 逐字取自 PubMed efetch 摘要；膜力学定量与浓度依赖细节未审计）",
+   "PDB 1SPF/2DWF 完整 mmCIF 沉积文件（未做本地坐标审计；接地限于 RCSB REST 沉积记录的 TITLE/KEYWDS/实体来源）",
+   "1SPF 沉积引文文献（DOI 未核验，未作 from_source 引用）"
+  ],
+  "generated_by": "manual-curation-2026-07-22",
+  "note": "诚实优先：机制接地限于肺表面活性物质界面生物物理（摘要级）与 PFOA-DMPC 模型膜相互作用（摘要级）；一切污染物捕获转译为 inspiration/外推；氟碳分配标注为碰巧疏水利用"
+ },
+ "boundary_rules": [
+  {
+   "rule": "界面功能依赖脂质-蛋白协同组装：SP-B/SP-C 为脂质结合/表面活性蛋白（SP-C 富缬氨酸 α 螺旋，SP-B Mini-B 于 SDS 胶束中研究），纯磷脂界面缺乏蛋白介导的吸附/铺展辅助",
+   "source_mechanism": "肺表面活性物质磷脂单层的动态界面屏障与表面张力调节",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "PFOA-脂质界面分配证据来自 DMPC 双层囊泡模型实验（Brüning 2014）；向 DPPC 气-水单层或吸附剂支撑脂质层的外推为推断",
+   "source_mechanism": "两亲性污染物向脂质界面疏水域的分配（碰巧疏水利用）",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "PFOA 对脂质双层产生类胆固醇膜凝聚/刚化，幅度随全氟化合物量变化；高负载扰动界面力学",
+   "source_mechanism": "两亲性污染物向脂质界面疏水域的分配（碰巧疏水利用）",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "分配为碰巧疏水利用（两亲性/疏水效应驱动），非氟特异性亲和；疏水域分配本身不提供 PFAS 选择性（定性，无数值阈值）",
+   "source_mechanism": "两亲性污染物向脂质界面疏水域的分配（碰巧疏水利用）",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  },
+  {
+   "rule": "动态界面层须维持吸附/更新能力；静态或被污堵封闭的界面丧失动态屏障功能（定性，无数值阈值）",
+   "source_mechanism": "肺表面活性物质磷脂单层的动态界面屏障与表面张力调节",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  }
+ ]
+}

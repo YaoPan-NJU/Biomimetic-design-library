@@ -1,0 +1,391 @@
+{
+ "id": "asbt-bile-acid-elevator-transporter",
+ "name_zh": "ASBT 胆汁酸电梯型磺酸腔转运体",
+ "name_en": "ASBT Bile-Acid Elevator Sulfonate-Cavity Transporter",
+ "organism": {
+  "scientific": "Neisseria meningitidis（ASBT_NM 细菌同源物，PDB 3ZUY，基因 NMB0705，菌株 MC58）/ 顶端钠依赖胆汁酸转运体 ASBT（SLC10A2）家族",
+  "category": "微生物"
+ },
+ "biomimetic_dimension": "分子仿生",
+ "features": [
+  "特异性识别",
+  "向量传质",
+  "分子筛分"
+ ],
+ "tested_conditions": {
+  "tested_ph_range": null,
+  "tested_temp_range": null,
+  "salinity": null,
+  "note": "ASBT 为整合膜转运蛋白（分子识别/转运原型），本库无其吸附性能测试条件；performance_data 为空，故测试条件全空。"
+ },
+ "library_tier": "extended",
+ "lifecycle_status": "active",
+ "coverage": "partial",
+ "status": "active",
+ "provenance_summary": {
+  "n_papers": 2,
+  "n_verified": 11,
+  "n_unverified": 0,
+  "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与边界条数（ASBT-001 四要素+2 from_source 边界=6，ASBT-002 四要素+1 from_source 边界=5，合计 11）。机制接地限于 ASBT_NM 天然底物牛磺胆酸盐（Hu 2011, PDB 3ZUY）与 SLC10 家族全氟烷基磺酸盐转运（Zhao 2015）；PFBS 应用为设计转译（llm_inferred），无性能数据。quote 取自 PDB 沉积记录与 PubMed/Crossref 题录（可核验），未做全文 PDF 审计。"
+ },
+ "mechanisms": [
+  {
+   "mechanism_id": "ASBT-001",
+   "name": "预组织两亲阴离子腔对牛磺胆酸盐磺酸根头基的识别",
+   "description": "ASBT_NM（PDB 3ZUY）以核心域与板域间的大型内向疏水腔结合天然底物牛磺胆酸盐（taurocholate，牛磺酸共轭胆汁酸，其牛磺酸末端为磺酸根头基 -SO3⁻）；腔的极性/钠端（两个 Na⁺ 位点 AC1：Ser114/Asn115/Ser128/Thr132/Glu260，AC2：Gln77/Gly110/Glu260/Val261/Met263/Gln264）识别阴离子头基，疏水壁（SITE AC3 记 Gly12/Lys13/Phe15/Phe28/Ile47/Thr112/Ala113/Val116/Leu120/Ser199/Val200/Ile203/Asn295 等）容纳甾体骨架，对两亲阴离子实现头基与骨架的同时识别",
+   "基本原理": "预组织的两亲腔以极性/带电端（Na⁺ 位点与极性残基）锚定阴离子头基、以疏水壁容纳疏水骨架，对两亲阴离子底物实现头基与骨架的同时识别，天然区分两亲阴离子与背景离子",
+   "source": "literature",
+   "ref_doi": "10.1038/nature10450",
+   "verification": "corroborated",
+   "verification_quote": "The ASBT(NM) structure was captured with the substrate taurocholate present, bound between the core and panel domains in a large, inward-facing, hydrophobic cavity.",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "天然底物牛磺胆酸盐（taurocholate）——牛磺酸共轭胆汁酸，疏水甾体骨架 + 牛磺酸末端磺酸根头基（-SO3⁻），为两亲阴离子底物；PDB 3ZUY 以 TCH 配体捕获该底物于核心域-板域间腔（与全氟烷基磺酸盐 PFBS 的磺酸根头基 + 疏水尾链同源两亲架构）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/nature10450",
+     "locator": "abstract, p.408",
+     "quote": "The ASBT(NM) structure was captured with the substrate taurocholate present, bound between the core and panel domains in a large, inward-facing, hydrophobic cavity.",
+     "scope_match": "Keywords: taurocholate, substrate, hydrophobic cavity"
+    },
+    "bio_structure": {
+     "text": "底物腔位于核心域与板域之间：核心域六螺旋携带两个钠离子，其余四螺旋排成平板状板域；PDB 3ZUY SOURCE 记录源生物为 Neisseria meningitidis（ASBT_NM，基因 NMB0705）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/nature10450",
+     "locator": "abstract, p.408",
+     "quote": "A core domain of six helices harbours two sodium ions, and the remaining four helices pack in a row to form a flat, 'panel'-like domain.",
+     "scope_match": "Keywords: core domain, sodium ions, panel"
+    },
+    "interaction": {
+     "text": "PDB 3ZUY 沉积记录 SITE AC3（REMARK 800 注释为 TCH A1312 结合位点）列出牛磺胆酸盐接触残基 Gly12/Lys13/Phe15/Phe28/Ile47/Thr112/Ala113/Val116（及 Leu120/Ser199/Val200/Ile203/Asn295 等）；两个 Na⁺ 位点 AC1/AC2 由 Ser/Asn/Thr/Glu/Gln 等配位",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/nature10450",
+     "locator": "PDB 3ZUY, SITE AC3 (p.408)",
+     "quote": "SITE 1 AC3 16 GLY A 12 LYS A 13 PHE A 15 PHE A 28 ILE A 47 THR A 112 ALA A 113 VAL A 116",
+     "scope_match": "Keywords: gly, lys, phe"
+    },
+    "why_it_works": {
+     "text": "腔周残基对配体结合具功能相关性：Hu 2011 指出该腔附近残基已被证明影响人 ASBT 特异抑制剂的结合，表明预组织两亲腔是底物/配体识别的结构基础；极性/钠端锚定阴离子头基、疏水壁容纳甾体骨架的双重读取赋予两亲阴离子选择性（背景离子缺乏疏水骨架，难以同时满足两端识别）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/nature10450",
+     "locator": "abstract, p.408",
+     "quote": "Residues near this cavity have been shown to affect the binding of specific inhibitors of human ASBT.",
+     "scope_match": "Keywords: cavity, binding, inhibitors"
+    },
+    "boundary_conditions": [
+     {
+      "text": "链长/家族特异性：在人/大鼠中，人 ASBT 仅转运长链 PFOS、大鼠 ASBT 不转运所测任一全氟烷基磺酸盐；短链 PFBS 由家族成员 NTCP 转运而非 ASBT。即 ASBT 腔的链长选择性偏向长链，对 C4 PFBS 无天然转运",
+      "parameter": "chain_length_specificity",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "abstract, p.363",
+      "quote": "Only PFOS was transported by human ASBT whereas rat ASBT did not transport any of the tested PFASs.",
+      "scope_match": "Keywords: PFOS, human ASBT, PFASs",
+      "source_asset": null
+     },
+     {
+      "text": "链长依赖 Km：家族成员人 NTCP 对 PFBS/PFHxS/PFOS 的 Km 为 39.6/112/130 µM，随全氟碳链增长 Km 升高（亲和力随链长变化），佐证该识别体系对全氟烷基磺酸盐的链长读取（数值为 NTCP 旁证，非 ASBT 对 PFBS 的性能）",
+      "parameter": "chain_length_affinity",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "abstract, p.363",
+      "quote": "Kinetics with human NTCP revealed Km values of 39.6, 112, and 130 µM for PFBS, PFHxS, and PFOS, respectively.",
+      "scope_match": "Keywords: Km, PFBS, PFOS",
+      "source_asset": null
+     },
+     {
+      "text": "预组织两亲腔需维持去溶剂化/低介电微环境；若完全暴露于体相水，阴离子头基的离子对/氢键识别被水竞争削弱（定性，无数值阈值）",
+      "parameter": "wet_stability",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "预组织的两亲阴离子腔——极性/钠端识别阴离子头基、疏水壁容纳疏水骨架，并具链长容纳几何——可在电梯型交替通道中天然区分两亲阴离子底物与背景离子；该头基 + 链长双重读取原理可外推至结构类似的两亲阴离子（如全氟烷基磺酸盐），但 ASBT 自身对短链 PFBS 无天然转运（由 NTCP 承担），家族链长偏好须在转译时正视",
+    "verification_quote": "The ASBT(NM) structure was captured with the substrate taurocholate present, bound between the core and panel domains in a large, inward-facing, hydrophobic cavity."
+   },
+   "source_doi": "10.1038/nature10450",
+   "source_page": 408,
+   "source_locator": "abstract, p.408",
+   "source_file": "RCSB PDB 3ZUY 沉积记录（TITLE/SOURCE/SITE/FORMUL）与 Hu 2011 Nature 摘要（PMC3198845）；Zhao 2015 Toxicol Sci 摘要（PMC4607751）旁证；未做全文 PDF 审计",
+   "functional_groups": [
+    "钠离子配位残基（Ser/Asn/Thr/Glu/Gln 侧链，Na⁺ 位点 AC1/AC2）",
+    "极性/带电头基识别残基（Lys/Asn/Ser/Thr）",
+    "疏水甾体容纳壁（Phe/Ile/Leu/Val/Ala/Gly 疏水残基）",
+    "预组织两亲阴离子腔（核心域-板域界面）"
+   ],
+   "key_structures": [
+    "识别结构",
+    "转运结构"
+   ]
+  },
+  {
+   "mechanism_id": "ASBT-002",
+   "name": "双钠协同驱动的电梯型交替通道（构象循环原理）",
+   "description": "ASBT_NM 含两组反向五跨膜螺旋重复；核心域（六螺旋，含两个 Na⁺ 位点 AC1/AC2）承载底物，板域（四螺旋平板）作支架；底物牛磺胆酸盐结合于核心域与板域间内向腔。Hu 2011 由底物位置与分子构架提出转运机制雏形，后续 ASBT/SLC10 工作将其归为电梯型——核心域携底物与两个 Na⁺ 相对板域/支架移动，实现内向↔外向交替通道",
+   "基本原理": "钠离子协同结合稳定底物结合态的核心域构象，底物与两个 Na⁺ 共转运；核心域相对板域的电梯型位移实现内向↔外向交替通道，使两亲阴离子底物跨膜易位",
+   "source": "literature",
+   "ref_doi": "10.1038/nature10450",
+   "verification": "corroborated",
+   "verification_quote": "The position of the taurocholate molecule, together with the molecular architecture, suggests the rudiments of a possible transport mechanism.",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "两亲阴离子底物牛磺胆酸盐（taurocholate）为转运对象，与两个 Na⁺ 协同结合于核心域-板域间腔；牛磺胆酸盐牛磺酸末端的磺酸根头基与 PFBS 磺酸根同源",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/nature10450",
+     "locator": "abstract, p.408",
+     "quote": "The ASBT(NM) structure was captured with the substrate taurocholate present, bound between the core and panel domains in a large, inward-facing, hydrophobic cavity.",
+     "scope_match": "Keywords: taurocholate, substrate, core and panel"
+    },
+    "bio_structure": {
+     "text": "ASBT_NM 含两组反向五跨膜螺旋重复：核心域（六螺旋，含两 Na⁺）与板域（四螺旋平板）；该双域架构是电梯型转运中核心域相对板域位移的结构基础",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/nature10450",
+     "locator": "abstract, p.408",
+     "quote": "ASBT(NM) contains two inverted structural repeats of five transmembrane helices.",
+     "scope_match": "Keywords: inverted, transmembrane helices, repeats"
+    },
+    "interaction": {
+     "text": "PDB 3ZUY 沉积记录两个 Na⁺ 位点：SITE AC1（注释为 NA A1310 结合位点）残基 Ser114/Asn115/Ser128/Thr132/Glu260；SITE AC2（NA A1311）残基 Gln77/Gly110/Glu260/Val261/Met263/Gln264。钠离子经这些极性残链配位，协同稳定底物结合态",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/nature10450",
+     "locator": "PDB 3ZUY, SITE AC1 (p.408)",
+     "quote": "SITE 1 AC1 5 SER A 114 ASN A 115 SER A 128 THR A 132",
+     "scope_match": "Keywords: ser, asn, thr"
+    },
+    "why_it_works": {
+     "text": "Hu 2011 由底物（牛磺胆酸盐）位置与分子构架提出转运机制雏形；后续 ASBT/SLC10 机制工作据双域架构将转运归为电梯型——核心域携底物与 Na⁺ 相对板域/支架移动实现交替通道。钠协同降低底物结合态能量、电梯型位移完成跨膜易位（电梯型命名为公认机制框架，结构要素 from_source 接地）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/nature10450",
+     "locator": "abstract, p.408",
+     "quote": "The position of the taurocholate molecule, together with the molecular architecture, suggests the rudiments of a possible transport mechanism.",
+     "scope_match": "Keywords: taurocholate, molecular architecture, transport mechanism"
+    },
+    "boundary_conditions": [
+     {
+      "text": "钠依赖：全氟烷基磺酸盐（PFBS/PFHxS/PFOS）经 SLC10 家族的摄取为钠依赖（无钠则无摄取），与 ASBT 核心域两个 Na⁺ 位点的钠协同一致",
+      "parameter": "sodium_dependence",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "abstract, p.363",
+      "quote": "The results demonstrated sodium-dependent uptake for all 3 PFASs.",
+      "scope_match": "Keywords: sodium-dependent, uptake, PFASs",
+      "source_asset": null
+     },
+     {
+      "text": "完整电梯型交替通道需核心域相对板域/支架的构象位移与钠梯度；固定化为静态吸附位点时构象循环受限，可移植限于'预组织腔 + 链长几何'的识别原理层，而非完整跨膜转运循环（定性，无数值阈值）",
+      "parameter": "conformational_cycle",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "钠协同稳定底物结合态、核心域相对板域电梯型位移实现交替通道，是两亲阴离子跨膜转运的构象循环原理；转译为吸附材料时，完整转运循环不可移植，可移植的是'预组织两亲阴离子腔 + 链长容纳几何'的识别原理",
+    "verification_quote": "The position of the taurocholate molecule, together with the molecular architecture, suggests the rudiments of a possible transport mechanism."
+   },
+   "source_doi": "10.1038/nature10450",
+   "source_page": 408,
+   "source_locator": "abstract, p.408",
+   "source_file": "RCSB PDB 3ZUY 沉积记录（SITE AC1/AC2）与 Hu 2011 Nature 摘要（PMC3198845）；Zhao 2015 Toxicol Sci 摘要（PMC4607751）旁证；未做全文 PDF 审计",
+   "functional_groups": [
+    "两组反向五跨膜螺旋重复",
+    "核心域（六螺旋，两 Na⁺ 位点 AC1/AC2）",
+    "板域/支架域（四螺旋平板）",
+    "钠协同位点（Ser/Asn/Thr/Glu/Gln 配位 Na⁺）"
+   ],
+   "key_structures": [
+    "转运结构",
+    "识别结构"
+   ]
+  }
+ ],
+ "performance_data": [],
+ "engineering_constraints": [
+  {
+   "constraint": "膜整合形态与去垢剂依赖",
+   "value": "ASBT_NM 为整合膜蛋白，PDB 3ZUY 以去垢剂 LDAO（lauryl dimethylamine-N-oxide）胶束结晶，含多个 LDA 配体；单体约 33.9 kDa（PDB 3ZUY polymer_entity formula_weight），组装体 molecular_weight 37.59 kDa。识别腔依赖跨膜三级结构与脂质/去垢剂微环境，须移植/固定于固体载体方可用作吸附",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "RCSB PDB 3ZUY：FORMUL 记 LDA 去垢剂（C14 H31 N O），polymer_entity formula_weight 33.902 kDa，entry molecular_weight 37.59 kDa",
+   "source": "literature",
+   "ref_doi": "10.1038/nature10450"
+  },
+  {
+   "constraint": "电梯型构象循环依赖",
+   "value": "完整转运依赖核心域相对板域/支架的电梯型构象位移与钠梯度驱动的交替通道；固定化为静态吸附位点时丧失跨膜转运循环，仅保留识别腔几何与头基/链长读取",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（基于 Hu 2011 核心域-板域双域架构与电梯型框架）",
+   "source": "llm_inference",
+   "ref_doi": null
+  },
+  {
+   "constraint": "链长选择性约束（转译风险）",
+   "value": "SLC10 家族对全氟烷基磺酸盐呈链长依赖：人 NTCP Km PFBS 39.6 < PFHxS 112 < PFOS 130 µM；人 ASBT 仅转运 PFOS、大鼠 ASBT 不转运所测任一 PFAS，PFBS 由 NTCP 而非 ASBT 转运。ASBT 衍生腔可能继承偏向长链的选择性，对短链 PFBS 的亲和力/选择性须实验验证",
+   "unit": "µM（NTCP Km，旁证）",
+   "relevance": "high",
+   "explanation": "Zhao 2015 Toxicol Sci 摘要：human NTCP Km 39.6/112/130 µM（PFBS/PFHxS/PFOS）；human ASBT 仅转运 PFOS，rat ASBT 不转运任一被测 PFAS",
+   "source": "literature",
+   "ref_doi": "10.1093/toxsci/kfv102"
+  }
+ ],
+ "narrative": {
+  "entries": [
+   {
+    "source_file": "RCSB PDB 3ZUY / Hu 2011 Nature (DOI 10.1038/nature10450, PMC3198845) + Zhao 2015 Toxicol Sci (DOI 10.1093/toxsci/kfv102, PMC4607751)",
+    "paper_id": "2011-Hu-ASBT-NM-crystal-structure",
+    "sections": {
+     "problem_definition": "胆固醇经转化为胆汁酸排出，约半数胆固醇由此清除；肠腔释放的胆汁酸须在含高浓度背景离子的肠内容物中被顶端钠依赖胆汁酸转运体（ASBT，SLC10A2）高效、选择性地重吸收以完成肠肝循环。蛋白如何以钠协同机制选择性识别两亲胆汁酸阴离子（疏水甾体骨架 + 极性阴离子头基）并驱动其跨膜易位，是分子识别与转运的基础问题。",
+     "biological_solution": "Hu 等解析 Neisseria meningitidis 的 ASBT 细菌同源物 ASBT_NM（PDB 3ZUY，2.2 Å）。结构含两组反向五跨膜螺旋重复；核心域六螺旋携带两个钠离子，其余四螺旋排成平板状板域（摘要逐字）。底物牛磺胆酸盐（taurocholate，牛磺酸共轭胆汁酸，牛磺酸末端为磺酸根头基）被捕获于核心域与板域间大型内向疏水腔（摘要逐字）；PDB SITE 记录该腔结合 TCH（AC3：Gly12/Lys13/Phe15/Phe28/Ile47/Thr112/Ala113/Val116/Leu120/Ser199/Val200/Ile203/Asn295 等），两个 Na⁺ 位点为 AC1（Ser114/Asn115/Ser128/Thr132/Glu260）与 AC2（Gln77/Gly110/Glu260/Val261/Met263/Gln264）。Hu 由底物位置与分子构架提出转运机制雏形；后续 ASBT/SLC10 工作将其归为核心域携底物与 Na⁺ 相对板域移动的电梯型交替通道。Zhao 2015 在人/大鼠肝细胞与转染细胞实测：SLC10 家族胆汁酸转运体（NTCP、ASBT）参与全氟烷基磺酸盐（PFAS）处置，呈钠依赖与链长依赖；人 NTCP 转运 PFBS（Km 39.6 µM），但人 ASBT 仅转运 PFOS、大鼠 ASBT 不转运任一被测 PFAS。",
+     "key_features": "必须保留：① 预组织两亲阴离子腔——极性/钠端（Na⁺ 位点与极性残基）锚定阴离子头基、疏水壁（Phe/Ile/Leu/Val）容纳疏水骨架；② 链长容纳几何（腔尺寸对底物链长的匹配）；③ 钠协同（两个 Na⁺ 稳定底物结合态）。天然机制类别：钠协同电梯型跨膜转运（动态传质类）。可灵活调整（转译层）：载体骨架、给体/疏水壁化学、腔尺寸与链长几何；完整跨膜转运循环不可移植。",
+     "design_mapping": "仿生映射：ASBT 预组织两亲阴离子腔 + 链长几何 → 两亲阴离子识别位点。对 PFBS（全氟丁烷磺酸，C4F9SO3⁻），其磺酸根头基（-SO3⁻）与牛磺胆酸盐的牛磺酸磺酸根头基同源，全氟碳尾对应疏水骨架，原理上可由'极性/氢键给体端锚定磺酸根 + 疏水/氟亲壁容纳全氟碳尾 + 链长几何'识别。重要边界：此为设计转译/启发（llm_inferred），非 from_source 事实——Zhao 2015 实测 ASBT 自身不转运 PFBS（仅人 ASBT 转运 PFOS），PFBS 由家族成员 NTCP 转运；ASBT 腔可能继承偏向长链的选择性，PFBS 亲和力/选择性须实验验证。本原型与库内 NTCP 原型属同家族不同蛋白/机制（ASBT 电梯型，NTCP 为另一 SLC10 成员），不重复。",
+     "explainability_anchors": "设计溯源：牛磺胆酸盐两亲阴离子识别（PDB 3ZUY，from_source：内向疏水腔、双 Na⁺ 位点、SITE 残基）→ '预组织两亲阴离子腔 + 链长容纳几何 + 钠协同'可迁移原理 → PFBS 磺酸根头基 + 全氟碳尾识别（llm_inferred 启发；ASBT 自身不转运 PFBS，链长偏好可能不利短链，须实验验证）。"
+    }
+   }
+  ]
+ },
+ "design_translation": [
+  {
+   "idea": "将 ASBT 的'预组织两亲阴离子腔（极性/钠端锚定阴离子头基 + 疏水壁容纳疏水骨架）+ 链长容纳几何'移植到多孔固体载体，面向 PFBS 全氟丁烷磺酸：以预组织阳离子/中性氢键给体（季铵、胍、脲/硫脲、酰胺）阵列锚定四面体磺酸根头基，以疏水/氟亲孔壁容纳全氟丁基尾链，并按 C4 链长设定腔深/腔径几何",
+   "specific_functional_group": "阴离子头基锚定基团（季铵/胍/脲/硫脲/酰胺，按与磺酸根三氧几何互补预组织）+ 疏水/氟亲壁（烃链或氟碳链）容纳全氟碳尾",
+   "material_handle": "在介孔二氧化硅或聚合物骨架上经硅烷偶联/表面引发聚合接枝阳离子或脲/硫脲单体，借分子印迹或刚性间隔臂预组织头基锚定位点；孔壁以烃/氟碳链修饰营造疏水/氟亲微环境并按 C4 链长控制腔几何",
+   "target_interaction": "阳离子/氢键给体与 PFBS 磺酸根头基的方向性离子对/氢键 + 疏水/氟亲壁对全氟碳尾的疏水与氟亲作用 + 腔几何对 C4 链长的尺寸匹配",
+   "source_tier": "llm_inference",
+   "evidence_tier": "inspiration（原理层外推：ASBT 机制接地于天然底物牛磺胆酸盐；PFBS 磺酸根转译为 llm_inferred；且 Zhao 2015 实测 ASBT 自身不转运 PFBS、仅家族成员 NTCP 转运，属警示性启发，无 PFBS 直接结合证据）",
+   "examples": [],
+   "design_principle": "ASBT 证明预组织两亲阴离子腔（极性/钠端 + 疏水壁）与链长几何可在钠协同下选择性识别两亲胆汁酸阴离子（PDB 3ZUY）；牛磺胆酸盐磺酸根头基与 PFBS 磺酸根头基同源，原理上可外推，但 ASBT 对短链 PFBS 无天然转运、家族链长偏好可能不利短链",
+   "implementation_example": "阳离子/脲-硫脲功能化、具疏水/氟亲孔壁与 C4 链长几何的介孔二氧化硅或聚合物（无实验数据，仅为设计假设）",
+   "constraints": "磺酸根（-1）与天然底物牛磺胆酸盐在两亲架构上同源但骨架不同；ASBT 自身不转运 PFBS（Zhao 2015），腔可能继承偏向长链（PFOS）的选择性，对短链 PFBS 的亲和力/选择性须实验验证；水相中水竞争与共存阴离子（硫酸根、氯离子）干扰为关键挑战",
+   "failure_modes": "腔继承家族长链偏好而对 C4 PFBS 适配不足；头基锚定过强致非特异阴离子共吸附；氟亲壁致全氟碳尾非特异吸附降低选择性；给体暴露于体相水被氢键竞争淬灭；预组织刚性与底物适配失衡",
+   "material_realization_examples": []
+  }
+ ],
+ "honesty_ledger": {
+  "facts": [
+   {
+    "type": "mechanism",
+    "index": 0,
+    "name": "预组织两亲阴离子腔对牛磺胆酸盐磺酸根头基的识别",
+    "basis": "from_source_corroborated",
+    "note": "Hu 2011（PDB 3ZUY：牛磺胆酸盐结合于核心域-板域间大型内向疏水腔；核心域六螺旋含两 Na⁺；SITE AC3 记 TCH 结合残基 Gly12/Lys13/Phe15/Phe28/Ile47/Thr112/Ala113/Val116 等；AC1/AC2 钠位点；腔周残基影响人 ASBT 抑制剂结合）；quote 取自 PubMed 摘要（PMC3198845）与 PDB 沉积记录 SITE，未做全文 PDF 审计"
+   },
+   {
+    "type": "mechanism",
+    "index": 1,
+    "name": "双钠协同电梯型交替通道（构象循环原理）",
+    "basis": "from_source_corroborated",
+    "note": "Hu 2011（两组反向五跨膜螺旋重复；核心域/板域；两 Na⁺ 位点 AC1 Ser114/Asn115/Ser128/Thr132/Glu260、AC2 Gln77/Gly110/Glu260/Val261/Met263/Gln264；底物位置与构架提示转运机制雏形）；电梯型命名为后续 ASBT/SLC10 机制工作确立的公认框架，本条未取 'elevator' 逐字 quote，结构要素 from_source 接地，未做全文 PDF 审计"
+   },
+   {
+    "type": "boundary",
+    "index": 0,
+    "name": "链长/家族特异性与 PFBS 转运归属（Zhao 2015）",
+    "basis": "from_source_verified",
+    "note": "Zhao 2015 Toxicol Sci（PMC4607751）实测：人/大鼠 NTCP 转运 PFBS/PFHxS/PFOS，人 NTCP Km 39.6/112/130 µM、大鼠 NTCP Km 76.2/294 µM（PFBS/PFHxS）；人 ASBT 仅转运 PFOS、大鼠 ASBT 不转运任一被测 PFAS；PFAS 摄取为钠依赖。quote 取自 PubMed 摘要与 Crossref 标题，未做全文 PDF 审计"
+   }
+  ],
+  "leads": [
+   {
+    "type": "lead",
+    "index": 0,
+    "name": "SLC10 两亲阴离子腔对全氟烷基磺酸盐的家族级识别",
+    "basis": "from_source",
+    "note": "Zhao 2015 证明 SLC10 胆汁酸转运体家族（NTCP/ASBT）以钠依赖、链长依赖方式处置全氟烷基磺酸盐；PFBS（C4）由 NTCP 转运而非 ASBT。lead：ASBT 作为该家族结构原型，其预组织两亲阴离子腔 + 链长几何是 PFAS 识别的原理来源，但具体到 ASBT 腔，短链 PFBS 可能不利（家族偏好长链 PFOS）；须以 NTCP 腔或工程腔实验验证 PFBS 识别"
+   }
+  ],
+  "inferences": [
+   {
+    "type": "design_translation",
+    "index": 0,
+    "idea": "将 ASBT 预组织两亲阴离子腔 + 链长几何移植到多孔载体识别 PFBS 磺酸根头基 + 全氟碳尾",
+    "basis": "llm_inferred",
+    "label": "inspiration",
+    "note": "PFBS（C4F9SO3⁻）磺酸根头基与牛磺胆酸盐牛磺酸磺酸根同源、全氟碳尾对应疏水骨架；但 ASBT 自身不转运 PFBS（Zhao 2015，仅 NTCP 转运）、家族链长偏好可能偏向长链，属警示性原理外推，无 PFBS 直接结合证据，亲和力/选择性须实验验证"
+   }
+  ],
+  "boundary_notes": [
+   "本原型天然底物为牛磺胆酸盐（两亲阴离子，牛磺酸末端磺酸根头基）；机制 from_source 接地限于 Hu 2011 的 ASBT_NM（Neisseria meningitidis，PDB 3ZUY）结构与 Zhao 2015 的 SLC10 家族 PFAS 转运数据",
+   "关键诚实边界：Zhao 2015 实测人 ASBT 仅转运 PFOS、大鼠 ASBT 不转运任一被测 PFAS；PFBS（C4 短链）由家族成员 NTCP 转运（人 NTCP Km 39.6 µM），ASBT 自身不转运 PFBS。故 PFBS 与本原型关系为家族/原理层启发（警示性），非 ASBT-PFBS 直接转运事实，不得用作 PFBS 的 direct evidence",
+   "源生物订正：PDB 3ZUY 的 SOURCE 记录为 ORGANISM_SCIENTIFIC: NEISSERIA MENINGITIDIS（基因 NMB0705，菌株 MC58），即 ASBT_NM；任务简报标注的 ASBT_Yf（Yersinia frederiksenii）与 3ZUY 不符，已据 PDB 沉积记录订正。候选 3ZVY 经 RCSB 核验为 UHRF1-PHD（人源 PHD 指与组蛋白 H3 复合物），与 ASBT 无关，已排除",
+   "电梯型（elevator）为 ASBT/SLC10 家族已确立的转运机制分类；Hu 2011 提供结构基础（内向构象、核心/板域双域、双 Na⁺、底物位置）并提出'转运机制雏形'，电梯型命名属后续机制工作的共识框架，未取到逐字 'elevator' quote",
+   "PFBS 吸附应用全部为 design_translation（llm_inferred/inspiration）；performance_data 严格为空，未从外部污染物知识库搬运任何 qmax/Kd/去除率",
+   "边界中一切 PFBS 亲和力/链长适配的定性判断为 llm_inferred，不带数值阈值，gate_level=soft；Zhao 2015 的 Km 数值仅作家族链长依赖的旁证（非本原型对 PFBS 的性能）"
+  ],
+  "missing_pdf_items": [
+   "Hu 2011 Nature 全文 PDF（quote 取自 PubMed 摘要与 PDB 3ZUY 沉积记录 SITE/COMPND/SOURCE）",
+   "Zhao 2015 Toxicol Sci 全文 PDF（quote 取自 PubMed 摘要与 Crossref 标题）",
+   "ASBT 电梯型机制后续结构文献（如 ASBT_Yf 等 Rizwan/Drew 系列）未全文审计——电梯型命名按公认机制框架陈述",
+   "未对 PDB 3ZUY 做本地坐标级氢键/距离审计；SITE 残基取自 RCSB 沉积记录 SITE 字段（非坐标直测）"
+  ],
+  "generated_by": "manual-curation-2026-07-22",
+  "note": "诚实优先：ASBT 机制接地限于天然底物牛磺胆酸盐（Hu 2011, PDB 3ZUY）与 SLC10 家族 PFAS 转运数据（Zhao 2015）；PFBS 应用为警示性 inspiration——ASBT 自身不转运 PFBS，仅家族成员 NTCP 转运；源生物已由 ASBT_Yf 订正为 ASBT_NM（Neisseria meningitidis）"
+ },
+ "boundary_rules": [
+  {
+   "rule": "两亲阴离子底物识别：腔识别牛磺胆酸盐类两亲阴离子（阴离子头基 + 疏水骨架），非两亲或尺寸失配分子匹配差",
+   "source_mechanism": "预组织两亲阴离子腔对牛磺胆酸盐磺酸根头基的识别",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "链长/家族特异性与 PFBS 归属：ASBT 自身仅转运长链 PFOS、不转运 PFBS；PFBS 由家族成员 NTCP 转运，家族对全氟烷基磺酸盐呈链长依赖（Zhao 2015）",
+   "source_mechanism": "预组织两亲阴离子腔对牛磺胆酸盐磺酸根头基的识别",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "钠依赖：底物/全氟烷基磺酸盐摄取为钠依赖，核心域含两个 Na⁺ 位点（AC1/AC2）",
+   "source_mechanism": "双钠协同电梯型交替通道（构象循环原理）",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "完整电梯型跨膜转运循环不可移植于固定化吸附材料，可移植限于'预组织两亲阴离子腔 + 链长容纳几何'识别原理层（定性）",
+   "source_mechanism": "双钠协同电梯型交替通道（构象循环原理）",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  },
+  {
+   "rule": "预组织两亲腔需维持去溶剂化/低介电微环境，完全溶剂化削弱阴离子头基识别（定性，无数值阈值）",
+   "source_mechanism": "预组织两亲阴离子腔对牛磺胆酸盐磺酸根头基的识别",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  }
+ ]
+}

@@ -1031,6 +1031,18 @@
       "weight": 0.7,
       "mechanism_summary": "人 TTR 四聚体甲状腺素通道以 Lys15/Ser117/Thr119 酚羟基锚簇 + Leu17/Ala108/Leu110 卤素疏水口袋识别 T4，OH-PCB 与卤代酚（五氯苯酚、溴代酚）竞争占据同一通道（PDB 2ROX/2G5U），构成'酚羟基锚定 + 卤素取代口袋'的酚类污染物仿生识别分子原型",
       "design_hint": "在低极性孔壁预组织与酚羟基几何互补的阳离子/中性氢键给体锚阵列（胍基/脲/硫脲型）并构筑卤亲/疏水口袋；注意 BPA 双酚基序与 T4 单酚取向/位阻差异，特异性须按双酚几何在材料层构建（转译层启发，须实验验证）"
+     },
+     {
+      "id": "p450bisd-bisphenol-monooxygenase",
+      "weight": 0.7,
+      "mechanism_summary": "Sphingobium sp. AO1 的 P450bisd 单加氧酶经底物口袋几何将双酚 A 定位于活化氧而执行 ipso-羟基化降解，是自然界处理 BPA 的真实酶学方案；其'刚性芳香夹持底物口袋 + 活化氧几何对双酚桥键的断裂识别'可转译为口袋几何层识别原理（仅口袋几何可转译，活化氧催化属降解而非吸附）。",
+      "design_hint": "以刚性芳香孔壁 + 按双酚 A 两端酚羟基间距预组织的氢键识别位点构筑尺寸匹配夹持空腔（分子印迹聚合物/COF），借鉴天然口袋对双酚骨架的几何夹持定位；若目标为降解须另引入催化位点并核验产物雌激素活性不升高。"
+     },
+     {
+      "id": "pxr-xenobiotic-receptor-promiscuity",
+      "weight": 0.5,
+      "mechanism_summary": "人 PXR 以大体积构象自适应疏水腔加少量极性锚对结构多样的亲脂异生物质呈定向混杂识别（PDB 1ILH/1SKX：SR12813 取三种取向、与利福平共享腔壁残基），双酚类作为亲脂异生物质可被此混杂腔碰巧捕获，启发对双酚类混合物的广谱识别（机制层级为异生物质感知而非 BPA 专一去除）",
+      "design_hint": "在孔壁构筑大体积构象自适应疏水腔加稀疏预组织极性锚（识别酚羟基），取广谱/类选择性而非单一锁钥，面向双酚类混合物；注意 PXR 天然功能为异生物质感知-解毒、双酚为碰巧配体，BPA 亲和力与选择性须实验验证"
      }
     ]
    },
@@ -1041,6 +1053,22 @@
       "weight": 0.7,
       "mechanism_summary": "FcRn 以可滴定组氨酸随 pH 质子化/去质子化可逆切换对 IgG Fc 的亲和力（酸性结合、中性释放），并以酸性-中性双区室实现回收循环；启发 ROX（洛克沙胂，含砷酸根/酚氧负离子头基的可电离有机砷酚）的 pH 摆动吸附-再生",
       "design_hint": "在载体上构筑含可滴定基团（咪唑/吡啶/胺/羧基，pKa 落于捕获与再生 pH 之间）的识别位点，捕获 pH 质子化吸附 ROX 头基、再生 pH 去质子化脱附，实现循环再生；识别内核须与 pH 门控耦合并实验验证"
+     }
+    ]
+   },
+   "2,6-DCP": {
+    "prototypes": [
+     {
+      "id": "chlorophenol-hydroxylase-regioselective",
+      "weight": 0.7,
+      "mechanism_summary": "氯酚羟化酶以与底物取代模式互补的活性位轮廓实现区域选择性芳香羟基化（TcpA 对 2,4,6-TCP 的 C-4 单加氧；TftD/TcpA 因取代模式不同而结构可分）；2,6-DCP 双邻位氯阻碍羟基化，其取代模式可被活性位轮廓读取区分",
+      "design_hint": "仅取活性位轮廓读取（不复制催化）：构筑与 2,6-二氯取代轮廓互补的刚性识别腔（分子印迹/刚性笼），形状选择性识别 2,6-DCP 并排除其他氯酚异构体，选择性须实验验证"
+     },
+     {
+      "id": "hemoglobin-bohr-ph-allostery",
+      "weight": 0.7,
+      "mechanism_summary": "血红蛋白 Bohr 效应经多组氨酸（His146β/HC3 等）盐桥网络将质子化耦联于 T/R 四级开关，使亲和力随 pH 可逆切换；启发 2,6-DCP（2,6-二氯酚，弱酸酚类，pKa 6.79）酚/酚氧负离子形态切换的 pH 摆动吸附-再生",
+      "design_hint": "在多孔载体构筑高密度可滴定咪唑/吡啶/叔胺位点阵列（pKa 经微环境调校落于捕获与再生 pH 之间），借位点电荷态/氢键能力切换实现 2,6-DCP 的 pH 摆动吸附-释放；协同锐度为原理借用（聚合物位点 Hill 约 1），须实验验证"
      }
     ]
    }
@@ -1113,6 +1141,12 @@
       "weight": 0.7,
       "mechanism_summary": "OAT4 以阴离子头基阳离子/极性锚 + 有限容积疏水骨架口袋两点位构型识别硫酸结合型有机阴离子，其口袋容积窗口与交换再生逻辑启发对全氟烷基链长（C8/C4）的选择性识别",
       "design_hint": "在多孔载体构建头基锚（季铵/胍/脲）+ 孔宽可控疏水孔道两点位，以竞争阴离子或 pH 切换交换驱动力实现再生"
+     },
+     {
+      "id": "pulmonary-surfactant-phospholipid-interface",
+      "weight": 0.6,
+      "mechanism_summary": "肺表面活性物质在气-液界面形成 DPPC 为主的动态磷脂单层；两亲性 PFOA 经疏水效应分配入脂质界面疏水域（Brüning 2014 DMPC 囊泡模型，碰巧疏水利用而非氟亲和），为两亲污染物的界面富集与水化头基层抗 NOM 污堵提供原理启发",
+      "design_hint": "在吸附剂表面构建水化两性离子头基层 + 疏水分配域的动态两亲界面层，以疏水分配捕获 PFOA 全氟碳尾、以水化头基层抗 NOM 污堵；分配为疏水而非氟亲，PFAS 选择性须由头基锚定或链长几何另行引入"
      }
     ]
    },
@@ -1141,6 +1175,18 @@
       "weight": 0.6,
       "mechanism_summary": "FFAR2 以成对精氨酸离子锚识别短链脂肪酸羧酸根头基并以短链疏水腔分辨链长，启发对短链 PFAS 阴离子头基（最直接为短链全氟羧酸 PFBA 羧酸根，与丁酸根等构；PFBS 磺酸根为较松的阴离子类别类比）的识别。",
       "design_hint": "在多孔载体构筑成对预组织胍基/脒基阳离子锚 + 匹配 C4 链长的疏水腔，识别短链 PFAS 阴离子头基；注意 PFBS 磺酸根与短链脂肪酸羧酸根头基差异，亲和力与选择性须实验验证。"
+     },
+     {
+      "id": "asbt-bile-acid-elevator-transporter",
+      "weight": 0.45,
+      "mechanism_summary": "ASBT（SLC10A2，电梯型）以核心域-板域间预组织两亲阴离子腔识别两亲胆汁酸（牛磺胆酸盐：极性/钠端锚定磺酸根头基 + 疏水壁容纳甾体骨架，PDB 3ZUY），并具链长容纳几何；PFBS 磺酸根头基 + 全氟碳尾与之同源两亲架构，原理上启发识别。注：Zhao 2015 实测 ASBT 自身仅转运长链 PFOS、不转运 PFBS，PFBS 由家族成员 NTCP 转运，故为警示性而非有效 PFBS 识别原型",
+      "design_hint": "仿 ASBT 两亲阴离子腔：预组织阳离子/脲-硫脲氢键给体锚定磺酸根头基 + 疏水/氟亲孔壁容纳全氟碳尾 + 按 C4 设链长几何；正视家族链长偏好可能偏向长链、ASBT 自身不转运 PFBS，短链 PFBS 选择性须实验验证，并与库内 NTCP 原型区分（ASBT 电梯型，机制不重复）"
+     },
+     {
+      "id": "siderophore-capture-recovery-architecture",
+      "weight": 0.6,
+      "mechanism_summary": "铁载体「分泌型高亲和捕获单元 + 专一受体回收」两级架构启发对 ng/L 级 PFBS 的传质强化：以可分散高亲和捕获单元体相扫集，再经专一回收级选择性回收再生。",
+      "design_hint": "仅架构可转译：Fe3+ 阳离子螯合化学不可平移至阴离子 PFBS，PFBS 亲和化学（磺酸根锚定 + 全氟丁尾氟亲容纳）须独立设计；以可分散捕获单元 + 膜/磁分离回收级 + 再生循环实现传质强化。"
      }
     ]
    }
@@ -1165,6 +1211,36 @@
       "weight": 0.5,
       "mechanism_summary": "LiP 经血红素中心一电子转移生成介体/底物自由基，非特异氧化降解顽固芳香聚合物木质素（天然机制为降解/转化）；原理上启发有机氯芳香污染物的氧化降解，但 DDT 高氯化/高疏水且底物类别与木质素差异显著，转译仅限原理层，无降解活性证据。",
       "design_hint": "取'金属卟啉血红素仿中心 + 可再生小分子介体 relay + 表面自由基 relay 位点'三要素构建氧化降解催化体系，以 H2O2 绿色氧化剂驱动；固定化酶/全细胞或仿生非均相催化路线均须实验验证活性与产物毒性。"
+     },
+     {
+      "id": "reductive-dehalogenase-b12-dechlorination",
+      "weight": 0.7,
+      "mechanism_summary": "有机卤呼吸菌的钴胺素（B12/类咕啉）依赖还原脱卤酶经钴-卤素相互作用（卤素-钴键形成）转移电子、断裂有机氯 C-Cl 键（PDB 4RAS，Payne 2015）；游离 B12 与还原型黄素/血红素亦非酶还原脱氯 DDT→DDD 且 DDE 不反应（Berry 1977/Sugihara 1998/Kallman 1963），启发对 DDT 桥键 C-Cl 的还原脱氯反应位设计",
+      "design_hint": "取'低电位类咕啉/金属卟啉电子转移中心 + 钴/金属-卤素相互作用 + 还原态再生'三要素，在隔氧还原微环境中耦联低电位电子供体断裂 DDT 三氯甲基 C-Cl 键（DDT→DDD）；天然机制为降解/转化，转译限原理层，无降解活性数据，须实验验证"
+     }
+    ]
+   }
+  },
+  "大环内酯类抗生素": {
+   "ROX（罗红霉素）": {
+    "prototypes": [
+     {
+      "id": "natural-riboswitch-metabolite-sensing",
+      "weight": 0.6,
+      "mechanism_summary": "天然 TPP 核糖开关以预组织精密氢键口袋高选择性识别代谢物并经配体诱导构象开关调控基因，其 '预组织方向性识别 + 配体诱导结构状态切换' 原理可在机制层启发对大环内酯 ROX 的选择性识别与动态响应（天然配体为代谢物，与 ROX 无结构相似性，属机制匹配非直接靶标）。",
+      "design_hint": "构筑与 ROX 大环内酯环表面官能团（内酯羰基/羟基/环氧/去氧糖）互补的预组织氢键给体/受体阵列（分子印迹或刚性间隔臂功能化），并耦合结合诱导的溶胀/捕获-释放结构响应；选择性须实验验证。"
+     }
+    ]
+   }
+  },
+  "抗生素（大环内酯类）": {
+   "ROX（罗红霉素 roxithromycin）": {
+    "prototypes": [
+     {
+      "id": "ribosome-npet-macrolide-recognition",
+      "weight": 0.8,
+      "mechanism_summary": "细菌 50S 核糖体亚基新生肽出口隧道（NPET）/肽基转移酶中心与 14 元大环内酯（含罗红霉素 ROX）共进化结合，以受限几何加多点氢键对大环内酯骨架作形状读出（PDB 1JZZ 罗红霉素-50S 复合物；Kalpaxis 2003 慢结合竞争动力学）。本 ROX 指罗红霉素（14 元大环内酯），非洛克沙胂 roxarsone。",
+      "design_hint": "以尺寸匹配狭缝/分子印迹腔加预组织多点氢键网络，对 14 元大环内酯骨架（大环内酯环、糖基羟基与内酯羰基、罗红霉素 C9 肟醚）作形状与氢键互补识别；属原理层外推，环境水相 ROX 吸附须实验验证。"
      }
     ]
    }
@@ -1222,6 +1298,14 @@
     {
      "id": "ntcp-bile-acid-pfas-transporter",
      "weight": 0.6
+    },
+    {
+     "id": "pulmonary-surfactant-phospholipid-interface",
+     "weight": 0.6
+    },
+    {
+     "id": "pxr-xenobiotic-receptor-promiscuity",
+     "weight": 0.5
     }
    ]
   },
@@ -1544,6 +1628,10 @@
     {
      "id": "decarboxylase-carbanion-activation",
      "weight": 0.8
+    },
+    {
+     "id": "reductive-dehalogenase-b12-dechlorination",
+     "weight": 0.8
     }
    ]
   },
@@ -1624,6 +1712,14 @@
     {
      "id": "oat4-organic-anion-transporter",
      "weight": 0.6
+    },
+    {
+     "id": "asbt-bile-acid-elevator-transporter",
+     "weight": 0.6
+    },
+    {
+     "id": "chlorophenol-hydroxylase-regioselective",
+     "weight": 0.7
     }
    ]
   },
@@ -1663,6 +1759,10 @@
     },
     {
      "id": "ecdysis-renewable-interface",
+     "weight": 0.7
+    },
+    {
+     "id": "pulmonary-surfactant-phospholipid-interface",
      "weight": 0.7
     }
    ]
@@ -1714,6 +1814,30 @@
     {
      "id": "oat4-organic-anion-transporter",
      "weight": 0.8
+    },
+    {
+     "id": "asbt-bile-acid-elevator-transporter",
+     "weight": 0.7
+    },
+    {
+     "id": "chlorophenol-hydroxylase-regioselective",
+     "weight": 0.6
+    },
+    {
+     "id": "natural-riboswitch-metabolite-sensing",
+     "weight": 0.7
+    },
+    {
+     "id": "p450bisd-bisphenol-monooxygenase",
+     "weight": 0.6
+    },
+    {
+     "id": "ribosome-npet-macrolide-recognition",
+     "weight": 0.7
+    },
+    {
+     "id": "siderophore-capture-recovery-architecture",
+     "weight": 0.6
     }
    ]
   },
@@ -1723,6 +1847,10 @@
    "prototypes": [
     {
      "id": "fcrn-ph-dependent-fc-recycling",
+     "weight": 0.85
+    },
+    {
+     "id": "hemoglobin-bohr-ph-allostery",
      "weight": 0.85
     }
    ]
@@ -1734,6 +1862,14 @@
     {
      "id": "mscl-mechanosensitive-channel",
      "weight": 0.7
+    },
+    {
+     "id": "hemoglobin-bohr-ph-allostery",
+     "weight": 0.8
+    },
+    {
+     "id": "natural-riboswitch-metabolite-sensing",
+     "weight": 0.7
     }
    ]
   },
@@ -1744,6 +1880,10 @@
     {
      "id": "oatp-intestinal-hepatic-uptake",
      "weight": 0.8
+    },
+    {
+     "id": "asbt-bile-acid-elevator-transporter",
+     "weight": 0.65
     }
    ]
   },
@@ -1754,6 +1894,26 @@
     {
      "id": "nephron-capture-then-separate",
      "weight": 0.7
+    }
+   ]
+  },
+  "广谱识别": {
+   "dimension": "功能特性",
+   "description": "大体积柔性疏水腔加少量极性锚对一类亲脂异生物质/双酚配体的定向混杂（多配体、多取向）识别",
+   "prototypes": [
+    {
+     "id": "pxr-xenobiotic-receptor-promiscuity",
+     "weight": 0.7
+    }
+   ]
+  },
+  "传质强化": {
+   "dimension": "传质特性",
+   "description": "可分泌/可回收高亲和捕获单元在体相扫集超低浓度底物 + 专一回收级再生循环，对 ng/L 级目标物的两级传质增强",
+   "prototypes": [
+    {
+     "id": "siderophore-capture-recovery-architecture",
+     "weight": 0.8
     }
    ]
   }
@@ -2901,6 +3061,174 @@
    "organism": {
     "scientific": "Homo sapiens（OAT4/SLC22A11）",
     "category": "动物"
+   }
+  },
+  "asbt-bile-acid-elevator-transporter": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "ASBT 为整合膜转运蛋白（分子识别/转运原型），本库无其吸附性能测试；测试条件全空，performance_data 为空。"
+   },
+   "features": [
+    "特异性识别",
+    "向量传质",
+    "分子筛分"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Neisseria meningitidis（ASBT_NM 细菌同源物，PDB 3ZUY，基因 NMB0705）/ 顶端钠依赖胆汁酸转运体 ASBT（SLC10A2）家族",
+    "category": "微生物"
+   }
+  },
+  "chlorophenol-hydroxylase-regioselective": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "酚/氯酚羟化酶（降解/转化类酶，分子识别原型），本库无其吸附性能测试；天然机制为催化降解，转译仅取活性位几何/轮廓读取，故测试条件全空。"
+   },
+   "features": [
+    "分子筛分",
+    "特异性识别"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Pseudomonas sp. CF600 / Cupriavidus necator JMP134 / Ralstonia pickettii（酚/氯酚羟化酶系）",
+    "category": "微生物"
+   }
+  },
+  "hemoglobin-bohr-ph-allostery": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "pH/质子门控别构开关原型（动态响应型），本库无吸附性能测试；天然碱性 Bohr 效应作用于生理 pH 约 7.0-7.6 区间（来源机制，Hub 2010 PMC 2865513）。"
+   },
+   "features": [
+    "pH 响应",
+    "动态响应"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Homo sapiens（人成人血红蛋白 HbA，α2β2 四聚体；Bohr 效应别构开关）",
+    "category": "动物"
+   }
+  },
+  "natural-riboswitch-metabolite-sensing": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "TPP 核糖开关为代谢物感应 RNA（分子识别与构象开关原型），本库无其吸附性能测试；performance_data 为空，测试条件全空。"
+   },
+   "features": [
+    "特异性识别",
+    "动态响应"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Escherichia coli thiM mRNA（TPP 核糖开关适配体域）",
+    "category": "微生物"
+   }
+  },
+  "p450bisd-bisphenol-monooxygenase": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "P450bisd 为细菌胞内可溶细胞色素 P450 单加氧酶（催化转化/降解原型，非吸附类），本库无其吸附性能测试条件；performance_data 为空，测试条件全空。"
+   },
+   "features": [
+    "特异性识别"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Sphingobium (原 Sphingomonas) sp. strain AO1（P450bisd 双酚 A 降解细胞色素 P450 单加氧酶）",
+    "category": "微生物"
+   }
+  },
+  "pulmonary-surfactant-phospholipid-interface": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "本原型为界面生物物理原型（肺表面活性物质磷脂-蛋白复合界面层），本库无其吸附适用性测试数据，故全空"
+   },
+   "features": [
+    "疏水性",
+    "抗生物污染"
+   ],
+   "biomimetic_dimension": "功能仿生",
+   "organism": {
+    "scientific": "Homo sapiens / Sus scrofa（肺表面活性物质：DPPC 为主磷脂单层 + SP-B/SP-C）",
+    "category": "动物"
+   }
+  },
+  "pxr-xenobiotic-receptor-promiscuity": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "PXR 为核受体配体结合域（分子识别原型），无吸附适用性测试数据，故全空"
+   },
+   "features": [
+    "广谱识别",
+    "疏水性"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Homo sapiens（人孕烷 X 受体 PXR / NR1I2，异生物质-甾体核受体）",
+    "category": "动物"
+   }
+  },
+  "reductive-dehalogenase-b12-dechlorination": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "还原脱卤酶/钴胺素为降解/转化（催化）原型，本库无其吸附适用性测试数据，故全空；performance_data 为空。"
+   },
+   "features": [
+    "催化降解"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Nitratireductor pacificus pht-3B（还原脱卤酶 RdhA，PDB 4RAS；有机卤呼吸厌氧菌的钴胺素依赖还原脱卤酶）",
+    "category": "微生物"
+   }
+  },
+  "ribosome-npet-macrolide-recognition": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "核糖体 NPET 为分子识别原型，无吸附性能测试条件；证据来自 PDB 1JZZ 罗红霉素-50S 复合物结构与 Kalpaxis 2003 体外翻译复合物慢结合动力学。"
+   },
+   "features": [
+    "特异性识别"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Deinococcus radiodurans（50S 核糖体亚基 NPET）",
+    "category": "微生物"
+   }
+  },
+  "siderophore-capture-recovery-architecture": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "铁载体捕获-回收为微生物系统级架构原型（mass_transfer），本库无其吸附/传质性能测试条件；performance_data 为空，故测试条件全空。"
+   },
+   "features": [
+    "特异性识别",
+    "传质强化"
+   ],
+   "biomimetic_dimension": "系统仿生",
+   "organism": {
+    "scientific": "Escherichia coli（铁载体系统：肠杆菌素/ferrichrome 型；周质铁载体结合蛋白 FhuD（1EFD）与 FepB（3TLK））",
+    "category": "微生物"
    }
   }
  },

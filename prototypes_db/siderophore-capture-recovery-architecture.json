@@ -1,0 +1,342 @@
+{
+ "id": "siderophore-capture-recovery-architecture",
+ "name_zh": "铁载体两相高亲和捕获-受体回收架构",
+ "name_en": "Siderophore Two-Phase High-Affinity Capture and Receptor-Mediated Recovery Architecture",
+ "organism": {
+  "scientific": "Escherichia coli（铁载体系统：肠杆菌素/ferrichrome 型；周质铁载体结合蛋白 FhuD（1EFD）与 FepB（3TLK））",
+  "category": "微生物"
+ },
+ "biomimetic_dimension": "系统仿生",
+ "features": [
+  "特异性识别",
+  "传质强化"
+ ],
+ "tested_conditions": {
+  "tested_ph_range": null,
+  "tested_temp_range": null,
+  "salinity": null,
+  "note": "铁载体捕获-回收为微生物系统级架构原型（mass_transfer），本库无其吸附/传质性能测试条件；performance_data 为空，故测试条件全空。"
+ },
+ "library_tier": "extended",
+ "lifecycle_status": "active",
+ "coverage": "partial",
+ "status": "active",
+ "provenance_summary": {
+  "n_papers": 2,
+  "n_verified": 10,
+  "n_unverified": 0,
+  "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与硬边界条数（SIDER-001 四要素+1 硬边界=5，SIDER-002 四要素+1 硬边界=5）。机制接地限于大肠杆菌铁/铁载体捕获-回收系统（PDB 1EFD FhuD-gallichrome 与 PDB 3TLK holo FepB-铁肠杆菌素 + Miethke 2007 MMBR 摘要 + Loomis 1991 Inorg Chem 标题）；PFBS 应用为架构层设计转译（llm_inferred/inspiration），无性能数据。quote 逐字取自 RCSB 沉积记录与 PubMed 摘要/文献标题（可核验），未做全文 PDF 审计；文献论文 2 篇（Miethke 2007、Loomis 1991），另 2 个 PDB 沉积为结构数据。"
+ },
+ "mechanisms": [
+  {
+   "mechanism_id": "SIDER-001",
+   "name": "分泌型铁载体对超低浓度三价铁的高亲和螯合捕获（捕获级）",
+   "description": "微生物合成并分泌高亲和铁载体（如大肠杆菌肠杆菌素 enterobactin，三邻苯二酚型；ferrichrome/gallichrome，羟肟酸型），以多齿螯合剂在体相水中螯合超低浓度（fM 级）三价铁 Fe3+，形成铁载体-铁复合物并将铁扫集浓缩。PDB 3TLK 中 FepB 与 Fe(III) 及肠杆菌素共结晶，直接显示该捕获化学的对象为阳离子三价铁",
+   "基本原理": "可分泌/可分散的高亲和螯合捕获单元进入体相，在底物浓度极低、竞争离子大量存在的条件下扫集并浓缩目标底物，将「向固定表面扩散受限」的捕获转变为「捕获单元主动接触底物」，是自然界对超低浓度底物传质难题的捕获级方案",
+   "source": "literature",
+   "ref_doi": "10.1128/MMBR.00012-07",
+   "verification": "verified",
+   "verification_quote": "High-affinity iron acquisition is mediated by siderophore-dependent pathways in the majority of pathogenic and nonpathogenic bacteria and fungi.",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "铁载体捕获级的天然底物为超低浓度（fM 级）三价铁 Fe3+（阳离子）；PDB 3TLK 关键词记 'Ferric-enterobactin ... siderophore transport'，表明被扫集浓缩的对象是三价铁-肠杆菌素复合物中的三价铁",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "PDB 3TLK",
+     "locator": "PDB 3TLK, KEYWDS / polymer entity 1",
+     "quote": "Ferric-enterobactin, trimer, siderophore transport, Periplasmic space, METAL TRANSPORT",
+     "scope_match": "Keywords: ferric, enterobactin, siderophore"
+    },
+    "bio_structure": {
+     "text": "分泌型铁载体为多齿高亲和螯合捕获单元：PDB 3TLK 非聚合物实体记录肠杆菌素（enterobactin）化学名，为三(2,3-二羟基苯甲酰胺)环三缩酚酸酯，即三邻苯二酚型 Fe3+ 螯合剂；gallichrome/ferrichrome（PDB 1EFD 配体）为羟肟酸型",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "PDB 3TLK",
+     "locator": "PDB 3TLK / nonpolymer entity 3",
+     "quote": "N,N',N''-[(3S,7S,11S)-2,6,10-trioxo-1,5,9-trioxacyclododecane-3,7,11-triyl]tris(2,3-dihydroxybenzamide)",
+     "scope_match": "Keywords: trioxo, trioxacyclododecane, dihydroxybenzamide"
+    },
+    "interaction": {
+     "text": "铁载体以多齿螯合配位 Fe3+ 形成金属-铁载体复合物；Loomis 1991 测定肠杆菌素与金属-肠杆菌素复合物的溶液平衡（螯合稳定性的定量基础），PDB 3TLK 以 Fe(III) 与肠杆菌素共结晶实证该复合物",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1021/ic00005a008",
+     "locator": "title, p.906",
+     "quote": "Solution equilibria of enterobactin and metal-enterobactin complexes",
+     "scope_match": "Keywords: enterobactin, metal, complexes"
+    },
+    "why_it_works": {
+     "text": "高亲和使铁载体在铁极度受限（fM 级游离铁）下仍能有效扫集铁；Miethke 2007 综述指出高亲和铁获取由铁载体依赖途径介导，遍及多数致病与非致病菌及真菌，是超低浓度捕获的架构基础",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1128/MMBR.00012-07",
+     "locator": "abstract, p.413",
+     "quote": "High-affinity iron acquisition is mediated by siderophore-dependent pathways in the majority of pathogenic and nonpathogenic bacteria and fungi.",
+     "scope_match": "Keywords: high-affinity, iron acquisition, siderophore"
+    },
+    "boundary_conditions": [
+     {
+      "text": "捕获级化学特异性：多齿螯合针对阳离子三价铁 Fe3+（PDB 3TLK 非聚合物实体记录 'FE (III) ION'），即捕获化学的对象是阳离子，其配位化学（邻苯二酚/羟肟酸对 Fe3+ 的螯合）随底物而定",
+      "parameter": "competing_ion",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "PDB 3TLK / nonpolymer entity 2",
+      "quote": "FE (III) ION",
+      "scope_match": "Keywords: FE, III, ION",
+      "source_asset": null
+     },
+     {
+      "text": "转译边界：Fe3+ 阳离子螯合化学不可平移至阴离子目标物 PFBS（C4F9SO3⁻），本机制对 PFBS 仅架构层级（可分泌/可回收捕获单元在体相扫集超低浓度底物）可转译，PFBS 的结合化学须独立设计（定性，无数值阈值）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "可分泌/可分散的高亲和捕获单元进入体相扫集并浓缩超低浓度底物，将扩散受限的捕获转为捕获单元主动接触底物（架构层；具体螯合化学随目标底物而变）",
+    "verification_quote": "High-affinity iron acquisition is mediated by siderophore-dependent pathways in the majority of pathogenic and nonpathogenic bacteria and fungi."
+   },
+   "source_doi": "10.1128/MMBR.00012-07",
+   "source_page": 413,
+   "source_locator": "PDB 3TLK（RCSB 沉积数据）/ Loomis 1991 title p.906 / Miethke 2007 abstract p.413",
+   "source_file": "PDB 3TLK（RCSB 沉积数据）+ Loomis 1991 Inorg Chem 30:906-911（标题接地）+ Miethke 2007 MMBR 71:413-451（PubMed 摘要）；未做本地全文 PDF 审计",
+   "functional_groups": [
+    "多齿螯合基团（enterobactin 邻苯二酚 / gallichrome 羟肟酸的 Fe3+ 配位基团）",
+    "铁载体-铁螯合腔"
+   ],
+   "key_structures": [
+    "捕获单元（分泌型铁载体）"
+   ]
+  },
+  {
+   "mechanism_id": "SIDER-002",
+   "name": "专一受体/周质结合蛋白介导的铁载体-铁复合物回收与再生（回收级）",
+   "description": "铁载体-铁复合物经外膜专一受体（FhuA 识别 ferrichrome 类、FepA 识别肠杆菌素）识别，由周质铁载体结合蛋白（FhuD/FepB）转运回收；回收对完整铁载体-铁复合物（holo/载附形式）具选择性，随后铁被释放、铁载体循环再利用。PDB 1EFD 为 FhuD 与 gallichrome 复合物，PDB 3TLK 为 holo FepB（结合铁-肠杆菌素）",
+   "基本原理": "专一回收界面只识别「已载附底物的捕获单元」（holo 形式），使捕获与回收两级解耦：捕获级负责体相高亲和扫集，回收级负责选择性提取与捕获单元再生循环，二者各自优化而互不拖累，构成完整的捕获-回收传质闭环",
+   "source": "literature",
+   "ref_doi": "10.1128/MMBR.00012-07",
+   "verification": "verified",
+   "verification_quote": "PERIPLASMIC FERRIC SIDEROPHORE BINDING PROTEIN FHUD COMPLEXED WITH GALLICHROME",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "回收级的识别对象是完整铁载体-铁复合物（被捕获后待回收的载货）：PDB 1EFD 关键词记周质结合蛋白-铁载体复合物（FhuD 与 gallichrome、铁铁载体结合蛋白），即回收针对的是已载铁的完整铁载体复合物",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "PDB 1EFD",
+     "locator": "PDB 1EFD, KEYWDS / p.287",
+     "quote": "periplasmic binding protein-siderophore complex, FhuD complex with gallichrome, Escherichia coli, ferric siderophore binding protein, METAL TRANSPORT",
+     "scope_match": "Keywords: siderophore, FhuD, gallichrome, ferric"
+    },
+    "bio_structure": {
+     "text": "周质铁载体结合蛋白（FhuD/FepB）构成回收界面的识别元件：PDB 1EFD 实体描述为 'FERRICHROME-BINDING PERIPLASMIC PROTEIN'，PDB 3TLK 实体为 'Ferrienterobactin-binding periplasmic protein'，均为两结构域间裂隙结合铁载体-铁复合物的周质结合蛋白",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "PDB 1EFD",
+     "locator": "PDB 1EFD, COMPND / polymer entity 1",
+     "quote": "FERRICHROME-BINDING PERIPLASMIC PROTEIN",
+     "scope_match": "Keywords: ferrichrome, binding, periplasmic"
+    },
+    "interaction": {
+     "text": "回收识别对 holo（载铁）形式具选择性：PDB 3TLK 标题 'Crystal structure of holo FepB' 表明 FepB 以载附铁-肠杆菌素的 holo 形式被结构表征，空载或游离铁不被同等回收",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "PDB 3TLK",
+     "locator": "PDB 3TLK, TITLE / polymer entity 1",
+     "quote": "Crystal structure of holo FepB",
+     "scope_match": "Keywords: holo, FepB"
+    },
+    "why_it_works": {
+     "text": "专一摄取与释放使载货被选择性回收且捕获单元得以再生循环；Miethke 2007 摘要述及铁载体依赖途径涵盖合成、分泌、铁的扫集以及铁载体递送的铁摄取与其释放，回收-释放-循环是该架构的固有环节",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1128/MMBR.00012-07",
+     "locator": "abstract, p.413",
+     "quote": "siderophore synthesis, secretion, iron scavenging, and siderophore-delivered iron uptake and its release",
+     "scope_match": "Keywords: siderophore, uptake, release"
+    },
+    "boundary_conditions": [
+     {
+      "text": "回收底物完整性：回收级识别完整铁载体-铁复合物（PDB 1EFD 示 FhuD 与 gallichrome 复合物），游离铁或空载铁载体不被同等回收，回收选择性的结构基础是载附复合物",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "PDB 1EFD, TITLE / p.287",
+      "quote": "PERIPLASMIC FERRIC SIDEROPHORE BINDING PROTEIN FHUD COMPLEXED WITH GALLICHROME",
+      "scope_match": "Keywords: ferric, siderophore, gallichrome",
+      "source_asset": null
+     },
+     {
+      "text": "转译边界：天然回收经跨膜受体（FhuA/FepA）与能量偶联实现，人工转译为 PFBS 时回收级须以固载界面/分离级（膜、磁分离、捕获柱）重建，其对捕获单元相对共存杂质的选择性须独立设计与实验验证（定性，无数值阈值）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "对「已载附底物的捕获单元」具选择性的专一回收界面 + 捕获单元释放再生循环，使捕获与回收两级解耦、各自优化（架构层；回收的化学识别须按目标底物独立设计）",
+    "verification_quote": "PERIPLASMIC FERRIC SIDEROPHORE BINDING PROTEIN FHUD COMPLEXED WITH GALLICHROME"
+   },
+   "source_doi": "10.1128/MMBR.00012-07",
+   "source_page": 413,
+   "source_locator": "PDB 1EFD / p.287 与 PDB 3TLK（RCSB 沉积数据）/ Miethke 2007 abstract p.413",
+   "source_file": "PDB 1EFD（RCSB；Clarke 2000 Nat Struct Biol 7:287-291 主引文）+ PDB 3TLK（RCSB；holo FepB，主引文 'To be published'）+ Miethke 2007 MMBR 71:413-451（PubMed 摘要）；未做本地全文 PDF 审计",
+   "functional_groups": [
+    "周质结合蛋白底物结合腔（FhuD/FepB 两结构域间裂隙）",
+    "holo（载附）构象识别界面"
+   ],
+   "key_structures": [
+    "识别结构",
+    "回收界面"
+   ]
+  }
+ ],
+ "performance_data": [],
+ "engineering_constraints": [
+  {
+   "constraint": "可溶周质蛋白形态",
+   "value": "FhuD 约 29.7 kDa（1EFD 实体 1，29.68 kDa）、FepB 约 35.4 kDa（3TLK 实体 1，35.385 kDa），均为周质可溶结合蛋白；天然回收经跨膜受体与能量偶联，人工转译须以固载界面/分离级重建",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "RCSB 1EFD/3TLK 实体分子量与 KEYWDS（periplasmic）；Miethke 2007 述及铁载体递送的铁摄取",
+   "source": "literature",
+   "ref_doi": "10.1128/MMBR.00012-07"
+  },
+  {
+   "constraint": "holo（载附）形式识别依赖",
+   "value": "回收级识别完整铁载体-铁复合物（holo 形式，3TLK 'holo FepB'）；游离铁或空载铁载体不被同等回收，固定化或界面重建须保留对载附形式的选择性",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "PDB 3TLK 标题 'Crystal structure of holo FepB'；PDB 1EFD FhuD 与 gallichrome 复合物",
+   "source": "literature",
+   "ref_doi": "10.1128/MMBR.00012-07"
+  },
+  {
+   "constraint": "两级须闭环且捕获单元可再生",
+   "value": "架构传质优势依赖捕获单元回收完全且可再生循环、回收级对其选择性高于共存杂质，否则回收损耗与二次泄漏抵消捕获增益（定性）",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（基于捕获-回收-释放-循环架构事实的外推）",
+   "source": "llm_inference",
+   "ref_doi": null
+  }
+ ],
+ "narrative": {
+  "entries": [
+   {
+    "source_file": "RCSB PDB 1EFD / 3TLK + Miethke 2007 MMBR (DOI 10.1128/MMBR.00012-07, PMID 17804665) + Loomis 1991 Inorg Chem (DOI 10.1021/ic00005a008)",
+    "paper_id": "2000-Clarke-FhuD-gallichrome_and_2007-Miethke-siderophore-review",
+    "sections": {
+     "problem_definition": "铁为多数细菌与真菌必需元素，但在有氧、近中性 pH 水中 Fe3+ 溶解度极低，游离 Fe3+ 活度常低至 fM 级。微生物须在超低浓度、并与大量竞争离子共存的水环境中高效捕获铁并加以回收。铁载体系统正是自然界对「超低浓度底物的高效捕获-回收」这一传质难题的架构方案。",
+     "biological_solution": "微生物铁载体系统采两级架构。捕获级：合成并分泌高亲和铁载体（如大肠杆菌肠杆菌素 enterobactin，三邻苯二酚型；ferrichrome/gallichrome，羟肟酸型），以多齿螯合 Fe3+ 形成铁载体-铁复合物，将超低浓度铁扫集浓缩（Loomis 1991 测定肠杆菌素与金属-肠杆菌素复合物的溶液平衡；Miethke 2007 摘要指出高亲和铁获取由铁载体依赖途径介导）。回收级：铁载体-铁复合物被外膜专一受体（FhuA 识别 ferrichrome 类、FepA 识别肠杆菌素）识别，经周质结合蛋白（FhuD/FepB）转运回收，随后铁被释放、铁载体循环再利用（PDB 1EFD：周质铁载体结合蛋白 FhuD 与 gallichrome 复合物，Nat Struct Biol 2000 p.287；PDB 3TLK：holo FepB 结合铁-肠杆菌素，关键词记 'siderophore transport'；Miethke 2007 摘要述及铁载体递送的铁摄取与其释放）。",
+     "key_features": "必须保留：① 可分泌/可分散且可回收的高亲和捕获单元（在体相扫集超低浓度底物，消除向固定表面的扩散限制）；② 对「已载附底物的捕获单元」具选择性的专一回收界面（识别 holo/载附形式）；③ 捕获-回收两级解耦 + 捕获单元再生循环。可灵活调整：捕获单元的结合化学（须按目标底物独立设计）、载体形态（胶体/纳米/可溶）、回收级实现方式（膜/磁分离/捕获柱）、再生触发条件（pH/离子强度/竞争洗脱）。",
+     "design_mapping": "仿生映射：铁载体「分泌-扫集 + 受体-回收」两级架构 → 面向 ng/L 级 PFBS 的传质强化设计（可分散高亲和捕获单元 + 专一回收级 + 再生循环）。边界声明：这是架构层设计转译/启发（llm_inferred），非 from_source 事实——铁载体以多齿螯合化学针对阳离子 Fe3+，该化学不可平移至阴离子 PFBS（C4F9SO3⁻）；仅「可回收捕获单元 + 专一回收」的架构层级可转译，PFBS 的结合化学须独立设计并经实验验证。",
+     "explainability_anchors": "设计溯源：铁载体高亲和捕获（enterobactin/gallichrome，PDB 1EFD/3TLK + Loomis 1991，from_source）→ 专一受体/周质蛋白介导回收（FhuD/FepB holo 识别，PDB 1EFD/3TLK + Miethke 2007，from_source）→「可回收捕获单元 + 专一回收 + 再生循环」可迁移架构原理（from_source）→ PFBS 传质强化材料（llm_inferred 启发，化学须独立设计、须实验验证）。"
+    }
+   }
+  ]
+ },
+ "design_translation": [
+  {
+   "idea": "将铁载体「分泌/可分散的高亲和捕获单元 + 专一受体介导回收」两级架构转译为面向 ng/L 级 PFBS 的传质强化设计：以可分散/可回收的高亲和 PFBS 捕获单元（功能化胶体/磁性纳米颗粒或可溶选择性结合剂）在体相水中布撒，消除向固定床的扩散限制、高效扫集超低浓度 PFBS；再经一专一回收界面（膜、磁分离或捕获柱）选择性回收载附单元并再生循环。两级解耦使体相高亲和扫集与选择性回收再生各自优化",
+   "specific_functional_group": "捕获单元上针对阴离子 PFBS 独立设计的亲和基团：胍基/季铵阳离子与脲/硫脲氢键给体识别全氟丁烷磺酸根（SO3⁻）头基，氟碳/烃链经氟亲-疏水作用容纳全氟丁基尾链；此为对 PFBS 的化学设计，非铁载体 Fe3+ 螯合化学的平移",
+   "material_handle": "功能化磁性纳米颗粒/胶体或可溶选择性聚合物作可分散捕获单元；以膜、磁分离或固载受体界面作专一回收级；以 pH/离子强度切换或竞争洗脱实现捕获单元再生循环",
+   "target_interaction": "捕获单元对 PFBS 磺酸根头基的静电/氢键锚定 + 全氟丁尾的氟亲/疏水接触（捕获级）；回收级对载附捕获单元（而非共存杂质）的选择性识别/截留",
+   "source_tier": "llm_inference",
+   "evidence_tier": "inspiration（架构层外推：铁载体两级捕获-回收架构接地于 PDB 1EFD/3TLK 与 Miethke 2007、Loomis 1991；PFBS 的结合化学与传质转译为 llm_inferred，无 PFBS 实验数据）",
+   "examples": [],
+   "design_principle": "铁载体系统证明「可分泌/可回收的高亲和捕获单元 + 专一回收界面」两级架构可在极低浓度（fM 级铁限制）下高效捕获-回收底物（PDB 1EFD/3TLK，Miethke 2007）；可转译的是该架构层级（捕获-回收-再生解耦），而非 Fe3+ 螯合化学，后者不可平移至阴离子 PFBS",
+   "implementation_example": "胍基/脲功能化、可磁分离回收的功能化纳米捕获单元 + 膜/磁分离回收级（无实验数据，仅为设计假设）",
+   "constraints": "仅架构可转译，Fe3+ 阳离子螯合化学不可平移至阴离子 PFBS，PFBS 亲和化学须独立设计并经实验验证；可分散捕获单元的回收完全性与二次泄漏、再生循环稳定性、共存阴离子（硫酸根、氯离子）与天然有机物的竞争是关键挑战",
+   "failure_modes": "捕获单元回收不完全造成二次污染与损耗；PFBS 亲和化学在水相被氢键/静电竞争淬灭；回收级对捕获单元选择性不足导致共杂质富集；再生循环中结合活性衰减",
+   "material_realization_examples": []
+  }
+ ],
+ "honesty_ledger": {
+  "facts": [
+   {
+    "type": "mechanism",
+    "index": 0,
+    "name": "分泌型铁载体对超低浓度三价铁的高亲和螯合捕获（捕获级）",
+    "basis": "from_source_verified",
+    "note": "PDB 3TLK（Fe(III) 与肠杆菌素共结晶，关键词 'Ferric-enterobactin ... siderophore transport'，非聚合物实体记录肠杆菌素化学名与 'FE (III) ION'）+ Loomis 1991 Inorg Chem（肠杆菌素与金属-肠杆菌素复合物溶液平衡，标题接地 p.906）+ Miethke 2007 MMBR 摘要（高亲和铁获取由铁载体依赖途径介导，PMID 17804665 逐字）；quote 逐字取自 RCSB 沉积记录与 PubMed 摘要/文献标题，未做全文 PDF 审计"
+   },
+   {
+    "type": "mechanism",
+    "index": 1,
+    "name": "专一受体/周质结合蛋白介导的铁载体-铁复合物回收与再生（回收级）",
+    "basis": "from_source_verified",
+    "note": "PDB 1EFD（周质铁载体结合蛋白 FhuD 与 gallichrome 复合物，Clarke 2000 Nat Struct Biol 7:287-291 主引文；实体 'FERRICHROME-BINDING PERIPLASMIC PROTEIN'）+ PDB 3TLK（holo FepB 结合铁-肠杆菌素，标题与关键词）+ Miethke 2007 摘要（铁摄取与其释放，逐字）；quote 逐字取自 RCSB 与 PubMed 摘要，未做全文 PDF 审计"
+   }
+  ],
+  "leads": [],
+  "inferences": [
+   {
+    "type": "design_translation",
+    "index": 0,
+    "idea": "将铁载体两级捕获-回收架构转译为 ng/L 级 PFBS 传质强化（可分散捕获单元 + 专一回收级 + 再生循环）",
+    "basis": "llm_inferred",
+    "label": "inspiration",
+    "note": "仅架构层级可转译；Fe3+ 阳离子螯合化学不可平移至阴离子 PFBS（C4F9SO3⁻），PFBS 结合化学（磺酸根锚定 + 全氟丁尾氟亲容纳）须独立设计；无 PFBS 实验数据，亲和力/选择性/回收率须实验验证"
+   }
+  ],
+  "boundary_notes": [
+   "本原型天然底物为阳离子三价铁 Fe3+（铁载体多齿螯合）；机制 from_source 接地限于铁/铁载体捕获-回收系统（PDB 1EFD/3TLK + Miethke 2007 + Loomis 1991）",
+   "阳离子螯合化学不可平移至阴离子 PFBS（C4F9SO3⁻）；仅「可回收高亲和捕获单元 + 专一回收 + 再生循环」的架构层级可转译（llm_inferred/inspiration），不得用作 PFBS 捕获/去除的 direct evidence",
+   "无 PFBS 吸附/传质性能数据（qmax、去除率、回收率等）；performance_data 为空，严格未从外部污染物知识库搬运任何性能数值（知识隔离红线）",
+   "enterobactin 的精确稳定常数（文献常引 Kf 约 10^52、对应游离铁 fM 级）属 Loomis 1991 与 Miethke 2007 正文内容，本次未取得全文逐字句，故未作为 from_source quote 引用；正文以「fM 级铁限制」作生物学背景陈述，属已知背景而非逐字接地",
+   "候选 PDB 1KQG 经 RCSB 核验标题为 'FORMATE DEHYDROGENASE N FROM E. COLI'（甲酸脱氢酶），与铁载体系统无关，已剔除"
+  ],
+  "missing_pdf_items": [
+   "Miethke 2007 MMBR 全文（PMC2168645 全文抓取受限，仅 PubMed 摘要 PMID 17804665 逐字可核验）；enterobactin Kf 约 10^52 等精确常数未取得逐字句",
+   "Loomis 1991 Inorg Chem 30:906-911 全文 PDF（quote 取自 Crossref 标题）",
+   "Clarke 2000 Nat Struct Biol 7:287-291（1EFD 主引文）全文 PDF（quote 取自 RCSB 沉积记录标题/关键词/实体描述）",
+   "3TLK 主引文为 'To be published'（无期刊/页码），其结构断言 quote 取自 RCSB 沉积记录"
+  ],
+  "generated_by": "manual-curation-2026-07-22",
+  "note": "诚实优先：机制接地限于铁/铁载体捕获-回收系统；阳离子螯合化学不可平移、仅架构可转译的边界已显式标注；一切 PFBS 转译为 inspiration/外推"
+ },
+ "boundary_rules": [
+  {
+   "rule": "阳离子螯合化学特异性：捕获级经多齿螯合针对阳离子三价铁 Fe3+（PDB 3TLK 配体 'FE (III) ION'），该化学的对象是阳离子",
+   "source_mechanism": "分泌型铁载体对超低浓度三价铁的高亲和螯合捕获（捕获级）",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "回收底物完整性：回收级识别完整铁载体-铁复合物（holo/载附形式，PDB 3TLK 'holo FepB'、PDB 1EFD FhuD 与 gallichrome 复合物），游离铁或空载铁载体不被同等回收",
+   "source_mechanism": "专一受体/周质结合蛋白介导的铁载体-铁复合物回收与再生（回收级）",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "阳离子螯合化学不可平移至阴离子 PFBS（C4F9SO3⁻），仅「可回收捕获单元 + 专一回收 + 再生循环」架构层级可转译，PFBS 结合化学须独立设计（定性，无数值阈值）",
+   "source_mechanism": "专一受体/周质结合蛋白介导的铁载体-铁复合物回收与再生（回收级）",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  }
+ ]
+}

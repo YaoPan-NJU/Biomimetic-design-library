@@ -1,0 +1,343 @@
+{
+ "id": "ribosome-npet-macrolide-recognition",
+ "name_zh": "核糖体新生肽出口隧道大环内酯识别",
+ "name_en": "Ribosomal Nascent Polypeptide Exit Tunnel (NPET) Macrolide Recognition",
+ "organism": {
+  "scientific": "Deinococcus radiodurans（50S 核糖体亚基新生肽出口隧道 NPET / 肽基转移酶中心 PTC；大环内酯为链霉菌属 Streptomyces 次级代谢产物）",
+  "category": "微生物"
+ },
+ "biomimetic_dimension": "分子仿生",
+ "features": [
+  "特异性识别"
+ ],
+ "tested_conditions": {
+  "tested_ph_range": null,
+  "tested_temp_range": null,
+  "salinity": null,
+  "note": "核糖体 NPET 为分子识别原型，本库无其吸附性能测试；performance_data 为空，故测试条件全空。大环内酯-NPET 结合证据来自结构（PDB 1JZZ 罗红霉素-50S 复合物）与体外翻译复合物慢结合动力学（Kalpaxis 2003），非水相吸附测试。"
+ },
+ "library_tier": "extended",
+ "lifecycle_status": "active",
+ "coverage": "partial",
+ "status": "active",
+ "provenance_summary": {
+  "n_papers": 2,
+  "n_verified": 8,
+  "n_unverified": 0,
+  "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与边界条数（NPET-001 四要素+1 from_source 边界=5，NPET-002 三要素=3）。机制接地限于大环内酯（含罗红霉素 ROX）与细菌 50S 核糖体 NPET/PTC 的共进化结合及慢结合竞争动力学；环境水相 ROX 吸附为设计转译（llm_inferred），无性能数据。quote 取自 RCSB 沉积记录（标题/关键词/配体实体）与 Crossref 题录标题（可核验），未做坐标级结合位点残基审计与全文 PDF 审计。"
+ },
+ "mechanisms": [
+  {
+   "mechanism_id": "NPET-001",
+   "name": "NPET/PTC 受限几何对 14 元大环内酯（罗红霉素）的形状读出",
+   "description": "大环内酯抗生素与细菌长期共进化，作为次级代谢产物天然占据 50S 核糖体亚基新生肽出口隧道（NPET）近肽基转移酶中心（PTC）的受限区域并抑制翻译。PDB 1JZZ 为 Deinococcus radiodurans 50S 与罗红霉素（roxithromycin，14 元大环内酯）复合物，罗红霉素为沉积配体实体 5；受限隧道以尺寸匹配狭缝加多点氢键网络对 14 元大环内酯骨架作形状读出",
+   "基本原理": "受限且与 14 元大环内酯骨架几何互补的隧道/狭缝提供范德华形状互补，隧道衬里（23S rRNA 与核糖体蛋白）的极性基团与大环内酯糖基羟基、内酯羰基等形成多点氢键，使大环内酯在进化形成的受限位点被选择性容纳",
+   "source": "literature",
+   "ref_doi": "10.1038/35101544",
+   "verification": "corroborated",
+   "verification_quote": "Structural Basis for the Interaction of Antibiotics with the Peptidyl Transferase Center in Eubacteria",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "ROX（罗红霉素 roxithromycin）为 14 元大环内酯抗生素；PDB 1JZZ 罗红霉素-50S 核糖体亚基复合物的 RCSB 沉积关键词明确列出 Roxithromycin，且罗红霉素为该结构的非聚合物配体实体（实体 5），即 NPET 天然配体类别成员",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/35101544",
+     "locator": "PDB 1JZZ / p.814",
+     "quote": "Ribosome, 50S, 23S, 5S, Antibiotics, Roxithromycin, Peptidyl transferase center",
+     "scope_match": "Keywords: Roxithromycin, 50S, Peptidyl transferase center"
+    },
+    "bio_structure": {
+     "text": "细菌 50S 核糖体亚基新生肽出口隧道（NPET）/肽基转移酶中心（PTC）；PDB 1JZZ（Deinococcus radiodurans 50S，23S/5S rRNA 与核糖体蛋白，X 射线衍射 3.8 Å，2001 沉积）标题记为抗生素与真细菌肽基转移酶中心相互作用的结构基础",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/35101544",
+     "locator": "PDB 1JZZ / p.814",
+     "quote": "Structural Basis for the Interaction of Antibiotics with the Peptidyl Transferase Center in Eubacteria",
+     "scope_match": "Keywords: Antibiotics, Peptidyl Transferase Center, Eubacteria"
+    },
+    "interaction": {
+     "text": "14 元大环内酯（红霉素、罗红霉素、克拉霉素）与具有肽键形成活性的细菌核糖体复合物发生慢结合（slow-binding）相互作用（Kalpaxis 2003 慢结合动力学）；该核糖体复合物功能位点即 PTC，罗红霉素在 PDB 1JZZ 中占据 NPET/PTC 区域",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1124/mol.63.3.617",
+     "locator": "title, p.617",
+     "quote": "Erythromycin, Roxithromycin, and Clarithromycin: Use of Slow-Binding Kinetics to Compare Their in Vitro Interaction with a Bacterial Ribosomal Complex Active in Peptide Bond Formation",
+     "scope_match": "Keywords: Roxithromycin, Ribosomal Complex, Peptide Bond Formation"
+    },
+    "why_it_works": {
+     "text": "受限 NPET 隧道在 PTC 附近为大环内酯提供几何约束的形状读出位点；Schlünzen 2001 在真细菌 50S 上给出抗生素-PTC 相互作用的结构基础（沉积标题），罗红霉素作为 14 元大环内酯被该受限位点容纳，属大环内酯与细菌核糖体共进化的受限几何识别",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/35101544",
+     "locator": "PDB 1JZZ / p.814",
+     "quote": "Structural Basis for the Interaction of Antibiotics with the Peptidyl Transferase Center in Eubacteria",
+     "scope_match": "Keywords: Structural Basis, Antibiotics, Peptidyl Transferase Center"
+    },
+    "boundary_conditions": [
+     {
+      "text": "该结合为大环内酯-细菌核糖体共进化形成的抗生素-靶标相互作用，发生于翻译（肽键形成/新生肽出口）语境；核糖体 NPET 的生理功能是翻译而非环境水相中清除 ROX，本接地限于共进化结合，不构成核糖体进化以去水/清除水中 ROX 的证据",
+      "parameter": "biological_context",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "corroborated",
+      "gate_level": "hard",
+      "locator": "title, p.617",
+      "quote": "Erythromycin, Roxithromycin, and Clarithromycin: Use of Slow-Binding Kinetics to Compare Their in Vitro Interaction with a Bacterial Ribosomal Complex Active in Peptide Bond Formation",
+      "scope_match": "Keywords: Bacterial, Ribosomal Complex, Peptide Bond Formation",
+      "source_asset": null
+     },
+     {
+      "text": "将 NPET 形状读出转译为环境水相 ROX 吸附属设计推断；核糖体非为去除水中 ROX 而进化，亲和力与选择性须实验验证",
+      "parameter": "environmental_transfer",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     },
+     {
+      "text": "NPET 受限隧道对 14 元大环内酯骨架尺寸匹配；环尺寸显著不同或非大环内酯骨架几何失配，识别减弱（定性，无数值阈值）",
+      "parameter": "ring_size_specificity",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "受限且与 14 元大环内酯骨架几何互补的狭缝/隧道，配合多点氢键网络，可对大环内酯作形状读出式选择性识别；该受限几何识别源于大环内酯-核糖体共进化，可作原理层转译",
+    "verification_quote": "Structural Basis for the Interaction of Antibiotics with the Peptidyl Transferase Center in Eubacteria"
+   },
+   "source_doi": "10.1038/35101544",
+   "source_page": 814,
+   "source_locator": "PDB 1JZZ / p.814",
+   "source_file": "PDB 1JZZ（RCSB 沉积记录：标题/关键词/配体罗红霉素实体 5；Schlünzen 2001 Nature 413:814-821，DOI 10.1038/35101544，PMID 11677599；未做坐标级结合位点 rRNA 残基审计）",
+   "functional_groups": [
+    "受限 NPET 隧道衬里（23S rRNA 核糖核酸碱基与骨架及核糖体蛋白，构成受限氢键/范德华口袋；具体残基编号未审计）",
+    "大环内酯糖基羟基与内酯羰基（多点氢键受体/给体）",
+    "罗红霉素 C9 肟醚"
+   ],
+   "key_structures": [
+    "识别结构"
+   ]
+  },
+  {
+   "mechanism_id": "NPET-002",
+   "name": "14 元大环内酯在核糖体肽键形成位点的慢结合竞争动力学",
+   "description": "红霉素、罗红霉素、克拉霉素（均为 14 元大环内酯）以慢结合动力学竞争同一具有肽键形成活性的细菌核糖体复合物位点（Kalpaxis 2003），表明 NPET/PTC 对 14 元大环内酯存在共享的受限识别位点",
+   "基本原理": "慢结合（slow-binding）特征反映大环内酯进入受限 NPET 位点需经历构象适配；三种 14 元大环内酯竞争同一核糖体位点说明该位点对此类骨架的共享几何与化学互补",
+   "source": "literature",
+   "ref_doi": "10.1124/mol.63.3.617",
+   "verification": "corroborated",
+   "verification_quote": "Erythromycin, Roxithromycin, and Clarithromycin: Use of Slow-Binding Kinetics to Compare Their in Vitro Interaction with a Bacterial Ribosomal Complex Active in Peptide Bond Formation",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "罗红霉素（ROX）与红霉素、克拉霉素同为 14 元大环内酯，是 Kalpaxis 2003 慢结合动力学研究并列比较的三个对象",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1124/mol.63.3.617",
+     "locator": "title, p.617",
+     "quote": "Erythromycin, Roxithromycin, and Clarithromycin: Use of Slow-Binding Kinetics to Compare Their in Vitro Interaction with a Bacterial Ribosomal Complex Active in Peptide Bond Formation",
+     "scope_match": "Keywords: Erythromycin, Roxithromycin, Clarithromycin"
+    },
+    "bio_structure": {
+     "text": "具有肽键形成活性的细菌核糖体复合物（a Bacterial Ribosomal Complex Active in Peptide Bond Formation），其功能核心为 PTC/NPET",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1124/mol.63.3.617",
+     "locator": "title, p.617",
+     "quote": "Erythromycin, Roxithromycin, and Clarithromycin: Use of Slow-Binding Kinetics to Compare Their in Vitro Interaction with a Bacterial Ribosomal Complex Active in Peptide Bond Formation",
+     "scope_match": "Keywords: Bacterial Ribosomal Complex, Peptide Bond Formation"
+    },
+    "interaction": {
+     "text": "三种 14 元大环内酯以慢结合动力学（slow-binding kinetics）与该核糖体复合物发生体外相互作用并被相互比较，提示对同一或重叠位点的竞争性结合",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1124/mol.63.3.617",
+     "locator": "title, p.617",
+     "quote": "Erythromycin, Roxithromycin, and Clarithromycin: Use of Slow-Binding Kinetics to Compare Their in Vitro Interaction with a Bacterial Ribosomal Complex Active in Peptide Bond Formation",
+     "scope_match": "Keywords: Slow-Binding Kinetics, in Vitro Interaction"
+    },
+    "why_it_works": {
+     "text": "慢结合/紧结合特征反映大环内酯进入受限 NPET 位点需构象适配，受限隧道对 14 元大环内酯骨架提供共享几何与化学互补（机理性推断，标题未直接给出热力学分解）",
+     "basis": "llm_inferred"
+    },
+    "boundary_conditions": [
+     {
+      "text": "动力学参数依赖体外翻译复合物语境（离子强度、温度、核糖体来源）；环境水相条件下不可直接外推（定性，无数值阈值）",
+      "parameter": "kinetic_context",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "受限识别位点对一类几何/化学互补的配体可表现为慢结合竞争动力学；共享位点的竞争可用作选择性识别与位点单一性的判据",
+    "verification_quote": "Erythromycin, Roxithromycin, and Clarithromycin: Use of Slow-Binding Kinetics to Compare Their in Vitro Interaction with a Bacterial Ribosomal Complex Active in Peptide Bond Formation"
+   },
+   "source_doi": "10.1124/mol.63.3.617",
+   "source_page": 617,
+   "source_locator": "title, p.617",
+   "source_file": "Molecular Pharmacology 63:617-623（2003，Dinos G / Connell S / Nierhaus K / Kalpaxis DL；DOI 10.1124/mol.63.3.617；Crossref 题录标题接地，未做全文 PDF 审计）",
+   "functional_groups": [
+    "大环内酯环骨架（14 元内酯）",
+    "去氧糖/克拉定糖羟基与内酯羰基（氢键位点）"
+   ],
+   "key_structures": [
+    "识别结构"
+   ]
+  }
+ ],
+ "performance_data": [],
+ "engineering_constraints": [
+  {
+   "constraint": "核糖体为超大分子机器",
+   "value": "50S 亚基约 MDa 量级、由 23S/5S rRNA 与数十种核糖体蛋白组装；无法直接作吸附材料，须将受限几何识别原理抽取至合成载体",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（基于 PDB 1JZZ 为完整 50S 亚基复合物）",
+   "source": "llm_inference",
+   "ref_doi": null
+  },
+  {
+   "constraint": "NPET 受限几何依赖完整三级结构",
+   "value": "大环内酯识别依赖 NPET/PTC 的预组织受限隧道；rRNA 折叠破坏或隧道溶剂化使几何与氢键网络丧失",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（基于 NPET 为受限隧道的事实）",
+   "source": "llm_inference",
+   "ref_doi": null
+  },
+  {
+   "constraint": "14 元大环内酯骨架尺寸匹配",
+   "value": "NPET 容纳 14 元大环内酯（罗红霉素在 PDB 1JZZ 占据 PTC/NPET，配体实体 5）；环尺寸显著失配的分子识别减弱",
+   "unit": null,
+   "relevance": "medium",
+   "explanation": "PDB 1JZZ 罗红霉素（14 元大环内酯）为配体实体 5；环尺寸特异性为定性推断",
+   "source": "literature",
+   "ref_doi": "10.1038/35101544"
+  },
+  {
+   "constraint": "结合属翻译语境",
+   "value": "大环内酯-NPET 结合的生理读出为翻译抑制（肽键形成受阻），非环境水相 ROX 清除；转译为吸附须重构识别内核",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "Kalpaxis 2003 标题示能肽键形成活性核糖体复合物",
+   "source": "literature",
+   "ref_doi": "10.1124/mol.63.3.617"
+  }
+ ],
+ "narrative": {
+  "entries": [
+   {
+    "source_file": "RCSB PDB 1JZZ / Schlünzen 2001 Nature 413:814-821 (DOI 10.1038/35101544)；Kalpaxis/Dinos 2003 Mol Pharmacol 63:617-623 (DOI 10.1124/mol.63.3.617)",
+    "paper_id": "2001-Schlunzen-1JZZ-macrolide-PTC / 2003-Dinos-macrolide-slow-binding",
+    "sections": {
+     "problem_definition": "大环内酯抗生素（红霉素、罗红霉素、克拉霉素等 14 元大环内酯）是链霉菌属次级代谢产物，长期与细菌共进化，通过占据核糖体 50S 亚基新生肽出口隧道（NPET）抑制翻译。分子层面的问题是：核糖体 NPET 这一受限隧道如何对 14 元大环内酯骨架实现选择性识别，以及该识别可否抽取为对同类分子（如水中罗红霉素 ROX）的形状读出原理。",
+     "biological_solution": "Deinococcus radiodurans 50S 与罗红霉素复合物的晶体结构（PDB 1JZZ，X 射线 3.8 Å，Schlünzen 2001，标题为抗生素与真细菌肽基转移酶中心相互作用的结构基础）显示罗红霉素（RCSB 关键词与配体实体 5）占据 NPET/PTC 受限区域；14 元大环内酯的糖基与内酯部分与隧道衬里（23S rRNA 与核糖体蛋白）形成多点接触。Kalpaxis 2003（DOI 10.1124/mol.63.3.617）以慢结合动力学比较红霉素、罗红霉素、克拉霉素与具有肽键形成活性的细菌核糖体复合物的体外相互作用，表明三种 14 元大环内酯竞争同一受限位点。识别由受限隧道的几何形状读出加多点氢键网络共同实现。具体 rRNA 残基编号本文未做坐标级审计。",
+     "key_features": "必须保留：① 与 14 元大环内酯骨架几何互补的受限狭缝/隧道（尺寸匹配）；② 隧道衬里极性基团对糖基羟基/内酯羰基/肟醚的多点氢键网络；③ 预组织受限微环境。可灵活调整：载体骨架、腔尺寸与给体排布、疏水微环境。",
+     "design_mapping": "仿生映射：NPET 受限几何加多点氢键 → 对罗红霉素 ROX（14 元大环内酯）的形状读出识别位点。可以罗红霉素为模板的分子印迹腔或预组织氢键腔（脲/酰胺/羟基/吡啶给受体）匹配大环内酯环骨架与糖基/羰基/肟醚。注意：大环内酯-NPET 结合属细菌翻译语境的共进化抗生素-靶标作用，非环境水相清除 ROX 的功能；环境吸附转译为 llm_inferred（inspiration），亲和力与选择性须实验验证。命名提示：本条 ROX 指罗红霉素（roxithromycin，14 元大环内酯），与库内既有 酚类.ROX（洛克沙胂 roxarsone，有机砷酚）为不同化合物。",
+     "explainability_anchors": "设计溯源：罗红霉素-50S NPET/PTC 占据（PDB 1JZZ，from_source）+ 14 元大环内酯慢结合竞争动力学（Kalpaxis 2003，from_source）→ 『受限尺寸匹配狭缝 + 多点氢键网络对 14 元大环内酯骨架的形状读出』可迁移原理 → ROX（罗红霉素）水相识别（llm_inferred 启发，须实验验证）。边界：共进化结合而非核糖体进化去水中 ROX。"
+    }
+   }
+  ]
+ },
+ "design_translation": [
+  {
+   "idea": "将核糖体 NPET 的『尺寸匹配受限狭缝 + 多点氢键网络』转译为对 14 元大环内酯（罗红霉素 ROX）骨架的形状读出识别位点：在多孔载体构筑与大环内酯环几何互补的印迹/预组织狭缝腔，腔壁布设与糖基羟基、内酯羰基、C9 肟醚互补的氢键给体/受体阵列",
+   "specific_functional_group": "氢键给体/受体（脲/酰胺、羟基、吡啶氮），按与 14 元大环内酯糖基羟基、内酯羰基、肟醚几何互补预组织排布；疏水腔壁匹配大环内酯环骨架",
+   "material_handle": "以罗红霉素/大环内酯为模板的分子印迹聚合物（MIP）或刚性预组织氢键腔（如脲/酰胺功能化介孔二氧化硅、氢键有机框架），借刚性间隔臂控制给体间距与腔尺寸",
+   "target_interaction": "腔壁氢键给体/受体与 ROX 糖基羟基/内酯羰基/肟醚的方向性多点氢键 + 与大环内酯环骨架的形状/范德华互补",
+   "source_tier": "llm_inference",
+   "evidence_tier": "inspiration（原理层外推：NPET 大环内酯识别接地于细菌核糖体翻译语境；环境水相 ROX 吸附转译为 llm_inferred，无直接环境吸附证据）",
+   "examples": [],
+   "design_principle": "受限且与 14 元大环内酯骨架几何互补的狭缝/隧道加多点氢键网络可作形状读出式识别（PDB 1JZZ 罗红霉素-50S NPET/PTC 占据；Kalpaxis 2003 慢结合竞争动力学）；ROX 即该隧道天然配体类别成员（14 元大环内酯）",
+   "implementation_example": "罗红霉素印迹聚合物或脲/酰胺功能化预组织氢键腔（无实验数据，仅为设计假设）",
+   "constraints": "ROX（罗红霉素）为电中性大环内酯，水相中水竞争与天然有机物/共存抗生素干扰是关键挑战；印迹腔尺寸与氢键几何须对 14 元大环内酯精确适配；核糖体本身不可用作材料，原理须重构于合成载体",
+   "failure_modes": "腔尺寸或氢键几何失配导致对大环内酯环适配不足；水相氢键被水竞争淬灭；非特异性疏水吸附降低对 ROX 的选择性；印迹模板残留",
+   "material_realization_examples": []
+  }
+ ],
+ "honesty_ledger": {
+  "facts": [
+   {
+    "type": "mechanism",
+    "index": 0,
+    "name": "NPET/PTC 受限几何对 14 元大环内酯（罗红霉素）的形状读出",
+    "basis": "from_source_corroborated",
+    "note": "Schlünzen 2001 Nature 413:814-821（DOI 10.1038/35101544，PMID 11677599）/ PDB 1JZZ：Deinococcus radiodurans 50S 复合物，RCSB 沉积标题、关键词（含 Roxithromycin）与配体实体 5（ROXITHROMYCIN）经 RCSB REST 核验；Kalpaxis 2003（DOI 10.1124/mol.63.3.617，Mol Pharmacol 63:617-623）标题经 Crossref 核验。quote 取自 RCSB 沉积记录与 Crossref 题录标题，未做坐标级 rRNA 残基审计与全文 PDF 审计"
+   },
+   {
+    "type": "mechanism",
+    "index": 1,
+    "name": "14 元大环内酯在核糖体肽键形成位点的慢结合竞争动力学",
+    "basis": "from_source_corroborated",
+    "note": "Dinos/Connell/Nierhaus/Kalpaxis 2003 Mol Pharmacol 63:617-623（DOI 10.1124/mol.63.3.617）标题直接陈述红霉素/罗红霉素/克拉霉素以慢结合动力学比较其与肽键形成活性细菌核糖体复合物的体外相互作用；quote 取自 Crossref 题录标题，未做全文 PDF 审计"
+   }
+  ],
+  "leads": [],
+  "inferences": [
+   {
+    "type": "design_translation",
+    "index": 0,
+    "idea": "将 NPET 受限几何加多点氢键网络转译为对罗红霉素 ROX 的形状读出识别位点（印迹/预组织氢键腔）",
+    "basis": "llm_inferred",
+    "label": "inspiration",
+    "note": "大环内酯-NPET 结合属细菌翻译语境的共进化抗生素-靶标作用，非环境水相清除 ROX 的功能；环境吸附为原理层外推，无直接 ROX 环境吸附证据，亲和力与选择性须实验验证"
+   }
+  ],
+  "boundary_notes": [
+   "本原型接地限于大环内酯（含罗红霉素）与细菌 50S 核糖体 NPET/PTC 的共进化结合及慢结合竞争动力学；该结合为抗生素-靶标相互作用（翻译语境），核糖体非进化以去水/清除水中 ROX，不构成环境清除的 from_source 证据",
+   "环境水相 ROX 吸附应用为设计转译（llm_inferred / inspiration），非 from_source 事实，不得用作 ROX 的 direct evidence",
+   "无 ROX 吸附性能数据（qmax 等）；严格未从外部污染物知识库搬运任何性能数值",
+   "命名歧义：本条 ROX 定义为罗红霉素（roxithromycin，14 元大环内酯，与 PDB 1JZZ 配体一致），与库内既有 酚类.ROX（洛克沙胂 roxarsone，有机砷酚）为不同化合物，已分别处理",
+   "候选 4V7Q 经核验为轮状病毒颗粒，不可用，已剔除；NPET 隧道尺寸/结合残基未做坐标级审计，相关环尺寸特异性与转译边界均为定性 llm_inferred，gate_level=soft"
+  ],
+  "missing_pdf_items": [
+   "Schlünzen 2001 Nature 413:814-821 全文 PDF（quote 取自 RCSB 沉积标题/关键词与 Crossref 题录）",
+   "Dinos/Kalpaxis 2003 Mol Pharmacol 63:617-623 全文 PDF（quote 取自 Crossref 题录标题）",
+   "PDB 1JZZ 坐标级 NPET 结合位点 rRNA/蛋白残基审计（未引具体残基编号）"
+  ],
+  "generated_by": "manual-curation-2026-07-22",
+  "note": "诚实优先：机制接地限于大环内酯（含罗红霉素）-核糖体 NPET 共进化结合与慢结合动力学；环境水相 ROX 吸附全部为 inspiration/外推，共进化结合而非核糖体进化去水中 ROX 的边界已在 boundary_rules 与 boundary_notes 明示"
+ },
+ "boundary_rules": [
+  {
+   "rule": "大环内酯-NPET 结合为共进化抗生素-靶标相互作用，发生于细菌翻译（肽键形成/新生肽出口）语境；核糖体非进化以去水/清除水中 ROX，不构成环境清除的 from_source 证据",
+   "source_mechanism": "NPET/PTC 受限几何对 14 元大环内酯（罗红霉素）的形状读出",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "环境水相 ROX 吸附转译为设计推断，核糖体非为去除水中 ROX 而进化，亲和力与选择性须实验验证（定性，无数值阈值）",
+   "source_mechanism": "NPET/PTC 受限几何对 14 元大环内酯（罗红霉素）的形状读出",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  },
+  {
+   "rule": "NPET 识别依赖完整 rRNA 预组织受限隧道，变性/溶剂化破坏几何与氢键网络（定性）",
+   "source_mechanism": "NPET/PTC 受限几何对 14 元大环内酯（罗红霉素）的形状读出",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  }
+ ]
+}

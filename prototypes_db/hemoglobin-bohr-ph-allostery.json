@@ -1,0 +1,385 @@
+{
+ "id": "hemoglobin-bohr-ph-allostery",
+ "name_zh": "血红蛋白 Bohr 效应 pH 质子联锁别构开关",
+ "name_en": "Hemoglobin Bohr Effect pH-Proton Allosteric Switch",
+ "organism": {
+  "scientific": "Homo sapiens（人成人血红蛋白 HbA，α2β2 四聚体；碱性 Bohr 效应）",
+  "category": "动物"
+ },
+ "biomimetic_dimension": "分子仿生",
+ "features": [
+  "pH 响应",
+  "动态响应"
+ ],
+ "tested_conditions": {
+  "tested_ph_range": null,
+  "tested_temp_range": null,
+  "salinity": null,
+  "note": "血红蛋白为胞内可溶别构蛋白（pH 门控动态响应原型，非吸附材料），本库无其吸附性能测试；performance_data 为空，故测试条件全空。天然碱性 Bohr 效应作用于生理 pH 约 7.0-7.6 区间（来源机制，Hub 2010）。"
+ },
+ "library_tier": "extended",
+ "lifecycle_status": "active",
+ "coverage": "partial",
+ "status": "active",
+ "provenance_summary": {
+  "n_papers": 5,
+  "n_verified": 10,
+  "n_unverified": 0,
+  "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与硬边界条数（HBB-001 四要素+1 硬边界=5，HBB-002 四要素+1 硬边界=5）。机制接地限于人血红蛋白碱性 Bohr 效应的天然机制（His146β/HC3 质子化耦联 T/R 四级开关，结构端点 PDB 2HHB/1HHO）；2,6-DCP pH 摆动吸附-再生应用为设计转译（llm_inferred/inspiration），无性能数据。quote 逐字取自 RCSB PDB 沉积记录（2HHB/1HHO TITLE）、PMC 2865513 开放获取全文 XML（Hub 2010）与文献标题（Crossref 核验），未做全文 PDF 审计。"
+ },
+ "mechanisms": [
+  {
+   "mechanism_id": "HBB-001",
+   "name": "碱性 Bohr 效应：His146β（HC3）质子化耦联 T/R 四级开关",
+   "description": "人血红蛋白氧亲和力随 pH 降低而下降（碱性 Bohr 效应）；约 40% 的 Bohr 效应归于 β 亚基 C 端 His146（HC3 组氨酸）的质子化。脱氧 T 态（PDB 2HHB，链 B/D 为 β 链，沉积坐标直测确认 HIS 146 与 ASP 94 存在）中，质子化 His(β)146 经亚基内盐桥 D(β)94-H(β)146 与 Asp94、Glu90 紧密结合，稳定于 T 晶体结构位点附近，并形成亚基间盐桥 K(α)40-H(β)146；His(β)146 去质子化则断裂盐桥、去稳定 T 态，使四级布居移向高亲和 R 态。多个可滴定组氨酸遂作为质子传感器，将氧亲和力随 pH 可逆切换",
+   "基本原理": "可滴定组氨酸（咪唑基）的质子化与盐桥网络的形成/断裂及 T/R 四级平衡相耦合，使配体亲和力随环境 pH 可逆反转；质子占有与配体占有竞争性地决定四级态布居，构成天然的 pH 别构开关",
+   "source": "literature",
+   "ref_doi": "10.1371/journal.pcbi.1000774",
+   "verification": "verified",
+   "verification_quote": "Approximately 40% of the Bohr effect has been attributed to the protonation of the terminal His146 residues of the β subunits, which are also denoted as ‘HC3 histidines’",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "环境质子浓度（H+/pH）是 Bohr 效应的天然别构信号：Hb 氧亲和力随 pH 降低而下降（碱性 Bohr 效应）；目标应用将该 pH 信号映射到 2,6-DCP（2,6-二氯酚，弱酸酚类，pKa 6.79，25 °C 水中，PubChem CID 6899）酚/酚氧负离子形态切换的 pH 窗口（该映射为 llm_inferred）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1371/journal.pcbi.1000774",
+     "locator": "PMC 2865513 Introduction / p.e1000774",
+     "quote": "The oxygen affinity of Hb decreases with lower pH, a phenomenon that is referred to as alkaline Bohr effect.",
+     "scope_match": "Keywords: oxygen affinity, pH, alkaline Bohr effect"
+    },
+    "bio_structure": {
+     "text": "质子传感基团为 β 亚基 C 端 His146（HC3 组氨酸，位于 β1/β2 界面）；T 态脱氧结构（PDB 2HHB，1.74 Å，COMPND 记链 A/C 为 α 链、链 B/D 为 β 链；沉积坐标直测 HIS B 146 与 ASP B 94 存在）中，His(β)146 参与亚基内盐桥 D(β)94-H(β)146 与亚基间盐桥 K(α)40-H(β)146（Hub 2010 以 2HHB 为 T 态模拟起点）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1371/journal.pcbi.1000774",
+     "locator": "PMC 2865513 Methods / PDB 2HHB chain B residues 146, 94",
+     "quote": "the inter-subunit salt bridges Val(α)1-R(α)141, D(α)126-R(α)141, K(α)40-H(β)146, as well as the intra-subunit salt bridge D(β)94-H(β)146",
+     "scope_match": "Keywords: salt bridges, H(β)146, D(β)94"
+    },
+    "interaction": {
+     "text": "T 态模拟中质子化 His(β)146 稳定停留于 T 晶体结构位点附近，由亚基内盐桥与 Asp94、Glu90 紧密结合；His(β)146 去质子化则丧失盐桥、侧链柔性增加而去稳定 T 态（Hub 2010：deprotonation of His(β)146 results in opposing consequences）。残基编号按 PDB 2HHB 编号（人 HbA 经典序列编号，与 UniProt P69905/P68871 序列编号一致）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1371/journal.pcbi.1000774",
+     "locator": "PMC 2865513 Results / p.e1000774",
+     "quote": "were found to be structurally stable near the His(β)146 position of the T X-ray structure, tightly bound to Asp94 and Glu90 by subunit-internal salt bridges",
+     "scope_match": "Keywords: His(β)146, Asp94, Glu90, salt bridges"
+    },
+    "why_it_works": {
+     "text": "约 40% 的 Bohr 效应归于 β 亚基 C 端 His146（HC3 组氨酸）的质子化；His146β 对 Bohr 效应的参与已由 Shih 1984 以天然与突变（Hb Cowtown，β146 His→Leu）血红蛋白实验证明；质子化将四级布居移向低亲和 T 态，使氧亲和力随 pH 反转响应",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1016/s0021-9258(17)43552-6",
+     "locator": "title, p.967",
+     "quote": "Involvement of His HC3 (146) beta in the Bohr effect of human hemoglobin",
+     "scope_match": "Keywords: His HC3, 146, Bohr effect, hemoglobin"
+    },
+    "boundary_conditions": [
+     {
+      "text": "His146β（HC3）是主要碱性 Bohr 基团，贡献约 40% 的 Bohr 效应；pH 响应依赖完整四聚体四级开关与 T 态盐桥网络，单体化或变性位点丧失该耦联",
+      "parameter": "pH",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "PMC 2865513 Introduction / p.e1000774",
+      "quote": "Approximately 40% of the Bohr effect has been attributed to the protonation of the terminal His146 residues of the β subunits, which are also denoted as ‘HC3 histidines’",
+      "scope_match": "Keywords: Bohr effect, protonation, His146",
+      "source_asset": null
+     },
+     {
+      "text": "人工位点协同锐度边界：聚合物固定化可滴定基团为无协同单位点（Hill 系数约 1），难及天然 Hb 四聚体的协同锐度（n 约 2.8-3.0），吸附-释放摆动的转变宽度将展宽；属原理借用而非机制复现（定性，无数值阈值）",
+      "parameter": "cooperativity",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     },
+     {
+      "text": "响应 pH 窗口边界：开关作用于滴定基团 pKa 两侧约 ±1 的窗口内；窗口外质子占有饱和、吸附-释放摆动失效，须以局部微环境调校滴定基团 pKa 使之匹配目标污染物的形态切换 pH（定性，无数值阈值）",
+      "parameter": "pH",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "多个 pKa 匹配的可滴定基团阵列，其质子化/去质子化与结合位点的可逆稳定化相互作用（盐桥/氢键/离子对）形成/断裂相耦联，使位点亲和状态随环境 pH 可逆切换；若目标物形态或位点结合能力亦随 pH 变化，即可构筑 pH 摆动吸附-释放循环",
+    "verification_quote": "Approximately 40% of the Bohr effect has been attributed to the protonation of the terminal His146 residues of the β subunits, which are also denoted as ‘HC3 histidines’"
+   },
+   "source_doi": "10.1371/journal.pcbi.1000774",
+   "source_page": null,
+   "source_locator": "PMC 2865513（Hub 2010 PLoS Comput Biol 6(5):e1000774 开放获取全文 XML；Introduction/Results/Methods）",
+   "source_file": "PMC 2865513 开放获取全文 XML + RCSB PDB 2HHB 沉积坐标（quote 逐字可核验）；未做本地全文 PDF 审计",
+   "functional_groups": [
+    "可滴定咪唑基（His146β/HC3 侧链，质子传感）",
+    "盐桥网络残基（Asp94β、Glu90β、Lys40α）",
+    "α1β2/α2β1 亚基界面（四级开关）"
+   ],
+   "key_structures": [
+    "动态响应结构"
+   ]
+  },
+  {
+   "mechanism_id": "HBB-002",
+   "name": "T/R 别构开关的结构端点与协同框架",
+   "description": "人血红蛋白四级转变的结构端点为脱氧 T 态（PDB 2HHB，1.74 Å）与氧合 R 态（PDB 1HHO，2.1 Å），分别具低、高氧亲和力；配体结合协同性源于四级态布居对联结亚基数目的依赖；Perutz 1970 将血红蛋白协同效应的立体化学基础置于别构框架，T 态特异盐桥网络（含 HBB-001 的质子化组氨酸盐桥）稳定脱氧结构，构成 Bohr 效应的结构基础",
+   "基本原理": "两个预组织四级态（T/R）之间的布居转换，叠加质子与配体对态稳定性的差异耦合，产生协同且可被 pH 逆转的亲和力响应",
+   "source": "literature",
+   "ref_doi": "10.1038/228726a0",
+   "verification": "corroborated",
+   "verification_quote": "The end points of the quaternary transition of Hb are referred to as deoxy T state and oxy R state of Hb, which are characterized by low and high oxygen affinity, respectively",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "开关的两个功能端点：脱氧 T 态低氧亲和力、氧合 R 态高氧亲和力；环境配体（O2）占有率与质子占有率共同决定四级态布居，是 pH 信号可逆调制亲和力的框架前提",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1371/journal.pcbi.1000774",
+     "locator": "PMC 2865513 Introduction / p.e1000774",
+     "quote": "The end points of the quaternary transition of Hb are referred to as deoxy T state and oxy R state of Hb, which are characterized by low and high oxygen affinity, respectively",
+     "scope_match": "Keywords: quaternary transition, deoxy T state, oxy R state, oxygen affinity"
+    },
+    "bio_structure": {
+     "text": "T 态结构端点取自 PDB 2HHB（人脱氧血红蛋白 1.74 Å，Fermi 1984；RCSB 沉积记录 TITLE 已核验），R/R2 端点文献取 1IRD/1BBB（Hub 2010 模拟起点）；氧合 R 态端点对应 PDB 1HHO（人氧合血红蛋白 2.1 Å，Shaanan 1983，TITLE 已核验）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1371/journal.pcbi.1000774",
+     "locator": "PMC 2865513 Methods / PDB 2HHB (T state)",
+     "quote": "the R , R2 , and T state were taken from the protein data bank (PDB codes 1IRD [26] , 1BBB [7] and 2HHB [27] , respectively)",
+     "scope_match": "Keywords: T state, protein data bank, 2HHB"
+    },
+    "interaction": {
+     "text": "配体结合协同性源于四级态布居对联结亚基数目的依赖；四级 T→R 转变是协同性的分子过程，质子结合（Bohr 效应）经同一四级平衡与氧亲和力耦合",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1371/journal.pcbi.1000774",
+     "locator": "PMC 2865513 Introduction / p.e1000774",
+     "quote": "the cooperativity of ligand binding originates from the dependence of quaternary population on the number of liganded subunits",
+     "scope_match": "Keywords: cooperativity, ligand binding, quaternary population"
+    },
+    "why_it_works": {
+     "text": "Perutz 1970 提出血红蛋白协同效应的立体化学基础并将其置于别构问题框架（标题级接地）；T 态特异盐桥网络的形成/断裂是质子结合能转化为四级态稳定化能的立体化学途径（机制层，标题接地）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/228726a0",
+     "locator": "title, p.726",
+     "quote": "Stereochemistry of Cooperative Effects in Haemoglobin: Haem–Haem Interaction and the Problem of Allostery",
+     "scope_match": "Keywords: Cooperative, Haemoglobin, Allostery"
+    },
+    "boundary_conditions": [
+     {
+      "text": "开关端点边界：别构切换定义于脱氧 T 态（PDB 2HHB，人脱氧血红蛋白 1.74 Å 晶体结构）与氧合 R 态（PDB 1HHO，2.1 Å）两个四级结构之间；脱离四级结构谈 Bohr 开关属误用",
+      "parameter": "quaternary_structure",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "RCSB PDB 2HHB TITLE (Fermi 1984, p.159)",
+      "quote": "THE CRYSTAL STRUCTURE OF HUMAN DEOXYHAEMOGLOBIN AT 1.74 ANGSTROMS RESOLUTION",
+      "scope_match": "Keywords: deoxyhaemoglobin, 1.74, human",
+      "source_asset": null
+     },
+     {
+      "text": "四聚体约束边界：协同性依赖完整 α2β2 四聚体与亚基界面；载体固定化、单体化或界面破坏使四级耦合丧失，S 形响应退化为单位点双曲响应（定性，无数值阈值）",
+      "parameter": "quaternary_structure",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "在两个预组织状态间构筑布居型开关，并令环境信号（质子/配体）差异性地稳定其中一态，可获得协同、可逆且信号门控的亲和力切换；该框架独立于蛋白骨架，可转译为人工位点的态切换设计",
+    "verification_quote": "The end points of the quaternary transition of Hb are referred to as deoxy T state and oxy R state of Hb, which are characterized by low and high oxygen affinity, respectively"
+   },
+   "source_doi": "10.1038/228726a0",
+   "source_page": 726,
+   "source_locator": "title, p.726 / PMC 2865513 Introduction/Methods",
+   "source_file": "Nature 228:726-734（Perutz 1970 标题接地）+ PMC 2865513 全文 XML + RCSB PDB 2HHB/1HHO 沉积记录；未做全文 PDF 审计",
+   "functional_groups": [
+    "四级态界面盐桥网络（Val1α-Arg141α、Asp126α-Arg141α、Lys40α-His146β、Asp94β-His146β）",
+    "血红素-血红素相互作用"
+   ],
+   "key_structures": [
+    "识别结构",
+    "动态响应结构"
+   ]
+  }
+ ],
+ "performance_data": [],
+ "engineering_constraints": [
+  {
+   "constraint": "四聚体与四级结构依赖",
+   "value": "人 HbA 为 α2β2 四聚体（PDB 2HHB 条目约 64.74 kDa）；协同性与 Bohr 耦合依赖完整四聚体与亚基界面盐桥（K(α)40-H(β)146、D(β)94-H(β)146 等），界面破坏即丧失协同锐度",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "RCSB 2HHB rcsb_entry_info molecular_weight 64.74 kDa；Hub 2010 列举 T 态亚基间/亚基内盐桥（PMC 2865513 Methods）",
+   "source": "literature",
+   "ref_doi": "10.1016/0022-2836(84)90472-8"
+  },
+  {
+   "constraint": "可滴定基团 pKa 窗口",
+   "value": "pH 开关工作于滴定基团 pKa 两侧约 ±1 的范围；组氨酸咪唑 pKa 约 6，Hb 内 His146β 因 T 态盐桥抬升其表观 pKa；人工位点须按目标形态切换 pH 调校滴定基团 pKa",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（基于 Hub 2010 质子化-T 态稳定化事实的外推）",
+   "source": "llm_inference",
+   "ref_doi": null
+  },
+  {
+   "constraint": "可溶蛋白形态",
+   "value": "血红蛋白为红细胞内可溶蛋白，直接用作吸附剂须固定化；固定化常破坏四级耦合，故本原型只提取设计原理（多滴定基团耦联开关），不复制蛋白本身",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断",
+   "source": "llm_inference",
+   "ref_doi": null
+  }
+ ],
+ "narrative": {
+  "entries": [
+   {
+    "source_file": "PMC 2865513 / Hub 2010 PLoS Comput Biol 6(5):e1000774 (DOI 10.1371/journal.pcbi.1000774) + RCSB PDB 2HHB/1HHO + Shih 1984 JBC + Perutz 1970 Nature",
+    "paper_id": "2010-Hub-Hb-T-R-transitions-Bohr",
+    "sections": {
+     "problem_definition": "生物体需在代谢产生的 pH/CO2 波动下精确调控血红蛋白的氧亲和力：组织酸化时释放氧、肺部复氧时结合氧。Bohr 效应即氧亲和力随 pH 降低而下降的现象，是自然界精确的 pH 响应别构开关。其分子基础问题是：质子信号如何经可滴定残基耦联到四级结构转变。2,6-DCP（2,6-二氯酚，弱酸酚类，pKa 6.79，25 °C 水中）等污染物的酚/酚氧负离子形态切换同样发生于近中性 pH 窗口，构成 pH 触发吸附-再生设计的化学前提。",
+     "biological_solution": "人血红蛋白为 α2β2 四聚体，其四级转变端点为脱氧 T 态（PDB 2HHB，1.74 Å，Fermi 1984）与氧合 R 态（PDB 1HHO，2.1 Å，Shaanan 1983），分别具低、高氧亲和力（Hub 2010）。碱性 Bohr 效应的关键质子传感器为 β 亚基 C 端 His146（HC3 组氨酸）：约 40% 的 Bohr 效应归于其质子化（Hub 2010，引 Shih 1984 对天然与 Hb Cowtown 突变体的实验）。T 态中质子化 His(β)146 由亚基内盐桥与 Asp94、Glu90 紧密结合而稳定于 T 晶体结构位点附近（D(β)94-H(β)146），并形成亚基间盐桥 K(α)40-H(β)146；去质子化则断裂盐桥、去稳定 T 态，使四级布居移向 R 态。酸性环境因此倾向低亲和 T 态，实现氧亲和力随 pH 的可逆切换；协同性源于四级态布居对联结亚基数目的依赖。",
+     "key_features": "必须保留：① 多个 pKa 匹配的可滴定基团（咪唑/吡啶/胺类）构成质子传感阵列；② 质子化状态与位点间稳定化相互作用（盐桥/氢键/离子对）的形成-断裂耦联；③ 位点亲和态在两个预组织状态间可逆切换（布居型开关）；④ 滴定基团 pKa 落于工作 pH 窗口内。可灵活调整：载体骨架、滴定基团种类与密度、微环境对 pKa 的调校、识别内核化学。",
+     "design_mapping": "仿生映射：Hb 多组氨酸协同质子开关 → 面向 2,6-DCP 的 pH 摆动吸附-再生位点。边界声明：这是设计转译/启发（llm_inferred），非 from_source 事实。天然机制类别为别构动态响应（氧输送调控），转译限于原理层；聚合物固定化位点无协同（Hill 约 1），难及天然四聚体的协同锐度，摆动转变将展宽；蛋白本身（可溶、约 64.7 kDa、四聚体依赖）不可直接复制为吸附剂，只提取设计原则。",
+     "explainability_anchors": "设计溯源：His146β 质子化耦联 T/R 四级开关（PDB 2HHB/1HHO + Hub 2010 + Shih 1984，from_source）→ '多滴定基团耦联稳定化相互作用的布居型 pH 开关'可迁移原理（from_source）→ 2,6-DCP 酚/酚氧负离子形态切换的 pH 摆动吸附-再生位点（llm_inferred 启发，须实验验证）。"
+    }
+   }
+  ]
+ },
+ "design_translation": [
+  {
+   "idea": "将 Hb 的'多组氨酸协同质子开关'转译为多孔载体上的多滴定基团阵列，面向 2,6-DCP（2,6-二氯酚，pKa 6.79，25 °C 水中，PubChem CID 6899）：在捕获 pH（低于 2,6-DCP pKa，酚形态为主）与再生 pH（高于 pKa，酚氧负离子为主）之间，借咪唑/吡啶/叔胺位点的质子化切换改变位点电荷态与氢键能力，实现 pH 摆动的吸附-释放循环",
+   "specific_functional_group": "可滴定咪唑基（组氨酸类似物/咪唑单体）、吡啶基、叔胺，pKa 经局部微环境调校落于捕获 pH 与再生 pH 之间；辅以与酚/酚氧负离子互补的氢键给体（脲/酰胺）或阳离子锚",
+   "material_handle": "在介孔二氧化硅或交联聚合物骨架上接枝高密度咪唑/组氨酸类似物单体（表面引发聚合或硅烷偶联），构筑局部多咪唑阵列以逼近多滴定基团耦联；以分子印迹或刚性间隔臂预组织识别内核，并以疏水微环境调校咪唑表观 pKa",
+   "target_interaction": "捕获 pH 下咪唑质子化（正电）与 2,6-DCP 酚形态的氢键/偶极作用，或与再生 pH 下酚氧负离子的离子对/氢键差异，驱动吸附-释放摆动；2,6-二氯苯环贡献疏水/π 接触",
+   "source_tier": "llm_inference",
+   "evidence_tier": "inspiration（原理层外推：Bohr 效应质子开关接地于人 Hb 天然机制（PDB 2HHB/1HHO + Hub 2010 + Shih 1984）；转译为 2,6-DCP pH 摆动吸附位点为 llm_inferred，无吸附实验数据）",
+   "examples": [],
+   "design_principle": "Hb 证明多个可滴定组氨酸的质子化可与稳定化相互作用网络耦联，使结合态随 pH 可逆切换（PDB 2HHB/1HHO，Hub 2010）；该'多滴定基团耦联布居型开关'原理独立于蛋白骨架，可移植到人工位点以响应 2,6-DCP 形态切换的 pH 窗口",
+   "implementation_example": "高密度咪唑/组氨酸类似物功能化、微环境调校 pKa 的介孔二氧化硅或交联聚合物（无实验数据，仅为设计假设）",
+   "constraints": "聚合物位点 Hill 系数约 1、难及天然协同锐度，摆动转变展宽（原理借用层级）；咪唑 pKa 须调校至 2,6-DCP pKa（6.79）两侧的捕获/再生 pH 之间；缓冲容量、离子强度与共存弱酸（腐殖酸、碳酸）竞争质子化位点是关键挑战；对共存酚类的选择性须实验验证",
+   "failure_modes": "单位点无协同使吸附-释放转变不锐、再生不彻底；咪唑质子化同时改变亲水性，引起非特异吸附波动；共存阴离子/腐殖酸占据质子化位点；多咪唑阵列密度不足则耦联效应消失、退化为单基团 pH 滴定",
+   "material_realization_examples": []
+  }
+ ],
+ "honesty_ledger": {
+  "facts": [
+   {
+    "type": "mechanism",
+    "index": 0,
+    "name": "碱性 Bohr 效应：His146β（HC3）质子化耦联 T/R 四级开关",
+    "basis": "from_source_verified",
+    "note": "Hub 2010（PMC 2865513 全文 XML：约 40% Bohr 效应归于 β 亚基 His146 质子化；T 态盐桥 D(β)94-H(β)146、K(α)40-H(β)146；质子化 His(β)146 与 Asp94/Glu90 结合稳定 T 态；去质子化去稳定 T 态）+ Shih 1984 JBC（His HC3 146β 参与 Bohr 效应的实验证明，标题接地）+ RCSB PDB 2HHB 沉积坐标直测 HIS B 146/ASP B 94 存在；quote 逐字取自 PMC 全文 XML 与 PDB 沉积记录/标题，未做全文 PDF 审计"
+   },
+   {
+    "type": "mechanism",
+    "index": 1,
+    "name": "T/R 别构开关的结构端点与协同框架",
+    "basis": "from_source_corroborated",
+    "note": "Hub 2010（T/R 端点定义与协同性表述；2HHB 作 T 态起点）+ RCSB PDB 2HHB/1HHO 沉积记录 TITLE 逐字核验（1.74 Å 脱氧/2.1 Å 氧合）+ Perutz 1970 Nature 标题（协同效应立体化学与别构框架）；Perutz 1970 为标题级接地，正文未审计"
+   },
+   {
+    "type": "pollutant_context",
+    "index": 0,
+    "name": "2,6-DCP pKa 6.79（25 °C 水中）",
+    "basis": "external_verified",
+    "note": "PubChem CID 6899（IUPAC 名 2,6-dichlorophenol）PUG View 'Dissociation Constants'：pKa = 6.79 at 25 °C in water；仅用于 design_translation 语境，不作原型机制证据"
+   }
+  ],
+  "leads": [
+   {
+    "type": "mutant_evidence",
+    "name": "Hb Cowtown [β146 His→Leu]：碱性 Bohr 效应起源的结构证据",
+    "note": "PNAS 81:4781-4784（DOI 10.1073/pnas.81.15.4781，Crossref 检索命中，未直接 fetch 核验全文），可加强 His146β 的 Bohr 贡献证据链，后续核验后可补入"
+   }
+  ],
+  "inferences": [
+   {
+    "type": "design_translation",
+    "index": 0,
+    "idea": "将 Hb 多组氨酸协同质子开关转译为多孔载体上多滴定基团阵列，实现 2,6-DCP 的 pH 摆动吸附-再生",
+    "basis": "llm_inferred",
+    "label": "inspiration",
+    "note": "天然机制类别为别构动态响应（氧输送调控），非污染物识别；转译限于原理层（多滴定基团耦联布居型开关），无 2,6-DCP 吸附实验数据，亲和力、选择性与再生性须实验验证"
+   },
+   {
+    "type": "boundary_inference",
+    "index": 0,
+    "name": "人工位点 Hill 约 1、难及天然协同锐度；pH 窗口受滴定基团 pKa 限制",
+    "basis": "llm_inferred",
+    "label": "engineering_limit",
+    "note": "聚合物固定化单位点无四级耦联，摆动转变展宽；天然 Hb Hill 约 2.8-3.0 为教科书值（未 from_source 接地于本条目引文）"
+   }
+  ],
+  "boundary_notes": [
+   "本原型天然功能为氧输送的 pH 调控（碱性 Bohr 效应），非污染物识别；机制 from_source 接地限于人 Hb 天然机制（His146β 质子化-T/R 开关，结构端点 2HHB/1HHO）",
+   "2,6-DCP pH 摆动吸附-再生应用全部为 design_translation（llm_inferred/inspiration），不得用作 2,6-DCP 吸附的 direct evidence",
+   "无 2,6-DCP 吸附性能数据（qmax 等）；performance_data 为空数组，严格未从任何污染物知识库搬运性能数值（知识隔离红线）",
+   "聚合物位点协同锐度不足（Hill 约 1）与 pH 窗口边界均为定性 llm_inferred，不带数值阈值，gate_level=soft",
+   "记忆候选 DOI 10.1038/301049a0 经 Crossref 证伪（解析为无关条目 'Tension fractures and extensional tectonics', Nature 1983, 49-51），已剔除；1HHO 正确主引文经 RCSB 沉积记录核验为 Shaanan 1983 J Mol Biol 171:31-59（DOI 10.1016/S0022-2836(83)80313-1）"
+  ],
+  "missing_pdf_items": [
+   "Hub 2010 PLoS Comput Biol 正文 PDF（quote 逐字取自 PMC 2865513 开放获取全文 XML，可核验；正文内精确页码以 elocation e1000774 计）",
+   "Perutz 1970 Nature 228:726-734 全文 PDF（quote 取自 Crossref 核验标题）",
+   "Shih 1984 JBC 259:967-974 全文 PDF（quote 取自 Crossref 核验标题）",
+   "Fermi 1984 J Mol Biol 175:159-174 全文 PDF（quote 取自 RCSB PDB 2HHB 沉积记录 TITLE）",
+   "Shaanan 1983 J Mol Biol 171:31-59 全文 PDF（quote 取自 RCSB PDB 1HHO 沉积记录 TITLE）"
+  ],
+  "generated_by": "manual-curation-2026-07-22",
+  "note": "诚实优先：机制接地限于人 Hb 碱性 Bohr 效应天然机制（PDB 2HHB/1HHO + Hub 2010 + Shih 1984 + Perutz 1970 标题）；一切 2,6-DCP 吸附转译为 inspiration/外推，协同锐度不足如实标注"
+ },
+ "boundary_rules": [
+  {
+   "rule": "His146β（HC3）是主要碱性 Bohr 基团，贡献约 40% 的 Bohr 效应；pH 响应依赖完整四聚体四级开关与 T 态盐桥网络",
+   "source_mechanism": "碱性 Bohr 效应：His146β（HC3）质子化耦联 T/R 四级开关",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "别构切换定义于脱氧 T 态（PDB 2HHB，1.74 Å）与氧合 R 态（PDB 1HHO，2.1 Å）两个四级结构之间，酸性环境倾向低亲和 T 态",
+   "source_mechanism": "T/R 别构开关的结构端点与协同框架",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "人工聚合物固定化位点 Hill 系数约 1，难及天然 Hb 四聚体协同锐度，吸附-释放摆动转变展宽（定性，无数值阈值）",
+   "source_mechanism": "碱性 Bohr 效应：His146β（HC3）质子化耦联 T/R 四级开关",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  },
+  {
+   "rule": "响应 pH 窗口受滴定基团 pKa 限制（窗口外质子占有饱和、摆动失效），须调校 pKa 匹配目标形态切换 pH（定性，无数值阈值）",
+   "source_mechanism": "碱性 Bohr 效应：His146β（HC3）质子化耦联 T/R 四级开关",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  }
+ ]
+}
