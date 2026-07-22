@@ -1,0 +1,361 @@
+{
+ "id": "natural-dna-imotif-gquadruplex-switch",
+ "name_zh": "天然核酸二级结构分子开关（i-motif / G-四链体）",
+ "name_en": "Natural Nucleic-Acid Secondary-Structure Conformational Switch (i-motif / G-quadruplex)",
+ "organism": {
+  "scientific": "Homo sapiens（人端粒 C 富集链 i-motif 与 (TTAGGG)n G 富集重复 G-四链体；端粒/启动子区天然存在的核酸二级结构，非 SELEX 体外筛选适配体）",
+  "category": "动物"
+ },
+ "biomimetic_dimension": "分子仿生",
+ "features": [
+  "动态响应",
+  "pH 响应"
+ ],
+ "tested_conditions": {
+  "tested_ph_range": null,
+  "tested_temp_range": null,
+  "salinity": null,
+  "note": "i-motif / G-四链体为天然核酸二级结构构象开关（动态响应原型），本库无其吸附性能测试条件；performance_data 为空，故测试条件全空。"
+ },
+ "library_tier": "extended",
+ "lifecycle_status": "active",
+ "coverage": "partial",
+ "status": "active",
+ "provenance_summary": {
+  "n_papers": 2,
+  "n_verified": 8,
+  "n_unverified": 0,
+  "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与硬边界条数（NDNA-001 bio_structure/interaction/why_it_works 三要素+1 硬边界=4，NDNA-002 同=4，合计 8）。机制接地限于天然端粒序列的 pH/离子响应构象折叠：i-motif 六重 intercalated C.C+ 配对（PDB 1ELN + Phan 2000 JMB PMID 10860727）与 G-四链体三重 G-tetrad 堆叠经 K+ 稳定（PDB 2HY9 + Dai 2007 NAR PMC1874667）。ROX（罗红霉素，大环内酯，pKa 8.8-9.0）捕获-释放为设计转译（llm_inferred/inspiration），构象开关为作用机制而非 ROX 直接靶标，无 DNA-ROX 结合或吸附性能数据。quote 逐字取自 PubMed efetch 摘要与 RCSB PDB 沉积记录（可核验）；正文 PDF 未取得，未做全文 PDF 审计。"
+ },
+ "mechanisms": [
+  {
+   "mechanism_id": "NDNA-001",
+   "name": "i-motif 酸性触发的半质子化 C·C⁺ 折叠（构象开关折叠态）",
+   "description": "人端粒 C 富集链 d(CCCTA2CCCTA2CCCTA2CCCT) 在酸性条件下经胞嘧啶 N3 半质子化形成 intercalated C·C⁺ 配对，分子内折叠为 i-motif：四段胞嘧啶 stretches 构成六重交替插入的 C·C⁺ 配对（PDB 1ELN NMR 结构）。折叠态（紧凑）与去折叠态（伸展）之间的 pH 可逆切换构成构象开关",
+   "基本原理": "胞嘧啶 N3 半质子化使两条平行 C 富集链以 C·C⁺ 配对交替插入堆叠，酸性条件驱动该 intercalated 拓扑组装为紧凑 i-motif；去质子化（升 pH）则解折叠，构成 pH 门控的可逆构象开闭",
+   "source": "literature",
+   "ref_doi": "10.1006/jmbi.2000.3613",
+   "verification": "verified",
+   "verification_quote": "The four cytidine stretches form an i-motif which includes six intercalated C.C+ pairs and terminates with the cytidines at the 5' extremity of each stretch.",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "ROX（罗红霉素，14 元大环内酯抗生素，叔胺 pKa 约 8.8-9.0）为本原型面向的动态响应目标物；构象开关经折叠/去折叠改变孔道可及性或结合位点几何以可逆捕获-释放 ROX。注意 ROX 并非 i-motif 的天然触发输入（天然触发为酸性 pH 下的胞嘧啶半质子化），亦无端粒序列特异结合 ROX 的证据，此处接地的是 i-motif 的天然 pH 触发机制而非 ROX 识别",
+     "basis": "llm_inferred"
+    },
+    "bio_structure": {
+     "text": "人端粒 C 富集链分子内折叠为 i-motif；PDB 1ELN（NMR，序列 CCCTAACCCTAACCCUAACCCT）显示四段胞嘧啶 stretches 形成六重 intercalated C·C⁺ 配对，终止于每段 5' 端胞嘧啶，TA2 连接环跨越窄/宽沟",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1006/jmbi.2000.3613",
+     "locator": "PDB 1ELN / p.123",
+     "quote": "The four cytidine stretches form an i-motif which includes six intercalated C.C+ pairs and terminates with the cytidines at the 5' extremity of each stretch.",
+     "scope_match": "Keywords: cytidine, i-motif, intercalated, C.C+"
+    },
+    "interaction": {
+     "text": "i-motif 由六重 intercalated 半质子化 C·C⁺ 碱基对稳定（C·C⁺ 中一个质子由两胞嘧啶 N3 共享，记号 C.C+ 即示半质子化）；胞嘧啶 N3 半质子化是酸性触发的分子基础，C·C⁺ 配对的交替插入堆叠构成折叠态骨架",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1006/jmbi.2000.3613",
+     "locator": "PDB 1ELN / p.123",
+     "quote": "The four cytidine stretches form an i-motif which includes six intercalated C.C+ pairs and terminates with the cytidines at the 5' extremity of each stretch.",
+     "scope_match": "Keywords: cytidine, i-motif, C.C+, intercalated"
+    },
+    "why_it_works": {
+     "text": "i-motif 折叠态由 intercalated C·C⁺ 拓扑定义：四段胞嘧啶 stretches 形成六重 intercalated C·C⁺ 配对终止于各段 5' 端胞嘧啶（PDB 1ELN），该半质子化交替插入架构是紧凑折叠态的结构基础；因其组装依赖胞嘧啶半质子化，pH 升降可逆地组装/解组装该折叠态，构成构象开关",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1006/jmbi.2000.3613",
+     "locator": "PDB 1ELN / p.123",
+     "quote": "The four cytidine stretches form an i-motif which includes six intercalated C.C+ pairs and terminates with the cytidines at the 5' extremity of each stretch.",
+     "scope_match": "Keywords: cytidine, i-motif, intercalated, C.C+"
+    },
+    "boundary_conditions": [
+     {
+      "text": "折叠触发边界：i-motif 折叠依赖胞嘧啶半质子化（六重 intercalated C·C⁺ 配对），故折叠态与酸性条件耦合；C·C⁺ 配对是折叠的必要结构要素，去质子化使 i-motif 解折叠",
+      "parameter": "ph",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "PDB 1ELN / p.123",
+      "quote": "The four cytidine stretches form an i-motif which includes six intercalated C.C+ pairs and terminates with the cytidines at the 5' extremity of each stretch.",
+      "scope_match": "Keywords: cytidine, i-motif, C.C+, intercalated",
+      "source_asset": null
+     },
+     {
+      "text": "pH 窗口匹配边界：i-motif 酸性折叠窗口（依序列/缓冲液而定，须实测）与 ROX 叔胺 pKa 8.8-9.0（偏碱）的匹配性须实验测定；构象切换须可测地改变 ROX 可及性/结合几何方可作为捕获-释放开关，二者耦合非自明（定性，无数值阈值）",
+      "parameter": "ph",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "依赖胞嘧啶半质子化的 pH 门控可逆折叠/去折叠（intercalated C·C⁺ 拓扑）可作为固定化核酸构象致动器，切换结合位点几何或孔道可及性，提供动态吸附-再生维度",
+    "verification_quote": "The four cytidine stretches form an i-motif which includes six intercalated C.C+ pairs and terminates with the cytidines at the 5' extremity of each stretch."
+   },
+   "source_doi": "10.1006/jmbi.2000.3613",
+   "source_page": 123,
+   "source_locator": "PDB 1ELN / p.123",
+   "source_file": "PDB 1ELN（RCSB 沉积数据）+ J Mol Biol 299:123-144（Phan, Guéron, Leroy 2000，PMID 10860727 摘要逐字；正文 PDF 未取得，未做本地全文 PDF 审计）",
+   "functional_groups": [
+    "半质子化胞嘧啶 N3（intercalated C·C⁺ 配对，i-motif 折叠致动基团）",
+    "TA2 连接环（折叠拓扑的环跨结构）"
+   ],
+   "key_structures": [
+    "构象开关"
+   ]
+  },
+  {
+   "mechanism_id": "NDNA-002",
+   "name": "G-四链体 Hoogsteen G-四分体堆叠与 K⁺ 稳定（构象开关折叠态）",
+   "description": "人端粒 G 富集重复 (TTAGGG)n 在 K⁺ 溶液中分子内折叠为 G-四链体：三层 G-四分体（G-tetrad）经 Hoogsteen 氢键连接的鸟嘌呤四联体堆叠而成，中心通道由 K⁺ 占据稳定（PDB 2HY9 NMR hybrid-1 型）。K⁺ 依赖的折叠/去折叠构成离子门控构象开关，与 i-motif 的 pH 门控互补",
+   "基本原理": "四个鸟嘌呤以 Hoogsteen 氢键形成平面 G-四分体，多层四分体堆叠并由单价阳离子（K⁺）居中配位稳定；阳离子依赖的四级堆叠使 G 富集链在折叠（紧凑）与去折叠态间可逆切换",
+   "source": "literature",
+   "ref_doi": "10.1093/nar/gkm009",
+   "verification": "verified",
+   "verification_quote": "The hybrid-type telomeric G-quadruplex consists of three G-tetrads linked with mixed parallel-antiparallel G-strands",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "ROX（罗红霉素，大环内酯）亦为本 G-四链体构象开关面向的动态响应目标物；K⁺ 触发的 G-四链体折叠/去折叠可经改变孔道可及性或位点几何参与 ROX 可逆捕获-释放。ROX 非 G-四链体的天然触发输入（天然触发为 K⁺ 等单价阳离子），亦无端粒 G 序列特异结合 ROX 的证据，此处接地的是 G-四链体天然阳离子响应折叠而非 ROX 识别",
+     "basis": "llm_inferred"
+    },
+    "bio_structure": {
+     "text": "人端粒 G 富集 DNA（序列 AAAGGGTTAGGGTTAGGGTTAGGGAA）在 K⁺ 中分子内折叠为 G-四链体；PDB 2HY9 NMR 结构（hybrid-1 型）给出该胞内型端粒 G-四链体",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1093/nar/gkm009",
+     "locator": "PDB 2HY9 / p.2440",
+     "quote": "We report the NMR solution structure of the intramolecular G-quadruplex formed in human telomeric DNA in K(+).",
+     "scope_match": "Keywords: G-quadruplex, human telomeric DNA, K(+)"
+    },
+    "interaction": {
+     "text": "hybrid 型端粒 G-四链体由三层 G-tetrad 构成，G-tetrad 为 Hoogsteen 氢键连接的鸟嘌呤四联体，层间以混合平行-反平行 G 链连接；底部两层 G-tetrad 取 anti:anti:syn:anti 排布，顶层取反向 syn:syn:anti:syn 排布",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1093/nar/gkm009",
+     "locator": "PDB 2HY9 / p.2440",
+     "quote": "The hybrid-type telomeric G-quadruplex consists of three G-tetrads linked with mixed parallel-antiparallel G-strands",
+     "scope_match": "Keywords: G-quadruplex, G-tetrads, telomeric"
+    },
+    "why_it_works": {
+     "text": "端粒 G-四链体的独特结构在 K⁺ 中形成并由 K⁺ 居中稳定（K⁺ 配位于 G-tetrad 堆叠中心通道）；阳离子依赖的 G-tetrad 堆叠定义了折叠态，使其在 K⁺ 存在下稳定、阳离子条件改变时可逆切换，构成离子门控构象开关",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1093/nar/gkm009",
+     "locator": "PDB 2HY9 / p.2440",
+     "quote": "We report the NMR solution structure of the intramolecular G-quadruplex formed in human telomeric DNA in K(+).",
+     "scope_match": "Keywords: G-quadruplex, K(+), human telomeric DNA"
+    },
+    "boundary_conditions": [
+     {
+      "text": "阳离子触发边界：G-四链体折叠依赖 K⁺（或特定单价阳离子）居中稳定三层 G-tetrad 堆叠，三层 G-tetrad 拓扑为阳离子依赖；缺 K⁺ 或强竞争阳离子环境使折叠态不稳定",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "PDB 2HY9 / p.2440",
+      "quote": "We report the NMR solution structure of the intramolecular G-quadruplex formed in human telomeric DNA in K(+).",
+      "scope_match": "Keywords: G-quadruplex, K(+), human telomeric DNA",
+      "source_asset": null
+     },
+     {
+      "text": "离子门控转译边界：将 K⁺ 依赖的 G-四链体折叠转译为 ROX 捕获-释放，须使构象变化可测地改变 ROX 可及性/位点几何，且离子环境须受控；该耦合须实测（定性，无数值阈值）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "阳离子（K⁺）门控的可逆 G-tetrad 折叠/去折叠可作为固定化 G 富集核酸构象致动器，与 pH 门控 i-motif 互补，共同提供 pH/离子双动态响应维度",
+    "verification_quote": "The hybrid-type telomeric G-quadruplex consists of three G-tetrads linked with mixed parallel-antiparallel G-strands"
+   },
+   "source_doi": "10.1093/nar/gkm009",
+   "source_page": 2440,
+   "source_locator": "PDB 2HY9 / p.2440",
+   "source_file": "PDB 2HY9（RCSB 沉积数据）+ Nucleic Acids Res 35:2440-2450（Dai et al. 2007，PMC1874667 摘要逐字；正文 PDF 未取得，未做本地全文 PDF 审计）",
+   "functional_groups": [
+    "Hoogsteen 氢键鸟嘌呤四联体（G-tetrad，G-四链体堆叠致动基团）",
+    "中心通道 K⁺（稳定 G-tetrad 堆叠）"
+   ],
+   "key_structures": [
+    "构象开关"
+   ]
+  }
+ ],
+ "performance_data": [],
+ "engineering_constraints": [
+  {
+   "constraint": "i-motif 酸性触发依赖",
+   "value": "i-motif 折叠依赖胞嘧啶半质子化（六重 intercalated C·C⁺ 配对，PDB 1ELN），折叠态与酸性条件耦合；具体折叠 pH 窗口依序列与缓冲液而定，须实测",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "Phan 2000 JMB 摘要：四段胞嘧啶 stretches 形成六重 intercalated C.C+ 配对（PMID 10860727, p.123）",
+   "source": "literature",
+   "ref_doi": "10.1006/jmbi.2000.3613"
+  },
+  {
+   "constraint": "G-四链体阳离子依赖",
+   "value": "G-四链体折叠依赖 K⁺（或特定单价阳离子）居中稳定三层 G-tetrad 堆叠（PDB 2HY9，K⁺ 溶液 hybrid-1 型）；离子环境改变使折叠态不稳定",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "Dai 2007 NAR 摘要：intramolecular G-quadruplex formed in human telomeric DNA in K(+)（PMC1874667, p.2440）",
+   "source": "literature",
+   "ref_doi": "10.1093/nar/gkm009"
+  },
+  {
+   "constraint": "pH 窗口错配（i-motif 酸性触发 vs ROX 偏碱 pKa）",
+   "value": "i-motif 酸性折叠窗口与 ROX（罗红霉素）叔胺 pKa 8.8-9.0（偏碱）相距较远，二者匹配性须实验测定；在 i-motif 折叠的酸性条件下 ROX 叔胺质子化呈阳离子态，对结合的影响不可先验判定",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（框架 2026-07-21 PROTOTYPE_TEST_NONPROTEIN.md 行 66 已标注 'i-motif 酸性触发与 ROX 偏碱性 pKa 的 pH 窗口匹配性需验证'；ROX pKa 8.8-9.0 取自该框架简报，未在本条目外部复核）",
+   "source": "llm_inference",
+   "ref_doi": null
+  },
+  {
+   "constraint": "DNA 固定化与稳定性（转译限原理层）",
+   "value": "构象开关为寡核苷酸，直接用作可循环吸附剂须固定于多孔载体并在流动条件下维持可逆折叠/去折叠；核酸酶降解、不可逆变性与固定化成本是关键工程约束",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（基于 PDB 1ELN/2HY9 为溶液核酸结构的事实外推；框架 2026-07-21 标注 '天然核酸二级结构稳定性与材料化固定需评估'）",
+   "source": "llm_inference",
+   "ref_doi": null
+  }
+ ],
+ "narrative": {
+  "entries": [
+   {
+    "source_file": "PDB 1ELN / Phan 2000 J Mol Biol 299:123-144（DOI 10.1006/jmbi.2000.3613，PMID 10860727）；PDB 2HY9 / Dai 2007 Nucleic Acids Res 35:2440-2450（DOI 10.1093/nar/gkm009，PMC1874667）",
+    "paper_id": "2000-Phan-telomere-imotif / 2007-Dai-telomere-gquadruplex",
+    "sections": {
+     "problem_definition": "真核端粒与基因启动子区在进化中形成 i-motif 与 G-四链体等天然核酸二级结构，参与端粒保护与基因调控。i-motif 由 C 富集链在酸性条件下经胞嘧啶半质子化折叠，G-四链体由 G 富集重复经 Hoogsteen 氢键四分体堆叠并由 K⁺ 稳定。二者是自然界存在的 pH/离子响应构象开关，属自然进化序列而非 SELEX 体外筛选适配体，满足自然界进化解决方案判据。其可逆构象切换能否转译为吸附-再生的动态维度，是动态响应仿生的问题。",
+     "biological_solution": "人端粒 C 富集链 d(CCCTA2CCCTA2CCCTA2CCCT) 分子内折叠为 i-motif，四段胞嘧啶 stretches 形成六重 intercalated C·C⁺ 配对，终止于各段 5' 端胞嘧啶（PDB 1ELN NMR；Phan 2000 摘要逐字 'six intercalated C.C+ pairs'）。人端粒 G 富集重复 (TTAGGG)n 在 K⁺ 中分子内折叠为 G-四链体，三层 G-tetrad（Hoogsteen 氢键鸟嘌呤四联体）经混合平行-反平行 G 链连接，K⁺ 居中稳定（PDB 2HY9 NMR hybrid-1 型；Dai 2007 摘要逐字 'three G-tetrads linked with mixed parallel-antiparallel G-strands' 与 'formed in human telomeric DNA in K(+)'）。i-motif 的酸性折叠与 G-四链体的阳离子折叠均为可逆构象切换，构成 pH/离子门控的天然构象开关。",
+     "key_features": "必须保留：① 半质子化 intercalated C·C⁺ 拓扑（i-motif pH 门控折叠的致动基团）；② Hoogsteen 氢键 G-tetrad 堆叠与中心 K⁺（G-四链体离子门控折叠的致动基团）；③ 折叠/去折叠的可逆性（动态响应输出）。可灵活调整：骨架化学（寡核苷酸改固定化于多孔载体/聚合物刷/水凝胶）、序列与折叠窗口的调谐、构象切换门控孔道可及性或位点几何的材料实现方式。",
+     "design_mapping": "仿生映射：i-motif/G-四链体的 'pH/离子门控可逆构象折叠' → 面向大环内酯 ROX（罗红霉素，pKa 8.8-9.0）的动态响应捕获-释放系统（吸附时折叠改变孔道/位点几何以捕获，洗脱时去折叠以释放再生）。边界声明：这是设计转译/启发（llm_inferred），构象开关为作用机制而非 ROX 直接靶标。ROX 非天然触发输入（天然触发为酸性 pH 与 K⁺），端粒 i-motif/G-四链体亦非 ROX 的 SELEX 适配体；对 ROX 的具体识别化学须由共固定化识别基序另行构建，且 i-motif 酸性折叠窗口与 ROX 偏碱 pKa 的匹配性、pH-构象响应曲线与 ROX 结合差异均须实验测定。",
+     "explainability_anchors": "设计溯源：i-motif 六重 intercalated C·C⁺ 酸性折叠（PDB 1ELN + Phan 2000，from_source）与 G-四链体三层 G-tetrad 经 K⁺ 稳定折叠（PDB 2HY9 + Dai 2007，from_source）→ 'pH/离子门控可逆构象折叠作为致动器切换孔道可及性/位点几何' 可迁移原理 → 面向 ROX 大环内酯的动态响应捕获-释放材料（llm_inferred 启发，机制层非靶标层，须实验验证）。"
+    }
+   }
+  ]
+ },
+ "design_translation": [
+  {
+   "idea": "将 i-motif/G-四链体的 'pH/离子门控可逆构象折叠' 转译为面向大环内酯 ROX（罗红霉素）的动态响应捕获-释放系统：将天然端粒 C 富集链（i-motif）与 G 富集重复（G-四链体）寡核苷酸固定于多孔载体，以酸性 pH 触发 i-motif 折叠、以 K⁺ 触发 G-四链体折叠，使固定化核酸在紧凑折叠态与伸展去折叠态间可逆切换，改变孔道可及性或共固定化 ROX 识别基序的位点几何，实现 ROX 可控捕获（折叠/闭合）与洗脱释放（去折叠/开放）的吸附-再生切换",
+   "specific_functional_group": "构象致动基团：半质子化胞嘧啶 N3（intercalated C·C⁺，i-motif pH 门控）与 Hoogsteen 鸟嘌呤四联体加中心 K⁺（G-tetrad 离子门控）；ROX 识别基序另设：与大环内酯环表面官能团（内酯羰基/羟基/环氧/去氧糖）及叔胺互补的弱酸碱离子对、氢键给体/受体或疏水/π 位点，其可及性由构象开关门控",
+   "material_handle": "5'/3' 端功能化端粒寡核苷酸经硅烷偶联或点击化学接枝于介孔二氧化硅/聚合物刷/水凝胶孔壁，并共接枝 ROX 识别基序；折叠/去折叠改变接枝链构象以门控孔道可及性或位点暴露",
+   "target_interaction": "pH/离子门控的核酸构象切换调节 ROX 识别位点的可及性/几何（动态门控）；ROX 由共固定化识别基序捕获（非端粒序列特异结合），开关去折叠时释放再生",
+   "source_tier": "llm_inference",
+   "evidence_tier": "inspiration（原理层外推：i-motif/G-四链体机制接地于天然端粒序列的 pH/离子响应构象折叠 PDB 1ELN/2HY9；ROX 捕获-释放耦合为 llm_inferred，构象开关为机制非靶标，无 DNA-ROX 结合或吸附数据）",
+   "examples": [],
+   "design_principle": "i-motif 与 G-四链体证明天然核酸二级结构可发生 pH/离子门控的可逆构象折叠（PDB 1ELN 六重 intercalated C·C⁺；PDB 2HY9 三层 K⁺ 稳定 G-tetrad），该切换在原理层可作为构象致动器驱动可逆捕获-释放；但 ROX 识别须由独立基序提供，且 pH 窗口匹配须验证",
+   "implementation_example": "端粒 i-motif/G-四链体寡核苷酸接枝于具共固定化大环内酯识别基序的介孔二氧化硅孔内（无实验数据，仅为设计假设）",
+   "constraints": "ROX 非天然触发输入（天然触发为酸性 pH 与 K⁺），端粒序列非 ROX 的 SELEX 适配体，原型不提供对 ROX 的直接识别，仅提供 pH/离子门控构象开关原理；i-motif 酸性折叠窗口与 ROX 叔胺 pKa 8.8-9.0（偏碱）的匹配性、pH-构象响应曲线与 ROX 结合差异须实测；寡核苷酸固定化成本、核酸酶/化学稳定性与流动下可逆折叠的保持是关键挑战",
+   "failure_modes": "构象切换未可测改变 ROX 可及性（无门控效应）；i-motif 折叠所需酸性条件与 ROX 阳离子态耦合使结合不可先验预测；固定化 DNA 被核酸酶降解或不可逆变性；大环内酯非特异疏水吸附降低选择性；去折叠不完全导致再生/释放不充分",
+   "material_realization_examples": []
+  }
+ ],
+ "honesty_ledger": {
+  "facts": [
+   {
+    "type": "mechanism",
+    "index": 0,
+    "name": "i-motif 酸性触发的半质子化 C·C⁺ 折叠（构象开关折叠态）",
+    "basis": "from_source_verified",
+    "note": "Phan 2000 J Mol Biol（PDB 1ELN NMR：人端粒 C 富集链分子内折叠，四段胞嘧啶 stretches 形成六重 intercalated C.C+ 配对，终止于各段 5' 端胞嘧啶，TA2 连接环跨沟）；quote 逐字取自 PMID 10860727 efetch 摘要与 RCSB PDB 沉积记录（可核验），正文 PDF 未取得，未做全文 PDF 审计"
+   },
+   {
+    "type": "mechanism",
+    "index": 1,
+    "name": "G-四链体 Hoogsteen G-四分体堆叠与 K⁺ 稳定（构象开关折叠态）",
+    "basis": "from_source_verified",
+    "note": "Dai 2007 Nucleic Acids Res（PDB 2HY9 NMR hybrid-1 型：人端粒 G 富集 DNA 在 K⁺ 中形成胞内型 G-四链体，三层 G-tetrad 经混合平行-反平行 G 链连接）；quote 逐字取自 PMC1874667 efetch 摘要与 RCSB PDB 沉积记录（可核验），正文 PDF 未取得，未做全文 PDF 审计"
+   },
+   {
+    "type": "source_origin",
+    "index": 0,
+    "name": "天然结构与天然序列起源接地",
+    "basis": "from_source_verified",
+    "note": "PDB 1ELN（RCSB 核验：标题 'SOLUTION STRUCTURE OF A MODIFIED HUMAN TELOMERE FRAGMENT (STRUCTURE \"S\")'，序列 CCCTAACCCTAACCCUAACCCT，polydeoxyribonucleotide）；PDB 2HY9（RCSB 核验：标题 'Human telomere DNA quadruplex structure in K+ solution hybrid-1 form'，序列 AAAGGGTTAGGGTTAGGGTTAGGGAA）；DOI 10.1006/jmbi.2000.3613（Crossref 核验：Phan, Guéron, Leroy, J Mol Biol 2000）与 10.1093/nar/gkm009（Crossref 核验：Dai et al., Nucleic Acids Res 2007）。二者为人端粒天然序列的核酸二级结构，非 SELEX 体外筛选适配体"
+   }
+  ],
+  "leads": [],
+  "inferences": [
+   {
+    "type": "design_translation",
+    "index": 0,
+    "idea": "将 i-motif/G-四链体 pH/离子门控可逆构象折叠转译为面向大环内酯 ROX 的动态响应捕获-释放系统",
+    "basis": "llm_inferred",
+    "label": "inspiration",
+    "note": "ROX（罗红霉素，大环内酯，pKa 8.8-9.0）非天然触发输入，端粒序列亦非 ROX 的 SELEX 适配体；可迁移者仅为 'pH/离子门控可逆构象折叠作为致动器切换孔道可及性/位点几何' 原理，ROX 识别须由共固定化基序另行构建，pH 窗口匹配与 ROX 结合差异须实验验证，无 DNA-ROX 结合/吸附数据"
+   },
+   {
+    "type": "boundary_inference",
+    "index": 0,
+    "name": "i-motif 酸性折叠窗口与 ROX 偏碱 pKa 8.8-9.0 的匹配性须实验测定",
+    "basis": "llm_inferred",
+    "label": "inspiration",
+    "note": "机理层推断，无数值阈值；框架 2026-07-21 PROTOTYPE_TEST_NONPROTEIN.md 行 66 已标注此验证需求"
+   }
+  ],
+  "boundary_notes": [
+   "本原型天然触发输入为酸性 pH（i-motif 胞嘧啶半质子化）与 K⁺（G-四链体 G-tetrad 稳定），非 ROX；机制 from_source 接地限于天然端粒序列的 pH/离子响应构象折叠",
+   "ROX（罗红霉素，大环内酯，pKa 8.8-9.0）应用为设计转译（llm_inferred/inspiration），构象开关为机制非直接靶标，端粒序列非 ROX 的 SELEX 适配体，不得用作 ROX 的 direct evidence",
+   "无 ROX 吸附或结合性能数据（qmax 等）；performance_data 为空，严格未从任何污染物知识库搬运性能数值（知识隔离红线）",
+   "合规依据：框架 2026-07-21 表列 DNA 分子开关（PROTOTYPE_TEST_NONPROTEIN.md 行 66：天然 DNA 二级结构分子开关 i-motif/G-quadruplex，端粒/启动子区天然存在），明确为自然界存在的核酸二级结构并排除 SELEX 适配体（库内 dna-aptamer 不构成仿生原型）",
+   "BC（i-motif 半质子化酸性触发、G-四链体 K⁺ 依赖）为 from_source 硬边界；pH 窗口匹配与离子门控转译为定性 llm_inferred 软边界，无数值阈值，gate_level=soft",
+   "ROX pKa 8.8-9.0 取自框架简报（PROTOTYPE_TEST_NONPROTEIN.md），未在本条目外部复核，记入 missing_pdf_items"
+  ],
+  "missing_pdf_items": [
+   "Phan 2000 J Mol Biol 299:123-144 正文 PDF（quote 取自 PMID 10860727 efetch 摘要；正文内具体核苷酸编号/氢键几何未取得）",
+   "Dai 2007 Nucleic Acids Res 35:2440-2450 正文 PDF（quote 取自 PMC1874667 efetch 摘要；正文内 K⁺ 配位距离/loop 残基编号未取得）",
+   "ROX（罗红霉素）pKa 8.8-9.0 的原始文献未外部复核（取自项目框架 2026-07-21 简报）"
+  ],
+  "generated_by": "manual-curation-2026-07-22",
+  "note": "诚实优先：机制接地限于天然端粒 i-motif/G-四链体的 pH/离子响应构象折叠（PDB 1ELN/2HY9）；ROX 应用全部为 inspiration/原理层外推，机制层非靶标层，pH 窗口匹配须实测"
+ },
+ "boundary_rules": [
+  {
+   "rule": "i-motif 折叠触发边界：折叠依赖胞嘧啶半质子化（六重 intercalated C·C⁺ 配对），折叠态与酸性条件耦合，去质子化解折叠",
+   "source_mechanism": "i-motif 酸性触发的半质子化 C·C⁺ 折叠（构象开关折叠态）",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "i-motif 酸性折叠窗口与 ROX 偏碱 pKa 8.8-9.0 的匹配性须实验测定，构象切换须可测改变 ROX 可及性（定性）",
+   "source_mechanism": "i-motif 酸性触发的半质子化 C·C⁺ 折叠（构象开关折叠态）",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  },
+  {
+   "rule": "G-四链体阳离子触发边界：折叠依赖 K⁺（或特定单价阳离子）居中稳定三层 G-tetrad 堆叠，缺 K⁺ 或强竞争阳离子使折叠态不稳定",
+   "source_mechanism": "G-四链体 Hoogsteen G-四分体堆叠与 K⁺ 稳定（构象开关折叠态）",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "离子门控转译为 ROX 捕获-释放须使构象变化可测改变 ROX 可及性/位点几何且离子环境受控（定性）",
+   "source_mechanism": "G-四链体 Hoogsteen G-四分体堆叠与 K⁺ 稳定（构象开关折叠态）",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  }
+ ]
+}

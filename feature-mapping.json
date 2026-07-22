@@ -1043,6 +1043,12 @@
       "weight": 0.5,
       "mechanism_summary": "人 PXR 以大体积构象自适应疏水腔加少量极性锚对结构多样的亲脂异生物质呈定向混杂识别（PDB 1ILH/1SKX：SR12813 取三种取向、与利福平共享腔壁残基），双酚类作为亲脂异生物质可被此混杂腔碰巧捕获，启发对双酚类混合物的广谱识别（机制层级为异生物质感知而非 BPA 专一去除）",
       "design_hint": "在孔壁构筑大体积构象自适应疏水腔加稀疏预组织极性锚（识别酚羟基），取广谱/类选择性而非单一锁钥，面向双酚类混合物；注意 PXR 天然功能为异生物质感知-解毒、双酚为碰巧配体，BPA 亲和力与选择性须实验验证"
+     },
+     {
+      "id": "lectin-glycan-hydroxyl-recognition",
+      "weight": 0.7,
+      "mechanism_summary": "ConA 以与甘露糖羟基模式几何互补的多点氢键阵列加 Mn/Ca 金属预组织识别环区分单糖立体化学；该'与羟基模式几何互补的多点供体/受体阵列加金属配位预组织'原理可启发对双酚 A 两个酚羟基几何排列的识别（approach-2 类比，酚氧与糖羟基供受体身份类比，非进化靶标）。",
+      "design_hint": "在载体表面以金属配位或刚性骨架预组织、间距匹配 BPA 两酚羟基（约 10 Å）的成对氢键供体/受体阵列，孔壁适度疏水；区分 BPA 与单酚/异构双酚（BPF/BPS）的选择性增量须实验验证。"
      }
     ]
    },
@@ -1069,6 +1075,22 @@
       "weight": 0.7,
       "mechanism_summary": "血红蛋白 Bohr 效应经多组氨酸（His146β/HC3 等）盐桥网络将质子化耦联于 T/R 四级开关，使亲和力随 pH 可逆切换；启发 2,6-DCP（2,6-二氯酚，弱酸酚类，pKa 6.79）酚/酚氧负离子形态切换的 pH 摆动吸附-再生",
       "design_hint": "在多孔载体构筑高密度可滴定咪唑/吡啶/叔胺位点阵列（pKa 经微环境调校落于捕获与再生 pH 之间），借位点电荷态/氢键能力切换实现 2,6-DCP 的 pH 摆动吸附-释放；协同锐度为原理借用（聚合物位点 Hill 约 1），须实验验证"
+     },
+     {
+      "id": "lysosome-acid-ion-trapping-ph-switch",
+      "weight": 0.7,
+      "mechanism_summary": "溶酶体经 V-ATPase 维持酸性腔室（pH 4.5–5.0），弱碱以中性形态跨膜、酸性腔内质子化带电后被截获累积（质子陷获），证明可维持的 pH 梯度能经质子化态依赖分配驱动可逆捕获-释放；弱酸 2,6-DCP 酚羟基形态随 pH 切换，原理上可反向构建 pH 摆动。",
+      "design_hint": "载体构筑阳离子型阴离子识别位（季铵/胺基离子交换，辅以酚环氢键/π-π 协同），偏碱捕获酚盐阴离子、偏酸质子化中性酚脱附，实现反向 pH 摆动吸附-再生一体化；捕获方向与天然弱碱酸性陷获相反，形态切换须实验验证。"
+     }
+    ]
+   },
+   "BPA/2,6-DCP": {
+    "prototypes": [
+     {
+      "id": "ugt-glucuronidation-glycosylation-regioselective",
+      "weight": 0.7,
+      "mechanism_summary": "植物 UGT 受体口袋以尺寸形状与单残基决定元区域选择性地读取酚羟基可及性，并经二相结合将糖/葡萄糖醛酸接合到酚羟基以封存去除酚类底物；启发 BPA/2,6-DCP 的「位阻受限位点读取酚羟基可及性加结合型封存」两段去除（天然机制为共价结合转化类，转译限原理层）",
+      "design_hint": "以受限开口/口袋轮廓读取 BPA（酚羟基可及）与 2,6-DCP（2,6 位双氯遮蔽）的酚羟基可及性差异，并结合可逆共价（硼酸酯）或强结合（吡啶酰胺双齿）封存；注意 2,6-DCP 的 UGT 数据仅 E012 级线索，不引速率比，方向取反（偏好遮蔽酚羟基）须独立论证"
      }
     ]
    }
@@ -1147,6 +1169,18 @@
       "weight": 0.6,
       "mechanism_summary": "肺表面活性物质在气-液界面形成 DPPC 为主的动态磷脂单层；两亲性 PFOA 经疏水效应分配入脂质界面疏水域（Brüning 2014 DMPC 囊泡模型，碰巧疏水利用而非氟亲和），为两亲污染物的界面富集与水化头基层抗 NOM 污堵提供原理启发",
       "design_hint": "在吸附剂表面构建水化两性离子头基层 + 疏水分配域的动态两亲界面层，以疏水分配捕获 PFOA 全氟碳尾、以水化头基层抗 NOM 污堵；分配为疏水而非氟亲，PFAS 选择性须由头基锚定或链长几何另行引入"
+     },
+     {
+      "id": "serine-protease-oxyanion-hole",
+      "weight": 0.7,
+      "mechanism_summary": "蛋白酶氧阴离子穴以预组织双骨架酰胺 NH 阵列经方向性氢键稳定四面体过渡态氧阴离子，启发以预组织脲/硫脲供体阵列对 PFOA 羧酸根执行多点定向氢键锚定。",
+      "design_hint": "在活性炭/多孔聚合物孔壁按与羧酸根两氧几何互补的固定间距排布双脲/双硫脲供体，并以疏水孔壁营造低介电微环境；亲和力与选择性须实验验证。"
+     },
+     {
+      "id": "sortase-a-lpxtg-covalent-immobilization",
+      "weight": 0.6,
+      "mechanism_summary": "sortase A 经 LPXTG 转肽将表面蛋白共价锚定于细胞壁肽聚糖，启发以酶介导单点共价固定将 PFOA 识别蛋白取向化锚定于载体；识别 PFOA 的是所固定的独立识别蛋白，而非 sortase 本身。",
+      "design_hint": "在载体表面预装伯胺/甘氨酸手柄作为转肽氨基受体，以 sortase A 将 C 端 LPETG 标签的 PFOA 识别蛋白转肽固定；单点 C 端固定不自动带来取向增量，须由随机偶联对照、活性分数 factive 与失活对照验证。"
      }
     ]
    },
@@ -1187,6 +1221,12 @@
       "weight": 0.6,
       "mechanism_summary": "铁载体「分泌型高亲和捕获单元 + 专一受体回收」两级架构启发对 ng/L 级 PFBS 的传质强化：以可分散高亲和捕获单元体相扫集，再经专一回收级选择性回收再生。",
       "design_hint": "仅架构可转译：Fe3+ 阳离子螯合化学不可平移至阴离子 PFBS，PFBS 亲和化学（磺酸根锚定 + 全氟丁尾氟亲容纳）须独立设计；以可分散捕获单元 + 膜/磁分离回收级 + 再生循环实现传质强化。"
+     },
+     {
+      "id": "viral-capsid-slayer-multivalent-self-assembly",
+      "weight": 0.6,
+      "mechanism_summary": "病毒衣壳与 S 层蛋白自组装为周期性多价阵列，启发在载体表面以自组装单层/蛋白支架精确重复排布阴离子识别位点，借多价协同提升对短链全氟磺酸根（PFBS）的表观亲和力与位点均一性",
+      "design_hint": "以自组装单层或重组多肽/蛋白支架在介孔载体表面构建周期性多价阴离子识别阵列，位点间距按磺酸根头基几何设计（多价协同增量须结合实验验证）"
      }
     ]
    }
@@ -1217,6 +1257,12 @@
       "weight": 0.7,
       "mechanism_summary": "有机卤呼吸菌的钴胺素（B12/类咕啉）依赖还原脱卤酶经钴-卤素相互作用（卤素-钴键形成）转移电子、断裂有机氯 C-Cl 键（PDB 4RAS，Payne 2015）；游离 B12 与还原型黄素/血红素亦非酶还原脱氯 DDT→DDD 且 DDE 不反应（Berry 1977/Sugihara 1998/Kallman 1963），启发对 DDT 桥键 C-Cl 的还原脱氯反应位设计",
       "design_hint": "取'低电位类咕啉/金属卟啉电子转移中心 + 钴/金属-卤素相互作用 + 还原态再生'三要素，在隔氧还原微环境中耦联低电位电子供体断裂 DDT 三氯甲基 C-Cl 键（DDT→DDD）；天然机制为降解/转化，转译限原理层，无降解活性数据，须实验验证"
+     },
+     {
+      "id": "bile-salt-mixed-micelle-solubilization",
+      "weight": 0.7,
+      "mechanism_summary": "胆盐混合胶束以疏水核增溶膳食脂质/胆固醇并经胶体载体输运的进化机制，启发对超疏水有机氯农药 DDT 的水相增溶-传质强化：以生物相容胶束/环糊精-表面活性剂载体提升 DDT 表观溶解度与到识别位点的传质速率，缓解 ng/L 级传质驱动力不足（DDT 增溶属碰巧胶束分配，approach-2，非进化靶标）。",
+      "design_hint": "仅增溶-传质原理可转译，选择性须由下游识别位点承担：以牛磺胆酸盐型胶束或环糊精-表面活性剂混合胶束作水相增溶-预富集介质，控制载体-溶质结合强度以规避胶束截留（增溶提升溶解度但可降低游离分数传质驱动力），串联疏水识别/富集位点；CMC 以下胶束解体增溶失效。"
      }
     ]
    }
@@ -1241,6 +1287,30 @@
       "weight": 0.8,
       "mechanism_summary": "细菌 50S 核糖体亚基新生肽出口隧道（NPET）/肽基转移酶中心与 14 元大环内酯（含罗红霉素 ROX）共进化结合，以受限几何加多点氢键对大环内酯骨架作形状读出（PDB 1JZZ 罗红霉素-50S 复合物；Kalpaxis 2003 慢结合竞争动力学）。本 ROX 指罗红霉素（14 元大环内酯），非洛克沙胂 roxarsone。",
       "design_hint": "以尺寸匹配狭缝/分子印迹腔加预组织多点氢键网络，对 14 元大环内酯骨架（大环内酯环、糖基羟基与内酯羰基、罗红霉素 C9 肟醚）作形状与氢键互补识别；属原理层外推，环境水相 ROX 吸附须实验验证。"
+     }
+    ]
+   }
+  },
+  "大环内酯抗生素": {
+   "ROX": {
+    "prototypes": [
+     {
+      "id": "natural-dna-imotif-gquadruplex-switch",
+      "weight": 0.6,
+      "mechanism_summary": "天然端粒 i-motif（酸性半质子化 C·C⁺ 折叠）与 G-四链体（K⁺ 稳定 G-tetrad 堆叠）的 pH/离子门控可逆构象切换，启发以固定化核酸构象开关门控孔道可及性/位点几何，实现罗红霉素（大环内酯，pKa 8.8-9.0）的可控捕获-释放与吸附-再生",
+      "design_hint": "将端粒 C 富集链（i-motif）与 G 富集重复（G-四链体）固定于多孔载体作为 pH/离子门控构象致动器，共固定化独立的大环内酯识别基序；i-motif 酸性折叠窗口与 ROX 偏碱 pKa 的匹配性须实验测定，端粒序列非 ROX 的 SELEX 适配体"
+     }
+    ]
+   }
+  },
+  "含氧阴离子营养盐": {
+   "硝酸盐（NO3⁻）": {
+    "prototypes": [
+     {
+      "id": "nrta-nitrate-binding-protein",
+      "weight": 0.7,
+      "mechanism_summary": "NrtA 以被围口袋内的 Lys269 阳离子锚加预组织中性氢键给体阵列按几何/静电互补选择性识别平面三角形硝酸根（PDB 2G29 硝酸根结合态，1.5 Å，SITE AC1 含 Lys269），与水体硝酸盐从高背景阴离子中选择性去除的工程问题同构（转译限静态识别几何层级）",
+      "design_hint": "仿 NrtA 识别口袋：以胍基/铵基阳离子锚稳定硝酸根电荷，按与硝酸根三氧几何互补预组织脲/硫脲/酰胺/羟基中性给体，加低介电埋藏孔壁排除水竞争；构象动态无实验 apo 证据不可搬用，对碳酸氢根/氯离子/硫酸根的分辨与亲和力须实验验证"
      }
     ]
    }
@@ -1305,6 +1375,10 @@
     },
     {
      "id": "pxr-xenobiotic-receptor-promiscuity",
+     "weight": 0.5
+    },
+    {
+     "id": "bile-salt-mixed-micelle-solubilization",
      "weight": 0.5
     }
    ]
@@ -1720,6 +1794,10 @@
     {
      "id": "chlorophenol-hydroxylase-regioselective",
      "weight": 0.7
+    },
+    {
+     "id": "nrta-nitrate-binding-protein",
+     "weight": 0.7
     }
    ]
   },
@@ -1838,6 +1916,22 @@
     {
      "id": "siderophore-capture-recovery-architecture",
      "weight": 0.6
+    },
+    {
+     "id": "lectin-glycan-hydroxyl-recognition",
+     "weight": 0.7
+    },
+    {
+     "id": "nrta-nitrate-binding-protein",
+     "weight": 0.75
+    },
+    {
+     "id": "serine-protease-oxyanion-hole",
+     "weight": 0.7
+    },
+    {
+     "id": "ugt-glucuronidation-glycosylation-regioselective",
+     "weight": 0.7
     }
    ]
   },
@@ -1852,6 +1946,14 @@
     {
      "id": "hemoglobin-bohr-ph-allostery",
      "weight": 0.85
+    },
+    {
+     "id": "lysosome-acid-ion-trapping-ph-switch",
+     "weight": 0.85
+    },
+    {
+     "id": "natural-dna-imotif-gquadruplex-switch",
+     "weight": 0.5
     }
    ]
   },
@@ -1869,6 +1971,14 @@
     },
     {
      "id": "natural-riboswitch-metabolite-sensing",
+     "weight": 0.7
+    },
+    {
+     "id": "lysosome-acid-ion-trapping-ph-switch",
+     "weight": 0.8
+    },
+    {
+     "id": "natural-dna-imotif-gquadruplex-switch",
      "weight": 0.7
     }
    ]
@@ -1914,6 +2024,30 @@
     {
      "id": "siderophore-capture-recovery-architecture",
      "weight": 0.8
+    },
+    {
+     "id": "bile-salt-mixed-micelle-solubilization",
+     "weight": 0.85
+    }
+   ]
+  },
+  "位点特异性共价固定": {
+   "dimension": "功能特性",
+   "description": "酶介导在确定残基/位点形成共价键，将蛋白取向化锚定于载体表面，区别于随机偶联（以 sortase A LPXTG 转肽为代表）",
+   "prototypes": [
+    {
+     "id": "sortase-a-lpxtg-covalent-immobilization",
+     "weight": 0.85
+    }
+   ]
+  },
+  "多价协同": {
+   "dimension": "功能特性",
+   "description": "等同/准等同亚基自组装为周期性阵列，精确均一地重复排布功能位点，借多价协同效应提升表观亲和力与位点均一性",
+   "prototypes": [
+    {
+     "id": "viral-capsid-slayer-multivalent-self-assembly",
+     "weight": 0.7
     }
    ]
   }
@@ -3228,6 +3362,154 @@
    "biomimetic_dimension": "系统仿生",
    "organism": {
     "scientific": "Escherichia coli（铁载体系统：肠杆菌素/ferrichrome 型；周质铁载体结合蛋白 FhuD（1EFD）与 FepB（3TLK））",
+    "category": "微生物"
+   }
+  },
+  "bile-salt-mixed-micelle-solubilization": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "胆盐混合胶束为哺乳动物肠道脂质增溶-传质的超分子体系原型（mass_transfer），无单一蛋白结构（无 PDB）；本库无其吸附/传质性能测试条件，performance_data 为空，故测试条件全空。"
+   },
+   "features": [
+    "传质强化",
+    "疏水性"
+   ],
+   "biomimetic_dimension": "系统仿生",
+   "organism": {
+    "scientific": "哺乳动物（人/大鼠）胆汁：胆盐（牛磺胆酸钠 sodium taurocholate）-卵磷脂-脂质水解产物（单甘油酯/脂肪酸）混合胶束超分子体系",
+    "category": "动物"
+   }
+  },
+  "lectin-glycan-hydroxyl-recognition": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "ConA 为可溶性四聚体植物凝集素（分子识别原型），本库无其吸附性能测试条件；performance_data 为空，测试条件全空。"
+   },
+   "features": [
+    "特异性识别"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Canavalia ensiformis（刀豆 凝集素 Concanavalin A / ConA）",
+    "category": "植物"
+   }
+  },
+  "lysosome-acid-ion-trapping-ph-switch": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "本原型为细胞器级理化现象（溶酶体酸性腔室 pH 4.5–5.0 为天然条件，来源机制，非本库吸附测试）；可转译 pH 摆动区间（捕获偏碱、再生偏酸，须跨越 2,6-DCP pKa ≈ 6.8）为设计转译，须实验确定，故全空。"
+   },
+   "features": [
+    "pH 响应",
+    "动态响应"
+   ],
+   "biomimetic_dimension": "功能仿生",
+   "organism": {
+    "scientific": "Rattus norvegicus / Mus musculus（溶酶体，细胞器级；经典模型为大鼠肝溶酶体与小鼠腹膜巨噬细胞，无单一蛋白结构）",
+    "category": "动物"
+   }
+  },
+  "natural-dna-imotif-gquadruplex-switch": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "天然核酸二级结构构象开关（动态响应原型），本库无吸附性能测试条件；i-motif 折叠触发于酸性 pH（胞嘧啶半质子化），G-四链体折叠依赖 K⁺，具体窗口依序列/缓冲液而定须实测，故全空。"
+   },
+   "features": [
+    "动态响应",
+    "pH 响应"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Homo sapiens（人端粒 C 富集链 i-motif 与 (TTAGGG)n G 富集重复 G-四链体；天然核酸二级结构，非 SELEX 适配体）",
+    "category": "动物"
+   }
+  },
+  "nrta-nitrate-binding-protein": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "NrtA 为蓝细菌周质可溶底物结合蛋白（分子识别原型），本库无吸附性能测试条件；performance_data 为空，测试条件全空。"
+   },
+   "features": [
+    "分子筛分",
+    "特异性识别"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Synechocystis sp. PCC 6803（NrtA 硝酸盐结合蛋白）",
+    "category": "微生物"
+   }
+  },
+  "serine-protease-oxyanion-hole": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "蛋白酶氧阴离子穴为分子识别/催化原型，本库无其吸附性能测试；performance_data 为空，测试条件全空。"
+   },
+   "features": [
+    "特异性识别"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Bos taurus（γ-胰凝乳蛋白酶，PDB 1GCT）/ Bacillus amyloliquefaciens（枯草蛋白酶 BPN′，PDB 1SBT）/ Carica papaya（木瓜蛋白酶，PDB 1PAD）；跨物种趋同的氧阴离子穴基序",
+    "category": "动物"
+   }
+  },
+  "sortase-a-lpxtg-covalent-immobilization": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "sortase A 为位点特异性共价固定工具酶（非污染物吸附识别原型），无吸附测试条件；转肽反应条件 pH 7.5、25 °C、需 Ca2+ 属固定化工艺，见条目 engineering_constraints。"
+   },
+   "features": [
+    "位点特异性共价固定"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Staphylococcus aureus（sortase A，LPXTG 特异性转肽酶）",
+    "category": "微生物"
+   }
+  },
+  "ugt-glucuronidation-glycosylation-regioselective": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "UGT/植物糖基转移酶为内质网膜/胞质域糖基转移酶（分子识别加共价结合转化原型），本库无其吸附性能测试；performance_data 为空，故测试条件全空。"
+   },
+   "features": [
+    "特异性识别"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Medicago truncatula UGT71G1 / Vitis vinifera VvGT1 / Arabidopsis thaliana UGT74F2（植物 UDP-糖基转移酶）；动物二相 UGT（人 UGT2B15 等，同工酶动力学层级）",
+    "category": "植物"
+   }
+  },
+  "viral-capsid-slayer-multivalent-self-assembly": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "自组装阵列原型（病毒衣壳与 S 层蛋白周期性自组装），本库无其吸附性能测试；自组装稳定性对 pH/离子强度/二价阳离子敏感（CCMV 天然-膨胀态转变），测试条件全空。"
+   },
+   "features": [
+    "多价协同"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Tobacco mosaic virus / Cowpea chlorotic mottle virus（病毒衣壳蛋白）; Sulfolobus acidocaldarius / Deinococcus radiodurans（古菌/细菌 S 层蛋白）",
     "category": "微生物"
    }
   }

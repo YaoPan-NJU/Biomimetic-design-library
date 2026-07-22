@@ -1,0 +1,391 @@
+{
+ "id": "lysosome-acid-ion-trapping-ph-switch",
+ "name_zh": "溶酶体酸性离子捕获（pH 质子化态依赖陷获）",
+ "name_en": "Lysosomal Acid Ion Trapping (pH Protonation-State-Dependent Trapping)",
+ "organism": {
+  "scientific": "Rattus norvegicus / Mus musculus（溶酶体，细胞器级；经典模型为大鼠肝溶酶体与小鼠腹膜巨噬细胞，无单一蛋白结构）",
+  "category": "动物"
+ },
+ "biomimetic_dimension": "功能仿生",
+ "features": [
+  "pH 响应",
+  "动态响应"
+ ],
+ "tested_conditions": {
+  "tested_ph_range": null,
+  "tested_temp_range": null,
+  "salinity": null,
+  "note": "本原型为细胞器级理化现象（溶酶体酸性腔室 pH 4.5–5.0 为天然条件，属来源机制，非本库吸附测试）；performance_data 为空，故测试条件全空。可转译 pH 摆动区间（捕获偏碱、再生偏酸，须跨越 2,6-DCP pKa ≈ 6.8）为设计转译，须实验确定。"
+ },
+ "library_tier": "extended",
+ "lifecycle_status": "active",
+ "coverage": "partial",
+ "status": "active",
+ "provenance_summary": {
+  "n_papers": 4,
+  "n_verified": 10,
+  "n_unverified": 0,
+  "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与边界条数（LYST-001 四要素+2 边界=6，LYST-002 三要素+1 边界=4）。本原型为细胞器级理化现象，无单一蛋白结构、无 PDB 接地；接地限于 Crossref/PubMed 题录摘要级（de Duve 1974 仅题录级接地，Europe PMC/PubMed 无摘要）。天然机制接地为弱碱的酸性腔室质子陷获；2,6-DCP 弱酸应用为设计转译（llm_inferred），无性能数据。quote 取自 Crossref 摘要逐字文本（可核验），未做全文 PDF 审计。"
+ },
+ "mechanisms": [
+  {
+   "mechanism_id": "LYST-001",
+   "name": "弱电解质质子化态依赖的跨膜离子陷获（lysosomotropism，酸性陷获）",
+   "description": "溶酶体腔经 V-ATPase 维持 pH 4.5–5.0；弱碱（溶酶体向性胺类，天然陷获底物）以中性未质子化形态透过溶酶体膜，在酸性腔内质子化带电荷后不能自由回渗而累积，即质子陷获（proton trapping）/离子陷获；Ohkuma 1981 证明弱碱的活性形态为中性未质子化形式，其累积使腔内 pH 浓度依赖性升高，可诠释为质子以质子化弱碱形式漏出溶酶体。该机制是自然界 pH 梯度驱动捕获/释放的原型",
+   "基本原理": "弱电解质的中性形态与质子化形态膜透性差异显著；酸性腔室使弱碱质子化平衡移向带电形态，带电形态不能跨膜回渗，溶质即在腔内累积直至两室 Henderson-Hasselbalch 分布平衡。质子化态依赖的跨膜分配是离子陷获的物理化学本质",
+   "source": "literature",
+   "ref_doi": "10.1073/pnas.75.7.3327",
+   "verification": "verified",
+   "verification_quote": "active proton accumulation mechanism in the lysosomal membrane and support the theory of lysosomal accumulation of weak bases by proton trapping",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "可电离弱碱基团（溶酶体向性胺类，天然陷获底物）：其中性未质子化形态可透过溶酶体膜、质子化带电形态不能（Ohkuma 1981 摘要「The active form of the base is the neutral, unprotonated form」）。目标污染物 2,6-二氯酚（2,6-DCP）的酚羟基为弱酸可电离基团（pKa ≈ 6.8，简报常用文献值，本条目未经核验），其 pH 形态切换方向与弱碱相反，属反向转译（llm_inferred，须实验验证）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1083/jcb.90.3.665",
+     "locator": "abstract, p.665",
+     "quote": "The active form of the base is the neutral, unprotonated form.",
+     "scope_match": "Keywords: base, neutral, unprotonated"
+    },
+    "bio_structure": {
+     "text": "溶酶体为单层膜细胞器，腔内维持高酸性 pH 4.5–5.0，驻留水解酶在该 pH 被激活；腔内酸性由膜上 V-ATPase 质子泵建立（见 LYST-002）。该原型为细胞器级理化结构（膜屏障+质子泵+弱电解质分配的综合效应），无单一蛋白结合位点、无 PDB 接地",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1146/annurev-physiol-012110-142317",
+     "locator": "abstract, p.69",
+     "quote": "these enzymes are activated by the highly acidic pH (between 4.5 and 5.0) in the organelles' interior",
+     "scope_match": "Keywords: acidic pH, 4.5, 5.0"
+    },
+    "interaction": {
+     "text": "弱碱性物质以中性未质子化形态跨膜进入酸性腔，质子化后带电形态不能回渗而累积；该累积使腔内 pH 浓度依赖性升高（Ohkuma 1981），并被诠释为质子以质子化弱碱形式漏出溶酶体，即质子陷获驱动的酸性捕获",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1083/jcb.90.3.665",
+     "locator": "abstract, p.665",
+     "quote": "Weakly basic substances in the medium cause a concentration-dependent increase in the intralysosomal pH.",
+     "scope_match": "Keywords: Weakly basic substances, concentration-dependent, intralysosomal pH"
+    },
+    "why_it_works": {
+     "text": "Ohkuma 1978 在活巨噬细胞中直接证明溶酶体膜存在主动质子累积机制，并支持「弱碱经质子陷获在溶酶体累积」的理论；中性/质子化两形态膜透性差异与酸性腔的质子化平衡偏移共同造成带电形态被截留，实现 pH 梯度驱动的跨膜分配与累积",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1073/pnas.75.7.3327",
+     "locator": "abstract, p.3327",
+     "quote": "support the theory of lysosomal accumulation of weak bases by proton trapping",
+     "scope_match": "Keywords: lysosomal accumulation, weak bases, proton trapping"
+    },
+    "boundary_conditions": [
+     {
+      "text": "底物电荷类型特异性：离子陷获对弱碱有效（中性形态跨膜、质子化形态截留累积）；不同碱所需改变腔内 pH 的浓度范围差异很大（Ohkuma 1981），即陷获效率强依赖底物 pKa 与膜透性",
+      "parameter": "substrate_charge_type",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "abstract, p.665",
+      "quote": "the concentration of base necessary to produce a significant change in the intralysosomal pH varies over a wide range for different bases",
+      "scope_match": "Keywords: base, intralysosomal pH, different bases",
+      "source_asset": null
+     },
+     {
+      "text": "梯度主动维持：腔内 pH 不随胞外培养基 pH 改变（Ohkuma 1981），表明 pH 梯度由细胞主动维持而非被动平衡；天然膜屏障对带电形态不通透是截留前提",
+      "parameter": "gradient_maintenance",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "abstract, p.665",
+      "quote": "The pH of the medium has no effect on the intralysosomal pH.",
+      "scope_match": "Keywords: pH, medium, intralysosomal",
+      "source_asset": null
+     },
+     {
+      "text": "酸碱反转边界：2,6-DCP 为弱酸（pKa ≈ 6.8，未核验），其捕获方向与天然弱碱酸性陷获相反，偏碱解离为酚盐阴离子被阴离子位捕获、偏酸质子化为中性酚脱附（反向 pH 摆动）；弱酸形态切换吸附-再生一体化须实验验证",
+      "parameter": "acid_base_inversion",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "scope_match": null,
+      "source_asset": null
+     },
+     {
+      "text": "天然梯度依赖细胞 V-ATPase 主动泵质子与跨膜电位；体外吸附-再生无主动质子泵，须以外部酸碱加药或双区室操作构建对应 pH 摆动（定性，无数值阈值）",
+      "parameter": "in_vitro_reconstitution",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "scope_match": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "弱电解质质子化态依赖的跨膜/跨界面分配：pKa 落于摆动两 pH 之间的可电离化合物，其两形态在电荷与界面亲和上差异显著，可在捕获 pH 被选择性截留、在再生 pH 释放，实现 pH 梯度驱动的可逆捕获-释放",
+    "verification_quote": "support the theory of lysosomal accumulation of weak bases by proton trapping"
+   },
+   "source_doi": "10.1073/pnas.75.7.3327",
+   "source_page": 3327,
+   "source_locator": "abstract, p.3327",
+   "source_file": "Ohkuma & Poole 1978 PNAS 75:3327-3331（proton trapping 理论与活细胞腔内 pH 测定）+ Ohkuma & Poole 1981 J Cell Biol 90:665-669（弱碱活性形态与浓度依赖性升 pH）+ de Duve 1974 Biochem Pharmacol 23:2495-2531（lysosomotropic agents 概念，题录级）。Crossref/Europe PMC 题录，未做本地全文 PDF 审计",
+   "functional_groups": [
+    "可电离弱碱基团（胺类，可质子化）",
+    "溶酶体膜双分子层屏障（对带电形态不通透）",
+    "V-ATPase 质子泵（梯度源）"
+   ],
+   "key_structures": [
+    "动态响应结构"
+   ]
+  },
+  {
+   "mechanism_id": "LYST-002",
+   "name": "溶酶体酸性腔室的建立与维持（V-ATPase 质子泵，pH 4.5–5.0）",
+   "description": "溶酶体为内吞途径末端细胞器；膜上 V 型 ATPase 以 ATP 代谢能泵质子入腔，反离子流动耗散跨膜电压（ClC-7 Cl⁻/H⁺ 反向转运体可能参与），建立并维持稳态腔内 pH 4.5–5.0；该酸性腔室激活水解酶并为质子化态依赖的离子陷获（LYST-001）提供梯度驱动力。Ohkuma 1978 以荧光素异硫氰酸酯标记葡聚糖探针在活细胞中直接测得腔内 pH 4.7–4.8",
+   "基本原理": "主动质子转运建立并维持跨膜 pH 梯度，为质子化态依赖的弱电解质分配与截留提供可持续驱动力；该梯度依赖代谢能供给，并可被弱碱与能量抑制剂扰动",
+   "source": "literature",
+   "ref_doi": "10.1146/annurev-physiol-012110-142317",
+   "verification": "verified",
+   "verification_quote": "Lysosomes generate and maintain their pH gradients by using the activity of a proton-pumping V-type ATPase",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "靶分子的可电离功能基团（可质子化/去质子化基团）是感受 pH 梯度的响应单元；弱酸 2,6-DCP 酚羟基（pKa ≈ 6.8，简报常用文献值，本条目未核验）即此类单元，在摆动 pH 间酚/酚盐形态切换而驱动吸附-脱附（转译推断，须实验验证）",
+     "basis": "llm_inferred"
+    },
+    "bio_structure": {
+     "text": "溶酶体膜 V 型 ATPase 质子泵：以 ATP 代谢能泵质子入溶酶体腔；电荷分离产生跨膜电压，须由反离子（阳离子外流或阴离子内流，ClC-7 等）流动耗散方可净泵送；稳态腔内 pH 由 V-ATPase 与反离子转运体共同决定（Mindell 2012）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1146/annurev-physiol-012110-142317",
+     "locator": "abstract, p.69",
+     "quote": "Lysosomes generate and maintain their pH gradients by using the activity of a proton-pumping V-type ATPase",
+     "scope_match": "Keywords: Lysosomes, pH gradients, V-type ATPase"
+    },
+    "interaction": {
+     "text": "ATP 驱动的质子泵送将质子浓缩入腔，建立 pH 4.5–5.0；高酸性微环境激活驻留水解酶，同时为跨膜弱电解质提供使其质子化平衡移向截留形态的质子源，与 LYST-001 离子陷获耦合",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1146/annurev-physiol-012110-142317",
+     "locator": "abstract, p.69",
+     "quote": "which uses metabolic energy in the form of ATP to pump protons into the lysosome lumen",
+     "scope_match": "Keywords: ATP, protons, lysosome lumen"
+    },
+    "why_it_works": {
+     "text": "Ohkuma 1978 以荧光素-葡聚糖探针首次定量测得活巨噬细胞溶酶体腔 pH 4.7–4.8（瞬时可低至 4.5），并证明弱碱与酸性钾离子载体使腔内 pH 升高、糖酵解与氧化磷酸化抑制剂合用（单独无效）使腔内 pH 升高，为溶酶体膜主动质子累积机制提供直接证据：pH 梯度依赖代谢能主动维持，离子陷获方可持续",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1073/pnas.75.7.3327",
+     "locator": "abstract, p.3327",
+     "quote": "The normal pH inside macrophage lysosomes seems to be 4.7-4.8, although it can drop transiently as low as 4.5.",
+     "scope_match": "Keywords: pH, macrophage lysosomes, 4.7-4.8"
+    },
+    "boundary_conditions": [
+     {
+      "text": "梯度能量依赖：糖酵解抑制剂（2-脱氧葡萄糖）与氧化磷酸化抑制剂（氰化物或叠氮化物）合用（而非单用）使腔内 pH 升高（Ohkuma 1978），表明 pH 维持依赖代谢能供给；体外转译须以外部能源/酸碱供给维持 pH 差",
+      "parameter": "energy_dependence",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "abstract, p.3327",
+      "quote": "Inhibitors of glycolysis (2-deoxyglucose) and of oxidative phosphorylation (cyanide or azide) added together, but not separately, cause the intralysosomal pH to increase.",
+      "scope_match": "Keywords: glycolysis, oxidative phosphorylation, intralysosomal pH",
+      "source_asset": null
+     },
+     {
+      "text": "天然 pH 梯度由 V-ATPase 封闭维持于单层膜细胞器内；体外吸附剂无主动质子泵，须以外部酸碱加药批次摆动或双区室流动操作构建摆动 pH 差（定性，无数值阈值）",
+      "parameter": "compartmentalization",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "scope_match": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "主动建立并维持跨膜/跨界面 pH 梯度，可为质子化态依赖的分配提供可持续驱动力；体外可以外部施加的 pH 摆动替代该梯度功能，同样驱动弱电解质的可逆捕获-释放",
+    "verification_quote": "Lysosomes generate and maintain their pH gradients by using the activity of a proton-pumping V-type ATPase"
+   },
+   "source_doi": "10.1146/annurev-physiol-012110-142317",
+   "source_page": 69,
+   "source_locator": "abstract, p.69",
+   "source_file": "Mindell 2012 Annu Rev Physiol 74:69-86（V-ATPase 酸化机制：pH 4.5–5.0、质子泵与反离子）+ Ohkuma & Poole 1978 PNAS 75:3327-3331（活细胞腔内 pH 定量测定与能量依赖证据）。Crossref 题录摘要，未做本地全文 PDF 审计",
+   "functional_groups": [
+    "V 型 ATPase 质子泵",
+    "反离子通道/转运体（ClC-7 Cl⁻/H⁺ 反向转运体）",
+    "溶酶体膜双分子层"
+   ],
+   "key_structures": [
+    "动态响应结构"
+   ]
+  }
+ ],
+ "performance_data": [],
+ "engineering_constraints": [
+  {
+   "constraint": "细胞器级现象，无蛋白结构接地",
+   "value": "溶酶体酸性离子捕获是 V-ATPase 泵质子、膜双分子层屏障与弱电解质酸碱分配综合作用的细胞器级理化现象，不可归于单一蛋白结合位点，无 PDB 结构接地，无法以分子识别蛋白方式移植，仅原理层（pH 梯度+质子化态依赖分配）可转译",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机制事实（Mindell 2012 V-ATPase；Ohkuma 1978/1981 质子陷获与弱碱累积）；可转译性判断为 llm_inference",
+   "source": "literature",
+   "ref_doi": "10.1146/annurev-physiol-012110-142317"
+  },
+  {
+   "constraint": "捕获方向酸碱反转",
+   "value": "天然离子陷获为弱碱的酸性陷获（低 pH 捕获）；2,6-DCP 为弱酸，转译方向相反，偏碱酚盐阴离子被阳离子/阴离子识别位捕获、偏酸质子化中性酚释放，吸附位点须以阳离子型阴离子识别单元匹配",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机制推断（基于 Ohkuma 1978 弱碱质子陷获事实与弱酸形态切换方向对比），llm_inference",
+   "source": "llm_inference",
+   "ref_doi": null
+  },
+  {
+   "constraint": "pH 摆动窗口须跨越目标 pKa",
+   "value": "2,6-DCP 酚羟基 pKa ≈ 6.8（简报常用文献值，本条目未经全文核验，实验前须以电位法或分光法复核）；捕获 pH（偏碱，酚盐阴离子）与再生 pH（偏酸，中性酚）须跨越该 pKa，摆动幅度直接决定吸附-脱附驱动力",
+   "unit": "pH",
+   "relevance": "high",
+   "explanation": "Henderson-Hasselbalch 形态切换推断（llm_inference）；pKa 数值未经本条目核验",
+   "source": "llm_inference",
+   "ref_doi": null
+  },
+  {
+   "constraint": "梯度维持方式",
+   "value": "天然腔内 pH 4.5–5.0 由 V-ATPase 主动泵质子与代谢能维持，且糖酵解与氧化磷酸化同时受抑方可使腔内 pH 升高；体外无主动质子泵，须以外部酸碱加药或双区室操作构建 pH 摆动，并计及试剂消耗与循环成本",
+   "unit": null,
+   "relevance": "medium",
+   "explanation": "机制事实（Ohkuma 1978 能量依赖证据）与体外重构推断（llm_inference）",
+   "source": "literature",
+   "ref_doi": "10.1073/pnas.75.7.3327"
+  }
+ ],
+ "narrative": {
+  "entries": [
+   {
+    "source_file": "Ohkuma & Poole 1978 PNAS 75:3327-3331 (DOI 10.1073/pnas.75.7.3327)；Ohkuma & Poole 1981 J Cell Biol 90:665-669 (DOI 10.1083/jcb.90.3.665)；Mindell 2012 Annu Rev Physiol 74:69-86 (DOI 10.1146/annurev-physiol-012110-142317)；de Duve 1974 Biochem Pharmacol 23:2495-2531 (DOI 10.1016/0006-2952(74)90174-9)",
+    "paper_id": "1978-Ohkuma-intralysosomal-pH-proton-trapping",
+    "sections": {
+     "problem_definition": "细胞须在中性胞质中维持酸性溶酶体腔以激活水解酶并处理内吞底物；弱电解质在跨膜 pH 梯度下如何随质子化态发生跨膜分配并被酸性腔室选择性截留，是细胞器级的物理化学问题，也构成自然界 pH 梯度驱动捕获/释放的原型。",
+     "biological_solution": "溶酶体膜 V 型 ATPase 以 ATP 代谢能泵质子入腔，反离子流动耗散跨膜电压，建立稳态腔内 pH 4.5–5.0（Mindell 2012）。Ohkuma 与 Poole 1978 以荧光素异硫氰酸酯标记葡聚糖（FD）探针首次在活巨噬细胞中定量测得腔内 pH 4.7–4.8（瞬时可低至 4.5），发现弱碱使腔内 pH 快速升高，并为「弱碱经质子陷获在溶酶体累积」的理论提供证据（摘要原文 support the theory of lysosomal accumulation of weak bases by proton trapping）。Ohkuma 与 Poole 1981 进一步证明：培养基 pH 不影响腔内 pH，弱碱的活性形态为中性未质子化形式，其累积浓度依赖性地升高腔内 pH，结果被诠释为能量依赖的溶酶体酸化与质子以质子化弱碱形式漏出。de Duve 1974 将此类在溶酶体累积的弱碱命名为溶酶体向性剂（lysosomotropic agents）。",
+     "key_features": "必须保留：① pKa 落于摆动两 pH 之间、两形态在电荷与界面亲和上差异显著的可电离单元（天然为弱碱胺类，捕获在酸性侧）；② 可维持的 pH 差（天然由 V-ATPase 主动维持，体外由外部酸碱摆动维持）；③ 对带电形态的截留屏障（天然为膜双分子层，体外为吸附位点与选择性屏障）。可灵活调整：载体骨架、识别位点类型（阳离子/阴离子交换/氢键 π 协同）、摆动操作方式与区室构型。",
+     "design_mapping": "仿生映射：溶酶体弱碱酸性陷获（低 pH 捕获）→ 弱酸 2,6-DCP 的反向 pH 摆动（高 pH 捕获、低 pH 释放）。对 2,6-DCP（酚羟基 pKa ≈ 6.8，本条目未核验）：偏碱条件下酚盐阴离子被阳离子型识别位（季铵/胺基离子交换单元）经静电/阴离子识别捕获，并可辅以对酚环的氢键与 π-π 协同；偏酸条件下酚羟基质子化为中性酚，阴离子相互作用消失而脱附，实现吸附-再生一体化。注意：此为设计转译/启发（llm_inferred），非 from_source 事实。天然原型捕获弱碱，2,6-DCP 为弱酸，捕获方向与天然方向相反（反向转译），形态切换吸附-再生须实验验证亲和力、选择性与循环稳定性。",
+     "explainability_anchors": "设计溯源：V-ATPase 酸性腔室 pH 4.5–5.0（Mindell 2012，from_source）+ 弱碱质子陷获累积（Ohkuma 1978/1981，from_source）→「pH 梯度+质子化态依赖分配实现可逆捕获-释放」可迁移原理 → 2,6-DCP 弱酸反向 pH 摆动吸附-再生一体化（llm_inferred 启发，须实验验证）。"
+    }
+   }
+  ]
+ },
+ "design_translation": [
+  {
+   "idea": "将溶酶体「pH 梯度驱动弱电解质质子化态依赖分配、实现捕获-释放」原理移植到 2,6-DCP 吸附剂：在载体上构筑阳离子型阴离子识别位（季铵/叔胺离子交换单元，辅以与酚环几何匹配的氢键/π-π 协同位），偏碱捕获条件下 2,6-DCP 去质子化为酚盐阴离子被静电/阴离子识别捕获；偏酸再生条件下酚羟基质子化为中性酚，阴离子相互作用断裂而脱附，实现 pH 摆动吸附-再生一体化循环。天然弱碱酸性陷获方向对弱酸反转，故本方案为反向 pH 摆动：高 pH 捕获、低 pH 释放",
+   "specific_functional_group": "阳离子型阴离子识别单元（季铵/叔胺、离子交换基团）+ 酚环氢键/π-π 协同位；靶标自身酚羟基（pKa ≈ 6.8，未核验）为质子化态切换单元",
+   "material_handle": "在介孔二氧化硅、聚合物或碳骨架上经硅烷偶联或表面引发聚合接枝季铵/胺基单体，结合分子印迹或刚性间隔臂组织识别位；以批次 pH 摆动或双区室流动操作复现捕获-再生循环（碱调再吸附、酸洗再生）",
+   "target_interaction": "捕获条件下酚盐阴离子与阳离子位点的静电/阴离子识别，辅以对二氯酚环的 π-π 与氢键协同；再生条件下酚羟基质子化中和，阴离子相互作用消失，中性酚脱附",
+   "source_tier": "llm_inference",
+   "evidence_tier": "inspiration（原理层外推：溶酶体机制接地于天然弱碱的 pH 梯度质子陷获捕获；2,6-DCP 弱酸反向摆动为 llm_inferred 转译，无直接 2,6-DCP 捕获证据）",
+   "examples": [],
+   "design_principle": "溶酶体证明可维持的 pH 梯度可经质子化态依赖的跨膜分配驱动弱电解质可逆捕获-释放（Ohkuma 1978/1981 质子陷获；Mindell 2012 V-ATPase 酸性腔室 pH 4.5–5.0）；2,6-DCP 酚羟基形态随 pH 切换，按同一 Henderson-Hasselbalch 原理可反向构建 pH 摆动：高 pH 捕获、低 pH 释放",
+   "implementation_example": "季铵/胺基功能化介孔二氧化硅或阴离子交换树脂，配 pH 摆动操作（无实验数据，仅为设计假设）",
+   "constraints": "2,6-DCP pKa ≈ 6.8 为简报常用文献值，本条目未核验，实验前须复核；天然原型捕获弱碱，弱酸转译为反向摆动，需阳离子型识别位点匹配；水相缓冲容量、共存阴离子（氯离子、腐殖酸等）与共存酚类（其他氯酚异构体）竞争干扰须评估；酸碱试剂消耗与 pH 摆动下载体循环稳定性须评价",
+   "failure_modes": "摆动 pH 未跨越 pKa 导致形态切换不充分、脱附不完全；阳离子位点在高离子强度或腐殖酸存在下被屏蔽或污堵；反复酸碱摆动下功能基水解或骨架疲劳；中性酚残留疏水吸附造成再生不完全",
+   "material_realization_examples": []
+  }
+ ],
+ "honesty_ledger": {
+  "facts": [
+   {
+    "type": "mechanism",
+    "index": 0,
+    "name": "弱电解质质子化态依赖的跨膜离子陷获（lysosomotropism，酸性陷获）",
+    "basis": "from_source_verified",
+    "note": "Ohkuma & Poole 1978 PNAS 75:3327-3331（摘要直接陈述 support the theory of lysosomal accumulation of weak bases by proton trapping；活细胞腔内 pH 4.7-4.8）+ Ohkuma & Poole 1981 J Cell Biol 90:665-669（弱碱活性形态为中性未质子化形式；累积浓度依赖性升高腔内 pH；培养基 pH 不影响腔内 pH）+ de Duve 1974 Biochem Pharmacol 23:2495-2531（lysosomotropic agents 概念，Europe PMC/PubMed 无摘要，仅题录级接地）；quote 取自 Crossref 摘要逐字文本，可核验，未做全文 PDF 审计"
+   },
+   {
+    "type": "mechanism",
+    "index": 1,
+    "name": "溶酶体酸性腔室的建立与维持（V-ATPase 质子泵，pH 4.5–5.0）",
+    "basis": "from_source_verified",
+    "note": "Mindell 2012 Annu Rev Physiol 74:69-86（摘要：highly acidic pH between 4.5 and 5.0；Lysosomes generate and maintain their pH gradients by using the activity of a proton-pumping V-type ATPase；反离子与 ClC-7）+ Ohkuma & Poole 1978（活细胞腔内 pH 定量测定；糖酵解与氧化磷酸化抑制剂合用升高腔内 pH 的能量依赖证据）；quote 取自 Crossref 摘要逐字文本，未做全文 PDF 审计"
+   }
+  ],
+  "leads": [],
+  "inferences": [
+   {
+    "type": "design_translation",
+    "index": 0,
+    "idea": "将溶酶体 pH 梯度驱动的质子化态依赖分配转译为弱酸 2,6-DCP 的反向 pH 摆动（高 pH 捕获、低 pH 释放）吸附-再生一体化",
+    "basis": "llm_inferred",
+    "label": "inspiration",
+    "note": "天然原型捕获弱碱（酸性陷获，低 pH 捕获）；2,6-DCP 为弱酸（pKa ≈ 6.8，简报常用文献值，本条目未核验），捕获方向与天然方向相反，转译属反向 pH 摆动而非天然机制的直接映射；无直接 2,6-DCP 捕获证据，亲和力、选择性与循环稳定性须实验验证"
+   }
+  ],
+  "boundary_notes": [
+   "本原型家族本质为细胞器级理化现象（V-ATPase 泵质子、膜双分子层屏障与弱电解质酸碱分配的综合效应），无单一蛋白结构、无 PDB 接地；机制 from_source 接地限于 Crossref/PubMed 题录摘要级（de Duve 1974 仅题录级，Europe PMC/PubMed 无摘要）",
+   "天然离子陷获对象为弱碱（溶酶体向性剂，酸性陷获/低 pH 捕获）；2,6-DCP 为弱酸，其捕获方向与天然方向相反（高 pH 酚盐捕获、低 pH 酚释放），转译标注为反向 pH 摆动，不得表述为天然机制对 2,6-DCP 的直接验证",
+   "2,6-DCP 捕获/再生应用全部为设计转译（llm_inferred / inspiration），非 from_source 事实，不得用作 2,6-DCP 的 direct evidence",
+   "无 2,6-DCP 吸附性能数据（qmax 等）；严格未从外部污染物知识库搬运任何性能数值；performance_data 为空",
+   "2,6-DCP pKa ≈ 6.8 为简报常用文献值，本条目未做全文核验，实验前须复核；一切 2,6-DCP 相关边界均为定性 llm_inferred，不带数值阈值，gate_level=soft"
+  ],
+  "missing_pdf_items": [
+   "Ohkuma & Poole 1978 PNAS 全文 PDF（quote 取自 Crossref 摘要）",
+   "Ohkuma & Poole 1981 J Cell Biol 全文 PDF（quote 取自 Crossref 摘要）",
+   "Mindell 2012 Annu Rev Physiol 全文 PDF（quote 取自 Crossref 摘要）",
+   "de Duve 1974 Biochem Pharmacol 全文 PDF 与摘要（Europe PMC/PubMed 无摘要，仅题录级接地）"
+  ],
+  "generated_by": "manual-curation-2026-07-22",
+  "note": "诚实优先：机制接地限于溶酶体酸性腔室（pH 4.5–5.0，V-ATPase）与弱碱质子陷获的天然事实；2,6-DCP 弱酸反向摆动应用全部为 inspiration/外推"
+ },
+ "boundary_rules": [
+  {
+   "rule": "底物电荷类型特异性：离子陷获对弱碱有效（中性形态跨膜、质子化形态截留累积），不同碱改变腔内 pH 所需浓度范围差异很大（天然机制事实，Ohkuma 1981）",
+   "source_mechanism": "弱电解质质子化态依赖的跨膜离子陷获（lysosomotropism，酸性陷获）",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "梯度主动维持：腔内 pH 不随胞外培养基 pH 改变，依赖能量驱动的 V-ATPase 酸化与膜对带电形态的不通透截留（天然机制事实，Ohkuma 1981）",
+   "source_mechanism": "弱电解质质子化态依赖的跨膜离子陷获（lysosomotropism，酸性陷获）",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "能量依赖：糖酵解与氧化磷酸化抑制剂合用（单用无效）升高腔内 pH，pH 梯度维持依赖代谢能供给（天然机制事实，Ohkuma 1978）",
+   "source_mechanism": "溶酶体酸性腔室的建立与维持（V-ATPase 质子泵，pH 4.5–5.0）",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "酸碱反转：2,6-DCP 为弱酸（pKa ≈ 6.8，未核验），捕获方向与天然弱碱酸性陷获相反（高 pH 捕获、低 pH 释放，反向 pH 摆动），形态切换吸附-再生须实验验证（定性，无数值阈值）",
+   "source_mechanism": "弱电解质质子化态依赖的跨膜离子陷获（lysosomotropism，酸性陷获）",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  },
+  {
+   "rule": "体外重构：天然梯度由 V-ATPase 封闭维持于单层膜细胞器内，吸附剂无主动质子泵，须以外部酸碱加药或双区室操作构建摆动 pH 差（定性，无数值阈值）",
+   "source_mechanism": "溶酶体酸性腔室的建立与维持（V-ATPase 质子泵，pH 4.5–5.0）",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  }
+ ]
+}

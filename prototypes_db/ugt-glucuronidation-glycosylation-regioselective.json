@@ -1,0 +1,424 @@
+{
+ "id": "ugt-glucuronidation-glycosylation-regioselective",
+ "name_zh": "UGT 葡萄糖醛酸化/植物糖苷化区域选择性结合与两段封存原型",
+ "name_en": "UGT Glucuronidation / Plant Glycosylation Regioselective Binding and Two-stage Sequestration Prototype",
+ "organism": {
+  "scientific": "Medicago truncatula UGT71G1 / Vitis vinifera VvGT1 / Arabidopsis thaliana UGT74F2（植物 UDP-糖基转移酶）；动物二相 UGT（人 UGT2B15 等，同工酶动力学层级）",
+  "category": "植物"
+ },
+ "biomimetic_dimension": "分子仿生",
+ "features": [
+  "特异性识别"
+ ],
+ "tested_conditions": {
+  "tested_ph_range": null,
+  "tested_temp_range": null,
+  "salinity": null,
+  "note": "UGT/植物糖基转移酶为内质网膜/胞质域糖基转移酶（分子识别加共价结合转化原型），本库无其吸附性能测试；performance_data 为空，故测试条件全空。"
+ },
+ "library_tier": "extended",
+ "lifecycle_status": "active",
+ "coverage": "partial",
+ "status": "active",
+ "provenance_summary": {
+  "n_papers": 5,
+  "n_verified": 12,
+  "n_unverified": 0,
+  "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与硬边界条数（UGT-001 四要素+3 硬边界=7，UGT-002 四要素+1 硬边界=5）。机制接地限于植物 UGT 同源结构（PDB 2ACW/2C1Z/5U6M）与酚类糖苷化架构、区域选择性决定元，以及人 BPA 葡萄糖醛酸化同工酶归属；BPA/2,6-DCP 去除转译为 design_translation（llm_inferred/inspiration），无吸附性能数据。quote 逐字取自 PubMed 摘要、PDB 沉积记录与 PMC 开放全文（可核验），未做本地全文 PDF 审计。候选 1PN5 经 RCSB 实测为 NALP1 Pyrin 域 NMR 结构（非糖基转移酶），10.1038/sj.emboj.7600753 经 Crossref 实测为 Munc13/RIM/Rab3 论文（非 UGT 论文），均已剔除；2ACW 正确主引为 10.1105/tpc.105.035055（Shao 2005 Plant Cell）。"
+ },
+ "mechanisms": [
+  {
+   "mechanism_id": "UGT-001",
+   "name": "GT-B 折叠植物 UGT 受体口袋对酚羟基的区域选择性糖苷化架构",
+   "description": "植物 UDP-糖基转移酶（UGT）采 GT-B 折叠：UDP-糖供体结合于 C 端 Rossmann 域（PDB 2ACW UGT71G1 与 UDP-葡萄糖配体 UPG 共晶），酚类受体底物结合于结构域间区域受限的受体口袋；His-22 为推定催化碱，Asp-121 经电子传递链协助受体酚羟基去质子化（残基编号按 PDB 2ACW auth 编号）。PDB 2C1Z VvGT1 Michaelis 复合物共结合 UDP-葡萄糖衍生供体类似物 U2F（UDP-2-脱氧-2-氟-α-D-葡萄糖）与黄酮受体山柰酚 KMP；PDB 5U6M UGT74F2 中水杨酸 SAL（2-羟基苯甲酸）以两种构象结合。区域选择性与产物特异性由受体口袋尺寸形状与单残基决定元控制",
+   "基本原理": "预组织受体口袋的尺寸、形状与单残基位阻/氢键决定元读取酚羟基头基的可及性与取向，产生区域选择性糖苷化；口袋几何与单残基差异单独即可切换区域选择性与产物形态，该「位阻受限位点读取酚羟基可及性」原理可独立于酶骨架提取",
+   "source": "literature",
+   "ref_doi": "10.1105/tpc.105.035055",
+   "verification": "verified",
+   "verification_quote": "Our results provide an initial structural basis for understanding the complex substrate specificity and regiospecificity underlying the glycosylation of plant natural products",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "酚羟基受体底物（植物 UGT 天然受体：黄酮酚羟基、水杨酸邻羟基苯甲酸酚羟基）；PDB 2C1Z 为 VvGT1「Michaelis 复合物」，共结合 UDP-葡萄糖衍生供体类似物 U2F 与受体山柰酚 KMP（3,5,7-三羟基-2-(4-羟苯基)-4H-色烯-4-酮），同文另有 UDP 与槲皮素复合物；PDB 5U6M 共结合 UGT74F2 底物水杨酸 SAL（2-羟基苯甲酸）与 UDP",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/sj.emboj.7600970",
+     "locator": "PDB 2C1Z / p.1396",
+     "quote": "both in its 'Michaelis' complex with a UDP-glucose-derived donor and the acceptor kaempferol and in complex with UDP and quercetin",
+     "scope_match": "Keywords: Michaelis complex, kaempferol, quercetin"
+    },
+    "bio_structure": {
+     "text": "植物 UGT 采 GT-B 折叠（双 Rossmann 域），UDP-葡萄糖供体结合于 C 端域（PDB 2ACW UGT71G1，配体 UPG 为 URIDINE-5'-DIPHOSPHATE-GLUCOSE）；His-22 为推定催化碱，Asp-121 为协助受体酚羟基去质子化的关键残基，与催化碱构成电子传递链（残基编号按 PDB 2ACW auth 编号，UGT71G1）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1105/tpc.105.035055",
+     "locator": "PMID 16214900 abstract / p.3141",
+     "quote": "suggest His-22 as the catalytic base and Asp-121 as a key residue that may assist deprotonation of the acceptor by forming an electron transfer chain with the catalytic base",
+     "scope_match": "Keywords: His-22, catalytic base, Asp-121"
+    },
+    "interaction": {
+     "text": "酚类底物以不同取向/构象结合于受体口袋：水杨酸以两种构象结合于 UGT74F2 活性位点，各酶选择其特定结合模式（PDB 5U6M/5V2J/5V2K）；2C1Z 中受体黄酮酚羟基与供体糖相邻定位，就位转糖苷",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/srep46629",
+     "locator": "Sci Rep 7:46629 / p.46629",
+     "quote": "SA binds to the active site in two conformations, with each enzyme selecting a certain binding mode of SA",
+     "scope_match": "Keywords: active site, conformations, binding mode"
+    },
+    "why_it_works": {
+     "text": "区域选择性由受体口袋尺寸与形状决定、并可由单残基切换：酚类区域选择性硫酸化/葡萄糖醛酸化综述结论为二相酶的区域选择性由结合口袋的尺寸与形状决定；UGT74F1 与 UGT74F2 仅两个苏氨酸决定元差异即切换糖苷（SAG）与葡萄糖酯（SGE）产物",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.2174/138920011797470100",
+     "locator": "PMC3426368 / p.900 (Abstract)",
+     "quote": "It is concluded that the regioselective nature of these phase II enzymes is determined by the size and shape of the binding pocket",
+     "scope_match": "Keywords: regioselective, phase II, binding pocket"
+    },
+    "boundary_conditions": [
+     {
+      "text": "单残基差异即可切换区域选择性/产物特异性：UGT74F1 与 UGT74F2 序列同一性 77%、活性位点残基保守，却生成不同产物（UGT74F1 生成水杨酸糖苷 SAG，UGT74F2 主要生成水杨酸葡萄糖酯 SGE），两个苏氨酸为产物特异性关键决定元（Thr15 位，T15S 突变体见 PDB 5V2J/5V2K）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "Sci Rep 7:46629 / p.46629",
+      "quote": "Despite being 77% identical and with conserved active site residues, these enzymes catalyze the formation of different products",
+      "scope_match": "Keywords: identical, active site, different products",
+      "source_asset": null
+     },
+     {
+      "text": "活性位点残基位阻调制局域结合亲和力：Wu 2011 综述对接分析中 GLU146 与 ASP48 贡献的位阻局域影响结合亲和力（SULT1A3 晶体/对接模型，原理级旁证，非 UGT 或氯酚特异数据）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "corroborated",
+      "gate_level": "hard",
+      "locator": "PMC3426368 / p.900 (Results, GLU146/ASP48)",
+      "quote": "It is contributed by GLU146 and ASP48, and is presumably thought to create a steric hindrance that affect the binding affinity locally",
+      "scope_match": "Keywords: steric hindrance, binding affinity, GLU146",
+      "source_asset": null
+     },
+     {
+      "text": "UGT 对 2,6-DCP 与 2,4-DCP 的差异区域选择性结合仍为 E012 级线索：两轮 Crossref 检索未获氯酚特异 UGT 速率全文，本条目不引具体速率比（定性）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     },
+     {
+      "text": "真核 UGT 全长结构稀缺：截至 2011 年 UGT 区域选择性的分子级解释仍依赖同源建模 UGT 结构（Wu 2011），酚底物结合几何主要据植物 UGT 同源结构（PDB 2ACW/2C1Z/5U6M）外推",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "corroborated",
+      "gate_level": "hard",
+      "locator": "PMC3426368 / p.900 (Abstract)",
+      "quote": "the enzyme structures (i.e., SULT crystal structures and a homology-modeled UGT structure) combined with molecular docking are employed",
+      "scope_match": "Keywords: homology-modeled, UGT structure, molecular docking",
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "由口袋尺寸形状与单残基位阻/氢键决定元定义的预组织受体口袋读取酚羟基头基的可及性与取向，产生区域选择性糖苷化；「位阻受限位点读取酚羟基可及性」原理可独立于酶骨架提取（原理层）",
+    "verification_quote": "Our results provide an initial structural basis for understanding the complex substrate specificity and regiospecificity underlying the glycosylation of plant natural products"
+   },
+   "source_doi": "10.1105/tpc.105.035055",
+   "source_page": 3141,
+   "source_locator": "PDB 2ACW / 2C1Z / 5U6M（RCSB 沉积数据）与 PMID 16214900 摘要 / p.3141",
+   "source_file": "PDB 2ACW / 2C1Z / 5U6M（RCSB 沉积数据）+ Plant Cell 17:3141-3154、EMBO J 25:1396-1405、Sci Rep 7:46629、Curr Drug Metab 12:900-916（PubMed 摘要与 PMC 开放全文；未做本地全文 PDF 审计）",
+   "functional_groups": [
+    "糖核苷酸供体位点（UDP-葡萄糖/UDP-葡萄糖醛酸结合）",
+    "催化碱与受体去质子化阵列（His-22、Asp-121）",
+    "区域受限受体口袋（尺寸与形状决定区域选择性）"
+   ],
+   "key_structures": [
+    "识别结构"
+   ]
+  },
+  {
+   "mechanism_id": "UGT-002",
+   "name": "二相结合封存链：酚羟基糖苷/葡萄糖醛酸共价接合、活性衰减与区室化封存",
+   "description": "UGT/植物糖基转移酶催化葡萄糖醛酸/糖基共价接合到底物酚羟基（二相结合）：人肝 BPA 葡萄糖醛酸化由 UGT1A1、UGT1A3、UGT1A9、UGT2B4、UGT2B7、UGT2B15 催化，UGT2B15 为主同工酶（汇合人肝微粒体 Km 约 6.4 μM，重组 UGT2B15 约 8.7 μM）；结合后底物雌激素活性下降（Elsby 2001 人肝微粒体观测 3 倍下降，无 DOI，未入四件套），植物糖苷结合物转为失活形态并转运入液泡封存。构成「结合 → 失活 → 区室化封存/排泄」的两段链",
+   "基本原理": "酚羟基共价接合亲水性糖/葡萄糖醛酸使结合物水溶性提高且生物活性衰减，结合物被导向区室化封存（植物液泡）或排泄（动物），完成解毒式去除",
+   "source": "literature",
+   "ref_doi": "10.1016/j.chemosphere.2008.09.053",
+   "verification": "verified",
+   "verification_quote": "this UGT isoform plays important roles in the detoxification and elimination of BPA",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "BPA 分子酚羟基（人肝 UGT 葡萄糖醛酸化底物）：人肝微粒体与重组人 UGT 同工酶（UGT1A1、UGT1A3、UGT1A9、UGT2B4、UGT2B7、UGT2B15）均催化 BPA 葡萄糖醛酸化，该酚类结合反应是 BPA 在动物体内的主要代谢去向之一",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1016/j.chemosphere.2008.09.053",
+     "locator": "Chemosphere 74:33 / p.33 (Abstract)",
+     "quote": "BPA glucuronidation was catalyzed by UGT1A1, UGT1A3, UGT1A9, UGT2B4, UGT2B7 and UGT2B15 as well as by human liver microsomes",
+     "scope_match": "Keywords: BPA, glucuronidation, UGT2B15"
+    },
+    "bio_structure": {
+     "text": "人 UGT 同工酶中 UGT2B15 的 BPA 葡萄糖醛酸化活性最高，为人肝微粒体中的主要结合酶（汇合人肝微粒体 Km 约 6.4 μM，重组 UGT2B15 约 8.7 μM）；人 UGT 为内质网膜蛋白，全长结构稀缺，同工酶归属依据重组酶动力学而非结合位点直接结构测定（Wu 2011 仍用 UGT 同源模型）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1016/j.chemosphere.2008.09.053",
+     "locator": "Chemosphere 74:33 / p.33 (Abstract)",
+     "quote": "These findings demonstrate that BPA is mainly glucuronidated by UGT2B15 in human liver microsomes",
+     "scope_match": "Keywords: BPA, UGT2B15, glucuronidated"
+    },
+    "interaction": {
+     "text": "糖基经 UGT 共价接合到酚羟基生成糖苷结合物（植物体系以水杨酸为例：与葡萄糖等小分子的结合生成失活形态的结合物；动物体系的对应反应为 BPA 酚羟基的葡萄糖醛酸单结合物）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/srep46629",
+     "locator": "Sci Rep 7:46629 / p.46629 (Abstract)",
+     "quote": "Through conjugation with small organic molecules such as glucose, an inactive form of SA is generated which can be transported into and stored in plant vacuoles",
+     "scope_match": "Keywords: conjugation, glucose, vacuoles"
+    },
+    "why_it_works": {
+     "text": "结合生成水溶性更高、生物活性衰减的结合物，并被导向封存或排泄：UGT2B15 等异构体在 BPA 的解毒与清除中起重要作用；植物糖苷结合物经转运储存于液泡完成区室化封存",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1016/j.chemosphere.2008.09.053",
+     "locator": "Chemosphere 74:33 / p.33 (Abstract)",
+     "quote": "this UGT isoform plays important roles in the detoxification and elimination of BPA",
+     "scope_match": "Keywords: detoxification, elimination, BPA"
+    },
+    "boundary_conditions": [
+     {
+      "text": "同工酶与底物依赖：BPA 葡萄糖醛酸化仅由部分 UGT 同工酶催化（UGT1A1/1A3/1A9/2B4/2B7/2B15），UGT2B15 在低（1.0 μM）与高（20 μM）底物浓度下活性最高",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "Chemosphere 74:33 / p.33 (Abstract)",
+      "quote": "Among these UGTs, UGT2B15 showed the highest activity of BPA glucuronidation at low- (1.0 microM) and high- (20 microM) substrate concentrations",
+      "scope_match": "Keywords: UGT2B15, BPA glucuronidation, substrate concentrations",
+      "source_asset": null
+     },
+     {
+      "text": "酚羟基可及性门控结合转化效率：2,6 位双氯对酚羟基的立体与水化遮蔽调制其接近供体位点的可及性，产生区域依赖的结合差异；该主张为 E012 级线索，无直接速率数据，不引速率比（定性）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     },
+     {
+      "text": "材料转译限原理层：两段封存以可逆共价（如硼酸酯）或强结合封存实现，非酶促葡萄糖醛酸化代谢路径复制；结合封存的可逆性与再生需实验验证（定性）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "酚羟基的亲水性糖/葡萄糖醛酸共价接合同时提高结合物水溶性并衰减生物活性，导向区室化封存或排泄；「识别加结合封存」两段逻辑可在原理层转译为「头基识别加可逆共价/强结合封存」",
+    "verification_quote": "this UGT isoform plays important roles in the detoxification and elimination of BPA"
+   },
+   "source_doi": "10.1016/j.chemosphere.2008.09.053",
+   "source_page": 33,
+   "source_locator": "Chemosphere 74:33-36 / p.33 (Abstract)",
+   "source_file": "Chemosphere 74(1):33-36（PubMed 摘要 PMID 18990428）+ Sci Rep 7:46629（PMC5397973 摘要）；Elsby 2001 JPET 297:103-113（PMID 11259533，无 DOI，未入四件套）",
+   "functional_groups": [
+    "酚羟基共价接合位点（葡萄糖醛酸/糖基转移）",
+    "水溶性结合物（葡萄糖醛酸苷/糖苷）"
+   ],
+   "key_structures": [
+    "识别结构"
+   ]
+  }
+ ],
+ "performance_data": [],
+ "engineering_constraints": [
+  {
+   "constraint": "真核 UGT 全长结构稀缺",
+   "value": "人 UGT 为内质网膜蛋白，酚底物结合与区域选择性的分子级解释长期依赖植物同源结构（PDB 2ACW/2C1Z/5U6M）与 UGT 同源模型（Wu 2011），全长结构数据有限",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "Wu 2011 摘要：UGT 区域选择性分子解释采用同源建模 UGT 结构加分子对接（PMC3426368 / p.900）",
+   "source": "literature",
+   "ref_doi": "10.2174/138920011797470100"
+  },
+  {
+   "constraint": "糖核苷酸供体依赖",
+   "value": "酶促结合需 UDP-葡萄糖/UDP-葡萄糖醛酸糖核苷酸供体持续供给（PDB 2ACW UDP-葡萄糖配体 UPG 位点）；仿生材料不复制供体循环与催化，仅提取识别与封存原理",
+   "unit": null,
+   "relevance": "medium",
+   "explanation": "Shao 2005：UGT71G1 与 UDP/UDP-葡萄糖共晶，供体识别残基经突变验证（PMID 16214900 摘要 / p.3141）",
+   "source": "literature",
+   "ref_doi": "10.1105/tpc.105.035055"
+  },
+  {
+   "constraint": "识别位点几何敏感性",
+   "value": "单残基差异即可切换区域选择性与产物形态（UGT74F1/UGT74F2 同一性 77%，两个苏氨酸决定元切换 SAG 与 SGE）；人工识别位点选择性的实现依赖口袋轮廓与残基等价基团几何的严格控制",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "George Thompson 2017：T15S 等突变切换产物特异性（Sci Rep 7:46629 摘要）",
+   "source": "literature",
+   "ref_doi": "10.1038/srep46629"
+  }
+ ],
+ "narrative": {
+  "entries": [
+   {
+    "source_file": "PDB 2ACW·2C1Z·5U6M + Shao 2005 Plant Cell（DOI 10.1105/tpc.105.035055）/ Offen 2006 EMBO J（DOI 10.1038/sj.emboj.7600970）/ George Thompson 2017 Sci Rep（DOI 10.1038/srep46629）/ Wu 2011 Curr Drug Metab（DOI 10.2174/138920011797470100）/ Hanioka 2008 Chemosphere（DOI 10.1016/j.chemosphere.2008.09.053）",
+    "paper_id": "2005-Shao-UGT71G1-plant-glycosyltransferase-structures",
+    "sections": {
+     "problem_definition": "酚类外源物与内源酚类在生物体内需经结合反应失活与去除：动物二相 UGT 催化酚羟基葡萄糖醛酸化，植物糖基转移酶催化酚类天然产物与外源酚的糖苷化。UGT 活性位如何结合酚羟基并产生区域选择性，以及结合如何导向封存与排泄，是酚类去除的基本机制问题；BPA 与 2,6-二氯苯酚（2,6-DCP）等污染物的 UGT 差异结合归属此框架。",
+     "biological_solution": "植物 UGT 采 GT-B 折叠：UDP-糖供体结合于 C 端 Rossmann 域（PDB 2ACW UGT71G1 与 UDP-葡萄糖 UPG 共晶；Shao 2005 推定 His-22 为催化碱、Asp-121 经电子传递链协助受体去质子化）。VvGT1（PDB 2C1X/2C1Z）与 UDP-葡萄糖衍生供体类似物及黄酮受体山柰酚/槲皮素形成 Michaelis 复合物（Offen 2006）；UGT74F2（PDB 5U6M）以两种构象结合水杨酸，两个苏氨酸残基决定糖苷与葡萄糖酯的产物特异性（George Thompson 2017）。区域选择性结构基础综述结论为二相酶区域选择性由结合口袋尺寸与形状决定（Wu 2011）。动物层面：人 UGT1A1/1A3/1A9/2B4/2B7/2B15 均催化 BPA 葡萄糖醛酸化，UGT2B15 为主（Hanioka 2008）；结合后雌激素活性下降（Elsby 2001，无 DOI 未入四件套），植物糖苷转为失活形态并转运入液泡封存（George Thompson 2017）。",
+     "key_features": "必须保留：① 区域受限受体口袋（口袋尺寸形状与单残基决定元读取酚羟基可及性与取向）；② 结合加封存两段逻辑（结合物失活与区室化）；③ 头基可及性作为区域描述符（邻位取代调制酚羟基对供体位点的接近）。可灵活调整：载体骨架、受体基团化学（硼酸/吡啶酰胺/脲）、开口轮廓与深度。",
+     "design_mapping": "仿生映射：UGT「位阻受限受体口袋加结合封存」→ BPA/2,6-DCP 两段去除设计原理：以受限开口识别位点读取 BPA（酚羟基可及）与 2,6-DCP（2,6 位双氯遮蔽酚羟基）的可及性差异，并结合可逆共价或强结合封存实现解毒式去除。边界声明：此为设计转译（llm_inferred），非 from_source 事实；天然机制为共价结合转化，转译限原理层，非复制酶促葡萄糖醛酸化路径；2,6-DCP 的 UGT 差异结合仅 E012 级线索，不引速率比；若材料反设计为优先捕获被遮蔽的 2,6-DCP，则仿生方向取反（UGT 偏好可及酚羟基，2,6-DCP 为较差底物），须独立论证。",
+     "explainability_anchors": "设计溯源：植物 UGT 受体口袋结构与区域选择性决定元（PDB 2ACW/2C1Z/5U6M，from_source）+ BPA 葡萄糖醛酸化工酶归属与结合失活封存链（Hanioka 2008 / George Thompson 2017，from_source）→「位阻受限位点读取酚羟基可及性加结合型封存」可迁移原理 → BPA/2,6-DCP 两段去除材料设计（llm_inferred 启发，须实验验证）。"
+    }
+   }
+  ]
+ },
+ "design_translation": [
+  {
+   "idea": "将 UGT「位阻受限受体口袋读取酚羟基可及性加结合封存」两段逻辑转译为多孔识别材料，面向 BPA 与 2,6-DCP：第一段以受限开口口袋轮廓读取 BPA（酚羟基可及，与 UGT 偏好同向）与 2,6-DCP（2,6 位双氯遮蔽酚羟基）的可及性差异；第二段以可逆共价（苯硼酸成硼酸酯）或强氢键/静电（吡啶酰胺双齿）结合封存结合物类似物，实现解毒式去除",
+   "specific_functional_group": "酚羟基受体基团（苯硼酸可逆共价成硼酸酯、吡啶酰胺/脲双齿氢键），按与酚羟基几何互补方式预组织排布；口袋开口轮廓作为可及性读取的位阻元件",
+   "material_handle": "介孔二氧化硅、环糊精或交联聚合物骨架上经硅烷偶联/表面引发聚合固定硼酸或吡啶酰胺单体；以分子印迹或刚性间隔臂构筑位阻受限开口，调控开口轮廓与深度以区分 BPA 双酚羟基与 2,6-DCP 邻氯遮蔽酚羟基",
+   "target_interaction": "酚羟基头基的方向性氢键/可逆共价锚定 + 邻位取代的可及性轮廓位阻读取 + 芳香骨架的疏水腔容纳",
+   "source_tier": "llm_inference",
+   "evidence_tier": "inspiration（原理层外推：UGT 识别架构与区域选择性决定元接地于 PDB 2ACW/2C1Z/5U6M 与相应文献，BPA 葡萄糖醛酸化工酶归属接地于 Hanioka 2008；转译为 BPA/2,6-DCP 吸附材料为 llm_inferred，无吸附实验数据）",
+   "examples": [],
+   "design_principle": "UGT 证明由口袋尺寸形状与单残基决定元定义的预组织受体口袋可读取酚羟基可及性与取向并产生区域选择性，且结合导向失活与封存；「头基可及性读取加结合封存」两段逻辑可在原理层转译为「识别加强结合/可逆共价封存」",
+   "implementation_example": "具受限开口的硼酸功能化分子印迹介孔二氧化硅或环糊精基超分子聚合物（无实验数据，仅为设计假设）",
+   "constraints": "天然机制为共价结合转化，材料转译限结合封存原理层，非复制酶促葡萄糖醛酸化；2,6-DCP 与 2,4-DCP 的 UGT 差异结合为 E012 级线索，不引具体速率比；若材料优先捕获被遮蔽的 2,6-DCP，则方向与 UGT 原型取反（UGT 偏好可及酚羟基），须独立论证；水相中受体基团氢键竞争与共存阴离子干扰是关键挑战",
+   "failure_modes": "酚羟基受体暴露于体相水被氢键竞争淬灭；硼酸酯可逆共价在中性至弱酸水解渗漏；疏水腔非特异吸附芳香共存物降低选择性；方向取反设计（优先捕获 2,6-DCP）仿生载荷弱、落入常规超分子直觉；开口轮廓控制失准使可及性读取失效",
+   "material_realization_examples": []
+  }
+ ],
+ "honesty_ledger": {
+  "facts": [
+   {
+    "type": "mechanism",
+    "index": 0,
+    "name": "GT-B 折叠植物 UGT 受体口袋对酚羟基的区域选择性糖苷化架构",
+    "basis": "from_source_verified",
+    "note": "Shao 2005 Plant Cell（PDB 2ACW UGT71G1 与 UDP-葡萄糖 UPG 共晶；His-22 催化碱、Asp-121 去质子化协助）+ Offen 2006 EMBO J（PDB 2C1Z VvGT1 Michaelis 复合物山柰酚/槲皮素）+ George Thompson 2017 Sci Rep（PDB 5U6M UGT74F2 水杨酸双构象、两个苏氨酸决定元）+ Wu 2011 综述（区域选择性由口袋尺寸形状决定）；quote 取自 PubMed 摘要、PDB 沉积记录与 PMC 开放全文（逐字可核验），未做本地全文 PDF 审计"
+   },
+   {
+    "type": "mechanism",
+    "index": 1,
+    "name": "二相结合封存链：酚羟基糖苷/葡萄糖醛酸共价接合、活性衰减与区室化封存",
+    "basis": "from_source_verified",
+    "note": "Hanioka 2008 Chemosphere（BPA 葡萄糖醛酸化工酶归属，UGT2B15 为主，解毒与清除）+ George Thompson 2017（结合后失活形态、液泡转运封存）；Elsby 2001 JPET（结合后雌激素活性下降 3 倍，PMID 11259533）无 DOI，未入四件套，仅在机制描述中提及"
+   }
+  ],
+  "leads": [
+   {
+    "type": "missing_evidence",
+    "index": 0,
+    "name": "UGT 对 2,6-DCP 与 2,4-DCP 差异结合/结合转化的直接速率数据（E012 级线索）",
+    "basis": "llm_inferred",
+    "label": "lead",
+    "note": "姊妹项目 biomimetic-adsorbent-design 仓 dcp26 简报记为 E012 级线索；两轮 Crossref 检索（本条目与仓内方案审阅）均未获氯酚特异 UGT 速率全文，本条目不引速率比"
+   },
+   {
+    "type": "unverified_reference",
+    "index": 1,
+    "name": "Nakajima 2002 BPA 葡萄糖醛酸化（任务简报记忆引文）",
+    "basis": "llm_inferred",
+    "label": "falsified_dropped",
+    "note": "两轮 PubMed/Crossref 检索未发现 Nakajima 2002 的 BPA 葡萄糖醛酸化论文（作者 Nakajima 的命中为 chlorpropham 代谢论文，非 BPA），证伪后剔除；BPA-UGT 接地改用 Hanioka 2008（已核验）"
+   },
+   {
+    "type": "unverified_reference",
+    "index": 2,
+    "name": "Elsby 2001 JPET 297:103-113（PMID 11259533，无 DOI）",
+    "basis": "llm_inferred",
+    "label": "no_doi_dropped",
+    "note": "摘要记 BPA 葡萄糖醛酸化后雌激素活性下降 3 倍（人肝微粒体），题录属实但无 DOI，未入四件套；后续如需纳入须寻获可引用 DOI 或全文定位符"
+   }
+  ],
+  "inferences": [
+   {
+    "type": "design_translation",
+    "index": 0,
+    "idea": "将 UGT 受限受体口袋与结合封存两段逻辑转译为 BPA/2,6-DCP 识别-封存材料",
+    "basis": "llm_inferred",
+    "label": "inspiration",
+    "note": "天然机制为共价结合转化，转译限原理层；UGT 偏好可及酚羟基（2,6-DCP 为较差底物），优先捕获 2,6-DCP 的设计方向取反、须独立论证；2,6-DCP 与 2,4-DCP 的 UGT 差异结合仅 E012 级线索，不引速率比，亲和力与选择性须实验验证"
+   }
+  ],
+  "boundary_notes": [
+   "本原型天然机制为酚类底物的糖苷化/葡萄糖醛酸化（共价结合转化，二相）及其后的区室化封存；机制 from_source 接地限于植物同源结构（PDB 2ACW/2C1Z/5U6M）与动物同工酶动力学（Hanioka 2008）",
+   "BPA/2,6-DCP 吸附去除应用全部为 design_translation（llm_inference/inspiration），不得用作 BPA/2,6-DCP 吸附的 direct evidence",
+   "UGT 对 2,6-DCP 与 2,4-DCP 的差异结合仅 E012 级线索，无已发表直接速率数据，不引具体速率比",
+   "候选 1PN5 经 RCSB 实测为 NALP1 Pyrin 域 NMR 结构（非糖基转移酶），剔除；10.1038/sj.emboj.7600753 经 Crossref 实测为 Munc13/RIM/Rab3 论文（非 UGT 论文），剔除；2ACW 正确主引为 10.1105/tpc.105.035055（Shao 2005 Plant Cell）",
+   "无吸附性能数据（qmax 等）；严格未从外部污染物知识库搬运任何性能数值"
+  ],
+  "missing_pdf_items": [
+   "Shao 2005 Plant Cell 17:3141-3154 全文 PDF（quote 取自 PubMed 摘要 PMID 16214900 与 PDB 2ACW 沉积记录）",
+   "Offen 2006 EMBO J 25:1396-1405 全文 PDF（quote 取自 PubMed 摘要 PMID 16482224 与 PDB 2C1Z 沉积记录）",
+   "George Thompson 2017 Sci Rep 7:46629 全文 PDF（quote 取自 PubMed 摘要 PMID 28425481 / PMC5397973）",
+   "Wu 2011 Curr Drug Metab 12:900-916 全文 PDF 审计（quote 取自 PubMed 摘要 PMID 21933112 与 PMC3426368 开放全文 XML）",
+   "Hanioka 2008 Chemosphere 74:33-36 全文 PDF（quote 取自 PubMed 摘要 PMID 18990428）",
+   "Elsby 2001 JPET 297:103-113（PMID 11259533，无 DOI，未入四件套）"
+  ],
+  "generated_by": "manual-curation-2026-07-22",
+  "note": "诚实优先：机制接地限于植物 UGT 同源结构与酚类糖苷化架构、区域选择性决定元，以及动物 BPA 葡萄糖醛酸化工酶归属；BPA/2,6-DCP 去除转译全部为 inspiration/外推，2,6-DCP 区域选择性为线索级，不引速率比"
+ },
+ "boundary_rules": [
+  {
+   "rule": "区域选择性/产物特异性由受体口袋尺寸与形状及单残基决定元控制（UGT74F1/F2 同一性 77%，两个苏氨酸切换糖苷与糖酯）",
+   "source_mechanism": "GT-B 折叠植物 UGT 受体口袋对酚羟基的区域选择性糖苷化架构",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "UGT 结合转化具底物/同工酶依赖：BPA 葡萄糖醛酸化仅由部分 UGT 同工酶催化，UGT2B15 为主",
+   "source_mechanism": "二相结合封存链：酚羟基糖苷/葡萄糖醛酸共价接合、活性衰减与区室化封存",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "真核 UGT 全长结构稀缺：截至 2011 年 UGT 区域选择性的分子解释仍依赖同源建模（Wu 2011），酚底物结合几何以植物同源结构为据",
+   "source_mechanism": "GT-B 折叠植物 UGT 受体口袋对酚羟基的区域选择性糖苷化架构",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "UGT 对 2,6-DCP 与 2,4-DCP 的差异区域选择性结合为 E012 级线索，无直接速率数据，不得引速率比（定性）",
+   "source_mechanism": "GT-B 折叠植物 UGT 受体口袋对酚羟基的区域选择性糖苷化架构",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  },
+  {
+   "rule": "材料两段封存转译为可逆共价/强结合封存，限原理层，非酶促葡萄糖醛酸化代谢复制（定性）",
+   "source_mechanism": "二相结合封存链：酚羟基糖苷/葡萄糖醛酸共价接合、活性衰减与区室化封存",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  }
+ ]
+}

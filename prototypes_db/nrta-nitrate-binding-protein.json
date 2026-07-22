@@ -1,0 +1,271 @@
+{
+ "id": "nrta-nitrate-binding-protein",
+ "name_zh": "NrtA 硝酸盐结合蛋白",
+ "name_en": "NrtA Nitrate-Binding Protein",
+ "organism": {
+  "scientific": "Synechocystis sp. PCC 6803（NrtA 硝酸盐结合蛋白，蓝细菌高亲和硝酸盐 ABC 转运系统底物结合组分）",
+  "category": "微生物"
+ },
+ "biomimetic_dimension": "分子仿生",
+ "features": [
+  "分子筛分",
+  "特异性识别"
+ ],
+ "tested_conditions": {
+  "tested_ph_range": null,
+  "tested_temp_range": null,
+  "salinity": null,
+  "note": "NrtA 为蓝细菌周质可溶底物结合蛋白（分子识别原型），本库无其吸附性能测试条件；performance_data 为空，故测试条件全空。"
+ },
+ "library_tier": "extended",
+ "lifecycle_status": "active",
+ "coverage": "partial",
+ "status": "active",
+ "provenance_summary": {
+  "n_papers": 1,
+  "n_verified": 5,
+  "n_unverified": 0,
+  "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与硬边界条数（NRTA-001 四要素+1 硬边界=5）。机制接地限于 NrtA 天然底物硝酸根（PDB 2G29 硝酸根结合态，1.5 Å）的静态识别几何：硝酸根配体身份（HETNAM）、结合口袋残基（SITE AC1 含 Lys269）、ABC 转运底物结合组分角色与硝酸盐选择性决定簇均取自 PDB 沉积记录与摘要（可核验）。动态结构变化（去配体后构象闭合）无实验性 apo 结构支撑，仅来自去配体分子动力学推断，诚实标注为缺口。硝酸盐去除材料转译为 design_translation（llm_inferred/inspiration），无吸附性能数据。论文正文 PDF 未做逐字审计，K269 精确氢键距离、C-clamp 描述符与 K269A 变体功能验证（DSF/ITC）见 honesty_ledger.missing_pdf_items。"
+ },
+ "mechanisms": [
+  {
+   "mechanism_id": "NRTA-001",
+   "name": "预组织被围口袋与 Lys269 阳离子锚对平面硝酸根的几何氢键识别",
+   "description": "蓝细菌 Synechocystis sp. PCC 6803 的 NrtA 是高亲和硝酸盐 ABC 转运系统的周质底物结合蛋白，天然配体即硝酸根。PDB 2G29（1.5 Å，硝酸根结合态）显示硝酸根（配体 NO3，chain A 700）埋藏于由 N 与 C 结构域围成的口袋中；PDB SITE AC1 记录围成结合位点的十个残基为 Leu71、Trp102、Leu124、Gln155、Thr190、His196、Pro222、Val239、Gly240、Lys269（chain A），其中带正电的 Lys269 构成对平面硝酸根的阳离子锚，与中性氢键给体共同按几何互补识别平面三角形硝酸根",
+   "基本原理": "被围口袋以预组织的阳离子锚（Lys269 侧链铵基）与中性氢键给体阵列对平面三角形硝酸根提供几何与静电互补：阳离子锚稳定氧阴离子电荷，方向性氢键固定其平面三氧取向，埋藏口袋排除水竞争，使硝酸根在高背景阴离子中被选择性识别",
+   "source": "literature",
+   "ref_doi": "10.1073/pnas.0602517103",
+   "verification": "corroborated",
+   "verification_quote": "a nitrate-specific receptor, NrtA from Synechocystis sp. PCC 6803, complexed with nitrate and determined to a resolution of 1.5 Å",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "平面三角形硝酸根 NO3⁻（NrtA 天然配体；PDB 2G29 配体 NO3 为 NITRATE ION，位于 chain A 700，中心 N 与 O1/O2/O3 三氧共面），是高背景阴离子水体中需选择性去除的含氧阴离子营养盐，与碳酸氢根等平面氧阴离子几何相近",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1073/pnas.0602517103",
+     "locator": "PDB 2G29, HETNAM (NO3 A 700) / Abstract p.9820",
+     "quote": "the structure of a nitrate-specific receptor, NrtA from Synechocystis sp. PCC 6803, complexed with nitrate and determined to a resolution of 1.5 Å",
+     "scope_match": "Keywords: nitrate, receptor, complexed, NrtA"
+    },
+    "bio_structure": {
+     "text": "NrtA 是高亲和硝酸盐 ABC 转运系统的底物结合组分（周质可溶蛋白，约 46 kDa，PDB 2G29 molecular_weight 46.01 kDa）；硝酸根埋藏于 N 与 C 结构域围成的口袋，PDB SITE AC1 记录围成位点的残基为 Leu71、Trp102、Leu124、Gln155、Thr190、His196、Pro222、Val239、Gly240、Lys269（chain A）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1073/pnas.0602517103",
+     "locator": "PDB 2G29, SITE AC1 (chain A) / p.9820",
+     "quote": "SITE 1 AC1 10 LEU A 71 TRP A 102 LEU A 124 GLN A 155 THR A 190 HIS A 196 PRO A 222 VAL A 239 GLY A 240 LYS A 269",
+     "scope_match": "Keywords: AC1, LYS A 269, GLN A 155"
+    },
+    "interaction": {
+     "text": "PDB 2G29（chain A）硝酸根配体（NO3，A 700）埋藏于上述十残基围成的口袋；带正电的 Lys269 侧链作为阳离子锚与硝酸根氧原子作用，Gln155、Thr190、His196 等提供中性氢键给体，共同按几何互补固定平面三氧取向（围成位点残基由 SITE AC1 沉积记录直列；Lys269 的精确氢键距离与 C-clamp 描述符出自论文正文，未逐字核验，见 honesty_ledger）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1073/pnas.0602517103",
+     "locator": "PDB 2G29, SITE AC1 (chain A) / Abstract p.9820",
+     "quote": "The structure not only details the determinants for nitrate selectivity in NrtA but also the bicarbonate specificity in CmpA",
+     "scope_match": "Keywords: nitrate, selectivity, NrtA, determinants"
+    },
+    "why_it_works": {
+     "text": "摘要明言该结构揭示了 NrtA 硝酸盐选择性的决定簇（determinants for nitrate selectivity in NrtA）：被围口袋的阳离子锚（Lys269）与预组织中性氢键给体对平面三角形硝酸根提供几何与静电互补，埋藏微环境强化静电并削弱水竞争，使硝酸根在含高背景阴离子的水相中被选择性识别",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1073/pnas.0602517103",
+     "locator": "Abstract, p.9820",
+     "quote": "The structure not only details the determinants for nitrate selectivity in NrtA but also the bicarbonate specificity in CmpA",
+     "scope_match": "Keywords: nitrate, selectivity, determinants"
+    },
+    "boundary_conditions": [
+     {
+      "text": "底物几何/静电特异性：NrtA 为硝酸盐特异性受体，被围口袋与阳离子锚按平面三角形硝酸根的几何与电荷分布互补；非平面或几何/电荷失配的阴离子难以获得同等互补（摘要称其为 nitrate-specific receptor）",
+      "parameter": "competing_ion",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "corroborated",
+      "gate_level": "hard",
+      "locator": "Abstract, p.9820",
+      "quote": "a nitrate-specific receptor, NrtA from Synechocystis sp. PCC 6803, complexed with nitrate and determined to a resolution of 1.5 Å",
+      "scope_match": "Keywords: nitrate-specific, receptor, complexed",
+      "source_asset": null
+     },
+     {
+      "text": "结构证据缺口：现有实验结构仅为硝酸根结合态（holo，PDB 2G29）；无实验性配体游离（apo）结构，去配体后的构象闭合/结构域运动仅来自去配体分子动力学推断，非实验测定（定性，无数值阈值）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     },
+     {
+      "text": "预组织被围口袋须维持完整三级结构与埋藏微环境；若阳离子锚与氢键给体完全暴露于体相水，水分子氢键竞争将削弱硝酸根结合（定性，无数值阈值）",
+      "parameter": "wet_stability",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "对被围口袋内平面三角形氧阴离子的选择性识别，可由几何互补的预组织阳离子锚（稳定氧阴离子电荷）与中性氢键给体阵列（方向性固定氧取向）配合埋藏低介电微环境实现，无需金属配位",
+    "verification_quote": "a nitrate-specific receptor, NrtA from Synechocystis sp. PCC 6803, complexed with nitrate and determined to a resolution of 1.5 Å"
+   },
+   "source_doi": "10.1073/pnas.0602517103",
+   "source_page": 9820,
+   "source_locator": "PDB 2G29 / Abstract p.9820",
+   "source_file": "PDB 2G29（RCSB 沉积数据：TITLE/HETNAM/SITE AC1）+ PNAS 103:9820-9825 摘要（Crossref 与 PMC1502537 front matter，可核验）；未做本地全文 PDF 审计",
+   "functional_groups": [
+    "阳离子锚（Lys269 侧链铵基）",
+    "中性氢键给体（Gln155、Thr190、His196 等侧链与骨架）",
+    "被围低介电口袋"
+   ],
+   "key_structures": [
+    "识别结构"
+   ]
+  }
+ ],
+ "performance_data": [],
+ "engineering_constraints": [
+  {
+   "constraint": "可溶蛋白形态",
+   "value": "NrtA 为蓝细菌周质可溶底物结合蛋白（约 46 kDa），其识别口袋依赖完整三级结构，用作吸附须将识别基序移植/固定于固体载体",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "RCSB 2G29：molecular_weight 46.01 kDa；COMPND 记 NITRATE TRANSPORT PROTEIN NRTA / FRAGMENT SOLUTE-BINDING DOMAIN，SOURCE 记 Synechocystis sp. / GENE NRTA",
+   "source": "literature",
+   "ref_doi": "10.1073/pnas.0602517103"
+  },
+  {
+   "constraint": "仅结合态结构已知",
+   "value": "实验结构仅硝酸根结合态（holo，PDB 2G29）；无实验性 apo 结构，配体诱导的构象闭合/结构域运动未经实验测定，转译限静态识别几何层级",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（基于 RCSB 2G29 仅含硝酸根结合态、无对应 apo 沉积的事实）；该缺口为原方案终止原因",
+   "source": "llm_inference",
+   "ref_doi": null
+  },
+  {
+   "constraint": "硝酸盐几何/静电特异性与共存阴离子竞争",
+   "value": "被围口袋与阳离子锚按平面三角形硝酸根互补；对几何/电荷相近的平面氧阴离子（碳酸氢根/碳酸根）及高背景阴离子（氯离子、硫酸根）的分辨须在选择性设计上额外约束",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "摘要称 NrtA 为 nitrate-specific receptor 并揭示硝酸盐选择性决定簇；同类 CmpA 结合碳酸氢根，提示平面氧阴离子间分辨是天然设计难点",
+   "source": "literature",
+   "ref_doi": "10.1073/pnas.0602517103"
+  }
+ ],
+ "narrative": {
+  "entries": [
+   {
+    "source_file": "PNAS 103:9820-9825 / PDB 2G29（Koropatkin, Pakrasi & Smith 2006，DOI 10.1073/pnas.0602517103，PMC1502537）",
+    "paper_id": "2006-Koropatkin-NrtA-nitrate-binding-structure",
+    "sections": {
+     "problem_definition": "硝酸盐是蓝细菌光合作用与生长最关键的氮营养源，在许多水体（尤其开阔海洋）严重受限；蓝细菌须从高背景阴离子中选择性捕获硝酸盐。NrtA 作为高亲和硝酸盐 ABC 转运系统的底物结合组分，是这类细菌质膜上含量最高的蛋白之一。蛋白如何在无金属配位前提下从众多阴离子中选择性识别平面三角形硝酸根，是含氧阴离子营养盐选择性捕获的分子基础问题，与水体硝酸盐选择性去除的工程问题同构。",
+     "biological_solution": "Koropatkin 等测定了 Synechocystis sp. PCC 6803 NrtA 与硝酸根复合体的晶体结构（PDB 2G29，1.5 Å）。摘要称其为硝酸盐特异性受体（nitrate-specific receptor），并揭示 NrtA 硝酸盐选择性的决定簇。结构显示硝酸根（配体 NO3，chain A 700，HETNAM 记 NITRATE ION）埋藏于 N 与 C 结构域围成的口袋；PDB SITE AC1 记录围成位点的十残基为 Leu71/Trp102/Leu124/Gln155/Thr190/His196/Pro222/Val239/Gly240/Lys269（chain A），其中带正电的 Lys269 构成阳离子锚，与中性氢键给体共同按几何互补识别平面硝酸根。NrtA 显著大于其他氧阴离子结合蛋白，代表一类此前未表征的转运蛋白；序列上同类唯一的另一成员是碳酸氢根结合蛋白 CmpA。需要诚实标注：现有实验结构仅硝酸根结合态，去配体后的构象闭合仅来自去配体分子动力学推断，无实验性 apo 结构支撑。",
+     "key_features": "必须保留：① 与平面三角形硝酸根几何/静电互补的阳离子锚（Lys269 型铵基/胍基）；② 预组织中性氢键给体阵列（Gln/Thr/His 型，方向性固定三氧取向）；③ 被围低介电口袋（强化静电、排除水竞争）。可灵活调整：载体骨架、阳离子锚与给体的间距取向、口袋疏水微环境。不可直接搬用：蛋白的构象动态（无实验 apo 证据，仅静态识别几何可迁移）。",
+     "design_mapping": "仿生映射：NrtA 的'阳离子锚 + 预组织氢键给体被围口袋'→ 面向水体硝酸盐的预组织识别位点设计。边界声明：这是设计转译/启发（llm_inferred），非 from_source 事实，蛋白对硝酸根的识别接地于天然底物硝酸根结合态结构（PDB 2G29）；将其转译为人工硝酸盐吸附位点限于静态识别几何层级，构象闭合动态无实验证据，且硝酸根与碳酸氢根/氯离子/硫酸根的分辨须在选择性设计上额外约束，实际亲和力与选择性须实验验证。",
+     "explainability_anchors": "设计溯源：硝酸根在 NrtA 被围口袋的结合态几何（PDB 2G29 HETNAM/SITE AC1，from_source，含 Lys269 阳离子锚）→ '阳离子锚 + 预组织氢键给体 + 被围低介电口袋'可迁移原理（from_source）→ 水体硝酸盐预组织识别位点（llm_inferred 启发，限静态几何层级，须实验验证）。"
+    }
+   }
+  ]
+ },
+ "design_translation": [
+  {
+   "idea": "将 NrtA 的'Lys269 型阳离子锚 + 预组织中性氢键给体被围口袋'移植到多孔固体载体，构建对平面三角形硝酸根几何/静电互补的预组织识别位点，面向水体硝酸盐（NO3⁻）选择性去除：以胍基/铵基阳离子锚稳定硝酸根电荷，以脲/硫脲/酰胺/羟基中性给体按与硝酸根三氧几何互补预组织排布，并以疏水/低介电孔壁营造埋藏微环境排除水竞争",
+   "specific_functional_group": "阳离子锚（胍基/脒基/铵基，仿 Lys269 稳定氧阴离子电荷）+ 中性氢键给体（脲/硫脲、酰胺、羟基），按与平面三角形硝酸根三氧几何互补的方式预组织排布",
+   "material_handle": "在介孔二氧化硅或交联聚合物骨架上经硅烷偶联或表面引发聚合接枝胍基/脲/硫脲单体，借分子印迹或刚性间隔臂控制阳离子锚与给体的间距取向；孔壁以烃链修饰降低局部介电常数，构筑埋藏型识别口袋",
+   "target_interaction": "阳离子锚与硝酸根的静电/氢键锚定 + 中性给体与三氧的方向性氢键（固定平面取向）+ 低介电埋藏微环境强化静电并排除水竞争",
+   "source_tier": "llm_inference",
+   "evidence_tier": "inspiration（原理层外推：NrtA 机制接地于天然底物硝酸根结合态结构 PDB 2G29；将蛋白识别几何转译为人工硝酸盐吸附位点为 llm_inferred，限静态识别几何层级，无直接硝酸盐吸附实验证据）",
+   "examples": [],
+   "design_principle": "NrtA 证明被围口袋内的阳离子锚（Lys269）与预组织中性氢键给体可在无金属参与下按几何/静电互补选择性识别平面三角形硝酸根（PDB 2G29）；阳离子锚几何与给体排布可独立于蛋白骨架移植到人工孔道",
+   "implementation_example": "胍基/脲或硫脲功能化、具低介电埋藏孔壁的介孔二氧化硅或交联聚合物（无实验数据，仅为设计假设）",
+   "constraints": "转译限静态识别几何层级：NrtA 构象闭合动态无实验 apo 证据，不可搬用；硝酸根与几何/电荷相近的碳酸氢根/碳酸根及高背景阴离子（氯离子、硫酸根）的分辨是关键选择性挑战；水相中阳离子锚与给体的水合竞争须实验排查",
+   "failure_modes": "阳离子锚/给体暴露于体相水被氢键竞争淬灭；预组织刚性强导致对硝酸根适配不足；对碳酸氢根/硫酸根/氯离子缺乏分辨而共吸附；缺乏对硝酸盐相对其他平面氧阴离子的特异选择性",
+   "material_realization_examples": []
+  }
+ ],
+ "honesty_ledger": {
+  "facts": [
+   {
+    "type": "mechanism",
+    "index": 0,
+    "name": "预组织被围口袋与 Lys269 阳离子锚对平面硝酸根的几何氢键识别",
+    "basis": "from_source_corroborated",
+    "note": "Koropatkin 2006 PNAS（PDB 2G29 硝酸根结合态，1.5 Å）：硝酸根配体身份（HETNAM NO3 NITRATE ION，chain A 700）、围成位点残基（SITE AC1 含 Lys269/Gln155/Thr190/His196 等）、ABC 转运底物结合组分角色与硝酸盐选择性决定簇均取自 PDB 沉积记录与摘要（Crossref 与 PMC1502537 front matter，逐字可核验）。quote 取自 PDB 沉积记录（TITLE/HETNAM/SITE）与摘要，未做全文 PDF 审计"
+   }
+  ],
+  "leads": [
+   {
+    "type": "functional_validation",
+    "name": "K269A 变体浓度依赖 DSF 与水相 ITC 证据（清单 N1/N2）",
+    "note": "原方案清单记录 K269A 突变体的差示扫描荧光（DSF）浓度依赖响应与水相等温滴定量热（ITC）证据，指向 Lys269 对硝酸根结合的功能重要性；该证据位于论文正文/补充材料，本次未逐字核验（PMC 正文 XML 被出版方禁止下载），故未作为 from_source 引用要素，仅作待核验线索登记"
+   }
+  ],
+  "inferences": [
+   {
+    "type": "design_translation",
+    "index": 0,
+    "idea": "将 NrtA 阳离子锚 + 预组织氢键给体被围口袋移植到多孔载体识别水体硝酸盐",
+    "basis": "llm_inferred",
+    "label": "inspiration",
+    "note": "NrtA 天然底物为硝酸根，机制接地于结合态结构；转译为人工硝酸盐吸附位点属原理层外推，限静态识别几何层级，无直接硝酸盐吸附实验证据，亲和力与选择性须实验验证"
+   },
+   {
+    "type": "structural_gap",
+    "index": 0,
+    "name": "去配体后构象闭合/结构域运动仅来自去配体分子动力学推断",
+    "basis": "llm_inferred",
+    "label": "md_inference",
+    "note": "现有实验结构仅硝酸根结合态（holo，PDB 2G29），无实验性 apo 结构；任何配体诱导的动态闭合非实验测定，转译不可依赖该动态层级（此缺口为原方案终止原因）"
+   }
+  ],
+  "boundary_notes": [
+   "本原型天然底物为硝酸根（平面三角形氧阴离子）；机制 from_source 接地限于硝酸根结合态结构（PDB 2G29）的静态识别几何",
+   "动态结构变化（去配体构象闭合）无实验 apo 证据，仅来自去配体分子动力学推断；转译严格限于静态识别几何层级，该缺口为原方案终止原因",
+   "硝酸盐去除材料应用为设计转译（llm_inferred/inspiration），非 from_source 事实，不得用作硝酸盐吸附的 direct evidence",
+   "无硝酸盐吸附性能数据（qmax 等）；严格未从任何污染物知识库搬运性能数值",
+   "K269 的精确氢键距离、C-clamp 描述符与 K269A 功能验证（DSF/ITC）出自论文正文，本次未逐字核验，不作 from_source 引用",
+   "BC2（apo 结构缺口）与 BC3（低介电/水竞争）均为定性 llm_inferred，不带数值阈值，gate_level=soft"
+  ],
+  "missing_pdf_items": [
+   "Koropatkin 2006 PNAS 全文 PDF（PMC1502537 正文 XML 被出版方禁止下载；quote 取自摘要 front matter 与 PDB 沉积记录）",
+   "论文正文/补充材料中 K269 与硝酸根的精确氢键距离与 C-clamp 几何描述（未逐字核验）",
+   "K269A 变体浓度依赖 DSF 与水相 ITC 原始数据（清单 N1/N2，未逐字核验）"
+  ],
+  "generated_by": "manual-curation-2026-07-22",
+  "note": "诚实优先：机制接地限于 NrtA 硝酸根结合态结构（PDB 2G29）的静态识别几何；动态闭合无实验 apo 证据，硝酸盐去除转译为 inspiration/外推，限静态几何层级"
+ },
+ "boundary_rules": [
+  {
+   "rule": "底物几何/静电特异性：NrtA 为硝酸盐特异性受体，被围口袋与阳离子锚按平面三角形硝酸根几何与电荷互补，失配阴离子结合差",
+   "source_mechanism": "预组织被围口袋与 Lys269 阳离子锚对平面硝酸根的几何氢键识别",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "结构证据缺口：仅硝酸根结合态（holo）有实验结构，无实验性 apo 结构，去配体构象闭合仅来自分子动力学推断，转译限静态识别几何层级（定性）",
+   "source_mechanism": "预组织被围口袋与 Lys269 阳离子锚对平面硝酸根的几何氢键识别",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  },
+  {
+   "rule": "预组织被围口袋须维持完整三级结构与埋藏微环境，水竞争削弱结合（定性，无数值阈值）",
+   "source_mechanism": "预组织被围口袋与 Lys269 阳离子锚对平面硝酸根的几何氢键识别",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  }
+ ]
+}

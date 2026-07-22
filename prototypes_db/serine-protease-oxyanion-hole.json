@@ -1,0 +1,347 @@
+{
+ "id": "serine-protease-oxyanion-hole",
+ "name_zh": "丝氨酸/半胱氨酸蛋白酶氧阴离子穴（预组织双氢键阵列）",
+ "name_en": "Serine/Cysteine Protease Oxyanion Hole (Preorganized Dual Hydrogen-Bond Array)",
+ "organism": {
+  "scientific": "Bos taurus（γ-胰凝乳蛋白酶，PDB 1GCT）/ Bacillus amyloliquefaciens（枯草蛋白酶 BPN′，PDB 1SBT）/ Carica papaya（木瓜蛋白酶，PDB 1PAD）；跨物种趋同的氧阴离子穴基序",
+  "category": "动物"
+ },
+ "biomimetic_dimension": "分子仿生",
+ "features": [
+  "特异性识别"
+ ],
+ "tested_conditions": {
+  "tested_ph_range": null,
+  "tested_temp_range": null,
+  "salinity": null,
+  "note": "蛋白酶氧阴离子穴为分子识别/催化原型（识别并稳定肽键水解四面体过渡态氧阴离子），本库无其吸附性能测试；performance_data 为空，故测试条件全空。"
+ },
+ "library_tier": "extended",
+ "lifecycle_status": "active",
+ "coverage": "partial",
+ "status": "active",
+ "provenance_summary": {
+  "n_papers": 5,
+  "n_verified": 10,
+  "n_unverified": 0,
+  "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与边界条数（SPH-001 四要素+1 边界=5，SPH-002 四要素+1 边界=5）。5 个接地来源：3 个 RCSB PDB 沉积（1GCT/1SBT/1PAD）+ 2 篇文献 DOI（10.3390/molecules31091454、10.1038/s41467-026-72367-y）。机制接地限于蛋白酶天然底物（四面体过渡态氧阴离子）与氧阴离子穴骨架 NH 供体几何；PFOA/BPA 应用为机制转译（llm_inferred），无性能数据。quote 取自 PMC 全文文本与 PDB TITLE 记录（可核验），未做本地 PDF 版式审计。任务简报所述'双脲 POP 氢键先例'DOI 10.1038/s41467-022-29816-1 机制归属已证伪（实为静电/疏水协同叔胺 POP），见 honesty_ledger.leads。"
+ },
+ "mechanisms": [
+  {
+   "mechanism_id": "SPH-001",
+   "name": "丝氨酸蛋白酶氧阴离子穴：预组织双骨架酰胺 NH 氢键阵列稳定四面体过渡态氧阴离子",
+   "description": "丝氨酸蛋白酶（γ-胰凝乳蛋白酶 PDB 1GCT、枯草蛋白酶 BPN′ PDB 1SBT）在进化中形成氧阴离子穴，由两个预组织骨架酰胺 NH 供体（chymotrypsinogen 编号 Gly193 与 Ser195 主链 NH）以固定间距与取向排布，对肽键水解四面体过渡态发展的氧阴离子（底物羰基氧获得的负电荷）形成两个定向氢键，选择性稳定该高能过渡态；该基序在不同折叠的丝氨酸蛋白酶（chymotrypsin 与 subtilisin）中趋同保守",
+   "基本原理": "预组织的中性骨架酰胺 NH 供体以固定几何与四面体过渡态氧阴离子方向性互补，两个定向氢键选择性稳定带负电的四面体过渡态而非平面基态羰基；预组织使供体结合的熵代价预先支付，从而降低过渡态能量",
+   "source": "literature",
+   "ref_doi": "10.3390/molecules31091454",
+   "verification": "verified",
+   "verification_quote": "Importantly, in the predicted complex, the carbonyl oxygen of the pivaloyl group formed hydrogen bonds with the backbone NH groups of Gly193 and Ser195 in the oxyanion hole.",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "肽键水解四面体过渡态的氧阴离子（底物羰基氧在四面体过渡态/四面体中间体获得的负电荷）；γ-胰凝乳蛋白酶 PDB 1GCT 捕获了四肽基酰基-酶共价加合物，即经氧阴离子穴稳定的四面体中间体的结构类似物",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "PDB 1GCT",
+     "locator": "PDB 1GCT / TITLE (res 195)",
+     "quote": "IS GAMMA-CHYMOTRYPSIN A TETRAPEPTIDE ACYL-ENZYME ADDUCT OF GAMMA-CHYMOTRYPSIN?",
+     "scope_match": "Keywords: chymotrypsin, acyl-enzyme, adduct"
+    },
+    "bio_structure": {
+     "text": "氧阴离子穴由两个预组织骨架酰胺 NH 供体构成：在丝氨酸蛋白酶（chymotrypsinogen 编号）为 Gly193 与 Ser195 的主链 NH，以固定间距与取向排布，对进入活性位点的底物羰基氧形成定向氢键；该基序在 γ-胰凝乳蛋白酶（PDB 1GCT）与不同折叠的枯草蛋白酶 BPN′（PDB 1SBT）中趋同保守",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.3390/molecules31091454",
+     "locator": "DOI 10.3390/molecules31091454, Results (res 193, 195)",
+     "quote": "Importantly, in the predicted complex, the carbonyl oxygen of the pivaloyl group formed hydrogen bonds with the backbone NH groups of Gly193 and Ser195 in the oxyanion hole.",
+     "scope_match": "Keywords: oxyanion hole, backbone NH, Gly193, Ser195"
+    },
+    "interaction": {
+     "text": "底物（或抑制剂）羰基氧与氧阴离子穴 Gly193、Ser195 骨架 NH 形成定向氢键（两个主链 NH···O 氢键）；该羰基氧须定位于氧阴离子穴内方可成键，自穴内位移即破坏氢键",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.3390/molecules31091454",
+     "locator": "DOI 10.3390/molecules31091454, Results (res 193, 195)",
+     "quote": "Importantly, in the predicted complex, the carbonyl oxygen of the pivaloyl group formed hydrogen bonds with the backbone NH groups of Gly193 and Ser195 in the oxyanion hole.",
+     "scope_match": "Keywords: hydrogen bonds, backbone NH, Gly193, Ser195"
+    },
+    "why_it_works": {
+     "text": "氧阴离子穴将反应性羰基定位于穴内，骨架 NH 氢键稳定近攻击构象/四面体过渡态；预组织使两个供体的结合熵代价预先支付，定向氢键选择性稳定带负电的四面体氧阴离子而非平面基态羰基，从而降低过渡态能量",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.3390/molecules31091454",
+     "locator": "DOI 10.3390/molecules31091454, Results (near-attack)",
+     "quote": "its binding mode positions the reactive carbonyl within the oxyanion hole, where hydrogen-bond interactions with backbone NH groups stabilize a near-attack configuration",
+     "scope_match": "Keywords: oxyanion hole, backbone NH, hydrogen-bond, near-attack"
+    },
+    "boundary_conditions": [
+     {
+      "text": "方向/位置特异性：羰基氧须定位于氧阴离子穴内方与 Gly193/Ser195 骨架 NH 成键；羰基自穴内位移即破坏这些氢键，故识别依赖供体-受体几何与取向匹配",
+      "parameter": "donor_acceptor_geometry",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "DOI 10.3390/molecules31091454, Results (res 193, 195)",
+      "quote": "This displacement was accompanied by disruption of the hydrogen-bond interactions between the ester carbonyl oxygen and the oxyanion hole NH groups of Gly193 and Ser195.",
+      "scope_match": "Keywords: oxyanion hole, NH groups, hydrogen-bond, disruption",
+      "source_asset": null
+     },
+     {
+      "text": "转译至水相吸附时，预组织氢键供体阵列若完全暴露于体相水，水分子氢键竞争将削弱对目标氧阴离子的结合；需低介电/疏水微环境或刚性预组织以维持供体几何（定性，无数值阈值）",
+      "parameter": "wet_stability",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "以固定间距与取向预组织的中性氢键供体（骨架酰胺 NH 或其合成等价物脲/硫脲）阵列，可通过方向性多点氢键选择性识别并稳定含氧阴离子，识别取决于供体-受体几何与取向匹配而非非特异分配",
+    "verification_quote": "Importantly, in the predicted complex, the carbonyl oxygen of the pivaloyl group formed hydrogen bonds with the backbone NH groups of Gly193 and Ser195 in the oxyanion hole."
+   },
+   "source_doi": "10.3390/molecules31091454",
+   "source_page": null,
+   "source_locator": "DOI 10.3390/molecules31091454, Results (res 193, 195)",
+   "source_file": "PMC13165411 全文（DOI 10.3390/molecules31091454）+ RCSB PDB 1GCT/1SBT 沉积记录；未做本地 PDF 版式审计",
+   "functional_groups": [
+    "骨架酰胺 NH 氢键供体（Gly193、Ser195 主链 NH，chymotrypsinogen 编号）",
+    "预组织活性位点氧阴离子穴"
+   ],
+   "key_structures": [
+    "识别结构",
+    "催化结构"
+   ]
+  },
+  {
+   "mechanism_id": "SPH-002",
+   "name": "半胱氨酸蛋白酶氧阴离子穴：双骨架酰胺氢键阵列稳定过渡态负电荷（趋同原理）",
+   "description": "半胱氨酸蛋白酶（木瓜蛋白酶 PDB 1PAD；天冬酰胺肽连接酶 C13 折叠）以两个预组织骨架酰胺供体（Gly172 与 Cys213 主链 NH）构成氧阴离子穴，稳定过渡态发展的负电荷；与丝氨酸蛋白酶氧阴离子穴为趋同原理，表明预组织双骨架酰胺 NH 氢键阵列是稳定四面体过渡态氧阴离子的通用结构方案",
+   "基本原理": "两个预组织骨架酰胺 NH 以方向性氢键稳定四面体过渡态氧阴离子所发展的负电荷，降低过渡态能量；该原理与丝氨酸蛋白酶氧阴离子穴趋同",
+   "source": "literature",
+   "ref_doi": "10.1038/s41467-026-72367-y",
+   "verification": "verified",
+   "verification_quote": "The oxyanion hole, formed by the backbone amides of C213 and G172, is also essential for stabilizing the negative charge developed during the transition state",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "肽基底物羰基在四面体过渡态发展的负电荷；木瓜蛋白酶 PDB 1PAD 以氯甲基酮底物类似物共价加合于活性位点，模拟经氧阴离子穴稳定的四面体中间态",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "PDB 1PAD",
+     "locator": "PDB 1PAD / TITLE, p. 1",
+     "quote": "Binding of chloromethyl ketone substrate analogues to crystalline papain",
+     "scope_match": "Keywords: papain, substrate analogues, chloromethyl ketone"
+    },
+    "bio_structure": {
+     "text": "半胱氨酸蛋白酶（木瓜蛋白酶/天冬酰胺肽连接酶 C13 折叠）氧阴离子穴由两个预组织骨架酰胺供体（Gly172 与 Cys213 主链 NH）构成，与丝氨酸蛋白酶氧阴离子穴为趋同原理",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/s41467-026-72367-y",
+     "locator": "DOI 10.1038/s41467-026-72367-y, Results (res 172, 213)",
+     "quote": "Moreover, the oxyanion hole, formed by the backbone amides of Gly172 and Cys213, likely pre-activate the carbonyl carbon by enhancing its electrophilicity.",
+     "scope_match": "Keywords: oxyanion hole, backbone amides, Gly172, Cys213"
+    },
+    "interaction": {
+     "text": "氧阴离子穴骨架酰胺（Gly172、Cys213 主链 NH）与底物羰基相互作用，极化并预活化羰基碳（增强其亲电性），即以方向性氢键稳定发展中的氧阴离子",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/s41467-026-72367-y",
+     "locator": "DOI 10.1038/s41467-026-72367-y, Results (res 172, 213)",
+     "quote": "Moreover, the oxyanion hole, formed by the backbone amides of Gly172 and Cys213, likely pre-activate the carbonyl carbon by enhancing its electrophilicity.",
+     "scope_match": "Keywords: oxyanion hole, backbone amides, carbonyl, Gly172"
+    },
+    "why_it_works": {
+     "text": "氧阴离子穴对稳定过渡态发展的负电荷不可或缺：两个预组织骨架酰胺 NH 以方向性氢键稳定四面体过渡态氧阴离子，降低过渡态能量",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/s41467-026-72367-y",
+     "locator": "DOI 10.1038/s41467-026-72367-y, Results (transition state)",
+     "quote": "The oxyanion hole, formed by the backbone amides of C213 and G172, is also essential for stabilizing the negative charge developed during the transition state",
+     "scope_match": "Keywords: oxyanion hole, negative charge, transition state, stabilizing"
+    },
+    "boundary_conditions": [
+     {
+      "text": "过渡态电荷/几何特异性：氧阴离子穴稳定的是四面体过渡态发展的负电荷，供体阵列与该过渡态几何互补；基态平面羰基或非互补阴离子获得的稳定化较弱",
+      "parameter": "transition_state_complementarity",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "DOI 10.1038/s41467-026-72367-y, Results (transition state)",
+      "quote": "The oxyanion hole, formed by the backbone amides of C213 and G172, is also essential for stabilizing the negative charge developed during the transition state",
+      "scope_match": "Keywords: oxyanion hole, negative charge, transition state",
+      "source_asset": null
+     },
+     {
+      "text": "该原理对几何/电荷相似的含氧阴离子（羧酸根、酚氧、四面体氧阴离子）的可迁移程度受供体阵列几何匹配度与水竞争影响（定性，无数值阈值）",
+      "parameter": "substrate_geometry",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "预组织双骨架酰胺 NH 氢键阵列稳定过渡态氧阴离子的原理可迁移为：以固定几何排布的中性氢键供体阵列对含氧阴离子执行多点定向氢键锚定",
+    "verification_quote": "The oxyanion hole, formed by the backbone amides of C213 and G172, is also essential for stabilizing the negative charge developed during the transition state"
+   },
+   "source_doi": "10.1038/s41467-026-72367-y",
+   "source_page": null,
+   "source_locator": "DOI 10.1038/s41467-026-72367-y, Results (res 172, 213)",
+   "source_file": "PMC13323385 全文（DOI 10.1038/s41467-026-72367-y）+ RCSB PDB 1PAD 沉积记录；未做本地 PDF 版式审计",
+   "functional_groups": [
+    "骨架酰胺 NH 氢键供体（Gly172、Cys213 主链 NH）",
+    "预组织氧阴离子穴"
+   ],
+   "key_structures": [
+    "识别结构",
+    "催化结构"
+   ]
+  }
+ ],
+ "performance_data": [],
+ "engineering_constraints": [
+  {
+   "constraint": "催化蛋白形态与变性约束",
+   "value": "氧阴离子穴依赖蛋白酶三级结构的预组织（chymotrypsin/subtilisin/papain 均为约 23–27 kDa 球状蛋白）；游离蛋白在水相易变性，氢键几何与活性位点预组织丧失",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（基于 PDB 1GCT/1SBT/1PAD 沉积的球状蛋白结构事实）",
+   "source": "llm_inference",
+   "ref_doi": null
+  },
+  {
+   "constraint": "供体几何预组织依赖",
+   "value": "识别要求两个氢键供体维持固定间距与取向；柔性或溶剂化使方向性氢键与几何互补丧失",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（基于氧阴离子穴预组织骨架 NH 供体事实）",
+   "source": "llm_inference",
+   "ref_doi": null
+  },
+  {
+   "constraint": "水相氢键竞争",
+   "value": "水分子与目标氧阴离子竞争供体氢键；天然氧阴离子穴位于埋藏活性位点以降低水竞争，转译至开放孔壁需以低介电/疏水微环境或刚性预组织补偿",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断",
+   "source": "llm_inference",
+   "ref_doi": null
+  }
+ ],
+ "narrative": {
+  "entries": [
+   {
+    "source_file": "PMC13165411 (DOI 10.3390/molecules31091454) / PMC13323385 (DOI 10.1038/s41467-026-72367-y) / RCSB PDB 1GCT, 1SBT, 1PAD",
+    "paper_id": "2026-serine-cysteine-protease-oxyanion-hole",
+    "sections": {
+     "problem_definition": "蛋白酶须在温和条件下高效水解肽键，而肽键本身动力学稳定。如何选择性稳定肽键水解的高能四面体过渡态，是酶催化的核心问题。丝氨酸蛋白酶（胰凝乳蛋白酶、枯草蛋白酶）与半胱氨酸蛋白酶（木瓜蛋白酶）在进化中各自独立形成了氧阴离子穴这一结构方案。",
+     "biological_solution": "氧阴离子穴由两个预组织骨架酰胺 NH 供体构成：丝氨酸蛋白酶为 chymotrypsinogen 编号 Gly193 与 Ser195 的主链 NH（DOI 10.3390/molecules31091454 全文逐字记 '...the carbonyl oxygen ... formed hydrogen bonds with the backbone NH groups of Gly193 and Ser195 in the oxyanion hole'），半胱氨酸蛋白酶为 Gly172 与 Cys213 主链 NH（DOI 10.1038/s41467-026-72367-y 记氧阴离子穴 'formed by the backbone amides of Gly172 and Cys213' 且 'essential for stabilizing the negative charge developed during the transition state'）。两个供体以固定间距与取向对四面体过渡态羰基氧形成方向性氢键，选择性稳定带负电的过渡态而非平面基态。γ-胰凝乳蛋白酶酰基-酶加合物（PDB 1GCT，1.6 Å）、枯草蛋白酶 BPN′（PDB 1SBT）与木瓜蛋白酶氯甲基酮底物类似物复合物（PDB 1PAD）提供结构参照；该基序在 chymotrypsin 与 subtilisin 两个不同折叠中趋同保守。",
+     "key_features": "必须保留：① 两个（或多个）中性氢键供体（骨架酰胺 NH 或其合成等价物脲/硫脲）；② 供体以固定间距与取向预组织，与目标氧阴离子几何/方向互补；③ 埋藏或低介电微环境以降低水竞争。可灵活调整：供体化学（脲/硫脲/酰胺）、载体骨架（活性炭/聚合物/介孔二氧化硅）、孔壁疏水性。",
+     "design_mapping": "仿生映射：蛋白酶氧阴离子穴预组织双氢键阵列 → 孔壁预组织脲/硫脲定向氢键阵列。对 PFOA 羧酸根（COO⁻）或 BPA 酚氧，原理上可由几何互补的预组织中性供体阵列执行多点定向氢键锚定，区别于非特异疏水分配。注意：此为机制转译/启发（llm_inferred），非 from_source 事实——天然氧阴离子穴识别的是肽键水解四面体过渡态氧阴离子，PFOA 羧酸根/BPA 酚氧在电荷分布、几何、水合上不同，实际亲和力与选择性须实验验证。任务简报所述'双脲 POP 氢键先例'DOI 10.1038/s41467-022-29816-1 经核验机制归属证伪（实为静电/疏水协同叔胺 POP），已剔除。",
+     "explainability_anchors": "设计溯源：蛋白酶四面体过渡态氧阴离子识别（PDB 1GCT/1SBT/1PAD + DOI 10.3390/molecules31091454、10.1038/s41467-026-72367-y，from_source）→ '预组织双氢键供体阵列 + 固定几何 + 低介电微环境'可迁移原理 → PFOA 羧酸根/BPA 酚氧定向氢键锚定（llm_inferred 启发，须实验验证）。"
+    }
+   }
+  ]
+ },
+ "design_translation": [
+  {
+   "idea": "将蛋白酶氧阴离子穴的'预组织双氢键供体阵列 + 固定几何'原理转译为多孔固体孔壁上按固定间距/取向排布的脲/硫脲（骨架酰胺 NH 的合成等价物）定向氢键阵列，对 PFOA 羧酸根或 BPA 酚氧执行多点定向氢键锚定，区别于非特异疏水分配",
+   "specific_functional_group": "中性氢键供体（脲/硫脲 NH、酰胺 NH），按与目标含氧阴离子（PFOA 羧酸根两氧 / BPA 酚氧）几何互补的方式预组织排布",
+   "material_handle": "在活性炭或多孔聚合物（POP/COF/介孔二氧化硅）孔壁经硅烷偶联、表面引发聚合或刚性间隔臂固定双脲/双硫脲单体，借分子印迹或刚性骨架控制供体间距与取向；孔壁以烃/氟碳链修饰降低局部介电常数",
+   "target_interaction": "预组织脲/硫脲 NH 与 PFOA 羧酸根（COO⁻）或 BPA 酚氧的方向性多点氢键 + 低介电微环境埋藏（强化静电并排除水竞争）；PFOA 全氟碳尾另贡献疏水/氟亲作用",
+   "source_tier": "llm_inference",
+   "evidence_tier": "inspiration（机制转译/原理级借用：天然机制接地于蛋白酶四面体过渡态氧阴离子与氧阴离子穴骨架 NH 供体；PFOA 羧酸根/BPA 酚氧识别为 llm_inferred 外推，无直接结合证据）",
+   "examples": [],
+   "design_principle": "丝氨酸/半胱氨酸蛋白酶氧阴离子穴以预组织双骨架酰胺 NH 阵列经方向性氢键稳定四面体过渡态氧阴离子（PDB 1GCT/1SBT/1PAD；DOI 10.3390/molecules31091454、10.1038/s41467-026-72367-y）；含氧阴离子（羧酸根/酚氧）原理上可由几何互补的预组织中性供体阵列定向锚定",
+   "implementation_example": "双脲/双硫脲功能化活性炭或具疏水孔壁的多孔有机聚合物（无实验数据，仅为设计假设）",
+   "constraints": "天然氧阴离子穴识别的是肽键水解四面体过渡态，PFOA 羧酸根/BPA 酚氧在电荷分布、几何、水合上与过渡态氧阴离子不同，亲和力与选择性须实验验证；水相水竞争与共存阴离子/天然有机质干扰是关键挑战",
+   "failure_modes": "供体暴露于体相水被氢键竞争淬灭；预组织刚性过强导致对羧酸根/酚氧适配不足；全氟碳尾或芳环非特异吸附降低选择性；脲/硫脲在环境 pH 下质子化/溶剂化状态变化削弱氢键",
+   "material_realization_examples": []
+  }
+ ],
+ "honesty_ledger": {
+  "facts": [
+   {
+    "type": "mechanism",
+    "index": 0,
+    "name": "丝氨酸蛋白酶氧阴离子穴（Gly193/Ser195 骨架 NH 双氢键）",
+    "basis": "from_source_verified",
+    "note": "DOI 10.3390/molecules31091454（PMC13165411 全文）逐字陈述羰基氧与 Gly193/Ser195 骨架 NH 在氧阴离子穴形成氢键；PDB 1GCT（γ-胰凝乳蛋白酶四肽酰基-酶加合物，X 射线 1.6 Å）与 PDB 1SBT（枯草蛋白酶 BPN′）提供结构参照；quote 取自 PMC 全文与 PDB TITLE（可核验），未做 PDF 审计；Gly193/Ser195 为 chymotrypsinogen 经典编号"
+   },
+   {
+    "type": "mechanism",
+    "index": 1,
+    "name": "半胱氨酸蛋白酶氧阴离子穴（Gly172/Cys213 骨架酰胺，趋同）",
+    "basis": "from_source_verified",
+    "note": "DOI 10.1038/s41467-026-72367-y（PMC13323385 全文）逐字陈述氧阴离子穴由 Gly172/Cys213 骨架酰胺构成并稳定过渡态负电荷；PDB 1PAD（木瓜蛋白酶氯甲基酮底物类似物复合物）提供结构参照；quote 取自 PMC 全文与 PDB TITLE，未做 PDF 审计"
+   }
+  ],
+  "leads": [
+   {
+    "type": "falsified_doi",
+    "note": "DOI 10.1038/s41467-022-29816-1（Nat Commun 2022，'Installation of synergistic binding sites onto porous organic polymers for efficient removal of perfluorooctanoic acid'）经 Crossref 题录与摘要核验为真实论文，但其机制为静电/疏水协同（PAF-1-NDMB 叔胺位点），并非任务简报所述的'双脲预组织氢键阵列对含氧阴离子的水相结合'；机制归属证伪，故剔除出 from_source 接地，不用于支撑预组织氢键阵列转译。摘要逐字含 'installing synergistic electrostatic/hydrophobic sites onto porous organic polymers (POPs)'"
+   }
+  ],
+  "inferences": [
+   {
+    "type": "design_translation",
+    "index": 0,
+    "idea": "将氧阴离子穴预组织双氢键供体阵列转译为孔壁脲/硫脲定向氢键阵列，锚定 PFOA 羧酸根/BPA 酚氧",
+    "basis": "llm_inferred",
+    "label": "inspiration",
+    "note": "PFOA 羧酸根与 BPA 酚氧在电荷分布、几何、水合上与天然底物（肽键四面体过渡态氧阴离子）不同；属机制/原理层转译外推，无直接 PFOA/BPA 结合证据，亲和力与选择性须实验验证"
+   }
+  ],
+  "boundary_notes": [
+   "本原型天然功能为催化（肽键水解过渡态稳定），非吸附；机制 from_source 接地限于天然底物四面体过渡态氧阴离子与氧阴离子穴骨架 NH 供体几何",
+   "PFOA/BPA 含氧阴离子应用为机制转译（llm_inferred / inspiration），非 from_source 事实，不得用作 PFOA/BPA 的 direct evidence",
+   "无 PFOA/BPA 吸附性能数据（qmax 等）；严格未从外部污染物知识库搬运任何性能数值",
+   "DOI 10.1038/s41467-022-29816-1 机制归属（双脲预组织氢键阵列）已证伪，见 leads；该 DOI 实际为静电/疏水协同 POP",
+   "一切水相转译相关边界（水竞争、低介电微环境、供体几何预组织）均为定性 llm_inferred，无数值阈值，gate_level=soft"
+  ],
+  "missing_pdf_items": [
+   "DOI 10.3390/molecules31091454（PMC13165411）：quote 取自 PMC 全文文本，未做本地 PDF 版式审计",
+   "DOI 10.1038/s41467-026-72367-y（PMC13323385）：quote 取自 PMC 全文文本，未做本地 PDF 版式审计",
+   "经典氧阴离子穴一手文献（如 Kraut 1977 Annu Rev Biochem 丝氨酸蛋白酶结构与催化机制）未做 PDF 审计；Gly193/Ser195 为 chymotrypsinogen 经典编号，经 PMC 全文转述接地",
+   "DOI 10.1038/s41467-022-29816-1 全文 PDF 未审计（仅核验题录与摘要）"
+  ],
+  "generated_by": "bmdl-subagent-2026-07-22",
+  "note": "诚实优先：机制接地限于蛋白酶天然底物（四面体过渡态氧阴离子）与氧阴离子穴骨架 NH 供体；PFOA/BPA 应用全部为 inspiration/机制转译；任务简报所述'双脲 POP 氢键先例'DOI 机制归属已证伪并剔除"
+ },
+ "boundary_rules": [
+  {
+   "rule": "方向/位置特异性：羰基/含氧阴离子须定位于预组织氧阴离子穴内方与 Gly193/Ser195（丝氨酸）或 Gly172/Cys213（半胱氨酸）骨架 NH 成键，位移即破坏氢键",
+   "source_mechanism": "丝氨酸蛋白酶氧阴离子穴：预组织双骨架酰胺 NH 氢键阵列稳定四面体过渡态氧阴离子",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "过渡态电荷/几何特异性：氧阴离子穴选择性稳定四面体过渡态发展的负电荷，供体阵列与该过渡态几何互补",
+   "source_mechanism": "半胱氨酸蛋白酶氧阴离子穴：双骨架酰胺氢键阵列稳定过渡态负电荷（趋同原理）",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "转译至水相需维持供体预组织几何并抵抗水竞争（低介电/疏水微环境），定性无数值阈值",
+   "source_mechanism": "丝氨酸蛋白酶氧阴离子穴：预组织双骨架酰胺 NH 氢键阵列稳定四面体过渡态氧阴离子",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  }
+ ]
+}
