@@ -1,0 +1,387 @@
+{
+ "id": "fluc-fluoride-export-channel",
+ "name_zh": "Fluc 双拓扑氟离子输出通道",
+ "name_en": "Fluc Dual-Topology Fluoride Export Channel",
+ "organism": {
+  "scientific": "Escherichia coli（菌株 S88，Fluc/crcB 氟离子通道，又称 Fluc-Ec2；UniProt Q6J5N4）",
+  "category": "微生物"
+ },
+ "biomimetic_dimension": "分子仿生",
+ "features": [
+  "分子筛分",
+  "特异性识别"
+ ],
+ "tested_conditions": {
+  "tested_ph_range": null,
+  "tested_temp_range": null,
+  "salinity": null,
+  "note": "Fluc 为细菌整合膜氟离子通道（分子识别/离子输运原型），本库无其吸附性能测试条件；performance_data 为空，故测试条件全空。"
+ },
+ "library_tier": "extended",
+ "lifecycle_status": "active",
+ "coverage": "partial",
+ "status": "active",
+ "provenance_summary": {
+  "n_papers": 2,
+  "n_verified": 11,
+  "n_unverified": 0,
+  "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与硬边界条数（FLUC-001 四要素+1 硬边界=5，FLUC-002 四要素+2 硬边界=6）。机制接地限于 Fluc/crcB 天然底物游离氟离子 F− 的抗氟毒性输出与 F−/Cl− 选择性（PDB 5A43 E. coli S88 双拓扑结构含 F−/Na+；PDB 7KKA Fluc-Ec2 S81A·Br− 复合物；Stockbridge 2015 Nature 与 McIlwain 2021 eLife 摘要逐字 quote）。经 RCSB 实测，5A43 种属为 E. coli 菌株 S88（gene crcB，无 Bordetella 记录），非清单候选所称 Bpe-Fluc，已据实订正。PFAS 转译限脱氟耦合场景（F− 为降解产物），直接 PFAS 吸附沿用清单『PFAS 无进化原型/边界证据』判定，全部为 design_translation（llm_inferred/inspiration），无吸附性能数据。quote 取自 Europe PMC/Crossref 开放摘要与 RCSB PDB 沉积标题（可核验），未做全文 PDF 审计。"
+ },
+ "mechanisms": [
+  {
+   "mechanism_id": "FLUC-001",
+   "name": "双拓扑『双桶』同源二聚体氟离子通道架构",
+   "description": "细菌 Fluc/crcB 为小型整合膜同源二聚体（每亚基约 13.6–13.9 kDa），两条亚基以相反的膜拓扑（dual topology）装配，各自形成一条独立的 F− 传导孔道，构成『双桶』（double-barrelled）架构，两个 F− 通路跨膜；双拓扑排布在二聚体中心配位一个阳离子（最可能为 Na+）。PDB 5A43（E. coli 菌株 S88 的 Fluc/crcB，硒代甲硫氨酸衍生物、单抗 chaperone 结晶，2.58 Å）含配体 F−（FLUORIDE ION）与 Na+（SODIUM ION），直接呈现该双拓扑双桶装配",
+   "基本原理": "同源二聚体以反向拓扑各自成孔，使单一基因产物即可形成两条独立的 F− 通路；中心配位阳离子稳定双拓扑界面，窄孔几何为后续 F− 选择性提供结构基础",
+   "source": "literature",
+   "ref_doi": "10.1038/nature14981",
+   "verification": "verified",
+   "verification_quote": "a surprising 'double-barrelled' channel architecture in which two F(-) ion pathways span the membrane",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "游离氟离子 F−（Fluc 天然底物；细菌受环境氟毒性胁迫时经 Fluc 将 F− 排出胞外）。PFAS 语境注意：完整 PFAS 分子不释放游离 F−，F− 仅在 C−F 键断裂（脱氟降解）后作为产物出现，故本要素对 PFAS 仅在脱氟耦合场景间接相关",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/nature14981",
+     "locator": "Abstract, p.548",
+     "quote": "microorganisms export this anion through F(-)-specific ion channels of the Fluc family",
+     "scope_match": "Keywords: microorganisms, export, F(-), Fluc"
+    },
+    "bio_structure": {
+     "text": "Fluc/crcB 为双拓扑同源二聚体『双桶』通道：两条 F− 通路跨膜，中心配位一个最可能为 Na+ 的阳离子。PDB 5A43 沉积标题自述为 dual topology fluoride ion channel，配体记录含 F（FLUORIDE ION）与 NA（SODIUM ION），与文献『中心配位 Na+』一致",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/nature14981",
+     "locator": "PDB 5A43 / p.548",
+     "quote": "a surprising 'double-barrelled' channel architecture in which two F(-) ion pathways span the membrane",
+     "scope_match": "Keywords: double-barrelled, F(-), pathways, membrane"
+    },
+    "interaction": {
+     "text": "F− 占据各亚基孔道内的传导位点，Na+ 配位于双拓扑二聚体中心、稳定反向亚基的界面（PDB 5A43 配体 F 与 NA；文献述 'centrally coordinated cation, most likely Na(+)'）。F− 与孔道相互作用经窄孔内的阴离子配位实现（见 FLUC-002）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/nature14981",
+     "locator": "PDB 5A43 / p.548",
+     "quote": "the dual-topology arrangement includes a centrally coordinated cation, most likely Na(+)",
+     "scope_match": "Keywords: dual-topology, cation, Na(+)"
+    },
+    "why_it_works": {
+     "text": "反向拓扑双桶装配使两条独立 F− 通路共用一个二聚体界面并由中心阳离子稳定；该架构是 Fluc 家族结构特异的标志，为窄孔 F− 选择性（FLUC-002）提供刚性支架。文献以晶体结构直接揭示两条跨膜 F− 通路",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/nature14981",
+     "locator": "p.548",
+     "quote": "a surprising 'double-barrelled' channel architecture in which two F(-) ion pathways span the membrane",
+     "scope_match": "Keywords: double-barrelled, F(-), pathways"
+    },
+    "boundary_conditions": [
+     {
+      "text": "双拓扑『双桶』同源二聚体为 Fluc 天然装配：两条反向拓扑亚基各成一条 F− 孔道，中心配位 Na+；该架构在 E. coli S88 Fluc（PDB 5A43）晶体结构中直接观测",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "PDB 5A43 / p.548",
+      "quote": "a surprising 'double-barrelled' channel architecture in which two F(-) ion pathways span the membrane",
+      "scope_match": "Keywords: double-barrelled, F(-), pathways",
+      "source_asset": null
+     },
+     {
+      "text": "将双桶孔道支架转译为人工 F− 传导/门控元件须同时复现窄孔选择性滤器（见 FLUC-002），仅复制二聚体骨架不足以获得 F− 选择性；蛋白为整合膜通道，须脂双层支撑方可行使通道功能（定性，无数值阈值）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "反向拓扑同源二聚体可各自成孔、形成两条独立的离子通路并由中心配位阳离子稳定界面，为以单一基因产物构建多通路、结构刚性的小型离子通道提供装配范式",
+    "verification_quote": "a surprising 'double-barrelled' channel architecture in which two F(-) ion pathways span the membrane"
+   },
+   "source_doi": "10.1038/nature14981",
+   "source_page": 548,
+   "source_locator": "PDB 5A43 / p.548",
+   "source_file": "PDB 5A43（RCSB 沉积数据：E. coli S88 Fluc/crcB，配体 F/NA，2.58 Å）+ Nature 525:548-551（Europe PMC 摘要逐字 quote；未做本地全文 PDF 审计）",
+   "functional_groups": [
+    "跨膜孔道骨架（双拓扑同源二聚体）",
+    "中心配位阳离子（Na+）"
+   ],
+   "key_structures": [
+    "输运结构"
+   ]
+  },
+  {
+   "mechanism_id": "FLUC-002",
+   "name": "窄孔与苯丙氨酸四极边缘对 F− 相对 Cl− 的尺寸/静电选择性识别",
+   "description": "Fluc 对 F− 相对 Cl− 具强选择性，文献提出其源于极窄的孔道与一种不寻常的阴离子配位：利用保守苯丙氨酸环的四极边缘（quadrupolar edges）配位阴离子。阴离子识别位点经 PDB 7KKA（Fluc-Ec2，E. coli，UniProt Q6J5N4，S81A 突变体，2.5 Å）以溴离子（Br−，Cl− 的同族较大卤离子）探针揭示：将保守 Ser81（PDB 链 A 81 位，UniProt Q6J5N4 Ser81）突变为 Ala 后，Br− 得以占据/可视化该识别位点（配体 BR，BROMIDE ION），结构同时含 F− 与 Na+。McIlwain 2021 eLife 据此提出阴离子结合位点沿渗透通路交替占据、且仅在底物接近时完全组装的渗透机制",
+   "基本原理": "极窄孔道按尺寸筛分、保守苯丙氨酸环四极边缘按静电/四极相互作用配位高电荷密度的小离子 F−；较大、电荷密度较低的 Cl−/Br− 与窄孔几何和四极配位失配，从而被排除。识别位点残基（如 Ser81）的侧链进一步约束可进入的卤离子尺寸",
+   "source": "literature",
+   "ref_doi": "10.1038/nature14981",
+   "verification": "verified",
+   "verification_quote": "F(-) selectivity is proposed to arise from the very narrow pores and an unusual anion coordination that exploits the quadrupolar edges of conserved phenylalanine rings.",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "F− 与竞争卤离子 Cl− 的尺寸/静电差异：F− 半径小、电荷密度高，Cl− 较大、电荷密度较低。Fluc 对 F− 相对 Cl− 具强选择性（文献直接陈述 'strong selectivity for F(-) over Cl(-)'）。PFAS 语境注意：此选择性针对游离卤离子，完整 PFAS 不含可识别的游离 F−",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/nature14981",
+     "locator": "Abstract, p.548",
+     "quote": "strong selectivity for F(-) over Cl(-) and dual-topology dimeric assembly",
+     "scope_match": "Keywords: selectivity, F(-), Cl(-), dual-topology"
+    },
+    "bio_structure": {
+     "text": "选择性结构基础为极窄孔道 + 保守苯丙氨酸环（四极边缘阴离子配位）；阴离子结合位点沿渗透通路分布，识别位点含保守 Ser81（Fluc-Ec2 / UniProt Q6J5N4，PDB 7KKA 链 A 81 位，S81A 为工程突变）。PDB 7KKA 沉积标题自述为 'Fluoride channel Fluc-Ec2 mutant S81A with bromide'，配体记录含 BR（BROMIDE ION）、F（FLUORIDE ION）、NA（SODIUM ION）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.7554/eLife.69482",
+     "locator": "PDB 7KKA / Abstract, eLife 10:e69482 (PMID 34250906)",
+     "quote": "alternating occupancy of anion-binding sites that are fully assembled only as the substrate approaches",
+     "scope_match": "Keywords: anion-binding, sites, substrate"
+    },
+    "interaction": {
+     "text": "F− 经窄孔内保守苯丙氨酸环的四极边缘与极性基团（骨架/侧链）配位而被选择性稳定；S81A 突变移除 Ser81 侧链后，较大的卤离子 Br− 得以占据识别位点（PDB 7KKA 配体 BR），直接显示该位点本可容纳较大卤离子、其尺寸排阻由 Ser81 等残基与窄孔几何共同施加。文献提出阴离子结合位点交替占据、底物接近时完全组装",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/nature14981",
+     "locator": "p.548 / PDB 7KKA",
+     "quote": "F(-) selectivity is proposed to arise from the very narrow pores and an unusual anion coordination that exploits the quadrupolar edges of conserved phenylalanine rings.",
+     "scope_match": "Keywords: F(-), selectivity, phenylalanine, quadrupolar"
+    },
+    "why_it_works": {
+     "text": "极窄孔道按尺寸排除较大的 Cl−/Br−，苯丙氨酸四极边缘对高电荷密度 F− 提供不寻常的阴离子配位，二者叠加产生 F− 相对 Cl− 的强选择性；识别位点残基（Ser81）侧链进一步收紧可进入卤离子的尺寸窗。该机制是自然界已知唯一的 F− 特异性生物识别/输运原型",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/nature14981",
+     "locator": "Abstract, p.548",
+     "quote": "F(-) selectivity is proposed to arise from the very narrow pores and an unusual anion coordination that exploits the quadrupolar edges of conserved phenylalanine rings.",
+     "scope_match": "Keywords: F(-), selectivity, narrow pores, phenylalanine"
+    },
+    "boundary_conditions": [
+     {
+      "text": "F−/Cl− 选择性边界：Fluc 对 F− 相对 Cl− 具强选择性（尺寸 + 静电/四极配位），较大竞争卤离子被窄孔与识别位点排除",
+      "parameter": "competing_ion",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "Abstract, p.548",
+      "quote": "strong selectivity for F(-) over Cl(-) and dual-topology dimeric assembly",
+      "scope_match": "Keywords: selectivity, F(-), Cl(-)",
+      "source_asset": null
+     },
+     {
+      "text": "识别位点尺寸敏感性：保守 Ser81（Fluc-Ec2 / UniProt Q6J5N4 链 A 81 位）突变为 Ala（PDB 7KKA S81A）后，较大的卤离子 Br− 得以占据识别位点（配体 BR），表明识别位点的卤离子尺寸窗由 Ser81 等残基施加",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "PDB 7KKA (chain A 81) / PMID 34250906",
+      "quote": "Fluoride channel Fluc-Ec2 mutant S81A with bromide",
+      "scope_match": "Keywords: Fluc-Ec2, S81A, bromide",
+      "source_asset": null
+     },
+     {
+      "text": "输运化学计量/耦合（如 F−/H+ 反向转运或 HF 形式）在本条目接地来源中未给出逐字定量陈述，属机制细节待定项（定性，无数值阈值）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "极窄孔道（尺寸筛分）+ 芳香环四极边缘的阴离子配位（静电/四极）+ 识别位点残基侧链的尺寸约束，三者组合可对高电荷密度的小阴离子（如 F−）实现相对较大同族卤离子（Cl−/Br−）的选择性识别与输运",
+    "verification_quote": "F(-) selectivity is proposed to arise from the very narrow pores and an unusual anion coordination that exploits the quadrupolar edges of conserved phenylalanine rings."
+   },
+   "source_doi": "10.7554/eLife.69482",
+   "source_page": null,
+   "source_locator": "PDB 7KKA / Abstract, eLife 10:e69482 (PMID 34250906)；选择性机制 quote 取自 Nature 525:548 摘要",
+   "source_file": "PDB 7KKA（RCSB 沉积数据：Fluc-Ec2 S81A·Br−，配体 BR/F/NA，2.5 Å）+ eLife 10:e69482（Crossref 摘要逐字 quote，PMC8315801）+ Nature 525:548-551（Europe PMC 摘要）；未做本地全文 PDF 审计",
+   "functional_groups": [
+    "窄孔选择性滤器",
+    "保守苯丙氨酸环（四极边缘阴离子配位）",
+    "Ser81 阴离子识别位点（Fluc-Ec2 / UniProt Q6J5N4，PDB 7KKA 链 A 81 位）"
+   ],
+   "key_structures": [
+    "识别结构",
+    "输运结构"
+   ]
+  }
+ ],
+ "performance_data": [],
+ "engineering_constraints": [
+  {
+   "constraint": "整合膜通道形态（脂双层依赖）",
+   "value": "Fluc/crcB 为小型整合膜同源二聚体（每亚基约 13.6–13.9 kDa，PDB 5A43 实体 1 约 13.86 kDa、PDB 7KKA 实体 1 约 13.60 kDa），须在脂双层中方可形成跨膜孔道；不可作为可溶蛋白直接用作吸附剂，转译只提取选择性与门控原理",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "RCSB PDB 5A43/7KKA polymer_entity formula_weight 与 7KKA KEYWDS 'MEMBRANE PROTEIN'；Stockbridge 2015 晶体结构以去垢剂（DMU decylmaltoside）增溶结晶",
+   "source": "literature",
+   "ref_doi": "10.1038/nature14981"
+  },
+  {
+   "constraint": "底物为游离 F−（对完整有机氟惰性）",
+   "value": "Fluc 识别/输运对象为裸 F−（小、高电荷密度）；完整 PFAS 的 C−F 键不释放游离 F−，故 Fluc 机制对完整 PFAS 分子无直接识别作用，仅在脱氟降解产生 F− 后间接相关",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（基于 Fluc 天然底物为 F− 与 PFAS C−F 键稳定性的外推）",
+   "source": "llm_inference",
+   "ref_doi": null
+  },
+  {
+   "constraint": "真实水体中的阴离子选择性挑战",
+   "value": "天然 F−/Cl− 选择性针对胞内 F− 排出；转译到真实水体须面对 Cl−、HCO3−、SO4²⁻ 等高浓度共存阴离子对 F− 识别的竞争，选择性窗口须实验重标定",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（基于 Fluc 选择性机制与水体阴离子谱的外推）",
+   "source": "llm_inference",
+   "ref_doi": null
+  },
+  {
+   "constraint": "双拓扑二聚体装配依赖",
+   "value": "通道功能依赖反向拓扑同源二聚体与中心配位 Na+ 的完整装配；破坏二聚界面或拓扑排布将使孔道/选择性丧失",
+   "unit": null,
+   "relevance": "medium",
+   "explanation": "PDB 5A43 双拓扑结构含中心 Na+；Nature 2015 述中心配位阳离子稳定双拓扑装配",
+   "source": "literature",
+   "ref_doi": "10.1038/nature14981"
+  }
+ ],
+ "narrative": {
+  "entries": [
+   {
+    "source_file": "Nature 525:548-551（Stockbridge et al. 2015，DOI 10.1038/nature14981，PMID 26344196）/ PDB 5A43·7KKA / eLife 10:e69482（McIlwain et al. 2021，DOI 10.7554/eLife.69482，PMID 34250906，PMC8315801）",
+    "paper_id": "2015-Stockbridge-Fluc-double-barrelled-F-channel",
+    "sections": {
+     "problem_definition": "环境氟化物对微生物具毒性，细菌须将胞内 F− 快速排出以抗氟毒性。F− 半径小、水合强、与 Cl− 等卤离子化学相似，如何在膜上构建一个对 F− 特异、排除 Cl− 的输运原型，是离子选择性的基础问题。Fluc/crcB 家族是自然界已知唯一的 F− 特异性生物输运原型。",
+     "biological_solution": "细菌 Fluc/crcB 为小型整合膜同源二聚体，两条亚基以反向膜拓扑装配，各自形成一条独立 F− 孔道，构成『双桶』架构，两条 F− 通路跨膜，中心配位一个最可能为 Na+ 的阳离子（Stockbridge 2015，PDB 5A43：E. coli 菌株 S88 的 Fluc/crcB，硒代甲硫氨酸衍生物、单抗 chaperone 结晶，2.58 Å，配体含 F− 与 Na+）。Fluc 对 F− 相对 Cl− 具强选择性，文献提出源于极窄孔道与利用保守苯丙氨酸环四极边缘的不寻常阴离子配位。McIlwain 2021（PDB 7KKA：Fluc-Ec2 S81A·Br− 复合物，2.5 Å，配体 Br−/F−/Na+）以 Br−（Cl− 同族较大卤离子）探针揭示阴离子识别位点：保守 Ser81 突变为 Ala 后 Br− 得以占据该位点，并据结合位点沿渗透通路分布提出『结合位点交替占据、底物接近时完全组装』的渗透机制。Fluc 的功能是保护微生物免受环境氟毒性（『protect microbes against ... cytoplasmic accumulation of this toxic halide』）。",
+     "key_features": "必须保留：① 极窄孔道（尺寸筛分，排除 Cl−/Br−）；② 保守芳香环（苯丙氨酸）四极边缘的阴离子配位；③ 识别位点残基（如 Ser81）对卤离子尺寸的约束；④ 双拓扑双桶二聚体支架与中心阳离子。可灵活调整：孔道骨架材料、芳香给体排布、识别位点化学、门控读出方式。",
+     "design_mapping": "仿生映射：Fluc 的『窄孔尺寸筛分 + 苯丙氨酸四极阴离子配位 + 识别位点尺寸约束』→ F− 选择性识别/门控原理。边界声明（关键）：完整 PFAS 不释放游离 F−，本原型对直接 PFAS 吸附仅为清单台账判定的『PFAS 无进化原型/边界证据』，不得升格为 PFAS 吸附原型；转译价值限于脱氟耦合场景：当 PFAS 经还原/氧化/光化学等途径脱氟释放 F− 后，Fluc 式 F− 选择性可用于产物 F− 的分离或 F− 响应门控（报告脱氟进程、移出 F− 以驱动反应）。此为 design_translation/inspiration（llm_inferred），非 from_source 事实，须实验验证。",
+     "explainability_anchors": "设计溯源：Fluc 双拓扑双桶 F− 通道与 F−/Cl− 选择性（PDB 5A43/7KKA，Stockbridge 2015 / McIlwain 2021，from_source）→『窄孔尺寸筛分 + 芳香四极阴离子配位 + 识别位点尺寸约束』可迁移原理（from_source）→ 脱氟耦合体系的 F− 产物分离与 F− 响应门控（llm_inferred 启发，限脱氟耦合场景，须实验验证）。"
+    }
+   }
+  ]
+ },
+ "design_translation": [
+  {
+   "idea": "面向脱氟耦合型 PFAS 降解体系，借鉴 Fluc 的『极窄孔道尺寸筛分 + 苯丙氨酸四极边缘阴离子配位 + 识别位点残基尺寸约束』，构建 F− 选择性识别/门控元件：当 PFAS 经还原/氧化/光化学脱氟在局部释放游离 F− 后，以窄孔 + 芳香四极给体阵列选择性识别/移出产物 F−（产物分离以驱动脱氟平衡、防止再氟化），或以 F− 响应门控报告脱氟进程。注意：本设想仅针对脱氟产生的游离 F−，不针对完整 PFAS 分子",
+   "specific_functional_group": "F− 选择性配位基团：预组织的缺电子芳香环（四极边缘阴离子配位）、脲/硫脲/酰胺/硼酸类中性氢键给体，按与裸 F− 小尺寸、高电荷密度互补的窄孔几何排布；识别位点引入尺寸约束侧链以排除较大 Cl−/Br−",
+   "material_handle": "在脱氟反应载体（还原性矿物/光催化剂/电化学阴极）附近构筑具窄孔与芳香四极给体的 F− 选择性膜/孔道或 F− 响应门控层；可借分子印迹或刚性间隔臂预组织给体几何，或以脂双层/聚合物膜支撑 Fluc 类孔道蛋白",
+   "target_interaction": "窄孔对裸 F− 的尺寸筛分 + 芳香环四极边缘与高电荷密度 F− 的阴离子配位 + 识别位点尺寸约束排除 Cl−/HCO3−/SO4²⁻ 等共存阴离子",
+   "source_tier": "llm_inference",
+   "evidence_tier": "inspiration（原理层外推，限脱氟耦合场景：Fluc 机制接地于天然底物游离 F− 与 F−/Cl− 选择性，PDB 5A43/7KKA + Stockbridge 2015 / McIlwain 2021；对 PFAS 本身无识别，PFAS 直接吸附为清单『边界证据』，脱氟耦合转译为 llm_inferred，无实验数据）",
+   "examples": [],
+   "design_principle": "Fluc 证明极窄孔道 + 芳香四极阴离子配位 + 识别位点尺寸约束可对高电荷密度的小阴离子 F− 实现相对 Cl−/Br− 的强选择性识别与输运（PDB 5A43/7KKA）；该原理可迁移到脱氟耦合体系中对产物 F− 的选择性分离与门控",
+   "implementation_example": "脱氟反应载体旁侧的窄孔芳香给体 F− 选择性膜/门控层，或脂双层支撑的 Fluc 孔道用于 F− 产物移出（无实验数据，仅为设计假设）",
+   "constraints": "完整 PFAS 不释放游离 F−，本原型对完整 PFAS 无直接作用，转译仅在脱氟降解产生 F− 后成立；F− 半径小、水合强，在含高浓度 Cl−/HCO3−/SO4²⁻ 的真实水体中选择性捕获 F− 极具挑战；Fluc 为整合膜通道（约 13.6–13.9 kDa/亚基、需脂双层），不可直接复制为吸附剂，只提取选择性与门控原理",
+   "failure_modes": "将本原型误用为直接 PFAS 吸附（完整 PFAS 无游离 F−，机制不适用）；F− 选择性被真实水体高浓度 Cl−/HCO3− 竞争淬灭；窄孔给体暴露于体相水被水合竞争占满；脱氟速率低于 F− 移出/门控响应导致信号滞后；蛋白脱离脂双层失活",
+   "material_realization_examples": []
+  }
+ ],
+ "honesty_ledger": {
+  "facts": [
+   {
+    "type": "mechanism",
+    "index": 0,
+    "name": "双拓扑『双桶』同源二聚体氟离子通道架构",
+    "basis": "from_source_verified",
+    "note": "Stockbridge 2015 Nature（PDB 5A43：E. coli 菌株 S88 Fluc/crcB，双拓扑、配体 F−/Na+、硒代甲硫氨酸衍生物、单抗 chaperone、2.58 Å；摘要述双桶架构两条 F− 通路与中心 Na+）；quote 取自 RCSB PDB 沉积标题与 Europe PMC 摘要（逐字可核验），未做全文 PDF 审计"
+   },
+   {
+    "type": "mechanism",
+    "index": 1,
+    "name": "窄孔与苯丙氨酸四极边缘对 F− 相对 Cl− 的尺寸/静电选择性识别",
+    "basis": "from_source_verified",
+    "note": "Stockbridge 2015 Nature 摘要述 'strong selectivity for F(-) over Cl(-)' 与窄孔/苯丙氨酸四极配位机制；McIlwain 2021 eLife（PDB 7KKA：Fluc-Ec2 S81A·Br−，配体 BR/F/NA，2.5 Å；阴离子识别位点沿渗透通路、交替占据机制）；quote 取自 Europe PMC/Crossref 摘要与 RCSB PDB 标题（逐字可核验），未做全文 PDF 审计"
+   }
+  ],
+  "leads": [],
+  "inferences": [
+   {
+    "type": "design_translation",
+    "index": 0,
+    "idea": "将 Fluc 的 F− 选择性识别/门控原理用于脱氟耦合型 PFAS 降解体系的产物 F− 分离与 F− 响应门控",
+    "basis": "llm_inferred",
+    "label": "inspiration",
+    "note": "转译严格限脱氟耦合场景（F− 为降解产物）；完整 PFAS 不含游离 F−，Fluc 对其无直接识别，直接 PFAS 吸附为清单『边界证据』；F− 在真实水体中被高浓度 Cl−/HCO3−/SO4²⁻ 竞争，选择性须实验验证，无吸附性能数据"
+   },
+   {
+    "type": "fact_derivation",
+    "index": 0,
+    "name": "5A43 种属订正为 E. coli 菌株 S88（非 Bpe-Fluc）",
+    "basis": "from_source",
+    "label": "metadata_correction",
+    "note": "清单候选将 5A43 标为 Bpe-Fluc；经 RCSB 沉积记录 entity_src_gen 实测，gene_src 为 ESCHERICHIA COLI S88（taxid 585035，gene crcB），全文 CIF 无 Bordetella 记录，故据实订正为 E. coli S88 Fluc/crcB（与 7KKA 的 Fluc-Ec2 / UniProt Q6J5N4 同源）"
+   }
+  ],
+  "boundary_notes": [
+   "本原型天然底物为游离氟离子 F−（细菌抗氟毒性输出）；机制 from_source 接地限于 F− 的抗氟毒性输出、双拓扑双桶架构与 F−/Cl− 选择性识别",
+   "PFAS 应用严格限脱氟耦合场景（F− 为降解产物）：完整 PFAS 不释放游离 F−，直接 PFAS 吸附沿用清单『PFAS 无进化原型/边界证据』判定，不得升格为吸附原型，全部为 design_translation（llm_inferred/inspiration）",
+   "无 PFAS 吸附性能数据（qmax 等）；严格未从外部污染物知识库（PKB/BRIEF）搬运任何性能数值（知识隔离红线）",
+   "5A43 种属经 RCSB 实测为 E. coli 菌株 S88（gene crcB），非清单候选所称 Bpe-Fluc，已订正；5A43 为硒代甲硫氨酸衍生物、单抗 chaperone 结晶、含 F−/Na+ 配体，2.58 Å",
+   "F−/H+ 反向转运或 HF 形式等输运化学计量/耦合细节在本条目接地来源中未给出逐字定量陈述，标为 llm_inferred/needs_review，不带数值阈值",
+   "7KKA 含工程突变 S81A（另有 R25K），配体记录同时含 Br−、F−、Na+；Ser81 编号按 UniProt Q6J5N4 / PDB 7KKA 链 A 81 位"
+  ],
+  "missing_pdf_items": [
+   "Stockbridge 2015 Nature 525:548-551 全文 PDF（quote 取自 Europe PMC 摘要与 RCSB PDB 沉积标题）",
+   "McIlwain 2021 eLife 10:e69482 全文 PDF（开放获取 PMC8315801；quote 取自 Crossref 摘要与 RCSB PDB 标题，未取 PDF）",
+   "Last/Fierke 系列 Fluc/crcB 机制文献（如 F−/H+ 反向转运）未核验，故未纳入 from_source 接地，相关输运耦合细节标 llm_inferred"
+  ],
+  "generated_by": "manual-curation-2026-07-22",
+  "note": "诚实优先：机制接地限于 Fluc/crcB 天然底物游离 F− 与 F−/Cl− 选择性识别（PDB 5A43/7KKA + 两篇文献摘要）；PFAS 转译严格限脱氟耦合场景，直接 PFAS 吸附为边界证据，全部为 inspiration/外推"
+ },
+ "boundary_rules": [
+  {
+   "rule": "F−/Cl− 选择性：Fluc 对 F− 相对 Cl− 具强选择性（窄孔尺寸筛分 + 苯丙氨酸四极阴离子配位），较大竞争卤离子被排除",
+   "source_mechanism": "窄孔与苯丙氨酸四极边缘对 F− 相对 Cl− 的尺寸/静电选择性识别",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "双拓扑『双桶』同源二聚体（两条独立 F− 孔道 + 中心配位 Na+）为 Fluc 天然装配",
+   "source_mechanism": "双拓扑『双桶』同源二聚体氟离子通道架构",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "识别位点尺寸敏感性：保守 Ser81（Fluc-Ec2 / UniProt Q6J5N4 链 A 81 位）突变为 Ala（PDB 7KKA S81A）后较大卤离子 Br− 得以占据识别位点，识别尺寸窗由该残基等施加",
+   "source_mechanism": "窄孔与苯丙氨酸四极边缘对 F− 相对 Cl− 的尺寸/静电选择性识别",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "PFAS 转译限脱氟耦合场景（F− 为降解产物）：完整 PFAS 不释放游离 F−，直接 PFAS 吸附为清单『边界证据』，不得升格为 PFAS 吸附原型（定性）",
+   "source_mechanism": "窄孔与苯丙氨酸四极边缘对 F− 相对 Cl− 的尺寸/静电选择性识别",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  },
+  {
+   "rule": "整合膜通道形态依赖脂双层，不可直接复制为可溶/固体吸附剂，转译只提取选择性与门控原理（定性，无数值阈值）",
+   "source_mechanism": "双拓扑『双桶』同源二聚体氟离子通道架构",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  }
+ ]
+}

@@ -1,0 +1,383 @@
+{
+ "id": "fluoride-riboswitch-f-sensing-switch",
+ "name_zh": "氟化物核糖开关氟离子感知构象开关",
+ "name_en": "Fluoride Riboswitch Fluoride-Sensing Conformational Switch",
+ "organism": {
+  "scientific": "Thermotoga petrophila（氟化物核糖开关适体域；PDB 3VRS/4ENA 为 T. petrophila 晶体结构，5KH8 为 Bacillus cereus 同源适体域 NMR 构建体；天然氟核糖开关 crcB 基序广布细菌与古菌，位于氟抗性输出蛋白 crcB/Fluc 基因上游）",
+  "category": "微生物"
+ },
+ "biomimetic_dimension": "分子仿生",
+ "features": [
+  "特异性识别",
+  "分子筛分",
+  "动态响应"
+ ],
+ "tested_conditions": {
+  "tested_ph_range": null,
+  "tested_temp_range": null,
+  "salinity": null,
+  "note": "氟化物核糖开关为 RNA 构象开关（分子识别 + 动态响应原型），本库无其吸附性能测试条件；performance_data 为空，故测试条件全空。"
+ },
+ "library_tier": "extended",
+ "lifecycle_status": "active",
+ "coverage": "partial",
+ "status": "active",
+ "provenance_summary": {
+  "n_papers": 3,
+  "n_verified": 11,
+  "n_unverified": 0,
+  "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与硬边界条数（FRS-001 四要素+1 硬边界=5，FRS-002 四要素+2 硬边界=6）。机制接地限于氟核糖开关天然分析物 F− 的特异封装识别（PDB 3VRS/4ENA + Ren 2012 Nature + Baker 2012 Science）与 F− 触发的构象开关/阈值化基因响应（PDB 5KH8 + Zhao 2017 Nat Chem Biol）；PFBS 应用为设计转译（llm_inferred/inspiration），属间接转译（PFBS 不含游离 F−，须经脱氟产物流耦合）。quote 逐字取自 NIH efetch PubMed 摘要与 RCSB PDB 沉积记录/标题（可核验），未做全文 PDF 审计。PDB 原始文献归属经 RCSB 再核为 Ren/Patel 2012 与 Zhao/Zhang 2017（任务简报所记 Baker/Batey 系列经核为误记，Batey 非这三处结构作者；Baker/Breaker 2012 为发现学文献，已接地）。"
+ },
+ "mechanisms": [
+  {
+   "mechanism_id": "FRS-001",
+   "name": "金属离子与磷酸骨架对氟离子的选择性封装识别",
+   "description": "氟核糖开关适体域折叠为由假结（pseudoknot）稳定的高阶 RNA 结构，在连接区（junctional architecture）构筑封装腔：F− 经直接配位三个 Mg2+ 离子而被封装，Mg2+ 又以八面体几何配位水分子与五个向内指的主链磷酸基团；该口袋对 F− 特异，区分更大的卤离子（如 Cl−）。PDB 3VRS（Mn2+ 浸渍，2.603 Å）与 4ENA（Cs+ 浸渍，2.85 Å）均为 T. petrophila 氟核糖开关，非聚合物组分含 F− 与相应金属离子",
+   "基本原理": "预组织的金属离子（Mg2+）阵列与向内指的主链磷酸/氢键给体共同围成尺寸与电荷密度匹配 F−（最小卤离子、电荷密度最高）的封装腔；F− 的高电荷密度使其能被该多极静电/氢键阵列强稳定，而更大的 Cl− 等因尺寸失配与电荷密度较低被排斥，从而在无蛋白侧链参与下实现 F− 对卤离子的特异识别",
+   "source": "literature",
+   "ref_doi": "10.1038/nature11152",
+   "verification": "verified",
+   "verification_quote": "how RNA can form a binding pocket selective for fluoride, while discriminating against larger halide ions",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "氟离子 F−（氟核糖开关的天然分析物；该类核糖开关被 F− 选择性地触发，但排斥包括 Cl− 在内的其他小阴离子）。对目标污染物 PFBS（全氟丁烷磺酸 C4F9SO3−）而言，其本身不含游离 F−，须经脱氟步骤释放 F− 后方可与本识别机制耦合（间接转译）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1126/science.1215063",
+     "locator": "title/Abstract, p.233",
+     "quote": "We have discovered a riboswitch class in many bacterial and archaeal species whose members are selectively triggered by fluoride but reject other small anions, including chloride.",
+     "scope_match": "Keywords: fluoride, riboswitch, triggered, chloride"
+    },
+    "bio_structure": {
+     "text": "T. petrophila 氟核糖开关配体结合态结构（PDB 3VRS，2.603 Å；4ENA，2.85 Å）：适体域折叠为由假结与长程反向 Watson-Crick 及 Hoogsteen A•U 配对稳定的高阶 RNA 架构，封装腔位于连接区。PDB KEYWDS 记 'pseudoknot, RNA'，非聚合物组分含 F− 与金属离子",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/nature11152",
+     "locator": "PDB 3VRS / p.85 (Abstract)",
+     "quote": "the ligand-bound structure of the Thermotoga petrophila fluoride riboswitch, which adopts a higher-order RNA architecture stabilized by pseudoknot",
+     "scope_match": "Keywords: Thermotoga petrophila, fluoride, architecture, pseudoknot"
+    },
+    "interaction": {
+     "text": "PDB 3VRS/4ENA 坐标所示：F− 封装于连接区架构内，经直接配位三个 Mg2+ 离子锚定（3VRS 以 Mn2+ 浸渍占据相应位点，4ENA 以 Cs+ 浸渍），Mg2+ 再经八面体配位水分子；五个向内指的主链磷酸参与围成封装腔",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/nature11152",
+     "locator": "PDB 3VRS / p.85 (Abstract)",
+     "quote": "The bound fluoride ion is encapsulated within the junctional architecture, anchored in place through direct coordination to three Mg(2+) ions, which in turn are octahedrally coordinated to water",
+     "scope_match": "Keywords: fluoride, encapsulated, coordination, Mg(2+)"
+    },
+    "why_it_works": {
+     "text": "封装由 Mg2+ 离子与主链磷酸共同完成（论文标题直陈 'Fluoride ion encapsulation by Mg2+ ions and phosphates'）：多金属离子/磷酸提供的密集正静电与方向性配位对高电荷密度的 F− 形成强互补，封装腔尺寸与 F− 离子半径匹配，构成 F− 特异识别的物理基础",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/nature11152",
+     "locator": "title, p.85",
+     "quote": "Fluoride ion encapsulation by Mg2+ ions and phosphates in a fluoride riboswitch.",
+     "scope_match": "Keywords: fluoride, encapsulation, Mg2+, phosphates"
+    },
+    "boundary_conditions": [
+     {
+      "text": "卤离子选择性边界：结合口袋对 F− 特异，区分更大的卤离子（Cl− 等）；该类核糖开关被 F− 选择性触发而排斥包括 Cl− 在内的其他小阴离子。尺寸/电荷密度失配的阴离子无法获得同等封装稳定化",
+      "parameter": "competing_ion",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "p.85 (Abstract)",
+      "quote": "Our structure of the fluoride riboswitch in the bound state shows how RNA can form a binding pocket selective for fluoride, while discriminating against larger halide ions.",
+      "scope_match": "Keywords: fluoride, selective, discriminating, halide",
+      "source_asset": null
+     },
+     {
+      "text": "封装依赖完整折叠的 RNA 三级结构与 Mg2+ 可用；RNA 变性、RNase 降解、Mg2+ 螯合或强水竞争将瓦解封装腔几何与静电（定性，无数值阈值）",
+      "parameter": "wet_stability",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "由预组织金属离子阵列与向内指的磷酸/氢键给体围成、尺寸与电荷密度匹配最小高电荷密度阴离子（F−）的封装腔，可在无蛋白侧链参与下选择性封装该阴离子并排斥更大卤离子；此识别可与下游构象响应耦合",
+    "verification_quote": "how RNA can form a binding pocket selective for fluoride, while discriminating against larger halide ions"
+   },
+   "source_doi": "10.1038/nature11152",
+   "source_page": 85,
+   "source_locator": "PDB 3VRS（2.603 Å）/ 4ENA（2.85 Å），RCSB 沉积数据 + Ren 2012 Nature 486:85-89 摘要",
+   "source_file": "PDB 3VRS / 4ENA（RCSB 沉积数据）+ Nature 486:85-89（NIH efetch PubMed 摘要 PMID 22678284；未做本地全文 PDF 审计）",
+   "functional_groups": [
+    "金属离子配位（Mg2+ / 浸渍 Mn2+、Cs+）",
+    "向内指的主链磷酸基团（静电/配位）",
+    "RNA 骨架与 2'-OH 氢键给体",
+    "假结稳定的高阶 RNA 封装腔"
+   ],
+   "key_structures": [
+    "识别结构"
+   ]
+  },
+  {
+   "mechanism_id": "FRS-002",
+   "name": "氟离子触发的适体域构象开关与阈值化基因响应（动态响应）",
+   "description": "氟核糖开关为基因组自然编码的构象开关：在 Bacillus cereus 氟核糖开关中，无配体适体域在溶液中基态三级结构与结合态相同，但瞬时访问一个低布居（约 1%）、短寿命（约 3 ms）的激发构象态，解开一个保守 'linchpin' 碱基对以发出转录终止信号；F− 结合别构抑制该激发态过程，从而激活下游基因转录（调控 crcB/Fluc 型氟输出蛋白表达）。这是分析物特异的阈值触发构象开关，区别于 SELEX 体外筛选适配体",
+   "基本原理": "识别（F− 特异封装）与响应（构象态布居的别构调控）在同一 RNA 分子内耦合：F− 结合改变适体域激发态的布居，进而经表达平台（转录终止/通读）把分子识别转译为二元基因表达输出，实现阈值化、可逆、分析物特异的动态响应",
+   "source": "literature",
+   "ref_doi": "10.1038/nchembio.2427",
+   "verification": "verified",
+   "verification_quote": "Upon fluoride binding, this highly localized, fleeting process is allosterically suppressed, which activates transcription",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "F− 为触发该构象开关的特异分析物：F− 结合别构抑制无配体适体域的激发态解开过程，从而激活转录（输出耦合至 crcB/Fluc 氟输出基因）。PFBS 本身不含游离 F−，须经脱氟释放 F− 后方可触发此开关（间接转译）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/nchembio.2427",
+     "locator": "p.968 (Abstract)",
+     "quote": "Upon fluoride binding, this highly localized, fleeting process is allosterically suppressed, which activates transcription.",
+     "scope_match": "Keywords: fluoride, binding, suppressed, transcription"
+    },
+    "bio_structure": {
+     "text": "B. cereus 氟核糖开关适体域 apo 态结构由溶液 NMR 解析（PDB 5KH8，合成构建体）：KEYWDS 记 'apo state, pseudoknot, riboswitch aptamer, transcriptional regulation, RNA'，即该适体域为参与转录调控的假结型核糖开关适体域",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/nchembio.2427",
+     "locator": "PDB 5KH8 / p.968",
+     "quote": "apo state, pseudoknot, riboswitch aptamer, transcriptional regulation, RNA",
+     "scope_match": "Keywords: apo state, riboswitch aptamer, transcriptional regulation"
+    },
+    "interaction": {
+     "text": "无配体适体域瞬时访问激发构象态：解开保守 'linchpin' 碱基对，发出转录终止信号；该激发态布居低（约 1%）、寿命短（约 3 ms），F− 结合别构抑制此过程",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/nchembio.2427",
+     "locator": "p.968 (Abstract)",
+     "quote": "transiently accesses a low-populated (∼1%) and short-lived (∼3 ms) excited conformational state that unravels a conserved 'linchpin' base pair to signal transcription termination.",
+     "scope_match": "Keywords: excited, conformational, linchpin, transcription termination"
+    },
+    "why_it_works": {
+     "text": "调控不依赖基态结构切换：B. cereus 氟核糖开关适体域在有/无配体时基态三级结构相同，基因调控经配体抑制激发态构象过程实现，故 F− 结合以别构方式将识别转译为转录激活；该机制在宽转录速率范围内实现有效的氟依赖基因激活",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/nchembio.2427",
+     "locator": "p.968 (Abstract)",
+     "quote": "the Bacillus cereus fluoride riboswitch aptamer adopts identical tertiary structures in solution with and without ligand",
+     "scope_match": "Keywords: Bacillus cereus, fluoride riboswitch, aptamer, tertiary structures, ligand"
+    },
+    "boundary_conditions": [
+     {
+      "text": "调控输出耦合边界：氟核糖开关激活编码推定氟转运体（crcB/Fluc 型输出蛋白）及受氟抑制酶的基因表达，即识别经表达平台耦合至氟解毒输出；转译为材料须自构该输出/读出耦合",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "title/Abstract, p.233",
+      "quote": "These fluoride riboswitches activate expression of genes that encode putative fluoride transporters, enzymes that are known to be inhibited by fluoride",
+      "scope_match": "Keywords: fluoride riboswitches, activate expression, fluoride transporters",
+      "source_asset": null
+     },
+     {
+      "text": "自然基因组起源边界：核糖开关为位于细菌 mRNA 中、控制基因表达的天然代谢物/阴离子结合 RNA 结构，氟核糖开关广布细菌与古菌（自然进化解决方案，非 SELEX 体外筛选适配体）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "p.233 (Abstract)",
+      "quote": "Most riboswitches are metabolite-binding RNA structures located in bacterial messenger RNAs where they control gene expression.",
+      "scope_match": "Keywords: riboswitches, RNA structures, bacterial messenger RNAs, gene expression",
+      "source_asset": null
+     },
+     {
+      "text": "构象开关材料转导边界：天然开关经 RNA 三级结构与转录终止/通读的时间尺度转导，转译为合成吸附/释放须工程化配体耦合的可逆构象或亲和响应；刚性无构象变化的位点不具备动态响应功能（定性）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "分析物特异、阈值触发的构象开关：目标阴离子的结合抑制/诱导一处确定的结构转变（如保守碱基对/识别元件的解离），并据此门控下游输出，可把分子识别转译为二元、可逆的调控/开关响应",
+    "verification_quote": "Upon fluoride binding, this highly localized, fleeting process is allosterically suppressed, which activates transcription"
+   },
+   "source_doi": "10.1038/nchembio.2427",
+   "source_page": 968,
+   "source_locator": "PDB 5KH8（apo NMR）+ Zhao 2017 Nat Chem Biol 13:968-974 摘要 + Baker 2012 Science 335:233-235 摘要",
+   "source_file": "PDB 5KH8（RCSB 沉积数据）+ Nat Chem Biol 13:968-974（NIH efetch PubMed 摘要 PMID 28719589）+ Science 335:233-235（摘要 PMID 22194412）；未做本地全文 PDF 审计",
+   "functional_groups": [
+    "保守 'linchpin' 碱基对（构象开关元件）",
+    "F− 封装适体域（识别-响应耦合）",
+    "假结型核糖开关表达平台（转录终止/通读）"
+   ],
+   "key_structures": [
+    "识别结构",
+    "响应/开关结构"
+   ]
+  }
+ ],
+ "performance_data": [],
+ "engineering_constraints": [
+  {
+   "constraint": "RNA 分子形态与环境不稳定性",
+   "value": "氟核糖开关适体域为 RNA 分子（PDB 3VRS 条目分子量约 17.33 kDa），易受 RNase 降解与热/化学变性；用作材料须固定化、化学稳定化或抽象为合成类似物",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "RCSB 3VRS：molecular_weight 17.33 kDa，聚合物实体为 RNA；机理推断（RNA 通性）",
+   "source": "literature",
+   "ref_doi": "10.1038/nature11152"
+  },
+  {
+   "constraint": "Mg2+ 依赖的封装识别",
+   "value": "F− 封装依赖三个 Mg2+ 离子与向内指主链磷酸的预组织配位；Mg2+ 螯合或低 Mg2+ 环境将削弱/丧失 F− 结合",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "Ren 2012 摘要：F− 经直接配位三个 Mg2+ 离子封装，Mg2+ 八面体配位水与五个主链磷酸（PMID 22678284）",
+   "source": "literature",
+   "ref_doi": "10.1038/nature11152"
+  },
+  {
+   "constraint": "对 F− 特异而非 PFBS 直接识别（脱氟耦合需求）",
+   "value": "本原型特异识别游离 F−；PFBS（C4F9SO3−）不含游离 F−，转译须经上游脱氟步骤释放 F−，传感门响应脱氟产物流，其窗口匹配（释放速率/局部浓度）未核验",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（基于 Baker 2012 F− 特异触发与 PFBS 全氟链无游离 F− 的化学事实之外推）",
+   "source": "llm_inference",
+   "ref_doi": null
+  },
+  {
+   "constraint": "生物时间尺度与材料转导差距",
+   "value": "天然开关经转录终止/通读在生物时间尺度转导（激发态寿命约 3 ms、布居约 1%）；转译为吸附-释放/读出需工程化的配体耦合可逆构象或亲和开关",
+   "unit": null,
+   "relevance": "medium",
+   "explanation": "Zhao 2017 摘要：激发态低布居（约 1%）短寿命（约 3 ms），经转录激活输出（PMID 28719589）；材料转导为机理推断",
+   "source": "literature",
+   "ref_doi": "10.1038/nchembio.2427"
+  }
+ ],
+ "narrative": {
+  "entries": [
+   {
+    "source_file": "Baker 2012 Science 335:233-235（DOI 10.1126/science.1215063）/ Ren 2012 Nature 486:85-89（DOI 10.1038/nature11152，PDB 3VRS·4ENA）/ Zhao 2017 Nat Chem Biol 13:968-974（DOI 10.1038/nchembio.2427，PDB 5KH8）",
+    "paper_id": "2012-Baker-Ren-2017-Zhao-fluoride-riboswitch",
+    "sections": {
+     "problem_definition": "氟化物在环境中普遍存在并对多数生物有毒，细胞需在含高浓度 Cl− 等化学相似小阴离子的胞内环境中特异感知微摩尔级 F− 并据此启动解毒。细菌如何以单一 RNA 元件同时实现 F− 特异识别与阈值化基因调控，是阴离子感知与动态响应的基础问题。",
+     "biological_solution": "细菌与古菌在氟抗性输出蛋白基因（crcB/Fluc）上游进化出天然氟化物核糖开关（Baker 2012 Science：'selectively triggered by fluoride but reject other small anions, including chloride'，并激活编码推定氟转运体的基因）。Ren 2012（Nature，PDB 3VRS/4ENA，T. petrophila，2.603/2.85 Å）解析配体结合态：适体域折叠为假结稳定的高阶 RNA 架构，F− 封装于连接区，经直接配位三个 Mg2+ 离子锚定，Mg2+ 再八面体配位水与五个向内指的主链磷酸，形成对 F− 特异、区分更大卤离子的口袋。Zhao 2017（Nat Chem Biol，PDB 5KH8，B. cereus apo NMR）揭示动态响应机制：无配体适体域基态结构与结合态相同，但瞬时访问低布居（约 1%）、短寿命（约 3 ms）的激发态，解开保守 'linchpin' 碱基对以发出转录终止信号；F− 结合别构抑制该过程从而激活转录。识别与构象开关在同一 RNA 内耦合，构成分析物特异的阈值触发动态响应。",
+     "key_features": "必须保留：① 与 F− 尺寸/电荷密度匹配的预组织封装腔（金属离子阵列 + 向内指磷酸/氢键给体）；② F− 特异、排斥更大卤离子的选择性；③ 分析物触发的可逆构象开关（识别-响应耦合，阈值化输出）。可灵活调整：金属离子/受体化学（如硼基或金属配位 F− 受体替代 Mg2+/磷酸）、开关读出方式、与上游反应模块的串联拓扑。",
+     "design_mapping": "仿生映射：氟核糖开关 'F− 特异封装识别 + 分析物触发构象门控' → 面向 PFBS 的间接转译。关键边界：PFBS（全氟丁烷磺酸 C4F9SO3−）不含游离 F−，本原型不直接识别 PFBS；转译须经上游脱氟步骤释放 F−，再由氟核糖开关启发的 F− 识别门响应脱氟产物流（阈值触发构象/亲和/信号切换，报告或门控脱氟进程）。此为设计转译/启发（llm_inferred），非 from_source 事实——脱氟产物流的窗口匹配（释放速率、局部 F− 浓度、共存卤离子干扰）均须实验验证。本条定位为 F− 特异分支，与已入库 natural-riboswitch-metabolite-sensing（TPP/FMN/SAM 代谢物核糖开关，氢键口袋识别有机代谢物）非重复：本原型识别单原子无机阴离子 F−，机制为金属离子/磷酸封装 + 激发态构象开关，调控 crcB/Fluc 氟输出基因。",
+     "explainability_anchors": "设计溯源：F− 特异封装识别（PDB 3VRS/4ENA，from_source，Ren 2012；Baker 2012 选择性）+ F− 触发构象开关（PDB 5KH8，from_source，Zhao 2017）→ '金属离子/磷酸辅助 F− 封装 + 阈值触发构象门控' 可迁移原理（from_source）→ 与脱氟模块串联响应 PFBS 脱氟释放的 F−（llm_inferred 间接启发，须实验验证）。"
+    }
+   }
+  ]
+ },
+ "design_translation": [
+  {
+   "idea": "将氟核糖开关的 '金属离子/磷酸辅助的 F− 特异封装口袋 + 分析物触发构象门控' 两原理转译为面向 PFBS 的脱氟耦合响应门控概念：PFBS（C4F9SO3−）不含游离 F−，设计将上游脱氟模块（断裂全氟丁基链 C-F 键、释放 F−）与下游氟核糖开关启发的 F− 识别/门控元件串联，使后者对脱氟产物流中释放的 F− 作阈值触发的构象/亲和/信号切换，从而报告或门控脱氟进程",
+   "specific_functional_group": "F− 特异识别基序：模拟 Mg2+/磷酸封装的预组织金属离子辅助口袋或 Lewis 酸/氢键给体阵列（如硼基 F− 受体、金属配位 F− 受体、脲/酰胺氢键给体阵列），与阈值触发的可切换连接体/读出基元耦合",
+   "material_handle": "将脱氟催化模块与 F− 响应门控集成于同一载体或串联反应器；门控元件以 F− 识别基序把释放的游离 F− 转导为构象/亲和或光学/电化学信号变化；识别位点几何按 F− 离子半径与高电荷密度预组织",
+   "target_interaction": "对脱氟产物（释放的游离 F−）的特异结合 + 阈值门控；非对 PFBS 母体直接结合",
+   "source_tier": "llm_inference",
+   "evidence_tier": "inspiration（间接转译：核糖开关机制接地于天然分析物 F− 的特异封装识别与 F− 触发构象开关；PFBS 不含游离 F−，转译须经脱氟产物流窗口匹配，无直接 PFBS 结合或脱氟-门控耦合证据）",
+   "examples": [],
+   "design_principle": "氟核糖开关证明预组织金属离子/磷酸封装腔可在无蛋白侧链参与下特异识别 F− 并排斥更大卤离子（PDB 3VRS/4ENA，Ren 2012；Baker 2012），且 F− 结合可别构触发阈值化构象开关（PDB 5KH8，Zhao 2017）；'F− 特异封装 + 阈值触发门控' 可独立于 RNA 骨架抽象为合成 F− 识别-响应元件",
+   "implementation_example": "脱氟催化模块 + 硼基/金属配位 F− 响应门控的串联体系（无实验数据，仅为设计假设）",
+   "constraints": "PFBS 全氟链 C-F 键极惰性，温和水相脱氟本身即为难题；脱氟释放 F− 的速率与局部浓度能否达到门控阈值（窗口匹配）未核验；共存卤离子（Cl−）虽被天然口袋排斥，合成受体的选择性须重新验证；RNA 元件不可直接复制（RNase 敏感、Mg2+ 依赖），仅提取设计原理",
+   "failure_modes": "脱氟不完全或速率过低致释放 F− 低于门控阈值，开关不触发；合成 F− 受体对 Cl−/其他阴离子选择性不足产生假响应；门控元件在真实水质（pH、离子强度、有机质）下失活；脱氟副产物干扰读出",
+   "material_realization_examples": []
+  }
+ ],
+ "honesty_ledger": {
+  "facts": [
+   {
+    "type": "mechanism",
+    "index": 0,
+    "name": "金属离子与磷酸骨架对氟离子的选择性封装识别",
+    "basis": "from_source_verified",
+    "note": "Ren 2012 Nature（T. petrophila PDB 3VRS/4ENA：F− 封装于连接区，直接配位三个 Mg2+，Mg2+ 八面体配位水与五个向内指主链磷酸；区分更大卤离子）+ Baker 2012 Science（氟核糖开关被 F− 选择性触发、排斥 Cl− 等小阴离子）；quote 逐字取自 NIH efetch PubMed 摘要与 RCSB PDB 沉积记录/标题（可核验），未做全文 PDF 审计"
+   },
+   {
+    "type": "mechanism",
+    "index": 1,
+    "name": "氟离子触发的适体域构象开关与阈值化基因响应（动态响应）",
+    "basis": "from_source_verified",
+    "note": "Zhao 2017 Nat Chem Biol（B. cereus PDB 5KH8 apo NMR：基态结构有/无配体相同，激发态约 1% 布居/约 3 ms 解开 linchpin 碱基对发出转录终止，F− 结合别构抑制之并激活转录）+ Baker 2012（氟核糖开关激活氟转运体基因，天然 mRNA 元件）；quote 逐字取自 PubMed 摘要与 PDB KEYWDS，未做全文 PDF 审计"
+   }
+  ],
+  "leads": [],
+  "inferences": [
+   {
+    "type": "design_translation",
+    "index": 0,
+    "idea": "将氟核糖开关 F− 特异封装识别 + 阈值触发构象门控转译为面向 PFBS 的脱氟耦合响应门控",
+    "basis": "llm_inferred",
+    "label": "inspiration",
+    "note": "PFBS（C4F9SO3−）不含游离 F−，本原型不直接识别 PFBS 母体；转译须经上游脱氟释放 F−、传感门响应脱氟产物流，窗口匹配（释放速率/局部 F− 浓度/共存卤离子）与亲和力均须实验验证；属间接、原理层外推，无直接 PFBS 结合或脱氟-门控耦合证据"
+   }
+  ],
+  "boundary_notes": [
+   "本原型天然分析物为游离氟离子 F−；机制 from_source 接地限于 F− 的特异封装识别（PDB 3VRS/4ENA + Ren 2012 + Baker 2012）与 F− 触发构象开关（PDB 5KH8 + Zhao 2017）",
+   "PFBS 应用为间接转译（llm_inferred / inspiration）：PFBS 不含游离 F−，须经脱氟步骤释放 F− 后方可与本识别/门控机制耦合，不得用作 PFBS 直接识别或吸附的 direct evidence",
+   "无 PFBS 吸附性能数据（qmax 等）；performance_data 为空，严格未从外部污染物知识库搬运任何性能数值（知识隔离红线）",
+   "非重复性定位：本条为 F− 特异分支（单原子无机阴离子、金属离子/磷酸封装、激发态构象开关、调控 crcB/Fluc 氟输出基因），区别于已入库 natural-riboswitch-metabolite-sensing（TPP/FMN/SAM 代谢物核糖开关、氢键口袋识别有机代谢物、ROX 转译）",
+   "自然基因组起源：氟核糖开关为细菌/古菌 mRNA 中自然进化的阴离子结合 RNA 结构（Baker 2012），非 SELEX 体外筛选适配体，满足自然界进化解决方案判据",
+   "文献归属订正：PDB 3VRS/4ENA 原始文献经 RCSB 再核为 Ren/Rajashankar/Patel 2012 Nature（DOI 10.1038/nature11152），PDB 5KH8 为 Zhao/Guffy/Williams/Zhang 2017 Nat Chem Biol（DOI 10.1038/nchembio.2427）；任务简报所记 'Baker/Batey 系列' 经核为误记（Batey 非这三处结构作者），发现学文献为 Baker/Breaker 2012 Science（DOI 10.1126/science.1215063），已接地",
+   "硬边界 BC（卤离子选择性、氟转运体基因输出耦合、自然基因组起源）均 from_source 四件套齐全、gate_level=hard；脱氟耦合窗口匹配与材料转导边界为 llm_inferred、gate_level=soft"
+  ],
+  "missing_pdf_items": [
+   "Baker 2012 Science 335:233-235 全文 PDF（quote 取自 NIH efetch PubMed 摘要 PMID 22194412 与 Crossref 标题）",
+   "Ren 2012 Nature 486:85-89 全文 PDF（quote 取自 PubMed 摘要 PMID 22678284、Crossref 标题与 RCSB PDB 3VRS/4ENA 沉积记录）",
+   "Zhao 2017 Nat Chem Biol 13:968-974 全文 PDF（quote 取自 PubMed 摘要 PMID 28719589 与 RCSB PDB 5KH8 沉积记录）"
+  ],
+  "generated_by": "manual-curation-2026-07-22",
+  "note": "诚实优先：机制接地限于氟核糖开关天然分析物 F− 的特异封装识别与 F− 触发构象开关；PFBS 应用全部为间接 inspiration/外推（须经脱氟耦合，窗口匹配未核验）"
+ },
+ "boundary_rules": [
+  {
+   "rule": "卤离子尺寸/电荷密度选择性：结合口袋对 F− 特异，区分更大的卤离子（Cl− 等）；该类核糖开关被 F− 选择性触发而排斥包括 Cl− 在内的其他小阴离子",
+   "source_mechanism": "金属离子与磷酸骨架对氟离子的选择性封装识别",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "调控输出耦合：氟核糖开关激活编码推定氟转运体（crcB/Fluc 型输出蛋白）的基因表达，识别经表达平台耦合至氟解毒输出；转译为材料须自构输出/读出耦合",
+   "source_mechanism": "氟离子触发的适体域构象开关与阈值化基因响应（动态响应）",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "自然基因组起源：氟核糖开关为细菌/古菌 mRNA 中自然进化的阴离子结合 RNA 结构，控制基因表达，非 SELEX 体外筛选适配体",
+   "source_mechanism": "氟离子触发的适体域构象开关与阈值化基因响应（动态响应）",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "PFBS 间接转译边界：PFBS 不含游离 F−，转译须经脱氟步骤释放 F−，传感门响应脱氟产物流；窗口匹配与亲和力须实验验证（定性，无数值阈值）",
+   "source_mechanism": "金属离子与磷酸骨架对氟离子的选择性封装识别",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  },
+  {
+   "rule": "构象开关材料转导：天然开关经 RNA 三级结构与转录时间尺度转导，转译为材料吸附-释放需工程化配体耦合可逆构象/亲和响应；刚性无构象变化位点不具备动态响应功能（定性）",
+   "source_mechanism": "氟离子触发的适体域构象开关与阈值化基因响应（动态响应）",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  }
+ ]
+}

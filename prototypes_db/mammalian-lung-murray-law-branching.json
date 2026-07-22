@@ -1,0 +1,380 @@
+{
+ "id": "mammalian-lung-murray-law-branching",
+ "name_zh": "哺乳动物肺支气管树 Murray 律分级传质网络",
+ "name_en": "Mammalian Lung Bronchial Tree Murray-Law Hierarchical Mass-Transfer Network",
+ "organism": {
+  "scientific": "Homo sapiens（哺乳动物肺支气管树；Weibel 人肺形态测量）",
+  "category": "动物"
+ },
+ "biomimetic_dimension": "结构仿生",
+ "features": [
+  "层次孔",
+  "大孔",
+  "分级传质网络"
+ ],
+ "tested_conditions": {
+  "tested_ph_range": null,
+  "tested_temp_range": null,
+  "salinity": null,
+  "note": "本原型为器官形态测量级传质几何原型（哺乳动物肺 Murray 律分支网络），本库无其吸附适用性或吸附性能测试数据；performance_data 为空，故测试条件全空。"
+ },
+ "library_tier": "extended",
+ "lifecycle_status": "active",
+ "coverage": "partial",
+ "status": "active",
+ "provenance_summary": {
+  "n_papers": 5,
+  "n_verified": 8,
+  "n_unverified": 0,
+  "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与硬边界条数（MLB-001 三要素+1 硬边界=4，MLB-002 三要素+1 硬边界=4）。本原型为非蛋白器官形态测量级原型，按形态学/生理原理证据层级接地：Murray 1926 PNAS 标题级接地最小功原理（PMID 16576980/PMC1084489）；LaBarbera 1990 Science 摘要逐字接地分支管网几何与全局最优最小代价（PMID 2396104）；Weibel & Gomez 1962 Science 摘要逐字接地约 23 级二叉分支/约 3 亿肺泡/逐级'最优'直径（PMID 14005590）+ Weibel 1963 专著题录（DOI 10.1007/978-3-642-87553-3）；肺动脉 Murray 律研究 2025（DOI 10.1115/1.4068886, PMC12834150）Discussion 逐字复述立方律。quote 取自 PubMed 标题/摘要与 PMC 全文（可核验），未做全文 PDF 审计。PFOA/BPA/ROX 分级孔道吸附床转译为 llm_inference/inspiration。"
+ },
+ "mechanisms": [
+  {
+   "mechanism_id": "MLB-001",
+   "name": "Murray 律立方递减分级传质网络（最小功原理）",
+   "description": "哺乳动物肺支气管树以对称二叉分支将主干逐级细分为约 3 亿末端交换单元，分支半径按 Murray 律（平均流量正比于半径立方）递减；该几何源自 Murray 1926 最小功原理——在泵送功耗与代谢/血液体积代价间取最小总代价，使分支管网逼近全局最优、逐级维持恒定单位输运代价，是长程低驱动力输运的几何最优模板",
+   "基本原理": "对称二叉分支中令半径立方正比于流量，可以最小的构造-维持代价将流体高通量分配至广布传质末端，逐级保持恒定的单位输运代价",
+   "source": "literature",
+   "ref_doi": "10.1073/pnas.12.3.207",
+   "verification": "corroborated",
+   "verification_quote": "The Physiological Principle of Minimum Work: I. The Vascular System and the Cost of Blood Volume.",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "ng/L 级超低浓度目标物（如 PFOA，兼 BPA/ROX 等）在低驱动力下传质通量难维持、目标物难送达吸附位点；这是长程低驱动力输运问题在吸附工程中的对应（设计语境，非 Murray/Weibel 来源事实）",
+     "basis": "llm_inferred"
+    },
+    "bio_structure": {
+     "text": "体内流体输运系统呈两种几何之一：单管中断于平面传质区，或分支管网连接广布传质区；哺乳动物肺属后者——对称二叉分支管网连接约 3 亿肺泡末端传质区（LaBarbera 1990 摘要）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1126/science.2396104",
+     "locator": "Abstract, p.992",
+     "quote": "a branched network of vessels linking widely distributed transfer regions; each is determined by different morphogenetic processes",
+     "scope_match": "Keywords: branched network, vessels, transfer regions"
+    },
+    "interaction": {
+     "text": "Murray 律：平均流量正比于血管半径立方；该立方律由最小功原理导出，优化泵送功耗与代谢能量耗散代价间的平衡（肺动脉 Murray 律研究 2025 复述 Murray 1926）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1115/1.4068886",
+     "locator": "PMC12834150 / Discussion (2025)",
+     "quote": "Murray’s Law, originally proposed to optimize the balance between pumping power and rate of metabolic energy dissipation, predicts that mean flow is proportional to the cube of vessel radius.",
+     "scope_match": "Keywords: Murray, pumping power, cube, vessel radius"
+    },
+    "why_it_works": {
+     "text": "动物借壁面剪应力信号反复进化出复杂分支层级，逼近全局最优、最小化流体输运系统构造与维持代价的系统（LaBarbera 1990 摘要）；分支管网以最小代价将流体分配至广布传质末端",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1126/science.2396104",
+     "locator": "Abstract, p.992",
+     "quote": "a complex branching hierarchy of vessels approximating a globally optimal system that minimizes the costs of the construction and maintenance of the fluid transport system",
+     "scope_match": "Keywords: branching hierarchy, vessels, globally optimal, minimizes"
+    },
+    "boundary_conditions": [
+     {
+      "text": "Murray 律立方关系（平均流量正比半径立方）是泵送功耗与代谢能量耗散代价平衡下的最小功最优；该最优依赖特定代价权衡假设，假设改变时分支几何偏离立方律",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "corroborated",
+      "gate_level": "hard",
+      "locator": "PMC12834150 / Discussion (2025)",
+      "quote": "Murray’s Law, originally proposed to optimize the balance between pumping power and rate of metabolic energy dissipation, predicts that mean flow is proportional to the cube of vessel radius.",
+      "scope_match": "Keywords: Murray, pumping power, metabolic energy dissipation, cube",
+      "source_asset": null
+     },
+     {
+      "text": "Murray 律分支几何向固定吸附床转译须实体化：在合成单体中精确实现半径立方正比流量的逐级径缩分支孔道为制造挑战；肺为动态通气器官，静态床层须外加驱动力（定性，无数值阈值）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "scope_match": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "对称二叉分支管网中，令分支半径立方正比于流量（Murray 律），可在逐级保持恒定单位输运代价的同时，以最小构造-维持代价将流体分配至广布传质末端，是长程低驱动力输运的几何最优模板",
+    "verification_quote": "a complex branching hierarchy of vessels approximating a globally optimal system that minimizes the costs of the construction and maintenance of the fluid transport system"
+   },
+   "source_doi": "10.1073/pnas.12.3.207",
+   "source_page": 207,
+   "source_locator": "title, p.207",
+   "source_file": "PNAS 12:207-214（Murray 1926，PMID 16576980/PMC1084489，标题级接地）+ Science 249:992-1000（LaBarbera 1990，PMID 2396104 摘要逐字）+ J Biomech Eng 2025（DOI 10.1115/1.4068886, PMC12834150 Discussion 逐字）；均未做本地全文 PDF 审计",
+   "functional_groups": [
+    "分级分支孔道几何（对称二叉、半径立方递减）",
+    "广布末端传质/交换面"
+   ],
+   "key_structures": [
+    "传质结构"
+   ]
+  },
+  {
+   "mechanism_id": "MLB-002",
+   "name": "人肺约 23 级对称二叉分支至约 3 亿肺泡末端的形态测量几何",
+   "description": "Weibel 人肺形态测量（1962/1963）确立：气道平均约 23 级对称二叉分支，终止于约 3 亿肺泡（配约 1400 万肺泡管、约 2800 亿毛细血管段），逐级气道与血管直径遵循'最优'尺寸，交换面积约 40-80 m²；该形态测量是 Murray 律分支几何在哺乳动物肺的器官级实例",
+   "基本原理": "约 23 级对称二叉分支将单一主干逐级细分为约 3 亿末端交换单元，逐级直径遵循最优尺寸，在巨大交换面积与低驱动力间取得平衡",
+   "source": "literature",
+   "ref_doi": "10.1126/science.137.3530.577",
+   "verification": "verified",
+   "verification_quote": "The airways have, on the average, 23 generations of dichotomous branching; the pulmonary arteries reach the precapillaries after about 28 generations.",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "ng/L 级 PFOA 等超低浓度目标物需要巨大末端交换/吸附面积与低驱动力高通量传质的匹配（设计语境，非来源事实）",
+     "basis": "llm_inferred"
+    },
+    "bio_structure": {
+     "text": "人肺气道平均约 23 级对称二叉分支；肺动脉约 28 级达毛细血管前段（Weibel & Gomez 1962 摘要）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1126/science.137.3530.577",
+     "locator": "Abstract, p.577",
+     "quote": "The airways have, on the average, 23 generations of dichotomous branching; the pulmonary arteries reach the precapillaries after about 28 generations.",
+     "scope_match": "Keywords: airways, 23 generations, dichotomous branching"
+    },
+    "interaction": {
+     "text": "分支终止于约 3 亿肺泡、约 1400 万肺泡管、约 2800 亿毛细血管段，构成分布的传质末端交换单元（Weibel & Gomez 1962 摘要）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1126/science.137.3530.577",
+     "locator": "Abstract, p.577",
+     "quote": "There are essentially the same number of alveoli (300 million), alveolar ducts (14 million), and capillary segments (280 billion) in all lungs.",
+     "scope_match": "Keywords: alveoli, 300 million, capillary segments"
+    },
+    "why_it_works": {
+     "text": "逐级气道与血管元件的平均直径遵循'最优'尺寸规律（Weibel & Gomez 1962 摘要），即形态测量确认 Murray 型最优径缩标度，使约 40-80 m² 的巨大交换面积在低驱动力下实现高通量气体交换",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1126/science.137.3530.577",
+     "locator": "Abstract, p.577",
+     "quote": "The average diameters of the airway and blood-vessel elements at each generation appear to follow the laws of \"best\" dimensions.",
+     "scope_match": "Keywords: diameters, generation, best"
+    },
+    "boundary_conditions": [
+     {
+      "text": "约 23 级二叉分支与约 3 亿肺泡的形态测量基于 5 例 8-74 岁正常人肺，为人肺特异形态测量；其他哺乳动物肺的级数与末端数不同",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "Abstract, p.577",
+      "quote": "five normal lungs from individuals aged 8 to 74 years were subjected to a dimensional analysis",
+      "scope_match": "Keywords: five normal lungs, 8 to 74 years, dimensional analysis",
+      "source_asset": null
+     },
+     {
+      "text": "气-液界面气体交换形态测量向液相吸附孔道几何的外推为推断；约 23 级/约 3 亿末端的具体级数与末端数为人肺参数，移植到吸附床须按目标传质量重新标度（定性，无数值阈值）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "scope_match": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "约 23 级对称二叉分支将单一主干逐级细分为约 3 亿末端交换单元，逐级直径遵循最优尺寸，在巨大交换面积与低驱动力间取得平衡，为分级孔道吸附床提供级数-径缩-末端面积的几何标度参照",
+    "verification_quote": "The airways have, on the average, 23 generations of dichotomous branching; the pulmonary arteries reach the precapillaries after about 28 generations."
+   },
+   "source_doi": "10.1126/science.137.3530.577",
+   "source_page": 577,
+   "source_locator": "Abstract, p.577",
+   "source_file": "Science 137:577-585（Weibel & Gomez 1962，PMID 14005590 摘要逐字）+《Morphometry of the Human Lung》（Weibel 1963 专著，DOI 10.1007/978-3-642-87553-3，题录级）；均未做本地全文 PDF 审计",
+   "functional_groups": [
+    "对称二叉分级孔道（约 23 级）",
+    "约 3 亿肺泡末端高交换面积单元"
+   ],
+   "key_structures": [
+    "传质结构"
+   ]
+  }
+ ],
+ "performance_data": [],
+ "engineering_constraints": [
+  {
+   "constraint": "气-液界面与液相吸附的相态差异",
+   "value": "肺为气-液界面气体交换器官，其分级几何服务于气体扩散；转译为液相吸附床时，传质介质、驱动力与界面性质均改变",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（基于 Weibel & Gomez 1962 人肺气-液交换形态测量的相态事实）",
+   "source": "llm_inference",
+   "ref_doi": null
+  },
+  {
+   "constraint": "动态通气与静态床层的动力差异",
+   "value": "肺靠呼吸主动通气维持气流；吸附床为静态/被动结构，低驱动力须由外加流速/压差提供，分支几何本身不提供动力",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断",
+   "source": "llm_inference",
+   "ref_doi": null
+  },
+  {
+   "constraint": "立方律半径递减的实体化制造难度",
+   "value": "在合成单体中精确实现约 23 级、半径立方正比流量的逐级径缩分支孔道，制造与表征难度高",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（基于 Murray 律立方递减几何要求）",
+   "source": "llm_inference",
+   "ref_doi": null
+  },
+  {
+   "constraint": "Murray 律最优依赖代价权衡假设",
+   "value": "立方律是泵送功耗与代谢耗散代价平衡下的最小功最优，假设改变时分支几何偏离立方律",
+   "unit": null,
+   "relevance": "medium",
+   "explanation": "肺动脉 Murray 律研究 2025（DOI 10.1115/1.4068886, PMC12834150）Discussion 逐字：Murray's Law ... optimize the balance between pumping power and rate of metabolic energy dissipation",
+   "source": "literature",
+   "ref_doi": "10.1115/1.4068886"
+  },
+  {
+   "constraint": "形态测量的种属特异性",
+   "value": "约 23 级二叉分支与约 3 亿肺泡基于 5 例 8-74 岁正常人肺，为人肺特异形态测量",
+   "unit": null,
+   "relevance": "medium",
+   "explanation": "Weibel & Gomez 1962 Science 137:577-585 摘要（PMID 14005590）",
+   "source": "literature",
+   "ref_doi": "10.1126/science.137.3530.577"
+  }
+ ],
+ "narrative": {
+  "entries": [
+   {
+    "source_file": "PNAS 12:207-214（Murray 1926，DOI 10.1073/pnas.12.3.207）+ Science 249:992-1000（LaBarbera 1990，DOI 10.1126/science.2396104）+ Science 137:577-585（Weibel & Gomez 1962，DOI 10.1126/science.137.3530.577）+《Morphometry of the Human Lung》（Weibel 1963，DOI 10.1007/978-3-642-87553-3）+ J Biomech Eng 2025（DOI 10.1115/1.4068886, PMC12834150）",
+    "paper_id": "1926-Murray-minimum-work + 1990-LaBarbera-fluid-transport + 1962-Weibel-Gomez-lung-architecture",
+    "sections": {
+     "problem_definition": "在 ng/L 级超低目标浓度下，吸附床层面临驱动力极低、传质通量难以维持、目标物难以高效送达吸附位点的工程难题。长程低驱动力输运是自然界反复出现的问题，进化已在动物器官中给出几何解。",
+     "biological_solution": "哺乳动物肺以进化优化的分级传质网络给出自然解：气道平均约 23 级对称二叉分支（Weibel & Gomez 1962 摘要），分支半径按 Murray 律（平均流量正比于半径立方）逐级递减（Murray 1926 最小功原理；肺动脉 Murray 律研究 2025 复述），终止于约 3 亿肺泡末端（Weibel & Gomez 1962），形成约 40-80 m² 的巨大交换面积。LaBarbera 1990 指出，体内流体输运系统呈两种几何之一——单管中断于平面传质区，或分支管网连接广布传质区；动物借壁面剪应力信号反复进化出逼近全局最优、最小化构造-维持代价的复杂分支层级。该几何在极低驱动力下维持高通量气体交换。",
+     "key_features": "必须保留：① 对称二叉分支的分级孔道（主干→分支→末端）；② 半径按 Murray 律立方递减以维持逐级恒定单位输运代价；③ 大量末端高交换/吸附面积单元。可灵活调整：级数、各级绝对孔径、末端域负载的吸附剂与识别基团、单体材质与制造工艺。",
+     "design_mapping": "仿生映射：肺支气管树 Murray 律分级传质网络 → ng/L PFOA 低驱动力分级孔道吸附床。主干大孔降阻 → 逐级二叉分支按 r³∝Q 径缩 → 末端高比表面域富集 PFOA。边界声明：此为设计转译/启发（llm_inferred），非 from_source 事实——Murray 律与人肺形态测量接地于气体交换器官，向液相吸附床的外推须实验验证；分支几何仅维持传质通量，不赋予对 PFOA 的化学选择性，选择性须由末端识别位点另行引入。",
+     "explainability_anchors": "设计溯源：Murray 律最小功分支原理（Murray 1926 标题 + LaBarbera 1990 摘要 + 肺动脉 Murray 律 2025 摘要，from_source）+ 人肺约 23 级二叉/约 3 亿肺泡形态测量（Weibel-Gomez 1962 摘要 + Weibel 1963 专著题录，from_source）→ '半径立方递减的对称二叉分级孔道维持低驱动力高通量传质'可迁移原理 → ng/L PFOA 分级孔道吸附床（llm_inferred 启发，须实验验证）。"
+    }
+   }
+  ]
+ },
+ "design_translation": [
+  {
+   "idea": "将肺支气管树的 Murray 律对称二叉分级传质几何转译为分级孔道吸附床/单体：主干大孔→逐级二叉分支（半径立方正比流量）→末端高比表面吸附域，在 ng/L 级 PFOA（兼 BPA/ROX 等）低驱动力下以低阻对流-扩散维持传质通量，将目标物高效送达末端吸附位点",
+   "specific_functional_group": "Murray 律半径立方递减的对称二叉分级孔道几何（主干→分支→末端）；末端高比表面吸附域可按目标物另行嫁接识别基团（氟亲/阳离子/氢键给体/疏水）",
+   "material_handle": "以定向冷冻、牺牲模板或增材制造（3D 打印）在聚合物或陶瓷单体中构筑主干-分支-末端分级孔道；按 r³∝Q 设计各级孔径；末端域负载高比表面吸附剂（活性炭/树脂/MOF/接枝功能层）",
+   "target_interaction": "分级孔道以低阻对流-扩散将 ng/L 级 PFOA 高效输运至末端高比表面吸附域（几何维持的传质通量）；末端域的化学捕获（疏水/氟亲/静电/氢键）另行设计，分支几何本身不赋予化学选择性",
+   "source_tier": "llm_inference",
+   "evidence_tier": "inspiration（原理层外推：Murray 律分支几何与最小功原理接地于 Murray 1926 标题、LaBarbera 1990 摘要、肺动脉 Murray 律 2025 摘要；人肺约 23 级二叉/约 3 亿肺泡形态测量接地于 Weibel-Gomez 1962 摘要与 Weibel 1963 专著题录；向 ng/L PFOA 液相吸附床的转译为 llm_inferred，无吸附实验数据）",
+   "examples": [],
+   "design_principle": "对称二叉分支中令半径立方正比流量（Murray 律），可以最小构造-维持代价逐级维持恒定单位输运代价，将流体高通量分配至广布末端；人肺以约 23 级二叉分支达约 3 亿肺泡末端、约 40-80 m² 交换面积，是该原理的器官级范例",
+   "implementation_example": "按 Murray 律设计级数与逐级孔径的 3D 打印分级孔道单体，末端域负载高比表面吸附剂（无实验数据，仅为设计假设）",
+   "constraints": "气-液几何向液相吸附床外推须实验验证；立方律半径递减的精确制造难；分支几何不提供化学选择性，须由末端识别位点补足；静态床层须外加驱动力",
+   "failure_modes": "级数/径缩偏离 Murray 律导致局部高阻或短路；末端域堵塞使分级传质失效；非选择性几何同时富集共存有机物造成竞争；放大后逐级孔径公差累积破坏输运代价恒定",
+   "material_realization_examples": []
+  }
+ ],
+ "honesty_ledger": {
+  "facts": [
+   {
+    "type": "mechanism",
+    "index": 0,
+    "name": "Murray 律立方递减分级传质网络（最小功原理）",
+    "basis": "from_source_corroborated",
+    "note": "Murray 1926 PNAS 标题级接地最小功原理（PMID 16576980/PMC1084489，正文 PDF 未审计）；LaBarbera 1990 Science 摘要逐字接地分支管网几何与全局最优最小化构造-维持代价（PMID 2396104）；肺动脉 Murray 律研究 2025（DOI 10.1115/1.4068886, PMC12834150）Discussion 逐字复述立方律（流量正比半径立方）。quote 取自 PubMed 标题/摘要与 PMC 全文，可核验，未做全文 PDF 审计"
+   },
+   {
+    "type": "mechanism",
+    "index": 1,
+    "name": "人肺约 23 级对称二叉分支至约 3 亿肺泡末端的形态测量几何",
+    "basis": "from_source_verified",
+    "note": "Weibel & Gomez 1962 Science 137:577-585 摘要逐字接地：气道平均 23 级二叉分支、约 3 亿肺泡、逐级直径遵循'最优'尺寸（PMID 14005590）；Weibel 1963 专著《Morphometry of the Human Lung》（DOI 10.1007/978-3-642-87553-3）为题录级接地，专著无摘要，逐字形态数取自 1962 伴随论文摘要，未做全文 PDF 审计"
+   }
+  ],
+  "leads": [
+   {
+    "type": "literature_lead",
+    "name": "Murray 律分级孔道吸附床/反应器的直接实验证据",
+    "note": "Crossref/PMC 检索未得直接将 Murray 律分支几何用于吸附床传质强化的可核验实验，未纳入 from_source；若后续取得可核验原文，可补强转译接地"
+   }
+  ],
+  "inferences": [
+   {
+    "type": "design_translation",
+    "index": 0,
+    "idea": "将 Murray 律对称二叉分级孔道转译为 ng/L PFOA 低驱动力分级孔道吸附床",
+    "basis": "llm_inferred",
+    "label": "inspiration",
+    "note": "肺为气-液气体交换器官，向液相吸附床外推属原理层；分支几何仅维持传质通量，不赋予 PFOA 化学选择性；无吸附实验数据"
+   },
+   {
+    "type": "mechanism_interpretation",
+    "index": 0,
+    "name": "气-液界面动态通气几何向液相静态床层的相态/动力外推",
+    "basis": "llm_inferred",
+    "label": "boundary_disclosure",
+    "note": "Murray/Weibel 接地限于气体交换与血流输运；液相吸附传质外推为机理层推断，用作相态边界披露"
+   }
+  ],
+  "boundary_notes": [
+   "本原型天然功能为肺气体交换的低驱动力高通量传质，非污染物捕获；一切 PFOA/BPA/ROX 分级孔道吸附床转译均为 design_translation（llm_inferred/inspiration），不得用作这些污染物的 direct evidence",
+   "独立性论证负担（须下游裁决）：库内 wood-xylem 与 plant-lignocellulosic-architecture 均涉植物输运/生物炭，但 wood-xylem 机制为木质素 π-π/氢键与氨基配位吸附化学、其木质部为平行导管/管胞毛细管输运（非对称二叉 Murray 立方律分支），plant-lignocellulosic-architecture 为表面离子交换/沉淀/硅生物矿化化学，二者均未覆盖 Murray 律对称二叉分级传质几何；本条与 wood-xylem 共享'层次孔/大孔'结构特征与'长程低驱动力输运'母题，独立性在于几何原理（对称二叉立方律径缩 vs 平行毛细管）与界面（气-液 vs 液-固）差异，重叠风险记录于此交下游裁决",
+   "与框架示例 4（木质部）的独立性：木质部为平行管胞/导管毛细管束，靠蒸腾负压驱动液相输运；本原型为对称二叉 Murray 律分支管网，靠壁面剪应力最小功优化，末端为气-液交换面——几何生成规则、对称性与界面相态均不同",
+   "Murray 1926 正文 PDF 未审计，最小功原理接地限于标题级；立方律（流量正比半径立方）逐字接地来自肺动脉 Murray 律研究 2025 的复述，非 Murray 1926 原文逐字",
+   "LaBarbera 1990 实测改正：正确出处为 Science 249:992-1000（DOI 10.1126/science.2396104），非记忆中的 Annual Review of Physiology，错误出处已剔除",
+   "无 PFOA 吸附性能数据（qmax 等）；严格未从任何外部污染物知识库搬运性能数值（知识隔离红线）"
+  ],
+  "missing_pdf_items": [
+   "Murray 1926 PNAS 全文 PDF（PMC 不允许 XML 下载，为扫描篇，正文未审计；接地限于 PubMed/PMC 标题）",
+   "Weibel 1963《Morphometry of the Human Lung》专著全文（无摘要；形态测量逐字取自伴随论文 Weibel & Gomez 1962 Science 摘要）",
+   "Weibel & Gomez 1962 Science 全文 PDF（quote 取自 PubMed 摘要，接地限于摘要级）",
+   "LaBarbera 1990 Science 全文 PDF（quote 取自 PubMed 摘要，接地限于摘要级）",
+   "肺动脉 Murray 律研究 2025（DOI 10.1115/1.4068886）全文（立方律 quote 取自 PMC 全文 Discussion 段，周围推导未审计）"
+  ],
+  "generated_by": "manual-curation-2026-07-22",
+  "note": "诚实优先：机制接地限于 Murray 律分支几何/最小功原理（标题与摘要级）与人肺形态测量（摘要级）；一切污染物分级孔道吸附床转译为 inspiration/外推；立方律逐字来自 2025 肺动脉研究复述"
+ },
+ "boundary_rules": [
+  {
+   "rule": "Murray 律立方关系（平均流量正比半径立方）是泵送功耗与代谢耗散代价平衡下的最小功最优，依赖特定代价权衡假设，假设改变时分支几何偏离立方律",
+   "source_mechanism": "Murray 律立方递减分级传质网络（最小功原理）",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "体内流体输运系统呈两种几何之一：单管中断于平面传质区，或分支管网连接广布传质区；本原型属后者（分支管网几何）",
+   "source_mechanism": "Murray 律立方递减分级传质网络（最小功原理）",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "人肺气道平均约 23 级对称二叉分支、约 3 亿肺泡末端、逐级直径遵循'最优'尺寸，系 5 例 8-74 岁正常人肺形态测量，种属特异",
+   "source_mechanism": "人肺约 23 级对称二叉分支至约 3 亿肺泡末端的形态测量几何",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "肺为气-液界面动态通气器官，其分级几何向液相静态吸附床的转译为外推；分级孔道须实体化并维持立方律半径递减（制造挑战），无数值阈值",
+   "source_mechanism": "Murray 律立方递减分级传质网络（最小功原理）",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  },
+  {
+   "rule": "Murray 律分支几何本身不赋予化学选择性，仅维持低驱动力传质通量；对 PFOA 的选择性须由末端识别位点另行引入（定性，无数值阈值）",
+   "source_mechanism": "Murray 律立方递减分级传质网络（最小功原理）",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  }
+ ]
+}

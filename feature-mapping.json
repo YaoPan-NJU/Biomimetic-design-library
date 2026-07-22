@@ -1187,6 +1187,12 @@
       "weight": 0.6,
       "mechanism_summary": "sortase A 经 LPXTG 转肽将表面蛋白共价锚定于细胞壁肽聚糖，启发以酶介导单点共价固定将 PFOA 识别蛋白取向化锚定于载体；识别 PFOA 的是所固定的独立识别蛋白，而非 sortase 本身。",
       "design_hint": "在载体表面预装伯胺/甘氨酸手柄作为转肽氨基受体，以 sortase A 将 C 端 LPETG 标签的 PFOA 识别蛋白转肽固定；单点 C 端固定不自动带来取向增量，须由随机偶联对照、活性分数 factive 与失活对照验证。"
+     },
+     {
+      "id": "mammalian-lung-murray-law-branching",
+      "weight": 0.6,
+      "mechanism_summary": "哺乳动物肺支气管树以 Murray 律立方递减的对称二叉分级传质网络，在极低驱动力下维持高通量输运与巨大末端交换面积；该分级孔道几何启发在 ng/L 级 PFOA 低驱动力传质场景中构建逐级降阻的分级孔道以维持传质通量（兼 BPA/ROX 等低驱动力传质通用角度）",
+      "design_hint": "以 Murray 律（半径立方正比流量）设计主干-分支-末端分级孔道吸附床，近端大孔降阻、末端高比表面富集，维持 ng/L PFOA 的低驱动力传质通量；化学选择性由末端识别位点另行引入（原理层，须实验验证）"
      }
     ]
    },
@@ -1233,6 +1239,22 @@
       "weight": 0.6,
       "mechanism_summary": "病毒衣壳与 S 层蛋白自组装为周期性多价阵列，启发在载体表面以自组装单层/蛋白支架精确重复排布阴离子识别位点，借多价协同提升对短链全氟磺酸根（PFBS）的表观亲和力与位点均一性",
       "design_hint": "以自组装单层或重组多肽/蛋白支架在介孔载体表面构建周期性多价阴离子识别阵列，位点间距按磺酸根头基几何设计（多价协同增量须结合实验验证）"
+     },
+     {
+      "id": "fluoride-riboswitch-f-sensing-switch",
+      "weight": 0.4,
+      "mechanism_summary": "氟核糖开关以 Mg2+/向内指磷酸封装腔特异识别游离 F− 并经 F− 触发构象开关阈值化调控 crcB/Fluc 氟输出基因；PFBS 不含游离 F−，转译须经脱氟产物流耦合 F− 识别门控（间接、原理层，无直接 PFBS 证据）。",
+      "design_hint": "取'金属离子/磷酸辅助的 F− 特异封装口袋 + 阈值触发构象门控'两原理，与上游脱氟模块串联，使 F− 识别门响应 PFBS 脱氟释放的氟离子并报告/门控脱氟进程；脱氟窗口匹配、合成受体对 Cl− 选择性与材料转导均须实验验证。"
+     }
+    ]
+   },
+   "PFAS（全氟/多氟烷基物质，氟化学角度）": {
+    "prototypes": [
+     {
+      "id": "fluc-fluoride-export-channel",
+      "weight": 0.4,
+      "mechanism_summary": "Fluc/crcB 是自然界已知唯一的 F− 特异性生物输运原型，以双拓扑双桶窄孔 + 苯丙氨酸四极阴离子配位将游离 F− 选择性排出、排除 Cl−（PDB 5A43/7KKA）。完整 PFAS 不释放游离 F−，故其对直接 PFAS 吸附仅为清单判定的『边界证据』；转译价值限于脱氟耦合场景：PFAS 脱氟产生的 F− 可经 Fluc 式窄孔/四极配位选择性识别，用于产物 F− 分离与 F− 响应门控。",
+      "design_hint": "仅在脱氟耦合型 PFAS 降解体系中借鉴：以窄孔 + 缺电子芳香四极给体阵列选择性识别/移出脱氟产物 F−（驱动脱氟平衡、防再氟化）或作 F− 响应门控报告脱氟进程；不得用作完整 PFAS 的直接吸附，F− 在真实水体中受 Cl−/HCO3−/SO4²⁻ 竞争须实验验证，转译限原理层。"
      }
     ]
    }
@@ -1269,6 +1291,12 @@
       "weight": 0.7,
       "mechanism_summary": "胆盐混合胶束以疏水核增溶膳食脂质/胆固醇并经胶体载体输运的进化机制，启发对超疏水有机氯农药 DDT 的水相增溶-传质强化：以生物相容胶束/环糊精-表面活性剂载体提升 DDT 表观溶解度与到识别位点的传质速率，缓解 ng/L 级传质驱动力不足（DDT 增溶属碰巧胶束分配，approach-2，非进化靶标）。",
       "design_hint": "仅增溶-传质原理可转译，选择性须由下游识别位点承担：以牛磺胆酸盐型胶束或环糊精-表面活性剂混合胶束作水相增溶-预富集介质，控制载体-溶质结合强度以规避胶束截留（增溶提升溶解度但可降低游离分数传质驱动力），串联疏水识别/富集位点；CMC 以下胶束解体增溶失效。"
+     },
+     {
+      "id": "anaerobic-sequential-dechlorination-cascade",
+      "weight": 0.7,
+      "mechanism_summary": "厌氧菌群以多位点顺序分工与中间产物通道化对 DDT 及其持久代谢物（DDD/DDE）实施有次序的级联还原脱氯（DDT→DDD/DDE，DDE→DDMU），使曾被认为顽固的 DDE 继续转化",
+      "design_hint": "取「级联次序加中间产物通道化」架构原理，将多个专司一步脱氯/转化的功能位点按次序串联、中间产物顺序通过，面向 DDT/DDE 的多位点串联转化（限原理层，不复刻辅酶化学与单酶机制）"
      }
     ]
    }
@@ -1434,6 +1462,10 @@
     {
      "id": "wood-xylem",
      "weight": 0.9
+    },
+    {
+     "id": "mammalian-lung-murray-law-branching",
+     "weight": 0.65
     }
    ]
   },
@@ -1456,6 +1488,10 @@
     {
      "id": "iron-oxidizing-bacteria",
      "weight": 0.7
+    },
+    {
+     "id": "mammalian-lung-murray-law-branching",
+     "weight": 0.85
     }
    ]
   },
@@ -1720,6 +1756,10 @@
     {
      "id": "hrp-laccase-phenol-radical-coupling",
      "weight": 0.8
+    },
+    {
+     "id": "anaerobic-sequential-dechlorination-cascade",
+     "weight": 0.7
     }
    ]
   },
@@ -1812,6 +1852,14 @@
     {
      "id": "nrta-nitrate-binding-protein",
      "weight": 0.7
+    },
+    {
+     "id": "fluc-fluoride-export-channel",
+     "weight": 0.7
+    },
+    {
+     "id": "fluoride-riboswitch-f-sensing-switch",
+     "weight": 0.6
     }
    ]
   },
@@ -1946,6 +1994,14 @@
     {
      "id": "ugt-glucuronidation-glycosylation-regioselective",
      "weight": 0.7
+    },
+    {
+     "id": "fluc-fluoride-export-channel",
+     "weight": 0.7
+    },
+    {
+     "id": "fluoride-riboswitch-f-sensing-switch",
+     "weight": 0.7
     }
    ]
   },
@@ -1994,6 +2050,10 @@
     {
      "id": "natural-dna-imotif-gquadruplex-switch",
      "weight": 0.7
+    },
+    {
+     "id": "fluoride-riboswitch-f-sensing-switch",
+     "weight": 0.8
     }
    ]
   },
@@ -2062,6 +2122,16 @@
     {
      "id": "viral-capsid-slayer-multivalent-self-assembly",
      "weight": 0.7
+    }
+   ]
+  },
+  "分级传质网络": {
+   "dimension": "传质特性",
+   "description": "Murray 律立方递减的对称二叉分支维持逐级恒定单位输运代价，在 ng/L 级超低驱动力下保持传质通量（几何式传质强化，区别于分泌/回收型捕获单元的传质强化）",
+   "prototypes": [
+    {
+     "id": "mammalian-lung-murray-law-branching",
+     "weight": 0.8
     }
    ]
   }
@@ -3542,6 +3612,75 @@
    "organism": {
     "scientific": "Armoracia rusticana（辣根；辣根过氧化物酶 C，HRP C，EC 1.11.1.7；并列漆酶 EC 1.10.3.2 源于担子菌 Trametes versicolor）",
     "category": "植物"
+   }
+  },
+  "anaerobic-sequential-dechlorination-cascade": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "本原型为群落级降解/转化原型（厌氧菌群顺序还原脱氯），非分子识别/吸附原型，本库无其吸附性能测试；performance_data 为空，故测试条件全空。"
+   },
+   "features": [
+    "催化降解"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "厌氧混合微生物群落（marine/estuarine sediment 产甲烷与硫酸盐还原富集中的 DDT/DDE 顺序还原脱氯功能菌群；无单一模式种，功能单元为群落）",
+    "category": "微生物"
+   }
+  },
+  "fluc-fluoride-export-channel": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "Fluc 为细菌整合膜氟离子通道（离子输运/识别原型），本库无其吸附适用性测试数据，故全空"
+   },
+   "features": [
+    "分子筛分",
+    "特异性识别"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Escherichia coli（菌株 S88，Fluc/crcB 氟离子通道 Fluc-Ec2；UniProt Q6J5N4）",
+    "category": "微生物"
+   }
+  },
+  "fluoride-riboswitch-f-sensing-switch": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "氟核糖开关为 RNA 构象开关（分子识别 + 动态响应原型），本库无吸附性能测试；性能与测试条件全空。"
+   },
+   "features": [
+    "特异性识别",
+    "分子筛分",
+    "动态响应"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Thermotoga petrophila（氟化物核糖开关适体域；crcB 基序广布细菌与古菌，PDB 5KH8 为 Bacillus cereus 同源构建体）",
+    "category": "微生物"
+   }
+  },
+  "mammalian-lung-murray-law-branching": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "器官形态测量级传质几何原型（哺乳动物肺 Murray 律分支网络），本库无其吸附适用性或吸附性能测试数据；performance_data 为空，故测试条件全空。"
+   },
+   "features": [
+    "层次孔",
+    "大孔",
+    "分级传质网络"
+   ],
+   "biomimetic_dimension": "结构仿生",
+   "organism": {
+    "scientific": "Homo sapiens（哺乳动物肺支气管树；Weibel 人肺形态测量）",
+    "category": "动物"
    }
   }
  },
