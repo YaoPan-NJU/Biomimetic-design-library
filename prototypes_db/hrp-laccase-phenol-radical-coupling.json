@@ -1,0 +1,437 @@
+{
+ "id": "hrp-laccase-phenol-radical-coupling",
+ "name_zh": "过氧化物酶/漆酶酚氧自由基偶联封存",
+ "name_en": "Peroxidase/Laccase Phenoxy Radical Coupling Sequestration (HRP EC 1.11.1.7 / Laccase EC 1.10.3.2)",
+ "organism": {
+  "scientific": "Armoracia rusticana（辣根；辣根过氧化物酶 C，HRP C，EC 1.11.1.7）；并列酶源为 Trametes versicolor（变色栓菌，担子菌；漆酶 EC 1.10.3.2）",
+  "category": "植物"
+ },
+ "biomimetic_dimension": "分子仿生",
+ "features": [
+  "催化降解",
+  "活性氧位点"
+ ],
+ "tested_conditions": {
+  "tested_ph_range": null,
+  "tested_temp_range": null,
+  "salinity": null,
+  "note": "HRP/漆酶为分泌型糖蛋白酶催化降解/转化原型（酚氧自由基偶联聚合封存），本库无其吸附性能测试条件；performance_data 为空，故测试条件全空。HRP 与 H2O2 在宽 pH 与酚浓度范围内沉淀 97 至 99% 的酚（Klibanov 1983 摘要，定性）。"
+ },
+ "library_tier": "extended",
+ "lifecycle_status": "active",
+ "coverage": "partial",
+ "status": "active",
+ "provenance_summary": {
+  "n_papers": 11,
+  "n_verified": 11,
+  "n_unverified": 0,
+  "note": "n_papers 计 7 篇期刊论文（Klibanov 1983 Science 221:259，DOI 10.1126/science.221.4607.259；Berglund 2002 Nature 417:463，DOI 10.1038/417463a；Gajhede 1997 Nat Struct Biol 4:1032，DOI 10.1038/nsb1297-1032；Piontek 2002 J Biol Chem 277:37663，DOI 10.1074/jbc.M204571200；Bertrand 2002 Biochemistry 41:7325，DOI 10.1021/bi0201318；Cabana 2007 J Biotechnol 132:23，DOI 10.1016/j.jbiotec.2007.07.948；Cabana 2008 Biotechnol Bioeng 102:1582，DOI 10.1002/bit.22198）与 4 个 PDB 沉积（1HCH/1ATJ/1GYC/1KYA，经 RCSB REST 核验）；全部 DOI 经 Crossref 或 RCSB 主引文核验。n_verified 计 from_source 四件套齐全的 causal_chain 要素与边界条数（HRP-001 四要素+2 硬边界=6，HRP-002 四要素+1 硬边界=5）。机制接地限于原型底物酚/二酚/漆酚与酶活性中心结构及 CLEA 功能证据；BPA 反应性捕获封存为设计转译（llm_inferred），无性能数据。quote 取自 PubMed 摘要（PMID 17815191）、PDB 沉积记录（TITLE/COMPND/KEYWDS/HETNAM/LINK）与 Crossref 标题（逐字，≤200 字符），未做全文 PDF 审计。"
+ },
+ "mechanisms": [
+  {
+   "mechanism_id": "HRP-001",
+   "name": "HRP 血红素化合物 I 一电子氧化酚类生成酚氧自由基并经 C-C/C-O 偶联聚合沉淀封存",
+   "description": "HRP C（辣根过氧化物酶 C1A，EC 1.11.1.7）为含铁原卟啉 IX（HEM）的分泌型糖蛋白过氧化物酶；PDB 1HCH（重组 HRP C1A 化合物 I 结构）记录血红素 Fe 与 His170 NE2 轴向配位（chain A，2.14 Å，LINK 记录）并解析催化中间体化合物 I 的高价铁氧键（FE-O，LINK 1.71 Å）。H2O2 激活血红素生成化合物 I 后，对酚类底物执行一电子氧化生成共振稳定酚氧自由基；酚氧自由基经非酶 C-C/C-O 偶联低聚/聚合为不溶性酚类聚合物而沉淀封存（Klibanov 1983：HRP 与 H2O2 处理在宽 pH 与酚浓度范围内沉淀 97 至 99% 的酚，并可酶促共沉淀多氯联苯等其他污染物）",
+   "基本原理": "高价血红素中间体对酚的一电子氧化生成共振稳定酚氧自由基，自由基经 C-C/C-O 偶联生成高分子量不溶性聚合物，把溶解态酚转化为固相偶联聚合物而固定；共沉淀效应使该固定化聚合物可裹挟其他污染物，构成破坏性封存而非可逆吸附",
+   "source": "literature",
+   "ref_doi": "10.1126/science.221.4607.259",
+   "verification": "corroborated",
+   "verification_quote": "Peroxidase-Catalyzed Removal of Phenols from Coal-Conversion Waste Waters",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "酚类为 HRP 催化去除的原型底物类别：Klibanov 1983 Science 摘要直陈以酶学方法去除煤气化废水中的酚（降解/转化类底物，非吸附质）。BPA（双酚 A，二酚）属酚类底物类别的延伸，其底物类别外推标注为 llm_inferred（见边界 BC3）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1126/science.221.4607.259",
+     "locator": "PubMed PMID 17815191 abstract, p.259",
+     "quote": "A novel, enzymatic approach has been developed for the removal of phenols from coal-conversion aqueous effluents.",
+     "scope_match": "Keywords: enzymatic, removal, phenols"
+    },
+    "bio_structure": {
+     "text": "HRP C1A 含一枚铁原卟啉 IX（PDB 1HCH HETNAM: HEM PROTOPORPHYRIN IX CONTAINING FE；COMPND: MOLECULE PEROXIDASE C1A，SYNONYM HORSERADISH PEROXIDASE C1A/HRP C，EC 1.11.1.7），血红素 Fe 与 His170 NE2 轴向配位（chain A，2.14 Å，PDB 1HCH LINK 记录）；重组 HRP C 天然态结构见 PDB 1ATJ（Gajhede 1997，2.15 Å，标题 'Crystal structure of horseradish peroxidase C at 2.15 Å resolution'）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/417463a",
+     "locator": "PDB 1HCH, LINK record NE2 HIS A 170 - FE HEM A 350 (Berglund 2002 Nature 417:463)",
+     "quote": "LINK NE2 HIS A 170 FE HEM A 350 1555 1555 2.14",
+     "scope_match": "Keywords: HIS A 170, HEM A 350"
+    },
+    "interaction": {
+     "text": "H2O2 激活血红素生成催化中间体化合物 I（PDB 1HCH 沉积标题直陈 compound I，并解析高价铁氧键 LINK FE HEM A 350 O O A 500 1.71 Å）；化合物 I 对酚类底物执行一电子氧化生成酚氧自由基，酚氧自由基再经非酶 C-C/C-O 偶联聚合（偶联步骤为非酶自由基化学，机理层通识；总反应以 Klibanov 1983 标题 'Peroxidase-Catalyzed Removal of Phenols' 接地）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/417463a",
+     "locator": "PDB 1HCH, TITLE (Berglund 2002 Nature 417:463, compound I)",
+     "quote": "Structure of horseradish peroxidase C1A compound I",
+     "scope_match": "Keywords: horseradish, peroxidase, compound"
+    },
+    "why_it_works": {
+     "text": "偶联聚合的封存效力来自不溶性酚类聚合物的沉淀与裹挟：Klibanov 1983 摘要直陈该酶促酚类聚合物可与其他污染物（多氯联苯）酶促共沉淀，即偶联聚合网络在固定酚本身的同时裹挟共存的疏水污染物；去除机制为偶联聚合封存而非吸附平衡，亦非完全矿化",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1126/science.221.4607.259",
+     "locator": "PubMed PMID 17815191 abstract, p.259",
+     "quote": "Other pollutants, such as polychlorinated biphenyls, can be enzymatically coprecipitated with the phenols.",
+     "scope_match": "Keywords: pollutants, coprecipitated, phenols"
+    },
+    "boundary_conditions": [
+     {
+      "text": "H2O2 共底物依赖与宽 pH 耐受：过氧化物酶途径需 H2O2 为共底物启动化合物 I；Klibanov 1983 摘要显示 HRP+H2O2 在宽 pH 与酚浓度范围内沉淀 97 至 99% 的酚，即反应对 pH 有宽耐受但共底物供给为必要条件",
+      "parameter": "cosubstrate_requirement",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "corroborated",
+      "gate_level": "hard",
+      "locator": "PubMed PMID 17815191 abstract, p.259",
+      "quote": "Treatment with horseradish peroxidase and hydrogen peroxide precipitates 97 to 99 percent of the phenol in a wide range of pH and phenol concentrations",
+      "scope_match": "Keywords: hydrogen peroxide, phenol, pH",
+      "source_asset": null
+     },
+     {
+      "text": "去除终点为不溶性酚类偶联聚合物沉淀（封存而非可逆解吸，亦非完全矿化）：Klibanov 1983 标题直陈过氧化物酶催化去除酚，摘要以 precipitates 描述终点；偶联聚合物的矿化度与长期稳定性须另行评估",
+      "parameter": "product_form",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "corroborated",
+      "gate_level": "hard",
+      "locator": "Science 221:259, title (DOI 10.1126/science.221.4607.259)",
+      "quote": "Peroxidase-Catalyzed Removal of Phenols from Coal-Conversion Waste Waters",
+      "scope_match": "Keywords: peroxidase, phenols, removal",
+      "source_asset": null
+     },
+     {
+      "text": "BPA 底物类别外推：机制接地于酚类原型底物；BPA（双酚 A，二酚）属酚类类别延伸，但本原型对 BPA 自身反应性捕获封存无直接证据，偶联效率与产物谱须实验验证（定性，无数值阈值）",
+      "parameter": "substrate_class_extrapolation",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "scope_match": null,
+      "source_asset": null
+     },
+     {
+      "text": "偶联加合物雌激素活性须验证：BPA 偶联寡聚物可能保留酚羟基与双酚芳香骨架，自由基偶联不保证消除雌激素活性，加合物雌激素活性是否升高须经生物测定验证（定性，无数值阈值）",
+      "parameter": "adduct_bioactivity",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "scope_match": null,
+      "source_asset": null
+     },
+     {
+      "text": "H2O2 过量失活与氧化剂计量：过量 H2O2 致血红素中心氧化失活（过氧化物酶通性），连续运行需计量/流加供给（定性，无数值阈值）",
+      "parameter": "oxidant_dosing",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "scope_match": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "血红素高氧化电位中心经 H2O2 激活生成化合物 I，对酚类底物一电子氧化生成酚氧自由基，自由基经 C-C/C-O 偶联聚合为不溶性固相聚合物并共沉淀裹挟其他污染物；'氧化中心生成酚氧自由基 + 自由基偶联聚合封存'是可迁移的反应性捕获封存原理，其破坏性固定化区别于可逆吸附",
+    "verification_quote": "Peroxidase-Catalyzed Removal of Phenols from Coal-Conversion Waste Waters"
+   },
+   "source_doi": "10.1126/science.221.4607.259",
+   "source_page": 259,
+   "source_locator": "Science 221:259-261 + PDB 1HCH/1ATJ (DOI 10.1126/science.221.4607.259)",
+   "source_file": "Klibanov 1983 Science（PubMed PMID 17815191 摘要接地）+ RCSB PDB 1HCH/1ATJ 沉积记录（TITLE/COMPND/HETNAM/LINK；未做本地全文 PDF 审计）",
+   "functional_groups": [
+    "血红素铁氧化还原中心（铁原卟啉 IX，His170 轴向配位，化合物 I 高价铁氧中间体）",
+    "酚氧自由基 C-C/C-O 偶联聚合化学"
+   ],
+   "key_structures": [
+    "催化结构"
+   ]
+  },
+  {
+   "mechanism_id": "HRP-002",
+   "name": "漆酶多铜中心以 O2 为电子受体氧化二酚生成酚氧自由基的偶联封存途径",
+   "description": "漆酶（Trametes versicolor 漆酶 2，EC 1.10.3.2，benzenediol:oxygen oxidoreductase）为含四铜的多铜氧化酶：PDB 1GYC（氧化态全铜结构）解析 T1 型 1 铜位（CU A1503，Cys453 SG 2.19 Å、His395 ND1 2.02 Å、His458 ND1 2.04 Å，chain A LINK 记录）与 T2/T3 三核铜簇（CU A1500/1501/1502，8 个 His 配位：His64/His66/His109/His111/His398/His400/His452/His454）。T1 位（蓝铜，特征性 Cys 硫醇配位）从酚类/二酚底物接受一个电子生成酚氧自由基，电子经 Cys-His 途径传至三核铜簇将 O2 还原为水（电子传递细节为机理层通识）；PDB 1KYA 显示小分子底物类似物（2,5-二甲基苯胺）结合于 T1 铜附近（Bertrand 2002 标题：Four-Copper Laccase Complexed with an Arylamine: Insights into Substrate Recognition）。沉积记录 KEYWDS 标注 DIPHENOL OXIDASE 与 LIGNIN DEGRADATION，COMPND 同义名含 URISHIOL OXIDASE（漆酚氧化酶）：漆酚类邻二酚的氧化偶联成膜是漆酶在自然中的自由基偶联封存实例。功能层证据：Cabana 2007 将漆酶交联为 CLEA 并用于去除内分泌干扰物（标题直陈），Cabana 2008 将 CLEA 装于渗滤篮反应器连续运行",
+   "基本原理": "多铜氧化酶以 O2 为终端电子受体（无需 H2O2 共底物），T1 铜单点氧化酚类底物生成酚氧自由基，自由基偶联聚合化学与过氧化物酶途径收敛于同一封存机制；以空气氧为氧化剂使连续操作更简便",
+   "source": "literature",
+   "ref_doi": "10.1074/jbc.M204571200",
+   "verification": "corroborated",
+   "verification_quote": "SYNONYM: BENZENEDIOL:OXYGEN OXIDOREDUCTASE, URISHIOL OXIDASE, DIPHENOL OXIDASE, LACCASE I",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "二酚/酚类为漆酶天然底物类别：PDB 1GYC 沉积 KEYWDS 标注 DIPHENOL OXIDASE（二酚氧化酶）与 LIGNIN DEGRADATION（木质素降解），COMPND 同义名含 URISHIOL OXIDASE（漆酚氧化酶，漆酚为生漆中邻二酚类单体，经漆酶氧化偶联成膜）；酚类底物经单电子氧化生成酚氧自由基是该酶家族的固有反应性",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1074/jbc.M204571200",
+     "locator": "PDB 1GYC, KEYWDS record (Piontek 2002 JBC 277:37663)",
+     "quote": "LACCASE, OXIDOREDUCTASE, DIPHENOL OXIDASE, LIGNIN DEGRADATION",
+     "scope_match": "Keywords: diphenol oxidase, lignin degradation, laccase"
+    },
+    "bio_structure": {
+     "text": "T. versicolor 漆酶为含四铜的多铜氧化酶（PDB 1GYC 沉积标题直陈氧化态含全套铜离子）：T1 型 1 铜（CU A1503）由 Cys453 SG、His395 ND1、His458 ND1 配位（chain A LINK 记录，2.19/2.02/2.04 Å），为底物氧化位；T2/T3 三核铜簇（CU A1500/1501/1502）由 8 个 His 配位，为 O2 还原位",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1074/jbc.M204571200",
+     "locator": "PDB 1GYC, TITLE (RCSB deposition, p.37663)",
+     "quote": "CRYSTAL STRUCTURE DETERMINATION AT ROOM TEMPERATURE OF A LACCASE FROM TRAMETES VERSICOLOR IN ITS OXIDISED FORM CONTAINING A FULL COMPLEMENT OF COPPER IONS",
+     "scope_match": "Keywords: laccase, trametes, copper"
+    },
+    "interaction": {
+     "text": "T1 蓝铜位的特征性 Cys453 硫醇配位（PDB 1GYC LINK 记录 SG CYS A 453-CU A1503，2.19 Å）调制铜中心氧化电位并介导底物单电子氧化：酚类底物在 T1 位被氧化为酚氧自由基（PDB 1KYA 复合物显示小分子底物类似物结合于 T1 铜附近，Bertrand 2002 标题 'Insights into Substrate Recognition'），电子经 Cys-His 途径传递至三核铜簇还原 O2（长程电子传递细节为机理层通识）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1074/jbc.M204571200",
+     "locator": "PDB 1GYC, LINK record SG CYS A 453 - CU A1503 (deposition 2002)",
+     "quote": "LINK SG CYS A 453 CU CU A1503 1555 1555 2.19",
+     "scope_match": "Keywords: CYS A 453, CU A1503"
+    },
+    "why_it_works": {
+     "text": "漆酶酚氧自由基偶联途径可工程化为连续反应性去除：Cabana 2007（J Biotechnol 132:23）制备交联漆酶聚集体（CLEA）并应用于内分泌干扰物的去除（标题直陈 cross-linked laccase aggregates and their application to the elimination of endocrine disrupting chemicals）；1GYC KEYWDS 同时标注 LIGNIN DEGRADATION 与 DIPHENOL OXIDASE，即漆酶天然参与木质素酚型结构单元的自由基转化。连续渗滤篮反应器形态见 Cabana 2008（engineering_constraints 引证）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1016/j.jbiotec.2007.07.948",
+     "locator": "Journal of Biotechnology 132:23, title (DOI 10.1016/j.jbiotec.2007.07.948)",
+     "quote": "Preparation and characterization of cross-linked laccase aggregates and their application to the elimination of endocrine disrupting chemicals",
+     "scope_match": "Keywords: cross-linked, laccase, endocrine"
+    },
+    "boundary_conditions": [
+     {
+      "text": "O2 为终端电子受体：漆酶 EC 1.10.3.2 催化二酚与 O2 的氧化还原（PDB 1GYC COMPND 同义名 BENZENEDIOL:OXYGEN OXIDOREDUCTASE），以空气氧还原为水，无需过氧化物酶途径的 H2O2 共底物，从而规避 H2O2 计量与过量失活问题",
+      "parameter": "electron_acceptor",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "corroborated",
+      "gate_level": "hard",
+      "locator": "PDB 1GYC, COMPND EC 1.10.3.2 (deposition 2002)",
+      "quote": "SYNONYM: BENZENEDIOL:OXYGEN OXIDOREDUCTASE, URISHIOL OXIDASE, DIPHENOL OXIDASE, LACCASE I",
+      "scope_match": "Keywords: benzenediol, oxygen, oxidoreductase",
+      "source_asset": null
+     },
+     {
+      "text": "介体依赖：高氧化电位或位阻酚类底物的漆酶氧化常需小分子氧化还原介体（ABTS、丁香醛、羟基苯并三唑等）relay，介体消耗与浸出是连续运行约束（定性，无数值阈值）",
+      "parameter": "mediator_requirement",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "scope_match": null,
+      "source_asset": null
+     },
+     {
+      "text": "BPA 底物类别外推与加合物活性：机制接地于二酚/漆酚等天然底物；向 BPA 的反应性捕获封存外推属原理层推断，本原型对 BPA 无直接证据，偶联加合物雌激素活性是否升高须验证（定性，无数值阈值）",
+      "parameter": "substrate_class_extrapolation",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "scope_match": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "以 O2 为终端电子受体的多铜氧化中心（T1 蓝铜单点氧化 + 三核铜簇 O2 还原）对酚类/二酚底物单电子氧化生成酚氧自由基，经 C-C/C-O 偶联聚合封存；'空气驱动的多铜酚氧自由基偶联'与 HRP 途径收敛，可迁移为以空气为氧化剂的反应性捕获封存体系",
+    "verification_quote": "SYNONYM: BENZENEDIOL:OXYGEN OXIDOREDUCTASE, URISHIOL OXIDASE, DIPHENOL OXIDASE, LACCASE I"
+   },
+   "source_doi": "10.1074/jbc.M204571200",
+   "source_page": 37663,
+   "source_locator": "J Biol Chem 277:37663-37669 + PDB 1GYC/1KYA (DOI 10.1074/jbc.M204571200)",
+   "source_file": "Piontek 2002 JBC + Bertrand 2002 Biochemistry（DOI 10.1021/bi0201318，标题接地）+ Cabana 2007 J Biotechnol（DOI 10.1016/j.jbiotec.2007.07.948，标题接地）+ RCSB PDB 1GYC/1KYA 沉积记录（TITLE/COMPND/KEYWDS/LINK；未做本地全文 PDF 审计）",
+   "functional_groups": [
+    "多铜氧化还原中心（T1 蓝铜 Cys453/His395/His458 + T2/T3 三核铜簇，O2 为电子受体）",
+    "酚氧自由基 C-C/C-O 偶联聚合（二酚/漆酚氧化酶活性）"
+   ],
+   "key_structures": [
+    "催化结构"
+   ]
+  }
+ ],
+ "performance_data": [],
+ "engineering_constraints": [
+  {
+   "constraint": "H2O2 共底物与过量失活（过氧化物酶途径）",
+   "value": "HRP 催化循环需 H2O2 为共底物启动化合物 I；过量 H2O2 致血红素中心氧化失活（过氧化物酶通性），需计量/流加供给",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（基于 Klibanov 1983 摘要 HRP+H2O2 反应体系与过氧化物酶通性）",
+   "source": "llm_inference",
+   "ref_doi": null
+  },
+  {
+   "constraint": "可溶分泌型糖蛋白形态",
+   "value": "HRP C1A 为分泌型糖蛋白（RCSB 1HCH molecular_weight 34.52 kDa 单体；PDB 1ATJ KEYWDS: GLYCOPROTEIN）；T. versicolor 漆酶单体 RCSB 1GYC molecular_weight 55.99 kDa；材料化需固定化（CLEA/共价锚定）或全细胞部署",
+   "unit": "kDa",
+   "relevance": "high",
+   "explanation": "RCSB 1HCH/1GYC rcsb_entry_info 分子量与 PDB 1ATJ KEYWDS 沉积记录",
+   "source": "literature",
+   "ref_doi": "10.1038/417463a"
+  },
+  {
+   "constraint": "介体依赖与浸出（漆酶途径）",
+   "value": "高氧化电位或位阻酚类底物的漆酶氧化常需 ABTS/丁香醛/羟基苯并三唑等小分子介体 relay；介体消耗、浸出与再生是连续运行约束",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（漆酶介体体系通识，无本库全文审计）",
+   "source": "llm_inference",
+   "ref_doi": null
+  },
+  {
+   "constraint": "CLEA 交联固定化与连续反应器",
+   "value": "漆酶经交联酶聚集体（CLEA）固定化后可装于渗滤篮反应器连续去除内分泌干扰物（Cabana 2008 Biotechnol Bioeng 102:1582，DOI 10.1002/bit.22198；CLEA 制备与内分泌干扰物去除应用见 Cabana 2007 J Biotechnol 132:23，DOI 10.1016/j.jbiotec.2007.07.948）",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "Cabana 2007/2008 Crossref 核验标题",
+   "source": "literature",
+   "ref_doi": "10.1002/bit.22198"
+  },
+  {
+   "constraint": "偶联加合物雌激素活性评估",
+   "value": "BPA 偶联寡聚物可能保留酚羟基与双酚骨架，偶联加合物雌激素活性是否升高须经受体报告基因或酵母雌激素筛等生物测定验证，不可默认无毒化",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（简报诚实性要求；自由基偶联不保证消除雌激素活性）",
+   "source": "llm_inference",
+   "ref_doi": null
+  }
+ ],
+ "narrative": {
+  "entries": [
+   {
+    "source_file": "Klibanov 1983 Science 221:259 (DOI 10.1126/science.221.4607.259, PubMed PMID 17815191) + RCSB PDB 1HCH/1ATJ (Berglund 2002 Nature 417:463, DOI 10.1038/417463a; Gajhede 1997 NSB 4:1032, DOI 10.1038/nsb1297-1032) + RCSB PDB 1GYC/1KYA (Piontek 2002 JBC 277:37663, DOI 10.1074/jbc.M204571200; Bertrand 2002 Biochemistry 41:7325, DOI 10.1021/bi0201318) + Cabana 2007 J Biotechnol 132:23 (DOI 10.1016/j.jbiotec.2007.07.948) / 2008 Biotechnol Bioeng 102:1582 (DOI 10.1002/bit.22198)",
+    "paper_id": "1983-Klibanov-HRP-phenol-removal-prototype",
+    "sections": {
+     "problem_definition": "酚类化合物是煤气化废水与多种工业废水中的典型有毒污染物，也是双酚 A 等内分泌干扰物的结构母核。以可逆吸附处理酚类存在解吸与浓缩问题；自然界过氧化物酶与漆酶在进化中正是以氧化偶联方式转化并固定酚类与木质素单体。将这一氧化偶联封存机制转译为对酚类新兴污染物的反应性捕获，是降解/转化仿生的原理源头。",
+     "biological_solution": "辣根过氧化物酶 C（HRP C1A，EC 1.11.1.7）为含铁原卟啉 IX 的分泌型糖蛋白（PDB 1HCH COMPND/HETNAM 记录；1ATJ KEYWDS: GLYCOPROTEIN），血红素 Fe 与 His170 NE2 轴向配位（PDB 1HCH LINK 记录，2.14 Å），H2O2 激活生成催化中间体化合物 I（PDB 1HCH 沉积标题 'Structure of horseradish peroxidase C1A compound I'，高价铁氧键 LINK 1.71 Å）；化合物 I 对酚类底物一电子氧化生成酚氧自由基，自由基经 C-C/C-O 偶联聚合为不溶性聚合物沉淀。Klibanov 1983 Science 确立该原型：HRP 与 H2O2 在宽 pH 与酚浓度范围内沉淀 97 至 99% 的酚（摘要逐字），并可酶促共沉淀多氯联苯等其他污染物。并列酶源漆酶（T. versicolor 漆酶 2，EC 1.10.3.2）以四铜中心执行同类化学：PDB 1GYC 解析 T1 蓝铜（CU A1503，Cys453 SG 2.19 Å/His395/His458 配位）与 T2/T3 三核铜簇（8 His 配位），以 O2 为终端电子受体（COMPND: BENZENEDIOL:OXYGEN OXIDOREDUCTASE）；沉积记录标注 DIPHENOL OXIDASE、LIGNIN DEGRADATION 与 URISHIOL OXIDASE（漆酚氧化偶联成膜即自然界的酚类自由基偶联封存）。功能工程化证据：Cabana 2007 制备交联漆酶聚集体（CLEA）用于内分泌干扰物去除，Cabana 2008 将其装于渗滤篮反应器连续运行。两条途径收敛于同一封存化学：酚氧自由基偶联聚合，把溶解态酚转化为固相不溶性聚合物，属降解/转化而非吸附。",
+     "key_features": "必须保留：① 高氧化电位氧化还原中心（血红素铁/化合物 I 或多铜 T1 蓝铜）；② 一电子氧化生成酚氧自由基的反应性；③ 酚氧自由基 C-C/C-O 偶联聚合生成不溶性固相产物的封存终点；④ 共底物/电子受体供给（HRP 需 H2O2；漆酶用 O2）；⑤ 固定化形态（CLEA/共价锚定）支撑连续运行。可灵活调整：蛋白骨架（可换酶工程稳性突变体或仿酶金属卟啉/多铜配合物）、介体种类、载体与反应器形式。",
+     "design_mapping": "仿生映射：HRP/漆酶'氧化中心 + 酚氧自由基偶联聚合封存'→ BPA（双酚 A，二酚）的反应性捕获封存：在多孔载体孔壁锚定金属卟啉（血红素仿）或多铜仿氧化中心与可再生介体，将 BPA 氧化为酚氧自由基并偶联聚合或共价接枝于孔壁，实现破坏性固定化。注意：此为设计转译/启发（llm_inferred），非 from_source 事实。机制接地于酚/二酚/漆酚等原型底物与 CLEA 内分泌干扰物去除的功能证据；本原型对 BPA 自身的反应性捕获无直接数据，偶联加合物雌激素活性是否升高须实验验证。",
+     "explainability_anchors": "设计溯源：HRP 化合物 I 酚类一电子氧化与 Klibanov 1983 酚沉淀/共沉淀原型（PDB 1HCH/1ATJ，from_source）+ 漆酶四铜中心二酚氧化与 CLEA 连续去除功能证据（PDB 1GYC/1KYA，Cabana 2007/2008，from_source）→ '氧化中心生成酚氧自由基 + 偶联聚合封存 + 固定化连续运行'可迁移原理 → BPA 二酚反应性捕获封存（llm_inferred 启发，底物类别外推与加合物雌激素活性为明确软边界，须实验验证）。"
+    }
+   }
+  ]
+ },
+ "design_translation": [
+  {
+   "idea": "将 HRP/漆酶的'高氧化电位中心一电子氧化酚类生成酚氧自由基 + C-C/C-O 偶联聚合封存'转译为对 BPA（双酚 A，二酚）的反应性捕获封存体系：路径一为固定化 HRP/漆酶或 CLEA 式交联酶颗粒反应器（HRP 途径计量流加 H2O2，漆酶途径曝气供 O2，介体外加或固定化再生）；路径二为仿生非均相催化材料，在多孔载体孔壁共价锚定金属卟啉（血红素仿，His/咪唑轴向配位仿）或多铜配合物（T1 蓝铜仿，硫醇配位仿）氧化中心，并共固定可再生小分子介体，将 BPA 氧化为酚氧自由基后偶联低聚/聚合，或使自由基与孔壁接枝受体（胺/烯/酚）共价偶联，实现 BPA 的破坏性固定化而非可逆吸附",
+   "specific_functional_group": "金属卟啉/多铜仿氧化还原中心（血红素化合物 I 仿或 T1 蓝铜 Cys 硫醇配位仿）+ 固定化可再生小分子氧化还原介体（酚类/苯胺类仿介体）+ 可选孔壁自由基接枝受体（胺基、烯基或酚基偶联受体）",
+   "material_handle": "金属卟啉或多铜配合物经共价偶联/配位锚定于介孔二氧化硅、共价有机骨架或聚合物孔壁；介体以可聚合单体共聚固定或负载于 CLEA 式交联颗粒；HRP 仿途径以计量泵/连续流供给 H2O2，漆酶仿途径以曝气供 O2；孔壁适度疏水修饰改善双酚类界面接触",
+   "target_interaction": "氧化中心对 BPA 酚羟基的一电子氧化生成酚氧自由基；自由基经 C-C（邻-邻/邻-对）与 C-O 偶联使 BPA 低聚/聚合，并与孔壁接枝受体共价偶联，将 BPA 以固相偶联聚合物形式固定（降解/转化机制，非吸附平衡）",
+   "source_tier": "llm_inference",
+   "evidence_tier": "inspiration（原理层外推：HRP/漆酶机制接地于酚/二酚/漆酚等天然与原型底物；Klibanov 1983 证明 HRP+H2O2 沉淀 97 至 99% 的酚并可共沉淀其他污染物，Cabana 2007/2008 证明漆酶 CLEA 可连续去除内分泌干扰物；但本原型对 BPA 自身反应性捕获封存无直接证据，转译限原理层）",
+   "examples": [],
+   "design_principle": "HRP 化合物 I 与漆酶 T1 蓝铜均可对酚类底物一电子氧化生成酚氧自由基，自由基 C-C/C-O 偶联聚合为不溶性固相聚合物而封存（PDB 1HCH/1GYC，Klibanov 1983）；BPA 为二酚，结构上属酚类底物类别，原理上可外推为孔壁锚定氧化中心 + 介体的反应性捕获封存体系，但偶联效率、产物谱与加合物活性须实验验证",
+   "implementation_example": "金属卟啉或多铜配合物功能化介孔二氧化硅 + 固定化酚类/苯胺类仿介体 + H2O2 连续流或曝气 O2 驱动的 BPA 偶联封存反应器（无实验数据，仅为设计假设）",
+   "constraints": "酚类底物类别向 BPA 二酚的外推仅属原理层，本原型对 BPA 无直接反应性捕获证据；BPA 偶联寡聚物可能保留酚羟基与双酚骨架，加合物雌激素活性是否升高须经生物测定验证；介体浸出与消耗需再生循环；HRP 途径 H2O2 过量致氧化中心失活；偶联聚合与完全矿化之间的选择性须评估；酚氧自由基化学非特异，共存酚类/腐殖酸竞争消耗氧化当量",
+   "failure_modes": "BPA 仅低聚而未接枝孔壁，生成可溶性寡聚物泄漏；偶联加合物保留酚羟基致雌激素活性升高；介体耗尽后氧化 relay 中断；H2O2 过量破坏卟啉/仿酶中心；BPA 仅被载体非特异吸附而未被氧化，退化为可逆吸附；共存腐殖酸等天然酚类竞争使目标物去除选择性下降",
+   "material_realization_examples": []
+  }
+ ],
+ "honesty_ledger": {
+  "facts": [
+   {
+    "type": "mechanism",
+    "index": 0,
+    "name": "HRP 血红素化合物 I 一电子氧化酚类生成酚氧自由基并经 C-C/C-O 偶联聚合沉淀封存",
+    "basis": "from_source_corroborated",
+    "note": "Klibanov 1983 Science（DOI 10.1126/science.221.4607.259，PubMed PMID 17815191 摘要逐字：HRP+H2O2 在宽 pH 范围沉淀 97 至 99% 的酚，并可酶促共沉淀多氯联苯）+ PDB 1HCH（HRP C1A 化合物 I：His170-HEM Fe LINK 2.14 Å、高价铁氧 LINK 1.71 Å、TITLE compound I）+ PDB 1ATJ（HRP C 2.15 Å 天然态）；quote 取自 PubMed 摘要与 PDB 沉积记录（逐字，≤200 字符），未做全文 PDF 审计；酚氧自由基偶联步骤为非酶自由基化学的机理层通识"
+   },
+   {
+    "type": "mechanism",
+    "index": 1,
+    "name": "漆酶多铜中心以 O2 为电子受体氧化二酚生成酚氧自由基的偶联封存途径",
+    "basis": "from_source_corroborated",
+    "note": "PDB 1GYC（T. versicolor 漆酶氧化态全铜：T1 铜 CU A1503 由 Cys453/His395/His458 配位、T2/T3 三核铜簇 8 His 配位；COMPND 记 benzenediol:oxygen oxidoreductase/urushiol oxidase/diphenol oxidase，EC 1.10.3.2；KEYWDS 记 DIPHENOL OXIDASE, LIGNIN DEGRADATION）+ PDB 1KYA（底物类似物复合物，Bertrand 2002 标题接地）+ Cabana 2007 J Biotechnol（CLEA 去除内分泌干扰物，标题接地）；quote 取自 PDB 沉积记录与 Crossref 标题，未做全文 PDF 审计；T1 至三核铜簇的长程电子传递细节为机理层通识"
+   }
+  ],
+  "leads": [],
+  "inferences": [
+   {
+    "type": "design_translation",
+    "index": 0,
+    "idea": "将 HRP/漆酶酚氧自由基偶联封存转译为 BPA 二酚的反应性捕获封存（孔壁锚定金属卟啉/多铜仿氧化中心 + 可再生介体，偶联聚合/接枝固定）",
+    "basis": "llm_inferred",
+    "label": "inspiration",
+    "note": "BPA 为二酚，结构上属酚类底物类别延伸，但本原型对 BPA 自身反应性捕获封存无直接证据；偶联加合物可能保留酚羟基与双酚骨架，雌激素活性是否升高须生物测定验证；转译限原理层，偶联效率、产物谱与选择性须实验验证"
+   }
+  ],
+  "boundary_notes": [
+   "本原型天然/原型机制为酶催化降解/转化（酚氧自由基偶联聚合封存），非可逆吸附机制；机制 from_source 接地限于酚/二酚/漆酚等原型底物、酶活性中心结构与 CLEA 功能证据",
+   "BPA 反应性捕获封存应用为设计转译（llm_inferred / inspiration），非 from_source 事实，不得用作 BPA 的 direct evidence",
+   "无 BPA 去除/降解性能数据（去除率、速率常数等）；严格未从外部污染物知识库搬运任何性能数值",
+   "与库内既有 lignin-peroxidase-white-rot 区分：LiP 为藜芦醇介体 relay 非酚型芳香单元的一电子氧化降解（靶向 DDT/PAH，机制为介体 relay 非特异氧化）；本原型为酚类底物自由基偶联聚合封存（靶向 BPA 二酚，机制为偶联聚合固定化）",
+   "与库内既有 p450bisd-bisphenol-monooxygenase 区分：P450BisD 为单加氧酶氧插入裂解 BPA；本原型为自由基偶联封存而非氧插入裂解",
+   "记忆 DOI 证伪订正记录：10.1126/science.6684743（Crossref 查无）与 10.1126/science.6867713（Crossref 核验为 Goldin-Meadow 1983 Science 他题论文）经证伪剔除，订正为 10.1126/science.221.4607.259；记忆 DOI 10.1016/j.bej.2007.09.024（Crossref resource not found）与 10.1002/bit.21461（核验为无关论文）经证伪剔除，订正为 10.1016/j.jbiotec.2007.07.948 与 10.1002/bit.22198",
+   "边界 BC1（H2O2 共底物与宽 pH）、BC2（偶联聚合物沉淀终点）与漆酶 O2 电子受体边界为 from_source 硬边界；BPA 底物类别外推、加合物雌激素活性验证、H2O2 过量失活、介体依赖为定性 llm_inferred 软边界，不带数值阈值"
+  ],
+  "missing_pdf_items": [
+   "Klibanov 1983 Science 全文 PDF（quote 取自 PubMed PMID 17815191 摘要）",
+   "Berglund 2002 Nature 全文 PDF（quote 取自 PDB 1HCH 沉积 TITLE/LINK）",
+   "Gajhede 1997 Nat Struct Biol 全文 PDF（quote 取自 Crossref 标题）",
+   "Piontek 2002 J Biol Chem 全文 PDF（quote 取自 PDB 1GYC 沉积 TITLE/COMPND/KEYWDS/LINK）",
+   "Bertrand 2002 Biochemistry 全文 PDF（quote 取自 Crossref 标题）",
+   "Cabana 2007 J Biotechnol 与 Cabana 2008 Biotechnol Bioeng 全文 PDF（quote 取自 Crossref 标题）"
+  ],
+  "generated_by": "subagent-bmdl-wave2-hrp-laccase-phenol-radical-coupling-2026-07-22",
+  "note": "诚实优先：机制接地限于酚/二酚/漆酚原型底物与酶活性中心结构及 CLEA 功能证据；BPA 应用全部为 inspiration/外推；偶联加合物雌激素活性不升高标注为待验证软边界；天然机制如实标注为降解/转化"
+ },
+ "boundary_rules": [
+  {
+   "rule": "H2O2 共底物依赖（过氧化物酶途径）：HRP 需 H2O2 启动化合物 I，摘要显示 HRP+H2O2 在宽 pH 与酚浓度范围内沉淀 97 至 99% 的酚",
+   "source_mechanism": "HRP 血红素化合物 I 一电子氧化酚类生成酚氧自由基并经 C-C/C-O 偶联聚合沉淀封存",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "去除终点为不溶性酚类偶联聚合物沉淀（封存而非可逆解吸，亦非完全矿化），并可酶促共沉淀裹挟其他污染物；偶联聚合物矿化度须另行评估",
+   "source_mechanism": "HRP 血红素化合物 I 一电子氧化酚类生成酚氧自由基并经 C-C/C-O 偶联聚合沉淀封存",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "漆酶途径以 O2 为终端电子受体（benzenediol:oxygen oxidoreductase，EC 1.10.3.2），无需 H2O2 共底物，与过氧化物酶途径互补",
+   "source_mechanism": "漆酶多铜中心以 O2 为电子受体氧化二酚生成酚氧自由基的偶联封存途径",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "底物类别外推未证实：向 BPA 二酚的反应性捕获封存外推属原理层推断，本原型对 BPA 无直接证据；偶联加合物雌激素活性是否升高须生物测定验证（定性，无数值阈值）",
+   "source_mechanism": "HRP 血红素化合物 I 一电子氧化酚类生成酚氧自由基并经 C-C/C-O 偶联聚合沉淀封存",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  },
+  {
+   "rule": "H2O2 过量失活与介体浸出/消耗为连续运行约束，氧化剂需计量供给、介体需再生循环（定性，无数值阈值）",
+   "source_mechanism": "漆酶多铜中心以 O2 为电子受体氧化二酚生成酚氧自由基的偶联封存途径",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  }
+ ]
+}

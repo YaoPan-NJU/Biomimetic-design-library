@@ -1049,6 +1049,12 @@
       "weight": 0.7,
       "mechanism_summary": "ConA 以与甘露糖羟基模式几何互补的多点氢键阵列加 Mn/Ca 金属预组织识别环区分单糖立体化学；该'与羟基模式几何互补的多点供体/受体阵列加金属配位预组织'原理可启发对双酚 A 两个酚羟基几何排列的识别（approach-2 类比，酚氧与糖羟基供受体身份类比，非进化靶标）。",
       "design_hint": "在载体表面以金属配位或刚性骨架预组织、间距匹配 BPA 两酚羟基（约 10 Å）的成对氢键供体/受体阵列，孔壁适度疏水；区分 BPA 与单酚/异构双酚（BPF/BPS）的选择性增量须实验验证。"
+     },
+     {
+      "id": "hrp-laccase-phenol-radical-coupling",
+      "weight": 0.7,
+      "mechanism_summary": "HRP/漆酶对酚类底物一电子氧化生成酚氧自由基，经 C-C/C-O 偶联聚合为不溶性固相聚合物而封存（Klibanov 1983 HRP 除酚原型：HRP+H2O2 沉淀 97 至 99% 的酚并可共沉淀其他污染物；漆酶 CLEA 连续去除内分泌干扰物，Cabana 2007/2008）；原理上启发 BPA 二酚的反应性捕获封存，但底物类别向 BPA 的外推限原理层，偶联加合物雌激素活性是否升高须验证。",
+      "design_hint": "取孔壁锚定金属卟啉/多铜仿氧化中心 + 可再生小分子介体 + 自由基接枝受体三要素，以 H2O2（HRP 仿）或 O2（漆酶仿）驱动将 BPA 氧化为酚氧自由基并偶联聚合/接枝于孔壁实现破坏性固定化；反应器形态（CLEA 式交联固定化/连续流）、介体再生与加合物雌激素活性评估均须实验验证。"
      }
     ]
    },
@@ -1632,6 +1638,10 @@
     {
      "id": "lignin-peroxidase-white-rot",
      "weight": 0.6
+    },
+    {
+     "id": "hrp-laccase-phenol-radical-coupling",
+     "weight": 0.6
     }
    ]
   },
@@ -1705,6 +1715,10 @@
     },
     {
      "id": "reductive-dehalogenase-b12-dechlorination",
+     "weight": 0.8
+    },
+    {
+     "id": "hrp-laccase-phenol-radical-coupling",
      "weight": 0.8
     }
    ]
@@ -3511,6 +3525,23 @@
    "organism": {
     "scientific": "Tobacco mosaic virus / Cowpea chlorotic mottle virus（病毒衣壳蛋白）; Sulfolobus acidocaldarius / Deinococcus radiodurans（古菌/细菌 S 层蛋白）",
     "category": "微生物"
+   }
+  },
+  "hrp-laccase-phenol-radical-coupling": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "酶催化降解/转化原型（HRP/漆酶酚氧自由基偶联聚合封存）；本库无吸附性能测试；performance_data 为空。HRP+H2O2 在宽 pH 范围沉淀 97 至 99% 的酚（Klibanov 1983 摘要，定性）；漆酶途径以 O2 为电子受体（PDB 1GYC COMPND，定性）。"
+   },
+   "features": [
+    "催化降解",
+    "活性氧位点"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Armoracia rusticana（辣根；辣根过氧化物酶 C，HRP C，EC 1.11.1.7；并列漆酶 EC 1.10.3.2 源于担子菌 Trametes versicolor）",
+    "category": "植物"
    }
   }
  },
