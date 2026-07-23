@@ -21,8 +21,8 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "Heavy metal ions and dye molecules",
-          "basis": "from_source",
-          "evidence_label": "from_source",
+          "basis": "llm_inferred",
+          "evidence_label": "llm_inferred",
           "source": "10.1007/s10924-021-02312-1",
           "locator": "p.12",
           "quote": "ble coordination/chelation with various heavy metal ions",
@@ -30,8 +30,8 @@
         },
         "bio_structure": {
           "text": "Acetamido (-NHCOCH₃) and hydroxyl (-OH) groups",
-          "basis": "from_source",
-          "evidence_label": "from_source",
+          "basis": "llm_inferred",
+          "evidence_label": "llm_inferred",
           "source": "10.1007/s10924-021-02312-1",
           "locator": "p.12",
           "quote": "The amine and hydroxyl groups in chitosan molecules ena-",
@@ -39,8 +39,8 @@
         },
         "interaction": {
           "text": "Coordination with acetamido/amino groups on chitin backbone",
-          "basis": "from_source",
-          "evidence_label": "from_source",
+          "basis": "llm_inferred",
+          "evidence_label": "llm_inferred",
           "source": "10.1007/s10924-021-02312-1",
           "locator": "p.12",
           "quote": "non-protonated amino groups of chitosan allow formation",
@@ -48,9 +48,9 @@
         },
         "why_it_works": {
           "text": "Adsorption capacity varies by metal and chitin source",
-          "basis": "from_source",
+          "basis": "llm_inferred",
           "source": "10.1007/s10924-021-02312-1",
-          "evidence_label": "from_source",
+          "evidence_label": "llm_inferred",
           "locator": "p.12",
           "quote": "improve its adsorption capacity of heavy metal ion in water",
           "scope_match": "Keywords: capacity, metal, adsorption, chitin"
@@ -130,7 +130,7 @@
     "verified_performance_data": 0,
     "missing_pdf_items": 1,
     "knowledge_gaps": [
-      "Need primary research papers with quantitative performance data",
+      "[QC 2026-07-23] 现引 10.1007/s10924-021-02312-1 为泛几丁质/壳聚糖膜综述（quote 实为 chitosan，非昆虫专属，仅作 background）；昆虫外骨骼几丁质吸附一手源稀缺（多为虾蟹壳，与 chitosan/lobster-exoskeleton 原型重叠），需确认是否冗余；检索：black soldier fly larvae chitin adsorption / insect cuticle chitin biosorption Pb Cd FTIR",
       "Insect-specific chitin extraction optimization",
       "Comparison with crustacean-derived chitin"
     ]

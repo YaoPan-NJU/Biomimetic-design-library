@@ -21,8 +21,8 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "Oil and water-based pollutants",
-          "basis": "from_source",
-          "evidence_label": "from_source",
+          "basis": "llm_inferred",
+          "evidence_label": "llm_inferred",
           "source": "10.1016/j.scitotenv.2021.152280.",
           "locator": "p.19",
           "quote": "of water pollutants: a review [J], Environ",
@@ -30,8 +30,8 @@
         },
         "bio_structure": {
           "text": "Epicuticular wax crystals (long-chain alkanes, esters, fatty acids)",
-          "basis": "from_source",
-          "evidence_label": "from_source",
+          "basis": "llm_inferred",
+          "evidence_label": "llm_inferred",
           "source": "10.3390/jmse10040534",
           "locator": "p.16",
           "quote": "Silane compounds with short- and long-alkyl chains were",
@@ -39,8 +39,8 @@
         },
         "interaction": {
           "text": "Superhydrophobicity from hierarchical micro/nano wax crystal structure",
-          "basis": "from_source",
-          "evidence_label": "from_source",
+          "basis": "llm_inferred",
+          "evidence_label": "llm_inferred",
           "source": "10.3390/jmse10040534",
           "locator": "p.16",
           "quote": "of which was coated with hierarchical micro/nanostructures",
@@ -48,9 +48,9 @@
         },
         "why_it_works": {
           "text": "WCA >150°, oil-water separation efficiency >95%",
-          "basis": "from_source",
+          "basis": "llm_inferred",
           "source": "10.3390/jmse10040534",
-          "evidence_label": "from_source",
+          "evidence_label": "llm_inferred",
           "locator": "p.16",
           "quote": "this type of mesh, a separation efﬁciency >99% was achieved for kerosene–water mixtures",
           "scope_match": "Keywords: water, separation"
@@ -59,8 +59,8 @@
           {
             "text": "Superhydrophobic surface required",
             "parameter": "wettability",
-            "basis": "corroborated",
-            "verification": "mechanism_context",
+            "basis": "llm_inferred",
+            "verification": "needs_review",
             "gate_level": "soft",
             "condition": {
               "operator": "qualitative",
@@ -131,7 +131,7 @@
     "verified_performance_data": 0,
     "missing_pdf_items": 1,
     "knowledge_gaps": [
-      "Need primary research papers with quantitative performance data",
+      "[QC 2026-07-23] 现引 10.3390/jmse10040534（通用材料综述）与 10.1016/j.scitotenv.2021.152280.（DOI 尾部多余句点、quote 实为参考文献片段）范围均不符，仅作 background；待补一手源并提取全文 quote+页码以升 from_source：Koch & Barthlott 2009 (10.1098/rsta.2009.0022, 植物蜡质超疏水权威源)",
       "Wax composition and structure optimization",
       "Durability under repeated use"
     ]

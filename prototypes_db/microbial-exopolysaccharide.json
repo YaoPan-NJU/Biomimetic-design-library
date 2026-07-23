@@ -21,8 +21,8 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "Heavy metal ions and cationic dyes",
-          "basis": "from_source",
-          "evidence_label": "from_source",
+          "basis": "llm_inferred",
+          "evidence_label": "llm_inferred",
           "source": "10.1016/j.jwpe.2022.102884",
           "locator": "p.3",
           "quote": "viable for cationic metal attachment [20]",
@@ -30,8 +30,8 @@
         },
         "bio_structure": {
           "text": "Carboxyl (-COOH), hydroxyl (-OH), sulfate (-OSO₃H) groups",
-          "basis": "from_source",
-          "evidence_label": "from_source",
+          "basis": "llm_inferred",
+          "evidence_label": "llm_inferred",
           "source": "10.1016/j.jwpe.2022.102884",
           "locator": "p.3",
           "quote": "protons convert phosphate, carboxyl, and sulfate groups into neutral,",
@@ -39,8 +39,8 @@
         },
         "interaction": {
           "text": "Coordination with carboxyl, hydroxyl, sulfate groups on EPS",
-          "basis": "from_source",
-          "evidence_label": "from_source",
+          "basis": "llm_inferred",
+          "evidence_label": "llm_inferred",
           "source": "10.1016/j.jwpe.2022.102884",
           "locator": "p.3",
           "quote": "and hydroxyl-carboxyl groups interact in coordination with heavy metal",
@@ -48,9 +48,9 @@
         },
         "why_it_works": {
           "text": "EPS can bind significant amounts of heavy metals",
-          "basis": "from_source",
+          "basis": "llm_inferred",
           "source": "10.1016/j.jwpe.2022.102884",
-          "evidence_label": "from_source",
+          "evidence_label": "llm_inferred",
           "locator": "p.3",
           "quote": "Recent research outcomes on bacterial biosorption of heavy metals",
           "scope_match": "Keywords: heavy, significant, metals, bind"
@@ -124,7 +124,7 @@
     "verified_performance_data": 0,
     "missing_pdf_items": 1,
     "knowledge_gaps": [
-      "Need primary research papers with quantitative performance data",
+      "[QC 2026-07-23] 现引 10.1016/j.jwpe.2022.102884 为细菌生物修复综述（复用、范围偏，仅作 background）；待补一手源并提取全文 quote+页码以升 from_source：Ciempiel 2025 (10.1038/s41598-025-94372-9, EPS Pb 生物吸附) 与 Qu 2022 (Environ Pollut, DOI 待核实)",
       "EPS-specific adsorption capacity comparison",
       "Production cost analysis"
     ]

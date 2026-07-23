@@ -21,8 +21,8 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "Heavy metal ions (Pb²⁺, Cu²⁺, Cd²⁺, Zn²⁺, Cr³⁺)",
-          "basis": "from_source",
-          "evidence_label": "from_source",
+          "basis": "llm_inferred",
+          "evidence_label": "llm_inferred",
           "source": "10.1016/j.jwpe.2022.102884",
           "locator": "p.3",
           "quote": "In ion exchange mechanism, metal cations bind to a vacant site,",
@@ -30,8 +30,8 @@
         },
         "bio_structure": {
           "text": "Amino (-NH₂), carboxyl (-COOH), hydroxyl (-OH), phosphate groups on fungal cell wall",
-          "basis": "from_source",
-          "evidence_label": "from_source",
+          "basis": "llm_inferred",
+          "evidence_label": "llm_inferred",
           "source": "10.1016/j.jwpe.2022.102884",
           "locator": "p.3",
           "quote": "these groups are present on bacterial cell wall",
@@ -39,8 +39,8 @@
         },
         "interaction": {
           "text": "Coordination and electrostatic interaction with cell wall functional groups",
-          "basis": "from_source",
-          "evidence_label": "from_source",
+          "basis": "llm_inferred",
+          "evidence_label": "llm_inferred",
           "source": "10.1016/j.jwpe.2022.102884",
           "locator": "p.3",
           "quote": "these groups are present on bacterial cell wall",
@@ -48,9 +48,9 @@
         },
         "why_it_works": {
           "text": "Biosorption capacity varies by species and metal: typically 10-200 mg/g",
-          "basis": "from_source",
+          "basis": "llm_inferred",
           "source": "10.1016/j.jwpe.2022.102884",
-          "evidence_label": "from_source",
+          "evidence_label": "llm_inferred",
           "locator": "p.3",
           "quote": "Recent research outcomes on bacterial biosorption of heavy metals",
           "scope_match": "Keywords: biosorption, capacity, metal, species"
@@ -134,7 +134,7 @@
     "verified_performance_data": 0,
     "missing_pdf_items": 1,
     "knowledge_gaps": [
-      "Need primary research papers with quantitative performance data",
+      "[QC 2026-07-23] 现引 10.1016/j.jwpe.2022.102884 为细菌生物修复综述（范围不符，quote 实为 bacterial cell wall，仅作 background）；待补一手源并提取全文 quote+页码以升 from_source：Baik 2002 (10.1016/S0960-8524(01)00148-1) 与 Kapoor 1999 (10.1016/S0960-8524(98)00192-8, A. niger 专属)",
       "Species-specific biosorption capacity comparison",
       "Regeneration and reuse cycles data"
     ]

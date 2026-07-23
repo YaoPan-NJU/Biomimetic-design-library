@@ -21,8 +21,8 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "Heavy metal ions (Hg²⁺, Ag⁺, Pb²⁺, Cu²⁺)",
-          "basis": "from_source",
-          "evidence_label": "from_source",
+          "basis": "llm_inferred",
+          "evidence_label": "llm_inferred",
           "source": "10.1007/s10853-026-12899-2",
           "locator": "p.12",
           "quote": "capture metal ions and form metal–ligand complexes",
@@ -30,8 +30,8 @@
         },
         "bio_structure": {
           "text": "Cysteine thiol groups, amino groups, carboxyl groups",
-          "basis": "from_source",
-          "evidence_label": "from_source",
+          "basis": "llm_inferred",
+          "evidence_label": "llm_inferred",
           "source": "10.1007/s10853-026-12899-2",
           "locator": "p.12",
           "quote": "Ligand groups such as amines(–NH2), thiols (–SH),",
@@ -39,8 +39,8 @@
         },
         "interaction": {
           "text": "Coordination with thiol (-SH) and amino (-NH₂) groups on keratin",
-          "basis": "from_source",
-          "evidence_label": "from_source",
+          "basis": "llm_inferred",
+          "evidence_label": "llm_inferred",
           "source": "10.1007/s10853-026-12899-2",
           "locator": "p.12",
           "quote": "Ligand groups such as amines(–NH2), thiols (–SH),",
@@ -48,9 +48,9 @@
         },
         "why_it_works": {
           "text": "High affinity for soft heavy metals due to thiol groups",
-          "basis": "from_source",
+          "basis": "llm_inferred",
           "source": "10.1007/s10853-026-12899-2",
-          "evidence_label": "from_source",
+          "evidence_label": "llm_inferred",
           "locator": "p.12",
           "quote": "agents for their affinity towards heavy metals:",
           "scope_match": "Keywords: heavy, groups, metals, soft, high"
@@ -128,7 +128,7 @@
     "verified_performance_data": 0,
     "missing_pdf_items": 1,
     "knowledge_gaps": [
-      "Need primary research papers with quantitative performance data",
+      "[QC 2026-07-23] 现引 10.1007/s10853-026-12899-2 为通用膜功能化综述（范围不符，仅作 background）；待补原型专属一手源并提取全文 quote+页码以升 from_source：Zhang 2018 (10.1177/0040517518764008, Valorization of keratin biofibers for removing heavy metals, Textile Research Journal)",
       "Keratin extraction method optimization",
       "Comparison with other bio-adsorbents"
     ]
