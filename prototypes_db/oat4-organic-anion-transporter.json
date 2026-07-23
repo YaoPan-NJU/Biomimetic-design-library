@@ -465,7 +465,13 @@
     "note": "2025-06-18 释放；COMPND/SOURCE 确认 SOLUTE CARRIER FAMILY 22 MEMBER 11（SLC22A11）、Homo sapiens；HETNAM ZWY 即 DHEAS（17-氧代雄甾-5-烯-3β-基硫酸氢酯）；引文标注 To be published，残基级功能解释未同行评审"
    }
   ],
-  "leads": [
+   "leads": [
+   {
+    "type": "pollutant_transport_literature",
+    "doi": "10.1007/s00204-022-03428-6",
+    "verification": "corroborated",
+    "note": "Louisse et al. 2023 Archives of Toxicology 97:685-696（PMID 36436016）：OAT4 转染 HEK 细胞直接测定 7 种 PFAS；除 PFBS 外，PFHpA、PFOA、PFNA、PFDA、PFHxS 与 PFOS 均显示清晰的 OAT4 介导摄取，并有对接与分子动力学支持。PubMed 摘要已核验；全文 PDF 尚待页码级审计。该来源可作为污染物-OAT4 直接转运证据，但不能作为污染物吸附材料的 direct evidence。"
+   },
    {
     "type": "pollutant_transport_literature",
     "doi": "10.1093/toxsci/kfq219",
@@ -508,12 +514,13 @@
   "boundary_notes": [
    "本原型天然底物为硫酸结合型甾体有机阴离子（E1S/DHEAS）与多样有机阴离子（PAH、赭曲霉毒素 A、NSAIDs、胆汁酸盐等）；机制 from_source 接地限于这些天然/已知底物与转运行为",
    "PFOA/PFBS 链长窗口识别为设计转译（llm_inferred/inspiration），非 from_source 事实，不得用作污染物去除的 direct evidence",
-   "PFAS 经 OAT4 转运的既有文献（Zhao 2010、Myllynen 2015、Li 2021、Arch Toxicol 2026）仅作 leads 记录，全部 DOI 经 Crossref 核验，未纳入因果链接地要素",
+   "PFAS 经 OAT4 转运的既有文献中，Louisse 2023（DOI 10.1007/s00204-022-03428-6）已由 PubMed 摘要核验为 OAT4 转染细胞的直接摄取实验；Zhao 2010、Myllynen 2015、Li 2021、Arch Toxicol 2026 其余来源仍仅作 leads 记录。所有这些来源均不得被等同为污染物吸附材料的 direct evidence",
    "无 PFAS 吸附性能数据（qmax 等）；performance_data 为空，严格未从外部污染物知识库搬运任何性能数值",
    "接地中经 Crossref 证伪并剔除两条错误记忆 DOI：10.1124/mol.59.5.1277 实为 OAT3 论文（Cha 2001 Mol Pharmacol 59:1277，与 OAT4 无关）；10.1074/jbc.275.1.450 不存在（Crossref Resource not found）。正确 OAT4 鉴定文献 DOI 为 10.1074/jbc.275.6.4507（JBC 275:4507-4512）",
    "所有软边界为定性 llm_inferred，无数值阈值，gate_level=soft；9U5A/9M9Y 残基级功能归属待伴随文献发表"
   ],
   "missing_pdf_items": [
+   "Louisse 2023 Archives of Toxicology 97:685-696 全文 PDF（DOI 10.1007/s00204-022-03428-6；PubMed 摘要已核验）",
    "Cha 2000 JBC 275:4507-4512 全文 PDF（quote 取自 PubMed 摘要 PMID 10660625）",
    "Ekaratanawong 2004 J Pharmacol Sci 94:297-304 全文 PDF（quote 取自 PubMed 摘要 PMID 15037815）",
    "Dou 2023 Nat Struct Mol Biol 30:1794-1805 全文 PDF（quote 取自 PubMed 摘要 PMID 37845412 与 PMC11406556 全文 XML）",

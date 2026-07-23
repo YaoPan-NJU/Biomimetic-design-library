@@ -25,7 +25,7 @@ evidence_level: low
 
 **问题定义**：长链脂肪酸不溶于血浆水相，须由载体蛋白可逆结合并转运。人血清白蛋白（HSA，约 66-69 kDa）是血浆丰度最高的蛋白，承担脂肪酸从摄取组织向代谢组织的转运，是脂肪酸体液分布的主要决定蛋白。分子层面的问题是：单个白蛋白分子如何在水相中同时可逆结合多个两亲性脂肪酸分子。
 
-**生物策略**：HSA 以分布于三个结构域（I、II、III，各含 A/B 亚域）的 7 个主要脂肪酸位点（FA1-FA7）结合脂肪酸，位点分布不对称（Curry 1998，DOI 10.1038/1869，PDB 1BKE）。各位点以 Arg/Lys/Tyr 型阳离子与氢键给体锚定脂肪酸羧酸头基：如 FA2 位点（亚域 IIIA，Sudlow 位点 II）的 Arg410 与 Tyr411、FA1 位点的 Lys199 与 Arg218（PDB 1E7G SITE 记录）；侧壁 Leu/Phe 等疏水残基容纳烃链。Bhattacharya 2000（DOI 10.1006/jmbi.2000.4158）测定 HSA 与癸酸至硬脂酸系列复合物（PDB 1E7E-1E7I，C10-C18），显示中长链脂肪酸以共同模式结合、头基锚定保守。PDB 1BKE 中 5 个肉豆蔻酸分子同时占据不同位点，1E7G 中达 8 个，体现多位点高容量转运。PFAS 维度：全氟辛烷磺酸（PFOS）以脂肪酸类似物形式占据 HSA 的 FA2 位点（Luo 2012，DOI 10.1021/tx300112p，PDB 4E99：配体 P8S 即全氟辛烷磺酸位于 A601/A602，SITE AC1 含 Arg410/Tyr411，与肉豆蔻酸位点 AC4 共享 Leu387/Arg410/Tyr411/Phe488/Ser489），即 PFAS 结合是脂肪酸模拟的碰巧占据，并非独立进化的 PFAS 识别位点。
+**生物策略**：HSA 以分布于三个结构域（I、II、III，各含 A/B 亚域）的 7 个主要脂肪酸位点（FA1-FA7）结合脂肪酸，位点分布不对称（Curry 1998，DOI 10.1038/1869，PDB 1BKE）。各位点以 Arg/Lys/Tyr 型阳离子与氢键给体锚定脂肪酸羧酸头基：如 FA2 位点（亚域 IIIA，Sudlow 位点 II）的 Arg410 与 Tyr411、FA1 位点的 Lys199 与 Arg218（PDB 1E7G SITE 记录）；侧壁 Leu/Phe 等疏水残基容纳烃链。Bhattacharya 2000（DOI 10.1006/jmbi.2000.4158）测定 HSA 与癸酸至硬脂酸系列复合物（PDB 1E7E-1E7I，C10-C18），显示中长链脂肪酸以共同模式结合、头基锚定保守。PDB 1BKE 中 5 个肉豆蔻酸分子同时占据不同位点，1E7G 中达 8 个，体现多位点高容量转运。PFAS 维度：PFOS 结构（Luo 2012，DOI 10.1021/tx300112p，PDB 4E99）显示脂肪酸位点占据；Maso 2021（DOI 10.1002/pro.4036，Protein Science 30:830-841）进一步在 2.10 Å 晶体结构中定位 4 个 PFOA 与 4 个脂肪酸位点，并用溶液实验确认 4:1 PFOA:HSA 化学计量、一个高亲和位点和三个低亲和位点。该论文第 832-834 页显示 PFOA 的羧酸头基由 Ser489、Asn391、Arg410、Tyr411 等极性作用锚定，氟化尾链进入疏水通道；其结合模式总体类似中链脂肪酸。上述证据支持 HSA-PFAS 结合，但不证明对 PFAS 的进化特异性。
 
 ## 2. 吸附机制详解
 
@@ -58,11 +58,11 @@ evidence_level: low
 
 ## 6. 相关原型
 
+- asbt-bile-acid-elevator-transporter
+- bile-salt-mixed-micelle-solubilization
 - cactus-spine
-- errg-bpa-endocrine-receptor
-- fabp4-fatty-acid-pfas-binding
-- lipocalin-hydrophobic-calyx
-- lotus-leaf
+- chlorophenol-hydroxylase-regioselective
+- ddt-dehydrochlorinase-gst
 
 ## 参考文献
 

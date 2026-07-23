@@ -15,7 +15,7 @@ applicability:
   temp_range: null
   salinity: null
 evidence_level: low
-# provenance: 5 papers, 3 verified, 0 unverified
+# provenance: 5 papers, 0 verified, 5 unverified
 # coverage: partial
 # status: active
 ---
@@ -31,13 +31,13 @@ evidence_level: low
 
 ### 机制1：羧酸头基定点识别 + 有限低极性链段容纳对长链全氟羧酸的结合
 
-**描述**：人肝 FABP 以大疏水腔容纳长链全氟羧酸（PFOA/PFNA）的全氟碳链，并以极性残基（Asn111、Arg122 等）与羧酸头基作用；结合呈链长依赖，短链亲和显著弱于长链。
-**关键官能团**：['极性头基锚定残基（Asn/Arg 类）', '疏水大腔（容纳低极性链段）']
+**描述**：人肝 FABP 以其大疏水腔容纳长链全氟羧酸（PFOA/PFNA）的全氟碳链，并以极性残基（Asn111、Arg122 等）与羧酸头基作用；结合呈链长依赖，短链亲和显著弱于长链。此为'羧酸头基定向识别 + 有限低极性链段容纳'的分子识别范式。
+**关键官能团**：['极性头基锚定残基（Asn/Arg 类，识别羧酸头基）', '疏水大腔（容纳低极性链段）']
 **来源**：DOI 10.1007/s00204-014-1391-7
 
 ### 机制2：portal/gap 区骨架动态（动态对应边界，勿过度主张）
 
-**描述**：hL-FABP 的 portal/gap 区存在骨架运动（Cai 2012，PDB 2LKK）；但 NMR 研究指出其本征慢（毫秒）动力学不太可能是配体进入所需的关键构象重排（Long & Yang），故不作'目标诱导门控'的动态硬对应主张。
+**描述**：hL-FABP 的 portal/gap 区存在骨架运动（Cai 2012）；但 NMR 研究指出其本征慢（毫秒）动力学不太可能是配体进入所需的关键构象重排（Long & Yang），故本原型不作'目标诱导门控'的动态硬对应主张。
 **关键官能团**：['portal/gap 柔性区（动态边界，非承重）']
 **来源**：DOI 10.1016/j.bpj.2012.04.039
 
@@ -47,27 +47,19 @@ evidence_level: low
 
 ## 4. 已报道性能数据
 
-[待补充]（hL-FABP 为分子识别蛋白原型，本库无其吸附剂性能数据；蛋白-配体亲和力非吸附剂性能）
+[待补充]
 
 ## 5. 适用场景
 
 **约束条件**：
-- 可溶蛋白形态：约 14 kDa 胞内可溶结合蛋白，识别基序需以非蛋白方式抽象/移植于固体载体
-- 双配体大腔：结合腔异常大、可同时容纳两个配体，直接照搬腔体几何不利于单一 PFOA 高选择性
-- 体内归因禁区：FABP 敲除不改变 PFOS 体内组织分布（Modaresi 2025），仅用于体外几何/化学识别原则
+- 可溶蛋白形态: hL-FABP 为胞内可溶结合蛋白（约 14 kDa），其识别基序需以非蛋白方式抽象/移植于固体载体方可用作吸附 None
+- 双配体大腔: hL-FABP 结合腔异常大、可同时容纳两个配体，直接照搬腔体几何不利于单一 PFOA 的高选择性识别 None
+- 体内归因禁区: FABP 敲除不改变 PFOS 体内组织分布（Modaresi 2025），本原型仅用于体外几何/化学识别原则，不得主张体内富集因果 None
 
 ## 6. 相关原型
 
-- fabp4-fatty-acid-pfas-binding
-- hsa-fatty-acid-pfas-binding
-- lipocalin-hydrophobic-calyx
+[待补充]
 
 ## 参考文献
 
-- Sheng 等，Interaction of perfluoroalkyl acids with human liver fatty acid-binding protein，Arch Toxicol 2016，DOI 10.1007/s00204-014-1391-7
-- Cai 等，Solution Structure and Backbone Dynamics of Human Liver Fatty Acid Binding Protein，Biophys J 2012，DOI 10.1016/j.bpj.2012.04.039（PDB 2LKK）
-- Zhang, Ren, Guo，Structure-Based Investigation on the Interaction of Perfluorinated Compounds with hL-FABP，ES&T 2013，DOI 10.1021/es4026722
-- Cheng & Ng（氟代亲和归疏水/体积），Protein Sci 2021，DOI 10.1002/pro.4036
-- Modaresi 等（FABP 敲除不改变 PFOS 体内分布），Chem Res Toxicol 2025，DOI 10.1021/acs.chemrestox.5c00199
-
-> 诚实边界：机制接地为摘要级核验，未做本地全文 PDF 审计；非蛋白材料转译为 inspiration/llm_inferred；此为广度优先入库条目，待后续审计补全文与残基级定位后可升 tier。
+[待补充]

@@ -25,7 +25,7 @@
   "n_papers": 5,
   "n_verified": 10,
   "n_unverified": 0,
-  "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与硬边界条数（HSA-001 四要素+1 硬边界=5，HSA-002 四要素+1 硬边界=5）。机制接地限于 HSA 天然底物长链脂肪酸（C10-C18）的结合位点与头基锚模式（PDB 1BKE/1E7G/1E7E-1E7I，Curry 1998，Bhattacharya 2000）；PFAS 对 HSA 位点的结合（PDB 4E99，Luo 2012）定性为脂肪酸类似物的碰巧占据，PFOA 吸附转译为警示性 inspiration，无性能数据。quote 逐字取自 RCSB PDB 沉积记录（TITLE/HETNAM/SITE）与 Crossref 题录，未做全文 PDF 审计。"
+  "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与硬边界条数（HSA-001 四要素+1 硬边界=5，HSA-002 四要素+1 硬边界=5）。机制接地限于 HSA 天然底物长链脂肪酸（C10-C18）的结合位点与头基锚模式（PDB 1BKE/1E7G/1E7E-1E7I，Curry 1998，Bhattacharya 2000）。PFAS 结合现有两组直接结构来源：PFOS-HSA（PDB 4E99，DOI 10.1021/tx300112p）和 PFOA-HSA（DOI 10.1002/pro.4036；论文 PDF 报告 2.10 Å 复合物、4 个 PFOA 位点及 4:1 化学计量）。PFOA 吸附转译仍为警示性 inspiration，无吸附性能数据。Maso 2021 PDF 已做页码级核验；其正文对 7AAE/7AAI 的指派与当前 RCSB 条目标题和分辨率互换，词条暂以 DOI 与页码事实为主并显式记录该冲突。"
  },
  "mechanisms": [
   {
@@ -247,14 +247,14 @@
  "narrative": {
   "entries": [
    {
-    "source_file": "PDB 1BKE / 1E7G / 1E7E-1E7I / 4E99（RCSB 沉积数据）+ Curry 1998 Nat Struct Biol 5:827-835（DOI 10.1038/1869）+ Bhattacharya 2000 J Mol Biol 303:721-732（DOI 10.1006/jmbi.2000.4158）+ Luo 2012 Chem Res Toxicol 25:990-992（DOI 10.1021/tx300112p）",
+    "source_file": "PDB 1BKE / 1E7G / 1E7E-1E7I / 4E99（RCSB 沉积数据）+ Curry 1998 Nat Struct Biol 5:827-835（DOI 10.1038/1869）+ Bhattacharya 2000 J Mol Biol 303:721-732（DOI 10.1006/jmbi.2000.4158）+ Luo 2012 Chem Res Toxicol 25:990-992（DOI 10.1021/tx300112p）+ Maso 2021 Protein Science 30:830-841（DOI 10.1002/pro.4036，全文 PDF）",
     "paper_id": "1998-Curry-HSA-fatty-acid-asymmetric-sites",
     "sections": {
      "problem_definition": "长链脂肪酸不溶于血浆水相，须由载体蛋白可逆结合并转运。人血清白蛋白（HSA，约 66-69 kDa）是血浆丰度最高的蛋白，承担脂肪酸从摄取组织向代谢组织的转运，是脂肪酸体液分布的主要决定蛋白。分子层面的问题是：单个白蛋白分子如何在水相中同时可逆结合多个两亲性脂肪酸分子。",
-     "biological_solution": "HSA 以分布于三个结构域（I、II、III，各含 A/B 亚域）的 7 个主要脂肪酸位点（FA1-FA7）结合脂肪酸，位点分布不对称（Curry 1998，DOI 10.1038/1869，PDB 1BKE）。各位点以 Arg/Lys/Tyr 型阳离子与氢键给体锚定脂肪酸羧酸头基：如 FA2 位点（亚域 IIIA，Sudlow 位点 II）的 Arg410 与 Tyr411、FA1 位点的 Lys199 与 Arg218（PDB 1E7G SITE 记录）；侧壁 Leu/Phe 等疏水残基容纳烃链。Bhattacharya 2000（DOI 10.1006/jmbi.2000.4158）测定 HSA 与癸酸至硬脂酸系列复合物（PDB 1E7E-1E7I，C10-C18），显示中长链脂肪酸以共同模式结合、头基锚定保守。PDB 1BKE 中 5 个肉豆蔻酸分子同时占据不同位点，1E7G 中达 8 个，体现多位点高容量转运。PFAS 维度：全氟辛烷磺酸（PFOS）以脂肪酸类似物形式占据 HSA 的 FA2 位点（Luo 2012，DOI 10.1021/tx300112p，PDB 4E99：配体 P8S 即全氟辛烷磺酸位于 A601/A602，SITE AC1 含 Arg410/Tyr411，与肉豆蔻酸位点 AC4 共享 Leu387/Arg410/Tyr411/Phe488/Ser489），即 PFAS 结合是脂肪酸模拟的碰巧占据，并非独立进化的 PFAS 识别位点。",
+     "biological_solution": "HSA 以分布于三个结构域（I、II、III，各含 A/B 亚域）的 7 个主要脂肪酸位点（FA1-FA7）结合脂肪酸，位点分布不对称（Curry 1998，DOI 10.1038/1869，PDB 1BKE）。各位点以 Arg/Lys/Tyr 型阳离子与氢键给体锚定脂肪酸羧酸头基：如 FA2 位点（亚域 IIIA，Sudlow 位点 II）的 Arg410 与 Tyr411、FA1 位点的 Lys199 与 Arg218（PDB 1E7G SITE 记录）；侧壁 Leu/Phe 等疏水残基容纳烃链。Bhattacharya 2000（DOI 10.1006/jmbi.2000.4158）测定 HSA 与癸酸至硬脂酸系列复合物（PDB 1E7E-1E7I，C10-C18），显示中长链脂肪酸以共同模式结合、头基锚定保守。PDB 1BKE 中 5 个肉豆蔻酸分子同时占据不同位点，1E7G 中达 8 个，体现多位点高容量转运。PFAS 维度：PFOS 结构（Luo 2012，DOI 10.1021/tx300112p，PDB 4E99）显示脂肪酸位点占据；Maso 2021（DOI 10.1002/pro.4036，Protein Science 30:830-841）进一步在 2.10 Å 晶体结构中定位 4 个 PFOA 与 4 个脂肪酸位点，并用溶液实验确认 4:1 PFOA:HSA 化学计量、一个高亲和位点和三个低亲和位点。该论文第 832-834 页显示 PFOA 的羧酸头基由 Ser489、Asn391、Arg410、Tyr411 等极性作用锚定，氟化尾链进入疏水通道；其结合模式总体类似中链脂肪酸。上述证据支持 HSA-PFAS 结合，但不证明对 PFAS 的进化特异性。",
      "key_features": "必须保留：① Arg/Lys/Tyr 型阳离子与氢键给体对羧酸头基的方向性锚定；② 容纳长烃链的疏水侧壁（Leu/Phe/Met 型）；③ 多位点、可逆、水相容的结合架构。须警惕：该化学对一切羧酸型两亲阴离子广谱，不区分脂肪酸与 PFAS；HSA 本身为 66-69 kDa 可溶蛋白且天然承担药物结合（Sudlow 位点 I/II），直接仿生只得广谱结合位点。",
      "design_mapping": "仿生映射（警示性）：HSA 脂肪酸位点 → 对 PFOA 等全氟羧酸的'头基锚 + 疏水腔'设计要素。但本映射为警示性 inspiration：PFOA/PFOS 对 HSA 位点的结合属脂肪酸类似物碰巧占据（PDB 4E99 同位点共享 Arg410/Tyr411 锚），并非自然界进化出的 PFAS 识别方案；项目框架（2026-07-21 定性）记录 FABP/HSA 家族蛋白敲除不改变 PFOS 组织分布（原始文献未取得），Ng 与 Hungerbühler 2013（DOI 10.1021/es400981a）以设问式标题质疑蛋白特异性结合对 PFAA 生物浓缩的重要性。故 HSA 不作为有效的 PFAS 识别原型，只作为'何种仿生会失败'的负面参照：单纯复制头基锚加疏水腔得到的是广谱两亲阴离子结合，PFAS 选择性须在材料层另行构建。",
-     "explainability_anchors": "设计溯源：HSA 脂肪酸位点的头基锚加疏水腔（PDB 1BKE/1E7G/1E7E-1E7I，from_source）→ PFAS 同位点碰巧占据（PDB 4E99，from_source）→ 警示性结论：脂肪酸模拟锚不构成 PFAS 特异识别，选择性须材料层构建（llm_inferred 转译，须实验验证）。"
+     "explainability_anchors": "设计溯源：HSA 脂肪酸位点的头基锚加疏水腔（PDB 1BKE/1E7G/1E7E-1E7I，from_source）→ PFOS/PFOA 占据脂肪酸类位点（PDB 4E99；DOI 10.1002/pro.4036 的 2.10 Å PFOA 复合物，from_source）→ 警示性结论：脂肪酸模拟锚提供结合力但不构成 PFAS 特异识别，选择性须材料层构建（llm_inferred 转译，须实验验证）。"
     }
    }
   ]
@@ -297,6 +297,13 @@
     "name": "PFOS 以脂肪酸类似物形式占据 HSA FA2 位点（碰巧结合，非进化识别）",
     "basis": "from_source_verified",
     "note": "Luo 2012 Chem Res Toxicol（PDB 4E99：配体 P8S 即全氟辛烷磺酸位于 A601/A602；SITE AC1 含 Arg410/Tyr411/Lys414 等 17 残基，与肉豆蔻酸位点 1E7G AC4 共享 Leu387/Arg410/Tyr411/Phe488/Ser489）；Jones 2003 Environ Toxicol Chem 记载全氟脂肪酸与血清蛋白结合（题录接地）；本条记录为有文献记载的外源污染物-蛋白相互作用并定性为碰巧占据，不作 PFAS 特异识别证据"
+   },
+   {
+    "type": "interaction_fact",
+    "index": 1,
+    "name": "PFOA 在 HSA 中占据多个脂肪酸类位点并形成头基极性锚与氟化尾链疏水接触",
+    "basis": "from_source_verified",
+    "note": "Maso et al. 2021 Protein Science 30:830-841（DOI 10.1002/pro.4036）全文 PDF 已核验：摘要与第 831-834 页报告 2.10 Å HSA-PFOA-肉豆蔻酸复合物、4 个 PFOA 位点及 4:1 PFOA:HSA 化学计量；第 832 页逐项给出 PFOA1 羧酸头基与 Ser489/Asn391/Arg410/Tyr411 的极性作用及氟化尾链的疏水通道接触。论文正文把 PFOA 复合物标为 7AAE、肉豆蔻酸复合物标为 7AAI，但当前 RCSB 条目标题和分辨率相反（7AAI=PFOA 2.10 Å；7AAE=肉豆蔻酸 2.27 Å），故此处不把争议 PDB 编号作为唯一证据键。该事实只支持结合模式，不支持 PFAS 特异选择性或吸附性能。"
    }
   ],
   "leads": [],

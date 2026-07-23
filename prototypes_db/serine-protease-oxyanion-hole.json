@@ -24,7 +24,7 @@
   "n_papers": 5,
   "n_verified": 10,
   "n_unverified": 0,
-  "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与边界条数（SPH-001 四要素+1 边界=5，SPH-002 四要素+1 边界=5）。5 个接地来源：3 个 RCSB PDB 沉积（1GCT/1SBT/1PAD）+ 2 篇文献 DOI（10.3390/molecules31091454、10.1038/s41467-026-72367-y）。机制接地限于蛋白酶天然底物（四面体过渡态氧阴离子）与氧阴离子穴骨架 NH 供体几何；PFOA/BPA 应用为机制转译（llm_inferred），无性能数据。quote 取自 PMC 全文文本与 PDB TITLE 记录（可核验），未做本地 PDF 版式审计。任务简报所述'双脲 POP 氢键先例'DOI 10.1038/s41467-022-29816-1 机制归属已证伪（实为静电/疏水协同叔胺 POP），见 honesty_ledger.leads。"
+  "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与边界条数（SPH-001 四要素+1 边界=5，SPH-002 四要素+1 边界=5）。接地来源包括 3 个 RCSB PDB 沉积（1GCT/1SBT/1PAD）、丝氨酸蛋白酶氧阴离子穴的直接结构-动力学研究 DOI 10.1074/jbc.M503499200，以及两个窄实例 DOI 10.3390/molecules31091454、10.1038/s41467-026-72367-y。机制接地限于蛋白酶天然底物（四面体过渡态氧阴离子）与氧阴离子穴骨架 NH 供体几何；PFOA/BPA 应用为机制转译（llm_inferred），无性能数据。DOI 10.1074/jbc.M503499200 已核验 PubMed 摘要，窄实例 quote 取自 PMC 全文文本；未完成全部来源的本地 PDF 版式审计。任务简报所述'双脲 POP 氢键先例'DOI 10.1038/s41467-022-29816-1 机制归属已证伪（实为静电/疏水协同叔胺 POP），见 honesty_ledger.leads。"
  },
  "mechanisms": [
   {
@@ -33,9 +33,9 @@
    "description": "丝氨酸蛋白酶（γ-胰凝乳蛋白酶 PDB 1GCT、枯草蛋白酶 BPN′ PDB 1SBT）在进化中形成氧阴离子穴，由两个预组织骨架酰胺 NH 供体（chymotrypsinogen 编号 Gly193 与 Ser195 主链 NH）以固定间距与取向排布，对肽键水解四面体过渡态发展的氧阴离子（底物羰基氧获得的负电荷）形成两个定向氢键，选择性稳定该高能过渡态；该基序在不同折叠的丝氨酸蛋白酶（chymotrypsin 与 subtilisin）中趋同保守",
    "基本原理": "预组织的中性骨架酰胺 NH 供体以固定几何与四面体过渡态氧阴离子方向性互补，两个定向氢键选择性稳定带负电的四面体过渡态而非平面基态羰基；预组织使供体结合的熵代价预先支付，从而降低过渡态能量",
    "source": "literature",
-   "ref_doi": "10.3390/molecules31091454",
+   "ref_doi": "10.1074/jbc.M503499200",
    "verification": "verified",
-   "verification_quote": "Importantly, in the predicted complex, the carbonyl oxygen of the pivaloyl group formed hydrogen bonds with the backbone NH groups of Gly193 and Ser195 in the oxyanion hole.",
+   "verification_quote": "The oxyanion hole of serine proteases is formed by the backbone N atoms of the catalytic Ser-195 and Gly-193 and engages the backbone O atom of the P1 residue of substrate in an important H-bonding interaction.",
    "causal_chain": {
     "pollutant_feature": {
      "text": "肽键水解四面体过渡态的氧阴离子（底物羰基氧在四面体过渡态/四面体中间体获得的负电荷）；γ-胰凝乳蛋白酶 PDB 1GCT 捕获了四肽基酰基-酶共价加合物，即经氧阴离子穴稳定的四面体中间体的结构类似物",
@@ -50,28 +50,28 @@
      "text": "氧阴离子穴由两个预组织骨架酰胺 NH 供体构成：在丝氨酸蛋白酶（chymotrypsinogen 编号）为 Gly193 与 Ser195 的主链 NH，以固定间距与取向排布，对进入活性位点的底物羰基氧形成定向氢键；该基序在 γ-胰凝乳蛋白酶（PDB 1GCT）与不同折叠的枯草蛋白酶 BPN′（PDB 1SBT）中趋同保守",
      "basis": "from_source",
      "evidence_label": "from_source",
-     "source": "10.3390/molecules31091454",
-     "locator": "DOI 10.3390/molecules31091454, Results (res 193, 195)",
-     "quote": "Importantly, in the predicted complex, the carbonyl oxygen of the pivaloyl group formed hydrogen bonds with the backbone NH groups of Gly193 and Ser195 in the oxyanion hole.",
-     "scope_match": "Keywords: oxyanion hole, backbone NH, Gly193, Ser195"
+     "source": "10.1074/jbc.M503499200",
+     "locator": "PubMed PMID 15890651, Abstract (Gly-193/Ser-195)",
+     "quote": "The oxyanion hole of serine proteases is formed by the backbone N atoms of the catalytic Ser-195 and Gly-193",
+     "scope_match": "Keywords: oxyanion hole, Ser-195, Gly-193"
     },
     "interaction": {
      "text": "底物（或抑制剂）羰基氧与氧阴离子穴 Gly193、Ser195 骨架 NH 形成定向氢键（两个主链 NH···O 氢键）；该羰基氧须定位于氧阴离子穴内方可成键，自穴内位移即破坏氢键",
      "basis": "from_source",
      "evidence_label": "from_source",
-     "source": "10.3390/molecules31091454",
-     "locator": "DOI 10.3390/molecules31091454, Results (res 193, 195)",
-     "quote": "Importantly, in the predicted complex, the carbonyl oxygen of the pivaloyl group formed hydrogen bonds with the backbone NH groups of Gly193 and Ser195 in the oxyanion hole.",
-     "scope_match": "Keywords: hydrogen bonds, backbone NH, Gly193, Ser195"
+     "source": "10.1074/jbc.M503499200",
+     "locator": "PubMed PMID 15890651, Abstract (H-bonding interaction)",
+     "quote": "engages the backbone O atom of the P1 residue of substrate in an important H-bonding interaction.",
+     "scope_match": "Keywords: backbone O, P1 residue, H-bonding interaction"
     },
     "why_it_works": {
      "text": "氧阴离子穴将反应性羰基定位于穴内，骨架 NH 氢键稳定近攻击构象/四面体过渡态；预组织使两个供体的结合熵代价预先支付，定向氢键选择性稳定带负电的四面体氧阴离子而非平面基态羰基，从而降低过渡态能量",
      "basis": "from_source",
      "evidence_label": "from_source",
-     "source": "10.3390/molecules31091454",
-     "locator": "DOI 10.3390/molecules31091454, Results (near-attack)",
-     "quote": "its binding mode positions the reactive carbonyl within the oxyanion hole, where hydrogen-bond interactions with backbone NH groups stabilize a near-attack configuration",
-     "scope_match": "Keywords: oxyanion hole, backbone NH, hydrogen-bond, near-attack"
+     "source": "10.1074/jbc.M503499200",
+     "locator": "PubMed PMID 15890651, Abstract (energetic estimate)",
+     "quote": "the H-bonding interaction in the oxyanion hole contributes a stabilization of the ground and transition states of > 1.5 kcal/mol but < 3.0 kcal/mol.",
+     "scope_match": "Keywords: oxyanion hole, stabilization, transition states"
     },
     "boundary_conditions": [
      {
@@ -84,8 +84,8 @@
       "basis": "from_source",
       "verification": "verified",
       "gate_level": "hard",
-      "locator": "DOI 10.3390/molecules31091454, Results (res 193, 195)",
-      "quote": "This displacement was accompanied by disruption of the hydrogen-bond interactions between the ester carbonyl oxygen and the oxyanion hole NH groups of Gly193 and Ser195.",
+      "locator": "PubMed PMID 15890651, Abstract (G193A/G193P mutants)",
+      "quote": "The Ala mutant weakens the H-bonding interaction of the N atom of residue 193, whereas the Pro substitution abrogates it altogether with additional small shifts of the protein backbone.",
       "scope_match": "Keywords: oxyanion hole, NH groups, hydrogen-bond, disruption",
       "source_asset": null
      },
@@ -105,12 +105,12 @@
      }
     ],
     "transferable_principle": "以固定间距与取向预组织的中性氢键供体（骨架酰胺 NH 或其合成等价物脲/硫脲）阵列，可通过方向性多点氢键选择性识别并稳定含氧阴离子，识别取决于供体-受体几何与取向匹配而非非特异分配",
-    "verification_quote": "Importantly, in the predicted complex, the carbonyl oxygen of the pivaloyl group formed hydrogen bonds with the backbone NH groups of Gly193 and Ser195 in the oxyanion hole."
+   "verification_quote": "The oxyanion hole of serine proteases is formed by the backbone N atoms of the catalytic Ser-195 and Gly-193 and engages the backbone O atom of the P1 residue of substrate in an important H-bonding interaction."
    },
-   "source_doi": "10.3390/molecules31091454",
+   "source_doi": "10.1074/jbc.M503499200",
    "source_page": null,
-   "source_locator": "DOI 10.3390/molecules31091454, Results (res 193, 195)",
-   "source_file": "PMC13165411 全文（DOI 10.3390/molecules31091454）+ RCSB PDB 1GCT/1SBT 沉积记录；未做本地 PDF 版式审计",
+   "source_locator": "PubMed PMID 15890651, Abstract；RCSB PDB 1GCT/1SBT",
+   "source_file": "Bobofchak et al. 2005（DOI 10.1074/jbc.M503499200，PubMed PMID 15890651）+ RCSB PDB 1GCT/1SBT；全文 PDF 待版式审计；DOI 10.3390/molecules31091454 仅作窄实例补充",
    "functional_groups": [
     "骨架酰胺 NH 氢键供体（Gly193、Ser195 主链 NH，chymotrypsinogen 编号）",
     "预组织活性位点氧阴离子穴"
