@@ -107,3 +107,16 @@
 - 未改（已达标）：bacterial-cellulose、plant-lignocellulosic-architecture
 - 校验：`validate_consistency` 0 error / 171 warning（与改前一致）；`check_causal_chain` 520/520 qualified；5 文件 JSON 合法
 - 说明：这些 causal_chain 的 `source`/`quote`/`locator` 仍指向原综述，现已标 `llm_inferred`（不再冒充 from_source）；下一步需用 §5 一手源提取逐字 quote+精确页码后方可升 `from_source`。尚未 commit。
+
+## 10. check_source_authenticity 首跑与清理（2026-07-23，rebase 合并远端扩张后）
+
+合并 `origin/expand`（14 个提交、数十个新分子识别原型）后，在完整库上运行 `tools/check_source_authenticity.py`：
+
+- **校准脚本**：接受 PDB 结构号（含 RCSB DOI `10.2210/...`）为合法一手来源，消除对协作者 PDB 接地原型的 12 条误报 ERROR；取消"跨原型 DOI 复用"检查（综述合法支撑多原型≠缺陷，噪声过高，51 条）。
+- **机械清理 DOI 尾部句点 24 处**（6 文件：chitosan / lotus-leaf / plant-wax-cuticle / spider-silk / superhydrophobic-artificial / water-strider-leg），如 `10.15898/j.ykcs.202208230155.` → 去尾点。
+- **结果**：ERROR 0；WARNING 由 92 降至 18。
+
+### 残留 18 条 WARNING（需回源，非机械可修，交后续/学生）
+
+- **shark-skin[0]**（bio_structure / why_it_works）：DOI 为截断占位 `10.1016/j.`（仅 Elsevier 前缀，无文章号），需补真实 DOI。
+- **16 条参考文献碎片 quote**（extraction 取到参考文献列表或错误段落，需回源重取逐字 quote）：chitosan[51,52,104]、iron-oxidizing-bacteria[1]、lotus-leaf[11,29,30]、mussel-foot-adhesion[51]、plant-wax-cuticle[0]、silk-fibroin[8]。

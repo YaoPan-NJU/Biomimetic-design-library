@@ -8,13 +8,13 @@ Validator: check_source_authenticity.py
 1. 标签膨胀（ERROR）：honesty_ledger 计数式 schema 里 from_source_mechanisms 与
    causal_chain 实际标 from_source 的机制数矛盾（尤其 ledger=0 却存在 from_source）。
 2. from_source 来源非可引标识（ERROR）：basis=from_source 的 causal_chain 要素，其 source
-   为空或不是 DOI/专利号/标准号（例如只填了 PDF 文件名或自由文本）。
+   为空或不含 DOI / PDB 号 / 专利号 / 标准号（例如只填了 PDF 文件名或自由文本）。
 3. DOI 格式非法（WARNING）：任何以 "10." 开头的 DOI 字段含尾部标点、空格或不合规。
-4. 疑似泛引 / 跨原型复用（WARNING）：quote 形如参考文献列表碎片；同一 DOI 被 ≥2 个不同原型
-   当作 from_source 来源复用。
+4. 疑似泛引（WARNING）：quote 形如参考文献列表碎片（[J] / 期刊缩写尾 / et al. 年份 等）。
 
 仅对计数式 ledger（含 from_source_mechanisms 键，即 V1-B 新批次）做第 1 类硬检查，
-避免对第一批 facts/leads/inferences schema 误报。
+避免对第一批 facts/leads/inferences schema 误报。PDB 结构号（含 RCSB DOI 10.2210/...）
+视为合法一手来源。
 """
 import json
 import glob
@@ -28,6 +28,8 @@ DB = os.path.join(REPO, 'prototypes_db')
 CC_KEYS = ['pollutant_feature', 'bio_structure', 'interaction', 'why_it_works']
 
 DOI_RE = re.compile(r'^10\.\d{4,9}/\S+$')
+DOI_ANYWHERE_RE = re.compile(r'10\.\d{4,9}/\S+')
+PDB_RE = re.compile(r'\bPDB[\s:]*[0-9][A-Za-z0-9]{3}\b', re.IGNORECASE)
 PATENT_RE = re.compile(r'^(CN|US|EP|WO|JP|KR)\s?\d{6,}', re.IGNORECASE)
 STANDARD_RE = re.compile(r'^(GB|ISO|ASTM|HJ|SN|NY|DL|IEC|EN|Q/)\s?[\d\.\-T/]+', re.IGNORECASE)
 
@@ -60,10 +62,16 @@ def doi_format_issue(s):
 
 
 def is_citable_identifier(s):
+    """source 只要含 DOI / PDB 号 / 专利号 / 标准号即视为可引来源。"""
     if not isinstance(s, str) or not s.strip():
         return False
     s = s.strip()
-    return bool(DOI_RE.match(s) or PATENT_RE.match(s) or STANDARD_RE.match(s))
+    return bool(
+        DOI_ANYWHERE_RE.search(s)
+        or PDB_RE.search(s)
+        or PATENT_RE.match(s)
+        or STANDARD_RE.match(s)
+    )
 
 
 def count_mechs_with_from_source(mechs):
@@ -82,7 +90,6 @@ def count_mechs_with_from_source(mechs):
 def check():
     errors = []
     warnings = []
-    doi_to_prototypes = {}  # from_source DOI -> set(pid)
 
     for f in sorted(glob.glob(os.path.join(DB, '*.json'))):
         d = json.load(open(f, encoding='utf-8'))
@@ -118,9 +125,7 @@ def check():
                     if not src or not str(src).strip():
                         errors.append(f'{pid}[{mi}].{k}: from_source 但 source 为空（DOI 缺失）')
                     elif not is_citable_identifier(str(src)):
-                        errors.append(f'{pid}[{mi}].{k}: from_source 但 source 非 DOI/专利/标准："{str(src)[:60]}"')
-                    else:
-                        doi_to_prototypes.setdefault(str(src).strip(), set()).add(pid)
+                        errors.append(f'{pid}[{mi}].{k}: from_source 但 source 非 DOI/PDB/专利/标准："{str(src)[:60]}"')
 
                 # 3. DOI 格式（任何 basis）
                 if looks_like_doi(str(src)):
@@ -144,11 +149,7 @@ def check():
                         if issue:
                             warnings.append(f'{pid}.{coll_name}[{i}].{fld}: DOI 格式非法（{issue}）："{v}"')
 
-    # ---- 4b. 跨原型 from_source DOI 复用 ----
-    for doi, pids in sorted(doi_to_prototypes.items()):
-        if len(pids) >= 2:
-            warnings.append(f'DOI 复用：{doi} 被 {len(pids)} 个原型当作 from_source 来源（{", ".join(sorted(pids))}）')
-
+    # ---- 跨原型 DOI 复用：已取消（综述合法地支撑多个原型≠缺陷，噪声过高）----
     return errors, warnings
 
 
