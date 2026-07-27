@@ -6,17 +6,21 @@ organism: Bos taurus（γ-胰凝乳蛋白酶，PDB 1GCT）/ Bacillus amyloliquef
 biomimetic_dimension: 分子仿生
 features:
   - 特异性识别
+pollutants:
+  - PFOA
+  - PFAS
 adsorption_mechanisms:
   - 丝氨酸蛋白酶氧阴离子穴：预组织双骨架酰胺 NH 氢键阵列稳定四面体过渡态氧阴离子
   - 半胱氨酸蛋白酶氧阴离子穴：双骨架酰胺氢键阵列稳定过渡态负电荷（趋同原理）
+  - 合成转译：刚性预组织双脲/硫脲阵列对全氟羧酸根头基的中性氢键捕获（POP 孔口放置）
+qmax_range: "动态床容量 ~0.10 µg/mL 床（~0.29 µg/g 总干，50 ng/L 进料 2000 BV 目标）"
 applicability:
-  pH_range: null
-  temp_range: null
-  salinity: null
-evidence_level: low
-# provenance: 5 papers, 10 verified, 0 unverified
-# coverage: partial
-# status: active
+  pH_range: [2, 10]
+  temp_range: [10, 40]
+  salinity: low_to_moderate
+evidence_level: medium
+coverage: full
+source_scheme: S05_A02 (PFOA, score 85, passed) — PAF-1 孔口预组织双脲氧阴离子洞 POP
 ---
 # 丝氨酸/半胱氨酸蛋白酶氧阴离子穴（预组织双氢键阵列）（Serine/Cysteine Protease Oxyanion Hole (Preorganized Dual Hydrogen-Bond Array)）
 
@@ -24,45 +28,83 @@ evidence_level: low
 
 **问题定义**：蛋白酶须在温和条件下高效水解肽键，而肽键本身动力学稳定。如何选择性稳定肽键水解的高能四面体过渡态，是酶催化的核心问题。丝氨酸蛋白酶（胰凝乳蛋白酶、枯草蛋白酶）与半胱氨酸蛋白酶（木瓜蛋白酶）在进化中各自独立形成了氧阴离子穴这一结构方案。
 
-**生物策略**：氧阴离子穴由两个预组织骨架酰胺 NH 供体构成：丝氨酸蛋白酶为 chymotrypsinogen 编号 Gly193 与 Ser195 的主链 NH（DOI 10.3390/molecules31091454 全文逐字记 '...the carbonyl oxygen ... formed hydrogen bonds with the backbone NH groups of Gly193 and Ser195 in the oxyanion hole'），半胱氨酸蛋白酶为 Gly172 与 Cys213 主链 NH（DOI 10.1038/s41467-026-72367-y 记氧阴离子穴 'formed by the backbone amides of Gly172 and Cys213' 且 'essential for stabilizing the negative charge developed during the transition state'）。两个供体以固定间距与取向对四面体过渡态羰基氧形成方向性氢键，选择性稳定带负电的过渡态而非平面基态。γ-胰凝乳蛋白酶酰基-酶加合物（PDB 1GCT，1.6 Å）、枯草蛋白酶 BPN′（PDB 1SBT）与木瓜蛋白酶氯甲基酮底物类似物复合物（PDB 1PAD）提供结构参照；该基序在 chymotrypsin 与 subtilisin 两个不同折叠中趋同保守。
+**生物策略**：氧阴离子穴由两个预组织骨架酰胺 NH 供体构成：丝氨酸蛋白酶为 chymotrypsinogen 编号 Gly193 与 Ser195 的主链 NH（DOI 10.3390/molecules31091454），半胱氨酸蛋白酶为 Gly172 与 Cys213 主链 NH（DOI 10.1038/s41467-026-72367-y）。两个供体以固定间距与取向对四面体过渡态羰基氧形成方向性氢键，选择性稳定带负电的过渡态而非平面基态。γ-胰凝乳蛋白酶酰基-酶加合物（PDB 1GCT，1.6 Å）、枯草蛋白酶 BPN′（PDB 1SBT）与木瓜蛋白酶氯甲基酮底物类似物复合物（PDB 1PAD）提供结构参照。
+
+**仿生转译至吸附材料**（来源方案 S05）：蛋白酶氧阴离子洞在 S05 方案中提供量级动机——单个定向氢键对过渡态氧负离子贡献约 2.4–3.8 kcal/mol（E2 DOI 10.1073/pnas.83.11.3743；E3 DOI 10.1021/bi00101a002），但该量值不迁移至底物态羧酸根。真实设计谱系为 V 形双脲受体超分子家族（E16 喹啉双脲、E24 硝基双脲、Hamilton 受体），定向、预组织、低介电遮蔽三原则为 Cram 与 Lehn 以降通用超分子原则。S05 刻意偏离生物羧酸根原型（阳离子胍基叉落入硫酸盐陷阱），改用中性脲阵列以牺牲生物同源性换取硫酸盐非过补偿与 pH 不变性。
 
 ## 2. 吸附机制详解
 
 ### 机制1：丝氨酸蛋白酶氧阴离子穴：预组织双骨架酰胺 NH 氢键阵列稳定四面体过渡态氧阴离子
 
-**描述**：丝氨酸蛋白酶（γ-胰凝乳蛋白酶 PDB 1GCT、枯草蛋白酶 BPN′ PDB 1SBT）在进化中形成氧阴离子穴，由两个预组织骨架酰胺 NH 供体（chymotrypsinogen 编号 Gly193 与 Ser195 主链 NH）以固定间距与取向排布，对肽键水解四面体过渡态发展的氧阴离子（底物羰基氧获得的负电荷）形成两个定向氢键，选择性稳定该高能过渡态；该基序在不同折叠的丝氨酸蛋白酶（chymotrypsin 与 subtilisin）中趋同保守
-**关键官能团**：['骨架酰胺 NH 氢键供体（Gly193、Ser195 主链 NH，chymotrypsinogen 编号）', '预组织活性位点氧阴离子穴']
+**描述**：丝氨酸蛋白酶（γ-胰凝乳蛋白酶 PDB 1GCT、枯草蛋白酶 BPN′ PDB 1SBT）在进化中形成氧阴离子穴，由两个预组织骨架酰胺 NH 供体（Gly193 与 Ser195 主链 NH）以固定间距与取向排布，对肽键水解四面体过渡态发展的氧阴离子形成两个定向氢键
+**关键官能团**：骨架酰胺 NH 氢键供体（Gly193、Ser195 主链 NH）、预组织活性位点氧阴离子穴
 **来源**：DOI 10.1074/jbc.M503499200
 
 ### 机制2：半胱氨酸蛋白酶氧阴离子穴：双骨架酰胺氢键阵列稳定过渡态负电荷（趋同原理）
 
-**描述**：半胱氨酸蛋白酶（木瓜蛋白酶 PDB 1PAD；天冬酰胺肽连接酶 C13 折叠）以两个预组织骨架酰胺供体（Gly172 与 Cys213 主链 NH）构成氧阴离子穴，稳定过渡态发展的负电荷；与丝氨酸蛋白酶氧阴离子穴为趋同原理，表明预组织双骨架酰胺 NH 氢键阵列是稳定四面体过渡态氧阴离子的通用结构方案
-**关键官能团**：['骨架酰胺 NH 氢键供体（Gly172、Cys213 主链 NH）', '预组织氧阴离子穴']
+**描述**：半胱氨酸蛋白酶（木瓜蛋白酶 PDB 1PAD）以两个预组织骨架酰胺供体（Gly172 与 Cys213 主链 NH）构成氧阴离子穴，与丝氨酸蛋白酶为趋同原理
+**关键官能团**：骨架酰胺 NH 氢键供体（Gly172、Cys213 主链 NH）、预组织氧阴离子穴
 **来源**：DOI 10.1038/s41467-026-72367-y
+
+### 机制3：合成转译——刚性预组织双脲阵列对全氟羧酸根的中性捕获（S05 方案）
+
+**描述**：S05 方案将氧阴离子洞的预组织原理转译为 PAF-1 孔口刚性 V 形双脲隙缝（4,5-二氨基呫吨骨架，E26 DOI 10.1016/j.tetlet.2010.12.067），四个脲 NH 由刚性骨架预固定为汇聚取向，几何匹配平面羧酸根双齿接受构型。中性脲供体不受 pH 2–10 酸碱平衡约束，规避阳离子位点在碱性地下水去质子失静电的失效模式。三机制分层：A 二价阴离子脱溶剂化门控（物理基底）；B 脲阵列对羧酸头基几何识别（创新锚点，面对 E16/E23 双负锚）；C 全氟链疏水腔（单调分量）
+**关键官能团**：刚性 V 形双脲隙缝（汇聚 NH 供体）、PAF-1 芳烃疏水孔壁
+**来源**：S05 方案通过版（score 85）
 
 ## 3. 结构特征与结构-功能关系
 
-必须保留：① 两个（或多个）中性氢键供体（骨架酰胺 NH 或其合成等价物脲/硫脲）；② 供体以固定间距与取向预组织，与目标氧阴离子几何/方向互补；③ 埋藏或低介电微环境以降低水竞争。可灵活调整：供体化学（脲/硫脲/酰胺）、载体骨架（活性炭/聚合物/介孔二氧化硅）、孔壁疏水性。
+### 多尺度结构描述
+
+| 尺度 | 特征 | 尺寸范围 | 功能作用 |
+|------|------|----------|----------|
+| 宏观 | PAF-1 多孔芳香框架颗粒 | 50–200 µm 微床 | 固定床吸附载体 |
+| 介观 | PAF-1 笼与孔口 | 笼 ~1.2 nm、窗口 ~0.6–0.7 nm | 孔口放置脲隙缝单体 |
+| 微观 | 刚性 V 形双脲隙缝 | ~1.5–2.0 nm | 预组织 NH 阵列识别羧酸根 |
+| 纳米 | 脲 NH···O 氢键 | 目标 1.8–2.2 Å | 方向性氢键锚定 |
+
+### 结构-功能关系
+
+**功能**：预组织双脲 NH 阵列对全氟羧酸根头基的中性氢键捕获，与电荷解耦
+**结构基础**：刚性呫吨骨架预固定汇聚 NH 几何；PAF-1 孔口疏水微环境降低水竞争
+**物理原理**：预组织免除溶剂与偶极重排代价（E4 DOI 10.1021/cr0503106）；低介电遮蔽增强定向氢键
+**关键参数**：NH···O 距离 1.8–2.2 Å；脲负荷由元素分析 N 含量给出
+
+**仿生制造启示**：
+- 4,5-二氨基呫吨 + 4-乙炔基苯基异氰酸酯 → 双炔基双脲隙缝单体 → CuAAC 点击接枝至 PAF-1-CH₂N₃
+- 孔内变体 M1-in 由共聚与前体转化第二路径制备
 
 ## 4. 已报道性能数据
 
-[待补充]
+> 来源方案 S05 工程目标（实验待验证）
+
+| 污染物 | 材料形态 | 去除率 | qmax (mg/g) | pH | 温度(°C) | 数据来源 | 文献 |
+|--------|----------|--------|-------------|-----|----------|----------|------|
+| PFOA | M1-pm (PAF-1 孔口双脲) | — | ~0.29 µg/g 总干 (动态床, 50 ng/L, 2000 BV 目标) | 6–9 | 25 | S05 工程设计值 | 方案通过版 |
+
+> 注：E23 同平台高浓参照（~1 mmol/L 单溶质 8h 平衡）：FNDMB PFOA 4.0 mmol/g、中性 BE PFOA ~1.0 mmol/g（DOI 10.1021/jacs.5c04689）
 
 ## 5. 适用场景
 
+**最适合**：ng/L 级 PFOA 及全氟羧酸族（PFCA）从地下水/饮用水中去除；需硫酸盐耐受的中性吸附场景
+**不适用**：高浓度有机废水（NOM 微孔污堵）；需选择性 PFOA 单分子特异的场景（PFNA 预期强于 PFOA）
 **约束条件**：
-- 催化蛋白形态与变性约束: 氧阴离子穴依赖蛋白酶三级结构的预组织（chymotrypsin/subtilisin/papain 均为约 23–27 kDa 球状蛋白）；游离蛋白在水相易变性，氢键几何与活性位点预组织丧失 None
-- 供体几何预组织依赖: 识别要求两个氢键供体维持固定间距与取向；柔性或溶剂化使方向性氢键与几何互补丧失 None
-- 水相氢键竞争: 水分子与目标氧阴离子竞争供体氢键；天然氧阴离子穴位于埋藏活性位点以降低水竞争，转译至开放孔壁需以低介电/疏水微环境或刚性预组织补偿 None
+- 孔口暴露于 NOM 与小分子羧酸（M1-pm 结构性负债，F5 先验高）
+- 水相氢键竞争：中性脲对裸无机阴离子水相 K 常低于 10–50 M⁻¹（E18 旁证）
+- 机制 B（头基几何识别）面对 E16/E23 双负锚，先验低
 
 ## 6. 相关原型
 
-- asbt-bile-acid-elevator-transporter
-- chlorophenol-hydroxylase-regioselective
-- ddt-dehydrochlorinase-gst
-- decarboxylase-carbanion-activation
-- fcrn-ph-dependent-fc-recycling
+- sbp-sulfate-oxyanion-geometric-recognition：硫酸根结合蛋白，四面体氧阴离子纯氢键识别先例
+- moda-oxyanion-geometric-recognition：ModA 钼酸根几何识别蛋白
+- dmpr-phenol-effector-binding-domain：DmpR 酚效应物传感器（同为通过方案原型）
 
 ## 参考文献
 
-[待补充]
+[1] Kraut J. Serine Proteases: Structure and Mechanism of Catalysis. Annu Rev Biochem. 1977;46:331-358. DOI 10.1146/annurev.bi.46.070177.001555
+[2] Bryan P, et al. PNAS. 1986;83(11):3743-3745. DOI 10.1073/pnas.83.11.3743
+[3] Menard R, et al. Biochemistry. 1991;30(37):8924-8928. DOI 10.1021/bi00101a002
+[4] Warshel A, et al. Chem Rev. 2006;106(8):3210-3235. DOI 10.1021/cr0503106
+[5] Busschaert N, et al. Chem Rev. 2015;115(15):8038-8155. DOI 10.1021/acs.chemrev.5b00099
+[6] Pezoulas C, et al. JACS. 2025;147(25):21832-21843. DOI 10.1021/jacs.5c04689 (PMC12203610)
+[7] Nemoto K, et al. Tetrahedron Lett. 2011;52(9):987-991. DOI 10.1016/j.tetlet.2010.12.067
