@@ -1,0 +1,51 @@
+{
+  "id": "laccase-t1-cu-phenol-coordination",
+  "name_zh": "漆酶 T1 单核 Cu(II) 酚羟基配位识别",
+  "name_en": "Laccase T1 Mononuclear Cu(II) Phenol Coordination Recognition",
+  "organism": {
+    "scientific": "Trametes versicolor / 多铜氧化酶（漆酶 T1 单核 Cu 中心对酚羟基的配位与单电子转移识别）",
+    "category": "微生物"
+  },
+  "biomimetic_dimension": "分子仿生",
+  "features": [
+    "特异性识别",
+    "配位选择性"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": null,
+    "note": "方案为 revise 状态，实验尚未执行"
+  },
+  "library_tier": "extended",
+  "lifecycle_status": "active",
+  "coverage": "full",
+  "status": "active",
+  "source_scheme": "BPA-U01 (BPA, score 79, revise) — 漆酶 T1 位启发单核 Cu(II) 配位识别活性炭",
+  "provenance_summary": {
+    "n_papers": 2,
+    "n_verified": 1,
+    "n_unverified": 1,
+    "note": "Reiss 2013 综述 verified (PMC3670849)；BPA-U01 方案文档为设计文档"
+  },
+  "mechanisms": [
+    {
+      "mechanism_id": "LACC-001",
+      "name": "单核 Cu(II)-酚定向配位识别",
+      "description": "T1 Cu(II) 对酚羟基的配位与单电子转移识别。BPA 为可氧化双酚，BPS 砜桥吸电子使酚更难配位/氧化，由此产生判别",
+      "基本原理": "单核 Cu(II)-N 螯合位点对酚羟基的定向配位，提供 logKow 无法解释的正交电子环境读出维度",
+      "source": "literature",
+      "ref_doi": "10.1007/s00018-013-1305-3",
+      "verification": "verified"
+    },
+    {
+      "mechanism_id": "LACC-002",
+      "name": "疏水底物槽协同预富集",
+      "description": "漆酶 T1 位邻近疏水底物槽容纳酚类芳环、预定位于 Cu 附近",
+      "基本原理": "活性炭微孔疏水环境邻接 Cu 位点，疏水预富集 + 配位定位协同",
+      "source": "design_document",
+      "ref_doi": null,
+      "verification": "design_level"
+    }
+  ]
+}

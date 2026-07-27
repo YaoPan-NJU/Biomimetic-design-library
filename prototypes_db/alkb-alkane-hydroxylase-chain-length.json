@@ -1,0 +1,42 @@
+{
+  "id": "alkb-alkane-hydroxylase-chain-length",
+  "name_zh": "AbAlkB 烷烃羟化酶底物通道深度窗口",
+  "name_en": "Alcanivorax borkumensis AbAlkB Alkane Hydroxylase Substrate Channel Depth Window",
+  "organism": {
+    "scientific": "Alcanivorax borkumensis（AbAlkB 烷烃羟化酶，底物通道有限深度设定链长上限）",
+    "category": "微生物"
+  },
+  "biomimetic_dimension": "结构仿生",
+  "features": [
+    "分子筛分",
+    "链长选择"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": null,
+    "note": "方案因原创性天花板终止，无实验数据"
+  },
+  "library_tier": "extended",
+  "lifecycle_status": "active",
+  "coverage": "full",
+  "status": "active",
+  "source_scheme": "S35_A04 (NP, score 57, terminated) — 链长窗口狭缝碳（AbAlkB 底物通道深度启发）",
+  "provenance_summary": {
+    "n_papers": 2,
+    "n_verified": 1,
+    "n_unverified": 1,
+    "note": "Naing 2013 经 PMC 全文核验 verified；Seo 2021 metadata_verified"
+  },
+  "mechanisms": [
+    {
+      "mechanism_id": "ALKb-001",
+      "name": "底物通道有限深度设定链长上限",
+      "description": "AbAlkB 底物通道为有限深度疏水管，C16 因通道深度不足无法到达催化中心不被氧化",
+      "基本原理": "几何深度窗口——物理通道长度限制底物可及性",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jinorgbio.2012.12.012",
+      "verification": "verified"
+    }
+  ]
+}

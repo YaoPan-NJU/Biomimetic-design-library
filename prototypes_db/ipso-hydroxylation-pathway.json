@@ -1,271 +1,51 @@
 {
- "id": "ipso-hydroxylation-pathway",
- "name_zh": "Sphingobium ipso 羟基化途径（α-分支拓扑形状选择腔）",
- "name_en": "Sphingobium ipso Hydroxylation Pathway (α-Branch Topology Shape-Selective Cavity)",
- "organism": {
-  "scientific": "Sphingobium xenophagum Bayram / Sphingomonas sp. TTNP3（ipso 羟基化途径，PDB 5M22 氢醌 1,2-双加氧酶）",
-  "category": "微生物"
- },
- "biomimetic_dimension": "分子仿生",
- "features": [
-  "特异性识别",
-  "分子筛分"
- ],
- "tested_conditions": {
-  "tested_ph_range": null,
-  "tested_temp_range": null,
-  "salinity": null,
-  "note": "ipso 羟基化途径为微生物降解壬基酚异构体的代谢途径原型，本库无其吸附性能测试；performance_data 为空。"
- },
- "library_tier": "extended",
- "lifecycle_status": "active",
- "coverage": "full",
- "status": "active",
- "provenance_summary": {
-  "n_papers": 5,
-  "n_verified": 0,
-  "n_unverified": 5,
-  "note": "来源方案 S26（NP, score 92，千方案计划最高分）通过严格评审。α-四级碳要求源于电子效应推断，无 NP 降解酶-底物复合物晶体结构。"
- },
- "mechanisms": [
-  {
-   "mechanism_id": "IHP-001",
-   "name": "α-四级碳取代模式的几何重读（ipso 途径底物判据转译为人工腔体形状互补）",
-   "description": "Sphingobium xenophagum Bayram 与 Sphingomonas sp. TTNP3 通过 ipso 羟基化途径降解对位烷基酚，该途径对 α-碳取代模式有严格要求：α-四级碳异构体进入 ipso 碳羟化伴 1,2-烷基迁移的降解序列，线性 4-n-NP 的 α-碳带氢、不进入该途径。TTNP3 氢醌 1,2-双加氧酶晶体结构已解析（PDB 5M22）。Lu 2015 报 19 种 NP 异构体去除率 90–99%，出水残留浓度与立体效应指数正相关 R²=0.76",
-   "基本原理": "生物侧 α-四级碳要求源于稳定中间体阳离子特征的电子效应；材料侧以几何腔互补重读同一拓扑变量（物理转导机制不同）",
-   "source": "literature",
-   "ref_doi": "10.1074/jbc.m413446200",
-   "verification": "metadata_verified",
-   "verification_quote": null,
-   "causal_chain": {
-    "pollutant_feature": {
-     "text": "壬基酚（NP）异构体的 α-碳取代模式：α-四级碳异构体（如 NP193a/b、NP110a、NP194）vs 线性 4-n-NP（α-碳带氢）",
-     "basis": "from_source",
-     "evidence_label": "from_source",
-     "source": "DOI 10.1074/jbc.m413446200",
-     "locator": "Gabriel et al. JBC 2005;280:15526-15533",
-     "quote": null,
-     "scope_match": "Keywords: ipso hydroxylation, NP isomers, α-quaternary carbon"
-    },
-    "bio_structure": {
-     "text": "ipso 羟基化途径对 α-碳取代模式有严格要求：α-四级碳异构体进入 ipso 碳羟化伴 1,2-烷基迁移的降解序列",
-     "basis": "from_source",
-     "evidence_label": "from_source",
-     "source": "10.1074/jbc.m413446200",
-     "locator": "Gabriel et al. JBC 2005",
-     "quote": null,
-     "scope_match": "Keywords: ipso hydroxylation, α-quaternary, dihydroxylation"
-    },
-    "interaction": {
-     "text": "α-四级碳底物在 ipso 碳上羟基化生成醌醇型中间体，烷基经 1,2-迁移产生 α-四级烷基氢醌",
-     "basis": "from_source",
-     "evidence_label": "from_source",
-     "source": "10.1074/jbc.m413446200",
-     "locator": "Gabriel et al. JBC 2005",
-     "quote": null,
-     "scope_match": "Keywords: ipso carbon, hydroxylation, 1,2-migration"
-    },
-    "why_it_works": {
-     "text": "α-四级碳取代模式稳定反应中间体的阳离子特征（电子效应）；材料侧以闭底深腔几何互补重读同一拓扑变量",
-     "basis": "llm_inferred",
-     "evidence_label": "llm_inferred",
-     "source": null,
-     "locator": null,
-     "quote": null,
-     "scope_match": null
-    },
-    "boundary_conditions": [
-     {
-      "text": "无 NP 降解酶-底物复合物晶体结构，α-四级碳要求源于电子效应推断而非结构互补",
-      "parameter": "structural_evidence",
-      "condition": { "operator": "qualitative", "value": null },
-      "basis": "from_source",
-      "verification": "needs_review",
-      "gate_level": "soft",
-      "locator": null, "quote": null, "source_asset": null
-     }
-    ],
-    "transferable_principle": "将 ipso 途径的 α-四级碳底物规则转译为人工刚性预组织闭底深腔笼，以几何腔互补读取同一 α-取代拓扑变量"
-   },
-   "source_doi": "10.1074/jbc.m413446200",
-   "source_page": null,
-   "source_locator": "Gabriel et al. JBC 2005;280:15526-15533",
-   "source_file": "Gabriel et al. 2005; metadata_verified",
-   "functional_groups": [
-    "α-四级碳 C9 分支丛",
-    "酚羟基"
-   ],
-   "key_structures": [
-    "识别结构",
-    "催化结构"
-   ]
+  "id": "ipso-hydroxylation-pathway",
+  "name_zh": "ipso 羟基化途径（α-四级碳拓扑形状选择腔）",
+  "name_en": "Ipso Hydroxylation Pathway (α-Quaternary Carbon Topology Shape-Selective Cavity)",
+  "organism": {
+    "scientific": "Sphingobium xenophagum Bayram / Sphingomonas sp. TTNP3（ipso 羟基化途径降解对位烷基酚，TTNP3 氢醌 1,2-双加氧酶 PDB 5M22）",
+    "category": "微生物"
   },
-  {
-   "mechanism_id": "IHP-002",
-   "name": "酚羟基腔口锚定（取向固定与对位偏好）",
-   "description": "酚羟基（酚盐）对位锚定于识别位点，对位取代酚共用识别位点（E8 DOI 10.1007/s00244-010-9576-4 竞争抑制实验证明）。S26 方案以笼口边缘氢键供受体阵列固定酚羟基",
-   "基本原理": "酚羟基对腔口边缘氢键供受体的锚定固定分子取向，使 α-取代丛进入腔体接受几何读出",
-   "source": "literature",
-   "ref_doi": "10.1007/s00244-010-9576-4",
-   "verification": "metadata_verified",
-   "verification_quote": null,
-   "causal_chain": {
-    "pollutant_feature": {
-     "text": "NP 酚羟基（pKa 约 10），对位烷基取代",
-     "basis": "from_source",
-     "evidence_label": "from_source",
-     "source": "DOI 10.1007/s00244-010-9576-4",
-     "locator": "competition inhibition experiment",
-     "quote": null,
-     "scope_match": "Keywords: NP, phenol, para-substitution"
-    },
-    "bio_structure": {
-     "text": "对位取代酚共用识别位点，酚羟基为锚定基团",
-     "basis": "from_source",
-     "evidence_label": "from_source",
-     "source": "10.1007/s00244-010-9576-4",
-     "locator": "competition experiment",
-     "quote": null,
-     "scope_match": "Keywords: para-alkylphenol, binding site"
-    },
-    "interaction": {
-     "text": "酚羟基与笼口边缘氢键供受体阵列形成定向氢键，固定分子取向",
-     "basis": "llm_inferred",
-     "evidence_label": "llm_inferred",
-     "source": null,
-     "locator": null,
-     "quote": null,
-     "scope_match": null
-    },
-    "why_it_works": {
-     "text": "酚羟基锚定固定取向，使 α-取代丛进入腔体接受几何读出；对位取代酚共用位点",
-     "basis": "llm_inferred",
-     "evidence_label": "llm_inferred",
-     "source": null,
-     "locator": null,
-     "quote": null,
-     "scope_match": null
-    },
-    "boundary_conditions": [],
-    "transferable_principle": "笼口边缘氢键供受体阵列可锚定酚羟基并固定分子取向"
-   },
-   "source_doi": "10.1007/s00244-010-9576-4",
-   "source_page": null,
-   "source_locator": "DOI 10.1007/s00244-010-9576-4",
-   "source_file": "competition inhibition experiment; metadata_verified",
-   "functional_groups": [
-    "笼口边缘氢键供受体阵列",
-    "酚羟基"
-   ],
-   "key_structures": [
-    "识别结构"
-   ]
-  }
- ],
- "performance_data": [],
- "engineering_constraints": [
-  {
-   "constraint": "无酶-底物复合物晶体结构",
-   "value": "α-四级碳要求源于电子效应推断而非结构互补，无 NP 降解酶-底物复合物晶体结构",
-   "unit": null,
-   "relevance": "high",
-   "explanation": "方案 S26 诚实标注：无晶体结构支撑",
-   "source": "llm_inference",
-   "ref_doi": null
+  "biomimetic_dimension": "分子仿生",
+  "features": [
+    "特异性识别",
+    "分子筛分"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": null,
+    "note": "方案通过但实验尚未执行，吸附测试条件为空"
   },
-  {
-   "constraint": "成网化学须温和",
-   "value": "笼体保留为前置判据；HIPE 模板聚合或 DA 点击须不破坏腔体",
-   "unit": null,
-   "relevance": "medium",
-   "explanation": "方案 S26 合成约束",
-   "source": "llm_inference",
-   "ref_doi": null
-  }
- ],
- "narrative": {
-  "entries": [
-   {
-    "source_file": "S26_A01_ipso-alpha-quaternary-topology-cavity_passed.md (score 92)",
-    "paper_id": "S26-np-ipso",
-    "sections": {
-     "problem_definition": "商品 NP 含约 20 种异构体，其中 α-四级碳组分（NP193a/b、NP110a、NP194）雌激素活性最高、最抗降解。能否以人工腔体几何互补读取 α-取代拓扑变量，优先捕获高风险组分？",
-     "biological_solution": "Sphingobium 通过 ipso 羟基化途径降解 NP，α-四级碳异构体进入降解序列而线性 4-n-NP 不进入。Lu 2015 报 19 种异构体去除率 90–99%，残留浓度与立体效应指数正相关 R²=0.76。",
-     "key_features": "必须保留：① 闭底深腔轮廓匹配 α-四级碳 C9 分支丛；② 腔口锚定固定酚羟基取向；③ 成网化学温和以保留腔体。可灵活调整：笼化学（间苯二酚芳烃/扩壁碗）、交联方式。",
-     "design_mapping": "仿生映射：ipso 途径 α-四级碳底物规则 → 闭底深腔笼几何互补。逆读标尺：生物留下的高风险组分 = 材料优先捕获组分。",
-     "explainability_anchors": "设计溯源：ipso 途径 α-四级碳要求（DOI 10.1074/jbc.m413446200，metadata_verified）→ 闭底深腔几何互补重读 → 逆读标尺（材料优先捕获高风险组分）。"
+  "library_tier": "extended",
+  "lifecycle_status": "active",
+  "coverage": "full",
+  "status": "active",
+  "source_scheme": "S26_A01 (NP, score 92, passed) — α-分支拓扑形状选择腔（ipso 途径逆读标尺）",
+  "provenance_summary": {
+    "n_papers": 6,
+    "n_verified": 0,
+    "n_unverified": 6,
+    "note": "全部文献摘要或题录级核验，无全文 verified。核心文献 Gabriel 2005 JBC/EST、Lu 2015 Water Res 均为 abstract_read。PDB 5M22 为 metadata_verified。"
+  },
+  "mechanisms": [
+    {
+      "mechanism_id": "IPSO-001",
+      "name": "α-四级碳取代模式的几何重读",
+      "description": "α-四级碳取代模式是 ipso 途径的底物判据。生物侧不存在已知的形状互补口袋，α-四级碳要求源于稳定中间体阳离子特征的电子效应。材料侧以几何腔互补重读同一拓扑变量",
+      "基本原理": "闭底深腔笼轮廓匹配 α-四级碳 C9 分支丛，腔口锚定固定酚羟基取向",
+      "source": "literature",
+      "ref_doi": "10.1074/jbc.m413446200",
+      "verification": "abstract_read"
+    },
+    {
+      "mechanism_id": "IPSO-002",
+      "name": "酚羟基腔口锚定",
+      "description": "酚羟基（酚盐）对位锚定于识别位点，对位取代酚共用识别位点",
+      "基本原理": "笼口边缘氢键供受体阵列固定酚羟基取向",
+      "source": "literature",
+      "ref_doi": "10.1007/s00244-010-9576-4",
+      "verification": "abstract_read"
     }
-   }
   ]
- },
- "design_translation": [
-  {
-   "idea": "将 ipso 途径 α-四级碳底物规则转译为闭底深腔笼几何互补，以逆读标尺优先捕获高风险 NP 异构体",
-   "specific_functional_group": "间苯二酚芳烃扩壁深腔笼（vase 型闭底碗），腔体轮廓匹配 α-四级碳 C9 分支丛",
-   "material_handle": "主路线 A：下缘降冰片烯笼 + 刚性芳基双四嗪 → 无催化逆电子需求 DA 点击；主路线 B：下缘乙烯基笼 + DVB-80 → AIBN 引发悬浮聚合（HIPE 模板大孔珠）",
-   "target_interaction": "形状互补（焓接触 + 闭底几何失配罚）+ 疏水效应驱动 + 酚羟基腔口氢键锚定",
-   "source_tier": "llm_inference",
-   "evidence_tier": "inspiration（α-四级碳要求源于电子效应推断，无结构互补晶体结构）",
-   "examples": [],
-   "design_principle": "ipso 途径 α-四级碳底物规则（DOI 10.1074/jbc.m413446200）→ 闭底深腔笼几何互补重读同一拓扑变量；逆读标尺：生物留下的高风险组分 = 材料优先捕获组分",
-   "implementation_example": "间苯二酚芳烃扩壁深腔笼交联网络（HIPE 模板大孔珠）",
-   "constraints": "无酶-底物复合物晶体结构；成网化学须温和；商品 NP ~20 种异构体单异构体分离因子测定工作量大",
-   "failure_modes": "成网化学破坏腔体；DOM 摩尔过剩竞争；笼尺寸失配致异构体区分不足",
-   "material_realization_examples": []
-  }
- ],
- "honesty_ledger": {
-  "facts": [
-   {
-    "type": "mechanism",
-    "index": 0,
-    "name": "ipso 途径 α-四级碳底物要求",
-    "basis": "from_source",
-    "note": "DOI 10.1074/jbc.m413446200 metadata_verified；α-四级碳异构体进入 ipso 碳羟化降解序列"
-   },
-   {
-    "type": "mechanism",
-    "index": 1,
-    "name": "Lu 2015 立体效应指数正相关 R²=0.76",
-    "basis": "from_source",
-    "note": "DOI 10.1016/j.watres.2014.09.050 metadata_verified；19 种 NP 异构体去除率 90–99%"
-   }
-  ],
-  "leads": [],
-  "inferences": [
-   {
-    "type": "design_translation",
-    "index": 0,
-    "idea": "闭底深腔笼几何互补重读 α-取代拓扑变量",
-    "basis": "llm_inferred",
-    "label": "inspiration",
-    "note": "生物侧 α-四级碳要求源于电子效应，材料侧为形状互补；物理转导机制不同"
-   }
-  ],
-  "boundary_notes": [
-   "无 NP 降解酶-底物复合物晶体结构，α-四级碳要求源于电子效应推断",
-   "生物侧为电子效应判据，材料侧为形状互补；物理转导机制不同",
-   "一切转译相关边界均为定性 llm_inferred"
-  ],
-  "missing_pdf_items": [
-   "DOI 10.1074/jbc.m413446200 全文未读，metadata_verified",
-   "DOI 10.1016/j.watres.2014.09.050 全文未读，metadata_verified"
-  ],
-  "generated_by": "bmdl-subagent-2026-07-27",
-  "note": "诚实优先：α-四级碳要求源于电子效应推断；物理转导机制与生物侧不同；无晶体结构支撑"
- },
- "boundary_rules": [
-  {
-   "rule": "闭底深腔几何须匹配 α-四级碳 C9 分支丛轮廓；腔深短于线性 C9 链全长（~1.1 nm）以排斥线性异构体",
-   "source_mechanism": "α-四级碳取代模式的几何重读",
-   "gate_level": "hard",
-   "basis": "from_source"
-  },
-  {
-   "rule": "酚羟基腔口锚定固定取向，使 α-取代丛进入腔体",
-   "source_mechanism": "酚羟基腔口锚定",
-   "gate_level": "soft",
-   "basis": "llm_inferred"
-  }
- ]
 }

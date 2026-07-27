@@ -1,0 +1,51 @@
+{
+  "id": "rw1-bay-region-dioxygenase",
+  "name_zh": "Sphingomonas RW1 角位双加氧酶（醚骨架识别几何）",
+  "name_en": "Sphingomonas RW1 Bay-Region Dioxygenase (Ether Skeleton Recognition Geometry)",
+  "organism": {
+    "scientific": "Sphingomonas sp. strain RW1（二苯并-p-二噁英降解菌，角位双加氧酶 dxnA1A2 基因簇）",
+    "category": "微生物"
+  },
+  "biomimetic_dimension": "分子仿生",
+  "features": [
+    "特异性识别",
+    "骨架判别"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": null,
+    "note": "方案为 revise 状态，实验尚未执行"
+  },
+  "library_tier": "extended",
+  "lifecycle_status": "active",
+  "coverage": "full",
+  "status": "active",
+  "source_scheme": "SL11_A04 (TCDD, score 69, revise) — 二芳醚骨架角位轮廓虚拟模板 MIP",
+  "provenance_summary": {
+    "n_papers": 3,
+    "n_verified": 2,
+    "n_unverified": 1,
+    "note": "Wittich 1992 和 Wilkes 1996 为 verified；Mutter 2021 为 tier primary"
+  },
+  "mechanisms": [
+    {
+      "mechanism_id": "RW1-001",
+      "name": "醚氧锚定点",
+      "description": "MIP 腔内预组织氢键/偶极供体对二芳醚醚氧执行弱锚定",
+      "基本原理": "醚氧为弱给体，MIP 腔内氢键供体阵列（脲/硫脲/酰胺）提供偶极/弱相互作用读杂原子",
+      "source": "literature",
+      "ref_doi": "10.1128/aem.58.3.1005-1012.1992",
+      "verification": "verified"
+    },
+    {
+      "mechanism_id": "RW1-002",
+      "name": "角位轮廓窗口",
+      "description": "MIP 腔的角位轮廓窗口按 Å 级几何区分二芳醚（TCDD）、联苯（PCB）和呋喃（PCDF）",
+      "基本原理": "RW1 角位双加氧酶识别二苯并-p-二噁英醚桥相邻角位（骨架特异），转译为 MIP 几何记忆",
+      "source": "literature",
+      "ref_doi": "10.1128/aem.02464-20",
+      "verification": "verified"
+    }
+  ]
+}
