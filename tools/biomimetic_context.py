@@ -197,7 +197,67 @@ class BiomimeticContext:
                 seen.add(c['prototype_id'])
                 unique_candidates.append(c)
 
+        # Track2A 降级：仅在 pollutant_prototype_map 中出现不构成 direct evidence；
+        # 只有当该原型对本污染物有真实 performance_data 时才标 direct_evidence。
+        for c in unique_candidates:
+            proto = self.prototypes.get(c['prototype_id'], {})
+            c['direct_evidence'] = self._has_perf_for(proto, pollutant)
+
         return unique_candidates
+
+    def _has_perf_for(self, proto: Dict, pollutant: str) -> bool:
+        """True if prototype has performance_data whose pollutant matches (Track2A: gates direct_evidence)."""
+        pl = (pollutant or '').lower()
+        for p in proto.get('performance_data', []) or []:
+            pol = (p.get('pollutant', '') or '').strip().lower()
+            if pol and (pl in pol or pol in pl):
+                return True
+        return False
+
+    def find_mechanism_based(self, pollutant_profile: Dict[str, Any]) -> List[Dict[str, Any]]:
+        """Track2A 机制层：污染物 -> canonical 机制 -> 原型（经 mechanism_tags 倒排）。
+        非污染物键路由：原型无需挂载特定污染物，只要机制标签与污染物特征/相互作用对应即可被命中。"""
+        i2m = self.matching_rules.get('interaction_to_mechanism', {})
+        f2m = self.matching_rules.get('molecular_feature_to_mechanism', {})
+        mechs = set()
+        for it in pollutant_profile.get('likely_interactions', []) or []:
+            m = i2m.get(it) or i2m.get(str(it).lower())
+            if m:
+                mechs.add(m)
+        for mf in pollutant_profile.get('molecular_features', []) or []:
+            ms = f2m.get(mf) or f2m.get(str(mf).lower())
+            if ms:
+                mechs.update(ms)
+        scores = {}
+        if mechs:
+            for pid, proto in self.prototypes.items():
+                overlap = set(proto.get('mechanism_tags', []) or []) & mechs
+                if overlap:
+                    scores[pid] = {'overlap': overlap, 'fpm': 0.0}
+        # 次级来源：为直接匹配的分子特征激活闲置的 feature_prototype_map
+        fpm = self.feature_mapping.get('feature_prototype_map', {})
+        for mf in pollutant_profile.get('molecular_features', []) or []:
+            rule = fpm.get(mf)
+            if isinstance(rule, dict):
+                for p in rule.get('prototypes', []):
+                    pid = p.get('id')
+                    if pid in self.prototypes:
+                        sc = scores.setdefault(pid, {'overlap': set(), 'fpm': 0.0})
+                        sc['fpm'] = max(sc['fpm'], p.get('weight', 0.5))
+        candidates = []
+        for pid, sc in scores.items():
+            n = len(sc['overlap'])
+            weight = min(0.2 + 0.12 * n + 0.25 * sc['fpm'], 0.55)
+            candidates.append({
+                'prototype_id': pid,
+                'weight': round(weight, 3),
+                'reason': f"机制层匹配（{'/'.join(sorted(sc['overlap'])) if sc['overlap'] else '特征'}）",
+                'match_basis': 'mechanism_feature_bridge',
+                'direct_evidence': False,
+                'molecular_feature_links': sorted(sc['overlap']),
+            })
+        candidates.sort(key=lambda x: x['weight'], reverse=True)
+        return candidates[:15]
 
     def find_feature_based(self, pollutant_profile: Dict[str, Any]) -> List[Dict[str, Any]]:
         """基于分子特征查找匹配的原型"""
@@ -353,11 +413,19 @@ class BiomimeticContext:
         # 3. 查找 feature-based inspiration
         feature_candidates = self.find_feature_based(pollutant_profile)
 
-        # 4. 合并候选（direct evidence 优先）
+        # 3b. Track2A 机制层候选（原型-机制映射，非污染物键路由）
+        mechanism_candidates = self.find_mechanism_based(pollutant_profile)
+
+        # 4. 合并候选（direct evidence 优先 → 机制层 → feature）
         all_candidates = []
         seen_ids = set()
 
         for c in direct_candidates:
+            if c['prototype_id'] not in seen_ids:
+                seen_ids.add(c['prototype_id'])
+                all_candidates.append(c)
+
+        for c in mechanism_candidates:
             if c['prototype_id'] not in seen_ids:
                 seen_ids.add(c['prototype_id'])
                 all_candidates.append(c)

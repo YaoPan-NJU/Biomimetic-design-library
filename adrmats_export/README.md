@@ -1,4 +1,4 @@
-# ADRMATS Match Export — Snapshot 2026-07-29T03:14Z
+# ADRMATS Match Export — Snapshot 2026-07-29T07:24Z
 
 ## 这是什么
 
@@ -51,15 +51,15 @@
 
 | 指标 | 值 |
 |------|---|
-| 总行数 | 267 |
-| 覆盖污染物数 | 37 |
-| 有机污染物 | 22 个，148 行 |
-| 有机 exploratory 行 | 81 / 148 (54%) |
-| 金属污染物 | 15 个，119 行 |
-| 金属 fact 行 | 25 / 119 (21%) |
-| Pb(II) 候选 | 10 行（fact 2, lead 6） |
-| PFOA 候选 | 10 行（exploratory 0） |
-| BPA 候选 | 10 行（exploratory 3） |
+| 总行数 | 422 |
+| 覆盖污染物数 | 44 |
+| 有机污染物 | 28 个，265 行 |
+| 有机 exploratory 行 | 257 / 265 (96%) |
+| 金属污染物 | 16 个，157 行 |
+| 金属 fact 行 | 3 / 157 (1%) |
+| Pb(II) 候选 | 10 行（fact 1, lead 6） |
+| PFOA 候选 | 10 行（exploratory 10） |
+| BPA 候选 | 10 行（exploratory 9） |
 
 ### 抽查预期
 

@@ -78,7 +78,10 @@
           {
             "text": "链长依赖：短链全氟羧酸/磺酸亲和显著弱于长链；本原型对短链 PFAS（如 PFBA/PFBS）不构成强识别依据",
             "parameter": "chain_length",
-            "condition": { "operator": "qualitative", "value": null },
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
             "basis": "llm_inferred",
             "verification": "needs_review",
             "gate_level": "hard",
@@ -90,7 +93,10 @@
           {
             "text": "氟代亲和机制尚未充分接地：现有模拟研究支持链长、体积与疏水/色散贡献，但本轮未找到可直接排除定向 C–F 贡献的原文证据；在完成全文审计前不得主张'氟亲和仿生'或把选择性归因于单一氟特异作用",
             "parameter": "selectivity_basis",
-            "condition": { "operator": "qualitative", "value": null },
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
             "basis": "llm_inferred",
             "verification": "needs_review",
             "gate_level": "hard",
@@ -159,7 +165,10 @@
           {
             "text": "无 PFOA 诱导门户构象的直接测量；不得将 portal 动态转译为'目标诱导门控'的动态硬对应",
             "parameter": "dynamic_claim",
-            "condition": { "operator": "qualitative", "value": null },
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
             "basis": "llm_inferred",
             "verification": "needs_review",
             "gate_level": "hard",
@@ -321,5 +330,12 @@
       "gate_level": "soft",
       "basis": "llm_inferred"
     }
+  ],
+  "mechanism_tags": [
+    "配位螯合",
+    "氢键",
+    "疏水分配",
+    "孔道限域分子筛分",
+    "几何识别"
   ]
 }
