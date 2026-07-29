@@ -4,6 +4,30 @@
 
 ---
 
+## 当前状态（2026-07-29 · massive 分支）
+
+> 分支：`massive`｜主题：**机制层匹配激活（Track 2A）+ 源项目原型抽取扩库（Track 2B）+ 检索排序修复**
+
+| 指标 | 值 |
+|------|-----|
+| root prototypes | **94**（v0.2 的 36 → V1 扩展 89 → Track2B +5 = 94）|
+| 完整原型（active + source-backed 机制 + honesty_ledger + design_translation + mechanism_tags）| ~72 |
+| 机制总数 | ~623（每条含 causal_chain）|
+| from_source 接地率 | ~65%（causal 元素）|
+| mechanism_tags 覆盖 | 94/94 |
+| validator | validate_consistency 0 error · from_source 0 non-compliant · causal_chain 全合格 |
+| ADRMATS 导出 | `adrmats_export/` 586 行 / 44 污染物 |
+
+**Track 2A — 机制层匹配激活**：匹配重心从“污染物查表”升级为“原型-机制”映射。每个原型声明 `mechanism_tags`（12 类 canonical 机制）；`query()` 新增 `find_mechanism_based`（污染物特征/相互作用 → canonical 机制 → 原型），原型无需挂载特定污染物即可被机制命中。`pollutant_prototype_map` 命中降级为“仅当有真实 performance_data 才算 direct_evidence”。
+
+**Track 2B — 源项目原型抽取扩库**：从姊妹项目 `biomimetic-adsorbent-design`（Ultimate/main/Qwen/kimi-k3 四分支）逐设计只看原型、不论方案成败地抽取库中缺失的生物原型/机制，+5：β-环糊精主客体包合、SERT 芳香胺识别、成熟污水生物膜大环内酯类别富集、DHPS 磺胺识别、ArsR 砷三硫醇捕获。知识隔离红线：`performance_data` 一律留空，机制经联网核验的原始文献独立接地。
+
+**检索排序修复（2026-07-29）**：`find_direct_evidence` 改为按 (direct_evidence, weight) 降序返回；brief 候选上限 10→15；有机诚实域（PFOA/SMX/BPA）无真实 performance_data 的 ppm 命中不再冒充 `direct_pollutant_evidence`（降级为 `mechanism_feature_bridge`）。修复后新原型可按权重浮现（SMX→DHPS rank 1、As(III)→ArsR、PFOA/BPA→β-环糊精）。
+
+**已知遗留**：`pollutant_prototype_map` 中约 47/69 个键为 bare-list 形态，`find_direct_evidence` 主要靠 `mechanism_summary` 内容匹配扫描，bare-list 条目不被键路由扫描（本轮已将 As(III) 转 dict-form 修复 ArsR 可见性，其余待统一治理）；`verify_adrmats_delivery` 整体仍 FAIL，仅因预存项（PFOA/BPA 有机域 plant-lignocellulosic/fabp4 真实容量数据与“有机域无直接证据”口径冲突；check_chimera 10 个多物种 organism）。
+
+---
+
 ## 当前方向（2026-06-21, v0.2 共识）
 
 本库是 ADRMATS 的**仿生候选匹配 + 证据检索 + 设计启发**模块，不是材料设计器，也不是按性能值排序的评价器。权威执行计划仍以 `docs/active/EXECUTION-PLAN-V3.md` 为基础，但 v0.2 前的完成定义已更新：
@@ -170,7 +194,8 @@ brief = result['brief']
 **支持的污染物**：Pb(II), Cd(II), Hg(II), Cu(II), Cr(VI), PFOA, SMX, BPA, TC, TCE, MB, MO 等 25+ 种
 
 **匹配模式**：
-- `direct_pollutant_evidence`：有直接实验数据
+- `direct_pollutant_evidence`：有真实 performance_data 的直接实验证据
+- `mechanism_feature_bridge`：原型-机制映射（Track 2A 机制层；含无 perf 的污染物映射，诚实降级）
 - `molecular_feature_inference`：基于分子特征推断
 
 详见 [ADRMATS 调用说明](docs/ADRMATS_CALL_GUIDE.md)

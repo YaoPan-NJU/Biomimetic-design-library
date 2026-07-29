@@ -199,10 +199,21 @@ class BiomimeticContext:
 
         # Track2A 降级：仅在 pollutant_prototype_map 中出现不构成 direct evidence；
         # 只有当该原型对本污染物有真实 performance_data 时才标 direct_evidence。
+        # 有机诚实域（PFOA/SMX/BPA）：无真实 performance_data 的 ppm 命中不得冒充
+        # direct_pollutant_evidence（与 direct_evidence 门控一致；否则违反有机域诚实门）。
+        _gated_organic = {'PFOA', 'SMX', 'BPA'}
+        _canon_gate = self._get_canonical_name(pollutant)
+        _is_gated = (pollutant in _gated_organic) or (_canon_gate in _gated_organic)
         for c in unique_candidates:
             proto = self.prototypes.get(c['prototype_id'], {})
-            c['direct_evidence'] = self._has_perf_for(proto, pollutant)
+            has_perf = self._has_perf_for(proto, pollutant)
+            c['direct_evidence'] = has_perf
+            if _is_gated and not has_perf and c.get('match_basis') == 'direct_pollutant_evidence':
+                c['match_basis'] = 'mechanism_feature_bridge'
 
+        # 排序修复：直接证据(真实performance_data)优先，其次按 weight 降序。
+        # 此前按 ppm 遍历顺序返回，导致后接线的新原型(如 β-CD/ArsR)被 top-N 截断而不浮现。
+        unique_candidates.sort(key=lambda c: (c.get('direct_evidence', False), c.get('weight', 0.0)), reverse=True)
         return unique_candidates
 
     def _has_perf_for(self, proto: Dict, pollutant: str) -> bool:
@@ -462,7 +473,7 @@ class BiomimeticContext:
         forbidden_set = _gold_set_forbidden.get(pollutant, set())
 
         brief_candidates = []
-        for c in all_candidates[:10]:  # top 10
+        for c in all_candidates[:15]:  # top 15（合并后按 lane 优先级；direct 已按 direct_evidence+weight 排序）
             pid = c['prototype_id']
             if pid in forbidden_set:
                 continue  # Skip forbidden candidates per gold-set

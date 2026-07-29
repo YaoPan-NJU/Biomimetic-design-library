@@ -844,21 +844,23 @@
     "design_hint": ""
    }
   ],
-  "As(III)": [
-   {
-    "id": "chitosan",
-    "weight": 0.4,
-    "weight_source": "formula_v1",
-    "mechanism_summary": "",
-    "design_hint": ""
-   },
-   {
-    "id": "arsr-arsenic-trithiol-disorder-to-order",
-    "weight": 0.5,
-    "mechanism_summary": "ArsR三半胱氨酸三配位(AsS3)选择性锚定亚砷酸As(III)(软-软匹配);As(III)诱导无序到有序(Shi1996/Zhu2023)",
-    "design_hint": "三硫醇预组织肽-丝素复合膜捕获As(III),防氧化,软-软匹配区别硬含氧阴离子"
-   }
-  ],
+  "As(III)": {
+   "prototypes": [
+    {
+     "id": "chitosan",
+     "weight": 0.4,
+     "weight_source": "formula_v1",
+     "mechanism_summary": "",
+     "design_hint": ""
+    },
+    {
+     "id": "arsr-arsenic-trithiol-disorder-to-order",
+     "weight": 0.5,
+     "mechanism_summary": "ArsR三半胱氨酸三配位(AsS3)选择性锚定亚砷酸As(III)(软-软匹配);As(III)诱导无序到有序(Shi1996/Zhu2023)",
+     "design_hint": "三硫醇预组织肽-丝素复合膜捕获As(III),防氧化,软-软匹配区别硬含氧阴离子"
+    }
+   ]
+  },
   "tetracycline": [
    {
     "id": "chitosan",
@@ -1626,7 +1628,7 @@
     {
      "id": "dhps-dihydropteroate-synthase-paba-recognition",
      "weight": 0.5,
-     "mechanism_summary": "DHPS的pABA口袋识别磺胺甲噁唑(SMX为pABA结构类似物,竞争性占据)；苯胺氨基定向锚点+芳香口袋(Hevener2010/Babaoglu2004)",
+     "mechanism_summary": "DHPS的pABA口袋识别磺胺甲恶唑(SMX为pABA结构类似物,竞争性占据)；苯胺氨基定向锚点+芳香口袋(Hevener2010/Babaoglu2004)",
      "design_hint": "SMX分子印迹凝胶,苯胺氨基定向锚点+尺寸匹配芳香口袋+柔性环封口(动态候选)"
     }
    ]
