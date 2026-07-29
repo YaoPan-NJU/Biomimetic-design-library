@@ -43,4 +43,4 @@
 
 ## 说明
 - `mechanism_tags` 为**显式 canon 字段**（用户选定），可直接手工编辑维护；上表规则仅为首次批量派生依据，非运行时依赖。
-- 匹配主路径 = pollutant 特征/相互作用 → canonical 机制 → 原型（经 `mechanism_tags` 倒排）；`feature_prototype_map` 作直接特征命中的次级来源。`mechanism_feature_bridge` 因 feature vocab 与 pollutant 特征错位，未作运行时依赖（由自洽的 canonical 机制词表取代）。
+- 匹配主路径 = pollutant 特征/相互作用 → canonical 机制 → 原型（经 `mechanism_tags` 倒排，主）；并经 `mechanism_to_bridge` 将 canonical 机制映射到 `mechanism_feature_bridge` 键 → bridge 特征 → `feature_prototype_map` 原型（次级，**已激活**）。bridge 的 feature vocab 已对齐 fpm 键（修 `离子交换能力→离子交换`）；`mechanism_to_bridge` 位于 `feature_matching_rules.json`。

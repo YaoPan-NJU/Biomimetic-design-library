@@ -244,10 +244,23 @@ class BiomimeticContext:
                     if pid in self.prototypes:
                         sc = scores.setdefault(pid, {'overlap': set(), 'fpm': 0.0})
                         sc['fpm'] = max(sc['fpm'], p.get('weight', 0.5))
+        # Track2A: 激活 mechanism_feature_bridge —— canonical 机制 -> bridge 特征 -> feature_prototype_map 原型
+        bridge = self.feature_mapping.get('mechanism_feature_bridge', {})
+        m2b = self.matching_rules.get('mechanism_to_bridge', {})
+        for mech in mechs:
+            for bkey in m2b.get(mech, [mech]):
+                for feat in bridge.get(bkey, []):
+                    rule = fpm.get(feat)
+                    if isinstance(rule, dict):
+                        for p in rule.get('prototypes', []):
+                            pid = p.get('id')
+                            if pid in self.prototypes:
+                                sc = scores.setdefault(pid, {'overlap': set(), 'fpm': 0.0})
+                                sc['fpm'] = max(sc['fpm'], p.get('weight', 0.5) * 0.85)
         candidates = []
         for pid, sc in scores.items():
             n = len(sc['overlap'])
-            weight = min(0.2 + 0.12 * n + 0.25 * sc['fpm'], 0.55)
+            weight = min(0.18 + 0.1 * n + 0.2 * sc['fpm'], 0.7)
             candidates.append({
                 'prototype_id': pid,
                 'weight': round(weight, 3),
@@ -257,7 +270,7 @@ class BiomimeticContext:
                 'molecular_feature_links': sorted(sc['overlap']),
             })
         candidates.sort(key=lambda x: x['weight'], reverse=True)
-        return candidates[:15]
+        return candidates[:25]
 
     def find_feature_based(self, pollutant_profile: Dict[str, Any]) -> List[Dict[str, Any]]:
         """基于分子特征查找匹配的原型"""

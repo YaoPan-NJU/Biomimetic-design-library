@@ -11,7 +11,7 @@
 ## 改动
 - 89 个 `prototypes_db/*.json` 新增 `mechanism_tags`（受控增量字段，未改既有 mechanism 内容/证据标签）；86/89 为纯增量单字段，3 个（hl-fabp/oat4/serine-protease）附带 compact-line 归一（cosmetic，共 5 行删除）。
 - `feature_matching_rules.json` 新增 `canonical_mechanisms` / `interaction_to_mechanism` / `molecular_feature_to_mechanism`。
-- `tools/biomimetic_context.py`：新增 `find_mechanism_based()`（pollutant 特征/相互作用→canonical 机制→原型经 mechanism_tags 倒排 + feature_prototype_map 次级），并入 `query()` 候选（direct→机制→feature）；`pollutant_prototype_map` 降级——`direct_evidence` 仅当原型对该污染物有真实 performance_data。match_basis 用既有白名单值 `mechanism_feature_bridge`。
+- `tools/biomimetic_context.py`：新增 `find_mechanism_based()`（pollutant 特征/相互作用→canonical 机制→原型：主路经 mechanism_tags 倒排，次级经 **mechanism_feature_bridge 已激活**（canonical→bridge键→bridge特征→feature_prototype_map）+ 直接分子特征→fpm），并入 `query()` 候选（direct→机制→feature）；`pollutant_prototype_map` 降级——`direct_evidence` 仅当原型对该污染物有真实 performance_data。match_basis 用既有白名单值 `mechanism_feature_bridge`。
 
 ## 验证
 - **机制层生效**：SMX 候选 3→9；PO43- 机制候选 7；8 个查询覆盖 47 个不同原型。
