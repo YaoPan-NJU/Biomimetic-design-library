@@ -83,10 +83,12 @@
     },
     "氟碳链": {
       "prototypes": [
-        "lotus-leaf",
-        "superhydrophobic-artificial"
+        "fabp4-fatty-acid-pfas-binding",
+        "hsa-fatty-acid-pfas-binding",
+        "ntcp-bile-acid-pfas-transporter",
+        "hl-fabp-liver-fatty-acid-pfas-binding"
       ],
-      "reason": "氟碳链具有强疏水性和低表面能，可与超疏水表面通过疏水分配作用结合",
+      "reason": "全氟碳链的羧酸/磺酸头基由PFAS分子识别蛋白(FABP/HSA/NTCP)以头基锚+疏水腔结合；此为分子识别原型而非超疏水表面(inspiration，须叠加选择性)",
       "weight": 0.7,
       "evidence_source": "PFOA/PFBS/PFHxS/HFPO-DA 提参聚合",
       "evidence_count": 407
@@ -202,14 +204,18 @@
       "prototypes": [
         "chitosan",
         "bone-structure",
-        "oyster-shell"
+        "oyster-shell",
+        "scallop-shell",
+        "rice-husk-phytolith",
+        "cell-membrane-ion-channel"
       ],
       "reason": "吸附剂表面的可交换离子与溶液中的污染物离子进行等当量交换",
       "weight": 0.8
     },
     "沉淀": {
       "prototypes": [
-        "sulfate-reducing-bacteria"
+        "sulfate-reducing-bacteria",
+        "scallop-shell"
       ],
       "reason": "微生物代谢产物与金属离子形成不溶性沉淀",
       "weight": 0.9
@@ -308,7 +314,8 @@
       "prototypes": [
         "lotus-leaf",
         "superhydrophobic-artificial",
-        "water-strider-leg"
+        "water-strider-leg",
+        "plant-wax-cuticle"
       ],
       "reason": "超疏水表面对油水混合物具有选择性透过能力，可实现油水分离",
       "weight": 0.8
@@ -317,7 +324,8 @@
       "prototypes": [
         "lotus-leaf",
         "superhydrophobic-artificial",
-        "water-strider-leg"
+        "water-strider-leg",
+        "plant-wax-cuticle"
       ],
       "reason": "Superhydrophobic surfaces enable selective oil/water separation",
       "weight": 0.8
@@ -327,7 +335,10 @@
         "lotus-leaf",
         "superhydrophobic-artificial",
         "water-strider-leg",
-        "shark-skin"
+        "shark-skin",
+        "cactus-spine",
+        "namib-beetle",
+        "plant-wax-cuticle"
       ],
       "reason": "超润湿表面（超疏水/超亲水）可用于油水分离和抗污",
       "weight": 0.7
@@ -337,7 +348,10 @@
         "lotus-leaf",
         "superhydrophobic-artificial",
         "water-strider-leg",
-        "shark-skin"
+        "shark-skin",
+        "cactus-spine",
+        "namib-beetle",
+        "plant-wax-cuticle"
       ],
       "reason": "超疏水表面（接触角>150°）具有自清洁和油水分离能力",
       "weight": 0.7

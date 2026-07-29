@@ -1,4 +1,4 @@
-# ADRMATS Match Export — Snapshot 2026-06-26T03:13Z
+# ADRMATS Match Export — Snapshot 2026-07-29T03:14Z
 
 ## 这是什么
 
@@ -51,29 +51,21 @@
 
 | 指标 | 值 |
 |------|---|
-| 总行数 | 130 |
-| 覆盖污染物数 | 29 |
-| 有机污染物 | 14 个，50 行 |
-| 有机 exploratory 行 | 43 / 50 (86%) |
-| 金属污染物 | 15 个，80 行 |
-| 金属 fact 行 | 8 / 80 (10%) |
-| Pb(II) 候选 | 8 行（fact 1, lead 6） |
-| PFOA 候选 | 3 行（exploratory 3） |
-| BPA 候选 | 3 行（exploratory 3） |
+| 总行数 | 267 |
+| 覆盖污染物数 | 37 |
+| 有机污染物 | 22 个，148 行 |
+| 有机 exploratory 行 | 81 / 148 (54%) |
+| 金属污染物 | 15 个，119 行 |
+| 金属 fact 行 | 25 / 119 (21%) |
+| Pb(II) 候选 | 10 行（fact 2, lead 6） |
+| PFOA 候选 | 10 行（exploratory 0） |
+| BPA 候选 | 10 行（exploratory 3） |
 
 ### 抽查预期
 
 - **Pb(II)**：应有 fact/lead 候选（壳聚糖、牡蛎壳、铁氧化细菌等有 source-backed 机制） ✅
 - **PFOA**：应全为 exploratory/低权重（有机域无直接证据） ✅
 - **BPA**：应全为 exploratory/低权重 ✅
-
-## 污染物覆盖
-
-共 44 个污染物 profile，29 个返回候选，15 个返回 0 候选。
-
-**Phase E 新兴污染物（19 个）**：4 个有候选（2,6-Dichlorophenol、Pentachlorophenol、Nonylphenol、Roxithromycin），
-15 个无候选（HFPO-DA、PFBS、Octocrylene、SCCPs、PCB-209、β-HCH、Endosulfan、Chloroform、HCBD、BDE-209、TCDD、DDT、DDE、Dieldrin、PFHxS）。
-无候选 = 当前 36-prototype 库中没有匹配到的原型，不代表该污染物不可处理。
 
 ## 约束
 

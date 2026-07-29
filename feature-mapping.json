@@ -28,6 +28,18 @@
       "weight": 0.75,
       "mechanism_summary": "缩合单宁含大量邻苯二酚类似结构，可络合Hg²⁺",
       "design_hint": "单宁来源广泛、成本低，适合大规模应用"
+     },
+     {
+      "id": "cell-membrane-ion-channel",
+      "weight": 0.35,
+      "mechanism_summary": "仿生离子通道对Hg(II)的选择性传输/截留（perf支撑，exploratory）",
+      "design_hint": "离子选择滤器截留Hg"
+     },
+     {
+      "id": "bird-feather-keratin",
+      "weight": 0.3,
+      "mechanism_summary": "羽毛角蛋白半胱氨酸巯基(软配体)螯合软酸Hg(II)（真实生物吸附，机制llm未接地）",
+      "design_hint": "以角蛋白巯基/氨基做软酸金属螯合位点"
      }
     ]
    },
@@ -560,6 +572,36 @@
     "weight_source": "formula_v1",
     "mechanism_summary": "",
     "design_hint": ""
+   },
+   {
+    "id": "scallop-shell",
+    "weight": 0.5,
+    "mechanism_summary": "扇贝壳CaCO₃离子交换/碳酸盐沉淀去除Cu(II)",
+    "design_hint": "CaCO₃基质做Cu结合位点"
+   },
+   {
+    "id": "fungal-biosorption",
+    "weight": 0.3,
+    "mechanism_summary": "真菌生物质对Cu(II)的生物吸附（exploratory）",
+    "design_hint": "真菌细胞壁配位Cu"
+   },
+   {
+    "id": "insect-chitin",
+    "weight": 0.3,
+    "mechanism_summary": "昆虫外骨骼几丁质乙酰胺基/羟基对Cu(II)配位（类壳聚糖，机制llm）",
+    "design_hint": "昆虫废弃几丁质提取做吸附剂"
+   },
+   {
+    "id": "microbial-exopolysaccharide",
+    "weight": 0.3,
+    "mechanism_summary": "EPS羧基/硫酸基对Cu(II)络合吸附（exploratory）",
+    "design_hint": "EPS络合Cu"
+   },
+   {
+    "id": "spider-silk",
+    "weight": 0.3,
+    "mechanism_summary": "丝蛋白残基对Cu(II)配位（exploratory，含嵌合）",
+    "design_hint": "丝蛋白配位Cu（含嵌合）"
    }
   ],
   "CrO42-": [
@@ -650,6 +692,42 @@
     "weight_source": "formula_v1",
     "mechanism_summary": "",
     "design_hint": ""
+   },
+   {
+    "id": "scallop-shell",
+    "weight": 0.5,
+    "mechanism_summary": "扇贝壳文石/方解石CaCO₃经离子交换与碳酸盐共沉淀固定Pb(II)（类牡蛎壳，Chenet2024等证据）",
+    "design_hint": "以生物矿化CaCO₃层状基质做Pb沉淀/离子交换位点"
+   },
+   {
+    "id": "rice-husk-phytolith",
+    "weight": 0.35,
+    "mechanism_summary": "稻壳无定形SiO₂/硅醇基(Si-OH)络合与离子交换去除Pb(II)（exploratory）",
+    "design_hint": "稻壳硅做硅醇络合位点"
+   },
+   {
+    "id": "cell-membrane-ion-channel",
+    "weight": 0.35,
+    "mechanism_summary": "仿生离子通道/膜的电荷与尺寸选择性用于Pb(II)离子分离（perf支撑，exploratory）",
+    "design_hint": "冠醚/功能化纳米孔做离子选择位点"
+   },
+   {
+    "id": "bird-feather-keratin",
+    "weight": 0.3,
+    "mechanism_summary": "角蛋白巯基/氨基对Pb(II)的生物吸附（exploratory）",
+    "design_hint": "角蛋白做低成本生物吸附剂"
+   },
+   {
+    "id": "fungal-biosorption",
+    "weight": 0.3,
+    "mechanism_summary": "真菌细胞壁几丁质/葡聚糖官能团对Pb(II)的生物吸附（经典生物吸附，机制llm）",
+    "design_hint": "真菌生物质做低成本吸附剂"
+   },
+   {
+    "id": "microbial-exopolysaccharide",
+    "weight": 0.3,
+    "mechanism_summary": "微生物胞外多糖羧基/硫酸基对Pb(II)络合/静电吸附（机制llm）",
+    "design_hint": "发酵EPS做吸附剂"
    }
   ],
   "Cd(II)": [
@@ -659,6 +737,30 @@
     "weight_source": "formula_v1",
     "mechanism_summary": "",
     "design_hint": ""
+   },
+   {
+    "id": "scallop-shell",
+    "weight": 0.4,
+    "mechanism_summary": "扇贝壳CaCO₃对Cd(II)的离子交换/共沉淀（exploratory）",
+    "design_hint": "CaCO₃基质固Cd"
+   },
+   {
+    "id": "rice-husk-phytolith",
+    "weight": 0.35,
+    "mechanism_summary": "稻壳硅醇基对Cd(II)的络合/离子交换（exploratory）",
+    "design_hint": "硅醇络合Cd"
+   },
+   {
+    "id": "insect-chitin",
+    "weight": 0.3,
+    "mechanism_summary": "昆虫几丁质对Cd(II)的配位吸附（exploratory）",
+    "design_hint": "几丁质配位Cd"
+   },
+   {
+    "id": "plant-lignocellulosic-architecture",
+    "weight": 0.5,
+    "mechanism_summary": "木质纤维素羧基/硅酸盐离子交换与表面沉淀去除Cd(II)",
+    "design_hint": "生物炭羧基做Cd离子交换位点"
    }
   ],
   "Al(III)": [
@@ -812,6 +914,24 @@
     "weight_source": "formula_v1",
     "mechanism_summary": "",
     "design_hint": ""
+   },
+   {
+    "id": "scallop-shell",
+    "weight": 0.3,
+    "mechanism_summary": "扇贝壳CaCO₃钙位点可诱导磷酸盐沉淀去除PO43-（exploratory类比）",
+    "design_hint": "钙位点诱导磷酸盐沉淀"
+   },
+   {
+    "id": "rice-husk-phytolith",
+    "weight": 0.3,
+    "mechanism_summary": "稻壳硅/生物炭-方解石复合去除磷酸盐PO43-（exploratory）",
+    "design_hint": "硅基复合磷去除"
+   },
+   {
+    "id": "moda-oxyanion-geometric-recognition",
+    "weight": 0.3,
+    "mechanism_summary": "ModA四面体氧阴离子识别类比磷酸根PO43-(四面体但-3)（exploratory）",
+    "design_hint": "氢键给体阵列识别四面体氧阴离子"
    }
   ],
   "Sb(锑)": [
@@ -1055,6 +1175,12 @@
       "weight": 0.7,
       "mechanism_summary": "HRP/漆酶对酚类底物一电子氧化生成酚氧自由基，经 C-C/C-O 偶联聚合为不溶性固相聚合物而封存（Klibanov 1983 HRP 除酚原型：HRP+H2O2 沉淀 97 至 99% 的酚并可共沉淀其他污染物；漆酶 CLEA 连续去除内分泌干扰物，Cabana 2007/2008）；原理上启发 BPA 二酚的反应性捕获封存，但底物类别向 BPA 的外推限原理层，偶联加合物雌激素活性是否升高须验证。",
       "design_hint": "取孔壁锚定金属卟啉/多铜仿氧化中心 + 可再生小分子介体 + 自由基接枝受体三要素，以 H2O2（HRP 仿）或 O2（漆酶仿）驱动将 BPA 氧化为酚氧自由基并偶联聚合/接枝于孔壁实现破坏性固定化；反应器形态（CLEA 式交联固定化/连续流）、介体再生与加合物雌激素活性评估均须实验验证。"
+     },
+     {
+      "id": "plant-lignocellulosic-architecture",
+      "weight": 0.6,
+      "mechanism_summary": "农业废弃物木质纤维素生物炭/活性炭吸附BPA（多篇容量数据；scope:工程化生物炭非保留植物结构）",
+      "design_hint": "热解生物炭/AC做BPA疏水/π吸附（scope caveat）"
      }
     ]
    },
@@ -1193,6 +1319,24 @@
       "weight": 0.6,
       "mechanism_summary": "哺乳动物肺支气管树以 Murray 律立方递减的对称二叉分级传质网络，在极低驱动力下维持高通量输运与巨大末端交换面积；该分级孔道几何启发在 ng/L 级 PFOA 低驱动力传质场景中构建逐级降阻的分级孔道以维持传质通量（兼 BPA/ROX 等低驱动力传质通用角度）",
       "design_hint": "以 Murray 律（半径立方正比流量）设计主干-分支-末端分级孔道吸附床，近端大孔降阻、末端高比表面富集，维持 ng/L PFOA 的低驱动力传质通量；化学选择性由末端识别位点另行引入（原理层，须实验验证）"
+     },
+     {
+      "id": "fabp4-fatty-acid-pfas-binding",
+      "weight": 0.45,
+      "mechanism_summary": "FABP4β桶埋藏疏水腔+羧酸根极性锚直接结合PFOA（PDB9MIW,Birchfield2025）；广谱非选择性，蛋白结合≠吸附",
+      "design_hint": "羧酸根锚+C8氟亲腔仿FABP4识别PFOA（inspiration，须叠加选择性）"
+     },
+     {
+      "id": "hl-fabp-liver-fatty-acid-pfas-binding",
+      "weight": 0.3,
+      "mechanism_summary": "hL-FABP对PFOA中等亲和结合（Sheng ITC）；仅PFOA/PFNA，PFHxS弱，binding≠adsorption",
+      "design_hint": "阴离子头基受体+低极性腔仿hL-FABP（inspiration）"
+     },
+     {
+      "id": "plant-lignocellulosic-architecture",
+      "weight": 0.6,
+      "mechanism_summary": "木质纤维素生物炭/AC(如Fe@MBC233mg/g)吸附PFOA；scope:工程化生物炭",
+      "design_hint": "Fe改性生物炭做PFOA内球络合吸附"
      }
     ]
    },
@@ -1245,6 +1389,12 @@
       "weight": 0.4,
       "mechanism_summary": "氟核糖开关以 Mg2+/向内指磷酸封装腔特异识别游离 F− 并经 F− 触发构象开关阈值化调控 crcB/Fluc 氟输出基因；PFBS 不含游离 F−，转译须经脱氟产物流耦合 F− 识别门控（间接、原理层，无直接 PFBS 证据）。",
       "design_hint": "取'金属离子/磷酸辅助的 F− 特异封装口袋 + 阈值触发构象门控'两原理，与上游脱氟模块串联，使 F− 识别门响应 PFBS 脱氟释放的氟离子并报告/门控脱氟进程；脱氟窗口匹配、合成受体对 Cl− 选择性与材料转导均须实验验证。"
+     },
+     {
+      "id": "moda-oxyanion-geometric-recognition",
+      "weight": 0.3,
+      "mechanism_summary": "ModA四面体氧阴离子几何识别外推至PFBS磺酸头基；因电荷(-1vs-2)/尺寸差异属过度外推(inspiration)",
+      "design_hint": "预组织中性氢键给体阵列+低介电口袋（inspiration）"
      }
     ]
    },
@@ -1348,6 +1498,36 @@
      }
     ]
    }
+  },
+  "Nonylphenol": {
+   "prototypes": [
+    {
+     "id": "cell-membrane-ion-channel",
+     "weight": 0.3,
+     "mechanism_summary": "细胞膜仿生疏水通道对壬基酚(Nonylphenol)的疏水分配/截留（perf支撑，exploratory）",
+     "design_hint": "疏水通道分配壬基酚"
+    }
+   ]
+  },
+  "Cr(VI)": {
+   "prototypes": [
+    {
+     "id": "spider-silk",
+     "weight": 0.3,
+     "mechanism_summary": "蜘蛛丝蛋白β折叠氨基酸残基对Cr(VI)配位吸附（XPS机制；原型含超疏水嵌合待清理）",
+     "design_hint": "丝蛋白酰胺/羧基做金属结合位点（注意嵌合）"
+    }
+   ]
+  },
+  "PFOS": {
+   "prototypes": [
+    {
+     "id": "fabp4-fatty-acid-pfas-binding",
+     "weight": 0.3,
+     "mechanism_summary": "FABP4广谱PFAS结合外推至PFOS（inspiration，无选择性）",
+     "design_hint": "PFOS需实验验证"
+    }
+   ]
   }
  },
  "feature_prototype_map": {
@@ -2137,7 +2317,23 @@
   }
  },
  "prototype_metadata": {
-  "hl-fabp-liver-fatty-acid-pfas-binding": {"applicability": {"pH_range": null, "temp_range": null, "salinity": null, "note": "hL-FABP 为胞内可溶结合蛋白原型，无吸附适用性测试数据，故全空"}, "features": ["疏水性", "分子筛分"], "biomimetic_dimension": "分子仿生", "organism": {"scientific": "Homo sapiens（人肝脂肪酸结合蛋白 FABP1 / L-FABP，具异常大结合腔）", "category": "动物"}},
+  "hl-fabp-liver-fatty-acid-pfas-binding": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "hL-FABP 为胞内可溶结合蛋白原型，无吸附适用性测试数据，故全空"
+   },
+   "features": [
+    "疏水性",
+    "分子筛分"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Homo sapiens（人肝脂肪酸结合蛋白 FABP1 / L-FABP，具异常大结合腔）",
+    "category": "动物"
+   }
+  },
   "moda-oxyanion-geometric-recognition": {
    "applicability": {
     "pH_range": null,
