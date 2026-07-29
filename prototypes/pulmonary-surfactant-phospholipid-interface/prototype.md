@@ -2,7 +2,7 @@
 id: pulmonary-surfactant-phospholipid-interface
 name: 肺表面活性物质-磷脂界面分配（Pulmonary Surfactant Phospholipid Interface Partitioning）
 category: 动物
-organism: Homo sapiens / Sus scrofa（肺表面活性物质：DPPC 为主磷脂单层 + 表面活性剂蛋白 SP-B/SP-C；2DWF 为人源 SP-B，1SPF 为猪源 SP-C）
+organism: Homo sapiens 肺表面活性物质系统
 biomimetic_dimension: 功能仿生
 features:
   - 疏水性

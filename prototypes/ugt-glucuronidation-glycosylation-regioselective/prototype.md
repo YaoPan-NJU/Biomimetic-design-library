@@ -2,7 +2,7 @@
 id: ugt-glucuronidation-glycosylation-regioselective
 name: UGT 葡萄糖醛酸化/植物糖苷化区域选择性结合与两段封存原型（UGT Glucuronidation / Plant Glycosylation Regioselective Binding and Two-stage Sequestration Prototype）
 category: 植物
-organism: Medicago truncatula UGT71G1 / Vitis vinifera VvGT1 / Arabidopsis thaliana UGT74F2（植物 UDP-糖基转移酶）；动物二相 UGT（人 UGT2B15 等，同工酶动力学层级）
+organism: 多物种 UDP 糖基转移酶比较原型
 biomimetic_dimension: 分子仿生
 features:
   - 特异性识别

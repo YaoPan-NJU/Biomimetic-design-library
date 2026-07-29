@@ -11,16 +11,342 @@
       },
       "pollutant_profile": {
         "canonical_name": "oil-water",
-        "pollutant_class": "未知",
-        "molecular_features": [],
-        "likely_interactions": [],
-        "profile_basis": "llm_inference"
+        "pollutant_class": "separation_use_case",
+        "molecular_features": [
+          "油水分离",
+          "超疏水"
+        ],
+        "likely_interactions": [
+          "选择性润湿"
+        ],
+        "profile_basis": "curated_use_case"
       },
       "engineering_constraints": [
         "超疏水/超亲油"
       ]
     },
-    "candidates": [],
+    "candidates": [
+      {
+        "prototype_id": "lotus-leaf",
+        "organism": "Nelumbo nucifera",
+        "candidate_honesty": "inference",
+        "lane": "exploratory",
+        "prototype_status": {
+          "is_background": true,
+          "is_placeholder": false,
+          "scope_note": "V1-A: Surface physics. 33 mechanisms reclassified to background_only_surface_physics."
+        },
+        "domain_caveat": "",
+        "match": {
+          "reason": "Superhydrophobic surfaces enable selective oil/water separation",
+          "weight": 0.8,
+          "applicability_fit": "盐度 any",
+          "match_basis": "use_case_mapping",
+          "direct_evidence": false
+        },
+        "mechanism": {
+          "name": "超疏水膜的仿生设计原则 Biomimetic design principles for superhydrophobic membranes",
+          "selected_mechanism_reason": "Query-conditioned scoring selected this mechanism for oil-water based on relevance to matched features/interactions",
+          "selected_mechanism_alignment": {
+            "query_pollutant": "oil-water",
+            "query_class": "separation_use_case",
+            "mechanism_keywords": "超疏水膜的仿生设计原则 Biomimetic design principles for super",
+            "alignment_basis": "query_relevance_scoring",
+            "query_features": [
+              "油水分离",
+              "超疏水"
+            ],
+            "mechanism_functional_groups": [
+              "-S-（硫醚键）",
+              "低表面能化学物质",
+              "-O-（醚键）",
+              "氟化表面基团"
+            ],
+            "mechanism_key_structures": [
+              "Cassie-Baxter润湿态",
+              "膜结构",
+              "疏水表面",
+              "超疏水表面",
+              "吸附结构",
+              "表面能特征"
+            ],
+            "feature_binding_score": 1
+          },
+          "基本原理": "needs_review",
+          "key_structures": [
+            "Cassie-Baxter润湿态",
+            "膜结构",
+            "疏水表面",
+            "超疏水表面",
+            "吸附结构",
+            "表面能特征"
+          ],
+          "functional_groups": [
+            "-S-（硫醚键）",
+            "低表面能化学物质",
+            "-O-（醚键）",
+            "氟化表面基团"
+          ],
+          "molecular_feature_links": [],
+          "attribution": {
+            "source": "literature",
+            "ref": "10.1016/j.porgcoat.2024.108885",
+            "verification_tier": "unverified",
+            "confidence": "normal"
+          }
+        },
+        "design_translation": {
+          "idea": "利用荷叶表面微纳层级结构实现超疏水自清洁，可启发油水分离膜设计",
+          "material_handle": "超疏水涂层、仿生微纳结构膜",
+          "design_principle": "荷叶表面微米乳突+纳米蜡晶体形成层级结构，空气垫使水滴呈Cassie-Baxter态（接触角>150°，滚动角<10°）。超疏水表面对油水混合物具有选择性透过能力——水被排斥而油可渗透",
+          "implementation_example": "SiO₂/PDMS浸涂→超疏水涂层；或静电纺丝PCL/氟聚合物→微纳纤维膜→油水分离",
+          "constraints": "机械磨损破坏微纳结构→超疏水失效；强酸/碱腐蚀；有机溶剂溶胀",
+          "failure_modes": "机械磨损丧失超疏水性；油污堵塞孔道；长期使用涂层脱落",
+          "evidence_tier": "lead",
+          "source_tier": "llm_inference",
+          "material_realization_examples": [
+            "超疏水涂层、仿生微纳结构膜"
+          ]
+        },
+        "boundaries": [
+          {
+            "text": "表面粗糙度和化学组成决定润湿性",
+            "parameter": "surface_roughness",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          }
+        ],
+        "honesty_summary": "基于分子特征推断，非直接证据",
+        "boundary_summary": "1 条软限制（caution）",
+        "evidence_context": {
+          "performance_leads": []
+        },
+        "charge_state": {
+          "has_charge_state": true,
+          "pka_values": [],
+          "ion_dependence": [],
+          "ph_sensitive": true,
+          "charge_mechanisms": [
+            {
+              "mechanism_id": "",
+              "description": "天然蜡优点：绿色可降解+低熔点易复合+蜡向表面迁移改善疏水+可渗入粗糙/多孔表面+温度结晶形成荷叶粗糙结构+可分散于有机溶剂+可熔融涂覆。缺点：高温融化+热稳定性低+力学性能低+附着力差+耐用性差。脂",
+              "charge_terms": [
+                "羧基",
+                "羟基"
+              ]
+            }
+          ]
+        },
+        "relevance_gating": {
+          "is_excluded": false,
+          "exclusion_reason": "",
+          "do_not_list": []
+        }
+      },
+      {
+        "prototype_id": "superhydrophobic-artificial",
+        "organism": "Nelumbo nucifera",
+        "candidate_honesty": "inference",
+        "lane": "exploratory",
+        "prototype_status": {
+          "is_background": true,
+          "is_placeholder": false,
+          "scope_note": "V1-A: Surface physics. 60 mechanisms reclassified to background_only_surface_physics."
+        },
+        "domain_caveat": "",
+        "match": {
+          "reason": "Superhydrophobic surfaces enable selective oil/water separation",
+          "weight": 0.8,
+          "applicability_fit": "盐度 any",
+          "match_basis": "use_case_mapping",
+          "direct_evidence": false
+        },
+        "mechanism": {
+          "name": "PDA/FA阻燃超疏水泡沫性能 - Wang等 其它方法",
+          "selected_mechanism_reason": "Query-conditioned scoring selected this mechanism for oil-water based on relevance to matched features/interactions",
+          "selected_mechanism_alignment": {
+            "query_pollutant": "oil-water",
+            "query_class": "separation_use_case",
+            "mechanism_keywords": "PDA/FA阻燃超疏水泡沫性能 - Wang等 其它方法",
+            "alignment_basis": "query_relevance_scoring",
+            "query_features": [
+              "油水分离",
+              "超疏水"
+            ],
+            "mechanism_functional_groups": [
+              "聚多巴胺（PDA）邻苯二酚/胺基"
+            ],
+            "mechanism_key_structures": [
+              "油水分离结构",
+              "接触角特征",
+              "超疏水表面"
+            ],
+            "feature_binding_score": 2
+          },
+          "基本原理": "needs_review",
+          "key_structures": [
+            "油水分离结构",
+            "接触角特征",
+            "超疏水表面"
+          ],
+          "functional_groups": [
+            "聚多巴胺（PDA）邻苯二酚/胺基"
+          ],
+          "molecular_feature_links": [],
+          "attribution": {
+            "source": "literature",
+            "ref": "10.16865/j.cnki.1000-7555.2020.0282",
+            "verification_tier": "unverified",
+            "confidence": "normal"
+          }
+        },
+        "design_translation": {
+          "idea": "利用人工超疏水表面实现油水分离和自清洁，可启发抗污染膜设计",
+          "material_handle": "超疏水膜、涂层、织物",
+          "design_principle": "人工超疏水表面通过微纳结构+低表面能涂层实现接触角>150°。可用于油水分离和自清洁",
+          "implementation_example": "微纳结构加工（刻蚀/喷涂/电纺）+ 低表面能修饰（氟硅烷/PDMS）",
+          "constraints": "机械磨损破坏微纳结构；有机溶剂溶胀；长期稳定性差",
+          "failure_modes": "",
+          "evidence_tier": "inference",
+          "source_tier": "llm_inference",
+          "material_realization_examples": [
+            "超疏水膜、涂层、织物"
+          ]
+        },
+        "boundaries": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          }
+        ],
+        "honesty_summary": "基于分子特征推断，非直接证据",
+        "boundary_summary": "1 条软限制（caution）",
+        "evidence_context": {
+          "performance_leads": []
+        },
+        "charge_state": {
+          "has_charge_state": true,
+          "pka_values": [],
+          "ion_dependence": [],
+          "ph_sensitive": true,
+          "charge_mechanisms": [
+            {
+              "mechanism_id": "",
+              "description": "在高离子浓度环境下依然保持很好的疏水性和吸附性",
+              "charge_terms": [
+                "ionic"
+              ]
+            }
+          ]
+        },
+        "relevance_gating": {
+          "is_excluded": false,
+          "exclusion_reason": "",
+          "do_not_list": []
+        }
+      },
+      {
+        "prototype_id": "water-strider-leg",
+        "organism": "Gerridae",
+        "candidate_honesty": "inference",
+        "lane": "exploratory",
+        "prototype_status": {
+          "is_background": true,
+          "is_placeholder": false,
+          "scope_note": "V1-A: Surface physics. 52 mechanisms reclassified to background_only_surface_physics."
+        },
+        "domain_caveat": "",
+        "match": {
+          "reason": "Superhydrophobic surfaces enable selective oil/water separation",
+          "weight": 0.8,
+          "applicability_fit": "盐度 any",
+          "match_basis": "use_case_mapping",
+          "direct_evidence": false
+        },
+        "mechanism": {
+          "name": "PDA/FA阻燃超疏水泡沫性能 - Wang等 其它方法",
+          "selected_mechanism_reason": "Query-conditioned scoring selected this mechanism for oil-water based on relevance to matched features/interactions",
+          "selected_mechanism_alignment": {
+            "query_pollutant": "oil-water",
+            "query_class": "separation_use_case",
+            "mechanism_keywords": "PDA/FA阻燃超疏水泡沫性能 - Wang等 其它方法",
+            "alignment_basis": "query_relevance_scoring",
+            "query_features": [
+              "油水分离",
+              "超疏水"
+            ],
+            "mechanism_functional_groups": [
+              "聚多巴胺（PDA）邻苯二酚/胺基"
+            ],
+            "mechanism_key_structures": [
+              "油水分离结构",
+              "接触角特征",
+              "超疏水表面"
+            ],
+            "feature_binding_score": 2
+          },
+          "基本原理": "needs_review",
+          "key_structures": [
+            "油水分离结构",
+            "接触角特征",
+            "超疏水表面"
+          ],
+          "functional_groups": [
+            "聚多巴胺（PDA）邻苯二酚/胺基"
+          ],
+          "molecular_feature_links": [],
+          "attribution": {
+            "source": "literature",
+            "ref": "10.16865/j.cnki.1000-7555.2020.0282",
+            "verification_tier": "unverified",
+            "confidence": "normal"
+          }
+        },
+        "design_translation": {
+          "idea": "利用水黾腿的微纳层级结构和超疏水性实现水面行走，可启发水面漂浮/分离材料",
+          "material_handle": "超疏水微结构表面",
+          "design_principle": "水黾腿的微纳层级结构和超疏水性实现水面行走。可用于设计水面漂浮/分离材料",
+          "implementation_example": "微纳锥形阵列+疏水涂层→水面漂浮材料",
+          "constraints": "微纳结构加工精度高；不适用于液态吸附；仅适用于气-液界面",
+          "failure_modes": "",
+          "evidence_tier": "inference",
+          "source_tier": "llm_inference",
+          "material_realization_examples": [
+            "超疏水微结构表面"
+          ]
+        },
+        "boundaries": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          }
+        ],
+        "honesty_summary": "基于分子特征推断，非直接证据",
+        "boundary_summary": "1 条软限制（caution）",
+        "evidence_context": {
+          "performance_leads": []
+        },
+        "charge_state": {
+          "has_charge_state": false,
+          "pka_values": [],
+          "ion_dependence": [],
+          "ph_sensitive": true,
+          "charge_mechanisms": []
+        },
+        "relevance_gating": {
+          "is_excluded": false,
+          "exclusion_reason": "",
+          "do_not_list": []
+        }
+      }
+    ],
     "applicable_rules": [],
     "rule_based_cautions": {
       "do_not": [],

@@ -87,6 +87,32 @@ def test_gate_mechanisms():
 
     print("✅ test_gate_mechanisms passed")
 
+def test_direct_evidence_requires_verified_pollutant_performance():
+    """Text-only mappings must not be promoted to direct evidence."""
+    ctx = BiomimeticContext()
+
+    assert ctx.find_direct_evidence('PFOA') == [], "PFOA mappings are inspiration-only"
+    assert ctx.find_direct_evidence('BPA') == [], "BPA mappings are inspiration-only"
+
+    lead_ids = {item['prototype_id'] for item in ctx.find_direct_evidence('Pb(II)')}
+    assert 'mussel-foot-adhesion' in lead_ids, "Verified Pb(II) performance should remain direct"
+
+    print("✅ test_direct_evidence_requires_verified_pollutant_performance passed")
+
+def test_use_case_can_select_background_mechanisms():
+    """Explicit separation queries may use otherwise hidden surface-physics mechanisms."""
+    ctx = BiomimeticContext()
+    candidates = ctx.query('oil-water', {}, [])['brief']['candidates']
+
+    assert candidates, "Oil-water use case should return separation prototypes"
+    assert all(item['match']['match_basis'] == 'use_case_mapping' for item in candidates)
+    assert all(item['prototype_status']['is_background'] for item in candidates)
+    for item in candidates:
+        if item['prototype_id'] in {'lotus-leaf', 'superhydrophobic-artificial'}:
+            assert '超疏水' in item['mechanism']['name'] or '油水' in item['mechanism']['name']
+
+    print("✅ test_use_case_can_select_background_mechanisms passed")
+
 def main():
     print("=== BiomimeticContext Unit Tests ===\n")
 
@@ -96,6 +122,8 @@ def main():
         test_charge_state()
         test_relevance_gating()
         test_gate_mechanisms()
+        test_direct_evidence_requires_verified_pollutant_performance()
+        test_use_case_can_select_background_mechanisms()
         print("\n✅ All tests passed!")
         return 0
     except AssertionError as e:

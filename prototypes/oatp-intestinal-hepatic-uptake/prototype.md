@@ -2,7 +2,7 @@
 id: oatp-intestinal-hepatic-uptake
 name: OATP 有机阴离子转运多肽（肠肝循环向量摄取）（OATP Organic Anion Transporting Polypeptides (Enterohepatic Vectorial Uptake)）
 category: 动物
-organism: Homo sapiens（人源 OATP1B1/OATP1B3，SLCO1B1/SLCO1B3 肝窦膜摄取转运体）
+organism: Homo sapiens OATP1B 转运体家族
 biomimetic_dimension: 分子仿生
 features:
   - 特异性识别

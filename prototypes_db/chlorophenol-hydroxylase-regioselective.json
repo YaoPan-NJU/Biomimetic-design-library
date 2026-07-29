@@ -3,7 +3,7 @@
  "name_zh": "氯酚羟化酶区域选择性芳香羟基化",
  "name_en": "Chlorophenol Hydroxylase Regioselective Aromatic Hydroxylation",
  "organism": {
-  "scientific": "Pseudomonas sp. CF600 / Cupriavidus necator JMP134 / Ralstonia pickettii（酚/氯酚羟化酶系：酚羟化酶组分 P2、TcpA 2,4,6-TCP 4-单加氧酶、HadA 黄素依赖氯酚单加氧酶）",
+  "scientific": "多物种细菌酚与氯酚羟化酶比较原型",
   "category": "微生物"
  },
  "biomimetic_dimension": "分子仿生",
@@ -160,7 +160,7 @@
     },
     "boundary_conditions": [
      {
-      "text": "2,6-DCP 专一羟化酶结构缺口：本库经 RCSB 检索（4G5E 为 TcpA/2,4,6-TCP 4-单加氧酶，5MA1 为 PceA 还原脱卤酶、非羟化酶）未获 2,6-DCP 专一羟化酶晶体结构；2,6-DCP 双邻位氯阻碍羟基化为推断，须实验核验（定性，无数值阈值）",
+      "text": "目标氯酚专一羟化酶存在结构缺口：数据库命中的是其他氯酚单加氧酶或还原脱卤酶，未获得目标专一羟化酶结构；双邻位氯阻碍羟基化仍是待实验核验的定性推断。",
       "parameter": "other",
       "condition": {
        "operator": "qualitative",

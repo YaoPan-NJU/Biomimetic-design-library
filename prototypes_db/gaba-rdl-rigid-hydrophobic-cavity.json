@@ -1,0 +1,91 @@
+{
+  "id": "gaba-rdl-rigid-hydrophobic-cavity",
+  "name_zh": "Rdl 通道孔位点对环二烯拮抗剂敏感性的调制",
+  "name_en": "Rdl Pore-Site Modulation of Cyclodiene Antagonist Sensitivity",
+  "organism": {
+    "scientific": "Drosophila melanogaster",
+    "category": "动物"
+  },
+  "biomimetic_dimension": "分子仿生",
+  "features": ["疏水孔环境", "极性位点调制"],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": null,
+    "note": "来源研究抗性表型，不是水相吸附；本库无二嗪农等污染物的材料性能数据。"
+  },
+  "library_tier": "exploratory",
+  "lifecycle_status": "pending_extraction",
+  "coverage": "partial",
+  "status": "pending_extraction",
+  "source_scheme": "S27_A01 (dieldrin, score 89, passed)",
+  "provenance_summary": {
+    "n_papers": 1,
+    "n_verified": 0,
+    "n_unverified": 1,
+    "note": "A302S 研究支持 Rdl 孔区位点与环二烯抗性相关；不支持原条目的精确腔体尺寸、直接结合结构或方酰胺能量增量。"
+  },
+  "mechanisms": [
+    {
+      "mechanism_id": "RDL-001",
+      "name": "Rdl 孔区位点对环二烯敏感性的调制",
+      "description": "Rdl 亚基 A302S 替换与环二烯杀虫剂抗性相关，说明通道孔区的局部残基能调制药理敏感性；该结果不等于已获得配体结合腔结构。",
+      "基本原理": "通道孔区单点极性变化可改变受体对环二烯拮抗剂的响应。",
+      "source": "literature",
+      "ref_doi": "10.1038/363449a0",
+      "verification": "partial",
+      "verification_quote": null,
+      "causal_chain": {
+        "pollutant_feature": {"text": "环二烯类具有刚性疏水骨架，但具体结合姿态尚未由该来源解析。", "basis": "llm_inferred", "source": null, "locator": null, "quote": null},
+        "bio_structure": {"text": "Rdl 氯通道孔区的 A302 位点影响环二烯敏感性。", "basis": "llm_inferred", "source": null, "locator": null, "quote": null},
+        "interaction": {"text": "局部极性和孔区几何可能共同改变配体阻断或受体构象响应。", "basis": "llm_inferred", "source": null, "locator": null, "quote": null},
+        "why_it_works": {"text": "单点替换造成抗性表型，表明该区域参与敏感性调制，但作用方向和直接接触仍待结构验证。", "basis": "llm_inferred", "source": null, "locator": null, "quote": null},
+        "boundary_conditions": [
+          {
+            "text": "抗性突变只能定位功能相关区域，不能给出精确腔体尺寸或人工受体的结合能。",
+            "parameter": "evidence_scope",
+            "condition": {"operator": "qualitative", "value": null},
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "可用疏水受限空间中的单点极性变化测试识别增量，但必须与非特异疏水分配分开。"
+      },
+      "functional_groups": ["通道孔区残基", "局部极性位点"],
+      "key_structures": ["Rdl 通道孔区"]
+    }
+  ],
+  "performance_data": [],
+  "design_translation": [
+    {
+      "idea": "在疏水受限孔中逐步引入单一极性位点，比较环二烯同系物的竞争吸附；方酰胺位点仅作为待测工程假设。",
+      "specific_functional_group": "可控密度的方酰胺或其他氢键供体",
+      "material_handle": "表面化学可分步调节的疏水介孔材料",
+      "target_interaction": "疏水分配背景上的局部极性增量",
+      "source_tier": "llm_inference",
+      "evidence_tier": "inspiration",
+      "examples": [],
+      "design_principle": "只转译局部位点可调制敏感性的原则，不声称复制天然结合腔。",
+      "implementation_example": "同孔径材料的无位点、单极性位点和高密度位点对照组",
+      "constraints": "需在真实水相中控制有机质竞争，并用无极性对照扣除疏水贡献。",
+      "failure_modes": "极性位点被水占据；非特异疏水分配占主导；把抗性表型误作直接结合证据。",
+      "material_realization_examples": []
+    }
+  ],
+  "honesty_ledger": {
+    "facts": [],
+    "leads": [
+      {"type": "mechanism", "index": 0, "name": "Rdl A302S 与环二烯抗性", "basis": "literature_backed", "note": "抗性关联有文献支持，直接结合结构与全文 locator 尚未提取。"}
+    ],
+    "inferences": [
+      {"type": "design_translation", "index": 0, "idea": "疏水孔内单极性位点调制", "basis": "llm_inferred", "label": "inspiration"}
+    ],
+    "boundary_notes": ["不再保留精确孔径、ng/L 捕获或氢键能量等无直接证据数字。"],
+    "missing_pdf_items": ["10.1038/363449a0 全文证据提取"],
+    "generated_by": "codex-2026-07-28"
+  }
+}

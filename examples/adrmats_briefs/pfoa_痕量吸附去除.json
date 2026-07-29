@@ -44,8 +44,8 @@
     },
     "candidates": [
       {
-        "prototype_id": "plant-tannin",
-        "organism": "Plant sources (单宁酸)",
+        "prototype_id": "mussel-foot-adhesion",
+        "organism": "Mytilus spp.",
         "candidate_honesty": "inference",
         "lane": "exploratory",
         "prototype_status": {
@@ -55,19 +55,19 @@
         },
         "domain_caveat": "organic micropollutant evidence weak",
         "match": {
-          "reason": "芳香环可通过π-π堆积作用与含芳香环的吸附剂结合",
+          "reason": "含 N/O 配位原子的污染物可与壳聚糖氨基、DOPA 邻苯二酚、单宁羟基配位",
           "weight": 0.7,
-          "applicability_fit": "pH 2.5-7.0, 盐度 low_to_moderate",
+          "applicability_fit": "pH 3.0-6.8, 盐度 moderate",
           "match_basis": "molecular_feature_inference",
           "direct_evidence": false
         },
         "mechanism": {
-          "name": "CR吸附机制总结",
+          "name": "三种驱动力协同机制",
           "selected_mechanism_reason": "Query-conditioned scoring selected this mechanism for PFOA based on relevance to matched features/interactions",
           "selected_mechanism_alignment": {
             "query_pollutant": "PFOA",
             "query_class": "PFASs（全氟和多氟烷基物质）",
-            "mechanism_keywords": "CR吸附机制总结",
+            "mechanism_keywords": "三种驱动力协同机制",
             "alignment_basis": "query_relevance_scoring",
             "query_features": [
               "两亲性",
@@ -83,19 +83,230 @@
               "芳香环",
               "长链全氟烷基"
             ],
-            "mechanism_functional_groups": "",
-            "mechanism_key_structures": [],
-            "feature_binding_score": 0
+            "mechanism_functional_groups": [
+              "π-π堆积位点",
+              "静电作用位点",
+              "氢键位点"
+            ],
+            "mechanism_key_structures": [
+              "吸附结构"
+            ],
+            "feature_binding_score": 1
           },
           "基本原理": "needs_review",
-          "key_structures": [],
-          "functional_groups": "",
+          "key_structures": [
+            "吸附结构"
+          ],
+          "functional_groups": [
+            "π-π堆积位点",
+            "静电作用位点",
+            "氢键位点"
+          ],
           "molecular_feature_links": [
+            "可配位"
+          ],
+          "attribution": {
+            "source": "literature",
+            "ref": "10.1016/j.cej.2021.129237",
+            "verification_tier": "needs_review",
+            "confidence": "low"
+          }
+        },
+        "design_translation": {
+          "idea": "利用贻贝足丝蛋白 DOPA 的邻苯二酚基团进行表面功能化，通过双齿配位捕获软金属离子",
+          "material_handle": "聚多巴胺（PDA）涂层或多巴胺改性聚合物",
+          "design_principle": "贻贝足丝蛋白 DOPA 的邻苯二酚基团通过双齿配位捕获软金属离子(Pb²⁺ logK~13, Cu²⁺ logK~12)，且在湿润表面保持粘附力",
+          "implementation_example": "PDA涂层(见polydopamine-coating) → 基底功能化 → 金属吸附；或 mussel-inspired hydrogel (PDA/PAM双网络) → 3D吸附柱",
+          "constraints": "DOPA氧化后螯合能力下降；pH>8时邻苯二酚去质子化；竞争配体(如EDTA)干扰",
+          "failure_modes": "氧化失活；高pH脱附；竞争离子降低选择性",
+          "evidence_tier": "fact (有 Liu2024 Pb 526.68mg/g 数据)",
+          "source_tier": "literature",
+          "material_realization_examples": [
+            "聚多巴胺（PDA）涂层或多巴胺改性聚合物"
+          ]
+        },
+        "boundaries": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          }
+        ],
+        "honesty_summary": "基于分子特征推断，非直接证据",
+        "boundary_summary": "1 条软限制（caution）",
+        "evidence_context": {
+          "performance_leads": []
+        },
+        "charge_state": {
+          "has_charge_state": true,
+          "pka_values": [],
+          "ion_dependence": [],
+          "ph_sensitive": true,
+          "charge_mechanisms": [
+            {
+              "mechanism_id": "",
+              "description": "磷酸甜菜碱基两性离子聚合物被视为仿生抗污材料，因其具有通常存在于细胞膜外层的磷酸胆碱头基",
+              "charge_terms": [
+                "磷酸"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "氧化条件下羟基自发去质子化形成多巴胺醌，经亲核分子内环化变为leukodopaminechrome，再经进一步氧化重排形成5,6-二羟基吲哚或5,6-吲哚醌，最终通过2,3,4,7位分支反应交联形成类",
+              "charge_terms": [
+                "amine",
+                "羟基",
+                "质子化"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "PDA可沉积于任何表面（有机/无机、亲水/疏水、块状/纤维状/颗粒状、金属/聚合物/活细胞），而SAM仅限贵金属表面（Cu/Pt/Ag/Au）通过巯基金属键或氧化物表面通过烷基硅烷；LbL需多步沉积且",
+              "charge_terms": [
+                "巯基"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "多巴胺辅助共沉积涉及多巴胺与第二组分之间的单/多共价或非共价相互作用。共价共沉积提供更强网络以促进涂层稳定性。poly(SBMA)通过去质子化酚基与季铵的局部静电作用与PDA交互；poly(MPC)通",
+              "charge_terms": [
+                "质子化"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "金属配位、Michael加成、Schiff碱形成、氢键、π-π堆积五种相互作用",
+              "charge_terms": [
+                "羟基"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "含氨基聚合物经CO2暴露质子化增强亲水性（水合增强）；去除CO2去质子化恢复中性态，聚合物链塌缩恢复疏水",
+              "charge_terms": [
+                "氨基",
+                "质子化"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "可离子化和可水解聚合物响应pH变化质子化/去质子化，改变水合状态，在亲水和疏水间切换",
+              "charge_terms": [
+                "质子化"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "多巴胺在弱碱性环境下通过酚羟基氧化成醌，醌式相互叠加实现聚合；聚多巴胺在Fe3O4外以羟基间氢键或物理堆积形式沉积，不涉及与Fe元素的配位作用",
+              "charge_terms": [
+                "羟基"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "聚多巴胺壳层大量羟基为主要吸附位点，氨基主要参与苯环成环，仅部分氨基参与与铀的作用",
+              "charge_terms": [
+                "氨基",
+                "羟基"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "phenolic hydroxyl groups participate in adsorption (C-O and O 1s binding energy shifts)",
+              "charge_terms": [
+                "hydroxyl"
+              ]
+            }
+          ]
+        },
+        "relevance_gating": {
+          "is_excluded": false,
+          "exclusion_reason": "",
+          "do_not_list": []
+        }
+      },
+      {
+        "prototype_id": "plant-tannin",
+        "organism": "Plant sources (单宁酸)",
+        "candidate_honesty": "inference",
+        "lane": "exploratory",
+        "prototype_status": {
+          "is_background": false,
+          "is_placeholder": false,
+          "scope_note": ""
+        },
+        "domain_caveat": "organic micropollutant evidence weak",
+        "match": {
+          "reason": "含 N/O 配位原子的污染物可与壳聚糖氨基、DOPA 邻苯二酚、单宁羟基配位",
+          "weight": 0.7,
+          "applicability_fit": "pH 2.5-7.0, 盐度 low_to_moderate",
+          "match_basis": "molecular_feature_inference",
+          "direct_evidence": false
+        },
+        "mechanism": {
+          "name": "植物单宁芳香环π-π堆积与酚羟基氢键静电吸附",
+          "selected_mechanism_reason": "Query-conditioned scoring selected this mechanism for PFOA based on relevance to matched features/interactions",
+          "selected_mechanism_alignment": {
+            "query_pollutant": "PFOA",
+            "query_class": "PFASs（全氟和多氟烷基物质）",
+            "mechanism_keywords": "植物单宁芳香环π-π堆积与酚羟基氢键静电吸附",
+            "alignment_basis": "query_relevance_scoring",
+            "query_features": [
+              "两亲性",
+              "化学稳定性",
+              "可电离",
+              "可配位",
+              "大分子",
+              "弱酸性",
+              "氟碳链",
+              "水溶性",
+              "疏水性",
+              "羧酸基团",
+              "芳香环",
+              "长链全氟烷基"
+            ],
+            "mechanism_functional_groups": [
+              "-COOH（羧基）",
+              "静电作用位点",
+              "芳香环",
+              "-COO⁻（羧基阴离子）",
+              "-S-（硫醚键）",
+              "GO羧基/羟基/环氧基",
+              "-OH（羟基）",
+              "氢键位点",
+              "π-π堆积位点",
+              "-O-（醚键）"
+            ],
+            "mechanism_key_structures": [
+              "吸附结构"
+            ],
+            "feature_binding_score": 3
+          },
+          "基本原理": "needs_review",
+          "key_structures": [
+            "吸附结构"
+          ],
+          "functional_groups": [
+            "-COOH（羧基）",
+            "静电作用位点",
+            "芳香环",
+            "-COO⁻（羧基阴离子）",
+            "-S-（硫醚键）",
+            "GO羧基/羟基/环氧基",
+            "-OH（羟基）",
+            "氢键位点",
+            "π-π堆积位点",
+            "-O-（醚键）"
+          ],
+          "molecular_feature_links": [
+            "可配位",
             "芳香环"
           ],
           "attribution": {
             "source": "literature",
-            "ref": "10.1016/j.seppur.2024.127979",
+            "ref": "10.1016/j.colsurfa.2021.126972",
             "verification_tier": "partial",
             "confidence": "normal"
           }
@@ -174,12 +385,12 @@
           "direct_evidence": false
         },
         "mechanism": {
-          "name": "热处理——550°C表面Si-OH暴露",
+          "name": "硅藻壳多尺度孔限域筛分与表面硅羟基配位",
           "selected_mechanism_reason": "Query-conditioned scoring selected this mechanism for PFOA based on relevance to matched features/interactions",
           "selected_mechanism_alignment": {
             "query_pollutant": "PFOA",
             "query_class": "PFASs（全氟和多氟烷基物质）",
-            "mechanism_keywords": "热处理——550°C表面Si-OH暴露",
+            "mechanism_keywords": "硅藻壳多尺度孔限域筛分与表面硅羟基配位",
             "alignment_basis": "query_relevance_scoring",
             "query_features": [
               "两亲性",
@@ -196,29 +407,39 @@
               "长链全氟烷基"
             ],
             "mechanism_functional_groups": [
-              "硅羟基 Si-OH",
-              "L碱位点",
               "表面羟基配合",
-              "多孔吸附"
+              "硅羟基 Si-OH",
+              "配位/螯合位点",
+              "多孔吸附",
+              "-OH（羟基）",
+              "L碱位点",
+              "氢键位点",
+              "-O-（醚键）"
             ],
             "mechanism_key_structures": [
               "非晶态SiO₂多孔骨架",
+              "吸附结构",
               "550°C煅烧暴露裸露Si-OH",
               "层级多孔(大孔300-500nm+介孔2-50nm)"
             ],
-            "feature_binding_score": 0
+            "feature_binding_score": 1
           },
           "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
           "key_structures": [
             "非晶态SiO₂多孔骨架",
+            "吸附结构",
             "550°C煅烧暴露裸露Si-OH",
             "层级多孔(大孔300-500nm+介孔2-50nm)"
           ],
           "functional_groups": [
-            "硅羟基 Si-OH",
-            "L碱位点",
             "表面羟基配合",
-            "多孔吸附"
+            "硅羟基 Si-OH",
+            "配位/螯合位点",
+            "多孔吸附",
+            "-OH（羟基）",
+            "L碱位点",
+            "氢键位点",
+            "-O-（醚键）"
           ],
           "molecular_feature_links": [
             "二价阳离子",
@@ -336,27 +557,33 @@
             ],
             "mechanism_functional_groups": [
               "邻苯二酚 catechol (-OH)",
+              "静电作用位点",
               "胺基 amine (-NH₂)",
+              "氢键位点",
               "吲哚环 indole"
             ],
             "mechanism_key_structures": [
-              "PDA邻苯二酚螯合",
-              "胺基静电吸附",
               "π-π堆叠",
+              "胺基静电吸附",
+              "吸附结构",
+              "PDA邻苯二酚螯合",
               "席夫碱反应"
             ],
-            "feature_binding_score": 0
+            "feature_binding_score": 1
           },
           "基本原理": "needs_review",
           "key_structures": [
-            "PDA邻苯二酚螯合",
-            "胺基静电吸附",
             "π-π堆叠",
+            "胺基静电吸附",
+            "吸附结构",
+            "PDA邻苯二酚螯合",
             "席夫碱反应"
           ],
           "functional_groups": [
             "邻苯二酚 catechol (-OH)",
+            "静电作用位点",
             "胺基 amine (-NH₂)",
+            "氢键位点",
             "吲哚环 indole"
           ],
           "molecular_feature_links": [
@@ -427,7 +654,7 @@
       },
       {
         "prototype_id": "chitosan",
-        "organism": "Crustacea",
+        "organism": "Crustacea (甲壳类外骨骼几丁质)",
         "candidate_honesty": "inference",
         "lane": "exploratory",
         "prototype_status": {
@@ -437,19 +664,19 @@
         },
         "domain_caveat": "organic micropollutant evidence weak",
         "match": {
-          "reason": "弱酸性污染物在低pH下可被质子化壳聚糖(-NH₃⁺)通过静电吸引吸附",
-          "weight": 0.625,
+          "reason": "可电离污染物在特定 pH 下带电荷，与壳聚糖/海藻酸的离子交换位点作用",
+          "weight": 0.6166666666666667,
           "applicability_fit": "pH 3.0-7.0, 盐度 low_to_moderate",
           "match_basis": "molecular_feature_inference",
           "direct_evidence": false
         },
         "mechanism": {
-          "name": "吸附机制——CR的三重作用",
+          "name": "抗生素在CS/GO复合物上的吸附机制",
           "selected_mechanism_reason": "Query-conditioned scoring selected this mechanism for PFOA based on relevance to matched features/interactions",
           "selected_mechanism_alignment": {
             "query_pollutant": "PFOA",
             "query_class": "PFASs（全氟和多氟烷基物质）",
-            "mechanism_keywords": "吸附机制——CR的三重作用",
+            "mechanism_keywords": "抗生素在CS/GO复合物上的吸附机制",
             "alignment_basis": "query_relevance_scoring",
             "query_features": [
               "两亲性",
@@ -466,35 +693,55 @@
               "长链全氟烷基"
             ],
             "mechanism_functional_groups": [
-              "氨基 amino (-NH₂)",
-              "羟基 hydroxyl (-OH)",
-              "羧基 carboxyl (-COOH)"
+              "-NH-（亚氨基）",
+              "离子交换位点",
+              "静电作用位点",
+              "芳香环",
+              "疏水相互作用",
+              "壳聚糖氨基/羟基",
+              "配位/螯合位点",
+              "GO羧基/羟基/环氧基",
+              "-OH（羟基）",
+              "-NH₂（氨基）",
+              "氢键位点",
+              "-S-（硫醚键）",
+              "-O-（醚键）",
+              "-C=O（羰基）"
             ],
             "mechanism_key_structures": [
-              "壳聚糖-NH₂氢键",
-              "静电作用(pH>7.24)",
-              "孔道捕获"
+              "吸附结构"
             ],
-            "feature_binding_score": 3
+            "feature_binding_score": 5
           },
-          "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合",
+          "基本原理": "壳聚糖分子链上的氨基（-NH₂）可通过质子化带正电，与带负电的污染物（如染料、重金属阴离子）通过静电吸引结合",
           "key_structures": [
-            "壳聚糖-NH₂氢键",
-            "静电作用(pH>7.24)",
-            "孔道捕获"
+            "吸附结构"
           ],
           "functional_groups": [
-            "氨基 amino (-NH₂)",
-            "羟基 hydroxyl (-OH)",
-            "羧基 carboxyl (-COOH)"
+            "-NH-（亚氨基）",
+            "离子交换位点",
+            "静电作用位点",
+            "芳香环",
+            "疏水相互作用",
+            "壳聚糖氨基/羟基",
+            "配位/螯合位点",
+            "GO羧基/羟基/环氧基",
+            "-OH（羟基）",
+            "-NH₂（氨基）",
+            "氢键位点",
+            "-S-（硫醚键）",
+            "-O-（醚键）",
+            "-C=O（羰基）"
           ],
           "molecular_feature_links": [
+            "可电离",
+            "可配位",
             "弱酸性",
             "水溶性"
           ],
           "attribution": {
             "source": "literature",
-            "ref": "10.1016/j.cej.2022.138934",
+            "ref": "10.3390/molecules26030594",
             "verification_tier": "partial",
             "confidence": "normal"
           }
@@ -731,6 +978,455 @@
           "exclusion_reason": "",
           "do_not_list": []
         }
+      },
+      {
+        "prototype_id": "alginate",
+        "organism": "Phaeophyceae",
+        "candidate_honesty": "inference",
+        "lane": "exploratory",
+        "prototype_status": {
+          "is_background": false,
+          "is_placeholder": false,
+          "scope_note": ""
+        },
+        "domain_caveat": "organic micropollutant evidence weak",
+        "match": {
+          "reason": "可电离污染物在特定 pH 下带电荷，与壳聚糖/海藻酸的离子交换位点作用",
+          "weight": 0.5,
+          "applicability_fit": "盐度 any",
+          "match_basis": "molecular_feature_inference",
+          "direct_evidence": false
+        },
+        "mechanism": {
+          "name": "海藻酸盐羧基/羟基螯合吸附",
+          "selected_mechanism_reason": "Query-conditioned scoring selected this mechanism for PFOA based on relevance to matched features/interactions",
+          "selected_mechanism_alignment": {
+            "query_pollutant": "PFOA",
+            "query_class": "PFASs（全氟和多氟烷基物质）",
+            "mechanism_keywords": "海藻酸盐羧基/羟基螯合吸附",
+            "alignment_basis": "query_relevance_scoring",
+            "query_features": [
+              "两亲性",
+              "化学稳定性",
+              "可电离",
+              "可配位",
+              "大分子",
+              "弱酸性",
+              "氟碳链",
+              "水溶性",
+              "疏水性",
+              "羧酸基团",
+              "芳香环",
+              "长链全氟烷基"
+            ],
+            "mechanism_functional_groups": [
+              "离子交换位点",
+              "-COOH（羧基）",
+              "静电作用位点",
+              "配位/螯合位点",
+              "海藻酸羧基/羟基",
+              "-OH（羟基）",
+              "-O-（醚键）"
+            ],
+            "mechanism_key_structures": [
+              "蛋盒凝胶结构",
+              "吸附结构",
+              "凝胶结构",
+              "海藻酸盐多糖骨架"
+            ],
+            "feature_binding_score": 0
+          },
+          "基本原理": "needs_review",
+          "key_structures": [
+            "蛋盒凝胶结构",
+            "吸附结构",
+            "凝胶结构",
+            "海藻酸盐多糖骨架"
+          ],
+          "functional_groups": [
+            "离子交换位点",
+            "-COOH（羧基）",
+            "静电作用位点",
+            "配位/螯合位点",
+            "海藻酸羧基/羟基",
+            "-OH（羟基）",
+            "-O-（醚键）"
+          ],
+          "molecular_feature_links": [
+            "可电离"
+          ],
+          "attribution": {
+            "source": "literature",
+            "ref": "10.1016/j.ijbiomac.2025.140801",
+            "verification_tier": "needs_review",
+            "confidence": "low"
+          }
+        },
+        "design_translation": {
+          "idea": "利用海藻酸盐的羧基/羟基官能团和蛋盒凝胶结构进行重金属和染料吸附",
+          "material_handle": "海藻酸盐水凝胶、气凝胶、复合微球",
+          "design_principle": "海藻酸盐的-COOH/-OH通过螯合配位+离子交换双重机制吸附重金属。蛋盒凝胶结构与二价阳离子(Ca²⁺、Pb²⁺)形成稳定凝胶",
+          "implementation_example": "海藻酸钠(1-3% w/v) + CaCl₂(2-5% w/v)凝固浴→海藻酸钙珠粒(直径1-5mm) → 金属吸附 → EDTA或酸洗再生",
+          "constraints": "酸性条件(pH<3)凝胶溶解；机械强度低需复合增强；高盐竞争",
+          "failure_modes": "凝胶溶胀/溶解；机械破碎；竞争离子降低容量",
+          "evidence_tier": "lead (有70行性能数据但缺 verification_quote)",
+          "source_tier": "literature",
+          "material_realization_examples": [
+            "海藻酸盐水凝胶、气凝胶、复合微球"
+          ]
+        },
+        "boundaries": [
+          {
+            "text": "酸性条件（pH<3）下-COOH质子化，螯合能力显著下降",
+            "parameter": "pH",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          },
+          {
+            "text": "交联度影响凝胶孔径和官能团可及性，过度交联降低吸附容量",
+            "parameter": "crosslinking_density",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          },
+          {
+            "text": "性能数据中未记录pH/温度测试条件，适用范围未知",
+            "parameter": "tested_conditions",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          }
+        ],
+        "honesty_summary": "基于分子特征推断，非直接证据",
+        "boundary_summary": "3 条软限制（caution）",
+        "evidence_context": {
+          "performance_leads": [
+            {
+              "pollutant": "全氟辛酸（PFOA）",
+              "material": "alginate",
+              "value": "382.1",
+              "unit": "",
+              "verification_tier": "partial"
+            }
+          ]
+        },
+        "charge_state": {
+          "has_charge_state": false,
+          "pka_values": [],
+          "ion_dependence": [],
+          "ph_sensitive": false,
+          "charge_mechanisms": []
+        },
+        "relevance_gating": {
+          "is_excluded": false,
+          "exclusion_reason": "",
+          "do_not_list": []
+        }
+      },
+      {
+        "prototype_id": "wood-xylem",
+        "organism": "Limonia acidissima",
+        "candidate_honesty": "inference",
+        "lane": "exploratory",
+        "prototype_status": {
+          "is_background": false,
+          "is_placeholder": false,
+          "scope_note": ""
+        },
+        "domain_caveat": "organic micropollutant evidence weak",
+        "match": {
+          "reason": "大分子污染物可通过体积排阻/孔径截留被多孔材料去除",
+          "weight": 0.5,
+          "applicability_fit": "pH 6.0-6.0, 盐度 low",
+          "match_basis": "molecular_feature_inference",
+          "direct_evidence": false
+        },
+        "mechanism": {
+          "name": "木质部多级孔道木质素芳香结构π-π堆积与氢键选择性吸附",
+          "selected_mechanism_reason": "Query-conditioned scoring selected this mechanism for PFOA based on relevance to matched features/interactions",
+          "selected_mechanism_alignment": {
+            "query_pollutant": "PFOA",
+            "query_class": "PFASs（全氟和多氟烷基物质）",
+            "mechanism_keywords": "木质部多级孔道木质素芳香结构π-π堆积与氢键选择性吸附",
+            "alignment_basis": "query_relevance_scoring",
+            "query_features": [
+              "两亲性",
+              "化学稳定性",
+              "可电离",
+              "可配位",
+              "大分子",
+              "弱酸性",
+              "氟碳链",
+              "水溶性",
+              "疏水性",
+              "羧酸基团",
+              "芳香环",
+              "长链全氟烷基"
+            ],
+            "mechanism_functional_groups": [
+              "-S-（硫醚键）"
+            ],
+            "mechanism_key_structures": [
+              "吸附结构"
+            ],
+            "feature_binding_score": 1
+          },
+          "基本原理": "木质素的芳香环和酚羟基与酚类污染物结构相似，通过π-π堆积和氢键实现选择性吸附",
+          "key_structures": [
+            "吸附结构"
+          ],
+          "functional_groups": [
+            "-S-（硫醚键）"
+          ],
+          "molecular_feature_links": [
+            "大分子"
+          ],
+          "attribution": {
+            "source": "literature",
+            "ref": "10.1038/s41598-021-82277-2",
+            "verification_tier": "partial",
+            "confidence": "normal"
+          }
+        },
+        "design_translation": {
+          "idea": "利用木材木质部的纤维素和木质素进行吸附和过滤",
+          "material_handle": "木材切片、碳化或化学改性",
+          "design_principle": "木材导管的定向多孔结构和纤维素/木质素官能团提供吸附位点。可用于设计低成本多孔吸附材料",
+          "implementation_example": "木材切片→化学处理（碱/酸）→多孔吸附基材",
+          "constraints": "机械强度低需复合增强；酸性条件水解；微生物降解",
+          "failure_modes": "",
+          "evidence_tier": "inference",
+          "source_tier": "llm_inference",
+          "material_realization_examples": [
+            "木材切片、碳化或化学改性"
+          ]
+        },
+        "boundaries": [
+          {
+            "text": "强碱性条件下酚类解离为酚盐，吸附下降",
+            "parameter": "pH",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          }
+        ],
+        "honesty_summary": "基于分子特征推断，非直接证据",
+        "boundary_summary": "1 条软限制（caution）",
+        "evidence_context": {
+          "performance_leads": []
+        },
+        "charge_state": {
+          "has_charge_state": true,
+          "pka_values": [],
+          "ion_dependence": [],
+          "ph_sensitive": true,
+          "charge_mechanisms": [
+            {
+              "mechanism_id": "",
+              "description": "pH<pKa时分子态酚占优→利于吸附；高pH酚酸根阴离子→与负电荷WAS-BC排斥",
+              "charge_terms": [
+                "pka",
+                "羟基"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "XPS确认N 1s偏移(398.9→399.1-399.4 eV)→N孤对电子与金属离子形成配位键。O 1s也偏移→含氧官能团参与吸附。EDX mapping确认Pb/Cu/Zn/Cd均匀分布。机制：",
+              "charge_terms": [
+                "氨基"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "TCNF(TEMPO氧化纤维素纳米纤维)+GO(改良Hummers法)+TMPTAP(三(2-氨基乙基)胺-聚丙二醇→交联剂+金属螯合配体)。Zr/BDC/OA比例不适用→但TCNF/GO/TMPTA",
+              "charge_terms": [
+                "氨基"
+              ]
+            }
+          ]
+        },
+        "relevance_gating": {
+          "is_excluded": false,
+          "exclusion_reason": "",
+          "do_not_list": []
+        }
+      },
+      {
+        "prototype_id": "bacterial-cellulose",
+        "organism": "Acetobacter xylinum",
+        "candidate_honesty": "inference",
+        "lane": "exploratory",
+        "prototype_status": {
+          "is_background": false,
+          "is_placeholder": false,
+          "scope_note": ""
+        },
+        "domain_caveat": "organic micropollutant evidence weak",
+        "match": {
+          "reason": "大分子污染物可通过体积排阻/孔径截留被多孔材料去除",
+          "weight": 0.5,
+          "applicability_fit": "盐度 any",
+          "match_basis": "molecular_feature_inference",
+          "direct_evidence": false
+        },
+        "mechanism": {
+          "name": "细菌纤维素纳米纤维网物理筛分与表面羟基吸附",
+          "selected_mechanism_reason": "Query-conditioned scoring selected this mechanism for PFOA based on relevance to matched features/interactions",
+          "selected_mechanism_alignment": {
+            "query_pollutant": "PFOA",
+            "query_class": "PFASs（全氟和多氟烷基物质）",
+            "mechanism_keywords": "细菌纤维素纳米纤维网物理筛分与表面羟基吸附",
+            "alignment_basis": "query_relevance_scoring",
+            "query_features": [
+              "两亲性",
+              "化学稳定性",
+              "可电离",
+              "可配位",
+              "大分子",
+              "弱酸性",
+              "氟碳链",
+              "水溶性",
+              "疏水性",
+              "羧酸基团",
+              "芳香环",
+              "长链全氟烷基"
+            ],
+            "mechanism_functional_groups": [
+              "-S-（硫醚键）",
+              "-O-（醚键）"
+            ],
+            "mechanism_key_structures": [
+              "3D互连网络",
+              "吸附结构",
+              "纳米纤维网络",
+              "分级多孔结构",
+              "纤维结构",
+              "层次结构"
+            ],
+            "feature_binding_score": 0
+          },
+          "基本原理": "needs_review",
+          "key_structures": [
+            "3D互连网络",
+            "吸附结构",
+            "纳米纤维网络",
+            "分级多孔结构",
+            "纤维结构",
+            "层次结构"
+          ],
+          "functional_groups": [
+            "-S-（硫醚键）",
+            "-O-（醚键）"
+          ],
+          "molecular_feature_links": [
+            "大分子"
+          ],
+          "attribution": {
+            "source": "unknown",
+            "ref": "",
+            "verification_tier": "partial",
+            "confidence": "normal"
+          }
+        },
+        "design_translation": {
+          "idea": "Use bacterial cellulose from Acetobacter fermentation as bio-based ultrafiltration membrane, modified with mussel-inspired PDA and graphene oxide for enhanced anti-fouling and dye/oil rejection",
+          "material_handle": "BC/PDA/RGO membrane: 1149.3 L/m²/h flux, 96.9% flux recovery",
+          "design_principle": "Bacterial cellulose nanofiber network provides high surface area and hydroxyl groups for metal ion adsorption and water treatment",
+          "implementation_example": "BC/PDA/RGO membrane: 1149.3 L/m²/h flux, 96.9% flux recovery; Dye rejection and oil-water separation; Superhydrophilic/underwater superoleophobic surface",
+          "constraints": "Production cost of bacterial fermentation; mechanical strength in wet state",
+          "failure_modes": "",
+          "evidence_tier": "inference",
+          "source_tier": "llm_inference",
+          "material_realization_examples": [
+            "BC/PDA/RGO membrane: 1149.3 L/m²/h flux, 96.9% flux recovery"
+          ]
+        },
+        "boundaries": [
+          {
+            "text": "Acidic to neutral pH",
+            "parameter": "pH",
+            "gate_level": "hard",
+            "basis": "from_source",
+            "verification": "corroborated"
+          },
+          {
+            "text": "Moderate temperature",
+            "parameter": "temperature",
+            "gate_level": "hard",
+            "basis": "from_source",
+            "verification": "corroborated"
+          }
+        ],
+        "honesty_summary": "基于分子特征推断，非直接证据",
+        "boundary_summary": "2 条硬限制（DO-NOT）",
+        "evidence_context": {
+          "performance_leads": []
+        },
+        "charge_state": {
+          "has_charge_state": true,
+          "pka_values": [],
+          "ion_dependence": [],
+          "ph_sensitive": true,
+          "charge_mechanisms": [
+            {
+              "mechanism_id": "BC-001",
+              "description": "3D nanofiber network: BC ultrafine nanofibers (10-100 nm) form interconnected porous structure actin",
+              "charge_terms": [
+                "hydroxyl"
+              ]
+            },
+            {
+              "mechanism_id": "BC-002",
+              "description": "Superhydrophilicity and underwater superoleophobicity: water trapped in membrane pores forms continu",
+              "charge_terms": [
+                "hydroxyl"
+              ]
+            }
+          ]
+        },
+        "relevance_gating": {
+          "is_excluded": false,
+          "exclusion_reason": "",
+          "do_not_list": [
+            {
+              "rule_id": "",
+              "description": "",
+              "source": "",
+              "gate_level": "hard"
+            },
+            {
+              "rule_id": "",
+              "description": "",
+              "source": "",
+              "gate_level": "hard"
+            },
+            {
+              "rule_id": "BC-001_bc",
+              "description": "Acidic to neutral pH",
+              "source": "",
+              "gate_level": "hard"
+            },
+            {
+              "rule_id": "BC-001_bc",
+              "description": "Moderate temperature",
+              "source": "",
+              "gate_level": "hard"
+            },
+            {
+              "rule_id": "BC-002_bc",
+              "description": "Acidic to neutral pH",
+              "source": "",
+              "gate_level": "hard"
+            },
+            {
+              "rule_id": "BC-002_bc",
+              "description": "Moderate temperature",
+              "source": "",
+              "gate_level": "hard"
+            }
+          ]
+        }
       }
     ],
     "applicable_rules": [],
@@ -738,8 +1434,8 @@
       "do_not": [],
       "cautions": [
         {
-          "prototype_id": "superhydrophobic-artificial",
-          "mechanism_name": "PTFE涂层不锈钢网膜超疏水性能 - Feng等2004",
+          "prototype_id": "mussel-foot-adhesion",
+          "mechanism_name": "贻贝足丝DOPA儿茶酚-金属多齿配位与胺基静电黏附",
           "parameter": "other",
           "text": "适用条件需根据具体机制验证",
           "basis": "llm_inferred",
@@ -747,8 +1443,44 @@
           "source_asset": null
         },
         {
+          "prototype_id": "mussel-foot-adhesion",
+          "mechanism_name": "PDA自聚合形成机制 PDA self-polymerization mechanism",
+          "parameter": "other",
+          "text": "涂层厚度随时间增加但活性位点密度下降",
+          "basis": "llm_inferred",
+          "verification": "needs_review",
+          "source_asset": null
+        },
+        {
+          "prototype_id": "mussel-foot-adhesion",
+          "mechanism_name": "铀酰离子配位化学",
+          "parameter": "salinity",
+          "text": "高浓度碳酸盐（海水条件）会与铀酰形成碳酸铀酰络合物，竞争配位",
+          "basis": "llm_inferred",
+          "verification": "needs_review",
+          "source_asset": null
+        },
+        {
+          "prototype_id": "mussel-foot-adhesion",
+          "mechanism_name": "PDA涂层粘附机制",
+          "parameter": "other",
+          "text": "强氧化性环境（如Cr(VI)、高浓度H₂O₂）会氧化DOPA为醌",
+          "basis": "llm_inferred",
+          "verification": "needs_review",
+          "source_asset": null
+        },
+        {
           "prototype_id": "plant-tannin",
-          "mechanism_name": "吸附机制",
+          "mechanism_name": "植物单宁芳香环π-π堆积与酚羟基氢键静电吸附",
+          "parameter": "other",
+          "text": "适用条件需根据具体机制验证",
+          "basis": "llm_inferred",
+          "verification": "needs_review",
+          "source_asset": null
+        },
+        {
+          "prototype_id": "superhydrophobic-artificial",
+          "mechanism_name": "PTFE涂层不锈钢网膜超疏水性能 - Feng等2004",
           "parameter": "other",
           "text": "适用条件需根据具体机制验证",
           "basis": "llm_inferred",
@@ -763,15 +1495,6 @@
           "basis": "llm_inferred",
           "verification": "needs_review",
           "source_asset": null
-        },
-        {
-          "prototype_id": "polydopamine-coating",
-          "mechanism_name": "超疏水抗菌表面'双重保险'原理",
-          "parameter": "other",
-          "text": "适用条件需根据具体机制验证",
-          "basis": "llm_inferred",
-          "verification": "needs_review",
-          "source_asset": null
         }
       ]
     },
@@ -779,11 +1502,11 @@
       "facts": [],
       "leads": [],
       "inferences": [
-        "superhydrophobic-artificial: 基于分子特征推断，非直接证据",
+        "mussel-foot-adhesion: 基于分子特征推断，非直接证据",
         "plant-tannin: 基于分子特征推断，非直接证据",
+        "superhydrophobic-artificial: 基于分子特征推断，非直接证据",
         "diatom-frustule: 基于分子特征推断，非直接证据",
-        "lotus-leaf: 基于分子特征推断，非直接证据",
-        "polydopamine-coating: 基于分子特征推断，非直接证据"
+        "lotus-leaf: 基于分子特征推断，非直接证据"
       ]
     }
   }

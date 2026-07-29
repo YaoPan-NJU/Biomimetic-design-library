@@ -1,0 +1,91 @@
+{
+  "id": "bacterial-photosynthetic-reaction-center",
+  "name_zh": "紫色细菌光合反应中心的定向电子转移",
+  "name_en": "Directed Electron Transfer in the Purple Bacterial Photosynthetic Reaction Center",
+  "organism": {
+    "scientific": "Blastochloris viridis",
+    "category": "微生物"
+  },
+  "biomimetic_dimension": "过程仿生",
+  "features": ["空间预组织", "定向电子转移"],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": null,
+    "note": "天然功能是光驱电荷分离，不是吸附；本库无奥克立林吸附性能数据。"
+  },
+  "library_tier": "exploratory",
+  "lifecycle_status": "pending_extraction",
+  "coverage": "partial",
+  "status": "pending_extraction",
+  "source_scheme": "S34_A01 (OC, score 85, passed)",
+  "provenance_summary": {
+    "n_papers": 2,
+    "n_verified": 0,
+    "n_unverified": 2,
+    "note": "结构研究支持特殊对作为初级供体以及受体侧色素的有序排列；不支持把整条电子传递链描述成富电子吸附腔。"
+  },
+  "mechanisms": [
+    {
+      "mechanism_id": "BPRC-001",
+      "name": "特殊对初级供体与受体侧色素的空间预组织",
+      "description": "反应中心以细菌叶绿素特殊对作为初级电子供体，电子随后经辅助色素传向细菌脱镁叶绿素和醌受体；结构预组织服务于光驱定向电子转移。",
+      "基本原理": "供体、桥联色素和受体按空间与氧化还原梯度排列，从而促进定向电荷分离。",
+      "source": "literature",
+      "ref_doi": "10.1038/318449a0",
+      "verification": "partial",
+      "verification_quote": null,
+      "causal_chain": {
+        "pollutant_feature": {"text": "奥克立林含共轭受体样结构，但其水相电荷转移结合能力尚未由本原型来源验证。", "basis": "llm_inferred", "source": null, "locator": null, "quote": null},
+        "bio_structure": {"text": "反应中心把特殊对、辅助色素、细菌脱镁叶绿素和醌沿电子传递方向预组织。", "basis": "llm_inferred", "source": null, "locator": null, "quote": null},
+        "interaction": {"text": "天然体系发生光激发后的逐级电子转移，不是客体在富电子孔腔中的平衡吸附。", "basis": "llm_inferred", "source": null, "locator": null, "quote": null},
+        "why_it_works": {"text": "固定距离、取向和氧化还原梯度共同降低反向过程并促进定向电荷分离。", "basis": "llm_inferred", "source": null, "locator": null, "quote": null},
+        "boundary_conditions": [
+          {
+            "text": "把定向光化学电子转移映射为水相电荷转移吸附属于独立工程假设。",
+            "parameter": "function_context_gap",
+            "condition": {"operator": "qualitative", "value": null},
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "空间预组织可控制电子转移方向；若用于吸附，必须另行证明平衡结合及其选择性增量。"
+      },
+      "functional_groups": ["细菌叶绿素特殊对", "受体侧色素与醌"],
+      "key_structures": ["电子传递色素链"]
+    }
+  ],
+  "performance_data": [],
+  "design_translation": [
+    {
+      "idea": "构建电子密度可调但拓扑一致的孔壁系列，测试奥克立林是否存在超出疏水分配的电荷转移增量。",
+      "specific_functional_group": "电子丰富度可调的芳香孔壁",
+      "material_handle": "同拓扑多孔聚合物或分子笼系列",
+      "target_interaction": "待验证的供体-受体电荷转移叠加疏水分配",
+      "source_tier": "llm_inference",
+      "evidence_tier": "inspiration",
+      "examples": [],
+      "design_principle": "只转译空间和电子梯度的可控性，不把光合色素链称为天然吸附腔。",
+      "implementation_example": "供体、中性和受体型孔壁的同拓扑三成员对照",
+      "constraints": "需用光谱和热力学对照区分电荷转移与普通疏水吸附。",
+      "failure_modes": "孔结构不等价；水相屏蔽电荷转移；吸附仅与疏水性相关。",
+      "material_realization_examples": []
+    }
+  ],
+  "honesty_ledger": {
+    "facts": [],
+    "leads": [
+      {"type": "mechanism", "index": 0, "name": "光合反应中心定向电子转移", "basis": "literature_backed", "note": "色素排列与电子传递方向有结构文献支持，全文 quote 和 locator 尚未提取。"}
+    ],
+    "inferences": [
+      {"type": "design_translation", "index": 0, "idea": "孔壁电子梯度用于奥克立林水相识别", "basis": "llm_inferred", "label": "inspiration"}
+    ],
+    "boundary_notes": ["特殊对是初级电子供体；细菌脱镁叶绿素位于受体侧。", "天然过程不是吸附，水相电荷转移选择性尚未证实。"],
+    "missing_pdf_items": ["10.1038/318449a0 全文证据提取"],
+    "generated_by": "codex-2026-07-28"
+  }
+}

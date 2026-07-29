@@ -2421,23 +2421,14 @@
   }
  },
  "prototype_metadata": {
-  "hl-fabp-liver-fatty-acid-pfas-binding": {
-   "applicability": {
-    "pH_range": null,
-    "temp_range": null,
-    "salinity": null,
-    "note": "hL-FABP 为胞内可溶结合蛋白原型，无吸附适用性测试数据，故全空"
-   },
-   "features": [
-    "疏水性",
-    "分子筛分"
-   ],
-   "biomimetic_dimension": "分子仿生",
-   "organism": {
-    "scientific": "Homo sapiens（人肝脂肪酸结合蛋白 FABP1 / L-FABP，具异常大结合腔）",
-    "category": "动物"
-   }
-  },
+  "alkb-alkane-hydroxylase-chain-length": {"applicability": {"pH_range": null, "temp_range": null, "salinity": null, "note": "原方案已终止；仅作为链长门控灵感，无吸附性能数据"}, "features": ["底物范围", "链长筛分"], "biomimetic_dimension": "过程仿生", "organism": {"scientific": "Alcanivorax borkumensis", "category": "微生物"}},
+  "bacterial-photosynthetic-reaction-center": {"applicability": {"pH_range": null, "temp_range": null, "salinity": null, "note": "光驱电荷分离原型；水相电荷转移吸附为待验证工程假设"}, "features": ["空间预组织", "定向电子转移"], "biomimetic_dimension": "过程仿生", "organism": {"scientific": "Blastochloris viridis", "category": "微生物"}},
+  "beta-cyclodextrin-hostguest-inclusion": {"applicability": {"pH_range": null, "temp_range": null, "salinity": null, "note": "β-CD 天然环状寡糖主客体识别单元，吸附性能以交联多孔聚合物形态报道，无独立适用性测试，全空"}, "features": ["疏水性", "分子筛分"], "biomimetic_dimension": "分子仿生", "organism": {"scientific": "环糊精：直链淀粉经细菌 CGTase 环化的天然环状寡糖；β-CD 为 7 葡萄糖大环", "category": "植物"}},
+  "gaba-rdl-rigid-hydrophobic-cavity": {"applicability": {"pH_range": null, "temp_range": null, "salinity": null, "note": "抗性突变原型；无直接结合结构或吸附性能数据"}, "features": ["疏水孔环境", "极性位点调制"], "biomimetic_dimension": "分子仿生", "organism": {"scientific": "Drosophila melanogaster", "category": "动物"}},
+  "ipso-hydroxylation-pathway": {"applicability": {"pH_range": null, "temp_range": null, "salinity": null, "note": "降解途径原型；人工形状识别为待验证工程假设"}, "features": ["反应位点选择", "取代基脱除"], "biomimetic_dimension": "过程仿生", "organism": {"scientific": "Sphingobium xenophagum Bayram", "category": "微生物"}},
+  "laccase-t1-cu-phenol-coordination": {"applicability": {"pH_range": null, "temp_range": null, "salinity": null, "note": "酚氧化原型；天然机制为邻近口袋外球电子转移，不是 T1 铜直接吸附"}, "features": ["底物预定位", "外球电子转移"], "biomimetic_dimension": "分子仿生", "organism": {"scientific": "Trametes versicolor 漆酶", "category": "微生物"}},
+  "rw1-bay-region-dioxygenase": {"applicability": {"pH_range": null, "temp_range": null, "salinity": null, "note": "二噁英氧化原型；MIP 吸附转译为独立假设"}, "features": ["角位双加氧", "取代模式范围"], "biomimetic_dimension": "过程仿生", "organism": {"scientific": "Sphingomonas wittichii RW1", "category": "微生物"}},
+  "hl-fabp-liver-fatty-acid-pfas-binding": {"applicability": {"pH_range": null, "temp_range": null, "salinity": null, "note": "hL-FABP 为胞内可溶结合蛋白原型，无吸附适用性测试数据，故全空"}, "features": ["疏水性", "分子筛分"], "biomimetic_dimension": "分子仿生", "organism": {"scientific": "Homo sapiens（人肝脂肪酸结合蛋白 FABP1 / L-FABP，具异常大结合腔）", "category": "动物"}},
   "moda-oxyanion-geometric-recognition": {
    "applicability": {
     "pH_range": null,
@@ -3511,7 +3502,7 @@
    ],
    "biomimetic_dimension": "分子仿生",
    "organism": {
-    "scientific": "Homo sapiens（人源 OATP1B1/OATP1B3，SLCO1B1/SLCO1B3）",
+    "scientific": "Homo sapiens OATP1B 转运体家族",
     "category": "动物"
    }
   },
@@ -3578,7 +3569,7 @@
    ],
    "biomimetic_dimension": "分子仿生",
    "organism": {
-    "scientific": "Homo sapiens（OAT4/SLC22A11）",
+    "scientific": "Homo sapiens OAT4 有机阴离子转运体",
     "category": "动物"
    }
   },
@@ -3613,7 +3604,7 @@
    ],
    "biomimetic_dimension": "分子仿生",
    "organism": {
-    "scientific": "Pseudomonas sp. CF600 / Cupriavidus necator JMP134 / Ralstonia pickettii（酚/氯酚羟化酶系）",
+    "scientific": "多物种细菌酚与氯酚羟化酶比较原型",
     "category": "微生物"
    }
   },
@@ -3680,7 +3671,7 @@
    ],
    "biomimetic_dimension": "功能仿生",
    "organism": {
-    "scientific": "Homo sapiens / Sus scrofa（肺表面活性物质：DPPC 为主磷脂单层 + SP-B/SP-C）",
+    "scientific": "Homo sapiens 肺表面活性物质系统",
     "category": "动物"
    }
   },
@@ -3763,7 +3754,7 @@
    ],
    "biomimetic_dimension": "系统仿生",
    "organism": {
-    "scientific": "哺乳动物（人/大鼠）胆汁：胆盐（牛磺胆酸钠 sodium taurocholate）-卵磷脂-脂质水解产物（单甘油酯/脂肪酸）混合胶束超分子体系",
+    "scientific": "哺乳动物胆汁混合胶束系统",
     "category": "动物"
    }
   },
@@ -3846,7 +3837,7 @@
    ],
    "biomimetic_dimension": "分子仿生",
    "organism": {
-    "scientific": "Bos taurus（γ-胰凝乳蛋白酶，PDB 1GCT）/ Bacillus amyloliquefaciens（枯草蛋白酶 BPN′，PDB 1SBT）/ Carica papaya（木瓜蛋白酶，PDB 1PAD）；跨物种趋同的氧阴离子穴基序",
+    "scientific": "多物种蛋白酶氧阴离子穴比较原型",
     "category": "动物"
    }
   },
@@ -3878,7 +3869,7 @@
    ],
    "biomimetic_dimension": "分子仿生",
    "organism": {
-    "scientific": "Medicago truncatula UGT71G1 / Vitis vinifera VvGT1 / Arabidopsis thaliana UGT74F2（植物 UDP-糖基转移酶）；动物二相 UGT（人 UGT2B15 等，同工酶动力学层级）",
+    "scientific": "多物种 UDP 糖基转移酶比较原型",
     "category": "植物"
    }
   },
@@ -3894,7 +3885,7 @@
    ],
    "biomimetic_dimension": "分子仿生",
    "organism": {
-    "scientific": "Tobacco mosaic virus / Cowpea chlorotic mottle virus（病毒衣壳蛋白）; Sulfolobus acidocaldarius / Deinococcus radiodurans（古菌/细菌 S 层蛋白）",
+    "scientific": "多物种周期性蛋白阵列比较原型（病毒衣壳与 S 层）",
     "category": "微生物"
    }
   },
@@ -3927,7 +3918,7 @@
    ],
    "biomimetic_dimension": "分子仿生",
    "organism": {
-    "scientific": "厌氧混合微生物群落（marine/estuarine sediment 产甲烷与硫酸盐还原富集中的 DDT/DDE 顺序还原脱氯功能菌群；无单一模式种，功能单元为群落）",
+    "scientific": "厌氧沉积物还原脱氯功能群落",
     "category": "微生物"
    }
   },
@@ -3962,7 +3953,7 @@
    ],
    "biomimetic_dimension": "分子仿生",
    "organism": {
-    "scientific": "Thermotoga petrophila（氟化物核糖开关适体域；crcB 基序广布细菌与古菌，PDB 5KH8 为 Bacillus cereus 同源构建体）",
+    "scientific": "Thermotoga petrophila 氟化物核糖开关适体域",
     "category": "微生物"
    }
   },

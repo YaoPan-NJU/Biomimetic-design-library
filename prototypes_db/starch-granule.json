@@ -970,8 +970,8 @@
               "operator": "qualitative",
               "value": null
             },
-            "basis": "corroborated",
-            "verification": "literature_aggregate",
+            "basis": "llm_inferred",
+            "verification": "needs_review",
             "gate_level": "soft",
             "locator": null,
             "quote": null,
@@ -986,8 +986,8 @@
               "operator": "qualitative",
               "value": null
             },
-            "basis": "corroborated",
-            "verification": "literature_aggregate",
+            "basis": "llm_inferred",
+            "verification": "needs_review",
             "gate_level": "soft",
             "locator": null,
             "quote": null,
@@ -1000,13 +1000,10 @@
             "parameter": "pH",
             "condition": {
               "operator": "range",
-              "value": [
-                4,
-                7
-              ]
+              "value": null
             },
-            "basis": "corroborated",
-            "verification": "literature_aggregate",
+            "basis": "llm_inferred",
+            "verification": "needs_review",
             "gate_level": "soft",
             "locator": "performance_data pH aggregation",
             "quote": null,

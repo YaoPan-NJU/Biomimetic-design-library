@@ -2,7 +2,7 @@
 id: anaerobic-sequential-dechlorination-cascade
 name: 厌氧菌群顺序脱氯级联（DDT/DDE 多位点有序还原脱氯）（Anaerobic Sequential Dechlorination Cascade (Ordered Multi-Site Reductive Dechlorination of DDT/DDE)）
 category: 微生物
-organism: 厌氧混合微生物群落（marine/estuarine sediment 产甲烷与硫酸盐还原富集培养中的 DDT/DDE 顺序还原脱氯功能菌群；无单一模式种，功能单元为群落，Quensen et al. 1998 海洋沉积物微宇宙）
+organism: 厌氧沉积物还原脱氯功能群落
 biomimetic_dimension: 分子仿生
 features:
   - 催化降解

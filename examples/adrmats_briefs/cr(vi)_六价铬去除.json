@@ -30,8 +30,8 @@
     },
     "candidates": [
       {
-        "prototype_id": "chitosan",
-        "organism": "Crustacea",
+        "prototype_id": "polydopamine-coating",
+        "organism": "Mytilus edulis",
         "candidate_honesty": "lead",
         "lane": "lead",
         "prototype_status": {
@@ -41,19 +41,19 @@
         },
         "domain_caveat": "",
         "match": {
-          "reason": "氨基在酸性条件下质子化带正电，可吸附Cr₂O₇²⁻阴离子",
-          "weight": 0.85,
-          "applicability_fit": "pH 3.0-7.0, 盐度 low_to_moderate",
+          "reason": "PDA的还原性可将Cr(VI)还原为Cr(III)",
+          "weight": 0.7,
+          "applicability_fit": "pH 3.0-7.0, 盐度 moderate",
           "match_basis": "direct_pollutant_evidence",
           "direct_evidence": true
         },
         "mechanism": {
-          "name": "Cr(VI)的氧化还原吸附机制（VMCP案例）",
+          "name": "Cr(VI)吸附机制总结",
           "selected_mechanism_reason": "Query-conditioned scoring selected this mechanism for Cr(VI) based on relevance to matched features/interactions",
           "selected_mechanism_alignment": {
             "query_pollutant": "Cr(VI)",
             "query_class": "重金属",
-            "mechanism_keywords": "Cr(VI)的氧化还原吸附机制（VMCP案例）",
+            "mechanism_keywords": "Cr(VI)吸附机制总结",
             "alignment_basis": "query_relevance_scoring",
             "query_features": [
               "六价铬",
@@ -61,38 +61,493 @@
               "强氧化性"
             ],
             "mechanism_functional_groups": [
-              "氨基 amino (-NH₂)",
-              "羟基 hydroxyl (-OH)",
-              "质子化氨基 -NH₃⁺"
+              "邻苯二酚 catechol (-OH)",
+              "静电作用位点",
+              "配位/螯合位点",
+              "胺基 amine (-NH₂)",
+              "吲哚环 indole"
             ],
             "mechanism_key_structures": [
-              "壳聚糖-NH₂质子化",
+              "π-π堆叠",
               "Cr(VI)→Cr(III)还原",
-              "N原子配位",
-              "静电吸引Cr₂O₇²⁻"
+              "胺基静电吸附",
+              "吸附结构",
+              "PDA邻苯二酚螯合"
             ],
-            "feature_binding_score": 3
+            "feature_binding_score": 4
           },
-          "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合",
+          "基本原理": "needs_review",
           "key_structures": [
-            "壳聚糖-NH₂质子化",
+            "π-π堆叠",
             "Cr(VI)→Cr(III)还原",
-            "N原子配位",
-            "静电吸引Cr₂O₇²⁻"
+            "胺基静电吸附",
+            "吸附结构",
+            "PDA邻苯二酚螯合"
           ],
           "functional_groups": [
-            "氨基 amino (-NH₂)",
-            "羟基 hydroxyl (-OH)",
-            "质子化氨基 -NH₃⁺"
+            "邻苯二酚 catechol (-OH)",
+            "静电作用位点",
+            "配位/螯合位点",
+            "胺基 amine (-NH₂)",
+            "吲哚环 indole"
           ],
           "molecular_feature_links": [
             "六价铬",
             "含氧阴离子",
-            "强氧化性"
+            "强氧化性",
+            "静电吸引",
+            "还原沉淀",
+            "配位"
           ],
           "attribution": {
             "source": "literature",
-            "ref": "10.1039/d2ra07112f",
+            "ref": "10.1016/j.seppur.2024.127979",
+            "verification_tier": "partial",
+            "confidence": "normal"
+          }
+        },
+        "design_translation": {
+          "idea": "利用 PDA 涂层的邻苯二酚和胺基双功能基团进行表面改性，实现普适性粘附和污染物捕获",
+          "material_handle": "多巴胺在弱碱性（pH 8.5）条件下自聚成 PDA 涂层",
+          "design_principle": "PDA 的邻苯二酚(-OH)和胺基(-NH₂)双功能基团：(1)邻苯二酚螯合软金属(Pb²⁺、Cu²⁺、UO₂²⁺)；(2)胺基提供正电荷吸附阴离子(如Cr₂O₇²⁻)；(3)通用粘附性可在任意基底表面成膜",
+          "implementation_example": "多巴胺盐酸盐(2 mg/mL)溶于 Tris-HCl(pH 8.5)，浸渍基底12-24h → PDA涂层 → 可进一步接枝功能分子(如EDTA、SH)",
+          "constraints": "涂层厚度控制(通常<100nm)；pH 8.5碱性条件；多巴胺成本较高；长期稳定性",
+          "failure_modes": "涂层不均匀；碱性条件限制基底选择；多次循环后涂层脱落",
+          "evidence_tier": "fact (有 CN114887602A 专利支撑 P 吸附)",
+          "source_tier": "literature",
+          "material_realization_examples": [
+            "多巴胺在弱碱性（pH 8.5）条件下自聚成 PDA 涂层"
+          ]
+        },
+        "boundaries": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          }
+        ],
+        "honesty_summary": "有直接实验数据但机制未经独立核实",
+        "boundary_summary": "1 条软限制（caution）",
+        "evidence_context": {
+          "performance_leads": [
+            {
+              "pollutant": "Cr(VI)",
+              "material": "H-PDA-SO",
+              "value": "~38",
+              "unit": "mg/g",
+              "verification_tier": "partial"
+            },
+            {
+              "pollutant": "Cr(VI)",
+              "material": "",
+              "value": "~8.2",
+              "unit": "mg/g",
+              "verification_tier": "partial"
+            },
+            {
+              "pollutant": "Cr(VI)",
+              "material": "CNF-TA-PMMT-PEI",
+              "value": "456.62",
+              "unit": "mg/g",
+              "verification_tier": "verified"
+            }
+          ]
+        },
+        "charge_state": {
+          "has_charge_state": true,
+          "pka_values": [],
+          "ion_dependence": [],
+          "ph_sensitive": true,
+          "charge_mechanisms": [
+            {
+              "mechanism_id": "",
+              "description": "La与磷酸根配位生成磷酸镧化合物",
+              "charge_terms": [
+                "磷酸"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "phenolic hydroxyl groups participate in adsorption (C-O and O 1s binding energy shifts)",
+              "charge_terms": [
+                "hydroxyl"
+              ]
+            }
+          ]
+        },
+        "relevance_gating": {
+          "is_excluded": false,
+          "exclusion_reason": "",
+          "do_not_list": []
+        }
+      },
+      {
+        "prototype_id": "bone-structure",
+        "organism": "Mammalian bone (哺乳动物骨骼)",
+        "candidate_honesty": "lead",
+        "lane": "lead",
+        "prototype_status": {
+          "is_background": false,
+          "is_placeholder": false,
+          "scope_note": ""
+        },
+        "domain_caveat": "",
+        "match": {
+          "reason": "金属离子与配体上的供电子原子（N/O/S）形成配位键",
+          "weight": 0.9,
+          "applicability_fit": "盐度 any",
+          "match_basis": "molecular_feature_inference",
+          "direct_evidence": false
+        },
+        "mechanism": {
+          "name": "HAp四种重金属吸附机制",
+          "selected_mechanism_reason": "Query-conditioned scoring selected this mechanism for Cr(VI) based on relevance to matched features/interactions",
+          "selected_mechanism_alignment": {
+            "query_pollutant": "Cr(VI)",
+            "query_class": "重金属",
+            "mechanism_keywords": "HAp四种重金属吸附机制",
+            "alignment_basis": "query_relevance_scoring",
+            "query_features": [
+              "六价铬",
+              "含氧阴离子",
+              "强氧化性"
+            ],
+            "mechanism_functional_groups": [
+              "表面配合还原",
+              "离子交换位点",
+              "含氧阴离子吸附",
+              "沉淀反应位点",
+              "静电作用位点",
+              "-PO₄³⁻（磷酸基）",
+              "羟基 -OH",
+              "磷酸根 PO₄³⁻",
+              "-OH（羟基）",
+              "Ca²⁺位点",
+              "-O-（醚键）"
+            ],
+            "mechanism_key_structures": [
+              "溶解-再沉淀",
+              "HAp六方晶体Ca₁₀(PO₄)₆(OH)₂",
+              "吸附结构",
+              "表面配合",
+              "HAp羟基磷灰石晶体",
+              "Ca²⁺/PO₄³⁻离子交换"
+            ],
+            "feature_binding_score": 1
+          },
+          "基本原理": "HAp的Ca²⁺位点可被重金属离子交换取代，且磷酸根可与重金属形成难溶磷酸盐沉淀，实现双重去除机制",
+          "key_structures": [
+            "溶解-再沉淀",
+            "HAp六方晶体Ca₁₀(PO₄)₆(OH)₂",
+            "吸附结构",
+            "表面配合",
+            "HAp羟基磷灰石晶体",
+            "Ca²⁺/PO₄³⁻离子交换"
+          ],
+          "functional_groups": [
+            "表面配合还原",
+            "离子交换位点",
+            "含氧阴离子吸附",
+            "沉淀反应位点",
+            "静电作用位点",
+            "-PO₄³⁻（磷酸基）",
+            "羟基 -OH",
+            "磷酸根 PO₄³⁻",
+            "-OH（羟基）",
+            "Ca²⁺位点",
+            "-O-（醚键）"
+          ],
+          "molecular_feature_links": [
+            "六价铬",
+            "含氧阴离子",
+            "强氧化性",
+            "静电吸引",
+            "还原沉淀",
+            "配位"
+          ],
+          "attribution": {
+            "source": "literature",
+            "ref": "10.1016/j.jtice.2024.105668",
+            "verification_tier": "verified",
+            "confidence": "normal"
+          }
+        },
+        "design_translation": {
+          "idea": "利用羟基磷灰石的钙磷结构进行重金属和氟离子吸附",
+          "material_handle": "合成羟基磷灰石粉末或涂层",
+          "design_principle": "骨骼的羟基磷灰石(HAp)层通过离子交换（Pb²⁺替换Ca²⁺形成磷氯铅矿）和表面配位吸附重金属。层状结构提供高比表面积",
+          "implementation_example": "骨粉→600°C煅烧→HAp粉末→柱吸附或压片；或化学合成HAp纳米颗粒→涂层/复合材料",
+          "constraints": "酸性条件HAp溶解；竞争阳离子(Ca²⁺、Mg²⁺)干扰；煅烧温度影响晶相",
+          "failure_modes": "酸性溶解；竞争吸附；合成HAp不如天然骨粉多孔",
+          "evidence_tier": "fact",
+          "source_tier": "llm_inference",
+          "material_realization_examples": [
+            "合成羟基磷灰石粉末或涂层"
+          ]
+        },
+        "boundaries": [
+          {
+            "text": "酸性条件下HAp开始溶解，释放Ca²⁺，配位/沉淀能力下降",
+            "parameter": "pH",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          },
+          {
+            "text": "酸性条件下HAp溶解，释放Ca²⁺，吸附能力下降",
+            "parameter": "pH",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          }
+        ],
+        "honesty_summary": "有性能数据但缺乏 verification_quote",
+        "boundary_summary": "2 条软限制（caution）",
+        "evidence_context": {
+          "performance_leads": []
+        },
+        "charge_state": {
+          "has_charge_state": true,
+          "pka_values": [],
+          "ion_dependence": [],
+          "ph_sensitive": false,
+          "charge_mechanisms": [
+            {
+              "mechanism_id": "",
+              "description": "(1)离子交换：HAp表面Ca²⁺/PO₄³⁻与重金属离子交换；(2)表面配合：污染物与HAp表面官能团形成化学键；(3)溶解-再沉淀：HAp溶解→释放PO₄³⁻→与重金属形成更难溶磷酸盐沉淀；(4)",
+              "charge_terms": [
+                "羟基",
+                "磷酸"
+              ]
+            }
+          ]
+        },
+        "relevance_gating": {
+          "is_excluded": false,
+          "exclusion_reason": "",
+          "do_not_list": []
+        }
+      },
+      {
+        "prototype_id": "oyster-shell",
+        "organism": "Ostreidae",
+        "candidate_honesty": "inference",
+        "lane": "exploratory",
+        "prototype_status": {
+          "is_background": false,
+          "is_placeholder": false,
+          "scope_note": ""
+        },
+        "domain_caveat": "",
+        "match": {
+          "reason": "污染物类别匹配: 重金属",
+          "weight": 0.9,
+          "applicability_fit": "pH 5.0-7.0, 盐度 moderate",
+          "match_basis": "molecular_feature_inference",
+          "direct_evidence": false
+        },
+        "mechanism": {
+          "name": "牡蛎壳文石碳酸钙离子交换与煅烧钙氧化物碱性沉淀",
+          "selected_mechanism_reason": "Query-conditioned scoring selected this mechanism for Cr(VI) based on relevance to matched features/interactions",
+          "selected_mechanism_alignment": {
+            "query_pollutant": "Cr(VI)",
+            "query_class": "重金属",
+            "mechanism_keywords": "牡蛎壳文石碳酸钙离子交换与煅烧钙氧化物碱性沉淀",
+            "alignment_basis": "query_relevance_scoring",
+            "query_features": [
+              "六价铬",
+              "含氧阴离子",
+              "强氧化性"
+            ],
+            "mechanism_functional_groups": [
+              "离子交换位点",
+              "CaO/Ca(OH)₂",
+              "含氧阴离子吸附",
+              "CaCO₃碳酸根",
+              "碱性环境还原",
+              "-PO₄³⁻（磷酸基）",
+              "-OH（羟基）",
+              "Ca²⁺位点",
+              "-O-（醚键）"
+            ],
+            "mechanism_key_structures": [
+              "煅烧CaO碱性释放",
+              "吸附结构",
+              "HAp羟基磷灰石晶体",
+              "羟基磷灰石沉淀",
+              "离子交换",
+              "方解石CaCO₃层状结构"
+            ],
+            "feature_binding_score": 1
+          },
+          "基本原理": "煅烧牡蛎壳（CaO）在水中生成Ca(OH)₂，提供碱性环境和Ca²⁺，可与磷酸盐形成羟基磷灰石沉淀，同时重金属通过表面配位吸附",
+          "key_structures": [
+            "煅烧CaO碱性释放",
+            "吸附结构",
+            "HAp羟基磷灰石晶体",
+            "羟基磷灰石沉淀",
+            "离子交换",
+            "方解石CaCO₃层状结构"
+          ],
+          "functional_groups": [
+            "离子交换位点",
+            "CaO/Ca(OH)₂",
+            "含氧阴离子吸附",
+            "CaCO₃碳酸根",
+            "碱性环境还原",
+            "-PO₄³⁻（磷酸基）",
+            "-OH（羟基）",
+            "Ca²⁺位点",
+            "-O-（醚键）"
+          ],
+          "molecular_feature_links": [
+            "六价铬",
+            "含氧阴离子",
+            "强氧化性",
+            "静电吸引",
+            "还原沉淀"
+          ],
+          "attribution": {
+            "source": "literature",
+            "ref": "10.16663/j.cnki.lskj.2021.02.025",
+            "verification_tier": "partial",
+            "confidence": "normal"
+          }
+        },
+        "design_translation": {
+          "idea": "利用牡蛎壳的方解石结构进行重金属固定和pH缓冲",
+          "material_handle": "牡蛎壳粉碎、煅烧或酸活化",
+          "design_principle": "牡蛎壳方解石(CaCO₃)通过离子交换与Pb²⁺形成PbCO₃沉淀，煅烧后CaO具有更强的吸附能力和pH缓冲作用",
+          "implementation_example": "牡蛎壳清洗→800°C煅烧2h→研磨→CaO粉末→直接用于柱吸附；或酸活化(HCl)→CaCl₂溶液→再生",
+          "constraints": "煅烧能耗高；CaO在水中放热需控制；竞争阳离子(Ca²⁺、Mg²⁺)干扰",
+          "failure_modes": "煅烧不完全；CaO水化放热；竞争离子降低容量",
+          "evidence_tier": "inference",
+          "source_tier": "llm_inference",
+          "material_realization_examples": [
+            "牡蛎壳粉碎、煅烧或酸活化"
+          ]
+        },
+        "boundaries": [
+          {
+            "text": "未煅烧的CaCO₃吸附容量远低于煅烧产物CaO",
+            "parameter": "other",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          },
+          {
+            "text": "未煅烧CaCO₃吸附容量远低于煅烧产物CaO",
+            "parameter": "other",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          }
+        ],
+        "honesty_summary": "基于分子特征推断，非直接证据",
+        "boundary_summary": "2 条软限制（caution）",
+        "evidence_context": {
+          "performance_leads": []
+        },
+        "charge_state": {
+          "has_charge_state": true,
+          "pka_values": [],
+          "ion_dependence": [],
+          "ph_sensitive": false,
+          "charge_mechanisms": [
+            {
+              "mechanism_id": "",
+              "description": "CaCO₃在800℃缺氧条件下分解为CaO→CaO负载在花生壳生物炭上→CaO在含磷废水中释放Ca²⁺和OH⁻→OH⁻使水体呈弱碱性→Ca²⁺与磷酸盐在碱性条件下生成羟基磷灰石沉淀",
+              "charge_terms": [
+                "羟基",
+                "磷酸"
+              ]
+            }
+          ]
+        },
+        "relevance_gating": {
+          "is_excluded": false,
+          "exclusion_reason": "",
+          "do_not_list": []
+        }
+      },
+      {
+        "prototype_id": "chitosan",
+        "organism": "Crustacea (甲壳类外骨骼几丁质)",
+        "candidate_honesty": "inference",
+        "lane": "exploratory",
+        "prototype_status": {
+          "is_background": false,
+          "is_placeholder": false,
+          "scope_note": ""
+        },
+        "domain_caveat": "",
+        "match": {
+          "reason": "带电污染物与带相反电荷的吸附剂通过库仑引力结合",
+          "weight": 0.8666666666666667,
+          "applicability_fit": "pH 3.0-7.0, 盐度 low_to_moderate",
+          "match_basis": "molecular_feature_inference",
+          "direct_evidence": false
+        },
+        "mechanism": {
+          "name": "PEI-grafted cellulose aerogel - Cr(VI) removal mechanism",
+          "selected_mechanism_reason": "Query-conditioned scoring selected this mechanism for Cr(VI) based on relevance to matched features/interactions",
+          "selected_mechanism_alignment": {
+            "query_pollutant": "Cr(VI)",
+            "query_class": "重金属",
+            "mechanism_keywords": "PEI-grafted cellulose aerogel - Cr(VI) removal mec",
+            "alignment_basis": "query_relevance_scoring",
+            "query_features": [
+              "六价铬",
+              "含氧阴离子",
+              "强氧化性"
+            ],
+            "mechanism_functional_groups": [
+              "-NH-（亚氨基）",
+              "离子交换位点",
+              "-COOH（羧基）",
+              "静电作用位点",
+              "壳聚糖氨基/羟基",
+              "配位/螯合位点",
+              "PEI胺基",
+              "纤维素羟基",
+              "-OH（羟基）",
+              "-NH₂（氨基）",
+              "-S-（硫醚键）",
+              "-O-（醚键）"
+            ],
+            "mechanism_key_structures": [
+              "气凝胶",
+              "吸附结构",
+              "凝胶结构"
+            ],
+            "feature_binding_score": 6
+          },
+          "基本原理": "壳聚糖的氨基和羟基可与重金属离子形成配位键，实现特异性吸附",
+          "key_structures": [
+            "气凝胶",
+            "吸附结构",
+            "凝胶结构"
+          ],
+          "functional_groups": [
+            "-NH-（亚氨基）",
+            "离子交换位点",
+            "-COOH（羧基）",
+            "静电作用位点",
+            "壳聚糖氨基/羟基",
+            "配位/螯合位点",
+            "PEI胺基",
+            "纤维素羟基",
+            "-OH（羟基）",
+            "-NH₂（氨基）",
+            "-S-（硫醚键）",
+            "-O-（醚键）"
+          ],
+          "molecular_feature_links": [],
+          "attribution": {
+            "source": "literature",
+            "ref": "10.1016/j.scitotenv.2021.150606",
             "verification_tier": "partial",
             "confidence": "normal"
           }
@@ -119,10 +574,17 @@
             "verification": "needs_review"
           }
         ],
-        "honesty_summary": "有直接实验数据但机制未经独立核实",
+        "honesty_summary": "基于分子特征推断，非直接证据",
         "boundary_summary": "1 条软限制（caution）",
         "evidence_context": {
           "performance_leads": [
+            {
+              "pollutant": "Cr(VI)",
+              "material": "",
+              "value": "去除率从79%提升至92%（分子量从3.62×10⁵降至6.21×10³）",
+              "unit": "percent",
+              "verification_tier": "partial"
+            },
             {
               "pollutant": "Cr(VI)",
               "material": "chitosan/PAAS (polyacrylic acid sodium) composite ENM",
@@ -150,13 +612,6 @@
               "value": "78 (non-crosslinked), 50 (crosslinked)",
               "unit": "mg/g",
               "verification_tier": "partial"
-            },
-            {
-              "pollutant": "CR",
-              "material": "",
-              "value": "中性红98.82%，刚果红97.54%，活性黑-5 95.77%",
-              "unit": "%",
-              "verification_tier": "needs_review"
             }
           ]
         },
@@ -369,8 +824,8 @@
       {
         "prototype_id": "iron-oxidizing-bacteria",
         "organism": "Acidithiobacillus ferrooxidans",
-        "candidate_honesty": "lead",
-        "lane": "lead",
+        "candidate_honesty": "inference",
+        "lane": "exploratory",
         "prototype_status": {
           "is_background": false,
           "is_placeholder": false,
@@ -378,11 +833,11 @@
         },
         "domain_caveat": "",
         "match": {
-          "reason": "生物FeOOH可催化还原Cr(VI)为Cr(III)",
-          "weight": 0.8,
+          "reason": "生物成因铁氧化物可提供 Cr(VI) 吸附与还原转化环境；候选层级由原型性能证据决定",
+          "weight": 0.7,
           "applicability_fit": "pH 3.0-7.5, 盐度 low_to_moderate",
-          "match_basis": "direct_pollutant_evidence",
-          "direct_evidence": true
+          "match_basis": "molecular_feature_inference",
+          "direct_evidence": false
         },
         "mechanism": {
           "name": "Cu在施氏矿物表面配位模式",
@@ -398,16 +853,18 @@
               "强氧化性"
             ],
             "mechanism_functional_groups": [
-              "表面羟基 -OH (Fe-OH)",
               "硫酸根 SO₄²⁻",
-              "Fe-O/OH位点"
+              "配位/螯合位点",
+              "Fe-O/OH位点",
+              "表面羟基 -OH (Fe-OH)",
+              "-O-（醚键）"
             ],
             "mechanism_key_structures": [
               "施氏矿物Fe₈O₈(OH)₆SO₄",
               "双齿内球配合物",
               "单配位表面位点"
             ],
-            "feature_binding_score": 1
+            "feature_binding_score": 2
           },
           "基本原理": "needs_review",
           "key_structures": [
@@ -416,13 +873,14 @@
             "单配位表面位点"
           ],
           "functional_groups": [
-            "表面羟基 -OH (Fe-OH)",
             "硫酸根 SO₄²⁻",
-            "Fe-O/OH位点"
+            "配位/螯合位点",
+            "Fe-O/OH位点",
+            "表面羟基 -OH (Fe-OH)",
+            "-O-（醚键）"
           ],
           "molecular_feature_links": [
-            "六价铬",
-            "含氧阴离子"
+            "六价铬"
           ],
           "attribution": {
             "source": "literature",
@@ -453,7 +911,7 @@
             "verification": "needs_review"
           }
         ],
-        "honesty_summary": "有直接实验数据但机制未经独立核实",
+        "honesty_summary": "基于分子特征推断，非直接证据",
         "boundary_summary": "1 条软限制（caution）",
         "evidence_context": {
           "performance_leads": []
@@ -470,407 +928,57 @@
           "exclusion_reason": "",
           "do_not_list": []
         }
-      },
-      {
-        "prototype_id": "polydopamine-coating",
-        "organism": "Mytilus edulis",
-        "candidate_honesty": "lead",
-        "lane": "lead",
-        "prototype_status": {
-          "is_background": false,
-          "is_placeholder": false,
-          "scope_note": ""
-        },
-        "domain_caveat": "",
-        "match": {
-          "reason": "PDA的还原性可将Cr(VI)还原为Cr(III)",
-          "weight": 0.7,
-          "applicability_fit": "pH 3.0-7.0, 盐度 moderate",
-          "match_basis": "direct_pollutant_evidence",
-          "direct_evidence": true
-        },
-        "mechanism": {
-          "name": "Cr(VI)吸附机制总结",
-          "selected_mechanism_reason": "Query-conditioned scoring selected this mechanism for Cr(VI) based on relevance to matched features/interactions",
-          "selected_mechanism_alignment": {
-            "query_pollutant": "Cr(VI)",
-            "query_class": "重金属",
-            "mechanism_keywords": "Cr(VI)吸附机制总结",
-            "alignment_basis": "query_relevance_scoring",
-            "query_features": [
-              "六价铬",
-              "含氧阴离子",
-              "强氧化性"
-            ],
-            "mechanism_functional_groups": [
-              "邻苯二酚 catechol (-OH)",
-              "胺基 amine (-NH₂)",
-              "吲哚环 indole"
-            ],
-            "mechanism_key_structures": [
-              "PDA邻苯二酚螯合",
-              "胺基静电吸附",
-              "π-π堆叠",
-              "Cr(VI)→Cr(III)还原"
-            ],
-            "feature_binding_score": 0
-          },
-          "基本原理": "needs_review",
-          "key_structures": [
-            "PDA邻苯二酚螯合",
-            "胺基静电吸附",
-            "π-π堆叠",
-            "Cr(VI)→Cr(III)还原"
-          ],
-          "functional_groups": [
-            "邻苯二酚 catechol (-OH)",
-            "胺基 amine (-NH₂)",
-            "吲哚环 indole"
-          ],
-          "molecular_feature_links": [
-            "六价铬",
-            "含氧阴离子",
-            "强氧化性",
-            "静电吸引",
-            "还原沉淀",
-            "配位"
-          ],
-          "attribution": {
-            "source": "literature",
-            "ref": "10.1016/j.seppur.2024.127979",
-            "verification_tier": "partial",
-            "confidence": "normal"
-          }
-        },
-        "design_translation": {
-          "idea": "利用 PDA 涂层的邻苯二酚和胺基双功能基团进行表面改性，实现普适性粘附和污染物捕获",
-          "material_handle": "多巴胺在弱碱性（pH 8.5）条件下自聚成 PDA 涂层",
-          "design_principle": "PDA 的邻苯二酚(-OH)和胺基(-NH₂)双功能基团：(1)邻苯二酚螯合软金属(Pb²⁺、Cu²⁺、UO₂²⁺)；(2)胺基提供正电荷吸附阴离子(如Cr₂O₇²⁻)；(3)通用粘附性可在任意基底表面成膜",
-          "implementation_example": "多巴胺盐酸盐(2 mg/mL)溶于 Tris-HCl(pH 8.5)，浸渍基底12-24h → PDA涂层 → 可进一步接枝功能分子(如EDTA、SH)",
-          "constraints": "涂层厚度控制(通常<100nm)；pH 8.5碱性条件；多巴胺成本较高；长期稳定性",
-          "failure_modes": "涂层不均匀；碱性条件限制基底选择；多次循环后涂层脱落",
-          "evidence_tier": "fact (有 CN114887602A 专利支撑 P 吸附)",
-          "source_tier": "literature",
-          "material_realization_examples": [
-            "多巴胺在弱碱性（pH 8.5）条件下自聚成 PDA 涂层"
-          ]
-        },
-        "boundaries": [
-          {
-            "text": "适用条件需根据具体机制验证",
-            "parameter": "other",
-            "gate_level": "soft",
-            "basis": "llm_inferred",
-            "verification": "needs_review"
-          }
-        ],
-        "honesty_summary": "有直接实验数据但机制未经独立核实",
-        "boundary_summary": "1 条软限制（caution）",
-        "evidence_context": {
-          "performance_leads": [
-            {
-              "pollutant": "Cr(VI)",
-              "material": "CNF-TA-PMMT-PEI",
-              "value": "456.62",
-              "unit": "mg/g",
-              "verification_tier": "verified"
-            }
-          ]
-        },
-        "charge_state": {
-          "has_charge_state": true,
-          "pka_values": [],
-          "ion_dependence": [],
-          "ph_sensitive": true,
-          "charge_mechanisms": [
-            {
-              "mechanism_id": "",
-              "description": "La与磷酸根配位生成磷酸镧化合物",
-              "charge_terms": [
-                "磷酸"
-              ]
-            },
-            {
-              "mechanism_id": "",
-              "description": "phenolic hydroxyl groups participate in adsorption (C-O and O 1s binding energy shifts)",
-              "charge_terms": [
-                "hydroxyl"
-              ]
-            }
-          ]
-        },
-        "relevance_gating": {
-          "is_excluded": false,
-          "exclusion_reason": "",
-          "do_not_list": []
-        }
-      },
-      {
-        "prototype_id": "bone-structure",
-        "organism": "Mammalian bone (哺乳动物骨骼)",
-        "candidate_honesty": "lead",
-        "lane": "lead",
-        "prototype_status": {
-          "is_background": false,
-          "is_placeholder": false,
-          "scope_note": ""
-        },
-        "domain_caveat": "",
-        "match": {
-          "reason": "金属离子与配体上的供电子原子（N/O/S）形成配位键",
-          "weight": 0.9,
-          "applicability_fit": "盐度 any",
-          "match_basis": "molecular_feature_inference",
-          "direct_evidence": false
-        },
-        "mechanism": {
-          "name": "HAp四种重金属吸附机制",
-          "selected_mechanism_reason": "Query-conditioned scoring selected this mechanism for Cr(VI) based on relevance to matched features/interactions",
-          "selected_mechanism_alignment": {
-            "query_pollutant": "Cr(VI)",
-            "query_class": "重金属",
-            "mechanism_keywords": "HAp四种重金属吸附机制",
-            "alignment_basis": "query_relevance_scoring",
-            "query_features": [
-              "六价铬",
-              "含氧阴离子",
-              "强氧化性"
-            ],
-            "mechanism_functional_groups": [
-              "羟基 -OH",
-              "磷酸根 PO₄³⁻",
-              "Ca²⁺位点",
-              "含氧阴离子吸附",
-              "表面配合还原"
-            ],
-            "mechanism_key_structures": [
-              "HAp六方晶体Ca₁₀(PO₄)₆(OH)₂",
-              "Ca²⁺/PO₄³⁻离子交换",
-              "溶解-再沉淀",
-              "表面配合"
-            ],
-            "feature_binding_score": 1
-          },
-          "基本原理": "HAp的Ca²⁺位点可被重金属离子交换取代，且磷酸根可与重金属形成难溶磷酸盐沉淀，实现双重去除机制",
-          "key_structures": [
-            "HAp六方晶体Ca₁₀(PO₄)₆(OH)₂",
-            "Ca²⁺/PO₄³⁻离子交换",
-            "溶解-再沉淀",
-            "表面配合"
-          ],
-          "functional_groups": [
-            "羟基 -OH",
-            "磷酸根 PO₄³⁻",
-            "Ca²⁺位点",
-            "含氧阴离子吸附",
-            "表面配合还原"
-          ],
-          "molecular_feature_links": [
-            "六价铬",
-            "含氧阴离子",
-            "强氧化性",
-            "静电吸引",
-            "还原沉淀",
-            "配位"
-          ],
-          "attribution": {
-            "source": "literature",
-            "ref": "10.1016/j.jtice.2024.105668",
-            "verification_tier": "verified",
-            "confidence": "normal"
-          }
-        },
-        "design_translation": {
-          "idea": "利用羟基磷灰石的钙磷结构进行重金属和氟离子吸附",
-          "material_handle": "合成羟基磷灰石粉末或涂层",
-          "design_principle": "骨骼的羟基磷灰石(HAp)层通过离子交换（Pb²⁺替换Ca²⁺形成磷氯铅矿）和表面配位吸附重金属。层状结构提供高比表面积",
-          "implementation_example": "骨粉→600°C煅烧→HAp粉末→柱吸附或压片；或化学合成HAp纳米颗粒→涂层/复合材料",
-          "constraints": "酸性条件HAp溶解；竞争阳离子(Ca²⁺、Mg²⁺)干扰；煅烧温度影响晶相",
-          "failure_modes": "酸性溶解；竞争吸附；合成HAp不如天然骨粉多孔",
-          "evidence_tier": "fact",
-          "source_tier": "llm_inference",
-          "material_realization_examples": [
-            "合成羟基磷灰石粉末或涂层"
-          ]
-        },
-        "boundaries": [
-          {
-            "text": "酸性条件下HAp开始溶解，释放Ca²⁺，配位/沉淀能力下降",
-            "parameter": "pH",
-            "gate_level": "soft",
-            "basis": "llm_inferred",
-            "verification": "needs_review"
-          },
-          {
-            "text": "酸性条件下HAp溶解，释放Ca²⁺，吸附能力下降",
-            "parameter": "pH",
-            "gate_level": "soft",
-            "basis": "llm_inferred",
-            "verification": "needs_review"
-          }
-        ],
-        "honesty_summary": "有性能数据但缺乏 verification_quote",
-        "boundary_summary": "2 条软限制（caution）",
-        "evidence_context": {
-          "performance_leads": []
-        },
-        "charge_state": {
-          "has_charge_state": true,
-          "pka_values": [],
-          "ion_dependence": [],
-          "ph_sensitive": false,
-          "charge_mechanisms": [
-            {
-              "mechanism_id": "",
-              "description": "(1)离子交换：HAp表面Ca²⁺/PO₄³⁻与重金属离子交换；(2)表面配合：污染物与HAp表面官能团形成化学键；(3)溶解-再沉淀：HAp溶解→释放PO₄³⁻→与重金属形成更难溶磷酸盐沉淀；(4)",
-              "charge_terms": [
-                "羟基",
-                "磷酸"
-              ]
-            }
-          ]
-        },
-        "relevance_gating": {
-          "is_excluded": false,
-          "exclusion_reason": "",
-          "do_not_list": []
-        }
-      },
-      {
-        "prototype_id": "oyster-shell",
-        "organism": "Ostreidae",
-        "candidate_honesty": "inference",
-        "lane": "exploratory",
-        "prototype_status": {
-          "is_background": false,
-          "is_placeholder": false,
-          "scope_note": ""
-        },
-        "domain_caveat": "",
-        "match": {
-          "reason": "污染物类别匹配: 重金属",
-          "weight": 0.9,
-          "applicability_fit": "pH 5.0-7.0, 盐度 moderate",
-          "match_basis": "molecular_feature_inference",
-          "direct_evidence": false
-        },
-        "mechanism": {
-          "name": "牡蛎壳改性吸附机制",
-          "selected_mechanism_reason": "Query-conditioned scoring selected this mechanism for Cr(VI) based on relevance to matched features/interactions",
-          "selected_mechanism_alignment": {
-            "query_pollutant": "Cr(VI)",
-            "query_class": "重金属",
-            "mechanism_keywords": "牡蛎壳改性吸附机制",
-            "alignment_basis": "query_relevance_scoring",
-            "query_features": [
-              "六价铬",
-              "含氧阴离子",
-              "强氧化性"
-            ],
-            "mechanism_functional_groups": [
-              "CaCO₃碳酸根",
-              "CaO/Ca(OH)₂",
-              "Ca²⁺位点",
-              "含氧阴离子吸附",
-              "碱性环境还原"
-            ],
-            "mechanism_key_structures": [
-              "方解石CaCO₃层状结构",
-              "煅烧CaO碱性释放",
-              "羟基磷灰石沉淀",
-              "离子交换"
-            ],
-            "feature_binding_score": 1
-          },
-          "基本原理": "煅烧牡蛎壳（CaO）在水中生成Ca(OH)₂，提供碱性环境和Ca²⁺，可与磷酸盐形成羟基磷灰石沉淀，同时重金属通过表面配位吸附",
-          "key_structures": [
-            "方解石CaCO₃层状结构",
-            "煅烧CaO碱性释放",
-            "羟基磷灰石沉淀",
-            "离子交换"
-          ],
-          "functional_groups": [
-            "CaCO₃碳酸根",
-            "CaO/Ca(OH)₂",
-            "Ca²⁺位点",
-            "含氧阴离子吸附",
-            "碱性环境还原"
-          ],
-          "molecular_feature_links": [
-            "六价铬",
-            "含氧阴离子",
-            "强氧化性",
-            "静电吸引",
-            "还原沉淀"
-          ],
-          "attribution": {
-            "source": "literature",
-            "ref": "10.16663/j.cnki.lskj.2021.02.025",
-            "verification_tier": "partial",
-            "confidence": "normal"
-          }
-        },
-        "design_translation": {
-          "idea": "利用牡蛎壳的方解石结构进行重金属固定和pH缓冲",
-          "material_handle": "牡蛎壳粉碎、煅烧或酸活化",
-          "design_principle": "牡蛎壳方解石(CaCO₃)通过离子交换与Pb²⁺形成PbCO₃沉淀，煅烧后CaO具有更强的吸附能力和pH缓冲作用",
-          "implementation_example": "牡蛎壳清洗→800°C煅烧2h→研磨→CaO粉末→直接用于柱吸附；或酸活化(HCl)→CaCl₂溶液→再生",
-          "constraints": "煅烧能耗高；CaO在水中放热需控制；竞争阳离子(Ca²⁺、Mg²⁺)干扰",
-          "failure_modes": "煅烧不完全；CaO水化放热；竞争离子降低容量",
-          "evidence_tier": "inference",
-          "source_tier": "llm_inference",
-          "material_realization_examples": [
-            "牡蛎壳粉碎、煅烧或酸活化"
-          ]
-        },
-        "boundaries": [
-          {
-            "text": "未煅烧的CaCO₃吸附容量远低于煅烧产物CaO",
-            "parameter": "other",
-            "gate_level": "soft",
-            "basis": "llm_inferred",
-            "verification": "needs_review"
-          },
-          {
-            "text": "未煅烧CaCO₃吸附容量远低于煅烧产物CaO",
-            "parameter": "other",
-            "gate_level": "soft",
-            "basis": "llm_inferred",
-            "verification": "needs_review"
-          }
-        ],
-        "honesty_summary": "基于分子特征推断，非直接证据",
-        "boundary_summary": "2 条软限制（caution）",
-        "evidence_context": {
-          "performance_leads": []
-        },
-        "charge_state": {
-          "has_charge_state": true,
-          "pka_values": [],
-          "ion_dependence": [],
-          "ph_sensitive": false,
-          "charge_mechanisms": [
-            {
-              "mechanism_id": "",
-              "description": "CaCO₃在800℃缺氧条件下分解为CaO→CaO负载在花生壳生物炭上→CaO在含磷废水中释放Ca²⁺和OH⁻→OH⁻使水体呈弱碱性→Ca²⁺与磷酸盐在碱性条件下生成羟基磷灰石沉淀",
-              "charge_terms": [
-                "羟基",
-                "磷酸"
-              ]
-            }
-          ]
-        },
-        "relevance_gating": {
-          "is_excluded": false,
-          "exclusion_reason": "",
-          "do_not_list": []
-        }
       }
     ],
     "applicable_rules": [],
     "rule_based_cautions": {
       "do_not": [],
       "cautions": [
+        {
+          "prototype_id": "polydopamine-coating",
+          "mechanism_name": "聚多巴胺儿茶酚/胺基多价协同表面黏附",
+          "parameter": "other",
+          "text": "适用条件需根据具体机制验证",
+          "basis": "llm_inferred",
+          "verification": "needs_review",
+          "source_asset": null
+        },
+        {
+          "prototype_id": "bone-structure",
+          "mechanism_name": "骨羟基磷灰石钙离子交换与表面配位",
+          "parameter": "other",
+          "text": "适用条件需根据具体机制验证",
+          "basis": "llm_inferred",
+          "verification": "needs_review",
+          "source_asset": null
+        },
+        {
+          "prototype_id": "oyster-shell",
+          "mechanism_name": "牡蛎壳文石碳酸钙离子交换与煅烧钙氧化物碱性沉淀",
+          "parameter": "other",
+          "text": "未煅烧的CaCO₃吸附容量远低于煅烧产物CaO",
+          "basis": "llm_inferred",
+          "verification": "needs_review",
+          "source_asset": null
+        },
+        {
+          "prototype_id": "oyster-shell",
+          "mechanism_name": "牡蛎壳文石碳酸钙离子交换与煅烧钙氧化物碱性沉淀",
+          "parameter": "other",
+          "text": "未煅烧CaCO₃吸附容量远低于煅烧产物CaO",
+          "basis": "llm_inferred",
+          "verification": "needs_review",
+          "source_asset": "domain_knowledge"
+        },
+        {
+          "prototype_id": "oyster-shell",
+          "mechanism_name": "钝化机理",
+          "parameter": "other",
+          "text": "适用条件需根据具体机制验证",
+          "basis": "llm_inferred",
+          "verification": "needs_review",
+          "source_asset": null
+        },
         {
           "prototype_id": "chitosan",
           "mechanism_name": "金属离子络合机制 Metal ion complexation mechanism",
@@ -891,7 +999,7 @@
         },
         {
           "prototype_id": "iron-oxidizing-bacteria",
-          "mechanism_name": "MICP化学反应机理",
+          "mechanism_name": "亚铁氧化驱动铁氢氧化物共沉淀",
           "parameter": "other",
           "text": "适用条件需根据具体机制验证",
           "basis": "llm_inferred",
@@ -906,66 +1014,21 @@
           "basis": "llm_inferred",
           "verification": "needs_review",
           "source_asset": null
-        },
-        {
-          "prototype_id": "polydopamine-coating",
-          "mechanism_name": "超疏水抗菌表面'双重保险'原理",
-          "parameter": "other",
-          "text": "适用条件需根据具体机制验证",
-          "basis": "llm_inferred",
-          "verification": "needs_review",
-          "source_asset": null
-        },
-        {
-          "prototype_id": "bone-structure",
-          "mechanism_name": "HAp膜重金属去除性能",
-          "parameter": "other",
-          "text": "适用条件需根据具体机制验证",
-          "basis": "llm_inferred",
-          "verification": "needs_review",
-          "source_asset": null
-        },
-        {
-          "prototype_id": "oyster-shell",
-          "mechanism_name": "牡蛎壳改性吸附机制",
-          "parameter": "other",
-          "text": "未煅烧的CaCO₃吸附容量远低于煅烧产物CaO",
-          "basis": "llm_inferred",
-          "verification": "needs_review",
-          "source_asset": null
-        },
-        {
-          "prototype_id": "oyster-shell",
-          "mechanism_name": "牡蛎壳改性吸附机制",
-          "parameter": "other",
-          "text": "未煅烧CaCO₃吸附容量远低于煅烧产物CaO",
-          "basis": "llm_inferred",
-          "verification": "needs_review",
-          "source_asset": "domain_knowledge"
-        },
-        {
-          "prototype_id": "oyster-shell",
-          "mechanism_name": "钝化机理",
-          "parameter": "other",
-          "text": "适用条件需根据具体机制验证",
-          "basis": "llm_inferred",
-          "verification": "needs_review",
-          "source_asset": null
         }
       ]
     },
     "honesty_ledger": {
       "facts": [
-        "有 3 个原型对 Cr(VI) 有直接实验数据"
+        "有 1 个原型对 Cr(VI) 有直接实验数据"
       ],
       "leads": [
-        "chitosan: 有直接实验数据，但未经独立核实",
-        "iron-oxidizing-bacteria: 有直接实验数据，但未经独立核实",
         "polydopamine-coating: 有直接实验数据，但未经独立核实"
       ],
       "inferences": [
         "bone-structure: 基于分子特征推断，非直接证据",
-        "oyster-shell: 基于分子特征推断，非直接证据"
+        "oyster-shell: 基于分子特征推断，非直接证据",
+        "chitosan: 基于分子特征推断，非直接证据",
+        "iron-oxidizing-bacteria: 基于分子特征推断，非直接证据"
       ]
     }
   }

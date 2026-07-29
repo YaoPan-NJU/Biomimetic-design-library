@@ -48,12 +48,12 @@
           "direct_evidence": false
         },
         "mechanism": {
-          "name": "吸附机制",
+          "name": "植物单宁芳香环π-π堆积与酚羟基氢键静电吸附",
           "selected_mechanism_reason": "Query-conditioned scoring selected this mechanism for SMX based on relevance to matched features/interactions",
           "selected_mechanism_alignment": {
             "query_pollutant": "SMX",
             "query_class": "抗生素/磺胺类",
-            "mechanism_keywords": "吸附机制",
+            "mechanism_keywords": "植物单宁芳香环π-π堆积与酚羟基氢键静电吸附",
             "alignment_basis": "query_relevance_scoring",
             "query_features": [
               "芳香环",
@@ -61,13 +61,39 @@
               "异恶唑环",
               "弱酸性"
             ],
-            "mechanism_functional_groups": "",
-            "mechanism_key_structures": [],
-            "feature_binding_score": 0
+            "mechanism_functional_groups": [
+              "-COOH（羧基）",
+              "静电作用位点",
+              "芳香环",
+              "-COO⁻（羧基阴离子）",
+              "-S-（硫醚键）",
+              "GO羧基/羟基/环氧基",
+              "-OH（羟基）",
+              "氢键位点",
+              "π-π堆积位点",
+              "-O-（醚键）"
+            ],
+            "mechanism_key_structures": [
+              "吸附结构"
+            ],
+            "feature_binding_score": 4
           },
           "基本原理": "needs_review",
-          "key_structures": [],
-          "functional_groups": "",
+          "key_structures": [
+            "吸附结构"
+          ],
+          "functional_groups": [
+            "-COOH（羧基）",
+            "静电作用位点",
+            "芳香环",
+            "-COO⁻（羧基阴离子）",
+            "-S-（硫醚键）",
+            "GO羧基/羟基/环氧基",
+            "-OH（羟基）",
+            "氢键位点",
+            "π-π堆积位点",
+            "-O-（醚键）"
+          ],
           "molecular_feature_links": [
             "芳香环"
           ],
@@ -167,27 +193,33 @@
             ],
             "mechanism_functional_groups": [
               "邻苯二酚 catechol (-OH)",
+              "静电作用位点",
               "胺基 amine (-NH₂)",
+              "氢键位点",
               "吲哚环 indole"
             ],
             "mechanism_key_structures": [
-              "PDA邻苯二酚螯合",
-              "胺基静电吸附",
               "π-π堆叠",
+              "胺基静电吸附",
+              "吸附结构",
+              "PDA邻苯二酚螯合",
               "席夫碱反应"
             ],
-            "feature_binding_score": 0
+            "feature_binding_score": 1
           },
           "基本原理": "needs_review",
           "key_structures": [
-            "PDA邻苯二酚螯合",
-            "胺基静电吸附",
             "π-π堆叠",
+            "胺基静电吸附",
+            "吸附结构",
+            "PDA邻苯二酚螯合",
             "席夫碱反应"
           ],
           "functional_groups": [
             "邻苯二酚 catechol (-OH)",
+            "静电作用位点",
             "胺基 amine (-NH₂)",
+            "氢键位点",
             "吲哚环 indole"
           ],
           "molecular_feature_links": [
@@ -257,7 +289,7 @@
       },
       {
         "prototype_id": "chitosan",
-        "organism": "Crustacea",
+        "organism": "Crustacea (甲壳类外骨骼几丁质)",
         "candidate_honesty": "inference",
         "lane": "exploratory",
         "prototype_status": {
@@ -274,12 +306,12 @@
           "direct_evidence": false
         },
         "mechanism": {
-          "name": "吸附机制——CR的三重作用",
+          "name": "抗生素在CS/GO复合物上的吸附机制",
           "selected_mechanism_reason": "Query-conditioned scoring selected this mechanism for SMX based on relevance to matched features/interactions",
           "selected_mechanism_alignment": {
             "query_pollutant": "SMX",
             "query_class": "抗生素/磺胺类",
-            "mechanism_keywords": "吸附机制——CR的三重作用",
+            "mechanism_keywords": "抗生素在CS/GO复合物上的吸附机制",
             "alignment_basis": "query_relevance_scoring",
             "query_features": [
               "芳香环",
@@ -288,27 +320,45 @@
               "弱酸性"
             ],
             "mechanism_functional_groups": [
-              "氨基 amino (-NH₂)",
-              "羟基 hydroxyl (-OH)",
-              "羧基 carboxyl (-COOH)"
+              "-NH-（亚氨基）",
+              "离子交换位点",
+              "静电作用位点",
+              "芳香环",
+              "疏水相互作用",
+              "壳聚糖氨基/羟基",
+              "配位/螯合位点",
+              "GO羧基/羟基/环氧基",
+              "-OH（羟基）",
+              "-NH₂（氨基）",
+              "氢键位点",
+              "-S-（硫醚键）",
+              "-O-（醚键）",
+              "-C=O（羰基）"
             ],
             "mechanism_key_structures": [
-              "壳聚糖-NH₂氢键",
-              "静电作用(pH>7.24)",
-              "孔道捕获"
+              "吸附结构"
             ],
-            "feature_binding_score": 3
+            "feature_binding_score": 5
           },
-          "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合",
+          "基本原理": "壳聚糖分子链上的氨基（-NH₂）可通过质子化带正电，与带负电的污染物（如染料、重金属阴离子）通过静电吸引结合",
           "key_structures": [
-            "壳聚糖-NH₂氢键",
-            "静电作用(pH>7.24)",
-            "孔道捕获"
+            "吸附结构"
           ],
           "functional_groups": [
-            "氨基 amino (-NH₂)",
-            "羟基 hydroxyl (-OH)",
-            "羧基 carboxyl (-COOH)"
+            "-NH-（亚氨基）",
+            "离子交换位点",
+            "静电作用位点",
+            "芳香环",
+            "疏水相互作用",
+            "壳聚糖氨基/羟基",
+            "配位/螯合位点",
+            "GO羧基/羟基/环氧基",
+            "-OH（羟基）",
+            "-NH₂（氨基）",
+            "氢键位点",
+            "-S-（硫醚键）",
+            "-O-（醚键）",
+            "-C=O（羰基）"
           ],
           "molecular_feature_links": [
             "磺酰胺基",
@@ -316,7 +366,7 @@
           ],
           "attribution": {
             "source": "literature",
-            "ref": "10.1016/j.cej.2022.138934",
+            "ref": "10.3390/molecules26030594",
             "verification_tier": "partial",
             "confidence": "normal"
           }
@@ -561,7 +611,7 @@
       "cautions": [
         {
           "prototype_id": "plant-tannin",
-          "mechanism_name": "吸附机制",
+          "mechanism_name": "植物单宁芳香环π-π堆积与酚羟基氢键静电吸附",
           "parameter": "other",
           "text": "适用条件需根据具体机制验证",
           "basis": "llm_inferred",
@@ -570,7 +620,7 @@
         },
         {
           "prototype_id": "polydopamine-coating",
-          "mechanism_name": "超疏水抗菌表面'双重保险'原理",
+          "mechanism_name": "聚多巴胺儿茶酚/胺基多价协同表面黏附",
           "parameter": "other",
           "text": "适用条件需根据具体机制验证",
           "basis": "llm_inferred",

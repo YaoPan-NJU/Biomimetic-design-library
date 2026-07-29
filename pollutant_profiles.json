@@ -3,6 +3,18 @@
   "description": "污染物分子特征画像数据库",
   "last_updated": "2026-06-08",
   "profiles": {
+    "oil-water": {
+      "canonical_name": "oil-water",
+      "pollutant_class": "separation_use_case",
+      "molecular_features": [
+        "油水分离",
+        "超疏水"
+      ],
+      "likely_interactions": [
+        "选择性润湿"
+      ],
+      "profile_basis": "curated_use_case"
+    },
     "Pb(II)": {
       "canonical_name": "Pb(II)",
       "pollutant_class": "重金属",
