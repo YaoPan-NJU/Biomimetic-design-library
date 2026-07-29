@@ -851,6 +851,12 @@
     "weight_source": "formula_v1",
     "mechanism_summary": "",
     "design_hint": ""
+   },
+   {
+    "id": "arsr-arsenic-trithiol-disorder-to-order",
+    "weight": 0.5,
+    "mechanism_summary": "ArsR三半胱氨酸三配位(AsS3)选择性锚定亚砷酸As(III)(软-软匹配);As(III)诱导无序到有序(Shi1996/Zhu2023)",
+    "design_hint": "三硫醇预组织肽-丝素复合膜捕获As(III),防氧化,软-软匹配区别硬含氧阴离子"
    }
   ],
   "tetracycline": [
@@ -1612,6 +1618,16 @@
      "weight": 0.4,
      "mechanism_summary": "同上，红霉素类别富集(literature_backed)",
      "design_hint": "浅层阴离子-疏水相邻界面"
+    }
+   ]
+  },
+  "SMX": {
+   "prototypes": [
+    {
+     "id": "dhps-dihydropteroate-synthase-paba-recognition",
+     "weight": 0.5,
+     "mechanism_summary": "DHPS的pABA口袋识别磺胺甲噁唑(SMX为pABA结构类似物,竞争性占据)；苯胺氨基定向锚点+芳香口袋(Hevener2010/Babaoglu2004)",
+     "design_hint": "SMX分子印迹凝胶,苯胺氨基定向锚点+尺寸匹配芳香口袋+柔性环封口(动态候选)"
     }
    ]
   }
@@ -4014,6 +4030,39 @@
    "biomimetic_dimension": "系统仿生",
    "organism": {
     "scientific": "混合微生物群落（成熟失活污水生物膜 / MBBR 载体生物膜；EPS 与磷脂界面构成）",
+    "category": "微生物"
+   }
+  },
+  "dhps-dihydropteroate-synthase-paba-recognition": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "Track2B抽取入库；performance_data为空，未搬运数值"
+   },
+   "features": [
+    "特异性识别",
+    "分子筛分"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Bacillus anthracis / Escherichia coli 等细菌的二氢蝶酸合酶（DHPS，叶酸合成关键酶）",
+    "category": "微生物"
+   }
+  },
+  "arsr-arsenic-trithiol-disorder-to-order": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "Track2B抽取入库；performance_data为空，未搬运数值"
+   },
+   "features": [
+    "特异性识别"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Acidithiobacillus ferrooxidans 等细菌的 ArsR/SmtB 家族 As(III) 感应转录抑制蛋白（AfArsR）",
     "category": "微生物"
    }
   }
