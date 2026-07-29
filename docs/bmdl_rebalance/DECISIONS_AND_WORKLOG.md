@@ -2,6 +2,8 @@
 
 > 分支：`massive`｜时间跨度：Track 2A → Track 2B → 检索排序修复｜用途：供集中审阅本轮所有决策与改动。
 > 逐批次细节另见：`track2a_*.md`、`track2b_extraction_log.md`；本文件是**总纲 + 决策依据 + 遗留清单**。
+>
+> **状态更正（2026-07-29）：** 本文件保留历史决策，但其“全部分支已扫描/机制均已联网接地”的概括未形成逐文件审计链，不能作为完备性证明。β-CD 重复项、5 个 Track 2B 原型的证据等级和查询诚实门已按 `docs/active/massive-remediation-2026-07-29.md` 修正。
 
 ---
 
@@ -39,11 +41,11 @@
 
 | 新原型 id | 中文 | 来源 | 目标污染物 | 接地层级 |
 |---|---|---|---|---|
-| `beta-cyclodextrin-host-guest-inclusion` | β-环糊精天然环腔主客体包合 | Ultimate S2 | PFOA/PFOS/PFBS/BPA/壬基酚/MB | from_source（Alsbaiee 2016 Nature 529:190）|
-| `sert-serotonin-transporter-aromatic-amine-recognition` | SERT 芳香胺中央位点识别 | model_only A5 | ODV/文拉法辛（芳香胺药物）| from_source（Coleman 2016 Nature 532:334）|
-| `wastewater-biofilm-macrolide-class-enrichment` | 成熟污水生物膜大环内酯类别富集（系统仿生）| main ROX | 罗红霉素/克拉霉素/红霉素 | literature_backed（Torresi 2017 + Burzio 2024）|
-| `dhps-dihydropteroate-synthase-paba-recognition` | DHPS PABA/磺胺识别 | batch_b | SMX | literature_backed（Hevener 2010 + Babaoglu 2004，PDB 3H26）|
-| `arsr-arsenic-trithiol-disorder-to-order` | ArsR 砷三硫醇 AsS3 捕获 | batch_b | As(III) | literature_backed（Shi 1996 + Prabaharan 2019 + Zhu 2023 JACS）|
+| `beta-cyclodextrin-hostguest-inclusion` | β-环糊精天然环腔主客体包合 | Ultimate S2 | PFOA/PFOS/PFBS/BPA/壬基酚/MB | 去重保留；正确 DOI `10.1038/nature16185`；专项映射为 inspiration |
+| `sert-serotonin-transporter-aromatic-amine-recognition` | SERT 芳香胺中央位点识别 | model_only A5 | ODV/文拉法辛（芳香胺药物）| exploratory / needs_review |
+| `wastewater-biofilm-macrolide-class-enrichment` | 成熟污水生物膜大环内酯类别富集（系统仿生）| main ROX | 罗红霉素/克拉霉素/红霉素 | exploratory；界面材料化为 llm_inferred |
+| `dhps-dihydropteroate-synthase-paba-recognition` | DHPS 条件性 PABA/磺胺识别 | batch_b | SMX | exploratory；3H26 非 SMX/pABA 直接结构 |
+| `arsr-arsenic-trithiol-disorder-to-order` | ArsR 砷三硫醇 AsS3 捕获 | batch_b | As(III) | exploratory / needs_review |
 
 未入库判定：PFHxS "PFH-1"（工程离子交换珠，非仿生原型）；ER/GPER 烷基酚（证据弱）、BSA（与 HSA 近重复）暂缓。
 

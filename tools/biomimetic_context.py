@@ -158,6 +158,14 @@ class BiomimeticContext:
             for row in prototype.get('performance_data', []):
                 quote = row.get('verification_quote') or ''
                 source = row.get('ref_doi') or row.get('patent_number') or row.get('standard_number')
+                metric_text = ' '.join(str(row.get(key, '')) for key in ('metric_type', 'parameter', 'unit', 'conditions')).lower()
+                is_removal_metric = any(term in metric_text for term in (
+                    'adsorption', '吸附', 'qmax', 'uptake', 'removal', '去除',
+                    'rejection', '分配系数', 'distribution coefficient'
+                ))
+                is_non_removal_metric = any(term in metric_text for term in (
+                    '非吸附剂性能', '解离常数', 'dissociation', 'sensor', '传感', 'lod', 'ic50'
+                ))
                 if (
                     matches_pollutant(row.get('pollutant', ''))
                     and row.get('verification') in ('verified', 'corroborated')
@@ -165,6 +173,8 @@ class BiomimeticContext:
                     and row.get('locator')
                     and quote
                     and '[PDF缺失]' not in quote
+                    and is_removal_metric
+                    and not is_non_removal_metric
                 ):
                     return True
             return False
@@ -216,35 +226,83 @@ class BiomimeticContext:
                 seen.add(c['prototype_id'])
                 unique_candidates.append(c)
 
-        # Track2A 降级：仅在 pollutant_prototype_map 中出现不构成 direct evidence；
-        # 只有当该原型对本污染物有真实 performance_data 时才标 direct_evidence。
-        # 有机诚实域（PFOA/SMX/BPA）：无真实 performance_data 的 ppm 命中不得冒充
-        # direct_pollutant_evidence（与 direct_evidence 门控一致；否则违反有机域诚实门）。
-        _gated_organic = {'PFOA', 'SMX', 'BPA'}
-        _canon_gate = self._get_canonical_name(pollutant)
-        _is_gated = (pollutant in _gated_organic) or (_canon_gate in _gated_organic)
-        for c in unique_candidates:
-            proto = self.prototypes.get(c['prototype_id'], {})
-            has_perf = self._has_perf_for(proto, pollutant)
-            c['direct_evidence'] = has_perf
-            if _is_gated and not has_perf and c.get('match_basis') == 'direct_pollutant_evidence':
-                c['match_basis'] = 'mechanism_feature_bridge'
-
-        # 排序修复：直接证据(真实performance_data)优先，其次按 weight 降序。
-        # 此前按 ppm 遍历顺序返回，导致后接线的新原型(如 β-CD/ArsR)被 top-N 截断而不浮现。
-        unique_candidates.sort(key=lambda c: (c.get('direct_evidence', False), c.get('weight', 0.0)), reverse=True)
+        unique_candidates.sort(key=lambda c: c.get('weight', 0.0), reverse=True)
         return unique_candidates
 
-    def _has_perf_for(self, proto: Dict, pollutant: str) -> bool:
-        """True if prototype has performance_data whose pollutant matches (Track2A: gates direct_evidence)."""
-        pl = (pollutant or '').lower()
-        for p in proto.get('performance_data', []) or []:
-            pol = (p.get('pollutant', '') or '').strip().lower()
-            if pol and (pl in pol or pol in pl):
-                return True
-        return False
+    def find_pollutant_inspiration(self, pollutant: str) -> List[Dict[str, Any]]:
+        """Return explicit pollutant mappings as inspiration, never as direct evidence."""
+        ppm = self.feature_mapping.get('pollutant_prototype_map', {})
+        canonical = self._get_canonical_name(pollutant)
+        aliases = {pollutant.lower(), canonical.lower()}
+        for canon, info in self.pollutant_aliases.get('aliases', {}).items():
+            names = [canon] + list(info.get('aliases', []))
+            if pollutant.lower() in {str(name).lower() for name in names}:
+                aliases.update(str(name).lower() for name in names)
 
-    def find_mechanism_based(self, pollutant_profile: Dict[str, Any]) -> List[Dict[str, Any]]:
+        candidates = []
+
+        def add_entries(entries):
+            if not isinstance(entries, list):
+                return
+            for entry in entries:
+                if not isinstance(entry, dict) or entry.get('id') not in self.prototypes:
+                    continue
+                prototype = self.prototypes[entry['id']]
+                pollutant_grounded = False
+                grounded_verification = 'needs_review'
+                for mechanism in prototype.get('mechanisms', []) or []:
+                    item = mechanism.get('causal_chain', {}).get('pollutant_feature', {})
+                    item_text = (item.get('text', '') or '').lower()
+                    complete_source = (
+                        item.get('basis') in ('from_source', 'corroborated')
+                        and item.get('source') and item.get('locator') and item.get('quote')
+                    )
+                    if complete_source and any(alias in item_text for alias in aliases):
+                        pollutant_grounded = True
+                        grounded_verification = mechanism.get('verification', 'needs_review')
+                        break
+                summary = entry.get('mechanism_summary', '') or ''
+                speculative = any(term in summary.lower() for term in ('外推', 'inspiration', '假说', '待验证', '原理原型'))
+                evidence_bonus = 0.25 if pollutant_grounded and grounded_verification == 'verified' else 0.20 if pollutant_grounded else 0.0
+                ranking_weight = min(
+                    entry.get('weight', 0.5)
+                    + evidence_bonus
+                    - (0.12 if speculative else 0.0),
+                    0.95,
+                )
+                candidates.append({
+                    'prototype_id': entry['id'],
+                    'weight': round(ranking_weight, 3),
+                    'reason': f"污染物专项映射（非直接证据；机制卡命中={pollutant_grounded}）：{summary}",
+                    'design_hint': entry.get('design_hint', ''),
+                    'match_basis': 'molecular_feature_inference',
+                    'mapping_source': 'pollutant_prototype_map',
+                    'mapping_quality': 'source_grounded_inspiration' if pollutant_grounded else 'inspiration_only',
+                    'direct_evidence': False,
+                    'molecular_feature_links': [],
+                })
+
+        def walk(obj):
+            if isinstance(obj, dict):
+                for key, value in obj.items():
+                    key_lower = str(key).lower()
+                    if any(alias == key_lower or alias in key_lower for alias in aliases):
+                        add_entries(value.get('prototypes', []) if isinstance(value, dict) else value)
+                    walk(value)
+            elif isinstance(obj, list):
+                for value in obj:
+                    walk(value)
+
+        walk(ppm)
+
+        deduplicated = {}
+        for candidate in candidates:
+            pid = candidate['prototype_id']
+            if pid not in deduplicated or candidate['weight'] > deduplicated[pid]['weight']:
+                deduplicated[pid] = candidate
+        return sorted(deduplicated.values(), key=lambda c: c['weight'], reverse=True)
+
+    def find_mechanism_based(self, pollutant_profile: Dict[str, Any], pollutant: str = '') -> List[Dict[str, Any]]:
         """Track2A 机制层：污染物 -> canonical 机制 -> 原型（经 mechanism_tags 倒排）。
         非污染物键路由：原型无需挂载特定污染物，只要机制标签与污染物特征/相互作用对应即可被命中。"""
         i2m = self.matching_rules.get('interaction_to_mechanism', {})
@@ -258,46 +316,73 @@ class BiomimeticContext:
             ms = f2m.get(mf) or f2m.get(str(mf).lower())
             if ms:
                 mechs.update(ms)
+        query_text = ' '.join(
+            [pollutant]
+            + list(pollutant_profile.get('molecular_features', []) or [])
+            + list(pollutant_profile.get('likely_interactions', []) or [])
+        )
+        query_keywords = _extract_keywords(query_text)
+        # 原型级 mechanism_tags 只用于盘点，不能作为检索权威；它会把一个原型
+        # 任意机制的标签传播给该原型全部机制。运行时直接在具体机制卡中识别标签，
+        # 并把命中的 mechanism_id 传给 brief 渲染层。
+        tag_keywords = {
+            '配位螯合': ('配位', '螯合', 'coordination', 'chelat'),
+            '静电吸附': ('静电', 'electrostatic'),
+            '离子交换': ('离子交换', 'ion exchange'),
+            '氢键': ('氢键', 'hydrogen bond'),
+            'π-π堆积': ('π-π', 'pi-pi', '芳香堆积'),
+            '疏水分配': ('疏水', 'hydrophobic'),
+            '孔道限域分子筛分': ('孔道', '限域', '筛分', 'pore', 'size exclusion'),
+            '沉淀共沉淀': ('沉淀', 'precipitation'),
+            '还原催化降解': ('还原', '氧化', '降解', 'catalytic'),
+            '生物矿化': ('矿化', 'biomineral'),
+            '几何识别': ('几何识别', '形状识别', 'geometric recognition'),
+            '超浸润分离': ('超疏水', '超亲水', '超浸润', '油水分离', 'superwet'),
+        }
         scores = {}
-        if mechs:
-            for pid, proto in self.prototypes.items():
-                overlap = set(proto.get('mechanism_tags', []) or []) & mechs
-                if overlap:
-                    scores[pid] = {'overlap': overlap, 'fpm': 0.0}
-        # 次级来源：为直接匹配的分子特征激活闲置的 feature_prototype_map
-        fpm = self.feature_mapping.get('feature_prototype_map', {})
-        for mf in pollutant_profile.get('molecular_features', []) or []:
-            rule = fpm.get(mf)
-            if isinstance(rule, dict):
-                for p in rule.get('prototypes', []):
-                    pid = p.get('id')
-                    if pid in self.prototypes:
-                        sc = scores.setdefault(pid, {'overlap': set(), 'fpm': 0.0})
-                        sc['fpm'] = max(sc['fpm'], p.get('weight', 0.5))
-        # Track2A: 激活 mechanism_feature_bridge —— canonical 机制 -> bridge 特征 -> feature_prototype_map 原型
-        bridge = self.feature_mapping.get('mechanism_feature_bridge', {})
-        m2b = self.matching_rules.get('mechanism_to_bridge', {})
-        for mech in mechs:
-            for bkey in m2b.get(mech, [mech]):
-                for feat in bridge.get(bkey, []):
-                    rule = fpm.get(feat)
-                    if isinstance(rule, dict):
-                        for p in rule.get('prototypes', []):
-                            pid = p.get('id')
-                            if pid in self.prototypes:
-                                sc = scores.setdefault(pid, {'overlap': set(), 'fpm': 0.0})
-                                sc['fpm'] = max(sc['fpm'], p.get('weight', 0.5) * 0.85)
+        for pid, proto in self.prototypes.items():
+            overlap = set()
+            mechanism_ids = []
+            relevance = 0
+            for mechanism in proto.get('mechanisms', []) or []:
+                if mechanism.get('brief_visibility', 'visible') == 'hidden':
+                    continue
+                cc = mechanism.get('causal_chain', {}) or {}
+                text_parts = [
+                    mechanism.get('name', ''), mechanism.get('description', ''),
+                    mechanism.get('基本原理', ''), cc.get('transferable_principle', ''),
+                    ' '.join(mechanism.get('functional_groups', []) or []),
+                    ' '.join(mechanism.get('key_structures', []) or []),
+                ]
+                for element in ('pollutant_feature', 'bio_structure', 'interaction', 'why_it_works'):
+                    value = cc.get(element, {})
+                    if isinstance(value, dict):
+                        text_parts.append(value.get('text', ''))
+                mechanism_text = ' '.join(str(part) for part in text_parts).lower()
+                matched = {
+                    tag for tag in mechs
+                    if any(keyword.lower() in mechanism_text for keyword in tag_keywords.get(tag, (tag,)))
+                }
+                direct_relevance = sum(keyword in mechanism_text for keyword in query_keywords)
+                if matched and direct_relevance:
+                    overlap.update(matched)
+                    mechanism_ids.append(mechanism.get('mechanism_id'))
+                    relevance = max(relevance, direct_relevance)
+            mechanism_ids = [mid for mid in mechanism_ids if mid]
+            if mechanism_ids:
+                scores[pid] = {'overlap': overlap, 'mechanism_ids': mechanism_ids, 'relevance': relevance}
         candidates = []
         for pid, sc in scores.items():
             n = len(sc['overlap'])
-            weight = min(0.18 + 0.1 * n + 0.2 * sc['fpm'], 0.7)
+            weight = min(0.25 + 0.1 * n + 0.08 * min(sc['relevance'], 3), 0.75)
             candidates.append({
                 'prototype_id': pid,
                 'weight': round(weight, 3),
-                'reason': f"机制层匹配（{'/'.join(sorted(sc['overlap'])) if sc['overlap'] else '特征'}）",
+                'reason': f"具体机制卡匹配（{'/'.join(sorted(sc['overlap']))}；query overlap={sc['relevance']}）",
                 'match_basis': 'mechanism_feature_bridge',
                 'direct_evidence': False,
                 'molecular_feature_links': sorted(sc['overlap']),
+                'matched_mechanism_ids': sc['mechanism_ids'],
             })
         candidates.sort(key=lambda x: x['weight'], reverse=True)
         return candidates[:25]
@@ -454,13 +539,24 @@ class BiomimeticContext:
         # 2. 查找 direct evidence
         direct_candidates = self.find_direct_evidence(pollutant)
 
+        # 2b. 污染物专项映射只作启发，不能升级为 direct evidence
+        pollutant_candidates = self.find_pollutant_inspiration(pollutant)
+
         # 3. 查找 feature-based inspiration
         feature_candidates = self.find_feature_based(pollutant_profile)
 
-        # 3b. Track2A 机制层候选（原型-机制映射，非污染物键路由）
-        mechanism_candidates = self.find_mechanism_based(pollutant_profile)
+        # 显式 use-case 是独立路由，不能混入普通吸附机制候选。
+        use_case_candidates = [c for c in feature_candidates if c.get('match_basis') == 'use_case_mapping']
+        if use_case_candidates:
+            direct_candidates = []
+            pollutant_candidates = []
+            mechanism_candidates = []
+            feature_candidates = use_case_candidates
+        else:
+            # 3b. Track2A 机制层候选（绑定到具体 mechanism_id）
+            mechanism_candidates = self.find_mechanism_based(pollutant_profile, pollutant)
 
-        # 4. 合并候选（direct evidence 优先 → 机制层 → feature）
+        # 4. 合并候选（direct evidence → 污染物专项启发 → curated feature → 机制发现）
         all_candidates = []
         seen_ids = set()
 
@@ -469,12 +565,19 @@ class BiomimeticContext:
                 seen_ids.add(c['prototype_id'])
                 all_candidates.append(c)
 
-        for c in mechanism_candidates:
+        # Keep room for independent feature/mechanism discovery; one curated lane
+        # must not monopolize the 15-result brief.
+        for c in pollutant_candidates[:8]:
             if c['prototype_id'] not in seen_ids:
                 seen_ids.add(c['prototype_id'])
                 all_candidates.append(c)
 
-        for c in feature_candidates:
+        for c in feature_candidates if use_case_candidates else feature_candidates[:4]:
+            if c['prototype_id'] not in seen_ids:
+                seen_ids.add(c['prototype_id'])
+                all_candidates.append(c)
+
+        for c in mechanism_candidates:
             if c['prototype_id'] not in seen_ids:
                 seen_ids.add(c['prototype_id'])
                 all_candidates.append(c)
@@ -493,7 +596,7 @@ class BiomimeticContext:
         forbidden_set = _gold_set_forbidden.get(pollutant, set())
 
         brief_candidates = []
-        for c in all_candidates[:15]:  # top 15（合并后按 lane 优先级；direct 已按 direct_evidence+weight 排序）
+        for c in all_candidates:
             pid = c['prototype_id']
             if pid in forbidden_set:
                 continue  # Skip forbidden candidates per gold-set
@@ -521,6 +624,9 @@ class BiomimeticContext:
                 # 过滤掉 brief_visibility=hidden 的机制
                 visible_mechs = [m for m in mechs if m.get('brief_visibility', 'visible') != 'hidden']
                 mechs = mechs if c.get('match_basis') == 'use_case_mapping' and not visible_mechs else visible_mechs
+                matched_mechanism_ids = set(c.get('matched_mechanism_ids', []))
+                if matched_mechanism_ids:
+                    mechs = [m for m in mechs if m.get('mechanism_id') in matched_mechanism_ids]
                 if not mechs:
                     continue  # 所有机制都隐藏，跳过此原型
                 _verif_priority = {'verified': 0, 'corroborated': 1, 'needs_review': 3}
@@ -721,6 +827,14 @@ class BiomimeticContext:
                         exclusion_reason = dnl.get('text', '')
                         break
 
+                valid_verification_tiers = {
+                    'verified', 'corroborated', 'partial', 'needs_review',
+                    'missing_pdf', 'unverified', 'knowledge_gap', 'scope_mismatch'
+                }
+                output_verification_tier = (
+                    mech_verif if mech_verif in valid_verification_tiers else 'needs_review'
+                )
+
                 brief_candidates.append({
                     'prototype_id': pid,
                     'organism': proto.get('organism', {}).get('scientific', '未知'),
@@ -737,9 +851,13 @@ class BiomimeticContext:
                         'weight': c.get('weight', 0.5),
                         'applicability_fit': self._get_applicability(proto),
                         'match_basis': c.get('match_basis', 'unknown'),
-                        'direct_evidence': c.get('direct_evidence', False)
+                        'direct_evidence': c.get('direct_evidence', False),
+                        'matched_mechanism_ids': c.get('matched_mechanism_ids', []),
+                        'mapping_source': c.get('mapping_source', ''),
+                        'mapping_quality': c.get('mapping_quality', '')
                     },
                     'mechanism': {
+                        'mechanism_id': main_mech.get('mechanism_id', ''),
                         'name': main_mech.get('name', '未知'),
                         'selected_mechanism_reason': f"Query-conditioned scoring selected this mechanism for {pollutant} based on relevance to matched features/interactions",
                         'selected_mechanism_alignment': {
@@ -759,8 +877,8 @@ class BiomimeticContext:
                         'attribution': {
                             'source': main_mech.get('source', 'unknown'),
                             'ref': main_mech.get('ref_doi', main_mech.get('ref', '')),
-                            'verification_tier': main_mech.get('verification', 'needs_review') or 'needs_review',
-                            'confidence': 'low' if (main_mech.get('verification', 'needs_review') or 'needs_review') == 'needs_review' else 'normal'
+                            'verification_tier': output_verification_tier,
+                            'confidence': 'low' if output_verification_tier in ('needs_review', 'unverified', 'knowledge_gap', 'scope_mismatch') else 'normal'
                         }
                     },
                     'design_translation': {
@@ -787,6 +905,8 @@ class BiomimeticContext:
                         'do_not_list': do_not_list
                     }
                 })
+                if len(brief_candidates) >= 15:
+                    break
 
         # 6. 构建 honesty_ledger
         facts = []

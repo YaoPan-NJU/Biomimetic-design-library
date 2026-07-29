@@ -996,7 +996,7 @@
     "design_hint": ""
    },
    {
-    "id": "beta-cyclodextrin-host-guest-inclusion",
+    "id": "beta-cyclodextrin-hostguest-inclusion",
     "weight": 0.4,
     "mechanism_summary": "β-CD多孔聚合物对染料的主客体/静电去除（exploratory）",
     "design_hint": "β-CD聚合物做染料主客体/静电吸附"
@@ -1197,7 +1197,7 @@
       "design_hint": "热解生物炭/AC做BPA疏水/π吸附（scope caveat）"
      },
      {
-      "id": "beta-cyclodextrin-host-guest-inclusion",
+      "id": "beta-cyclodextrin-hostguest-inclusion",
       "weight": 0.55,
       "mechanism_summary": "β-CD天然环腔主客体包合BPA疏水双酚骨架（Alsbaiee2016有机微污染物去除直接先例）",
       "design_hint": "多孔β-CD聚合物做BPA疏水包合位点，与非环状/无电荷对照分离环腔贡献"
@@ -1359,7 +1359,7 @@
       "design_hint": "Fe改性生物炭做PFOA内球络合吸附"
      },
      {
-      "id": "beta-cyclodextrin-host-guest-inclusion",
+      "id": "beta-cyclodextrin-hostguest-inclusion",
       "weight": 0.5,
       "mechanism_summary": "β-环糊精天然疏水环腔主客体包合PFOA全氟辛酸C8氟碳尾（Alsbaiee2016/Wang2022材料先例）；环缘羟基/叠加阳离子锚定羧酸头基",
       "design_hint": "多孔β-CD交联聚合物做主客体包合位点，腔径/电荷可调分离链段包合与头基锚定"
@@ -1423,7 +1423,7 @@
       "design_hint": "预组织中性氢键给体阵列+低介电口袋（inspiration）"
      },
      {
-      "id": "beta-cyclodextrin-host-guest-inclusion",
+      "id": "beta-cyclodextrin-hostguest-inclusion",
       "weight": 0.35,
       "mechanism_summary": "β-CD环腔对短链PFBS包合较弱，需调腔径/交联密度（exploratory）",
       "design_hint": "短链PFAS宜α-CD或调腔径/交联"
@@ -1540,7 +1540,7 @@
      "design_hint": "疏水通道分配壬基酚"
     },
     {
-     "id": "beta-cyclodextrin-host-guest-inclusion",
+     "id": "beta-cyclodextrin-hostguest-inclusion",
      "weight": 0.45,
      "mechanism_summary": "β-CD环腔包合壬基酚疏水烷基尾+环缘羟基氢键锚定酚羟基（exploratory）",
      "design_hint": "β-CD腔包合C9烷基尾，酚羟基氢键"
@@ -1566,7 +1566,7 @@
      "design_hint": "PFOS需实验验证"
     },
     {
-     "id": "beta-cyclodextrin-host-guest-inclusion",
+     "id": "beta-cyclodextrin-hostguest-inclusion",
      "weight": 0.45,
      "mechanism_summary": "β-CD环腔包合PFOS全氟辛烷磺酸氟碳尾+阳离子点锚定磺酸头基（exploratory）",
      "design_hint": "β-CD腔包合氟碳尾，磺酸头基叠加阳离子交联点"
@@ -3973,24 +3973,6 @@
    "organism": {
     "scientific": "Homo sapiens（哺乳动物肺支气管树；Weibel 人肺形态测量）",
     "category": "动物"
-   }
-  },
-  "beta-cyclodextrin-host-guest-inclusion": {
-   "applicability": {
-    "pH_range": null,
-    "temp_range": null,
-    "salinity": null,
-    "note": "β-环糊精主客体包合原型（Track2B抽取入库）；performance_data 为空，未搬运容量数值"
-   },
-   "features": [
-    "特异性识别",
-    "疏水性",
-    "分子筛分"
-   ],
-   "biomimetic_dimension": "分子仿生",
-   "organism": {
-    "scientific": "Bacillus sp.（环糊精葡萄糖基转移酶 CGTase 催化淀粉环化生成 β-环糊精天然环状低聚糖）",
-    "category": "微生物"
    }
   },
   "sert-serotonin-transporter-aromatic-amine-recognition": {

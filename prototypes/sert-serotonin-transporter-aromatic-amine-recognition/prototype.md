@@ -15,7 +15,7 @@ applicability:
   temp_range: null
   salinity: null
 evidence_level: low
-# provenance: 1 papers, 2 verified, 0 unverified
+# provenance: 1 papers, 0 verified, 2 unverified
 # coverage: partial
 # status: active
 ---

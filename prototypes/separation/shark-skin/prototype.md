@@ -2,29 +2,29 @@
 id: shark-skin
 name: 鲨鱼皮（Shark Skin）
 category: 动物
-organism: Nelumbo nucifera (lotus leaf); fish scale; Gecko; Morpho deidamia butterfly; rose petal
+organism: Selachimorpha
 biomimetic_dimension: 结构仿生
 features:
   - 抗生物污染
 adsorption_mechanisms:
-  - 表面润湿性对细菌粘附的影响规律
+  - 鲨鱼皮盾鳞riblet微结构减阻抗污
   - 细菌粘附的长程和短程相互作用距离阈值
-  - 油水分离材料分类（基于润湿性）
-  - CVD法制备超疏水石墨烯气凝胶（SGAs）
-  - Table 1 超疏水/超亲油材料代表性汇总
-  - 特殊润湿性分类
-  - 荷叶效应仿生原理
-  - 荷叶上下表面润湿性差异
-  - 壁虎脚仿生特性
-  - 玫瑰花瓣高黏附超疏水
+  - 超疏水表面接触角阈值 Superhydrophobic contact angle threshold
+  - 微生物表面润湿性偏好 Microorganism surface wettability preference
+  - 超疏水表面防污机制 Superhydrophobic surface antifouling mechanism
+  - 超疏水表面防污短暂性 Superhydrophobic surface antifouling short-lived
+  - 超疏水性定义阈值
+  - PDMS '胶+粉'法通用性
+  - 无氟透明超疏水涂层接触角
+  - 巯基硅烷改性棉纤维超疏水纺织品接触角和滚动角
 applicability:
   pH_range: null
   temp_range: null
   salinity: any
 evidence_level: low
-# provenance: 6 papers, 0 verified, 34 unverified
-# coverage: low
-# status: active
+# provenance: 5 papers, 0 verified, 31 unverified
+# coverage: parked
+# status: parked_separation
 ---
 # 鲨鱼皮（Shark Skin）
 
@@ -36,7 +36,7 @@ evidence_level: low
 
 ## 2. 吸附机制详解
 
-### 机制1：表面润湿性对细菌粘附的影响规律
+### 机制1：鲨鱼皮盾鳞riblet微结构减阻抗污
 
 **描述**：WCA 40°-70°或54°-130°最利于细菌粘附；超疏水和超亲水均抵抗粘附
 **来源**：DOI 10.1002/admi.202201425
@@ -44,37 +44,43 @@ evidence_level: low
 ### 机制2：细菌粘附的长程和短程相互作用距离阈值
 
 **描述**：长程>150 nm(van der Waals等)，短程<3 nm(氢键、静电、疏水等)
+**关键官能团**：['范德华力', '静电作用位点', '疏水相互作用', '-S-（硫醚键）', '氢键位点']
 **来源**：DOI 10.1002/admi.202201425
 
-### 机制3：油水分离材料分类（基于润湿性）
+### 机制3：超疏水表面接触角阈值 Superhydrophobic contact angle threshold
 
-**描述**：两类主要材料：超疏水/超亲油（oil-removing）和超亲水/水下超疏油（water-removing）
-**来源**：DOI 10.1021/acsami.0c18794
+**描述**：接触角>150°表现为超疏水行为；接触角<10°为超亲水
+**关键官能团**：['-S-（硫醚键）', '-O-（醚键）', '-SH（巯基）']
+**来源**：DOI 10.33263/BRIAC132.185
 
-### 机制4：CVD法制备超疏水石墨烯气凝胶（SGAs）
+### 机制4：微生物表面润湿性偏好 Microorganism surface wettability preference
 
-**描述**：WCA=160.2°, OCA=0°
-**来源**：DOI 10.1021/acsami.0c18794
+**描述**：Ulva linza偏好疏水表面，Balanus Amphitrite偏好亲水表面
+**关键官能团**：['-S-（硫醚键）', '-O-（醚键）']
+**来源**：DOI 10.33263/BRIAC132.185
 
-### 机制5：Table 1 超疏水/超亲油材料代表性汇总
+### 机制5：超疏水表面防污机制 Superhydrophobic surface antifouling mechanism
 
-**描述**：13种材料体系覆盖浸涂、喷涂、相分离、电镀、LBL、表面氧化、聚合、ATRP、冷冻干燥等技术
-**来源**：DOI 10.1021/acsami.0c18794
+**描述**：超疏水表面的抗污性能归因于截留的空气泡层，减少了细菌与表面之间的接触
+**关键官能团**：['-S-（硫醚键）', '-O-（醚键）']
+**来源**：DOI 10.33263/BRIAC132.185
 
-### 机制6：特殊润湿性分类
+### 机制6：超疏水表面防污短暂性 Superhydrophobic surface antifouling short-lived
 
-**描述**：超疏水/超亲油（'除油'型）和超亲水/水下超疏油（'除水'型）
-**来源**：DOI 10.1021/acsami.0c18794
+**描述**：超疏水表面的抗污性能是短暂的（short-lived）
+**关键官能团**：['-S-（硫醚键）', '-O-（醚键）', '-SH（巯基）']
+**来源**：DOI 10.33263/BRIAC132.185
 
-### 机制7：荷叶效应仿生原理
+### 机制7：超疏水性定义阈值
 
-**描述**：微纳复合结构+低表面能蜡质的协同效应产生超疏水性
-**来源**：DOI 10.1021/acsami.0c18794
+**描述**：接触角>150°且滚动角<10°
+**来源**：DOI 10.3390/polym15030543
 
-### 机制8：荷叶上下表面润湿性差异
+### 机制8：PDMS '胶+粉'法通用性
 
-**描述**：上表面超疏水，下表面超亲水/水下超疏油
-**来源**：DOI 10.1021/acsami.0c18794
+**描述**：17种以上颗粒均可制备超疏水表面
+**关键官能团**：['-S-（硫醚键）', 'PDMS硅氧烷']
+**来源**：DOI 10.3390/polym15030543
 
 ## 3. 结构特征与结构-功能关系
 
@@ -91,7 +97,9 @@ evidence_level: low
 
 ## 6. 相关原型
 
+- ecdysis-renewable-interface
 - pitcher-plant-slippery-surface
+- pulmonary-surfactant-phospholipid-interface
 
 ## 参考文献
 

@@ -781,10 +781,10 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "目标污染物/混合物",
-          "basis": "from_source",
-          "source": "10.1016/j.surfin.2024.104035",
-          "locator": "page 21",
-          "quote": "Chem. Eng. \nJ. Adv. 8 (2021) 100138. \n[133] A. Marmur, The lotus effect: superhydrophobicity and metastability, Langmuir 20 \n(9) (2004) 3517–3519. \n[134] G.H. Teoh, J.Y. Chin, B.S",
+          "basis": "llm_inferred",
+          "source": null,
+          "locator": null,
+          "quote": null,
           "scope_match": "Keywords: Lotus, effect, mechanism"
         },
         "bio_structure": {
@@ -1868,11 +1868,11 @@
         },
         "why_it_works": {
           "text": "超疏水/超亲水性能",
-          "basis": "from_source",
-          "evidence_label": "from_source",
-          "source": "10.16490/j.cnki.issn.1001-3660.2021.05.001",
-          "locator": "p.1",
-          "quote": "多功能超疏水表面的制造和应用研究现状[J]",
+          "basis": "llm_inferred",
+          "evidence_label": "needs_review",
+          "source": null,
+          "locator": null,
+          "quote": null,
           "scope_match": "Keywords: 超疏, 超疏水, 疏水"
         },
         "boundary_conditions": [
@@ -1916,16 +1916,21 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "油水混合物/乳化油",
+          "basis": "llm_inferred",
+          "evidence_label": "needs_review",
+          "source": null,
+          "locator": null,
+          "quote": null,
+          "scope_match": "Keywords: 纳米, 纳米晶, 纳米晶体, 纳米晶体结, 米晶"
+        },
+        "bio_structure": {
+          "text": "荷叶微纳层级结构+蜡质层",
           "basis": "from_source",
           "evidence_label": "from_source",
           "source": "10.16490/j.cnki.issn.1001-3660.2021.05.001",
           "locator": "p.2",
           "quote": "步研究发现，该乳突结构表面还存在纳米晶体结构",
-          "scope_match": "Keywords: 纳米, 纳米晶, 纳米晶体, 纳米晶体结, 米晶"
-        },
-        "bio_structure": {
-          "text": "荷叶微纳层级结构+蜡质层",
-          "basis": "llm_inferred"
+          "scope_match": "Keywords: 纳米晶体, 乳突结构"
         },
         "interaction": {
           "text": "微纳层级结构+表面化学修饰",
@@ -1933,11 +1938,11 @@
         },
         "why_it_works": {
           "text": "超疏水/超亲水性能",
-          "basis": "from_source",
-          "evidence_label": "from_source",
-          "source": "10.16490/j.cnki.issn.1001-3660.2021.05.001",
-          "locator": "p.1",
-          "quote": "多功能超疏水表面的制造和应用研究现状[J]",
+          "basis": "llm_inferred",
+          "evidence_label": "needs_review",
+          "source": null,
+          "locator": null,
+          "quote": null,
           "scope_match": "Keywords: 超疏, 超疏水, 疏水"
         },
         "boundary_conditions": [

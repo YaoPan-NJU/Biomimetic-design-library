@@ -120,5 +120,7 @@ def main():
                 f.write(f'\n总计: {total_qualified}/{total_mechs} qualified\n')
             print(f'\n输出: {out_path}')
 
+    return 1 if no_qualified or empty_basis_total else 0
+
 if __name__ == '__main__':
-    main()
+    sys.exit(main())

@@ -16,15 +16,15 @@
     "salinity": null,
     "note": "ArsR 为金属感应识别原型；performance_data 为空，未搬运姊妹项目任何吸附数值。"
   },
-  "library_tier": "extended",
+  "library_tier": "exploratory",
   "lifecycle_status": "active",
   "coverage": "partial",
   "status": "active",
   "provenance_summary": {
     "n_papers": 3,
     "n_verified": 0,
-    "n_unverified": 0,
-    "note": "机制为 literature_backed（题录级，联网核验 DOI 真实，未做全文 PDF 页码审计）：Shi 1996 JBC（砷-硫醇相互作用与 ars 操纵子金属调控，三半胱氨酸，DOI 10.1074/jbc.271.16.9291）；Prabaharan 2019（两个 ArsR As(III) 响应抑制蛋白结构，三配位硫位点，PMC6689322）；Zhu 2023 JACS（As(III) 选择性诱导 AfArsR 无序到有序转变，DOI 10.1021/jacs.3c11665）。As(III) 亲硫、以 3 个半胱氨酸形成 AsS3 三配位。performance_data 空：知识隔离红线。"
+    "n_unverified": 1,
+    "note": "已识别 Shi 1996、Prabaharan 2019 和 Zhu 2023 三个来源，但当前只有题录/摘要线索，没有完成全文页码、逐字引文和断言范围复核。ArsR 三硫醇 As(III) 候选保留为 exploratory；所有机制细节均标 needs_review，performance_data 为空。"
   },
   "mechanisms": [
     {
@@ -34,13 +34,13 @@
       "基本原理": "As(III) 为软路易斯酸、强亲硫，3 个软硫配体(半胱氨酸)以三角锥几何选择性锚定亚砷酸；配位同时驱动局部构象由无序变有序，把‘识别’与‘构象响应’耦合，区别于硬阴离子(磷酸/硫酸)结合",
       "source": "literature",
       "ref_doi": "10.1021/jacs.3c11665",
-      "verification": "partial",
+      "verification": "needs_review",
       "verification_quote": "AsIII Selectively Induces a Disorder-to-Order Transition",
       "causal_chain": {
         "pollutant_feature": {
           "text": "亚砷酸 As(III)(中性 pH 主要为中性 H3AsO3)：软路易斯酸、强亲硫，可与软硫配体形成三配位",
-          "basis": "literature_backed",
-          "evidence_label": "literature_backed",
+          "basis": "llm_inferred",
+          "evidence_label": "needs_review",
           "source": "10.1021/jacs.3c11665",
           "locator": "title / abstract",
           "quote": "AsIII Selectively Induces a Disorder-to-Order Transition",
@@ -48,8 +48,8 @@
         },
         "bio_structure": {
           "text": "ArsR/SmtB 家族同源二聚体转录抑制蛋白，含由 3 个半胱氨酸构成的三配位硫结合位点(位置因家族成员而异)(Prabaharan 2019)",
-          "basis": "literature_backed",
-          "evidence_label": "literature_backed",
+          "basis": "llm_inferred",
+          "evidence_label": "needs_review",
           "source": "10.1074/jbc.271.16.9291",
           "locator": "title / abstract",
           "quote": "role of arsenic-thiol interactions in metalloregulation",
@@ -57,8 +57,8 @@
         },
         "interaction": {
           "text": "As(III) 与 3 个半胱氨酸硫醇形成三角锥 AsS3 三配位，AfArsR 中诱导无序区折叠为有序(Zhu 2023)；三半胱氨酸中任缺其一即显著削弱结合(Shi 1996)",
-          "basis": "literature_backed",
-          "evidence_label": "literature_backed",
+          "basis": "llm_inferred",
+          "evidence_label": "needs_review",
           "source": "10.1021/jacs.3c11665",
           "locator": "title / abstract",
           "quote": "AsIII Selectively Induces a Disorder-to-Order Transition",
@@ -76,7 +76,7 @@
               "operator": "qualitative",
               "value": null
             },
-            "basis": "literature_backed",
+            "basis": "llm_inferred",
             "verification": "needs_review",
             "gate_level": "soft",
             "locator": "title / abstract",
@@ -123,7 +123,7 @@
           "biological_solution": "细菌 ArsR/SmtB 家族 As(III) 感应抑制蛋白以 3 个半胱氨酸硫醇对 As(III) 形成三角锥三配位(AsS3)：Shi 1996(JBC 271:9291)证明三半胱氨酸缺一即显著削弱结合；Prabaharan 2019 解析三配位硫位点结构；Zhu 2023(JACS，DOI 10.1021/jacs.3c11665)表明 As(III) 选择性诱导 AfArsR 无序到有序转变。软-软匹配(As(III)-3S)+三角锥几何提供对亚砷酸的高选择性，并把识别与构象折叠耦合。",
           "key_features": "必须保留：① 3 个软硫配体(半胱氨酸)三角锥几何；② 软-软匹配锚定 As(III)；③（可选）配位诱导折叠作信号/再生响应。须警惕：只对 As(III) 有效(As(V) 走硬阴离子路线)；硫醇易氧化；缺一硫配体即失效。",
           "design_mapping": "仿生映射：ArsR 三硫醇 AsS3 位点 → As(III) 选择性捕获层(三硫醇预组织或 As(III) 诱导折叠肽-丝素复合膜，源项目 ArsR 启发方案)。注意：属分子识别转译；须以‘单/双硫醇对照、As(V) 对照、防氧化’分离软-软三配位的独立贡献。",
-          "explainability_anchors": "设计溯源：ArsR 三半胱氨酸 AsS3 三配位与 As(III) 诱导折叠(Shi1996/Prabaharan2019/Zhu2023，literature_backed)→ 迁移为 As(III) 三硫醇捕获层(llm_inferred 转译，须对照分离三配位贡献)。"
+          "explainability_anchors": "设计溯源：ArsR 三半胱氨酸与 As(III) 诱导折叠为待全文复核的文献线索→ 迁移为 As(III) 三硫醇捕获层属于 llm_inferred 转译，须对照分离三配位贡献。"
         }
       }
     ]
@@ -134,7 +134,7 @@
       "specific_functional_group": "三半胱氨酸/三硫醇(AsS3 三配位)位点；可选 As(III) 诱导折叠肽段",
       "material_handle": "肽-丝素复合膜或巯基化多孔载体预组织三硫醇位点；惰性/抗氧化环境；控制 As(III) 形态(必要时先还原 As(V)→As(III))",
       "target_interaction": "As(III) 与 3 个软硫配体的三角锥配位(软-软匹配)",
-      "source_tier": "literature",
+      "source_tier": "llm_inference",
       "evidence_tier": "lead（ArsR 三半胱氨酸 AsS3 三配位与 As(III) 诱导折叠有直接结构/生化证据(Shi1996/Prabaharan2019/Zhu2023)；转译为捕获层须以单/双硫醇、As(V)、防氧化对照分离贡献，无搬运吸附数值）",
       "examples": [],
       "design_principle": "As(III) 选择性来自软-软匹配的三角锥三硫醇配位几何，而非静电或硬阴离子识别",
@@ -151,7 +151,7 @@
         "type": "mechanism",
         "index": 0,
         "name": "As(III) 三半胱氨酸三配位(AsS3)与无序到有序折叠捕获",
-        "basis": "literature_backed",
+        "basis": "source_identified_needs_review",
         "note": "Shi 1996 JBC 271:9291(DOI 10.1074/jbc.271.16.9291)+ Prabaharan 2019(PMC6689322)+ Zhu 2023 JACS(DOI 10.1021/jacs.3c11665)；DOI 联网核验真实，题录级接地，未做全文 PDF 页码审计。三半胱氨酸 AsS3 三配位为公认 ArsR 感应机制"
       }
     ],
@@ -166,7 +166,7 @@
       }
     ],
     "boundary_notes": [
-      "机制为 literature_backed(题录级)：Shi 1996 + Prabaharan 2019 + Zhu 2023，DOI 联网核验真实，未做全文页码审计",
+      "Shi 1996 + Prabaharan 2019 + Zhu 2023 仅完成来源识别，尚未完成全文页码和逐字引文审计，不得标 from_source",
       "三半胱氨酸 AsS3 三配位为公认 ArsR/SmtB 家族 As(III) 感应机制；缺一硫配体即显著削弱",
       "只对 As(III)(亚砷酸)有效，As(V)(硬含氧阴离子)不走三硫醇路线；硫醇易氧化",
       "performance_data 为空：未从姊妹项目搬运任何数值(知识隔离红线)",
@@ -184,8 +184,8 @@
     {
       "rule": "As(III) 选择性依赖 3 个软硫配体的三角锥三配位(软-软匹配)；缺一硫配体即显著削弱；只对 As(III) 有效、对 As(V) 不适用",
       "source_mechanism": "As(III) 三半胱氨酸三配位(AsS3)与无序到有序折叠捕获",
-      "gate_level": "hard",
-      "basis": "literature_backed"
+      "gate_level": "soft",
+      "basis": "llm_inferred"
     }
   ],
   "mechanism_tags": [

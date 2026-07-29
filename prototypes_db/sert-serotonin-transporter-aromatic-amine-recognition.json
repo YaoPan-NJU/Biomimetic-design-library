@@ -17,15 +17,15 @@
     "salinity": null,
     "note": "SERT 为膜整合转运蛋白（分子识别原型）；performance_data 为空，未从姊妹项目搬运任何吸附数值。"
   },
-  "library_tier": "extended",
+  "library_tier": "exploratory",
   "lifecycle_status": "active",
   "coverage": "partial",
   "status": "active",
   "provenance_summary": {
     "n_papers": 1,
-    "n_verified": 2,
-    "n_unverified": 0,
-    "note": "机制接地于人 SERT 的中央配体位点与 Na+/Cl- 耦合交替开放：Coleman/Green/Gouaux 2016 Nature 532:334（DOI 10.1038/nature17629，PDB 5I6X/5I71/5I73，(S)-西酞普兰/帕罗西汀复合物；联网核验，题录/页码接地）。抗抑郁药（SSRI/SNRI）为 SERT 天然配体；O-去甲基文拉法辛(ODV)/文拉法辛为芳香胺 SNRI，作为吸附识别目标属转译层假说（ODV 专属结合构象未直接核验）。performance_data 空：知识隔离红线。"
+    "n_verified": 0,
+    "n_unverified": 2,
+    "note": "Coleman/Green/Gouaux 2016 Nature 532:334（DOI 10.1038/nature17629，PDB 5I6X/5I71/5I73）已完成来源识别，但当前条目只保存论文题目，不能支撑中央位点残基、芳香/离子作用和交替开放的细节断言。两条机制均降为 needs_review；ODV/文拉法辛材料识别属于转译假说，performance_data 为空。"
   },
   "mechanisms": [
     {
@@ -35,13 +35,13 @@
       "基本原理": "有限尺寸的中央腔以芳香残基的 π 相互作用、极性/离子残基对配体胺基/酚羟基的定向作用，识别两亲性芳香胺配体；识别来自腔体几何与芳香/离子作用的组合而非单纯疏水分配",
       "source": "literature",
       "ref_doi": "10.1038/nature17629",
-      "verification": "verified",
+      "verification": "needs_review",
       "verification_quote": "X-ray structures and mechanism of the human serotonin transporter",
       "causal_chain": {
         "pollutant_feature": {
           "text": "芳香胺类药物客体（SERT 天然配体为血清素/抗抑郁药；吸附目标外推为 O-去甲基文拉法辛 ODV、文拉法辛等含芳香环+胺基+酚羟基的 SNRI/SSRI 微污染物）",
-          "basis": "from_source",
-          "evidence_label": "from_source",
+          "basis": "llm_inferred",
+          "evidence_label": "needs_review",
           "source": "10.1038/nature17629",
           "locator": "title, p.334",
           "quote": "X-ray structures and mechanism of the human serotonin transporter",
@@ -49,8 +49,8 @@
         },
         "bio_structure": {
           "text": "SERT 为 12 次跨膜的 NSS 家族转运蛋白，中央结合位点位于 TM1/3/6/8/10 之间（Coleman 2016 3.15 Å 结构，PDB 5I6X/5I73 结合 (S)-西酞普兰/帕罗西汀）",
-          "basis": "from_source",
-          "evidence_label": "from_source",
+          "basis": "llm_inferred",
+          "evidence_label": "needs_review",
           "source": "10.1038/nature17629",
           "locator": "title, p.334",
           "quote": "human serotonin transporter",
@@ -58,8 +58,8 @@
         },
         "interaction": {
           "text": "配体锁定于中央位点，由芳香残基 π 作用、极性/离子残基对胺基的定向作用共同结合；抗抑郁药以此将 SERT 锁于外向开放构象（Coleman 2016）",
-          "basis": "from_source",
-          "evidence_label": "from_source",
+          "basis": "llm_inferred",
+          "evidence_label": "needs_review",
           "source": "10.1038/nature17629",
           "locator": "title, p.334",
           "quote": "X-ray structures and mechanism of the human serotonin transporter",
@@ -107,13 +107,13 @@
       "基本原理": "离子（Na+/Cl-）结合与构象循环耦合，为配体进出提供方向性门控；该门控是‘识别+可逆释放+再生’的天然实现，而非静态结合",
       "source": "literature",
       "ref_doi": "10.1038/nature17629",
-      "verification": "corroborated",
+      "verification": "needs_review",
       "verification_quote": "X-ray structures and mechanism of the human serotonin transporter",
       "causal_chain": {
         "pollutant_feature": {
           "text": "两亲性芳香胺配体在离子耦合构象循环中被摄取/释放（天然底物血清素；外推目标 ODV/文拉法辛）",
-          "basis": "from_source",
-          "evidence_label": "from_source",
+          "basis": "llm_inferred",
+          "evidence_label": "needs_review",
           "source": "10.1038/nature17629",
           "locator": "title, p.334",
           "quote": "mechanism of the human serotonin transporter",
@@ -125,8 +125,8 @@
         },
         "interaction": {
           "text": "离子结合驱动构象循环，门控配体可达性（交替开放机制）",
-          "basis": "from_source",
-          "evidence_label": "from_source",
+          "basis": "llm_inferred",
+          "evidence_label": "needs_review",
           "source": "10.1038/nature17629",
           "locator": "title, p.334",
           "quote": "X-ray structures and mechanism of the human serotonin transporter",
@@ -190,7 +190,7 @@
           "biological_solution": "人血清素转运体(SERT/SLC6A4)以位于跨膜螺旋 TM1/3/6/8/10 之间的中央结合位点识别芳香胺类配体：Coleman 2016（Nature 532:334，DOI 10.1038/nature17629）以 3.15 Å 晶体结构解析 SERT 结合抗抑郁药((S)-西酞普兰、帕罗西汀)，配体锁定中央位点；SERT 通过 Na+/Cl- 耦合在外向/闭塞/内向态间交替开放，以离子梯度驱动配体定向摄取与释放。中央腔以芳香残基 π 作用与极性/离子残基对胺基的定向作用组合识别，选择性来自几何+芳香/离子而非纯疏水。",
           "key_features": "必须保留：① 有限尺寸中央腔；② 芳香残基 π 作用壁；③ 对胺基/酚羟基的定向极性/离子锚定；④（隐喻）离子/pH 响应的门控可达性用于再生。须警惕：ODV/文拉法辛对该位点的专属构象无直接证据；被动材料不能复制主动转运。",
           "design_mapping": "仿生映射：SERT 中央芳香胺腔 → 对 ODV/文拉法辛等芳香胺药物的识别位点。以芳香壁(π)+定向氢键/离子位点构建有限腔体，pH/离子响应实现温和再生。注意：属转译层假说(ODV 专属取向未核验)；须以‘删除酚羟基识别位点/羧酸锚点甲酯化/单叶口袋/随机官能团’为因果对照分离几何识别与总体疏水/盐响应贡献。",
-          "explainability_anchors": "设计溯源：SERT 中央位点结构与交替开放机制(Coleman 2016 Nature，from_source)→ 迁移为芳香胺药物识别腔+离子响应再生(llm_inferred 转译，须实验对照分离几何识别贡献)。"
+          "explainability_anchors": "设计溯源：Coleman 2016 支持 SERT/抗抑郁药结构这一来源方向，但当前只有题目级引文；ODV 专属识别和材料转译均为 llm_inferred。"
         }
       }
     ]
@@ -201,8 +201,8 @@
       "specific_functional_group": "芳香π壁(如芘/联苯/石墨烯片段)+ 对胺基/酚羟基的定向氢键/离子锚点(羧酸根/磺酸根/酚)；有限腔体几何匹配芳香胺分子",
       "material_handle": "介孔硅/COF/交联聚合物内经分子印迹或刚性间隔臂预组织芳香π壁与极性锚点；外层两性离子壳抗 DOM",
       "target_interaction": "芳香环 π-π/阳离子-π + 胺基的定向离子/氢键锚定 + 有限腔体几何约束",
-      "source_tier": "literature",
-      "evidence_tier": "inspiration（SERT 中央位点与交替开放机制 from_source(Coleman 2016)；对 ODV/文拉法辛的识别为转译层假说，ODV 专属结合未核验，无吸附数据）",
+      "source_tier": "llm_inference",
+      "evidence_tier": "inspiration（Coleman 2016 来源已识别但当前引文不足以支持细节；ODV/文拉法辛专属识别与材料转译均未核验，无吸附数据）",
       "examples": [],
       "design_principle": "有限中央腔的几何+芳香π+定向离子锚定组合识别两亲性芳香胺配体；离子/pH 响应门控提供温和再生隐喻",
       "implementation_example": "芳香π壁+酚/羧酸锚点的分子印迹介孔材料，pH 切换再生(无实验数据，仅设计假设)",
@@ -217,14 +217,14 @@
         "type": "mechanism",
         "index": 0,
         "name": "中央结合位点对芳香胺配体的识别",
-        "basis": "from_source_verified",
+        "basis": "source_identified_needs_review",
         "note": "Coleman/Green/Gouaux 2016 Nature 532:334（DOI 10.1038/nature17629，PDB 5I6X/5I73 结合 (S)-西酞普兰/帕罗西汀）；DOI 联网核验真实，quote 取自题录，未做全文 PDF 审计"
       },
       {
         "type": "mechanism",
         "index": 1,
         "name": "Na+/Cl- 耦合交替开放门控",
-        "basis": "from_source_corroborated",
+        "basis": "source_identified_needs_review",
         "note": "Coleman 2016 提出 SERT 交替开放机制；题录/页码接地"
       }
     ],
@@ -236,11 +236,11 @@
         "idea": "SERT 中央芳香胺腔转译为 ODV/文拉法辛识别位点",
         "basis": "llm_inferred",
         "label": "inspiration",
-        "note": "SERT 结构 from_source，但 ODV/文拉法辛对该位点的专属结合构象未直接核验；转译为吸附识别腔属外推，无吸附数据，须实验对照分离几何识别贡献"
+        "note": "SERT 结构来源已识别但未完成全文逐字审计；ODV/文拉法辛专属结合构象与吸附识别腔转译均属外推"
       }
     ],
     "boundary_notes": [
-      "机制 from_source 接地限于人 SERT 中央位点与交替开放机制(Coleman 2016 Nature 532:334)；天然配体为血清素/抗抑郁药",
+      "Coleman 2016 Nature 532:334 已识别，但当前仅有题目级引文，不能据此把中央位点细节或交替开放机制标成 from_source",
       "ODV/文拉法辛为芳香胺 SNRI，作为吸附识别目标属转译层假说，未直接核验其专属结合",
       "SERT 为膜整合转运蛋白，被动吸附材料只能提取识别与门控原则，不能复制主动转运",
       "performance_data 为空：未从姊妹项目搬运任何数值(知识隔离红线)",
@@ -256,8 +256,8 @@
     {
       "rule": "识别依赖有限中央腔的几何+芳香π+定向离子锚定组合；单纯疏水/芳香吸附不足以获得芳香胺药物选择性",
       "source_mechanism": "中央结合位点对芳香胺配体的有限腔体+芳香/离子识别",
-      "gate_level": "hard",
-      "basis": "from_source"
+      "gate_level": "soft",
+      "basis": "llm_inferred"
     },
     {
       "rule": "被动吸附材料不能复制 Na+/Cl- 耦合主动转运的方向性，只能借取离子/pH 响应门控的再生隐喻",

@@ -99,6 +99,33 @@ def test_direct_evidence_requires_verified_pollutant_performance():
 
     print("✅ test_direct_evidence_requires_verified_pollutant_performance passed")
 
+def test_pollutant_mapping_stays_inspiration():
+    """Explicit source-project mappings remain discoverable without evidence inflation."""
+    ctx = BiomimeticContext()
+    smx = ctx.find_pollutant_inspiration('SMX')
+
+    assert smx and smx[0]['prototype_id'] == 'dhps-dihydropteroate-synthase-paba-recognition'
+    assert all(not candidate['direct_evidence'] for candidate in smx)
+    assert all(candidate['mapping_source'] == 'pollutant_prototype_map' for candidate in smx)
+
+    print("✅ test_pollutant_mapping_stays_inspiration passed")
+
+def test_pollutant_mapping_requires_source_grounding_and_keeps_lane_diversity():
+    """Unrelated verified cards cannot inflate a mapping or crowd out discovery."""
+    ctx = BiomimeticContext()
+    mapped = ctx.find_pollutant_inspiration('PFOA')
+
+    fabp4 = next(item for item in mapped if item['prototype_id'] == 'fabp4-fatty-acid-pfas-binding')
+    assert fabp4['mapping_quality'] == 'source_grounded_inspiration'
+    assert mapped[0]['mapping_quality'] == 'source_grounded_inspiration'
+
+    candidates = ctx.query('PFOA', {}, [])['brief']['candidates']
+    explicit = [c for c in candidates if c['match']['mapping_source'] == 'pollutant_prototype_map']
+    assert len(explicit) <= 8
+    assert any(c['match']['match_basis'] == 'mechanism_feature_bridge' for c in candidates)
+
+    print("✅ test_pollutant_mapping_requires_source_grounding_and_keeps_lane_diversity passed")
+
 def test_use_case_can_select_background_mechanisms():
     """Explicit separation queries may use otherwise hidden surface-physics mechanisms."""
     ctx = BiomimeticContext()
@@ -106,12 +133,29 @@ def test_use_case_can_select_background_mechanisms():
 
     assert candidates, "Oil-water use case should return separation prototypes"
     assert all(item['match']['match_basis'] == 'use_case_mapping' for item in candidates)
-    assert all(item['prototype_status']['is_background'] for item in candidates)
+    background_ids = {'lotus-leaf', 'superhydrophobic-artificial', 'water-strider-leg'}
+    for item in candidates:
+        if item['prototype_id'] in background_ids:
+            assert item['prototype_status']['is_background']
     for item in candidates:
         if item['prototype_id'] in {'lotus-leaf', 'superhydrophobic-artificial'}:
             assert '超疏水' in item['mechanism']['name'] or '油水' in item['mechanism']['name']
 
     print("✅ test_use_case_can_select_background_mechanisms passed")
+
+def test_mechanism_lane_binds_selected_mechanism():
+    """A mechanism-lane hit must render one of the mechanisms that caused the hit."""
+    ctx = BiomimeticContext()
+    candidates = ctx.query('Roxithromycin', {}, [])['brief']['candidates']
+
+    mechanism_hits = [c for c in candidates if c['match']['match_basis'] == 'mechanism_feature_bridge']
+    assert mechanism_hits, "Roxithromycin should retain mechanism-based inspiration"
+    for candidate in mechanism_hits:
+        matched_ids = candidate['match']['matched_mechanism_ids']
+        assert matched_ids, f"{candidate['prototype_id']} lacks a concrete mechanism binding"
+        assert candidate['mechanism']['mechanism_id'] in matched_ids
+
+    print("✅ test_mechanism_lane_binds_selected_mechanism passed")
 
 def main():
     print("=== BiomimeticContext Unit Tests ===\n")
@@ -123,7 +167,10 @@ def main():
         test_relevance_gating()
         test_gate_mechanisms()
         test_direct_evidence_requires_verified_pollutant_performance()
+        test_pollutant_mapping_stays_inspiration()
+        test_pollutant_mapping_requires_source_grounding_and_keeps_lane_diversity()
         test_use_case_can_select_background_mechanisms()
+        test_mechanism_lane_binds_selected_mechanism()
         print("\n✅ All tests passed!")
         return 0
     except AssertionError as e:

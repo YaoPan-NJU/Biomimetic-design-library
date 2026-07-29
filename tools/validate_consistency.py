@@ -134,6 +134,14 @@ def validate_structured_json(db_dir: str) -> list:
 
         # R7 + R13: chimera 检测
         org = d.get('organism', {})
+        category = org.get('category', '')
+        normalized_category = {
+            '真菌': '微生物', '节肢动物': '动物', '海洋无脊椎动物': '动物'
+        }.get(category, category)
+        if not category:
+            report['errors'].append('organism.category 缺失')
+        elif normalized_category not in VALID_CATEGORIES:
+            report['errors'].append(f'organism.category 值无效: {category}')
         sci = org.get('scientific', '')
         if sci:
             parts = [p.strip() for p in re.split(r'[,;/]', sci) if p.strip()]
