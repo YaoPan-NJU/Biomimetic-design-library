@@ -1564,6 +1564,56 @@
      "design_hint": "β-CD腔包合氟碳尾，磺酸头基叠加阳离子交联点"
     }
    ]
+  },
+  "Venlafaxine": {
+   "prototypes": [
+    {
+     "id": "sert-serotonin-transporter-aromatic-amine-recognition",
+     "weight": 0.4,
+     "mechanism_summary": "SERT中央芳香胺位点识别文拉法辛(SNRI芳香胺药物)；芳香π+胺基定向锚定(inspiration,ODV专属构象未核验)",
+     "design_hint": "芳香π壁+酚/胺定向锚定的印迹介孔腔，pH响应再生"
+    }
+   ]
+  },
+  "O-desmethylvenlafaxine": {
+   "prototypes": [
+    {
+     "id": "sert-serotonin-transporter-aromatic-amine-recognition",
+     "weight": 0.4,
+     "mechanism_summary": "SERT中央芳香胺位点识别ODV(文拉法辛活性代谢物)(exploratory,ODV专属结合未核验)",
+     "design_hint": "芳香胺识别腔，pH响应再生"
+    }
+   ]
+  },
+  "Roxithromycin": {
+   "prototypes": [
+    {
+     "id": "wastewater-biofilm-macrolide-class-enrichment",
+     "weight": 0.45,
+     "mechanism_summary": "成熟污水生物膜浅层阴离子-相邻低极性界面对大环内酯类别富集(Torresi2017)；罗红霉素带正电糖区+大内酯环",
+     "design_hint": "多孔孔壁浅层稀疏弱阴离子+相邻疏水区，类别级富集"
+    }
+   ]
+  },
+  "Clarithromycin": {
+   "prototypes": [
+    {
+     "id": "wastewater-biofilm-macrolide-class-enrichment",
+     "weight": 0.4,
+     "mechanism_summary": "同上，克拉霉素类别富集(literature_backed)",
+     "design_hint": "浅层阴离子-疏水相邻界面"
+    }
+   ]
+  },
+  "Erythromycin": {
+   "prototypes": [
+    {
+     "id": "wastewater-biofilm-macrolide-class-enrichment",
+     "weight": 0.4,
+     "mechanism_summary": "同上，红霉素类别富集(literature_backed)",
+     "design_hint": "浅层阴离子-疏水相邻界面"
+    }
+   ]
   }
  },
  "feature_prototype_map": {
@@ -3931,6 +3981,39 @@
    "biomimetic_dimension": "分子仿生",
    "organism": {
     "scientific": "Bacillus sp.（环糊精葡萄糖基转移酶 CGTase 催化淀粉环化生成 β-环糊精天然环状低聚糖）",
+    "category": "微生物"
+   }
+  },
+  "sert-serotonin-transporter-aromatic-amine-recognition": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "Track2B抽取入库；performance_data为空，未搬运数值"
+   },
+   "features": [
+    "特异性识别",
+    "分子筛分"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Homo sapiens（人血清素转运体 SERT / SLC6A4，NSS 家族跨膜转运蛋白）",
+    "category": "动物"
+   }
+  },
+  "wastewater-biofilm-macrolide-class-enrichment": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "Track2B抽取入库；performance_data为空，未搬运数值"
+   },
+   "features": [
+    "网状"
+   ],
+   "biomimetic_dimension": "系统仿生",
+   "organism": {
+    "scientific": "混合微生物群落（成熟失活污水生物膜 / MBBR 载体生物膜；EPS 与磷脂界面构成）",
     "category": "微生物"
    }
   }
