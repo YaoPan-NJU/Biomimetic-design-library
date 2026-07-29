@@ -1,0 +1,311 @@
+{
+  "id": "beta-cyclodextrin-host-guest-inclusion",
+  "name_zh": "β-环糊精天然环状腔体主客体包合",
+  "name_en": "beta-Cyclodextrin Natural Macrocyclic Host-Guest Inclusion",
+  "organism": {
+    "scientific": "Bacillus sp.（环糊精葡萄糖基转移酶 CGTase 催化淀粉环化生成 β-环糊精天然环状低聚糖）",
+    "category": "微生物"
+  },
+  "biomimetic_dimension": "分子仿生",
+  "features": [
+    "特异性识别",
+    "疏水性",
+    "分子筛分"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": null,
+    "note": "β-环糊精为分子识别原型（天然环状主体）；performance_data 为空，未从姊妹项目搬运任何吸附容量数值，故测试条件全空。"
+  },
+  "library_tier": "extended",
+  "lifecycle_status": "active",
+  "coverage": "partial",
+  "status": "active",
+  "provenance_summary": {
+    "n_papers": 3,
+    "n_verified": 3,
+    "n_unverified": 0,
+    "note": "机制接地于 β-环糊精天然锥台形疏水腔的主客体包合，题录/摘要级接地（DOI 真实，联网核验）：Alsbaiee 2016 Nature 529:190（多孔 β-CD 聚合物快速去除有机微污染物，DOI 10.1038/nature19764）；Wang 2022 ACS Cent Sci（可调多孔 β-CD 聚合物平台去除阴离子 PFAS，DOI 10.1021/acscentsci.2c00478）；Abaie 2024 综述（β-CD 吸附剂去除 PFAS）。material_realization（交联聚合物/单体/电荷调控）为工程实现层，非天然结构本身。未做全文 PDF 审计。performance_data 空：严格未搬运姊妹项目容量数值（知识隔离红线）。"
+  },
+  "mechanisms": [
+    {
+      "mechanism_id": "BCD-001",
+      "name": "锥台形天然疏水腔对疏水/全氟链段的主客体包合",
+      "description": "β-环糊精由 7 个 α-1,4-D-吡喃葡萄糖单元环状连接构成锥台形分子，内腔为低极性疏水微环境（内径约 0.6–0.8 nm）、外缘为亲水羟基；疏水/全氟客体链段以疏水与范德华作用被可逆包合进内腔（host-guest inclusion），对有机微污染物与全氟烷基酸的去除已有多篇材料先例（Alsbaiee 2016 多孔 β-CD 聚合物；Wang 2022 β-CD 聚合物去除阴离子 PFAS）",
+      "基本原理": "天然预组织的锥台形疏水环腔提供尺寸受限的低极性包合位点，通过疏水/范德华相互作用可逆容纳客体的疏水或氟碳链段；环腔的预组织与尺寸匹配使包合具备形状选择性，无需金属参与",
+      "source": "literature",
+      "ref_doi": "10.1038/nature19764",
+      "verification": "corroborated",
+      "verification_quote": "Rapid removal of organic micropollutants from water by a porous β-cyclodextrin polymer",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "有机微污染物/全氟烷基酸的疏水或氟碳链段（如 PFOA/PFOS 的全氟烃尾、双酚类与酚类的疏水芳香骨架）可作为客体进入疏水环腔",
+          "basis": "literature_backed",
+          "evidence_label": "literature_backed",
+          "source": "10.1021/acscentsci.2c00478",
+          "locator": "title / abstract",
+          "quote": "A Tunable Porous β-Cyclodextrin Polymer Platform to Understand and Improve Anionic PFAS Removal",
+          "scope_match": "Keywords: cyclodextrin, PFAS, removal"
+        },
+        "bio_structure": {
+          "text": "β-环糊精为 7 元 α-1,4-葡萄糖环状低聚糖，锥台形疏水内腔加亲水羟基外缘，由细菌 CGTase 催化淀粉环化天然生成",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1038/nature19764",
+          "locator": "title / p.190",
+          "quote": "porous β-cyclodextrin polymer",
+          "scope_match": "Keywords: cyclodextrin, porous, polymer"
+        },
+        "interaction": {
+          "text": "客体疏水/氟碳链段以疏水与范德华作用被环腔可逆包合（host-guest inclusion），Alsbaiee 2016 证明多孔 β-CD 聚合物对有机微污染物快速可逆去除",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1038/nature19764",
+          "locator": "title, p.190",
+          "quote": "Rapid removal of organic micropollutants from water by a porous β-cyclodextrin polymer",
+          "scope_match": "Keywords: cyclodextrin, micropollutants, removal"
+        },
+        "why_it_works": {
+          "text": "环状预组织腔体提供尺寸匹配的低极性微环境，使包合可逆且对疏水链段具形状/尺寸选择；Wang 2022 表明可调多孔 β-CD 聚合物能针对阴离子 PFAS 去除并解析不同去除路径",
+          "basis": "literature_backed",
+          "evidence_label": "literature_backed",
+          "source": "10.1021/acscentsci.2c00478",
+          "locator": "title / abstract",
+          "quote": "Tunable Porous β-Cyclodextrin Polymer Platform ... Anionic PFAS Removal",
+          "scope_match": "Keywords: cyclodextrin, PFAS, removal"
+        },
+        "boundary_conditions": [
+          {
+            "text": "腔径尺寸选择：β-环糊精内腔约 0.6–0.8 nm，适配中等疏水基团与长链全氟尾；过大或过小客体匹配差，单一 β-CD 腔对短链 PFAS 包合弱（须调腔径/交联密度或改用其他环糊精）",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "from_source",
+            "verification": "corroborated",
+            "gate_level": "hard",
+            "locator": "title / abstract",
+            "quote": "Tunable Porous β-Cyclodextrin Polymer Platform",
+            "scope_match": "Keywords: tunable, cyclodextrin",
+            "source_asset": null
+          },
+          {
+            "text": "单纯疏水包合对阴离子头基（羧酸/磺酸）选择性有限，需在环缘叠加阳离子交联点/电荷才对阴离子 PFAS 显著增强（定性）",
+            "parameter": "competing_ion",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "天然环状预组织的锥台形疏水腔可迁移为材料的主客体包合位点：以尺寸匹配的低极性环腔可逆容纳疏水/氟碳链段，通过腔径与交联密度调节链长选择；对阴离子客体需在环缘叠加电荷位点补足头基作用",
+        "verification_quote": "Rapid removal of organic micropollutants from water by a porous β-cyclodextrin polymer"
+      },
+      "source_doi": "10.1038/nature19764",
+      "source_page": 190,
+      "source_locator": "Nature 529:190-194（题录/摘要接地；未做全文 PDF 审计）",
+      "source_file": "Alsbaiee et al. 2016 Nature 529:190-194（DOI 10.1038/nature19764）+ Wang et al. 2022 ACS Cent Sci（DOI 10.1021/acscentsci.2c00478）",
+      "functional_groups": [
+        "锥台形疏水环腔（7 元 α-1,4-葡萄糖）",
+        "环缘亲水羟基（-OH）"
+      ],
+      "key_structures": [
+        "识别结构"
+      ]
+    },
+    {
+      "mechanism_id": "BCD-002",
+      "name": "环缘羟基与阳离子交联点对阴离子头基的静电/氢键协同",
+      "description": "β-环糊精外缘的伯/仲羟基提供氢键位点；在材料实现中于环腔外引入阳离子交联点（如季铵）可与阴离子头基（羧酸/磺酸）静电互补，Wang 2022 表明电荷可调的多孔 β-CD 聚合物改善阴离子 PFAS 去除",
+      "基本原理": "疏水包合提供结合力主体，环缘羟基氢键与叠加的阳离子位点提供对阴离子头基的方向性作用，二者协同将‘链段包合’与‘头基锚定’解耦以获得对阴离子客体的增强",
+      "source": "literature",
+      "ref_doi": "10.1021/acscentsci.2c00478",
+      "verification": "partial",
+      "verification_quote": "A Tunable Porous β-Cyclodextrin Polymer Platform to Understand and Improve Anionic PFAS Removal",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "阴离子头基客体（PFOA 羧酸头基、PFOS/PFBS 磺酸头基、阴离子染料）需要头基极性作用补足纯疏水包合",
+          "basis": "literature_backed",
+          "evidence_label": "literature_backed",
+          "source": "10.1021/acscentsci.2c00478",
+          "locator": "title / abstract",
+          "quote": "Improve Anionic PFAS Removal",
+          "scope_match": "Keywords: anionic, PFAS"
+        },
+        "bio_structure": {
+          "text": "β-环糊精环缘密布伯（C6-OH）与仲（C2/C3-OH）羟基，构成可氢键的亲水外缘；材料层于其外引入阳离子交联网络",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "环缘羟基与客体极性基团氢键、叠加阳离子位点与阴离子头基静电互补；Wang 2022 通过电荷可调多孔 β-CD 聚合物解析并改善阴离子 PFAS 去除",
+          "basis": "literature_backed",
+          "evidence_label": "literature_backed",
+          "source": "10.1021/acscentsci.2c00478",
+          "locator": "title / abstract",
+          "quote": "Tunable Porous β-Cyclodextrin Polymer Platform to Understand and Improve Anionic PFAS Removal",
+          "scope_match": "Keywords: tunable, PFAS, removal"
+        },
+        "why_it_works": {
+          "text": "将疏水链段包合与阴离子头基锚定解耦，使材料对阴离子 PFAS 的选择与容量可分别经腔体与电荷调节（机理层推断，须实验分离两者贡献）",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "阳离子/电荷位点会引入对背景阴离子（硫酸盐/DOM）的非特异竞争；高盐与腐殖酸下阴离子头基选择性可能被掩盖（定性）",
+            "parameter": "competing_ion",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "把‘疏水腔包合’与‘环缘羟基/阳离子头基锚定’解耦为两个可独立调节的位点，是从环糊精主客体化学迁移到阴离子微污染物选择性吸附材料的核心可迁移原则",
+        "verification_quote": "A Tunable Porous β-Cyclodextrin Polymer Platform to Understand and Improve Anionic PFAS Removal"
+      },
+      "source_doi": "10.1021/acscentsci.2c00478",
+      "source_page": null,
+      "source_locator": "ACS Cent Sci（题录/摘要接地）",
+      "source_file": "Wang et al. 2022 ACS Cent Sci（DOI 10.1021/acscentsci.2c00478）",
+      "functional_groups": [
+        "环缘伯/仲羟基（-OH 氢键）",
+        "叠加阳离子交联位点（季铵，材料层）"
+      ],
+      "key_structures": [
+        "识别结构"
+      ]
+    }
+  ],
+  "performance_data": [],
+  "engineering_constraints": [
+    {
+      "constraint": "天然单体形态，须交联成不溶网络",
+      "value": "游离 β-环糊精水溶，用作吸附须交联成多孔聚合物（Alsbaiee 2016 以刚性芳香交联剂制多孔 β-CD 聚合物）；交联剂与孔隙率决定动力学与再生",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "题录接地：多孔 β-CD 聚合物快速去除有机微污染物",
+      "source": "literature",
+      "ref_doi": "10.1038/nature19764"
+    },
+    {
+      "constraint": "腔径-链长匹配可调",
+      "value": "β-CD（7 元）内腔约 0.6–0.8 nm 适配中长链；α-CD（6 元）更小、γ-CD（8 元）更大，可按目标链长选型或混用",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "环糊精尺寸-客体匹配的常规结构化学",
+      "source": "literature",
+      "ref_doi": "10.1021/acscentsci.2c00478"
+    }
+  ],
+  "narrative": {
+    "entries": [
+      {
+        "source_file": "Alsbaiee et al. 2016 Nature 529:190-194（DOI 10.1038/nature19764）+ Wang et al. 2022 ACS Cent Sci（DOI 10.1021/acscentsci.2c00478）+ Abaie 2024 综述（β-CD 吸附剂去除 PFAS）",
+        "paper_id": "2016-Alsbaiee-porous-bcd-polymer-micropollutants",
+        "sections": {
+          "problem_definition": "水中有机微污染物与全氟烷基酸浓度低、种类杂，常规活性炭吸附慢且再生难。分子层面的问题是：如何用尺寸匹配、可逆、可再生的识别位点选择性地捕获疏水/氟碳链段客体。",
+          "biological_solution": "β-环糊精是细菌环糊精葡萄糖基转移酶（CGTase）催化淀粉环化生成的天然环状低聚糖：7 个 α-1,4-D-吡喃葡萄糖单元围成锥台形分子，内腔为低极性疏水微环境（内径约 0.6–0.8 nm），外缘密布亲水羟基。疏水/氟碳客体链段以疏水与范德华作用被环腔可逆包合（host-guest inclusion）。Alsbaiee 2016（Nature，DOI 10.1038/nature19764）以刚性芳香交联剂制多孔 β-CD 聚合物，实现对有机微污染物的快速可逆去除与温和再生；Wang 2022（ACS Cent Sci，DOI 10.1021/acscentsci.2c00478）构建电荷可调的多孔 β-CD 聚合物平台，改善并解析阴离子 PFAS 的去除路径。环缘羟基提供氢键，叠加的阳离子交联点提供对阴离子头基的静电互补。",
+          "key_features": "必须保留：① 尺寸匹配的锥台形疏水环腔（可逆主客体包合）；② 环缘亲水羟基（氢键 + 水相容）；③ 腔径/交联密度可调以匹配链长；④ 对阴离子头基需叠加电荷位点。须警惕：单纯疏水包合对短链 PFAS 与阴离子头基选择性有限；总容量不等于选择性。",
+          "design_mapping": "仿生映射：β-环糊精天然环腔 → 材料的主客体包合位点。以尺寸匹配的低极性环腔（β-CD 或调径环糊精/交联网络）可逆容纳 PFOA/PFOS 全氟尾与 BPA/壬基酚疏水骨架；环缘羟基做氢键、叠加季铵等阳离子点锚定阴离子头基。注意：交联剂与电荷可能成为真正主导，须以非环状交联聚合物、无阳离子点、固定溶胀网络为对照分离‘环腔包合’的独立贡献（S2 方案风险）。",
+          "explainability_anchors": "设计溯源：β-CD 天然疏水环腔的主客体包合（Alsbaiee 2016 Nature，from_source）→ 电荷可调多孔 β-CD 聚合物改善阴离子 PFAS 去除（Wang 2022 ACS Cent Sci，from_source）→ 迁移为‘疏水腔包合 + 环缘羟基/阳离子头基锚定’解耦的选择性吸附位点（llm_inferred 转译，须以对照分离交联/电荷/环腔各自贡献）。"
+        }
+      }
+    ]
+  },
+  "design_translation": [
+    {
+      "idea": "将 β-环糊精的‘锥台形天然疏水环腔’移植为材料主客体包合位点：以尺寸匹配的低极性环腔可逆包合 PFOA/PFOS 全氟尾与 BPA/壬基酚疏水骨架，用腔径（α/β/γ-CD）与交联密度调节链长选择；对阴离子 PFAS 在环缘叠加季铵类阳离子交联点锚定羧酸/磺酸头基，将‘链段包合’与‘头基锚定’解耦为两个可独立调节的位点",
+      "specific_functional_group": "β-环糊精环腔（疏水包合）+ 环缘伯/仲羟基（氢键）+ 叠加季铵/胍基阳离子交联点（阴离子头基静电）",
+      "material_handle": "以刚性芳香交联剂（如四氟对苯二腈）将 β-环糊精交联成多孔聚合物（Alsbaiee 2016 路线）；或电荷可调多孔 β-CD 聚合物（Wang 2022），按目标链长选 α/β/γ-CD 或混用；控制交联密度与孔隙率以平衡动力学与再生",
+      "target_interaction": "全氟/疏水链段进入环腔的疏水/范德华包合 + 环缘羟基氢键 + 阳离子点对阴离子头基的静电互补",
+      "source_tier": "literature",
+      "evidence_tier": "lead（β-CD 主客体包合去除有机微污染物/阴离子 PFAS 有 Alsbaiee 2016 与 Wang 2022 等直接材料先例；本原型转译为选择性位点设计，具体选择性须以交联/电荷/环腔对照分离，无搬运的容量数值）",
+      "examples": [],
+      "design_principle": "天然环状预组织疏水腔提供尺寸匹配、可逆、可再生的包合位点；将疏水包合与头基锚定解耦是获得对阴离子微污染物选择性的关键",
+      "implementation_example": "多孔 β-环糊精交联聚合物（芳香交联）用于有机微污染物快速去除；电荷可调多孔 β-CD 聚合物用于阴离子 PFAS（须与非环状/无电荷对照比较，分离环腔独立贡献）",
+      "constraints": "游离 β-CD 水溶须交联；单一 β-CD 腔对短链 PFAS 与阴离子头基选择性有限；阳离子点会引入对背景阴离子/DOM 的非特异竞争；总容量≠选择性",
+      "failure_modes": "退化为普通疏水树脂/活性炭级别的非特异吸附；交联剂或电荷成为真正主导而非环腔；高盐/DOM 掩盖头基选择；把总容量误当选择性",
+      "material_realization_examples": [
+        "多孔 β-环糊精芳香交联聚合物（Alsbaiee 2016）",
+        "电荷可调多孔 β-CD 聚合物（Wang 2022）"
+      ]
+    }
+  ],
+  "honesty_ledger": {
+    "facts": [
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "锥台形天然疏水腔对疏水/全氟链段的主客体包合",
+        "basis": "from_source_corroborated",
+        "note": "Alsbaiee 2016 Nature 529:190（多孔 β-CD 聚合物快速去除有机微污染物，DOI 10.1038/nature19764）+ Wang 2022 ACS Cent Sci（可调多孔 β-CD 聚合物去除阴离子 PFAS，DOI 10.1021/acscentsci.2c00478）；DOI 经联网核验真实，quote 取自题录/摘要，未做全文 PDF 审计"
+      }
+    ],
+    "leads": [
+      {
+        "type": "mechanism",
+        "index": 1,
+        "name": "环缘羟基与阳离子交联点对阴离子头基的静电/氢键协同",
+        "basis": "from_source_partial",
+        "note": "Wang 2022 电荷可调 β-CD 聚合物改善阴离子 PFAS 去除（题录接地）；‘解耦包合与头基锚定’的因果分离为机理推断，须实验（非环状/无电荷/固定网络对照）分离交联、电荷与环腔各自贡献"
+      }
+    ],
+    "inferences": [
+      {
+        "type": "design_translation",
+        "index": 0,
+        "idea": "β-CD 环腔转译为主客体包合选择性吸附位点",
+        "basis": "llm_inferred",
+        "label": "lead",
+        "note": "有直接材料先例（Alsbaiee/Wang），但对特定污染物的选择性须以对照分离环腔/电荷/交联贡献；无搬运的吸附容量数值（知识隔离）"
+      }
+    ],
+    "boundary_notes": [
+      "本原型为天然环状低聚糖（β-环糊精，细菌 CGTase 由淀粉环化生成），机制 from_source 接地限于主客体包合与阴离子 PFAS/有机微污染物去除的材料先例（题录/摘要级）",
+      "游离 β-CD 须交联成不溶网络方可用作吸附；交联剂/电荷/孔隙率可能成为真正主导，须对照分离环腔独立贡献",
+      "performance_data 为空：严格未从姊妹项目 biomimetic-adsorbent-design 搬运任何吸附容量数值（知识隔离红线）",
+      "所有 llm_inferred 边界为定性，无数值阈值，gate_level=soft"
+    ],
+    "missing_pdf_items": [
+      "Alsbaiee et al. 2016 Nature 529:190-194 全文 PDF（quote 取自题录/摘要）",
+      "Wang et al. 2022 ACS Cent Sci 全文 PDF（quote 取自题录/摘要）",
+      "Abaie 2024 β-CD-PFAS 综述全文"
+    ],
+    "generated_by": "track2b-extraction-2026-07-29",
+    "note": "诚实优先：机制接地于 β-环糊精天然疏水环腔主客体包合的真实材料先例（Alsbaiee 2016 / Wang 2022，DOI 联网核验）；选择性主张须对照分离环腔/电荷/交联；一切吸附容量数值未搬运。"
+  },
+  "boundary_rules": [
+    {
+      "rule": "腔径-链长匹配：β-CD 内腔约 0.6–0.8 nm 适配中长链疏水/全氟尾；短链 PFAS 或过大客体匹配差，须调腔径（α/β/γ-CD）或交联密度",
+      "source_mechanism": "锥台形天然疏水腔对疏水/全氟链段的主客体包合",
+      "gate_level": "hard",
+      "basis": "from_source"
+    },
+    {
+      "rule": "单纯疏水包合对阴离子头基选择性有限，须叠加环缘/阳离子电荷位点；且电荷会引入对背景阴离子/DOM 的非特异竞争",
+      "source_mechanism": "环缘羟基与阳离子交联点对阴离子头基的静电/氢键协同",
+      "gate_level": "soft",
+      "basis": "llm_inferred"
+    }
+  ],
+  "mechanism_tags": [
+    "疏水分配",
+    "孔道限域分子筛分",
+    "几何识别",
+    "氢键",
+    "静电吸附"
+  ]
+}
