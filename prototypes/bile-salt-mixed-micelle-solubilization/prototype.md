@@ -2,7 +2,7 @@
 id: bile-salt-mixed-micelle-solubilization
 name: 胆盐混合胶束肠道脂质增溶传质（Bile Salt Mixed Micelle Intestinal Lipid Solubilization Mass Transfer）
 category: 动物
-organism: 哺乳动物（人/大鼠）胆汁：胆盐（牛磺胆酸钠 sodium taurocholate）-卵磷脂-脂质水解产物（单甘油酯/脂肪酸）混合胶束超分子体系
+organism: 哺乳动物胆汁混合胶束系统
 biomimetic_dimension: 系统仿生
 features:
   - 传质强化

@@ -2,7 +2,7 @@
 id: viral-capsid-slayer-multivalent-self-assembly
 name: 病毒衣壳/S 层多价协同自组装阵列（Viral Capsid / Bacterial S-layer Multivalent Cooperative Self-Assembly Array）
 category: 微生物
-organism: Tobacco mosaic virus 与 Cowpea chlorotic mottle virus（病毒衣壳蛋白）; Sulfolobus acidocaldarius 与 Deinococcus radiodurans（古菌/细菌 S 层蛋白）
+organism: 多物种周期性蛋白阵列比较原型（病毒衣壳与 S 层）
 biomimetic_dimension: 分子仿生
 features:
   - 多价协同

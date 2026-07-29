@@ -1,42 +1,91 @@
 {
   "id": "alkb-alkane-hydroxylase-chain-length",
-  "name_zh": "AbAlkB 烷烃羟化酶底物通道深度窗口",
-  "name_en": "Alcanivorax borkumensis AbAlkB Alkane Hydroxylase Substrate Channel Depth Window",
+  "name_zh": "AbAlkB 中链烷烃底物范围与链长门控",
+  "name_en": "AbAlkB Medium-Chain Alkane Scope and Chain-Length Gating",
   "organism": {
-    "scientific": "Alcanivorax borkumensis（AbAlkB 烷烃羟化酶，底物通道有限深度设定链长上限）",
+    "scientific": "Alcanivorax borkumensis",
     "category": "微生物"
   },
-  "biomimetic_dimension": "结构仿生",
-  "features": [
-    "分子筛分",
-    "链长选择"
-  ],
+  "biomimetic_dimension": "过程仿生",
+  "features": ["底物范围", "链长筛分"],
   "tested_conditions": {
     "tested_ph_range": null,
     "tested_temp_range": null,
     "salinity": null,
-    "note": "方案因原创性天花板终止，无实验数据"
+    "note": "原方案已终止；天然酶的氧化范围不直接证明人工材料的吸附选择性。"
   },
-  "library_tier": "extended",
-  "lifecycle_status": "active",
-  "coverage": "full",
-  "status": "active",
-  "source_scheme": "S35_A04 (NP, score 57, terminated) — 链长窗口狭缝碳（AbAlkB 底物通道深度启发）",
+  "library_tier": "exploratory",
+  "lifecycle_status": "parked",
+  "coverage": "partial",
+  "status": "parked",
+  "source_scheme": "S35_A04 (NP, score 57, terminated)",
   "provenance_summary": {
-    "n_papers": 2,
-    "n_verified": 1,
+    "n_papers": 1,
+    "n_verified": 0,
     "n_unverified": 1,
-    "note": "Naing 2013 经 PMC 全文核验 verified；Seo 2021 metadata_verified"
+    "note": "研究报告 AbAlkB 的中链烷烃氧化范围及对更长底物缺乏活性；把该现象归因于已测得的通道深度属于过度解读。"
   },
   "mechanisms": [
     {
-      "mechanism_id": "ALKb-001",
-      "name": "底物通道有限深度设定链长上限",
-      "description": "AbAlkB 底物通道为有限深度疏水管，C16 因通道深度不足无法到达催化中心不被氧化",
-      "基本原理": "几何深度窗口——物理通道长度限制底物可及性",
+      "mechanism_id": "ALKB-001",
+      "name": "中链烷烃底物范围与链长门控",
+      "description": "AbAlkB 可氧化一定范围的中链烷烃，而对更长底物未观察到氧化；通道可达性是合理解释，但该来源没有直接测定通道深度。",
+      "基本原理": "底物必须进入并以合适姿态接近催化中心，链长可能限制可达性。",
       "source": "literature",
       "ref_doi": "10.1016/j.jinorgbio.2012.12.012",
-      "verification": "verified"
+      "verification": "partial",
+      "verification_quote": null,
+      "causal_chain": {
+        "pollutant_feature": {"text": "直链疏水底物的链长影响其进入催化环境的可行性。", "basis": "llm_inferred", "source": null, "locator": null, "quote": null},
+        "bio_structure": {"text": "膜结合烷烃羟化酶需要让底物接近催化铁中心。", "basis": "llm_inferred", "source": null, "locator": null, "quote": null},
+        "interaction": {"text": "底物沿疏水路径接近活性中心；路径几何解释仍需结构证据。", "basis": "llm_inferred", "source": null, "locator": null, "quote": null},
+        "why_it_works": {"text": "可达性与反应姿态共同限制可被氧化的链长范围。", "basis": "llm_inferred", "source": null, "locator": null, "quote": null},
+        "boundary_conditions": [
+          {
+            "text": "未观察到长链底物氧化不能单独证明存在固定深度的封闭通道。",
+            "parameter": "structural_interpretation",
+            "condition": {"operator": "qualitative", "value": null},
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "可用受限疏水路径测试链长门控，但门控来源必须通过同系物与孔结构对照确认。"
+      },
+      "functional_groups": ["疏水底物路径", "双铁催化中心"],
+      "key_structures": ["底物进入路径"]
     }
-  ]
+  ],
+  "performance_data": [],
+  "design_translation": [
+    {
+      "idea": "用一端受限的疏水孔道比较直链同系物，以验证是否存在独立于疏水性的链长门控。",
+      "specific_functional_group": "疏水烷基或芳香孔壁",
+      "material_handle": "孔深和孔口可调的多孔材料",
+      "target_interaction": "疏水分配加路径可达性筛分",
+      "source_tier": "llm_inference",
+      "evidence_tier": "inspiration",
+      "examples": [],
+      "design_principle": "先验证链长窗口，再讨论通道深度机制。",
+      "implementation_example": "端封闭介孔材料的链长同系物竞争实验",
+      "constraints": "必须控制不同链长底物的水溶性和传质差异。",
+      "failure_modes": "表观选择性完全来自溶解度；孔道并非端封闭；传质被误判为平衡识别。",
+      "material_realization_examples": []
+    }
+  ],
+  "honesty_ledger": {
+    "facts": [],
+    "leads": [
+      {"type": "mechanism", "index": 0, "name": "AbAlkB 中链底物范围", "basis": "literature_backed", "note": "活性范围有文献支持，固定通道深度解释尚无本条目直接结构证据。"}
+    ],
+    "inferences": [
+      {"type": "design_translation", "index": 0, "idea": "端封闭疏水孔的链长筛分", "basis": "llm_inferred", "label": "inspiration"}
+    ],
+    "boundary_notes": ["原方案终止，保留为低优先级灵感，不作为已证实机制。"],
+    "missing_pdf_items": ["10.1016/j.jinorgbio.2012.12.012 全文证据定位"],
+    "generated_by": "codex-2026-07-28"
+  }
 }

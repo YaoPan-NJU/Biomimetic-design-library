@@ -2,7 +2,7 @@
 id: oat4-organic-anion-transporter
 name: OAT4 有机阴离子转运体（OAT4 Organic Anion Transporter (SLC22A11)）
 category: 动物
-organism: Homo sapiens（OAT4/SLC22A11 有机阴离子转运体；结构接地含 Rattus norvegicus OAT1/SLC22A6）
+organism: Homo sapiens OAT4 有机阴离子转运体
 biomimetic_dimension: 分子仿生
 features:
   - 特异性识别

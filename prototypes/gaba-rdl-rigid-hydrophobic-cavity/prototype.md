@@ -1,113 +1,53 @@
 ---
 id: gaba-rdl-rigid-hydrophobic-cavity
-name: GABA/Rdl 刚性疏水腔（环氧桥双氢键供体几何读出）（GABA/Rdl Rigid Hydrophobic Cavity (Exo-Epoxide Dual H-Bond Donor Geometric Readout)）
+name: Rdl 通道孔位点对环二烯拮抗剂敏感性的调制（Rdl Pore-Site Modulation of Cyclodiene Antagonist Sensitivity）
 category: 动物
-organism: Drosophila melanogaster（Rdl 基因 GABA 门控氯通道亚基，跨膜段围成环二烯结合孔腔）
+organism: Drosophila melanogaster
 biomimetic_dimension: 分子仿生
 features:
-  - 特异性识别
-  - 分子筛分
-pollutants:
-  - 狄氏剂
-  - dieldrin
-  - 异狄氏剂
-  - endrin
-  - 艾氏剂
-  - aldrin
+  - 疏水孔环境
+  - 极性位点调制
 adsorption_mechanisms:
-  - 刚性疏水受限腔容纳笼状骨架（疏水分选驱动 ng/L 级捕获）
-  - 预组织双氢键供体（方酰胺双 NH）对 exo-环氧氧的几何依赖读出
-  - exo/endo/无环氧三种构型对 logKow 非单调的几何依赖结合
-qmax_range: "可饱和 Langmuir 型容量，方酰胺接枝量 0.1–0.4 mmol/g 估算 ~38–152 mg/g 狄氏剂当量"
+  - Rdl 孔区位点对环二烯敏感性的调制
 applicability:
-  pH_range: [4, 10]
-  temp_range: [10, 40]
-  salinity: low_to_moderate
-evidence_level: medium
-coverage: full
-source_scheme: S27_A01 (Dieldrin, score 89, passed) — exo-环氧双氢键几何读出腔
+  pH_range: null
+  temp_range: null
+  salinity: null
+evidence_level: low
+# provenance: 1 papers, 0 verified, 1 unverified
+# coverage: partial
+# status: pending_extraction
 ---
-# GABA/Rdl 刚性疏水腔（环氧桥双氢键供体几何读出）
+# Rdl 通道孔位点对环二烯拮抗剂敏感性的调制（Rdl Pore-Site Modulation of Cyclodiene Antagonist Sensitivity）
 
 ## 1. 生物原型简介
 
-**问题定义**：狄氏剂为中性非解离分子，无氢键供体、无 pKa 与电荷把手，唯一弱氢键受体为 6,7-环氧桥氧。Rdl 基因为果蝇 GABA 门控氯通道亚基，跨膜段围成环二烯结合孔腔，是狄氏剂唯一被证的直接结合机制。
-
-**生物策略**：Rdl 孔腔 M2 段 A302 位单一残基极性属性对环二烯结合产生开关式调制——A302S（丙氨酸至丝氨酸，引入羟基）即赋予狄氏剂/环二烯抗性（结合削弱）。该突变证明刚性疏水腔内单一极性接触足以显著改写笼状配体结合。环二烯类对 GABA 受体呈高亲和立体专一性结合（Abalis 1985），识别不由 logKow 单调决定，存在立体化学读出。
-
-**仿生转译**（来源方案 S27，score 89）：提取"刚性疏水腔内单一极性接触开关式调制笼状配体结合"的架构原理（注意：记载方向为削弱，人工增强方向为独立假设）。SBA-15 介孔硅胶孔壁疏水化构成受限疏水腔 + 腔口接枝方酰胺双 NH 双齿供体阵列，对 exo-环氧氧执行几何依赖读出。
+[待补充：200-300字介绍]
 
 ## 2. 吸附机制详解
 
-### 机制1：刚性疏水受限腔——疏水分选与笼状骨架容纳
+### 机制1：Rdl 孔区位点对环二烯敏感性的调制
 
-**描述**：Rdl 跨膜段非极性残基围成刚性疏水孔腔，容纳横截面约 0.9–1.0 nm 的笼状骨架。S27 方案以 SBA-15 介孔硅胶（孔径约 6–8 nm）孔壁接枝苯基/甲基疏水层构成受限疏水腔
-**关键官能团**：苯基/甲基疏水化孔壁
-**来源**：DOI 10.1038/363449a0, DOI 10.1016/0048-3575(85)90118-x
-
-### 机制2：exo-环氧双氢键几何读出
-
-**描述**：方酰胺双 NH 对 exo-环氧氧（狄氏剂，可及立体角大）形成双点螯合氢键的概率与强度高于 endo-环氧氧（异狄氏剂，可及性低），艾氏剂无受体。增量估计 ΔΔG_geo(狄/异) 约 1–3 kJ/mol
-**关键官能团**：方酰胺双 NH 双齿氢键供体（预组织，NH 酸性强于脲/硫脲）
-**来源**：DOI 10.1016/0048-3575(85)90118-x, DOI 10.1080/10610278.2014.976221
-
-### 机制3：合成转译——受限疏水腔口预组织双氢键供体
-
-**描述**：疏水腔定位笼骨架取向，供体阵列按环氧几何预组织；无腔则供体对水相任意环氧与水无差别结合，无供体则腔不能区分 exo 与 endo。正交协同：疏水捕获驱动 + 几何读出选择性
-**关键官能团**：方酰胺硅烷接枝（预合成路线保证双 NH 双齿齿合度）
-**来源**：DOI 10.1039/c9cc01317b
+**描述**：Rdl 亚基 A302S 替换与环二烯杀虫剂抗性相关，说明通道孔区的局部残基能调制药理敏感性；该结果不等于已获得配体结合腔结构。
+**关键官能团**：['通道孔区残基', '局部极性位点']
+**来源**：DOI 10.1038/363449a0
 
 ## 3. 结构特征与结构-功能关系
 
-### 多尺度结构描述
-
-| 尺度 | 特征 | 尺寸范围 | 功能作用 |
-|------|------|----------|----------|
-| 宏观 | SBA-15 颗粒填充床 | 50–200 µm | 固定床吸附 |
-| 介观 | 介孔孔道 | 6–8 nm (SBA-15) | 笼状骨架容纳 + 传质 |
-| 微观 | 孔壁疏水层 + 腔口方酰胺供体 | ~1 nm 接枝层 | 疏水驱动 + 环氧几何读出 |
-| 纳米 | 方酰胺双 NH···环氧氧氢键 | ~1.5–2.5 Å | 几何依赖识别 |
-
-### 结构-功能关系
-
-**功能**：exo-环氧几何依赖结合（狄氏剂 exo > 异狄氏剂 endo > 艾氏剂无环氧），对 logKow 非单调
-**结构基础**：受限疏水腔容纳笼状骨架 + 腔口方酰胺双 NH 对 exo-环氧双点螯合
-**物理原理**：疏水分配驱动 ng/L 捕获（本底按 logKow 排序）；几何依赖双氢键提供选择性增量（ΔΔG_geo 约 1–3 kJ/mol）
-**关键参数**：EF_endrin = α_present(狄/异)/α_absent(狄/异) ≥ 1.8（完全成功）；EF_aldrin ≥ 2.5
-
-**仿生制造启示**：
-- 主路线：P123 模板法合成 SBA-15 → 苯基三甲氧基硅烷疏水化 → 预合成 N-(3-三乙氧基硅丙基)-N′-苄基方酰胺一步接枝
-- 对照系列：脲（苯基异氰酸酯偶联）与硫脲（苯基异硫氰酸酯偶联）两组
+[待补充：多尺度结构描述]
 
 ## 4. 已报道性能数据
 
-> 来源方案 S27 设计目标（实验待验证）
-
-| 污染物 | 材料形态 | 去除率 | qmax (mg/g) | pH | 温度(°C) | 数据来源 | 文献 |
-|--------|----------|--------|-------------|-----|----------|----------|------|
-| 狄氏剂/异狄氏剂/艾氏剂 | Ph-SBA-15 + 方酰胺 | — | ~38–152（设计估算，接枝量 0.1–0.4 mmol/g） | 7 | 25 | S27 工程设计值 | 方案通过版 |
+[待补充]
 
 ## 5. 适用场景
 
-**最适合**：环二烯杀虫剂异构体选择性研究（狄氏剂/异狄氏剂/环氧几何读出）；有机氯农药几何选择性吸附
-**不适用**：需完全矿化狄氏剂的场景（吸附为富集非降解）；高羰基 DOM 基质（羰基竞争上限）
-**约束条件**：
-- 原型记载方向为削弱（A302S 抗性），人工增强方向为独立假设
-- 水相氢键净收益 1–3 kJ/mol 待验证（核心化学风险）
-- 羰基氧优先占据氢键供体位（机制固有上限）
-- 无狄氏剂共晶结构，孔腔残基推断自突变与结合文献链
+[待补充：最适合的应用场景和不适用的情况]
 
 ## 6. 相关原型
 
-- serine-protease-oxyanion-hole：氧阴离子穴（预组织双氢键阵列原理）
-- dmpr-phenol-effector-binding-domain：DmpR 酚效应物传感器（疏水腔 + 极性接触原理）
+[待补充]
 
 ## 参考文献
 
-[1] ffrench-Constant R, et al. Nature. 1993;363:449. DOI 10.1038/363449a0
-[2] Cole L, et al. Life Sciences. 1995. DOI 10.1016/0024-3205(95)00006-r
-[3] Abalis P, et al. Pestic Biochem Physiol. 1985. DOI 10.1016/0048-3575(85)90118-x
-[4] Nagata K, Narahashi T. J Pharmacol Exp Ther. 1994. DOI 10.1016/s0022-3565(25)38678-7
-[5] Casida J, Durkin K. Pestic Biochem Physiol. 2015. DOI 10.1016/j.pestbp.2014.11.006
-[6] Schneider H-J. Angew Chem Int Ed. 2009;48:3924. DOI 10.1002/anie.200802947
-[7] S27 方案通过版 (score 89). rounds/fresh_1000/dieldrin/SCHEMES/S27_A01_exo-epoxide-dual-Hbond-cavity_passed.md
+[待补充]

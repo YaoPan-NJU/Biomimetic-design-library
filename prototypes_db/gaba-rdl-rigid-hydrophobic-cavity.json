@@ -1,306 +1,91 @@
 {
- "id": "gaba-rdl-rigid-hydrophobic-cavity",
- "name_zh": "GABA/Rdl 刚性疏水腔（环氧桥双氢键供体几何读出）",
- "name_en": "GABA/Rdl Rigid Hydrophobic Cavity (Exo-Epoxide Dual H-Bond Donor Geometric Readout)",
- "organism": {
-  "scientific": "Drosophila melanogaster（Rdl 基因 GABA 门控氯通道亚基，跨膜段围成环二烯结合孔腔）",
-  "category": "动物"
- },
- "biomimetic_dimension": "分子仿生",
- "features": [
-  "特异性识别",
-  "分子筛分"
- ],
- "tested_conditions": {
-  "tested_ph_range": null,
-  "tested_temp_range": null,
-  "salinity": null,
-  "note": "GABA/Rdl 刚性疏水腔为环二烯杀虫剂结合原型（毒效靶标），本库无其吸附性能测试；performance_data 为空，故测试条件全空。"
- },
- "library_tier": "extended",
- "lifecycle_status": "active",
- "coverage": "full",
- "status": "active",
- "provenance_summary": {
-  "n_papers": 6,
-  "n_verified": 0,
-  "n_unverified": 6,
-  "note": "所有引用均为 metadata_verified（DOI 存在性核验），无全文 verified。来源方案 S27（Dieldrin, score 89）通过严格评审。原型记载方向为削弱（A302S 抗性突变），人工水相增强方向为独立假设。"
- },
- "mechanisms": [
-  {
-   "mechanism_id": "GRC-001",
-   "name": "刚性疏水受限腔：疏水分选与笼状骨架容纳",
-   "description": "Rdl/GABA 受体环二烯结合位点由跨膜段非极性残基围成刚性疏水孔腔，容纳环二烯笼状骨架（横截面约 0.9–1.0 nm）。狄氏剂、异狄氏剂、艾氏剂共享该疏水腔，疏水分配驱动 ng/L 级捕获。实测 logKow 排序：艾氏剂 6.50 > 狄氏剂 5.40 > 异狄氏剂 5.20，疏水本底偏好艾氏剂最强",
-   "基本原理": "受限疏水腔以形状/去溶剂化互补容纳笼状骨架，疏水分配提供 ng/L 捕获驱动力；本底不构成选择性来源，仅为几何读出的承载层",
-   "source": "literature",
-   "ref_doi": "10.1038/363449a0",
-   "verification": "metadata_verified",
-   "verification_quote": null,
-   "causal_chain": {
-    "pollutant_feature": {
-     "text": "环二烯笼状骨架（横截面约 0.9–1.0 nm），中性非解离分子，无氢键供体、无 pKa 与电荷把手",
-     "basis": "from_source",
-     "evidence_label": "from_source",
-     "source": "ATSDR 2022 ToxProfile",
-     "locator": "https://wwwn.cdc.gov/TSP/ToxProfiles/ToxProfiles.aspx?id=89&tid=21",
-     "quote": null,
-     "scope_match": "Keywords: dieldrin, aldrin, endrin, logKow, neutral"
-    },
-    "bio_structure": {
-     "text": "Rdl 基因果蝇 GABA 门控氯通道亚基，跨膜段非极性残基围成刚性疏水孔腔，是狄氏剂唯一被证的直接结合机制",
-     "basis": "from_source",
-     "evidence_label": "from_source",
-     "source": "10.1038/363449a0",
-     "locator": "DOI 10.1038/363449a0, A302S mutation",
-     "quote": null,
-     "scope_match": "Keywords: Rdl, GABA, dieldrin, resistance"
-    },
-    "interaction": {
-     "text": "笼状骨架进入疏水孔腔，疏水分配驱动结合；A302S 单点突变引入羟基即赋予抗性（削弱结合），证明单一极性残基改变足以显著改写结合",
-     "basis": "from_source",
-     "evidence_label": "from_source",
-     "source": "10.1038/363449a0",
-     "locator": "DOI 10.1038/363449a0, A302S",
-     "quote": null,
-     "scope_match": "Keywords: A302S, resistance, binding"
-    },
-    "why_it_works": {
-     "text": "刚性疏水腔以形状互补与疏水效应容纳笼状骨架；疏水分配驱动 ng/L 级捕获，logKow 差异决定本底排序",
-     "basis": "llm_inferred",
-     "evidence_label": "llm_inferred",
-     "source": null,
-     "locator": null,
-     "quote": null,
-     "scope_match": null
-    },
-    "boundary_conditions": [
-     {
-      "text": "孔径须匹配笼状骨架横截面（约 0.9–1.0 nm）；过大丧失形状选择，过小排斥客体",
-      "parameter": "cavity_cross_section",
-      "condition": { "operator": "approx", "value": "0.9-1.0 nm" },
-      "basis": "llm_inferred",
-      "verification": "needs_review",
-      "gate_level": "soft",
-      "locator": null, "quote": null, "source_asset": null
-     }
-    ],
-    "transferable_principle": "刚性疏水受限腔可容纳笼状骨架并以疏水分配驱动 ng/L 级捕获；腔内单一极性接触可对结合产生开关式调制"
-   },
-   "source_doi": "10.1038/363449a0",
-   "source_page": null,
-   "source_locator": "DOI 10.1038/363449a0, A302S resistance mutation",
-   "source_file": "ffrench-Constant et al. 1993, Nature 363:449; metadata_verified",
-   "functional_groups": [
-    "跨膜段非极性残基围成的刚性疏水孔腔"
-   ],
-   "key_structures": [
-    "识别结构"
-   ]
+  "id": "gaba-rdl-rigid-hydrophobic-cavity",
+  "name_zh": "Rdl 通道孔位点对环二烯拮抗剂敏感性的调制",
+  "name_en": "Rdl Pore-Site Modulation of Cyclodiene Antagonist Sensitivity",
+  "organism": {
+    "scientific": "Drosophila melanogaster",
+    "category": "动物"
   },
-  {
-   "mechanism_id": "GRC-002",
-   "name": "exo-环氧双氢键几何读出：方酰胺双 NH 对环氧氧的几何依赖结合",
-   "description": "狄氏剂唯一弱氢键受体为 6,7-环氧桥氧（exo 构型，可及立体角大）；异狄氏剂 endo-环氧氧朝向笼内凹面，可及性低；艾氏剂 6,7 位为双键无受体。预组织双氢键供体（方酰胺双 NH）置于刚性疏水腔口，对 exo-环氧氧形成双点螯合氢键的概率与强度高于 endo-环氧氧。增量估计 ΔΔG_geo(狄/异) 约 1–3 kJ/mol",
-   "基本原理": "预组织双氢键供体对环氧氧的几何依赖读出：exo-环氧（可及立体角大）> endo-环氧（可及性低）> 无环氧；对 logKow、电荷、分子量均非单调",
-   "source": "literature",
-   "ref_doi": "10.1016/0048-3575(85)90118-x",
-   "verification": "metadata_verified",
-   "verification_quote": null,
-   "causal_chain": {
-    "pollutant_feature": {
-     "text": "狄氏剂 6,7-环氧桥氧（exo 构型，唯一弱氢键受体）；异狄氏剂 endo-环氧氧；艾氏剂无环氧",
-     "basis": "from_source",
-     "evidence_label": "from_source",
-     "source": "ATSDR 2022 ToxProfile",
-     "locator": "https://wwwn.cdc.gov/TSP/ToxProfiles/ToxProfiles.aspx?id=89&tid=21",
-     "quote": null,
-     "scope_match": "Keywords: dieldrin, epoxide, exo, endo"
-    },
-    "bio_structure": {
-     "text": "Rdl 孔腔 M2 段 A302 位单一残基极性属性对环二烯结合产生开关式调制；原型支持'刚性疏水腔内单一极性接触足以几何调制配体结合'的架构原理",
-     "basis": "from_source",
-     "evidence_label": "from_source",
-     "source": "10.1038/363449a0",
-     "locator": "DOI 10.1038/363449a0, A302S",
-     "quote": null,
-     "scope_match": "Keywords: A302S, polar contact, modulation"
-    },
-    "interaction": {
-     "text": "方酰胺双 NH 对 exo-环氧氧形成双点螯合氢键；异狄氏剂 endo-环氧可及性低，艾氏剂无受体",
-     "basis": "llm_inferred",
-     "evidence_label": "llm_inferred",
-     "source": null,
-     "locator": null,
-     "quote": null,
-     "scope_match": null
-    },
-    "why_it_works": {
-     "text": "几何依赖双点氢键：exo-环氧可及立体角大 → 双点螯合概率高 → ΔΔG_geo 约 1–3 kJ/mol；对 logKow 非单调（狄氏剂 5.40 < 艾氏剂 6.50 但环氧增量可部分补偿）",
-     "basis": "llm_inferred",
-     "evidence_label": "llm_inferred",
-     "source": null,
-     "locator": null,
-     "quote": null,
-     "scope_match": null
-    },
-    "boundary_conditions": [
-     {
-      "text": "水相氢键竞争：扣除环氧氧与供体 NH 双侧去溶剂化代价后，净自由能须高于约 1 kJ/mol 可测下限",
-      "parameter": "net_hbond_energy",
-      "condition": { "operator": ">=", "value": "1.0 kJ/mol" },
-      "basis": "llm_inferred",
-      "verification": "needs_review",
-      "gate_level": "soft",
-      "locator": null, "quote": null, "source_asset": null
-     },
-     {
-      "text": "羰基竞争上限：羰基氧氢键碱度显著强于环氧氧，供体位对羰基亲和力更高并优先占据，为机制固有上限",
-      "parameter": "carbonyl_competition",
-      "condition": { "operator": "qualitative", "value": null },
-      "basis": "llm_inferred",
-      "verification": "needs_review",
-      "gate_level": "soft",
-      "locator": null, "quote": null, "source_asset": null
-     }
-    ],
-    "transferable_principle": "将预组织双氢键供体（方酰胺双 NH）置于刚性受限疏水腔口，可对环氧氧执行几何依赖读出，区分 exo/endo/无环氧三种构型"
-   },
-   "source_doi": "10.1016/0048-3575(85)90118-x",
-   "source_page": null,
-   "source_locator": "DOI 10.1016/0048-3575(85)90118-x, stereospecific binding",
-   "source_file": "Abalis et al. 1985, Pestic Biochem Physiol; metadata_verified",
-   "functional_groups": [
-    "方酰胺双 NH 双齿氢键供体",
-    "exo-环氧桥氧（氢键受体）"
-   ],
-   "key_structures": [
-    "识别结构"
-   ]
-  }
- ],
- "performance_data": [],
- "engineering_constraints": [
-  {
-   "constraint": "水相氢键竞争",
-   "value": "受限疏水腔口预组织双氢键供体与环氧氧的结合，扣除双侧去溶剂化代价及孔内残余水竞争后，净自由能须高于约 1 kJ/mol 可测下限",
-   "unit": "kJ/mol",
-   "relevance": "high",
-   "explanation": "方案 S27 M1 台账：撤销'低介电微环境'声称，以保守润湿孔极限为设计基准",
-   "source": "llm_inference",
-   "ref_doi": "10.1002/anie.200802947"
+  "biomimetic_dimension": "分子仿生",
+  "features": ["疏水孔环境", "极性位点调制"],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": null,
+    "note": "来源研究抗性表型，不是水相吸附；本库无二嗪农等污染物的材料性能数据。"
   },
-  {
-   "constraint": "原型记载方向为削弱",
-   "value": "A302S 极性插入削弱狄氏剂结合（抗性），人工水相增强方向为独立假设，无原型背书",
-   "unit": null,
-   "relevance": "high",
-   "explanation": "方案 S27 M3 闭合：原型仅支持可调制性原理，不含增强方向命题",
-   "source": "llm_inference",
-   "ref_doi": "10.1038/363449a0"
+  "library_tier": "exploratory",
+  "lifecycle_status": "pending_extraction",
+  "coverage": "partial",
+  "status": "pending_extraction",
+  "source_scheme": "S27_A01 (dieldrin, score 89, passed)",
+  "provenance_summary": {
+    "n_papers": 1,
+    "n_verified": 0,
+    "n_unverified": 1,
+    "note": "A302S 研究支持 Rdl 孔区位点与环二烯抗性相关；不支持原条目的精确腔体尺寸、直接结合结构或方酰胺能量增量。"
   },
-  {
-   "constraint": "羰基竞争上限",
-   "value": "羰基氧氢键碱度（约 0.45–0.5）显著强于环氧氧（约 0.2），供体位对羰基优先占据",
-   "unit": null,
-   "relevance": "medium",
-   "explanation": "方案 S27 M5 闭合：氢键供体化学上无法区分环氧氧与羰基氧，为机制固有上限",
-   "source": "llm_inference",
-   "ref_doi": null
-  }
- ],
- "narrative": {
-  "entries": [
-   {
-    "source_file": "S27_A01_exo-epoxide-dual-Hbond-cavity_passed.md (score 89)",
-    "paper_id": "S27-dieldrin-gaba-rdl",
-    "sections": {
-     "problem_definition": "狄氏剂为中性非解离分子，无氢键供体、无 pKa 与电荷把手，唯一弱氢键受体为 6,7-环氧桥氧。能否将预组织双氢键供体置于刚性受限疏水腔口，使其在水相中对环氧氧呈几何依赖读出？",
-     "biological_solution": "Rdl 基因果蝇 GABA 门控氯通道亚基，跨膜段围成刚性疏水孔腔。A302S 单点突变引入羟基即赋予狄氏剂抗性，证明刚性疏水腔内单一极性接触足以开关式调制笼状配体结合（记载方向为削弱）。环二烯类对 GABA 受体呈高亲和立体专一性结合，识别不由 logKow 单调决定。",
-     "key_features": "必须保留：① 刚性疏水受限腔容纳笼状骨架；② 腔口预组织双氢键供体（方酰胺双 NH）朝向腔口；③ exo/endo 环氧几何可及性连续差异。可灵活调整：供体化学（脲/硫脲/方酰胺）、载体（SBA-15/MCM-41 介孔硅胶）、疏水化程度。",
-     "design_mapping": "仿生映射：Rdl 刚性疏水腔 + 单一极性接触调制 → SBA-15 介孔硅胶孔壁疏水化 + 腔口方酰胺双 NH 双齿供体。注意：原型记载方向为削弱，人工增强方向为独立假设。",
-     "explainability_anchors": "设计溯源：Rdl 刚性疏水腔（DOI 10.1038/363449a0，metadata_verified）→ 单一极性接触调制原理 → 方酰胺双 NH 对 exo-环氧几何读出（llm_inferred，水相净收益 1–3 kJ/mol 待验证）。"
+  "mechanisms": [
+    {
+      "mechanism_id": "RDL-001",
+      "name": "Rdl 孔区位点对环二烯敏感性的调制",
+      "description": "Rdl 亚基 A302S 替换与环二烯杀虫剂抗性相关，说明通道孔区的局部残基能调制药理敏感性；该结果不等于已获得配体结合腔结构。",
+      "基本原理": "通道孔区单点极性变化可改变受体对环二烯拮抗剂的响应。",
+      "source": "literature",
+      "ref_doi": "10.1038/363449a0",
+      "verification": "partial",
+      "verification_quote": null,
+      "causal_chain": {
+        "pollutant_feature": {"text": "环二烯类具有刚性疏水骨架，但具体结合姿态尚未由该来源解析。", "basis": "llm_inferred", "source": null, "locator": null, "quote": null},
+        "bio_structure": {"text": "Rdl 氯通道孔区的 A302 位点影响环二烯敏感性。", "basis": "llm_inferred", "source": null, "locator": null, "quote": null},
+        "interaction": {"text": "局部极性和孔区几何可能共同改变配体阻断或受体构象响应。", "basis": "llm_inferred", "source": null, "locator": null, "quote": null},
+        "why_it_works": {"text": "单点替换造成抗性表型，表明该区域参与敏感性调制，但作用方向和直接接触仍待结构验证。", "basis": "llm_inferred", "source": null, "locator": null, "quote": null},
+        "boundary_conditions": [
+          {
+            "text": "抗性突变只能定位功能相关区域，不能给出精确腔体尺寸或人工受体的结合能。",
+            "parameter": "evidence_scope",
+            "condition": {"operator": "qualitative", "value": null},
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "可用疏水受限空间中的单点极性变化测试识别增量，但必须与非特异疏水分配分开。"
+      },
+      "functional_groups": ["通道孔区残基", "局部极性位点"],
+      "key_structures": ["Rdl 通道孔区"]
     }
-   }
-  ]
- },
- "design_translation": [
-  {
-   "idea": "将 Rdl 刚性疏水腔 + 单一极性接触调制原理转译为 SBA-15 介孔硅胶孔壁疏水化 + 腔口方酰胺双 NH 双齿供体阵列，对 exo-环氧执行几何依赖读出",
-   "specific_functional_group": "方酰胺双 NH 双齿氢键供体（预组织，NH 酸性强于脲/硫脲）",
-   "material_handle": "SBA-15 介孔硅胶（孔径约 6–8 nm）孔壁接枝苯基/甲基疏水层 + 腔口预合成方酰胺硅烷接枝",
-   "target_interaction": "方酰胺双 NH 对 exo-环氧氧双点螯合氢键（ΔΔG_geo 约 1–3 kJ/mol）叠加疏水分配驱动",
-   "source_tier": "llm_inference",
-   "evidence_tier": "inspiration（原型记载方向为削弱，增强方向为独立假设）",
-   "examples": [],
-   "design_principle": "Rdl 刚性疏水腔内单一极性接触开关式调制笼状配体结合（DOI 10.1038/363449a0）；人工体系以方酰胺双 NH 对 exo-环氧几何读出",
-   "implementation_example": "Ph-SBA-15 孔壁 + 腔口预合成 N-(3-三乙氧基硅丙基)-N′-苄基方酰胺接枝",
-   "constraints": "水相氢键竞争（净收益 1–3 kJ/mol 待验证）；原型方向为削弱，增强为独立假设；羰基竞争上限",
-   "failure_modes": "孔内润湿态致氢键竞争淬灭；方酰胺对羰基优先占据；供体缺如时腔不能区分 exo/endo",
-   "material_realization_examples": []
+  ],
+  "performance_data": [],
+  "design_translation": [
+    {
+      "idea": "在疏水受限孔中逐步引入单一极性位点，比较环二烯同系物的竞争吸附；方酰胺位点仅作为待测工程假设。",
+      "specific_functional_group": "可控密度的方酰胺或其他氢键供体",
+      "material_handle": "表面化学可分步调节的疏水介孔材料",
+      "target_interaction": "疏水分配背景上的局部极性增量",
+      "source_tier": "llm_inference",
+      "evidence_tier": "inspiration",
+      "examples": [],
+      "design_principle": "只转译局部位点可调制敏感性的原则，不声称复制天然结合腔。",
+      "implementation_example": "同孔径材料的无位点、单极性位点和高密度位点对照组",
+      "constraints": "需在真实水相中控制有机质竞争，并用无极性对照扣除疏水贡献。",
+      "failure_modes": "极性位点被水占据；非特异疏水分配占主导；把抗性表型误作直接结合证据。",
+      "material_realization_examples": []
+    }
+  ],
+  "honesty_ledger": {
+    "facts": [],
+    "leads": [
+      {"type": "mechanism", "index": 0, "name": "Rdl A302S 与环二烯抗性", "basis": "literature_backed", "note": "抗性关联有文献支持，直接结合结构与全文 locator 尚未提取。"}
+    ],
+    "inferences": [
+      {"type": "design_translation", "index": 0, "idea": "疏水孔内单极性位点调制", "basis": "llm_inferred", "label": "inspiration"}
+    ],
+    "boundary_notes": ["不再保留精确孔径、ng/L 捕获或氢键能量等无直接证据数字。"],
+    "missing_pdf_items": ["10.1038/363449a0 全文证据提取"],
+    "generated_by": "codex-2026-07-28"
   }
- ],
- "honesty_ledger": {
-  "facts": [
-   {
-    "type": "mechanism",
-    "index": 0,
-    "name": "Rdl A302S 突变赋予狄氏剂抗性",
-    "basis": "from_source",
-    "note": "DOI 10.1038/363449a0 metadata_verified；A302S 单点突变赋予狄氏剂/环二烯抗性，记载方向为削弱"
-   },
-   {
-    "type": "mechanism",
-    "index": 1,
-    "name": "环二烯类对 GABA 受体高亲和立体专一性结合",
-    "basis": "from_source",
-    "note": "DOI 10.1016/0048-3575(85)90118-x metadata_verified；识别不由 logKow 单调决定"
-   }
-  ],
-  "leads": [],
-  "inferences": [
-   {
-    "type": "design_translation",
-    "index": 0,
-    "idea": "方酰胺双 NH 对 exo-环氧几何依赖读出",
-    "basis": "llm_inferred",
-    "label": "inspiration",
-    "note": "原型记载方向为削弱；人工增强方向为独立假设，水相净收益 1–3 kJ/mol 待实验验证"
-   }
-  ],
-  "boundary_notes": [
-   "原型 P1 仅支持可调制性原理（刚性疏水腔内单一极性接触足以调制结合），不含增强方向",
-   "A302S 记载方向为削弱（抗性），人工水相增强方向为独立假设",
-   "羰基竞争为机制固有上限，氢键供体化学上无法区分环氧氧与羰基氧",
-   "无狄氏剂共晶结构（T10），孔腔残基推断自突变与结合文献链",
-   "一切水相转译相关边界均为定性 llm_inferred，无数值阈值"
-  ],
-  "missing_pdf_items": [
-   "DOI 10.1038/363449a0 全文未读，metadata_verified",
-   "DOI 10.1016/0048-3575(85)90118-x 全文未读，metadata_verified",
-   "DOI 10.1016/j.pestbp.2014.11.006 全文未读，metadata_verified"
-  ],
-  "generated_by": "bmdl-subagent-2026-07-27",
-  "note": "诚实优先：原型记载方向为削弱，增强方向为独立假设；羰基竞争为固有上限；水相氢键存活为未证赌注"
- },
- "boundary_rules": [
-  {
-   "rule": "exo/endo 环氧几何可及性连续差异：exo-环氧（狄氏剂）可及立体角大，endo-环氧（异狄氏剂）可及性低",
-   "source_mechanism": "exo-环氧双氢键几何读出",
-   "gate_level": "hard",
-   "basis": "from_source"
-  },
-  {
-   "rule": "水相氢键净收益须高于约 1 kJ/mol 可测下限（扣除双侧去溶剂化与水竞争）",
-   "source_mechanism": "exo-环氧双氢键几何读出",
-   "gate_level": "soft",
-   "basis": "llm_inferred"
-  },
-  {
-   "rule": "羰基氧优先占据氢键供体位，为机制固有上限",
-   "source_mechanism": "exo-环氧双氢键几何读出",
-   "gate_level": "soft",
-   "basis": "llm_inferred"
-  }
- ]
 }

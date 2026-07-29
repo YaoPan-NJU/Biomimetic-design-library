@@ -62,9 +62,11 @@
               "可与含硫/氮配体配位"
             ],
             "mechanism_functional_groups": [
+              "DOPA 3,4-二羟基苯丙氨酸",
               "邻苯二酚 catechol (-OH)",
+              "配位/螯合位点",
               "胺基 amine (-NH₂)",
-              "DOPA 3,4-二羟基苯丙氨酸"
+              "-O-（醚键）"
             ],
             "mechanism_key_structures": [
               "PDA邻苯二酚双齿配位",
@@ -72,7 +74,7 @@
               "金属配位",
               "Michael加成"
             ],
-            "feature_binding_score": 2
+            "feature_binding_score": 3
           },
           "基本原理": "needs_review",
           "key_structures": [
@@ -82,9 +84,11 @@
             "Michael加成"
           ],
           "functional_groups": [
+            "DOPA 3,4-二羟基苯丙氨酸",
             "邻苯二酚 catechol (-OH)",
+            "配位/螯合位点",
             "胺基 amine (-NH₂)",
-            "DOPA 3,4-二羟基苯丙氨酸"
+            "-O-（醚键）"
           ],
           "molecular_feature_links": [
             "二价阳离子",
@@ -236,140 +240,8 @@
         }
       },
       {
-        "prototype_id": "fish-scale-hydroxyapatite",
-        "organism": "Fish scales (鱼鳞)",
-        "candidate_honesty": "fact",
-        "lane": "fact",
-        "prototype_status": {
-          "is_background": false,
-          "is_placeholder": false,
-          "scope_note": ""
-        },
-        "domain_caveat": "",
-        "match": {
-          "reason": "Pb²⁺可替换HAP中的Ca²⁺形成更稳定的磷氯铅矿",
-          "weight": 0.9,
-          "applicability_fit": "pH 5.0-6.0, 盐度 any",
-          "match_basis": "direct_pollutant_evidence",
-          "direct_evidence": true
-        },
-        "mechanism": {
-          "name": "八重协同吸附机制",
-          "selected_mechanism_reason": "Query-conditioned scoring selected this mechanism for Pb(II) based on relevance to matched features/interactions",
-          "selected_mechanism_alignment": {
-            "query_pollutant": "Pb(II)",
-            "query_class": "重金属",
-            "mechanism_keywords": "八重协同吸附机制",
-            "alignment_basis": "query_relevance_scoring",
-            "query_features": [
-              "二价阳离子",
-              "软酸",
-              "高电荷密度",
-              "可与含硫/氮配体配位"
-            ],
-            "mechanism_functional_groups": [
-              "羟基 -OH",
-              "磷酸根 PO₄³⁻",
-              "Ca²⁺位点"
-            ],
-            "mechanism_key_structures": [
-              "HAp纳米晶体(~30nm)",
-              "离子交换Ca²⁺↔Pb²⁺",
-              "阳离子交换",
-              "疏水+π-π+氢键+孔填充+静电"
-            ],
-            "feature_binding_score": 1
-          },
-          "基本原理": "鱼鳞HAp的纳米级晶体（~30nm）提供超高比表面积，多机制协同实现高容量吸附",
-          "key_structures": [
-            "HAp纳米晶体(~30nm)",
-            "离子交换Ca²⁺↔Pb²⁺",
-            "阳离子交换",
-            "疏水+π-π+氢键+孔填充+静电"
-          ],
-          "functional_groups": [
-            "羟基 -OH",
-            "磷酸根 PO₄³⁻",
-            "Ca²⁺位点"
-          ],
-          "molecular_feature_links": [
-            "二价阳离子",
-            "软酸"
-          ],
-          "attribution": {
-            "source": "literature",
-            "ref": "10.1016/j.chemosphere.2021.131962",
-            "verification_tier": "verified",
-            "confidence": "normal"
-          }
-        },
-        "design_translation": {
-          "idea": "利用鱼鳞羟基磷灰石的多孔结构和 Ca/P 位点进行吸附",
-          "material_handle": "鱼鳞热处理转化为羟基磷灰石",
-          "design_principle": "鱼鳞热处理→羟基磷灰石(HAp, Ca₁₀(PO₄)₆(OH)₂)。Pb²⁺通过离子交换替换Ca²⁺形成更稳定的磷氯铅矿(Pb₁₀(PO₄)₆(OH)₂)，Ksp远小于HAp",
-          "implementation_example": "鱼鳞清洗→600°C煅烧2h→研磨→HAp粉末→直接用于柱吸附或压片成型",
-          "constraints": "煅烧温度影响晶相(>700°C分解)；酸性条件HAp溶解；竞争阳离子(Ca²⁺、Mg²⁺)干扰",
-          "failure_modes": "煅烧不完全残留有机物；酸性溶解；竞争离子降低容量",
-          "evidence_tier": "fact (有 CN114849640A 专利支撑)",
-          "source_tier": "llm_inference",
-          "material_realization_examples": [
-            "鱼鳞热处理转化为羟基磷灰石"
-          ]
-        },
-        "boundaries": [
-          {
-            "text": "酸性条件下HAp溶解，释放Ca²⁺，吸附能力下降",
-            "parameter": "pH",
-            "gate_level": "soft",
-            "basis": "llm_inferred",
-            "verification": "needs_review"
-          }
-        ],
-        "honesty_summary": "有直接实验数据且机制经验证",
-        "boundary_summary": "1 条软限制（caution）",
-        "evidence_context": {
-          "performance_leads": [
-            {
-              "pollutant": "Pb(II)",
-              "material": "HA-3HPB",
-              "value": "110.2",
-              "unit": "mg/g",
-              "verification_tier": "verified"
-            },
-            {
-              "pollutant": "Pb(II)",
-              "material": "HA-3HPB",
-              "value": "≥99.83",
-              "unit": "%",
-              "verification_tier": "verified"
-            }
-          ]
-        },
-        "charge_state": {
-          "has_charge_state": true,
-          "pka_values": [],
-          "ion_dependence": [],
-          "ph_sensitive": true,
-          "charge_mechanisms": [
-            {
-              "mechanism_id": "",
-              "description": "疏水+π-π+π-π EDA+阳离子交换+氢键+孔填充+静电+阳阳-π",
-              "charge_terms": [
-                "羟基",
-                "磷酸"
-              ]
-            }
-          ]
-        },
-        "relevance_gating": {
-          "is_excluded": false,
-          "exclusion_reason": "",
-          "do_not_list": []
-        }
-      },
-      {
-        "prototype_id": "oyster-shell",
-        "organism": "Ostreidae",
+        "prototype_id": "bone-structure",
+        "organism": "Mammalian bone (哺乳动物骨骼)",
         "candidate_honesty": "lead",
         "lane": "lead",
         "prototype_status": {
@@ -379,19 +251,19 @@
         },
         "domain_caveat": "",
         "match": {
-          "reason": "CaCO₃与Pb²⁺进行离子交换，形成PbCO₃",
-          "weight": 0.8,
-          "applicability_fit": "pH 5.0-7.0, 盐度 moderate",
-          "match_basis": "direct_pollutant_evidence",
-          "direct_evidence": true
+          "reason": "二价阳离子可与含羧基/羟基的吸附剂形成配位键",
+          "weight": 0.85,
+          "applicability_fit": "盐度 any",
+          "match_basis": "molecular_feature_inference",
+          "direct_evidence": false
         },
         "mechanism": {
-          "name": "牡蛎壳改性吸附机制",
+          "name": "骨羟基磷灰石钙离子交换与表面配位",
           "selected_mechanism_reason": "Query-conditioned scoring selected this mechanism for Pb(II) based on relevance to matched features/interactions",
           "selected_mechanism_alignment": {
             "query_pollutant": "Pb(II)",
             "query_class": "重金属",
-            "mechanism_keywords": "牡蛎壳改性吸附机制",
+            "mechanism_keywords": "骨羟基磷灰石钙离子交换与表面配位",
             "alignment_basis": "query_relevance_scoring",
             "query_features": [
               "二价阳离子",
@@ -400,79 +272,68 @@
               "可与含硫/氮配体配位"
             ],
             "mechanism_functional_groups": [
-              "CaCO₃碳酸根",
-              "CaO/Ca(OH)₂",
-              "Ca²⁺位点",
-              "含氧阴离子吸附",
-              "碱性环境还原"
+              "-NH-（亚氨基）",
+              "壳聚糖氨基/羟基",
+              "-O-（醚键）"
             ],
             "mechanism_key_structures": [
-              "方解石CaCO₃层状结构",
-              "煅烧CaO碱性释放",
-              "羟基磷灰石沉淀",
-              "离子交换"
+              "膜结构",
+              "凝胶结构",
+              "纳米纤维网络",
+              "HAp羟基磷灰石晶体",
+              "静电纺丝纤维",
+              "纤维结构"
             ],
             "feature_binding_score": 2
           },
-          "基本原理": "煅烧牡蛎壳（CaO）在水中生成Ca(OH)₂，提供碱性环境和Ca²⁺，可与磷酸盐形成羟基磷灰石沉淀，同时重金属通过表面配位吸附",
+          "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
           "key_structures": [
-            "方解石CaCO₃层状结构",
-            "煅烧CaO碱性释放",
-            "羟基磷灰石沉淀",
-            "离子交换"
+            "膜结构",
+            "凝胶结构",
+            "纳米纤维网络",
+            "HAp羟基磷灰石晶体",
+            "静电纺丝纤维",
+            "纤维结构"
           ],
           "functional_groups": [
-            "CaCO₃碳酸根",
-            "CaO/Ca(OH)₂",
-            "Ca²⁺位点",
-            "含氧阴离子吸附",
-            "碱性环境还原"
+            "-NH-（亚氨基）",
+            "壳聚糖氨基/羟基",
+            "-O-（醚键）"
           ],
           "molecular_feature_links": [
-            "六价铬",
-            "含氧阴离子",
-            "强氧化性",
-            "静电吸引",
-            "还原沉淀"
+            "二价阳离子"
           ],
           "attribution": {
             "source": "literature",
-            "ref": "10.16663/j.cnki.lskj.2021.02.025",
+            "ref": "10.1016/j.jtice.2024.105668",
             "verification_tier": "partial",
             "confidence": "normal"
           }
         },
         "design_translation": {
-          "idea": "利用牡蛎壳的方解石结构进行重金属固定和pH缓冲",
-          "material_handle": "牡蛎壳粉碎、煅烧或酸活化",
-          "design_principle": "牡蛎壳方解石(CaCO₃)通过离子交换与Pb²⁺形成PbCO₃沉淀，煅烧后CaO具有更强的吸附能力和pH缓冲作用",
-          "implementation_example": "牡蛎壳清洗→800°C煅烧2h→研磨→CaO粉末→直接用于柱吸附；或酸活化(HCl)→CaCl₂溶液→再生",
-          "constraints": "煅烧能耗高；CaO在水中放热需控制；竞争阳离子(Ca²⁺、Mg²⁺)干扰",
-          "failure_modes": "煅烧不完全；CaO水化放热；竞争离子降低容量",
-          "evidence_tier": "inference",
+          "idea": "利用羟基磷灰石的钙磷结构进行重金属和氟离子吸附",
+          "material_handle": "合成羟基磷灰石粉末或涂层",
+          "design_principle": "骨骼的羟基磷灰石(HAp)层通过离子交换（Pb²⁺替换Ca²⁺形成磷氯铅矿）和表面配位吸附重金属。层状结构提供高比表面积",
+          "implementation_example": "骨粉→600°C煅烧→HAp粉末→柱吸附或压片；或化学合成HAp纳米颗粒→涂层/复合材料",
+          "constraints": "酸性条件HAp溶解；竞争阳离子(Ca²⁺、Mg²⁺)干扰；煅烧温度影响晶相",
+          "failure_modes": "酸性溶解；竞争吸附；合成HAp不如天然骨粉多孔",
+          "evidence_tier": "fact",
           "source_tier": "llm_inference",
           "material_realization_examples": [
-            "牡蛎壳粉碎、煅烧或酸活化"
+            "合成羟基磷灰石粉末或涂层"
           ]
         },
         "boundaries": [
           {
-            "text": "未煅烧的CaCO₃吸附容量远低于煅烧产物CaO",
-            "parameter": "other",
-            "gate_level": "soft",
-            "basis": "llm_inferred",
-            "verification": "needs_review"
-          },
-          {
-            "text": "未煅烧CaCO₃吸附容量远低于煅烧产物CaO",
+            "text": "适用条件需根据具体机制验证",
             "parameter": "other",
             "gate_level": "soft",
             "basis": "llm_inferred",
             "verification": "needs_review"
           }
         ],
-        "honesty_summary": "有直接实验数据但机制未经独立核实",
-        "boundary_summary": "2 条软限制（caution）",
+        "honesty_summary": "有性能数据但缺乏 verification_quote",
+        "boundary_summary": "1 条软限制（caution）",
         "evidence_context": {
           "performance_leads": []
         },
@@ -484,149 +345,10 @@
           "charge_mechanisms": [
             {
               "mechanism_id": "",
-              "description": "CaCO₃在800℃缺氧条件下分解为CaO→CaO负载在花生壳生物炭上→CaO在含磷废水中释放Ca²⁺和OH⁻→OH⁻使水体呈弱碱性→Ca²⁺与磷酸盐在碱性条件下生成羟基磷灰石沉淀",
+              "description": "(1)离子交换：HAp表面Ca²⁺/PO₄³⁻与重金属离子交换；(2)表面配合：污染物与HAp表面官能团形成化学键；(3)溶解-再沉淀：HAp溶解→释放PO₄³⁻→与重金属形成更难溶磷酸盐沉淀；(4)",
               "charge_terms": [
                 "羟基",
                 "磷酸"
-              ]
-            }
-          ]
-        },
-        "relevance_gating": {
-          "is_excluded": false,
-          "exclusion_reason": "",
-          "do_not_list": []
-        }
-      },
-      {
-        "prototype_id": "diatom-frustule",
-        "organism": "Bacillariophyta (硅藻门)",
-        "candidate_honesty": "lead",
-        "lane": "lead",
-        "prototype_status": {
-          "is_background": false,
-          "is_placeholder": false,
-          "scope_note": ""
-        },
-        "domain_caveat": "",
-        "match": {
-          "reason": "硅藻壳对Pb²⁺有吸附能力",
-          "weight": 0.7,
-          "applicability_fit": "pH 2.0-12.0, 盐度 any",
-          "match_basis": "direct_pollutant_evidence",
-          "direct_evidence": true
-        },
-        "mechanism": {
-          "name": "热处理——550°C表面Si-OH暴露",
-          "selected_mechanism_reason": "Query-conditioned scoring selected this mechanism for Pb(II) based on relevance to matched features/interactions",
-          "selected_mechanism_alignment": {
-            "query_pollutant": "Pb(II)",
-            "query_class": "重金属",
-            "mechanism_keywords": "热处理——550°C表面Si-OH暴露",
-            "alignment_basis": "query_relevance_scoring",
-            "query_features": [
-              "二价阳离子",
-              "软酸",
-              "高电荷密度",
-              "可与含硫/氮配体配位"
-            ],
-            "mechanism_functional_groups": [
-              "硅羟基 Si-OH",
-              "L碱位点",
-              "表面羟基配合",
-              "多孔吸附"
-            ],
-            "mechanism_key_structures": [
-              "非晶态SiO₂多孔骨架",
-              "550°C煅烧暴露裸露Si-OH",
-              "层级多孔(大孔300-500nm+介孔2-50nm)"
-            ],
-            "feature_binding_score": 0
-          },
-          "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
-          "key_structures": [
-            "非晶态SiO₂多孔骨架",
-            "550°C煅烧暴露裸露Si-OH",
-            "层级多孔(大孔300-500nm+介孔2-50nm)"
-          ],
-          "functional_groups": [
-            "硅羟基 Si-OH",
-            "L碱位点",
-            "表面羟基配合",
-            "多孔吸附"
-          ],
-          "molecular_feature_links": [
-            "二价阳离子",
-            "软酸",
-            "可与含硫/氮配体配位",
-            "配位",
-            "静电吸引",
-            "离子交换",
-            "长链全氟烷基",
-            "疏水性",
-            "两亲性"
-          ],
-          "attribution": {
-            "source": "literature",
-            "ref": "10.19817/j.cnki.issn1006-3536.2022.01.060",
-            "verification_tier": "partial",
-            "confidence": "normal"
-          }
-        },
-        "design_translation": {
-          "idea": "利用硅藻土的多孔结构和表面硅羟基进行吸附和过滤",
-          "material_handle": "硅藻土直接使用或酸活化/改性处理",
-          "design_principle": "硅藻壳的无定形SiO₂含丰富表面Si-OH，可通过氢键和静电吸引吸附金属离子，多孔结构提供高比表面积",
-          "implementation_example": "硅藻土→酸活化(HCl, 80°C)→洗涤干燥→直接使用；或表面改性(硅烷偶联剂)→功能化硅藻土",
-          "constraints": "天然硅藻土吸附容量有限需改性；酸性条件溶解；粉尘控制",
-          "failure_modes": "改性不均匀；酸性溶解；粉尘危害",
-          "evidence_tier": "lead",
-          "source_tier": "llm_inference",
-          "material_realization_examples": [
-            "硅藻土直接使用或酸活化/改性处理"
-          ]
-        },
-        "boundaries": [
-          {
-            "text": "pH影响表面电荷和吸附性能",
-            "parameter": "pH",
-            "gate_level": "soft",
-            "basis": "llm_inferred",
-            "verification": "needs_review"
-          }
-        ],
-        "honesty_summary": "有直接实验数据但机制未经独立核实",
-        "boundary_summary": "1 条软限制（caution）",
-        "evidence_context": {
-          "performance_leads": [
-            {
-              "pollutant": "Pb(II)",
-              "material": "DE-SO₃",
-              "value": "178.57",
-              "unit": "mg/g",
-              "verification_tier": "partial"
-            }
-          ]
-        },
-        "charge_state": {
-          "has_charge_state": true,
-          "pka_values": [],
-          "ion_dependence": [],
-          "ph_sensitive": true,
-          "charge_mechanisms": [
-            {
-              "mechanism_id": "",
-              "description": "最佳吸附量363.30 mg/g(1200 mg/L初始浓度)→质子化氨基与阴离子染料静电吸引",
-              "charge_terms": [
-                "氨基",
-                "质子化"
-              ]
-            },
-            {
-              "mechanism_id": "",
-              "description": "物理吸附为主，硅羟基参与吸附",
-              "charge_terms": [
-                "羟基"
               ]
             }
           ]
@@ -639,9 +361,9 @@
       },
       {
         "prototype_id": "chitosan",
-        "organism": "Crustacea",
-        "candidate_honesty": "lead",
-        "lane": "lead",
+        "organism": "Crustacea (甲壳类外骨骼几丁质)",
+        "candidate_honesty": "inference",
+        "lane": "exploratory",
         "prototype_status": {
           "is_background": false,
           "is_placeholder": false,
@@ -649,11 +371,11 @@
         },
         "domain_caveat": "",
         "match": {
-          "reason": "壳聚糖的氨基和羟基可与Pb(II)形成配位键",
-          "weight": 0.8,
+          "reason": "二价阳离子可与含羧基/羟基的吸附剂形成配位键",
+          "weight": 0.8333333333333334,
           "applicability_fit": "pH 3.0-7.0, 盐度 low_to_moderate",
-          "match_basis": "direct_pollutant_evidence",
-          "direct_evidence": true
+          "match_basis": "molecular_feature_inference",
+          "direct_evidence": false
         },
         "mechanism": {
           "name": "Chitosan beads的六种吸附机制",
@@ -670,11 +392,19 @@
               "可与含硫/氮配体配位"
             ],
             "mechanism_functional_groups": [
-              "氨基 amino (-NH₂)",
+              "离子交换位点",
+              "静电作用位点",
+              "质子化氨基 -NH₃⁺",
+              "壳聚糖氨基/羟基",
+              "配位/螯合位点",
+              "-OH（羟基）",
+              "氢键位点",
               "羟基 hydroxyl (-OH)",
-              "质子化氨基 -NH₃⁺"
+              "-O-（醚键）",
+              "氨基 amino (-NH₂)"
             ],
             "mechanism_key_structures": [
+              "吸附结构",
               "壳聚糖β-(1→4)糖苷键骨架",
               "六重协同(静电/络合/氢键/酸碱/配位/离子交换)"
             ],
@@ -682,18 +412,25 @@
           },
           "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合",
           "key_structures": [
+            "吸附结构",
             "壳聚糖β-(1→4)糖苷键骨架",
             "六重协同(静电/络合/氢键/酸碱/配位/离子交换)"
           ],
           "functional_groups": [
-            "氨基 amino (-NH₂)",
+            "离子交换位点",
+            "静电作用位点",
+            "质子化氨基 -NH₃⁺",
+            "壳聚糖氨基/羟基",
+            "配位/螯合位点",
+            "-OH（羟基）",
+            "氢键位点",
             "羟基 hydroxyl (-OH)",
-            "质子化氨基 -NH₃⁺"
+            "-O-（醚键）",
+            "氨基 amino (-NH₂)"
           ],
           "molecular_feature_links": [
             "二价阳离子",
-            "软酸",
-            "可与含硫/氮配体配位"
+            "软酸"
           ],
           "attribution": {
             "source": "literature",
@@ -724,10 +461,24 @@
             "verification": "needs_review"
           }
         ],
-        "honesty_summary": "有直接实验数据但机制未经独立核实",
+        "honesty_summary": "基于分子特征推断，非直接证据",
         "boundary_summary": "1 条软限制（caution）",
         "evidence_context": {
           "performance_leads": [
+            {
+              "pollutant": "Pb(II)",
+              "material": "γ-Fe₃O₄嵌入壳聚糖/纤维素珠",
+              "value": "Cu(II) 88.21, Cd(II) 61.12, Pb(II) 45.86 mg/g",
+              "unit": "mg/g",
+              "verification_tier": "partial"
+            },
+            {
+              "pollutant": "Pb(II)",
+              "material": "壳聚糖纳米纤维膜+TiO₂纳米颗粒",
+              "value": "嵌入型TiO₂: Cu(II) 710.3 mg/g, Pb(II) 579.1 mg/g；包覆型: Cu(II) 526.5 mg/g, Pb(II) 475.5 mg/g",
+              "unit": "mg/g",
+              "verification_tier": "partial"
+            },
             {
               "pollutant": "Pb(II)",
               "material": "CYCS/CNC hydrogel beads",
@@ -746,13 +497,6 @@
               "pollutant": "Pb(II)",
               "material": "Chitosan/Fe-hydroxyapatite beads",
               "value": "1385",
-              "unit": "mg/g",
-              "verification_tier": "partial"
-            },
-            {
-              "pollutant": "Pb(II)",
-              "material": "CTS/CMC/PAA水凝胶",
-              "value": "142.83",
               "unit": "mg/g",
               "verification_tier": "partial"
             }
@@ -965,10 +709,10 @@
         }
       },
       {
-        "prototype_id": "lobster-exoskeleton",
-        "organism": "Homarus americanus (美洲龙虾)",
-        "candidate_honesty": "lead",
-        "lane": "lead",
+        "prototype_id": "oyster-shell",
+        "organism": "Ostreidae",
+        "candidate_honesty": "inference",
+        "lane": "exploratory",
         "prototype_status": {
           "is_background": false,
           "is_placeholder": false,
@@ -976,19 +720,19 @@
         },
         "domain_caveat": "",
         "match": {
-          "reason": "龙虾外骨骼对Pb(II)有吸附能力",
-          "weight": 0.7,
-          "applicability_fit": "盐度 moderate",
-          "match_basis": "direct_pollutant_evidence",
-          "direct_evidence": true
+          "reason": "二价阳离子可与含羧基/羟基的吸附剂形成配位键",
+          "weight": 0.8333333333333334,
+          "applicability_fit": "pH 5.0-7.0, 盐度 moderate",
+          "match_basis": "molecular_feature_inference",
+          "direct_evidence": false
         },
         "mechanism": {
-          "name": "Chitosan beads的六种吸附机制",
+          "name": "牡蛎壳文石碳酸钙离子交换与煅烧钙氧化物碱性沉淀",
           "selected_mechanism_reason": "Query-conditioned scoring selected this mechanism for Pb(II) based on relevance to matched features/interactions",
           "selected_mechanism_alignment": {
             "query_pollutant": "Pb(II)",
             "query_class": "重金属",
-            "mechanism_keywords": "Chitosan beads的六种吸附机制",
+            "mechanism_keywords": "牡蛎壳文石碳酸钙离子交换与煅烧钙氧化物碱性沉淀",
             "alignment_basis": "query_relevance_scoring",
             "query_features": [
               "二价阳离子",
@@ -997,83 +741,93 @@
               "可与含硫/氮配体配位"
             ],
             "mechanism_functional_groups": [
-              "乙酰氨基 -NHCOCH₃",
-              "氨基 amino (-NH₂)",
-              "羟基 hydroxyl (-OH)",
-              "含氮配体"
+              "离子交换位点",
+              "CaO/Ca(OH)₂",
+              "含氧阴离子吸附",
+              "CaCO₃碳酸根",
+              "碱性环境还原",
+              "-PO₄³⁻（磷酸基）",
+              "-OH（羟基）",
+              "Ca²⁺位点",
+              "-O-（醚键）"
             ],
             "mechanism_key_structures": [
-              "几丁质-蛋白质复合结构",
-              "脱乙酰化→壳聚糖",
-              "六重协同吸附"
+              "煅烧CaO碱性释放",
+              "吸附结构",
+              "HAp羟基磷灰石晶体",
+              "羟基磷灰石沉淀",
+              "离子交换",
+              "方解石CaCO₃层状结构"
             ],
-            "feature_binding_score": 0
+            "feature_binding_score": 2
           },
-          "基本原理": "龙虾外骨骼是壳聚糖的天然来源之一，吸附机制与壳聚糖相同",
+          "基本原理": "煅烧牡蛎壳（CaO）在水中生成Ca(OH)₂，提供碱性环境和Ca²⁺，可与磷酸盐形成羟基磷灰石沉淀，同时重金属通过表面配位吸附",
           "key_structures": [
-            "几丁质-蛋白质复合结构",
-            "脱乙酰化→壳聚糖",
-            "六重协同吸附"
+            "煅烧CaO碱性释放",
+            "吸附结构",
+            "HAp羟基磷灰石晶体",
+            "羟基磷灰石沉淀",
+            "离子交换",
+            "方解石CaCO₃层状结构"
           ],
           "functional_groups": [
-            "乙酰氨基 -NHCOCH₃",
-            "氨基 amino (-NH₂)",
-            "羟基 hydroxyl (-OH)",
-            "含氮配体"
+            "离子交换位点",
+            "CaO/Ca(OH)₂",
+            "含氧阴离子吸附",
+            "CaCO₃碳酸根",
+            "碱性环境还原",
+            "-PO₄³⁻（磷酸基）",
+            "-OH（羟基）",
+            "Ca²⁺位点",
+            "-O-（醚键）"
           ],
           "molecular_feature_links": [
-            "二价阳离子",
-            "软酸",
-            "可与含硫/氮配体配位",
-            "配位",
-            "静电吸引",
-            "离子交换",
-            "络合"
+            "二价阳离子"
           ],
           "attribution": {
             "source": "literature",
-            "ref": "10.1007/s10311-023-01563-9",
-            "verification_tier": "needs_review",
-            "confidence": "low"
+            "ref": "10.16663/j.cnki.lskj.2021.02.025",
+            "verification_tier": "partial",
+            "confidence": "normal"
           }
         },
         "design_translation": {
-          "idea": "利用龙虾外骨骼的几丁质-蛋白质复合结构设计高强度吸附材料",
-          "material_handle": "几丁质提取、脱乙酰化或复合改性",
-          "design_principle": "龙虾外骨骼的几丁质-蛋白质复合结构提供高强度和吸附官能团。脱乙酰化后转化为壳聚糖增强吸附能力",
-          "implementation_example": "龙虾壳→脱蛋白→脱乙酰化→壳聚糖→复合改性",
-          "constraints": "原料来源有限；脱乙酰化程度影响性能；机械强度需复合增强",
-          "failure_modes": "",
+          "idea": "利用牡蛎壳的方解石结构进行重金属固定和pH缓冲",
+          "material_handle": "牡蛎壳粉碎、煅烧或酸活化",
+          "design_principle": "牡蛎壳方解石(CaCO₃)通过离子交换与Pb²⁺形成PbCO₃沉淀，煅烧后CaO具有更强的吸附能力和pH缓冲作用",
+          "implementation_example": "牡蛎壳清洗→800°C煅烧2h→研磨→CaO粉末→直接用于柱吸附；或酸活化(HCl)→CaCl₂溶液→再生",
+          "constraints": "煅烧能耗高；CaO在水中放热需控制；竞争阳离子(Ca²⁺、Mg²⁺)干扰",
+          "failure_modes": "煅烧不完全；CaO水化放热；竞争离子降低容量",
           "evidence_tier": "inference",
           "source_tier": "llm_inference",
           "material_realization_examples": [
-            "几丁质提取、脱乙酰化或复合改性"
+            "牡蛎壳粉碎、煅烧或酸活化"
           ]
         },
         "boundaries": [
           {
-            "text": "与壳聚糖相同的pH限制",
-            "parameter": "pH",
+            "text": "未煅烧的CaCO₃吸附容量远低于煅烧产物CaO",
+            "parameter": "other",
             "gate_level": "soft",
             "basis": "llm_inferred",
             "verification": "needs_review"
           },
           {
-            "text": "与壳聚糖相同的pH限制，酸性下溶解",
-            "parameter": "pH",
+            "text": "未煅烧CaCO₃吸附容量远低于煅烧产物CaO",
+            "parameter": "other",
             "gate_level": "soft",
             "basis": "llm_inferred",
             "verification": "needs_review"
           }
         ],
-        "honesty_summary": "有直接实验数据但机制未经独立核实",
+        "honesty_summary": "基于分子特征推断，非直接证据",
         "boundary_summary": "2 条软限制（caution）",
         "evidence_context": {
           "performance_leads": [
             {
               "pollutant": "Pb(II)",
-              "material": "Chitosan/Fe-hydroxyapatite beads",
-              "value": "1385",
+              "material": "",
+              "value": "Cd2+: 2184.29, Pb2+: 1949.39",
               "unit": "mg/g",
               "verification_tier": "partial"
             }
@@ -1087,11 +841,10 @@
           "charge_mechanisms": [
             {
               "mechanism_id": "",
-              "description": "静电作用(electrostatic interaction)、络合(complexation)、氢键(hydrogen bonding)、酸碱作用(acid-base interaction)、配位",
+              "description": "CaCO₃在800℃缺氧条件下分解为CaO→CaO负载在花生壳生物炭上→CaO在含磷废水中释放Ca²⁺和OH⁻→OH⁻使水体呈弱碱性→Ca²⁺与磷酸盐在碱性条件下生成羟基磷灰石沉淀",
               "charge_terms": [
-                "electrostatic",
-                "氨基",
-                "羟基"
+                "羟基",
+                "磷酸"
               ]
             }
           ]
@@ -1103,8 +856,8 @@
         }
       },
       {
-        "prototype_id": "bone-structure",
-        "organism": "Mammalian bone (哺乳动物骨骼)",
+        "prototype_id": "fish-scale-hydroxyapatite",
+        "organism": "Fish scales (鱼鳞)",
         "candidate_honesty": "lead",
         "lane": "lead",
         "prototype_status": {
@@ -1115,18 +868,18 @@
         "domain_caveat": "",
         "match": {
           "reason": "二价阳离子可与含羧基/羟基的吸附剂形成配位键",
-          "weight": 0.85,
-          "applicability_fit": "盐度 any",
+          "weight": 0.8,
+          "applicability_fit": "pH 5.0-6.0, 盐度 any",
           "match_basis": "molecular_feature_inference",
           "direct_evidence": false
         },
         "mechanism": {
-          "name": "HAp四种重金属吸附机制",
+          "name": "鱼鳞羟基磷灰石纳米晶钙离子交换与磷酸盐共沉淀",
           "selected_mechanism_reason": "Query-conditioned scoring selected this mechanism for Pb(II) based on relevance to matched features/interactions",
           "selected_mechanism_alignment": {
             "query_pollutant": "Pb(II)",
             "query_class": "重金属",
-            "mechanism_keywords": "HAp四种重金属吸附机制",
+            "mechanism_keywords": "鱼鳞羟基磷灰石纳米晶钙离子交换与磷酸盐共沉淀",
             "alignment_basis": "query_relevance_scoring",
             "query_features": [
               "二价阳离子",
@@ -1135,65 +888,66 @@
               "可与含硫/氮配体配位"
             ],
             "mechanism_functional_groups": [
+              "离子交换位点",
               "羟基 -OH",
               "磷酸根 PO₄³⁻",
               "Ca²⁺位点",
-              "含氧阴离子吸附",
-              "表面配合还原"
+              "氢键位点"
             ],
             "mechanism_key_structures": [
-              "HAp六方晶体Ca₁₀(PO₄)₆(OH)₂",
-              "Ca²⁺/PO₄³⁻离子交换",
-              "溶解-再沉淀",
-              "表面配合"
+              "疏水表面",
+              "吸附结构",
+              "纳米级结构",
+              "疏水+π-π+氢键+孔填充+静电",
+              "HAp羟基磷灰石晶体",
+              "HAp纳米晶体(~30nm)",
+              "阳离子交换",
+              "离子交换Ca²⁺↔Pb²⁺"
             ],
             "feature_binding_score": 1
           },
-          "基本原理": "HAp的Ca²⁺位点可被重金属离子交换取代，且磷酸根可与重金属形成难溶磷酸盐沉淀，实现双重去除机制",
+          "基本原理": "鱼鳞HAp的纳米级晶体（~30nm）提供超高比表面积，多机制协同实现高容量吸附",
           "key_structures": [
-            "HAp六方晶体Ca₁₀(PO₄)₆(OH)₂",
-            "Ca²⁺/PO₄³⁻离子交换",
-            "溶解-再沉淀",
-            "表面配合"
+            "疏水表面",
+            "吸附结构",
+            "纳米级结构",
+            "疏水+π-π+氢键+孔填充+静电",
+            "HAp羟基磷灰石晶体",
+            "HAp纳米晶体(~30nm)",
+            "阳离子交换",
+            "离子交换Ca²⁺↔Pb²⁺"
           ],
           "functional_groups": [
+            "离子交换位点",
             "羟基 -OH",
             "磷酸根 PO₄³⁻",
             "Ca²⁺位点",
-            "含氧阴离子吸附",
-            "表面配合还原"
+            "氢键位点"
           ],
           "molecular_feature_links": [
             "二价阳离子"
           ],
           "attribution": {
             "source": "literature",
-            "ref": "10.1016/j.jtice.2024.105668",
+            "ref": "10.1016/j.chemosphere.2021.131962",
             "verification_tier": "verified",
             "confidence": "normal"
           }
         },
         "design_translation": {
-          "idea": "利用羟基磷灰石的钙磷结构进行重金属和氟离子吸附",
-          "material_handle": "合成羟基磷灰石粉末或涂层",
-          "design_principle": "骨骼的羟基磷灰石(HAp)层通过离子交换（Pb²⁺替换Ca²⁺形成磷氯铅矿）和表面配位吸附重金属。层状结构提供高比表面积",
-          "implementation_example": "骨粉→600°C煅烧→HAp粉末→柱吸附或压片；或化学合成HAp纳米颗粒→涂层/复合材料",
-          "constraints": "酸性条件HAp溶解；竞争阳离子(Ca²⁺、Mg²⁺)干扰；煅烧温度影响晶相",
-          "failure_modes": "酸性溶解；竞争吸附；合成HAp不如天然骨粉多孔",
-          "evidence_tier": "fact",
+          "idea": "利用鱼鳞羟基磷灰石的多孔结构和 Ca/P 位点进行吸附",
+          "material_handle": "鱼鳞热处理转化为羟基磷灰石",
+          "design_principle": "鱼鳞热处理→羟基磷灰石(HAp, Ca₁₀(PO₄)₆(OH)₂)。Pb²⁺通过离子交换替换Ca²⁺形成更稳定的磷氯铅矿(Pb₁₀(PO₄)₆(OH)₂)，Ksp远小于HAp",
+          "implementation_example": "鱼鳞清洗→600°C煅烧2h→研磨→HAp粉末→直接用于柱吸附或压片成型",
+          "constraints": "煅烧温度影响晶相(>700°C分解)；酸性条件HAp溶解；竞争阳离子(Ca²⁺、Mg²⁺)干扰",
+          "failure_modes": "煅烧不完全残留有机物；酸性溶解；竞争离子降低容量",
+          "evidence_tier": "fact (有 CN114849640A 专利支撑)",
           "source_tier": "llm_inference",
           "material_realization_examples": [
-            "合成羟基磷灰石粉末或涂层"
+            "鱼鳞热处理转化为羟基磷灰石"
           ]
         },
         "boundaries": [
-          {
-            "text": "酸性条件下HAp开始溶解，释放Ca²⁺，配位/沉淀能力下降",
-            "parameter": "pH",
-            "gate_level": "soft",
-            "basis": "llm_inferred",
-            "verification": "needs_review"
-          },
           {
             "text": "酸性条件下HAp溶解，释放Ca²⁺，吸附能力下降",
             "parameter": "pH",
@@ -1203,19 +957,41 @@
           }
         ],
         "honesty_summary": "有性能数据但缺乏 verification_quote",
-        "boundary_summary": "2 条软限制（caution）",
+        "boundary_summary": "1 条软限制（caution）",
         "evidence_context": {
-          "performance_leads": []
+          "performance_leads": [
+            {
+              "pollutant": "Pb(II)",
+              "material": "HA-3HPB",
+              "value": "110.2",
+              "unit": "mg/g",
+              "verification_tier": "verified"
+            },
+            {
+              "pollutant": "Pb(II)",
+              "material": "HA-3HPB",
+              "value": "≥99.83",
+              "unit": "%",
+              "verification_tier": "verified"
+            },
+            {
+              "pollutant": "Pb(II)",
+              "material": "",
+              "value": "99.49%（1:1:1混合，100 mg/L Pb²⁺，72h）",
+              "unit": "%",
+              "verification_tier": "partial"
+            }
+          ]
         },
         "charge_state": {
           "has_charge_state": true,
           "pka_values": [],
           "ion_dependence": [],
-          "ph_sensitive": false,
+          "ph_sensitive": true,
           "charge_mechanisms": [
             {
               "mechanism_id": "",
-              "description": "(1)离子交换：HAp表面Ca²⁺/PO₄³⁻与重金属离子交换；(2)表面配合：污染物与HAp表面官能团形成化学键；(3)溶解-再沉淀：HAp溶解→释放PO₄³⁻→与重金属形成更难溶磷酸盐沉淀；(4)",
+              "description": "疏水+π-π+π-π EDA+阳离子交换+氢键+孔填充+静电+阳阳-π",
               "charge_terms": [
                 "羟基",
                 "磷酸"
@@ -1261,13 +1037,19 @@
               "高电荷密度",
               "可与含硫/氮配体配位"
             ],
-            "mechanism_functional_groups": "",
+            "mechanism_functional_groups": [
+              "-S-（硫醚键）",
+              "-O-（醚键）"
+            ],
             "mechanism_key_structures": [],
             "feature_binding_score": 0
           },
           "基本原理": "生物硫化物沉淀是去除软酸金属最有效的方法之一——金属硫化物溶度积极低，且SRB可在厌氧条件下持续产S²⁻",
           "key_structures": [],
-          "functional_groups": "",
+          "functional_groups": [
+            "-S-（硫醚键）",
+            "-O-（醚键）"
+          ],
           "molecular_feature_links": [
             "软酸"
           ],
@@ -1339,7 +1121,7 @@
       "cautions": [
         {
           "prototype_id": "mussel-foot-adhesion",
-          "mechanism_name": "两性离子水合能力 vs PEG Zwitterion hydration capacity vs PEG",
+          "mechanism_name": "贻贝足丝DOPA儿茶酚-金属多齿配位与胺基静电黏附",
           "parameter": "other",
           "text": "适用条件需根据具体机制验证",
           "basis": "llm_inferred",
@@ -1374,35 +1156,8 @@
           "source_asset": null
         },
         {
-          "prototype_id": "fish-scale-hydroxyapatite",
-          "mechanism_name": "疏水相互作用证据",
-          "parameter": "other",
-          "text": "适用条件需根据具体机制验证",
-          "basis": "llm_inferred",
-          "verification": "needs_review",
-          "source_asset": null
-        },
-        {
-          "prototype_id": "oyster-shell",
-          "mechanism_name": "牡蛎壳改性吸附机制",
-          "parameter": "other",
-          "text": "未煅烧的CaCO₃吸附容量远低于煅烧产物CaO",
-          "basis": "llm_inferred",
-          "verification": "needs_review",
-          "source_asset": null
-        },
-        {
-          "prototype_id": "oyster-shell",
-          "mechanism_name": "牡蛎壳改性吸附机制",
-          "parameter": "other",
-          "text": "未煅烧CaCO₃吸附容量远低于煅烧产物CaO",
-          "basis": "llm_inferred",
-          "verification": "needs_review",
-          "source_asset": "domain_knowledge"
-        },
-        {
-          "prototype_id": "oyster-shell",
-          "mechanism_name": "钝化机理",
+          "prototype_id": "bone-structure",
+          "mechanism_name": "骨羟基磷灰石钙离子交换与表面配位",
           "parameter": "other",
           "text": "适用条件需根据具体机制验证",
           "basis": "llm_inferred",
@@ -1426,21 +1181,58 @@
           "basis": "llm_inferred",
           "verification": "needs_review",
           "source_asset": null
+        },
+        {
+          "prototype_id": "oyster-shell",
+          "mechanism_name": "牡蛎壳文石碳酸钙离子交换与煅烧钙氧化物碱性沉淀",
+          "parameter": "other",
+          "text": "未煅烧的CaCO₃吸附容量远低于煅烧产物CaO",
+          "basis": "llm_inferred",
+          "verification": "needs_review",
+          "source_asset": null
+        },
+        {
+          "prototype_id": "oyster-shell",
+          "mechanism_name": "牡蛎壳文石碳酸钙离子交换与煅烧钙氧化物碱性沉淀",
+          "parameter": "other",
+          "text": "未煅烧CaCO₃吸附容量远低于煅烧产物CaO",
+          "basis": "llm_inferred",
+          "verification": "needs_review",
+          "source_asset": "domain_knowledge"
+        },
+        {
+          "prototype_id": "oyster-shell",
+          "mechanism_name": "钝化机理",
+          "parameter": "other",
+          "text": "适用条件需根据具体机制验证",
+          "basis": "llm_inferred",
+          "verification": "needs_review",
+          "source_asset": null
+        },
+        {
+          "prototype_id": "fish-scale-hydroxyapatite",
+          "mechanism_name": "疏水相互作用证据",
+          "parameter": "other",
+          "text": "适用条件需根据具体机制验证",
+          "basis": "llm_inferred",
+          "verification": "needs_review",
+          "source_asset": null
         }
       ]
     },
     "honesty_ledger": {
       "facts": [
-        "有 6 个原型对 Pb(II) 有直接实验数据"
+        "有 1 个原型对 Pb(II) 有直接实验数据"
       ],
       "leads": [
-        "mussel-foot-adhesion: 有直接实验数据，但未经独立核实",
-        "fish-scale-hydroxyapatite: 有直接实验数据，但未经独立核实",
-        "oyster-shell: 有直接实验数据，但未经独立核实",
-        "diatom-frustule: 有直接实验数据，但未经独立核实",
-        "chitosan: 有直接实验数据，但未经独立核实"
+        "mussel-foot-adhesion: 有直接实验数据，但未经独立核实"
       ],
-      "inferences": []
+      "inferences": [
+        "bone-structure: 基于分子特征推断，非直接证据",
+        "chitosan: 基于分子特征推断，非直接证据",
+        "oyster-shell: 基于分子特征推断，非直接证据",
+        "fish-scale-hydroxyapatite: 基于分子特征推断，非直接证据"
+      ]
     }
   }
 }

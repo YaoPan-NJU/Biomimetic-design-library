@@ -2,7 +2,7 @@
 id: fluoride-riboswitch-f-sensing-switch
 name: 氟化物核糖开关氟离子感知构象开关（Fluoride Riboswitch Fluoride-Sensing Conformational Switch）
 category: 微生物
-organism: Thermotoga petrophila（氟化物核糖开关适体域；PDB 3VRS/4ENA 为 T. petrophila 晶体结构，5KH8 为 Bacillus cereus 同源适体域 NMR 构建体；天然氟核糖开关 crcB 基序广布细菌与古菌，位于氟抗性输出蛋白 crcB/Fluc 基因上游）
+organism: Thermotoga petrophila 氟化物核糖开关适体域
 biomimetic_dimension: 分子仿生
 features:
   - 特异性识别

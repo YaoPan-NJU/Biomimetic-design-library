@@ -2,7 +2,7 @@
 id: chlorophenol-hydroxylase-regioselective
 name: 氯酚羟化酶区域选择性芳香羟基化（Chlorophenol Hydroxylase Regioselective Aromatic Hydroxylation）
 category: 微生物
-organism: Pseudomonas sp. CF600 / Cupriavidus necator JMP134 / Ralstonia pickettii（酚/氯酚羟化酶系：酚羟化酶组分 P2、TcpA 2,4,6-TCP 4-单加氧酶、HadA 黄素依赖氯酚单加氧酶）
+organism: 多物种细菌酚与氯酚羟化酶比较原型
 biomimetic_dimension: 分子仿生
 features:
   - 分子筛分

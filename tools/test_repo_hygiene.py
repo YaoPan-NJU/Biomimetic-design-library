@@ -12,15 +12,15 @@ from check_repo_hygiene import check_root_directory
 class RootDirectoryRulesTest(unittest.TestCase):
     def test_allows_claude_project_instructions(self):
         original_cwd = os.getcwd()
-        try:
-            with tempfile.TemporaryDirectory() as temp_dir:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            try:
                 Path(temp_dir, "README.md").touch()
                 Path(temp_dir, "CLAUDE.md").touch()
                 os.chdir(temp_dir)
 
                 self.assertEqual([], check_root_directory())
-        finally:
-            os.chdir(original_cwd)
+            finally:
+                os.chdir(original_cwd)
 
 
 if __name__ == "__main__":

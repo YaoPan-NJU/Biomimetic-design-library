@@ -138,11 +138,11 @@ class BiomimeticContext:
         aliases_data = self.pollutant_aliases.get('aliases', {})
 
         # 获取所有可能的别名
-        aliases = [pollutant]
+        aliases = [pollutant, canonical]
         for canon, info in aliases_data.items():
             alias_list = info.get('aliases', [])
             if pollutant in alias_list or pollutant.lower() in [a.lower() for a in alias_list]:
-                aliases = alias_list
+                aliases.extend(alias_list)
                 break
 
         def matches_pollutant(text):
@@ -152,6 +152,23 @@ class BiomimeticContext:
             text_lower = text.lower()
             return any(alias.lower() in text_lower for alias in aliases)
 
+        def has_verified_performance(prototype_id):
+            """Require pollutant-specific, reproducible performance evidence."""
+            prototype = self.prototypes.get(prototype_id, {})
+            for row in prototype.get('performance_data', []):
+                quote = row.get('verification_quote') or ''
+                source = row.get('ref_doi') or row.get('patent_number') or row.get('standard_number')
+                if (
+                    matches_pollutant(row.get('pollutant', ''))
+                    and row.get('verification') in ('verified', 'corroborated')
+                    and source
+                    and row.get('locator')
+                    and quote
+                    and '[PDF缺失]' not in quote
+                ):
+                    return True
+            return False
+
         def search_prototypes(obj, path=""):
             if isinstance(obj, dict):
                 for k, v in obj.items():
@@ -159,7 +176,8 @@ class BiomimeticContext:
                         for p in v:
                             if isinstance(p, dict) and 'id' in p:
                                 # 检查是否匹配污染物
-                                if matches_pollutant(str(p.get('mechanism_summary', ''))):
+                                if (matches_pollutant(str(p.get('mechanism_summary', '')))
+                                        and has_verified_performance(p['id'])):
                                     candidates.append({
                                         'prototype_id': p['id'],
                                         'weight': p.get('weight', 0.5),
@@ -174,7 +192,8 @@ class BiomimeticContext:
                 if isinstance(k, str) and matches_pollutant(k):
                     if isinstance(v, dict) and 'prototypes' in v:
                         for p in v['prototypes']:
-                            if isinstance(p, dict) and 'id' in p:
+                            if (isinstance(p, dict) and 'id' in p
+                                    and has_verified_performance(p['id'])):
                                 candidates.append({
                                     'prototype_id': p['id'],
                                     'weight': p.get('weight', 0.5),
@@ -221,7 +240,7 @@ class BiomimeticContext:
                 rule = feature_to_prototype[feature]
                 for pid in rule.get('prototypes', []):
                     if pid not in prototype_scores:
-                        prototype_scores[pid] = {'score': 0, 'weight': 0, 'features': [], 'interactions': [], 'reasons': []}
+                        prototype_scores[pid] = {'score': 0, 'weight': 0, 'features': [], 'interactions': [], 'reasons': [], 'use_cases': []}
                     prototype_scores[pid]['score'] += 1
                     prototype_scores[pid]['weight'] += rule.get('weight', 0.5)
                     prototype_scores[pid]['features'].append(feature)
@@ -233,7 +252,7 @@ class BiomimeticContext:
                 rule = interaction_to_prototype[interaction]
                 for pid in rule.get('prototypes', []):
                     if pid not in prototype_scores:
-                        prototype_scores[pid] = {'score': 0, 'weight': 0, 'features': [], 'interactions': [], 'reasons': []}
+                        prototype_scores[pid] = {'score': 0, 'weight': 0, 'features': [], 'interactions': [], 'reasons': [], 'use_cases': []}
                     prototype_scores[pid]['score'] += 1
                     prototype_scores[pid]['weight'] += rule.get('weight', 0.5)
                     prototype_scores[pid]['interactions'].append(interaction)
@@ -244,7 +263,7 @@ class BiomimeticContext:
             if class_name in pollutant_class:
                 for pid in rule.get('prototypes', []):
                     if pid not in prototype_scores:
-                        prototype_scores[pid] = {'score': 0, 'weight': 0, 'features': [], 'interactions': [], 'reasons': []}
+                        prototype_scores[pid] = {'score': 0, 'weight': 0, 'features': [], 'interactions': [], 'reasons': [], 'use_cases': []}
                     prototype_scores[pid]['score'] += 1
                     prototype_scores[pid]['weight'] += rule.get('weight', 0.5)
                     prototype_scores[pid]['reasons'].append(f"污染物类别匹配: {class_name}")
@@ -256,10 +275,11 @@ class BiomimeticContext:
             if use_case.lower() in canonical_lower or canonical_lower in use_case.lower():
                 for pid in rule.get('prototypes', []):
                     if pid not in prototype_scores:
-                        prototype_scores[pid] = {'score': 0, 'weight': 0, 'features': [], 'interactions': [], 'reasons': []}
+                        prototype_scores[pid] = {'score': 0, 'weight': 0, 'features': [], 'interactions': [], 'reasons': [], 'use_cases': []}
                     prototype_scores[pid]['score'] += 1
                     prototype_scores[pid]['weight'] += rule.get('weight', 0.5)
                     prototype_scores[pid]['reasons'].append(rule.get('reason', f"Use-case匹配: {use_case}"))
+                    prototype_scores[pid]['use_cases'].append(use_case)
 
         # 转换为候选列表
         for pid, score_info in prototype_scores.items():
@@ -270,7 +290,7 @@ class BiomimeticContext:
                     'prototype_id': pid,
                     'weight': min(avg_weight, 0.9),
                     'reason': reason,
-                    'match_basis': 'molecular_feature_inference',
+                    'match_basis': 'use_case_mapping' if score_info['use_cases'] else 'molecular_feature_inference',
                     'direct_evidence': False,
                     'molecular_feature_links': score_info['features'][:5]
                 })
@@ -407,7 +427,8 @@ class BiomimeticContext:
                 # 获取机制（按 query relevance + verification 综合评分）
                 mechs = proto.get('mechanisms', [])
                 # 过滤掉 brief_visibility=hidden 的机制
-                mechs = [m for m in mechs if m.get('brief_visibility', 'visible') != 'hidden']
+                visible_mechs = [m for m in mechs if m.get('brief_visibility', 'visible') != 'hidden']
+                mechs = mechs if c.get('match_basis') == 'use_case_mapping' and not visible_mechs else visible_mechs
                 if not mechs:
                     continue  # 所有机制都隐藏，跳过此原型
                 _verif_priority = {'verified': 0, 'corroborated': 1, 'needs_review': 3}
@@ -418,6 +439,7 @@ class BiomimeticContext:
                 _query_interactions = [i.lower() for i in pollutant_profile.get('likely_interactions', [])]
                 _query_all_text = ' '.join(_query_features + _query_interactions)
                 _query_keywords = _extract_keywords(_query_all_text)
+                _query_keywords.update(_extract_keywords(pollutant))
                 # Also add split-by-slash keywords
                 for _feat in _query_features:
                     for _part in _feat.split('/'):
@@ -438,6 +460,9 @@ class BiomimeticContext:
 
                     # Mechanism name/desc relevance to query
                     mech_name = ((m.get('name', '') or '') + ' ' + (m.get('description', '') or '')).lower()
+                    if c.get('match_basis') == 'use_case_mapping':
+                        title = (m.get('name', '') or '').lower()
+                        score += 10 * sum(keyword in title for keyword in _query_keywords)
                     # Check if mechanism mentions matched features/interactions
                     for feat in c.get('molecular_feature_links', []):
                         if feat.lower() in mech_name:

@@ -25,7 +25,7 @@
     "n_papers": 5,
     "n_verified": 2,
     "n_unverified": 0,
-    "note": "机制为经典主客体包结化学（β-CD 疏水内腔容纳芳香/疏水客体）。Alsbaiee & Dichtel 2016 Nature（多孔 β-CD 聚合物快速去除微污染物，吸附速率常数为活性炭 15–200 倍）本轮摘要外部核验；CD-氯酚包结 NMR、CD 聚合物选择性吸附为项目继承一手文献。β-CD:BPA 1:1 Ka≈3.6–4.1×10³ M⁻¹ 为项目 BPA-2 台账继承（NMR）。均未做本地全文 PDF 审计。分类争议见 honesty_ledger（天然寡糖 vs 合成聚合物材料形态）。"
+    "note": "机制为经典主客体包结化学（β-CD 疏水内腔容纳芳香/疏水客体）。Alsbaiee & Dichtel 2016 Nature 摘要支持多孔 β-CD 聚合物快速去除多种微污染物；CD-氯酚包结和其他 CD 聚合物研究仍待全文定位。项目台账中的 β-CD:BPA 结合常数尚未追溯到原始 NMR 来源，不再归因于 CD 聚合物论文。"
   },
   "mechanisms": [
     {
@@ -40,30 +40,30 @@
       "causal_chain": {
         "pollutant_feature": {
           "text": "芳香/疏水有机微污染物（双酚 A、氯酚、多环麝香、紫外过滤剂等）：具与 β-CD 内腔（约 6.0–6.5 Å 腔径）尺寸匹配的疏水芳环/烷基部分",
-          "basis": "from_source",
-          "evidence_label": "from_source",
-          "source": "10.1038/nature16185",
-          "locator": "abstract（摘要级外部核验）",
-          "quote": "It rapidly sequesters a variety of organic micropollutants",
-          "scope_match": "Keywords: organic micropollutants, cyclodextrin, sequesters"
+          "basis": "llm_inferred",
+          "evidence_label": "llm_inferred",
+          "source": null,
+          "locator": null,
+          "quote": null,
+          "scope_match": null
         },
         "bio_structure": {
           "text": "β-CD 7 葡萄糖大环：疏水内腔容纳客体，亲水外缘保持水溶性/可交联；CD-氯酚包结经 NMR 证实（1:1 包结）",
-          "basis": "from_source",
-          "evidence_label": "from_source",
-          "source": "10.1023/A:1008150908997",
-          "locator": "NMR 包结（题录/摘要级）",
-          "quote": "inclusion complex of cyclodextrin with chlorophenol",
-          "scope_match": "Keywords: cyclodextrin, chlorophenol, inclusion"
+          "basis": "llm_inferred",
+          "evidence_label": "llm_inferred",
+          "source": null,
+          "locator": null,
+          "quote": null,
+          "scope_match": null
         },
         "interaction": {
-          "text": "疏水效应驱动客体去溶剂进入低极性内腔 + 范德华/尺寸互补；β-CD:BPA 1:1 复合 NMR 报道 Ka≈3.6–4.1×10³ M⁻¹（项目 BPA-2 台账继承）",
-          "basis": "from_source",
-          "evidence_label": "from_source",
-          "source": "10.1039/d0cc04784h",
-          "locator": "CD 聚合物选择性吸附（项目继承，verified）",
-          "quote": "cyclodextrin polymer selective adsorption",
-          "scope_match": "Keywords: cyclodextrin, selective, adsorption"
+          "text": "疏水效应、客体去溶剂与腔体尺寸互补可共同促进包结；项目台账中的 β-CD:BPA 结合常数尚待原始 NMR 来源核验。",
+          "basis": "llm_inferred",
+          "evidence_label": "llm_inferred",
+          "source": null,
+          "locator": null,
+          "quote": null,
+          "scope_match": null
         },
         "why_it_works": {
           "text": "Alsbaiee & Dichtel 2016 将 β-CD 交联为多孔聚合物，快速去除多种有机微污染物、吸附速率常数为活性炭 15–200 倍、并在环境相关浓度下优于活性炭——证明 β-CD 主客体包结可转译为高效水相吸附材料",
@@ -79,12 +79,12 @@
             "text": "1:1 化学计量容量上限：单位 β-CD 仅一个内腔，纯 β-CD 位点对大客体容量有硬上限（如 β-CD:BPA 纯位点约 201 mg/g），载体/交联质量摊薄总容量",
             "parameter": "capacity_ceiling",
             "condition": { "operator": "qualitative", "value": null },
-            "basis": "from_source",
-            "verification": "corroborated",
-            "gate_level": "hard",
-            "locator": "项目 BPA-2 台账（1:1 上限）",
-            "quote": "beta-CD:BPA 1:1 pure-site ceiling ~201 mg/g",
-            "scope_match": "Keywords: 1:1, capacity, ceiling",
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "scope_match": null,
             "source_asset": null
           },
           {
@@ -125,7 +125,7 @@
       "relevance": "high",
       "explanation": "主客体 1:1 化学计量（项目 BPA-2 台账）",
       "source": "literature",
-      "ref_doi": "10.1039/d0cc04784h"
+      "ref_doi": null
     },
     {
       "constraint": "需交联多孔化",
@@ -153,10 +153,10 @@
         "paper_id": "2016-Alsbaiee-Dichtel-betaCD-polymer-micropollutant",
         "sections": {
           "problem_definition": "水中痕量有机微污染物（内分泌干扰物、药物、农药、紫外过滤剂等）种类多、浓度低（ng/L–µg/L），活性炭吸附动力学慢、再生能耗高。需要快速、可温和再生、耐真实基质的水相吸附材料。",
-          "biological_solution": "β-环糊精为直链淀粉经细菌 CGTase 环化的天然环状寡糖，7 葡萄糖大环具疏水内腔、亲水外缘，可在水相以疏水效应+尺寸互补包结芳香/疏水客体（CD-氯酚 NMR 1:1 包结；β-CD:BPA Ka≈3.6–4.1×10³ M⁻¹）。Alsbaiee & Dichtel 2016 将 β-CD 交联为多孔聚合物，快速去除多种有机微污染物、吸附速率常数为活性炭 15–200 倍、在环境相关浓度优于活性炭且可温和再生。",
+          "biological_solution": "β-环糊精为直链淀粉经细菌 CGTase 环化的天然环状寡糖，7 葡萄糖大环具疏水内腔、亲水外缘，可在水相包结芳香或疏水客体。Alsbaiee & Dichtel 2016 将 β-CD 交联为多孔聚合物，摘要支持其快速去除多种有机微污染物。",
           "key_features": "必须保留：① β-CD 疏水内腔（尺寸-客体匹配的包结位点）；② 外缘羟基作交联/亲水把手；③ 多孔化以获高可及位点与快动力学。可灵活调整：交联剂化学、孔结构、颗粒形态。边界：1:1 容量上限、广谱非特异。",
           "design_mapping": "仿生映射：β-CD 内腔包结 → 交联多孔 β-CD 聚合物吸附位点（已是成熟真实材料，非仅设想）。对靶标选择性设计，须在内腔外附加二级识别（如二级缘极性受体）以超越广谱疏水富集——该增量属设计假设（llm_inferred）。",
-          "explainability_anchors": "设计溯源：主客体包结（CD-氯酚 NMR、β-CD:BPA Ka，from_source）→ 多孔 β-CD 聚合物快速吸附（Dichtel 2016，material_realization，verified 摘要）→ 靶标选择性增强（二级识别，llm_inferred）。分类边界：天然寡糖 vs 合成聚合物材料，见 honesty_ledger。"
+          "explainability_anchors": "设计溯源：经典主客体包结 → 多孔 β-CD 聚合物快速吸附（Dichtel 2016，摘要核验）→ 靶标选择性增强（二级识别，llm_inferred）。β-CD:BPA 结合常数待原始 NMR 来源核验。"
         }
       }
     ]
@@ -169,7 +169,10 @@
       "target_interaction": "内腔对疏水芳环客体的疏水+尺寸包结；二级缘受体对头基的定向作用（可选增量）",
       "source_tier": "literature",
       "evidence_tier": "material_realized（多孔 β-CD 聚合物吸附微污染物为真实成熟材料，Dichtel 2016 摘要核验）；靶标选择性增强为 llm_inferred",
-      "examples": [],
+      "examples": [
+        {"source": "10.1038/nature16185", "scope": "多孔 β-CD 聚合物材料实现"},
+        {"source": "10.1039/d0cc04784h", "scope": "环糊精聚合物选择性吸附研究"}
+      ],
       "design_principle": "两亲环状寡糖疏水内腔包结疏水微污染物；交联多孔化得快速可再生耐基质吸附剂",
       "implementation_example": "多孔 β-CD 聚合物（Alsbaiee & Dichtel 2016，去除速率为活性炭 15–200 倍）；CD 聚合物真实水基质 RSSCT（10.1016/j.watres.2020.115551）",
       "constraints": "1:1 容量上限、广谱非特异（靶标选择性有限）、同尺寸疏水共存物竞争",
@@ -187,7 +190,7 @@
         "index": 0,
         "name": "β-环糊精疏水内腔的主客体包结识别",
         "basis": "from_source_corroborated",
-        "note": "经典主客体包结化学；Alsbaiee & Dichtel 2016 Nature（多孔 β-CD 聚合物快速去除微污染物、速率 15–200×活性炭，DOI 10.1038/nature16185，摘要外部核验）；CD-氯酚包结 NMR（10.1023/A:1008150908997）与 CD 聚合物选择性吸附（10.1039/d0cc04784h）为项目继承一手文献；均未做本地全文 PDF 审计"
+        "note": "经典主客体包结化学；Alsbaiee & Dichtel 2016 Nature 摘要支持多孔 β-CD 聚合物快速去除微污染物。其余来源仍待全文定位，不用 10.1039/d0cc04784h 支撑 β-CD:BPA 结合常数。"
       }
     ],
     "leads": [

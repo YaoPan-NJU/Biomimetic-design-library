@@ -1,219 +1,91 @@
 {
- "id": "bacterial-photosynthetic-reaction-center",
- "name_zh": "紫色细菌光合反应中心（电子互补预组织 → 供体-受体电荷转移识别腔）",
- "name_en": "Purple Bacterial Photosynthetic Reaction Center (Electronic Complement Preorganization → Donor-Acceptor CT Recognition Cavity)",
- "organism": {
-  "scientific": "Rhodopseudomonas viridis / Blastochloris viridis（紫色细菌光合反应中心，Deisenhofer 1985 晶体结构）",
-  "category": "微生物"
- },
- "biomimetic_dimension": "分子仿生",
- "features": [
-  "特异性识别"
- ],
- "tested_conditions": {
-  "tested_ph_range": null,
-  "tested_temp_range": null,
-  "salinity": null,
-  "note": "紫色细菌光合反应中心为光驱电荷分离原型，非吸附原型；本库无其吸附性能测试；performance_data 为空。"
- },
- "library_tier": "extended",
- "lifecycle_status": "active",
- "coverage": "full",
- "status": "active",
- "provenance_summary": {
-  "n_papers": 4,
-  "n_verified": 0,
-  "n_unverified": 4,
-  "note": "来源方案 S34（OC, score 85）通过严格评审。生物原型为光驱电荷分离而非吸附，转译距离大；CT 选择性水相捕获为未经实验证实的科学赌注。"
- },
- "mechanisms": [
-  {
-   "mechanism_id": "BPRC-001",
-   "name": "特殊对富电子 π 供体面的电子互补预组织",
-   "description": "紫色细菌光合反应中心（Deisenhofer 1985 / Allen 1987）中特殊对（special pair）由两个细菌叶绿素分子组成，周围排列富电子 π 供体面（细胞色素 c 亚基、细菌叶绿素、细菌脱镁叶绿素），以精确的空间几何预组织实现电子互补选择性耦合。Moser-Dutton 距离标度律（PMID 1311417，被引 2483）确认距离为定义电子转移速率与方向性的充分参数之一",
-   "基本原理": "富电子 π 供体面与电子亏缺受体以精确空间几何预组织实现电子互补选择性耦合；距离为定义电子转移速率与方向性的充分参数之一",
-   "source": "literature",
-   "ref_doi": "10.1038/318449a0",
-   "verification": "metadata_verified",
-   "verification_quote": null,
-   "causal_chain": {
-    "pollutant_feature": {
-     "text": "OC（奥克立林）的 α-氰基-二苯基丙烯酸酯核为 π 电子受体（电子亏缺）；氰基致双键电子亏缺，亲电臭氧进攻钝化（kO3 OC 1.58 vs EHMC 5.25×10⁴ M⁻¹s⁻¹，低约 3.3×10⁴ 倍）",
-     "basis": "from_source",
-     "evidence_label": "from_source",
-     "source": "PubMed PMID 28535480 (Hopkins 2017)",
-     "locator": "PubMed PMID 28535480, kO3 values",
-     "quote": null,
-     "scope_match": "Keywords: octocrylene, ozone rate constant, kO3"
-    },
-    "bio_structure": {
-     "text": "紫色细菌光合反应中心特殊对富电子 π 供体面以精确空间几何预组织实现电子互补选择性耦合",
-     "basis": "from_source",
-     "evidence_label": "from_source",
-     "source": "Deisenhofer 1985, Nature 318:449",
-     "locator": "DOI 10.1038/318449a0, crystal structure",
-     "quote": null,
-     "scope_match": "Keywords: reaction center, special pair, electron transfer"
-    },
-    "interaction": {
-     "text": "富电子 π 供体面与电子亏缺客体之间的电荷转移（CT）相互作用；距离与几何预组织决定耦合强度与方向性",
-     "basis": "llm_inferred",
-     "evidence_label": "llm_inferred",
-     "source": null,
-     "locator": null,
-     "quote": null,
-     "scope_match": null
-    },
-    "why_it_works": {
-     "text": "电子互补预组织使供体面与电子亏缺客体之间 CT 自由能增量最大化；距离标度律确保几何精确性",
-     "basis": "llm_inferred",
-     "evidence_label": "llm_inferred",
-     "source": null,
-     "locator": null,
-     "quote": null,
-     "scope_match": null
-    },
-    "boundary_conditions": [
-     {
-      "text": "转译落差：RC 功能为光驱电荷分离而非吸附；生物原型与吸附识别的功能语境完全不同",
-      "parameter": "functional_context_gap",
-      "condition": { "operator": "qualitative", "value": null },
-      "basis": "llm_inferred",
-      "verification": "needs_review",
-      "gate_level": "soft",
-      "locator": null, "quote": null, "source_asset": null
-     },
-     {
-      "text": "水相 CT 幅度为未证赌注：中性弱极性客体在水相中的 CT 自由能增量可能被水竞争淬灭",
-      "parameter": "aqueous_ct_magnitude",
-      "condition": { "operator": "qualitative", "value": null },
-      "basis": "llm_inferred",
-      "verification": "needs_review",
-      "gate_level": "soft",
-      "locator": null, "quote": null, "source_asset": null
-     }
-    ],
-    "transferable_principle": "以精确空间几何预组织富电子 π 供体面，可对电子亏缺客体执行供体-受体电荷转移（CT）识别；距离与取向为关键参数"
-   },
-   "source_doi": "10.1038/318449a0",
-   "source_page": null,
-   "source_locator": "Deisenhofer 1985, Nature 318:449; Allen 1987",
-   "source_file": "Deisenhofer et al. 1985; Allen et al. 1987; metadata_verified",
-   "functional_groups": [
-    "富电子 π 供体面（细菌叶绿素/细胞色素 c）",
-    "特殊对（special pair）电子互补预组织"
-   ],
-   "key_structures": [
-    "识别结构",
-    "电子传递结构"
-   ]
-  }
- ],
- "performance_data": [],
- "engineering_constraints": [
-  {
-   "constraint": "转译落差",
-   "value": "RC 功能为光驱电荷分离而非吸附；生物原型与吸附识别的功能语境完全不同，转译距离大",
-   "unit": null,
-   "relevance": "high",
-   "explanation": "方案 S34 H2 降级：Moser-Dutton 距离标度律降为一般刚性预组织使能论证，不作硬对应",
-   "source": "llm_inference",
-   "ref_doi": "1311417"
+  "id": "bacterial-photosynthetic-reaction-center",
+  "name_zh": "紫色细菌光合反应中心的定向电子转移",
+  "name_en": "Directed Electron Transfer in the Purple Bacterial Photosynthetic Reaction Center",
+  "organism": {
+    "scientific": "Blastochloris viridis",
+    "category": "微生物"
   },
-  {
-   "constraint": "水相 CT 幅度不确定",
-   "value": "中性高疏水客体在水相中的 CT 自由能增量可能被水竞争与介电屏蔽淬灭",
-   "unit": null,
-   "relevance": "high",
-   "explanation": "方案 S34 Stage −1 计算门：DFT-SAPT 预示三成员 |ΔΔ(CT+ind)|<~RT 或符号序错乱 → 合成前降优先级",
-   "source": "llm_inference",
-   "ref_doi": null
-  }
- ],
- "narrative": {
-  "entries": [
-   {
-    "source_file": "S34_A01_donor-acceptor-CT-cavity_passed.md (score 85)",
-    "paper_id": "S34-oc-photosynthetic-rc",
-    "sections": {
-     "problem_definition": "OC 的 α-氰基-二苯基丙烯酸酯核为 π 电子受体。水相中孔壁电子密度可调的预组织富电子芳腔，对 OC 电子亏缺核的供体-受体 CT 结合自由能增量 ΔΔG_CT 是否可测、且随孔壁供体强度单调？",
-     "biological_solution": "紫色细菌光合反应中心以特殊对富电子 π 供体面的电子互补预组织实现选择性电荷分离。Moser-Dutton 距离标度律确认距离为定义电子转移速率与方向性的充分参数之一。",
-     "key_features": "必须保留：① 富电子 π 供体面（烷氧供体壁 / TTF 等）；② 刚性预组织使供体-受体距离与取向固定；③ 同拓扑电子梯度三成员（D/N/A）因果对照。可灵活调整：载体骨架（COF/分子笼/柱芳烃）、供体强度、孔径。",
-     "design_mapping": "仿生映射：RC 特殊对电子互补预组织 → 多孔骨架孔壁预组织富电子芳香供体面。注意：RC 功能为光驱电荷分离，转译为吸附识别距离大；水相 CT 幅度为未证赌注。",
-     "explainability_anchors": "设计溯源：紫色细菌 RC 电子互补预组织（Deisenhofer 1985，metadata_verified）→ 富电子 π 供体面 + 距离标度律 → 孔壁供体面-OC 电子亏缺核 CT 识别（llm_inferred，水相幅度待验证）。"
+  "biomimetic_dimension": "过程仿生",
+  "features": ["空间预组织", "定向电子转移"],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": null,
+    "note": "天然功能是光驱电荷分离，不是吸附；本库无奥克立林吸附性能数据。"
+  },
+  "library_tier": "exploratory",
+  "lifecycle_status": "pending_extraction",
+  "coverage": "partial",
+  "status": "pending_extraction",
+  "source_scheme": "S34_A01 (OC, score 85, passed)",
+  "provenance_summary": {
+    "n_papers": 2,
+    "n_verified": 0,
+    "n_unverified": 2,
+    "note": "结构研究支持特殊对作为初级供体以及受体侧色素的有序排列；不支持把整条电子传递链描述成富电子吸附腔。"
+  },
+  "mechanisms": [
+    {
+      "mechanism_id": "BPRC-001",
+      "name": "特殊对初级供体与受体侧色素的空间预组织",
+      "description": "反应中心以细菌叶绿素特殊对作为初级电子供体，电子随后经辅助色素传向细菌脱镁叶绿素和醌受体；结构预组织服务于光驱定向电子转移。",
+      "基本原理": "供体、桥联色素和受体按空间与氧化还原梯度排列，从而促进定向电荷分离。",
+      "source": "literature",
+      "ref_doi": "10.1038/318449a0",
+      "verification": "partial",
+      "verification_quote": null,
+      "causal_chain": {
+        "pollutant_feature": {"text": "奥克立林含共轭受体样结构，但其水相电荷转移结合能力尚未由本原型来源验证。", "basis": "llm_inferred", "source": null, "locator": null, "quote": null},
+        "bio_structure": {"text": "反应中心把特殊对、辅助色素、细菌脱镁叶绿素和醌沿电子传递方向预组织。", "basis": "llm_inferred", "source": null, "locator": null, "quote": null},
+        "interaction": {"text": "天然体系发生光激发后的逐级电子转移，不是客体在富电子孔腔中的平衡吸附。", "basis": "llm_inferred", "source": null, "locator": null, "quote": null},
+        "why_it_works": {"text": "固定距离、取向和氧化还原梯度共同降低反向过程并促进定向电荷分离。", "basis": "llm_inferred", "source": null, "locator": null, "quote": null},
+        "boundary_conditions": [
+          {
+            "text": "把定向光化学电子转移映射为水相电荷转移吸附属于独立工程假设。",
+            "parameter": "function_context_gap",
+            "condition": {"operator": "qualitative", "value": null},
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "空间预组织可控制电子转移方向；若用于吸附，必须另行证明平衡结合及其选择性增量。"
+      },
+      "functional_groups": ["细菌叶绿素特殊对", "受体侧色素与醌"],
+      "key_structures": ["电子传递色素链"]
     }
-   }
-  ]
- },
- "design_translation": [
-  {
-   "idea": "将 RC 电子互补预组织原理转译为多孔骨架孔壁预组织富电子芳香供体面，对 OC 电子亏缺核执行水相 CT 识别",
-   "specific_functional_group": "富电子 π 供体面（烷氧供体壁 / TTF 起始氧化电位 +0.34 V vs Ag/AgCl）",
-   "material_handle": "β-酮烯胺水解稳定 COF 孔壁电子密度梯度三成员（D=烷氧供体壁 / N=中性壁 / A=非联苯胺电子贫壁）；TTF-COF 供体强化谱学平台；离散亚胺分子笼第三验证格式",
-   "target_interaction": "孔壁富电子 π 供体面与 OC α-氰基-二苯基丙烯酸酯核之间的电荷转移（CT）相互作用",
-   "source_tier": "llm_inference",
-   "evidence_tier": "inspiration（RC 功能为光驱电荷分离，水相 CT 幅度为未证赌注）",
-   "examples": [],
-   "design_principle": "紫色细菌 RC 以精确空间几何预组织富电子 π 供体面实现电子互补选择性耦合（Deisenhofer 1985）；多孔骨架孔壁供体面原理上可对电子亏缺客体执行 CT 识别",
-   "implementation_example": "β-酮烯胺 COF 孔壁电子密度梯度三成员 + TTF-COF 供体强化 + 离散亚胺分子笼第三格式",
-   "constraints": "RC 功能为光驱电荷分离而非吸附（转译落差大）；水相 CT 幅度为未证赌注；Stage −1 DFT-SAPT 计算门前置",
-   "failure_modes": "D/N/A 三成员 α 统计等价（CT=0）；全谱 α 与 logKow 线性 R²>0.9（纯疏水）；水相 CT 被介电屏蔽淬灭",
-   "material_realization_examples": []
+  ],
+  "performance_data": [],
+  "design_translation": [
+    {
+      "idea": "构建电子密度可调但拓扑一致的孔壁系列，测试奥克立林是否存在超出疏水分配的电荷转移增量。",
+      "specific_functional_group": "电子丰富度可调的芳香孔壁",
+      "material_handle": "同拓扑多孔聚合物或分子笼系列",
+      "target_interaction": "待验证的供体-受体电荷转移叠加疏水分配",
+      "source_tier": "llm_inference",
+      "evidence_tier": "inspiration",
+      "examples": [],
+      "design_principle": "只转译空间和电子梯度的可控性，不把光合色素链称为天然吸附腔。",
+      "implementation_example": "供体、中性和受体型孔壁的同拓扑三成员对照",
+      "constraints": "需用光谱和热力学对照区分电荷转移与普通疏水吸附。",
+      "failure_modes": "孔结构不等价；水相屏蔽电荷转移；吸附仅与疏水性相关。",
+      "material_realization_examples": []
+    }
+  ],
+  "honesty_ledger": {
+    "facts": [],
+    "leads": [
+      {"type": "mechanism", "index": 0, "name": "光合反应中心定向电子转移", "basis": "literature_backed", "note": "色素排列与电子传递方向有结构文献支持，全文 quote 和 locator 尚未提取。"}
+    ],
+    "inferences": [
+      {"type": "design_translation", "index": 0, "idea": "孔壁电子梯度用于奥克立林水相识别", "basis": "llm_inferred", "label": "inspiration"}
+    ],
+    "boundary_notes": ["特殊对是初级电子供体；细菌脱镁叶绿素位于受体侧。", "天然过程不是吸附，水相电荷转移选择性尚未证实。"],
+    "missing_pdf_items": ["10.1038/318449a0 全文证据提取"],
+    "generated_by": "codex-2026-07-28"
   }
- ],
- "honesty_ledger": {
-  "facts": [
-   {
-    "type": "mechanism",
-    "index": 0,
-    "name": "紫色细菌 RC 特殊对电子互补预组织",
-    "basis": "from_source",
-    "note": "Deisenhofer 1985 (DOI 10.1038/318449a0) metadata_verified；RC 晶体结构揭示特殊对富电子 π 供体面的精确空间几何"
-   },
-   {
-    "type": "mechanism",
-    "index": 1,
-    "name": "Moser-Dutton 距离标度律",
-    "basis": "from_source",
-    "note": "PMID 1311417 外部核验，被引 2483；距离为定义电子转移速率与方向性的充分参数之一。方案 S34 中降为一般刚性预组织使能论证"
-   }
-  ],
-  "leads": [],
-  "inferences": [
-   {
-    "type": "design_translation",
-    "index": 0,
-    "idea": "孔壁富电子 π 供体面对 OC 电子亏缺核的水相 CT 识别",
-    "basis": "llm_inferred",
-    "label": "inspiration",
-    "note": "RC 功能为光驱电荷分离，转译为吸附识别距离大；水相 CT 幅度为未证赌注，Stage −1 DFT-SAPT 计算门前置"
-   }
-  ],
-  "boundary_notes": [
-   "RC 功能为光驱电荷分离而非吸附；转译落差大",
-   "水相 CT 幅度为未证赌注，方案以 Stage −1 计算 go/no-go 预筛门 + 完整可证伪判据前置",
-   "论文措辞禁称'CT 选择性水相捕获全球首例'（碘/硝基芳烃主题已占用）",
-   "一切水相 CT 相关边界均为定性 llm_inferred，无数值阈值"
-  ],
-  "missing_pdf_items": [
-   "Deisenhofer 1985 (DOI 10.1038/318449a0) 全文未读，metadata_verified",
-   "Allen 1987 全文未读，metadata_verified"
-  ],
-  "generated_by": "bmdl-subagent-2026-07-27",
-  "note": "诚实优先：RC 功能为光驱电荷分离，水相 CT 幅度为未证赌注；转译距离大；Stage −1 计算门前置"
- },
- "boundary_rules": [
-  {
-   "rule": "供体-受体距离与几何预组织为 CT 相互作用强度的关键参数（Moser-Dutton 距离标度律）",
-   "source_mechanism": "特殊对富电子 π 供体面的电子互补预组织",
-   "gate_level": "soft",
-   "basis": "from_source"
-  },
-  {
-   "rule": "水相 CT 幅度为未证赌注；Stage −1 DFT-SAPT 预示三成员 |ΔΔ(CT+ind)|<~RT 或符号序错乱 → 合成前降优先级",
-   "source_mechanism": "特殊对富电子 π 供体面的电子互补预组织",
-   "gate_level": "soft",
-   "basis": "llm_inferred"
-  }
- ]
 }

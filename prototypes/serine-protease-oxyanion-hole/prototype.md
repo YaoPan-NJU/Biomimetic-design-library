@@ -2,7 +2,7 @@
 id: serine-protease-oxyanion-hole
 name: 丝氨酸/半胱氨酸蛋白酶氧阴离子穴（预组织双氢键阵列）（Serine/Cysteine Protease Oxyanion Hole (Preorganized Dual Hydrogen-Bond Array)）
 category: 动物
-organism: Bos taurus（γ-胰凝乳蛋白酶，PDB 1GCT）/ Bacillus amyloliquefaciens（枯草蛋白酶 BPN′，PDB 1SBT）/ Carica papaya（木瓜蛋白酶，PDB 1PAD）；跨物种趋同的氧阴离子穴基序
+organism: 多物种蛋白酶氧阴离子穴比较原型
 biomimetic_dimension: 分子仿生
 features:
   - 特异性识别

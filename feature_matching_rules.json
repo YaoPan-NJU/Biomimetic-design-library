@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "description": "feature-based 匹配规则数据化，用于 BiomimeticContext 接口",
-  "last_updated": "2026-06-27",
+  "last_updated": "2026-07-28",
   "molecular_feature_to_prototype": {
     "芳香环": {
       "prototypes": [
@@ -31,7 +31,8 @@
       "prototypes": [
         "chitosan",
         "bone-structure",
-        "oyster-shell"
+        "oyster-shell",
+        "fish-scale-hydroxyapatite"
       ],
       "reason": "二价阳离子可与含羧基/羟基的吸附剂形成配位键",
       "weight": 0.8
@@ -150,6 +151,28 @@
       "reason": "大分子污染物可通过体积排阻/孔径截留被多孔材料去除",
       "evidence_source": "15种有机污染物提参聚合",
       "evidence_count": 2839
+    },
+    "C9支链": {
+      "prototypes": [
+        "ipso-hydroxylation-pathway",
+        "alkb-alkane-hydroxylase-chain-length"
+      ],
+      "reason": "壬基酚的支化烷基可参考 ipso 反应底物资格与 AlkB 链长门控；二者均为机制灵感，不是吸附直接证据",
+      "weight": 0.4
+    },
+    "环氧": {
+      "prototypes": [
+        "gaba-rdl-rigid-hydrophobic-cavity"
+      ],
+      "reason": "Rdl 抗性突变提示孔区位点可调制环二烯敏感性；不代表已解析环氧基直接结合或材料吸附",
+      "weight": 0.4
+    },
+    "六价铬": {
+      "prototypes": [
+        "iron-oxidizing-bacteria"
+      ],
+      "reason": "生物成因铁氧化物可提供 Cr(VI) 吸附与还原转化环境；候选层级由原型性能证据决定",
+      "weight": 0.7
     }
   },
   "interaction_to_prototype": {
@@ -239,7 +262,8 @@
     },
     "阳离子染料": {
       "prototypes": [
-        "chlorella-cell-wall"
+        "chlorella-cell-wall",
+        "silk-fibroin"
       ],
       "mechanisms": [
         "静电吸引",
@@ -301,6 +325,45 @@
         "离子交换"
       ],
       "weight": 0.8
+    },
+    "内分泌干扰物/酚类化合物": {
+      "prototypes": [
+        "laccase-t1-cu-phenol-coordination"
+      ],
+      "mechanisms": [
+        "邻近口袋预定位",
+        "外球电子转移"
+      ],
+      "weight": 0.4
+    },
+    "alkylphenol_EDC": {
+      "prototypes": [
+        "ipso-hydroxylation-pathway",
+        "alkb-alkane-hydroxylase-chain-length"
+      ],
+      "mechanisms": [
+        "反应位点选择",
+        "链长门控"
+      ],
+      "weight": 0.4
+    },
+    "UV_filter_ester": {
+      "prototypes": [
+        "bacterial-photosynthetic-reaction-center"
+      ],
+      "mechanisms": [
+        "空间与电子梯度预组织"
+      ],
+      "weight": 0.3
+    },
+    "dioxin": {
+      "prototypes": [
+        "rw1-bay-region-dioxygenase"
+      ],
+      "mechanisms": [
+        "角位双加氧"
+      ],
+      "weight": 0.5
     }
   },
   "use_case_to_prototype": {

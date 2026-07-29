@@ -1,51 +1,147 @@
 {
   "id": "ipso-hydroxylation-pathway",
-  "name_zh": "ipso 羟基化途径（α-四级碳拓扑形状选择腔）",
-  "name_en": "Ipso Hydroxylation Pathway (α-Quaternary Carbon Topology Shape-Selective Cavity)",
+  "name_zh": "Sphingobium 对位烷基酚 ipso 羟基化途径",
+  "name_en": "Sphingobium Ipso-Hydroxylation Pathway for para-Alkylphenols",
   "organism": {
-    "scientific": "Sphingobium xenophagum Bayram / Sphingomonas sp. TTNP3（ipso 羟基化途径降解对位烷基酚，TTNP3 氢醌 1,2-双加氧酶 PDB 5M22）",
+    "scientific": "Sphingobium xenophagum Bayram",
     "category": "微生物"
   },
-  "biomimetic_dimension": "分子仿生",
-  "features": [
-    "特异性识别",
-    "分子筛分"
-  ],
+  "biomimetic_dimension": "过程仿生",
+  "features": ["反应位点选择", "取代基脱除"],
   "tested_conditions": {
     "tested_ph_range": null,
     "tested_temp_range": null,
     "salinity": null,
-    "note": "方案通过但实验尚未执行，吸附测试条件为空"
+    "note": "天然机制为生物转化，不直接证明吸附选择性；人工孔穴转译尚无实验验证。"
   },
-  "library_tier": "extended",
-  "lifecycle_status": "active",
-  "coverage": "full",
-  "status": "active",
-  "source_scheme": "S26_A01 (NP, score 92, passed) — α-分支拓扑形状选择腔（ipso 途径逆读标尺）",
+  "library_tier": "exploratory",
+  "lifecycle_status": "pending_extraction",
+  "coverage": "partial",
+  "status": "pending_extraction",
+  "source_scheme": "S26_A01 (NP, score 92, passed)",
   "provenance_summary": {
-    "n_papers": 6,
+    "n_papers": 2,
     "n_verified": 0,
-    "n_unverified": 6,
-    "note": "全部文献摘要或题录级核验，无全文 verified。核心文献 Gabriel 2005 JBC/EST、Lu 2015 Water Res 均为 abstract_read。PDB 5M22 为 metadata_verified。"
+    "n_unverified": 2,
+    "note": "文献支持 ipso 羟基化及后续侧链裂解；原条目声称存在已知形状互补口袋，现已降为工程假设，待全文证据提取。"
   },
   "mechanisms": [
     {
       "mechanism_id": "IPSO-001",
-      "name": "α-四级碳取代模式的几何重读",
-      "description": "α-四级碳取代模式是 ipso 途径的底物判据。生物侧不存在已知的形状互补口袋，α-四级碳要求源于稳定中间体阳离子特征的电子效应。材料侧以几何腔互补重读同一拓扑变量",
-      "基本原理": "闭底深腔笼轮廓匹配 α-四级碳 C9 分支丛，腔口锚定固定酚羟基取向",
+      "name": "α-四级碳取代酚的 ipso 羟基化入口",
+      "description": "细菌代谢以芳环 ipso 位羟基化启动对位烷基酚转化；该反应说明底物需要满足化学反应条件，但不等于存在可直接移植的形状互补结合腔。",
+      "基本原理": "在连接侧链的芳环 ipso 位发生氧化，形成可继续裂解的反应中间体。",
       "source": "literature",
-      "ref_doi": "10.1074/jbc.m413446200",
-      "verification": "abstract_read"
+      "ref_doi": "10.1074/jbc.M413446200",
+      "verification": "partial",
+      "verification_quote": null,
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "对位烷基酚具有可发生 ipso 氧化的酚环与支化侧链。",
+          "basis": "llm_inferred",
+          "source": null,
+          "locator": null,
+          "quote": null
+        },
+        "bio_structure": {
+          "text": "Bayram 菌株的酶促途径对该类底物执行 ipso 羟基化。",
+          "basis": "llm_inferred",
+          "source": null,
+          "locator": null,
+          "quote": null
+        },
+        "interaction": {
+          "text": "底物进入酶促反应后在侧链连接的芳环位点被氧化。",
+          "basis": "llm_inferred",
+          "source": null,
+          "locator": null,
+          "quote": null
+        },
+        "why_it_works": {
+          "text": "该入口反应把稳定的对位取代结构转化为可发生后续断裂的中间体。",
+          "basis": "llm_inferred",
+          "source": null,
+          "locator": null,
+          "quote": null
+        },
+        "boundary_conditions": [
+          {
+            "text": "文献支持反应途径，不支持把未知酶口袋尺寸当作已证实的吸附模板。",
+            "parameter": "evidence_scope",
+            "condition": {"operator": "qualitative", "value": null},
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "可把底物的反应位点与支化拓扑同时用于候选筛选，但人工形状识别必须独立验证。"
+      },
+      "functional_groups": ["酚环", "对位支化烷基"],
+      "key_structures": ["ipso 反应位点"]
     },
     {
       "mechanism_id": "IPSO-002",
-      "name": "酚羟基腔口锚定",
-      "description": "酚羟基（酚盐）对位锚定于识别位点，对位取代酚共用识别位点",
-      "基本原理": "笼口边缘氢键供受体阵列固定酚羟基取向",
+      "name": "侧链裂解与水捕获",
+      "description": "ipso 羟基化后的中间体发生侧链裂解，并由水参与生成后续产物；这是降解步骤，不是孔穴识别证据。",
+      "基本原理": "先活化芳环连接位点，再裂解侧链以推进代谢。",
       "source": "literature",
-      "ref_doi": "10.1007/s00244-010-9576-4",
-      "verification": "abstract_read"
+      "ref_doi": "10.1128/AEM.02994-06",
+      "verification": "partial",
+      "verification_quote": null,
+      "causal_chain": {
+        "pollutant_feature": {"text": "支化烷基通过芳环 ipso 位连接。", "basis": "llm_inferred", "source": null, "locator": null, "quote": null},
+        "bio_structure": {"text": "微生物途径提供连续氧化和裂解反应环境。", "basis": "llm_inferred", "source": null, "locator": null, "quote": null},
+        "interaction": {"text": "氧化中间体进一步发生侧链脱除。", "basis": "llm_inferred", "source": null, "locator": null, "quote": null},
+        "why_it_works": {"text": "连续反应解除芳环与支链之间的稳定连接。", "basis": "llm_inferred", "source": null, "locator": null, "quote": null},
+        "boundary_conditions": [
+          {
+            "text": "降解可行性不能直接外推为材料吸附容量或选择性。",
+            "parameter": "function_context",
+            "condition": {"operator": "qualitative", "value": null},
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "反应级联可启发先活化后脱除的处理路线。"
+      },
+      "functional_groups": ["氧化中间体"],
+      "key_structures": ["连续反应途径"]
     }
-  ]
+  ],
+  "performance_data": [],
+  "design_translation": [
+    {
+      "idea": "用芳环结合位点与支化拓扑筛选组合构建对烷基酚候选材料；这不是天然酶口袋的结构复制。",
+      "specific_functional_group": "芳香疏水位点与可调支化空间",
+      "material_handle": "孔径可调的芳香多孔聚合物",
+      "target_interaction": "芳香分配加支化拓扑排阻",
+      "source_tier": "llm_inference",
+      "evidence_tier": "inspiration",
+      "examples": [],
+      "design_principle": "把反应底物范围作为化学资格筛选，不把它冒充已知形状口袋。",
+      "implementation_example": "具有可调交联度的芳香多孔聚合物",
+      "constraints": "必须用同系物竞争实验验证几何增量。",
+      "failure_modes": "仅由疏水性驱动；孔径分布过宽；把降解证据误当吸附证据。",
+      "material_realization_examples": []
+    }
+  ],
+  "honesty_ledger": {
+    "facts": [],
+    "leads": [
+      {"type": "mechanism", "index": 0, "name": "ipso 羟基化与侧链裂解", "basis": "literature_backed", "note": "反应途径有文献支持，全文 quote 和 locator 尚未提取。"}
+    ],
+    "inferences": [
+      {"type": "design_translation", "index": 0, "idea": "人工孔穴进行支化拓扑筛选", "basis": "llm_inferred", "label": "inspiration"}
+    ],
+    "boundary_notes": ["未发现支持特定形状互补酶口袋的直接结构证据。"],
+    "missing_pdf_items": ["10.1074/jbc.M413446200 与 10.1128/AEM.02994-06 全文证据提取"],
+    "generated_by": "codex-2026-07-28"
+  }
 }
