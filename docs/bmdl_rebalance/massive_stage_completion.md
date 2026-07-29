@@ -9,8 +9,10 @@
 - `feature-mapping.json`：`pollutant_prototype_map` 新增 28 条原型接线（保留原有 PO43-/chitosan 条目）；新建 3 个污染物键（Nonylphenol/Cr(VI)/PFOS）。
 - `feature_matching_rules.json`：修正 `氟碳链` 误指（超疏水表面 → PFAS 分子识别蛋白 FABP4/HSA/NTCP/hL-FABP）；`离子交换`+3、`沉淀`+scallop-shell；4 个 use_case 补入背景表面原型。
 - `adrmats_export/`：重新生成 `match_export.json` / `match_weights.csv` / `_stats.json` / `README.md`。
+- `tools/generate_prototype_md.py`：修复渲染工具对旧 schema 变体的健壮性（`tested_conditions`/`provenance_summary`/`narrative` 类型守卫 + 非规范 `organism.category` → 规范四类映射）。
+- `prototypes/<12 接线原型>/prototype.md`：全部重渲染，保持 canon↔render 同步。
 - `docs/bmdl_rebalance/`：本报告 + triage + 对抗账本。
-- **未改任何 `prototypes_db/*.json`**（canon 未动）。
+- **未改任何 `prototypes_db/*.json`**（canon 未动；.md 为渲染产物非 canon）。
 
 ## 验收指标（before → after）
 | 指标 | before | after |
@@ -29,11 +31,13 @@
 | check_from_source_integrity.py | 1617/1617 compliant ✅ |
 | check_causal_chain.py | 616/616 qualified ✅ |
 | check_source_authenticity.py | 无 from_source 膨胀/DOI 缺失类硬错误 ✅ |
+| check_chimera.py --strict | **exit 1（10 个预存违规，均为 organism 多物种/家族级，非本批引入；本批 12 个接线原型无一违规）** |
 | check_boundary_guardrail.py | **exit 1（预存失败，非本批引入）** |
 
 ## 预存问题（记录，不在本批修复）
-1. **check_boundary_guardrail 失败**：`superhydrophobic-artificial.json` 有 from_source 机制标 verification=needs_review。该文件本批未改动，且该脚本只读 `prototypes_db/*.json`（不读 feature-mapping），故为 expand 分支预存失败。留待专门修复。
-2. **prototype.md 渲染工具 bug**：`tools/generate_prototype_md.py` 对 `design_translation` 为 list 形态的 V1-B 原型抛 `AttributeError: 'list' object has no attribute 'get'`（12 个里 6 个渲染失败）。为避免 canon↔render 半同步，本批已回退所有 .md 改动；prototype.md 全量重渲染留作后续（须先修渲染工具）。.md 为渲染产物，不被 query/export 消费，不影响本次交付。
+1. **check_boundary_guardrail 失败**：`superhydrophobic-artificial.json`（分离/背景原型，本批未改动）有 from_source 机制标 verification=needs_review。该脚本只读 `prototypes_db/*.json`，为 expand 分支预存失败，属 canon 证据卫生，留待专门修复（本批坚持 canon-freeze，不牵连修改无关原型）。
+1b. **check_chimera --strict 10 违规**：均为 organism 字段列多物种（多为蛋白家族跨物种代表，属设计判断而非本批引入）；计划已将嵌合清理（如 spider-silk）列入 Track 2。本批 12 个接线原型经核验无一在违规名单。
+2. **prototype.md 渲染（已解决）**：`tools/generate_prototype_md.py` 原对旧 schema 变体（`tested_conditions`/`provenance_summary`/`narrative` 为 list/str、`organism.category` 非规范如真菌/节肢动物）抛 `AttributeError` 或产生非法 category。已修复（类型守卫 + category 映射），12 个接线原型 prototype.md 全部成功重渲染，validate_consistency 回到 0 errors。.md 为渲染产物，不被 query/export 消费。
 3. **PFOA 导出全 lane=lead/fact（exploratory=0）**：为 expand 分支 query() 对 PFAS 蛋白原型经 pollutant key-match 置 direct_evidence=True 的预存诚实度口径问题，非本批引入。建议 Track 2 评估 query() 有机域 honesty 计算。
 
 ## Track 2 指针

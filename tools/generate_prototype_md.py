@@ -88,7 +88,9 @@ def render_frontmatter(d: dict, feature_mapping: dict) -> str:
     lines = ['---']
     lines.append(f'id: {d["id"]}')
     lines.append(f'name: {d["name_zh"]}（{d["name_en"]}）')
-    lines.append(f'category: {d["organism"]["category"]}')
+    _cat = d["organism"]["category"]
+    _cat = {'真菌': '微生物', '节肢动物': '动物', '海洋无脊椎动物': '动物'}.get(_cat, _cat)
+    lines.append(f'category: {_cat}')
     lines.append(f'organism: {d["organism"]["scientific"]}')
     lines.append(f'biomimetic_dimension: {d.get("biomimetic_dimension", "")}')
 
@@ -120,6 +122,8 @@ def render_frontmatter(d: dict, feature_mapping: dict) -> str:
 
     # applicability (tested_conditions)
     tc = d.get('tested_conditions', {})
+    if not isinstance(tc, dict):
+        tc = {}
     lines.append('applicability:')
     ph_range = tc.get('tested_ph_range')
     if ph_range:
@@ -140,6 +144,8 @@ def render_frontmatter(d: dict, feature_mapping: dict) -> str:
 
     # provenance
     prov = d.get('provenance_summary', {})
+    if not isinstance(prov, dict):
+        prov = {}
     lines.append(f'# provenance: {prov.get("n_papers", 0)} papers, {prov.get("n_verified", 0)} verified, {prov.get("n_unverified", 0)} unverified')
     lines.append(f'# coverage: {d.get("coverage", "unknown")}')
     lines.append(f'# status: {d.get("status", "unknown")}')
@@ -153,7 +159,8 @@ def render_section_1(d: dict) -> str:
     lines = ['## 1. 生物原型简介', '']
 
     # 从 narrative 的第一个 entry 提取
-    entries = d.get('narrative', {}).get('entries', [])
+    _nar = d.get('narrative', {})
+    entries = _nar.get('entries', []) if isinstance(_nar, dict) else []
     if entries:
         sections = entries[0].get('sections', {})
         bio_solution = sections.get('biological_solution', sections.get('biological_strategy', ''))
@@ -208,7 +215,8 @@ def render_section_3(d: dict) -> str:
     """3. 结构特征与结构-功能关系"""
     lines = ['## 3. 结构特征与结构-功能关系', '']
 
-    entries = d.get('narrative', {}).get('entries', [])
+    _nar = d.get('narrative', {})
+    entries = _nar.get('entries', []) if isinstance(_nar, dict) else []
     if entries:
         sections = entries[0].get('sections', {})
         key_features = sections.get('key_features', sections.get('structural_features', ''))

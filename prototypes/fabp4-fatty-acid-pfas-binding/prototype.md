@@ -64,11 +64,11 @@ evidence_level: high
 
 ## 6. 相关原型
 
+- asbt-bile-acid-elevator-transporter
+- bile-salt-mixed-micelle-solubilization
 - cactus-spine
 - cell-membrane-ion-channel
-- diatom-frustule
-- lotus-leaf
-- moda-oxyanion-geometric-recognition
+- chlorophenol-hydroxylase-regioselective
 
 ## 参考文献
 

@@ -57,7 +57,10 @@ evidence_level: low
 
 ## 6. 相关原型
 
+- asbt-bile-acid-elevator-transporter
 - cell-membrane-ion-channel
+- chlorophenol-hydroxylase-regioselective
+- ddt-dehydrochlorinase-gst
 - diatom-frustule
 
 ## 参考文献
