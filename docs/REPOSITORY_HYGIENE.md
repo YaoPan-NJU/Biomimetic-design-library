@@ -42,6 +42,7 @@
 ```
 Biomimetic-design-library/
 ├── README.md                      # 项目介绍
+├── AGENTS.md                      # 仓库级智能体工作约束
 ├── .gitignore
 ├── .gitmodules
 │
@@ -102,6 +103,7 @@ Biomimetic-design-library/
 
 根目录只允许：
 - `README.md`
+- `AGENTS.md`
 - `.gitignore`
 - `.gitmodules`
 - `feature-mapping.json`
@@ -110,7 +112,7 @@ Biomimetic-design-library/
 - `pollutant_profiles.json`
 
 禁止在根目录放置：
-- 任何 `.md` 评估/审计/指令文件
+- 除 `README.md`、`AGENTS.md` 外的任何 `.md` 评估/审计/指令文件
 - 任何 brief JSON 测试文件
 - 任何 `*_evaluation.md`
 - 任何 `*_brief_*.json`
