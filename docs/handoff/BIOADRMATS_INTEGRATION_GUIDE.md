@@ -1,4 +1,4 @@
-# BioADRMATS 集成交接
+# BioADRMATS 集成指南
 
 本文只描述 BioADRMATS 消费 BMDL 数据时需要实施的代码改动。BMDL 的权威输入是：
 

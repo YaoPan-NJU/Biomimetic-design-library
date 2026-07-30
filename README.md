@@ -4,6 +4,18 @@ BMDL 是面向水质风险控制与吸附材料设计的仿生原型知识库。
 
 本库不是材料性能排行榜，也不把生物结合、传感响应或规则命中当作已验证的材料去除性能。下游系统应依据证据 lane 使用候选，并在真实水体、竞争离子、再生和制造条件下继续验证。
 
+## 项目职责
+
+BMDL 接收目标污染物、水质条件和工程约束，返回结构化的 `BiomimeticDesignBrief`。它负责检索、证据分级、机制解释和材料转译提示，不直接给出最终材料配方，也不替代下游的组合设计与实验验证。
+
+```text
+结构化需求
+  → BMDL 条件预筛与特征/污染物匹配
+  → 原型、绑定机制、材料转译与边界
+  → BiomimeticDesignBrief
+  → 下游材料设计与验证
+```
+
 ## 库中有什么
 
 - 100 个根原型，覆盖微生物、植物、动物和人工仿生体系。
@@ -23,6 +35,17 @@ BMDL 是面向水质风险控制与吸附材料设计的仿生原型知识库。
 | `pollutant_profiles.json` | 污染物分子特征与相互作用画像 |
 | `tools/biomimetic_context.py` | 查询、证据分级、机制绑定和 brief 生成 |
 | `adrmats_export/` | 下游系统使用的匹配快照 |
+
+## 匹配架构
+
+| 匹配面 | 主要数据 | 作用 |
+|---|---|---|
+| 条件预筛 | `prototype_metadata[id].applicability`、`tested_conditions` | 根据 pH、温度、盐度和工程约束识别适用边界 |
+| 污染物匹配 | `pollutant_prototype_map`、性能证据 | 返回有污染物专项依据的候选，并区分 `fact` 与 `lead` |
+| 特征匹配 | `pollutant_profiles.json`、`feature_prototype_map` | 在专项证据不足时，以分子特征和可能相互作用寻找启发 |
+| 机制解释 | `mechanism_feature_bridge`、`prototypes_db/*.json` | 绑定具体机制，给出因果链、材料转译和边界条件 |
+
+`weight` 只表示检索相关性。库先按证据 lane 区分事实、线索和启发，再在同一 lane 内使用相关性排序。
 
 查询流程为：
 
@@ -84,7 +107,7 @@ python -X utf8 tools/export_adrmats_snapshot.py
 
 下游集成应优先读取 `adrmats_export/match_export.json`。其中保留 `lane`、`direct_evidence`、`performance_evidence_tier`、`candidate_honesty`、`bound_mechanism_id` 和 `bound_mechanism`；五列 CSV 仅用于兼容旧导入器。
 
-BioADRMATS 侧需要完成的导入与适配改动见 [BioADRMATS 集成交接](docs/handoff/BIOADRMATS_INTEGRATION_HANDOFF.md)。
+BioADRMATS 侧需要完成的导入与适配改动见 [BioADRMATS 集成指南](docs/handoff/BIOADRMATS_INTEGRATION_GUIDE.md)。
 
 ## 验证
 
@@ -105,6 +128,7 @@ python -X utf8 tools/verify_adrmats_delivery.py
 - [设计与 brief 结构](docs/design.md)
 - [证据与字段定义](docs/references/definitions.md)
 - [ADRMATS 调用说明](docs/ADRMATS_CALL_GUIDE.md)
+- [BioADRMATS 集成指南](docs/handoff/BIOADRMATS_INTEGRATION_GUIDE.md)
 - [支持范围与风险](docs/SUPPORT_SCOPE_AND_RISKS.md)
 - [仓库治理规范](docs/REPOSITORY_HYGIENE.md)
 
