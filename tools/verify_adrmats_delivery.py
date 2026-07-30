@@ -6,8 +6,8 @@ ADRMATS 交付验收脚本
     python tools/verify_adrmats_delivery.py
 
 验收标准：
-1. PFOA/SMX/BPA 不允许伪装成 direct evidence
-2. Pb(II) 如果有 direct evidence，可以标 direct_evidence=true，但每条 evidence 必须带 verification_tier
+1. direct evidence 必须来自严格核验的污染物特异材料去除性能
+2. partial 性能只能进入 lead，映射和机制类比只能进入 exploratory
 3. candidates 里的每个候选必须能说清楚：污染物分子特征 -> 可能作用机制 -> 仿生原型机制/结构/特征 -> 传给下游的设计思路
 4. needs_review 条目不得进入强排序
 5. validate_consistency.py 必须 0 error
@@ -91,13 +91,17 @@ def validate_brief_structure(brief, test_name):
             # 检查 match
             if 'match' in c:
                 m = c['match']
-                match_fields = ['reason', 'weight', 'applicability_fit', 'match_basis', 'direct_evidence']
+                match_fields = [
+                    'reason', 'weight', 'applicability_fit', 'match_basis',
+                    'direct_evidence', 'performance_evidence_tier'
+                ]
                 for field in match_fields:
                     if field not in m:
                         errors.append(f"candidate[{i}].match 缺少 {field}")
 
                 # 检查 match_basis 是否有效
                 valid_basis = ['direct_pollutant_evidence', 'pollutant_class_evidence',
+                              'source_backed_performance_lead',
                               'molecular_feature_inference', 'mechanism_feature_bridge',
                               'llm_suggested_low_confidence']
                 if m.get('match_basis') not in valid_basis:
@@ -180,12 +184,20 @@ def validate_direct_evidence_rules(brief, pollutant, test_name):
         match_basis = match.get('match_basis', '')
         direct_evidence = match.get('direct_evidence', False)
 
-        # 规则：PFOA/SMX/BPA 不允许伪装成 direct evidence
-        if pollutant in ['PFOA', 'SMX', 'BPA']:
-            if direct_evidence == True:
-                errors.append(f"candidate[{i}] ({c.get('prototype_id')}): {pollutant} 不允许 direct_evidence=true")
-            if match_basis == 'direct_pollutant_evidence':
-                errors.append(f"candidate[{i}] ({c.get('prototype_id')}): {pollutant} 不允许 match_basis=direct_pollutant_evidence")
+        performance_tier = match.get('performance_evidence_tier', 'none')
+        lane = c.get('lane', 'exploratory')
+
+        if direct_evidence and performance_tier != 'fact':
+            errors.append(f"candidate[{i}] ({c.get('prototype_id')}): direct evidence 必须有 performance_evidence_tier=fact")
+        if direct_evidence and match_basis != 'direct_pollutant_evidence':
+            errors.append(f"candidate[{i}] ({c.get('prototype_id')}): direct evidence 的 match_basis 不一致")
+        if performance_tier == 'lead':
+            if direct_evidence or lane != 'lead' or match_basis != 'source_backed_performance_lead':
+                errors.append(f"candidate[{i}] ({c.get('prototype_id')}): partial 性能必须是非 direct 的 lead")
+        if match_basis == 'source_backed_performance_lead' and performance_tier != 'lead':
+            errors.append(f"candidate[{i}] ({c.get('prototype_id')}): performance lead 缺少 lead 证据级")
+        if lane == 'fact' and not direct_evidence:
+            errors.append(f"candidate[{i}] ({c.get('prototype_id')}): fact lane 必须有 direct evidence")
 
         # 规则：direct evidence 必须带 verification_tier
         if direct_evidence == True:

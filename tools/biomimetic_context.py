@@ -127,107 +127,104 @@ class BiomimeticContext:
 
         return pollutant
 
-    def find_direct_evidence(self, pollutant: str) -> List[Dict[str, Any]]:
-        """查找有直接实验数据的原型"""
-        candidates = []
-
-        ppm = self.feature_mapping.get('pollutant_prototype_map', {})
-
-        # 从 JSON 文件获取别名
-        canonical = self._get_canonical_name(pollutant)
+    def _pollutant_aliases(self, pollutant: str) -> set:
+        """Return normalized names accepted for pollutant-specific evidence."""
         aliases_data = self.pollutant_aliases.get('aliases', {})
+        if pollutant in aliases_data:
+            info = aliases_data[pollutant]
+            return {pollutant, *[str(name) for name in info.get('aliases', [])]}
 
-        # 获取所有可能的别名
-        aliases = [pollutant, canonical]
+        canonical = self._get_canonical_name(pollutant)
+        aliases = {pollutant, canonical}
         for canon, info in aliases_data.items():
-            alias_list = info.get('aliases', [])
-            if pollutant in alias_list or pollutant.lower() in [a.lower() for a in alias_list]:
-                aliases.extend(alias_list)
-                break
+            names = [canon] + list(info.get('aliases', []))
+            if pollutant.lower() in {str(name).lower() for name in names}:
+                aliases.update(str(name) for name in names)
+        return {str(alias).strip() for alias in aliases if str(alias).strip()}
 
-        def matches_pollutant(text):
-            """检查文本是否包含目标污染物"""
-            if not text:
-                return False
-            text_lower = text.lower()
-            return any(alias.lower() in text_lower for alias in aliases)
-
-        def has_verified_performance(prototype_id):
-            """Require pollutant-specific, reproducible performance evidence."""
-            prototype = self.prototypes.get(prototype_id, {})
-            for row in prototype.get('performance_data', []):
-                quote = row.get('verification_quote') or ''
-                source = row.get('ref_doi') or row.get('patent_number') or row.get('standard_number')
-                metric_text = ' '.join(str(row.get(key, '')) for key in ('metric_type', 'parameter', 'unit', 'conditions')).lower()
-                is_removal_metric = any(term in metric_text for term in (
-                    'adsorption', '吸附', 'qmax', 'uptake', 'removal', '去除',
-                    'rejection', '分配系数', 'distribution coefficient'
-                ))
-                is_non_removal_metric = any(term in metric_text for term in (
-                    '非吸附剂性能', '解离常数', 'dissociation', 'sensor', '传感', 'lod', 'ic50'
-                ))
-                if (
-                    matches_pollutant(row.get('pollutant', ''))
-                    and row.get('verification') in ('verified', 'corroborated')
-                    and source
-                    and row.get('locator')
-                    and quote
-                    and '[PDF缺失]' not in quote
-                    and is_removal_metric
-                    and not is_non_removal_metric
-                ):
+    @staticmethod
+    def _matches_pollutant_text(text: str, aliases: set) -> bool:
+        """Match short chemical abbreviations as case-sensitive tokens."""
+        text = str(text or '')
+        for alias in aliases:
+            if len(alias) <= 2 and alias.isascii():
+                if re.search(rf'(?<![A-Za-z0-9]){re.escape(alias)}(?![A-Za-z0-9])', text):
                     return True
-            return False
+            elif alias.lower() in text.lower():
+                return True
+        return False
 
-        def search_prototypes(obj, path=""):
-            if isinstance(obj, dict):
-                for k, v in obj.items():
-                    if k == 'prototypes' and isinstance(v, list):
-                        for p in v:
-                            if isinstance(p, dict) and 'id' in p:
-                                # 检查是否匹配污染物
-                                if (matches_pollutant(str(p.get('mechanism_summary', '')))
-                                        and has_verified_performance(p['id'])):
-                                    candidates.append({
-                                        'prototype_id': p['id'],
-                                        'weight': p.get('weight', 0.5),
-                                        'reason': p.get('mechanism_summary', ''),
-                                        'design_hint': p.get('design_hint', ''),
-                                        'match_basis': 'direct_pollutant_evidence',
-                                        'direct_evidence': True
-                                    })
-                    elif isinstance(v, (dict, list)):
-                        search_prototypes(v, f"{path}.{k}")
-                # 检查 key 是否匹配
-                if isinstance(k, str) and matches_pollutant(k):
-                    if isinstance(v, dict) and 'prototypes' in v:
-                        for p in v['prototypes']:
-                            if (isinstance(p, dict) and 'id' in p
-                                    and has_verified_performance(p['id'])):
-                                candidates.append({
-                                    'prototype_id': p['id'],
-                                    'weight': p.get('weight', 0.5),
-                                    'reason': p.get('mechanism_summary', ''),
-                                    'design_hint': p.get('design_hint', ''),
-                                    'match_basis': 'direct_pollutant_evidence',
-                                    'direct_evidence': True
-                                })
-            elif isinstance(obj, list):
-                for v in obj:
-                    search_prototypes(v, path)
+    def _performance_evidence(self, prototype_id: str, pollutant: str):
+        """Return the strongest pollutant-specific removal evidence tier and row."""
+        aliases = self._pollutant_aliases(pollutant)
+        lead_row = None
+        for row in self.prototypes.get(prototype_id, {}).get('performance_data', []):
+            row_pollutant = str(row.get('pollutant', ''))
+            if not row_pollutant or not self._matches_pollutant_text(row_pollutant, aliases):
+                continue
 
-        search_prototypes(ppm)
+            quote = str(row.get('verification_quote') or row.get('quote') or '').strip()
+            evidence_text = ' '.join(str(row.get(key, '')) for key in (
+                'parameter', 'metric_type', 'material', 'adsorbent', 'conditions',
+                'verification_quote', 'quote'
+            ))
+            if not self._matches_pollutant_text(evidence_text, aliases):
+                continue
+            source = (
+                row.get('ref_doi') or row.get('source_doi') or row.get('patent_number')
+                or row.get('standard_number') or row.get('source')
+            )
+            locator = row.get('locator') or row.get('source_locator') or row.get('source_page')
+            metric_text = ' '.join(
+                [str(key) for key in row]
+                + [str(row.get(key, '')) for key in ('metric_type', 'parameter', 'unit', 'conditions', 'verification_quote')]
+            ).lower()
+            is_removal_metric = any(term in metric_text for term in (
+                'adsorption', '吸附', 'qmax', 'uptake', 'removal', '去除',
+                'rejection', '分配系数', 'distribution coefficient'
+            ))
+            is_non_removal_metric = any(term in metric_text for term in (
+                '非吸附剂性能', '解离常数', 'dissociation', 'sensor', '传感', 'lod', 'ic50'
+            ))
+            placeholder_quote = any(term in quote.lower() for term in ('pdf缺失', 'pdf missing'))
+            if not (source and locator and quote and not placeholder_quote and is_removal_metric and not is_non_removal_metric):
+                continue
 
-        # 去重
-        seen = set()
-        unique_candidates = []
-        for c in candidates:
-            if c['prototype_id'] not in seen:
-                seen.add(c['prototype_id'])
-                unique_candidates.append(c)
+            verification = row.get('verification')
+            if verification in ('verified', 'corroborated'):
+                return 'fact', row
+            if verification == 'partial' and lead_row is None:
+                lead_row = row
+        return ('lead', lead_row) if lead_row else ('none', None)
 
-        unique_candidates.sort(key=lambda c: c.get('weight', 0.0), reverse=True)
-        return unique_candidates
+    def _find_performance_candidates(self, pollutant: str, tier: str) -> List[Dict[str, Any]]:
+        mapped = {item['prototype_id']: item for item in self.find_pollutant_inspiration(pollutant)}
+        candidates = []
+        for prototype_id in self.prototypes:
+            evidence_tier, row = self._performance_evidence(prototype_id, pollutant)
+            if evidence_tier != tier:
+                continue
+            mapping = mapped.get(prototype_id, {})
+            candidates.append({
+                'prototype_id': prototype_id,
+                'weight': max(mapping.get('weight', 0.0), 0.85 if tier == 'fact' else 0.70),
+                'reason': f"污染物特异材料去除性能（{row.get('perf_id', 'performance_data')}；证据级={tier}）",
+                'design_hint': mapping.get('design_hint', ''),
+                'match_basis': 'direct_pollutant_evidence' if tier == 'fact' else 'source_backed_performance_lead',
+                'mapping_source': 'performance_data',
+                'mapping_quality': 'strict_direct_evidence' if tier == 'fact' else 'source_backed_partial',
+                'performance_evidence_tier': tier,
+                'direct_evidence': tier == 'fact',
+            })
+        return sorted(candidates, key=lambda c: c['weight'], reverse=True)
+
+    def find_direct_evidence(self, pollutant: str) -> List[Dict[str, Any]]:
+        """Return only strict, reproducible pollutant-specific removal evidence."""
+        return self._find_performance_candidates(pollutant, 'fact')
+
+    def find_performance_leads(self, pollutant: str) -> List[Dict[str, Any]]:
+        """Return source-located removal measurements whose verification is partial."""
+        return self._find_performance_candidates(pollutant, 'lead')
 
     def find_pollutant_inspiration(self, pollutant: str) -> List[Dict[str, Any]]:
         """Return explicit pollutant mappings as inspiration, never as direct evidence."""
@@ -539,6 +536,9 @@ class BiomimeticContext:
         # 2. 查找 direct evidence
         direct_candidates = self.find_direct_evidence(pollutant)
 
+        # 2a. 来源、定位和引文完整，但 verification=partial 的实测性能线索
+        performance_lead_candidates = self.find_performance_leads(pollutant)
+
         # 2b. 污染物专项映射只作启发，不能升级为 direct evidence
         pollutant_candidates = self.find_pollutant_inspiration(pollutant)
 
@@ -549,6 +549,7 @@ class BiomimeticContext:
         use_case_candidates = [c for c in feature_candidates if c.get('match_basis') == 'use_case_mapping']
         if use_case_candidates:
             direct_candidates = []
+            performance_lead_candidates = []
             pollutant_candidates = []
             mechanism_candidates = []
             feature_candidates = use_case_candidates
@@ -556,11 +557,16 @@ class BiomimeticContext:
             # 3b. Track2A 机制层候选（绑定到具体 mechanism_id）
             mechanism_candidates = self.find_mechanism_based(pollutant_profile, pollutant)
 
-        # 4. 合并候选（direct evidence → 污染物专项启发 → curated feature → 机制发现）
+        # 4. 合并候选（fact → source-backed lead → 污染物专项启发 → feature → 机制发现）
         all_candidates = []
         seen_ids = set()
 
         for c in direct_candidates:
+            if c['prototype_id'] not in seen_ids:
+                seen_ids.add(c['prototype_id'])
+                all_candidates.append(c)
+
+        for c in performance_lead_candidates:
             if c['prototype_id'] not in seen_ids:
                 seen_ids.add(c['prototype_id'])
                 all_candidates.append(c)
@@ -782,6 +788,7 @@ class BiomimeticContext:
 
                 # Determine per-candidate honesty classification
                 has_direct = c.get('direct_evidence', False)
+                performance_evidence_tier = c.get('performance_evidence_tier', 'none')
                 mech_verif = main_mech.get('verification', 'needs_review') or 'needs_review'
                 dt_tier = evidence_tier if dt_entries else 'inference'
 
@@ -795,13 +802,13 @@ class BiomimeticContext:
 
                 if has_direct and mech_verif in ('verified', 'corroborated'):
                     candidate_honesty = 'fact'
-                elif has_direct or dt_tier.startswith('fact'):
+                elif performance_evidence_tier in ('fact', 'lead') or has_direct or dt_tier.startswith('fact'):
                     candidate_honesty = 'lead'
                 else:
                     candidate_honesty = 'inference'
 
-                # Override: organic pollutant without direct evidence → always inference
-                if is_organic_pollutant and not has_direct:
+                # Organic mappings remain exploratory unless material-removal performance supports them.
+                if is_organic_pollutant and performance_evidence_tier == 'none' and not has_direct:
                     candidate_honesty = 'inference'
 
                 # Determine lane
@@ -845,13 +852,19 @@ class BiomimeticContext:
                         'is_placeholder': False,  # placeholders already filtered
                         'scope_note': proto.get('scope_note', ''),
                     },
-                    'domain_caveat': 'organic micropollutant evidence weak' if (is_organic_pollutant and not has_direct) else '',
+                    'domain_caveat': (
+                        'source-backed performance lead; independent verification pending'
+                        if is_organic_pollutant and performance_evidence_tier == 'lead'
+                        else 'organic micropollutant evidence weak'
+                        if is_organic_pollutant and not has_direct else ''
+                    ),
                     'match': {
                         'reason': c.get('reason', ''),
                         'weight': c.get('weight', 0.5),
                         'applicability_fit': self._get_applicability(proto),
                         'match_basis': c.get('match_basis', 'unknown'),
                         'direct_evidence': c.get('direct_evidence', False),
+                        'performance_evidence_tier': performance_evidence_tier,
                         'matched_mechanism_ids': c.get('matched_mechanism_ids', []),
                         'mapping_source': c.get('mapping_source', ''),
                         'mapping_quality': c.get('mapping_quality', '')
@@ -914,11 +927,16 @@ class BiomimeticContext:
         inferences = []
 
         if direct_candidates:
-            facts.append(f"有 {len(direct_candidates)} 个原型对 {pollutant} 有直接实验数据")
+            facts.append(f"有 {len(direct_candidates)} 个原型对 {pollutant} 有严格核验的材料去除性能")
+        if performance_lead_candidates:
+            leads.append(f"有 {len(performance_lead_candidates)} 个原型对 {pollutant} 有来源定位完整但仅部分核验的性能线索")
 
         for c in all_candidates[:5]:
             pid = c['prototype_id']
-            if c.get('direct_evidence'):
+            evidence_tier = c.get('performance_evidence_tier', 'none')
+            if evidence_tier == 'lead':
+                leads.append(f"{pid}: 污染物特异去除数据有来源、定位和引文，verification=partial")
+            elif c.get('direct_evidence'):
                 # 检查该候选展示的主机制 verification
                 if pid in self.prototypes:
                     proto_check = self.prototypes[pid]
@@ -1000,10 +1018,11 @@ class BiomimeticContext:
         if honesty == 'fact':
             return "有直接实验数据且机制经验证"
         elif honesty == 'lead':
+            if match_info.get('performance_evidence_tier') == 'lead':
+                return "有来源、定位和原文引文的材料去除性能，尚待独立核验"
             if match_info.get('direct_evidence'):
                 return "有直接实验数据但机制未经独立核实"
-            else:
-                return "有性能数据但缺乏 verification_quote"
+            return "有性能或转译线索，尚待独立核验"
         else:
             return "基于分子特征推断，非直接证据"
 
@@ -1023,18 +1042,25 @@ class BiomimeticContext:
     def _get_performance_leads(self, proto: Dict, pollutant: str) -> List[Dict]:
         """获取性能线索"""
         leads = []
+        aliases = self._pollutant_aliases(pollutant)
 
         for p in proto.get('performance_data', []):
             pol = p.get('pollutant', '')
             if not pol or not pol.strip():
                 continue  # 空 pollutant 不参与匹配
-            if pollutant.lower() in pol.lower() or pol.lower() in pollutant.lower():
+            if self._matches_pollutant_text(pol, aliases):
                 leads.append({
                     'pollutant': pol,
                     'material': p.get('material', ''),
                     'value': p.get('value', ''),
                     'unit': p.get('unit', ''),
-                    'verification_tier': p.get('verification', 'unverified')
+                    'verification_tier': p.get('verification', 'unverified'),
+                    'source': (
+                        p.get('ref_doi') or p.get('source_doi') or p.get('patent_number')
+                        or p.get('standard_number') or p.get('source', '')
+                    ),
+                    'locator': p.get('locator') or p.get('source_locator') or p.get('source_page', ''),
+                    'verification_quote': p.get('verification_quote') or p.get('quote', ''),
                 })
 
         return leads[:5]  # 返回 top 5

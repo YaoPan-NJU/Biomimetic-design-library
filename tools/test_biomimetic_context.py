@@ -99,6 +99,45 @@ def test_direct_evidence_requires_verified_pollutant_performance():
 
     print("✅ test_direct_evidence_requires_verified_pollutant_performance passed")
 
+def test_partial_source_backed_performance_is_a_lead():
+    """Partial, source-located removal data must survive without becoming a fact."""
+    ctx = BiomimeticContext()
+
+    lead_ids = {item['prototype_id'] for item in ctx.find_performance_leads('PFOA')}
+    assert 'plant-lignocellulosic-architecture' in lead_ids
+
+    candidates = ctx.query('PFOA', {}, [])['brief']['candidates']
+    plant = next(item for item in candidates if item['prototype_id'] == 'plant-lignocellulosic-architecture')
+    assert plant['lane'] == 'lead'
+    assert plant['candidate_honesty'] == 'lead'
+    assert plant['match']['direct_evidence'] is False
+    assert plant['match']['performance_evidence_tier'] == 'lead'
+    assert plant['evidence_context']['performance_leads'][0]['source']
+    assert plant['evidence_context']['performance_leads'][0]['locator']
+
+    print("✅ test_partial_source_backed_performance_is_a_lead passed")
+
+def test_short_pollutant_aliases_do_not_cross_match():
+    """CR must not match Cr(VI), and U must not match Cu."""
+    ctx = BiomimeticContext()
+
+    cr_ids = {
+        item['prototype_id']
+        for item in ctx.find_direct_evidence('CR') + ctx.find_performance_leads('CR')
+    }
+    assert 'chitosan' not in cr_ids
+    assert 'plant-tannin' in cr_ids
+
+    uranium_ids = {
+        item['prototype_id']
+        for item in ctx.find_direct_evidence('U(VI)') + ctx.find_performance_leads('U(VI)')
+    }
+    assert 'wood-xylem' not in uranium_ids
+    chitosan = ctx.prototypes['chitosan']
+    assert all('Cr(VI)' not in item['pollutant'] for item in ctx._get_performance_leads(chitosan, 'CR'))
+
+    print("✅ test_short_pollutant_aliases_do_not_cross_match passed")
+
 def test_pollutant_mapping_stays_inspiration():
     """Explicit source-project mappings remain discoverable without evidence inflation."""
     ctx = BiomimeticContext()
@@ -167,6 +206,8 @@ def main():
         test_relevance_gating()
         test_gate_mechanisms()
         test_direct_evidence_requires_verified_pollutant_performance()
+        test_partial_source_backed_performance_is_a_lead()
+        test_short_pollutant_aliases_do_not_cross_match()
         test_pollutant_mapping_stays_inspiration()
         test_pollutant_mapping_requires_source_grounding_and_keeps_lane_diversity()
         test_use_case_can_select_background_mechanisms()
