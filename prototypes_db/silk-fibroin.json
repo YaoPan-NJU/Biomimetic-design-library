@@ -1,0 +1,2198 @@
+{
+  "id": "silk-fibroin",
+  "name_zh": "丝素蛋白",
+  "name_en": "Silk Fibroin",
+  "organism": {
+    "scientific": "Bombyx mori",
+    "category": "动物"
+  },
+  "biomimetic_dimension": "结构仿生",
+  "features": [
+    "纤维状",
+    "层状"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": [
+      3.0,
+      7.0
+    ],
+    "tested_temp_range": null,
+    "salinity": "low",
+    "note": "测过的 pH/温度范围，不是适用范围。仅从 performance_data 中实际测试过的条件聚合。"
+  },
+  "performance_data": [
+    {
+      "parameter": "Cu²⁺最大吸附容量 qmax",
+      "value": "186.7",
+      "unit": "mg/g",
+      "pollutant": "Cu²⁺",
+      "material": "SF-PEI-2 millimetric aerogel beads",
+      "ph": "4.2",
+      "temperature": "293 K",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1002/admi.202001892",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第5组-纤维结构/2021-Bruder-silk-fibroin-hierarchical-shell.pdf",
+      "page": 1,
+      "locator": "abstract",
+      "verification": "partial",
+      "confidence": 0.8,
+      "source_locator": "Bruder2021 p.1 / Abstract",
+      "verification_quote": "The aerogel beads exhibit superior adsorption capacities for Cu2+ (186.7 mg g−1, in 240 min) with a regeneration potential."
+    },
+    {
+      "parameter": "SF-PEI-2@GO Cu²⁺最大吸附容量",
+      "value": "171.6",
+      "unit": "mg/g",
+      "pollutant": "Cu²⁺",
+      "material": "SF-PEI-2@GO core-shell aerogel beads",
+      "ph": "4.2",
+      "temperature": "293 K",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1002/admi.202001892",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第5组-纤维结构/2021-Bruder-silk-fibroin-hierarchical-shell.pdf",
+      "page": 7,
+      "locator": "Section 2.4.1",
+      "verification": "partial",
+      "confidence": 0.8,
+      "source_locator": "Bruder2021 p.7 / Section 2.4.1",
+      "verification_quote": "The maximum adsorption capacity was determined. SF-PEI-2@GO beads: 171.6 mg g−1 for Cu2+."
+    },
+    {
+      "parameter": "甲基橙(MO)最大吸附容量",
+      "value": "811.3",
+      "unit": "mg/g",
+      "pollutant": "methyl orange (MO)",
+      "material": "SF-PEI-2 millimetric aerogel beads",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1002/admi.202001892",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第5组-纤维结构/2021-Bruder-silk-fibroin-hierarchical-shell.pdf",
+      "page": 9,
+      "locator": "Section 2.4.2",
+      "verification": "partial",
+      "confidence": 0.8,
+      "source_locator": "Bruder2021 p.9 / Section 2.4.2",
+      "verification_quote": "The Langmuir model gives the highest adsorption capacities for SF-PEI-2 (811.3 mg g−1) and SF-PEI-2@GO (791.9 mg g−1)."
+    },
+    {
+      "parameter": "氯仿吸附容量",
+      "value": "1138",
+      "unit": "g/g%",
+      "pollutant": "chloroform",
+      "material": "SF-PEI-2@GO aerogel beads",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1002/admi.202001892",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第5组-纤维结构/2021-Bruder-silk-fibroin-hierarchical-shell.pdf",
+      "page": 1,
+      "locator": "abstract",
+      "verification": "partial",
+      "confidence": 0.8,
+      "source_locator": "Bruder2021 p.1 / Abstract",
+      "verification_quote": "1138 g g−1% for chloroform"
+    },
+    {
+      "parameter": "最大吸附容量 qmax",
+      "value": "SF: 235.84 mg/g; SF/GO: 381.67 mg/g",
+      "unit": "mg/g",
+      "pollutant": "methylene blue (MB)",
+      "material": "",
+      "ph": "6-10",
+      "temperature": "room temperature",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1039/d1va00047k",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第5组-纤维结构/2022-Martis-silk-adsorption-adsorbent-dye.pdf",
+      "page": 1,
+      "locator": "Abstract",
+      "verification": "partial",
+      "confidence": 0.8,
+      "source_locator": "Martis2022 p.1 / Abstract",
+      "verification_quote": "The maximum sorption capacity for MB was estimated to be 235.84 mg g−1 for SF and 381.67 mg g−1 for the SF/GO blend films."
+    },
+    {
+      "parameter": "去除率 removal efficiency",
+      "value": "SF: 86.24% (24h); SF/GO: 96.29% (24h)",
+      "unit": "%",
+      "pollutant": "MB",
+      "material": "",
+      "ph": "room temperature",
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1039/d1va00047k",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第5组-纤维结构/2022-Martis-silk-adsorption-adsorbent-dye.pdf",
+      "page": 5,
+      "locator": "Section 4.4.2 Effect of contact time",
+      "verification": "partial",
+      "confidence": 0.8,
+      "source_locator": "Martis2022 p.5 / Section 4.4.2",
+      "verification_quote": "After 24 h, the decolouration percentage of MB reached 86.24% for pure SF and 96.29% for the SF/GO film."
+    },
+    {
+      "parameter": "最大吸附容量 qmax",
+      "value": "Cu2+: 331.69 mg/g; Cr6+: 201.56 mg/g",
+      "unit": "mg/g",
+      "pollutant": "Cu(II); Cr(VI)",
+      "material": "BS/SF/PUF biocomposite",
+      "ph": null,
+      "temperature": "30°C",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.eti.2022.102741",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第5组-纤维结构/2022-Supriya-silk-fibroin-biosilica-adsorption.pdf",
+      "page": 1,
+      "locator": "Abstract",
+      "verification": "partial",
+      "confidence": 0.8,
+      "source_locator": "Prasad2022 p.1 / Abstract",
+      "verification_quote": "Maximum adsorption capacities of 331.69 mg/g and 201.56 mg/g were estimated for the Cu2+ and Cr6+ ions, respectively."
+    },
+    {
+      "parameter": "去除率 removal efficiency",
+      "value": "Cu2+ 89.8% (pH 5); Cr6+ 80.8% (pH 3)",
+      "unit": "%",
+      "pollutant": "Cu(II); Cr(VI)",
+      "material": "BS/SF/PUF biocomposite",
+      "ph": null,
+      "temperature": "30°C",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.eti.2022.102741",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第5组-纤维结构/2022-Supriya-silk-fibroin-biosilica-adsorption.pdf",
+      "page": 5,
+      "locator": "Section 3.2.1 Effect of pH",
+      "verification": "partial",
+      "confidence": 0.8,
+      "source_locator": "Prasad2022 p.5 / Section 3.2.1",
+      "verification_quote": "Maximum metal ions removal efficiencies of 80.8% and 89.8% for Cr6+ and Cu2+ ions were observed at a pH value of 3 and 5, respectively."
+    },
+    {
+      "parameter": "最大吸附容量 qmax (SF/GO, Freundlich)",
+      "value": "381.67",
+      "unit": "mg/g",
+      "pollutant": "MB",
+      "material": "SF/GO blend film",
+      "ph": null,
+      "temperature": "室温（lab conditions）",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1039/d1va00047k",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2022-Martis-silk-fibroin-graphene-dye-methylene-blue-adsorption.pdf",
+      "page": 1,
+      "locator": "Abstract",
+      "verification": "partial",
+      "confidence": 0.8,
+      "source_locator": "Martis2022 p.1 / Abstract",
+      "verification_quote": "The maximum sorption capacity for MB was estimated to be 235.84 mg g−1 for SF and 381.67 mg g−1 for the SF/GO blend films."
+    },
+    {
+      "parameter": "最大吸附容量 qmax (SF, Freundlich)",
+      "value": "235.84",
+      "unit": "mg/g",
+      "pollutant": "MB",
+      "material": "pure SF film",
+      "ph": null,
+      "temperature": "室温",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1039/d1va00047k",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2022-Martis-silk-fibroin-graphene-dye-methylene-blue-adsorption.pdf",
+      "page": 1,
+      "locator": "Abstract",
+      "verification": "partial",
+      "confidence": 0.8,
+      "source_locator": "Martis2022 p.1 / Abstract",
+      "verification_quote": "The maximum sorption capacity for MB was estimated to be 235.84 mg g−1 for SF and 381.67 mg g−1 for the SF/GO blend films."
+    },
+    {
+      "parameter": "去除率 removal efficiency",
+      "value": "SF: 86.24%; SF/GO: 96.29%",
+      "unit": "%",
+      "pollutant": "MB",
+      "material": "SF and SF/GO films",
+      "ph": null,
+      "temperature": null,
+      "conditions": "ambient, room temperature",
+      "source": "literature",
+      "ref_doi": "10.1039/d1va00047k",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2022-Martis-silk-fibroin-graphene-dye-methylene-blue-adsorption.pdf",
+      "page": 5,
+      "locator": "Section 4.4.2",
+      "verification": "partial",
+      "confidence": 0.8,
+      "source_locator": "Martis2022 p.5 / Section 4.4.2",
+      "verification_quote": "After 24 h, the decolouration percentage of MB reached 86.24% for pure SF and 96.29% for the SF/GO film."
+    },
+    {
+      "parameter": "浓度对吸附容量的影响",
+      "value": "SF: 10→33.81, 100→278.75 mg/g; SF/GO: 10→44.75, 100→295.52 mg/g",
+      "unit": "mg/g",
+      "pollutant": "MB",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1039/d1va00047k",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2022-Martis-silk-fibroin-graphene-dye-methylene-blue-adsorption.pdf",
+      "page": 6,
+      "locator": "Section 4.4.4",
+      "verification": "partial",
+      "confidence": 0.8,
+      "source_locator": "Martis2022 p.6 / Section 4.4.4",
+      "verification_quote": "The maximum MB uptake for the SF film increased from 33.81 to 278.75 mg g−1, while it increased from 44.75 to 295.52 mg g−1 for the SF/GO film."
+    },
+    {
+      "parameter": "最大吸附容量 Qmax",
+      "value": "163.84",
+      "unit": "mg/g",
+      "pollutant": "Methylene blue (MB)",
+      "material": "FK/SF(CTAB+EtOH) aerogel",
+      "ph": 7,
+      "temperature": "45°C",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jtice.2023.105298",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2025-Xing-silk-fibroin-keratin-aerogel-dye-methylene-blue.pdf",
+      "page": 1,
+      "locator": "Abstract",
+      "verification": "partial",
+      "confidence": 0.8,
+      "source_locator": "Xing2025 p.1 / Abstract",
+      "verification_quote": "The results revealed that under the conditions of pH 7 and 45°C, FK/SF aerogels treated with ethanol showed strong adsorption capacity with a maximum adsorption capacity of 163.84 mg/g at an initial concentration of 400 mg/L of MB dye."
+    },
+    {
+      "parameter": "pH 7时吸附容量(100 mg/L MB)",
+      "value": "42",
+      "unit": "mg/g",
+      "pollutant": "MB",
+      "material": "",
+      "ph": 7,
+      "temperature": "25°C",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jtice.2023.105298",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2025-Xing-silk-fibroin-keratin-aerogel-dye-methylene-blue.pdf",
+      "page": 6,
+      "locator": "Section 5.6",
+      "verification": "partial",
+      "confidence": 0.8,
+      "source_locator": "Xing2025 p.6 / Section 5.6",
+      "verification_quote": "The maximum adsorption capacity of 42 mg/g was observed at pH 7."
+    },
+    {
+      "parameter": "MB去除率随CTAB浓度变化",
+      "value": "decreases as CTAB concentration increases",
+      "unit": null,
+      "pollutant": "",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jtice.2023.105298",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2025-Xing-silk-fibroin-keratin-aerogel-dye-methylene-blue.pdf",
+      "page": 5,
+      "locator": "Section 5.5",
+      "verification": "partial",
+      "confidence": 0.8,
+      "source_locator": "Xing2025 p.5 / Section 5.5",
+      "verification_quote": "The removal efficiency of MB fell with an increasing CTAB concentration."
+    },
+    {
+      "parameter": "MB去除率随SF浓度变化",
+      "value": "先下降后上升(SF=9%时回升)",
+      "unit": null,
+      "pollutant": "MB",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jtice.2023.105298",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2025-Xing-silk-fibroin-keratin-aerogel-dye-methylene-blue.pdf",
+      "page": 5,
+      "locator": "Section 5.5",
+      "verification": "partial",
+      "confidence": 0.8,
+      "source_locator": "Xing2025 p.5 / Section 5.5",
+      "verification_quote": "The removal efficiency of MB fell with an increasing SF concentration, and then rose back up when the SF concentration reached 9%."
+    },
+    {
+      "parameter": "pH 2-10吸附容量变化趋势",
+      "value": "pH 2-7增加，pH 7-10趋于平稳",
+      "unit": null,
+      "pollutant": "MB",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jtice.2023.105298",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2025-Xing-silk-fibroin-keratin-aerogel-dye-methylene-blue.pdf",
+      "page": 6,
+      "locator": "Section 5.6",
+      "verification": "partial",
+      "confidence": 0.8,
+      "source_locator": "Xing2025 p.6 / Section 5.6",
+      "verification_quote": "The adsorption ability increased from pH 2–7, and flattened from pH 7-10."
+    },
+    {
+      "parameter": "初始浓度400 mg/L时吸附容量",
+      "value": "118",
+      "unit": "mg/g",
+      "pollutant": "MB",
+      "material": "",
+      "ph": 7,
+      "temperature": "25°C",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jtice.2023.105298",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2025-Xing-silk-fibroin-keratin-aerogel-dye-methylene-blue.pdf",
+      "page": 6,
+      "locator": "Section 5.7",
+      "verification": "partial",
+      "confidence": 0.8,
+      "source_locator": "Xing2025 p.6 / Section 5.7",
+      "verification_quote": "As the initial concentration rose to 400 mg/L, the maximum adsorption capacity reached 118 mg/g."
+    }
+  ],
+  "mechanisms": [
+    {
+      "name": "丝素蛋白氨基酸残基氨基/羧基配位与氢键吸附",
+      "description": "主导：PEI质子化氨基(-NH₃⁺)与阴离子染料MO静电吸引；辅助(GO部分)：MO芳香环与GO的π-π堆叠",
+      "functional_groups": [
+        "-NH-（亚氨基）",
+        "-NH₃⁺（质子化氨基）",
+        "静电作用位点",
+        "芳香环",
+        "PEI胺基",
+        "GO羧基/羟基/环氧基",
+        "-NH₂（氨基）",
+        "-O-（醚键）"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1002/admi.202001892",
+      "verification": "partial",
+      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "causal_chain": {
+        "transferable_principle": "基于机制: MO吸附机制",
+        "pollutant_feature": {
+          "text": "主导：PEI质子化氨基(-NH₃⁺)与阴离子染料MO静电吸引；辅助(GO部分)：MO芳香环与GO的π-π堆叠",
+          "basis": "from_source",
+          "scope_match": "Keywords: pei, electrostatic, interactions, between",
+          "evidence_label": "from_source",
+          "source": "10.1002/admi.202001892",
+          "locator": "p.9",
+          "quote": "electrostatic interactions between the anionic dye MO and the protonated amino groups of PEI. In case of core@shell beads, π−π interactions between the aromatic moieties of MO and the GO"
+        },
+        "bio_structure": {
+          "text": "MO吸附机制表面活性位点",
+          "basis": "from_source",
+          "scope_match": "Keywords: electrostatic, interactions",
+          "evidence_label": "from_source",
+          "source": "10.1002/admi.202001892",
+          "locator": "p.9",
+          "quote": "electrostatic interactions between the anionic dye MO and the protonated amino groups of PEI. In case of core@shell beads, π−π interactions between the aromatic moieties of MO and the GO"
+        },
+        "interaction": {
+          "text": "主导：PEI质子化氨基(-NH₃⁺)与阴离子染料MO静电吸引；辅助(GO部分)：MO芳香环与GO的π-π堆叠",
+          "basis": "from_source",
+          "scope_match": "Keywords: pei, electrostatic, interactions, between",
+          "evidence_label": "from_source",
+          "source": "10.1002/admi.202001892",
+          "locator": "p.9",
+          "quote": "electrostatic interactions between the anionic dye MO and the protonated amino groups of PEI. In case of core@shell beads, π−π interactions between the aromatic moieties of MO and the GO"
+        },
+        "why_it_works": {
+          "text": "静电相互作用驱动吸附",
+          "basis": "from_source",
+          "scope_match": "Keywords: electrostatic, interactions",
+          "evidence_label": "from_source",
+          "source": "10.1002/admi.202001892",
+          "locator": "p.9",
+          "quote": "electrostatic interactions between the anionic dye MO and the protonated amino groups of PEI. In case of core@shell beads, π−π interactions between the aromatic moieties of MO and the GO"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": "Section 2.4.2 / right column",
+            "quote": "Therefore, the adsorption mechanism is proposed to be dominated by electrostatic interactions between the anionic dye MO and the protonated amino groups of PEI. In case of core@shell beads this interaction is complemented by presence of additional π–π interactions between the aromatic moieties of MO and the GO even though GO contribution to MO adsorption is trivial due to the GO very low quantities (cf. Figure S4, Supporting Information).",
+            "source_asset": null,
+            "source": "10.1002/admi.202001892",
+            "scope_match": "Keywords: dye, methyl orange, polyethyleneimine",
+            "verification_method": "pdf_visual_reading"
+          }
+        ],
+        "verification_quote": "electrostatic interactions between the anionic dye MO and the protonated amino groups of PEI. In case of core@shell beads, π−π interactions between the aromatic moieties of MO and the GO",
+        "source_doi": "10.1002/admi.202001892",
+        "source_locator": "p.9"
+      },
+      "verification_quote": "electrostatic interactions between the anionic dye MO and the protonated amino groups of PEI. In case of core@shell beads, π−π interactions between the aromatic moieties of MO and the GO",
+      "source_page": 9,
+      "source_doi": "10.1002/admi.202001892",
+      "evidence_type": "source_verified",
+      "evidence_note": "verified via visual_cache PDF text",
+      "scope_match": "Keywords: MO, electrostatic, amino, PEI, π-π",
+      "source_locator": "p.9",
+      "evidence_label": "from_source",
+      "key_structures": [
+        "吸附结构"
+      ]
+    },
+    {
+      "name": "Cu²⁺吸附机制",
+      "description": "PEI氨基(-NH₂)螯合Cu²⁺→化学吸附；中心发散孔道→快速扩散→活性位点可及；低密度+高孔隙→快速传质",
+      "functional_groups": [
+        "-NH-（亚氨基）",
+        "-NH₂（氨基）",
+        "配位/螯合位点",
+        "PEI胺基"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1002/admi.202001892",
+      "verification": "partial",
+      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "causal_chain": {
+        "transferable_principle": "基于机制: Cu²⁺吸附机制",
+        "pollutant_feature": {
+          "text": "PEI氨基(-NH₂)螯合Cu²⁺→化学吸附；中心发散孔道→快速扩散→活性位点可及；低密度+高孔隙→快速传质",
+          "basis": "from_source",
+          "scope_match": "Keywords: adsorption, amino",
+          "evidence_label": "from_source",
+          "source": "10.1002/admi.202001892",
+          "locator": "p.7",
+          "quote": "With a low density, aligned macropores, and a high number of amino groups on the surface, the developed beads fulfill the requirements for ideal Cu2+ adsorption toward heavy metals."
+        },
+        "bio_structure": {
+          "text": "Cu²⁺吸附机制表面活性位点",
+          "basis": "from_source",
+          "scope_match": "Keywords: cu, adsorption",
+          "evidence_label": "from_source",
+          "source": "10.1002/admi.202001892",
+          "locator": "p.7",
+          "quote": "With a low density, aligned macropores, and a high number of amino groups on the surface, the developed beads fulfill the requirements for ideal Cu2+ adsorption toward heavy metals."
+        },
+        "interaction": {
+          "text": "PEI氨基(-NH₂)螯合Cu²⁺→化学吸附；中心发散孔道→快速扩散→活性位点可及；低密度+高孔隙→快速传质",
+          "basis": "from_source",
+          "scope_match": "Keywords: adsorption, amino",
+          "evidence_label": "from_source",
+          "source": "10.1002/admi.202001892",
+          "locator": "p.7",
+          "quote": "With a low density, aligned macropores, and a high number of amino groups on the surface, the developed beads fulfill the requirements for ideal Cu2+ adsorption toward heavy metals."
+        },
+        "why_it_works": {
+          "text": "配位/螯合作用固定目标物",
+          "basis": "from_source",
+          "scope_match": "Keywords: cu, adsorption",
+          "evidence_label": "from_source",
+          "source": "10.1002/admi.202001892",
+          "locator": "p.7",
+          "quote": "With a low density, aligned macropores, and a high number of amino groups on the surface, the developed beads fulfill the requirements for ideal Cu2+ adsorption toward heavy metals."
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": "page 7",
+            "quote": "GmbH\n2001892  (7 of 13)\nwww.advmatinterfaces.de\n2.4. Water Pollutant Adsorption by Developed Aerogel Beads\n2.4.1. Cu2+-Adsorption\nWith a low density, aligned macropores, and a high number of \namino g",
+            "source_asset": null,
+            "source": "10.1002/admi.202001892",
+            "scope_match": "Keywords: adsorb, sorption, porosity",
+            "verification_method": "pdf_not_found"
+          }
+        ],
+        "source_doi": "10.1002/admi.202001892",
+        "source_locator": "p.7",
+        "verification_quote": "With a low density, aligned macropores, and a high number of amino groups on the surface, the developed beads fulfill the requirements for ideal Cu2+ adsorption toward heavy metals."
+      },
+      "evidence_type": "source_verified",
+      "evidence_note": "verified via visual_cache PDF text",
+      "verification_quote": "With a low density, aligned macropores, and a high number of amino groups on the surface, the developed beads fulfill the requirements for ideal Cu2+ adsorption toward heavy metals.",
+      "source_page": 7,
+      "source_doi": "10.1002/admi.202001892",
+      "scope_match": "Keywords: Cu2+, amino, macropore, density, chelation",
+      "source_locator": "p.7",
+      "key_structures": [
+        "吸附结构"
+      ]
+    },
+    {
+      "name": "丝素蛋白分子结构与力学性能",
+      "description": "β-sheet结晶区提供机械强度，极限强度300-740 MPa；丝素为嵌段共聚物：疏水重复区(Gly/Ala/Ser 43-46%/25-30%/12%) + 亲水非重复区",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-SH（巯基）",
+        "丝素蛋白酰胺基"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1007/s10924-022-02741-6",
+      "verification": "partial",
+      "基本原理": "蚕丝蛋白的氨基、羧基和酰胺基可通过静电吸引、氢键或配位作用结合污染物",
+      "verification_quote": "ed for their robust mechanical quali-\nties, with ultimate strength ranging from 300 to 740 MPa. \nSilk fibroins exhibit two significant forms—silk I and silk \nII, where silk I have an amorphous region and silk II have \nantiparallel β sheets, which provide mechanical strength to \nt",
+      "causal_chain": {
+        "transferable_principle": "基于机制: 丝素蛋白分子结构与力学性能",
+        "pollutant_feature": {
+          "text": "β-sheet结晶区提供机械强度，极限强度300-740 MPa；丝素为嵌段共聚物：疏水重复区(Gly/Ala/Ser 43-46%/25-30%/12%) + 亲水非重复区",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1007/s10924-022-02741-6",
+          "locator": "p.4",
+          "quote": "the β-sheet crystallite structure in fibroin having hydrogen",
+          "scope_match": "Keywords: sheet, crystallite"
+        },
+        "bio_structure": {
+          "text": "丝素蛋白分子结构与力学功能结构",
+          "basis": "from_source",
+          "source": "10.1007/s10924-022-02741-6",
+          "locator": "page 5",
+          "quote": "mong others. Below, Fig. 5, represents the structure \nof sericin.\nDue to their homogeneous fiber property, continuous \nfiber, high toughness, high crystallinity, and high tensile \nstrength, silk fiber",
+          "scope_match": "Keywords: fibroin, silk, crystal",
+          "evidence_label": "from_source"
+        },
+        "interaction": {
+          "text": "β-sheet结晶区提供机械强度，极限强度300-740 MPa；丝素为嵌段共聚物：疏水重复区(Gly/Ala/Ser 43-46%/25-30%/12%) + 亲水非重复区",
+          "basis": "from_source",
+          "source": "10.1007/s10924-022-02741-6",
+          "locator": "page 5",
+          "quote": "mong others. Below, Fig. 5, represents the structure \nof sericin.\nDue to their homogeneous fiber property, continuous \nfiber, high toughness, high crystallinity, and high tensile \nstrength, silk fiber",
+          "scope_match": "Keywords: fibroin, silk, crystal",
+          "evidence_label": "from_source"
+        },
+        "why_it_works": {
+          "text": "疏水相互作用驱动分配",
+          "basis": "from_source",
+          "source": "10.1007/s10924-022-02741-6",
+          "locator": "page 5",
+          "quote": "mong others. Below, Fig. 5, represents the structure \nof sericin.\nDue to their homogeneous fiber property, continuous \nfiber, high toughness, high crystallinity, and high tensile \nstrength, silk fiber",
+          "scope_match": "Keywords: fibroin, silk, crystal",
+          "evidence_label": "from_source"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": "page 5",
+            "quote": "mong others. Below, Fig. 5, represents the structure \nof sericin.\nDue to their homogeneous fiber property, continuous \nfiber, high toughness, high crystallinity, and high tensile \nstrength, silk fiber",
+            "source_asset": null,
+            "source": "10.1007/s10924-022-02741-6",
+            "scope_match": "Keywords: fibroin, silk, crystal",
+            "verification_method": "unverifiable_generic_text"
+          }
+        ]
+      },
+      "source_page": 6,
+      "source_doi": "10.1007/s10924-022-02741-6",
+      "source_locator": "p.6",
+      "evidence_label": "from_source",
+      "key_structures": [
+        "β-折叠"
+      ]
+    },
+    {
+      "name": "丝素蛋白极性官能团——吸附活性位点",
+      "description": "羟基(-OH)、氨基(-NH₂)、羧基(-COOH)、酰胺键(-CONH-)→金属离子螯合+染料静电吸附",
+      "functional_groups": [
+        "hydroxyl",
+        "-CONH-（酰胺键）",
+        "-COOH（羧基）",
+        "-O-（醚键）",
+        "配位/螯合位点",
+        "amide",
+        "丝素蛋白酰胺基",
+        "-NH₂（氨基）",
+        "-OH（羟基）",
+        "amino",
+        "carboxyl"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1007/s10924-022-02741-6",
+      "verification": "partial",
+      "基本原理": "蚕丝蛋白的氨基、羧基和酰胺基可通过静电吸引、氢键或配位作用结合污染物",
+      "causal_chain": {
+        "transferable_principle": "基于机制: 丝素蛋白极性官能团——吸附活性位点",
+        "pollutant_feature": {
+          "text": "羟基(-OH)、氨基(-NH₂)、羧基(-COOH)、酰胺键(-CONH-)→金属离子螯合+染料静电吸附",
+          "basis": "from_source",
+          "source": "10.1007/s10924-022-02741-6",
+          "locator": "page 11",
+          "quote": "have numerous functional groups \nlike carboxyl, carbonyl & hydroxyl on its surface. Yu H. \net al. [73]modified corn silk by soaking it in ­HNO3 (nitric \nacid) which converted hydr",
+          "scope_match": "Keywords: hydroxyl, amino, carboxyl",
+          "translation_mapping": "羟基=hydroxyl; 氨基=amino; 羧基=carboxyl",
+          "evidence_label": "from_source"
+        },
+        "bio_structure": {
+          "text": "丝素蛋白极性官能团表面活性位点",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "羟基(-OH)、氨基(-NH₂)、羧基(-COOH)、酰胺键(-CONH-)→金属离子螯合+染料静电吸附",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1039/d1va00047k",
+          "locator": "p.4",
+          "quote": "a result of the dissociation of the –COOH groups on the surface",
+          "scope_match": "Keywords: cooh, result"
+        },
+        "why_it_works": {
+          "text": "静电相互作用驱动吸附",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": "page 27",
+            "quote": "llut Res 28:19544–\n19562. https://​doi.​org/​10.​1007/​s11356-​021-​13184-2\n\t 3.\t Rastogi S, Kandasubramanian B (2020) Progressive trends in \nheavy metal ions and dyes adsorption using silk fibroin co",
+            "source_asset": null,
+            "source": "10.1007/s10924-022-02741-6",
+            "scope_match": "Keywords: adsorbent, dye, uptake",
+            "verification_method": "unverifiable_generic_text"
+          }
+        ]
+      },
+      "verification_quote": "shells with an alkaline material like sodium hydroxide \n(NaOH). The CS was proven highly regenerable, but it was \nalso demonstrated to be effective at removing both MO dye \n& Cr (",
+      "source_page": 6,
+      "source_doi": "10.1007/s10924-022-02741-6",
+      "source_locator": "p.6",
+      "evidence_label": "from_source",
+      "key_structures": [
+        "吸附结构"
+      ]
+    },
+    {
+      "name": "Na₂CO₃脱胶丝纤维——超疏水油水分离",
+      "description": "WCA 158°(Na₂CO₃脱胶); 分离效率: 柴油>75%, 汽油>90%, 机油>80% (10次循环后)",
+      "functional_groups": [
+        "-O-（醚键）"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1007/s10924-022-02741-6",
+      "verification": "partial",
+      "基本原理": "needs_review",
+      "verification_quote": "and separating oil from water. With adsorption efficiencies of greater than 90% for copper ions, 93.75% for lead \nions, and adsorption capacities of 88.5 mg/g for acid-yellow 11, and 74.63 mg/g for naphthol orange, functionalized silk \ncomposites can be employed to discard pollutants. This review emphasizes the characteristics of functionalized sil",
+      "causal_chain": {
+        "transferable_principle": "基于机制: Na₂CO₃脱胶丝纤维——超疏水油水分离",
+        "pollutant_feature": {
+          "text": "WCA 158°(Na₂CO₃脱胶); 分离效率: 柴油>75%, 汽油>90%, 机油>80% (10次循环后)",
+          "basis": "from_source",
+          "source": "10.1007/s10924-022-02741-6",
+          "locator": "p.8",
+          "quote": "Silk Composites for Heavy Metal Ion Separation\nHeavy metals being water soluble and fast accumulating \nin living organisms, pose serious environmental problems \nwhen released in industrial operations.",
+          "scope_match": "Keywords: silk, composites, heavy"
+        },
+        "bio_structure": {
+          "text": "Na₂CO₃脱胶丝纤维——超疏水油水分离，微纳粗糙结构+低表面能涂层",
+          "basis": "from_source",
+          "source": "10.1007/s10924-022-02741-6",
+          "locator": "page 1",
+          "quote": "ible natural material like silk fibroin is used as an adsorbent with superior mechanical proper-\nties, biodegradability, and regenerability. The silk fibers obtained post-degumming are then functional",
+          "scope_match": "Keywords: degumming, fiber, degum",
+          "evidence_label": "from_source"
+        },
+        "interaction": {
+          "text": "WCA 158°(Na₂CO₃脱胶); 分离效率: 柴油>75%, 汽油>90%, 机油>80% (10次循环后)",
+          "basis": "from_source",
+          "source": "10.1007/s10924-022-02741-6",
+          "locator": "page 1",
+          "quote": "ible natural material like silk fibroin is used as an adsorbent with superior mechanical proper-\nties, biodegradability, and regenerability. The silk fibers obtained post-degumming are then functional",
+          "scope_match": "Keywords: degumming, fiber, degum",
+          "evidence_label": "from_source"
+        },
+        "why_it_works": {
+          "text": "微纳粗糙结构+低表面能→空气层阻隔→超疏水",
+          "basis": "from_source",
+          "source": "10.1007/s10924-022-02741-6",
+          "locator": "page 1",
+          "quote": "ible natural material like silk fibroin is used as an adsorbent with superior mechanical proper-\nties, biodegradability, and regenerability. The silk fibers obtained post-degumming are then functional",
+          "scope_match": "Keywords: degumming, fiber, degum",
+          "evidence_label": "from_source"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": "page 1",
+            "quote": "ible natural material like silk fibroin is used as an adsorbent with superior mechanical proper-\nties, biodegradability, and regenerability. The silk fibers obtained post-degumming are then functional",
+            "source_asset": null,
+            "source": "10.1007/s10924-022-02741-6",
+            "scope_match": "Keywords: degumming, fiber, degum",
+            "verification_method": "unverifiable_generic_text"
+          }
+        ]
+      },
+      "source_page": 1,
+      "source_doi": "10.1007/s10924-022-02741-6",
+      "source_locator": "p.1",
+      "evidence_label": "from_source",
+      "key_structures": [
+        "油水分离结构",
+        "纤维结构",
+        "接触角特征",
+        "超疏水表面"
+      ]
+    },
+    {
+      "name": "丝素仿生层级结构设计原则",
+      "description": "丝素为天然嵌段共聚物→疏水区(Gly/Ala)+亲水区(Asp/Glu/Lys/Arg)→自组装→β-sheet结晶+无定形区→层级结构",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-SH（巯基）"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1007/s10924-022-02741-6",
+      "verification": "partial",
+      "基本原理": "needs_review",
+      "verification_quote": "in, which gives the fiber mechani-\ncal strength. The mechanical strength is primarily due to \nthe β-sheet crystallite structure in fibroin having hydrogen \nbonding. Sericin, having molecular weight varying from 24 \nto 400 kDa with serine and glycine being the most prominent \namino acid groups, is hydrophilic in nature that binds the \nfibers togethe",
+      "causal_chain": {
+        "transferable_principle": "基于机制: 丝素仿生层级结构设计原则",
+        "pollutant_feature": {
+          "text": "丝素为天然嵌段共聚物→疏水区(Gly/Ala)+亲水区(Asp/Glu/Lys/Arg)→自组装→β-sheet结晶+无定形区→层级结构",
+          "basis": "from_source",
+          "source": "10.1007/s10924-022-02741-6",
+          "locator": "page 6",
+          "quote": "three basic amino acids: 43–46% of \nglycine (G), 25–30% of alanine (A), and 12% of serine (S) \n[1]. Apart from these, other critical amino acids found in \nsilk fibroins incorporat",
+          "scope_match": "Keywords: Gly, Ala, Asp",
+          "evidence_label": "from_source"
+        },
+        "bio_structure": {
+          "text": "丝素仿生层级结构设计原则功能结构",
+          "basis": "from_source",
+          "source": "10.1007/s10924-022-02741-6",
+          "locator": "page 5",
+          "quote": "mong others. Below, Fig. 5, represents the structure \nof sericin.\nDue to their homogeneous fiber property, continuous \nfiber, high toughness, high crystallinity, and high tensile \nstrength, silk fiber",
+          "scope_match": "Keywords: fibroin, silk, crystal",
+          "evidence_label": "from_source"
+        },
+        "interaction": {
+          "text": "丝素为天然嵌段共聚物→疏水区(Gly/Ala)+亲水区(Asp/Glu/Lys/Arg)→自组装→β-sheet结晶+无定形区→层级结构",
+          "basis": "from_source",
+          "source": "10.1007/s10924-022-02741-6",
+          "locator": "page 5",
+          "quote": "mong others. Below, Fig. 5, represents the structure \nof sericin.\nDue to their homogeneous fiber property, continuous \nfiber, high toughness, high crystallinity, and high tensile \nstrength, silk fiber",
+          "scope_match": "Keywords: fibroin, silk, crystal",
+          "evidence_label": "from_source"
+        },
+        "why_it_works": {
+          "text": "疏水相互作用驱动分配",
+          "basis": "from_source",
+          "source": "10.1007/s10924-022-02741-6",
+          "locator": "page 5",
+          "quote": "mong others. Below, Fig. 5, represents the structure \nof sericin.\nDue to their homogeneous fiber property, continuous \nfiber, high toughness, high crystallinity, and high tensile \nstrength, silk fiber",
+          "scope_match": "Keywords: fibroin, silk, crystal",
+          "evidence_label": "from_source"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": "page 5",
+            "quote": "mong others. Below, Fig. 5, represents the structure \nof sericin.\nDue to their homogeneous fiber property, continuous \nfiber, high toughness, high crystallinity, and high tensile \nstrength, silk fiber",
+            "source_asset": null,
+            "source": "10.1007/s10924-022-02741-6",
+            "scope_match": "Keywords: fibroin, silk, crystal",
+            "verification_method": "unverifiable_generic_text"
+          }
+        ]
+      },
+      "source_page": 4,
+      "source_doi": "10.1007/s10924-022-02741-6",
+      "source_locator": "p.4",
+      "evidence_label": "from_source",
+      "key_structures": [
+        "β-折叠"
+      ]
+    },
+    {
+      "name": "吸附机制——静电作用",
+      "description": "pH升高→COO⁻形成→负电荷密度增加→静电吸引 阳离子亚甲基蓝(MB, Methylene Blue)→去除率从7.93%升至94-96%。丝素蛋白羧基(-COO⁻)与阳离子染料静电吸引，羟基(-OH)和氨基(-NH₂)辅助氢键 作用。",
+      "functional_groups": [
+        "-COOH（羧基）",
+        "静电作用位点",
+        "-COO⁻（羧基阴离子）",
+        "丝素蛋白酰胺基",
+        "-OH（羟基）",
+        "-NH₂（氨基）",
+        "氢键位点",
+        "羟基 hydroxyl (-OH)",
+        "-O-（醚键）",
+        "羧基 carboxyl (-COO⁻)",
+        "氨基 amino (-NH₂)"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1039/d1va00047k",
+      "verification": "partial",
+      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "causal_chain": {
+        "transferable_principle": "丝素蛋白羧基(-COO⁻)在碱性条件下与阳离子染料亚甲基蓝(MB)通过 静电吸引 结合，羟基和氨基辅助 氢键 作用，实现高效吸附去除。",
+        "pollutant_feature": {
+          "text": "pH升高→COO⁻形成→负电荷密度增加→静电吸引阳离子MB→去除率从7.93%升至94-96%",
+          "basis": "from_source",
+          "source": "10.1039/d1va00047k",
+          "locator": "p.2",
+          "quote": "Equilibrium and\nkinetic analyses were conducted to understand the mechanism\nof adsorption, and the obtained experimental data were tested\nwith various theoretical models.",
+          "scope_match": "Keywords: equilibrium, kinetic, analyses"
+        },
+        "bio_structure": {
+          "text": "吸附机制表面活性位点",
+          "basis": "from_source",
+          "source": "10.1039/d1va00047k",
+          "locator": "page 2",
+          "quote": "lm, in particular, have drawn great attention as\nadsorbents for organic dyes because of the presence of various\namino acid moieties, which endow a high adsorption capacity for\nMB uptake.37,38 However",
+          "scope_match": "Keywords: uptake, adsorb, sorption",
+          "evidence_label": "from_source"
+        },
+        "interaction": {
+          "text": "pH升高→COO⁻形成→负电荷密度增加→静电吸引阳离子MB→去除率从7.93%升至94-96%",
+          "basis": "from_source",
+          "source": "10.1039/d1va00047k",
+          "locator": "page 2",
+          "quote": "lm, in particular, have drawn great attention as\nadsorbents for organic dyes because of the presence of various\namino acid moieties, which endow a high adsorption capacity for\nMB uptake.37,38 However",
+          "scope_match": "Keywords: uptake, adsorb, sorption",
+          "evidence_label": "from_source"
+        },
+        "why_it_works": {
+          "text": "静电相互作用驱动吸附",
+          "basis": "from_source",
+          "source": "10.1039/d1va00047k",
+          "locator": "page 2",
+          "quote": "lm, in particular, have drawn great attention as\nadsorbents for organic dyes because of the presence of various\namino acid moieties, which endow a high adsorption capacity for\nMB uptake.37,38 However",
+          "scope_match": "Keywords: uptake, adsorb, sorption",
+          "evidence_label": "from_source"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": "Section 4.4.1",
+            "quote": "The solution pH, which affects the ionisation and charge on the surface of the adsorbent and adsorbate, is one of the key factors determining the sorption process.",
+            "source_asset": null,
+            "source": "10.1039/d1va00047k",
+            "scope_match": "Keywords: uptake, adsorb, sorption",
+            "verification_method": "pdf_visual_reading"
+          }
+        ]
+      },
+      "verification_quote": "were investigated as novel methylene blue (MB) adsorbents, with good\nremoval eﬃciencies of 86% and 96%, respectively. The inﬂuences of pH, contact time, concentration\nand adsorbent dose on the dye adsorption were systematically examined. The MB adsorption kinetics\nvalidated the pseudo-second-order model with the preferable linear ﬁt for both the S",
+      "source_page": 1,
+      "source_doi": "10.1039/d1va00047k",
+      "source_locator": "p.1",
+      "evidence_label": "from_source",
+      "key_structures": [
+        "氢键",
+        "吸附结构",
+        "羧基-COO⁻",
+        "阳离子染料吸附",
+        "静电吸引"
+      ]
+    },
+    {
+      "name": "吸附机制",
+      "description": "多重机制协同: 静电作用+离子交换+范德华力+交联+氢键",
+      "functional_groups": [
+        "范德华力",
+        "离子交换位点",
+        "-COOH（羧基）",
+        "静电作用位点",
+        "丝素蛋白酰胺基",
+        "-NH₂（氨基）",
+        "-OH, -NH, C=O on biocomposite surface",
+        "氢键位点"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1016/j.eti.2022.102741",
+      "verification": "partial",
+      "基本原理": "丝素蛋白表面富含羧基和氨基，在中性pH下带负电荷，通过静电吸引捕获阳离子染料",
+      "source_file": "仿生文献库/3rd/第B组-新方向/B3-蚕丝蛋白/2022-Prasad-silk-fibroin-heavy-metal-adsorption-water-treatment.pdf",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "阳离子染料（MB、CV）和重金属离子",
+          "basis": "from_source",
+          "locator": "page 6",
+          "source": "10.1016/j.eti.2022.102741",
+          "quote": "s also an imperative factor in determining the adsorbent’s uptake capacity for given experimental\nconditions. Results for the dosage dependency study on the removal of Cu2+ and Cr6+ metal ions by BS/S",
+          "scope_match": "Keywords: uptake, heavy metal, Cr6+",
+          "evidence_label": "from_source"
+        },
+        "bio_structure": {
+          "text": "丝素蛋白的β-折叠结构和表面羧基/氨基",
+          "basis": "from_source",
+          "locator": "page 6",
+          "source": "10.1016/j.eti.2022.102741",
+          "quote": "s also an imperative factor in determining the adsorbent’s uptake capacity for given experimental\nconditions. Results for the dosage dependency study on the removal of Cu2+ and Cr6+ metal ions by BS/S",
+          "scope_match": "Keywords: uptake, heavy metal, Cr6+",
+          "evidence_label": "from_source"
+        },
+        "interaction": {
+          "text": "静电吸引（负电表面与阳离子）、配位（-COOH/-NH₂与金属离子）",
+          "basis": "from_source",
+          "locator": "page 6",
+          "source": "10.1016/j.eti.2022.102741",
+          "quote": "s also an imperative factor in determining the adsorbent’s uptake capacity for given experimental\nconditions. Results for the dosage dependency study on the removal of Cu2+ and Cr6+ metal ions by BS/S",
+          "scope_match": "Keywords: uptake, heavy metal, Cr6+",
+          "evidence_label": "from_source"
+        },
+        "why_it_works": {
+          "text": "丝素蛋白表面富含羧基和氨基，在中性pH下带负电荷，通过静电吸引捕获阳离子染料",
+          "basis": "from_source",
+          "locator": "page 6",
+          "source": "10.1016/j.eti.2022.102741",
+          "quote": "s also an imperative factor in determining the adsorbent’s uptake capacity for given experimental\nconditions. Results for the dosage dependency study on the removal of Cu2+ and Cr6+ metal ions by BS/S",
+          "scope_match": "Keywords: uptake, heavy metal, Cr6+",
+          "evidence_label": "from_source"
+        },
+        "boundary_conditions": [
+          {
+            "text": "丝素蛋白在强酸/强碱下水解",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": "page 6",
+            "quote": "s also an imperative factor in determining the adsorbent’s uptake capacity for given experimental\nconditions. Results for the dosage dependency study on the removal of Cu2+ and Cr6+ metal ions by BS/S",
+            "source_asset": null,
+            "source": "10.1016/j.eti.2022.102741",
+            "scope_match": "Keywords: uptake, heavy metal, Cr6+",
+            "verification_method": "pdf_not_found"
+          }
+        ],
+        "transferable_principle": "丝素蛋白的β-折叠结构提供力学稳定性，表面羧基/氨基提供吸附活性，是可降解的生物吸附剂",
+        "verification_quote": "Electrostatic interactions, ion exchange, van der Waals forces, crosslinking, and H-bonding were the main interaction modes involved in the adsorptive removal of metal ions.",
+        "source_doi": "10.1016/j.eti.2022.102741",
+        "source_locator": "p.10"
+      },
+      "evidence_type": "source_verified",
+      "evidence_note": "verified via visual_cache PDF text",
+      "verification_quote": "Electrostatic interactions, ion exchange, van der Waals forces, crosslinking, and H-bonding were the main interaction modes involved in the adsorptive removal of metal ions.",
+      "source_page": 10,
+      "source_doi": "10.1016/j.eti.2022.102741",
+      "scope_match": "Keywords: electrostatic, ion exchange, van der Waals, crosslinking, H-bonding",
+      "source_locator": "p.10",
+      "evidence_label": "from_source",
+      "key_structures": [
+        "交联网络",
+        "吸附结构",
+        "丝素β-折叠",
+        "β-折叠"
+      ]
+    },
+    {
+      "name": "BS/SF/PUF三元协同设计",
+      "description": "BS(生物硅高比表面积)+SF(极性基团螯合)+PUF(多孔弹性基底)→三元协同→综合性能优于单一组分",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "配位/螯合位点"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1016/j.eti.2022.102741",
+      "verification": "partial",
+      "基本原理": "needs_review",
+      "verification_quote": "ming rate of water pollution. In this work,\na novel biocomposite of biosilica (BS)/silk fibroin (SF)/polyurethane foam (PUF) was\nprepared and studied for the adsorptive recovery of toxic copper (Cu2+) and chromium\n(Cr6+) ions from synthetic wastewater. XRD and FTIR studies confirmed the formation of\nbiocomposite with amorphous structure and –OH, –NH, C=O surface functionalities. SEM\nresults confir",
+      "causal_chain": {
+        "transferable_principle": "基于机制: BS/SF/PUF三元协同设计",
+        "pollutant_feature": {
+          "text": "Cu2+ 与 Cr6+ 金属离子去除目标",
+          "basis": "from_source",
+          "source": "10.1016/j.eti.2022.102741",
+          "locator": "p.1",
+          "quote": "Further, effects of pH, adsorbent dose, contact time, and initial metal ion concentration\non the adsorptive removal of Cu2+ and Cr6+ metal ions by the BS/SF/PUF biocomposite\nwere studied in detail.",
+          "scope_match": "Keywords: further, effects, adsorbent"
+        },
+        "bio_structure": {
+          "text": "BS/SF/PUF三元协同设计表面结构",
+          "basis": "llm_inferred",
+          "source": null,
+          "locator": null,
+          "quote": null,
+          "scope_match": "Keywords: surface, BET, specific surface",
+          "evidence_label": "needs_review"
+        },
+        "interaction": {
+          "text": "BS(生物硅高比表面积)+SF(极性基团螯合)+PUF(多孔弹性基底)→三元协同→综合性能优于单一组分",
+          "basis": "llm_inferred",
+          "source": null,
+          "locator": null,
+          "quote": null,
+          "scope_match": "Keywords: surface, BET, specific surface",
+          "evidence_label": "needs_review"
+        },
+        "why_it_works": {
+          "text": "配位/螯合作用固定目标物",
+          "basis": "llm_inferred",
+          "source": null,
+          "locator": null,
+          "quote": null,
+          "scope_match": "Keywords: surface, BET, specific surface",
+          "evidence_label": "needs_review"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": "page 4",
+            "quote": "the casting method adopted in this study.\nPore size and porosity of an adsorbent play a major role in determining its adsorption capacity (Pal et al., 2018). The\nspecific surface area (SBET ) based on",
+            "source_asset": null,
+            "source": "10.1016/j.eti.2022.102741",
+            "scope_match": "Keywords: surface, BET, specific surface",
+            "verification_method": "unverifiable_generic_text"
+          }
+        ]
+      },
+      "source_doi": "10.1016/j.eti.2022.102741",
+      "source_locator": "p.1",
+      "evidence_label": "from_source",
+      "key_structures": []
+    },
+    {
+      "name": "结晶紫吸附机制",
+      "description": "π-π共轭 + 氢键 + 阴阳离子结合",
+      "functional_groups": [
+        "氢键位点"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1016/j.ijbiomac.2023.126863",
+      "verification": "partial",
+      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "causal_chain": {
+        "transferable_principle": "基于机制: 结晶紫吸附机制",
+        "pollutant_feature": {
+          "text": "π-π共轭 + 氢键 + 阴阳离子结合",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "结晶紫吸附机制表面活性位点",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "π-π共轭 + 氢键 + 阴阳离子结合",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "氢键相互作用增强吸附",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": "page 10",
+            "quote": "International Journal of Biological Macromolecules 253 (2023) 126863\n10\nUV and atomic absorption spectrophotometers (Fig. 6c-e, SI11, and \nTable 5). The lignin/SF film demonstrated superior adsorption",
+            "source_asset": null,
+            "source": "10.1016/j.ijbiomac.2023.126863",
+            "scope_match": "Keywords: adsorb, sorption, crystal",
+            "verification_method": "unverifiable_generic_text"
+          }
+        ],
+        "source_doi": "10.1016/j.ijbiomac.2023.126863",
+        "source_locator": "p.1",
+        "verification_quote": "revealing a chemisorption mechanism involving Π-Π conjugation, hydrogen bonding, and the binding of anions and cations. The lignin/SF membrane exhibited a retention rate exceeding 99.5%"
+      },
+      "evidence_type": "source_verified",
+      "evidence_note": "verified via visual_cache PDF text",
+      "verification_quote": "revealing a chemisorption mechanism involving Π-Π conjugation, hydrogen bonding, and the binding of anions and cations. The lignin/SF membrane exhibited a retention rate exceeding 99.5%",
+      "source_page": 1,
+      "source_doi": "10.1016/j.ijbiomac.2023.126863",
+      "scope_match": "Keywords: crystal violet, Π-Π conjugation, hydrogen bonding, anions, cations",
+      "source_locator": "p.1",
+      "key_structures": [
+        "吸附结构"
+      ]
+    },
+    {
+      "name": "静电纺丝工艺参数",
+      "description": "SF: 2μL/min, 18kV, 15cm, 90rpm, 4h/层; Lignin/PAN: 3μL/min, 18kV, 15cm, 90rpm, 2h/层",
+      "functional_groups": [
+        "-S-（硫醚键）"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1016/j.ijbiomac.2023.126863",
+      "verification": "partial",
+      "基本原理": "needs_review",
+      "verification_quote": "flow rate of 2 μL min−1, voltage maintained at 18 kV, needle-to-receiver distance 15 cm, drum collector rotated at 90 rpm. Each layer of silk fibroin membrane was spun for 4 h.",
+      "causal_chain": {
+        "transferable_principle": "基于机制: 静电纺丝工艺参数",
+        "pollutant_feature": {
+          "text": "SF: 2μL/min, 18kV, 15cm, 90rpm, 4h/层; Lignin/PAN: 3μL/min, 18kV, 15cm, 90rpm, 2h/层",
+          "basis": "from_source",
+          "scope_match": "Keywords: min, rpm",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.ijbiomac.2023.126863",
+          "locator": "p.4",
+          "quote": "flow rate of 2 μL min−1, voltage maintained at 18 kV, needle-to-receiver distance 15 cm, drum collector rotated at 90 rpm. Each layer of silk fibroin membrane was spun for 4 h."
+        },
+        "bio_structure": {
+          "text": "静电纺丝功能结构",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "SF: 2μL/min, 18kV, 15cm, 90rpm, 4h/层; Lignin/PAN: 3μL/min, 18kV, 15cm, 90rpm, 2h/层",
+          "basis": "from_source",
+          "scope_match": "Keywords: min, rpm",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.ijbiomac.2023.126863",
+          "locator": "p.4",
+          "quote": "flow rate of 2 μL min−1, voltage maintained at 18 kV, needle-to-receiver distance 15 cm, drum collector rotated at 90 rpm. Each layer of silk fibroin membrane was spun for 4 h."
+        },
+        "why_it_works": {
+          "text": "表面活性位点与目标物相互作用",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": "page 4",
+            "quote": "ared \nby dissolving 0.5 g of lignin and 0.5 g of PAN in 10 mL of DMF, followed \nby stirring at 60 ◦C for 6 h. \nPreparation of SF spinning solution: The silk fibroin solution was dried, \ndissolved in a",
+            "source_asset": null,
+            "source": "10.1016/j.ijbiomac.2023.126863",
+            "scope_match": "Keywords: electrospinning, electrostatic, electrospinning",
+            "verification_method": "unverifiable_generic_text"
+          }
+        ],
+        "source_doi": "10.1016/j.ijbiomac.2023.126863",
+        "source_locator": "p.4",
+        "verification_quote": "flow rate of 2 μL min−1, voltage maintained at 18 kV, needle-to-receiver distance 15 cm, drum collector rotated at 90 rpm. Each layer of silk fibroin membrane was spun for 4 h."
+      },
+      "evidence_type": "source_verified",
+      "evidence_note": "verified via visual_cache PDF text",
+      "source_page": 4,
+      "source_doi": "10.1016/j.ijbiomac.2023.126863",
+      "scope_match": "Keywords: electrospinning, 18 kV, 15 cm, 90 rpm, silk fibroin",
+      "source_locator": "p.4",
+      "key_structures": [
+        "静电纺丝纤维"
+      ]
+    },
+    {
+      "name": "木质素疏水性来源",
+      "description": "木质素疏水性: 酚环+甲氧基; SF疏水性: 疏水嵌段",
+      "functional_groups": [
+        "-S-（硫醚键）"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1016/j.ijbiomac.2023.126863",
+      "verification": "partial",
+      "基本原理": "木质部的纤维素和木质素可通过羟基、羧基和芳香环结合污染物",
+      "causal_chain": {
+        "transferable_principle": "基于机制: 木质素疏水性来源",
+        "pollutant_feature": {
+          "text": "木质素疏水性: 酚环+甲氧基; SF疏水性: 疏水嵌段",
+          "basis": "from_source",
+          "source": "10.1016/j.ijbiomac.2023.126863",
+          "locator": "page 10",
+          "quote": "International Journal of Biological Macromolecules 253 (2023) 126863\n10\nUV and atomic absorption spectrophotometers (Fig. 6c-e, SI11, and \nTable 5). The lignin/SF film demonstrated superior adsorption",
+          "scope_match": "Keywords: lignin, lignin",
+          "evidence_label": "from_source"
+        },
+        "bio_structure": {
+          "text": "木质素疏水性来源，微纳粗糙结构+低表面能涂层",
+          "basis": "from_source",
+          "source": "10.1016/j.ijbiomac.2023.126863",
+          "locator": "page 10",
+          "quote": "International Journal of Biological Macromolecules 253 (2023) 126863\n10\nUV and atomic absorption spectrophotometers (Fig. 6c-e, SI11, and \nTable 5). The lignin/SF film demonstrated superior adsorption",
+          "scope_match": "Keywords: lignin, lignin",
+          "evidence_label": "from_source"
+        },
+        "interaction": {
+          "text": "木质素疏水性: 酚环+甲氧基; SF疏水性: 疏水嵌段",
+          "basis": "from_source",
+          "source": "10.1016/j.ijbiomac.2023.126863",
+          "locator": "page 10",
+          "quote": "International Journal of Biological Macromolecules 253 (2023) 126863\n10\nUV and atomic absorption spectrophotometers (Fig. 6c-e, SI11, and \nTable 5). The lignin/SF film demonstrated superior adsorption",
+          "scope_match": "Keywords: lignin, lignin",
+          "evidence_label": "from_source"
+        },
+        "why_it_works": {
+          "text": "疏水相互作用驱动分配",
+          "basis": "from_source",
+          "source": "10.1016/j.ijbiomac.2023.126863",
+          "locator": "page 10",
+          "quote": "International Journal of Biological Macromolecules 253 (2023) 126863\n10\nUV and atomic absorption spectrophotometers (Fig. 6c-e, SI11, and \nTable 5). The lignin/SF film demonstrated superior adsorption",
+          "scope_match": "Keywords: lignin, lignin",
+          "evidence_label": "from_source"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": "page 10",
+            "quote": "International Journal of Biological Macromolecules 253 (2023) 126863\n10\nUV and atomic absorption spectrophotometers (Fig. 6c-e, SI11, and \nTable 5). The lignin/SF film demonstrated superior adsorption",
+            "source_asset": null,
+            "source": "10.1016/j.ijbiomac.2023.126863",
+            "scope_match": "Keywords: lignin, lignin, SF ",
+            "verification_method": "unverifiable_generic_text"
+          }
+        ],
+        "source_doi": "10.1016/j.ijbiomac.2023.126863",
+        "source_locator": "p.1",
+        "verification_quote": "Lignin, the second most abundant aromatic component in plants, has methoxy, hydroxy-aliphatic, polyphenolic structure, and carboxyl groups within its molecular framework."
+      },
+      "evidence_type": "source_verified",
+      "evidence_note": "verified via visual_cache PDF text",
+      "verification_quote": "Lignin, the second most abundant aromatic component in plants, has methoxy, hydroxy-aliphatic, polyphenolic structure, and carboxyl groups within its molecular framework.",
+      "source_page": 1,
+      "source_doi": "10.1016/j.ijbiomac.2023.126863",
+      "scope_match": "Keywords: lignin, methoxy, polyphenolic, carboxyl, aromatic",
+      "source_locator": "p.1",
+      "evidence_label": "from_source",
+      "key_structures": []
+    },
+    {
+      "name": "吸附机制",
+      "description": "静电吸引为主：pH>6时SF和GO表面-COOH解离为-COO⁻，与阳离子MB通过静电作用结合",
+      "functional_groups": [
+        "-COOH（羧基）",
+        "静电作用位点",
+        "-COO⁻（羧基阴离子）",
+        "丝素蛋白酰胺基",
+        "GO羧基/羟基/环氧基",
+        "-OH（羟基）",
+        "-NH₂（氨基）",
+        "-S-（硫醚键）",
+        "-O-（醚键）"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1039/d1va00047k",
+      "verification": "partial",
+      "source_file": "仿生文献库/3rd/第B组-新方向/B3-蚕丝蛋白/2022-Prasad-silk-fibroin-heavy-metal-adsorption-water-treatment.pdf",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "阳离子染料（MB、CV）和重金属离子",
+          "basis": "llm_inferred",
+          "scope_match": "Keywords: m, b, c, v",
+          "evidence_label": "from_source",
+          "source": "10.1039/d1va00047k",
+          "locator": "p.4",
+          "quote": "r pH\nlevels, negatively charged –COO ions are easily formed as\na result of the dissociation of the –COOH groups on the surface\nof the adsorbent. Electrostatic forces readily attract the cationic\nFig. "
+        },
+        "bio_structure": {
+          "text": "丝素蛋白的β-折叠结构和表面羧基/氨基",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "静电吸引（负电表面与阳离子）、配位（-COOH/-NH₂与金属离子）",
+          "basis": "from_source",
+          "scope_match": "Keywords: cooh, electrostatic",
+          "evidence_label": "from_source",
+          "source": "10.1039/d1va00047k",
+          "locator": "p.4",
+          "quote": "r pH\nlevels, negatively charged –COO ions are easily formed as\na result of the dissociation of the –COOH groups on the surface\nof the adsorbent. Electrostatic forces readily attract the cationic\nFig. "
+        },
+        "why_it_works": {
+          "text": "丝素蛋白表面富含羧基和氨基，在中性pH下带负电荷，通过静电吸引捕获阳离子染料",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "丝素蛋白在强酸/强碱下水解",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": "page 9",
+            "quote": "and the presence of more oxidation groups, which may aid in\nthe adsorption of MB onto the SF and SF/GO lms via multilayer\nadsorption. Further, in addition to the simple electrostatic\ninteractions, th",
+            "source_asset": null,
+            "source": "10.1039/d1va00047k",
+            "scope_match": "Keywords: dye, pH , graphene oxide",
+            "verification_method": "pdf_not_found"
+          }
+        ],
+        "transferable_principle": "丝素蛋白的β-折叠结构提供力学稳定性，表面羧基/氨基提供吸附活性，是可降解的生物吸附剂",
+        "verification_quote": "Biosilica/Silk Fibroin/Polyurethane biocomposite for Cu²⁺ and Cr⁶⁺ removal"
+      },
+      "verification_quote": "r pH\nlevels, negatively charged –COO ions are easily formed as\na result of the dissociation of the –COOH groups on the surface\nof the adsorbent. Electrostatic forces readily attract the cationic\nFig. 2\nSEM images of (a) pure silk ﬁbroin, (b) pristine GO, and (c and d) the SF/GO blend ﬁlm.\nFig. 3\nTGA graphs of the pure SF and SF/GO blend ﬁlms.\n288 |",
+      "source_page": 4,
+      "source_doi": "10.1039/d1va00047k",
+      "source_locator": "p.4",
+      "key_structures": [
+        "吸附结构",
+        "丝素β-折叠",
+        "β-折叠"
+      ]
+    },
+    {
+      "name": "脱胶蚕丝的超疏水性",
+      "description": "Na₂CO₃脱胶蚕丝: WCA=158°, OCA=0°; 水脱胶: WCA=153°; 原始蚕丝: WCA=103-110°",
+      "functional_groups": [
+        "-O-（醚键）"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1007/s10924-022-02741-6",
+      "verification": "partial",
+      "verification_quote": "m wastewater, researchers have identi-\nfied many materials in the form of foam [103], nano-tech-\nnology-based Janus fabric or Janus membranes [104–107], \naerogels [108], imprinted nano-fibers or polymer compos-\nites [109, 110] etc. However, due to rigorous environmental \nrules, s",
+      "causal_chain": {
+        "transferable_principle": "基于机制: 脱胶蚕丝的超疏水性",
+        "pollutant_feature": {
+          "text": "Na₂CO₃脱胶蚕丝: WCA=158°, OCA=0°; 水脱胶: WCA=153°; 原始蚕丝: WCA=103-110°",
+          "basis": "from_source",
+          "source": "10.1007/s10924-022-02741-6",
+          "locator": "page 18",
+          "quote": "Due to the interfacial H-bond network and oxidation, the \nWCA of the constructed membrane decreased from 63.5° \n(SNF) to 46° as GO loading increased. The free volume in \nthe memb",
+          "scope_match": "Keywords: WCA, OCA, WCA",
+          "evidence_label": "from_source"
+        },
+        "bio_structure": {
+          "text": "脱胶蚕丝的超疏水性，微纳粗糙结构+低表面能涂层",
+          "basis": "from_source",
+          "source": "10.1007/s10924-022-02741-6",
+          "locator": "page 1",
+          "quote": "ible natural material like silk fibroin is used as an adsorbent with superior mechanical proper-\nties, biodegradability, and regenerability. The silk fibers obtained post-degumming are then functional",
+          "scope_match": "Keywords: degumming, fibroin, degum",
+          "evidence_label": "from_source"
+        },
+        "interaction": {
+          "text": "Na₂CO₃脱胶蚕丝: WCA=158°, OCA=0°; 水脱胶: WCA=153°; 原始蚕丝: WCA=103-110°",
+          "basis": "from_source",
+          "source": "10.1007/s10924-022-02741-6",
+          "locator": "page 1",
+          "quote": "ible natural material like silk fibroin is used as an adsorbent with superior mechanical proper-\nties, biodegradability, and regenerability. The silk fibers obtained post-degumming are then functional",
+          "scope_match": "Keywords: degumming, fibroin, degum",
+          "evidence_label": "from_source"
+        },
+        "why_it_works": {
+          "text": "微纳粗糙结构+低表面能→空气层阻隔→超疏水",
+          "basis": "from_source",
+          "source": "10.1007/s10924-022-02741-6",
+          "locator": "page 1",
+          "quote": "ible natural material like silk fibroin is used as an adsorbent with superior mechanical proper-\nties, biodegradability, and regenerability. The silk fibers obtained post-degumming are then functional",
+          "scope_match": "Keywords: degumming, fibroin, degum",
+          "evidence_label": "from_source"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": "page 1",
+            "quote": "ible natural material like silk fibroin is used as an adsorbent with superior mechanical proper-\nties, biodegradability, and regenerability. The silk fibers obtained post-degumming are then functional",
+            "source_asset": null,
+            "source": "10.1007/s10924-022-02741-6",
+            "scope_match": "Keywords: degumming, fibroin, degum",
+            "verification_method": "unverifiable_generic_text"
+          }
+        ]
+      },
+      "source_page": 19,
+      "source_doi": "10.1007/s10924-022-02741-6",
+      "source_locator": "p.19",
+      "evidence_label": "from_source",
+      "key_structures": [
+        "接触角特征",
+        "超疏水表面"
+      ]
+    },
+    {
+      "name": "蚕丝蛋白油水分离材料汇总",
+      "description": "纳米纤维丝膜: 油水分离效率99.91-99.97%; SiO₂/SF海绵: 油吸附70.9-160.8 g/g; 超疏水蚕丝海绵: 油回收率>50%（10次循环）",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1007/s10924-022-02741-6",
+      "verification": "partial",
+      "causal_chain": {
+        "transferable_principle": "基于机制: 蚕丝蛋白油水分离材料汇总",
+        "pollutant_feature": {
+          "text": "纳米纤维丝膜: 油水分离效率99.91-99.97%; SiO₂/SF海绵: 油吸附70.9-160.8 g/g; 超疏水蚕丝海绵: 油回收率>50%（10次循环）",
+          "basis": "from_source",
+          "source": "10.1007/s10924-022-02741-6",
+          "locator": "p.2",
+          "quote": "Two-thirds of that 3% \nof freshwater exists as ice-caps, glaciers, etc., and balance \nwater is present as ground water or surface water.",
+          "scope_match": "Keywords: thirds, freshwater, exists"
+        },
+        "bio_structure": {
+          "text": "蚕丝蛋白油水分离材料汇总膜结构",
+          "basis": "from_source",
+          "source": "10.1007/s10924-022-02741-6",
+          "locator": "page 2",
+          "quote": "2244\n\t\nJournal of Polymers and the Environment (2023) 31:2243–2272\n1 3\nGraphical Abstract\nKeywords  Silk fibers · Wastewater treatment · Heavy metal ions · Dyes · Oil–water separation · Adsorption\nInt",
+          "scope_match": "Keywords: fiber, adsorption, separation",
+          "evidence_label": "from_source"
+        },
+        "interaction": {
+          "text": "纳米纤维丝膜: 油水分离效率99.91-99.97%; SiO₂/SF海绵: 油吸附70.9-160.8 g/g; 超疏水蚕丝海绵: 油回收率>50%（10次循环）",
+          "basis": "from_source",
+          "source": "10.1007/s10924-022-02741-6",
+          "locator": "page 2",
+          "quote": "2244\n\t\nJournal of Polymers and the Environment (2023) 31:2243–2272\n1 3\nGraphical Abstract\nKeywords  Silk fibers · Wastewater treatment · Heavy metal ions · Dyes · Oil–water separation · Adsorption\nInt",
+          "scope_match": "Keywords: fiber, adsorption, separation",
+          "evidence_label": "from_source"
+        },
+        "why_it_works": {
+          "text": "疏水相互作用驱动分配",
+          "basis": "from_source",
+          "source": "10.1007/s10924-022-02741-6",
+          "locator": "page 2",
+          "quote": "2244\n\t\nJournal of Polymers and the Environment (2023) 31:2243–2272\n1 3\nGraphical Abstract\nKeywords  Silk fibers · Wastewater treatment · Heavy metal ions · Dyes · Oil–water separation · Adsorption\nInt",
+          "scope_match": "Keywords: fiber, adsorption, separation",
+          "evidence_label": "from_source"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": "page 2",
+            "quote": "2244\n\t\nJournal of Polymers and the Environment (2023) 31:2243–2272\n1 3\nGraphical Abstract\nKeywords  Silk fibers · Wastewater treatment · Heavy metal ions · Dyes · Oil–water separation · Adsorption\nInt",
+            "source_asset": null,
+            "source": "10.1007/s10924-022-02741-6",
+            "scope_match": "Keywords: fiber, adsorption, separation",
+            "verification_method": "unverifiable_generic_text"
+          }
+        ]
+      },
+      "verification_quote": "ures outstanding water repel-\nlency. The sponges had absorption capabilities of 70.9 gm/\ngm for n-hexane, 80.9 gm/gm for dodecane, 86.8 gm/gm \nfor isopropyl alcohol, 97.7 gm/gm for pump oil, 102 gm/\ngm for maize oil, 103.3 gm/gm for DMF, and 160.8 gm/gm \nfor TTCE. Different visco",
+      "source_page": 23,
+      "source_doi": "10.1007/s10924-022-02741-6",
+      "source_locator": "p.23",
+      "evidence_label": "from_source",
+      "key_structures": [
+        "油水分离结构",
+        "膜结构",
+        "超疏水表面",
+        "吸附结构",
+        "纳米纤维网络",
+        "纤维结构"
+      ]
+    },
+    {
+      "name": "丝素蛋白复合材料的吸附机制",
+      "description": "静电相互作用、氢键、配位/螯合、π-π堆积、离子交换",
+      "functional_groups": [
+        "离子交换位点",
+        "静电作用位点",
+        "-OH, -NH₂, -COOH, 酰胺基",
+        "配位/螯合位点",
+        "丝素蛋白酰胺基",
+        "π-π堆积位点",
+        "氢键位点"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1007/s10924-022-02741-6",
+      "verification": "partial",
+      "causal_chain": {
+        "transferable_principle": "基于机制: 丝素蛋白复合材料的吸附机制",
+        "pollutant_feature": {
+          "text": "静电相互作用、氢键、配位/螯合、π-π堆积、离子交换",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "丝素蛋白复合材料表面活性位点",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "静电相互作用、氢键、配位/螯合、π-π堆积、离子交换",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "静电相互作用驱动吸附",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": "page 6",
+            "quote": "e at removing both MO dye \n& Cr (VI). Chen X et al. [40] also utilized chitosan and silk \nsericin for gold adsorption.\nProperties and Structures of Silk Composites\nSilk fibroin constitutes heavy & lig",
+            "source_asset": null,
+            "source": "10.1007/s10924-022-02741-6",
+            "scope_match": "Keywords: protein, fibroin, adsorb",
+            "verification_method": "unverifiable_generic_text"
+          }
+        ],
+        "source_doi": "10.1007/s10924-022-02741-6",
+        "source_locator": "p.21",
+        "verification_quote": "Silk nanofibrils provide excellent load transfer through hydrophobic, hydrogen bonding, electrostatic interactions, and van der waals bonding, aiding in powerful contaminant removal."
+      },
+      "evidence_type": "source_verified",
+      "evidence_note": "verified via visual_cache PDF text",
+      "verification_quote": "Silk nanofibrils provide excellent load transfer through hydrophobic, hydrogen bonding, electrostatic interactions, and van der waals bonding, aiding in powerful contaminant removal.",
+      "source_page": 21,
+      "source_doi": "10.1007/s10924-022-02741-6",
+      "scope_match": "Keywords: hydrophobic, hydrogen bonding, electrostatic, van der Waals, adsorption",
+      "source_locator": "p.21",
+      "key_structures": [
+        "吸附结构"
+      ]
+    },
+    {
+      "name": "pH 2-4时吸附机理",
+      "description": "物理吸附和配位辅助(两者均带正电)",
+      "functional_groups": [
+        "配位/螯合位点"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1016/j.jtice.2023.105298",
+      "verification": "partial",
+      "causal_chain": {
+        "transferable_principle": "基于机制: pH 2-4时吸附机理",
+        "pollutant_feature": {
+          "text": "物理吸附和配位辅助(两者均带正电)",
+          "basis": "from_source",
+          "source": "10.1016/j.jtice.2023.105298",
+          "locator": "page 2",
+          "quote": "as matrix and cellulose nano­\ncrystals as admixture to prepare an excellent and recyclable \nthree-dimensional biobased dye wastewater adsorbent, which showed \nadsorption capacity of 1201 mg/g and 1070",
+          "scope_match": "Keywords: adsorbent, adsorb",
+          "evidence_label": "from_source"
+        },
+        "bio_structure": {
+          "text": "pH 2表面活性位点",
+          "basis": "from_source",
+          "source": "10.1016/j.jtice.2023.105298",
+          "locator": "page 2",
+          "quote": "as matrix and cellulose nano­\ncrystals as admixture to prepare an excellent and recyclable \nthree-dimensional biobased dye wastewater adsorbent, which showed \nadsorption capacity of 1201 mg/g and 1070",
+          "scope_match": "Keywords: adsorbent, adsorb",
+          "evidence_label": "from_source"
+        },
+        "interaction": {
+          "text": "物理吸附和配位辅助(两者均带正电)",
+          "basis": "from_source",
+          "source": "10.1016/j.jtice.2023.105298",
+          "locator": "page 2",
+          "quote": "as matrix and cellulose nano­\ncrystals as admixture to prepare an excellent and recyclable \nthree-dimensional biobased dye wastewater adsorbent, which showed \nadsorption capacity of 1201 mg/g and 1070",
+          "scope_match": "Keywords: adsorbent, adsorb",
+          "evidence_label": "from_source"
+        },
+        "why_it_works": {
+          "text": "配位/螯合作用固定目标物",
+          "basis": "from_source",
+          "source": "10.1016/j.jtice.2023.105298",
+          "locator": "page 2",
+          "quote": "as matrix and cellulose nano­\ncrystals as admixture to prepare an excellent and recyclable \nthree-dimensional biobased dye wastewater adsorbent, which showed \nadsorption capacity of 1201 mg/g and 1070",
+          "scope_match": "Keywords: adsorbent, adsorb",
+          "evidence_label": "from_source"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": "Section 5.6",
+            "quote": "At pH 2–4, both the FK/SF(CTAB + EtOH) and the MB dye became positively charged [36], which made it difficult for MB molecules to attract to the surface of the FK/SF(CTAB + EtOH). However, due to the auxiliary effects of physical adhesion and coordination [38], it still possesses certain adsorption capacity.",
+            "source_asset": null,
+            "source": "10.1016/j.jtice.2023.105298",
+            "scope_match": "Keywords: adsorbent, pH , adsorb",
+            "verification_method": "pdf_visual_reading"
+          }
+        ],
+        "source_doi": "10.1016/j.jtice.2023.105298",
+        "source_locator": "p.6",
+        "verification_quote": "At pH 2–4, both FK/SF and MB dye became positively charged, making adsorption difficult. However, physical adhesion and coordination still provided certain adsorption capacity."
+      },
+      "evidence_type": "source_verified",
+      "evidence_note": "verified via visual_cache PDF text",
+      "verification_quote": "At pH 2–4, both FK/SF and MB dye became positively charged, making adsorption difficult. However, physical adhesion and coordination still provided certain adsorption capacity.",
+      "source_page": 6,
+      "source_doi": "10.1016/j.jtice.2023.105298",
+      "scope_match": "Keywords: pH, adsorption, positively charged, physical adhesion, coordination",
+      "source_locator": "p.6",
+      "evidence_label": "from_source",
+      "key_structures": [
+        "吸附结构"
+      ]
+    }
+  ],
+  "narrative": {
+    "entries": [
+      {
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2021-Bruder-silk-fibroin-hierarchical-shell.json",
+        "paper_id": "2021-Bruder-silk-fibroin-hierarchical-aerogels",
+        "sections": {
+          "problem_definition": "自然界中蚕丝需兼顾轻质高强与透气性以保护蛹体，对应水处理吸附材料需突破高吸附容量、快速传质与机械稳定性难以兼顾的工程瓶颈。",
+          "biological_solution": "蚕丝蛋白通过β-折叠自组装形成强韧网络；结合冰晶定向生长构建层级孔道；PEI氨基修饰模拟天然配体螯合机制；SF-PEI-2气凝胶珠成功实现Cu²⁺(186.7 mg/g)、甲基橙(811.3 mg/g)及有机溶剂的高效吸附与EDTA可再生。",
+          "key_features": "必须保留：SF β-折叠骨架、径向蜂窝大孔、PEI氨基活性位点；可灵活调整：GO复合构型(核壳/Janus)、微球尺寸(微米/毫米级)、交联剂种类及PEI接枝密度。",
+          "design_mapping": "生物蚕丝β-折叠→SF气凝胶力学骨架；冰晶径向生长→冻干蜂窝孔道；天然结合位点→PEI静电/螯合吸附；软约束建议：调控滴注流速与冷冻速率以优化孔径分布，控制PEI/SF比例防止过度交联导致传质受阻。",
+          "explainability_anchors": "仿生故事线：借鉴蚕丝“轻质高强”的进化智慧，通过cryo-assembly冰模板法与化学修饰，将天然蛋白转化为多污染物靶向吸附平台；设计溯源：高吸附容量源于PEI氨基与目标物的静电/螯合主导作用，快速传质与高比表面积由中心发散蜂窝孔道与微球褶皱表面(≈1.4 µm)协同保障。"
+        }
+      },
+      {
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2022-Epa-silk-fibroin-membrane-adsorption-review.json",
+        "paper_id": "2022-Gupta-silk-composites-remediation-review",
+        "sections": {
+          "problem_definition": "自然界中，蚕丝需在复杂环境中维持高强度与选择性物质交换，蝠鲼鳃需在动态海水中高效过滤微粒并防污；对应水处理领域，传统吸附/分离材料普遍面临吸附容量低、传质阻力大、界面易污染、机械强度不足及循环再生困难等瓶颈。",
+          "biological_solution": "进化策略：蚕丝蛋白通过β-sheet结晶区与无定形区交替形成天然嵌段共聚物，结合表面极性基团实现强韧骨架与活性位点共存；蝠鲼鳃演化出放射状微纳纤维拓扑实现连续流体过滤与抗润湿。关键机制：β-sheet提供力学支撑，-OH/-NH2/-COOH等基团通过配位螯合与静电作用捕获重金属/染料；分级孔隙与特殊润湿性(超亲水/水下超疏油)构建低阻力传质通道。成功案例：丝素/SiO2海绵实现>99%油水分离与30次循环；仿蝠鲼鳃纳米纤维膜分离效率>99.9%；丝胶花状结构对Pb²⁺去除率达99.8%。",
+          "key_features": "必须保留：β-sheet结晶网络(力学骨架)、丰富极性官能团(吸附活性位点)、微纳分级多孔/纤维拓扑(高比表面积与传质通道)。可灵活调整：复合组分(ZIF/GO/PEI/SiO2等以定向增强吸附或光热性能)、表面润湿性(通过脱胶或纳米涂层调控亲/疏水阈值)、宏观成型形态(膜/气凝胶/水凝胶/海绵按需定制)。",
+          "design_mapping": "生物→材料映射：蚕丝β-sheet/无定形区交替 → 仿生交联网络/嵌段共聚物骨架；蝠鲼鳃放射状纤维 → 静电纺丝定向纳米纤维膜；丝胶花状结构 → 共沉淀/冷冻组装3D分级多孔气凝胶。软约束建议：控制再生丝素β-sheet转化率以平衡溶解性与机械强度；利用IEP(4.53)特性，在pH>4.5时优先吸附阳离子重金属，pH<4.5时优化染料静电吸附；复合改性时保持仿生拓扑完整性，避免传质死区。",
+          "explainability_anchors": "仿生故事线：从“春蚕吐丝”的分子级结晶调控与强韧吸附，到“蝠鲼滤食”的宏观形态优化与高效分离，自然界通过“结构-功能”协同机制解决了物质捕获与界面传质难题。设计溯源：本材料构效关系直接映射丝素蛋白的分子构象(β-sheet+极性基团)与蝠鲼鳃的放射状微纳结构，将生物进化出的层级结构优势转化为水处理吸附/分离材料的可解释设计准则，确保高qmax、快速动力学与优异循环稳定性的物理化学基础。"
+        }
+      },
+      {
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2022-Martis-silk-adsorption-adsorbent-dye.json",
+        "paper_id": "2022-Martis-SF-GO-MB-dye-adsorption",
+        "sections": {
+          "problem_definition": "天然水体中阳离子染料污染难降解且传统吸附剂容量受限；自然界中蚕丝蛋白通过丰富的极性氨基酸残基与微纳界面实现高效的分子识别与结合。",
+          "biological_solution": "家蚕丝素蛋白进化出富含甘氨酸、丙氨酸等极性氨基酸的序列以结合环境分子；通过引入氧化石墨烯的层状褶皱结构与含氧官能团，模拟并强化天然蛋白的多层吸附与静电捕获机制；成功将亚甲基蓝吸附容量提升61.8%至381.67 mg/g。",
+          "key_features": "必须保留SF极性基团与GO含氧官能团的静电协同作用及pH 6-10下的负电荷捕获机制；可灵活调整GO掺杂比例、成膜厚度及针对不同目标污染物的表面官能团修饰。",
+          "design_mapping": "SF氨基酸残基映射为材料表面高活性吸附位点，GO二维褶皱结构映射为高粗糙度界面以暴露更多结合位点；软约束建议维持中性至弱碱性操作环境以保障COO⁻电离，并优化溶液共混-浇铸工艺确保GO均匀分散。",
+          "explainability_anchors": "仿生故事线：借鉴天然蛋白极性结合能力，耦合二维纳米材料构建仿生复合吸附界面；设计溯源：吸附容量跃升源于极性基团协同与表面粗糙度增加，伪二级动力学与Freundlich等温线模型印证化学吸附主导与多层仿生机制，生物相容性数据保障其作为绿色水处理吸附剂的工程潜力。"
+        }
+      },
+      {
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2022-Supriya-silk-fibroin-biosilica-adsorption.json",
+        "paper_id": "2022-Prasad-BS-SF-PUF-biocomposite-heavy-metals",
+        "sections": {
+          "problem_definition": "自然界重金属离子对水生生态的毒性累积 vs 传统吸附剂容量低、难再生；对应水处理中需开发高容量、可循环的绿色吸附材料以高效去除Cu²⁺与Cr⁶⁺。",
+          "biological_solution": "生物进化出硅质骨架与蛋白基质协同调控离子的策略；关键机制为生物硅提供高比表面积介孔骨架，丝纤蛋白暴露-NH与C=O极性基团实现金属螯合；成功案例为BS/SF/PUF三元复合材料实现Cu²⁺(331.69 mg/g)与Cr⁶⁺(201.56 mg/g)超高吸附量。",
+          "key_features": "必须保留：生物硅介孔骨架、丝纤蛋白极性螯合位点、戊二醛交联网络；可灵活调整：PUF基底孔隙率、BS与SF质量配比、交联密度以适配不同水质。",
+          "design_mapping": "生物→材料映射：天然硅质/蛋白结构→BS/SF复合介孔吸附层，PUF→宏观支撑骨架；软约束建议：维持pH 3-5操作窗口，控制交联剂用量平衡机械强度与传质阻力，预留EDTA再生接口。",
+          "explainability_anchors": "仿生故事线：从农业废弃物与天然蚕丝中提取硅/蛋白组分，复现自然界‘多孔骨架+活性基团’的离子捕获模式；设计溯源：XRD/FTIR证实无定形化与官能团保留，BET验证H1型介孔结构，Freundlich/Elovich模型印证多层化学吸附主导机制。"
+        }
+      },
+      {
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2023-Zhang-silk-fibroin-separation-membrane.json",
+        "paper_id": "2023-Zhang-lignin-SF-multilayer-membrane-dye",
+        "sections": {
+          "problem_definition": "水处理中需开发兼具高截留率、机械稳定性和可降解性的吸附膜材料；自然界中蚕丝通过独特的蛋白结构和多层组装提供优异的物理屏障和力学性能。",
+          "biological_solution": "蚕丝利用丝素蛋白的β-sheet结构形成热力学稳定的纳米纤维网络。本研究受此启发，通过静电纺丝构建丝素蛋白物理筛分层与木质素化学吸附层交替的多层纳米纤维膜，实现染料的高效截留(>99.5%)。",
+          "key_features": "必须保留特征：丝素蛋白的β-sheet结构、纳米纤维形态、多层交替组装结构。可灵活调整特征：单层纤维直径(如0.12-0.28μm)、膜层数、木质素与丝素蛋白的相对比例。",
+          "design_mapping": "生物蚕丝纤维→静电纺丝丝素蛋白纳米纤维(物理筛分层)；天然复合结构→木质素/丝素蛋白多层交替膜(化学+物理协同)。软约束建议：针对115.1°的疏水接触角，建议在实际水处理中引入亲水改性或优化孔隙结构以提升水通量。",
+          "explainability_anchors": "仿生故事线：模仿蚕丝的高强度纤维网络与多层结构，结合植物木质素的化学活性，打造'物理筛分+化学吸附'双效净水膜。设计溯源：丝素蛋白β-sheet结构直接映射为热力学稳定的静电纺丝纳米纤维，提供结构支撑与物理截留。"
+        }
+      },
+      {
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\第三波\\json\\2022-Martis-silk-fibroin-graphene-dye-methylene-blue-adsorption.json",
+        "paper_id": "martis2022_silk_fibroin_go_mb_adsorption",
+        "sections": {
+          "problem_definition": "水中合成染料（如亚甲基蓝）污染严重威胁水生生态和人类健康，传统处理方法成本高且产生二次污染。需要开发低成本、生物相容、高效的吸附材料。",
+          "biological_solution": "家蚕（Bombyx mori）丝素蛋白是一种天然纤维蛋白，含18种氨基酸，其中甘氨酸、丙氨酸、丝氨酸和酪氨酸占90%。这些氨基酸残基含有大量极性基团（-OH、-NH₂、-COOH），可通过静电作用、氢键等多种机制与染料分子结合。丝素蛋白的β-折叠结构提供了稳定的分子骨架。",
+          "key_features": "必须保留：丝素蛋白的极性氨基酸残基（-OH、-NH₂、-COOH等官能团，吸附活性位点）、β-折叠二级结构（结构稳定性）。可灵活调整：GO的引入量和分散程度（增强表面粗糙度和活性位点密度）、薄膜厚度。",
+          "design_mapping": "生物分子→材料设计：家蚕丝素蛋白→天然高分子吸附基体→提供极性官能团和生物相容性；氧化石墨烯→功能增强组分→增加表面粗糙度、活性位点和热稳定性。仿生设计启示：利用天然蛋白质的固有官能团实现染料吸附，通过纳米材料复合增强性能。",
+          "explainability_anchors": "仿生故事线：从家蚕丝素蛋白出发，利用其天然氨基酸极性基团实现染料分子的静电吸附。GO的引入增加了表面粗糙度和含氧官能团，协同提升吸附容量。设计溯源：家蚕→丝素蛋白→SF/GO复合膜→MB高效吸附。核心机制是静电吸引（-COO⁻与阳离子MB）。"
+        }
+      },
+      {
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\第三波\\json\\2025-Xing-silk-fibroin-keratin-aerogel-dye-methylene-blue.json",
+        "paper_id": "2025-Xing-silk-fibroin-keratin-aerogel-dye-methylene-blue",
+        "sections": {
+          "problem_definition": "印染废水中阳离子染料(如亚甲基蓝)毒性强难降解；同时大量废弃羽毛堆积造成环境污染和角蛋白资源浪费。传统吸附剂制备复杂、再生困难、易产生二次污染。",
+          "biological_solution": "蚕丝蛋白(SF)和羽毛角蛋白(FK)均为天然生物高分子，富含酰胺键、氨基、羧基等活性基团，可作为配位/静电吸附位点捕获污染物。利用深共熔溶剂提取羽毛角蛋白，与丝蛋白溶液混合，添加CTAB作为凝胶剂形成均匀三维网络，经冷冻干燥和乙醇处理诱导丝蛋白从无规卷曲转变为稳定的β-折叠构象，获得具有高孔隙率、良好机械强度和耐水性的生物基多孔气凝胶。",
+          "key_features": "必须保留：丝蛋白β-折叠构象(经乙醇诱导)、角蛋白丰富活性位点(酰胺/氨基/羧基)、CTAB凝胶交联网络、冷冻干燥多孔结构。可灵活调整：FK/SF比例、CTAB浓度、乙醇处理时间、初始染料浓度。",
+          "design_mapping": "生物结构→材料设计：蚕丝β-折叠晶体→乙醇诱导构象转变增强机械强度；羽毛角蛋白→深共熔溶剂绿色提取；静电交联→CTAB阳离子与蛋白负电荷结合；冷冻造孔→冰晶升华形成三维连通孔隙。软约束建议：控制CTAB在2%左右平衡孔隙率和结构稳定性；SF浓度≥9%时活性位点补偿孔隙率下降。",
+          "explainability_anchors": "仿生故事线：利用废弃羽毛角蛋白和蚕丝蛋白两种天然生物高分子，通过深共熔溶剂绿色提取、CTAB凝胶交联、冷冻干燥造孔、乙醇构象转变，构建富含活性位点的多孔生物气凝胶吸附剂，实现'以废治污'和生物质高值化利用。设计溯源：羽毛/蚕丝→天然蛋白高分子→深共熔溶剂提取→CTAB凝胶化→冷冻干燥→乙醇β-折叠转变→多孔气凝胶→亚甲基蓝静电/配位吸附。"
+        }
+      }
+    ]
+  },
+  "engineering_constraints": [
+    {
+      "constraint": "TGA热稳定性",
+      "value": "SF: 92%→73%→37%→2%残余(三阶段)；SF-GLYMO: 97%→35%→15%→15%残余(SiO₂)；SF-PEI-2: 86%→62%→31%→5%残余",
+      "unit": "%",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1002/admi.202001892"
+    },
+    {
+      "constraint": "Cu²⁺再生循环",
+      "value": "EDTA(0.1M)洗脱→蓝变白→可循环；但首次循环后容量有损失(EDTA残留)",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1002/admi.202001892"
+    },
+    {
+      "constraint": "再生丝素膜——酸性染料吸附",
+      "value": "酸性黄11 Qe=88.50 mg/g(b=1.06); 萘酚橙74.63 mg/g(b=0.30); 直接橙S 76.34 mg/g(b=0.12)",
+      "unit": "mg/g",
+      "relevance": "high",
+      "explanation": "pH 2-9, initial conc 20-70 mg/L",
+      "source": "literature",
+      "ref_doi": "10.1007/s10924-022-02741-6"
+    },
+    {
+      "constraint": "TGA热稳定性",
+      "value": "SF/GO热稳定性优于纯SF; 第一阶段(至175°C): SF失重17%, SF/GO 12%(水/溶剂损失); 第二阶段(250-430°C): SF~42%, SF/GO~40%分解",
+      "unit": "%",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1039/d1va00047k"
+    },
+    {
+      "constraint": "循环再生性能",
+      "value": "EDTA脱附→4次连续吸附/脱附循环后仍可高效再用",
+      "unit": "cycles",
+      "relevance": "high",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.eti.2022.102741"
+    },
+    {
+      "constraint": "TGA热稳定性",
+      "value": "BS: 总失重仅9%(至800°C); 复合材料: 第一阶段8.6%(150°C失水)→第二阶段35.4%(380°C SF酰胺分解)→第三阶段28.3%(400-800°C PUF碳骨架分解)→73%总失重",
+      "unit": "%",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.eti.2022.102741"
+    },
+    {
+      "constraint": "TGA热稳定性",
+      "value": "SF初始失重17%（室温-175°C，水分蒸发）；SF/GO初始失重12%；第二阶段250-430°C失重42%（SF）/40%（SF/GO）；SF/GO高温热稳定性优于纯SF",
+      "unit": "%",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1039/d1va00047k"
+    },
+    {
+      "constraint": "再生丝素蛋白膜染料吸附",
+      "value": "酸黄11: 88.50 mg/g; 直接橙S: 76.34 mg/g; 萘酚橙: 74.63 mg/g（Langmuir, R²=0.98-0.99）",
+      "unit": "mg/g",
+      "relevance": "high",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s10924-022-02741-6"
+    },
+    {
+      "constraint": "pH 7时吸附容量(100 mg/L MB)",
+      "value": "42",
+      "unit": "mg/g",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jtice.2023.105298"
+    },
+    {
+      "constraint": "pH 2-10吸附容量变化趋势",
+      "value": "pH 2-7增加，pH 7-10趋于平稳",
+      "unit": null,
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jtice.2023.105298"
+    },
+    {
+      "constraint": "未处理气凝胶水中稳定性",
+      "value": "立即破坏(结构崩溃)",
+      "unit": null,
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jtice.2023.105298"
+    },
+    {
+      "constraint": "pH 2-4时吸附机理",
+      "value": "物理吸附和配位辅助(两者均带正电)",
+      "unit": null,
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jtice.2023.105298"
+    },
+    {
+      "constraint": "TGA热稳定性趋势",
+      "value": "SF浓度增加→热稳定性提升，初始热分解温度升高",
+      "unit": null,
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.16375/j.cnki.cn45-1395/t.2026.02.014"
+    }
+  ],
+  "provenance_summary": {
+    "n_papers": 10,
+    "n_verified": 25,
+    "n_unverified": 20
+  },
+  "coverage": "normal",
+  "status": "active",
+  "design_translation": [
+    {
+      "idea": "利用丝素蛋白的 β-折叠结构和氨基酸侧链进行吸附",
+      "specific_functional_group": "丝氨酸（Ser）的羟基，酪氨酸（Tyr）的酚羟基",
+      "material_handle": "丝素蛋白提取、再生或交联成型",
+      "target_interaction": "羟基和酚羟基配位金属离子，β-折叠提供结构稳定性",
+      "source_tier": "llm_inference",
+      "examples": [],
+      "design_principle": "丝素蛋白的β-折叠结晶区提供机械强度，无定形区的-NH₂、-COOH、-OH提供吸附位点。可通过再生/改性调控溶解性和功能化",
+      "implementation_example": "蚕丝脱胶→SF溶液→静电纺丝纳米纤维膜；或SF/壳聚糖复合微球→柱吸附",
+      "constraints": "SF水溶性需甲醇/乙醇处理交联；机械强度低于合成聚合物；成本高于壳聚糖",
+      "failure_modes": "未交联SF溶解；机械强度不足；交联后官能团减少",
+      "evidence_tier": "lead"
+    }
+  ],
+  "library_tier": "core",
+  "lifecycle_status": "active",
+  "honesty_ledger": {
+    "facts": [],
+    "leads": [
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "MO吸附机制",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 1,
+        "name": "Cu²⁺吸附机制",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 2,
+        "name": "丝素蛋白分子结构与力学性能",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 3,
+        "name": "丝素蛋白极性官能团——吸附活性位点",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 4,
+        "name": "Na₂CO₃脱胶丝纤维——超疏水油水分离",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 5,
+        "name": "丝素仿生层级结构设计原则",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 6,
+        "name": "吸附机制——静电作用",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 7,
+        "name": "吸附机制",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 8,
+        "name": "BS/SF/PUF三元协同设计",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 9,
+        "name": "结晶紫吸附机制",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 10,
+        "name": "静电纺丝工艺参数",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 11,
+        "name": "木质素疏水性来源",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 13,
+        "name": "脱胶蚕丝的超疏水性",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 14,
+        "name": "蚕丝蛋白油水分离材料汇总",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 15,
+        "name": "丝素蛋白复合材料的吸附机制",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 16,
+        "name": "pH 2-4时吸附机理",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 0,
+        "parameter": "Cu²⁺最大吸附容量 qmax",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 1,
+        "parameter": "SF-PEI-2@GO Cu²⁺最大吸附容量",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 2,
+        "parameter": "甲基橙(MO)最大吸附容量",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 3,
+        "parameter": "氯仿吸附容量",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 4,
+        "parameter": "最大吸附容量 qmax",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 5,
+        "parameter": "去除率 removal efficiency",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 6,
+        "parameter": "最大吸附容量 qmax",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 7,
+        "parameter": "去除率 removal efficiency",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 8,
+        "parameter": "最大吸附容量 qmax (SF/GO, Freundlich)",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 9,
+        "parameter": "最大吸附容量 qmax (SF, Freundlich)",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 10,
+        "parameter": "去除率 removal efficiency",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 11,
+        "parameter": "浓度对吸附容量的影响",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 12,
+        "parameter": "最大吸附容量 Qmax",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 13,
+        "parameter": "pH 7时吸附容量(100 mg/L MB)",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 14,
+        "parameter": "MB去除率随CTAB浓度变化",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 15,
+        "parameter": "MB去除率随SF浓度变化",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 16,
+        "parameter": "pH 2-10吸附容量变化趋势",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 17,
+        "parameter": "初始浓度400 mg/L时吸附容量",
+        "basis": "partial_with_quote"
+      }
+    ],
+    "inferences": [],
+    "generated_by": "P1c-auto",
+    "note": "Classification based on verification label + quote presence + source type"
+  },
+  "mechanism_tags": [
+    "配位螯合",
+    "静电吸附",
+    "离子交换",
+    "氢键",
+    "π-π堆积",
+    "疏水分配",
+    "超浸润分离",
+    "孔道限域分子筛分",
+    "还原催化降解"
+  ]
+}

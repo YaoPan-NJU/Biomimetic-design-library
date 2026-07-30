@@ -1,0 +1,485 @@
+{
+  "version": "1.0",
+  "description": "污染物别名映射表，用于统一污染物名称",
+  "last_updated": "2026-06-08",
+  "aliases": {
+    "Pb(II)": {
+      "canonical_name": "Pb(II)",
+      "aliases": [
+        "Pb(II)",
+        "Pb²⁺",
+        "Pb2+",
+        "Pb",
+        "lead ion",
+        "铅离子",
+        "二价铅"
+      ]
+    },
+    "Cd(II)": {
+      "canonical_name": "Cd(II)",
+      "aliases": [
+        "Cd(II)",
+        "Cd²⁺",
+        "Cd2+",
+        "Cd",
+        "cadmium ion",
+        "镉离子",
+        "二价镉"
+      ]
+    },
+    "Hg(II)": {
+      "canonical_name": "Hg(II)",
+      "aliases": [
+        "Hg(II)",
+        "Hg²⁺",
+        "Hg2+",
+        "Hg",
+        "mercury ion",
+        "汞离子",
+        "二价汞"
+      ]
+    },
+    "Cu(II)": {
+      "canonical_name": "Cu(II)",
+      "aliases": [
+        "Cu(II)",
+        "Cu²⁺",
+        "Cu2+",
+        "Cu",
+        "copper ion",
+        "铜离子",
+        "二价铜"
+      ]
+    },
+    "Cr(VI)": {
+      "canonical_name": "Cr(VI)",
+      "aliases": [
+        "Cr(VI)",
+        "Cr⁶⁺",
+        "Cr6+",
+        "Cr",
+        "chromium(VI)",
+        "六价铬",
+        "铬酸根"
+      ]
+    },
+    "Cr(III)": {
+      "canonical_name": "Cr(III)",
+      "aliases": [
+        "Cr(III)",
+        "Cr³⁺",
+        "Cr3+",
+        "chromium(III)",
+        "三价铬"
+      ]
+    },
+    "As(V)": {
+      "canonical_name": "As(V)",
+      "aliases": [
+        "As(V)",
+        "As⁵⁺",
+        "As5+",
+        "arsenate",
+        "砷酸盐",
+        "五价砷"
+      ]
+    },
+    "As(III)": {
+      "canonical_name": "As(III)",
+      "aliases": [
+        "As(III)",
+        "As³⁺",
+        "As3+",
+        "arsenite",
+        "亚砷酸盐",
+        "三价砷"
+      ]
+    },
+    "U(VI)": {
+      "canonical_name": "U(VI)",
+      "aliases": [
+        "U(VI)",
+        "U⁶⁺",
+        "U6+",
+        "U",
+        "uranyl",
+        "铀酰离子",
+        "六价铀"
+      ]
+    },
+    "Zn(II)": {
+      "canonical_name": "Zn(II)",
+      "aliases": [
+        "Zn(II)",
+        "Zn²⁺",
+        "Zn2+",
+        "Zn",
+        "zinc ion",
+        "锌离子",
+        "二价锌"
+      ]
+    },
+    "Ni(II)": {
+      "canonical_name": "Ni(II)",
+      "aliases": [
+        "Ni(II)",
+        "Ni²⁺",
+        "Ni2+",
+        "Ni",
+        "nickel ion",
+        "镍离子",
+        "二价镍"
+      ]
+    },
+    "Co(II)": {
+      "canonical_name": "Co(II)",
+      "aliases": [
+        "Co(II)",
+        "Co²⁺",
+        "Co2+",
+        "Co",
+        "cobalt ion",
+        "钴离子",
+        "二价钴"
+      ]
+    },
+    "PFOA": {
+      "canonical_name": "PFOA",
+      "aliases": [
+        "PFOA",
+        "Perfluorooctanoic acid",
+        "全氟辛酸",
+        "PFOA（Perfluorooctanoic acid）"
+      ]
+    },
+    "PFOS": {
+      "canonical_name": "PFOS",
+      "aliases": [
+        "PFOS",
+        "Perfluorooctanesulfonic acid",
+        "全氟辛烷磺酸",
+        "PFOS（Perfluorooctanesulfonic acid）"
+      ]
+    },
+    "BPA": {
+      "canonical_name": "BPA",
+      "aliases": [
+        "BPA",
+        "Bisphenol A",
+        "双酚A",
+        "BPA（Bisphenol A）"
+      ]
+    },
+    "SMX": {
+      "canonical_name": "SMX",
+      "aliases": [
+        "SMX",
+        "Sulfamethoxazole",
+        "磺胺甲恶唑",
+        "SMX（Sulfamethoxazole）"
+      ]
+    },
+    "TC": {
+      "canonical_name": "TC",
+      "aliases": [
+        "TC",
+        "Tetracycline",
+        "四环素",
+        "TC（Tetracycline）",
+        "tetracycline hydrochloride",
+        "TC·HCl"
+      ]
+    },
+    "CIP": {
+      "canonical_name": "CIP",
+      "aliases": [
+        "CIP",
+        "Ciprofloxacin",
+        "环丙沙星",
+        "CIP（Ciprofloxacin）",
+        "ciprofloxacin hydrochloride"
+      ]
+    },
+    "TCE": {
+      "canonical_name": "TCE",
+      "aliases": [
+        "TCE",
+        "Trichloroethylene",
+        "三氯乙烯",
+        "TCE（Trichloroethylene）"
+      ]
+    },
+    "MB": {
+      "canonical_name": "MB",
+      "aliases": [
+        "MB",
+        "Methylene Blue",
+        "Methylene blue",
+        "亚甲基蓝",
+        "methylene blue",
+        "MB (Methylene Blue)",
+        "Methylene blue MB"
+      ]
+    },
+    "MO": {
+      "canonical_name": "MO",
+      "aliases": [
+        "MO",
+        "Methyl Orange",
+        "Methyl orange",
+        "甲基橙",
+        "methyl orange",
+        "MO (Methyl Orange)"
+      ]
+    },
+    "RhB": {
+      "canonical_name": "RhB",
+      "aliases": [
+        "RhB",
+        "Rhodamine B",
+        "Rhodamine b",
+        "罗丹明B",
+        "rhodamine B",
+        "RhB (Rhodamine B)"
+      ]
+    },
+    "CR": {
+      "canonical_name": "CR",
+      "aliases": [
+        "CR",
+        "Congo Red",
+        "Congo red",
+        "刚果红",
+        "congo red",
+        "CR (Congo Red)",
+        "Congo red CR"
+      ]
+    },
+    "CV": {
+      "canonical_name": "CV",
+      "aliases": [
+        "CV",
+        "Crystal Violet",
+        "Crystal violet",
+        "结晶紫",
+        "crystal violet"
+      ]
+    },
+    "MG": {
+      "canonical_name": "MG",
+      "aliases": [
+        "MG",
+        "Malachite Green",
+        "Malachite green",
+        "孔雀石绿",
+        "malachite green"
+      ]
+    },
+    "PO43-": {
+      "canonical_name": "PO43-",
+      "aliases": [
+        "PO43-",
+        "PO₄³⁻",
+        "Phosphate",
+        "phosphate",
+        "磷酸盐",
+        "磷酸根",
+        "无机磷"
+      ]
+    },
+    "NH4+": {
+      "canonical_name": "NH4+",
+      "aliases": [
+        "NH4+",
+        "NH₄⁺",
+        "Ammonium",
+        "ammonium",
+        "铵根",
+        "氨氮",
+        "NH4+-N"
+      ]
+    },
+    "NO3-": {
+      "canonical_name": "NO3-",
+      "aliases": [
+        "NO3-",
+        "NO₃⁻",
+        "Nitrate",
+        "nitrate",
+        "硝酸盐",
+        "硝酸根",
+        "NO3--N"
+      ]
+    },
+    "F-": {
+      "canonical_name": "F-",
+      "aliases": [
+        "F-",
+        "F⁻",
+        "Fluoride",
+        "fluoride",
+        "氟离子",
+        "氟化物"
+      ]
+    },
+    "HFPO-DA (GenX)": {
+      "aliases": [
+        "六氟环氧丙烷二聚酸",
+        "13252-13-6",
+        "HFPO-DA (GenX)",
+        "Hexafluoropropylene Oxide Dimer Acid",
+        "HFPO-DA"
+      ],
+      "class": "PFAS_ether_carboxylate"
+    },
+    "PFBS": {
+      "aliases": [
+        "PFBS",
+        "全氟丁烷磺酸",
+        "375-73-5"
+      ],
+      "class": "PFAS_sulfonate_short"
+    },
+    "2,6-Dichlorophenol": {
+      "aliases": [
+        "87-65-0",
+        "2,6-二氯苯酚",
+        "2,6-Dichlorophenol"
+      ],
+      "class": "chlorophenol"
+    },
+    "Pentachlorophenol": {
+      "aliases": [
+        "五氯苯酚",
+        "87-86-5",
+        "Pentachlorophenol"
+      ],
+      "class": "chlorophenol"
+    },
+    "Octocrylene": {
+      "aliases": [
+        "6197-30-4",
+        "奥克立林",
+        "Octocrylene"
+      ],
+      "class": "UV_filter_ester"
+    },
+    "SCCPs": {
+      "aliases": [
+        "短链氯化石蜡",
+        "85535-84-8",
+        "SCCPs",
+        "Alkanes"
+      ],
+      "class": "chlorinated_paraffin"
+    },
+    "PCB-209": {
+      "aliases": [
+        "2051-24-3",
+        "PCB-209",
+        "多氯联苯-209"
+      ],
+      "class": "PCB"
+    },
+    "β-HCH": {
+      "aliases": [
+        "β-HCH",
+        "319-85-7",
+        "β-六氯环己烷",
+        "β-Hexachlorocyclohexane"
+      ],
+      "class": "organochlorine"
+    },
+    "Endosulfan": {
+      "aliases": [
+        "硫丹",
+        "115-29-7",
+        "Endosulfan"
+      ],
+      "class": "organochlorine_pesticide"
+    },
+    "Nonylphenol": {
+      "aliases": [
+        "壬基酚",
+        "104-40-5",
+        "Nonylphenol"
+      ],
+      "class": "alkylphenol_EDC"
+    },
+    "Trichloromethane (Chloroform)": {
+      "aliases": [
+        "三氯甲烷",
+        "Trichloromethane",
+        "67-66-3",
+        "Trichloromethane (Chloroform)"
+      ],
+      "class": "chlorinated_solvent"
+    },
+    "Roxithromycin": {
+      "aliases": [
+        "Roxithromycin",
+        "80214-83-1",
+        "罗红霉素"
+      ],
+      "class": "macrolide_antibiotic"
+    },
+    "Hexachlorobutadiene (HCBD)": {
+      "aliases": [
+        "六氯丁二烯",
+        "Hexachlorobutadiene (HCBD)",
+        "Hexachlorobutadiene",
+        "87-68-3"
+      ],
+      "class": "chlorinated_diene"
+    },
+    "Decabromodiphenyl ether (BDE-209)": {
+      "aliases": [
+        "1163-19-5",
+        "Decabromodiphenyl ether (BDE-209)",
+        "十溴二苯醚",
+        "Decabromodiphenyl ether"
+      ],
+      "class": "PBDE"
+    },
+    "TCDD": {
+      "aliases": [
+        "2,3,7,8-四氯二苯并-p-二噁英",
+        "TCDD",
+        "1746-01-6"
+      ],
+      "class": "dioxin"
+    },
+    "DDT": {
+      "aliases": [
+        "50-29-3",
+        "滴滴涕",
+        "DDT"
+      ],
+      "class": "organochlorine_pesticide"
+    },
+    "DDE": {
+      "aliases": [
+        "72-55-9",
+        "DDE",
+        "滴滴伊"
+      ],
+      "class": "organochlorine_metabolite"
+    },
+    "Dieldrin": {
+      "aliases": [
+        "Dieldrin",
+        "60-57-1",
+        "狄氏剂"
+      ],
+      "class": "organochlorine_pesticide"
+    },
+    "PFHxS": {
+      "aliases": [
+        "PFHxS",
+        "355-46-4",
+        "全氟己烷磺酸"
+      ],
+      "class": "PFAS_sulfonate"
+    }
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "id": "namib-beetle",
+  "name_zh": "纳米布甲虫",
+  "name_en": "Namib Beetle",
+  "organism": {
+    "scientific": "Stenocara gracilipes (纳米布甲虫)",
+    "category": "动物"
+  },
+  "biomimetic_dimension": "结构仿生",
+  "features": [
+    "疏水性"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": "any",
+    "note": "测过的 pH/温度范围，不是适用范围。仅从 performance_data 中实际测试过的条件聚合。"
+  },
+  "performance_data": [],
+  "mechanisms": [
+    {
+      "name": "纳米布沙漠甲虫雾水收集机制",
+      "description": "亲水凸起捕获雾滴，疏水凹槽定向运输",
+      "functional_groups": [],
+      "source": "literature",
+      "ref_doi": "10.1002/adfm.202200359",
+      "verification": "partial",
+      "基本原理": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "雾气/水蒸气",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "纳米比亚甲虫亲水凸起+疏水基底交替表面",
+          "basis": "from_source",
+          "source": "10.1002/adfm.202200359",
+          "locator": "p.2",
+          "quote": "The Namib desert beetle’s bumpy surface is  randomly distributed with wax-coated hydrophobic areas and  hydrophilic wax-free parts (Figure 2a–c)",
+          "scope_match": "Keywords: Namib beetle, hydrophobic, hydrophilic"
+        },
+        "interaction": {
+          "text": "亲水区域凝结水滴，疏水区域导流收集",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "润湿性梯度和表面拓扑实现定向集水",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "亲疏水比例和凸起间距影响集水效率",
+            "parameter": "general",
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "verification_method": "pdf_not_found",
+            "source": "10.1002/adfm.202200359"
+          }
+        ],
+        "transferable_principle": "纳米比亚甲虫亲水凸起+疏水基底交替表面",
+        "verification_quote": "The Namib beetle has a hydrophilic side to collect water from fog and a hydrophobic side to direct the water to the beetle's mouth.",
+        "source_doi": "10.1007/s11783-021-1515-2",
+        "source_locator": "p.18 / Section 5.1 Principles of Janus membranes"
+      },
+      "verification_quote": "The Namib desert beetle’s bumpy surface is  randomly distributed with wax-coated hydrophobic areas and  hydrophilic wax-free parts (Figure 2a–c)",
+      "source_locator": "p.2",
+      "key_structures": [
+        "亲水表面",
+        "疏水表面"
+      ]
+    }
+  ],
+  "narrative": {
+    "entries": [
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2018-Halim-cellulose-superhydrophobic-hydrophobic-oil-water-review.json",
+        "paper_id": "Halim2022_cellulose_oily_wastewater_review",
+        "sections": {
+          "problem_definition": "自然界中生物面临泥水污染附着、油污排斥及干旱集水等极端润湿挑战；水处理中对应复杂油水乳液（水包油/油包水）的高效分离难题，传统膜受限于孔径匹配瓶颈与易污染堵塞。",
+          "biological_solution": "进化出微纳层级粗糙结构（荷叶微米沟槽+纳米蜡管、鱼鳞微乳突+黏液层）与双面异质构型（沙漠甲虫/槐叶萍）；通过Cassie-Baxter亚稳态截留空气或水下气垫效应实现极端润湿性调控；成功案例为纤维素基仿生膜实现98%-99%分离效率与高达65000 L/m²/h通量。",
+          "key_features": "必须保留：微纳层级粗糙度、低表面能涂层、双面润湿性反差（Janus）、气/水缓冲层；可灵活调整：纤维素基底形态（气凝胶/海绵/织物/滤纸）、粗糙增强纳米颗粒种类（SiO2/ZnO/Fe3O4等）、疏水聚合物类型（PDMS/PVDF/PS等）及交联网络密度。",
+          "design_mapping": "生物→材料映射：荷叶结构→SiO2/PDMS修饰纤维素织物/气凝胶；鱼鳞黏液→亲水纤维素基质构建水下超疏油表面；甲虫/Salvinia双面→Janus B-on-A非对称膜；软约束建议：依据Wenzel/Cassie-Baxter方程优化粗糙度比(r)与固液界面分数(fSL)，在突破压力与高通量间取得平衡。",
+          "explainability_anchors": "仿生故事线：从自然自清洁、定向集水与抗污机制迁移至人工极端润湿表面工程；设计溯源：表面微纳拓扑直接决定接触角阈值(≥150°)与Cassie-Baxter气穴稳定性，Janus非对称架构突破传统筛分极限，整体性能由突破压力方程与严苛环境稳定性测试双重锚定。"
+        }
+      },
+      {
+        "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2022-Progress-review 2.json",
+        "paper_id": "yu2022_fog_harvesting_biomimetic_review",
+        "sections": {
+          "problem_definition": "自然界挑战：干旱沙漠环境中液态水极度匮乏，生物需从稀薄雾气中高效捕获水分；水处理对应：低浓度气溶胶/雾水的高效收集与淡水化，突破传统冷凝/吸附的能耗与效率瓶颈。",
+          "biological_solution": "进化策略：通过体表微纳形貌与界面化学的协同演化实现被动式集水；关键机制：亲疏水异质界面捕获雾滴，结合非对称几何构型（锥形刺、纺锤节、楔形槽）产生Laplace压力差与表面能梯度，驱动液滴定向连续输运；成功案例：纳米布沙漠甲虫（Stenocara gracilipes）背部亲疏水凸起阵列、仙人掌刺与蜘蛛丝周期性结构、猪笼草楔形微通道。",
+          "key_features": "必须保留特征：亲疏水异质界面、非对称几何构型（锥形/纺锤节/楔形）、定向输运驱动力（Laplace压差/表面能梯度/毛细力）；可灵活调整特征：材料基底类型（织物/金属网/高分子/生物质）、微纳结构尺度与排列密度、表面化学修饰工艺（喷涂/光刻/剪纸/自组装）。",
+          "design_mapping": "生物→材料映射：甲虫背部亲疏水凸起映射为Janus涂层或图案化微区；仙人掌刺/蜘蛛丝纺锤节映射为锥形纤维或周期性非对称微针阵列；猪笼草/叶脉通道映射为光刻或模板法制备的定向导流槽；软约束建议：优先采用低成本宏量制备技术（如剪纸法、喷涂法）替代复杂光刻；结构参数（如尖端角15°、纺锤节间距1.43-1.67mm）需根据实际雾滴粒径分布与风速进行流体力学优化。",
+          "explainability_anchors": "仿生故事线：从沙漠甲虫‘捕雾-导流’生存策略出发，揭示自然界如何利用微纳结构与界面能梯度突破气液传质瓶颈；设计溯源：材料构效关系直接溯源至文献中的流体力学模型（ηa/ηd效率公式、Laplace压力模型、Re/St数）与多源仿生原型（甲虫、仙人掌、蜘蛛丝、猪笼草），确保集雾性能可解释、参数可预测。"
+        }
+      }
+    ]
+  },
+  "engineering_constraints": [],
+  "provenance_summary": {
+    "n_papers": 2,
+    "n_verified": 0,
+    "n_unverified": 16,
+    "boundary_rules": [
+      {
+        "id": "B07-REG-002",
+        "type": "soft",
+        "rule": "Current Namib beetle mechanisms and constraints mainly come from generic membrane or fog-harvesting review material rather than organism-specific experiments. Keep as background only; do not use as direct performance evidence."
+      }
+    ],
+    "scope_note": "Generic fog-harvesting review sources; background reference only, no direct adsorption evidence"
+  },
+  "coverage": "low",
+  "status": "active",
+  "library_tier": "exploratory",
+  "lifecycle_status": "parked",
+  "design_translation": [
+    {
+      "idea": "利用纳米比亚甲虫的亲疏水交替表面实现集水，可启发梯度润湿性分离膜",
+      "specific_functional_group": "亲水凸起 + 疏水基底",
+      "material_handle": "梯度润湿性表面、Janus膜",
+      "target_interaction": "润湿性梯度驱动液体定向传输",
+      "source_tier": "llm_inference",
+      "design_principle": "纳米布甲虫背部的亲疏水交替微纳结构实现大气水收集。可用于设计集水/分离表面",
+      "constraints": "微纳加工精度高；仅适用于气-液界面；不适用于液态吸附",
+      "implementation_example": "亲疏水交替微结构加工→集水表面"
+    }
+  ],
+  "honesty_ledger": {
+    "facts": [],
+    "leads": [],
+    "inferences": [],
+    "generated_by": "P5-B-preflight",
+    "note": "Auto-generated from verification labels + quote presence + source type"
+  },
+  "mechanism_tags": [
+    "疏水分配"
+  ]
+}

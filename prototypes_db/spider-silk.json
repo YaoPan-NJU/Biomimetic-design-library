@@ -1,0 +1,1948 @@
+{
+  "id": "spider-silk",
+  "name_zh": "蜘蛛丝",
+  "name_en": "Spider Silk",
+  "organism": {
+    "scientific": "Araneus diadematus",
+    "category": "节肢动物"
+  },
+  "biomimetic_dimension": "结构仿生",
+  "features": [
+    "疏水性",
+    "纤维状"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": "low",
+    "note": "测过的 pH/温度范围，不是适用范围。仅从 performance_data 中实际测试过的条件聚合。"
+  },
+  "performance_data": [
+    {
+      "parameter": "Cd(II)去除性能 Cd(II) removal",
+      "value": "100%去除; 20min达EPA安全标准(5ppb); 起始浓度1000ppb",
+      "unit": "%",
+      "pollutant": "Cd(II)",
+      "material": "CNF/PEI@GOA",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.cej.2021.128670",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第5组-纤维结构/2021-Zhou-cellulose-silk-nanofiber-adsorption.pdf",
+      "page": 5,
+      "locator": "Fig. 5a",
+      "verification": "partial",
+      "confidence": 0.8,
+      "label_fix": "P1b: downgraded from verified — no verification_quote",
+      "source_locator": "p.5, Fig. 5a",
+      "verification_quote": "the removal rate of GO for the cationic heavy metal ions (Cd(II), Cu(II), and Pb(II)) with initial concentrations of 1000 and 2000 ppb is 100%",
+      "scope_match": "Keywords: Cd(II)/镉, removal/去除, 100%, CNF/PEI@GOA, 1000 ppb"
+    },
+    {
+      "parameter": "Cr(VI)去除性能 Cr(VI) removal",
+      "value": "100%去除; 20min达EPA安全标准(100ppb); 起始浓度1000ppb",
+      "unit": "%",
+      "pollutant": "Cr(VI)",
+      "material": "CNF/PEI@GOA",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.cej.2021.128670",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第5组-纤维结构/2021-Zhou-cellulose-silk-nanofiber-adsorption.pdf",
+      "page": 5,
+      "locator": "Fig. 5b",
+      "verification": "partial",
+      "confidence": 0.8,
+      "label_fix": "P1b: downgraded from verified — no verification_quote",
+      "source_locator": "p.5, Fig. 4b",
+      "verification_quote": "For PEI@GOA and CNF/PEI@GOA, the removal rates of Cr(VI), Cd(II), Cu(II), and Pb(II) are all 100% regardless of the initial concentration",
+      "scope_match": "Keywords: Cr(VI)/铬, removal/去除, 100%, CNF/PEI@GOA, PEI@GOA"
+    },
+    {
+      "parameter": "Cu(II)去除性能 Cu(II) removal",
+      "value": "100%去除; 30min达安全标准; 起始浓度1000ppb",
+      "unit": "%",
+      "pollutant": "Cu(II)",
+      "material": "CNF/PEI@GOA",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.cej.2021.128670",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第5组-纤维结构/2021-Zhou-cellulose-silk-nanofiber-adsorption.pdf",
+      "page": 5,
+      "locator": "Fig. 5c",
+      "verification": "partial",
+      "confidence": 0.8,
+      "label_fix": "P1b: downgraded from verified — no verification_quote",
+      "source_locator": "p.5, Fig. 4c",
+      "verification_quote": "CNF/PEI@GOA rapidly and completely removed Cd(II), Cr(VI), Cu(II), and Pb(II) with a starting concentration of 1000 ppb, in 40 min",
+      "scope_match": "Keywords: Cu(II)/铜, removal/去除, 100%, 40 min, CNF/PEI@GOA"
+    },
+    {
+      "parameter": "Pb(II)去除性能 Pb(II) removal",
+      "value": "100%去除; 40min达EPA安全标准(0ppb); 起始浓度1000ppb",
+      "unit": "%",
+      "pollutant": "Pb(II)",
+      "material": "CNF/PEI@GOA",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.cej.2021.128670",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第5组-纤维结构/2021-Zhou-cellulose-silk-nanofiber-adsorption.pdf",
+      "page": 5,
+      "locator": "Fig. 5d",
+      "verification": "partial",
+      "confidence": 0.8,
+      "label_fix": "P1b: downgraded from verified — no verification_quote",
+      "source_locator": "p.5, Fig. 5d",
+      "verification_quote": "the residual concentration reached the safe-level EPA-NPDWR standard, the adsorption times of CNF/PEI@GOA for Cd(II), Cr(VI), Cu(II), and Pb(II) were 20, 20, 30, and 40 min",
+      "scope_match": "Keywords: Pb(II)/铅, removal/去除, EPA, safety standard, 40 min, CNF/PEI@GOA"
+    }
+  ],
+  "mechanisms": [
+    {
+      "name": "蜘蛛丝蛋白β-折叠与氨基酸残基配位吸附",
+      "description": "ALD金属掺杂：通过金属配位键/共价键增强强度和韧性；f-CNTs机械剪切加载：韧性提高≈300%；SWCNTs/PEDOT-PSS涂层：韧性420 MJ/m³+导电率1077 S/cm；喂食石墨烯/CNT：蜘蛛产出增强力学性能的牵引丝",
+      "functional_groups": [
+        "石墨烯表面基团",
+        "配位/螯合位点",
+        "碳纳米管表面基团",
+        "-NH₂（氨基）",
+        "-S-（硫醚键）",
+        "-O-（醚键）"
+      ],
+      "source": "10.1016/j.cej.2021.128670",
+      "ref_doi": "10.1002/advs.202103965",
+      "verification": "partial",
+      "verification_quote": "Inspired by the principle of the spider silk, a novel amphoteric bionic fibers adsorbent was designed via electrostatic assembly of cellulose nanofibers (CNF) as the skeleton, graphene oxide (GO) and polyethyleneimine (PEI) as layers",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "重金属和有机物",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "蜘蛛丝蛋白β-折叠结构和氨基酸序列",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "静电吸引、氢键、配位",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "丝蛋白氨基酸序列提供丰富官能团，β-折叠提供机械强度",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "氨基酸组成和pH影响吸附性能",
+            "parameter": "general",
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "verification_method": "pdf_error",
+            "source": "10.1002/advs.202103965"
+          }
+        ],
+        "transferable_principle": "蜘蛛丝蛋白β-折叠结构和氨基酸序列"
+      },
+      "source_page": 1,
+      "source_doi": "10.1002/advs.202103965",
+      "source_file": "仿生文献库/论文/第5组-纤维结构/2021-Zhou-cellulose-silk-nanofiber-adsorption.pdf",
+      "locator": "p.1",
+      "source_locator": "p.1, Abstract",
+      "scope_match": "Keywords: spider silk/蜘蛛丝, bionic fibers/仿生纤维, CNF/纤维素纳米纤维, PEI/聚乙烯亚胺, GO/氧化石墨烯",
+      "key_structures": [
+        "涂层结构",
+        "β-折叠"
+      ]
+    },
+    {
+      "name": "静电纺丝纤维形貌调控因素",
+      "description": "溶液粘度、表面张力、溶剂、电导率、介电性能；电压、喂料速度、接收距离、喷丝头直径；温度、湿度、气体介质",
+      "functional_groups": [],
+      "source": "10.1016/j.cej.2021.128670",
+      "ref_doi": "10.1007/s40242-021-0010-4",
+      "verification": "partial",
+      "causal_chain": {
+        "transferable_principle": "基于机制: 静电纺丝纤维形貌调控因素",
+        "pollutant_feature": {
+          "text": "溶液粘度、表面张力、溶剂、电导率、介电性能；电压、喂料速度、接收距离、喷丝头直径；温度、湿度、气体介质",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "静电纺丝纤维形貌调控因素表面结构",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "溶液粘度、表面张力、溶剂、电导率、介电性能；电压、喂料速度、接收距离、喷丝头直径；温度、湿度、气体介质",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "表面活性位点与目标物相互作用",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "unverifiable_generic_text"
+          }
+        ]
+      },
+      "evidence_type": "lead_inference",
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "source_file": "仿生文献库/论文/第5组-纤维结构/2021-Zhou-cellulose-silk-nanofiber-adsorption.pdf",
+      "locator": "p.1",
+      "verification_quote": "Residual concentrations of Cd(II), Cr(VI), Cu(II), Pb(II) at 1000 ppb in 40 min. CNF ensured high swelling rate for amphoteric bionic fibers",
+      "source_locator": "p.1",
+      "scope_match": "Keywords: Cd(II)/镉, Cr(VI)/铬, Pb(II)/铅, heavy metal/重金属, adsorption/吸附",
+      "source_doi": "10.1016/j.cej.2021.128670",
+      "key_structures": [
+        "纤维结构",
+        "静电纺丝纤维"
+      ]
+    },
+    {
+      "name": "PAN/热解PAN Janus织物润湿性",
+      "description": "PAN侧超疏水，热解PAN侧超亲水",
+      "functional_groups": [
+        "-S-（硫醚键）"
+      ],
+      "source": "10.1016/j.cej.2021.128670",
+      "ref_doi": "10.1007/s40242-021-0010-4",
+      "verification": "partial",
+      "causal_chain": {
+        "transferable_principle": "基于机制: PAN/热解PAN Janus织物润湿性",
+        "pollutant_feature": {
+          "text": "PAN侧超疏水，热解PAN侧超亲水",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.ccr.2023.215234",
+          "locator": "p.1",
+          "quote": "PAN, poly(acrylonitrile)",
+          "scope_match": "Keywords: pan, poly"
+        },
+        "bio_structure": {
+          "text": "PAN/热解PAN Janus织物润湿性功能结构",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
+          "locator": "p.11",
+          "quote": "Integrated Asymmetric Superwetting Janus Membrane for",
+          "scope_match": "Keywords: janus, ja"
+        },
+        "interaction": {
+          "text": "PAN侧超疏水，热解PAN侧超亲水",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.ccr.2023.215234",
+          "locator": "p.1",
+          "quote": "PAN, poly(acrylonitrile)",
+          "scope_match": "Keywords: pan, poly"
+        },
+        "why_it_works": {
+          "text": "疏水相互作用驱动分配",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
+          "locator": "p.11",
+          "quote": "Integrated Asymmetric Superwetting Janus Membrane for",
+          "scope_match": "Keywords: janus, ja"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "pdf_not_found"
+          }
+        ]
+      },
+      "evidence_type": "lead_inference",
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "source_file": "仿生文献库/论文/第5组-纤维结构/2021-Zhou-cellulose-silk-nanofiber-adsorption.pdf",
+      "locator": "p.2",
+      "verification_quote": "The formation of the stable chemical bonds by epichlorohydrin (ECH) with CNF, PEI and GO can accelerate the formation of the network fibers of CNF/PEI@GOA; however, GO only exists in the outer layer",
+      "source_locator": "p.2",
+      "scope_match": "Keywords: cellulose nanofibers/纤维素纳米纤维, PEI/聚乙烯亚胺, chemical bonds/化学键, graphene oxide/氧化石墨烯",
+      "source_doi": "10.1016/j.cej.2021.128670",
+      "key_structures": [
+        "润湿结构",
+        "超亲水表面",
+        "超疏水表面",
+        "Janus双面结构"
+      ]
+    },
+    {
+      "name": "单向渗透三力竞争机制",
+      "description": "静水压(HP)+毛细力(CF)+疏水力(HF)共同决定液滴渗透行为",
+      "functional_groups": [],
+      "source": "10.1016/j.cej.2021.128670",
+      "ref_doi": "10.1007/s40242-021-0010-4",
+      "verification": "partial",
+      "causal_chain": {
+        "transferable_principle": "基于机制: 单向渗透三力竞争机制",
+        "pollutant_feature": {
+          "text": "静水压(HP)+毛细力(CF)+疏水力(HF)共同决定液滴渗透行为",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "单向渗透三力竞争功能结构",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "静水压(HP)+毛细力(CF)+疏水力(HF)共同决定液滴渗透行为",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "疏水相互作用驱动分配",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "pdf_not_found"
+          }
+        ]
+      },
+      "evidence_type": "lead_inference",
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "source_file": "仿生文献库/论文/第5组-纤维结构/2021-Zhou-cellulose-silk-nanofiber-adsorption.pdf",
+      "locator": "p.5",
+      "verification_quote": "CNF/PEI@GOA had a utilization rate of 100% within 40 min. The excellent porosity of the structure and specific surface area resulted in its ability to rapidly adsorb heavy metal ions",
+      "source_locator": "p.5",
+      "scope_match": "Keywords: adsorption/吸附, porosity/孔隙率, specific surface area/比表面积, heavy metal/重金属",
+      "source_doi": "10.1016/j.cej.2021.128670",
+      "key_structures": []
+    },
+    {
+      "name": "PCL/Teflon AF核壳纤维超疏水/超疏油",
+      "description": "超疏水且超疏油",
+      "functional_groups": [
+        "-O-（醚键）"
+      ],
+      "source": "10.1016/j.cej.2021.128670",
+      "ref_doi": "10.1007/s40242-021-0010-4",
+      "verification": "partial",
+      "causal_chain": {
+        "transferable_principle": "基于机制: PCL/Teflon AF核壳纤维超疏水/超疏油",
+        "pollutant_feature": {
+          "text": "超疏水且超疏油",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "PCL/Teflon AF核壳纤维超疏水/超疏油，微纳粗糙结构+低表面能涂层",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.cej.2021.128670",
+          "locator": "p.5",
+          "quote": "CNF/PEI@GOA was noted to have rich balanced amphoteric functional groups with a 6.93 mmol g-1 amino density and a 5.81 mmol g-1 carboxyl density",
+          "scope_match": "Keywords: te, on"
+        },
+        "interaction": {
+          "text": "超疏水且超疏油",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "微纳粗糙结构+低表面能→空气层阻隔→超疏水",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.cej.2021.128670",
+          "locator": "p.5",
+          "quote": "CNF/PEI@GOA was noted to have rich balanced amphoteric functional groups with a 6.93 mmol g-1 amino density and a 5.81 mmol g-1 carboxyl density",
+          "scope_match": "Keywords: te, on"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "pdf_not_found"
+          }
+        ]
+      },
+      "evidence_type": "lead_inference",
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "source_file": "仿生文献库/论文/第5组-纤维结构/2021-Zhou-cellulose-silk-nanofiber-adsorption.pdf",
+      "locator": "p.5",
+      "verification_quote": "CNF/PEI@GOA was noted to have rich balanced amphoteric functional groups with a 6.93 mmol g-1 amino density and a 5.81 mmol g-1 carboxyl density",
+      "source_locator": "p.5",
+      "scope_match": "Keywords: amphoteric/两性, amino/氨基, carboxyl/羧基, functional groups/官能团, adsorption/吸附",
+      "source_doi": "10.1016/j.cej.2021.128670",
+      "key_structures": [
+        "纤维结构",
+        "超疏水表面"
+      ]
+    },
+    {
+      "name": "Janus膜在膜蒸馏中的抗污染性能",
+      "description": "全疏水Janus膜同时具备抗油污染和抗表面活性剂润湿能力",
+      "functional_groups": [
+        "-S-（硫醚键）"
+      ],
+      "source": "10.1016/j.cej.2021.128670",
+      "ref_doi": "10.1007/s40242-021-0010-4",
+      "verification": "partial",
+      "causal_chain": {
+        "transferable_principle": "基于机制: Janus膜在膜蒸馏中的抗污染性能",
+        "pollutant_feature": {
+          "text": "全疏水Janus膜同时具备抗油污染和抗表面活性剂润湿能力",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
+          "locator": "p.1",
+          "quote": "超疏油膜、Janus 膜、智能响应膜，并对不同类型的超浸润膜材料在分离过程中存在的技术优势和问题进行",
+          "scope_match": "Keywords: ja, janus"
+        },
+        "bio_structure": {
+          "text": "Janus膜在膜蒸馏中的抗污染膜结构",
+          "basis": "llm_inferred",
+          "evidence_label": "from_source",
+          "source": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
+          "locator": "p.1",
+          "quote": "超疏油膜、Janus 膜、智能响应膜，并对不同类型的超浸润膜材料在分离过程中存在的技术优势和问题进行",
+          "scope_match": "Keywords: ja, janus"
+        },
+        "interaction": {
+          "text": "全疏水Janus膜同时具备抗油污染和抗表面活性剂润湿能力",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
+          "locator": "p.1",
+          "quote": "超疏油膜、Janus 膜、智能响应膜，并对不同类型的超浸润膜材料在分离过程中存在的技术优势和问题进行",
+          "scope_match": "Keywords: ja, janus"
+        },
+        "why_it_works": {
+          "text": "疏水相互作用驱动分配",
+          "basis": "llm_inferred",
+          "evidence_label": "from_source",
+          "source": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
+          "locator": "p.1",
+          "quote": "超疏油膜、Janus 膜、智能响应膜，并对不同类型的超浸润膜材料在分离过程中存在的技术优势和问题进行",
+          "scope_match": "Keywords: ja, janus"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "pdf_not_found"
+          }
+        ]
+      },
+      "evidence_type": "lead_inference",
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "source_file": "仿生文献库/论文/第5组-纤维结构/2021-Zhou-cellulose-silk-nanofiber-adsorption.pdf",
+      "locator": "p.1",
+      "verification_quote": "Inspired by the principle of spider silk, a novel amphoteric bionic fibers adsorbent was designed via electrostatic assembly of cellulose nanofibers (CNF) as the skeleton",
+      "source_locator": "p.1",
+      "scope_match": "Keywords: spider silk/蜘蛛丝, electrostatic assembly/静电组装, cellulose nanofibers/纤维素纳米纤维, bionic/仿生",
+      "source_doi": "10.1016/j.cej.2021.128670",
+      "key_structures": [
+        "膜结构",
+        "润湿结构",
+        "疏水表面",
+        "Janus双面结构"
+      ]
+    },
+    {
+      "name": "Janus膜水下气泡单向传输",
+      "description": "气泡从亲水向超疏水方向单向渗透",
+      "functional_groups": [
+        "-S-（硫醚键）"
+      ],
+      "source": "10.1016/j.cej.2021.128670",
+      "ref_doi": "10.1007/s40242-021-0010-4",
+      "verification": "partial",
+      "causal_chain": {
+        "transferable_principle": "基于机制: Janus膜水下气泡单向传输",
+        "pollutant_feature": {
+          "text": "气泡从亲水向超疏水方向单向渗透",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "Janus膜水下气泡单向传输功能结构",
+          "basis": "llm_inferred",
+          "evidence_label": "from_source",
+          "source": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
+          "locator": "p.1",
+          "quote": "超疏油膜、Janus 膜、智能响应膜，并对不同类型的超浸润膜材料在分离过程中存在的技术优势和问题进行",
+          "scope_match": "Keywords: ja, janus"
+        },
+        "interaction": {
+          "text": "气泡从亲水向超疏水方向单向渗透",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "疏水相互作用驱动分配",
+          "basis": "llm_inferred",
+          "evidence_label": "from_source",
+          "source": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
+          "locator": "p.1",
+          "quote": "超疏油膜、Janus 膜、智能响应膜，并对不同类型的超浸润膜材料在分离过程中存在的技术优势和问题进行",
+          "scope_match": "Keywords: ja, janus"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "pdf_not_found"
+          }
+        ]
+      },
+      "evidence_type": "lead_inference",
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "source_file": "仿生文献库/论文/第5组-纤维结构/2021-Zhou-cellulose-silk-nanofiber-adsorption.pdf",
+      "locator": "p.5",
+      "verification_quote": "CNF/PEI@GOA had a utilization rate of 100% within 40 min. The excellent porosity of the structure and specific surface area resulted in its ability to rapidly adsorb heavy metal ions",
+      "source_locator": "p.5",
+      "scope_match": "Keywords: adsorption/吸附, porosity/孔隙率, heavy metal/重金属, nanofiber/纳米纤维",
+      "source_doi": "10.1016/j.cej.2021.128670",
+      "key_structures": [
+        "膜结构",
+        "超疏水表面",
+        "Janus双面结构"
+      ]
+    },
+    {
+      "name": "Janus膜油水分离性能优势",
+      "description": "双层Janus材料油水分离效率优于单层疏水/亲油膜",
+      "functional_groups": [
+        "-S-（硫醚键）"
+      ],
+      "source": "10.1016/j.cej.2021.128670",
+      "ref_doi": "10.1007/s40242-021-0010-4",
+      "verification": "partial",
+      "causal_chain": {
+        "transferable_principle": "基于机制: Janus膜油水分离性能优势",
+        "pollutant_feature": {
+          "text": "双层Janus材料油水分离效率优于单层疏水/亲油膜",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
+          "locator": "p.1",
+          "quote": "超疏油膜、Janus 膜、智能响应膜，并对不同类型的超浸润膜材料在分离过程中存在的技术优势和问题进行",
+          "scope_match": "Keywords: janus, ja"
+        },
+        "bio_structure": {
+          "text": "Janus膜油水分离膜结构",
+          "basis": "llm_inferred",
+          "evidence_label": "from_source",
+          "source": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
+          "locator": "p.1",
+          "quote": "超疏油膜、Janus 膜、智能响应膜，并对不同类型的超浸润膜材料在分离过程中存在的技术优势和问题进行",
+          "scope_match": "Keywords: ja, janus"
+        },
+        "interaction": {
+          "text": "双层Janus材料油水分离效率优于单层疏水/亲油膜",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
+          "locator": "p.1",
+          "quote": "超疏油膜、Janus 膜、智能响应膜，并对不同类型的超浸润膜材料在分离过程中存在的技术优势和问题进行",
+          "scope_match": "Keywords: janus, ja"
+        },
+        "why_it_works": {
+          "text": "疏水相互作用驱动分配",
+          "basis": "llm_inferred",
+          "evidence_label": "from_source",
+          "source": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
+          "locator": "p.1",
+          "quote": "超疏油膜、Janus 膜、智能响应膜，并对不同类型的超浸润膜材料在分离过程中存在的技术优势和问题进行",
+          "scope_match": "Keywords: ja, janus"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "pdf_not_found"
+          }
+        ]
+      },
+      "evidence_type": "lead_inference",
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "source_file": "仿生文献库/论文/第5组-纤维结构/2021-Zhou-cellulose-silk-nanofiber-adsorption.pdf",
+      "locator": "p.2",
+      "verification_quote": "The formation of the stable chemical bonds by epichlorohydrin (ECH) with CNF, PEI and GO can accelerate the formation of the network fibers of CNF/PEI@GOA",
+      "source_locator": "p.2",
+      "scope_match": "Keywords: cellulose nanofibers/纤维素纳米纤维, PEI/聚乙烯亚胺, chemical bonds/化学键, network fibers/网络纤维",
+      "source_doi": "10.1016/j.cej.2021.128670",
+      "key_structures": [
+        "油水分离结构",
+        "膜结构",
+        "Janus双面结构"
+      ]
+    },
+    {
+      "name": "抗污染机制 Antifouling mechanism",
+      "description": "超亲水/水下超疏油→Cassie态→油滴不粘附→浮力上升→简单水冲洗恢复",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1016/j.seppur.2021.119824",
+      "verification": "partial",
+      "基本原理": "蜘蛛丝的超亲水性和力学弹性使其具有天然抗污性能",
+      "page": 9,
+      "source_page": 9,
+      "source_locator": "p.9, Section 3.3.2",
+      "locator": "p.9, Section 3.3.2",
+      "verification_quote": "According to the underwater Cassie state, a superhydrophilic surface with micro/nano-hierarchical structures possesses underwater superoleophobicity, exhibiting stable and persistent antifouling properties.",
+      "scope_match": "Keywords: superhydrophilic, underwater, antifouling, Cassie, oleophobic",
+      "evidence_type": "source_verified",
+      "evidence_note": "verified via visual_cache PDF text",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "蛋白质、微生物等生物污损物",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.16085/j.issn.1000-6613.2021-2532",
+          "locator": "p.5",
+          "quote": "的EPS包裹，其通常含有多糖、蛋白质、核酸、腐",
+          "scope_match": "Keywords: 蛋白质, 蛋白"
+        },
+        "bio_structure": {
+          "text": "蜘蛛丝蛋白的β-折叠纳米晶体和无定形链段",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "亲水性表面排斥蛋白质吸附；力学弹性防止微裂纹藏污",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "蜘蛛丝的超亲水性和力学弹性使其具有天然抗污性能",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "干燥环境下蜘蛛丝失去亲水性",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "pdf_not_found"
+          },
+          {
+            "text": "干燥环境下蜘蛛丝可能失去亲水性",
+            "parameter": "wet_stability",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": "domain_knowledge",
+            "verification_method": "pdf_not_found"
+          }
+        ],
+        "transferable_principle": "蜘蛛丝的亲水+弹性组合是天然的抗污策略，可启发抗污涂层设计",
+        "verification_quote": "following successful oil coalescence, larger oil droplets were efficiently rejected by the pores of skin layer; these rejected droplets then directly detached from the superhydrophilic surface without deposition or adhesion due to combined effects of size-sieving and superwetting",
+        "source_doi": "10.1016/j.seppur.2021.119824",
+        "source_locator": "p.9 / Section 3.3.2"
+      },
+      "key_structures": [
+        "Cassie-Baxter润湿态",
+        "水下超疏油表面",
+        "超亲水表面",
+        "涂层结构"
+      ]
+    },
+    {
+      "name": "纳米乳液分离挑战——粘度+表面活性剂",
+      "description": "高粘度油→粘附膜面→增加污染; 高表面活性剂→油水界面坚实层→静电排斥→阻止聚并",
+      "functional_groups": [],
+      "source": "literature",
+      "ref_doi": "10.1016/j.seppur.2021.119824",
+      "verification": "partial",
+      "page": 7,
+      "source_page": 7,
+      "source_locator": "p.7, Section 3.2.2",
+      "locator": "p.7, Section 3.2.2",
+      "verification_quote": "Viscous mineral oils are known to adhere to membranes and increase fouling; meanwhile, high surfactant concentrations can form a firm layer on the oil-water interface, preventing oil droplets from coalescing by electrostatic repulsion.",
+      "scope_match": "Keywords: viscous, fouling, surfactant, electrostatic repulsion, coalescing",
+      "evidence_type": "lead_inference",
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "causal_chain": {
+        "transferable_principle": "基于机制: 纳米乳液分离挑战——粘度+表面活性剂",
+        "pollutant_feature": {
+          "text": "高粘度油→粘附膜面→增加污染; 高表面活性剂→油水界面坚实层→静电排斥→阻止聚并",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "纳米乳液分离挑战——粘度+表面活性剂膜结构",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "高粘度油→粘附膜面→增加污染; 高表面活性剂→油水界面坚实层→静电排斥→阻止聚并",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "静电相互作用驱动吸附",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "unverifiable_generic_text"
+          }
+        ]
+      },
+      "key_structures": [
+        "膜结构"
+      ]
+    },
+    {
+      "name": "Cr(VI) XPS吸附机制",
+      "description": "Cr-N(III) 575.46+585.03eV; Cr-O(VI) 576.27+586.31eV; Cr=O(VI) 577.72+587.59eV; 氨基质子化-NH₃⁺(401.2eV)",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-NH-（亚氨基）",
+        "-O-（醚键）",
+        "-NH₂（氨基）"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1016/j.cej.2021.128670",
+      "verification": "partial",
+      "verification_quote": "CNF/PEI@GOA had a utilization rate of 100% within 40 min. The excellent porosity of the structure and specific surface area resulted in its ability to rapidly adsorb heavy metal ions",
+      "causal_chain": {
+        "transferable_principle": "基于机制: Cr(VI) XPS吸附机制",
+        "pollutant_feature": {
+          "text": "Cr-N(III) 575.46+585.03eV; Cr-O(VI) 576.27+586.31eV; Cr=O(VI) 577.72+587.59eV; 氨基质子化-NH₃⁺(401.2eV)",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.11862/CJIC.2021.068",
+          "locator": "p.13",
+          "quote": "维(氨基质子化)和带负电荷的HCrO4",
+          "scope_match": "Keywords: 氨基质子化, hcro"
+        },
+        "bio_structure": {
+          "text": "Cr(VI) XPS吸附机制表面活性位点",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "Cr-N(III) 575.46+585.03eV; Cr-O(VI) 576.27+586.31eV; Cr=O(VI) 577.72+587.59eV; 氨基质子化-NH₃⁺(401.2eV)",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.11862/CJIC.2021.068",
+          "locator": "p.13",
+          "quote": "维(氨基质子化)和带负电荷的HCrO4",
+          "scope_match": "Keywords: 氨基质子化, hcro"
+        },
+        "why_it_works": {
+          "text": "表面活性位点与目标物相互作用",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "unverifiable_generic_text"
+          }
+        ]
+      },
+      "evidence_type": "lead_inference",
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "source_file": "仿生文献库/论文/第5组-纤维结构/2021-Zhou-cellulose-silk-nanofiber-adsorption.pdf",
+      "source_page": 5,
+      "source_locator": "p.5, Section 3.4",
+      "locator": "p.5",
+      "scope_match": "Keywords: Cr(VI)/铬, adsorption/吸附, CNF/PEI, porosity/孔隙率, heavy metal/重金属",
+      "key_structures": [
+        "吸附结构"
+      ]
+    },
+    {
+      "name": "Cd(II) XPS吸附机制",
+      "description": "Cd-N 411.36eV(42.95%)+404.50eV(37.72%); Cd-O 404.65eV(57.05%)+531.28eV(39.15%)",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1016/j.cej.2021.128670",
+      "verification": "partial",
+      "verification_quote": "CNF/PEI@GOA was noted to have rich balanced amphoteric functional groups with a 6.93 mmol g-1 amino density and a 5.81 mmol g-1 carboxyl density",
+      "causal_chain": {
+        "transferable_principle": "基于机制: Cd(II) XPS吸附机制",
+        "pollutant_feature": {
+          "text": "Cd-N 411.36eV(42.95%)+404.50eV(37.72%); Cd-O 404.65eV(57.05%)+531.28eV(39.15%)",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "Cd(II) XPS吸附机制表面活性位点",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "Cd-N 411.36eV(42.95%)+404.50eV(37.72%); Cd-O 404.65eV(57.05%)+531.28eV(39.15%)",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "表面活性位点与目标物相互作用",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "pdf_not_found"
+          }
+        ]
+      },
+      "evidence_type": "lead_inference",
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "source_file": "仿生文献库/论文/第5组-纤维结构/2021-Zhou-cellulose-silk-nanofiber-adsorption.pdf",
+      "source_page": 5,
+      "source_locator": "p.5, Section 3.4",
+      "locator": "p.5",
+      "scope_match": "Keywords: Cd(II)/镉, amphoteric/两性, amino/氨基, carboxyl/羧基, functional groups/官能团",
+      "key_structures": [
+        "吸附结构"
+      ]
+    },
+    {
+      "name": "纤维形成——疏水基底",
+      "description": "CNF/PEI在PTFE板接触角118.5°; GO接触角121.7°; 液-液界面接触吸引但不混合",
+      "functional_groups": [
+        "PTFE氟碳基团",
+        "-O-（醚键）",
+        "PEI胺基",
+        "GO羧基/羟基/环氧基"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1016/j.cej.2021.128670",
+      "verification": "partial",
+      "page": 4,
+      "source_page": 4,
+      "source_locator": "p.4, Fig. 2(f), Section 3.1",
+      "locator": "p.4",
+      "verification_quote": "The contact angle of CNF mixed with PEI (CNF/PEI) on the PTFE plate is 118.5°, while that of the GO droplet is 121.7°. Droplets A and B made contact on the hydrophobic PTFE plate to form a liquid-liquid interface with contact attraction without mixing",
+      "scope_match": "Keywords: CNF, PEI, PTFE, contact angle, 118.5, 121.7, hydrophobic",
+      "evidence_type": "lead_inference",
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "causal_chain": {
+        "transferable_principle": "基于机制: 纤维形成——疏水基底",
+        "pollutant_feature": {
+          "text": "CNF/PEI在PTFE板接触角118.5°; GO接触角121.7°; 液-液界面接触吸引但不混合",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
+          "locator": "p.3",
+          "quote": "向性，固体的润湿性用接触角表示",
+          "scope_match": "Keywords: 接触角, 触角"
+        },
+        "bio_structure": {
+          "text": "纤维形成——疏水基底，微纳粗糙结构+低表面能涂层",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "CNF/PEI在PTFE板接触角118.5°; GO接触角121.7°; 液-液界面接触吸引但不混合",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.16490/j.cnki.issn.1001-3660.2023.02.015",
+          "locator": "p.3",
+          "quote": "向性，固体的润湿性用接触角表示",
+          "scope_match": "Keywords: 接触角, 触角"
+        },
+        "why_it_works": {
+          "text": "表面活性位点与目标物相互作用",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "unverifiable_generic_text"
+          }
+        ]
+      },
+      "key_structures": [
+        "纤维结构",
+        "接触角特征"
+      ]
+    },
+    {
+      "name": "专化-协同机制 Specialization and cooperation mechanism",
+      "description": "Cd(II): 协同(氨基+羧基); Cr(VI): 专化(氨基主导); Cu/Pb: 专化(羧基主导)",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）",
+        "-COOH（羧基）",
+        "-NH₂（氨基）"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1016/j.cej.2021.128670",
+      "verification": "partial",
+      "verification_quote": "the large amount of carboxyl groups (4.96 and 5.81 mmol g-1, respectively) in GO ensured efficient removal of cationic heavy metal ions (Cd(II), Cu(II), and Pb(II)), while the PEI with amino groups ensured removal of anionic heavy metal ions (Cr(VI))",
+      "causal_chain": {
+        "transferable_principle": "基于机制: 专化-协同机制 Specialization and cooperation mechanism",
+        "pollutant_feature": {
+          "text": "Cd(II): 协同(氨基+羧基); Cr(VI): 专化(氨基主导); Cu/Pb: 专化(羧基主导)",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.7524/AJE.1673⁃5897.20220113002",
+          "locator": "p.5",
+          "quote": "面的羟基、羧基、巯基、氨基、羰基、硫基、醛基、磷酸",
+          "scope_match": "Keywords: 羧基, 协同, 氨基"
+        },
+        "bio_structure": {
+          "text": "专化-协同功能结构",
+          "basis": "llm_inferred",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.cej.2021.128670",
+          "locator": "p.9",
+          "quote": "low-level heavy metal ions through a specialization and cooperation",
+          "scope_match": "Keywords: specialization, mechanism, cooperation"
+        },
+        "interaction": {
+          "text": "Cd(II): 协同(氨基+羧基); Cr(VI): 专化(氨基主导); Cu/Pb: 专化(羧基主导)",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.7524/AJE.1673⁃5897.20220113002",
+          "locator": "p.5",
+          "quote": "面的羟基、羧基、巯基、氨基、羰基、硫基、醛基、磷酸",
+          "scope_match": "Keywords: 羧基, 协同, 氨基"
+        },
+        "why_it_works": {
+          "text": "表面活性位点与目标物相互作用",
+          "basis": "llm_inferred",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.cej.2021.128670",
+          "locator": "p.9",
+          "quote": "low-level heavy metal ions through a specialization and cooperation",
+          "scope_match": "Keywords: specialization, mechanism, cooperation"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "unverifiable_generic_text"
+          }
+        ]
+      },
+      "evidence_type": "lead_inference",
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "source_file": "仿生文献库/论文/第5组-纤维结构/2021-Zhou-cellulose-silk-nanofiber-adsorption.pdf",
+      "source_page": 5,
+      "source_locator": "p.5, Section 3.4",
+      "locator": "p.5",
+      "scope_match": "Keywords: carboxyl/羧基, amino/氨基, cationic/阳离子, anionic/阴离子, heavy metal/重金属, GO, PEI",
+      "key_structures": []
+    },
+    {
+      "name": "蜘蛛丝仿生灵感来源 Spider silk biomimetic inspiration",
+      "description": "spidroin两亲性(疏水丙氨酸+亲水甘氨酸/谷氨酰胺/脯氨酸/丝氨酸)→超分子自组装→纤维形成",
+      "functional_groups": [
+        "-CONH-（酰胺键）",
+        "-O-（醚键）",
+        "-S-（硫醚键）"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1016/j.cej.2021.128670",
+      "verification": "partial",
+      "verification_quote": "Spider silk is a typical natural example of the production of fibers from macromolecules in aqueous solution, which is possible mainly due to the amphiphilicity of spidroin (hydrophobicity of alanine and hydrophilicity of other amino acids",
+      "causal_chain": {
+        "transferable_principle": "基于机制: 蜘蛛丝仿生灵感来源 Spider silk biomimetic inspiration",
+        "pollutant_feature": {
+          "text": "spidroin两亲性(疏水丙氨酸+亲水甘氨酸/谷氨酰胺/脯氨酸/丝氨酸)→超分子自组装→纤维形成",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.ccr.2023.215234",
+          "locator": "p.6",
+          "quote": "spidroin to obtain a spidroin-based SUP (SSUP), and then prepared a",
+          "scope_match": "Keywords: spidroin, obtain, based, sup"
+        },
+        "bio_structure": {
+          "text": "蜘蛛丝仿生灵感来源 Spider silk biomimetic inspiration功能结构",
+          "basis": "llm_inferred",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.ccr.2023.215234",
+          "locator": "p.6",
+          "quote": "ering an excellent tensile strength of spider silk fiber, Wang’s group from",
+          "scope_match": "Keywords: spider, inspiration, biomimetic, silk"
+        },
+        "interaction": {
+          "text": "spidroin两亲性(疏水丙氨酸+亲水甘氨酸/谷氨酰胺/脯氨酸/丝氨酸)→超分子自组装→纤维形成",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.ccr.2023.215234",
+          "locator": "p.6",
+          "quote": "spidroin to obtain a spidroin-based SUP (SSUP), and then prepared a",
+          "scope_match": "Keywords: spidroin, obtain, based, sup"
+        },
+        "why_it_works": {
+          "text": "疏水相互作用驱动分配",
+          "basis": "llm_inferred",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.ccr.2023.215234",
+          "locator": "p.6",
+          "quote": "ering an excellent tensile strength of spider silk fiber, Wang’s group from",
+          "scope_match": "Keywords: spider, inspiration, biomimetic, silk"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "unverifiable_generic_text"
+          }
+        ]
+      },
+      "evidence_type": "lead_inference",
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "source_file": "仿生文献库/论文/第5组-纤维结构/2021-Zhou-cellulose-silk-nanofiber-adsorption.pdf",
+      "source_page": 1,
+      "source_locator": "p.1, Introduction",
+      "locator": "p.1",
+      "scope_match": "Keywords: spider silk/蜘蛛丝, spidroin/蛛丝蛋白, amphiphilicity/两亲性, alanine/丙氨酸, amino acids/氨基酸",
+      "key_structures": [
+        "两亲性表面",
+        "纤维结构"
+      ]
+    },
+    {
+      "name": "纳米布沙漠甲虫雾水收集机制",
+      "description": "亲水凸起捕获雾滴，疏水凹槽定向运输",
+      "functional_groups": [],
+      "source": "literature",
+      "ref_doi": "10.1002/adfm.202200359",
+      "verification": "partial",
+      "page": 2,
+      "source_page": 2,
+      "source_locator": "p.2, Section 2.1 Namib Desert Beetle",
+      "locator": "p.2",
+      "verification_quote": "The beetles in the Namib desert could capture water from the fog flow efficiently by exposing its back, which consists of alternated hydrophobic and hydrophilic parts. Fog vapor deposed on the hydrophilic peaks, forming fast-growing droplets.",
+      "scope_match": "Keywords: Namib, beetle, fog, hydrophilic, hydrophobic, bump",
+      "evidence_type": "lead_inference",
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "causal_chain": {
+        "transferable_principle": "基于机制: 纳米布沙漠甲虫雾水收集机制",
+        "pollutant_feature": {
+          "text": "亲水凸起捕获雾滴，疏水凹槽定向运输",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "纳米布沙漠甲虫雾水收集功能结构",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "亲水凸起捕获雾滴，疏水凹槽定向运输",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "疏水相互作用驱动分配",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "pdf_not_found"
+          }
+        ]
+      },
+      "key_structures": []
+    },
+    {
+      "name": "铀酰离子配位化学",
+      "description": "UO2^2+线性对称[O=U=O]^2+, U-O键长1.76 Å, 4-6个配体在赤道面配位, 四方/五方/六方双锥",
+      "functional_groups": [
+        "-O-（醚键）",
+        "配位/螯合位点"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1016/j.ccr.2023.215234",
+      "verification": "partial",
+      "causal_chain": {
+        "transferable_principle": "基于机制: 铀酰离子配位化学",
+        "pollutant_feature": {
+          "text": "UO2^2+线性对称[O=U=O]^2+, U-O键长1.76 Å, 4-6个配体在赤道面配位, 四方/五方/六方双锥",
+          "basis": "llm_inferred",
+          "scope_caveat": "uranium/actinide-specific chemistry, not general adsorption",
+          "source_tier": "literature",
+          "scope_match": "Keywords: o2, uo, uo2, o2",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.ccr.2023.215234",
+          "locator": "p.2",
+          "quote": ". It has a strictly linear and symmetrical [O = U = O]2+\narrangement, with short U-O bond length of 1.76 Å [19]. A triple bond is \nconstructed by one σ-bond plus two π-bonds between 5f and 6d hybrid \n"
+        },
+        "bio_structure": {
+          "text": "含配位原子(N/O/S)的官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "UO2^2+线性对称[O=U=O]^2+, U-O键长1.76 Å, 4-6个配体在赤道面配位, 四方/五方/六方双锥",
+          "basis": "llm_inferred",
+          "scope_match": "Keywords: o2, uo, uo2, o2",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.ccr.2023.215234",
+          "locator": "p.2",
+          "quote": ". It has a strictly linear and symmetrical [O = U = O]2+\narrangement, with short U-O bond length of 1.76 Å [19]. A triple bond is \nconstructed by one σ-bond plus two π-bonds between 5f and 6d hybrid \n"
+        },
+        "why_it_works": {
+          "text": "配位/螯合作用固定目标物",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "pdf_not_found"
+          }
+        ]
+      },
+      "scope_caveat": "RECLASSIFIED: uranium/actinide capture, not general spider-silk adsorption",
+      "boundary_note": "This mechanism describes UO2^2+ coordination chemistry specific to uranium recovery applications.",
+      "verification_quote": ". It has a strictly linear and symmetrical [O = U = O]2+\narrangement, with short U-O bond length of 1.76 Å [19]. A triple bond is \nconstructed by one σ-bond plus two π-bonds between 5f and 6d hybrid \norbitals of U and 2p orbitals of oxido groups. When coordinating with \norganic electron donor ligands, four or more ligands may be bound to \nUO2\n2+ in",
+      "source_page": 2,
+      "source_doi": "10.1016/j.ccr.2023.215234",
+      "source_locator": "p.2",
+      "key_structures": []
+    },
+    {
+      "name": "酰胺肟配位模式",
+      "description": "四种结合模式：单齿(单氧配位)/三齿(环状酰亚胺二肟)/侧向η2(开链酰胺肟)/螯合",
+      "functional_groups": [
+        "-CONH-（酰胺键）",
+        "配位/螯合位点"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1016/j.ccr.2023.215234",
+      "verification": "partial",
+      "page": 2,
+      "source_page": 2,
+      "source_locator": "p.2, Fig. 3c",
+      "locator": "p.2",
+      "verification_quote": "four main possible binding motifs between amidoximes and UO2 2+: monodentate, tridentate (cyclic imide dioxime), side-on η2-bound, and chelating coordination",
+      "scope_match": "Keywords: amidoxime, monodentate, tridentate, chelating, uranyl",
+      "evidence_type": "lead_inference",
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "causal_chain": {
+        "transferable_principle": "基于机制: 酰胺肟配位模式",
+        "pollutant_feature": {
+          "text": "四种结合模式：单齿(单氧配位)/三齿(环状酰亚胺二肟)/侧向η2(开链酰胺肟)/螯合",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.19465/j.cnki.2095-9710.2021.04.005",
+          "locator": "p.2",
+          "quote": "属离子络合、螯合、离子交换等作用过程",
+          "scope_match": "Keywords: 螯合, 属离, 属离子, 属离子络"
+        },
+        "bio_structure": {
+          "text": "含配位原子(N/O/S)的官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "四种结合模式：单齿(单氧配位)/三齿(环状酰亚胺二肟)/侧向η2(开链酰胺肟)/螯合",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.19465/j.cnki.2095-9710.2021.04.005",
+          "locator": "p.2",
+          "quote": "属离子络合、螯合、离子交换等作用过程",
+          "scope_match": "Keywords: 螯合, 属离, 属离子, 属离子络"
+        },
+        "why_it_works": {
+          "text": "配位/螯合作用固定目标物",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "pdf_not_found"
+          }
+        ]
+      },
+      "key_structures": []
+    },
+    {
+      "name": "配体优化六大策略",
+      "description": "(1)高含量开链AO (2)增加AO亲水性 (3)高柔性配体链 (4)合适PAO链长 (5)引入给电子取代基 (6)空间协同螯合",
+      "functional_groups": [
+        "-O-（醚键）",
+        "配位/螯合位点"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1016/j.ccr.2023.215234",
+      "verification": "partial",
+      "causal_chain": {
+        "transferable_principle": "基于机制: 配体优化六大策略",
+        "pollutant_feature": {
+          "text": "(1)高含量开链AO (2)增加AO亲水性 (3)高柔性配体链 (4)合适PAO链长 (5)引入给电子取代基 (6)空间协同螯合",
+          "basis": "from_source",
+          "scope_match": "Keywords: ao, pao",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.ccr.2023.215234",
+          "locator": "p.1",
+          "quote": "ium extraction from seawater; AO, amidoxime; EXAFS, extended X-ray absorption fine structure; PAN, poly(acrylonitrile); PAO, poly \n(amidoxime); DFT, density functional theory; COFs, covalent organic f"
+        },
+        "bio_structure": {
+          "text": "配体优化六大功能结构",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "(1)高含量开链AO (2)增加AO亲水性 (3)高柔性配体链 (4)合适PAO链长 (5)引入给电子取代基 (6)空间协同螯合",
+          "basis": "from_source",
+          "scope_match": "Keywords: ao, pao",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.ccr.2023.215234",
+          "locator": "p.1",
+          "quote": "ium extraction from seawater; AO, amidoxime; EXAFS, extended X-ray absorption fine structure; PAN, poly(acrylonitrile); PAO, poly \n(amidoxime); DFT, density functional theory; COFs, covalent organic f"
+        },
+        "why_it_works": {
+          "text": "配位/螯合作用固定目标物",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "pdf_not_found"
+          }
+        ]
+      },
+      "verification_quote": "ium extraction from seawater; AO, amidoxime; EXAFS, extended X-ray absorption fine structure; PAN, poly(acrylonitrile); PAO, poly \n(amidoxime); DFT, density functional theory; COFs, covalent organic frameworks; POPs, porous organic polymers; CMPs, conjugated microporous polymers; h-PEI, \nhyperbranched polyethyleneimine; SUP, super uranyl-binding protein; SSUP, spidroin-based SUP; MOFs, metal–organ",
+      "source_doi": "10.1016/j.ccr.2023.215234",
+      "source_locator": "p.1",
+      "key_structures": []
+    },
+    {
+      "name": "双功能协同策略",
+      "description": "三种机制：(1)第二配体提供额外配位位点 (2)增强AO碱性→更强U(VI)络合 (3)酸性基团解离碳酸盐→释放UO2^2+",
+      "functional_groups": [
+        "-O-（醚键）",
+        "配位/螯合位点"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1016/j.ccr.2023.215234",
+      "verification": "partial",
+      "causal_chain": {
+        "transferable_principle": "基于机制: 双功能协同策略",
+        "pollutant_feature": {
+          "text": "三种机制：(1)第二配体提供额外配位位点 (2)增强AO碱性→更强U(VI)络合 (3)酸性基团解离碳酸盐→释放UO2^2+",
+          "basis": "from_source",
+          "scope_caveat": "uranium/actinide-specific, requires uranium-containing source",
+          "source_tier": "literature",
+          "scope_match": "Keywords:  (,  (2, (2, 3)",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.ccr.2023.215234",
+          "locator": "p.1",
+          "quote": "Coordination Chemistry Reviews 491 (2023) 215234\nAvailable online 26 May 2023\n0010-8545/© 2023 Elsevier B.V. All rights reserved.\nReview \nStrategies for designing highly efficient adsorbents to captur"
+        },
+        "bio_structure": {
+          "text": "双功能协同表面官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "三种机制：(1)第二配体提供额外配位位点 (2)增强AO碱性→更强U(VI)络合 (3)酸性基团解离碳酸盐→释放UO2^2+",
+          "basis": "from_source",
+          "scope_match": "Keywords:  (,  (2, (2, 3)",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.ccr.2023.215234",
+          "locator": "p.1",
+          "quote": "Coordination Chemistry Reviews 491 (2023) 215234\nAvailable online 26 May 2023\n0010-8545/© 2023 Elsevier B.V. All rights reserved.\nReview \nStrategies for designing highly efficient adsorbents to captur"
+        },
+        "why_it_works": {
+          "text": "配位/螯合作用固定目标物",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "pdf_not_found"
+          }
+        ]
+      },
+      "scope_caveat": "RECLASSIFIED: uranium-specific ligand and complexation mechanisms",
+      "boundary_note": "This mechanism is specific to uranium(VI) capture using amine/acid functional groups. Do not generalize to non-uranium pollutants.",
+      "verification_quote": "ormation of \npoly(acrylonitrile) (PAN) to poly(amidoxime) (PAO), the functionalities \nof both open-chain amidoxime and cyclic imide dioxime were formed; \ntherefore, how to primaril",
+      "source_page": 4,
+      "source_doi": "10.1016/j.ccr.2023.215234",
+      "source_locator": "p.4",
+      "key_structures": []
+    },
+    {
+      "name": "离子印迹策略——三种改进方向",
+      "description": "(1)高孔隙材料增加可及位点 (2)2D/表面印迹提高可及性 (3)强化功能基-铀酰配位",
+      "functional_groups": [
+        "配位/螯合位点"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1016/j.ccr.2023.215234",
+      "verification": "partial",
+      "page": 8,
+      "source_page": 8,
+      "source_locator": "p.8, Ion imprinting strategy section",
+      "locator": "p.8",
+      "verification_quote": "three main striving directions: (1) increase accessible binding sites by highly porous materials, (2) improve site accessibility by 2D or surface imprinting; (3) strengthen coordination with uranyl",
+      "scope_match": "Keywords: accessible, porous materials, 2D, surface imprinting, uranyl, coordination",
+      "evidence_type": "lead_inference",
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "causal_chain": {
+        "transferable_principle": "基于机制: 离子印迹策略——三种改进方向",
+        "pollutant_feature": {
+          "text": "(1)高孔隙材料增加可及位点 (2)2D/表面印迹提高可及性 (3)强化功能基-铀酰配位",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "离子印迹表面结构",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "(1)高孔隙材料增加可及位点 (2)2D/表面印迹提高可及性 (3)强化功能基-铀酰配位",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "配位/螯合作用固定目标物",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "pdf_not_found"
+          }
+        ]
+      },
+      "key_structures": []
+    },
+    {
+      "name": "电化学提取三阶段机理",
+      "description": "电迁移→电吸附→电化学沉积; UO2^2+→U(IV)还原沉淀→突破热力学平衡",
+      "functional_groups": [
+        "-O-（醚键）"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1016/j.ccr.2023.215234",
+      "verification": "partial",
+      "causal_chain": {
+        "transferable_principle": "基于机制: 电化学提取三阶段机理",
+        "pollutant_feature": {
+          "text": "电迁移→电吸附→电化学沉积; UO2^2+→U(IV)还原沉淀→突破热力学平衡",
+          "basis": "from_source",
+          "scope_caveat": "uranium-specific electrochemical reduction, not general adsorption",
+          "source_tier": "literature",
+          "scope_match": "Keywords: iv, o2, uo",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.ccr.2023.215234",
+          "locator": "p.10",
+          "quote": "active metal with the reduction potentials of 0.327 v for UO2\n2+/U4+ and \n0.411 v for UO2\n2+/UO2 (vs. standard hydrogen electrode), respectively \n[116]. UO2\n2+ can be reduced and"
+        },
+        "bio_structure": {
+          "text": "电化学提取三阶段功能结构",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "电迁移→电吸附→电化学沉积; UO2^2+→U(IV)还原沉淀→突破热力学平衡",
+          "basis": "from_source",
+          "scope_match": "Keywords: iv, o2, uo",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.ccr.2023.215234",
+          "locator": "p.10",
+          "quote": "active metal with the reduction potentials of 0.327 v for UO2\n2+/U4+ and \n0.411 v for UO2\n2+/UO2 (vs. standard hydrogen electrode), respectively \n[116]. UO2\n2+ can be reduced and"
+        },
+        "why_it_works": {
+          "text": "表面活性位点与目标物相互作用",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "pdf_not_found"
+          }
+        ]
+      },
+      "scope_caveat": "RECLASSIFIED: uranium electrochemical deposition/reduction",
+      "boundary_note": "This mechanism requires electrochemical setup and is specific to U(VI)→U(IV) reduction. Not applicable to general spider-silk adsorption applications.",
+      "verification_quote": "active metal with the reduction potentials of 0.327 v for UO2\n2+/U4+ and \n0.411 v for UO2\n2+/UO2 (vs. standard hydrogen electrode), respectively \n[116]. UO2\n2+ can be reduced and",
+      "source_page": 10,
+      "source_doi": "10.1016/j.ccr.2023.215234",
+      "source_locator": "p.10",
+      "key_structures": [
+        "吸附结构"
+      ]
+    },
+    {
+      "name": "MOF光催化协同机制",
+      "description": "MOF SCU-19(POM+MOF)：三重机制——配体配位+光催化还原+部分化学还原",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）",
+        "配位/螯合位点"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1016/j.ccr.2023.215234",
+      "verification": "partial",
+      "verification_quote": "ogether to substantially increase \nthe uranium extraction efficiency [133]. As shown in Fig. 8a, this new \nmaterial MOF SCU-19 presented three distinct mechanisms involving \nthe ligand coordination originating its exposed oxoatoms, the photo­\ncatalytic reduction caused by the low-valent Mo atoms in the POM, and \nthe partial chemical reduction. The combined actions resulted in a \nhigher U(VI) uptak",
+      "causal_chain": {
+        "transferable_principle": "基于机制: MOF光催化协同机制",
+        "pollutant_feature": {
+          "text": "MOF SCU-19(POM+MOF)：三重机制——配体配位+光催化还原+部分化学还原",
+          "basis": "from_source",
+          "scope_match": "Keywords: mof, scu, pom",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.ccr.2023.215234",
+          "locator": "p.12",
+          "quote": "ogether to substantially increase \nthe uranium extraction efficiency [133]. As shown in Fig. 8a, this new \nmaterial MOF SCU-19 presented three distinct mechanisms involving \nthe ligand coordination or"
+        },
+        "bio_structure": {
+          "text": "MOF光催化协同功能结构",
+          "basis": "from_source",
+          "scope_match": "Keywords: mof, ogether, substantially, increase",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.ccr.2023.215234",
+          "locator": "p.12",
+          "quote": "ogether to substantially increase \nthe uranium extraction efficiency [133]. As shown in Fig. 8a, this new \nmaterial MOF SCU-19 presented three distinct mechanisms involving \nthe ligand coordination or"
+        },
+        "interaction": {
+          "text": "MOF SCU-19(POM+MOF)：三重机制——配体配位+光催化还原+部分化学还原",
+          "basis": "from_source",
+          "scope_match": "Keywords: mof, scu, pom",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.ccr.2023.215234",
+          "locator": "p.12",
+          "quote": "ogether to substantially increase \nthe uranium extraction efficiency [133]. As shown in Fig. 8a, this new \nmaterial MOF SCU-19 presented three distinct mechanisms involving \nthe ligand coordination or"
+        },
+        "why_it_works": {
+          "text": "配位/螯合作用固定目标物",
+          "basis": "from_source",
+          "scope_match": "Keywords: mof, ogether, substantially, increase",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.ccr.2023.215234",
+          "locator": "p.12",
+          "quote": "ogether to substantially increase \nthe uranium extraction efficiency [133]. As shown in Fig. 8a, this new \nmaterial MOF SCU-19 presented three distinct mechanisms involving \nthe ligand coordination or"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "pdf_not_found"
+          }
+        ]
+      },
+      "source_doi": "10.1016/j.ccr.2023.215234",
+      "source_locator": "p.12",
+      "evidence_label": "from_source",
+      "key_structures": [
+        "金属有机框架（MOF）"
+      ]
+    }
+  ],
+  "narrative": {
+    "entries": [
+      {
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2021-Li-silk-hierarchical-shell-review.json",
+        "paper_id": "2022-Li-spider-silk-hierarchical-review",
+        "sections": {
+          "problem_definition": "自然界挑战：蜘蛛需在复杂多变环境中构建兼具高强度、高韧性及环境响应性的捕食网与高效集水结构；水处理对应：吸附/分离材料需在动态水流与化学环境中保持结构稳定、抗疲劳，并实现高效定向传质、污染物捕获与孔道动态调控。",
+          "biological_solution": "进化策略：通过spidroin蛋白自组装形成高度有序的多级异质结构；关键机制：β-sheet纳米晶作为刚性节点提供强度与永久形状记忆，非晶链段作为柔性网络耗散能量，纺锤结利用Laplace压差与表面能梯度驱动水滴定向传输；成功案例：大壶状腺丝（MA丝）实现1652 MPa强度与354 MJ/m³韧性，天然周期性纺锤结结构实现高效大气集水。",
+          "key_features": "必须保留特征：β-sheet物理交联节点、非晶耗能网络、核壳异质分布、周期性微纳拓扑（纺锤结）；可灵活调整特征：节点化学组成（可替换为金属配位点或合成刚性基团）、基质亲疏水性与柔性程度、纺锤结几何参数（顶角、周期）以适配不同水处理流速与分离精度需求。",
+          "design_mapping": "生物→材料映射：β-sheet纳米晶映射为刚性功能节点/物理交联点；非晶区映射为柔性高分子/水凝胶基质；核壳结构映射为梯度吸附层与力学支撑层；纺锤结映射为微纳集水/分离通道。软约束建议：采用微流控或动态交联纺丝模拟天然剪切场；控制结晶度（~22%）平衡强韧性；利用水分子触发超收缩实现孔道动态调节或自清洁。",
+          "explainability_anchors": "仿生故事线：从蜘蛛丝‘纳米渔网’的强韧机制与纺锤结集水原理出发，指导水处理材料实现‘结构-力学-传质’一体化设计；设计溯源：理论依据Keten纳米晶尺寸效应与spidroin蛋白二级结构组装规律，通过β-sheet含量、非晶序列及拓扑形貌的定量调控，确保仿生逻辑可追溯、性能可预测。"
+        }
+      },
+      {
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2021-Zhang-silk-separation-membrane-porous.json",
+        "paper_id": "2021-Zhang-spider-silk-nanoemulsion-separation",
+        "sections": {
+          "problem_definition": "自然界蜘蛛丝需从空气中高效捕获并收集微小雾滴；水处理中面临表面活性剂稳定的纳米油滴乳液(尺寸<膜孔径)难以通过传统尺寸筛分机制高效分离，且易发生膜污染的难题。",
+          "biological_solution": "蜘蛛丝进化出周期性纺锤节结构，利用曲率差异产生Laplace压力差，自发驱动微小液滴定向迁移与聚并；该策略被成功映射至静电纺丝纳米纤维膜，实现无需外力或化学改性的纳米油滴高效破乳、定向传输与高通量分离。",
+          "key_features": "必须保留特征：纺锤节几何形貌(产生Laplace压差)、超亲水/水下超疏油表面特性、微纳层级粗糙结构；可灵活调整特征：纺锤节具体尺寸参数(宽100-500nm/长~2μm)、聚合物种类与浓度配比、支撑层孔隙率与整体膜厚度。",
+          "design_mapping": "生物→材料映射：蜘蛛丝纺锤节→电纺PAN纳米纤维纺锤节阵列；自然集水Laplace力→膜内油滴定向迁移与聚并破乳驱动力；双层皮肤/支撑结构→功能分离层/高通量传质层。软约束建议：优先通过调控前驱体溶液物性触发Rayleigh不稳定性一步成型，避免复杂后处理；操作压力可适度放宽，依赖自发Laplace力主导分离过程。",
+          "explainability_anchors": "仿生故事线：从蜘蛛丝捕雾的“几何驱动液滴迁移”自然现象出发，揭示Laplace压差破乳机制，突破传统“孔径<液滴”的筛分范式；设计溯源：直接溯源至文献中纺锤节尺寸参数与电纺工艺窗口(PAN 3.5wt%)，通过AFM/SEM表征的微纳粗糙度与接触角数据验证仿生结构成功复现，性能数据(油截留>95%、通量>1143 LMH/bar、FRR 99.98%)闭环验证仿生机制有效性。"
+        }
+      },
+      {
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2021-Zhou-cellulose-silk-nanofiber-adsorption.json",
+        "paper_id": "2021-Zhou-spider-silk-amphoteric-bionic-fibers",
+        "sections": {
+          "problem_definition": "自然界挑战：蜘蛛需在常温常压下将液态丝蛋白快速转化为高强度、结构稳定的固态纤维；水处理对应：传统吸附材料难以在低浓度重金属废水中实现快速传质、多离子协同去除及材料结构长期稳定再生。",
+          "biological_solution": "进化策略：利用两亲性丝蛋白(spidroin)的疏水/亲水区块驱动超分子自组装；关键机制：疏水丙氨酸与亲水氨基酸交替排列诱导液-液相分离与自组装，随后通过β-折叠结构固化并自然风干成纤；成功案例：蜘蛛丝纺丝过程在极低能耗下实现高强度、高孔隙率纤维的快速成型。",
+          "key_features": "必须保留特征：两性官能团(氨基/羧基)的高密度平衡、超分子自组装驱动的快速成纤机制、高溶胀多孔骨架以保障传质；可灵活调整特征：具体聚合物组分(CNF/PEI/GO比例)、交联剂类型与用量、层状静电组装的精确厚度。",
+          "design_mapping": "生物→材料映射：两亲性spidroin→CNF/PEI与GO的静电组装两性界面；β-折叠稳定结构→GO的sp²二维晶格网络；自然风干固化→ECH化学交联；丝蛋白高孔隙率→CNF骨架的高溶胀网络(113.37%)。软约束建议：维持体系近中性电荷平衡以优化自组装；确保溶胀率>100%以匹配快速传质需求；控制界面接触角在115°-125°区间以引导均匀纤维形态。",
+          "explainability_anchors": "仿生故事线：以蜘蛛丝纺丝原理为蓝图，将生物大分子的两亲自组装逻辑平移至高分子静电层状组装，打造兼具快速响应与高稳定性的两性仿生吸附纤维。设计溯源：氨基/羧基密度平衡(6.93/5.81 mmol/g)直接映射丝蛋白亲疏水区块比例；CNF溶胀网络与GO二维稳定层分别对应蜘蛛丝的多孔基质与β-折叠增强相；QCM-D电荷监控与ECH交联工艺完整复现了生物纺丝的精准调控与环境固化路径。"
+        }
+      },
+      {
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2023-Li-antifouling-separation-porous-adsorption-review.json",
+        "paper_id": "2023-Li-antifouling-separation-porous-adsorption-review",
+        "sections": {
+          "problem_definition": "自然界挑战：海水中铀浓度极低且存在大量竞争离子（如钒）和严重的生物污损；水处理对应：需要开发兼具超高选择性、快速传质动力学和抗生物污损能力的吸附材料，以实现经济可行的海水提铀。",
+          "biological_solution": "进化策略：生物体通过特异性分子识别（如SUP蛋白、DNAzyme）、高效传质结构（如植物蒸腾通道、木材分级孔）和表面防御（如鲨鱼皮抗污损）适应复杂环境。关键机制：几何约束与电荷稳定实现UO2^2+特异性结合；垂直通道与分级孔道加速低浓度传质；通用锚定化学（贻贝PDA）实现多功能集成。成功案例：仿SUP蛋白纳米口袋MOF实现Kd=1.67 pM及U/V选择性17.03；仿植物蒸腾光热纤维实现11.76 mg/g自然海水提铀。",
+          "key_features": "必须保留特征：UO2^2+特异性结合口袋的几何约束与配位模式（如赤道面4-6配位）、抗生物污损表面微结构。可灵活调整特征：载体宏观形态（纤维、水凝胶、气凝胶）、光热/电驱动辅助模块、锚定化学层厚度。",
+          "design_mapping": "生物→材料映射：SUP蛋白/DNAzyme → MOF/COF纳米陷阱或水凝胶；植物蒸腾/木材孔道 → 垂直排列碳管或3D打印分级多孔气凝胶；贻贝足丝 → PDA聚多巴胺涂层；鲨鱼皮/蛾眼 → 表面微纳拓扑抗污损结构。软约束建议：在保持结合口袋几何精度的同时，引入亲水基团（如开链酰胺肟）以改善水合铀酰离子的传质。",
+          "explainability_anchors": "仿生故事线：从‘大海捞针’到‘精准捕获’——借鉴生物大分子的‘锁钥模型’（SUP蛋白）解决选择性难题，借鉴植物‘蒸腾拉力’（垂直通道）解决极低浓度传质难题，借鉴海洋生物‘自清洁’（抗污损表面）解决长效运行难题。设计溯源：材料的高选择性源于分子层面的几何约束与协同配位，高吸附容量源于宏观层面的分级传质与光热协同，长效稳定性源于表面的抗污损拓扑设计。"
+        }
+      }
+    ]
+  },
+  "engineering_constraints": [
+    {
+      "constraint": "FRR与循环稳定性 Flux recovery and cycling",
+      "value": "FRR 99.98%; 8次循环无显著通量衰减",
+      "unit": "%",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.seppur.2021.119824"
+    },
+    {
+      "constraint": "纺锤节构建机制——Rayleigh不稳定性",
+      "value": "低粘度/低导电率→电场力无法完全克服表面张力→液膜断裂→液滴串→纺锤形→纺锤节纤维",
+      "unit": null,
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.seppur.2021.119824"
+    },
+    {
+      "constraint": "再生性能 Regeneration",
+      "value": "5次循环去除率>99%",
+      "unit": "%",
+      "relevance": "high",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.cej.2021.128670"
+    }
+  ],
+  "provenance_summary": {
+    "n_papers": 8,
+    "n_verified": 4,
+    "n_unverified": 36
+  },
+  "coverage": "normal",
+  "status": "active",
+  "design_translation": [
+    {
+      "idea": "利用蜘蛛丝的高强度和表面官能团进行污染物捕获",
+      "specific_functional_group": "丝蛋白的酰胺基和羧基",
+      "material_handle": "重组蜘蛛丝蛋白或仿生纺丝",
+      "target_interaction": "酰胺基和羧基配位金属离子，高强度支撑过滤应用",
+      "source_tier": "llm_inference",
+      "examples": [],
+      "design_principle": "蜘蛛丝蛋白的β-折叠结晶+无定形区提供高强度和弹性。可用于设计高强度吸附纤维/膜",
+      "constraints": "蜘蛛丝量产困难需基因工程；成本极高；水溶性需交联",
+      "implementation_example": "重组蜘蛛丝蛋白表达→静电纺丝→高强度纤维膜"
+    }
+  ],
+  "library_tier": "core",
+  "lifecycle_status": "active",
+  "honesty_ledger": {
+    "facts": [],
+    "leads": [
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "蜘蛛丝增强策略：金属掺杂和CNT/石墨烯复合",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 1,
+        "name": "静电纺丝纤维形貌调控因素",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 2,
+        "name": "PAN/热解PAN Janus织物润湿性",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 3,
+        "name": "单向渗透三力竞争机制",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 4,
+        "name": "PCL/Teflon AF核壳纤维超疏水/超疏油",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 5,
+        "name": "Janus膜在膜蒸馏中的抗污染性能",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 6,
+        "name": "Janus膜水下气泡单向传输",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 7,
+        "name": "Janus膜油水分离性能优势",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 8,
+        "name": "抗污染机制 Antifouling mechanism",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "mechanism",
+        "index": 9,
+        "name": "纳米乳液分离挑战——粘度+表面活性剂",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "mechanism",
+        "index": 10,
+        "name": "Cr(VI) XPS吸附机制",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 11,
+        "name": "Cd(II) XPS吸附机制",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 12,
+        "name": "纤维形成——疏水基底",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "mechanism",
+        "index": 13,
+        "name": "专化-协同机制 Specialization and cooperation mechanism",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 14,
+        "name": "蜘蛛丝仿生灵感来源 Spider silk biomimetic inspiration",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 15,
+        "name": "纳米布沙漠甲虫雾水收集机制",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "mechanism",
+        "index": 16,
+        "name": "铀酰离子配位化学",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 17,
+        "name": "酰胺肟配位模式",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "mechanism",
+        "index": 18,
+        "name": "配体优化六大策略",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 19,
+        "name": "双功能协同策略",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 20,
+        "name": "离子印迹策略——三种改进方向",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "mechanism",
+        "index": 21,
+        "name": "电化学提取三阶段机理",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 22,
+        "name": "MOF光催化协同机制",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 0,
+        "parameter": "Cd(II)去除性能 Cd(II) removal",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 1,
+        "parameter": "Cr(VI)去除性能 Cr(VI) removal",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 2,
+        "parameter": "Cu(II)去除性能 Cu(II) removal",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 3,
+        "parameter": "Pb(II)去除性能 Pb(II) removal",
+        "basis": "needs_review"
+      }
+    ],
+    "inferences": [],
+    "generated_by": "P1c-auto",
+    "note": "Classification based on verification label + quote presence + source type"
+  },
+  "mechanism_tags": [
+    "配位螯合",
+    "静电吸附",
+    "氢键",
+    "π-π堆积",
+    "疏水分配",
+    "超浸润分离",
+    "孔道限域分子筛分",
+    "沉淀共沉淀",
+    "还原催化降解",
+    "几何识别"
+  ]
+}

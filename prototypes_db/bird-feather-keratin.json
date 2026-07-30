@@ -1,0 +1,139 @@
+{
+  "id": "bird-feather-keratin",
+  "name_zh": "鸟类羽毛角蛋白",
+  "name_en": "Bird Feather Keratin",
+  "organism": {
+    "scientific": "Aves (bird feathers)",
+    "category": "动物"
+  },
+  "biomimetic_dimension": "keratin_biopolymer",
+  "features": [],
+  "tested_conditions": [],
+  "library_tier": "extended",
+  "lifecycle_status": "active",
+  "coverage": "partial",
+  "status": "active",
+  "provenance_summary": "V1-B biological expansion wave. Keratin from bird feather agricultural waste as bio-adsorbent for heavy metals and dyes. Rich in cysteine disulfide bonds and amino acid functional groups.",
+  "mechanisms": [
+    {
+      "mechanism_id": "BFK-001",
+      "description": "Keratin cysteine coordination: cysteine-rich keratin provides thiol (-SH) groups for heavy metal coordination, especially for soft metals like Hg²⁺, Ag⁺, Pb²⁺",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "Heavy metal ions (Hg²⁺, Ag⁺, Pb²⁺, Cu²⁺)",
+          "basis": "llm_inferred",
+          "evidence_label": "llm_inferred",
+          "source": "10.1007/s10853-026-12899-2",
+          "locator": "p.12",
+          "quote": "capture metal ions and form metal–ligand complexes",
+          "scope_match": "Keywords: ions, heavy, metal"
+        },
+        "bio_structure": {
+          "text": "Cysteine thiol groups, amino groups, carboxyl groups",
+          "basis": "llm_inferred",
+          "evidence_label": "llm_inferred",
+          "source": "10.1007/s10853-026-12899-2",
+          "locator": "p.12",
+          "quote": "Ligand groups such as amines(–NH2), thiols (–SH),",
+          "scope_match": "Keywords: amino, groups, carboxyl, cysteine, thiol"
+        },
+        "interaction": {
+          "text": "Coordination with thiol (-SH) and amino (-NH₂) groups on keratin",
+          "basis": "llm_inferred",
+          "evidence_label": "llm_inferred",
+          "source": "10.1007/s10853-026-12899-2",
+          "locator": "p.12",
+          "quote": "Ligand groups such as amines(–NH2), thiols (–SH),",
+          "scope_match": "Keywords: amino, groups, coordination, thiol"
+        },
+        "why_it_works": {
+          "text": "High affinity for soft heavy metals due to thiol groups",
+          "basis": "llm_inferred",
+          "source": "10.1007/s10853-026-12899-2",
+          "evidence_label": "llm_inferred",
+          "locator": "p.12",
+          "quote": "agents for their affinity towards heavy metals:",
+          "scope_match": "Keywords: heavy, groups, metals, soft, high"
+        },
+        "boundary_conditions": [
+          {
+            "text": "Acidic to neutral pH",
+            "parameter": "pH",
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "verification_method": "no_reference_available"
+          }
+        ],
+        "transferable_principle": "Keratin cysteine thiol groups provide high-affinity binding for soft heavy metals"
+      },
+      "verification": "llm_inferred",
+      "source_doi": "",
+      "source_page": 0,
+      "functional_groups": [
+        "配位硫",
+        "配位/螯合位点",
+        "-SH（巯基）",
+        "-S-（硫醚键）",
+        "配位氧",
+        "配位氮",
+        "角蛋白酰胺基/巯基",
+        "-O-（醚键）"
+      ],
+      "key_structures": [],
+      "name": "羽毛角蛋白巯基/氨基软酸重金属配位"
+    }
+  ],
+  "performance_data": [],
+  "engineering_constraints": [
+    {
+      "constraint_id": "BFK-E001",
+      "description": "Keratin extraction: alkaline hydrolysis, enzymatic extraction, or steam explosion from feather waste",
+      "source_doi": "",
+      "evidence_type": "llm_inferred"
+    }
+  ],
+  "narrative": [
+    {
+      "narrative_id": "BFK-N001",
+      "text": "Bird feather keratin is an abundant agricultural waste product rich in cysteine (14% by weight). The thiol groups provide high affinity for soft heavy metals. Keratin-based adsorbents are biodegradable and low-cost.",
+      "source_doi": ""
+    }
+  ],
+  "design_translation": [
+    {
+      "idea": "Extract keratin from bird feather waste and use as bio-adsorbent for heavy metals, especially soft metals with high thiol affinity",
+      "material_handle": "Chicken feather keratin for Hg²⁺ removal",
+      "design_principle": "Keratin protein contains disulfide bonds and amino acid residues (cysteine, serine) for heavy metal coordination",
+      "implementation_example": "Chicken feather keratin for Hg²⁺ removal; Keratin nanofiber membrane for heavy metal filtration",
+      "constraints": "Keratin solubility requires chemical pretreatment; limited adsorption capacity without modification",
+      "failure_modes": "",
+      "evidence_tier": "inference",
+      "source_tier": "llm_inference",
+      "material_realization_examples": [
+        "Chicken feather keratin for Hg²⁺ removal",
+        "Keratin nanofiber membrane for heavy metal filtration"
+      ],
+      "specific_functional_group": "disulfide bonds, amino groups (cysteine, serine)",
+      "target_interaction": "heavy metal chelation"
+    }
+  ],
+  "honesty_ledger": {
+    "from_source_mechanisms": 0,
+    "llm_inferred_mechanisms": 1,
+    "verified_performance_data": 0,
+    "missing_pdf_items": 1,
+    "knowledge_gaps": [
+      "[QC 2026-07-23] 现引 10.1007/s10853-026-12899-2 为通用膜功能化综述（范围不符，仅作 background）；待补原型专属一手源并提取全文 quote+页码以升 from_source：Zhang 2018 (10.1177/0040517518764008, Valorization of keratin biofibers for removing heavy metals, Textile Research Journal)",
+      "Keratin extraction method optimization",
+      "Comparison with other bio-adsorbents"
+    ]
+  },
+  "mechanism_tags": [
+    "配位螯合"
+  ]
+}

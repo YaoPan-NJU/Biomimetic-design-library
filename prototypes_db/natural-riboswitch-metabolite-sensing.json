@@ -1,0 +1,384 @@
+{
+ "id": "natural-riboswitch-metabolite-sensing",
+ "name_zh": "天然核糖开关代谢物选择性识别",
+ "name_en": "Natural Riboswitch Metabolite-Selective Recognition",
+ "organism": {
+  "scientific": "Escherichia coli thiM mRNA（TPP 核糖开关适配体域；PDB 2GDI 为体外转录构建体，天然 TPP 核糖开关遍及细菌、植物、真菌）",
+  "category": "微生物"
+ },
+ "biomimetic_dimension": "分子仿生",
+ "features": [
+  "特异性识别",
+  "动态响应"
+ ],
+ "tested_conditions": {
+  "tested_ph_range": null,
+  "tested_temp_range": null,
+  "salinity": null,
+  "note": "TPP 核糖开关为代谢物感应 RNA（分子识别与构象开关原型），本库无其吸附性能测试条件；performance_data 为空，故测试条件全空。"
+ },
+ "library_tier": "extended",
+ "lifecycle_status": "active",
+ "coverage": "partial",
+ "status": "active",
+ "provenance_summary": {
+  "n_papers": 2,
+  "n_verified": 10,
+  "n_unverified": 0,
+  "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与硬边界条数（RSW-001 四要素+1 硬边界=5，RSW-002 四要素+1 硬边界=5）。机制接地限于 TPP 核糖开关天然代谢物配体（焦磷酸硫胺素）的精密识别与配体诱导构象开关（PDB 2GDI + Serganov 2006 Nature 摘要 PMC4689313）；ROX（罗红霉素，大环内酯）应用为设计转译（llm_inferred/inspiration），属机制匹配非直接靶标，无性能数据。quote 逐字取自 PMC 开放获取摘要 XML 与 RCSB PDB 沉积记录（可核验）；正文 PDF 未取得，未做全文 PDF 审计。SAM 核糖开关 DOI 10.1038/nature04819（Montange & Batey 2006）经 Crossref 核验，仅作天然核糖开关类别的旁证。"
+ },
+ "mechanisms": [
+  {
+   "mechanism_id": "RSW-001",
+   "name": "预组织适配体域精密结合口袋对代谢物的高选择性识别",
+   "description": "大肠杆菌 thiM mRNA 的 TPP 核糖开关适配体域以两个亚结构域构成精密结合口袋：一个形成插入式口袋容纳 TPP 的 4-氨基-5-羟甲基-2-甲基嘧啶部分（方向性氢键与碱基堆积），另一形成较宽口袋经二价金属离子（Mg2+）与水分子桥接焦磷酸部分；两个口袋定位成分子量测装置，以伸展构象识别 TPP，对配体官能团几何高度判别（中央噻唑部分不被识别）",
+   "基本原理": "预组织的 RNA 碱基与核糖官能团阵列对代谢物配体的方向性氢键、插入式碱基堆积与金属水桥接组合，形成媲美蛋白的精密结合口袋，在无蛋白骨架参与下实现对特定小分子表位的高选择性识别",
+   "source": "literature",
+   "ref_doi": "10.1038/nature04740",
+   "verification": "verified",
+   "verification_quote": "The two pockets are positioned to function as a molecular measuring device that recognizes TPP in an extended conformation",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "天然配体为焦磷酸硫胺素 TPP（维生素 B1 活性形式，小分子代谢物/辅酶）；适配体域识别其嘧啶部分（4-氨基-5-羟甲基-2-甲基嘧啶）与焦磷酸部分，中央噻唑部分不被识别。注意 ROX（罗红霉素，大环内酯）与 TPP 无结构相似性，此处接地的是核糖开关的天然代谢物配体",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/nature04740",
+     "locator": "Abstract (PMC4689313), p.1167",
+     "quote": "responds to the coenzyme thiamine pyrophosphate (TPP)",
+     "scope_match": "Keywords: thiamine pyrophosphate, coenzyme, responds"
+    },
+    "bio_structure": {
+     "text": "适配体域一个亚结构域形成插入式（intercalation）口袋容纳 TPP 的 4-氨基-5-羟甲基-2-甲基嘧啶部分，另一亚结构域形成较宽口袋；PDB 2GDI（2.05 Å）给出该 RNA 适配体域与 TPP 的复合物结构（聚合物实体为 polyribonucleotide）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/nature04740",
+     "locator": "PDB 2GDI / Abstract (PMC4689313), p.1167",
+     "quote": "one subdomain forms an intercalation pocket for the 4-amino-5-hydroxymethyl-2-methyl-pyrimidine moiety of TPP, whereas another subdomain forms a wider pocket",
+     "scope_match": "Keywords: intercalation pocket, pyrimidine, subdomain, TPP"
+    },
+    "interaction": {
+     "text": "焦磷酸部分经二价金属离子（Mg2+，PDB 2GDI 含 MG 配体）与水分子形成桥接接触被识别；嘧啶部分经插入式口袋的方向性氢键与碱基堆积识别（氨基与羟甲基为关键氢键位点）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/nature04740",
+     "locator": "PDB 2GDI / Abstract (PMC4689313), p.1167",
+     "quote": "another subdomain forms a wider pocket that uses bivalent metal ions and water molecules to make bridging contacts to the pyrophosphate moiety of the ligand",
+     "scope_match": "Keywords: bivalent metal ions, water molecules, pyrophosphate, bridging contacts"
+    },
+    "why_it_works": {
+     "text": "两个口袋定位成分子量测装置，以伸展构象识别 TPP，对配体尺寸与官能团几何高度判别；Serganov 2006 指出折叠 RNA 可形成媲美蛋白遗传因子的精密结合口袋，这是无蛋白骨架下高选择性的结构基础",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/nature04740",
+     "locator": "Abstract (PMC4689313), p.1167",
+     "quote": "The two pockets are positioned to function as a molecular measuring device that recognizes TPP in an extended conformation",
+     "scope_match": "Keywords: pockets, molecular measuring device, recognizes, conformation"
+    },
+    "boundary_conditions": [
+     {
+      "text": "识别表位边界：选择性来自嘧啶部分（氨基/羟甲基）与焦磷酸部分的识别，中央噻唑部分不被 RNA 识别；故噻唑环修饰的吡啶硫胺素焦磷酸（药物类似物）仍能靶向该核糖开关，识别有明确表位边界而非全分子包裹",
+      "parameter": "competing_ion",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "Abstract (PMC4689313), p.1167",
+      "quote": "The central thiazole moiety is not recognized by the RNA, which explains why the antimicrobial compound pyrithiamine pyrophosphate targets this riboswitch",
+      "scope_match": "Keywords: thiazole, recognized, riboswitch, pyrithiamine",
+      "source_asset": null
+     },
+     {
+      "text": "预组织精密口袋须维持完整折叠的 RNA 三级结构；变性或口袋完全溶剂化将破坏氢键几何与金属水桥接，削弱识别（定性，无数值阈值）",
+      "parameter": "wet_stability",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "预组织的方向性氢键给体/受体阵列、插入式碱基堆积口袋与金属水桥接组合，可形成精密结合口袋，在无蛋白骨架参与下对特定小分子表位实现高选择性识别",
+    "verification_quote": "The two pockets are positioned to function as a molecular measuring device that recognizes TPP in an extended conformation"
+   },
+   "source_doi": "10.1038/nature04740",
+   "source_page": 1167,
+   "source_locator": "PDB 2GDI / Abstract (PMC4689313), p.1167",
+   "source_file": "PDB 2GDI（RCSB 沉积数据）+ Nature 441:1167-1171（PMC4689313 摘要全文 XML；正文 PDF 未取得，未做本地全文 PDF 审计）",
+   "functional_groups": [
+    "方向性氢键给体/受体（RNA 碱基与核糖 2'-OH，识别嘧啶氨基/羟甲基）",
+    "插入式碱基堆积口袋（嘧啶部分）",
+    "二价金属离子（Mg2+）与水分子桥接（焦磷酸部分）"
+   ],
+   "key_structures": [
+    "识别结构"
+   ]
+  },
+  {
+   "mechanism_id": "RSW-002",
+   "name": "配体诱导的适配体域构象开关调控下游基因（动态响应）",
+   "description": "TPP 核糖开关的代谢物结合事件触发构象开关：天然配体 TPP 与其药物类似物结合后稳定适配体域的二级与三级结构元件，该折叠结构经与表达平台（终止子/抗终止子发夹）的偶联调控 mRNA 编码蛋白的合成，实现代谢物感应到基因表达的动态响应",
+   "基本原理": "小分子配体结合热力学稳定适配体域的折叠态，折叠态与未折叠态的构象平衡移动经结构偶联传递至表达平台，将配体结合事件转换为下游基因调控信号；蛋白级精密口袋使该构象开关具备选择性",
+   "source": "literature",
+   "ref_doi": "10.1038/nature04740",
+   "verification": "verified",
+   "verification_quote": "Both the natural ligand and its drug-like analogue stabilize secondary and tertiary structure elements",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "天然核糖开关为代谢物感应 RNA，通常位于 mRNA 非编码区，配体（小分子代谢物）结合事件本身即触发下游基因调控信号（动态响应的输入）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/nature04740",
+     "locator": "Abstract (PMC4689313), p.1167",
+     "quote": "Riboswitches are metabolite-sensing RNAs, typically located in the non-coding portions of messenger RNAs, that control the synthesis of metabolite-related proteins",
+     "scope_match": "Keywords: metabolite-sensing, riboswitches, messenger RNAs, control"
+    },
+    "bio_structure": {
+     "text": "适配体域与表达平台偶联；配体结合稳定的二级/三级结构元件被核糖开关用于调控 mRNA 编码蛋白的合成（构象开关的结构机械）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/nature04740",
+     "locator": "Abstract (PMC4689313), p.1167",
+     "quote": "stabilize secondary and tertiary structure elements that are harnessed by the riboswitch to modulate the synthesis of the proteins coded by the mRNA",
+     "scope_match": "Keywords: stabilize, structure elements, riboswitch, modulate"
+    },
+    "interaction": {
+     "text": "天然配体 TPP 与其药物类似物均稳定适配体域的二级与三级结构元件，即配体结合诱导/稳定折叠，构成构象开关的热力学驱动（结合到折叠的耦合）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/nature04740",
+     "locator": "Abstract (PMC4689313), p.1167",
+     "quote": "Both the natural ligand and its drug-like analogue stabilize secondary and tertiary structure elements",
+     "scope_match": "Keywords: natural ligand, stabilize, tertiary structure"
+    },
+    "why_it_works": {
+     "text": "折叠 RNA 能形成媲美蛋白遗传因子的精密结合口袋，使配体诱导的构象开关具备蛋白级选择性，这是代谢物感应动态响应的结构基础",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/nature04740",
+     "locator": "Abstract (PMC4689313), p.1167",
+     "quote": "this structure provides insight into how folded RNAs can form precision binding pockets that rival those formed by protein genetic factors",
+     "scope_match": "Keywords: folded RNAs, precision binding pockets, protein"
+    },
+    "boundary_conditions": [
+     {
+      "text": "自然基因组起源与分布边界：TPP 核糖开关为自然基因组编码的代谢物感应 RNA，遍及细菌、植物、真菌三域生命，是分布最广的代谢物感应 RNA 调控系统；属自然进化解决方案，区别于 SELEX 体外筛选的核酸适配体（库内 dna-aptamer）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "Abstract (PMC4689313), p.1167",
+      "quote": "including bacteria, plants and fungi, use TPP-sensing riboswitches to control genes",
+      "scope_match": "Keywords: bacteria, plants, fungi, TPP-sensing riboswitches",
+      "source_asset": null
+     },
+     {
+      "text": "构象开关转译为合成吸附材料须具备结合诱导的结构/构象响应（如溶胀、链段重排、捕获-释放切换）；刚性且无构象变化的结合位点不具备动态响应功能（定性，无数值阈值）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "小分子配体结合热力学稳定识别元件的折叠/有序态，经结构偶联将结合事件转换为可输出的构象/状态切换，构成选择性动态响应的通用机制",
+    "verification_quote": "Both the natural ligand and its drug-like analogue stabilize secondary and tertiary structure elements"
+   },
+   "source_doi": "10.1038/nature04740",
+   "source_page": 1167,
+   "source_locator": "Abstract (PMC4689313), p.1167 / PDB 2GDI",
+   "source_file": "PDB 2GDI（RCSB 沉积数据）+ Nature 441:1167-1171（PMC4689313 摘要全文 XML；正文 PDF 未取得，未做本地全文 PDF 审计）",
+   "functional_groups": [
+    "适配体域二级/三级结构元件（配体稳定）",
+    "表达平台发夹（终止子/抗终止子，构象开关输出）"
+   ],
+   "key_structures": [
+    "识别结构",
+    "构象开关"
+   ]
+  }
+ ],
+ "performance_data": [],
+ "engineering_constraints": [
+  {
+   "constraint": "RNA 分子形态（非蛋白，水相易降解）",
+   "value": "TPP 核糖开关适配体域为 RNA（PDB 2GDI 聚合物实体为 polyribonucleotide，条目分子量约 53.24 kDa 含 RNA 与配体/离子）；RNA 在水相易被核糖核酸酶降解、热稳定性有限，直接用作吸附剂须固定化/化学稳定化，或仅提取设计原理",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "RCSB 2GDI：polymer_entity_count 1（polyribonucleotide），entry molecular_weight 53.24 kDa",
+   "source": "literature",
+   "ref_doi": "10.1038/nature04740"
+  },
+  {
+   "constraint": "焦磷酸识别的金属离子依赖",
+   "value": "焦磷酸部分识别依赖二价金属离子（Mg2+，PDB 2GDI 含 MG 配体）与水分子桥接；缺金属或强螯合环境削弱焦磷酸部分的识别",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "Serganov 2006 摘要：wider pocket uses bivalent metal ions and water molecules to make bridging contacts to the pyrophosphate moiety（PMC4689313, p.1167）",
+   "source": "literature",
+   "ref_doi": "10.1038/nature04740"
+  },
+  {
+   "constraint": "构象开关依赖完整折叠三级结构",
+   "value": "配体诱导的构象开关依赖完整折叠的适配体域及其与表达平台的偶联；变性或结构偶联丧失使开关失效",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（基于摘要 'stabilize secondary and tertiary structure elements harnessed by the riboswitch' 的事实外推）",
+   "source": "llm_inference",
+   "ref_doi": null
+  },
+  {
+   "constraint": "天然靶标错配（转译限原理层）",
+   "value": "天然配体为 TPP 代谢物，与大环内酯 ROX（罗红霉素）无结构相似性；可转译者仅为 '预组织精密识别 + 配体诱导构象开关' 原理，非对 ROX 的直接靶标识别",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（机制匹配非靶标匹配；ROX 结合须由材料设计另行构建并实验验证）",
+   "source": "llm_inference",
+   "ref_doi": null
+  }
+ ],
+ "narrative": {
+  "entries": [
+   {
+    "source_file": "Nature 441:1167-1171 / PDB 2GDI（Serganov et al. 2006，DOI 10.1038/nature04740，PMC4689313）",
+    "paper_id": "2006-Serganov-TPP-riboswitch-structure",
+    "sections": {
+     "problem_definition": "细菌等生物需在代谢层面感知微摩尔乃至更低浓度的特定小分子代谢物，并据此调控相关基因的导入或合成。核糖开关是位于 mRNA 非编码区的代谢物感应 RNA，以适配体域高选择性识别结构相近的小分子代谢物并经构象切换调控下游基因，属自然基因组序列而非 SELEX 体外筛选产物，满足自然界进化解决方案判据。",
+     "biological_solution": "大肠杆菌 thiM mRNA 的 TPP 核糖开关（PDB 2GDI，2.05 Å）以适配体域两个亚结构域构成精密结合口袋：一个形成插入式口袋容纳 TPP 的 4-氨基-5-羟甲基-2-甲基嘧啶部分，另一形成较宽口袋经二价金属离子（Mg2+）与水分子桥接焦磷酸部分；两个口袋定位成分子量测装置，以伸展构象识别 TPP（Serganov 2006 摘要 PMC4689313）。识别有明确表位边界：中央噻唑部分不被 RNA 识别，故噻唑修饰的吡啶硫胺素焦磷酸仍能靶向该核糖开关。天然配体与其药物类似物结合后均稳定适配体域的二级与三级结构元件，经与表达平台偶联调控 mRNA 编码蛋白的合成，实现代谢物感应到基因表达的动态响应。Serganov 2006 指出折叠 RNA 可形成媲美蛋白遗传因子的精密结合口袋。TPP 核糖开关遍及细菌、植物、真菌三域生命，是分布最广的代谢物感应 RNA 调控系统；SAM、FMN 等其他核糖开关亦为天然基因组代谢物感应元件（如 SAM 核糖开关，DOI 10.1038/nature04819）。",
+     "key_features": "必须保留：① 与目标小分子表位几何/官能团互补的预组织方向性氢键阵列（含插入式堆积与金属水桥接）；② 精密结合口袋对配体尺寸与官能团的高判别（分子量测装置）；③ 配体结合诱导/稳定的结构状态切换（动态响应输出）。可灵活调整：骨架化学（RNA 改合成聚合物/印迹基质）、给体/受体种类与取向、构象响应的材料实现方式。",
+     "design_mapping": "仿生映射：TPP 核糖开关的 '预组织精密识别口袋 + 配体诱导构象开关' → 面向大环内酯 ROX（罗红霉素）的选择性识别与动态响应系统。边界声明：这是设计转译/启发（llm_inferred），属机制匹配非靶标匹配。天然配体 TPP 与大环内酯 ROX 无结构相似性；可迁移者仅为 '预组织方向性氢键阵列对目标表位的高判别' 与 '配体诱导结构状态切换' 两条原理，对 ROX 的具体识别化学（大环内酯环羟基/酮基/环氧/去氧糖官能团的互补）须在材料设计层面另行构建并实验验证。本原型须与库内 dna-aptamer（SELEX 人工筛选，不构成仿生原型）明确区分：核糖开关为自然进化基因组序列。",
+     "explainability_anchors": "设计溯源：TPP 在适配体域精密口袋的双口袋识别与配体诱导构象开关（PDB 2GDI + Serganov 2006 摘要，from_source）→ '预组织方向性识别阵列 + 配体诱导结构状态切换' 可迁移原理（from_source）→ 面向 ROX 大环内酯的选择性识别与动态响应材料（llm_inferred 启发，机制匹配非靶标匹配，须实验验证）。"
+    }
+   }
+  ]
+ },
+ "design_translation": [
+  {
+   "idea": "将 TPP 核糖开关的 '预组织方向性氢键阵列 + 配体诱导构象开关' 两条原理转译为面向大环内酯 ROX（罗红霉素）的选择性识别与动态响应系统：在载体上构筑与 ROX 大环内酯环表面官能团（内酯羰基、羟基、环氧、去氧糖羟基/二甲氨基）几何互补的预组织氢键给体/受体阵列以实现选择性识别，并耦合一种结合诱导的结构状态切换（如响应性聚合物链段重排/溶胀，或主客体结合触发的捕获-释放转换）以提供动态响应",
+   "specific_functional_group": "氢键给体/受体（脲/硫脲、酰胺、羟基、羧基、硼酸酯），按与 ROX 大环内酯环羟基/酮基/环氧/去氧糖官能团互补的方式预组织排布；二甲氨基位点可辅以弱酸响应离子对",
+   "material_handle": "分子印迹聚合物（以 ROX 或大环内酯片段为模板，预组织互补氢键位点）或刚性间隔臂控制的氢键给体功能化介孔二氧化硅/共价有机框架；动态响应经 pH/竞争配体触发的链段重排或主客体解离实现捕获-释放切换",
+   "target_interaction": "预组织氢键给体/受体与 ROX 大环内酯环表面官能团的方向性氢键 + 形状互补（大环内酯环腔）+ 结合诱导的结构状态切换（动态响应）",
+   "source_tier": "llm_inference",
+   "evidence_tier": "inspiration（原理层外推：核糖开关机制接地于天然代谢物配体 TPP 的精密识别与构象开关；ROX 与 TPP 无结构相似性，转译为 llm_inferred，属机制匹配非靶标匹配，无 ROX 结合或吸附数据）",
+   "examples": [],
+   "design_principle": "TPP 核糖开关证明预组织方向性氢键阵列与插入式/金属水桥接可形成媲美蛋白的精密结合口袋、对特定小分子表位高判别，且配体结合可诱导结构状态切换（PDB 2GDI + Serganov 2006）；这两条原理可在原理层外推至人工识别与响应材料，但对 ROX 的具体识别化学须重新设计",
+   "implementation_example": "以 ROX 为模板的分子印迹聚合物或氢键给体功能化、具结合诱导溶胀/释放响应的共价有机框架（无实验数据，仅为设计假设）",
+   "constraints": "ROX（大环内酯）与天然配体 TPP 无结构相似性，原型不提供对 ROX 的直接识别，仅提供 '预组织识别 + 构象开关' 原理；水相中氢键给体/受体的水合竞争与共存大环内酯（红霉素、阿奇霉素）及天然有机质干扰是关键挑战；RNA 原型本身不可直接复制为吸附剂（RNA 易降解、金属依赖、构象依赖）",
+   "failure_modes": "氢键位点暴露于体相水被氢键竞争淬灭；分子印迹位点对结构相近大环内酯（红霉素/阿奇霉素）选择性不足；刚性印迹位点缺乏构象响应而无动态释放功能；非特异疏水吸附降低选择性；模板残留导致假阳性结合",
+   "material_realization_examples": []
+  }
+ ],
+ "honesty_ledger": {
+  "facts": [
+   {
+    "type": "mechanism",
+    "index": 0,
+    "name": "预组织适配体域精密结合口袋对代谢物的高选择性识别",
+    "basis": "from_source_verified",
+    "note": "Serganov 2006 Nature（PDB 2GDI 2.05 Å：E. coli thiM TPP 核糖开关适配体域；插入式口袋容纳嘧啶部分 + 较宽口袋经二价金属离子/水桥接焦磷酸；分子量测装置；中央噻唑不被识别）；quote 逐字取自 PMC4689313 摘要 XML 与 RCSB PDB 沉积记录（可核验），正文 PDF 未取得，未做全文 PDF 审计"
+   },
+   {
+    "type": "mechanism",
+    "index": 1,
+    "name": "配体诱导的适配体域构象开关调控下游基因（动态响应）",
+    "basis": "from_source_verified",
+    "note": "Serganov 2006 摘要：核糖开关为代谢物感应 RNA；天然配体与药物类似物均稳定适配体域二级/三级结构元件并经核糖开关调控 mRNA 编码蛋白合成；折叠 RNA 形成媲美蛋白的精密结合口袋；TPP 核糖开关遍及细菌/植物/真菌三域（quote 逐字取自 PMC4689313 摘要 XML）"
+   },
+   {
+    "type": "source_origin",
+    "index": 0,
+    "name": "天然结构与天然基因组起源接地",
+    "basis": "from_source_verified",
+    "note": "PDB 2GDI（RCSB 核验：标题 'Crystal structure of thiamine pyrophosphate-specific riboswitch in complex with thiamine pyrophosphate'，2.05 Å，X-RAY DIFFRACTION，配体含 TPP=thiamine diphosphate/MG/K/NA）；DOI 10.1038/nature04740（Crossref 核验：Serganov et al., Nature 441:1167-1171, 2006）；适配体域源自 E. coli thiM mRNA（摘要逐字 'a riboswitch domain from the Escherichia coli thiM mRNA'）"
+   },
+   {
+    "type": "class_corroboration",
+    "index": 0,
+    "name": "天然核糖开关类别旁证（SAM 核糖开关）",
+    "basis": "from_source_verified",
+    "note": "SAM 核糖开关 DOI 10.1038/nature04819（Crossref 核验：Montange & Batey, 'Structure of the S-adenosylmethionine riboswitch regulatory mRNA element', Nature 441:1172-1175, 2006），佐证核糖开关为多类天然基因组代谢物感应 RNA；仅作类别旁证，不参与 RSW 因果链四件套；FMN 核糖开关结构编号未核验，不列入 from_source 要素"
+   }
+  ],
+  "leads": [],
+  "inferences": [
+   {
+    "type": "design_translation",
+    "index": 0,
+    "idea": "将核糖开关 '预组织精密识别 + 配体诱导构象开关' 转译为面向大环内酯 ROX 的选择性识别与动态响应材料",
+    "basis": "llm_inferred",
+    "label": "inspiration",
+    "note": "ROX（罗红霉素，大环内酯）与天然配体 TPP 无结构相似性，属机制匹配非靶标匹配；可迁移者仅为 '预组织方向性识别 + 配体诱导结构状态切换' 两条原理，对 ROX 的具体识别化学须重新设计并实验验证，无 ROX 结合/吸附数据"
+   },
+   {
+    "type": "boundary_inference",
+    "index": 0,
+    "name": "构象开关转译为合成材料需结合诱导的结构响应；刚性位点无动态响应",
+    "basis": "llm_inferred",
+    "label": "inspiration",
+    "note": "机理层推断，无数值阈值"
+   }
+  ],
+  "boundary_notes": [
+   "本原型天然配体为焦磷酸硫胺素 TPP（小分子代谢物/辅酶）；机制 from_source 接地限于 TPP 核糖开关对天然代谢物的精密识别与配体诱导构象开关",
+   "ROX（罗红霉素，大环内酯）应用为设计转译（llm_inferred/inspiration），属机制匹配非直接靶标，ROX 与 TPP 无结构相似性，不得用作 ROX 的 direct evidence",
+   "无 ROX 吸附或结合性能数据（qmax 等）；performance_data 为空，严格未从任何污染物知识库搬运性能数值（知识隔离红线）",
+   "本原型为自然进化基因组核糖开关（RNA，非蛋白），明确区别于库内 dna-aptamer（SELEX 体外人工筛选产物，不构成仿生原型）",
+   "BC（识别表位边界、自然基因组分布）为 from_source 硬边界；水相稳定性与构象响应材料实现为定性 llm_inferred 软边界，无数值阈值，gate_level=soft"
+  ],
+  "missing_pdf_items": [
+   "Serganov 2006 Nature 441:1167-1171 正文 PDF（quote 取自 PMC4689313 开放获取摘要 XML 与 PDB 沉积记录；正文内氢键距离/具体核苷酸编号未取得）",
+   "SAM 核糖开关 Montange & Batey 2006 全文（仅 Crossref 题录核验，作类别旁证）",
+   "FMN 核糖开关结构编号与文献未核验，不列入 from_source 要素"
+  ],
+  "generated_by": "manual-curation-2026-07-22",
+  "note": "诚实优先：机制接地限于 TPP 核糖开关天然代谢物配体的精密识别与构象开关（PDB 2GDI + Serganov 2006）；ROX 应用全部为 inspiration/原理层外推，机制匹配非靶标匹配"
+ },
+ "boundary_rules": [
+  {
+   "rule": "识别表位边界：选择性来自嘧啶部分（氨基/羟甲基）与焦磷酸部分识别，中央噻唑不被识别，噻唑修饰类似物仍靶向",
+   "source_mechanism": "预组织适配体域精密结合口袋对代谢物的高选择性识别",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "预组织精密口袋须维持完整折叠 RNA 三级结构，水竞争/变性削弱识别（定性，无数值阈值）",
+   "source_mechanism": "预组织适配体域精密结合口袋对代谢物的高选择性识别",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  },
+  {
+   "rule": "自然基因组起源：TPP 核糖开关为自然进化编码（遍及细菌/植物/真菌三域），属自然进化解决方案，区别于 SELEX 体外筛选的 dna-aptamer",
+   "source_mechanism": "配体诱导的适配体域构象开关调控下游基因（动态响应）",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "构象开关转译为合成吸附材料需结合诱导的结构/构象响应，刚性无构象变化的位点不具备动态响应功能（定性）",
+   "source_mechanism": "配体诱导的适配体域构象开关调控下游基因（动态响应）",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  }
+ ],
+ "mechanism_tags": [
+  "配位螯合",
+  "氢键",
+  "几何识别"
+ ]
+}

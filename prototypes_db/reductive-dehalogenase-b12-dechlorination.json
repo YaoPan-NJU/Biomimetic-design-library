@@ -1,0 +1,353 @@
+{
+ "id": "reductive-dehalogenase-b12-dechlorination",
+ "name_zh": "B12/类咕啉依赖还原脱卤酶有机氯还原脱氯",
+ "name_en": "B12/Corrinoid-Dependent Reductive Dehalogenase Organochlorine Reductive Dechlorination",
+ "organism": {
+  "scientific": "Nitratireductor pacificus pht-3B（还原脱卤酶 RdhA，PDB 4RAS；有机卤呼吸厌氧菌的钴胺素依赖还原脱卤酶）",
+  "category": "微生物"
+ },
+ "biomimetic_dimension": "分子仿生",
+ "features": [
+  "催化降解"
+ ],
+ "tested_conditions": {
+  "tested_ph_range": null,
+  "tested_temp_range": null,
+  "salinity": null,
+  "note": "本原型为降解/转化（催化）原型而非分子识别/吸附原型，本库无其吸附性能测试条件；performance_data 为空，故测试条件全空。"
+ },
+ "library_tier": "extended",
+ "lifecycle_status": "active",
+ "coverage": "partial",
+ "status": "active",
+ "provenance_summary": {
+  "n_papers": 4,
+  "n_verified": 10,
+  "n_unverified": 0,
+  "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与硬边界条数（RDH-001 四要素+1 硬边界=5，RDH-002 四要素+1 硬边界=5）。机制接地限于还原脱卤酶/钴胺素的钴-卤素电子转移机制（PDB 4RAS + Payne 2015 Nature）与游离辅酶对 DDT 的还原脱氯（Berry 1977、Sugihara 1998、Kallman 1963）；DDT 作为目标污染物的应用为设计转译（llm_inferred/inspiration），无降解性能数据。quote 逐字取自 RCSB 4RAS 沉积记录（TITLE/配体）、Crossref 核验标题与 Europe PMC 摘要（可核验），未做全文 PDF 审计，故为 extended 而非 core。"
+ },
+ "mechanisms": [
+  {
+   "mechanism_id": "RDH-001",
+   "name": "钴胺素（B12）辅酶经钴-卤素相互作用介导的有机氯还原脱卤",
+   "description": "还原脱卤酶是有机卤呼吸菌中负责生物脱卤的钴胺素（B12）依赖酶亚家族。其活性位点的咕啉钴中心与底物卤素发生直接相互作用，经卤素-钴键形成实现对有机卤底物的还原，区别于其他钴胺素亚家族的碳-钴键化学。PDB 4RAS（Payne 2015，Nitratireductor pacificus pht-3B 的可溶耐氧还原脱卤酶）含 COBALAMIN（B12）与 IRON/SULFUR CLUSTER（SF4，[4Fe-4S]）辅因子及 CHLORIDE ION（CL，脱卤产物卤离子）",
+   "基本原理": "低电位钴中心（Co(I)/Co(II) 氧化还原对）作为强还原剂，与底物 C-卤键的卤素直接相互作用并经卤素-钴键形成转移电子，断裂 C-卤键并释放卤离子；[4Fe-4S] 簇与还原型铁氧还蛋白供电子，咕啉环提供电子离域与轴向配位以调谐钴中心还原电位",
+   "source": "literature",
+   "ref_doi": "10.1038/nature13901",
+   "verification": "verified",
+   "verification_quote": "a direct interaction between the cobalamin cobalt and the substrate halogen underpins catalysis",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "有机卤底物的 C-卤（C-Cl）键（底物卤素）。还原脱卤酶天然作用于有机卤呼吸菌的卤代底物，底物谱包括多氯联苯与二噁英等卤代芳烃的 C-卤键",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/nature13901",
+     "locator": "Abstract (PMID 25327251), p.513",
+     "quote": "Reductive dehalogenases are responsible for biological dehalogenation in organohalide respiring bacteria, with substrates including polychlorinated biphenyls or dioxins.",
+     "scope_match": "Keywords: reductive dehalogenases, dehalogenation, organohalide, polychlorinated biphenyls"
+    },
+    "bio_structure": {
+     "text": "还原脱卤酶活性位点的钴胺素（B12）辅因子与 [4Fe-4S] 簇。PDB 4RAS 配体记 B12（COBALAMIN）、SF4（IRON/SULFUR CLUSTER）、CL（CHLORIDE ION）；还原脱卤酶构成钴胺素（B12）依赖酶的一个独立亚家族，通常膜结合且氧敏感",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/nature13901",
+     "locator": "PDB 4RAS, ligands B12/SF4/CL / Abstract (PMID 25327251), p.513",
+     "quote": "Reductive dehalogenases form a distinct subfamily of cobalamin (B12)-dependent enzymes that are usually membrane associated and oxygen sensitive",
+     "scope_match": "Keywords: reductive dehalogenases, cobalamin, B12, enzymes"
+    },
+    "interaction": {
+     "text": "钴胺素钴中心与底物卤素的直接相互作用是催化的基础，经卤素-钴键形成介导有机卤底物的还原（Payne 2015 结合结构、EPR 与模拟提出）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/nature13901",
+     "locator": "Abstract (PMID 25327251), p.513",
+     "quote": "a direct interaction between the cobalamin cobalt and the substrate halogen underpins catalysis",
+     "scope_match": "Keywords: cobalamin, cobalt, substrate halogen, catalysis"
+    },
+    "why_it_works": {
+     "text": "还原脱卤酶经卤素-钴键形成实现有机卤底物的还原，此路径区别于其他钴胺素依赖亚家族所催化的碳-钴键化学；咕啉钴中心的低电位还原态由此成为断裂 C-卤键的电子转移中心",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/nature13901",
+     "locator": "Abstract (PMID 25327251), p.513",
+     "quote": "we propose that reductive dehalogenases achieve reduction of the organohalide substrate via halogen-cobalt bond formation",
+     "scope_match": "Keywords: reductive dehalogenases, reduction, organohalide, halogen-cobalt"
+    },
+    "boundary_conditions": [
+     {
+      "text": "氧敏感/膜结合约束：多数天然还原脱卤酶膜结合且氧敏感，催化须在低氧/还原微环境维持还原态钴中心（4RAS 为可溶、耐氧的例外，但其催化仍依赖还原态钴中心与低电位电子供体）",
+      "parameter": "redox_environment",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "Abstract (PMID 25327251), p.513",
+      "quote": "usually membrane associated and oxygen sensitive, hindering detailed studies",
+      "scope_match": "Keywords: membrane associated, oxygen sensitive",
+      "source_asset": null
+     },
+     {
+      "text": "游离辅酶/合成电子转移反应位需外加低电位电子供体（还原型铁氧还蛋白、NADPH/NADH、还原态矿物或光/电生电子）并维持还原态钴中心再生；高氯化、位阻或不同卤代底物的脱氯速率与产物分布须实验验证（定性，无数值阈值）",
+      "parameter": "electron_donor",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "低电位钴胺素/类咕啉中心经与底物卤素的直接钴-卤相互作用（卤素-钴键形成）转移电子、断裂有机氯 C-Cl 键并释放氯离子；该电子转移反应位原理（低电位中心 + 钴/金属-卤素相互作用 + 还原态再生）可独立于蛋白骨架移植到非酶还原体系",
+    "verification_quote": "a direct interaction between the cobalamin cobalt and the substrate halogen underpins catalysis"
+   },
+   "source_doi": "10.1038/nature13901",
+   "source_page": 513,
+   "source_locator": "PDB 4RAS / Abstract (PMID 25327251), p.513",
+   "source_file": "PDB 4RAS（RCSB 沉积数据：TITLE、配体 B12/SF4/CL）+ Payne 2015 Nature 517:513-516（Europe PMC 摘要 PMID 25327251；未做本地全文 PDF 审计）",
+   "functional_groups": [
+    "低电位钴胺素/类咕啉钴中心（Co(I)/Co(II) 氧化还原对）",
+    "[4Fe-4S] 铁硫簇（电子传递）",
+    "咕啉环共轭体系与轴向配位"
+   ],
+   "key_structures": [
+    "反应结构"
+   ]
+  },
+  {
+   "mechanism_id": "RDH-002",
+   "name": "辅酶化学介导的 DDT 还原脱氯（维生素 B12 与还原型黄素/血红素，DDT→DDD）",
+   "description": "游离钴胺素（维生素 B12）在温和还原条件下即可使 DDT 脱氯（Berry 与 Stotter 1977）；大鼠血液在还原型吡啶核苷酸与黄素存在下，由还原型黄素（FAD/FMN/核黄素，经 NADPH/NADH 还原）经血红蛋白血红素催化，对 DDT 进行非酶还原脱氯生成 DDD（Sugihara 1998）。这表明 DDT 的还原脱氯本质上是低电位辅酶/辅基的电子转移化学，而非整酶专属，构成辅酶化学层先例",
+   "基本原理": "低电位还原型辅酶（Co(I) 钴胺素、还原型黄素）作为电子供体，在血红素/金属中心辅助下向 DDT 三氯甲基的 C-Cl 键转移电子，断裂 C-Cl 释放氯离子，DDT 转化为 DDD；还原电位与辅酶再生（由 NADPH/NADH 或外源还原剂补给）决定反应持续",
+   "source": "literature",
+   "ref_doi": "10.1016/0045-6535(77)90151-5",
+   "verification": "verified",
+   "verification_quote": "Dechlorination of DDT by vitamin B12 under mildly reducing conditions",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "DDT（p,p'-二氯二苯基三氯乙烷，p,p'-dichlorodiphenyltrichloroethane）的三氯甲基 C-Cl 键；DDT 经还原脱氯生成 DDD（p,p'-二氯二苯基二氯乙烷，p,p'-dichlorodiphenyldichloroethane）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1080/15216549800202452",
+     "locator": "Abstract (Sugihara 1998), p.85",
+     "quote": "the reductive dechlorination of DDT (p, p'-dichlorodiphenyltrichloroethane) to DDD (p, p'-dichlorodiphenyldichloroethane)",
+     "scope_match": "Keywords: reductive dechlorination, DDT, DDD, dichlorodiphenyltrichloroethane"
+    },
+    "bio_structure": {
+     "text": "低电位还原型辅酶/辅基：游离钴胺素（维生素 B12）在温和还原条件下即可脱氯 DDT；还原型黄素（FAD/FMN/核黄素）与血红蛋白血红素构成另一非酶还原脱氯体系",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1016/0045-6535(77)90151-5",
+     "locator": "title, p.783",
+     "quote": "Dechlorination of DDT by vitamin B12 under mildly reducing conditions",
+     "scope_match": "Keywords: dechlorination, DDT, vitamin B12, reducing conditions"
+    },
+    "interaction": {
+     "text": "还原脱氯分两步：黄素先经 NADPH/NADH 还原（酶促或非酶促），还原型黄素再非酶地还原脱氯 DDT，并由血红蛋白血红素催化",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1080/15216549800202452",
+     "locator": "Abstract (Sugihara 1998), p.85",
+     "quote": "The second step is nonenzymatic reductive dechlorination of DDT by the reduced flavin, catalyzed by the heme group of hemoglobin.",
+     "scope_match": "Keywords: nonenzymatic, DDT, reduced flavin, heme, hemoglobin"
+    },
+    "why_it_works": {
+     "text": "DDT 还原脱氯的驱动力是低电位还原型辅酶/辅基；黄素先由 NADPH/NADH 还原生成低电位电子供体，再非酶地还原 DDT，即辅酶/辅基经低电位电子转移断裂 C-Cl 键，电子由 NADPH/NADH 等供体补给再生，故该脱氯可独立于完整酶发生",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1080/15216549800202452",
+     "locator": "Abstract (Sugihara 1998), p.85",
+     "quote": "The first step is reduction of a flavin such as FAD, FMN or riboflavin by NADPH or NADH, either enzymatically or nonenzymatically.",
+     "scope_match": "Keywords: reduction, flavin, NADPH, NADH, riboflavin"
+    },
+    "boundary_conditions": [
+     {
+      "text": "底物桥键反应性分辨：酵母/还原体系将 C14 标记 DDT 还原脱氯为 DDD，但由 DDE 生成 DDD 未被观察到，表明还原脱氯对桥键/底物结构有反应性分辨（DDT 反应、DDE 不反应）",
+      "parameter": "substrate_structure",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "Abstract (Kallman 1963), p.1050",
+      "quote": "The formation of DDD from DDE [1,1-dichloro-2,2-bis (p-chlorophenyl)-ethylene] was not observed, indicating that a reductive dechlorination of DDT occurs.",
+      "scope_match": "Keywords: DDD, DDE, reductive dechlorination, DDT",
+      "source_asset": null
+     },
+     {
+      "text": "非酶辅酶化学转译需低电位电子供体与还原条件并维持辅酶还原态再生；反应对底物桥键结构敏感（DDT 反应、DDE 不反应），对高氯化、缺桥氢或位阻底物的脱氯效率与产物选择性须实验验证（定性，无数值阈值）",
+      "parameter": "redox_environment",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "DDT 三氯甲基 C-Cl 键可被低电位还原型辅酶/辅基（钴胺素、还原型黄素）经电子转移还原断裂为 DDD，且该过程可独立于完整酶发生；还原脱氯对底物桥键结构敏感（DDT 反应、DDE 不反应），构成对有机氯桥键的反应性读出先例",
+    "verification_quote": "Dechlorination of DDT by vitamin B12 under mildly reducing conditions"
+   },
+   "source_doi": "10.1016/0045-6535(77)90151-5",
+   "source_page": 783,
+   "source_locator": "title, p.783 (Berry 1977) / Abstract, p.85 (Sugihara 1998) / Abstract, p.1050 (Kallman 1963)",
+   "source_file": "Berry & Stotter 1977 Chemosphere 6:783-787（Crossref 核验标题，无摘要可得）+ Sugihara 1998 IUBMB Life 45:85-91（Europe PMC 摘要）+ Kallman & Andrews 1963 Science 141:1050-1051（Europe PMC 摘要）；均未做本地全文 PDF 审计",
+   "functional_groups": [
+    "低电位钴胺素/类咕啉钴中心（Co(I)）",
+    "还原型黄素（FAD/FMN/核黄素）",
+    "血红素/金属卟啉催化中心"
+   ],
+   "key_structures": [
+    "反应结构"
+   ]
+  }
+ ],
+ "performance_data": [],
+ "engineering_constraints": [
+  {
+   "constraint": "膜结合/氧敏感约束",
+   "value": "多数天然还原脱卤酶膜结合且氧敏感（Payne 2015）；4RAS 为可溶、耐氧的例外，但催化仍需还原态钴中心与低电位电子供体（[4Fe-4S] 簇/铁氧还蛋白）。固定化或合成转译须维持还原微环境",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "Payne 2015 摘要：还原脱卤酶亚家族 'usually membrane associated and oxygen sensitive'，4RAS 为 'a soluble, oxygen-tolerant reductive dehalogenase'（Europe PMC PMID 25327251）",
+   "source": "literature",
+   "ref_doi": "10.1038/nature13901"
+  },
+  {
+   "constraint": "低电位电子供体依赖",
+   "value": "还原脱氯需低电位电子供体（还原型铁氧还蛋白、NADPH/NADH、还原态矿物或光/电生电子）再生 Co(I)/还原型辅酶；无持续电子供给则反应停止",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（基于 Payne 2015 钴-卤素还原机制与 Sugihara 1998 黄素经 NADPH/NADH 还原的两步电子转移事实的外推）",
+   "source": "llm_inference",
+   "ref_doi": null
+  },
+  {
+   "constraint": "底物桥键反应性分辨",
+   "value": "DDT 还原脱氯生成 DDD，但 DDE 不被同途径转化（Kallman 1963：DDD from DDE not observed），即反应对桥键结构敏感；对 DDE 等缺桥氢或高氯化/位阻底物，该还原脱氯途径不适用或效率低",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "Kallman & Andrews 1963 Science 摘要：'The formation of DDD from DDE ... was not observed, indicating that a reductive dechlorination of DDT occurs'（Europe PMC 摘要，p.1050）",
+   "source": "literature",
+   "ref_doi": "10.1126/science.141.3585.1050"
+  }
+ ],
+ "narrative": {
+  "entries": [
+   {
+    "source_file": "Payne 2015 Nature 517:513-516 / PDB 4RAS（DOI 10.1038/nature13901，PMID 25327251）；辅以 Berry 1977 Chemosphere 6:783-787、Sugihara 1998 IUBMB Life 45:85-91、Kallman 1963 Science 141:1050-1051",
+    "paper_id": "2015-Payne-reductive-dehalogenase-B12-mechanism",
+    "sections": {
+     "problem_definition": "有机卤化合物构成大量环境污染物，自然界经有机卤呼吸菌的生物脱卤参与全球卤素循环。还原脱卤酶是这一过程的催化核心，天然底物包括多氯联苯与二噁英等卤代芳烃。该酶如何在温和条件下断裂惰性的有机 C-卤键，是有机卤（生物）化学与生物修复的基础问题。DDT 作为高氯化、高疏水的代表性有机氯农药，其桥键 C-Cl 能否被还原断裂、以及对不同桥键结构（DDT 与 DDE）是否具反应性分辨，是有机氯降解的关键机理问题。",
+     "biological_solution": "有机卤呼吸厌氧菌进化出钴胺素（B12/类咕啉）依赖的还原脱卤酶亚家族。Payne 等（2015）报道了一株可溶、耐氧的还原脱卤酶（Nitratireductor pacificus pht-3B，PDB 4RAS，含 COBALAMIN/B12、[4Fe-4S]/SF4 与氯离子/CL 配体），结合结构、EPR 与模拟提出：钴胺素钴中心与底物卤素的直接相互作用是催化的基础，还原脱卤酶经卤素-钴键形成实现有机卤底物的还原，区别于其他钴胺素亚家族的碳-钴键化学。在辅酶化学层，游离维生素 B12 在温和还原条件下即可使 DDT 脱氯（Berry 与 Stotter 1977）；大鼠血液由还原型黄素（经 NADPH/NADH 还原）经血红蛋白血红素催化对 DDT 进行非酶还原脱氯生成 DDD（Sugihara 1998）。Kallman 与 Andrews（1963）以 C14 标记实验证明 DDT 经酵母还原脱氯为 DDD，且由 DDE 生成 DDD 未被观察到，确立了还原脱氯对桥键结构的反应性分辨（DDT 反应、DDE 不反应）。",
+     "key_features": "必须保留：① 低电位钴胺素/类咕啉钴中心（Co(I)/Co(II) 氧化还原对，电子转移中心）；② 钴/金属中心与底物卤素的直接相互作用（卤素-钴/金属-卤素键形成）；③ 低电位电子供体与还原态再生（[4Fe-4S] 簇/铁氧还蛋白、NADPH/NADH 或外源还原剂）；④ 还原/低氧微环境。可灵活调整：中心化学（类咕啉、金属卟啉、还原态矿物）、电子供体形式（化学牺牲还原剂、阴极电生电子、光生电子）、载体骨架与隔氧结构。",
+     "design_mapping": "仿生映射：还原脱卤酶/钴胺素的'低电位电子转移中心 + 钴-卤素相互作用 + 还原态再生'→ 面向 DDT 桥键 C-Cl 的还原脱氯反应位。边界声明：本原型天然机制为降解/转化（非吸附/非分子识别）；机制 from_source 接地限于酶/辅酶机制本身（PDB 4RAS/Payne 2015）与游离辅酶对 DDT 的还原脱氯（Berry/Sugihara/Kallman），将酶/辅酶机制转译为人工有机氯还原脱氯反应位为设计转译（llm_inferred/inspiration），无 DDT 降解性能数据，脱氯速率、产物分布与对 DDE 的区分须实验验证。另需订正：任务简报称 4RAS 为 PceA，但 RCSB 沉积记录显示 4RAS 聚合物实体为 Nitratireductor pacificus pht-3B 的还原脱卤酶（Payne 2015），本条目据实标注，不沿用 PceA 之名。",
+     "explainability_anchors": "设计溯源：还原脱卤酶钴-卤素相互作用还原机制（PDB 4RAS + Payne 2015，from_source）→ 游离钴胺素/还原型黄素/血红素对 DDT 的还原脱氯与 DDT/DDE 反应性分辨（Berry 1977/Sugihara 1998/Kallman 1963，from_source）→ '低电位电子转移中心 + 钴/金属-卤素相互作用 + 还原态再生'可迁移原理 → DDT 桥键 C-Cl 还原脱氯反应位（llm_inferred 启发，须实验验证）。"
+    }
+   }
+  ]
+ },
+ "design_translation": [
+  {
+   "idea": "将还原脱卤酶/钴胺素的'低电位钴-咕啉电子转移中心 + 钴-卤素相互作用（卤素-钴键形成）+ 还原态再生'三要素抽象为有机氯桥键 C-Cl 还原脱氯的反应位设计原理，面向 DDT：在还原微环境中以低电位类咕啉/金属卟啉/还原态矿物为电子转移中心，耦联低电位电子供体（还原型铁氧还蛋白模拟、NADH/还原态矿物、光/电生电子）再生还原态，断裂 DDT 三氯甲基 C-Cl 键（DDT→DDD）",
+   "specific_functional_group": "低电位电子转移中心（Co(I)/Co(II) 咕啉类、还原型黄素/核黄素类似物、金属卟啉/铁-硫簇模拟、还原态铁/锰矿物表面），可与有机氯 C-Cl 键卤素发生钴/金属-卤素相互作用",
+   "material_handle": "将类咕啉/金属卟啉/铁-硫簇模拟单元固定于导电或半导电载体（碳材料、半导体、MOF/COF）并耦联低电位电子供体（牺牲还原剂、阴极电生电子、光生电子）；构建隔氧还原微环境以维持中心还原态再生",
+   "target_interaction": "低电位还原态中心与 DDT 三氯甲基 C-Cl 键卤素的钴/金属-卤素相互作用与电子转移，断裂 C-Cl 释放氯离子（DDT→DDD）",
+   "source_tier": "llm_inference",
+   "evidence_tier": "inspiration（原理层外推：还原脱卤酶/钴胺素钴-卤素相互作用机制接地于 PDB 4RAS 与 Payne 2015；游离 B12 与还原型黄素/血红素对 DDT 的还原脱氯及 DDT/DDE 反应性分辨接地于 Berry 1977/Sugihara 1998/Kallman 1963；将酶/辅酶机制转译为人工有机氯还原脱氯反应位为 llm_inferred，无 DDT 降解性能数据）",
+   "examples": [],
+   "design_principle": "还原脱卤酶经钴胺素钴与底物卤素的直接相互作用（卤素-钴键形成）实现有机氯 C-Cl 键还原断裂（PDB 4RAS，Payne 2015）；游离钴胺素与还原型黄素/血红素亦可在温和还原条件下非酶还原脱氯 DDT 为 DDD（Berry 1977、Sugihara 1998），证明该过程是低电位辅酶/辅基的电子转移化学。三要素中电子转移中心化学与还原态再生可独立于蛋白骨架移植到人工催化位点",
+   "implementation_example": "类咕啉/金属卟啉功能化导电或多孔载体，耦联低电位电子供体于隔氧还原微环境（无实验数据，仅为设计假设）",
+   "constraints": "天然机制为降解/转化（非吸附）；DDT 高氯化、高疏水、低水溶，水相传质与底物-中心接触是限制；反应对桥键结构敏感（DDT 反应、DDE 不反应，Kallman 1963），对 DDE 等缺桥氢底物无效；需持续低电位电子供体与隔氧还原条件以维持中心还原态；脱氯产物（DDD 等）仍为含氯有机物，完全矿化程度与产物毒性须评估；转译限原理层，无 DDT 降解活性/速率数据",
+   "failure_modes": "电子供体耗尽或中心氧化失活使反应停滞；氧淬灭低电位还原态；底物高疏水导致与固定化中心接触差；对 DDE 等缺桥氢底物无效（反应性分辨边界）；非特异还原产生未知含氯副产物",
+   "material_realization_examples": []
+  }
+ ],
+ "honesty_ledger": {
+  "facts": [
+   {
+    "type": "mechanism",
+    "index": 0,
+    "name": "钴胺素（B12）辅酶经钴-卤素相互作用介导的有机氯还原脱卤",
+    "basis": "from_source_verified",
+    "note": "Payne 2015 Nature 517:513-516（DOI 10.1038/nature13901，PMID 25327251）+ PDB 4RAS（RCSB 沉积记录：TITLE 与配体 B12/COBALAMIN、SF4/IRON-SULFUR CLUSTER、CL/CHLORIDE ION）；机制 quote 逐字取自 Europe PMC 摘要（PMID 25327251）与 RCSB 沉积记录，未做全文 PDF 审计"
+   },
+   {
+    "type": "mechanism",
+    "index": 1,
+    "name": "辅酶化学介导的 DDT 还原脱氯（维生素 B12 与还原型黄素/血红素，DDT→DDD）",
+    "basis": "from_source_verified",
+    "note": "Berry & Stotter 1977 Chemosphere 6:783-787（DOI 10.1016/0045-6535(77)90151-5，Crossref 核验标题，无摘要可得）+ Sugihara 1998 IUBMB Life 45:85-91（DOI 10.1080/15216549800202452，Europe PMC 摘要：还原型黄素经血红素催化非酶还原脱氯 DDT）+ Kallman & Andrews 1963 Science 141:1050-1051（DOI 10.1126/science.141.3585.1050，Europe PMC 摘要：DDT→DDD 且 DDD from DDE not observed）；均未做全文 PDF 审计"
+   }
+  ],
+  "leads": [],
+  "inferences": [
+   {
+    "type": "design_translation",
+    "index": 0,
+    "idea": "将还原脱卤酶/钴胺素钴-卤素电子转移反应位转译为人工有机氯桥键还原脱氯位点（面向 DDT）",
+    "basis": "llm_inferred",
+    "label": "inspiration",
+    "note": "天然机制为降解/转化（非吸附）；DDT 应用全部为 inspiration/原理层外推，无降解性能数据，脱氯速率、产物分布与对 DDE 的区分须实验验证；性能数值严格未从外部污染物知识库搬运"
+   },
+   {
+    "type": "fact_derivation",
+    "index": 0,
+    "name": "4RAS 种属订正：RCSB 沉积记录显示 4RAS 聚合物实体为 Nitratireductor pacificus pht-3B 的还原脱卤酶（Payne 2015），非任务简报所称 Sulfurospirillum multivorans PceA",
+    "basis": "llm_inferred",
+    "label": "metadata_correction",
+    "note": "据 RCSB 4RAS 聚合物实体（oxidoreductase, NAD-binding/iron-sulfur cluster-binding protein, NCBI 391937）与一级引文（Payne et al. 2015, DOI 10.1038/nature13901）订正任务简报的 PceA 标注；不影响'4RAS 为 B12 依赖还原脱卤酶、含 COBALAMIN 辅因子'的核心接地"
+   }
+  ],
+  "boundary_notes": [
+   "本原型天然机制为有机氯还原脱卤（降解/转化类），非分子识别/吸附；机制 from_source 接地限于还原脱卤酶/钴胺素的钴-卤素电子转移机制（PDB 4RAS/Payne 2015）与游离辅酶对 DDT 的还原脱氯（Berry 1977/Sugihara 1998/Kallman 1963）",
+   "DDT 作为目标污染物的应用为设计转译（llm_inferred/inspiration），非 from_source 事实，不得用作 DDT 降解性能的 direct evidence",
+   "无 DDT 降解/吸附性能数据；performance_data 为空，严格未从外部污染物知识库（PKB/BRIEF）搬运任何 qmax/Kd/去除率/降解率数值（知识隔离红线）",
+   "反应性分辨（DDT→DDD、DDE 不反应，Kallman 1963）为 from_source 硬边界，表明还原脱氯对桥键结构敏感，不构成对 DDE 的转译承诺",
+   "一切合成电子转移反应位相关边界（低电位电子供体依赖、隔氧还原微环境、底物普适性）为定性 llm_inferred，gate_level=soft，不带数值阈值"
+  ],
+  "missing_pdf_items": [
+   "Payne 2015 Nature 517:513-516 全文 PDF（quote 取自 Europe PMC 摘要 PMID 25327251 与 RCSB 4RAS 沉积记录）",
+   "Berry & Stotter 1977 Chemosphere 6:783-787 全文 PDF（Crossref 与 Europe PMC 均无摘要可得，quote 取自 Crossref 核验标题）",
+   "Sugihara 1998 IUBMB Life 45:85-91 全文 PDF（quote 取自 Europe PMC 摘要）",
+   "Kallman & Andrews 1963 Science 141:1050-1051 全文 PDF（quote 取自 Europe PMC 摘要）"
+  ],
+  "generated_by": "manual-curation-2026-07-22",
+  "note": "诚实优先：机制接地限于还原脱卤酶/钴胺素钴-卤素电子转移机制（PDB 4RAS + Payne 2015）与辅酶化学 DDT 还原脱氯（Berry/Sugihara/Kallman）；DDT 应用全部为 inspiration/外推；4RAS 种属据 RCSB 订正为 Nitratireductor pacificus（非 PceA）"
+ },
+ "boundary_rules": [
+  {
+   "rule": "氧敏感/膜结合约束：多数天然还原脱卤酶膜结合且氧敏感，催化须在低氧/还原微环境维持还原态钴中心（4RAS 为可溶、耐氧例外）",
+   "source_mechanism": "钴胺素（B12）辅酶经钴-卤素相互作用介导的有机氯还原脱卤",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "底物桥键反应性分辨：DDT 还原脱氯生成 DDD，但 DDE 不被同途径转化（DDD from DDE not observed），还原脱氯对桥键/底物结构敏感",
+   "source_mechanism": "辅酶化学介导的 DDT 还原脱氯（维生素 B12 与还原型黄素/血红素，DDT→DDD）",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "低电位电子供体依赖与还原态再生：合成/非酶转译需外加低电位电子供体并维持还原微环境（定性，无数值阈值）",
+   "source_mechanism": "钴胺素（B12）辅酶经钴-卤素相互作用介导的有机氯还原脱卤",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  }
+ ],
+ "mechanism_tags": [
+  "还原催化降解"
+ ]
+}

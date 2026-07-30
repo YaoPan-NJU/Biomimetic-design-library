@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "docs/active/canon-recovery-ledger.schema.json",
+  "title": "Canon Recovery Ledger Entry",
+  "description": "One append-only line in docs/registries/canon-recovery-ledger.jsonl. Every field-level canon change has exactly one entry; without an entry no canon field changes.",
+  "type": "object",
+  "required": [
+    "id", "prototype_id", "field_path", "record_identity", "disposition",
+    "basis", "applied_commit"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Stable ledger entry id, e.g. R-<n> or <prototype>-<seq>."
+    },
+    "prototype_id": { "type": "string", "description": "Prototype filename without .json." },
+    "field_path": {
+      "type": "string",
+      "description": "JSON pointer into the prototype file, e.g. mechanisms[3].causal_chain.why_it_works or performance_data[7].verification_quote."
+    },
+    "record_identity": {
+      "type": "object",
+      "description": "The stable identity used to match (design §6.2).",
+      "properties": {
+        "level": { "enum": ["perf_1", "perf_2", "perf_3", "mech_1", "mech_2", "mech_3"] },
+        "key": { "type": "string", "description": "Serialized key used at this identity level." }
+      },
+      "required": ["level", "key"]
+    },
+    "disposition": {
+      "enum": ["restored", "replaced", "rejected", "ambiguous", "kept", "removed_wrong_source"]
+    },
+    "from_source_commit": { "type": ["string", "null"], "description": "Commit the evidence was drawn from." },
+    "evidence_precedence": { "enum": ["direct_quote", "human_review", "openclaw_candidate", "extraction", "inferred"] },
+    "basis": { "enum": ["from_source", "review", "openclaw_candidate", "extraction", "inferred"] },
+    "quote": { "type": ["string", "null"], "description": "Source quote <=300 chars, or null." },
+    "locator": { "type": ["string", "null"], "description": "p.x / Sec.y or paragraph [0xxx]." },
+    "local_file": { "type": ["string", "null"], "description": "Repo-relative path of the source PDF/visual_cache." },
+    "modality": { "enum": ["text", "visual", "mixed"], "description": "Evidence modality required (drives model routing)." },
+    "notes": { "type": "string" },
+    "applied_commit": { "type": "string", "description": "SHA of the canon commit that applied this entry." },
+    "applied_at": { "type": "string", "description": "ISO date applied." }
+  }
+}

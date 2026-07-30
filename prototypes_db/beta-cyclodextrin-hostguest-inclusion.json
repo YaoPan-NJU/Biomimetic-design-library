@@ -1,0 +1,249 @@
+{
+  "id": "beta-cyclodextrin-hostguest-inclusion",
+  "name_zh": "β-环糊精主客体包结识别",
+  "name_en": "beta-Cyclodextrin Host-Guest Inclusion Recognition",
+  "organism": {
+    "scientific": "环糊精：直链淀粉（植物多糖，α-D-吡喃葡萄糖 α-1,4 连接）经细菌 CGTase 酶促环化的天然环状寡糖；β-CD 为 7 葡萄糖单元大环，具疏水内腔、亲水外缘",
+    "category": "植物"
+  },
+  "biomimetic_dimension": "分子仿生",
+  "features": [
+    "疏水性",
+    "分子筛分"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": null,
+    "note": "本原型为天然环状寡糖主客体识别单元；性能数据以其交联多孔聚合物吸附剂形态报道（见 design_translation 的 material_realization_examples），本 JSON performance_data 不搬运具体数值，留待审计逐条接地。"
+  },
+  "library_tier": "extended",
+  "lifecycle_status": "active",
+  "coverage": "partial",
+  "status": "active",
+  "provenance_summary": {
+    "n_papers": 5,
+    "n_verified": 2,
+    "n_unverified": 0,
+    "note": "机制为经典主客体包结化学（β-CD 疏水内腔容纳芳香/疏水客体）。Alsbaiee & Dichtel 2016 Nature 摘要支持多孔 β-CD 聚合物快速去除多种微污染物；CD-氯酚包结和其他 CD 聚合物研究仍待全文定位。项目台账中的 β-CD:BPA 结合常数尚未追溯到原始 NMR 来源，不再归因于 CD 聚合物论文。"
+  },
+  "mechanisms": [
+    {
+      "mechanism_id": "BCD-001",
+      "name": "β-环糊精疏水内腔的主客体包结识别",
+      "description": "β-环糊精由 7 个 α-D-葡萄糖以 α-1,4 连接成锥筒，外缘羟基亲水、内腔疏水；水相中经疏水效应与范德华/尺寸互补将芳香或疏水客体（如双酚 A、氯酚、多环麝香、紫外过滤剂等）包结进内腔形成 1:1（或 2:1）主客体复合物，客体自体相水去溶剂进入低极性腔是主要驱动力。",
+      "基本原理": "疏水内腔 + 亲水外缘的两亲环状寡糖以疏水效应与尺寸/形状互补包结疏水客体；选择性来自腔径-客体尺寸匹配与疏水性，属广谱疏水包结而非靶标特异识别。",
+      "source": "literature",
+      "ref_doi": "10.1038/nature16185",
+      "verification": "corroborated",
+      "verification_quote": "Rapid removal of organic micropollutants from water by a porous beta-cyclodextrin polymer",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "芳香/疏水有机微污染物（双酚 A、氯酚、多环麝香、紫外过滤剂等）：具与 β-CD 内腔（约 6.0–6.5 Å 腔径）尺寸匹配的疏水芳环/烷基部分",
+          "basis": "llm_inferred",
+          "evidence_label": "llm_inferred",
+          "source": null,
+          "locator": null,
+          "quote": null,
+          "scope_match": null
+        },
+        "bio_structure": {
+          "text": "β-CD 7 葡萄糖大环：疏水内腔容纳客体，亲水外缘保持水溶性/可交联；CD-氯酚包结经 NMR 证实（1:1 包结）",
+          "basis": "llm_inferred",
+          "evidence_label": "llm_inferred",
+          "source": null,
+          "locator": null,
+          "quote": null,
+          "scope_match": null
+        },
+        "interaction": {
+          "text": "疏水效应、客体去溶剂与腔体尺寸互补可共同促进包结；项目台账中的 β-CD:BPA 结合常数尚待原始 NMR 来源核验。",
+          "basis": "llm_inferred",
+          "evidence_label": "llm_inferred",
+          "source": null,
+          "locator": null,
+          "quote": null,
+          "scope_match": null
+        },
+        "why_it_works": {
+          "text": "Alsbaiee & Dichtel 2016 将 β-CD 交联为多孔聚合物，快速去除多种有机微污染物、吸附速率常数为活性炭 15–200 倍、并在环境相关浓度下优于活性炭——证明 β-CD 主客体包结可转译为高效水相吸附材料",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1038/nature16185",
+          "locator": "Nature 529:190-194 abstract",
+          "quote": "adsorption rate constants 15 to 200 times greater than those of activated carbons",
+          "scope_match": "Keywords: adsorption rate, activated carbon, micropollutants"
+        },
+        "boundary_conditions": [
+          {
+            "text": "1:1 化学计量容量上限：单位 β-CD 仅一个内腔，纯 β-CD 位点对大客体容量有硬上限（如 β-CD:BPA 纯位点约 201 mg/g），载体/交联质量摊薄总容量",
+            "parameter": "capacity_ceiling",
+            "condition": { "operator": "qualitative", "value": null },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "scope_match": null,
+            "source_asset": null
+          },
+          {
+            "text": "广谱非特异：包结基于疏水+尺寸，为广谱疏水微污染物富集，非单一靶标识别；同尺寸疏水共存物竞争同一内腔，靶标选择性有限",
+            "parameter": "selectivity_basis",
+            "condition": { "operator": "qualitative", "value": null },
+            "basis": "from_source",
+            "verification": "corroborated",
+            "gate_level": "hard",
+            "locator": "10.1038/nature16185 abstract（a variety of micropollutants）",
+            "quote": "sequesters a variety of organic micropollutants",
+            "scope_match": "Keywords: variety, micropollutants, broad",
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "两亲环状寡糖以疏水内腔 + 尺寸/形状互补包结疏水芳香客体；交联为多孔聚合物即得快速、可再生、耐基质的广谱微污染物吸附材料；选择性上限受 1:1 容量与广谱疏水包结约束。",
+        "verification_quote": "adsorption rate constants 15 to 200 times greater than those of activated carbons"
+      },
+      "source_doi": "10.1038/nature16185",
+      "source_page": 190,
+      "source_locator": "Nature 529:190-194（摘要外部核验）",
+      "source_file": "Alsbaiee & Dichtel 2016 Nature / CD-氯酚包结 10.1023/A:1008150908997 / CD 聚合物 10.1039/d0cc04784h（均未做本地全文 PDF 审计）",
+      "functional_groups": [
+        "β-环糊精疏水内腔（7 葡萄糖大环）",
+        "外缘羟基（亲水/可交联把手）"
+      ],
+      "key_structures": [
+        "识别结构"
+      ]
+    }
+  ],
+  "performance_data": [],
+  "engineering_constraints": [
+    {
+      "constraint": "1:1 容量上限",
+      "value": "单位 β-CD 一个内腔，纯位点容量有硬上限（β-CD:BPA 约 201 mg/g 纯位点），交联/载体质量摊薄总干复合体容量",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "主客体 1:1 化学计量（项目 BPA-2 台账）",
+      "source": "literature",
+      "ref_doi": null
+    },
+    {
+      "constraint": "需交联多孔化",
+      "value": "游离 β-CD 水溶，须交联为不溶多孔聚合物（如 Dichtel 四氟对苯二甲腈交联 β-CD 聚合物）方可作吸附剂并获高比表面与快动力学",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "Alsbaiee & Dichtel 2016 多孔 β-CD 聚合物",
+      "source": "literature",
+      "ref_doi": "10.1038/nature16185"
+    },
+    {
+      "constraint": "广谱非特异选择性",
+      "value": "包结为广谱疏水富集，靶标特异性有限；同尺寸疏水共存物竞争同一内腔",
+      "unit": null,
+      "relevance": "medium",
+      "explanation": "疏水+尺寸包结机制固有",
+      "source": "literature",
+      "ref_doi": "10.1038/nature16185"
+    }
+  ],
+  "narrative": {
+    "entries": [
+      {
+        "source_file": "Alsbaiee & Dichtel 2016 Nature 529:190-194 (DOI 10.1038/nature16185)",
+        "paper_id": "2016-Alsbaiee-Dichtel-betaCD-polymer-micropollutant",
+        "sections": {
+          "problem_definition": "水中痕量有机微污染物（内分泌干扰物、药物、农药、紫外过滤剂等）种类多、浓度低（ng/L–µg/L），活性炭吸附动力学慢、再生能耗高。需要快速、可温和再生、耐真实基质的水相吸附材料。",
+          "biological_solution": "β-环糊精为直链淀粉经细菌 CGTase 环化的天然环状寡糖，7 葡萄糖大环具疏水内腔、亲水外缘，可在水相包结芳香或疏水客体。Alsbaiee & Dichtel 2016 将 β-CD 交联为多孔聚合物，摘要支持其快速去除多种有机微污染物。",
+          "key_features": "必须保留：① β-CD 疏水内腔（尺寸-客体匹配的包结位点）；② 外缘羟基作交联/亲水把手；③ 多孔化以获高可及位点与快动力学。可灵活调整：交联剂化学、孔结构、颗粒形态。边界：1:1 容量上限、广谱非特异。",
+          "design_mapping": "仿生映射：β-CD 内腔包结 → 交联多孔 β-CD 聚合物吸附位点（已是成熟真实材料，非仅设想）。对靶标选择性设计，须在内腔外附加二级识别（如二级缘极性受体）以超越广谱疏水富集——该增量属设计假设（llm_inferred）。",
+          "explainability_anchors": "设计溯源：经典主客体包结 → 多孔 β-CD 聚合物快速吸附（Dichtel 2016，摘要核验）→ 靶标选择性增强（二级识别，llm_inferred）。β-CD:BPA 结合常数待原始 NMR 来源核验。"
+        }
+      }
+    ]
+  },
+  "design_translation": [
+    {
+      "idea": "以交联多孔 β-环糊精聚合物为广谱疏水微污染物吸附剂（已有成熟真实材料）；若需靶标选择性，则在 β-CD 二级缘引入互补极性受体或以印迹控制腔外微环境，把广谱包结升级为准特异识别",
+      "specific_functional_group": "β-CD 疏水内腔（包结位点）+ 二级缘可选极性受体/印迹微环境",
+      "material_handle": "四氟对苯二甲腈/二苯砜等交联剂把 β-CD 交联为多孔聚合物（Dichtel 路线）；或 β-CD 接枝于多孔载体",
+      "target_interaction": "内腔对疏水芳环客体的疏水+尺寸包结；二级缘受体对头基的定向作用（可选增量）",
+      "source_tier": "literature",
+      "evidence_tier": "material_realized（多孔 β-CD 聚合物吸附微污染物为真实成熟材料，Dichtel 2016 摘要核验）；靶标选择性增强为 llm_inferred",
+      "examples": [
+        {"source": "10.1038/nature16185", "scope": "多孔 β-CD 聚合物材料实现"},
+        {"source": "10.1039/d0cc04784h", "scope": "环糊精聚合物选择性吸附研究"}
+      ],
+      "design_principle": "两亲环状寡糖疏水内腔包结疏水微污染物；交联多孔化得快速可再生耐基质吸附剂",
+      "implementation_example": "多孔 β-CD 聚合物（Alsbaiee & Dichtel 2016，去除速率为活性炭 15–200 倍）；CD 聚合物真实水基质 RSSCT（10.1016/j.watres.2020.115551）",
+      "constraints": "1:1 容量上限、广谱非特异（靶标选择性有限）、同尺寸疏水共存物竞争",
+      "failure_modes": "总容量被交联/载体质量摊薄；对目标与共存疏水物无区分；大客体尺寸失配不入腔",
+      "material_realization_examples": [
+        "多孔 β-环糊精聚合物（Alsbaiee & Dichtel 2016 Nature，DOI 10.1038/nature16185）",
+        "β-CD 聚合物吸附剂水基质效应评估 RSSCT（DOI 10.1016/j.watres.2020.115551）"
+      ]
+    }
+  ],
+  "honesty_ledger": {
+    "facts": [
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "β-环糊精疏水内腔的主客体包结识别",
+        "basis": "from_source_corroborated",
+        "note": "经典主客体包结化学；Alsbaiee & Dichtel 2016 Nature 摘要支持多孔 β-CD 聚合物快速去除微污染物。其余来源仍待全文定位，不用 10.1039/d0cc04784h 支撑 β-CD:BPA 结合常数。"
+      }
+    ],
+    "leads": [
+      {
+        "type": "material_realization",
+        "idea": "多孔 β-CD 聚合物为真实成熟微污染物吸附材料",
+        "basis": "from_source",
+        "label": "verified_abstract",
+        "note": "Dichtel 2016 为吸附材料真实先例（区别于仅分子识别蛋白原型）；性能数值留待审计逐条接地"
+      }
+    ],
+    "inferences": [
+      {
+        "type": "design_translation",
+        "index": 0,
+        "idea": "在 β-CD 二级缘加互补受体/印迹以获靶标选择性",
+        "basis": "llm_inferred",
+        "label": "inspiration",
+        "note": "超越广谱疏水包结的靶标选择性为设计假设，须实验验证"
+      }
+    ],
+    "boundary_notes": [
+      "分类争议：环糊精为天然环状寡糖（生物来源：淀粉+CGTase），但其吸附材料形态为交联合成聚合物；本条目按天然寡糖识别单元入 植物 类，若审计判定应归 仿生材料/材料参考层，则迁移",
+      "1:1 化学计量容量上限（β-CD:BPA 纯位点约 201 mg/g）；广谱非特异疏水包结，靶标选择性有限，同尺寸疏水共存物竞争同一内腔",
+      "β-CD:BPA Ka≈3.6–4.1×10³ M⁻¹ 为项目 BPA-2 台账继承（NMR），本轮未独立核验数值",
+      "承重文献为摘要/题录级外部核验，未做本地全文 PDF 审计（审计应补全文与具体性能数值接地）"
+    ],
+    "missing_pdf_items": [
+      "Alsbaiee & Dichtel 2016 Nature 全文 PDF（quote 取自摘要）",
+      "CD-氯酚包结 10.1023/A:1008150908997、CD 聚合物 10.1039/d0cc04784h、RSSCT 10.1016/j.watres.2020.115551 全文 PDF",
+      "β-CD:BPA Ka 原始 NMR 文献全文"
+    ],
+    "generated_by": "manual-curation-2026-07-23",
+    "note": "诚实优先：主客体包结机制成熟且有真实吸附材料先例（Dichtel 多孔 β-CD 聚合物）；靶标选择性增强为 inspiration；广谱非特异与 1:1 容量上限为硬边界；分类（天然寡糖 vs 材料）留待审计。广度优先入库条目，证据偏摘要级待升 tier。"
+  },
+  "boundary_rules": [
+    {
+      "rule": "1:1 容量上限：单位 β-CD 一个内腔，纯位点容量有硬上限，交联/载体质量摊薄总容量",
+      "source_mechanism": "β-环糊精疏水内腔的主客体包结识别",
+      "gate_level": "hard",
+      "basis": "from_source"
+    },
+    {
+      "rule": "广谱非特异：疏水+尺寸包结为广谱富集，靶标选择性有限，同尺寸疏水共存物竞争同一内腔",
+      "source_mechanism": "β-环糊精疏水内腔的主客体包结识别",
+      "gate_level": "hard",
+      "basis": "from_source"
+    },
+    {
+      "rule": "分类边界：天然环状寡糖识别单元 vs 交联合成聚合物材料形态，审计据此定 tier 与归类",
+      "source_mechanism": "β-环糊精疏水内腔的主客体包结识别",
+      "gate_level": "soft",
+      "basis": "llm_inferred"
+    }
+  ]
+}

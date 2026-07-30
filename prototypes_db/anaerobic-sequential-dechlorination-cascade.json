@@ -1,0 +1,371 @@
+{
+ "id": "anaerobic-sequential-dechlorination-cascade",
+ "name_zh": "厌氧菌群顺序脱氯级联（DDT/DDE 多位点有序还原脱氯）",
+ "name_en": "Anaerobic Sequential Dechlorination Cascade (Ordered Multi-Site Reductive Dechlorination of DDT/DDE)",
+ "organism": {
+  "scientific": "厌氧沉积物还原脱氯功能群落",
+  "category": "微生物"
+ },
+ "biomimetic_dimension": "分子仿生",
+ "features": [
+  "催化降解"
+ ],
+ "tested_conditions": {
+  "tested_ph_range": null,
+  "tested_temp_range": null,
+  "salinity": null,
+  "note": "本原型为群落级降解/转化原型（厌氧菌群顺序还原脱氯），非分子识别/吸附原型，本库无其吸附性能测试条件；performance_data 为空，故测试条件全空。Quensen 1998 的产甲烷/硫酸盐还原微宇宙属厌氧培养背景，非吸附测试。"
+ },
+ "library_tier": "extended",
+ "lifecycle_status": "active",
+ "coverage": "partial",
+ "status": "active",
+ "provenance_summary": {
+  "n_papers": 3,
+  "n_verified": 10,
+  "n_unverified": 0,
+  "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与硬边界条数（ASCD-001 四要素+1 硬边界=5，ASCD-002 四要素+1 硬边界=5）。机制接地限于 Quensen 1998 厌氧微宇宙代谢物序列鉴定（群落级有序顺序脱氯：DDT→DDD/DDE、DDE→DDMU、DDD→DDMU 慢三个数量级）与 Berry 1977、Gantzer & Wackett 1991 的辅酶单位点还原脱氯化学（作边界层引用）；DDT 作为目标污染物的多位点串联转化应用为设计转译（llm_inferred/inspiration），无降解性能数据。quote 逐字取自 Europe PMC 摘要（Quensen 1998，PMID 9563945）与 Crossref 核验标题（Berry 1977、Gantzer & Wackett 1991，均可核验），均未做全文 PDF 审计，故为 extended 而非 core。任务简报所称 Lesage 1991 经 Crossref 与 Europe PMC 核验无对应脱氯/辅酶文献，判定为误记，未引用，以 Gantzer & Wackett 1991 代之。"
+ },
+ "mechanisms": [
+  {
+   "mechanism_id": "ASCD-001",
+   "name": "厌氧菌群对 DDT 及其持久代谢物的有序顺序还原脱氯级联（DDT→DDD/DDE→DDMU）",
+   "description": "厌氧微生物群落在产甲烷与硫酸盐还原条件下对 DDT 进行顺序脱氯：DDT 先经还原脱氯生成 DDD、经脱氯化氢生成 DDE；其后 DDE 被进一步还原脱氯为 DDMU，而 DDD 脱氯化氢为 DDMU 慢约三个数量级，故这些沉积物中 DDMU 的主要前体是 DDE 而非 DDD。该功能由混合厌氧菌群完成（无单一模式种），各步由不同功能种群衔接电子供体与产物，形成有次序的多位点级联。DDE 曾长期被认为在环境中不再进一步降解，Quensen 等 1998 在海洋沉积物微宇宙中证明其可被顺序脱氯，确立了高氯代有机氯在厌氧群落中被逐步有序转化的自然解决路径。",
+   "基本原理": "单一反应位点难以独自完全转化高氯化、高疏水的有机氯分子；厌氧群落以多位点分工与中间产物通道化将各步脱氯按次序串联，前一种群的产物成为后一种群的底物，且各步速率差异（DDE→DDMU 远快于 DDD→DDMU）决定级联次序与中间产物去向，使曾被认为顽固的 DDE 得以继续转化而非累积为终端产物。",
+   "source": "literature",
+   "ref_doi": "10.1126/science.280.5364.722",
+   "verification": "verified",
+   "verification_quote": "DDE is dechlorinated to DDMU in both methanogenic and sulfidogenic microcosms and that DDD is dehydrochlorinated to DDMU three orders of magnitude more slowly",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "DDT 及其第一代持久代谢物：DDT 经还原脱氯生成 DDD（p,p'-二氯二苯基二氯乙烷）、经脱氯化氢生成 DDE（p,p'-二氯二苯基二氯乙烯）；DDE 缺桥氢、高度稳定，长期被视为环境中不再降解的终端代谢物，是本级联要转化的对象",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1126/science.280.5364.722",
+     "locator": "Abstract (PMID 9563945), p.722",
+     "quote": "DDT is reductively dechlorinated to DDD and dehydrochlorinated to DDE",
+     "scope_match": "Keywords: DDT, dechlorinated, DDD, DDE"
+    },
+    "bio_structure": {
+     "text": "功能单元为厌氧混合微生物群落（非单一蛋白/酶）：在产甲烷与硫酸盐还原两类厌氧微宇宙中，群落整体承担 DDE 的进一步脱氯；各步由群落中不同功能种群衔接电子供体与产物",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1126/science.280.5364.722",
+     "locator": "Abstract (PMID 9563945), p.722",
+     "quote": "DDE is dechlorinated to DDMU in both methanogenic and sulfidogenic microcosms",
+     "scope_match": "Keywords: DDE, dechlorinated, DDMU, methanogenic, sulfidogenic, microcosms"
+    },
+    "interaction": {
+     "text": "级联的次序由相对速率设定：DDD 脱氯化氢为 DDMU 比 DDE 脱氯为 DDMU 慢约三个数量级，故在该体系中 DDD 不是 DDMU 的重要前体，DDE 才是主要通道；这一速率差异在群落层级规定了中间产物的去向与级联次序",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1126/science.280.5364.722",
+     "locator": "Abstract (PMID 9563945), p.722",
+     "quote": "DDD is dehydrochlorinated to DDMU three orders of magnitude more slowly",
+     "scope_match": "Keywords: DDD, dehydrochlorinated, DDMU, orders of magnitude"
+    },
+    "why_it_works": {
+     "text": "级联之所以能越过曾被视为终端的 DDE，是因为群落将 DDT 第一代代谢物通道化进入不同后续步骤，且 DDD 不是 DDMU 的重要前体、DDE 为主要中间体；多位点分工加中间产物通道化使各步脱氯按次序衔接，从而完成对高氯化有机氯的逐步有序转化",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1126/science.280.5364.722",
+     "locator": "Abstract (PMID 9563945), p.722-724",
+     "quote": "DDD does not appear to be an important precursor of the DDMU found in these sediments",
+     "scope_match": "Keywords: DDD, precursor, DDMU, sediments"
+    },
+    "boundary_conditions": [
+     {
+      "text": "终端顽固性边界被突破：DDE 曾被认为在环境中不再进一步降解，但厌氧菌群在产甲烷与硫酸盐还原条件下均可将其脱氯为 DDMU；级联因此延伸至曾被假定的终端点之后",
+      "parameter": "substrate_scope",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "Abstract (PMID 9563945), p.722",
+      "quote": "it has been thought that DDE is not degraded further in the environment",
+      "scope_match": "Keywords: DDE, degraded, environment",
+      "source_asset": null
+     },
+     {
+      "text": "群落次序依赖厌氧/还原微环境与功能种群间的中间产物通道化衔接；曝气、氧化或功能种群失活会中断级联，使中间产物在其处累积（定性，无数值阈值）",
+      "parameter": "redox_environment",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "scope_match": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "厌氧群落以多位点顺序分工与中间产物通道化对高氯代有机氯实施有次序的级联脱氯：前一步产物被通道化进入下一步（DDE 而非 DDD 为主要中间体），各步相对速率差异决定级联次序；该「级联次序加中间产物通道化」架构原理可独立于具体辅酶化学与单一酶机制而被抽象为多位点串联转化的设计思路",
+    "verification_quote": "DDE is dechlorinated to DDMU in both methanogenic and sulfidogenic microcosms and that DDD is dehydrochlorinated to DDMU three orders of magnitude more slowly"
+   },
+   "source_doi": "10.1126/science.280.5364.722",
+   "source_page": 722,
+   "source_locator": "Abstract (PMID 9563945), p.722-724",
+   "source_file": "Science 280:722-724（Quensen, Mueller, Jain & Tiedje 1998；DOI 10.1126/science.280.5364.722，PMID 9563945；Europe PMC 摘要逐字可核验，未做本地全文 PDF 审计）",
+   "functional_groups": [
+    "多位点顺序分工的功能种群/位点（各位点专司一步脱氯/转化）",
+    "中间产物通道化衔接（前一种群产物为后一种群底物）"
+   ],
+   "key_structures": [
+    "反应结构（群落级，无单一蛋白结构）"
+   ]
+  },
+  {
+   "mechanism_id": "ASCD-002",
+   "name": "各位点依托的低电位辅酶/辅基电子转移化学（B12/类咕啉、F430、血红素）——群落次序之下的单位点还原脱氯层",
+   "description": "级联中每一步脱氯在化学上由低电位过渡金属辅酶/辅基介导：游离维生素 B12（钴胺素/类咕啉）在温和还原条件下即可使 DDT 还原脱氯（Berry 与 Stotter 1977）；细菌过渡金属辅酶（包括钴胺素、辅酶 F430 与血红素类）催化有机氯的还原脱氯（Gantzer 与 Wackett 1991）。该层是各位点功能种群执行单步脱氯所依托的电子转移化学，属单位点共转化。本条将其作为边界层引用：辅酶化学层已由库内 reductive-dehalogenase-b12-dechlorination 原型专司，本原型不复述其化学，仅在其上叠加群落级次序。",
+   "基本原理": "低电位还原态过渡金属辅酶/辅基经电子转移断裂有机氯 C-Cl 键；该化学本质为单位点、单步的共转化，单个辅酶类型催化一步脱氯，本身不携带跨步次序，跨步次序由群落级架构赋予（见 ASCD-001）。",
+   "source": "literature",
+   "ref_doi": "10.1021/es00016a017",
+   "verification": "verified",
+   "verification_quote": "Reductive dechlorination catalyzed by bacterial transition-metal coenzymes",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "DDT 可被还原断裂的桥键 C-Cl（三氯甲基），作为单位点辅酶化学的底物；维生素 B12 在温和还原条件下即对 DDT 脱氯",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1016/0045-6535(77)90151-5",
+     "locator": "title, p.783",
+     "quote": "Dechlorination of DDT by vitamin B12 under mildly reducing conditions",
+     "scope_match": "Keywords: dechlorination, DDT, vitamin B12, reducing conditions"
+    },
+    "bio_structure": {
+     "text": "低电位细菌过渡金属辅酶/辅基：钴胺素（维生素 B12/类咕啉）、辅酶 F430 与血红素类，构成各位点执行单步还原脱氯的电子转移中心",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1021/es00016a017",
+     "locator": "title, p.715",
+     "quote": "Reductive dechlorination catalyzed by bacterial transition-metal coenzymes",
+     "scope_match": "Keywords: reductive dechlorination, bacterial, transition-metal, coenzymes"
+    },
+    "interaction": {
+     "text": "辅酶/辅基在温和还原条件下经电子转移催化有机氯单步还原脱氯（维生素 B12 对 DDT 脱氯即此类单位点反应）；单步反应由还原态辅酶供电子并需辅酶再生",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1016/0045-6535(77)90151-5",
+     "locator": "title, p.783",
+     "quote": "Dechlorination of DDT by vitamin B12 under mildly reducing conditions",
+     "scope_match": "Keywords: dechlorination, DDT, vitamin B12, reducing conditions"
+    },
+    "why_it_works": {
+     "text": "该化学之所以成立，因细菌过渡金属辅酶/辅基催化有机氯的还原脱氯（Gantzer 与 Wackett 1991）；其为单位点、单步共转化，本身不携带跨步次序，跨步次序为群落级涌现性质（见 ASCD-001 与证据缺口记录）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1021/es00016a017",
+     "locator": "title, p.715",
+     "quote": "Reductive dechlorination catalyzed by bacterial transition-metal coenzymes",
+     "scope_match": "Keywords: reductive dechlorination, catalyzed, transition-metal coenzymes"
+    },
+    "boundary_conditions": [
+     {
+      "text": "辅酶化学需温和还原条件与还原态辅酶再生：维生素 B12 对 DDT 的脱氯在温和还原条件下发生，无持续低电位电子供体维持辅酶还原态则单步反应停止",
+      "parameter": "redox_environment",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "title, p.783",
+      "quote": "Dechlorination of DDT by vitamin B12 under mildly reducing conditions",
+      "scope_match": "Keywords: dechlorination, vitamin B12, reducing conditions",
+      "source_asset": null
+     },
+     {
+      "text": "证据缺口边界（本原型相对辅酶/单酶原型的增量）：单位点共转化先例（Berry 1977 维生素 B12 对 DDT、Gantzer & Wackett 1991 过渡金属辅酶催化、库内 GST 单酶 β-消除）各位点仅催化一步脱氯，本身不提供跨步串联次序；次序是群落级涌现性质，由 ASCD-001（Quensen 1998）建立（定性）",
+      "parameter": "substrate_scope",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "scope_match": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "低电位细菌过渡金属辅酶/辅基（钴胺素、F430、血红素）经电子转移介导有机氯单步还原脱氯，是群落级联中各步所依托的单位点化学；该化学为单位点共转化、不提供跨步次序，次序由群落级架构（ASCD-001）赋予",
+    "verification_quote": "Reductive dechlorination catalyzed by bacterial transition-metal coenzymes"
+   },
+   "source_doi": "10.1021/es00016a017",
+   "source_page": 715,
+   "source_locator": "title, p.715 (Gantzer & Wackett 1991) / title, p.783 (Berry 1977)",
+   "source_file": "Environ. Sci. Technol. 25:715-722（Gantzer & Wackett 1991；DOI 10.1021/es00016a017，Crossref 核验标题，无摘要字段、Europe PMC 无记录）+ Chemosphere 6:783-787（Berry & Stotter 1977；DOI 10.1016/0045-6535(77)90151-5，Crossref 核验标题，无摘要可得）；均未做本地全文 PDF 审计",
+   "functional_groups": [
+    "低电位钴胺素/类咕啉钴中心",
+    "辅酶 F430（镍四吡咯）",
+    "血红素/金属卟啉催化中心"
+   ],
+   "key_structures": [
+    "反应结构（单位点辅酶化学，边界层引用）"
+   ]
+  }
+ ],
+ "performance_data": [],
+ "engineering_constraints": [
+  {
+   "constraint": "群落/厌氧还原条件依赖",
+   "value": "顺序脱氯级联在产甲烷与硫酸盐还原（厌氧还原）微宇宙中进行，需维持厌氧/还原条件与各功能种群活性；曝气或氧化使级联停滞",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "Quensen 1998 摘要：DDE 在 methanogenic 与 sulfidogenic microcosms 中被脱氯为 DDMU（Europe PMC 摘要 PMID 9563945）",
+   "source": "literature",
+   "ref_doi": "10.1126/science.280.5364.722"
+  },
+  {
+   "constraint": "中间产物通道化/多位点衔接依赖",
+   "value": "级联次序依赖不同功能种群间的中间产物通道化衔接（前一种群产物为后一种群底物）；分离单一菌种则丧失级联次序",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "Quensen 1998：DDT→DDD/DDE，DDE→DDMU，而 DDD→DDMU 慢约三个数量级，故 DDMU 主要前体为 DDE（群落级次序）",
+   "source": "literature",
+   "ref_doi": "10.1126/science.280.5364.722"
+  },
+  {
+   "constraint": "无单一可固定化蛋白",
+   "value": "功能单元为混合厌氧菌群（无单一模式种、无单一蛋白结构），工程转译须以架构重建次序而非移植单一分子",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（基于群落级原型无单一结构数据、证据形式为厌氧培养与代谢物序列鉴定的事实）",
+   "source": "llm_inference",
+   "ref_doi": null
+  }
+ ],
+ "narrative": {
+  "entries": [
+   {
+    "source_file": "Science 280:722-724（Quensen, Mueller, Jain & Tiedje 1998, DOI 10.1126/science.280.5364.722, PMID 9563945）；辅以 Chemosphere 6:783-787（Berry & Stotter 1977, DOI 10.1016/0045-6535(77)90151-5）与 Environ. Sci. Technol. 25:715-722（Gantzer & Wackett 1991, DOI 10.1021/es00016a017）",
+    "paper_id": "1998-Quensen-DDE-DDMU-anaerobic-sequential-dechlorination",
+    "sections": {
+     "problem_definition": "DDT 是代表性的高氯化、高疏水有机氯农药，进入环境后经还原脱氯生成 DDD、经脱氯化氢生成 DDE；其中 DDE 因缺桥氢、高度稳定而长期被认为在环境中不再进一步降解，成为沉积物中的持久终端代谢物。如何理解并驱动这类高氯化有机氯的持续转化，是有机氯污染修复的基础问题。单个酶或单个辅酶只能催化一步转化（DDT→DDD 或 DDT→DDE），无法独自完成对顽固中间产物的后续转化；自然界是否在更高的组织层级（群落）给出多步有序转化的解决路径，是本原型要提取的原理。",
+     "biological_solution": "Quensen 等（Science 1998）在含 DDE 的海洋沉积物微宇宙中证明：在产甲烷与硫酸盐还原两类厌氧条件下，DDE 均被进一步脱氯为 DDMU，推翻了 DDE 在环境中不再降解的旧认识；而 DDD 脱氯化氢为 DDMU 慢约三个数量级，故这些沉积物中 DDMU 的主要前体是 DDE 而非 DDD。这一结果在群落层级确立了 DDT 的顺序脱氯级联：DDT 先经还原脱氯（DDT→DDD）与脱氯化氢（DDT→DDE）生成第一代代谢物，再由群落中相应功能种群将 DDE 通道化进入下一步（DDE→DDMU），各步由不同功能种群衔接电子供体与产物，速率差异决定级联次序。在化学层级，级联中每一步脱氯依托低电位过渡金属辅酶/辅基的电子转移：游离维生素 B12 在温和还原条件下即可使 DDT 脱氯（Berry 与 Stotter 1977），细菌过渡金属辅酶（钴胺素、辅酶 F430、血红素类）催化有机氯的还原脱氯（Gantzer 与 Wackett 1991）。但辅酶化学是单位点、单步的共转化，本身不携带跨步次序；次序是群落级的涌现性质，正是本原型相对辅酶层与单酶层的增量。任务简报所称 Lesage 1991 经核验无对应文献，其描述（B12/F430/血红素介导有机氯共代谢）与 Gantzer 与 Wackett 1991 相符，本条据实引用后者。",
+     "key_features": "必须保留：① 多个按次序排列、各位点专司一步脱氯/转化的功能单元（多位点分工）；② 中间产物通道化衔接（前一步产物进入下一步，DDE 为主要中间体）；③ 由相对速率设定的级联次序（DDE→DDMU 远快于 DDD→DDMU）；④ 厌氧/还原微环境与功能种群/位点活性。可灵活调整：位点的化学实现（生物或非生物）、载体与分区方式、电子供体形式。不可由本条移植者：具体辅酶化学（属 reductive-dehalogenase-b12-dechlorination）与单酶 β-消除机制（属 ddt-dehydrochlorinase-gst）。",
+     "design_mapping": "仿生映射限于架构原理层：厌氧顺序脱氯群落的「级联次序加中间产物通道化」→ 面向持久性高氯代有机氯（DDT/DDE/DDD）的多位点串联转化设计（按次序分置功能位点、中间产物顺序通过）。边界声明：本原型天然机制为群落级降解/转化，无单一蛋白结构、无单一可固定化分子；机制 from_source 接地限于 Quensen 1998 的厌氧微宇宙代谢物序列鉴定（群落级次序）与 Berry 1977、Gantzer 与 Wackett 1991 的辅酶单位点化学（边界层引用）；将群落级次序/通道化架构转译为人工多位点串联转化为 llm_inferred/inspiration，无 DDT 降解性能数据。与库内两个 DDT 原型边界明确：辅酶化学归 reductive-dehalogenase-b12-dechlorination，单酶 β-消除归 ddt-dehydrochlorinase-gst，本条专司群落级次序层。",
+     "explainability_anchors": "设计溯源：厌氧菌群顺序还原脱氯的群落级次序（DDT→DDD/DDE，DDE→DDMU，DDD→DDMU 慢三个数量级；Quensen 1998，from_source）加各位点依托的低电位辅酶单位点化学（Berry 1977、Gantzer & Wackett 1991，from_source，作边界层引用）→「级联次序加中间产物通道化」可迁移架构原理 → DDT/DDE 多位点串联转化设计（llm_inferred 启发，限架构层，须实验验证）。"
+    }
+   }
+  ]
+ },
+ "design_translation": [
+  {
+   "idea": "将厌氧顺序脱氯群落的「级联次序加中间产物通道化」架构原理抽象为对持久性高氯代有机氯（DDT 及其持久代谢物 DDE/DDD）的多位点串联转化设计：以多个按次序排列、各位点专司一步脱氯/转化的功能单元串联，前一位点产物经通道化衔接进入下一位点，使曾被认为顽固的中间产物（如 DDE）被路由继续转化而非累积。本条仅取群落级次序与通道化架构，不复刻辅酶化学（属 reductive-dehalogenase-b12-dechlorination）亦不复刻单酶机制（属 ddt-dehydrochlorinase-gst）。",
+   "specific_functional_group": "多个按次序排列、各位点专司一步脱氯/转化的功能单元（如分置的还原/脱卤位点或分区），及其中间产物通道化衔接结构；本条所指为架构次序而非单一结合/催化基团",
+   "material_handle": "将多个功能各异的转化位点按次序分置于同一载体或串联反应区（如氧化还原分区的多孔载体、分步固定化催化位、或分级的生物/非生物串联反应器），各区调控匹配一步转化并使中间产物顺序通过；原理层设想，无实验数据",
+   "target_interaction": "多位点按次序对 DDT/DDD/DDE 实施顺序还原脱氯，中间产物经通道化衔接进入下一步，级联次序由各步位点排布与相对速率设定（DDT→DDD/DDE→低氯化产物如 DDMU）",
+   "source_tier": "llm_inference",
+   "evidence_tier": "inspiration（原理层外推：群落级有序顺序脱氯与 DDE→DDMU 通道化次序接地于 Quensen 1998 厌氧微宇宙代谢物序列鉴定；辅酶单位点化学接地于 Berry 1977 与 Gantzer & Wackett 1991；将群落级次序/通道化架构转译为人工多位点串联转化为 llm_inferred，无降解性能数据）",
+   "examples": [],
+   "design_principle": "厌氧菌群以多位点顺序分工与中间产物通道化对 DDT/DDE 实施有次序的级联脱氯（DDT→DDD/DDE，DDE→DDMU，且 DDD→DDMU 慢三个数量级使 DDE 为主要中间体；Quensen 1998）；该「级联次序加中间产物通道化」架构可独立于辅酶化学与单酶机制被抽象为多位点串联转化设计",
+   "implementation_example": "氧化还原分区多孔载体或分级串联反应器，各位点分步固定化并顺序衔接中间产物（无实验数据，仅为设计假设）",
+   "constraints": "天然机制为群落级降解/转化（非吸附、非单一蛋白）；无单一可固定化分子，须以架构重建次序而非移植分子；DDT 高氯化、高疏水、低水溶，水相传质与多位点间中间产物通道化效率是关键挑战；次序依赖厌氧/还原微环境与功能位点间衔接；脱氯产物仍为含氯有机物，完全矿化程度与产物分布须评估；转译限原理层，无 DDT 降解活性/速率数据",
+   "failure_modes": "中间产物在位点间扩散损失或旁路累积（通道化失效）使级联中断；任一功能位点失活或被氧化使次序在其处停滞；厌氧/还原微环境破坏使还原脱氯终止；非特异还原产生未知含氯副产物；对缺桥氢或更高氯化底物的后续步效率未知",
+   "material_realization_examples": []
+  }
+ ],
+ "honesty_ledger": {
+  "facts": [
+   {
+    "type": "mechanism",
+    "index": 0,
+    "name": "厌氧菌群对 DDT 及其持久代谢物的有序顺序还原脱氯级联（DDT→DDD/DDE→DDMU）",
+    "basis": "from_source_verified",
+    "note": "Quensen, Mueller, Jain & Tiedje 1998 Science 280:722-724（DOI 10.1126/science.280.5364.722，PMID 9563945）：DDT 还原脱氯为 DDD、脱氯化氢为 DDE；DDE 在产甲烷与硫酸盐还原微宇宙中被脱氯为 DDMU；DDD 脱氯化氢为 DDMU 慢约三个数量级，故 DDD 非 DDMU 重要前体；曾认为 DDE 在环境中不再降解。quote 逐字取自 Europe PMC 摘要（PMID 9563945），可核验；未做全文 PDF 审计"
+   },
+   {
+    "type": "mechanism",
+    "index": 1,
+    "name": "各位点依托的低电位辅酶/辅基电子转移化学（B12/类咕啉、F430、血红素）——群落次序之下的单位点还原脱氯层",
+    "basis": "from_source_verified",
+    "note": "Berry & Stotter 1977 Chemosphere 6:783-787（DOI 10.1016/0045-6535(77)90151-5，Crossref 核验标题，无摘要可得）：维生素 B12 在温和还原条件下对 DDT 脱氯；Gantzer & Wackett 1991 Environ. Sci. Technol. 25:715-722（DOI 10.1021/es00016a017，Crossref 核验标题，无摘要字段、Europe PMC 无记录）：细菌过渡金属辅酶催化还原脱氯。quote 均取自 Crossref 核验标题，可核验；本层作边界层引用（辅酶化学属 reductive-dehalogenase-b12-dechlorination 原型），未做全文 PDF 审计"
+   }
+  ],
+  "leads": [],
+  "inferences": [
+   {
+    "type": "design_translation",
+    "index": 0,
+    "idea": "将群落级「级联次序加中间产物通道化」架构转译为面向 DDT/DDE 的多位点串联转化设计",
+    "basis": "llm_inferred",
+    "label": "inspiration",
+    "note": "天然机制为群落级降解/转化（非吸附、非单一蛋白），转译限架构原理层；不复刻辅酶化学与单酶机制；无降解性能数据，次序与通道化效率须实验验证；性能数值严格未从外部污染物知识库搬运"
+   },
+   {
+    "type": "fact_derivation",
+    "index": 0,
+    "name": "任务简报「Lesage 1991（B12/F430/血红素介导有机氯共代谢）」经核验无对应文献，以 Gantzer & Wackett 1991 代之",
+    "basis": "llm_inferred",
+    "label": "brief_correction",
+    "note": "Crossref（query.author=Lesage，1989-1994，reductive dechlorination/corrinoid/heme 等多组检索）与 Europe PMC（AUTH:Lesage AND YEAR:1991 AND dechlorination，0 命中）均未检得对应文献；描述相符的 1991 年论文为 Gantzer & Wackett 1991 ES&T 25:715-722（DOI 10.1021/es00016a017，'Reductive dechlorination catalyzed by bacterial transition-metal coenzymes'）。条目据实引用 Gantzer & Wackett 1991，绝不伪造 Lesage 1991 引文"
+   },
+   {
+    "type": "fact_derivation",
+    "index": 1,
+    "name": "证据缺口判定：单位点共转化先例无串联次序",
+    "basis": "llm_inferred",
+    "label": "evidence_gap",
+    "note": "Berry 1977（B12 对 DDT）、Gantzer & Wackett 1991（过渡金属辅酶催化）与库内 ddt-dehydrochlorinase-gst（单酶 β-消除 DDT→DDE）均为单位点共转化先例，各位点仅催化一步脱氯；检索所得文献中无单一辅酶/酶提供跨步串联次序的记载。跨步次序为群落级涌现性质，由 Quensen 1998（ASCD-001）建立，是本原型相对辅酶/单酶原型的增量。此为据检索与文献内容的归纳判定，非某篇文献的单句陈述"
+   }
+  ],
+  "boundary_notes": [
+   "本原型天然机制为群落级有序降解/转化（厌氧菌群顺序还原脱氯），非分子识别/吸附，非单一蛋白/酶；机制 from_source 接地限于 Quensen 1998 的厌氧微宇宙代谢物序列鉴定（群落级次序）与 Berry 1977、Gantzer & Wackett 1991 的辅酶单位点化学（边界层引用）",
+   "与库内两个 DDT 原型的边界：本条为群落级次序原理；辅酶化学层（B12/F430/血红素还原脱氯）属 reductive-dehalogenase-b12-dechlorination；单酶机制（GST β-消除 DDT→DDE）属 ddt-dehydrochlorinase-gst。本条不复述辅酶化学或单酶机制，仅在其上叠加群落级次序",
+   "证据缺口（诚实记录）：单位点共转化先例（Berry 1977、Gantzer & Wackett 1991、库内 GST）各位点仅催化一步、无串联次序；次序为群落级涌现性质，由 Quensen 1998 建立",
+   "DDT 作为目标污染物的多位点串联转化应用为设计转译（llm_inferred/inspiration），非 from_source 事实，不得用作 DDT 降解性能的 direct evidence",
+   "无 DDT 降解/吸附性能数据；performance_data 为空，严格未从外部污染物知识库（PKB/BRIEF）搬运任何 qmax/Kd/去除率/降解率数值（知识隔离红线）",
+   "任务简报所称 Lesage 1991 经核验无对应文献，未引用，以 Gantzer & Wackett 1991 代之",
+   "一切 llm_inferred 边界均为定性、无数值阈值，gate_level=soft"
+  ],
+  "missing_pdf_items": [
+   "Quensen et al. 1998 Science 280:722-724 全文 PDF（quote 取自 Europe PMC 摘要 PMID 9563945，逐字可核验）",
+   "Berry & Stotter 1977 Chemosphere 6:783-787 全文 PDF（Crossref 与 Europe PMC 均无摘要可得，quote 取自 Crossref 核验标题）",
+   "Gantzer & Wackett 1991 Environ. Sci. Technol. 25:715-722 全文 PDF（Crossref 无 abstract 字段、Europe PMC 无记录，quote 取自 Crossref 核验标题）",
+   "任务简报所称 Lesage 1991 经 Crossref 与 Europe PMC 核验无对应脱氯/辅酶文献，未引用；以 Gantzer & Wackett 1991 代之"
+  ],
+  "generated_by": "manual-curation-2026-07-22",
+  "note": "诚实优先：机制接地限于 Quensen 1998 厌氧微宇宙代谢物序列鉴定（群落级有序顺序脱氯）与 Berry 1977、Gantzer & Wackett 1991 辅酶单位点化学（边界层引用）；DDT 多位点串联转化应用全部为 inspiration/外推，限架构原理层；Lesage 1991 判定为简报误记，以 Gantzer & Wackett 1991 代之"
+ },
+ "boundary_rules": [
+  {
+   "rule": "群落级次序硬边界：DDE 经厌氧菌群还原脱氯为 DDMU（曾被认为环境中不再降解），DDD→DDMU 慢约三个数量级，故 DDMU 主要前体为 DDE 而非 DDD",
+   "source_mechanism": "厌氧菌群对 DDT 及其持久代谢物的有序顺序还原脱氯级联（DDT→DDD/DDE→DDMU）",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "辅酶化学需温和还原条件与还原态辅酶再生：维生素 B12 对 DDT 脱氯在温和还原条件下发生（Berry 1977）",
+   "source_mechanism": "各位点依托的低电位辅酶/辅基电子转移化学（B12/类咕啉、F430、血红素）——群落次序之下的单位点还原脱氯层",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "群落次序依赖厌氧/还原微环境与功能种群间中间产物通道化衔接（定性，无数值阈值）",
+   "source_mechanism": "厌氧菌群对 DDT 及其持久代谢物的有序顺序还原脱氯级联（DDT→DDD/DDE→DDMU）",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  },
+  {
+   "rule": "证据缺口：单位点共转化先例（B12/过渡金属辅酶、单酶 β-消除）仅催化单步脱氯、本身不提供跨步串联次序；次序为群落级涌现（本原型相对辅酶/单酶原型的增量）（定性）",
+   "source_mechanism": "各位点依托的低电位辅酶/辅基电子转移化学（B12/类咕啉、F430、血红素）——群落次序之下的单位点还原脱氯层",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  }
+ ],
+ "mechanism_tags": [
+  "还原催化降解",
+  "几何识别"
+ ]
+}

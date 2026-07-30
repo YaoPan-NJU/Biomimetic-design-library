@@ -1,0 +1,324 @@
+{
+ "id": "viral-capsid-slayer-multivalent-self-assembly",
+ "name_zh": "病毒衣壳/S 层多价协同自组装阵列",
+ "name_en": "Viral Capsid / Bacterial S-layer Multivalent Cooperative Self-Assembly Array",
+ "organism": {
+  "scientific": "多物种周期性蛋白阵列比较原型（病毒衣壳与 S 层）",
+  "category": "微生物"
+ },
+ "biomimetic_dimension": "分子仿生",
+ "features": [
+  "多价协同"
+ ],
+ "tested_conditions": {
+  "tested_ph_range": null,
+  "tested_temp_range": null,
+  "salinity": null,
+  "note": "本原型为自组装阵列原型（病毒衣壳与 S 层蛋白的周期性自组装），非可溶单体分子识别蛋白；本库无其吸附性能测试，performance_data 为空，故测试条件全空。自组装阵列稳定性对 pH/离子强度/二价阳离子敏感（CCMV 存在 pH/Ca2+ 依赖的天然态-膨胀态可逆转变）。"
+ },
+ "library_tier": "extended",
+ "lifecycle_status": "active",
+ "coverage": "partial",
+ "status": "active",
+ "provenance_summary": {
+  "n_papers": 4,
+  "n_verified": 4,
+  "n_unverified": 0,
+  "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与边界条数：VCAP-001 bio_structure(1)+VCAP-001 边界 BC1(1)+VCAP-002 bio_structure(1)+VCAP-002 interaction(1)=4。机制 from_source 接地限于病毒衣壳与 S 层的周期性自组装结构事实（PDB 2TMV 螺旋衣壳、1CWP 二十面体衣壳、8QP0/8ACQ S 层冷冻电镜晶格）；PFBS 应用与多价协同亲和力增量均为设计转译（llm_inferred），无性能数据。quote 取自 PDB 沉积标题与 eLife 摘要（可核验），未做全文 PDF 审计。任务候选 1C8N 经 RCSB 实测为烟草坏死病毒（Tobacco Necrosis Virus）而非豇豆褪绿斑驳病毒，已改正为 PDB 1CWP。"
+ },
+ "mechanisms": [
+  {
+   "mechanism_id": "VCAP-001",
+   "name": "病毒衣壳蛋白多价协同自组装为周期性阵列",
+   "description": "病毒衣壳蛋白在进化中自发组装为高度有序的周期性多价阵列：烟草花叶病毒（TMV）衣壳蛋白以螺旋对称周期性重复排布（PDB 2TMV，关键词 Helical virus），豇豆褪绿斑驳病毒（CCMV）以二十面体 T=3 排列 180 个准等同亚基（PDB 1CWP，关键词 Icosahedral virus）。大量等同/准等同亚基以固定几何周期性重复，构成化学均一、空间精确的多价阵列",
+   "基本原理": "等同/准等同亚基经大量弱非共价相互作用自组装为周期性阵列，使每个潜在结合/接触位点在空间上精确重复且化学均一；多价协同将大量弱相互作用的自由能累加，产生高于单价的表观亲和力与位点均一性",
+   "source": "literature",
+   "ref_doi": "10.1016/0022-2836(89)90391-4",
+   "verification": "corroborated",
+   "verification_quote": "VISUALIZATION OF PROTEIN-NUCLEIC ACID INTERACTIONS IN A VIRUS. REFINED STRUCTURE OF INTACT TOBACCO MOSAIC VIRUS AT 2.9 ANGSTROMS RESOLUTION BY X-RAY FIBER DIFFRACTION",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "PFBS（全氟丁烷磺酸，C4F9SO3⁻）为短链全氟磺酸根，单价阴离子头基与单一位点的单价结合通常较弱，且短链疏水贡献小、水相滞留强；欲提升其表观亲和力，原理上可借助空间精确排布的多价位点以协同效应累加结合自由能。无病毒衣壳结合 PFAS 的来源证据，本要素属推断",
+     "basis": "llm_inferred"
+    },
+    "bio_structure": {
+     "text": "病毒衣壳蛋白自发组装为高度有序的周期性多价阵列：PDB 2TMV 为完整烟草花叶病毒（螺旋对称衣壳，关键词 Helical virus）的 2.9 Å X 射线纤维衍射结构；PDB 1CWP 为豇豆褪绿斑驳病毒天然与膨胀形态的二十面体衣壳结构（关键词 Icosahedral virus，X 射线晶体学与冷冻电镜）。两结构均为等同/准等同亚基按固定对称周期性重复排布的自组装阵列",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1016/0022-2836(89)90391-4",
+     "locator": "PDB 2TMV / p.307",
+     "quote": "VISUALIZATION OF PROTEIN-NUCLEIC ACID INTERACTIONS IN A VIRUS. REFINED STRUCTURE OF INTACT TOBACCO MOSAIC VIRUS AT 2.9 ANGSTROMS RESOLUTION BY X-RAY FIBER DIFFRACTION",
+     "scope_match": "Keywords: tobacco, mosaic, virus, structure"
+    },
+    "interaction": {
+     "text": "衣壳亚基间以大量弱非共价相互作用（疏水、氢键、静电，部分衣壳由 RNA 或阳离子介导）协同累积，传播形成长程周期性有序；单亚基接触弱而可逆，整体阵列因多价协同而稳定。2TMV/1CWP 沉积标题确认完整周期性衣壳结构存在，但未逐字给出亚基间相互作用清单，本要素的协同机理细节属推断",
+     "basis": "llm_inferred"
+    },
+    "why_it_works": {
+     "text": "周期性排布的等同/准等同亚基使每个潜在结合/接触位点在空间上精确重复且化学均一；多价协同将大量弱相互作用的自由能累加，产生高于单价的表观亲和力与位点均一性。此为生物物理推断，非来源逐字陈述",
+     "basis": "llm_inferred"
+    },
+    "boundary_conditions": [
+     {
+      "text": "周期性对称由亚基几何决定：TMV 为螺旋对称（PDB 2TMV），CCMV 为二十面体 T=3（PDB 1CWP）；阵列的周期性与位点重复方式依赖亚基自组装的固有对称性，对称类型决定阵列几何",
+      "parameter": "assembly_symmetry",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "corroborated",
+      "gate_level": "hard",
+      "locator": "PDB 1CWP / p.63",
+      "quote": "STRUCTURES OF THE NATIVE AND SWOLLEN FORMS OF COWPEA CHLOROTIC MOTTLE VIRUS DETERMINED BY X-RAY CRYSTALLOGRAPHY AND CRYO-ELECTRON MICROSCOPY",
+      "scope_match": "Keywords: cowpea, virus, forms",
+      "source_asset": null
+     },
+     {
+      "text": "多价协同对 PFAS 的表观亲和力增量须由结合实验验证；位点间距须与目标阴离子头基几何匹配方显协同（定性，无数值阈值）",
+      "parameter": "multivalency_affinity_increment",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "scope_match": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "等同/准等同亚基经大量弱非共价相互作用自组装为周期性阵列，可在空间精确且均一地重复排布功能位点，借多价协同提升表观亲和力",
+    "verification_quote": "VISUALIZATION OF PROTEIN-NUCLEIC ACID INTERACTIONS IN A VIRUS. REFINED STRUCTURE OF INTACT TOBACCO MOSAIC VIRUS AT 2.9 ANGSTROMS RESOLUTION BY X-RAY FIBER DIFFRACTION"
+   },
+   "source_doi": "10.1016/0022-2836(89)90391-4",
+   "source_page": 307,
+   "source_locator": "PDB 2TMV / p.307",
+   "source_file": "PDB 2TMV / 1CWP（RCSB 沉积数据）; Namba 1989 J Mol Biol 208:307-325; Speir 1995 Structure 3:63（标题/沉积记录接地，未做本地全文 PDF 审计）",
+   "functional_groups": [
+    "蛋白亚基非共价自组装界面（疏水/氢键/静电）",
+    "周期性重复功能位点阵列"
+   ],
+   "key_structures": [
+    "自组装结构"
+   ]
+  },
+  {
+   "mechanism_id": "VCAP-002",
+   "name": "细菌/古菌 S 层蛋白自组装为二维周期性晶格",
+   "description": "S 层（surface layer）是由蛋白/糖蛋白亚基自组装形成的二维周期性晶格，包覆众多细菌与多数古菌细胞表面。硫化叶菌 Sulfolobus acidocaldarius 的双组分 S 层（外层柔性高糖基化 SlaA + 内层膜结合 SlaB）经冷冻电镜/断层与 AlphaFold2 建模呈多孔交织晶格（PDB 8QP0）；Deinococcus radiodurans S 层 SDBC 组装体为 2.54 Å 冷冻电镜结构（PDB 8ACQ）",
+   "基本原理": "等同亚基/寡聚体在二维界面内周期性自组装，形成化学均一、间距固定的位点阵列；周期性赋予位点均一并允许多价协同",
+   "source": "literature",
+   "ref_doi": "10.7554/eLife.84617",
+   "verification": "corroborated",
+   "verification_quote": "Surface layers (S-layers) are resilient two-dimensional protein lattices that encapsulate many bacteria and most archaea.",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "PFBS（C4F9SO3⁻）单价阴离子头基单价结合弱、水相滞留强；二维周期性晶格可在表面精确重复排布阴离子识别位点，原理上以多价协同累加结合自由能。无 S 层结合 PFAS 的来源证据，本要素属推断",
+     "basis": "llm_inferred"
+    },
+    "bio_structure": {
+     "text": "S 层是由蛋白/糖蛋白自组装形成的二维周期性晶格，包覆众多细菌与多数古菌细胞表面；PDB 8QP0 为硫化叶菌 Sulfolobus acidocaldarius 双组分 S 层（外层 SlaA + 内层膜结合 SlaB）经单颗粒冷冻电镜、冷冻断层与 AlphaFold2 预测构建的原子模型，呈多孔交织晶格；PDB 8ACQ 为 Deinococcus radiodurans S 层 SDBC 组装体（2.54 Å 冷冻电镜），为 S 层周期性晶格的形态学证据",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.7554/eLife.84617",
+     "locator": "abstract, eLife 13 (2024)",
+     "quote": "Surface layers (S-layers) are resilient two-dimensional protein lattices that encapsulate many bacteria and most archaea.",
+     "scope_match": "Keywords: s-layers, lattices, archaea"
+    },
+    "interaction": {
+     "text": "S 层组分经自组装形成多孔交织的二维晶格：外层 SlaA 与内层膜结合组分 SlaB 共同组装成多孔且相互交织的晶格（they assemble into a porous and interwoven lattice），晶格以周期性重复单元构成（PDB 8QP0 冷冻电镜/断层结构）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.7554/eLife.84617",
+     "locator": "abstract, eLife 13 (2024)",
+     "quote": "Together with the inner and membrane-bound component (SlaB), they assemble into a porous and interwoven lattice.",
+     "scope_match": "Keywords: assemble, lattice"
+    },
+    "why_it_works": {
+     "text": "等同亚基/寡聚体在二维平面内周期性自组装，形成化学均一、间距固定的位点阵列；周期性使位点均一并允许多价协同。eLife 摘要给出晶格与组装事实，未量化亲和力协同，协同增效属推断",
+     "basis": "llm_inferred"
+    },
+    "boundary_conditions": [
+     {
+      "text": "S 层晶格的组装与稳定性依赖亚基结构、糖基化与环境（pH、离子强度）；PDB 8QP0 摘要提示 SlaA 的构象变化参与组装，组装条件改变将影响长程有序（定性，无数值阈值）",
+      "parameter": "lattice_assembly_condition",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "scope_match": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "蛋白/糖蛋白亚基在界面自组装为二维周期性晶格，可在表面精确重复排布功能位点，为多价识别阵列提供形态学先例",
+    "verification_quote": "Surface layers (S-layers) are resilient two-dimensional protein lattices that encapsulate many bacteria and most archaea."
+   },
+   "source_doi": "10.7554/eLife.84617",
+   "source_page": null,
+   "source_locator": "abstract, eLife 13 (2024)",
+   "source_file": "PDB 8QP0 / 8ACQ（RCSB 沉积数据）; Gambelli 2024 eLife 13:e84617（摘要接地）; Farci 2023 J Biol Chem 299:102784（旁证，未做本地全文 PDF 审计）",
+   "functional_groups": [
+    "蛋白/糖蛋白亚基二维自组装界面",
+    "周期性多孔晶格位点阵列"
+   ],
+   "key_structures": [
+    "自组装结构"
+   ]
+  }
+ ],
+ "performance_data": [],
+ "engineering_constraints": [
+  {
+   "constraint": "自组装条件敏感性",
+   "value": "衣壳/S 层阵列由大量弱非共价作用稳定，对 pH、离子强度、二价阳离子与变性剂敏感；CCMV 存在 pH/Ca2+ 依赖的天然态-膨胀态可逆转变（PDB 1CWP 标题记 native and swollen forms）",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "PDB 1CWP（CCMV 天然态与膨胀态结构）证明衣壳四级结构随环境可逆转变，自组装阵列在水相工况下的稳定性需控制组装条件",
+   "source": "literature",
+   "ref_doi": "10.1016/S0969-2126(01)00135-6"
+  },
+  {
+   "constraint": "载体上长程有序难维持",
+   "value": "将自组装阵列移植到多孔固体载体时，维持长程周期性有序与位点均一性是工程难点；非均相界面易产生缺陷，破坏周期性",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（基于周期性阵列依赖长程有序的事实）",
+   "source": "llm_inference",
+   "ref_doi": null
+  },
+  {
+   "constraint": "多价位点间距匹配",
+   "value": "多价协同要求位点间距与目标阴离子头基几何匹配；间距失配将削弱协同效应",
+   "unit": null,
+   "relevance": "medium",
+   "explanation": "机理推断（基于多价协同的几何匹配要求）",
+   "source": "llm_inference",
+   "ref_doi": null
+  }
+ ],
+ "narrative": {
+  "entries": [
+   {
+    "source_file": "RCSB PDB 2TMV / 1CWP（病毒衣壳）; PDB 8QP0 / 8ACQ（S 层冷冻电镜）; Namba 1989 / Speir 1995 / Gambelli 2024 eLife / Farci 2023 JBC",
+    "paper_id": "2024-Gambelli-Sulfolobus-Slayer-cryoEM-and-viral-capsid-self-assembly",
+    "sections": {
+     "problem_definition": "短链全氟磺酸根（如 PFBS，C4F9SO3⁻）单价阴离子头基与单一位点的单价结合通常较弱，且短链疏水贡献小、水相滞留强，单一识别位点难以获得高表观亲和力。如何在载体表面精确且均一地排布大量识别位点、借多价协同累加结合自由能，是提升短链全氟阴离子捕获的设计难题。",
+     "biological_solution": "病毒衣壳蛋白与细菌/古菌 S 层蛋白在进化中自组装为高度有序的周期性多价阵列。烟草花叶病毒衣壳蛋白以螺旋对称周期性重复排布（PDB 2TMV，完整 TMV 的 2.9 Å 纤维衍射结构，关键词 Helical virus）；豇豆褪绿斑驳病毒以二十面体 T=3 排列 180 个准等同亚基（PDB 1CWP，X 射线与冷冻电镜，关键词 Icosahedral virus）。S 层是蛋白/糖蛋白自组装形成的二维周期性晶格，包覆众多细菌与多数古菌（eLife 2024 摘要：'Surface layers (S-layers) are resilient two-dimensional protein lattices that encapsulate many bacteria and most archaea'）；硫化叶菌双组分 S 层的外层 SlaA 与内层 SlaB '组装成多孔且相互交织的晶格'（PDB 8QP0 冷冻电镜/断层 + AlphaFold2 原子模型），Deinococcus radiodurans S 层 SDBC 组装体为 2.54 Å 冷冻电镜结构（PDB 8ACQ）。这些结构的共性是：等同/准等同亚基以大量弱非共价作用自组装，形成空间精确、化学均一的周期性多价阵列。",
+     "key_features": "必须保留：① 等同/准等同亚基的周期性自组装（螺旋或二十面体对称衣壳，或二维 S 层晶格）；② 位点的空间精确重复与化学均一；③ 大量弱非共价作用的协同累积。可灵活调整：亚基化学本体（蛋白/多肽/合成单体）、对称类型、位点功能基团、载体骨架。",
+     "design_mapping": "仿生映射：病毒衣壳/S 层的周期性多价自组装阵列 → 载体表面精确重复排布的阴离子识别阵列。对 PFBS（C4F9SO3⁻），以自组装单层或重组多肽/蛋白支架在介孔载体表面呈现周期性多价阴离子识别位点（脲/硫脲/胍/季铵类氢键给体或阳离子位点），位点间距按磺酸根头基几何设计，借多价协同提升表观亲和力与位点均一性。注意：此为设计转译/启发（llm_inferred），非 from_source 事实——衣壳/S 层的天然功能是结构自组装而非 PFAS 识别，多价协同对 PFAS 的亲和力增量须由结合实验验证（属侦察候选方向，尚无实现方案）。",
+     "explainability_anchors": "设计溯源：病毒衣壳螺旋/二十面体周期阵列（PDB 2TMV/1CWP，from_source）与 S 层二维周期晶格自组装（PDB 8QP0/8ACQ，from_source）→ '等同亚基周期性自组装 + 空间精确均一多价位点 + 多价协同'可迁移原理 → PFBS 磺酸根头基的多价协同识别（llm_inferred 启发，亲和力增量须实验验证）。"
+    }
+   }
+  ]
+ },
+ "design_translation": [
+  {
+   "idea": "借病毒衣壳/S 层周期性多价自组装原理，在载体表面以自组装单层或蛋白/多肽支架呈现周期性多价阴离子识别阵列，位点间距按 PFBS 磺酸根头基几何设计，借多价协同提升对短链全氟磺酸根的表观亲和力与位点均一性",
+   "specific_functional_group": "周期性精确排布的阴离子识别位点（脲/硫脲/胍/季铵类氢键给体或阳离子位点），按自组装单层或嵌段多肽/蛋白支架的固有周期重复",
+   "material_handle": "自组装单层（SAM）于金或氧化物表面，或两亲嵌段多肽/重组蛋白支架在界面自组装为有序阵列；亦可借嵌段共聚物微相分离形成周期性功能域，再以点击化学或配位引入识别基团",
+   "target_interaction": "周期性位点对 PFBS 磺酸根头基的多价协同结合（方向性氢键/静电），全氟碳尾另贡献疏水/氟亲作用；多价协同累加结合自由能提升表观亲和力",
+   "source_tier": "llm_inference",
+   "evidence_tier": "inspiration（原理层外推：衣壳/S 层周期性多价自组装接地于天然结构 PDB 2TMV/1CWP/8QP0/8ACQ；多价协同对 PFAS 的亲和力增量为推断，须结合实验验证）",
+   "examples": [],
+   "design_principle": "等同/准等同亚基经大量弱非共价相互作用自组装为周期性阵列，可精确均一地重复排布功能位点并借多价协同提升表观亲和力（PDB 2TMV/1CWP 病毒衣壳，PDB 8QP0/8ACQ S 层晶格）；PFBS 单价头基的多价协同识别为原理层外推",
+   "implementation_example": "含脲/硫脲或胍基的自组装单层或重组多肽/蛋白支架在介孔载体表面形成周期性阴离子识别阵列（无实验数据，仅设计假设；属侦察候选方向，尚无实现方案）",
+   "constraints": "自组装阵列对 pH/离子强度/变性敏感（CCMV 天然-膨胀态可逆转变）；载体上长程有序难维持、界面易生缺陷；PFBS 单价头基的多价协同增量须实验验证；水相中水竞争与共存阴离子（硫酸根、氯离子）干扰是关键挑战",
+   "failure_modes": "界面缺陷破坏周期性与位点均一；位点间距与磺酸根头基失配则无协同；蛋白/多肽支架在水相降解或脱附；氟碳尾非特异性吸附降低选择性",
+   "material_realization_examples": []
+  }
+ ],
+ "honesty_ledger": {
+  "facts": [
+   {
+    "type": "mechanism",
+    "index": 0,
+    "name": "病毒衣壳蛋白多价协同自组装为周期性阵列（bio_structure）",
+    "basis": "from_source_corroborated",
+    "note": "PDB 2TMV（完整 TMV 螺旋衣壳 2.9 Å，关键词 Helical virus）与 PDB 1CWP（CCMV 二十面体衣壳，关键词 Icosahedral virus）确认周期性自组装衣壳结构存在；quote 取自 PDB 沉积标题（可核验），未做全文 PDF 审计。任务候选 1C8N 经 RCSB 实测为烟草坏死病毒（非 CCMV），已改正为 1CWP"
+   },
+   {
+    "type": "boundary",
+    "index": 0,
+    "name": "周期性对称由亚基几何决定（VCAP-001 BC1）",
+    "basis": "from_source_corroborated",
+    "note": "PDB 1CWP 沉积标题（CCMV 天然与膨胀形态，X 射线 + 冷冻电镜）确认二十面体衣壳周期性对称；quote 取自 PDB 标题"
+   },
+   {
+    "type": "mechanism",
+    "index": 1,
+    "name": "S 层蛋白自组装为二维周期性晶格（bio_structure + interaction）",
+    "basis": "from_source_corroborated",
+    "note": "eLife 2024（10.7554/eLife.84617，Sulfolobus acidocaldarius 双组分 S 层冷冻电镜）摘要逐字陈述 S 层为二维蛋白晶格且 SlaA/SlaB '组装成多孔交织晶格'；PDB 8QP0/8ACQ 为 S 层晶格冷冻电镜形态学证据；quote 取自 eLife 摘要（可核验），未做全文 PDF 审计"
+   }
+  ],
+  "leads": [],
+  "inferences": [
+   {
+    "type": "design_translation",
+    "index": 0,
+    "idea": "以自组装单层/蛋白支架在载体表面呈现周期性多价阴离子识别阵列识别 PFBS",
+    "basis": "llm_inferred",
+    "label": "inspiration",
+    "note": "衣壳/S 层天然功能为结构自组装而非 PFAS 识别；PFBS 磺酸根多价协同识别属原理层外推，无直接 PFBS 结合证据，亲和力增量须实验验证"
+   },
+   {
+    "type": "causal_chain_element",
+    "index": 0,
+    "idea": "多价协同累加结合自由能提升对单价 PFBS 头基的表观亲和力（VCAP-001/002 的 pollutant_feature/interaction/why_it_works）",
+    "basis": "llm_inferred",
+    "label": "inspiration",
+    "note": "多价协同为公认生物物理原理，但本库来源未逐字量化其对 PFAS 的亲和力增量；属推断"
+   }
+  ],
+  "boundary_notes": [
+   "本原型天然机制为病毒衣壳与 S 层蛋白的周期性多价自组装（结构功能），非分子识别 PFAS；机制 from_source 接地限于衣壳/S 层周期性自组装结构事实",
+   "PFBS 全氟丁烷磺酸应用与多价协同亲和力增量均为设计转译（llm_inferred / inspiration），非 from_source 事实，不得用作 PFBS 的 direct evidence，须由结合实验验证",
+   "无 PFBS 吸附性能数据（qmax 等）；严格未从外部污染物知识库搬运任何性能数值",
+   "任务候选 PDB 1C8N 经 RCSB 实测为烟草坏死病毒（Tobacco Necrosis Virus），非豇豆褪绿斑驳病毒；已改正为 PDB 1CWP（CCMV 天然与膨胀形态）",
+   "一切 PFAS 相关边界及多价协同亲和力增量边界均为定性 llm_inferred，不带数值阈值，gate_level=soft"
+  ],
+  "missing_pdf_items": [
+   "Namba 1989 J Mol Biol 208:307-325 全文 PDF（quote 取自 PDB 2TMV 沉积标题）",
+   "Speir 1995 Structure 3:63 全文 PDF（quote 取自 PDB 1CWP 沉积标题）",
+   "Gambelli 2024 eLife 13:e84617 全文 PDF（quote 取自摘要）",
+   "Farci 2023 J Biol Chem 299:102784 全文 PDF（仅作 S 层晶格旁证，未取 quote）"
+  ],
+  "generated_by": "manual-curation-2026-07-22",
+  "note": "诚实优先：机制 from_source 接地限于衣壳/S 层周期性自组装结构事实；PFBS 应用与多价协同亲和力增量全部为 inspiration/外推，须实验验证"
+ },
+ "boundary_rules": [
+  {
+   "rule": "周期性对称由亚基几何决定：TMV 螺旋对称、CCMV 二十面体 T=3，阵列周期性与位点重复方式依赖亚基自组装固有对称性",
+   "source_mechanism": "病毒衣壳蛋白多价协同自组装为周期性阵列",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "S 层晶格组装与稳定性依赖亚基结构、糖基化与环境（pH、离子强度），条件改变影响长程有序（定性，无数值阈值）",
+   "source_mechanism": "细菌/古菌 S 层蛋白自组装为二维周期性晶格",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  },
+  {
+   "rule": "多价协同对 PFAS 的表观亲和力增量须由结合实验验证；位点间距须与目标阴离子头基几何匹配方显协同（定性）",
+   "source_mechanism": "病毒衣壳蛋白多价协同自组装为周期性阵列",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  }
+ ],
+ "mechanism_tags": [
+  "静电吸附",
+  "氢键",
+  "疏水分配",
+  "孔道限域分子筛分",
+  "几何识别"
+ ]
+}

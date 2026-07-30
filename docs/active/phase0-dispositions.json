@@ -1,0 +1,2203 @@
+{
+  "manifest_version": 1,
+  "title": "Phase 0 Documentation Archive Dispositions",
+  "status": "executed",
+  "date": "2026-06-19",
+  "baseline_local": "review@04d282e",
+  "cloud_baseline": "origin/review@e4dc2d0",
+  "scope": "documentation only. NO git mv executed. NO canon edit. NO commit.",
+  "notes": [
+    "Action vocabulary: no_action | keep_at_root | git_mv | create | update_ref | record_only",
+    "directive_3: docs/imported/library-enhancement/** all no_action (runtime assets, not moved; tools/biomimetic_context.py not modified)",
+    "directive_4: docs/archive/** all no_action (already archived, no re-shuffle churn)",
+    "directive_5: no empty operational docs created in Phase 0 (deferred to later commits)",
+    "directive_6: CLAUDE-CODE-TAKEOVER.md path fix is update_ref (Yao-authorized)"
+  ],
+  "dispositions": [
+    {
+      "original_path": "docs/active/CLAUDE-CODE-TAKEOVER.md",
+      "proposed_path": "docs/active/CLAUDE-CODE-TAKEOVER.md",
+      "classification_reason": "active operational doc; references obsolete /private/tmp worktree",
+      "active_references": "recovery design, this manifest",
+      "replacement_document": "-",
+      "action": "update_ref"
+    },
+    {
+      "original_path": "docs/active/PROJECT-RECOVERY-DESIGN.md",
+      "proposed_path": "docs/active/PROJECT-RECOVERY-DESIGN.md",
+      "classification_reason": "active operational doc, no path edits needed",
+      "active_references": "takeover guide",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/design.md",
+      "proposed_path": "docs/design.md",
+      "classification_reason": "check_repo_hygiene.py mandatory docs/ root file",
+      "active_references": "README.md, tools/create_clean_branch.sh, tools/check_repo_hygiene.py",
+      "replacement_document": "-",
+      "action": "keep_at_root"
+    },
+    {
+      "original_path": "docs/ADRMATS_CALL_GUIDE.md",
+      "proposed_path": "docs/ADRMATS_CALL_GUIDE.md",
+      "classification_reason": "check_repo_hygiene.py mandatory docs/ root file",
+      "active_references": "README.md, tools/check_repo_hygiene.py",
+      "replacement_document": "-",
+      "action": "keep_at_root"
+    },
+    {
+      "original_path": "docs/ADRMATS_DELIVERY_PLAN.md",
+      "proposed_path": "docs/ADRMATS_DELIVERY_PLAN.md",
+      "classification_reason": "check_repo_hygiene.py mandatory docs/ root file",
+      "active_references": "README.md, tools/check_repo_hygiene.py",
+      "replacement_document": "-",
+      "action": "keep_at_root"
+    },
+    {
+      "original_path": "docs/ADRMATS_INTEGRATION.md",
+      "proposed_path": "docs/ADRMATS_INTEGRATION.md",
+      "classification_reason": "check_repo_hygiene.py mandatory docs/ root file",
+      "active_references": "tools/check_repo_hygiene.py",
+      "replacement_document": "-",
+      "action": "keep_at_root"
+    },
+    {
+      "original_path": "docs/REPOSITORY_HYGIENE.md",
+      "proposed_path": "docs/REPOSITORY_HYGIENE.md",
+      "classification_reason": "check_repo_hygiene.py mandatory docs/ root file",
+      "active_references": "README.md, tools/check_repo_hygiene.py",
+      "replacement_document": "-",
+      "action": "keep_at_root"
+    },
+    {
+      "original_path": "docs/SUPPORT_SCOPE_AND_RISKS.md",
+      "proposed_path": "docs/SUPPORT_SCOPE_AND_RISKS.md",
+      "classification_reason": "check_repo_hygiene.py mandatory docs/ root file",
+      "active_references": "README.md, tools/check_repo_hygiene.py",
+      "replacement_document": "-",
+      "action": "keep_at_root"
+    },
+    {
+      "original_path": "docs/DEFINITIONS.md",
+      "proposed_path": "docs/DEFINITIONS.md",
+      "classification_reason": "root-level definitions, no non-docs refs",
+      "active_references": "none outside docs",
+      "replacement_document": "-",
+      "action": "keep_at_root"
+    },
+    {
+      "original_path": "docs/adrmats-integration-analysis.md",
+      "proposed_path": "docs/adrmats-integration-analysis.md",
+      "classification_reason": "referenced by README",
+      "active_references": "README.md",
+      "replacement_document": "-",
+      "action": "keep_at_root"
+    },
+    {
+      "original_path": "docs/phase1-completion-report.md",
+      "proposed_path": "docs/archive/pre-optimization/phase1-completion-report.md",
+      "classification_reason": "superseded completion report, 0 non-docs refs",
+      "active_references": "none",
+      "replacement_document": "docs/archive/pre-optimization/FINAL-report.md (kept in archive)",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/phase2-completion-report.md",
+      "proposed_path": "docs/archive/pre-optimization/phase2-completion-report.md",
+      "classification_reason": "superseded completion report, 0 non-docs refs",
+      "active_references": "none",
+      "replacement_document": "FINAL-report.md",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/phase3-completion-report.md",
+      "proposed_path": "docs/archive/pre-optimization/phase3-completion-report.md",
+      "classification_reason": "superseded completion report, 0 non-docs refs",
+      "active_references": "none",
+      "replacement_document": "FINAL-report.md",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/phase4-completion-report.md",
+      "proposed_path": "docs/archive/pre-optimization/phase4-completion-report.md",
+      "classification_reason": "superseded completion report, 0 non-docs refs",
+      "active_references": "none",
+      "replacement_document": "FINAL-report.md",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/phase5-completion-report.md",
+      "proposed_path": "docs/archive/pre-optimization/phase5-completion-report.md",
+      "classification_reason": "superseded completion report, 0 non-docs refs",
+      "active_references": "none",
+      "replacement_document": "FINAL-report.md",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/phase6-completion-report.md",
+      "proposed_path": "docs/archive/pre-optimization/phase6-completion-report.md",
+      "classification_reason": "superseded completion report, 0 non-docs refs",
+      "active_references": "none",
+      "replacement_document": "FINAL-report.md",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/phase7-completion-report.md",
+      "proposed_path": "docs/archive/pre-optimization/phase7-completion-report.md",
+      "classification_reason": "superseded completion report, 0 non-docs refs",
+      "active_references": "none",
+      "replacement_document": "FINAL-report.md",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/post-mortem-20260609.md",
+      "proposed_path": "docs/archive/pre-optimization/post-mortem-20260609.md",
+      "classification_reason": "historical post-mortem, 0 non-docs refs",
+      "active_references": "none",
+      "replacement_document": "future commit-audit-root-cause.md (separate later commit)",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/remediation-summary.md",
+      "proposed_path": "docs/archive/pre-optimization/remediation-summary.md",
+      "classification_reason": "historical, 0 non-docs refs",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/status-and-next-steps-20260614.md",
+      "proposed_path": "docs/archive/pre-optimization/status-and-next-steps-20260614.md",
+      "classification_reason": "historical, 0 non-docs refs",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/baseline-stats-2026-06-10.md",
+      "proposed_path": "docs/archive/pre-optimization/baseline-stats-2026-06-10.md",
+      "classification_reason": "historical baseline, 0 non-docs refs",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/enrichment-separation-task.md",
+      "proposed_path": "docs/archive/pre-optimization/enrichment-separation-task.md",
+      "classification_reason": "historical task instruction, 0 non-docs refs",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/fix-chimera-and-enrichment.md",
+      "proposed_path": "docs/archive/pre-optimization/fix-chimera-and-enrichment.md",
+      "classification_reason": "historical fix doc, 0 non-docs refs",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/fix-perf-key-and-enrichment-separation.md",
+      "proposed_path": "docs/archive/pre-optimization/fix-perf-key-and-enrichment-separation.md",
+      "classification_reason": "historical fix doc, 0 non-docs refs",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/superpowers/plans/2026-06-10-biomimetic-library-remediation.md",
+      "proposed_path": "docs/archive/pre-optimization/superpowers-plans/2026-06-10-biomimetic-library-remediation.md",
+      "classification_reason": "historical remediation plan, 0 non-docs refs",
+      "active_references": "none",
+      "replacement_document": "future recovery-master-plan.md (separate later commit)",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/superpowers/plans/2026-06-17-evidence-audit-final-acceptance.md",
+      "proposed_path": "docs/archive/pre-optimization/superpowers-plans/2026-06-17-evidence-audit-final-acceptance.md",
+      "classification_reason": "historical acceptance plan, 0 non-docs refs",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-boundary-do-not-register.md",
+      "proposed_path": "docs/registries/boundary-do-not-register.md",
+      "classification_reason": "active ledger (105 IDs)",
+      "active_references": "CLAUDE.md",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-full-audit-decision-queue.md",
+      "proposed_path": "docs/registries/decision-queue.md",
+      "classification_reason": "active ledger (148 items)",
+      "active_references": "CLAUDE.md",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-decision-queue.md",
+      "proposed_path": "docs/registries/decision-queue-legacy.md",
+      "classification_reason": "legacy decision queue",
+      "active_references": "CLAUDE.md (historic)",
+      "replacement_document": "decision-queue.md",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/refuted-log.md",
+      "proposed_path": "docs/registries/refuted-log.md",
+      "classification_reason": "active must-not-resurrect ledger",
+      "active_references": "none outside docs",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/DEFINITIONS.md",
+      "proposed_path": "docs/references/definitions.md",
+      "classification_reason": "judgment standard",
+      "active_references": "CLAUDE.md",
+      "replacement_document": "future evidence-quality-standard.md (separate later commit)",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/PLAN.md",
+      "proposed_path": "docs/references/optimization-plan-v1.md",
+      "classification_reason": "original optimization plan",
+      "active_references": "CLAUDE.md",
+      "replacement_document": "future recovery-master-plan.md",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-full-audit-plan.md",
+      "proposed_path": "docs/references/full-audit-plan.md",
+      "classification_reason": "audit methodology",
+      "active_references": "none outside docs",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-next-stage-approval-summary.md",
+      "proposed_path": "docs/references/next-stage-approval-summary.md",
+      "classification_reason": "approval summary",
+      "active_references": "none outside docs",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/phase0-baseline.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/phase-reports/phase0-baseline.md",
+      "classification_reason": "phase report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/phase0-report.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/phase-reports/phase0-report.md",
+      "classification_reason": "phase report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/phase1-report.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/phase-reports/phase1-report.md",
+      "classification_reason": "phase report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/phase2-moves.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/phase-reports/phase2-moves.md",
+      "classification_reason": "phase moves log",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/phase2-report.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/phase-reports/phase2-report.md",
+      "classification_reason": "phase report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/phase3-decontam.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/phase-reports/phase3-decontam.md",
+      "classification_reason": "decontam log",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/phase3-report.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/phase-reports/phase3-report.md",
+      "classification_reason": "phase report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/phase4-report.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/phase-reports/phase4-report.md",
+      "classification_reason": "phase report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/phase5-chains.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/phase-reports/phase5-chains.md",
+      "classification_reason": "chains log",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/phase5-report.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/phase-reports/phase5-report.md",
+      "classification_reason": "phase report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/phase6-report.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/phase-reports/phase6-report.md",
+      "classification_reason": "phase report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/phase7-report.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/phase-reports/phase7-report.md",
+      "classification_reason": "phase report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/phase7-translation.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/phase-reports/phase7-translation.md",
+      "classification_reason": "translation log",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/phase7.5-report.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/phase-reports/phase7.5-report.md",
+      "classification_reason": "phase report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/phase8-report.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/phase-reports/phase8-report.md",
+      "classification_reason": "phase report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/FINAL-report.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/phase-reports/FINAL-report.md",
+      "classification_reason": "final phase report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/coverage-gaps.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/phase-reports/coverage-gaps.md",
+      "classification_reason": "coverage gap log",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/CLAUDE-CODE-TASK-64-68.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/task-history/CLAUDE-CODE-TASK-64-68.md",
+      "classification_reason": "task history",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/CLAUDE-CODE-TASK-69-73.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/task-history/CLAUDE-CODE-TASK-69-73.md",
+      "classification_reason": "task history",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/CLAUDE-CODE-WORKER-PROMPT.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/task-history/CLAUDE-CODE-WORKER-PROMPT.md",
+      "classification_reason": "worker prompt history",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/CODEX-HANDOFF-PROMPT.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/old-handoffs/CODEX-HANDOFF-PROMPT.md",
+      "classification_reason": "old handoff prompt",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/DISPATCH-briefing.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/task-history/DISPATCH-briefing.md",
+      "classification_reason": "dispatch history",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/COLLAB-BOARD.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/old-handoffs/COLLAB-BOARD.md",
+      "classification_reason": "superseded board",
+      "active_references": "CLAUDE.md (historic)",
+      "replacement_document": "future model-routing-protocol.md",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/COLLAB-HANDOFF.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/old-handoffs/COLLAB-HANDOFF.md",
+      "classification_reason": "superseded handoff",
+      "active_references": "CLAUDE.md (historic)",
+      "replacement_document": "claude-code handoff",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/COLLABORATION-PROTOCOL.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/old-handoffs/COLLABORATION-PROTOCOL.md",
+      "classification_reason": "superseded protocol",
+      "active_references": "CLAUDE.md (historic)",
+      "replacement_document": "future model-routing-protocol.md",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/CROSS_DEVICE_HANDOFF_20260615.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/old-handoffs/CROSS_DEVICE_HANDOFF_20260615.md",
+      "classification_reason": "old cross-device handoff",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/HOME_PHASE9_WORK_PLAN_20260615.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/old-handoffs/HOME_PHASE9_WORK_PLAN_20260615.md",
+      "classification_reason": "old work plan",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/session-handoff-20260615.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/old-handoffs/session-handoff-20260615.md",
+      "classification_reason": "old session handoff",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/交接文档_HANDOFF.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/old-handoffs/交接文档_HANDOFF.md",
+      "classification_reason": "old handoff",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-sync-summary.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/old-handoffs/review-sync-summary.md",
+      "classification_reason": "superseded sync summary",
+      "active_references": "CLAUDE.md (historic)",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-worklog.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/old-handoffs/review-worklog.md",
+      "classification_reason": "superseded worklog",
+      "active_references": "CLAUDE.md (historic)",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-full-audit-worklog.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/old-handoffs/review-full-audit-worklog.md",
+      "classification_reason": "superseded worklog",
+      "active_references": "CLAUDE.md (historic)",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-v0.1-delivery-summary.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/old-handoffs/review-v0.1-delivery-summary.md",
+      "classification_reason": "delivery summary",
+      "active_references": "none",
+      "replacement_document": "future execution-roadmap.md",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/verify-logs/biomineralization-template.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/generated-logs/verify-logs/biomineralization-template.md",
+      "classification_reason": "generated per-prototype verify log",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/verify-logs/bone-structure.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/generated-logs/verify-logs/bone-structure.md",
+      "classification_reason": "generated per-prototype verify log",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/verify-logs/cell-membrane-ion-channel.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/generated-logs/verify-logs/cell-membrane-ion-channel.md",
+      "classification_reason": "generated per-prototype verify log",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/verify-logs/chitosan.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/generated-logs/verify-logs/chitosan.md",
+      "classification_reason": "generated per-prototype verify log",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/verify-logs/chlorella-cell-wall.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/generated-logs/verify-logs/chlorella-cell-wall.md",
+      "classification_reason": "generated per-prototype verify log",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/verify-logs/coral-skeleton.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/generated-logs/verify-logs/coral-skeleton.md",
+      "classification_reason": "generated per-prototype verify log",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/verify-logs/diatom-frustule.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/generated-logs/verify-logs/diatom-frustule.md",
+      "classification_reason": "generated per-prototype verify log",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/verify-logs/dna-aptamer.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/generated-logs/verify-logs/dna-aptamer.md",
+      "classification_reason": "generated per-prototype verify log",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/verify-logs/fish-scale-hydroxyapatite.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/generated-logs/verify-logs/fish-scale-hydroxyapatite.md",
+      "classification_reason": "generated per-prototype verify log",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/verify-logs/iron-oxidizing-bacteria.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/generated-logs/verify-logs/iron-oxidizing-bacteria.md",
+      "classification_reason": "generated per-prototype verify log",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/verify-logs/lobster-exoskeleton.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/generated-logs/verify-logs/lobster-exoskeleton.md",
+      "classification_reason": "generated per-prototype verify log",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/verify-logs/magnetic-bacteria.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/generated-logs/verify-logs/magnetic-bacteria.md",
+      "classification_reason": "generated per-prototype verify log",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/verify-logs/mangrove-root.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/generated-logs/verify-logs/mangrove-root.md",
+      "classification_reason": "generated per-prototype verify log",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/verify-logs/mussel-foot-adhesion.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/generated-logs/verify-logs/mussel-foot-adhesion.md",
+      "classification_reason": "generated per-prototype verify log",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/verify-logs/mycelium.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/generated-logs/verify-logs/mycelium.md",
+      "classification_reason": "generated per-prototype verify log",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/verify-logs/oyster-shell.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/generated-logs/verify-logs/oyster-shell.md",
+      "classification_reason": "generated per-prototype verify log",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/verify-logs/pitcher-plant-slippery-surface.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/generated-logs/verify-logs/pitcher-plant-slippery-surface.md",
+      "classification_reason": "generated per-prototype verify log",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/verify-logs/plant-tannin.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/generated-logs/verify-logs/plant-tannin.md",
+      "classification_reason": "generated per-prototype verify log",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/verify-logs/polydopamine-coating.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/generated-logs/verify-logs/polydopamine-coating.md",
+      "classification_reason": "generated per-prototype verify log",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/verify-logs/scallop-shell.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/generated-logs/verify-logs/scallop-shell.md",
+      "classification_reason": "generated per-prototype verify log",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/verify-logs/silk-fibroin.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/generated-logs/verify-logs/silk-fibroin.md",
+      "classification_reason": "generated per-prototype verify log",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/verify-logs/spider-silk.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/generated-logs/verify-logs/spider-silk.md",
+      "classification_reason": "generated per-prototype verify log",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/verify-logs/sulfate-reducing-bacteria.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/generated-logs/verify-logs/sulfate-reducing-bacteria.md",
+      "classification_reason": "generated per-prototype verify log",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/verify-logs/wood-xylem.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/generated-logs/verify-logs/wood-xylem.md",
+      "classification_reason": "generated per-prototype verify log",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/missing-sources.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/generated-logs/missing-sources.md",
+      "classification_reason": "generated missing-source list",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/literature-requests.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/generated-logs/literature-requests.md",
+      "classification_reason": "generated literature requests",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-clcode-task1-decision-queue-summary.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/task-history/review-clcode-task1-decision-queue-summary.md",
+      "classification_reason": "clcode task history",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-clcode-task2-boundary-register-summary.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/task-history/review-clcode-task2-boundary-register-summary.md",
+      "classification_reason": "clcode task history",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-clcode-task3-missing-pdf-analysis.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/task-history/review-clcode-task3-missing-pdf-analysis.md",
+      "classification_reason": "clcode task history",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-clcode-task4-next-steps-roadmap.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/task-history/review-clcode-task4-next-steps-roadmap.md",
+      "classification_reason": "clcode task history",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-clcode-task5-metadata-fixes.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/task-history/review-clcode-task5-metadata-fixes.md",
+      "classification_reason": "clcode task history",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-clcode-task6-remaining-wrongsource.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/task-history/review-clcode-task6-remaining-wrongsource.md",
+      "classification_reason": "clcode task history",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-clcode-task7-queue-status-update.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/task-history/review-clcode-task7-queue-status-update.md",
+      "classification_reason": "clcode task history",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-clcode-task8-path-normalization.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/task-history/review-clcode-task8-path-normalization.md",
+      "classification_reason": "clcode task history",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-clcode-task9-queue-batch-update.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/task-history/review-clcode-task9-queue-batch-update.md",
+      "classification_reason": "clcode task history",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-clcode-task10-lotus-scope-assessment.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/task-history/review-clcode-task10-lotus-scope-assessment.md",
+      "classification_reason": "clcode task history",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-clcode-task11-reconciliation.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/task-history/review-clcode-task11-reconciliation.md",
+      "classification_reason": "clcode task history",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-clcode-task12-verification-batch1.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/task-history/review-clcode-task12-verification-batch1.md",
+      "classification_reason": "clcode task history",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-clcode-task13-verification-batch2.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/task-history/review-clcode-task13-verification-batch2.md",
+      "classification_reason": "clcode task history",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-clcode-task14-queue-full-update.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/task-history/review-clcode-task14-queue-full-update.md",
+      "classification_reason": "clcode task history",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-clcode-task15-lotus-scope-split.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/task-history/review-clcode-task15-lotus-scope-split.md",
+      "classification_reason": "clcode task history",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-clcode-task16-pda-ocr-fix.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/task-history/review-clcode-task16-pda-ocr-fix.md",
+      "classification_reason": "clcode task history",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-clcode-task17-scope-caveats-metadata.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/task-history/review-clcode-task17-scope-caveats-metadata.md",
+      "classification_reason": "clcode task history",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-clcode-task18-lotus-cleanup.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/task-history/review-clcode-task18-lotus-cleanup.md",
+      "classification_reason": "clcode task history",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-clcode-task19-verification-batch3.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/task-history/review-clcode-task19-verification-batch3.md",
+      "classification_reason": "clcode task history",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-clcode-task20-verification-batch4.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/task-history/review-clcode-task20-verification-batch4.md",
+      "classification_reason": "clcode task history",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-clcode-task21-verification-batch5.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/task-history/review-clcode-task21-verification-batch5.md",
+      "classification_reason": "clcode task history",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-clcode-task22-ocr-patents.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/task-history/review-clcode-task22-ocr-patents.md",
+      "classification_reason": "clcode task history",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-clcode-task23-validation.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/task-history/review-clcode-task23-validation.md",
+      "classification_reason": "clcode task history",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-clcode-task27-pending-yao-batch.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/task-history/review-clcode-task27-pending-yao-batch.md",
+      "classification_reason": "clcode task history",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-clcode-task46-51.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/task-history/review-clcode-task46-51.md",
+      "classification_reason": "clcode task history",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-clcode-task52-57.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/task-history/review-clcode-task52-57.md",
+      "classification_reason": "clcode task history",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-clcode-task58-63.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/task-history/review-clcode-task58-63.md",
+      "classification_reason": "clcode task history",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-clcode-infra-fix-and-verify.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/task-history/review-clcode-infra-fix-and-verify.md",
+      "classification_reason": "infra fix report history",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-continuous-openclaw-execution-plan.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/task-history/review-continuous-openclaw-execution-plan.md",
+      "classification_reason": "execution plan history",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-openclaw-coordination.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/task-history/review-openclaw-coordination.md",
+      "classification_reason": "coordination history",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-openclaw-worker-prompts.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/task-history/review-openclaw-worker-prompts.md",
+      "classification_reason": "worker prompts history",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-openclaw-next-tasks.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/task-history/review-openclaw-next-tasks.md",
+      "classification_reason": "next-tasks history",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-openclaw-dispatch-r01.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/task-history/review-openclaw-dispatch-r01.md",
+      "classification_reason": "dispatch r01 history",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-full-audit-batch-01-chitosan.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-full-audit-batch-01-chitosan.md",
+      "classification_reason": "batch preflight evidence report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-full-audit-batch-01-plant-tannin.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-full-audit-batch-01-plant-tannin.md",
+      "classification_reason": "batch preflight evidence report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-full-audit-batch-01-polydopamine-coating.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-full-audit-batch-01-polydopamine-coating.md",
+      "classification_reason": "batch preflight evidence report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-full-audit-batch-01-silk-fibroin.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-full-audit-batch-01-silk-fibroin.md",
+      "classification_reason": "batch preflight evidence report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-full-audit-batch-01-wood-xylem.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-full-audit-batch-01-wood-xylem.md",
+      "classification_reason": "batch preflight evidence report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-full-audit-batch-02-biomineralization-template.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-full-audit-batch-02-biomineralization-template.md",
+      "classification_reason": "batch preflight evidence report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-full-audit-batch-02-bone-structure.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-full-audit-batch-02-bone-structure.md",
+      "classification_reason": "batch preflight evidence report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-full-audit-batch-02-fish-scale-hydroxyapatite-preflight.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-full-audit-batch-02-fish-scale-hydroxyapatite-preflight.md",
+      "classification_reason": "batch preflight evidence report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-full-audit-batch-02-oyster-shell.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-full-audit-batch-02-oyster-shell.md",
+      "classification_reason": "batch preflight evidence report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-full-audit-batch-02-scallop-shell.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-full-audit-batch-02-scallop-shell.md",
+      "classification_reason": "batch preflight evidence report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-full-audit-batch-03-microbes-cells-preflight.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-full-audit-batch-03-microbes-cells-preflight.md",
+      "classification_reason": "batch preflight evidence report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-full-audit-batch-04-separation-surfaces-preflight.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-full-audit-batch-04-separation-surfaces-preflight.md",
+      "classification_reason": "batch preflight evidence report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-full-audit-batch-05-selective-materials-preflight.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-full-audit-batch-05-selective-materials-preflight.md",
+      "classification_reason": "batch preflight evidence report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-full-audit-batch-06-enrichment-crosscheck-preflight.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-full-audit-batch-06-enrichment-crosscheck-preflight.md",
+      "classification_reason": "batch preflight evidence report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-full-audit-openclaw-batch-07-parked-registry.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-full-audit-openclaw-batch-07-parked-registry.md",
+      "classification_reason": "openclaw batch evidence report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-full-audit-openclaw-batch-08-remaining-core.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-full-audit-openclaw-batch-08-remaining-core.md",
+      "classification_reason": "openclaw batch evidence report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-full-audit-openclaw-batch-09-core-source-gaps.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-full-audit-openclaw-batch-09-core-source-gaps.md",
+      "classification_reason": "openclaw batch evidence report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-full-audit-openclaw-batch-10-office-reconciliation.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-full-audit-openclaw-batch-10-office-reconciliation.md",
+      "classification_reason": "openclaw batch evidence report",
+      "active_references": "none",
+      "replacement_document": "review-post-office-reconciliation.md",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-full-audit-openclaw-batch-11-diatom-causal-card.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-full-audit-openclaw-batch-11-diatom-causal-card.md",
+      "classification_reason": "openclaw batch evidence report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-full-audit-openclaw-diatom-path-dedup.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-full-audit-openclaw-diatom-path-dedup.md",
+      "classification_reason": "dedup evidence report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-full-audit-openclaw-dna-aptamer-evidence-build.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-full-audit-openclaw-dna-aptamer-evidence-build.md",
+      "classification_reason": "evidence build report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-full-audit-openclaw-fish-scale-cleanup.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-full-audit-openclaw-fish-scale-cleanup.md",
+      "classification_reason": "cleanup evidence report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-full-audit-openclaw-mof-verification-semantics.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-full-audit-openclaw-mof-verification-semantics.md",
+      "classification_reason": "mof semantics report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-full-audit-openclaw-pda-mussel-overlap.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-full-audit-openclaw-pda-mussel-overlap.md",
+      "classification_reason": "overlap report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-full-audit-openclaw-pda-patent-ocr.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-full-audit-openclaw-pda-patent-ocr.md",
+      "classification_reason": "OCR report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-full-audit-openclaw-starch-extreme-values.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-full-audit-openclaw-starch-extreme-values.md",
+      "classification_reason": "extreme values report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-openclaw-boundary-b1-writes.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-openclaw-boundary-b1-writes.md",
+      "classification_reason": "boundary writes report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-openclaw-candidate-audit-chitosan-diatom-20260618.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-openclaw-candidate-audit-chitosan-diatom-20260618.md",
+      "classification_reason": "candidate audit report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-openclaw-chitosan-diatom-verification.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-openclaw-chitosan-diatom-verification.md",
+      "classification_reason": "verification report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-openclaw-diatom-card-write.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-openclaw-diatom-card-write.md",
+      "classification_reason": "card write report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-openclaw-enrichment-causal-fill.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-openclaw-enrichment-causal-fill.md",
+      "classification_reason": "enrichment fill report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-openclaw-iob-verification.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-openclaw-iob-verification.md",
+      "classification_reason": "IOB verification report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-openclaw-mussel-fish-verification.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-openclaw-mussel-fish-verification.md",
+      "classification_reason": "verification report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-openclaw-ocr-cn113275374a.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-openclaw-ocr-cn113275374a.md",
+      "classification_reason": "OCR report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-openclaw-ocr-cn114570339a-cn113244898a.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-openclaw-ocr-cn114570339a-cn113244898a.md",
+      "classification_reason": "OCR report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-openclaw-oyster-shell-verification.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-openclaw-oyster-shell-verification.md",
+      "classification_reason": "verification report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-openclaw-pda-verification.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-openclaw-pda-verification.md",
+      "classification_reason": "verification report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-openclaw-r01-structured-recovery.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-openclaw-r01-structured-recovery.md",
+      "classification_reason": "R01 structured recovery report",
+      "active_references": "none",
+      "replacement_document": "future commit-audit-root-cause.md",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-openclaw-tier2a-verification.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-openclaw-tier2a-verification.md",
+      "classification_reason": "tier2a verification report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-openclaw-zero-perf-scope-notes.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-openclaw-zero-perf-scope-notes.md",
+      "classification_reason": "scope notes report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-qoderwork-acceptance-boundary-b1.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-qoderwork-acceptance-boundary-b1.md",
+      "classification_reason": "acceptance report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-qoderwork-acceptance-diatom-card.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-qoderwork-acceptance-diatom-card.md",
+      "classification_reason": "acceptance report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-qoderwork-acceptance-iob.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-qoderwork-acceptance-iob.md",
+      "classification_reason": "acceptance report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-qoderwork-acceptance-ocr-cn113275374a.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-qoderwork-acceptance-ocr-cn113275374a.md",
+      "classification_reason": "acceptance report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-qoderwork-acceptance-ocr-cn114570339a-cn113244898a.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-qoderwork-acceptance-ocr-cn114570339a-cn113244898a.md",
+      "classification_reason": "acceptance report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-qoderwork-acceptance-oyster-shell.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-qoderwork-acceptance-oyster-shell.md",
+      "classification_reason": "acceptance report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-qoderwork-acceptance-tier2a.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-qoderwork-acceptance-tier2a.md",
+      "classification_reason": "acceptance report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-qoderwork-acceptance-tier2b.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-qoderwork-acceptance-tier2b.md",
+      "classification_reason": "acceptance report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-qoderwork-full-inventory-20260617.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-qoderwork-full-inventory-20260617.md",
+      "classification_reason": "inventory report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-qoderwork-remaining-gaps-20260618.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-qoderwork-remaining-gaps-20260618.md",
+      "classification_reason": "gaps report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-qoderwork-session-report-20260618.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-qoderwork-session-report-20260618.md",
+      "classification_reason": "session report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-codex-acceptance-candidate-a-20260618.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-codex-acceptance-candidate-a-20260618.md",
+      "classification_reason": "acceptance report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-batch-coral-skeleton.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-batch-coral-skeleton.md",
+      "classification_reason": "review batch report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-batch-lobster-exoskeleton.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-batch-lobster-exoskeleton.md",
+      "classification_reason": "review batch report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-batch-magnetic-bacteria.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-batch-magnetic-bacteria.md",
+      "classification_reason": "review batch report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-batch-pitcher-plant.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-batch-pitcher-plant.md",
+      "classification_reason": "review batch report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-batch-spider-silk.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-batch-spider-silk.md",
+      "classification_reason": "review batch report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/evidence-review-report.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/evidence-review-report.md",
+      "classification_reason": "evidence review report",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/review-post-office-reconciliation.md",
+      "proposed_path": "docs/archive/optimization-v1-2026-06/evidence-reports/review-post-office-reconciliation.md",
+      "classification_reason": "reconciliation report",
+      "active_references": "none",
+      "replacement_document": "future commit-audit-root-cause.md",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/optimization-v1/优化方案_仿生库策展与接地_v1.md",
+      "proposed_path": "docs/archive/pre-optimization/优化方案_仿生库策展与接地_v1.md",
+      "classification_reason": "original curation plan (pre optimization-v1)",
+      "active_references": "PLAN.md (moving to references/)",
+      "replacement_document": "optimization-plan-v1.md",
+      "action": "git_mv"
+    },
+    {
+      "original_path": "docs/archive/AI_AGENT_PROGRESS.md",
+      "proposed_path": "docs/archive/AI_AGENT_PROGRESS.md",
+      "classification_reason": "already archived; directive_4 no re-shuffle",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/archive/AI_COORDINATION_PROTOCOL.md",
+      "proposed_path": "docs/archive/AI_COORDINATION_PROTOCOL.md",
+      "classification_reason": "already archived; directive_4",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/archive/AI_SUPERVISOR_DIRECTIVE.md",
+      "proposed_path": "docs/archive/AI_SUPERVISOR_DIRECTIVE.md",
+      "classification_reason": "already archived; directive_4",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/archive/Github management-INSTRUCTIONS.md",
+      "proposed_path": "docs/archive/Github management-INSTRUCTIONS.md",
+      "classification_reason": "already archived; directive_4",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/archive/HANDOFF.md",
+      "proposed_path": "docs/archive/HANDOFF.md",
+      "classification_reason": "already archived; directive_4",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/archive/README-clean.md",
+      "proposed_path": "docs/archive/README-clean.md",
+      "classification_reason": "already archived; directive_4",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/archive/REVIEW-GUIDE.md",
+      "proposed_path": "docs/archive/REVIEW-GUIDE.md",
+      "classification_reason": "already archived; directive_4",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/archive/SESSION-CONTEXT.md",
+      "proposed_path": "docs/archive/SESSION-CONTEXT.md",
+      "classification_reason": "already archived; directive_4",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/archive/alginate_brief_evaluation.md",
+      "proposed_path": "docs/archive/alginate_brief_evaluation.md",
+      "classification_reason": "already archived; directive_4",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/archive/canon-stabilization-plan-20260610.zip",
+      "proposed_path": "docs/archive/canon-stabilization-plan-20260610.zip",
+      "classification_reason": "already archived; directive_4",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/archive/canon-stabilization-plan-20260610/README.md",
+      "proposed_path": "docs/archive/canon-stabilization-plan-20260610/README.md",
+      "classification_reason": "already archived; directive_4",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/archive/canon-stabilization-plan-20260610/phase-0-baseline.md",
+      "proposed_path": "docs/archive/canon-stabilization-plan-20260610/phase-0-baseline.md",
+      "classification_reason": "already archived; directive_4",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/archive/canon-stabilization-plan-20260610/phase-1-interface-trust.md",
+      "proposed_path": "docs/archive/canon-stabilization-plan-20260610/phase-1-interface-trust.md",
+      "classification_reason": "already archived; directive_4",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/archive/canon-stabilization-plan-20260610/phase-2-enrichment-split.md",
+      "proposed_path": "docs/archive/canon-stabilization-plan-20260610/phase-2-enrichment-split.md",
+      "classification_reason": "already archived; directive_4",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/archive/canon-stabilization-plan-20260610/phase-3-rebuild-verification.md",
+      "proposed_path": "docs/archive/canon-stabilization-plan-20260610/phase-3-rebuild-verification.md",
+      "classification_reason": "already archived; directive_4",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/archive/canon-stabilization-plan-20260610/phase-4-mapping-sync.md",
+      "proposed_path": "docs/archive/canon-stabilization-plan-20260610/phase-4-mapping-sync.md",
+      "classification_reason": "already archived; directive_4",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/archive/canon-stabilization-plan-20260610/phase-5-handoff-report.md",
+      "proposed_path": "docs/archive/canon-stabilization-plan-20260610/phase-5-handoff-report.md",
+      "classification_reason": "already archived; directive_4",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/archive/chitosan_brief_evaluation.md",
+      "proposed_path": "docs/archive/chitosan_brief_evaluation.md",
+      "classification_reason": "already archived; directive_4",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/archive/five_gold_standards_evaluation.md",
+      "proposed_path": "docs/archive/five_gold_standards_evaluation.md",
+      "classification_reason": "already archived; directive_4",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/archive/mof_brief_evaluation.md",
+      "proposed_path": "docs/archive/mof_brief_evaluation.md",
+      "classification_reason": "already archived; directive_4",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/archive/mof_brief_evaluation_v2.md",
+      "proposed_path": "docs/archive/mof_brief_evaluation_v2.md",
+      "classification_reason": "already archived; directive_4",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/archive/quality-audit-2026-06-07.md",
+      "proposed_path": "docs/archive/quality-audit-2026-06-07.md",
+      "classification_reason": "already archived; directive_4",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/archive/repo-status-briefing.md",
+      "proposed_path": "docs/archive/repo-status-briefing.md",
+      "classification_reason": "already archived; directive_4",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/archive/adrmats_briefs_pre_phase9/bpa_内分泌干扰物去除.json",
+      "proposed_path": "docs/archive/adrmats_briefs_pre_phase9/bpa_内分泌干扰物去除.json",
+      "classification_reason": "already archived; directive_4",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/archive/adrmats_briefs_pre_phase9/pb(ii)_重金属离子去除.json",
+      "proposed_path": "docs/archive/adrmats_briefs_pre_phase9/pb(ii)_重金属离子去除.json",
+      "classification_reason": "already archived; directive_4",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/archive/adrmats_briefs_pre_phase9/pfoa_痕量吸附去除.json",
+      "proposed_path": "docs/archive/adrmats_briefs_pre_phase9/pfoa_痕量吸附去除.json",
+      "classification_reason": "already archived; directive_4",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/archive/adrmats_briefs_pre_phase9/smx_抗生素吸附去除.json",
+      "proposed_path": "docs/archive/adrmats_briefs_pre_phase9/smx_抗生素吸附去除.json",
+      "classification_reason": "already archived; directive_4",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/archive/下一步执行计划_本地AI.md",
+      "proposed_path": "docs/archive/下一步执行计划_本地AI.md",
+      "classification_reason": "already archived; directive_4",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/archive/任务布置_brief中心_交本地AI执行.md",
+      "proposed_path": "docs/archive/任务布置_brief中心_交本地AI执行.md",
+      "classification_reason": "already archived; directive_4",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/archive/优化方案_v2综合_2026-06-07.md",
+      "proposed_path": "docs/archive/优化方案_v2综合_2026-06-07.md",
+      "classification_reason": "already archived; directive_4",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/archive/分层核查标准_交本地AI执行.md",
+      "proposed_path": "docs/archive/分层核查标准_交本地AI执行.md",
+      "classification_reason": "already archived; directive_4",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/archive/文献检索指令.md",
+      "proposed_path": "docs/archive/文献检索指令.md",
+      "classification_reason": "already archived; directive_4",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/archive/文献检索指令_第三波.md",
+      "proposed_path": "docs/archive/文献检索指令_第三波.md",
+      "classification_reason": "already archived; directive_4",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/archive/最新提取质量问题汇总.md",
+      "proposed_path": "docs/archive/最新提取质量问题汇总.md",
+      "classification_reason": "already archived; directive_4",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/archive/架构审查与优化建议_2026-06-07.md",
+      "proposed_path": "docs/archive/架构审查与优化建议_2026-06-07.md",
+      "classification_reason": "already archived; directive_4",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/archive/路径映射修复指令.md",
+      "proposed_path": "docs/archive/路径映射修复指令.md",
+      "classification_reason": "already archived; directive_4",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/archive/金标准闭环_启发质量评分卡.md",
+      "proposed_path": "docs/archive/金标准闭环_启发质量评分卡.md",
+      "classification_reason": "already archived; directive_4",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/README.md",
+      "proposed_path": "docs/imported/library-enhancement/README.md",
+      "classification_reason": "runtime asset; directive_3 keep in place, approved structure",
+      "active_references": "tools/biomimetic_context.py",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/design-rules.json",
+      "proposed_path": "docs/imported/library-enhancement/design-rules.json",
+      "classification_reason": "runtime asset read by biomimetic_context; directive_3",
+      "active_references": "tools/biomimetic_context.py",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/principles/mechanisms/.gitkeep",
+      "proposed_path": "docs/imported/library-enhancement/principles/mechanisms/.gitkeep",
+      "classification_reason": "dir marker; directive_3",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/principles/trade-offs/.gitkeep",
+      "proposed_path": "docs/imported/library-enhancement/principles/trade-offs/.gitkeep",
+      "classification_reason": "dir marker; directive_3",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/principles/design-strategies/.gitkeep",
+      "proposed_path": "docs/imported/library-enhancement/principles/design-strategies/.gitkeep",
+      "classification_reason": "dir marker; directive_3",
+      "active_references": "none",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/principles/mechanisms/amino-deprotonation-metal-coordination.md",
+      "proposed_path": "docs/imported/library-enhancement/principles/mechanisms/amino-deprotonation-metal-coordination.md",
+      "classification_reason": "boundary-reuse asset; directive_3",
+      "active_references": "tools/biomimetic_context.py",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/principles/mechanisms/amino-metal-selectivity.md",
+      "proposed_path": "docs/imported/library-enhancement/principles/mechanisms/amino-metal-selectivity.md",
+      "classification_reason": "boundary-reuse asset; directive_3",
+      "active_references": "tools/biomimetic_context.py",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/principles/mechanisms/amino-protonation-anion-adsorption.md",
+      "proposed_path": "docs/imported/library-enhancement/principles/mechanisms/amino-protonation-anion-adsorption.md",
+      "classification_reason": "boundary-reuse asset; directive_3",
+      "active_references": "tools/biomimetic_context.py",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/principles/mechanisms/carboxyl-deprotonation-metal-coordination.md",
+      "proposed_path": "docs/imported/library-enhancement/principles/mechanisms/carboxyl-deprotonation-metal-coordination.md",
+      "classification_reason": "boundary-reuse asset; directive_3",
+      "active_references": "tools/biomimetic_context.py",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/principles/mechanisms/carboxyl-ph-selectivity-shift.md",
+      "proposed_path": "docs/imported/library-enhancement/principles/mechanisms/carboxyl-ph-selectivity-shift.md",
+      "classification_reason": "boundary-reuse asset; directive_3",
+      "active_references": "tools/biomimetic_context.py",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/principles/mechanisms/catechol-amino-synergy.md",
+      "proposed_path": "docs/imported/library-enhancement/principles/mechanisms/catechol-amino-synergy.md",
+      "classification_reason": "boundary-reuse asset; directive_3",
+      "active_references": "tools/biomimetic_context.py",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/principles/mechanisms/catechol-low-ph-suppression.md",
+      "proposed_path": "docs/imported/library-enhancement/principles/mechanisms/catechol-low-ph-suppression.md",
+      "classification_reason": "boundary-reuse asset; directive_3",
+      "active_references": "tools/biomimetic_context.py",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/principles/mechanisms/catechol-metal-selectivity.md",
+      "proposed_path": "docs/imported/library-enhancement/principles/mechanisms/catechol-metal-selectivity.md",
+      "classification_reason": "boundary-reuse asset; directive_3",
+      "active_references": "tools/biomimetic_context.py",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/principles/mechanisms/catechol-oxidation-quinone.md",
+      "proposed_path": "docs/imported/library-enhancement/principles/mechanisms/catechol-oxidation-quinone.md",
+      "classification_reason": "boundary-reuse asset; directive_3",
+      "active_references": "tools/biomimetic_context.py",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/principles/mechanisms/catechol-ph-coordination.md",
+      "proposed_path": "docs/imported/library-enhancement/principles/mechanisms/catechol-ph-coordination.md",
+      "classification_reason": "boundary-reuse asset; directive_3",
+      "active_references": "tools/biomimetic_context.py",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/principles/mechanisms/chelate-effect-multidentate.md",
+      "proposed_path": "docs/imported/library-enhancement/principles/mechanisms/chelate-effect-multidentate.md",
+      "classification_reason": "boundary-reuse asset; directive_3",
+      "active_references": "tools/biomimetic_context.py",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/principles/mechanisms/competitive-ion-saturation.md",
+      "proposed_path": "docs/imported/library-enhancement/principles/mechanisms/competitive-ion-saturation.md",
+      "classification_reason": "boundary-reuse asset; directive_3",
+      "active_references": "tools/biomimetic_context.py",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/principles/mechanisms/egg-box-carboxyl-coordination.md",
+      "proposed_path": "docs/imported/library-enhancement/principles/mechanisms/egg-box-carboxyl-coordination.md",
+      "classification_reason": "boundary-reuse asset; directive_3",
+      "active_references": "tools/biomimetic_context.py",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/principles/mechanisms/high-salinity-coordination-suppression.md",
+      "proposed_path": "docs/imported/library-enhancement/principles/mechanisms/high-salinity-coordination-suppression.md",
+      "classification_reason": "boundary-reuse asset; directive_3",
+      "active_references": "tools/biomimetic_context.py",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/principles/mechanisms/ionic-strength-coordination-enhancement.md",
+      "proposed_path": "docs/imported/library-enhancement/principles/mechanisms/ionic-strength-coordination-enhancement.md",
+      "classification_reason": "boundary-reuse asset; directive_3",
+      "active_references": "tools/biomimetic_context.py",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/principles/mechanisms/irving-williams-selectivity.md",
+      "proposed_path": "docs/imported/library-enhancement/principles/mechanisms/irving-williams-selectivity.md",
+      "classification_reason": "boundary-reuse asset; directive_3",
+      "active_references": "tools/biomimetic_context.py",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/principles/mechanisms/metal-ligand-ratio-stoichiometry.md",
+      "proposed_path": "docs/imported/library-enhancement/principles/mechanisms/metal-ligand-ratio-stoichiometry.md",
+      "classification_reason": "boundary-reuse asset; directive_3",
+      "active_references": "tools/biomimetic_context.py",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/principles/mechanisms/redox-catechol-degradation.md",
+      "proposed_path": "docs/imported/library-enhancement/principles/mechanisms/redox-catechol-degradation.md",
+      "classification_reason": "boundary-reuse asset; directive_3",
+      "active_references": "tools/biomimetic_context.py",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/principles/mechanisms/temperature-coordination-stability.md",
+      "proposed_path": "docs/imported/library-enhancement/principles/mechanisms/temperature-coordination-stability.md",
+      "classification_reason": "boundary-reuse asset; directive_3",
+      "active_references": "tools/biomimetic_context.py",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/principles/mechanisms/thiol-oxidation-degradation.md",
+      "proposed_path": "docs/imported/library-enhancement/principles/mechanisms/thiol-oxidation-degradation.md",
+      "classification_reason": "boundary-reuse asset; directive_3",
+      "active_references": "tools/biomimetic_context.py",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/principles/mechanisms/thiol-soft-metal-specificity.md",
+      "proposed_path": "docs/imported/library-enhancement/principles/mechanisms/thiol-soft-metal-specificity.md",
+      "classification_reason": "boundary-reuse asset; directive_3",
+      "active_references": "tools/biomimetic_context.py",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/principles/mechanisms/universal-proton-suppression.md",
+      "proposed_path": "docs/imported/library-enhancement/principles/mechanisms/universal-proton-suppression.md",
+      "classification_reason": "boundary-reuse asset; directive_3",
+      "active_references": "tools/biomimetic_context.py",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/principles/trade-offs/acid-resistance-vs-carboxyl-coordination.md",
+      "proposed_path": "docs/imported/library-enhancement/principles/trade-offs/acid-resistance-vs-carboxyl-coordination.md",
+      "classification_reason": "trade-off asset; directive_3",
+      "active_references": "tools/biomimetic_context.py",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/principles/trade-offs/ease-of-synthesis-vs-structural-control.md",
+      "proposed_path": "docs/imported/library-enhancement/principles/trade-offs/ease-of-synthesis-vs-structural-control.md",
+      "classification_reason": "trade-off asset; directive_3",
+      "active_references": "tools/biomimetic_context.py",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/principles/trade-offs/environmental-friendliness-vs-efficiency.md",
+      "proposed_path": "docs/imported/library-enhancement/principles/trade-offs/environmental-friendliness-vs-efficiency.md",
+      "classification_reason": "trade-off asset; directive_3",
+      "active_references": "tools/biomimetic_context.py",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/principles/trade-offs/high-capacity-vs-fast-kinetics.md",
+      "proposed_path": "docs/imported/library-enhancement/principles/trade-offs/high-capacity-vs-fast-kinetics.md",
+      "classification_reason": "trade-off asset; directive_3",
+      "active_references": "tools/biomimetic_context.py",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/principles/trade-offs/low-cost-vs-high-performance.md",
+      "proposed_path": "docs/imported/library-enhancement/principles/trade-offs/low-cost-vs-high-performance.md",
+      "classification_reason": "trade-off asset; directive_3",
+      "active_references": "tools/biomimetic_context.py",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/principles/trade-offs/mechanical-strength-vs-porosity.md",
+      "proposed_path": "docs/imported/library-enhancement/principles/trade-offs/mechanical-strength-vs-porosity.md",
+      "classification_reason": "trade-off asset; directive_3",
+      "active_references": "tools/biomimetic_context.py",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/principles/trade-offs/selectivity-vs-broad-spectrum.md",
+      "proposed_path": "docs/imported/library-enhancement/principles/trade-offs/selectivity-vs-broad-spectrum.md",
+      "classification_reason": "trade-off asset; directive_3",
+      "active_references": "tools/biomimetic_context.py",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/principles/trade-offs/wet-stability-vs-functional-activity.md",
+      "proposed_path": "docs/imported/library-enhancement/principles/trade-offs/wet-stability-vs-functional-activity.md",
+      "classification_reason": "trade-off asset; directive_3",
+      "active_references": "tools/biomimetic_context.py",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/principles/design-strategies/bio-to-material-feature-mapping.md",
+      "proposed_path": "docs/imported/library-enhancement/principles/design-strategies/bio-to-material-feature-mapping.md",
+      "classification_reason": "design-strategy asset; directive_3",
+      "active_references": "tools/biomimetic_context.py",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/principles/design-strategies/biomineralization-template-strategy.md",
+      "proposed_path": "docs/imported/library-enhancement/principles/design-strategies/biomineralization-template-strategy.md",
+      "classification_reason": "design-strategy asset; directive_3",
+      "active_references": "tools/biomimetic_context.py",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/principles/design-strategies/dynamic-responsive-design.md",
+      "proposed_path": "docs/imported/library-enhancement/principles/design-strategies/dynamic-responsive-design.md",
+      "classification_reason": "design-strategy asset; directive_3",
+      "active_references": "tools/biomimetic_context.py",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/principles/design-strategies/functional-group-density-capacity.md",
+      "proposed_path": "docs/imported/library-enhancement/principles/design-strategies/functional-group-density-capacity.md",
+      "classification_reason": "design-strategy asset; directive_3",
+      "active_references": "tools/biomimetic_context.py",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/principles/design-strategies/hierarchical-structure-advantage.md",
+      "proposed_path": "docs/imported/library-enhancement/principles/design-strategies/hierarchical-structure-advantage.md",
+      "classification_reason": "design-strategy asset; directive_3",
+      "active_references": "tools/biomimetic_context.py",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/principles/design-strategies/multi-pollutant-synergistic-removal.md",
+      "proposed_path": "docs/imported/library-enhancement/principles/design-strategies/multi-pollutant-synergistic-removal.md",
+      "classification_reason": "design-strategy asset; directive_3",
+      "active_references": "tools/biomimetic_context.py",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/principles/design-strategies/multivalent-synergy.md",
+      "proposed_path": "docs/imported/library-enhancement/principles/design-strategies/multivalent-synergy.md",
+      "classification_reason": "design-strategy asset; directive_3",
+      "active_references": "tools/biomimetic_context.py",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/principles/design-strategies/recyclability-design.md",
+      "proposed_path": "docs/imported/library-enhancement/principles/design-strategies/recyclability-design.md",
+      "classification_reason": "design-strategy asset; directive_3",
+      "active_references": "tools/biomimetic_context.py",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/principles/design-strategies/selectivity-design.md",
+      "proposed_path": "docs/imported/library-enhancement/principles/design-strategies/selectivity-design.md",
+      "classification_reason": "design-strategy asset; directive_3",
+      "active_references": "tools/biomimetic_context.py",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/imported/library-enhancement/principles/design-strategies/surface-wettability-tuning.md",
+      "proposed_path": "docs/imported/library-enhancement/principles/design-strategies/surface-wettability-tuning.md",
+      "classification_reason": "design-strategy asset; directive_3",
+      "active_references": "tools/biomimetic_context.py",
+      "replacement_document": "-",
+      "action": "no_action"
+    },
+    {
+      "original_path": "docs/README.md",
+      "proposed_path": "docs/README.md",
+      "classification_reason": "design §11 entry point (Phase 0 create)",
+      "active_references": "all",
+      "replacement_document": "-",
+      "action": "create"
+    }
+  ],
+  "reference_updates": [
+    {
+      "target": "README.md",
+      "fix": "update docs/imported/library-enhancement path references (unchanged location; verify links); ADRMATS_* stay; add registries/ references"
+    },
+    {
+      "target": "CLAUDE.md",
+      "fix": "update paths for COLLAB-*, review-sync-summary, review-worklog, review-full-audit-worklog, review-openclaw-*, PLAN.md, DEFINITIONS.md, review-full-audit-decision-queue, review-boundary-do-not-register -> registries/ and references/"
+    },
+    {
+      "target": "docs/active/CLAUDE-CODE-TAKEOVER.md",
+      "fix": "Yao-authorized 2026-06-19: work in /Users/panyao/Desktop/Biomimetic-design-library on review; /private/tmp/biomimetic-recovery-docs worktree is OBSOLETE; preserve tools/litextract and _w1/_w2/_w3_doi_map.json"
+    }
+  ],
+  "execution": {
+    "executed_at": "2026-06-19",
+    "git_mv_applied": 176,
+    "git_mv_failures": 0,
+    "move_integrity_issues": 0,
+    "broken_links_in_active_docs": 0,
+    "git_diff_check": "clean (working + staged)",
+    "hygiene": "1 failure (CLAUDE.md root .md) — unchanged from baseline, 0 new failures",
+    "staged_scope": "docs/ only; 0 forbidden (prototypes_db/feature-mapping.json/tools-litextract/_w*_doi_map.json)",
+    "reference_files_updated": [
+      "README.md",
+      "CLAUDE.md",
+      "docs/active/PROJECT-RECOVERY-DESIGN.md",
+      "docs/active/CLAUDE-CODE-TAKEOVER.md"
+    ],
+    "created": [
+      "docs/README.md"
+    ]
+  }
+}

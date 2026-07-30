@@ -1,0 +1,107 @@
+{
+  "id": "plant-gum",
+  "name_zh": "植物胶",
+  "name_en": "Plant Gum",
+  "organism": {
+    "scientific": "Acacia senegal (gum arabic), Cyamopsis tetragonoloba (guar gum)",
+    "category": "植物"
+  },
+  "biomimetic_dimension": "plant_biopolymer",
+  "library_tier": "extended",
+  "lifecycle_status": "active",
+  "coverage": "partial",
+  "status": "active",
+  "provenance_summary": "V1-B biological expansion wave. Plant gums (gum arabic, guar gum, xanthan) as bio-adsorbents for heavy metals and dyes. Rich in hydroxyl and carboxyl groups.",
+  "mechanisms": [
+    {
+      "mechanism_id": "PG-001",
+      "name": "Plant gum polysaccharide adsorption",
+      "description": "Plant gum polysaccharides with hydroxyl and carboxyl groups coordinate heavy metals and cationic dyes",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "Heavy metal ions and cationic dyes",
+          "basis": "from_source",
+          "source": "10.1016/j.carbpol.2021.118625"
+        },
+        "bio_structure": {
+          "text": "Plant gum polysaccharide with hydroxyl and carboxyl groups",
+          "basis": "from_source",
+          "source": "10.1016/j.carbpol.2021.118625"
+        },
+        "interaction": {
+          "text": "Coordination and electrostatic interaction with functional groups",
+          "basis": "from_source",
+          "source": "10.1016/j.carbpol.2021.118625"
+        },
+        "why_it_works": {
+          "text": "Abundant hydroxyl and carboxyl groups provide binding sites",
+          "basis": "from_source",
+          "source": "10.1016/j.carbpol.2021.118625"
+        },
+        "boundary_conditions": [
+          {
+            "text": "Aqueous environment",
+            "parameter": "medium",
+            "basis": "from_source",
+            "verification": "corroborated",
+            "gate_level": "hard",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "locator": "10.1016/j.carbpol.2021.118625",
+            "verification_method": "keyword_match"
+          }
+        ],
+        "transferable_principle": "Plant gum polysaccharides provide hydroxyl and carboxyl groups for heavy metal coordination"
+      },
+      "functional_groups": [
+        "-COOH（羧基）",
+        "配位硫",
+        "PLA酯基",
+        "配位/螯合位点",
+        "-S-（硫醚键）",
+        "配位氧",
+        "-OH（羟基）",
+        "配位氮",
+        "-O-（醚键）"
+      ],
+      "key_structures": [
+        "吸附结构"
+      ]
+    }
+  ],
+  "performance_data": [],
+  "engineering_constraints": [
+    {
+      "constraint_id": "PG-E001",
+      "description": "Plant gum extraction: water dissolution and purification from plant exudates",
+      "evidence_type": "from_source"
+    }
+  ],
+  "narrative": [
+    {
+      "narrative_id": "PG-N001",
+      "text": "Plant gums are natural polysaccharides exuded by plants. Gum arabic, guar gum, and xanthan are widely used in food and pharmaceutical industries. Their hydroxyl and carboxyl groups make them effective bio-adsorbents."
+    }
+  ],
+  "design_translation": {
+    "idea": "Use plant gums (gum arabic, guar gum) as bio-adsorbents for heavy metals and dyes",
+    "examples": [
+      "Gum arabic for Pb²⁺ adsorption",
+      "Guar gum hydrogel for dye removal"
+    ],
+    "source_tier": "literature",
+    "applicability": "Heavy metal and dye removal from wastewater"
+  },
+  "honesty_ledger": {
+    "from_source_mechanisms": 1,
+    "llm_inferred_mechanisms": 0,
+    "verified_performance_data": 0,
+    "missing_pdf_items": 0,
+    "knowledge_gaps": [
+      "Need quantitative performance data",
+      "Comparison of different plant gums"
+    ]
+  }
+}

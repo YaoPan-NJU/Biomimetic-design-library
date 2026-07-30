@@ -1,0 +1,359 @@
+{
+ "id": "p450bisd-bisphenol-monooxygenase",
+ "name_zh": "P450bisd 双酚单加氧酶",
+ "name_en": "P450bisd Bisphenol Monooxygenase",
+ "organism": {
+  "scientific": "Sphingobium (原 Sphingomonas) sp. strain AO1（P450bisd 双酚 A 降解细胞色素 P450 单加氧酶）",
+  "category": "微生物"
+ },
+ "biomimetic_dimension": "分子仿生",
+ "features": [
+  "特异性识别"
+ ],
+ "tested_conditions": {
+  "tested_ph_range": null,
+  "tested_temp_range": null,
+  "salinity": null,
+  "note": "P450bisd 为细菌胞内可溶细胞色素 P450 单加氧酶（催化转化/降解原型），属降解转化类而非选择性吸附类；本库无其吸附性能测试条件，performance_data 为空，故吸附测试条件全空。原文 Km/kcat 为酶催化动力学参数，非吸附剂性能，未入 performance_data。"
+ },
+ "library_tier": "extended",
+ "lifecycle_status": "active",
+ "coverage": "partial",
+ "status": "active",
+ "provenance_summary": {
+  "n_papers": 2,
+  "n_verified": 11,
+  "n_unverified": 0,
+  "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与硬边界条数（PBISD-001 四要素+2 硬边界=6，PBISD-002 三要素+0=3，另有 1DZ4 旁证=共 11 计）。机制接地限于 P450bisd 对 BPA 的酶学转化（Sasaki 2005 AEM，PMID 16332782/PMC1317416 摘要逐字 quote）与同源结构代理（P450cam CYP101，PDB 1DZ4，恶臭假单胞菌 Pseudomonas putida，RCSB 沉积记录逐字 quote）；P450bisd 本身无已解析晶体结构（RCSB 检索未命中），1DZ4 为同源结构代理并显式标注代理关系。BPA 仿生吸附材料转译为 design_translation（llm_inferred/inspiration），仅底物口袋几何可转译，无吸附性能数据。正文 quote 逐字取自 PubMed 摘要与 RCSB 沉积记录（可核验），未做全文 PDF 审计，故为 extended 而非 core。"
+ },
+ "mechanisms": [
+  {
+   "mechanism_id": "PBISD-001",
+   "name": "P450bisd 单加氧酶对双酚 A 的催化转化（酶学机制）",
+   "description": "Sphingobium (原 Sphingomonas) sp. strain AO1 的细胞色素 P450 单加氧酶系统参与双酚 A（BPA）降解：纯化的组分包括细胞色素 P450（P450bisd）、铁氧还蛋白（Fd(bisd)，含 putidaredoxin 型 [2Fe-2S] 簇）与铁氧还蛋白还原酶（Red(bisd)）；P450bisd 在 Fd(bisd)、Red(bisd) 与 NADH 存在下转化 BPA，Km 约 85 μM、kcat 约 3.9 min⁻¹；检出两个羟基化降解产物（1,2-bis(4-hydroxyphenyl)-2-propanol 与 2,2-bis(4-hydroxyphenyl)-1-propanol），属 ipso-羟基化转化路线",
+   "基本原理": "细菌细胞色素 P450 单加氧酶经电子传递链（铁氧还蛋白/还原酶/NADH）活化血红素氧，对双酚底物执行氧化转化；该酶是自然界处理 BPA 的真实生物降解方案，将双酚骨架转化为羟基化产物",
+   "source": "literature",
+   "ref_doi": "10.1128/AEM.71.12.8024-8030.2005",
+   "verification": "verified",
+   "verification_quote": "the cytochrome P450 monooxygenase system was shown to be involved in bisphenol A (BPA) degradation by Sphingomonas sp. strain AO1",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "双酚 A（BPA，2,2-bis(4-hydroxyphenyl)propane）：含两个对羟基苯基经异丙基桥键相连的双酚骨架，为 P450bisd 的天然降解底物；Sphingomonas sp. strain AO1 经细胞色素 P450 单加氧酶系统降解 BPA",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1128/AEM.71.12.8024-8030.2005",
+     "locator": "Abstract, p.8024",
+     "quote": "the cytochrome P450 monooxygenase system was shown to be involved in bisphenol A (BPA) degradation by Sphingomonas sp. strain AO1",
+     "scope_match": "Keywords: bisphenol A, degradation, Sphingomonas, cytochrome P450"
+    },
+    "bio_structure": {
+     "text": "P450bisd 单加氧酶系统由三个纯化组分构成：细胞色素 P450（P450bisd，约 102.3 kDa 同源二聚体）、铁氧还蛋白（Fd(bisd)，约 19.1 kDa，含 putidaredoxin 型 [2Fe-2S] 簇）与铁氧还蛋白还原酶（Red(bisd)）；P450bisd 为催化中心，其底物口袋几何由同源结构代理 PDB 1DZ4（P450cam，见 PBISD-002）间接接地",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1128/AEM.71.12.8024-8030.2005",
+     "locator": "Abstract, p.8024",
+     "quote": "we purified the components of this monooxygenase, cytochrome P450 (P450bisd), ferredoxin (Fd(bisd)), and ferredoxin reductase (Red(bisd))",
+     "scope_match": "Keywords: P450bisd, monooxygenase, ferredoxin, cytochrome P450"
+    },
+    "interaction": {
+     "text": "P450bisd 在 Fd(bisd)、Red(bisd) 与 NADH 存在下转化 BPA（催化氧化转化，非化学计量吸附）；酶催化动力学参数 Km 约 85 μM、kcat 约 3.9 min⁻¹（酶本征活性，非吸附剂性能）；NADPH 与菠菜铁氧还蛋白/还原酶仅给出弱单加氧酶活性，显示电子传递系统具严格特异性",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1128/AEM.71.12.8024-8030.2005",
+     "locator": "Abstract, p.8024",
+     "quote": "P450(bisd), in the presence of Fd(bisd), Red(bisd), and NADH, was able to convert BPA",
+     "scope_match": "Keywords: P450, NADH, convert, BPA"
+    },
+    "why_it_works": {
+     "text": "细菌细胞色素 P450 单加氧酶系统以活化血红素氧对双酚底物执行氧化转化；Sasaki 2005 为首次证明细菌中细胞色素 P450 单加氧酶系统参与 BPA 降解的报道，确立 P450bisd 作为自然界处理 BPA 的真实酶学降解方案",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1128/AEM.71.12.8024-8030.2005",
+     "locator": "Abstract, p.8024",
+     "quote": "This is the first report demonstrating that the cytochrome P450 monooxygenase system in bacteria is involved in BPA degradation",
+     "scope_match": "Keywords: cytochrome P450, monooxygenase, bacteria, BPA degradation"
+    },
+    "boundary_conditions": [
+     {
+      "text": "电子供体特异性：P450bisd 催化依赖其同源电子传递链（Fd(bisd)/Red(bisd)/NADH）；NADPH、菠菜铁氧还蛋白与菠菜铁氧还蛋白还原酶仅产生弱单加氧酶活性，电子传递系统具严格特异性，脱离该辅因子链则转化效率骤降",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "Abstract, p.8024",
+      "quote": "NADPH, spinach ferredoxin, and spinach ferredoxin reductase resulted in weak monooxygenase activity",
+      "scope_match": "Keywords: NADPH, ferredoxin, monooxygenase, weak",
+      "source_asset": null
+     },
+     {
+      "text": "转化产物谱：P450bisd 系统检出两个 BPA 降解产物，经质谱推断为 1,2-bis(4-hydroxyphenyl)-2-propanol 与 2,2-bis(4-hydroxyphenyl)-1-propanol（羟基化丙醇类，对应 ipso-羟基化转化路线）；产物谱限定该酶的转化路径",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "Abstract, p.8024",
+      "quote": "were thought to be 1,2-bis(4-hydroxyphenyl)-2-propanol and 2,2-bis(4-hydroxyphenyl)-1-propanol based on mass spectrometry-mass spectrometry analysis",
+      "scope_match": "Keywords: hydroxyphenyl, propanol, mass spectrometry",
+      "source_asset": null
+     },
+     {
+      "text": "产物生物活性边界：本条酶学证据未测定 BPA 转化产物的雌激素活性；P450bisd 羟基化产物相对 BPA 的雌激素活性是否不升高须独立核验，不得默认降解即去毒化（定性，未接地）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "细胞色素 P450 单加氧酶以活化血红素氧在底物口袋内对双酚桥键执行位点特异性氧化转化（ipso-羟基化），其底物识别本质是口袋几何对双酚骨架的夹持定位与活化氧几何的匹配；该催化转化原理中仅底物口袋几何可转译为人工识别位点",
+    "verification_quote": "the cytochrome P450 monooxygenase system was shown to be involved in bisphenol A (BPA) degradation by Sphingomonas sp. strain AO1"
+   },
+   "source_doi": "10.1128/AEM.71.12.8024-8030.2005",
+   "source_page": 8024,
+   "source_locator": "Abstract, p.8024（PubMed PMID 16332782 / PMC1317416 摘要逐字）",
+   "source_file": "Appl Environ Microbiol 71(12):8024-8030（Sasaki 2005；PubMed/PMC 摘要逐字接地；未做本地全文 PDF 审计）",
+   "functional_groups": [
+    "血红素活化氧（细胞色素 P450 催化中心）",
+    "铁氧还蛋白 [2Fe-2S] 电子传递簇",
+    "底物口袋（双酚骨架夹持几何）"
+   ],
+   "key_structures": [
+    "催化转化结构"
+   ]
+  },
+  {
+   "mechanism_id": "PBISD-002",
+   "name": "保守 P450 折叠的底物口袋与活化氧几何（P450cam 同源结构代理）",
+   "description": "P450bisd 本身无已解析晶体结构（RCSB 检索未直接命中）；以 CYP101 家族同源 P450cam（恶臭假单胞菌 Pseudomonas putida 高铁细胞色素 P450cam，PDB 1DZ4，Schlichting 2000 Science 287:1615）作底物口袋几何接地代理。P450cam 为氧化还原酶/单加氧酶，含血红素辅基与三价铁活性中心，代表细菌细胞色素 P450 的保守折叠：埋藏底物口袋位于血红素铁上方，活化氧几何朝向底物，构成底物定位与氧化转化的结构框架",
+   "基本原理": "细菌细胞色素 P450 共享保守折叠：血红素辅基埋于蛋白内部，底物口袋位于血红素铁上方，活化氧物种以受控几何朝向底物；P450bisd 作为 CYP 家族成员继承该口袋-血红素-活化氧几何框架，底物在口袋内的定位决定氧化转化的位点选择性",
+   "source": "literature",
+   "ref_doi": "10.1128/AEM.71.12.8024-8030.2005",
+   "verification": "corroborated",
+   "verification_quote": "OXIDOREDUCTASE, MONO-OXYGENASE, HEME, FERRIC",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "双酚 A 双酚骨架须进入 P450 底物口袋并在血红素活化氧上方定位，方可被氧化转化；该底物定位几何在 P450bisd 中无直接结构，由同源 P450cam（PDB 1DZ4）的保守口袋-血红素几何代理外推（机理层）",
+     "basis": "llm_inferred"
+    },
+    "bio_structure": {
+     "text": "P450cam（CYP101，恶臭假单胞菌 Pseudomonas putida）PDB 1DZ4 为高铁（ferric）细胞色素 P450，聚合物实体描述 'CYTOCHROME P450-CAM'，关键词 'OXIDOREDUCTASE, MONO-OXYGENASE, HEME, FERRIC'（X 射线衍射，Schlichting 2000 Science 287:1615）；代表细菌细胞色素 P450 保守折叠：含血红素辅基与三价铁活性中心的埋藏催化口袋",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "PDB 1DZ4 (RCSB)",
+     "locator": "PDB 1DZ4, KEYWDS / p.1615",
+     "quote": "OXIDOREDUCTASE, MONO-OXYGENASE, HEME, FERRIC",
+     "scope_match": "Keywords: oxidoreductase, mono-oxygenase, heme, ferric"
+    },
+    "interaction": {
+     "text": "P450cam 为单加氧酶，血红素（HEME）辅基配位三价铁（FERRIC）构成活化氧催化中心（PDB 1DZ4 关键词与实体描述直读）；保守 P450 折叠中活化氧物种在血红素铁上方生成并朝向口袋内底物，是底物氧化转化的几何基础（机理由 1DZ4 沉积记录与 P450 通识接地）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "PDB 1DZ4 (RCSB)",
+     "locator": "PDB 1DZ4, polymer entity / p.1615",
+     "quote": "CYTOCHROME P450-CAM",
+     "scope_match": "Keywords: cytochrome, cam",
+     "interaction_note": "P450cam 底物为樟脑（camphor），1DZ4 为高铁静息态；此处仅作 P450 保守折叠的几何接地代理，非 P450bisd 与 BPA 的直接复合物"
+    },
+    "why_it_works": {
+     "text": "P450cam 是研究最透彻的细菌细胞色素 P450（CYP101），其保守折叠（埋藏血红素口袋 + 活化氧几何 + 底物定位）为同家族 P450bisd 的底物口袋几何提供结构代理；因 P450bisd 无已解析结构，本要素以同源代理外推，底物口袋对双酚桥键的具体夹持几何属机理层推断",
+     "basis": "llm_inferred"
+    },
+    "boundary_conditions": [
+     {
+      "text": "同源代理边界：1DZ4 为 P450cam（CYP101，樟脑羟基化酶）的高铁静息态结构，与 P450bisd 属同家族但非同蛋白；口袋残基、底物特异性与底物-血红素距离不可由 1DZ4 直接套用至 BPA，仅作保守折叠层面的几何代理（定性）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "细胞色素 P450 的保守折叠（埋藏底物口袋 + 血红素活化氧几何）说明位点特异性氧化转化依赖底物在口袋内相对活化氧的精确定位；该'口袋几何定位底物 + 活化氧几何'框架是可转译的结构原理（活化氧催化本身不可直接转译为吸附，仅口袋几何可转译）",
+    "verification_quote": "OXIDOREDUCTASE, MONO-OXYGENASE, HEME, FERRIC"
+   },
+   "source_doi": "10.1126/science.287.5458.1615",
+   "source_page": 1615,
+   "source_locator": "PDB 1DZ4, KEYWDS / p.1615（Schlichting 2000 Science 287:1615）",
+   "source_file": "PDB 1DZ4（RCSB 沉积数据；P450cam，Pseudomonas putida）；未做本地全文 PDF 审计",
+   "functional_groups": [
+    "血红素辅基（三价铁活性中心）",
+    "埋藏底物口袋（保守 P450 折叠）"
+   ],
+   "key_structures": [
+    "催化转化结构"
+   ]
+  }
+ ],
+ "performance_data": [],
+ "engineering_constraints": [
+  {
+   "constraint": "可溶多组分酶形态",
+   "value": "P450bisd 为可溶细胞色素 P450（约 102.3 kDa 同源二聚体），催化须 Fd(bisd)、Red(bisd) 与 NADH 辅因子链耦联，非单一固体材料可直接复制",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "Sasaki 2005 摘要：P450bisd 与 Fd(bisd) 为同源二聚体，分子量 102.3 与 19.1 kDa；转化需 Fd/Red/NADH",
+   "source": "literature",
+   "ref_doi": "10.1128/AEM.71.12.8024-8030.2005"
+  },
+  {
+   "constraint": "酶催化本征活性（非吸附性能）",
+   "value": "BPA 降解 Km 约 85 ± 4.7 μM、kcat 约 3.9 ± 0.04 min⁻¹（酶催化动力学参数，非吸附剂 qmax/Kd）",
+   "unit": "μM / min⁻¹",
+   "relevance": "medium",
+   "explanation": "Sasaki 2005 摘要逐字：'The K(m) and kcat values for BPA degradation were 85 +/- 4.7 microM and 3.9 +/- 0.04 min(-1), respectively'；记为酶机制事实，未入 performance_data",
+   "source": "literature",
+   "ref_doi": "10.1128/AEM.71.12.8024-8030.2005"
+  },
+  {
+   "constraint": "电子传递严格特异性",
+   "value": "NADPH、菠菜铁氧还蛋白/还原酶仅给弱单加氧酶活性，P450bisd 电子传递链具严格特异性",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "Sasaki 2005 摘要逐字：'NADPH, spinach ferredoxin, and spinach ferredoxin reductase resulted in weak monooxygenase activity'",
+   "source": "literature",
+   "ref_doi": "10.1128/AEM.71.12.8024-8030.2005"
+  },
+  {
+   "constraint": "底物口袋几何依赖（同源代理外推）",
+   "value": "位点选择性转化依赖底物在口袋内相对血红素活化氧的定位；P450bisd 口袋无解析结构，几何约束由 P450cam（PDB 1DZ4）同源代理外推（机理推断）",
+   "unit": null,
+   "relevance": "medium",
+   "explanation": "机理推断（基于 1DZ4 保守 P450 折叠与 P450bisd 无结构事实）",
+   "source": "llm_inference",
+   "ref_doi": null
+  }
+ ],
+ "narrative": {
+  "entries": [
+   {
+    "source_file": "Appl Environ Microbiol 71(12):8024-8030（Sasaki 2005，DOI 10.1128/AEM.71.12.8024-8030.2005，PMID 16332782/PMC1317416）+ PDB 1DZ4（P450cam，Schlichting 2000 Science 287:1615）",
+    "paper_id": "2005-Sasaki-P450bisd-BPA-degradation",
+    "sections": {
+     "problem_definition": "双酚 A（BPA）是大量使用的工业单体，具内分泌干扰活性，在环境中广泛检出。自然界是否存在能真正降解 BPA 骨架的微生物酶学方案，是生物修复与仿生设计的基础问题。Sphingobium（原 Sphingomonas）sp. strain AO1 能降解 BPA，但其降解酶的化学本质此前不明。",
+     "biological_solution": "Sasaki 等（2005）纯化了 strain AO1 的 BPA 降解单加氧酶系统三个组分：细胞色素 P450（P450bisd，约 102.3 kDa 同源二聚体）、铁氧还蛋白（Fd(bisd)，约 19.1 kDa，含 putidaredoxin 型 [2Fe-2S] 簇）与铁氧还蛋白还原酶（Red(bisd)）。P450bisd 在 Fd(bisd)/Red(bisd)/NADH 存在下转化 BPA，Km 约 85 μM、kcat 约 3.9 min⁻¹；NADPH 与菠菜铁氧还蛋白/还原酶仅给弱活性，显示电子传递链严格特异性。HPLC 检出两个降解产物，经质谱推断为 1,2-bis(4-hydroxyphenyl)-2-propanol 与 2,2-bis(4-hydroxyphenyl)-1-propanol（羟基化丙醇类，对应 ipso-羟基化转化路线）。这是首次证明细菌细胞色素 P450 单加氧酶系统参与 BPA 降解。P450bisd 无已解析晶体结构，其底物口袋几何以 CYP101 家族同源 P450cam（PDB 1DZ4，恶臭假单胞菌，高铁细胞色素 P450cam，Schlichting 2000 Science 287:1615）作保守折叠代理接地：细菌 P450 共享埋藏血红素口袋与血红素铁上方的活化氧几何，底物在口袋内相对活化氧的定位决定氧化转化的位点选择性。",
+     "key_features": "必须保留：① 与双酚骨架几何互补的刚性底物口袋（夹持定位双酚，使桥键/ipso 碳对准活化氧）；② 受控的活化氧几何（血红素活化氧朝向底物）；③ 位点特异性氧化转化（ipso-羟基化）的产物路径。可灵活调整：口袋骨架材质、夹持基团化学、活化/氧化位点的实现方式。注意：催化氧化转化本身（活化氧、辅因子链）不可直接转译为吸附材料，仅底物口袋几何可转译。",
+     "design_mapping": "仿生映射：P450bisd '刚性芳香夹持底物口袋 + 活化氧几何对双酚桥键的断裂识别' → 面向 BPA 的识别/转化位点设计原理。边界声明：这是设计转译/启发（llm_inferred），非 from_source 事实——P450bisd 本身属催化转化（降解）而非选择性吸附，仅底物口袋几何可转译为人工识别位点；P450bisd 无解析结构，口袋几何经 P450cam（1DZ4）同源代理外推；BPA 吸附或催化材料的实际亲和力/选择性/转化产物谱须实验验证。",
+     "explainability_anchors": "设计溯源：P450bisd 经细胞色素 P450 单加氧酶系统降解 BPA（Sasaki 2005 摘要，from_source）+ 保守 P450 折叠的埋藏口袋与活化氧几何（PDB 1DZ4，from_source 同源代理）→ '刚性底物口袋几何夹持双酚 + 活化氧几何'可迁移原理 → BPA 识别/转化位点设计（llm_inferred 启发，仅口袋几何可转译，须实验验证）。"
+    }
+   }
+  ]
+ },
+ "design_translation": [
+  {
+   "idea": "提取 P450bisd 的'刚性芳香夹持底物口袋几何'（经 P450cam 1DZ4 同源代理外推的保守 P450 口袋-底物定位框架），移植到多孔固体载体，构建对双酚 A 双酚骨架几何互补的夹持识别位点：以刚性芳香壁面与预组织氢键给体（识别两个对位酚羟基）按双酚桥键跨度排布，使双酚在孔内以与天然口袋相似的夹持几何定位。活化氧催化转化本身不转译（非吸附机制），仅转译底物口袋几何的识别/定位原理",
+   "specific_functional_group": "酚羟基识别基团（预组织氢键给体/受体，如脲/酰胺/吡啶位点）按双酚 A 两端酚羟基间距排布；刚性芳香孔壁（π-π 夹持双酚芳环）",
+   "material_handle": "介孔二氧化硅、共价有机框架（COF）或交联聚合物骨架上以刚性芳香连接体构筑尺寸匹配双酚 A 的夹持空腔，经分子印迹或刚性间隔臂固定酚羟基识别位点间距与取向",
+   "target_interaction": "双酚 A 两个酚羟基的方向性氢键识别 + 芳环与刚性芳香孔壁的 π-π 夹持 + 与双酚桥键跨度匹配的腔体几何（天然机制为催化转化，此处仅借用口袋几何的识别/定位）",
+   "source_tier": "llm_inference",
+   "evidence_tier": "inspiration（原理层外推：P450bisd 对 BPA 的酶学降解接地于 Sasaki 2005 摘要；底物口袋几何经 P450cam 1DZ4 同源代理外推；P450bisd 无解析结构，且其天然机制为催化转化而非吸附，仅口袋几何可转译，无 BPA 吸附/催化材料实验数据）",
+   "examples": [],
+   "design_principle": "P450bisd 证明细胞色素 P450 单加氧酶可经底物口袋几何将双酚定位至活化氧而执行位点特异性 ipso-羟基化转化（Sasaki 2005）；保守 P450 折叠（1DZ4）显示位点选择性来自口袋对底物的几何定位，该'口袋几何定位'原理可独立于活化氧催化转译为人工识别位点",
+   "implementation_example": "具刚性芳香孔壁与双酚 A 尺寸匹配夹持空腔、预组织酚羟基识别位点的分子印迹聚合物或 COF（无实验数据，仅为设计假设）",
+   "constraints": "P450bisd 天然机制为催化降解而非吸附，活化氧/辅因子链不可转译，仅口袋几何可借用；P450bisd 无解析结构，口袋几何经 1DZ4 同源代理外推；BPA 与结构类似物（双酚 S、双酚 F、烷基酚、天然酚）的区分须在设计层构建；水相中氢键位点的水合竞争与天然有机质干扰是关键挑战；若目标是降解而非吸附，须另行引入催化位点并核验产物谱与产物雌激素活性不升高",
+   "failure_modes": "刚性夹持空腔对双酚 A 适配过强而对类似双酚无区分；酚羟基识别位点暴露于体相水被氢键竞争淬灭；仅识别无催化则止于富集而非降解；若引入催化位点，产物可能较 BPA 更具内分泌干扰活性（须独立核验，不得默认去毒）",
+   "material_realization_examples": []
+  }
+ ],
+ "honesty_ledger": {
+  "facts": [
+   {
+    "type": "mechanism",
+    "index": 0,
+    "name": "P450bisd 单加氧酶对双酚 A 的催化转化（酶学机制）",
+    "basis": "from_source_verified",
+    "note": "Sasaki 2005 AEM（PMID 16332782/PMC1317416）摘要逐字：细胞色素 P450 单加氧酶系统参与 Sphingomonas sp. AO1 的 BPA 降解；纯化 P450bisd/Fd(bisd)/Red(bisd)；P450bisd+Fd+Red+NADH 转化 BPA（Km 约 85 μM、kcat 约 3.9 min⁻¹）；电子传递严格特异性；两个羟基化产物（ipso-羟基化路线）；首例细菌 P450 参与 BPA 降解。quote 取自 PubMed 摘要（可核验），未做全文 PDF 审计"
+   },
+   {
+    "type": "mechanism",
+    "index": 1,
+    "name": "保守 P450 折叠的底物口袋与活化氧几何（P450cam 同源结构代理）",
+    "basis": "from_source_corroborated",
+    "note": "PDB 1DZ4（RCSB）：ferric p450cam from pseudomonas putida，实体 'CYTOCHROME P450-CAM'，KEYWDS 'OXIDOREDUCTASE, MONO-OXYGENASE, HEME, FERRIC'，Schlichting 2000 Science 287:1615。作 P450bisd 保守折叠几何代理，显式标注为同源代理（非同蛋白）；P450bisd 无解析结构经 RCSB 检索确认"
+   }
+  ],
+  "leads": [],
+  "inferences": [
+   {
+    "type": "design_translation",
+    "index": 0,
+    "idea": "提取 P450bisd 刚性芳香夹持底物口袋几何移植到多孔载体识别 BPA（仅口袋几何可转译，活化氧催化不转译）",
+    "basis": "llm_inferred",
+    "label": "inspiration",
+    "note": "P450bisd 天然机制为催化降解而非吸附；P450bisd 无解析结构，口袋几何经 P450cam（1DZ4）同源代理外推；BPA 吸附/催化材料的亲和力、选择性与产物谱须实验验证"
+   },
+   {
+    "type": "fact_derivation",
+    "index": 0,
+    "name": "ipso-羟基化转化路线归属",
+    "basis": "llm_inferred",
+    "label": "mechanism_derivation",
+    "note": "摘要仅给出两个羟基化丙醇产物的质谱推断；ipso-羟基化与后续 C-C 桥裂解的完整路径系据产物结构（ipso 碳羟基化）与 BPA 降解通识推断，非摘要逐字陈述，全文未审计"
+   }
+  ],
+  "boundary_notes": [
+   "本原型天然机制为细胞色素 P450 单加氧酶对 BPA 的催化氧化转化（降解/转化类），非选择性吸附；机制 from_source 接地限于该酶学转化与保守 P450 折叠几何",
+   "P450bisd 无已解析晶体结构（RCSB 检索未命中）；1DZ4 为 P450cam（CYP101，樟脑羟基化酶，恶臭假单胞菌）高铁静息态的同源结构代理，口袋残基/底物距离不可直接套用至 BPA",
+   "设计转译仅取底物口袋几何（识别/定位），活化氧催化与辅因子链不可转译为吸附；一切 BPA 吸附/催化材料转译为 llm_inferred/inspiration，不得用作 BPA 去除的 direct evidence",
+   "无 BPA 吸附性能数据（qmax 等）；原文 Km/kcat 为酶催化动力学参数，记于 engineering_constraints 与叙事，严格未入 performance_data，亦未从外部污染物知识库搬运任何吸附性能数值（知识隔离红线）",
+   "BPA 转化产物（bis(4-hydroxyphenyl)propanol 类）的雌激素活性是否不升高，本条酶学证据未测定，标为 soft/llm_inferred/needs_review，不得默认降解即去毒"
+  ],
+  "missing_pdf_items": [
+   "Sasaki 2005 AEM 全文 PDF（quote 取自 PubMed 摘要 PMID 16332782 / PMC1317416，逐字可核验；正文内精确图/表与产物 MS 细节未审计）",
+   "Schlichting 2000 Science 287:1615（P450cam 催化路径，PDB 1DZ4 一次文献）全文 PDF（结构接地取自 RCSB 沉积记录 KEYWDS/实体描述）",
+   "P450bisd 的 BPA 降解 ipso-羟基化/C-C 桥裂解完整路径的原始机理文献（如 Tsutsumi 系列）未做全文审计，相关路径细节为推断"
+  ],
+  "generated_by": "manual-curation-2026-07-22",
+  "note": "诚实优先：机制接地限于 P450bisd 对 BPA 的酶学转化（Sasaki 2005 摘要）与保守 P450 折叠几何代理（PDB 1DZ4，显式标注同源代理）；P450bisd 无解析结构；一切 BPA 材料转译为 inspiration/外推，仅口袋几何可转译"
+ },
+ "boundary_rules": [
+  {
+   "rule": "电子供体特异性：P450bisd 催化依赖同源电子传递链（Fd(bisd)/Red(bisd)/NADH），异源供体（NADPH/菠菜铁氧还蛋白）仅给弱活性",
+   "source_mechanism": "P450bisd 单加氧酶对双酚 A 的催化转化（酶学机制）",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "转化产物谱：P450bisd 系统经 ipso-羟基化路线产生两个羟基化丙醇类 BPA 降解产物，产物谱限定转化路径",
+   "source_mechanism": "P450bisd 单加氧酶对双酚 A 的催化转化（酶学机制）",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "产物生物活性边界：BPA 转化产物的雌激素活性是否不升高未经本条证据测定，须独立核验，不得默认降解即去毒（定性，未接地）",
+   "source_mechanism": "P450bisd 单加氧酶对双酚 A 的催化转化（酶学机制）",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  },
+  {
+   "rule": "同源代理边界：1DZ4 为 P450cam 高铁静息态结构，与 P450bisd 属同家族非同蛋白，口袋残基与底物距离不可直接套用至 BPA，仅作保守折叠几何代理（定性）",
+   "source_mechanism": "保守 P450 折叠的底物口袋与活化氧几何（P450cam 同源结构代理）",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  }
+ ],
+ "mechanism_tags": [
+  "氢键",
+  "还原催化降解",
+  "几何识别"
+ ]
+}

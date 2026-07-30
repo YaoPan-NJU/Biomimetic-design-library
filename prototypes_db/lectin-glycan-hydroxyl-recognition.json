@@ -1,0 +1,352 @@
+{
+ "id": "lectin-glycan-hydroxyl-recognition",
+ "name_zh": "凝集素糖链羟基模式识别蛋白（刀豆球蛋白 A）",
+ "name_en": "Lectin Glycan Hydroxyl-Pattern Recognition Protein (Concanavalin A)",
+ "organism": {
+  "scientific": "Canavalia ensiformis（刀豆 凝集素 Concanavalin A / ConA）",
+  "category": "植物"
+ },
+ "biomimetic_dimension": "分子仿生",
+ "features": [
+  "特异性识别"
+ ],
+ "tested_conditions": {
+  "tested_ph_range": null,
+  "tested_temp_range": null,
+  "salinity": null,
+  "note": "ConA 为可溶性四聚体植物凝集素（分子识别原型），本库无其吸附性能测试条件；performance_data 为空，故测试条件全空。"
+ },
+ "library_tier": "extended",
+ "lifecycle_status": "active",
+ "coverage": "partial",
+ "status": "active",
+ "provenance_summary": {
+  "n_papers": 3,
+  "n_verified": 10,
+  "n_unverified": 0,
+  "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与硬边界条数（LEC-001 四要素+1 硬边界=5，LEC-002 四要素+1 硬边界=5）。机制接地限于 ConA 对甘露糖型单糖羟基模式的多点氢键识别与 Mn/Ca 金属辅因子预组织（PDB 5CNA 坐标直测 + Naismith 1994 摘要 + Loris 1998 摘要 + Kaushik 2009 摘要）；BPA 应用为 approach-2 类比转译（llm_inferred/inspiration），无 BPA 结合或吸附性能数据。quote 逐字取自 PubMed 摘要与 PDB 沉积记录（可核验），未做全文 PDF 审计。残基编号沿用 PDB 5CNA 链 A 编号（Asp208/Arg228/Asn14 与经典文献一致）。"
+ },
+ "mechanisms": [
+  {
+   "mechanism_id": "LEC-001",
+   "name": "多点氢键阵列对糖链表面羟基模式的识别",
+   "description": "刀豆球蛋白 A（ConA）以预组织的残基核心识别甘露糖型单糖表面的羟基空间模式：PDB 5CNA（2.0 Å，链 A）坐标直测，甲基 α-D-甘露吡喃糖苷（配体 MMA）的四个羟基与结合位点形成方向性氢键网络，Asp208 OD2→O4（2.63 Å）、Asp208 OD1→O6（2.88 Å）、Arg228 骨架酰胺 NH→O3（2.88 Å）、Asn14 ND2→O4（2.99 Å），另有 Leu99、Tyr100 骨架 NH 近 O6；同一结合位点以保守几何读取甘露糖的 O3/O4 顺式二醇与 O6 羟基",
+   "基本原理": "与目标羟基模式几何互补的多点氢键供体/受体阵列（保守残基核心）提供方向性相互作用，结合位点形状（保守核心加可变环）决定单糖特异性；甘露糖与半乳糖仅 C2 羟基轴向/平伏取向不同，氢键阵列即借此区分单糖立体化学",
+   "source": "literature",
+   "ref_doi": "10.1107/s0907444994005287",
+   "verification": "verified",
+   "verification_quote": "Each sugar is bound to the protein by hydrogen bonds and van der Waals contacts.",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "甘露糖型单糖表面羟基模式（ConA 天然配体；PDB 5CNA 配体 MMA 为甲基 α-D-甘露吡喃糖苷，呈 O2/O3/O4/O6 四羟基，其中 O3/O4 为顺式邻二醇，O3-O4 约 2.70 Å、O4-O6 约 3.83 Å，构成被识别的羟基空间模式）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1107/s0907444994005287",
+     "locator": "PDB 5CNA, HETNAM / p.847",
+     "quote": "MMA METHYL ALPHA-D-MANNOPYRANOSIDE",
+     "scope_match": "Keywords: MMA, mannopyranoside"
+    },
+    "bio_structure": {
+     "text": "ConA 单体糖结合位点由预组织残基核心构成；PDB 5CNA（链 A）坐标直测结合残基为 Asp208、Arg228、Asn14（并 Leu99、Tyr100 骨架 NH），与甘露糖四羟基一一对应；Naismith 1994 摘要指出糖的四个羟基被氢键合于结合位点，无糖结构中该位点由有序水分子占据，结合时这些有序水被排出",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1107/s0907444994005287",
+     "locator": "PDB 5CNA, chain A coordinates / p.847",
+     "quote": "These occupy positions similar to those of the four saccharide hydroxyls which are hydrogen bonded to the site.",
+     "scope_match": "Keywords: saccharide, hydroxyls, hydrogen"
+    },
+    "interaction": {
+     "text": "PDB 5CNA（链 A）坐标直测氢键距离：Asp208 OD2-H···O4（2.63 Å）、Asp208 OD1-H···O6（2.88 Å）、Arg228 骨架 NH···O3（2.88 Å）、Asn14 ND2-H···O4（2.99 Å）、Leu99 N···O6（3.06 Å）、Tyr100 N···O6（2.97 Å）；每个糖分子以氢键加范德华接触被蛋白结合，四聚体四个亚基的蛋白-糖相互作用近乎相同",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1107/s0907444994005287",
+     "locator": "Abstract, p.847",
+     "quote": "Each sugar is bound to the protein by hydrogen bonds and van der Waals contacts.",
+     "scope_match": "Keywords: sugar, hydrogen bonds, contacts"
+    },
+    "why_it_works": {
+     "text": "Legume 凝集素以氢键合于糖的保守残基核心加决定结合位点精确形状的可变环实现单糖特异性（Loris 1998 综述）；ConA 的保守核心（Asp208/Arg228/Asn14）提供对甘露糖羟基模式的方向性多点氢键，结合位点形状排除羟基取向不同的单糖（如半乳糖 C2 平伏羟基），从而区分单糖立体化学",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1016/s0167-4838(97)00182-9",
+     "locator": "Abstract, p.9",
+     "quote": "a conserved core of residues that hydrogen bond to the sugar, and a variable loop that determines the exact shape of the monosaccharide binding site",
+     "scope_match": "Keywords: conserved core, hydrogen bond, monosaccharide"
+    },
+    "boundary_conditions": [
+     {
+      "text": "单糖立体化学特异性：ConA 结合位点形状（保守核心加可变环）与甘露糖羟基模式几何互补，对羟基取向不同的单糖（如半乳糖）匹配差；单糖特异性由氢键合于糖的保守残基核心实现",
+      "parameter": "competing_ion",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "corroborated",
+      "gate_level": "hard",
+      "locator": "Abstract, p.9",
+      "quote": "Monosaccharide specificity seems to be achieved by the use of a conserved core of residues that hydrogen bond to the sugar",
+      "scope_match": "Keywords: monosaccharide, specificity, conserved core",
+      "source_asset": null
+     },
+     {
+      "text": "预组织多点氢键阵列需维持于结合位点微环境；给体/受体若完全暴露于体相水，水分子氢键竞争将削弱糖结合（定性，无数值阈值）",
+      "parameter": "wet_stability",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "与目标分子羟基模式几何互补的多点氢键供体/受体阵列，配合决定结合位点形状的保守核心与可变环，可通过氢键数目与方向性区分立体化学相近的含羟基分子",
+    "verification_quote": "Each sugar is bound to the protein by hydrogen bonds and van der Waals contacts."
+   },
+   "source_doi": "10.1107/s0907444994005287",
+   "source_page": 847,
+   "source_locator": "PDB 5CNA / p.847",
+   "source_file": "PDB 5CNA（RCSB 沉积数据，坐标直测）+ Acta Crystallogr D 50:847-858（Naismith 1994，PubMed 摘要）+ BBA 1383:9-36（Loris 1998，PubMed 摘要；未做本地全文 PDF 审计）",
+   "functional_groups": [
+    "氢键供体/受体（Asp208、Arg228、Asn14 侧链，Leu99/Tyr100 骨架酰胺 NH）",
+    "预组织结合位点（保守核心加可变环）"
+   ],
+   "key_structures": [
+    "识别结构"
+   ]
+  },
+  {
+   "mechanism_id": "LEC-002",
+   "name": "Mn/Ca 金属辅因子对糖识别环的结构预组织",
+   "description": "ConA 糖结合能力依赖两个紧邻金属辅因子（Mn²⁺ 与 Ca²⁺，相距 4.22 Å）；PDB 5CNA（链 A）坐标直测，Ca²⁺ 由 Tyr12 骨架羰基（2.27 Å）、Asn14 OD1（2.47 Å）、Asp19 OD2（2.34 Å）、Asp10 OD1（2.44 Å）配位，Mn²⁺ 由 Glu8 OE2（2.30 Å）、Asp10 OD2（1.97 Å）、Asp19 OD1（2.15 Å）、His24 NE2（2.51 Å）配位。桥联残基 Asn14 以 OD1 配位 Ca²⁺、同时以 ND2 氢键结合糖 O4，将金属位点与糖识别位点直接耦合",
+   "基本原理": "两个紧邻金属离子经配位保守酸性残基与骨架羰基预组织离子结合环的构象；金属配位预先支付识别环的构象熵代价并维持氢键阵列几何，桥联残基（Asn14）把金属位点与识别位点连为一体；去金属化使离子结合环构象紊乱而丧失糖结合",
+   "source": "literature",
+   "ref_doi": "10.1529/biophysj.108.134601",
+   "verification": "corroborated",
+   "verification_quote": "metal ions are known to control the sugar binding ability of legume lectins",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "ConA 糖结合能力依赖金属辅因子（legume 凝集素的糖结合能力由金属离子调控）；金属位点本身不直接接触糖，而经预组织识别环间接决定糖结合",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1529/biophysj.108.134601",
+     "locator": "Abstract, p.21",
+     "quote": "metal ions are known to control the sugar binding ability of legume lectins",
+     "scope_match": "Keywords: metal ions, sugar binding, legume"
+    },
+    "bio_structure": {
+     "text": "PDB 5CNA（链 A）含 Mn²⁺（残基 239）与 Ca²⁺（残基 240）两个金属辅因子，相距 4.22 Å，位于糖结合位点附近；HETNAM 记录 MN 为二价锰离子、CA 为钙离子。坐标直测配位层：Ca²⁺ 由 Tyr12 骨架羰基 O、Asn14 OD1、Asp19 OD2、Asp10 OD1 配位；Mn²⁺ 由 Glu8 OE2、Asp10 OD2、Asp19 OD1、His24 NE2 配位",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1107/s0907444994005287",
+     "locator": "PDB 5CNA, HETNAM & chain A coordinates / p.847",
+     "quote": "MN MANGANESE (II) ION",
+     "scope_match": "Keywords: MN, manganese"
+    },
+    "interaction": {
+     "text": "金属配位网络预组织离子结合环：桥联残基 Asn14 以 OD1 配位 Ca²⁺（2.47 Å）、同时以 ND2 氢键结合糖 O4（2.99 Å），把金属位点与糖识别位点直接耦合；Ca²⁺ 配位 Tyr12 骨架羰基（2.27 Å），Tyr100 侧链在结合时发生取向重排。Kaushik 2009 分子动力学显示去金属化使离子结合环产生大构象变化（部分环残基位移达 17 Å）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1529/biophysj.108.134601",
+     "locator": "Abstract, p.21",
+     "quote": "demetalization of ConA leads to large conformational changes in the ion binding loop",
+     "scope_match": "Keywords: demetalization, conformational changes, ion binding loop"
+    },
+    "why_it_works": {
+     "text": "金属离子预组织离子结合环的构象，维持糖结合所需的氢键阵列几何；去金属化使识别环紊乱、底物漂移，糖结合能力被废除。Kaushik 2009 的去金属化模拟为此前'去金属化废除糖结合'的实验观察提供了理论依据",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1529/biophysj.108.134601",
+     "locator": "Abstract, p.21-34",
+     "quote": "These simulations provide a theoretical rationale for previous experimental observations regarding the abolition of the sugar binding ability upon demetalization",
+     "scope_match": "Keywords: sugar binding, demetalization, abolition"
+    },
+    "boundary_conditions": [
+     {
+      "text": "金属辅因子依赖：Mn²⁺/Ca²⁺ 存在方能维持识别环预组织构象与糖结合能力；去金属化废除糖结合",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "corroborated",
+      "gate_level": "hard",
+      "locator": "Abstract, p.21",
+      "quote": "metal ions are known to control the sugar binding ability of legume lectins",
+      "scope_match": "Keywords: metal ions, sugar binding, legume",
+      "source_asset": null
+     },
+     {
+      "text": "金属位点需维持二价金属辅因子与适宜 pH/离子条件；螯合剂或极端 pH 可剥离金属并使识别环失活（定性，无数值阈值）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "两个紧邻金属离子经配位保守酸性残基与骨架羰基预组织识别环构象，桥联残基把金属位点与识别位点耦合；金属配位预组织降低结合熵代价并维持氢键阵列几何，该'金属辅因子预组织'原理可独立于蛋白骨架移植到人工识别位点",
+    "verification_quote": "metal ions are known to control the sugar binding ability of legume lectins"
+   },
+   "source_doi": "10.1529/biophysj.108.134601",
+   "source_page": 21,
+   "source_locator": "PDB 5CNA, chain A coordinates / p.21-34",
+   "source_file": "PDB 5CNA（RCSB 沉积数据，坐标直测）+ Biophys J 96:21-34（Kaushik 2009，PMC2710015 摘要；未做本地全文 PDF 审计）",
+   "functional_groups": [
+    "金属配位残基（Glu8、Asp10、Asp19、His24 配位 Mn²⁺；Tyr12 骨架羰基、Asn14、Asp19、Asp10 配位 Ca²⁺）",
+    "桥联残基（Asn14：OD1 配位 Ca²⁺，ND2 氢键结合糖）"
+   ],
+   "key_structures": [
+    "识别结构"
+   ]
+  }
+ ],
+ "performance_data": [],
+ "engineering_constraints": [
+  {
+   "constraint": "可溶蛋白形态",
+   "value": "ConA 为刀豆种子可溶性四聚体凝集素（RCSB 5CNA 条目分子质量 103.68 kDa，即约 26 kDa 单体组成的同源四聚体），其识别基序需移植/固定于固体载体方可用作吸附",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "RCSB 5CNA：molecular_weight 103.68 kDa（四聚体，链 A/B/C/D）；SOURCE 记 CANAVALIA ENSIFORMIS / JACK BEAN / ORGAN BEAN",
+   "source": "literature",
+   "ref_doi": "10.1107/s0907444994005287"
+  },
+  {
+   "constraint": "金属辅因子依赖",
+   "value": "糖结合依赖两个紧邻金属位点（Mn²⁺/Ca²⁺）的完整性；去金属化使离子结合环构象紊乱并丧失糖结合能力",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "Kaushik 2009：去金属化导致离子结合环大构象变化并废除糖结合（PMC2710015 摘要）；PDB 5CNA 坐标直测 Mn-Ca 4.22 Å 与配位层",
+   "source": "literature",
+   "ref_doi": "10.1529/biophysj.108.134601"
+  },
+  {
+   "constraint": "羟基模式几何特异性",
+   "value": "结合位点形状（保守核心加可变环）与甘露糖 O3/O4/O6 羟基模式几何互补，对羟基取向不同的单糖（如半乳糖）匹配差；ConA 本身提供单糖立体化学特异性，而非对某一非天然靶标的特异选择性",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "Loris 1998：单糖特异性由氢键合于糖的保守残基核心加决定结合位点形状的可变环实现（摘要）",
+   "source": "literature",
+   "ref_doi": "10.1016/s0167-4838(97)00182-9"
+  }
+ ],
+ "narrative": {
+  "entries": [
+   {
+    "source_file": "PDB 5CNA / Naismith 1994 Acta Crystallogr D 50:847-858（DOI 10.1107/s0907444994005287）+ Loris 1998 BBA 1383:9-36（DOI 10.1016/s0167-4838(97)00182-9）+ Kaushik 2009 Biophys J 96:21-34（DOI 10.1529/biophysj.108.134601）",
+    "paper_id": "1994-Naismith-ConA-methyl-mannopyranoside-structure",
+    "sections": {
+     "problem_definition": "糖类识别要求蛋白在一组化学结构高度相似的糖之间区分特定单糖。甘露糖与半乳糖仅 C2 羟基轴向/平伏取向不同，凝集素却须忠实识别其靶标单糖，以介导细胞黏附、种子贮藏蛋白分选与免疫识别等过程。如何以单一蛋白结构域经由对糖链表面羟基模式的多点读取区分单糖立体化学，是分子识别的基础问题。",
+     "biological_solution": "刀豆（Canavalia ensiformis）凝集素 ConA 为约 26 kDa 单体的同源四聚体，每个单体携带一个单糖结合位点，以读取糖链表面羟基的空间模式识别甘露糖型单糖。Naismith 等解析了 ConA 与甲基 α-D-甘露吡喃糖苷的 2.0 Å 晶体复合物（PDB 5CNA）：甘露糖四个羟基与预组织残基核心形成方向性氢键网络，坐标直测为 Asp208 OD2→O4（2.63 Å）、Asp208 OD1→O6（2.88 Å）、Arg228 骨架 NH→O3（2.88 Å）、Asn14 ND2→O4（2.99 Å）；摘要陈述'每个糖分子以氢键加范德华接触被蛋白结合'，且结合伴随有序水分子排出与 Tyr100 侧链取向重排。该结合依赖两个紧邻金属辅因子（Mn²⁺ 与 Ca²⁺，相距 4.22 Å）：Ca²⁺ 由 Tyr12 骨架羰基、Asn14、Asp19、Asp10 配位，Mn²⁺ 由 Glu8、Asp10、Asp19、His24 配位；桥联残基 Asn14 以 OD1 配位 Ca²⁺（2.47 Å）、同时以 ND2 氢键结合糖 O4（2.99 Å），把金属位点与糖识别位点直接耦合。Loris 1998 综述概括 legume 凝集素以'氢键合于糖的保守残基核心'加决定结合位点形状的可变环实现单糖特异性；Kaushik 2009 分子动力学显示去金属化使离子结合环产生大构象变化并废除糖结合，表明金属预组织识别环。",
+     "key_features": "必须保留：① 与目标羟基模式几何互补的多点氢键供体/受体阵列（Asp/Arg/Asn 型残基，方向性氢键）；② 金属配位预组织（两个紧邻金属离子固定识别环构象，桥联残基 Asn14 同时配位金属与氢键结合目标）；③ 保守核心加可变环界定的结合位点形状（位点几何特异性）。可灵活调整：载体骨架、氢键供体/受体化学、金属配位骨架或刚性间隔臂、腔体尺寸与疏水微环境。",
+     "design_mapping": "仿生映射：ConA 的'与羟基模式几何互补的多点氢键阵列加金属预组织识别环'→ 面向双酚 A（BPA）两个酚羟基几何排列的识别位点。边界声明：这是设计转译/启发（llm_inferred），非 from_source 事实。BPA 非 ConA 的天然或已记录靶标；酚氧与糖羟基在氢键供体/受体身份上类比（approach-2 类比），但 BPA 两个酚羟基的间距（约 10 Å，对位二苯基丙烷骨架）与甘露糖顺式邻二醇（O3-O4 约 2.70 Å）显著不同，类比限于羟基氢键供体/受体身份与多点原理，几何并不等同。区分 BPA 与单酚（苯酚、甲酚）或异构双酚（BPF/BPS）的选择性增量须实验验证。",
+     "explainability_anchors": "设计溯源：ConA 多点氢键识别甘露糖羟基模式加金属预组织识别环（PDB 5CNA，from_source，Naismith 1994 / Loris 1998 / Kaushik 2009）→ '与羟基模式几何互补的多点供体/受体阵列加金属配位预组织'可迁移原理（from_source）→ 双酚 A 两个酚羟基几何识别（llm_inferred 启发，须实验验证）。"
+    }
+   }
+  ]
+ },
+ "design_translation": [
+  {
+   "idea": "将 ConA 的'与羟基模式几何互补的多点氢键阵列加金属辅因子预组织识别环'转译为对双酚 A（BPA）两个酚羟基几何排列的识别：在载体表面以预组织方式排布间距与双酚两酚羟基匹配的氢键供体/受体阵列，并以金属配位骨架或刚性间隔臂预组织该阵列，使位点几何与双酚羟基排布互补，以区分 BPA（两个酚羟基、特定间距与取向）与单酚（单一羟基）或异构双酚（BPF/BPS，桥联基团与羟基间距不同）",
+   "specific_functional_group": "与酚羟基互补的氢键供体/受体（胺、酰胺、脲/硫脲、醚氧、杂环氮、硼酸酯等），按与双酚两酚羟基间距几何互补的方式成对预组织排布；金属配位节点（二价/三价金属与羧酸/吡啶/咪唑配体）或刚性间隔臂提供预组织",
+   "material_handle": "金属有机框架（MOF）、金属配位交联聚合物、分子印迹聚合物或介孔二氧化硅表面接枝；以刚性连接体将两个氢键位点固定于双酚羟基间距（BPA 两酚氧约 10 Å，对位二苯基丙烷骨架），并以金属配位或刚性骨架预组织阵列取向；孔壁适度疏水以降低局部水活度",
+   "target_interaction": "BPA 两个酚羟基与供体/受体阵列的方向性氢键（酚羟基兼具氢键供体与受体身份）加位点几何互补（多点：两酚羟基加芳环 π/疏水接触），金属预组织维持阵列几何并降低结合熵代价",
+   "source_tier": "llm_inference",
+   "evidence_tier": "inspiration（原理层外推：ConA 对甘露糖羟基模式的多点识别接地于 PDB 5CNA 与 Naismith 1994 / Loris 1998；BPA 非 ConA 天然或已记录靶标，酚氧与糖羟基供受体身份类比属 approach-2 类比，无 BPA 结合证据，BPA/单酚竞争选择性增量须实验验证）",
+   "examples": [],
+   "design_principle": "ConA 证明与目标羟基模式几何互补的多点氢键阵列加金属预组织识别环可区分单糖立体化学（PDB 5CNA，Naismith 1994 / Loris 1998 / Kaushik 2009）；'与羟基模式几何互补的多点供体/受体阵列加金属配位预组织'这一原理可外推至双酚 A 两个酚羟基的识别",
+   "implementation_example": "含成对氢键位点（间距匹配双酚羟基）、以金属配位或刚性骨架预组织、孔壁适度疏水的 MOF 或印迹聚合物（无实验数据，仅为设计假设）",
+   "constraints": "BPA 两酚羟基间距（约 10 Å，对位二苯基丙烷骨架）与甘露糖顺式邻二醇（O3-O4 约 2.70 Å）显著不同，二者仅在羟基氢键供体/受体身份与多点原理上类比，几何不等同；与单酚（苯酚、甲酚）及异构双酚（BPF/BPS）的竞争性选择须实验验证；水相中水的氢键竞争、共存天然有机物与 pH 对酚氧质子化状态的影响是关键挑战",
+   "failure_modes": "氢键位点暴露于体相水被氢键竞争淬灭；预组织间距与双酚羟基间距失配使多点效应减弱；单酚/异构双酚竞争吸附降低选择性；金属配位骨架在酸/碱或螯合条件下失稳（类比 ConA 去金属化失活）；对一切含双酚羟基物种非特异结合",
+   "material_realization_examples": []
+  }
+ ],
+ "honesty_ledger": {
+  "facts": [
+   {
+    "type": "mechanism",
+    "index": 0,
+    "name": "多点氢键阵列对糖链表面羟基模式的识别",
+    "basis": "from_source_verified",
+    "note": "PDB 5CNA（链 A）坐标直测甘露糖四羟基氢键网络（Asp208 OD2→O4 2.63 Å、Asp208 OD1→O6 2.88 Å、Arg228 NH→O3 2.88 Å、Asn14 ND2→O4 2.99 Å）+ Naismith 1994 摘要（每糖以氢键加范德华接触结合、四羟基氢键合于位点）+ Loris 1998 摘要（保守残基核心氢键合于糖）；quote 逐字取自 PubMed 摘要与 PDB HETNAM 记录，未做全文 PDF 审计"
+   },
+   {
+    "type": "mechanism",
+    "index": 1,
+    "name": "Mn/Ca 金属辅因子对糖识别环的结构预组织",
+    "basis": "from_source_corroborated",
+    "note": "PDB 5CNA（链 A）坐标直测金属配位层与 Mn-Ca 4.22 Å、Asn14 桥联（OD1→Ca 2.47 Å、ND2→糖 O4 2.99 Å）+ Kaushik 2009 摘要（金属离子调控 legume 凝集素糖结合、去金属化使离子结合环大构象变化并废除糖结合）；quote 逐字取自 PubMed 摘要与 PDB HETNAM，未做全文 PDF 审计"
+   }
+  ],
+  "leads": [],
+  "inferences": [
+   {
+    "type": "design_translation",
+    "index": 0,
+    "idea": "将 ConA 多点羟基识别阵列加金属预组织转译为对双酚 A 两个酚羟基几何排列的识别",
+    "basis": "llm_inferred",
+    "label": "inspiration",
+    "note": "BPA 非 ConA 天然或已记录靶标；酚氧与糖羟基供受体身份类比属 approach-2 类比。BPA 两酚羟基间距（约 10 Å）与甘露糖顺式邻二醇（O3-O4 约 2.70 Å）几何不等同，类比限于供受体身份与多点原理；属原理层设计外推，无 BPA 结合证据，BPA/单酚竞争选择性增量须实验验证"
+   }
+  ],
+  "boundary_notes": [
+   "本原型天然配体为甘露糖型单糖（糖链表面羟基模式）；机制 from_source 接地限于 ConA 天然糖识别（多点氢键加金属预组织），不涉及 BPA",
+   "BPA 应用为 approach-2 类比转译（llm_inferred / inspiration），非 from_source 事实，不得用作 BPA 的 direct evidence；BPA/单酚/异构双酚竞争选择性增量须实验验证",
+   "BPA 两酚羟基间距（约 10 Å）与甘露糖顺式邻二醇（O3-O4 约 2.70 Å）几何显著不同，类比限于羟基氢键供体/受体身份与多点原理，几何不等同",
+   "无 BPA 吸附性能数据（qmax 等）；performance_data 为空数组；严格未从任何污染物知识库搬运性能数值（知识隔离红线）",
+   "残基编号沿用 PDB 5CNA 链 A 编号：Asp208/Arg228/Asn14/Tyr12/Tyr100 与经典 ConA 文献编号一致；所有残基-糖羟基与金属配位距离为该结构坐标直测（重原子距离，非氢原子距离）",
+   "边界 BC2（两条机制的低介电/水竞争与金属位点 pH/螯合需求）均为定性 llm_inferred，不带数值阈值，gate_level=soft"
+  ],
+  "missing_pdf_items": [
+   "Naismith 1994 Acta Crystallogr D 全文 PDF（quote 取自 PubMed 摘要 PMID 15299352 与 PDB 5CNA 沉积记录）",
+   "Loris 1998 BBA 全文 PDF（quote 取自 PubMed 摘要 PMID 9546043）",
+   "Kaushik 2009 Biophys J 全文 PDF（quote 取自 PubMed 摘要 PMID 18849415；PMC2710015 开放获取，本条目仅取摘要）"
+  ],
+  "generated_by": "manual-curation-2026-07-22",
+  "note": "诚实优先：机制接地限于 ConA 天然糖识别（甘露糖羟基模式多点氢键加 Mn/Ca 金属预组织，PDB 5CNA 坐标直测 + 三篇文献摘要）；一切 BPA 应用为 approach-2 类比 / inspiration / 外推"
+ },
+ "boundary_rules": [
+  {
+   "rule": "单糖立体化学特异性：ConA 结合位点形状（保守核心加可变环）与甘露糖羟基模式几何互补，对羟基取向不同的单糖（如半乳糖）匹配差",
+   "source_mechanism": "多点氢键阵列对糖链表面羟基模式的识别",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "金属辅因子依赖：Mn²⁺/Ca²⁺ 存在方能维持识别环预组织与糖结合能力，去金属化废除糖结合",
+   "source_mechanism": "Mn/Ca 金属辅因子对糖识别环的结构预组织",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "预组织多点氢键阵列需维持于结合位点微环境，水竞争削弱结合（定性，无数值阈值）",
+   "source_mechanism": "多点氢键阵列对糖链表面羟基模式的识别",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  },
+  {
+   "rule": "金属位点需维持二价金属辅因子与适宜 pH，螯合剂或极端 pH 可剥离金属并失活（定性，无数值阈值）",
+   "source_mechanism": "Mn/Ca 金属辅因子对糖识别环的结构预组织",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  }
+ ],
+ "mechanism_tags": [
+  "配位螯合",
+  "氢键",
+  "疏水分配",
+  "几何识别"
+ ]
+}

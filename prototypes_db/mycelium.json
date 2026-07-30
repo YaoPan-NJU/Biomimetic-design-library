@@ -1,0 +1,213 @@
+{
+  "id": "mycelium",
+  "name_zh": "菌丝体",
+  "name_en": "Mycelium",
+  "organism": {
+    "scientific": "Beauveria bassiana / Botrytis cinerea (丝状真菌菌丝体)",
+    "category": "微生物"
+  },
+  "biomimetic_dimension": "结构仿生",
+  "features": [
+    "纤维状",
+    "网状",
+    "氨基"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": "low",
+    "note": "测过的 pH/温度范围，不是适用范围。仅从 performance_data 中实际测试过的条件聚合。"
+  },
+  "performance_data": [
+    {
+      "parameter": "重金属去除方法比较 Comparison of heavy metal removal methods",
+      "value": "生物吸附法: 来源丰富/操作简单/成本低/快速高效/无二次污染/但不稳定",
+      "unit": null,
+      "pollutant": "",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.19465/j.cnki.2095-9710.2021.04.005",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第5组-纤维结构/2021-刘-纤维素-膜-菌丝-吸附-综述.pdf",
+      "page": 1,
+      "locator": "Table 1",
+      "verification": "needs_review",
+      "confidence": 0.8,
+      "label_fix": "P1b: downgraded from verified — no verification_quote"
+    }
+  ],
+  "mechanisms": [
+    {
+      "name": "菌丝体几丁质/葡聚糖生物吸附",
+      "description": "真菌菌丝体的几丁质和葡聚糖含-NH₂/-OH官能团，通过螯合和静电吸引吸附重金属。",
+      "source": "llm_inference",
+      "causal_chain": {
+        "transferable_principle": "菌丝体的几丁质(含-NH₂)和葡聚糖(含-OH)提供天然吸附官能团，可用于重金属生物吸附",
+        "pollutant_feature": {
+          "text": "重金属阳离子（Cu²⁺、Pb²⁺、Cd²⁺等）",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "真菌菌丝体细胞壁的几丁质-葡聚糖复合基质",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "螯合配位（-NH₂-Me²⁺）、静电吸引、离子交换",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.19465/j.cnki.2095-9710.2021.04.005",
+          "locator": "p.1",
+          "quote": "用离子交换、物理吸附、反渗透、蒸发和电化学等技术方法",
+          "scope_match": "Keywords: 离子交换, 离子交"
+        },
+        "why_it_works": {
+          "text": "来源丰富（发酵废弃物）、成本低、官能团密度适中，可作为低成本吸附剂",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.19465/j.cnki.2095-9710.2021.04.005",
+          "locator": "p.1",
+          "quote": "来源丰富，操作简单，成本低，快速高效，无二次污染",
+          "scope_match": "Keywords: 成本低, 来源丰富"
+        },
+        "boundary_conditions": [
+          {
+            "text": "菌丝体吸附容量通常低于改性壳聚糖或活性炭，适合低浓度废水处理",
+            "parameter": "adsorption_capacity",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "keyword_match"
+          }
+        ],
+        "verification_quote": "Alkali lignin, PEI-graft-alkali lignin with nanoscale lanthanum hydroxide, phosphate, surface precipitation and ligand exchange.",
+        "source_doi": "10.1016/j.tibtech.2022.09.011",
+        "source_locator": "p.5 / Table 2"
+      },
+      "brief_visibility": "hidden"
+    }
+  ],
+  "narrative": {
+    "entries": [
+      {
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2021-刘-纤维素-膜-菌丝-吸附-综述.json",
+        "paper_id": "2021-刘-真菌吸附重金属研究进展",
+        "sections": {
+          "problem_definition": "自然界挑战：真菌在复杂土壤/水体中需高效捕获微量重金属离子以维持代谢平衡；水处理对应：工业废水中低浓度重金属离子难以通过传统物理化学方法经济高效去除。",
+          "biological_solution": "进化策略：真菌细胞壁演化出高比例多糖(几丁质+纤维素)与蛋白/脂类复合网络；关键机制：几丁质氨基/羟基提供天然螯合位点，分枝交织结构形成高比表面积多孔通道，实现快速物理截留与化学络合；成功案例：球孢白僵菌Z1在pH 6.0条件下对Cd²⁺去除率达56.17%，验证了天然菌丝的高效吸附潜力。",
+          "key_features": "必须保留特征：几丁质/纤维素衍生的氨基与羟基螯合位点、三维多孔交织网络骨架；可灵活调整特征：菌丝分层结构比例、表面官能团密度、材料交联度以提升稳定性。",
+          "design_mapping": "生物→材料映射：几丁质氨基/羟基→合成/改性高分子吸附剂螯合基团；纤维素分枝网络→纤维素纳米纤维(CNF)或仿生多孔支架；营养/气生分化→梯度孔径/功能分层复合材料。软约束建议：设计需预留pH缓冲微环境，避免强酸强碱破坏螯合位点；引入适度交联或无机复合以弥补天然材料稳定性缺陷。",
+          "explainability_anchors": "仿生故事线：从真菌细胞壁“多糖骨架+活性基团”的天然捕获机制出发，转化为“仿生多孔支架+靶向螯合位点”的工程材料设计；设计溯源：基于球孢白僵菌等丝状真菌的吸附实验数据(pH 6.0最优、去除率56.17%)及七种重金属去除法对比结论，确立生物吸附法在成本与效率上的综合优势，指导材料向低成本、高比表面积、易再生方向迭代。"
+        }
+      },
+      {
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2022-Zhang-adsorption-adsorbent-removal-review.json",
+        "paper_id": "Zhang2022_biomass_remediation_review",
+        "sections": {
+          "problem_definition": "自然界中植物细胞壁需高效捕获水分与养分并维持抗降解结构，而传统水处理依赖多级串联工艺（treatment train），存在能耗高、碳足迹大、吸附与降解环节割裂的局限。",
+          "biological_solution": "进化出由纤维素纳米纤丝与改性木质素构成的分级多孔网络，兼具高比表面积、丰富含氧官能团及生物相容性；关键机制为物理/化学吸附富集（静电、氢键、π-π堆叠、配体交换）与酶/微生物原位降解的协同；成功案例如RAPIMER系统实现‘吸附-富集-降解-营养供给’一体化，突破传统处理链局限。",
+          "key_features": "必须保留：纤维素-木质素分级网络骨架、高密度含氧/羧基官能团、三维多孔/泡沫形态、酶/微生物固定化界面；可灵活调整：具体生物质来源（如咖啡渣、丝瓜络、刺柏）、交联度与溶胀率、表面接枝化学（如PEI、氨基化）、目标污染物靶向修饰。",
+          "design_mapping": "生物→材料映射：植物细胞壁纤维素网络→TEMPO氧化纳米纤维素/水凝胶骨架（提供高羧基密度与物理吸附位点）；木质素基质→改性木质素粉末/生物炭（提供π-π堆叠、疏水作用及电子供受体复合物）；真菌营养微环境→多孔泡沫/水凝胶载体（负载漆酶/脲酶等实现原位降解）。软约束建议：优先采用水热碳化或温和改性以保留含氧官能团；调控交联网络平衡溶胀率与结构强度；合成过程需严格兼容生物酶活性中心。",
+          "explainability_anchors": "仿生故事线：借鉴植物细胞壁‘结构支撑-养分循环’双重角色，将传统单一吸附材料升级为‘吸附基质+生物修复营养源’的复合系统；设计溯源：基于RAPIMER逆向工程原理，以纤维素纳米纤丝构建吸附骨架，以改性木质素提供疏水/π-π作用及酶固定化微环境，最终实现全生命周期可持续的水处理材料设计范式。"
+        }
+      }
+    ]
+  },
+  "engineering_constraints": [
+    {
+      "constraint": "pH对真菌吸附的影响 pH effect on fungal adsorption",
+      "value": "pH 6.0时球孢白僵菌Z1对Cd²⁺去除率56.17%；pH过低→H⁺竞争位点；pH过高→金属氢氧化物沉淀",
+      "unit": "%",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.19465/j.cnki.2095-9710.2021.04.005"
+    }
+  ],
+  "provenance_summary": {
+    "n_papers": 2,
+    "n_verified": 6,
+    "n_unverified": 4
+  },
+  "coverage": "normal",
+  "status": "needs_literature",
+  "design_translation": [
+    {
+      "idea": "利用真菌菌丝体的几丁质和葡聚糖进行重金属吸附",
+      "specific_functional_group": "几丁质的氨基和羟基，β-葡聚糖的羟基",
+      "material_handle": "真菌菌丝体培养、固定化或改性",
+      "target_interaction": "氨基和羟基配位重金属离子，生物降解性好",
+      "source_tier": "llm_inference",
+      "examples": [],
+      "design_principle": "真菌菌丝体细胞壁的几丁质(含-NH₂)和葡聚糖(含-OH)提供天然吸附官能团。发酵废弃物来源丰富，可作为低成本吸附剂",
+      "implementation_example": "真菌发酵→菌丝体收获→干燥→直接使用；或菌丝体/壳聚糖复合微球→增强机械强度",
+      "constraints": "吸附容量低于改性壳聚糖；机械强度低；微生物降解",
+      "failure_modes": "容量有限；机械破碎；生物降解限制再生",
+      "evidence_tier": "lead"
+    }
+  ],
+  "library_tier": "core",
+  "lifecycle_status": "active",
+  "honesty_ledger": {
+    "facts": [],
+    "leads": [
+      {
+        "type": "performance",
+        "index": 0,
+        "parameter": "重金属去除方法比较 Comparison of heavy metal removal methods",
+        "basis": "needs_review"
+      }
+    ],
+    "inferences": [
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "菌丝体几丁质/葡聚糖吸附",
+        "basis": "llm_inference"
+      },
+      {
+        "type": "mechanism",
+        "index": 1,
+        "name": "菌丝体几丁质/葡聚糖生物吸附",
+        "basis": "llm_inference",
+        "causal_chain": "qualified"
+      }
+    ],
+    "generated_by": "P1c-auto",
+    "note": "Empty shell prototype — mechanism is llm_inference placeholder with boundary_conditions"
+  },
+  "boundary_conditions": [
+    {
+      "text": "现有性能数据仅为方法综述比较（Liu2021），无具体 qmax 值。需补充菌丝体吸附实验数据后方可用于设计决策",
+      "parameter": "literature_coverage",
+      "condition": {
+        "operator": "qualitative",
+        "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+    }
+  ],
+  "scope_note": "Placeholder prototype — no verified adsorption data, generated by auto-expansion",
+  "evidence_status": "placeholder",
+  "mechanism_tags": [
+    "配位螯合",
+    "静电吸附",
+    "离子交换",
+    "氢键"
+  ]
+}

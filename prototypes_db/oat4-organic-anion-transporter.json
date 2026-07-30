@@ -1,0 +1,577 @@
+{
+ "id": "oat4-organic-anion-transporter",
+ "name_zh": "OAT4 有机阴离子转运体",
+ "name_en": "OAT4 Organic Anion Transporter (SLC22A11)",
+ "organism": {
+  "scientific": "Homo sapiens OAT4 有机阴离子转运体",
+  "category": "动物"
+ },
+ "biomimetic_dimension": "分子仿生",
+ "features": [
+  "特异性识别",
+  "分子筛分"
+ ],
+ "tested_conditions": {
+  "tested_ph_range": null,
+  "tested_temp_range": null,
+  "salinity": null,
+  "note": "OAT4 为肾近端小管膜转运体（分子识别/转运原型），本库无其吸附性能测试；performance_data 为空，故测试条件全空。"
+ },
+ "library_tier": "extended",
+ "lifecycle_status": "active",
+ "coverage": "partial",
+ "status": "active",
+ "provenance_summary": {
+  "n_papers": 3,
+  "n_verified": 16,
+  "n_unverified": 5,
+  "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与边界条数（OAT4-001 四要素+2 硬边界=6，OAT4-002 四要素+1 硬边界=5，OAT4-003 四要素+1 硬边界=5）。机制接地限于 OAT4 天然底物（硫酸甾体 E1S/DHEAS、PAH、赭曲霉毒素 A 等）与转运行为；PFOA/PFBS 应用为设计转译（llm_inferred）。结构接地以 RCSB 沉积记录与坐标直测为主（人 OAT4 PDB 9U5A/9M9Y 于 2025-06-18 释放，伴随文献尚未发表）；quote 取自 PubMed 摘要、PMC 全文 XML 与 RCSB 沉积记录（可核验），未做全文 PDF 审计。接地中经 Crossref 证伪并剔除两条错误记忆 DOI（见 honesty_ledger）。"
+ },
+ "mechanisms": [
+  {
+   "mechanism_id": "OAT4-001",
+   "name": "阴离子头基与芳香-阳离子底物口袋的两点位识别（硫酸结合型有机阴离子）",
+   "description": "人 OAT4（SLC22A11，550 氨基酸残基、12 跨膜域）表达于肾近端小管顶端膜与胎盘，以高亲和力、钠离子非依赖方式转运硫酸结合型有机阴离子：雌酮硫酸酯 E1S（Km 1.01 µM）与硫酸脱氢表雄酮 DHEAS（Km 0.63 µM），并转运赭曲霉毒素 A（Cha 2000）。人 OAT4·DHEAS 冷冻电镜结构 PDB 9U5A（2025-06-18 释放）坐标直测：配体 ZWY（DHEAS，17-氧代雄甾-5-烯-3β-基硫酸氢酯）4.0 Å 内含芳香残基 Phe211、Phe238、Tyr360、Tyr361、Met231 与阳离子 Arg389、极性 Gln242（chain A，PDB 编号）；该芳香笼加阳离子锚为 SLC22 家族保守底物结合基序（大鼠 OAT1 PDB 8SDY 同源直测：Tyr230/Phe438/Tyr353/Phe443 芳香笼 + Lys382/Arg466 阳离子残基，Dou 2023）",
+   "基本原理": "疏水/芳香笼钳夹底物疏水骨架，阳离子/极性残基锚定阴离子头基，构成头基锚定加骨架容纳的两点位识别，使化学结构多样的有机阴离子被钠离子非依赖地高效识别",
+   "source": "pdb + literature",
+   "ref_doi": "10.1074/jbc.275.6.4507",
+   "verification": "corroborated",
+   "verification_quote": "CRYO-EM STRUCTURE OF HUMAN OAT4 IN COMPLEX WITH DHEAS",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "硫酸/磺酸结合型有机阴离子头基（OAT4 天然底物：雌酮硫酸酯 E1S 与硫酸脱氢表雄酮 DHEAS，Km 分别为 1.01 与 0.63 µM，钠离子非依赖；PDB 9U5A 配体 ZWY 即 DHEAS 的硫酸氢酯形式，另转运赭曲霉毒素 A）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1074/jbc.275.6.4507",
+     "locator": "p.4507 (abstract, PMID 10660625)",
+     "quote": "OAT4 mediated the high affinity transport of estrone sulfate (K(m) = 1.01 microM) and dehydroepiandrosterone sulfate (K(m) = 0.63 microM) in a sodium-independent manner",
+     "scope_match": "Keywords: OAT4, estrone sulfate, dehydroepiandrosterone sulfate, sodium-independent"
+    },
+    "bio_structure": {
+     "text": "人 OAT4（SLC22A11，chain A）为 12 跨膜域 MFS 折叠膜蛋白；PDB 9U5A 为人 OAT4 与 DHEAS 复合物的冷冻电镜结构（沉积记录 COMPND 记 SOLUTE CARRIER FAMILY 22 MEMBER 11，同义名 OAT4/有机阴离子:二羧酸交换体），DHEAS 结合于 N 与 C 端结构域间的中央口袋；PDB 9M9Y 为同蛋白 apo 态（均于 2025-06-18 释放）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "PDB 9U5A",
+     "locator": "PDB 9U5A, COMPND (chain A) / p.4507 (PMID 10660625)",
+     "quote": "SYNONYM: ORGANIC ANION TRANSPORTER 4,OAT4,ORGANIC ANION:DICARBOXYLATE EXCHANGER OAT4",
+     "scope_match": "Keywords: OAT4, ORGANIC ANION, DICARBOXYLATE"
+    },
+    "interaction": {
+     "text": "PDB 9U5A 坐标直测（chain A，PDB 编号）：配体 ZWY（DHEAS）4.0 Å 内残基 14 个，含芳香残基 Phe211（3.80 Å）、Phe238（2.91 Å）、Tyr360（2.66 Å）、Tyr361（3.19 Å）、Met231（3.17 Å）与阳离子 Arg389（3.92 Å）、极性 Gln242（2.10 Å）；芳香/疏水笼容纳甾体骨架、阳离子/极性残基朝向硫酸头基，与大鼠 OAT1 PDB 8SDY 直测的 PAH 结合模式同源（PAH 芳基被 Tyr230 与 Phe438 钳夹，羧基转向阳离子 Lys382 或 Arg466，rOAT1 编号）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "PDB 9U5A / 10.1038/s41594-023-01123-3",
+     "locator": "PDB 9U5A 坐标 (chain A, ≤4.0 Å 至 ZWY) / PMC11406556, p.1794",
+     "quote": "The aryl group of PAH is clamped between the side chains of Tyr230 and Phe438, which allows PAH to rotate and turn its carboxyl group to positively charged residues Lys382 or Arg466",
+     "scope_match": "Keywords: PAH, Tyr230, Phe438, carboxyl group, Lys382, Arg466"
+    },
+    "why_it_works": {
+     "text": "芳香笼加阳离子锚是 SLC22 家族高度保守的底物结合机制（Dou 2023：四个芳香残基成笼容纳多特异性底物）；OAT4 与 OAT 家族成员序列一致性 38 至 44%（Cha 2000），9U5A 口袋残基邻接关系与该保守基序一致，故 OAT4 可以钠离子非依赖方式识别头基加骨架型的多样有机阴离子",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/s41594-023-01123-3",
+     "locator": "abstract, p.1794 (PMC11406556)",
+     "quote": "a highly conserved substrate binding mechanism for SLC22 transporters, wherein four aromatic residues form a cage to accommodate the polyspecific binding of diverse compounds",
+     "scope_match": "Keywords: conserved, SLC22, aromatic residues, polyspecific"
+    },
+    "boundary_conditions": [
+     {
+      "text": "头基化学偏好：多种硫酸结合物（对硝基苯硫酸酯、α-萘硫酸酯、β-雌二醇硫酸酯、4-甲基伞形酮硫酸酯）抑制 OAT4 介导的雌酮硫酸酯转运，而葡萄糖醛酸结合物几乎无抑制，显示对硫酸/磺酸型头基的化学偏好",
+      "parameter": "head_group_chemistry",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "corroborated",
+      "gate_level": "hard",
+      "locator": "p.4507 (abstract, PMID 10660625)",
+      "quote": "By contrast, glucuronide conjugates showed little or no inhibitory effect on the OAT4-mediated transport of estrone sulfate.",
+      "scope_match": "Keywords: glucuronide, estrone sulfate, OAT4",
+      "source_asset": null
+     },
+     {
+      "text": "电荷类型要求：OAT4 与化学异质的阴离子化合物相互作用，但不转运有机阳离子四乙基铵（tetraethylammonium），阴离子电荷为结合必要条件",
+      "parameter": "substrate_charge",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "p.4507 (abstract, PMID 10660625)",
+      "quote": "whereas tetraethylammonium, an organic cation, did not",
+      "scope_match": "Keywords: tetraethylammonium, organic cation",
+      "source_asset": null
+     },
+     {
+      "text": "残基级功能验证仍有缺口：结构条目的伴随文献尚未发表，具体口袋残基对底物亲和力与选择性的贡献仍待同行评审的突变体验证。",
+      "parameter": "residue_role_validation",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "scope_match": null,
+      "source_asset": null
+     },
+     {
+      "text": "水相与 pH 依赖：阴离子头基的静电锚定依赖口袋阳离子残基质子化状态与溶液离子强度，水竞争与 pH 偏移可削弱结合（定性，无数值阈值）",
+      "parameter": "aqueous_ph_ionic_strength",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "scope_match": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "阳离子/极性头基锚加芳香-疏水骨架笼的两点位识别构型，可以钠离子非依赖方式识别化学结构多样的阴离子分子；头基化学（硫酸结合物优先于葡萄糖醛酸结合物）与阴离子电荷是选择性的关键决定因素",
+    "verification_quote": "CRYO-EM STRUCTURE OF HUMAN OAT4 IN COMPLEX WITH DHEAS"
+   },
+   "source_doi": "10.1074/jbc.275.6.4507",
+   "source_page": 4507,
+   "source_locator": "p.4507 (PMID 10660625) / PDB 9U5A (chain A)",
+   "source_file": "PDB 9U5A/9M9Y（RCSB 沉积记录 + 坐标直测，2025-06-18 释放）与 PMID 10660625 摘要；未做全文 PDF 审计",
+   "functional_groups": [
+    "阳离子残基（Arg389 邻接位，chain A PDB 编号）",
+    "极性残基（Gln242 邻接位）",
+    "芳香笼（Phe211/Phe238/Tyr360/Tyr361 邻接位）"
+   ],
+   "key_structures": [
+    "识别结构"
+   ]
+  },
+  {
+   "mechanism_id": "OAT4-002",
+   "name": "顶端有机阴离子/二羧酸交换（二羧酸外排梯度驱动的向量重吸收）",
+   "description": "OAT4 是顶端有机阴离子/二羧酸交换体：戊二酸（glutarate, GA）抑制 E1S 摄取（IC50 1.25 mM）；预载 GA 反式刺激 E1S 摄取，胞外 E1S 反式刺激 GA 外排；E1S 与 PAH 的摄取与外排均可被 GA 或 PAH 反式刺激（Ekaratanawong 2004）。免疫组化示 OAT4 位于肾近端小管顶端膜（与基底侧 hOAT1/hOAT3 同一管群），主要作为顶端重吸收通路",
+   "基本原理": "胞内外向二羧酸（α-酮戊二酸/戊二酸）梯度提供交换驱动力，将二羧酸下坡外排与有机阴离子上坡重吸收相偶联，构成近端小管的向量重吸收通路",
+   "source": "literature",
+   "ref_doi": "10.1254/jphs.94.297",
+   "verification": "verified",
+   "verification_quote": "OAT4 is an apical organic anion/dicarboxylate exchanger and mainly functions as an apical pathway for the reabsorption of some organic anions in renal proximal tubules",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "有机阴离子底物（E1S、PAH 对氨基马尿酸）与二羧酸偶联底物（戊二酸 GA）：E1S 与 PAH 的摄取与外排均被 GA 或 PAH 反式刺激，表明二者进入同一交换循环",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1254/jphs.94.297",
+     "locator": "p.297 (abstract, PMID 15037815)",
+     "quote": "both the uptake and efflux of [14C]p-aminohippuric acid (PAH) and [14C]GA via S2 OAT4 were significantly trans-stimulated by unlabeled GA or PAH",
+     "scope_match": "Keywords: PAH, GA, OAT4, trans-stimulated"
+    },
+    "bio_structure": {
+     "text": "OAT4 定位于肾近端小管上皮顶端膜（S2 OAT4 稳定表达细胞模型 + 免疫组化；与基底侧有机阴离子/二羧酸交换体 hOAT1、hOAT3 共存于同一管群），其顶端正向位置决定重吸收方向",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1254/jphs.94.297",
+     "locator": "p.297 (abstract, PMID 15037815)",
+     "quote": "The immunoreactivities of OAT4 were observed in the apical membrane of proximal tubules",
+     "scope_match": "Keywords: OAT4, apical membrane, proximal tubules"
+    },
+    "interaction": {
+     "text": "双向交换动力学：GA 抑制 OAT4 介导的 E1S 摄取（IC50 1.25 mM）；预载 GA 反式刺激 E1S 摄取；胞外 E1S 反式刺激 GA 外排，构成有机阴离子与二羧酸的逆向交换",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1254/jphs.94.297",
+     "locator": "p.297 (abstract, PMID 15037815)",
+     "quote": "OAT4-mediated E1S uptake was inhibited by glutarate (GA) (IC50:1.25 mM)",
+     "scope_match": "Keywords: E1S, glutarate, IC50"
+    },
+    "why_it_works": {
+     "text": "外向二羧酸梯度驱动重吸收：OAT4 主要作为近端小管部分有机阴离子重吸收的顶端通路，驱动力为外向二羧酸梯度；二羧酸偶联使有机阴离子可逆浓度积累被回收",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1254/jphs.94.297",
+     "locator": "p.297 (abstract, PMID 15037815)",
+     "quote": "OAT4 is an apical organic anion/dicarboxylate exchanger and mainly functions as an apical pathway for the reabsorption of some organic anions in renal proximal tubules",
+     "scope_match": "Keywords: OAT4, exchanger, reabsorption, dicarboxylate"
+    },
+    "boundary_conditions": [
+     {
+      "text": "偶联底物要求：OAT4 有机阴离子转运与二羧酸交换相偶联，GA 或 PAH 双向反式刺激彼此的摄取与外排；无交换偶联底物则转运不能持续",
+      "parameter": "exchange_coupling_substrate",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "p.297 (abstract, PMID 15037815)",
+      "quote": "[3H]E1S uptake via S2 OAT4 was significantly trans-stimulated by preloaded GA",
+      "scope_match": "Keywords: E1S, OAT4, trans-stimulated, GA",
+      "source_asset": null
+     },
+     {
+      "text": "驱动力可转译性：天然交换依赖代谢性二羧酸梯度，体外静态吸附体系无此梯度，转译为吸附-再生需替代交换驱动力（高浓度竞争阴离子洗脱、pH 头基电荷切换等），定性推断",
+      "parameter": "exchange_driving_force",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "scope_match": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "以可逆交换偶联底物梯度驱动有机阴离子的向量摄取与释放，摄取与再生共用同一识别位点、以梯度反向或竞争置换实现循环",
+    "verification_quote": "OAT4 is an apical organic anion/dicarboxylate exchanger and mainly functions as an apical pathway for the reabsorption of some organic anions in renal proximal tubules"
+   },
+   "source_doi": "10.1254/jphs.94.297",
+   "source_page": 297,
+   "source_locator": "p.297 (abstract, PMID 15037815)",
+   "source_file": "PMID 15037815 摘要（J Pharmacol Sci 94:297-304）；未做全文 PDF 审计",
+   "functional_groups": [
+    "有机阴离子/二羧酸交换位点",
+    "顶端膜定位基序"
+   ],
+   "key_structures": [
+    "识别结构",
+    "转运结构"
+   ]
+  },
+  {
+   "mechanism_id": "OAT4-003",
+   "name": "疏水骨架容纳与有限容积口袋的尺寸窗口（链长选择性结构基础）",
+   "description": "OAT 底物口袋为 NTD 与 CTD 之间的大腔：大鼠 OAT1·PAH/丙磺舒复合物直测口袋约 15 Å 宽 × 7 Å 深 × 13 Å 高（Dou 2023）；PAH 芳基被 Tyr230 与 Phe438 钳夹、Tyr353 以 edge-to-face 方式参与，底物可在笼内调整取向（柔性结合），且 PAH 与丙磺舒结合于 NTD/CTD 腔末端同一位点。OAT4 与化学异质的阴离子化合物相互作用（NSAIDs、利尿剂、磺溴酞钠、青霉素 G、胆汁酸盐、甾体硫酸酯、赭曲霉毒素 A），呈多特异性；9U5A 中 DHEAS 甾体骨架被 Phe211/Phe238/Tyr360/Tyr361/Met231 包围（坐标直测 ≤4.0 Å）",
+   "基本原理": "有限容积口袋与保守芳香笼的组合对容纳骨架的尺寸与伸展范围构成位阻上限，同时容忍化学变异（多特异性），为链长/骨架尺寸依赖的选择性提供尺寸窗口基础",
+   "source": "literature + pdb",
+   "ref_doi": "10.1038/s41594-023-01123-3",
+   "verification": "corroborated",
+   "verification_quote": "both PAH and probenecid bind to a large substrate pocket that measures approximately 15 Å in width, 7 Å in depth, and 13 Å in height",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "尺寸与化学各异的疏水骨架（OAT4 天然/已知底物：DHEAS/E1S 甾体骨架、PAH 芳基、赭曲霉毒素 A、NSAIDs、胆汁酸盐、青霉素 G 等），骨架伸展长度与体积跨度大",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1074/jbc.275.6.4507",
+     "locator": "p.4507 (abstract, PMID 10660625)",
+     "quote": "OAT4 interacted with chemically heterogeneous anionic compounds, such as nonsteroidal anti-inflammatory drugs, diuretics, sulfobromophthalein, penicillin G, and bile salts",
+     "scope_match": "Keywords: OAT4, heterogeneous, anionic"
+    },
+    "bio_structure": {
+     "text": "底物口袋为 NTD 与 CTD 之间的大腔：大鼠 OAT1·PAH 与·丙磺舒复合物直测口袋约 15 Å 宽 × 7 Å 深 × 13 Å 高（PDB 8SDY/8SDZ，rOAT1）；人 OAT4 PDB 9U5A 口袋同源，DHEAS 甾体骨架埋藏于芳香残基间",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/s41594-023-01123-3",
+     "locator": "p.1794-1805 (PMC11406556) / PDB 8SDY",
+     "quote": "both PAH and probenecid bind to a large substrate pocket that measures approximately 15 Å in width, 7 Å in depth, and 13 Å in height",
+     "scope_match": "Keywords: PAH, probenecid, substrate pocket"
+    },
+    "interaction": {
+     "text": "疏水骨架经 π-夹与 edge-to-face 相互作用被钳夹：rOAT1 中 PAH 芳基被 Tyr230 与 Phe438 侧链钳夹，Tyr353 以 edge-to-face 方式与底物芳基作用（rOAT1 编号）；9U5A 中 DHEAS 甾体骨架邻接 Phe211/Phe238/Tyr360/Tyr361（坐标直测 ≤4.0 Å，chain A）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/s41594-023-01123-3",
+     "locator": "p.1794-1805 (PMC11406556)",
+     "quote": "The aryl group of PAH is clamped between the side chains of Tyr230 and Phe438, which allows PAH to rotate and turn its carboxyl group to positively charged residues Lys382 or Arg466",
+     "scope_match": "Keywords: PAH, Tyr230, Phe438, carboxyl group, Lys382, Arg466"
+    },
+    "why_it_works": {
+     "text": "保守芳香笼仅一侧开放、口袋容积有限而化学环境宽松，底物可在笼内柔性调整取向，故同一口袋容纳结构异质的阴离子骨架（多特异性），同时对骨架尺寸设限",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/s41594-023-01123-3",
+     "locator": "p.1794-1805 (PMC11406556)",
+     "quote": "These five conserved residues, Tyr230, Phe438, Tyr353, Lys382, and Arg466, of the substrate pocket create an aromatic cage",
+     "scope_match": "Keywords: conserved residues, Tyr230, aromatic cage"
+    },
+    "boundary_conditions": [
+     {
+      "text": "口袋容积上限：rOAT1 底物口袋直测约 15 Å × 7 Å × 13 Å，对容纳骨架的尺寸与伸展长度设定位阻上限，超限骨架难以进入（rOAT1 直测，OAT4 同源外推为定性）",
+      "parameter": "pocket_volume",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "corroborated",
+      "gate_level": "hard",
+      "locator": "p.1794-1805 (PMC11406556)",
+      "quote": "both PAH and probenecid bind to a large substrate pocket that measures approximately 15 Å in width, 7 Å in depth, and 13 Å in height",
+      "scope_match": "Keywords: PAH, probenecid, substrate pocket",
+      "source_asset": null
+     },
+     {
+      "text": "链长窗口外推：推断全氟烷基链伸展长度差异（C4 PFBS 对 C8 PFOA）与疏水口袋容积的差异匹配产生链长依赖识别，但全氟链刚性、氟亲和性与芳基/甾体骨架不同，定量链长阈值须实验标定（定性）",
+      "parameter": "chain_length_window",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "scope_match": null,
+      "source_asset": null
+     },
+     {
+      "text": "氟碳-烃不匹配：全氟烷基链的氟亲和性使其在经典疏水（烃/芳香）口袋中的容纳能与取向可能不同于天然底物，需实验验证（定性）",
+      "parameter": "fluorocarbon_hydrocarbon_mismatch",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "scope_match": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "有限容积的疏水/芳香口袋在容忍骨架化学变异的同时对骨架尺寸设限，可作为链长/尺寸依赖选择性的仿生尺寸窗口",
+    "verification_quote": "both PAH and probenecid bind to a large substrate pocket that measures approximately 15 Å in width, 7 Å in depth, and 13 Å in height"
+   },
+   "source_doi": "10.1038/s41594-023-01123-3",
+   "source_page": 1794,
+   "source_locator": "p.1794-1805 (PMC11406556) / PDB 8SDY, 8SDZ",
+   "source_file": "Dou 2023 Nat Struct Mol Biol 全文 XML（PMC11406556）与 PDB 8SDU/8SDY/8SDZ 沉积记录；未做本地 PDF 审计",
+   "functional_groups": [
+    "芳香-疏水笼（π-夹/edge-to-face）",
+    "有限容积底物口袋"
+   ],
+   "key_structures": [
+    "识别结构"
+   ]
+  }
+ ],
+ "performance_data": [],
+ "engineering_constraints": [
+  {
+   "constraint": "整合膜蛋白形态",
+   "value": "OAT4 为 550 氨基酸残基、12 跨膜域的整合膜蛋白；识别口袋依赖膜内三级结构，直接用于吸附需膜囊泡/脂质体固定化或识别基序移植",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "Cha 2000 摘要直陈 550-amino acid residue protein with 12 putative membrane-spanning domains",
+   "source": "literature",
+   "ref_doi": "10.1074/jbc.275.6.4507"
+  },
+  {
+   "constraint": "交换驱动力依赖",
+   "value": "天然重吸收由胞内外向二羧酸梯度（戊二酸/α-酮戊二酸）驱动；静态吸附体系无代谢梯度，需以竞争阴离子洗脱或 pH 头基电荷切换替代",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "Ekaratanawong 2004 摘要：driven by an outwardly directed dicarboxylate gradient",
+   "source": "literature",
+   "ref_doi": "10.1254/jphs.94.297"
+  },
+  {
+   "constraint": "固有选择性有限（多特异性）",
+   "value": "OAT4 固有地与化学异质的阴离子化合物相互作用（NSAIDs、利尿剂、磺溴酞钠、青霉素 G、胆汁酸盐、甾体硫酸酯、赭曲霉毒素 A），对单一目标分子选择性低，吸附设计须叠加额外选择性要素",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "Cha 2000 摘要多特异性底物/抑制剂列表",
+   "source": "literature",
+   "ref_doi": "10.1074/jbc.275.6.4507"
+  },
+  {
+   "constraint": "结构文献尚未同行评审",
+   "value": "人 OAT4 冷冻电镜结构 PDB 9U5A（DHEAS 复合物）与 9M9Y（apo）于 2025-06-18 释放，引文标注 To be published；残基级功能归属（如 Arg389、Gln242 个体贡献）待同行评审文献支持",
+   "unit": null,
+   "relevance": "medium",
+   "explanation": "RCSB 沉积记录 rcsb_primary_citation 状态",
+   "source": "pdb_deposition",
+   "ref_doi": null
+  },
+  {
+   "constraint": "口袋容积位阻上限",
+   "value": "大鼠 OAT1 底物口袋直测约 15 Å 宽 × 7 Å 深 × 13 Å 高；同源 OAT4 口袋对全氟烷基链（C8 PFOA 全伸展约 1 nm 量级）的链长窗口定量阈值属定性外推",
+   "unit": "Å",
+   "relevance": "medium",
+   "explanation": "机理外推（基于 rOAT1 口袋尺寸直测事实，Dou 2023）",
+   "source": "llm_inference",
+   "ref_doi": null
+  }
+ ],
+ "narrative": {
+  "entries": [
+   {
+    "source_file": "PDB 9U5A/9M9Y（RCSB 沉积记录，2025-06-18 释放）；Cha 2000 JBC 275:4507（PMID 10660625）；Ekaratanawong 2004 J Pharmacol Sci 94:297（PMID 15037815）；Dou 2023 Nat Struct Mol Biol 30:1794（PMC11406556）",
+    "paper_id": "2000-Cha-OAT4-cloning-and-characterization",
+    "sections": {
+     "problem_definition": "全氟烷基物质（PFOA/PFBS 等）在水环境中以持久性有机阴离子形态存在（羧酸根/磺酸根头基加全氟烷基链），选择性捕获需同时解决阴离子头基识别与全氟链链长（C4/C8）区分。人肾近端小管顶端膜 OAT4 恰以高亲和力识别结构多样的有机阴离子，且文献报道其对全氟烷基酸的转运呈结构（链长）相关差异，是有机阴离子头基加链长窗口的分子识别原型。",
+     "biological_solution": "OAT4（SLC22A11，550 氨基酸残基、12 跨膜域）以钠离子非依赖方式高亲和力转运硫酸结合型有机阴离子 E1S（Km 1.01 µM）与 DHEAS（Km 0.63 µM），并转运赭曲霉毒素 A（Cha 2000）。人 OAT4·DHEAS 复合物冷冻电镜结构 PDB 9U5A（2025-06-18 释放）坐标直测示 DHEAS 口袋含芳香残基 Phe211/Phe238/Tyr360/Tyr361 与阳离子 Arg389、极性 Gln242（chain A），与 SLC22 保守芳香笼加阳离子锚同源（大鼠 OAT1 PDB 8SDY：Tyr230/Phe438/Tyr353/Phe443 芳香笼 + Lys382/Arg466，Dou 2023 NSMB，PMC11406556；PAH 芳基被 Tyr230/Phe438 钳夹、羧基转向阳离子残基）。OAT4 以顶端有机阴离子/二羧酸交换体运作，戊二酸与 E1S/PAH 双向反式刺激，重吸收由外向二羧酸梯度驱动（Ekaratanawong 2004）。底物口袋容积有限（rOAT1 直测约 15 Å × 7 Å × 13 Å），容忍化学异质骨架（多特异性），构成链长窗口的结构基础。",
+     "key_features": "必须保留：① 阴离子头基的阳离子/极性锚（Arg389/Gln242 邻接位）；② 疏水骨架的芳香-疏水笼（Phe211/Phe238/Tyr360/Tyr361 邻接位）；③ 有限容积口袋的尺寸窗口；④ 摄取与再生共用位点的交换逻辑。可灵活调整：载体骨架与孔结构、锚定位点密度与电荷、孔道宽度与疏水性、再生驱动力形式（以竞争阴离子或 pH 切换替代代谢性二羧酸梯度）。",
+     "design_mapping": "仿生映射：OAT4 两点位识别加口袋容积窗口，转译为对 PFOA（C8 羧酸根）/PFBS（C4 磺酸根）具链长选择性的有机阴离子吸附位点：阳离子（季铵/胍）或中性氢键给体（脲/硫脲）锚定头基，可控孔宽的疏水孔道容纳全氟链，C8 与 C4 的链长匹配差异产生选择性；交换再生以高浓度竞争阴离子洗脱或 pH 切换实现。注意：此为设计转译/启发（llm_inferred），非 from_source 事实。文献确有 OAT4 介导 PFAS 转运的体外证据（Zhao 2010 Tox Sci；Myllynen 2015 Placenta；Arch Toxicol 2026 十种全氟烷基酸结构相关摄取），但按入库规则仅作设计灵感记录于 leads，不作为污染物去除的 direct evidence；全氟链与甾体/芳基骨架在刚性与氟亲和性上不同，链长窗口定量阈值须实验标定。",
+     "explainability_anchors": "设计溯源：硫酸结合型有机阴离子两点位识别（PDB 9U5A 坐标直测 + Cha 2000，from_source）+ 顶端交换重吸收（Ekaratanawong 2004，from_source）+ 有限容积口袋尺寸窗口（Dou 2023 rOAT1 直测，from_source）→ 可迁移原理：头基阳离子/极性锚 + 有限容积疏水笼 + 交换驱动再生 → PFOA/PFBS 链长窗口识别（llm_inferred 启发，须实验验证）。"
+    }
+   }
+  ]
+ },
+ "design_translation": [
+  {
+   "idea": "将 OAT4 的阴离子头基阳离子/极性锚 + 疏水骨架芳香笼 + 有限容积口袋移植到多孔载体，构建对 PFOA/PFBS 的两点位识别位点：（1）以阳离子（季铵/胍）或中性氢键给体（脲/硫脲）锚定 PFAS 羧酸根/磺酸根头基；（2）以孔宽可控的疏水孔道（刚性芳香骨架或烃/氟碳微环境）容纳全氟烷基链，以 pore window 与 C8（PFOA）/C4（PFBS）伸展长度的匹配差异产生链长依赖选择性；（3）仿二羧酸交换驱动重吸收，以高浓度竞争阴离子洗脱或 pH 头基电荷切换实现温和再生",
+   "specific_functional_group": "阳离子锚（季铵/胍）或中性氢键给体（脲/硫脲/酰胺），加孔宽可控的芳香-疏水孔壁",
+   "material_handle": "在介孔二氧化硅或聚合物骨架上接枝季铵/胍/脲/硫脲单体，以刚性芳香连接体（微孔有机聚合物/COF 型刚性孔壁）控制孔宽至接近 C8/C4 全氟链伸展长度的尺寸窗口，孔壁以芳基或氟碳链营造疏水/氟亲和微环境",
+   "target_interaction": "PFAS 羧酸根/磺酸根头基的静电/氢键锚定 + 全氟烷基链在有限容积孔道中的疏水/氟亲和容纳；链长与孔道容积的匹配差异决定 PFOA（C8）与 PFBS（C4）的选择性差别",
+   "source_tier": "llm_inference",
+   "evidence_tier": "inspiration（原理层外推：OAT4 机制接地于硫酸甾体/有机阴离子等天然底物与交换转运；PFAS 链长窗口与头基锚定转译为 llm_inferred，无直接 PFAS 吸附证据）",
+   "examples": [],
+   "design_principle": "OAT4 证明头基阳离子/极性锚 + 有限容积疏水骨架口袋的两点位构型可钠离子非依赖地高效识别有机阴离子并容忍骨架尺寸差异（PDB 9U5A，Cha 2000）；其口袋容积窗口与交换再生逻辑为链长选择性与温和再生提供仿生依据（自 rOAT1 口袋尺寸直测外推）",
+   "implementation_example": "季铵/胍加硫脲共功能化的刚性芳香微孔聚合物，配高浓度碳酸氢钠或 pH 切换洗脱再生（无实验数据，仅为设计假设）",
+   "constraints": "全氟烷基链的刚性与氟亲和性不同于甾体/芳基天然骨架，链长窗口定量阈值须实验标定；水相中共存无机阴离子（硫酸根、氯离子、碳酸氢根）与腐殖酸竞争头基锚与疏水孔道；OAT4 自身多特异性表明仅头基锚定不足以获得高选择性，须头基加链长双重匹配；静态体系无代谢梯度，再生驱动力须外供",
+   "failure_modes": "阳离子位点被强静电非选择性吸附淬灭，失去头基化学选择性；疏水孔道被腐殖酸或短链脂肪酸非特异占据；链长窗口过宽致 C8/C4 无法分离、过窄致两者均难进入；交换再生驱动力不足致容量衰减",
+   "material_realization_examples": []
+  }
+ ],
+ "honesty_ledger": {
+  "facts": [
+   {
+    "type": "mechanism",
+    "index": 0,
+    "name": "阴离子头基与芳香-阳离子底物口袋的两点位识别",
+    "basis": "from_source_corroborated",
+    "note": "Cha 2000（E1S Km 1.01 µM、DHEAS Km 0.63 µM、钠离子非依赖；硫酸结合物抑制而葡萄糖醛酸结合物几乎不抑制；有机阳离子不转运）+ PDB 9U5A 坐标直测（DHEAS 4.0 Å 内 Phe211/Phe238/Tyr360/Tyr361/Met231/Arg389/Gln242，chain A PDB 编号）+ Dou 2023 rOAT1 芳香笼同源（PMC11406556）；quote 取自 PubMed 摘要与 RCSB 沉积记录，未做全文 PDF 审计"
+   },
+   {
+    "type": "mechanism",
+    "index": 1,
+    "name": "顶端有机阴离子/二羧酸交换",
+    "basis": "from_source_verified",
+    "note": "Ekaratanawong 2004 摘要直陈 apical organic anion/dicarboxylate exchanger、GA 抑制 E1S 摄取 IC50 1.25 mM、GA 与 E1S/PAH 双向反式刺激、外向二羧酸梯度驱动重吸收（PMID 15037815）；quote 取自 PubMed 摘要"
+   },
+   {
+    "type": "mechanism",
+    "index": 2,
+    "name": "疏水骨架容纳与有限容积口袋尺寸窗口",
+    "basis": "from_source_corroborated",
+    "note": "Dou 2023 NSMB 全文（PMC11406556）：口袋 15 Å × 7 Å × 13 Å 直测、PAH 芳基被 Tyr230/Phe438 钳夹、五保守残基芳香笼（rOAT1 编号）；Cha 2000 多特异性底物列表；PDB 8SDY/8SDZ 沉积记录；quote 取自 PMC 全文 XML 与 PubMed 摘要"
+   },
+   {
+    "type": "structure",
+    "index": null,
+    "name": "人 OAT4 冷冻电镜结构 PDB 9U5A/9M9Y",
+    "basis": "from_source_deposition",
+    "note": "2025-06-18 释放；COMPND/SOURCE 确认 SOLUTE CARRIER FAMILY 22 MEMBER 11（SLC22A11）、Homo sapiens；HETNAM ZWY 即 DHEAS（17-氧代雄甾-5-烯-3β-基硫酸氢酯）；引文标注 To be published，残基级功能解释未同行评审"
+   }
+  ],
+  "leads": [
+   {
+    "type": "pollutant_transport_literature",
+    "doi": "10.1007/s00204-022-03428-6",
+    "verification": "corroborated",
+    "note": "Louisse et al. 2023 Archives of Toxicology 97:685-696（PMID 36436016）：OAT4 转染 HEK 细胞直接测定 7 种 PFAS；除 PFBS 外，PFHpA、PFOA、PFNA、PFDA、PFHxS 与 PFOS 均显示清晰的 OAT4 介导摄取，并有对接与分子动力学支持。PubMed 摘要已核验；全文 PDF 尚待页码级审计。该来源可作为污染物-OAT4 直接转运证据，但不能作为污染物吸附材料的 direct evidence。"
+   },
+   {
+    "type": "pollutant_transport_literature",
+    "doi": "10.1093/toxsci/kfq219",
+    "note": "Zhao 2010 Toxicological Sciences：全氟辛酸（PFOA）经 OAT4（及 OATP1A2、URAT1）的细胞摄取表征；DOI 经 Crossref 核验。按入库规则不作 from_source 机制要素与污染物去除 direct evidence，仅作设计灵感"
+   },
+   {
+    "type": "pollutant_transport_literature",
+    "doi": "10.1016/j.placenta.2015.07.119",
+    "note": "Myllynen 2015 Placenta：OAT4 改变 PFOS/PFOA 的人胎盘转运（离体灌注）；DOI 经 Crossref 核验。仅作灵感"
+   },
+   {
+    "type": "pollutant_transport_literature",
+    "doi": "10.1007/s00204-026-04508-7",
+    "note": "Archives of Toxicology 2026：十种全氟烷基物质经人与大鼠肾转运体的结构相关（链长相关）摄取比较；DOI 经 Crossref 核验。链长窗口启发来源，不作 direct evidence"
+   },
+   {
+    "type": "pollutant_transport_literature",
+    "doi": "10.1016/j.envpol.2021.116460",
+    "note": "Li 2021 Environmental Pollution：PFAS 与人血清白蛋白及 OAT4 的结合能力；DOI 经 Crossref 核验。仅作灵感"
+   }
+  ],
+  "inferences": [
+   {
+    "type": "design_translation",
+    "index": 0,
+    "idea": "OAT4 两点位识别加口袋容积窗口移植至多孔载体，构建 PFOA/PFBS 链长选择性吸附位点",
+    "basis": "llm_inferred",
+    "label": "inspiration",
+    "note": "全氟烷基链的刚性与氟亲和性不同于甾体/芳基天然骨架；链长窗口、头基锚定亲和力与再生驱动力均须实验验证，无性能数据"
+   },
+   {
+    "type": "homology_extrapolation",
+    "index": null,
+    "idea": "rOAT1 芳香笼残基功能归属外推至人 OAT4 同源位点",
+    "basis": "llm_inferred",
+    "label": "inference",
+    "note": "9U5A 坐标直测邻接残基（Phe211/Phe238/Tyr360/Tyr361/Arg389/Gln242，chain A）为几何事实，其功能归属（哪个残基贡献头基锚定/骨架钳夹）为家族同源性外推，待同行评审突变体验证"
+   }
+  ],
+  "boundary_notes": [
+   "本原型天然底物为硫酸结合型甾体有机阴离子（E1S/DHEAS）与多样有机阴离子（PAH、赭曲霉毒素 A、NSAIDs、胆汁酸盐等）；机制 from_source 接地限于这些天然/已知底物与转运行为",
+   "PFOA/PFBS 链长窗口识别为设计转译（llm_inferred/inspiration），非 from_source 事实，不得用作污染物去除的 direct evidence",
+   "PFAS 经 OAT4 转运的既有文献中，Louisse 2023（DOI 10.1007/s00204-022-03428-6）已由 PubMed 摘要核验为 OAT4 转染细胞的直接摄取实验；Zhao 2010、Myllynen 2015、Li 2021、Arch Toxicol 2026 其余来源仍仅作 leads 记录。所有这些来源均不得被等同为污染物吸附材料的 direct evidence",
+   "无 PFAS 吸附性能数据（qmax 等）；performance_data 为空，严格未从外部污染物知识库搬运任何性能数值",
+   "接地中经 Crossref 证伪并剔除两条错误记忆 DOI：10.1124/mol.59.5.1277 实为 OAT3 论文（Cha 2001 Mol Pharmacol 59:1277，与 OAT4 无关）；10.1074/jbc.275.1.450 不存在（Crossref Resource not found）。正确 OAT4 鉴定文献 DOI 为 10.1074/jbc.275.6.4507（JBC 275:4507-4512）",
+   "所有软边界为定性 llm_inferred，无数值阈值，gate_level=soft；9U5A/9M9Y 残基级功能归属待伴随文献发表"
+  ],
+  "missing_pdf_items": [
+   "Louisse 2023 Archives of Toxicology 97:685-696 全文 PDF（DOI 10.1007/s00204-022-03428-6；PubMed 摘要已核验）",
+   "Cha 2000 JBC 275:4507-4512 全文 PDF（quote 取自 PubMed 摘要 PMID 10660625）",
+   "Ekaratanawong 2004 J Pharmacol Sci 94:297-304 全文 PDF（quote 取自 PubMed 摘要 PMID 15037815）",
+   "Dou 2023 Nat Struct Mol Biol 30:1794-1805 全文 PDF（quote 取自 PubMed 摘要 PMID 37845412 与 PMC11406556 全文 XML）",
+   "PDB 9U5A/9M9Y 伴随文献未发表（To be published），无同行评审的残基级功能解释"
+  ],
+  "generated_by": "manual-curation-2026-07-22",
+  "note": "诚实优先：机制接地限于 OAT4 天然底物与转运行为；PFOA/PFBS 全部内容为 inspiration/外推；结构接地以 RCSB 沉积记录与坐标直测为主，残基功能归属待同行评审"
+ },
+ "boundary_rules": [
+  {
+   "rule": "头基化学偏好：硫酸结合物抑制而葡萄糖醛酸结合物几乎不抑制 OAT4 介导的雌酮硫酸酯转运",
+   "source_mechanism": "阴离子头基与芳香-阳离子底物口袋的两点位识别",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "电荷类型要求：转运阴离子化合物，不转运有机阳离子四乙基铵",
+   "source_mechanism": "阴离子头基与芳香-阳离子底物口袋的两点位识别",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "交换偶联要求：有机阴离子转运与二羧酸交换相偶联，无偶联底物则转运不能持续",
+   "source_mechanism": "顶端有机阴离子/二羧酸交换",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "口袋容积上限：rOAT1 底物口袋直测约 15 Å × 7 Å × 13 Å，对骨架尺寸设位阻上限（OAT4 同源外推为定性）",
+   "source_mechanism": "疏水骨架容纳与有限容积口袋的尺寸窗口",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "链长窗口外推：C8 PFOA 与 C4 PFBS 的疏水口袋差异匹配识别属原理层外推，定量阈值须实验标定",
+   "source_mechanism": "疏水骨架容纳与有限容积口袋的尺寸窗口",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  },
+  {
+   "rule": "人 OAT4 口袋残基级功能归属待同行评审验证（PDB 9U5A/9M9Y 伴随文献尚未发表）",
+   "source_mechanism": "阴离子头基与芳香-阳离子底物口袋的两点位识别",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  }
+ ],
+ "mechanism_tags": [
+  "配位螯合",
+  "π-π堆积",
+  "疏水分配",
+  "孔道限域分子筛分",
+  "几何识别"
+ ]
+}

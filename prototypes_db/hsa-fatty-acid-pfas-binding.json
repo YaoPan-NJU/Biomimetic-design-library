@@ -1,0 +1,386 @@
+{
+ "id": "hsa-fatty-acid-pfas-binding",
+ "name_zh": "人血清白蛋白脂肪酸结合位点（FA1-FA7）",
+ "name_en": "Human Serum Albumin Fatty Acid Binding Sites (FA1-FA7)",
+ "organism": {
+  "scientific": "Homo sapiens（人血清白蛋白 HSA，血浆脂肪酸转运蛋白）",
+  "category": "动物"
+ },
+ "biomimetic_dimension": "分子仿生",
+ "features": [
+  "特异性识别",
+  "疏水性"
+ ],
+ "tested_conditions": {
+  "tested_ph_range": null,
+  "tested_temp_range": null,
+  "salinity": null,
+  "note": "HSA 为血浆可溶蛋白（分子识别原型），本库无其吸附性能测试条件；performance_data 为空，故吸附测试条件全空。"
+ },
+ "library_tier": "extended",
+ "lifecycle_status": "active",
+ "coverage": "partial",
+ "status": "active",
+ "provenance_summary": {
+  "n_papers": 5,
+  "n_verified": 10,
+  "n_unverified": 0,
+  "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与硬边界条数（HSA-001 四要素+1 硬边界=5，HSA-002 四要素+1 硬边界=5）。机制接地限于 HSA 天然底物长链脂肪酸（C10-C18）的结合位点与头基锚模式（PDB 1BKE/1E7G/1E7E-1E7I，Curry 1998，Bhattacharya 2000）。PFAS 结合现有两组直接结构来源：PFOS-HSA（PDB 4E99，DOI 10.1021/tx300112p）和 PFOA-HSA（DOI 10.1002/pro.4036；论文 PDF 报告 2.10 Å 复合物、4 个 PFOA 位点及 4:1 化学计量）。PFOA 吸附转译仍为警示性 inspiration，无吸附性能数据。Maso 2021 PDF 已做页码级核验；其正文对 7AAE/7AAI 的指派与当前 RCSB 条目标题和分辨率互换，词条暂以 DOI 与页码事实为主并显式记录该冲突。"
+ },
+ "mechanisms": [
+  {
+   "mechanism_id": "HSA-001",
+   "name": "长链脂肪酸的羧酸头基阳离子/氢键锚定与烃链疏水容纳",
+   "description": "人血清白蛋白以分布于三个结构域的脂肪酸结合位点（FA1-FA7）结合长链脂肪酸；各位点以 Arg/Lys/Tyr 型阳离子与氢键残基锚定羧酸头基（如 FA2 位点 Arg410 与 Tyr411、FA1 位点 Lys199 与 Arg218，PDB 链 A 编号），侧壁 Leu/Phe 等疏水残基容纳长烃链；PDB 1E7G 为 HSA 与肉豆蔻酸（十四烷酸）复合物，链 A 含 8 个 MYR 配体分子",
+   "基本原理": "预组织的 Arg/Lys/Tyr 型阳离子与氢键给体方向性锚定脂肪酸羧酸头基，疏水侧壁经范德华接触容纳长烃链；头基锚定与尾链疏水容纳的组合使两亲性脂肪酸在血浆水相中被可逆结合与转运，无金属参与",
+   "source": "literature",
+   "ref_doi": "10.1006/jmbi.2000.4158",
+   "verification": "verified",
+   "verification_quote": "Crystallographic Analysis Reveals Common Modes of Binding of Medium and Long-Chain Fatty Acids to Human Serum Albumin",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "长链脂肪酸（HSA 天然底物）：以肉豆蔻酸（十四烷酸，MYR）为例，PDB 1E7G 为 HSA-肉豆蔻酸复合物，链 A 含 8 个 MYR 配体分子（HET 记录 MYR A1001-A1008），极性羧酸头基加长烃链的两亲结构",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1006/jmbi.2000.4158",
+     "locator": "PDB 1E7G, HETNAM / HET (A1001-A1008) / p.721",
+     "quote": "HETNAM     MYR MYRISTIC ACID",
+     "scope_match": "Keywords: MYR, myristic acid"
+    },
+    "bio_structure": {
+     "text": "HSA 为单链三域（I/II/III，各含 A/B 亚域）血浆蛋白（PDB 1BKE 记 molecular_weight 68.28 kDa，SOURCE 记 HOMO SAPIENS），脂肪酸位点分布于各结构域；PDB 1E7G 为 HSA-肉豆蔻酸（十四烷酸）复合物沉积记录",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1006/jmbi.2000.4158",
+     "locator": "PDB 1E7G, TITLE (p.721)",
+     "quote": "Human serum albumin complexed with tetradecanoic acid (myristic acid)",
+     "scope_match": "Keywords: serum albumin, myristic"
+    },
+    "interaction": {
+     "text": "脂肪酸羧酸头基由阳离子/氢键残基锚定：FA2 位点 Arg410 与 Tyr411（PDB 1E7G SITE AC4 记录，同壁含 Leu387/Leu460/Phe488/Ser489），FA1 位点 Lys199 与 Arg218（SITE AC7）。残基编号按 PDB 链 A（成熟白蛋白 1-585 编号）；DBREF 记 PDB A1-585 对应 UniProt P02768 前体 25-609（偏移 +24，即 Arg410 = R434 前体编号）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1006/jmbi.2000.4158",
+     "locator": "PDB 1E7G, SITE AC4 (p.721)",
+     "quote": "SITE     1 AC4  6 LEU A 387  ARG A 410  TYR A 411  LEU A 460",
+     "scope_match": "Keywords: ARG A 410, TYR A 411"
+    },
+    "why_it_works": {
+     "text": "中长链脂肪酸以共同模式结合：Bhattacharya 2000 测定 HSA 与癸酸至硬脂酸系列复合物，显示中等与长链脂肪酸对 HSA 的结合存在共同模式，即头基锚定保守、烃链经疏水壁容纳，使单一位点化学可覆盖不同链长脂肪酸",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1006/jmbi.2000.4158",
+     "locator": "PDB 1E7G citation title / p.721",
+     "quote": "Crystallographic Analysis Reveals Common Modes of Binding of Medium and Long-Chain Fatty Acids to Human Serum Albumin",
+     "scope_match": "Keywords: fatty acids, serum albumin"
+    },
+    "boundary_conditions": [
+     {
+      "text": "链长容忍性：同一组脂肪酸位点结合 C10-C18 脂肪酸（PDB 1E7E 癸酸、1E7F 十二酸、1E7G 十四酸、1E7H 十六酸、1E7I 十八酸，均为 Bhattacharya 2000 沉积结构），头基锚定模式保守；对链长的分辨来自烃链疏水接触而非头基特异识别",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "PDB 1E7H, TITLE (p.721)",
+      "quote": "HUMAN SERUM ALBUMIN COMPLEXED WITH HEXADECANOIC ACID (PALMITIC ACID)",
+      "scope_match": "Keywords: albumin, hexadecanoic",
+      "source_asset": null
+     },
+     {
+      "text": "结构完整性：三域三级结构须维持完整，蛋白变性或位点完全溶剂化使头基锚几何与疏水埋藏丧失（定性，无数值阈值）",
+      "parameter": "wet_stability",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "预组织的 Arg/Lys/Tyr 型阳离子与氢键给体方向性锚定两亲性阴离子的羧酸头基，配合疏水侧壁对长烃链的范德华容纳，可在水相中可逆结合极性头基加疏水尾链型配体；该化学对羧酸型两亲阴离子广谱，不提供单一配体的特异选择性",
+    "verification_quote": "Crystallographic Analysis Reveals Common Modes of Binding of Medium and Long-Chain Fatty Acids to Human Serum Albumin"
+   },
+   "source_doi": "10.1006/jmbi.2000.4158",
+   "source_page": 721,
+   "source_locator": "PDB 1E7G / 1E7H（RCSB 沉积数据）/ p.721",
+   "source_file": "PDB 1E7G / 1E7H（RCSB 沉积数据，files.rcsb.org 头记录）+ J Mol Biol 303:721-732（题录接地；未做全文 PDF 审计）",
+   "functional_groups": [
+    "阳离子/氢键给体（Arg410、Tyr411、Lys199、Arg218、Arg117、Tyr138、Lys73 等位点头基锚）",
+    "疏水侧壁残基（Leu387、Leu460、Phe488、Tyr150、Arg257 邻壁等）",
+    "三域 α 螺旋束骨架"
+   ],
+   "key_structures": [
+    "识别结构"
+   ]
+  },
+  {
+   "mechanism_id": "HSA-002",
+   "name": "脂肪酸结合位点 FA1-FA7 的多位点不对称分布与跨位点保守头基锚",
+   "description": "HSA 含 7 个主要脂肪酸结合位点（FA1-FA7），不对称分布于 I、II、III 三个结构域（PDB 1BKE 中 5 个肉豆蔻酸分子同时占据不同位点）；跨位点头基锚化学保守为 Arg/Lys/Tyr 型极性残基（如 PDB 1E7G 位点 AC1 的 Arg117/Tyr138/Tyr161、位点 AC4 的 Arg410/Tyr411、位点 AC7 的 Lys199/Arg218）",
+   "基本原理": "多位点架构使单个白蛋白分子高容量、可逆地转运血浆脂肪酸；跨位点保守的阳离子/氢键头基锚意味着该识别化学本质上是广谱的羧酸/两亲阴离子结合，而非对某一配体的特异识别",
+   "source": "literature",
+   "ref_doi": "10.1038/1869",
+   "verification": "verified",
+   "verification_quote": "Crystal structure of human serum albumin complexed with fatty acid reveals an asymmetric distribution of binding sites",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "长链脂肪酸多位点同时占据：PDB 1BKE 为 HSA 与肉豆蔻酸（及三碘苯甲酸）复合物，链 A 含 5 个 MYR 配体分子（HET 记录 MYR A1001-A1005），分别占据不同脂肪酸位点",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/1869",
+     "locator": "PDB 1BKE, TITLE / HET (A1001-A1005) / p.827",
+     "quote": "HUMAN SERUM ALBUMIN IN A COMPLEX WITH MYRISTIC ACID AND TRI-IODOBENZOIC ACID",
+     "scope_match": "Keywords: albumin, myristic acid"
+    },
+    "bio_structure": {
+     "text": "7 个脂肪酸结合位点（FA1-FA7）跨三个结构域不对称分布：Curry 1998 以 HSA-脂肪酸复合物晶体结构揭示脂肪酸结合位点的不对称分布（如 FA1 在亚域 IB、FA2 在亚域 IIIA 即 Sudlow 位点 II、FA6/FA7 在亚域 IIA）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/1869",
+     "locator": "title, p.827",
+     "quote": "Crystal structure of human serum albumin complexed with fatty acid reveals an asymmetric distribution of binding sites",
+     "scope_match": "Keywords: serum albumin, asymmetric, binding sites"
+    },
+    "interaction": {
+     "text": "不同位点的头基锚由不同 Arg/Lys/Tyr 型残基承担：PDB 1E7G SITE AC1（亚域 IIA 区位点）记录 ARG A 117、TYR A 138、TYR A 161 等接触残基；SITE AC7 记录 LYS A 199、ARG A 218（与 1BKE SITE AC7 的 LYS A 190、SER A 193 近邻对应）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1006/jmbi.2000.4158",
+     "locator": "PDB 1E7G, SITE AC1 (p.721)",
+     "quote": "SITE     1 AC1  6 ARG A 117  MET A 123  TYR A 138  TYR A 161",
+     "scope_match": "Keywords: ARG A 117, TYR A 138"
+    },
+    "why_it_works": {
+     "text": "单个 HSA 分子的不同位点可同时结合多个脂肪酸分子（PDB 1BKE 中 MYR A1001 位于 AC7 位点并由 Lys190/Ser193 等近邻，另有 4 个 MYR 分别占据其他位点；1E7G 中达 8 个 MYR），多位点架构提供高容量、位点间非独占的血浆脂肪酸转运能力",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/1869",
+     "locator": "PDB 1BKE, SITE AC7 (p.827)",
+     "quote": "SITE     2 AC7  7 LYS A 190  SER A 193  MYR A1001",
+     "scope_match": "Keywords: LYS A 190, MYR"
+    },
+    "boundary_conditions": [
+     {
+      "text": "头基锚化学跨位点保守：各位点均以 Arg/Lys/Tyr 型极性残基接触脂肪酸羧酸头基（PDB 1BKE SITE AC7 记 LYS A 190、SER A 193 与 MYR A1001；PDB 1E7G SITE AC1 记 ARG A 117/TYR A 138，SITE AC4 记 ARG A 410/TYR A 411）；锚定化学的跨位点保守意味着对该位点的仿生只能复制广谱羧酸/两亲阴离子结合，不提供配体特异选择性",
+      "parameter": "competing_ion",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "PDB 1BKE, SITE AC7 (p.827)",
+      "quote": "SITE     2 AC7  7 LYS A 190  SER A 193  MYR A1001",
+      "scope_match": "Keywords: LYS A 190, MYR",
+      "source_asset": null
+     },
+     {
+      "text": "警示性边界：PFOA/PFOS 对 HSA 脂肪酸位点的结合属脂肪酸类似物的碰巧占据（PDB 4E99 中 PFOS 与肉豆蔻酸同位点共享 Arg410/Tyr411 锚），并非自然界进化出的 PFAS 识别方案；FABP/HSA 家族蛋白敲除不改变 PFOS 组织分布（项目框架 2026-07-21 定性，原始文献未取得）；不得将 HSA 脂肪酸位点视为有效 PFAS 识别原型（定性，无数值阈值）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "多位点架构加跨位点保守的 Arg/Lys/Tyr 头基锚意味着对该类位点的仿生只能复制广谱羧酸/两亲阴离子结合，无法获得对单一污染物的特异选择性；PFAS 对该类位点的结合是脂肪酸类似物的碰巧占据，特异性须在材料设计层面另行构建",
+    "verification_quote": "Crystal structure of human serum albumin complexed with fatty acid reveals an asymmetric distribution of binding sites"
+   },
+   "source_doi": "10.1038/1869",
+   "source_page": 827,
+   "source_locator": "PDB 1BKE（RCSB 沉积数据）/ p.827",
+   "source_file": "PDB 1BKE（RCSB 沉积数据，files.rcsb.org 头记录）+ Nat Struct Biol 5:827-835（题录接地；未做全文 PDF 审计）",
+   "functional_groups": [
+    "阳离子/氢键给体（多位点 Arg117、Tyr138、Tyr161、Lys73、Lys199、Arg218、Lys190 等）",
+    "多位点疏水腔（FA1-FA7）"
+   ],
+   "key_structures": [
+    "识别结构"
+   ]
+  }
+ ],
+ "performance_data": [],
+ "engineering_constraints": [
+  {
+   "constraint": "可溶大蛋白形态",
+   "value": "HSA 为血浆可溶性单链蛋白（RCSB 1BKE 记 molecular_weight 68.28 kDa），识别依赖完整三域三级结构，用作吸附须固定化或仅提取设计原则",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "RCSB 1BKE 条目 molecular_weight 68.28 kDa；SOURCE 记 ORGANISM_SCIENTIFIC: HOMO SAPIENS",
+   "source": "literature",
+   "ref_doi": "10.1038/1869"
+  },
+  {
+   "constraint": "头基锚广谱性（非 PFAS 特异）",
+   "value": "Arg/Lys/Tyr 头基锚对所有羧酸型两亲阴离子广谱结合（脂肪酸及经 Sudlow 位点的多种药物）；对该位点的仿生不提供 PFOA 相对脂肪酸/腐殖酸的选择性",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（基于 PDB 位点残基跨位点保守与白蛋白多配体结合特性的外推）",
+   "source": "llm_inference",
+   "ref_doi": null
+  },
+  {
+   "constraint": "PFAS 同位点碰巧占据（警示）",
+   "value": "PFOS 占据 HSA FA2 位点（PDB 4E99 SITE AC1 含 ARG A 410、TYR A 411），与肉豆蔻酸位点（PDB 1E7G SITE AC4）共享 Leu387/Arg410/Tyr411/Phe488/Ser489 五个接触残基，属脂肪酸类似物的同位点碰巧占据而非独立进化的 PFAS 识别",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "PDB 4E99 SITE AC1 残基清单与 PDB 1E7G SITE AC4 直接比对（RCSB 沉积记录逐行核对）",
+   "source": "literature",
+   "ref_doi": "10.1021/tx300112p"
+  }
+ ],
+ "narrative": {
+  "entries": [
+   {
+    "source_file": "PDB 1BKE / 1E7G / 1E7E-1E7I / 4E99（RCSB 沉积数据）+ Curry 1998 Nat Struct Biol 5:827-835（DOI 10.1038/1869）+ Bhattacharya 2000 J Mol Biol 303:721-732（DOI 10.1006/jmbi.2000.4158）+ Luo 2012 Chem Res Toxicol 25:990-992（DOI 10.1021/tx300112p）+ Maso 2021 Protein Science 30:830-841（DOI 10.1002/pro.4036，全文 PDF）",
+    "paper_id": "1998-Curry-HSA-fatty-acid-asymmetric-sites",
+    "sections": {
+     "problem_definition": "长链脂肪酸不溶于血浆水相，须由载体蛋白可逆结合并转运。人血清白蛋白（HSA，约 66-69 kDa）是血浆丰度最高的蛋白，承担脂肪酸从摄取组织向代谢组织的转运，是脂肪酸体液分布的主要决定蛋白。分子层面的问题是：单个白蛋白分子如何在水相中同时可逆结合多个两亲性脂肪酸分子。",
+     "biological_solution": "HSA 以分布于三个结构域（I、II、III，各含 A/B 亚域）的 7 个主要脂肪酸位点（FA1-FA7）结合脂肪酸，位点分布不对称（Curry 1998，DOI 10.1038/1869，PDB 1BKE）。各位点以 Arg/Lys/Tyr 型阳离子与氢键给体锚定脂肪酸羧酸头基：如 FA2 位点（亚域 IIIA，Sudlow 位点 II）的 Arg410 与 Tyr411、FA1 位点的 Lys199 与 Arg218（PDB 1E7G SITE 记录）；侧壁 Leu/Phe 等疏水残基容纳烃链。Bhattacharya 2000（DOI 10.1006/jmbi.2000.4158）测定 HSA 与癸酸至硬脂酸系列复合物（PDB 1E7E-1E7I，C10-C18），显示中长链脂肪酸以共同模式结合、头基锚定保守。PDB 1BKE 中 5 个肉豆蔻酸分子同时占据不同位点，1E7G 中达 8 个，体现多位点高容量转运。PFAS 维度：PFOS 结构（Luo 2012，DOI 10.1021/tx300112p，PDB 4E99）显示脂肪酸位点占据；Maso 2021（DOI 10.1002/pro.4036，Protein Science 30:830-841）进一步在 2.10 Å 晶体结构中定位 4 个 PFOA 与 4 个脂肪酸位点，并用溶液实验确认 4:1 PFOA:HSA 化学计量、一个高亲和位点和三个低亲和位点。该论文第 832-834 页显示 PFOA 的羧酸头基由 Ser489、Asn391、Arg410、Tyr411 等极性作用锚定，氟化尾链进入疏水通道；其结合模式总体类似中链脂肪酸。上述证据支持 HSA-PFAS 结合，但不证明对 PFAS 的进化特异性。",
+     "key_features": "必须保留：① Arg/Lys/Tyr 型阳离子与氢键给体对羧酸头基的方向性锚定；② 容纳长烃链的疏水侧壁（Leu/Phe/Met 型）；③ 多位点、可逆、水相容的结合架构。须警惕：该化学对一切羧酸型两亲阴离子广谱，不区分脂肪酸与 PFAS；HSA 本身为 66-69 kDa 可溶蛋白且天然承担药物结合（Sudlow 位点 I/II），直接仿生只得广谱结合位点。",
+     "design_mapping": "仿生映射（警示性）：HSA 脂肪酸位点 → 对 PFOA 等全氟羧酸的'头基锚 + 疏水腔'设计要素。但本映射为警示性 inspiration：PFOA/PFOS 对 HSA 位点的结合属脂肪酸类似物碰巧占据（PDB 4E99 同位点共享 Arg410/Tyr411 锚），并非自然界进化出的 PFAS 识别方案；项目框架（2026-07-21 定性）记录 FABP/HSA 家族蛋白敲除不改变 PFOS 组织分布（原始文献未取得），Ng 与 Hungerbühler 2013（DOI 10.1021/es400981a）以设问式标题质疑蛋白特异性结合对 PFAA 生物浓缩的重要性。故 HSA 不作为有效的 PFAS 识别原型，只作为'何种仿生会失败'的负面参照：单纯复制头基锚加疏水腔得到的是广谱两亲阴离子结合，PFAS 选择性须在材料层另行构建。",
+     "explainability_anchors": "设计溯源：HSA 脂肪酸位点的头基锚加疏水腔（PDB 1BKE/1E7G/1E7E-1E7I，from_source）→ PFOS/PFOA 占据脂肪酸类位点（PDB 4E99；DOI 10.1002/pro.4036 的 2.10 Å PFOA 复合物，from_source）→ 警示性结论：脂肪酸模拟锚提供结合力但不构成 PFAS 特异识别，选择性须材料层构建（llm_inferred 转译，须实验验证）。"
+    }
+   }
+  ]
+ },
+ "design_translation": [
+  {
+   "idea": "警示性转译：HSA 脂肪酸位点的'Arg/Lys/Tyr 头基锚 + 疏水腔'对 PFOA 只构成脂肪酸类似物的碰巧结合（PDB 4E99 中 PFOS 与肉豆蔻酸共享 FA2 位点 Arg410/Tyr411 锚），敲除与建模证据表明此类蛋白结合不主导 PFOS 组织分布与 PFAA 生物浓缩；故面向 PFOA 的材料设计若仅复制该二要素，将得到对天然脂肪酸与腐殖酸类两亲阴离子同样广谱结合的位点，PFAS 选择性须叠加材料层策略（全氟碳链氟亲识别、C8 链长几何匹配、脂肪酸竞争物形状排斥）另行构建",
+   "specific_functional_group": "胍基/脒基阳离子或脲/硫脲中性氢键给体（模拟 Arg/Lys/Tyr 头基锚）加烃链或全氟烷基孔壁（模拟疏水侧壁）；须另叠加 PFAS 特异要素：全氟碳识别微环境与匹配 C8 链长的腔体几何",
+   "material_handle": "介孔二氧化硅或交联聚合物骨架经硅烷偶联/表面引发聚合接枝胍基或脲/硫脲单体；孔壁以全氟烷基链修饰形成氟亲微环境；以刚性间隔臂或分子印迹预组织头基锚间距与取向，并按 C8 全氟链设定孔深/孔径",
+   "target_interaction": "PFOA 羧酸头基的方向性静电/氢键锚定加全氟碳链在低极性腔内的范德华/氟亲接触；该组合同样强结合天然脂肪酸，故选择性只能来自叠加的氟亲与链长几何要素",
+   "source_tier": "llm_inference",
+   "evidence_tier": "inspiration（警示性/负面案例：HSA 与 PFAS 的结合为脂肪酸类似物碰巧占据，PDB 4E99 与 Luo 2012 接地；敲除分布证据为项目框架 2026-07-21 定性，原始文献未取得；转译为 PFOA 选择性吸附材料为 llm_inferred，无吸附实验数据）",
+   "examples": [],
+   "design_principle": "HSA 证明阳离子/氢键头基锚加疏水腔可高容量可逆结合两亲性阴离子（PDB 1BKE/1E7G/1E7E-1E7I），但 4E99 表明 PFAS 只是以脂肪酸类似物外形碰巧进入同一位点；该二要素提供结合力而不提供 PFAS 选择性，是设计起点而非选择性来源",
+   "implementation_example": "胍基/脲功能化、具全氟烷基孔壁与 C8 链长匹配孔径的介孔二氧化硅或交联聚合物，并叠加尺寸/形状排阻以排斥长链脂肪酸竞争物（无实验数据，仅为设计假设）",
+   "constraints": "头基锚加疏水腔对天然脂肪酸与腐殖酸类两亲阴离子广谱结合，单独使用无 PFAS 选择性；水相中头基锚水合竞争与共存阴离子干扰是关键挑战；蛋白本身不可直接复制（可溶、66-69 kDa、多配体广谱），只提取设计原则与负面教训",
+   "failure_modes": "位点对血清脂肪酸与腐殖酸的非特异结合掩盖 PFOA；氟亲孔壁对一切全氟物种（PFOS/PFHxS/短链 PFAS）非特异吸附而无 PFOA 选择性；头基锚暴露于体相水被氢键竞争淬灭；将本原型误用为 PFOA 有效识别方案（正是本条目警示的失败模式）",
+   "material_realization_examples": []
+  }
+ ],
+ "honesty_ledger": {
+  "facts": [
+   {
+    "type": "mechanism",
+    "index": 0,
+    "name": "长链脂肪酸的羧酸头基阳离子/氢键锚定与烃链疏水容纳",
+    "basis": "from_source_verified",
+    "note": "Bhattacharya 2000 J Mol Biol（PDB 1E7G：8 个 MYR 配体 A1001-A1008；SITE AC4 记 Arg410/Tyr411 等头基锚，SITE AC7 记 Lys199/Arg218；1E7E-1E7I 覆盖 C10-C18 共同结合模式）；quote 逐字取自 RCSB PDB 沉积记录（TITLE/HETNAM/SITE）与 Crossref 题录，未做全文 PDF 审计"
+   },
+   {
+    "type": "mechanism",
+    "index": 1,
+    "name": "脂肪酸结合位点 FA1-FA7 的多位点不对称分布与跨位点保守头基锚",
+    "basis": "from_source_verified",
+    "note": "Curry 1998 Nat Struct Biol（PDB 1BKE：5 个 MYR A1001-A1005 同时占据不同位点；题录记脂肪酸结合位点不对称分布）加 1E7G SITE 记录多位点 Arg/Lys/Tyr 锚；quote 取自 RCSB 沉积记录题录与 SITE 行，未做全文 PDF 审计"
+   },
+   {
+    "type": "interaction_fact",
+    "index": 0,
+    "name": "PFOS 以脂肪酸类似物形式占据 HSA FA2 位点（碰巧结合，非进化识别）",
+    "basis": "from_source_verified",
+    "note": "Luo 2012 Chem Res Toxicol（PDB 4E99：配体 P8S 即全氟辛烷磺酸位于 A601/A602；SITE AC1 含 Arg410/Tyr411/Lys414 等 17 残基，与肉豆蔻酸位点 1E7G AC4 共享 Leu387/Arg410/Tyr411/Phe488/Ser489）；Jones 2003 Environ Toxicol Chem 记载全氟脂肪酸与血清蛋白结合（题录接地）；本条记录为有文献记载的外源污染物-蛋白相互作用并定性为碰巧占据，不作 PFAS 特异识别证据"
+   },
+   {
+    "type": "interaction_fact",
+    "index": 1,
+    "name": "PFOA 在 HSA 中占据多个脂肪酸类位点并形成头基极性锚与氟化尾链疏水接触",
+    "basis": "from_source_verified",
+    "note": "Maso et al. 2021 Protein Science 30:830-841（DOI 10.1002/pro.4036）全文 PDF 已核验：摘要与第 831-834 页报告 2.10 Å HSA-PFOA-肉豆蔻酸复合物、4 个 PFOA 位点及 4:1 PFOA:HSA 化学计量；第 832 页逐项给出 PFOA1 羧酸头基与 Ser489/Asn391/Arg410/Tyr411 的极性作用及氟化尾链的疏水通道接触。论文正文把 PFOA 复合物标为 7AAE、肉豆蔻酸复合物标为 7AAI，但当前 RCSB 条目标题和分辨率相反（7AAI=PFOA 2.10 Å；7AAE=肉豆蔻酸 2.27 Å），故此处不把争议 PDB 编号作为唯一证据键。该事实只支持结合模式，不支持 PFAS 特异选择性或吸附性能。"
+   }
+  ],
+  "leads": [],
+  "inferences": [
+   {
+    "type": "design_translation",
+    "index": 0,
+    "idea": "HSA 脂肪酸位点的头基锚加疏水腔转译为 PFOA 吸附设计要素（警示性/负面案例）",
+    "basis": "llm_inferred",
+    "label": "inspiration",
+    "note": "HSA 脂肪酸位点对 PFOA/PFOS 的结合为脂肪酸类似物碰巧占据（PDB 4E99），HSA 不作为有效 PFAS 识别原型；转译为 PFOA 选择性吸附材料属原理层外推，无吸附实验数据，选择性须材料层另行构建并实验验证"
+   },
+   {
+    "type": "framework_assertion",
+    "index": 0,
+    "name": "FABP/HSA 家族蛋白敲除不改变 PFOS 组织分布",
+    "basis": "llm_inferred",
+    "label": "framework_note",
+    "note": "项目框架 2026-07-21 定性记录；本条目未取得并核验其原始文献，故仅作软边界与诚实标注，不作 from_source 接地，待后续文献核验"
+   },
+   {
+    "type": "literature_inference",
+    "index": 0,
+    "name": "蛋白特异性结合对 PFAA 生物浓缩的重要性受质疑",
+    "basis": "llm_inferred",
+    "label": "title_only",
+    "note": "Ng 与 Hungerbühler 2013（DOI 10.1021/es400981a）标题 'Bioconcentration of Perfluorinated Alkyl Acids: How Important Is Specific Binding?' 的设问式立场；仅题录接地，摘要与全文未取得"
+   }
+  ],
+  "boundary_notes": [
+   "本原型天然底物为长链脂肪酸（C10-C18）；机制 from_source 接地限于脂肪酸结合位点与头基锚模式（PDB 1BKE/1E7G/1E7E-1E7I，Curry 1998，Bhattacharya 2000）",
+   "PFOA/PFOS 对 HSA 位点的结合定性为脂肪酸类似物的碰巧占据（PDB 4E99 同位点共享 Arg410/Tyr411 锚）；HSA 不作为有效 PFAS 识别原型，本条目转译为警示性 inspiration，不得用作 PFOA 吸附的 direct evidence",
+   "'FABP/HSA 敲除不改变 PFOS 组织分布'为项目框架（2026-07-21）定性断言，原始文献未取得，未作 from_source 接地，列于 inferences 与 missing_pdf_items 待核验",
+   "performance_data 为空数组：严格未从姊妹项目 biomimetic-adsorbent-design 的污染物知识库搬运任何 PFOA 吸附性能数值（知识隔离红线）；HSA 与 PFAS 的结合亲和力数值亦未搬运",
+   "所有 llm_inferred 边界为定性，无数值阈值，gate_level=soft"
+  ],
+  "missing_pdf_items": [
+   "Curry 1998 Nat Struct Biol 5:827-835 全文 PDF（quote 取自 RCSB PDB 沉积记录与 Crossref 题录）",
+   "Bhattacharya 2000 J Mol Biol 303:721-732 全文 PDF（quote 取自 PDB 沉积记录 TITLE/HETNAM/SITE 与题录）",
+   "Luo 2012 Chem Res Toxicol 25:990-992 全文 PDF（quote 取自 PDB 4E99 沉积记录与 Crossref 题录）",
+   "Jones 2003 Environ Toxicol Chem 22:2639-2649 全文 PDF（Crossref 摘要已核验，正文未取得）",
+   "Ng 与 Hungerbühler 2013 Environ Sci Technol 47:7214-7223 摘要与全文（仅 Crossref 题录）",
+   "'FABP/HSA 家族蛋白敲除不改变 PFOS 组织分布'的原始文献（框架断言，未取得）"
+  ],
+  "generated_by": "manual-curation-2026-07-21",
+  "note": "诚实优先：机制接地限于 HSA 天然底物长链脂肪酸的结合位点与头基锚模式；PFAS 结合定性为碰巧占据，一切 PFOA 吸附转译为警示性 inspiration/外推"
+ },
+ "boundary_rules": [
+  {
+   "rule": "链长容忍性：同一组脂肪酸位点结合 C10-C18 脂肪酸（PDB 1E7E-1E7I），头基锚定模式保守；对链长的分辨来自烃链疏水接触而非头基特异识别",
+   "source_mechanism": "长链脂肪酸的羧酸头基阳离子/氢键锚定与烃链疏水容纳",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "头基锚化学跨位点保守：各位点均以 Arg/Lys/Tyr 型极性残基锚定羧酸头基，对该位点的仿生只能复制广谱羧酸/两亲阴离子结合，不提供配体特异选择性",
+   "source_mechanism": "脂肪酸结合位点 FA1-FA7 的多位点不对称分布与跨位点保守头基锚",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "警示性边界：PFOA/PFOS 对 HSA 位点为脂肪酸类似物碰巧占据（PDB 4E99 与肉豆蔻酸同位点共享 Arg410/Tyr411 锚）；FABP/HSA 敲除不改变 PFOS 组织分布（项目框架 2026-07-21 定性，原始文献未取得）；不得将 HSA 脂肪酸位点视为有效 PFAS 识别原型",
+   "source_mechanism": "脂肪酸结合位点 FA1-FA7 的多位点不对称分布与跨位点保守头基锚",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  },
+  {
+   "rule": "结构完整性：三域三级结构须维持完整，变性或位点完全溶剂化使头基锚几何与疏水埋藏丧失（定性，无数值阈值）",
+   "source_mechanism": "长链脂肪酸的羧酸头基阳离子/氢键锚定与烃链疏水容纳",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  }
+ ],
+ "mechanism_tags": [
+  "配位螯合",
+  "氢键",
+  "疏水分配",
+  "几何识别"
+ ]
+}

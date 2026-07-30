@@ -1,0 +1,127 @@
+# COLLAB-HANDOFF
+
+## 2026-06-17 ~14:00 CST - qoder
+- completed:
+  - 第一层 wrong-source 清除（8原型150条），已写入 refuted-log.md
+  - 创建 COLLABORATION-PROTOCOL.md
+  - 创建 COLLAB-BOARD.md（4个任务分配给 Claude Code）
+  - 更新 CLAUDE.md 追加当前任务
+- next:
+  - Claude Code 开始执行 TASK-001 ~ TASK-004
+  - Qoder 将更新 decision queue 中已清除项的状态
+  - Qoder 将准备第二层 scope 决策清单给 Yao
+- blockers: none
+- decisions_needed: none (第一层已批准执行)
+
+## 2026-06-17 ~23:40 CST - qoderwork
+- completed:
+  - 全面盘点：决策队列 0 pending_yao，边界 59 applied+guard，验证覆盖 0% 性能 / 3% 机制
+  - 输出 review-qoderwork-full-inventory-20260617.md
+  - 确认 OpenClaw gateway 可用（localhost:18789），通过 `openclaw agent` 直接派发任务
+  - 更新 COLLABORATION-PROTOCOL.md（QoderWork 接替 Codex，角色表+工作模式）
+  - 派发 Phase 0 任务给 OpenClaw:
+    - Worker 1 (biomimetic-boundary-b1): 写入 8 项已审批边界规则到 JSON
+    - Worker 2 (biomimetic-diatom-write): 写入 diatom-frustule 因果链卡
+- next:
+  - 验收 Phase 0 两个 worker 的产出（spot-check 引文 + schema 合规）
+  - 验收通过后 → 派发 Phase 1: Tier 1 验证升级（chitosan 103 行 + PDA 35 行 + mussel 43 行 + diatom 42 行 + fish-scale 20 行）
+  - 同步派发 enrichment 因果链批量填充
+- blockers: none
+- decisions_needed: none（Phase 0 均为已审批项的机械执行）
+
+## 2026-06-18 ~02:00 CST - qoderwork
+- completed:
+  - Phase 0: 边界规则写入(6/8 accepted, 2 deferred) + diatom因果链卡片 + COLLAB文档
+  - Phase 1: PDA(44行) + mussel+fish-scale(72行) + chitosan+diatom(33行) = 149行验证
+  - Phase 1b: enrichment因果链 452/459 filled (98.5%)
+  - Phase 2 Tier 2a: plant-tannin(15) + wood-xylem(3) + silk-fibroin(25) = 43行
+  - Phase 2 Tier 2b: scallop-shell(7) + oyster-shell(13) + IOB(22) = 42行
+  - Phase 2: 零性能原型scope_notes (3+1+1+4 files)
+  - QoderWork修复: oyster-shell JSON语法错误, 29条违规verified降级, provenance重算
+  - 全量校验: 0 new errors, check_chimera 0 violations
+  - 输出: review-qoderwork-session-report-20260618.md + 4 acceptance reports
+- current_state:
+  - performance_data: 406 rows (164 verified 40%, 75 partial 19%, 160 needs_review 39%, 7 missing_pdf 2%)
+  - mechanisms: 530 total (15 verified 3%, 13 partial 3%, 401 needs_review 76%)
+  - enrichment causal chains: 471/478 filled (98.5%)
+  - boundary conditions: 61 in causal_chain blocks
+  - engineering_constraints: 210+ across 19 prototypes
+  - 全部未commit
+- next:
+  - P0: Tier 3 验证 (bone-structure, cell-membrane-ion-channel, starch-granule)
+  - P0: OCR扫描件用 mimo-v2.5 多模态验证 (CN113244898A, CN114570339A, CN113275374A)
+  - P0: lotus-leaf engineering_constraints + narrative cleanup (Task 18)
+  - P0: IOB + oyster-shell rework (补verification_quote)
+  - P1: 164 verified performance_data → Yao审批
+  - P1: Git commit 所有变更
+- blockers: none
+- decisions_needed:
+  - B03-CHL-001: chlorella mechanism index
+  - B04-SHART-003: superhydrophobic patent location
+  - wood-xylem mechanism[0] 引文来源 Mo2021 vs Kumar2021
+  - 3 zero-perf prototypes → parked?
+  - 164 verified perf rows → Yao逐条审批
+
+## 2026-06-18 ~07:30 CST - qoderwork
+- completed:
+  - Batch 3: IOB verification (19 rows from 3 PDFs: Luo/Xu/Jhariya) + Oyster-shell (9 rows from 3 PDFs: Wang/Zhang×2)
+  - Batch 4: OCR 3 scanned patents via mimo-v2.5 multimodal:
+    - CN113275374A → IOB rows 0-3 + fish-scale rows 18-21 (8 rows)
+    - CN114570339A → mussel rows 32-38 + PDA rows 28-34 (14 rows)
+    - CN113244898A → PDA rows 5-7 (3 rows)
+  - Tier 2a fixes: plant-tannin 15 rows source_locator补齐, wood-xylem mechanism[0] verification_quote补全 + 3 rows source_locator
+  - Chitosan row 97 verified from CN119488883A text patent (qualitative)
+  - 6 acceptance reports written
+  - 全量校验: validate_consistency 1 pre-existing error, check_chimera 0 violations
+- current_state (commit 9ac2b83):
+  - performance_data: ~410 rows
+    - Fully verified (0 needs_review): IOB(23), oyster-shell(12+1missing), fish-scale(29), diatom(29), plant-tannin(15), wood-xylem(3), silk-fibroin(25), scallop-shell(7)
+    - Mostly verified: PDA 44 (40 verified/partial, 4 needs_review), mussel 43 (33 verified/partial, 10 needs_review)
+    - PDF blocked: chitosan 117 (47 verified/partial, 70 needs_review — 22 PDFs missing), cell-membrane 14 (all missing), mycelium 5, pitcher-plant 1, lobster 1
+  - mechanisms: 530 total → 256 verified+partial (48% coverage, was 3%)
+    - chitosan: 50/132, mussel: 38/88, fish-scale: 41/89, PDA: 37/65
+    - spider-silk: 11/31, silk-fibroin: 8/19, pitcher-plant: 10/20
+    - Fully covered: chlorella(13), oyster-shell(3), plant-tannin(7+5=12/13), IOB(4/6), bone-structure(4/5), wood-xylem(1+3=4/4)
+  - enrichment causal chains: 471/478 filled (98.5%)
+  - boundary conditions: 61 in causal_chain blocks
+  - engineering_constraints: 210+ across 19 prototypes
+- next:
+  - P0: 剩余 274 mechanisms 继续用 verify_mechanisms.py + OpenClaw 推进（需要更多 DOI→PDF 映射）
+  - P1: chitosan 70 行 perf needs_review → 需 Yao 获取 22 篇缺失 PDF
+  - P1: mussel 10 行 + PDA 4 行 → 3+1 项专利 PDF 缺失
+  - P1: 164+ verified perf rows → Yao 逐条审批
+  - P2: lotus-leaf cleanup (parked_separation, low priority)
+- blockers:
+  - Chitosan 70 rows: 22 source PDFs 全部缺失，需 Yao 获取文献
+  - Cell-membrane 14 rows: 3 source PDFs 全部缺失
+  - Mussel 10 rows: 3 patent PDFs 缺失 (CN105413659B, CN113042006A, CN114849661A)
+  - PDA 4 rows: CN114887602A 缺失
+  - 274 mechanisms: ref_doi 无对应本地 PDF（31/92 DOIs 未匹配）
+- decisions_needed:
+  - B03-CHL-001: chlorella mechanism index
+  - B04-SHART-003: superhydrophobic patent location
+  - 3 zero-perf prototypes → parked? (coral, magnetic-bacteria, lobster)
+  - 164+ verified perf rows → Yao 逐条审批
+
+## 2026-06-18 ~02:00 CST - claude-code (Task 69-73)
+- completed:
+  - Task 64-68: infra fix + 13 prototype multimodal verify (24 perf verified)
+  - Task 69-73: prototype expansion 24->36 + verify 6 new prototypes + doc update
+  - activated: 5 separation (cactus/lotus/shark/superhydrophobic/water-strider) + 1 parked (namib-beetle)
+  - created: 6 skeleton entries (alginate/cellulose/diatom-inspired/MOF/silkworm/starch)
+  - chimera fix: 3 prototypes (cactus/shark/water-strider organism cleaned)
+  - multimodal verify: 6 new prototypes (7 verified, 0 not_found, 1 error)
+  - re-verify chitosan: +2 verified
+- current_state:
+  - active prototypes: 36 (6 pending_extraction)
+  - performance_data: 397/431 verified (92%), 85 with PDF quotes
+  - mechanisms: 265/773 verified (34%), 11 with PDF quotes
+  - pending_extraction: 6 (awaiting litextract)
+  - chimera: 0 violations, consistency: 12 errors (feature-mapping missing)
+- next:
+  - P0: litextract 提取 6 个 pending_extraction 原型
+  - P0: 解决 mechanisms 无 PDF 匹配问题 (检查 source_file 路径 / DOI 下载)
+  - P1: mechanisms 覆盖率继续推高
+  - P2: check_causal_chain / check_boundary_guardrail 达标
+- blockers: none
+- decisions_needed: none

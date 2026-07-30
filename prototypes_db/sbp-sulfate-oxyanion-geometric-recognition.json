@@ -1,0 +1,375 @@
+{
+ "id": "sbp-sulfate-oxyanion-geometric-recognition",
+ "name_zh": "硫酸根结合蛋白 SBP 氧阴离子几何识别蛋白",
+ "name_en": "Sulfate-Binding Protein (SBP) Oxyanion Geometric Recognition Protein",
+ "organism": {
+  "scientific": "Salmonella typhimurium（硫酸根结合蛋白 SBP）",
+  "category": "微生物"
+ },
+ "biomimetic_dimension": "分子仿生",
+ "features": [
+  "分子筛分"
+ ],
+ "tested_conditions": {
+  "tested_ph_range": null,
+  "tested_temp_range": null,
+  "salinity": null,
+  "note": "SBP 为周质结合蛋白（分子识别原型），本库无其吸附性能测试条件；performance_data 为空，故测试条件全空。"
+ },
+ "library_tier": "extended",
+ "lifecycle_status": "active",
+ "coverage": "partial",
+ "status": "active",
+ "provenance_summary": {
+  "n_papers": 3,
+  "n_verified": 10,
+  "n_unverified": 0,
+  "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与边界条数（SBP-001 四要素+1 边界=5，SBP-002 四要素+1 边界=5）。机制接地限于 SBP 天然底物硫酸根（PDB 1SBP 沉积记录与三篇论文的标题/PubMed 摘要，均经 curl 核验）；PFBS 应用为设计转译（llm_inferred），无性能数据。未做全文 PDF 审计。凭记忆猜测的两个 DOI（10.1016/0022-2836(88)90340-3 与 10.1002/pro.5560021009）经 Crossref 证伪后剔除。"
+ },
+ "mechanisms": [
+  {
+   "mechanism_id": "SBP-001",
+   "name": "预组织中性氢键给体阵列对四面体硫酸根的几何识别（纯氢键、无阳离子）",
+   "description": "鼠伤寒沙门氏菌硫酸根结合蛋白（SBP）在两个相似球状结构域间的深裂隙中完全包埋四面体硫酸根 SO4²⁻；硫酸根主要由七个氢键固定，其中五个由主链肽 NH 给出，一个由丝氨酸羟基给出，一个由 Trp192 吲哚 NH 给出（PDB 1SBP，SITE AC1 位点残基 Tyr10、Asp11、Pro12、Gly44、Ser45、Ser130、Gly131、Gly132、Gly172、Ala173、Trp192，chain A）；硫酸根二价阴离子范德华距离内无带正电残基、无阳离子、无水分子",
+   "基本原理": "以主链酰胺 NH 为主的预组织中性氢键给体阵列与四面体氧阴离子几何互补，完全埋藏的裂隙强化静电并排除溶剂竞争，二价氧阴离子在无盐桥、无金属或阳离子参与下即可被高选择性识别",
+   "source": "literature",
+   "ref_doi": "10.1016/0022-2836(88)90341-5",
+   "verification": "verified",
+   "verification_quote": "Sulphate sequestered in the sulphate-binding protein of Salmonella typhimurium is bound solely by hydrogen bonds",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "四面体硫酸根 SO4²⁻（SBP 天然底物；PDB 1SBP 精修结构含一个硫酸根底物，为唯一非水配体；硫酸根与全氟磺酸的磺酸根 SO3⁻ 头基同为 sp3 四面体氧阴离子，几何等构）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1016/0022-2836(88)90341-5",
+     "locator": "PDB 1SBP / p.163",
+     "quote": "1.7 ANGSTROMS REFINED STRUCTURE OF SULFATE-BINDING PROTEIN INVOLVED IN ACTIVE TRANSPORT AND NOVEL MODE OF SULFATE BINDING",
+     "scope_match": "Keywords: sulfate, binding, transport"
+    },
+    "bio_structure": {
+     "text": "SBP 由两个相似球状结构域经三段肽段连接构成椭球分子（约 35 Å × 35 Å × 65 Å），域间深裂隙完全包埋硫酸根；PDB 1SBP SITE AC1 记录结合位点残基为 Tyr10、Asp11、Pro12、Gly44、Ser45、Ser130、Gly131、Gly132、Gly172、Ala173、Trp192（chain A），构成预组织中性给体口袋",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1016/0022-2836(88)90341-5",
+     "locator": "PDB 1SBP, SITE AC1 (p.163)",
+     "quote": "SITE AC1 11 TYR A 10 ASP A 11 PRO A 12 GLY A 44 SER A 45 SER A 130 GLY A 131 GLY A 132 GLY A 172 ALA A 173 TRP A 192",
+     "scope_match": "Keywords: SER, TRP, GLY, ALA"
+    },
+    "interaction": {
+     "text": "硫酸根主要由七个氢键固定：五个由主链肽 NH 给出，一个由丝氨酸羟基给出，一个由 Trp192 吲哚 NH 给出；硫酸根二价阴离子范德华距离内无带正电残基、无阳离子、无水分子（PDB 1SBP 沉积记录与 1988 摘要一致）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1016/0022-2836(88)90341-5",
+     "locator": "J Mol Biol 200:163-180 abstract, p.163 (PubMed PMID 3288756)",
+     "quote": "the sulfate substrate is tightly held in place primarily by seven hydrogen bonds, five of which are donated by main-chain peptide NH groups",
+     "scope_match": "Keywords: sulfate, hydrogen bonds, main-chain"
+    },
+    "why_it_works": {
+     "text": "1.7 Å 精修结构表明硫酸根二价阴离子完全埋藏，由氢键（以主链肽 NH 为主）与范德华力结合；中性给体的方向性氢键与埋藏低介电环境提供特异性与电荷稳定化，无需盐桥、金属或阳离子，选择性来自四面体几何互补与氢键方向性",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1002/pro.5560021010",
+     "locator": "Protein Sci 2:1643-1647 abstract, p.1643 (PubMed PMID 8251939)",
+     "quote": "the sulfate dianion is completely buried and bound by hydrogen bonds (mostly main-chain peptide NH groups) and van der Waals forces",
+     "scope_match": "Keywords: sulfate, hydrogen bonds, buried"
+    },
+    "boundary_conditions": [
+     {
+      "text": "二价四面体几何特异性：位点与四面体 SO4²⁻ 几何互补，二价阴离子范德华距离内无阳离子或带正电残基补偿电荷，电荷补偿完全依赖中性给体几何；单价、非四面体或尺寸失配阴离子难以获得同等互补（定性判断）",
+      "parameter": "competing_ion",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "corroborated",
+      "gate_level": "hard",
+      "locator": "J Mol Biol 200:163-180 abstract, p.163 (PubMed PMID 3288756)",
+      "quote": "there are no positively charged residues, nor cations, nor water molecules within van der Waals' distance to the sulfate dianion",
+      "scope_match": "Keywords: cations, sulfate, dianion",
+      "source_asset": null
+     },
+     {
+      "text": "预组织给体阵列需维持于埋藏低介电裂隙；给体若完全暴露于体相水，水分子氢键竞争将削弱氧阴离子结合（定性，无数值阈值）",
+      "parameter": "wet_stability",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     },
+     {
+      "text": "磺酸根 SO3⁻（-1）与硫酸根 SO4²⁻（-2）在电荷、尺寸与水合上不同；预组织给体阵列对单价四面体氧阴离子的亲和力与选择性须实验核验（定性，无数值阈值）",
+      "parameter": "headgroup_charge_mismatch",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "以主链酰胺型中性氢键给体为主、与四面体氧阴离子几何互补的预组织阵列，配合完全埋藏的低介电裂隙，可在无金属、无阳离子、无盐桥参与下通过方向性与几何匹配选择性识别该氧阴离子",
+    "verification_quote": "Sulphate sequestered in the sulphate-binding protein of Salmonella typhimurium is bound solely by hydrogen bonds"
+   },
+   "source_doi": "10.1016/0022-2836(88)90341-5",
+   "source_page": 163,
+   "source_locator": "PDB 1SBP / J Mol Biol 200:163-180, abstract p.163",
+   "source_file": "RCSB PDB 1SBP 沉积记录 + PubMed PMID 3288756 摘要（未做本地全文 PDF 审计）",
+   "functional_groups": [
+    "氢键给体（主链酰胺 NH 为主，Ser 侧链羟基、Trp192 吲哚 NH）",
+    "完全埋藏低介电裂隙"
+   ],
+   "key_structures": [
+    "识别结构"
+   ]
+  },
+  {
+   "mechanism_id": "SBP-002",
+   "name": "硫酸根完全埋藏与局部偶极对无补偿电荷的稳定化",
+   "description": "硫酸根带电氧原子埋藏且与溶剂完全隔绝，其稳定化无盐桥参与，由蛋白特定位基的氢键完成；这些氢键又经肽单元与多个共振氢键体系耦合。1.7 Å 结构与定点突变表明：无补偿的埋藏二价电荷的稳定化是高度局域化过程，依赖肽单元与螺旋首圈局部偶极的集合；带正电 His 与两个 Arg 突变为 Asn 后硫酸根结合活性不受影响，螺旋宏偶极贡献可忽略",
+   "基本原理": "埋藏二价阴离子的电荷补偿可由局域偶极（肽单元、螺旋首圈）集合完成，无需荷电基团或长程静电；共振氢键网络将给体与远端结构耦合，强化预组织与方向性",
+   "source": "literature",
+   "ref_doi": "10.1002/pro.5560021010",
+   "verification": "corroborated",
+   "verification_quote": "Dominant role of local dipoles in stabilizing uncompensated charges on a sulfate sequestered in a periplasmic active transport protein.",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "四面体硫酸根 SO4²⁻（SBP 天然底物）完全埋藏于两域间裂隙，与溶剂完全隔绝（Nature 1985 摘要与 PDB 1SBP 两域裂隙吞没硫酸根的结构一致）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/314257a0",
+     "locator": "Nature 314:257-260 abstract, p.257 (PubMed PMID 3885043)",
+     "quote": "the charged oxygen atoms of the sulphate molecule, which is buried and completely inaccessible to the solvent",
+     "scope_match": "Keywords: sulphate, buried, solvent"
+    },
+    "bio_structure": {
+     "text": "结合硫酸根的氢键经肽单元与多个共振氢键体系耦合，形成延伸出局部给体的网络（共振耦合增强给体阵列的预组织与方向性，机理层推断）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/314257a0",
+     "locator": "Nature 314:257-260 abstract, p.257 (PubMed PMID 3885043)",
+     "quote": "These hydrogen bonds are in turn coupled via peptide units to several resonating hydrogen bonding systems",
+     "scope_match": "Keywords: hydrogen bonds, peptide units, resonating"
+    },
+    "interaction": {
+     "text": "硫酸根带电氧原子埋藏且与溶剂隔绝，其稳定化无盐桥参与，由蛋白特定位基给出的氢键完成",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/314257a0",
+     "locator": "Nature 314:257-260 abstract, p.257 (PubMed PMID 3885043)",
+     "quote": "are not stabilized by the formation of salt-bridges but by hydrogen bonds donated by specific residues of the protein",
+     "scope_match": "Keywords: salt-bridges, hydrogen bonds, residues"
+    },
+    "why_it_works": {
+     "text": "蛋白内无补偿电荷的稳定化是高度局域化过程，依赖包括螺旋首圈肽单元在内的局部偶极集合；重组硫酸根受体的定点突变显示，将带正电 His 与两个 Arg（单独及共同）替换为 Asn 对硫酸根结合活性无影响，证明电荷稳定化不依赖荷电基团",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1002/pro.5560021010",
+     "locator": "Protein Sci 2:1643-1647 abstract, p.1643 (PubMed PMID 8251939)",
+     "quote": "stabilization of uncompensated charges in a protein is a highly localized process that involves a collection of local dipoles",
+     "scope_match": "Keywords: uncompensated, dipoles, localized"
+    },
+    "boundary_conditions": [
+     {
+      "text": "电荷稳定化依赖局部偶极（肽单元、螺旋首圈），螺旋宏偶极贡献可忽略；设计移植应使用局域预组织的酰胺/脲偶极，而非依赖长程荷电静电",
+      "parameter": "charge_stabilization_mode",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "corroborated",
+      "gate_level": "hard",
+      "locator": "Protein Sci 2:1643-1647 abstract, p.1643 (PubMed PMID 8251939)",
+      "quote": "The contribution of helix macrodipoles appears insignificant.",
+      "scope_match": "Keywords: helix, macrodipoles, insignificant",
+      "source_asset": null
+     },
+     {
+      "text": "埋藏裂隙与共振氢键网络依赖完整三级结构；变性或裂隙溶剂化使低介电环境与偶极预组织丧失（定性，无数值阈值）",
+      "parameter": "structural_integrity",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "完全埋藏的低介电裂隙内，局域偶极集合（主链酰胺肽单元、螺旋首圈）与共振氢键网络可稳定无补偿的二价氧阴离子电荷，无需荷电基团或长程静电",
+    "verification_quote": "Dominant role of local dipoles in stabilizing uncompensated charges on a sulfate sequestered in a periplasmic active transport protein."
+   },
+   "source_doi": "10.1002/pro.5560021010",
+   "source_page": 1643,
+   "source_locator": "Protein Sci 2:1643-1647 abstract p.1643 / Nature 314:257-260 abstract p.257",
+   "source_file": "PubMed PMID 8251939 与 3885043 摘要（未做本地全文 PDF 审计）",
+   "functional_groups": [
+    "局部偶极（肽单元、螺旋首圈偶极）",
+    "共振氢键网络"
+   ],
+   "key_structures": [
+    "识别结构"
+   ]
+  }
+ ],
+ "performance_data": [],
+ "engineering_constraints": [
+  {
+   "constraint": "可溶周质蛋白形态",
+   "value": "SBP 为鼠伤寒沙门氏菌周质可溶性结合蛋白（约 34.6 kDa，椭球约 35 Å × 35 Å × 65 Å），识别裂隙需移植或固定于固体载体方可用作吸附",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "RCSB 1SBP molecular_weight 34.63 kDa；J Mol Biol 1988 摘要记整体尺寸 35 A x 35 A x 65 A",
+   "source": "literature",
+   "ref_doi": "10.1016/0022-2836(88)90341-5"
+  },
+  {
+   "constraint": "两域裂隙预组织依赖",
+   "value": "结合依赖两球状结构域间深裂隙的完整三级结构与域闭合；裂隙溶剂化或结构解折叠使氢键几何与低介电环境丧失",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（基于 1988 摘要两域裂隙与硫酸根完全包埋事实）",
+   "source": "llm_inference",
+   "ref_doi": null
+  },
+  {
+   "constraint": "二价四面体几何与电荷特异性",
+   "value": "位点与二价四面体硫酸根几何互补且无阳离子补偿；对单价磺酸根（SO3⁻）的亲和力与选择性受电荷、尺寸与水合差异影响，须实验核验",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（基于无阳离子补偿事实外推至单价头基）",
+   "source": "llm_inference",
+   "ref_doi": null
+  },
+  {
+   "constraint": "水相氢键竞争",
+   "value": "天然位点完全埋藏且硫酸根范德华距离内无水分子；水相吸附须以低介电孔壁排除体相水竞争",
+   "unit": null,
+   "relevance": "medium",
+   "explanation": "J Mol Biol 1988 摘要记 no water molecules within van der Waals' distance to the sulfate dianion",
+   "source": "literature",
+   "ref_doi": "10.1016/0022-2836(88)90341-5"
+  }
+ ],
+ "narrative": {
+  "entries": [
+   {
+    "source_file": "RCSB PDB 1SBP / Pflugrath & Quiocho 1985 Nature 314:257 / Pflugrath & Quiocho 1988 J Mol Biol 200:163 / He & Quiocho 1993 Protein Sci 2:1643",
+    "paper_id": "1985-Pflugrath-SBP-solely-hydrogen-bonds",
+    "sections": {
+     "problem_definition": "细菌需从水环境中捕获硫酸根（SO4²⁻）以供同化利用。带二价负电荷的氧阴离子在脱水埋藏后如何被蛋白识别与稳定，即在没有溶剂化壳层、没有阳离子或盐桥的前提下如何稳定带电基团，是分子识别与蛋白静电学的基础问题。",
+     "biological_solution": "鼠伤寒沙门氏菌周质 SBP 以两个相似球状结构域间的深裂隙完全包埋四面体硫酸根（PDB 1SBP，1.7 Å 精修；Nature 1985 摘要记硫酸根 buried and completely inaccessible to the solvent）。硫酸根主要由七个氢键固定：五个由主链肽 NH 给出，一个由丝氨酸羟基给出，一个由 Trp192 吲哚 NH 给出；二价阴离子范德华距离内无带正电残基、无阳离子、无水分子（J Mol Biol 1988 摘要）。结合氢键经肽单元与多个共振氢键体系耦合。He 与 Quiocho 1993 以 1.7 Å 结构与定点突变证明：无补偿埋藏电荷的稳定化是高度局域化过程，依赖肽单元与螺旋首圈的局部偶极集合；将带正电 His 与两个 Arg 替换为 Asn 后硫酸根结合活性不受影响，螺旋宏偶极贡献可忽略。这为纯氢键、无阳离子、局域偶极稳定的四面体氧阴离子识别提供了完整结构生物学证据。",
+     "key_features": "必须保留：① 以主链酰胺型中性氢键给体为主、与四面体氧阴离子几何互补的预组织阵列（1SBP 中七氢键，五个为主链 NH）；② 完全埋藏的低介电裂隙（排除溶剂竞争、强化静电）；③ 局域偶极与共振氢键网络（电荷稳定化不依赖荷电基团）。可灵活调整：载体骨架、给体密度与取向、裂隙疏水微环境。",
+     "design_mapping": "仿生映射：SBP 埋藏氢键裂隙 → 四面体氧阴离子头基吸附位点。对 PFBS（全氟丁烷磺酸，C4F9SO3⁻），其磺酸根头基（SO3⁻）与硫酸根同为 sp3 四面体氧阴离子，几何等构，原理上可由预组织中性给体阵列加低介电埋藏孔壁识别，且识别内核无需阳离子基团。注意：此为设计转译与启发（llm_inferred），磺酸根（-1）与硫酸根（-2）在电荷、尺寸、水合上不同，实际亲和力与选择性须实验验证。",
+     "explainability_anchors": "设计溯源：硫酸根纯氢键识别与局域偶极稳定化（PDB 1SBP、Nature 1985、J Mol Biol 1988、Protein Sci 1993，from_source）→ 主链酰胺型预组织给体阵列 + 完全埋藏低介电裂隙 + 局域偶极稳定无补偿电荷的可迁移原理 → PFBS 磺酸根头基识别（llm_inferred 启发，须实验验证）。与 ModA 条目互补：ModA 接地钼酸根/钨酸根，本条接地硫酸根。"
+    }
+   }
+  ]
+ },
+ "design_translation": [
+  {
+   "idea": "将 SBP 的以主链酰胺型中性给体为主的预组织氢键阵列 + 完全埋藏低介电裂隙 + 局域偶极稳定无补偿电荷移植到多孔固体载体，构建对 PFBS 四面体 SO3⁻ 头基几何互补的识别位点：以脲/酰胺/羟基类中性给体按与磺酸根三氧几何互补的方式预组织排布于孔壁，以烃或氟碳修饰孔壁降低局部介电常数并排除水竞争，识别内核不引入阳离子基团",
+   "specific_functional_group": "中性氢键给体（脲/硫脲、酰胺、羟基，模拟主链酰胺 NH 与丝氨酸羟基），按与四面体磺酸根三氧几何互补的方式预组织排布；以酰胺/脲单元的局域偶极而非阳离子基团稳定头基电荷",
+   "material_handle": "在介孔二氧化硅或交联聚合物骨架上经硅烷偶联或表面引发聚合接枝脲/酰胺单体，借分子印迹或刚性间隔臂控制给体间距与取向，复现 1.7 Å 结构中的给体几何；孔壁以烃/氟碳链修饰降低局部介电常数",
+   "target_interaction": "中性给体与 PFBS 磺酸根头基氧的方向性氢键 + 低介电埋藏环境 + 局域偶极电荷稳定化；全氟碳尾另贡献疏水/氟亲作用",
+   "source_tier": "llm_inference",
+   "evidence_tier": "inspiration（原理层外推：SBP 机制接地于天然底物硫酸根；PFBS 磺酸根转译为 llm_inferred，无直接 PFBS 结合证据）",
+   "examples": [],
+   "design_principle": "SBP 证明以主链酰胺 NH 为主的预组织中性给体阵列与完全埋藏裂隙可在无金属、无阳离子、无盐桥参与下几何选择性识别四面体二价氧阴离子，无补偿电荷由局域偶极集合稳定（PDB 1SBP；Nature 1985；Protein Sci 1993）；PFBS 磺酸根头基与硫酸根四面体几何等构，原理上可外推",
+   "implementation_example": "具低介电疏水孔壁的脲/酰胺功能化介孔二氧化硅或交联聚合物（无实验数据，仅为设计假设）",
+   "constraints": "磺酸根（-1）与硫酸根（-2）电荷、尺寸与水合不同，预组织给体对 PFBS 的亲和力与选择性须实验验证；水相中体相水竞争与共存阴离子（硫酸根、氯离子、碳酸氢根）干扰是关键挑战；天然位点完全埋藏，载体须构建等效低介电微环境",
+   "failure_modes": "给体暴露于体相水被氢键竞争淬灭；预组织刚性过强导致对磺酸根适配不足；引入阳离子基团反而破坏纯氢键识别模式并增加对共存阴离子的非选择性；氟碳尾非特异性吸附降低选择性",
+   "material_realization_examples": []
+  }
+ ],
+ "honesty_ledger": {
+  "facts": [
+   {
+    "type": "mechanism",
+    "index": 0,
+    "name": "预组织中性氢键给体阵列对四面体硫酸根的几何识别（纯氢键、无阳离子）",
+    "basis": "from_source_verified",
+    "note": "PDB 1SBP 沉积记录（TITLE/COMPND/SOURCE SALMONELLA TYPHIMURIUM TAXID 602/SITE AC1 残基集，curl 核验）+ Pflugrath & Quiocho 1988 J Mol Biol 摘要（PMID 3288756：七氢键，五主链 NH，无阳离子/水分子）+ He & Quiocho 1993 Protein Sci 摘要（PMID 8251939：1.7 Å 埋藏结合）；quote 取自 PDB 沉积记录与 PubMed 摘要逐字片段（可核验），未做全文 PDF 审计"
+   },
+   {
+    "type": "mechanism",
+    "index": 1,
+    "name": "硫酸根完全埋藏与局部偶极对无补偿电荷的稳定化",
+    "basis": "from_source_corroborated",
+    "note": "Pflugrath & Quiocho 1985 Nature 摘要（PMID 3885043：埋藏、无盐桥、氢键经肽单元与共振氢键体系耦合）+ He & Quiocho 1993 Protein Sci 摘要（PMID 8251939：局域偶极稳定无补偿电荷、His/Arg 突变无效、螺旋宏偶极贡献可忽略）；quote 取自 PubMed 摘要与标题（可核验），未做全文 PDF 审计"
+   }
+  ],
+  "leads": [],
+  "inferences": [
+   {
+    "type": "design_translation",
+    "index": 0,
+    "idea": "将 SBP 埋藏氢键裂隙与局域偶极稳定化原理移植到多孔载体识别 PFBS 磺酸根头基",
+    "basis": "llm_inferred",
+    "label": "inspiration",
+    "note": "PFBS（C4F9SO3⁻）磺酸根头基与硫酸根同为四面体氧阴离子，但电荷（-1 对 -2）、尺寸、水合不同；属原理层设计外推，无直接 PFBS 结合证据，亲和力与选择性须实验验证"
+   }
+  ],
+  "boundary_notes": [
+   "本原型天然底物为硫酸根（四面体二价氧阴离子）；机制 from_source 接地限于该天然底物（PDB 1SBP 与三篇 Quiocho 组论文）",
+   "PFBS 全氟丁烷磺酸应用为设计转译（llm_inferred / inspiration），非 from_source 事实，不得用作 PFBS 的 direct evidence",
+   "无 PFBS 吸附性能数据（qmax 等）；严格未从外部污染物知识库搬运任何性能数值",
+   "边界 BC（水竞争、结构完整性、头基电荷失配）及一切 PFBS 相关边界均为定性 llm_inferred，不带数值阈值，gate_level=soft",
+   "凭记忆猜测的两个 DOI（10.1016/0022-2836(88)90340-3 为 DNA 双链论文、10.1002/pro.5560021009 为水蛭素-凝血酶论文）经 Crossref 核验证伪后剔除，未进入任何接地字段"
+  ],
+  "missing_pdf_items": [
+   "Pflugrath & Quiocho 1985 Nature 全文 PDF（quote 取自 PubMed 摘要与 Crossref 标题，PMID 3885043）",
+   "Pflugrath & Quiocho 1988 J Mol Biol 全文 PDF（quote 取自 PubMed 摘要，PMID 3288756）",
+   "He & Quiocho 1993 Protein Sci 全文 PDF（quote 取自 PubMed 摘要，PMID 8251939）"
+  ],
+  "generated_by": "manual-curation-2026-07-22",
+  "note": "诚实优先：机制接地限于 SBP 天然底物硫酸根；PFBS 应用全部为 inspiration/外推。简报所记候选 PDB 作者 Sack & Quiocho 与核验结果不符，以 RCSB/PubMed 记录的 Pflugrath & Quiocho 为准。"
+ },
+ "boundary_rules": [
+  {
+   "rule": "底物几何与电荷特异性：位点与二价四面体硫酸根 SO4²⁻ 几何互补，二价阴离子范德华距离内无阳离子或带正电残基补偿电荷",
+   "source_mechanism": "预组织中性氢键给体阵列对四面体硫酸根的几何识别（纯氢键、无阳离子）",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "埋藏二价硫酸根的电荷稳定化依赖局部偶极集合（肽单元、螺旋首圈），螺旋宏偶极贡献可忽略；移植应使用局域预组织偶极而非长程荷电静电",
+   "source_mechanism": "硫酸根完全埋藏与局部偶极对无补偿电荷的稳定化",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "预组织给体阵列需维持于完全埋藏的低介电裂隙，水竞争削弱结合（定性，无数值阈值）",
+   "source_mechanism": "预组织中性氢键给体阵列对四面体硫酸根的几何识别（纯氢键、无阳离子）",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  },
+  {
+   "rule": "磺酸根 SO3⁻（-1）与硫酸根 SO4²⁻（-2）电荷、尺寸与水合不同，PFBS 转译的亲和力与选择性须实验核验（定性，无数值阈值）",
+   "source_mechanism": "预组织中性氢键给体阵列对四面体硫酸根的几何识别（纯氢键、无阳离子）",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  }
+ ],
+ "mechanism_tags": [
+  "静电吸附",
+  "氢键",
+  "疏水分配",
+  "孔道限域分子筛分",
+  "几何识别"
+ ]
+}

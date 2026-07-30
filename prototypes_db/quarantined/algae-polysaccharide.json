@@ -1,0 +1,120 @@
+{
+  "id": "algae-polysaccharide",
+  "name_zh": "藻类多糖",
+  "name_en": "Algae Polysaccharide",
+  "organism": {
+    "scientific": "Laminaria japonica",
+    "category": "藻类"
+  },
+  "biomimetic_dimension": "algal_biopolymer",
+  "library_tier": "extended",
+  "lifecycle_status": "active",
+  "coverage": "partial",
+  "status": "active",
+  "provenance_summary": "V1-B biological expansion wave. Algae-derived polysaccharides (alginate, carrageenan, agar) as bio-adsorbents for heavy metals and dyes. Rich in carboxyl and sulfate groups.",
+  "mechanisms": [
+    {
+      "mechanism_id": "AP-001",
+      "name": "褐藻多糖羧基螯合配位与离子交换",
+      "description": "Sodium alginate cross-linked with Ca²⁺ forms gel beads with carboxyl groups for heavy metal coordination",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "Heavy metal ions and cationic dyes",
+          "basis": "from_source",
+          "source": "10.1016/j.ijbiomac.2025.140801"
+        },
+        "bio_structure": {
+          "text": "Alginate gel bead with carboxyl groups (-COOH)",
+          "basis": "from_source",
+          "source": "10.1016/j.ijbiomac.2025.140801"
+        },
+        "interaction": {
+          "text": "Ion exchange and coordination with carboxyl groups",
+          "basis": "from_source",
+          "source": "10.1016/j.ijbiomac.2025.140801"
+        },
+        "why_it_works": {
+          "text": "High density of carboxyl groups provides abundant binding sites",
+          "basis": "from_source",
+          "source": "10.1016/j.ijbiomac.2025.140801"
+        },
+        "boundary_conditions": [
+          {
+            "text": "Aqueous environment",
+            "parameter": "medium",
+            "basis": "from_source",
+            "verification": "corroborated",
+            "gate_level": "hard",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "locator": "10.1016/j.ijbiomac.2025.140801",
+            "verification_method": "keyword_match"
+          }
+        ],
+        "transferable_principle": "Alginate gel bead structure provides high density of carboxyl groups for heavy metal coordination and ion exchange"
+      },
+      "functional_groups": [
+        "离子交换位点",
+        "-COOH（羧基）",
+        "配位硫",
+        "配位/螯合位点",
+        "-S-（硫醚键）",
+        "配位氧",
+        "海藻酸羧基/羟基",
+        "配位氮",
+        "-O-（醚键）"
+      ],
+      "key_structures": [
+        "交联网络",
+        "吸附结构",
+        "凝胶结构"
+      ]
+    }
+  ],
+  "performance_data": [
+    {
+      "perf_id": "AP-P001",
+      "name": "Alginate bead for Pb(II)",
+      "pollutant": "Pb(II)",
+      "parameter": "qmax_mg_g",
+      "value": "high",
+      "material": "sodium alginate gel bead",
+      "source_doi": "10.1016/j.ijbiomac.2025.140801",
+      "verification": "needs_review"
+    }
+  ],
+  "engineering_constraints": [
+    {
+      "constraint_id": "AP-E001",
+      "description": "Alginate extraction from brown algae via alkaline digestion",
+      "evidence_type": "from_source"
+    }
+  ],
+  "narrative": [
+    {
+      "narrative_id": "AP-N001",
+      "text": "Algae polysaccharides (alginate, carrageenan, agar) are abundant biopolymers from marine algae. Alginate forms gel beads with Ca²⁺ that have high density of carboxyl groups for heavy metal adsorption."
+    }
+  ],
+  "design_translation": {
+    "idea": "Extract alginate from brown algae and form gel beads for heavy metal and dye removal",
+    "examples": [
+      "Sodium alginate gel bead for Pb²⁺ adsorption",
+      "Chitosan-alginate composite for wastewater treatment"
+    ],
+    "source_tier": "literature",
+    "applicability": "Heavy metal and dye removal from wastewater"
+  },
+  "honesty_ledger": {
+    "from_source_mechanisms": 1,
+    "llm_inferred_mechanisms": 0,
+    "verified_performance_data": 0,
+    "missing_pdf_items": 0,
+    "knowledge_gaps": [
+      "Need quantitative performance data",
+      "Species-specific alginate content comparison"
+    ]
+  }
+}

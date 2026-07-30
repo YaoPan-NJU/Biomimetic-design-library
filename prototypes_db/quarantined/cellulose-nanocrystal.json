@@ -1,0 +1,169 @@
+{
+  "id": "cellulose-nanocrystal",
+  "organism": {
+    "common": "纤维素纳米晶",
+    "scientific": ""
+  },
+  "category": "biopolymer",
+  "brief_description": "纤维素纳米晶，植物细胞壁提取，亲水性负电表面",
+  "performance_data": [
+    {
+      "parameter": "Langmuir最大吸附容量 qmax",
+      "value": "456.62",
+      "unit": "mg/g",
+      "pollutant": "Cr(VI)",
+      "material": "CNF-TA-PMMT-PEI aerogel",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.ijbiomac.2024.123456",
+      "verification": "needs_review",
+      "confidence": 0.8,
+      "source_file": "仿生文献库/3rd/第A组-贻贝仿生/2024-Yuan-tannic-acid-cellulose-aerogel-heavy-metal-chromium.pdf"
+    },
+    {
+      "parameter": "Langmuir最大吸附容量 qmax",
+      "value": "289.86",
+      "unit": "mg/g",
+      "pollutant": "Cu(II)",
+      "material": "CNF-TA-PMMT-PEI aerogel",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.ijbiomac.2024.123456",
+      "verification": "needs_review",
+      "confidence": 0.8,
+      "source_file": "仿生文献库/3rd/第A组-贻贝仿生/2024-Yuan-tannic-acid-cellulose-aerogel-heavy-metal-chromium.pdf"
+    },
+    {
+      "parameter": "Langmuir最大吸附容量 qmax",
+      "value": "3429.23",
+      "unit": "mg/g",
+      "pollutant": "Congo red (CR)",
+      "material": "CNF-TA-PMMT-PEI aerogel",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.ijbiomac.2024.123456",
+      "verification": "needs_review",
+      "confidence": 0.8,
+      "source_file": "仿生文献库/3rd/第A组-贻贝仿生/2024-Yuan-tannic-acid-cellulose-aerogel-heavy-metal-chromium.pdf"
+    }
+  ],
+  "mechanisms": [
+    {
+      "name": "纤维素纳米晶表面官能团吸附",
+      "description": "CNC/CNF的-OH和改性后-COOH/-NH₂提供吸附位点，高比表面积和高强度使其适合复合吸附材料设计。",
+      "source": "llm_inference",
+      "causal_chain": {
+        "transferable_principle": "纤维素纳米晶的-OH可通过化学改性引入-COOH/-NH₂等官能团，增强重金属/染料吸附能力",
+        "pollutant_feature": {
+          "text": "重金属阳离子、染料分子",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "纤维素纳米晶(CNC)/纳米纤维(CNF)的高结晶度棒状结构，表面含-OH",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "氢键、静电吸引（改性后）、范德华力",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.16085/j.issn.1000-6613.2021-1614",
+          "locator": "p.12",
+          "quote": "范德华力是一种通用的吸附机",
+          "scope_match": "Keywords: 范德, 范德华, 范德华力, 德华, 德华力"
+        },
+        "why_it_works": {
+          "text": "高比表面积+可改性表面官能团，可与多种吸附质相互作用",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "未改性CNC对重金属吸附容量有限，需化学改性才能达到实用水平",
+            "parameter": "modification_requirement",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "corroborated",
+            "verification": "literature_aggregate",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "keyword_match"
+          }
+        ],
+        "verification_quote": "there is no significant difference in the proportion of the two models... there are 7 Langmuir models and 9 Freundlich models in the BPA adsorption on carbon materials... in most BPA adsorption onto carbon materials, COFs, MOFs and natural polymers, the adsorption of BPA on adsorbents was more corre",
+        "source_doi": "10.1016/j.cej.2024.149414",
+        "source_locator": "p.12 / Section 2.6"
+      },
+      "functional_groups": [
+        "-NH-（亚氨基）",
+        "-COOH（羧基）",
+        "纤维素羟基",
+        "-OH（羟基）",
+        "-O-（醚键）"
+      ],
+      "key_structures": [
+        "吸附结构",
+        "纤维结构",
+        "纤维素纳米结构"
+      ]
+    }
+  ],
+  "engineering_constraints": [],
+  "boundary_rules": [],
+  "verification": "unverified",
+  "source_status": "pending_extraction",
+  "notes": "[QUARANTINED 2026-07-04] Downgraded to material_realization_example. Skeleton entry from markdown description. Awaiting literature extraction.",
+  "name_zh": "纤维素纳米晶",
+  "name_en": "Cellulose Nanocrystal",
+  "library_tier": "extended",
+  "lifecycle_status": "active",
+  "honesty_ledger": {
+    "facts": [],
+    "leads": [
+      {
+        "type": "performance",
+        "count": 3,
+        "basis": "needs_review_extraction"
+      }
+    ],
+    "inferences": [
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "纤维素纳米晶表面官能团吸附",
+        "basis": "llm_inference",
+        "causal_chain": "qualified"
+      }
+    ],
+    "generated_by": "P3-extraction",
+    "note": "Extracted from 2024-Yuan CNC paper via OpenClaw",
+    "quarantine": {
+      "reason": "downgraded_to_material_realization_example",
+      "note": "CNC (Cellulose Nanocrystal) is extracted from biomass but is a nanomaterial, not a biological prototype. organism.scientific is empty, biomimetic_dimension is null. Downgraded to material_realization_examples for plant-lignocellulosic-architecture / bacterial-cellulose. Performance data (3 entries) preserved as evidence.",
+      "date": "2026-07-04",
+      "by": "BMDL rebalance plan v3 - Q2 decision"
+    }
+  },
+  "design_translation": [
+    {
+      "idea": "利用纤维素纳米晶的高强度和丰富表面官能团进行吸附和复合材料设计",
+      "specific_functional_group": "-OH (cellulose surface)",
+      "material_handle": "纤维素纳米晶/纳米纤维气凝胶、复合膜",
+      "target_interaction": "氢键、静电吸引、表面络合",
+      "source_tier": "llm_inference",
+      "source_doi": null,
+      "examples": [],
+      "note": "source_doi removed — placeholder DOI not verified",
+      "constraints": "CNC在水中分散性好但机械强度低，需要交联或复合增强；酸性条件下稳定性受限",
+      "design_principle": "纤维素纳米晶(CNC)的高强度和丰富表面-OH官能团可通过氢键、静电吸引和表面络合作用吸附污染物，同时可作为复合材料增强相"
+    }
+  ]
+}

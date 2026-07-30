@@ -1,0 +1,368 @@
+{
+ "id": "kcsa-potassium-channel-selectivity-filter",
+ "name_zh": "KcsA 钾离子通道选择性过滤器",
+ "name_en": "KcsA Potassium Channel Selectivity Filter",
+ "organism": {
+  "scientific": "Streptomyces lividans（KcsA 钾离子通道，链霉菌源四聚体膜蛋白）",
+  "category": "微生物"
+ },
+ "biomimetic_dimension": "分子仿生",
+ "features": [
+  "分子筛分",
+  "特异性识别"
+ ],
+ "tested_conditions": {
+  "tested_ph_range": null,
+  "tested_temp_range": null,
+  "salinity": null,
+  "note": "KcsA 为四聚体钾离子通道（分子识别/离子选择性原型），本库无其吸附性能测试条件；performance_data 为空，故测试条件全空。"
+ },
+ "library_tier": "extended",
+ "lifecycle_status": "active",
+ "coverage": "partial",
+ "status": "active",
+ "provenance_summary": {
+  "n_papers": 2,
+  "n_verified": 10,
+  "n_unverified": 0,
+  "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与硬边界条数（KCSA-001 四要素+2 硬边界=6，KCSA-002 三要素+1 硬边界=4）。机制接地限于 KcsA 选择性过滤器对裸 K⁺/Na⁺ 的脱水-几何配位选择性（PDB 1K4C + Zhou 2001 Nature；Doyle 1998 Science 原始结构）；PFOA/PFBS 应用为设计转译（llm_inferred/inspiration，原理层），无性能数据。quote 逐字取自 PubMed 摘要、Crossref 摘要与 RCSB 沉积记录（可核验），未做全文 PDF 审计。"
+ },
+ "mechanisms": [
+  {
+   "mechanism_id": "KCSA-001",
+   "name": "选择性过滤器主链羰基氧笼对脱水 K⁺ 的几何配位（脱水选择性核心机制）",
+   "description": "KcsA 选择性过滤器以主链羰基氧原子围成的方反棱柱配位笼识别脱水 K⁺：羰基氧笼在每个 K⁺ 结合位点形成与水合水极为相似的方反棱柱配位，等效替代水合壳，使 K⁺ 在脱水后被几何与能量匹配地稳定配位",
+   "基本原理": "离子须先脱去水合壳方可被选择性配位；预组织的主链羰基氧笼以与水合水几何相似的方反棱柱替代水合壳，对尺寸匹配的 K⁺ 提供等效配位稳定化，是'脱水选择性 + 几何配位'的核心",
+   "source": "literature",
+   "ref_doi": "10.1038/35102009",
+   "verification": "verified",
+   "verification_quote": "Carbonyl oxygen atoms within the selectivity filter form a very similar square antiprism around each K+ binding site, as if to mimic the waters of hydration.",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "K⁺ 为 KcsA 的天然渗透离子（非污染物，此处记天然识别对象）；PDB 1K4C 在高 K⁺ 条件下沉积，K⁺ 为其结合非聚合物组分，是脱水-配位识别原理的天然锚点",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/35102009",
+     "locator": "PDB 1K4C / p.43",
+     "quote": "Potassium Channel KcsA-Fab complex in high concentration of K+",
+     "scope_match": "Keywords: potassium, K+, channel"
+    },
+    "bio_structure": {
+     "text": "选择性过滤器内主链羰基氧原子在每个 K⁺ 结合位点围成方反棱柱配位笼，与水合水的几何极为相似（等效模拟水合壳）；过滤器由 K⁺ 通道签名序列主链构成（chain A，KcsA 残基 75-79 TVGYG 区段）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/35102009",
+     "locator": "Abstract, p.43",
+     "quote": "Carbonyl oxygen atoms within the selectivity filter form a very similar square antiprism around each K+ binding site, as if to mimic the waters of hydration.",
+     "scope_match": "Keywords: carbonyl, selectivity filter, K+, hydration"
+    },
+    "interaction": {
+     "text": "通道在胞外入口处置换离子周围的水分子（脱水步骤），羰基氧笼随即以方反棱柱几何配位脱水 K⁺，主链羰基氧- K⁺ 配位替代原水合水",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/35102009",
+     "locator": "Abstract, p.43",
+     "quote": "the K+ channel displaces water molecules around an ion at its extracellular entryway",
+     "scope_match": "Keywords: K+ channel, water, ion"
+    },
+    "why_it_works": {
+     "text": "离子转运蛋白须移除离子水合壳后方可按尺寸与电荷选择性配位；羰基氧笼以与水合水相似的几何提供等效配位，使尺寸匹配的 K⁺ 脱水能被补偿而稳定，构成脱水选择性的能量学基础",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/35102009",
+     "locator": "Abstract, p.43",
+     "quote": "Ion transport proteins must remove an ion's hydration shell to coordinate the ion selectively on the basis of its size and charge.",
+     "scope_match": "Keywords: hydration shell, ion, size, charge"
+    },
+    "boundary_conditions": [
+     {
+      "text": "尺寸-电荷脱水选择性：仅当离子尺寸与羰基氧笼匹配（如 K⁺），脱水能才被配位补偿而稳定配位；按尺寸与电荷选择性配位是过滤器区分离子的依据",
+      "parameter": "competing_ion",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "Abstract, p.43",
+      "quote": "Ion transport proteins must remove an ion's hydration shell to coordinate the ion selectively on the basis of its size and charge.",
+      "scope_match": "Keywords: hydration shell, size, charge",
+      "source_asset": null
+     },
+     {
+      "text": "过滤器配位结构依赖离子占据：低 K⁺ 溶液中选择性过滤器改变其离子配位结构，配位几何随环境离子浓度变化",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "Abstract, p.43",
+      "quote": "The selectivity filter changes its ion coordination structure in low K+ solutions.",
+      "scope_match": "Keywords: selectivity filter, ion coordination, K+",
+      "source_asset": null
+     },
+     {
+      "text": "预组织刚性羰基氧笼须维持精确配位几何；若笼体柔性化或完全溶剂化，几何匹配与脱水补偿丧失（定性，无数值阈值）",
+      "parameter": "wet_stability",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "预组织、刚性且几何精确的配位笼可通过'先脱水、再以与水合水几何相似的配位替代水合壳'的方式，按尺寸与配位能匹配选择性识别目标离子",
+    "verification_quote": "Carbonyl oxygen atoms within the selectivity filter form a very similar square antiprism around each K+ binding site, as if to mimic the waters of hydration."
+   },
+   "source_doi": "10.1038/35102009",
+   "source_page": 43,
+   "source_locator": "PDB 1K4C / Abstract p.43",
+   "source_file": "PDB 1K4C（RCSB 沉积数据）+ Zhou 2001 Nature 414:43-48（PubMed 摘要逐字；未做全文 PDF 审计）",
+   "functional_groups": [
+    "主链羰基氧（方反棱柱配位笼）",
+    "选择性过滤器签名序列主链"
+   ],
+   "key_structures": [
+    "识别结构"
+   ]
+  },
+  {
+   "mechanism_id": "KCSA-002",
+   "name": "刚性预组织选择性过滤器按尺寸-脱水能区分 K⁺ 与 Na⁺（结构基础先例）",
+   "description": "KcsA 四聚体在孔外端托举一条仅约 12 Å 长的窄选择性过滤器，由签名序列主链羰基氧排列而成；该过滤器被结构约束保持张开，配位 K⁺ 但不配位更小的 Na⁺，是裸离子尺寸-脱水能选择性的经典结构生物学先例",
+   "基本原理": "窄而刚性的过滤器由结构约束预组织为张开构象，其羰基氧配位几何匹配 K⁺ 而不匹配更小的 Na⁺，从而在裸离子层面实现 K⁺/Na⁺ 选择",
+   "source": "literature",
+   "ref_doi": "10.1126/science.280.5360.69",
+   "verification": "verified",
+   "verification_quote": "Main chain carbonyl oxygen atoms from the K+ channel signature sequence line the selectivity filter, which is held open by structural constraints to coordinate K+ ions but not smaller Na+ ions.",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "K⁺ 为被选择性导通的离子（对比更小的 Na⁺）；KcsA 的孔结构为所有已知 K⁺ 通道选择性导通与选择性的分子基础（天然底物层面，非污染物）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1126/science.280.5360.69",
+     "locator": "title, p.69",
+     "quote": "The Structure of the Potassium Channel: Molecular Basis of K+ Conduction and Selectivity",
+     "scope_match": "Keywords: potassium channel, K+, selectivity"
+    },
+    "bio_structure": {
+     "text": "选择性过滤器仅约 12 Å 长，窄而刚性，由签名序列主链羰基氧排列围成；孔的其余部分较宽并以疏水氨基酸衬里（PDB 1BL8，Doyle 1998 原始 KcsA 结构）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1126/science.280.5360.69",
+     "locator": "Abstract, p.69",
+     "quote": "The narrow selectivity filter is only 12 angstroms long, whereas the remainder of the pore is wider and lined with hydrophobic amino acids.",
+     "scope_match": "Keywords: selectivity filter, angstroms, pore, hydrophobic"
+    },
+    "interaction": {
+     "text": "签名序列主链羰基氧排列于选择性过滤器，被结构约束保持张开以配位 K⁺，但不配位更小的 Na⁺（配位几何尺寸门控）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1126/science.280.5360.69",
+     "locator": "Abstract, p.69",
+     "quote": "Main chain carbonyl oxygen atoms from the K+ channel signature sequence line the selectivity filter, which is held open by structural constraints to coordinate K+ ions but not smaller Na+ ions.",
+     "scope_match": "Keywords: carbonyl, signature sequence, K+, Na+"
+    },
+    "why_it_works": {
+     "text": "刚性过滤器被结构约束预组织为张开构象，其羰基氧配位几何与 K⁺ 匹配、与更小 Na⁺ 失配，使 Na⁺ 脱水能不被充分补偿而排除；该能量学解释为基于结构事实的机理推断（Doyle 摘要给出'配位 K⁺ 不配位 Na⁺'的结构结论，脱水能补偿为其机理外推）",
+     "basis": "llm_inferred"
+    },
+    "boundary_conditions": [
+     {
+      "text": "尺寸门控：过滤器被结构约束保持张开，配位 K⁺ 但不配位更小的 Na⁺；尺寸失配离子不被稳定配位",
+      "parameter": "competing_ion",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "Abstract, p.69",
+      "quote": "Main chain carbonyl oxygen atoms from the K+ channel signature sequence line the selectivity filter, which is held open by structural constraints to coordinate K+ ions but not smaller Na+ ions.",
+      "scope_match": "Keywords: K+, Na+, selectivity filter",
+      "source_asset": null
+     },
+     {
+      "text": "脱水能补偿的能量学判据与对大型水合有机阴离子的适用性属机理外推（定性，无数值阈值）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "刚性、由结构约束预组织张开的窄配位孔道可按离子尺寸与配位几何匹配区分目标离子与更小/失配离子，实现尺寸-脱水能选择",
+    "verification_quote": "Main chain carbonyl oxygen atoms from the K+ channel signature sequence line the selectivity filter, which is held open by structural constraints to coordinate K+ ions but not smaller Na+ ions."
+   },
+   "source_doi": "10.1126/science.280.5360.69",
+   "source_page": 69,
+   "source_locator": "title, p.69 / Abstract, p.69",
+   "source_file": "Doyle 1998 Science 280:69-77（Crossref 摘要逐字；PDB 1BL8，未做全文 PDF 审计）",
+   "functional_groups": [
+    "主链羰基氧（签名序列）",
+    "刚性窄过滤器（约 12 Å）",
+    "疏水孔壁"
+   ],
+   "key_structures": [
+    "识别结构"
+   ]
+  }
+ ],
+ "performance_data": [],
+ "engineering_constraints": [
+  {
+   "constraint": "整合膜蛋白/四聚体孔形态",
+   "value": "KcsA 为链霉菌源整合膜蛋白，四个相同亚基构成倒锥形孔、在外端托举选择性过滤器；过滤器几何依赖完整四聚体孔与膜环境，无法以可溶蛋白直接用作吸附剂，仅可提取配位几何原理",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "Doyle 1998 摘要：'The potassium channel from Streptomyces lividans is an integral membrane protein ... four identical subunits create an inverted teepee, or cone, cradling the selectivity filter'（PDB 1BL8）",
+   "source": "literature",
+   "ref_doi": "10.1126/science.280.5360.69"
+  },
+  {
+   "constraint": "配位结构的离子占据/环境依赖",
+   "value": "低 K⁺ 下选择性过滤器改变其离子配位结构；合成识别位点须维持目标离子占据下的配位构象，否则几何与选择性退化",
+   "unit": null,
+   "relevance": "medium",
+   "explanation": "Zhou 2001 摘要：'The selectivity filter changes its ion coordination structure in low K+ solutions.'（PDB 1K4C）",
+   "source": "literature",
+   "ref_doi": "10.1038/35102009"
+  },
+  {
+   "constraint": "裸单原子离子与大型有机阴离子的尺度失配",
+   "value": "KcsA 选择性针对脱水裸单原子离子（K⁺ 半径约 1.33 Å）；PFAS 头基（羧酸根/磺酸根）为远更大的水合多原子有机阴离子，腔体几何与脱水能不可直接套用，转译限原理层",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（基于裸离子脱水选择性与 PFAS 水合有机阴离子尺度/能量差异的外推）",
+   "source": "llm_inference",
+   "ref_doi": null
+  }
+ ],
+ "narrative": {
+  "entries": [
+   {
+    "source_file": "Zhou 2001 Nature 414:43-48（DOI 10.1038/35102009，PDB 1K4C）+ Doyle 1998 Science 280:69-77（DOI 10.1126/science.280.5360.69，PDB 1BL8）",
+    "paper_id": "2001-Zhou-KcsA-Fab-ion-coordination-hydration",
+    "sections": {
+     "problem_definition": "离子转运蛋白须在按尺寸与电荷选择性配位离子之前移除离子的水合壳，这是离子导通与选择性的基本问题。K⁺ 通道如何在孔径远小于水合离子的窄过滤器中高效且高选择性地导通 K⁺、排除更小且更丰富的 Na⁺，是分子识别与离子选择性的经典范式问题。",
+     "biological_solution": "链霉菌 KcsA 为四聚体整合膜 K⁺ 通道。Doyle 等（1998，PDB 1BL8）首次解析其结构：四个相同亚基构成倒锥形孔，在外端托举一条仅约 12 Å 长的窄选择性过滤器；过滤器由 K⁺ 通道签名序列（TVGYG）的主链羰基氧排列围成，被结构约束保持张开，配位 K⁺ 但不配位更小的 Na⁺。Zhou 等（2001，PDB 1K4C，2.0 Å，KcsA-Fab 复合物）进一步揭示其配位与水合化学：通道在胞外入口处置换离子周围水分子，羰基氧原子在选择性过滤器内于每个 K⁺ 结合位点围成与水合水极为相似的方反棱柱，等效模拟水合壳；离子须先脱去水合壳，再按尺寸与电荷被选择性配位。过滤器配位结构在低 K⁺ 下改变，显示其依赖离子占据。",
+     "key_features": "必须保留：① 预组织、刚性的窄配位腔（签名序列主链羰基氧笼，约 12 Å）；② 配位几何与目标离子尺寸/能量匹配（K⁺ 方反棱柱，等效替代水合壳）；③ 尺寸-脱水能门控（仅匹配者脱水能被补偿）。可灵活调整：载体骨架、配位给体化学（羰基/醚氧/冠醚样氧阵列/脲·硫脲）、腔径与刚性、孔壁疏水/氟亲修饰。",
+     "design_mapping": "仿生映射：KcsA'刚性预组织羰基氧配位笼 + 脱水-几何配位选择'→ 面向 PFAS 头基的部分去溶剂化-几何配位识别位点。边界声明：这是原理层设计转译（llm_inferred），非 from_source 事实——KcsA 识别对象为脱水裸单原子离子（K⁺/Na⁺），而 PFOA/PFBS 为大型水合有机阴离子（羧酸根/磺酸根头基 + 全氟碳尾），其几何尺度与脱水能不同于裸离子；只提取'预组织刚性配位腔 + 脱水能-配位能平衡 + 尺寸匹配'原理，选择性须实验验证。",
+     "explainability_anchors": "设计溯源：KcsA 选择性过滤器脱水 K⁺ 羰基氧方反棱柱配位、按尺寸排除 Na⁺（PDB 1K4C/1BL8，from_source）→'刚性预组织配位笼 + 脱水-几何配位选择'可迁移原理 → PFAS 头基部分去溶剂化-几何配位识别（llm_inferred 启发，原理层，须实验验证）。"
+    }
+   }
+  ]
+ },
+ "design_translation": [
+  {
+   "idea": "将 KcsA 的'刚性预组织配位笼 + 脱水-几何配位选择'原理移植到多孔吸附材料，面向 PFOA（全氟辛酸）的水合羧酸根头基：构筑刚性、几何预组织的配位/氢键给体腔，使水合头基在进入识别位点时部分去溶剂化，并以与头基氧几何匹配的给体阵列提供等效配位，令选择性来自头基脱水能与配位能的平衡及尺寸匹配；孔壁以疏水/氟亲链容纳全氟碳尾",
+   "specific_functional_group": "几何预组织的配位/中性氢键给体阵列（羰基、醚/冠醚样氧、脲/硫脲、弱配位阳离子），按与 PFOA 羧酸根二氧几何匹配的方式刚性排布",
+   "material_handle": "以刚性多孔骨架（MOF/COF、冠醚功能化或分子印迹刚性腔）呈现尺寸固定的配位口袋；借刚性间隔臂/印迹控制给体间距与取向，孔壁以烃/氟碳链降低局部极性",
+   "target_interaction": "PFOA 水合羧酸根头基的部分去溶剂化 + 几何匹配的刚性配位/氢键 + 全氟碳尾在疏水/氟亲孔壁的范德华/氟亲接触",
+   "source_tier": "llm_inference",
+   "evidence_tier": "inspiration（原理层外推：KcsA 机制接地于裸 K⁺/Na⁺ 的脱水-几何配位选择；PFAS 为大型水合有机阴离子，转译为 llm_inferred，无 PFAS 结合/吸附证据）",
+   "examples": [],
+   "design_principle": "KcsA 证明刚性预组织配位笼可通过'先脱水、再以几何匹配配位替代水合壳'按尺寸-配位能选择离子（PDB 1K4C/1BL8）；该原理在'预组织刚性配位腔 + 脱水能-配位能平衡 + 尺寸匹配'层面可外推到水合头基识别",
+   "implementation_example": "冠醚/羰基氧阵列功能化、具刚性尺寸固定配位腔与疏水孔壁的 COF/MOF 或分子印迹聚合物（无实验数据，仅为设计假设）",
+   "constraints": "PFAS 为大型水合有机阴离子（非裸离子），头基几何尺度与脱水能根本不同于 K⁺，腔体几何与脱水补偿不可直接套用；水相中水竞争与共存阴离子（Cl⁻、SO4²⁻、天然有机酸）干扰是关键挑战；蛋白本身为四聚体膜蛋白不可直接复制，仅提取配位几何原理",
+   "failure_modes": "刚性腔径与水合头基失配导致去溶剂化/配位失败；大型头基脱水能不被配位充分补偿；氟亲孔壁对一切全氟物种非特异吸附；过滤器式配位对离子占据/环境敏感，合成位点构象漂移使选择性退化",
+   "material_realization_examples": []
+  }
+ ],
+ "honesty_ledger": {
+  "facts": [
+   {
+    "type": "mechanism",
+    "index": 0,
+    "name": "选择性过滤器主链羰基氧笼对脱水 K⁺ 的几何配位",
+    "basis": "from_source_verified",
+    "note": "Zhou 2001 Nature（PDB 1K4C，2.0 Å，KcsA-Fab）：羰基氧在选择性过滤器内围成与水合水相似的方反棱柱配位 K⁺；通道在胞外入口置换离子水分子；离子须脱水后按尺寸与电荷被选择性配位；低 K⁺ 下过滤器配位结构改变。quote 逐字取自 PubMed 摘要（PMID 11689936）与 RCSB 沉积标题（可核验），未做全文 PDF 审计"
+   },
+   {
+    "type": "mechanism",
+    "index": 1,
+    "name": "刚性预组织选择性过滤器按尺寸-脱水能区分 K⁺ 与 Na⁺",
+    "basis": "from_source_verified",
+    "note": "Doyle 1998 Science（PDB 1BL8，3.2 Å）：四亚基倒锥孔托举约 12 Å 窄过滤器，签名序列主链羰基氧排列、被结构约束保持张开，配位 K⁺ 但不配位更小 Na⁺。quote 逐字取自 Crossref 摘要与标题（可核验），未做全文 PDF 审计"
+   }
+  ],
+  "leads": [],
+  "inferences": [
+   {
+    "type": "design_translation",
+    "index": 0,
+    "idea": "将 KcsA 刚性预组织配位笼 + 脱水-几何配位选择原理移植到多孔材料识别 PFOA 水合羧酸根头基",
+    "basis": "llm_inferred",
+    "label": "inspiration",
+    "note": "KcsA 识别对象为脱水裸单原子离子（K⁺/Na⁺）；PFOA/PFBS 为大型水合有机阴离子，几何尺度与脱水能根本不同，转译仅取'预组织刚性配位腔 + 脱水能-配位能平衡 + 尺寸匹配'原理层，无 PFAS 结合/吸附证据，选择性须实验验证"
+   },
+   {
+    "type": "fact_derivation",
+    "index": 0,
+    "name": "KCSA-002 why_it_works 的脱水能补偿能量学解释",
+    "basis": "llm_inferred",
+    "label": "mechanism_inference",
+    "note": "Doyle 摘要给出'配位 K⁺ 不配位更小 Na⁺'的结构结论；脱水能不被补偿的能量学机理为其外推，标 llm_inferred"
+   }
+  ],
+  "boundary_notes": [
+   "本原型天然识别对象为脱水裸 K⁺/Na⁺（单原子离子）；机制 from_source 接地限于 KcsA 选择性过滤器对裸离子的脱水-几何配位选择",
+   "PFOA/PFBS（大型水合有机阴离子）应用为设计转译（llm_inferred/inspiration），非 from_source 事实，不得用作 PFAS 吸附的 direct evidence",
+   "无 PFAS 吸附性能数据（qmax 等）；performance_data 严格为空，未从任何污染物知识库搬运性能数值（知识隔离红线）",
+   "裸离子与大型有机阴离子的尺度/脱水能失配、低介电/水竞争、离子占据依赖等边界为定性 llm_inferred，不带数值阈值，gate_level=soft"
+  ],
+  "missing_pdf_items": [
+   "Zhou 2001 Nature 414:43-48 全文 PDF（quote 取自 PubMed 摘要 PMID 11689936 与 RCSB 沉积标题）",
+   "Doyle 1998 Science 280:69-77 全文 PDF（quote 取自 Crossref 摘要与标题）"
+  ],
+  "generated_by": "manual-curation-2026-07-22",
+  "note": "诚实优先：机制接地限于 KcsA 选择性过滤器对裸 K⁺/Na⁺ 的脱水-几何配位选择（PDB 1K4C/1BL8 + Zhou 2001 + Doyle 1998）；一切 PFAS 应用为 inspiration/原理层外推"
+ },
+ "boundary_rules": [
+  {
+   "rule": "尺寸-脱水能选择性：刚性羰基氧配位笼按离子尺寸与配位能匹配识别脱水 K⁺、排除更小的 Na⁺（仅尺寸匹配者脱水能被配位补偿）",
+   "source_mechanism": "刚性预组织选择性过滤器按尺寸-脱水能区分 K⁺ 与 Na⁺（结构基础先例）",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "过滤器配位结构依赖离子占据：低 K⁺ 下选择性过滤器改变其离子配位结构",
+   "source_mechanism": "选择性过滤器主链羰基氧笼对脱水 K⁺ 的几何配位（脱水选择性核心机制）",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "预组织刚性配位笼须维持精确配位几何，柔性化或完全溶剂化使几何匹配与脱水补偿丧失（定性，无数值阈值）",
+   "source_mechanism": "选择性过滤器主链羰基氧笼对脱水 K⁺ 的几何配位（脱水选择性核心机制）",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  },
+  {
+   "rule": "KcsA 选择性针对脱水裸单原子离子（K⁺/Na⁺）；PFAS 为大型水合有机阴离子，腔体几何与脱水能不可直接套用，转译限原理层",
+   "source_mechanism": "选择性过滤器主链羰基氧笼对脱水 K⁺ 的几何配位（脱水选择性核心机制）",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  }
+ ],
+ "mechanism_tags": [
+  "疏水分配",
+  "孔道限域分子筛分",
+  "几何识别"
+ ]
+}

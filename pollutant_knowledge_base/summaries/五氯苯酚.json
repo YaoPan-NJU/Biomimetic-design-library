@@ -1,0 +1,3623 @@
+{
+  "pollutant_name": "五氯苯酚",
+  "paper_count": 171,
+  "total_ki": 1810,
+  "empty_papers": 1,
+  "skipped_low_confidence": 2,
+  "ki_by_domain": {
+    "D1_adsorption_performance": 597,
+    "D4_adsorption_mechanism": 381,
+    "D11_pollutant_property": 307,
+    "D5_engineering_constraint": 187,
+    "D2_material_structure": 104,
+    "D12_occurrence_pattern": 102,
+    "D6_pollutant_application": 87,
+    "D8_characterization": 22,
+    "D7_synthesis_method": 15,
+    "D9_comparison_review": 8
+  },
+  "properties": {
+    "1-NAPA的溶解度与甲醇体积分数(f_c)的线性回归关系": [
+      {
+        "value": "log[solubility, µmol L−1] = 2.43×f_c + 0.24 (CaCl2混合物); log[solubility, µmol L−1] = 2.16×f_c + 2.14 (KCl混合物)",
+        "unit": "无量纲（对数值）",
+        "ref_doi": "10.1080/03601234.2012.601949",
+        "source_file": "Kim 等 - 2012 - Sorption of acidic organic solute onto kaolinitic soils from methanol-water mixtures.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "1-NAPA的溶解度余弦功率(σ)与离子组成无关": [
+      {
+        "value": "CaCl2混合物中σ为2.43 ± 0.41，KCl混合物中σ为2.16 ± 0.25，差异不显著（α=0.05），表明离子组成对1-NAPA水相活性无显著影响。",
+        "unit": "无量纲",
+        "ref_doi": "10.1080/03601234.2012.601949",
+        "source_file": "Kim 等 - 2012 - Sorption of acidic organic solute onto kaolinitic soils from methanol-water mixtures.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "2,3,4,5-四氯苯酚 pKa": [
+      {
+        "value": "6.64",
+        "unit": null,
+        "ref_doi": "10.2136/sssaj2003.7870",
+        "source_file": "D'Angelo和Reddy - 2003 - Effect of aerobic and anaerobic conditions on chlorophenol sorption in wetland soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "5.40",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "JAFVERT 等 - 1990 - DISTRIBUTION OF HYDROPHOBIC IONOGENIC ORGANIC-COMPOUNDS BETWEEN OCTANOL AND WATER - ORGANIC-ACIDS.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "2,3,4,6-四氯苯酚 pKa": [
+      {
+        "value": "6.15",
+        "unit": null,
+        "ref_doi": "10.1021/es0494914",
+        "source_file": "Hyun和Lee - 2004 - Hydrophilic and hydrophobic sorption of organic acids by variable-charge soils Effect of chemical a.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "2,4,6-三氯苯酚 (TCP) logKow": [
+      {
+        "value": "3.72",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "VALSARAJ 等 - 1991 - CONTINUOUS COUNTERCURRENT SOLVENT SUBLATION FOR THE REMOVAL OF HYDROPHOBIC ORGANICS FROM WATER.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "2,4,6-三氯苯酚 (TCP) pKa": [
+      {
+        "value": "6.15",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "VALSARAJ 等 - 1991 - CONTINUOUS COUNTERCURRENT SOLVENT SUBLATION FOR THE REMOVAL OF HYDROPHOBIC ORGANICS FROM WATER.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "2,4,6-三氯苯酚 (TCP) 分子量": [
+      {
+        "value": "197.45",
+        "unit": "g/mol",
+        "ref_doi": null,
+        "source_file": "VALSARAJ 等 - 1991 - CONTINUOUS COUNTERCURRENT SOLVENT SUBLATION FOR THE REMOVAL OF HYDROPHOBIC ORGANICS FROM WATER.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "2,4,6-三氯苯酚 pKa": [
+      {
+        "value": "6.15",
+        "unit": null,
+        "ref_doi": "10.1021/es0494914",
+        "source_file": "Hyun和Lee - 2004 - Hydrophilic and hydrophobic sorption of organic acids by variable-charge soils Effect of chemical a.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "6.15",
+        "unit": null,
+        "ref_doi": "10.1007/s00244-003-0185-3",
+        "source_file": "Fingler 等 - 2004 - Sorption of chlorophenolates in soils and aquifer and marine sediments.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "2,4,6-三氯苯酚质子化物种浓度 (log molality)": [
+      {
+        "value": "-2.8",
+        "unit": "log molality",
+        "ref_doi": null,
+        "source_file": "Wightman和Fein - 1999 - Experimental study of 2,4,6-trichlorophenol and pentachlorophenol solubilities in aqueous solutions.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "2,4,6-三氯苯酚酸解离常数 pKa": [
+      {
+        "value": "6.0",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "Wightman和Fein - 1999 - Experimental study of 2,4,6-trichlorophenol and pentachlorophenol solubilities in aqueous solutions.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "2,4-DCP logKow (辛醇-水分配系数)": [
+      {
+        "value": "3.08",
+        "unit": null,
+        "ref_doi": "10.1016/j.chemosphere.2006.10.080",
+        "source_file": "Cea 等 - 2007 - Adsorption behavior of 2,4-dichlorophenol and pentachlorophenol in an allophanic soil.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "2,4-二氯苯酚 (2,4-DCP) 物理化学性质": [
+      {
+        "value": "分子量 163.0 g/mol, pKa 7.89, logKow 3.06",
+        "unit": null,
+        "ref_doi": "10.1016/j.jece.2018.05.034",
+        "source_file": "Ololade 等 - 2018 - In-situ modification of soil organic matter towards adsorption and desorption of phenol and its chlo.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "2,4-二氯苯酚 pKa": [
+      {
+        "value": "7.85",
+        "unit": null,
+        "ref_doi": "10.1021/es0494914",
+        "source_file": "Hyun和Lee - 2004 - Hydrophilic and hydrophobic sorption of organic acids by variable-charge soils Effect of chemical a.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "8.05",
+        "unit": null,
+        "ref_doi": "10.1134/S1061934811050145",
+        "source_file": "Prokhorova 等 - 2011 - Use of Lignins as Components of Background Electrolyte in Capillary Electrophoresis.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "2,4-滴除草剂 pKa": [
+      {
+        "value": "2.8",
+        "unit": null,
+        "ref_doi": "10.1021/es0494914",
+        "source_file": "Hyun和Lee - 2004 - Hydrophilic and hydrophobic sorption of organic acids by variable-charge soils Effect of chemical a.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "2,6-二氯苯酚 (2,6-DCP) 物理化学性质": [
+      {
+        "value": "分子量 163.0 g/mol, pKa 6.79, logKow 2.75",
+        "unit": null,
+        "ref_doi": "10.1016/j.jece.2018.05.034",
+        "source_file": "Ololade 等 - 2018 - In-situ modification of soil organic matter towards adsorption and desorption of phenol and its chlo.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "2-氯苯酚 pKa": [
+      {
+        "value": "8.50",
+        "unit": null,
+        "ref_doi": "10.1134/S1061934811050145",
+        "source_file": "Prokhorova 等 - 2011 - Use of Lignins as Components of Background Electrolyte in Capillary Electrophoresis.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "3-氯苯酚 pKa": [
+      {
+        "value": "9.00",
+        "unit": null,
+        "ref_doi": "10.1134/S1061934811050145",
+        "source_file": "Prokhorova 等 - 2011 - Use of Lignins as Components of Background Electrolyte in Capillary Electrophoresis.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "4-氯苯酚 pKa": [
+      {
+        "value": "9.47",
+        "unit": null,
+        "ref_doi": "10.1134/S1061934811050145",
+        "source_file": "Prokhorova 等 - 2011 - Use of Lignins as Components of Background Electrolyte in Capillary Electrophoresis.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "DDT的水溶性与来源": [
+      {
+        "value": "几乎不溶于水，但溶于大多数有机溶剂、油脂和脂肪；由氯醛与氯苯在硫酸催化下反应制得。",
+        "unit": null,
+        "ref_doi": "10.1016/j.jiec.2012.05.017",
+        "source_file": "Pilli 等 - 2012 - Extraction of pentachlorophenol and dichlorodiphenyltrichloroethane from aqueous solutions using ion.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "DNOC、silvex、DDA、2,4-DB 的酸解离常数 pKa 范围": [
+      {
+        "value": "2 到 3",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "JAFVERT - 1990 - SORPTION OF ORGANIC-ACID COMPOUNDS TO SEDIMENTS - INITIAL MODEL DEVELOPMENT.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "EPA优先污染物酚类的pKa范围": [
+      {
+        "value": "4 - 10.6",
+        "unit": null,
+        "ref_doi": "10.1016/S0021-9673(95)01301-6",
+        "source_file": "Li和Locke - 1996 - Nonionic surfactants for improving resolution of the priority pollutant phenols by micelle-modified.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "Imazalil的碱解离常数 pKa (pKb)": [
+      {
+        "value": "7.5",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "Hu 等 - 1998 - Adsorptive characteristics of ionogenic aromatic pesticides in water on powdered activated carbon.pdf",
+        "confidence": 0.8,
+        "low_confidence": false
+      }
+    ],
+    "Koc值比较 (Comparison of measured Koc with estimated values)": [
+      {
+        "value": "一致 (agreement) 或 显著不同 (significantly different)",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "MARTIN 等 - 1995 - CHLOROPHENOLICS FROM HIGH-MOLECULAR-WEIGHT CHLORINATED ORGANICS ISOLATED FROM BLEACHED KRAFT MILL EF.pdf",
+        "confidence": 0.8,
+        "low_confidence": false
+      }
+    ],
+    "MCPB的酸解离常数 pKa": [
+      {
+        "value": "4.7",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "Hu 等 - 1998 - Adsorptive characteristics of ionogenic aromatic pesticides in water on powdered activated carbon.pdf",
+        "confidence": 0.8,
+        "low_confidence": false
+      }
+    ],
+    "Na-2,4,6-三氯苯酚配合物 (NaTCP0) 稳定常数 (log K)": [
+      {
+        "value": "0.9",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "Wightman和Fein - 1999 - Experimental study of 2,4,6-trichlorophenol and pentachlorophenol solubilities in aqueous solutions.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "Na-五氯苯酚配合物 (NaPCP0) 稳定常数 (log K)": [
+      {
+        "value": "1.1",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "Wightman和Fein - 1999 - Experimental study of 2,4,6-trichlorophenol and pentachlorophenol solubilities in aqueous solutions.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "Na-五氯苯酚配合物 (NaPCP0) 稳定常数 (log K, 55°C)": [
+      {
+        "value": "0.9",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "Wightman和Fein - 1999 - Experimental study of 2,4,6-trichlorophenol and pentachlorophenol solubilities in aqueous solutions.pdf",
+        "confidence": 0.9,
+        "low_confidence": false
+      }
+    ],
+    "OHN氢键桥最短长度": [
+      {
+        "value": "2.52",
+        "unit": "Å",
+        "ref_doi": "10.1002/bbpc.19981020315",
+        "source_file": "Sobczyk - 1998 - X-ray diffraction, IR, UV and NMR studies on proton transfer equilibrating phenol-N-base systems.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PCP logKow (辛醇-水分配系数)": [
+      {
+        "value": "5.01",
+        "unit": null,
+        "ref_doi": "10.1016/j.chemosphere.2006.10.080",
+        "source_file": "Cea 等 - 2007 - Adsorption behavior of 2,4-dichlorophenol and pentachlorophenol in an allophanic soil.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PCP 离子态与中性态吸附系数比": [
+      {
+        "value": "8.51",
+        "unit": "倍 (中性态吸附系数 / 离子态吸附系数)",
+        "ref_doi": "10.1016/j.watres.2012.04.003",
+        "source_file": "Tao 等 - 2012 - Influences of pH, heavy metals and phosphate and their co-influences on the sorption of pentachlorop.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PCP与DDT的内分泌干扰特性": [
+      {
+        "value": "PCP和DDT是具有内分泌干扰特性的环境化学物质。",
+        "unit": null,
+        "ref_doi": "10.1016/j.jiec.2012.05.017",
+        "source_file": "Pilli 等 - 2012 - Extraction of pentachlorophenol and dichlorodiphenyltrichloroethane from aqueous solutions using ion.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PCP在不同pH下的纯水溶解度": [
+      {
+        "value": "pH 3: 5 mg/L; pH 7: 1300 mg/L",
+        "unit": "mg/L",
+        "ref_doi": "10.1016/j.jenvman.2004.01.001",
+        "source_file": "Hanna 等 - 2004 - Cyclodextrin-enhanced solubilization of pentachlorophenol in water.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PCP的水溶性与来源": [
+      {
+        "value": "易溶于水；由苯酚在催化剂存在下氯化制得。",
+        "unit": null,
+        "ref_doi": "10.1016/j.jiec.2012.05.017",
+        "source_file": "Pilli 等 - 2012 - Extraction of pentachlorophenol and dichlorodiphenyltrichloroethane from aqueous solutions using ion.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PCP的污染物类别": [
+      {
+        "value": "疏水性离子型有机化合物 (HIOC)",
+        "unit": null,
+        "ref_doi": "10.1016/S1001-0742(08)62294-9",
+        "source_file": "Li 等 - 2009 - Influence of organic amendments on the sorption of pentachlorophenol on soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "PCP的疏水性": [
+      {
+        "value": "五氯苯酚（PCP）是一种疏水性有机化合物（HOC）。",
+        "unit": null,
+        "ref_doi": "10.2175/106143001X138769",
+        "source_file": "Fall 等 - 2001 - Generalized model of pentachlorophenol distribution in amended soil-water systems.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "具有显著的疏水性",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "Tam 等 - 1999 - The effect of organic structures on pentachlorophenol adsorption on soil.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "TeCP酸电离常数 pKa": [
+      {
+        "value": "5.4",
+        "unit": null,
+        "ref_doi": "10.1007/s00232-005-0737-8",
+        "source_file": "Word和Smejtek - 2005 - Partitioning of tetrachlorophenol into lipid bilayers and sarcoplasmic reticulum Effect of length o.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "Tween 40 在水中的临界胶束浓度": [
+      {
+        "value": "0.0029",
+        "unit": "% (w/v)",
+        "ref_doi": "10.1016/S0021-9673(95)01301-6",
+        "source_file": "Li和Locke - 1996 - Nonionic surfactants for improving resolution of the priority pollutant phenols by micelle-modified.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "effect of Cd complexation on log Kow for chlorophenols": [
+      {
+        "value": "can reduce log Kow",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "Nowosielski和Fein - 1998 - Experimental study of octanol-water partition coefficients for 2,4,6-trichlorophenol and pentachloro.pdf",
+        "confidence": 0.8,
+        "low_confidence": false
+      }
+    ],
+    "ionic strength effect on log Kow for PCP": [
+      {
+        "value": "positive linear correlation",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "Nowosielski和Fein - 1998 - Experimental study of octanol-water partition coefficients for 2,4,6-trichlorophenol and pentachloro.pdf",
+        "confidence": 0.9,
+        "low_confidence": false
+      }
+    ],
+    "logKow (辛醇-水分配系数)": [
+      {
+        "value": "1.87, 2.82, 0.69, 3.72",
+        "unit": null,
+        "ref_doi": "10.1007/s11356-015-4742-x",
+        "source_file": "Kim 等 - 2015 - Factors influencing inapplicability of cosolvency-induced model on organic acid sorption onto humic.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "5.00",
+        "unit": null,
+        "ref_doi": "10.1016/j.envpol.2006.05.041",
+        "source_file": "da Silva和Marques - 2007 - Pentachlorophenol association with fulvic acids from recycled wastes.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "logPow (辛醇-水分配系数)": [
+      {
+        "value": "5.12",
+        "unit": null,
+        "ref_doi": "10.1016/j.clay.2010.07.002",
+        "source_file": "Bouras 等 - 2010 - Effect of humic acids on pentachlorophenol sorption to cetyltrimethylammonium-modified, Fe- and Al-p.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "pH 7.45 下污染物的电荷状态": [
+      {
+        "value": "PCP 和 DFN 带负电荷；CBZ、CAF、BPA 和 BZT 为中性；OFX 为两性离子",
+        "unit": "null",
+        "ref_doi": "10.1007/s11356-016-7614-0",
+        "source_file": "Masson 等 - 2017 - Thermodynamic study of seven micropollutants adsorption onto an activated carbon cloth Van't Hoff m.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "pH dependence range of log Kow for chlorophenols": [
+      {
+        "value": "pKa-1 < pH < pKa+3",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "Nowosielski和Fein - 1998 - Experimental study of octanol-water partition coefficients for 2,4,6-trichlorophenol and pentachloro.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "pH offset for PCP (relative to pKa)": [
+      {
+        "value": "1.41",
+        "unit": "pH units",
+        "ref_doi": null,
+        "source_file": "Nowosielski和Fein - 1998 - Experimental study of octanol-water partition coefficients for 2,4,6-trichlorophenol and pentachloro.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "pH offset for TCP (relative to pKa)": [
+      {
+        "value": "1.38",
+        "unit": "pH units",
+        "ref_doi": null,
+        "source_file": "Nowosielski和Fein - 1998 - Experimental study of octanol-water partition coefficients for 2,4,6-trichlorophenol and pentachloro.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "pKa": [
+      {
+        "value": "约 9",
+        "unit": null,
+        "ref_doi": "10.1002/elps.200600071",
+        "source_file": "Williams 等 - 2006 - Use of multivariate analysis for optimization of separation parameters and prediction of migration t.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "9.5",
+        "unit": null,
+        "ref_doi": "10.1002/elps.200600071",
+        "source_file": "Williams 等 - 2006 - Use of multivariate analysis for optimization of separation parameters and prediction of migration t.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "4.35",
+        "unit": null,
+        "ref_doi": "10.1016/j.clay.2010.07.002",
+        "source_file": "Bouras 等 - 2010 - Effect of humic acids on pentachlorophenol sorption to cetyltrimethylammonium-modified, Fe- and Al-p.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "4.75",
+        "unit": null,
+        "ref_doi": "10.1016/j.scitotenv.2013.07.072",
+        "source_file": "Zeng 等 - 2014 - The impact of solution chemistry of electrolyte on the sorption of pentachlorophenol and phenanthren.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "pKa (酸碱电离常数) for 2,3,4,6-四氯苯酚 (TeCP)": [
+      {
+        "value": "5.42",
+        "unit": null,
+        "ref_doi": "10.2175/106143095X133103",
+        "source_file": "Nelson和Yang - 1995 - Equilibrium adsorption of chlorophenols on granular activated carbon.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "pKa (酸碱电离常数) for 2,4,5-三氯苯酚 (TCP)": [
+      {
+        "value": "6.72",
+        "unit": null,
+        "ref_doi": "10.2175/106143095X133103",
+        "source_file": "Nelson和Yang - 1995 - Equilibrium adsorption of chlorophenols on granular activated carbon.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "pKa (酸碱电离常数) for 2,4,6-三氯苯酚 (TCP)": [
+      {
+        "value": "6.15",
+        "unit": null,
+        "ref_doi": "10.2175/106143095X133103",
+        "source_file": "Nelson和Yang - 1995 - Equilibrium adsorption of chlorophenols on granular activated carbon.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "pKa (酸碱电离常数) for 2,4-二氯苯酚 (DCP)": [
+      {
+        "value": "7.85",
+        "unit": null,
+        "ref_doi": "10.2175/106143095X133103",
+        "source_file": "Nelson和Yang - 1995 - Equilibrium adsorption of chlorophenols on granular activated carbon.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "pKa (酸碱电离常数) for 2-氯苯酚 (CP)": [
+      {
+        "value": "8.56",
+        "unit": null,
+        "ref_doi": "10.2175/106143095X133103",
+        "source_file": "Nelson和Yang - 1995 - Equilibrium adsorption of chlorophenols on granular activated carbon.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "pKa (酸碱电离常数) for 3,4-二氯苯酚 (DCP)": [
+      {
+        "value": "8.59",
+        "unit": null,
+        "ref_doi": "10.2175/106143095X133103",
+        "source_file": "Nelson和Yang - 1995 - Equilibrium adsorption of chlorophenols on granular activated carbon.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "pKa (酸碱电离常数) for 4-氯苯酚 (CP)": [
+      {
+        "value": "9.41",
+        "unit": null,
+        "ref_doi": "10.2175/106143095X133103",
+        "source_file": "Nelson和Yang - 1995 - Equilibrium adsorption of chlorophenols on granular activated carbon.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "pKa (酸碱电离常数) for 五氯苯酚 (PCP)": [
+      {
+        "value": "4.74",
+        "unit": null,
+        "ref_doi": "10.2175/106143095X133103",
+        "source_file": "Nelson和Yang - 1995 - Equilibrium adsorption of chlorophenols on granular activated carbon.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "pKa (酸解离常数)": [
+      {
+        "value": "4.26, 1.20, 4.80, 6.15",
+        "unit": null,
+        "ref_doi": "10.1007/s11356-015-4742-x",
+        "source_file": "Kim 等 - 2015 - Factors influencing inapplicability of cosolvency-induced model on organic acid sorption onto humic.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "4.75",
+        "unit": null,
+        "ref_doi": "10.1016/j.envpol.2006.05.041",
+        "source_file": "da Silva和Marques - 2007 - Pentachlorophenol association with fulvic acids from recycled wastes.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "pKa 值": [
+      {
+        "value": "9.37 for 4-chlorophenol to 4.74 for pentachlorophenol",
+        "unit": null,
+        "ref_doi": "10.1016/j.fluid.2015.03.026",
+        "source_file": "Martins 等 - 2015 - Prediction of diffusion coefficients of chlorophenols in water by computer simulation.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "pKa 酸解离常数": [
+      {
+        "value": "~2.0, ~3.9",
+        "unit": null,
+        "ref_doi": "10.1080/03601239909373237",
+        "source_file": "Celis 等 - 1999 - Sorption of the ionizable pesticide imazamox by organo-clays and organohydrotalcites.pdf",
+        "confidence": 0.6,
+        "low_confidence": true
+      }
+    ],
+    "pKa值": [
+      {
+        "value": "4.7",
+        "unit": null,
+        "ref_doi": "10.1080/01496399108050488",
+        "source_file": "VALSARAJ 等 - 1991 - STUDIES IN BATCH AND CONTINUOUS SOLVENT SUBLATION .3. SOLUBILITY OF PENTACHLOROPHENOL IN ALCOHOL WAT.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "Δ(log Kow) for 2,4,6-trichlorophenol (TCP)": [
+      {
+        "value": "2.83",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "Nowosielski和Fein - 1998 - Experimental study of octanol-water partition coefficients for 2,4,6-trichlorophenol and pentachloro.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "Δ(log Kow) for pentachlorophenol (PCP)": [
+      {
+        "value": "2.95",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "Nowosielski和Fein - 1998 - Experimental study of octanol-water partition coefficients for 2,4,6-trichlorophenol and pentachloro.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "丁草胺分子量": [
+      {
+        "value": "311.86",
+        "unit": "g/mol",
+        "ref_doi": "10.1007/s11368-012-0638-2",
+        "source_file": "Liu 等 - 2013 - How do amorphous sesquioxides affect and contribute to butachlor retention in soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "丁草胺水溶解度": [
+      {
+        "value": "20",
+        "unit": "mg/L",
+        "ref_doi": "10.1007/s11368-012-0638-2",
+        "source_file": "Liu 等 - 2013 - How do amorphous sesquioxides affect and contribute to butachlor retention in soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "丁草胺的性质与使用": [
+      {
+        "value": "一种芽前氯乙酰胺类除草剂，在亚洲和南美广泛用于控制一年生禾本科杂草。",
+        "unit": null,
+        "ref_doi": "10.2134/jeq2010.0340",
+        "source_file": "He 等 - 2011 - Can Assessing for Potential Contribution of Soil Organic and Inorganic Components for Butachlor Sorp.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "丁草胺辛醇-水分配系数 logKow": [
+      {
+        "value": "4.50",
+        "unit": null,
+        "ref_doi": "10.1007/s11368-012-0638-2",
+        "source_file": "Liu 等 - 2013 - How do amorphous sesquioxides affect and contribute to butachlor retention in soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "三氯愈创木酚和四氯愈创木酚的鱼类毒性 (LC50)": [
+      {
+        "value": "0.75 mg/L (三氯愈创木酚); 0.32 mg/L (四氯愈创木酚)",
+        "unit": "mg/L",
+        "ref_doi": null,
+        "source_file": "LEUENBERGER 等 - 1985 - PERSISTENT CHEMICALS IN PULP-MILL EFFLUENTS - OCCURRENCE AND BEHAVIOR IN AN ACTIVATED-SLUDGE TREATME.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "三溴苯酚(TBP)的用途与危害性质": [
+      {
+        "value": "亲脂性、持久性化合物，用作阻燃剂和木材防腐剂。被美国环境保护署(USEPA)视为危险残留物。",
+        "unit": null,
+        "ref_doi": "10.1002/jssc.200700403",
+        "source_file": "Mardones 等 - 2008 - Determination of pentachlorophenol and tribromophenol in sawdust by ultrasound-assisted extraction a.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "中性2,3,4,5-四氯苯酚 logKow": [
+      {
+        "value": "4.87",
+        "unit": null,
+        "ref_doi": "10.2136/sssaj2003.7870",
+        "source_file": "D'Angelo和Reddy - 2003 - Effect of aerobic and anaerobic conditions on chlorophenol sorption in wetland soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "中性3,4,5-三氯苯酚 logKow": [
+      {
+        "value": "4.11",
+        "unit": null,
+        "ref_doi": "10.2136/sssaj2003.7870",
+        "source_file": "D'Angelo和Reddy - 2003 - Effect of aerobic and anaerobic conditions on chlorophenol sorption in wetland soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "中性3,5-二氯苯酚 logKow": [
+      {
+        "value": "3.66",
+        "unit": null,
+        "ref_doi": "10.2136/sssaj2003.7870",
+        "source_file": "D'Angelo和Reddy - 2003 - Effect of aerobic and anaerobic conditions on chlorophenol sorption in wetland soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "中性PCP的辛醇-水分配系数 logKow,n": [
+      {
+        "value": "5.24",
+        "unit": null,
+        "ref_doi": "10.1016/j.chemosphere.2007.06.027",
+        "source_file": "Hyun和Lee - 2008 - Pentachlorophenol sorption by variable-charge soils in methanol-water mixture pH effect at the low.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "中性五氯苯酚 logKow": [
+      {
+        "value": "5.24",
+        "unit": null,
+        "ref_doi": "10.2136/sssaj2003.7870",
+        "source_file": "D'Angelo和Reddy - 2003 - Effect of aerobic and anaerobic conditions on chlorophenol sorption in wetland soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "临界压力 Pc": [
+      {
+        "value": "32.2",
+        "unit": "bar",
+        "ref_doi": null,
+        "source_file": "Cross和Akgerman - 1998 - Single-component and mixture solubilities of hexachlorobenzene and pentachlorophenol in supercritica.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "41.1",
+        "unit": "bar",
+        "ref_doi": null,
+        "source_file": "Cross和Akgerman - 1998 - Single-component and mixture solubilities of hexachlorobenzene and pentachlorophenol in supercritica.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "临界温度 Tc": [
+      {
+        "value": "843",
+        "unit": "K",
+        "ref_doi": null,
+        "source_file": "Cross和Akgerman - 1998 - Single-component and mixture solubilities of hexachlorobenzene and pentachlorophenol in supercritica.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "832",
+        "unit": "K",
+        "ref_doi": null,
+        "source_file": "Cross和Akgerman - 1998 - Single-component and mixture solubilities of hexachlorobenzene and pentachlorophenol in supercritica.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "乙醇-水混合溶剂的增溶能力 σ": [
+      {
+        "value": "4.75",
+        "unit": null,
+        "ref_doi": "10.1021/es980759z",
+        "source_file": "Khodadoust 等 - 1999 - Desorption of pentachlorophenol from soils using mixed solvents.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "乙醇分数为0时PCP在水中的溶解度 Sw": [
+      {
+        "value": "0.014",
+        "unit": "mg/L",
+        "ref_doi": "10.1021/es980759z",
+        "source_file": "Khodadoust 等 - 1999 - Desorption of pentachlorophenol from soils using mixed solvents.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "乙醇分数为1.0时PCP在纯乙醇中的溶解度 Sc": [
+      {
+        "value": "5.2e5",
+        "unit": "mg/L",
+        "ref_doi": "10.1021/es980759z",
+        "source_file": "Khodadoust 等 - 1999 - Desorption of pentachlorophenol from soils using mixed solvents.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "二噁英和呋喃 土壤中半衰期": [
+      {
+        "value": "约10年",
+        "unit": "years",
+        "ref_doi": "10.1016/j.jhazmat.2017.03.021",
+        "source_file": "Guemiza等 - 2017 - Treatment technologies used for the removal of As, Cr, Cu, PCP andor PCDDF from contaminated soil.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "二噁英和呋喃 大气半衰期": [
+      {
+        "value": "3.2 to 5.8 years",
+        "unit": "years",
+        "ref_doi": "10.1016/j.jhazmat.2017.03.021",
+        "source_file": "Guemiza等 - 2017 - Treatment technologies used for the removal of As, Cr, Cu, PCP andor PCDDF from contaminated soil.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "五氯苯酚 (PCP) logKow": [
+      {
+        "value": "5.12",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "VALSARAJ 等 - 1991 - CONTINUOUS COUNTERCURRENT SOLVENT SUBLATION FOR THE REMOVAL OF HYDROPHOBIC ORGANICS FROM WATER.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "五氯苯酚 (PCP) pKa": [
+      {
+        "value": "4.75",
+        "unit": null,
+        "ref_doi": "10.1016/j.watres.2003.08.005",
+        "source_file": "Aqueous chemistry and interactive effects on non-ionic surfactant and pentachlorophenol sorption to soil.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "4.75",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "VALSARAJ 等 - 1991 - CONTINUOUS COUNTERCURRENT SOLVENT SUBLATION FOR THE REMOVAL OF HYDROPHOBIC ORGANICS FROM WATER.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "4.75",
+        "unit": null,
+        "ref_doi": "10.1007/s11356-017-9822-7",
+        "source_file": "Chien 等 - 2018 - Effect of soil pH and organic matter on the adsorption and desorption of pentachlorophenol.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "五氯苯酚 (PCP) 分子量": [
+      {
+        "value": "266.34",
+        "unit": "g/mol",
+        "ref_doi": null,
+        "source_file": "VALSARAJ 等 - 1991 - CONTINUOUS COUNTERCURRENT SOLVENT SUBLATION FOR THE REMOVAL OF HYDROPHOBIC ORGANICS FROM WATER.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "266.34",
+        "unit": "g/mol",
+        "ref_doi": "10.1007/s11356-017-9822-7",
+        "source_file": "Chien 等 - 2018 - Effect of soil pH and organic matter on the adsorption and desorption of pentachlorophenol.json",
+        "confidence": 0.8,
+        "low_confidence": false
+      }
+    ],
+    "五氯苯酚 (PCP) 水中溶解度": [
+      {
+        "value": "10.8 - 2357",
+        "unit": "mg/L",
+        "ref_doi": "10.1016/j.watres.2003.08.005",
+        "source_file": "Aqueous chemistry and interactive effects on non-ionic surfactant and pentachlorophenol sorption to soil.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "五氯苯酚 (PCP) 物理化学性质": [
+      {
+        "value": "分子量 266.5 g/mol, pKa 4.75, logKow 5.01",
+        "unit": null,
+        "ref_doi": "10.1016/j.jece.2018.05.034",
+        "source_file": "Ololade 等 - 2018 - In-situ modification of soil organic matter towards adsorption and desorption of phenol and its chlo.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "五氯苯酚 (PCP) 的酸解离常数 pKa": [
+      {
+        "value": "4.75",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "JAFVERT - 1990 - SORPTION OF ORGANIC-ACID COMPOUNDS TO SEDIMENTS - INITIAL MODEL DEVELOPMENT.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "五氯苯酚 (PCP) 酸解离常数 pKa": [
+      {
+        "value": "4.74",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "Muir和Eduljee - 1999 - PCP in the freshwater and marine environment of the European Union.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "4.75",
+        "unit": null,
+        "ref_doi": "10.1016/j.jenvman.2004.01.001",
+        "source_file": "Hanna 等 - 2004 - Cyclodextrin-enhanced solubilization of pentachlorophenol in water.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "五氯苯酚 pKa": [
+      {
+        "value": "4.69",
+        "unit": null,
+        "ref_doi": "10.1021/es0494914",
+        "source_file": "Hyun和Lee - 2004 - Hydrophilic and hydrophobic sorption of organic acids by variable-charge soils Effect of chemical a.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "4.75",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "STAPLETON 等 - 1994 - SORPTION OF PENTACHLORPHENOL TO HDTMA-CLAY AS A FUNCTION OF IONIC-STRENGTH AND PH.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "4.75",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "SMEJTEK 等 - 1987 - ADSORPTION OF IONIZED AND NEUTRAL PENTACHLOROPHENOL TO PHOSPHATIDYLCHOLINE MEMBRANES.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "4.74",
+        "unit": null,
+        "ref_doi": "10.2136/sssaj2003.7870",
+        "source_file": "D'Angelo和Reddy - 2003 - Effect of aerobic and anaerobic conditions on chlorophenol sorption in wetland soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "4.7",
+        "unit": null,
+        "ref_doi": "10.5004/dwt.2011.2087",
+        "source_file": "Sanches 等 - 2011 - Removal of pesticides and polycyclic aromatic hydrocarbons from different drinking water sources by.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "4.7",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "DePaolis和Kukkonen - 1997 - Binding of organic pollutants to humic and fulvic acids Influence of pH and the structure of humic.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "4.68",
+        "unit": null,
+        "ref_doi": "10.1134/S1061934811050145",
+        "source_file": "Prokhorova 等 - 2011 - Use of Lignins as Components of Background Electrolyte in Capillary Electrophoresis.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "4.8",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "JAFVERT 等 - 1990 - DISTRIBUTION OF HYDROPHOBIC IONOGENIC ORGANIC-COMPOUNDS BETWEEN OCTANOL AND WATER - ORGANIC-ACIDS.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "4.75 (文献[56]中提及，但本文未直接给出数值)",
+        "unit": null,
+        "ref_doi": "10.3390/cryst12091205",
+        "source_file": "Lee 等 - 2022 - Theoretical Analysis of the Adsorption of Pentachlorophenol and 6-OH-BDE-47 (6-Hydroxy-2,2',4,4'-Tet.pdf",
+        "confidence": 0.5,
+        "low_confidence": true
+      }
+    ],
+    "五氯苯酚 pentachlorophenol (PCP) 分子量 molecular weight": [
+      {
+        "value": "266.35",
+        "unit": "g/mol",
+        "ref_doi": "10.1080/10934529209375720",
+        "source_file": "BADER和JENNINGS - 1992 - SEPARATION OF PRIORITY ORGANIC POLLUTANTS FROM TAP WATER BY LOW-PRESSURE COMPOSITE MEMBRANE.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "五氯苯酚 pentachlorophenol (PCP) 溶解度 solubility": [
+      {
+        "value": "79",
+        "unit": "ppm",
+        "ref_doi": "10.1080/10934529209375720",
+        "source_file": "BADER和JENNINGS - 1992 - SEPARATION OF PRIORITY ORGANIC POLLUTANTS FROM TAP WATER BY LOW-PRESSURE COMPOSITE MEMBRANE.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "五氯苯酚(PCP)的用途与危害性质": [
+      {
+        "value": "曾广泛用作木材防腐剂和杀菌剂，因其危害性质（致皮炎、全身影响、呼吸困难、过敏反应、疑似致癌性及环境持久性）现已在大多数国家禁用。",
+        "unit": null,
+        "ref_doi": "10.1002/jssc.200700403",
+        "source_file": "Mardones 等 - 2008 - Determination of pentachlorophenol and tribromophenol in sawdust by ultrasound-assisted extraction a.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "五氯苯酚分子式和分子量": [
+      {
+        "value": "C6HCl5O，266.34",
+        "unit": "g/mol",
+        "ref_doi": null,
+        "source_file": "STAPLETON 等 - 1994 - SORPTION OF PENTACHLORPHENOL TO HDTMA-CLAY AS A FUNCTION OF IONIC-STRENGTH AND PH.pdf",
+        "confidence": 0.8,
+        "low_confidence": false
+      }
+    ],
+    "五氯苯酚在实验pH范围内的主要存在形态": [
+      {
+        "value": "pH > 6时，>95%以五氯苯酚酸根阴离子(PCP⁻)形式存在",
+        "unit": null,
+        "ref_doi": "10.1021/ie050507o",
+        "source_file": "Diaz-Flores 等 - 2006 - Adsorption of pentachlorophenol from aqueous solution onto activated carbon fiber.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "五氯苯酚在纯水中的溶解度": [
+      {
+        "value": "2.90",
+        "unit": "mg/L",
+        "ref_doi": "10.1016/j.colsurfa.2004.12.016",
+        "source_file": "Hanna 等 - 2005 - Solubilization of pentachlorophenol in micelles and confined surfactant phases.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "五氯苯酚总水溶性范围": [
+      {
+        "value": "10.8-2357",
+        "unit": "mg/L",
+        "ref_doi": "10.1016/j.watres.2003.08.005",
+        "source_file": "Park和Bielefeldt - 2003 - Aqueous chemistry and interactive effects on non-ionic surfactant and pentachlorophenol sorption to.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "五氯苯酚毒性/环境风险": [
+      {
+        "value": "潜在致癌物，被列入污染物优先清单",
+        "unit": null,
+        "ref_doi": "10.1016/j.jhazmat.2007.10.060",
+        "source_file": "Kumar 等 - 2008 - Pentachlorophenol removal from water using surfactant-enhanced filtration through low-pressure thin.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "五氯苯酚水溶解度": [
+      {
+        "value": "10",
+        "unit": "mg/L",
+        "ref_doi": "10.1016/j.jhazmat.2007.01.029",
+        "source_file": "Patel和Suresh - 2007 - Dechlorination of chlorophenols using magnesium-palladium bimetallic system.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "五氯苯酚溶解度与pH关系": [
+      {
+        "value": "溶解度随pH升高而增加",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "STAPLETON 等 - 1994 - SORPTION OF PENTACHLORPHENOL TO HDTMA-CLAY AS A FUNCTION OF IONIC-STRENGTH AND PH.pdf",
+        "confidence": 0.8,
+        "low_confidence": false
+      }
+    ],
+    "五氯苯酚的logKow": [
+      {
+        "value": "5.01",
+        "unit": null,
+        "ref_doi": "10.1016/j.apgeochem.2013.02.002",
+        "source_file": "Lou 等 - 2013 - Influence of humic acid on the sorption of pentachlorophenol by aged sediment amended with rice-straw biochar.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "五氯苯酚的pKa": [
+      {
+        "value": "4.35",
+        "unit": null,
+        "ref_doi": "10.1016/j.apgeochem.2013.02.002",
+        "source_file": "Lou 等 - 2013 - Influence of humic acid on the sorption of pentachlorophenol by aged sediment amended with rice-straw biochar.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "五氯苯酚的环境优先污染物属性": [
+      {
+        "value": "bioaccumulative, refractory and carcinogenic",
+        "unit": null,
+        "ref_doi": "10.2166/ws.2016.009",
+        "source_file": "Cheng 等 - 2016 - Effect of Ni morphology on removal of pentachlorophenol with FeNi nanomaterials.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "五氯苯酚的环境风险与性质": [
+      {
+        "value": "曾是广泛使用的工业防腐剂和杀菌剂；美国EPA根据《清洁水法案》列为优先污染物和可能的人类致癌物；中国在1970年代大量生产使用，因降解缓慢，目前环境中仍有大量残留检出。",
+        "unit": null,
+        "ref_doi": "10.1016/j.jcis.2011.05.015",
+        "source_file": "Lou 等 - 2011 - The influence of acid demineralization on surface characteristics of black carbon and its sorption f.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "五氯苯酚的酸解离常数 pKa": [
+      {
+        "value": "4.75",
+        "unit": null,
+        "ref_doi": "10.1016/j.watres.2003.08.005",
+        "source_file": "Park和Bielefeldt - 2003 - Aqueous chemistry and interactive effects on non-ionic surfactant and pentachlorophenol sorption to.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "五氯苯酚离子形态 logKow": [
+      {
+        "value": "3.16",
+        "unit": null,
+        "ref_doi": "10.2136/sssaj2003.7870",
+        "source_file": "D'Angelo和Reddy - 2003 - Effect of aerobic and anaerobic conditions on chlorophenol sorption in wetland soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "五氯苯酚质子化物种浓度 (log molality)": [
+      {
+        "value": "-5.1",
+        "unit": "log molality",
+        "ref_doi": null,
+        "source_file": "Wightman和Fein - 1999 - Experimental study of 2,4,6-trichlorophenol and pentachlorophenol solubilities in aqueous solutions.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "五氯苯酚质子化物种浓度 (log molality, 55°C)": [
+      {
+        "value": "-4.7",
+        "unit": "log molality",
+        "ref_doi": null,
+        "source_file": "Wightman和Fein - 1999 - Experimental study of 2,4,6-trichlorophenol and pentachlorophenol solubilities in aqueous solutions.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "五氯苯酚酸度常数 pKa": [
+      {
+        "value": "4.7",
+        "unit": null,
+        "ref_doi": "10.1021/ie050507o",
+        "source_file": "Diaz-Flores 等 - 2006 - Adsorption of pentachlorophenol from aqueous solution onto activated carbon fiber.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "4.75",
+        "unit": null,
+        "ref_doi": "10.1016/j.colsurfa.2004.12.016",
+        "source_file": "Hanna 等 - 2005 - Solubilization of pentachlorophenol in micelles and confined surfactant phases.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "五氯苯酚酸解离常数 pKa": [
+      {
+        "value": "4.5",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "Wightman和Fein - 1999 - Experimental study of 2,4,6-trichlorophenol and pentachlorophenol solubilities in aqueous solutions.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "4.75",
+        "unit": null,
+        "ref_doi": "10.1021/es980628y",
+        "source_file": "Li和Sengupta - 1998 - Genesis of selectivity and reversibility for sorption of synthetic aromatic anions onto polymeric so.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "五氯苯酚酸解离常数 pKa (55°C)": [
+      {
+        "value": "4.0",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "Wightman和Fein - 1999 - Experimental study of 2,4,6-trichlorophenol and pentachlorophenol solubilities in aqueous solutions.pdf",
+        "confidence": 0.9,
+        "low_confidence": false
+      }
+    ],
+    "五氯苯酚钠 (NaPCP) 相对于五氯苯酚 (PCP) 的水溶性": [
+      {
+        "value": "PCP的5000-25000倍",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "Muir和Eduljee - 1999 - PCP in the freshwater and marine environment of the European Union.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "五氯苯酚（PCP）电离状态": [
+      {
+        "value": "在 pH 12 的缓冲溶液中完全溶解为五氯苯酚钠盐",
+        "unit": null,
+        "ref_doi": "10.1002/(SICI)1097-4660(199909)74:9<870::AID-JCTB116>3.0.CO;2-C",
+        "source_file": "Arriagada和García - 1999 - Pentachlorophenol retention on to lignocellulosic activated carbons.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "五氯苯酚（PCP）的化学性质描述": [
+      {
+        "value": "PCP是一种常用的农业杀菌剂、二恶英前体；具有亲脂性、相对水溶性、疏水性、低蒸汽压和抗生物降解特性；其分子中的羟基赋予其一定的水溶性，而疏水性使其更易吸附在悬浮颗粒物上。",
+        "unit": null,
+        "ref_doi": "10.1515/ohs-2016-0016",
+        "source_file": "Kobusinska 等 - 2016 - Partition of pentachlorophenol (PCP) into particulate and dissolved phases in the waters of the Vist.pdf",
+        "confidence": 0.9,
+        "low_confidence": false
+      }
+    ],
+    "五氯苯酚（PCP）的存在形态与pKa": [
+      {
+        "value": "pKa ~4.75，pH 7.0时PCP主要以阴离子形态PCP⁻存在（比例>94.7%）",
+        "unit": null,
+        "ref_doi": "10.1007/s11356-018-2261-2",
+        "source_file": "Hua 等 - 2018 - Effects of heavy metal species, concentrations, and speciation on pentachlorophenol sorption by rive.pdf",
+        "confidence": 0.8,
+        "low_confidence": false
+      }
+    ],
+    "五氯苯酚（PCP）的水溶解度": [
+      {
+        "value": "3.0",
+        "unit": "mg L⁻¹",
+        "ref_doi": "10.1016/j.envpol.2015.05.021",
+        "source_file": "He 等 - 2015 - Natural soil mineral nanoparticles are novel sorbents for pentachlorophenol and phenanthrene removal.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "五氯苯酚（PCP）的污染物理化性质": [
+      {
+        "value": "可电离的疏水性有机污染物",
+        "unit": null,
+        "ref_doi": "10.1080/19443994.2013.803704",
+        "source_file": "Xue 等 - 2013 - Inhibition effects of pentachlorophenol (PCP) on anaerobic digestion system.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "五氯苯酚（PCP）的酸度常数 pKa": [
+      {
+        "value": "4.7",
+        "unit": null,
+        "ref_doi": "10.1021/es980759z",
+        "source_file": "Khodadoust 等 - 1999 - Desorption of pentachlorophenol from soils using mixed solvents.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "五氯苯酚（PCP）的酸解离常数 pKa": [
+      {
+        "value": "4.75",
+        "unit": null,
+        "ref_doi": "10.1016/j.envpol.2015.05.021",
+        "source_file": "He 等 - 2015 - Natural soil mineral nanoparticles are novel sorbents for pentachlorophenol and phenanthrene removal.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "4.75",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "Tam 等 - 1999 - The effect of organic structures on pentachlorophenol adsorption on soil.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "五氯酚 (PCP) pKa": [
+      {
+        "value": "4.74",
+        "unit": null,
+        "ref_doi": "10.1016/j.chroma.2009.07.047",
+        "source_file": "Choi 等 - 2009 - In-line coupling of two-phase single drop microextraction and large volume stacking using an electro.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "五氯酚 Log Kow": [
+      {
+        "value": "5.17",
+        "unit": null,
+        "ref_doi": "10.1016/j.jhazmat.2017.03.021",
+        "source_file": "Guemiza等 - 2017 - Treatment technologies used for the removal of As, Cr, Cu, PCP andor PCDDF from contaminated soil.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "五氯酚 pKa": [
+      {
+        "value": "4.75",
+        "unit": null,
+        "ref_doi": "10.1016/j.jhazmat.2017.03.021",
+        "source_file": "Guemiza等 - 2017 - Treatment technologies used for the removal of As, Cr, Cu, PCP andor PCDDF from contaminated soil.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "五氯酚 吸附系数 Log Koc": [
+      {
+        "value": "6 < Log Koc < 11",
+        "unit": null,
+        "ref_doi": "10.1016/j.jhazmat.2017.03.021",
+        "source_file": "Guemiza等 - 2017 - Treatment technologies used for the removal of As, Cr, Cu, PCP andor PCDDF from contaminated soil.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "五氯酚 水中溶解度": [
+      {
+        "value": "14 mg/L",
+        "unit": "mg/L",
+        "ref_doi": "10.1016/j.jhazmat.2017.03.021",
+        "source_file": "Guemiza等 - 2017 - Treatment technologies used for the removal of As, Cr, Cu, PCP andor PCDDF from contaminated soil.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "五氯酚（PCP）的酸碱行为": [
+      {
+        "value": "PCP是一种弱酸，在低pH下主要以质子化（中性分子）形态存在，有利于吸附；在高pH下以阴离子形态存在。",
+        "unit": null,
+        "ref_doi": "10.1016/j.envres.2006.01.002",
+        "source_file": "He 等 - 2006 - Detailed sorption isotherms of pentachlorophenol on soils and its correlation with soil properties.pdf",
+        "confidence": 0.9,
+        "low_confidence": false
+      }
+    ],
+    "偏摩尔体积测量方法 - 容量因子与密度关系": [
+      {
+        "value": "容量因子对数对密度对数的偏导数与偏摩尔体积相关",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "Cross和Akgerman - 1998 - Single-component and mixture solubilities of hexachlorobenzene and pentachlorophenol in supercritica.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "分子体积 (Molecular Size)": [
+      {
+        "value": "190",
+        "unit": "Å³",
+        "ref_doi": "10.1016/j.jhazmat.2007.10.060",
+        "source_file": "Kumar 等 - 2008 - Pentachlorophenol removal from water using surfactant-enhanced filtration through low-pressure thin.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "分子结构 SMILES": [
+      {
+        "value": "Clc1cc(Cl)cc(OC(=O)CO)c1",
+        "unit": null,
+        "ref_doi": "10.1021/jf063048q",
+        "source_file": "Kah和Brown - 2007 - Prediction of the adsorption of ionizable pesticides in soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "OC(=O)c1(Cl)c(OC)cc(Cl)c1Cl",
+        "unit": null,
+        "ref_doi": "10.1021/jf063048q",
+        "source_file": "Kah和Brown - 2007 - Prediction of the adsorption of ionizable pesticides in soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "分子量": [
+      {
+        "value": "266.35",
+        "unit": "g/mol",
+        "ref_doi": "10.1080/01496398608056150",
+        "source_file": "VALSARAJ和SPRINGER - 1986 - REMOVAL OF TRACES OF PENTACHLOROPHENOL FROM AQUEOUS ACIDIC SOLUTIONS BY SOLVENT-EXTRACTION AND SOLVE.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "分子量 MW": [
+      {
+        "value": "266.5",
+        "unit": "g/mol",
+        "ref_doi": "10.1016/j.jhazmat.2007.10.060",
+        "source_file": "Kumar 等 - 2008 - Pentachlorophenol removal from water using surfactant-enhanced filtration through low-pressure thin.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "221.04",
+        "unit": "g/mol",
+        "ref_doi": "10.1021/es048820p",
+        "source_file": "Hyun和Lee - 2005 - Quantifying the contribution of different sorption mechanisms for 2,4-dichlorophenoxyacetic acid sor.pdf",
+        "confidence": 0.5,
+        "low_confidence": true
+      },
+      {
+        "value": "266.44",
+        "unit": "g/mol",
+        "ref_doi": null,
+        "source_file": "LEE 等 - 1990 - INFLUENCE OF SOLVENT AND SORBENT CHARACTERISTICS ON DISTRIBUTION OF PENTACHLOROPHENOL IN OCTANOL-WAT.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "202.72",
+        "unit": "g/mol",
+        "ref_doi": "10.1016/j.jenvman.2018.06.041",
+        "source_file": "Miao和Bi - 2018 - Effects of soil components and solution inorganic cations on interactions of imidazolium-based ionic.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "分子量 molecular weight": [
+      {
+        "value": "266.5",
+        "unit": "g/mol",
+        "ref_doi": "10.1021/ie101766e",
+        "source_file": "Gao 等 - 2011 - Adsorption of Pentachlorophenol from Aqueous Solution on Dodecylbenzenesulfonate Modified Nickel-Tit.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "分配系数 (水/二氯甲烷)": [
+      {
+        "value": "根据文献公式和萃取效率数据计算，不同酚类化合物的分配系数(D = Corg/Caq)不同，决定了其萃取所需次数。例如，2-氯酚和五氯酚一次萃取即可定量（D值高），其他酚类需要两次。",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "Angelino和Gennaro - 1997 - An ion-interaction RP-HPLC method for the determination of the eleven EPA priority pollutant phenols.pdf",
+        "confidence": 0.8,
+        "low_confidence": false
+      }
+    ],
+    "唑酮磺隆 pKa": [
+      {
+        "value": "3.76",
+        "unit": null,
+        "ref_doi": "10.1021/es0494914",
+        "source_file": "Hyun和Lee - 2004 - Hydrophilic and hydrophobic sorption of organic acids by variable-charge soils Effect of chemical a.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "土壤半衰期 DT50 范围": [
+      {
+        "value": "5-59",
+        "unit": "d",
+        "ref_doi": "10.1021/jf063048q",
+        "source_file": "Kah和Brown - 2007 - Prediction of the adsorption of ionizable pesticides in soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "1.4-11",
+        "unit": "d",
+        "ref_doi": "10.1021/jf063048q",
+        "source_file": "Kah和Brown - 2007 - Prediction of the adsorption of ionizable pesticides in soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "5-68",
+        "unit": "d",
+        "ref_doi": "10.1021/jf063048q",
+        "source_file": "Kah和Brown - 2007 - Prediction of the adsorption of ionizable pesticides in soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "2-168",
+        "unit": "d",
+        "ref_doi": "10.1021/jf063048q",
+        "source_file": "Kah和Brown - 2007 - Prediction of the adsorption of ionizable pesticides in soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "4-100",
+        "unit": "d",
+        "ref_doi": "10.1021/jf063048q",
+        "source_file": "Kah和Brown - 2007 - Prediction of the adsorption of ionizable pesticides in soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "在纯水中的溶解度（pH 2.5）": [
+      {
+        "value": "8 ± 2",
+        "unit": "mg/L",
+        "ref_doi": "10.1080/01496399108050488",
+        "source_file": "VALSARAJ 等 - 1991 - STUDIES IN BATCH AND CONTINUOUS SOLVENT SUBLATION .3. SOLUBILITY OF PENTACHLOROPHENOL IN ALCOHOL WAT.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "在纯水中的溶解度（pH 5.0）": [
+      {
+        "value": "32 ± 3",
+        "unit": "mg/L",
+        "ref_doi": "10.1080/01496399108050488",
+        "source_file": "VALSARAJ 等 - 1991 - STUDIES IN BATCH AND CONTINUOUS SOLVENT SUBLATION .3. SOLUBILITY OF PENTACHLOROPHENOL IN ALCOHOL WAT.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "壬基酚（NP）环境行为与毒性": [
+      {
+        "value": "是一种环境雌激素，在全球环境基质中普遍存在，例如在中国东北沿海的双壳类动物和沉积物中被检出。NP能干扰生物生长，低浓度下可能导致癌症或畸形，并可导致中国仓鼠卵巢细胞的潜在DNA损伤。在沉积物中具有有限的亲和力。",
+        "unit": null,
+        "ref_doi": "10.1016/j.jes.2020.09.008",
+        "source_file": "Cheng 等 - 2021 - Assessment and prediction of the effect of ageing on the adsorption of nonylphenol in black carbon-s.pdf",
+        "confidence": 0.8,
+        "low_confidence": false
+      }
+    ],
+    "官能团": [
+      {
+        "value": "咪唑环，辛基链（阳离子），氯离子（阴离子）",
+        "unit": null,
+        "ref_doi": "10.1016/j.jenvman.2018.06.041",
+        "source_file": "Miao和Bi - 2018 - Effects of soil components and solution inorganic cations on interactions of imidazolium-based ionic.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "扑草净的土壤有机碳吸附系数 Koc": [
+      {
+        "value": "311–614",
+        "unit": "L/kg",
+        "ref_doi": "10.1016/j.chemosphere.2007.08.062",
+        "source_file": "Cao 等 - 2008 - Effects of SOM, surfactant and pH on the sorption-desorption and mobility of prometryne in soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "扑草净的酸解离常数 pKa": [
+      {
+        "value": "10.3",
+        "unit": null,
+        "ref_doi": "10.1016/j.chemosphere.2007.08.062",
+        "source_file": "Cao 等 - 2008 - Effects of SOM, surfactant and pH on the sorption-desorption and mobility of prometryne in soils.pdf",
+        "confidence": 0.9,
+        "low_confidence": false
+      }
+    ],
+    "有机碳归一化分配系数 Koc": [
+      {
+        "value": "17 700",
+        "unit": null,
+        "ref_doi": "10.2175/106143000X137239",
+        "source_file": "Fall 等 - 2000 - Desorptive behavior of pentachlorophenol (PCP) and phenanthrene in soil-water systems.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "有机碳归一化分配系数 Koc (离子态)": [
+      {
+        "value": "8 010",
+        "unit": null,
+        "ref_doi": "10.2175/106143000X137239",
+        "source_file": "Fall 等 - 2000 - Desorptive behavior of pentachlorophenol (PCP) and phenanthrene in soil-water systems.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "有机碳归一化分配系数 Koc (非离子态)": [
+      {
+        "value": "714",
+        "unit": null,
+        "ref_doi": "10.2175/106143000X137239",
+        "source_file": "Fall 等 - 2000 - Desorptive behavior of pentachlorophenol (PCP) and phenanthrene in soil-water systems.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "有机碳归一化吸附系数 Koc 范围": [
+      {
+        "value": "5-212",
+        "unit": "mL/g",
+        "ref_doi": "10.1021/jf063048q",
+        "source_file": "Kah和Brown - 2007 - Prediction of the adsorption of ionizable pesticides in soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "3.5-21",
+        "unit": "mL/g",
+        "ref_doi": "10.1021/jf063048q",
+        "source_file": "Kah和Brown - 2007 - Prediction of the adsorption of ionizable pesticides in soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "51-81",
+        "unit": "mL/g",
+        "ref_doi": "10.1021/jf063048q",
+        "source_file": "Kah和Brown - 2007 - Prediction of the adsorption of ionizable pesticides in soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "39-84",
+        "unit": "mL/g",
+        "ref_doi": "10.1021/jf063048q",
+        "source_file": "Kah和Brown - 2007 - Prediction of the adsorption of ionizable pesticides in soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "4-60",
+        "unit": "mL/g",
+        "ref_doi": "10.1021/jf063048q",
+        "source_file": "Kah和Brown - 2007 - Prediction of the adsorption of ionizable pesticides in soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "条件电离常数 pK‘a（随甲醇体积分数变化）": [
+      {
+        "value": "随fc从0增加到0.6，pK‘a线性增加约1个单位（例如fc=0时约4.75，fc=0.6时约5.75）",
+        "unit": null,
+        "ref_doi": "10.1016/j.chemosphere.2007.06.027",
+        "source_file": "Hyun和Lee - 2008 - Pentachlorophenol sorption by variable-charge soils in methanol-water mixture pH effect at the low.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "林丹物理化学性质：疏水性、水溶性、毒性": [
+      {
+        "value": "高疏水性、低水溶性、高毒性",
+        "unit": null,
+        "ref_doi": "10.1007/s42832-020-0063-1",
+        "source_file": "Feng 等 - 2021 - Assembly and variation of root-associated microbiota of rice during their vegetative growth phase wi.pdf",
+        "confidence": 0.6,
+        "low_confidence": true
+      }
+    ],
+    "毒性与感官影响": [
+      {
+        "value": "酚类化合物通常对生物有毒，并且即使浓度低于1 µg/L也会影响水和鱼的味道与气味。",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "Angelino和Gennaro - 1997 - An ion-interaction RP-HPLC method for the determination of the eleven EPA priority pollutant phenols.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "氯代苯酚的物理化学性质范围": [
+      {
+        "value": "疏水性弱酸，logKow范围约10^2 - 10^5，pKa范围5-9。",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "SCHELLENBERG 等 - 1984 - SORPTION OF CHLORINATED PHENOLS BY NATURAL SEDIMENTS AND AQUIFER MATERIALS.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "氯代苯酚的辛醇-水分配系数 logKow": [
+      {
+        "value": "4.00",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "SCHELLENBERG 等 - 1984 - SORPTION OF CHLORINATED PHENOLS BY NATURAL SEDIMENTS AND AQUIFER MATERIALS.pdf",
+        "confidence": 0.8,
+        "low_confidence": false
+      }
+    ],
+    "氯代苯酚的酸解离常数 pKa": [
+      {
+        "value": "6.94",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "SCHELLENBERG 等 - 1984 - SORPTION OF CHLORINATED PHENOLS BY NATURAL SEDIMENTS AND AQUIFER MATERIALS.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "氯代酚的pKa值范围": [
+      {
+        "value": "4.80-6.40, except 2,6-DCP: 7.90",
+        "unit": null,
+        "ref_doi": "10.1039/c5ra03395k",
+        "source_file": "Kragulj 等 - 2015 - Adsorption of chlorinated phenols on multiwalled carbon nanotubes.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "氯仿 chloroform 溶解度 solubility": [
+      {
+        "value": "8000",
+        "unit": "ppm",
+        "ref_doi": "10.1080/10934529209375720",
+        "source_file": "BADER和JENNINGS - 1992 - SEPARATION OF PRIORITY ORGANIC POLLUTANTS FROM TAP WATER BY LOW-PRESSURE COMPOSITE MEMBRANE.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "氯仿的亨利常数 (Henry's constant)": [
+      {
+        "value": "2.88 × 10-3",
+        "unit": "atm·m³·mol⁻¹",
+        "ref_doi": null,
+        "source_file": "LEUENBERGER 等 - 1985 - PERSISTENT CHEMICALS IN PULP-MILL EFFLUENTS - OCCURRENCE AND BEHAVIOR IN AN ACTIVATED-SLUDGE TREATME.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "氯仿的辛醇-水分配系数 (log Kow)": [
+      {
+        "value": "1.97",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "LEUENBERGER 等 - 1985 - PERSISTENT CHEMICALS IN PULP-MILL EFFLUENTS - OCCURRENCE AND BEHAVIOR IN AN ACTIVATED-SLUDGE TREATME.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "氯化程度与生物降解速率关系": [
+      {
+        "value": "氯化程度越高，生物降解速率越低",
+        "unit": null,
+        "ref_doi": "10.1002/ep.670130213",
+        "source_file": "PARKER 等 - 1994 - MODELING THE FATE OF CHLORINATED PHENOLS IN WASTE-WATER TREATMENT PLANTS.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "氯酚pH依赖的辛醇-水分配系数模型": [
+      {
+        "value": "log Kow(pH) = log Kow(n) - 2.9/(1 + 10^(1.41pKa - pH))",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "Tebes-Stevens和Jones - 2004 - Estimation of microbial reductive transformation rates for chlorinated benzenes and phenols using a.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "氯酚在吸附实验中的主要存在形态": [
+      {
+        "value": "电离态（氯酚酸盐）主导",
+        "unit": null,
+        "ref_doi": "10.1007/s00244-003-0185-3",
+        "source_file": "Fingler 等 - 2004 - Sorption of chlorophenolates in soils and aquifer and marine sediments.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "氯酚在环境中浓度建议值": [
+      {
+        "value": "地表水中高达 10 ng/L；废水中建议限值 < 1 μg/L",
+        "unit": "ng/L, μg/L",
+        "ref_doi": "10.4491/eer.2019.004",
+        "source_file": "Ahari 等 - 2020 - Sorption of chlorophenols on geotextile of the geosynthetic clay liners.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "氯酚的毒性与分配特性": [
+      {
+        "value": "毒性取决于pH和分子中氯原子数量，五氯苯酚毒性最强，且具有最小的亨利常数和大的辛醇-水分配系数(Kow)",
+        "unit": null,
+        "ref_doi": "10.1016/j.chroma.2008.10.056",
+        "source_file": "Ho 等 - 2008 - Purge-assisted headspace solid-phase microextraction combined with gas chromatography-mass spectrome.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "氯酚的离子化行为": [
+      {
+        "value": "在正常土壤pH范围内，大多数氯酚完全或部分电离，影响其溶解性、吸附、迁移和生物利用度",
+        "unit": null,
+        "ref_doi": "10.1016/j.chemosphere.2009.10.040",
+        "source_file": "Cea 等 - 2010 - Kinetic and thermodynamic study of chlorophenol sorption in an allophanic soil.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "氯酚的酸度常数 (pKa)": [
+      {
+        "value": "见附录描述",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "LEUENBERGER 等 - 1985 - PERSISTENT CHEMICALS IN PULP-MILL EFFLUENTS - OCCURRENCE AND BEHAVIOR IN AN ACTIVATED-SLUDGE TREATME.pdf",
+        "confidence": 0.8,
+        "low_confidence": false
+      }
+    ],
+    "水中溶解度 Solubility": [
+      {
+        "value": "0.6",
+        "unit": "g/L",
+        "ref_doi": "10.1021/jf063048q",
+        "source_file": "Kah和Brown - 2007 - Prediction of the adsorption of ionizable pesticides in soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "6.5",
+        "unit": "g/L",
+        "ref_doi": "10.1021/jf063048q",
+        "source_file": "Kah和Brown - 2007 - Prediction of the adsorption of ionizable pesticides in soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "0.091",
+        "unit": "g/L",
+        "ref_doi": "10.1021/jf063048q",
+        "source_file": "Kah和Brown - 2007 - Prediction of the adsorption of ionizable pesticides in soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "0.780",
+        "unit": "g/L",
+        "ref_doi": "10.1021/jf063048q",
+        "source_file": "Kah和Brown - 2007 - Prediction of the adsorption of ionizable pesticides in soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "0.548 (pH7); 213 (pH9)",
+        "unit": "g/L",
+        "ref_doi": "10.1021/jf063048q",
+        "source_file": "Kah和Brown - 2007 - Prediction of the adsorption of ionizable pesticides in soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "水中溶解度 solubility in water": [
+      {
+        "value": "18",
+        "unit": "mg/L",
+        "ref_doi": "10.1021/ie101766e",
+        "source_file": "Gao 等 - 2011 - Adsorption of Pentachlorophenol from Aqueous Solution on Dodecylbenzenesulfonate Modified Nickel-Tit.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "水溶性": [
+      {
+        "value": "14–19",
+        "unit": "mg/L",
+        "ref_doi": "10.1080/01496398608056150",
+        "source_file": "VALSARAJ和SPRINGER - 1986 - REMOVAL OF TRACES OF PENTACHLOROPHENOL FROM AQUEOUS ACIDIC SOLUTIONS BY SOLVENT-EXTRACTION AND SOLVE.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "11-14",
+        "unit": "mg/mL",
+        "ref_doi": null,
+        "source_file": "LEE 等 - 1990 - INFLUENCE OF SOLVENT AND SORBENT CHARACTERISTICS ON DISTRIBUTION OF PENTACHLOROPHENOL IN OCTANOL-WAT.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "水溶解度 (25°C)": [
+      {
+        "value": "25-30",
+        "unit": "μg/mL",
+        "ref_doi": "10.1016/j.jhazmat.2010.09.066",
+        "source_file": "Luo 等 - 2011 - Sorption and desorption of pentachlorophenol to black carbon of three different origins.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "污染物亲水性对比": [
+      {
+        "value": "BaP为强疏水性；PCP为弱有机酸，亲水性更强",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "DePaolis和Kukkonen - 1997 - Binding of organic pollutants to humic and fulvic acids Influence of pH and the structure of humic.pdf",
+        "confidence": 0.8,
+        "low_confidence": false
+      }
+    ],
+    "污染物分子量": [
+      {
+        "value": "266.34",
+        "unit": "g/mol",
+        "ref_doi": "10.1016/j.ecoleng.2016.01.039",
+        "source_file": "Peng 等 - 2016 - Adsorption behavior and mechanism of pentachlorophenol on reed biochars pH effect, pyrolysis temper.pdf",
+        "confidence": 0.8,
+        "low_confidence": false
+      }
+    ],
+    "污染物化学标识": [
+      {
+        "value": "Triadimefon: 1-(4-chlorophenoxy)-3,3-dimethyl-1-(1H-1,2,4-triazol-1-yl)-2-butanone",
+        "unit": null,
+        "ref_doi": "10.2136/sssaj2000.64136x",
+        "source_file": "Celis 等 - 2000 - Triadimefon interactions with organoclays and organohydrotalcites.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "污染物吸附行为与理化性质的关系": [
+      {
+        "value": "吸附强度与污染物的极性相关（极性越强，在主要为吸附作用的有机膨润土上吸附量越大，如酚类）；吸附量与污染物的水溶性相关（水溶性越低，在主要为分配作用的有机膨润土上吸附量越大，如p-nitrophenol > aniline > phenol）。",
+        "unit": null,
+        "ref_doi": "10.1021/es990177x",
+        "source_file": "Zhu 等 - 2000 - Sorption of phenol, p-nitrophenol, and aniline to dual-cation organobentonites from water.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "污染物性质：PCDD/Fs的水溶性与持久性": [
+      {
+        "value": "相对低的水溶性；高度持久性有机污染物",
+        "unit": null,
+        "ref_doi": "10.1016/j.jhazmat.2010.03.017",
+        "source_file": "Jonsson 等 - 2010 - Dioxin removal from contaminated soils by ethanol washing.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "污染物性质：五氯苯酚的pKa值": [
+      {
+        "value": "4.74",
+        "unit": null,
+        "ref_doi": "10.1016/j.seppur.2007.11.005",
+        "source_file": "Fan 等 - 2008 - Solvent extraction of selected endocrine-disrupting phenols using ionic liquids.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "污染物性质：林丹（γ-HCH）": [
+      {
+        "value": "林丹是六六六（HCH）的γ异构体，纯度>99%，具有杀虫活性。",
+        "unit": null,
+        "ref_doi": "10.1016/j.envpol.2019.113580",
+        "source_file": "Feng 等 - 2020 - Crop-dependent root-microbe-soil interactions induce contrasting natural attenuation of organochlori.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "污染物性质：苯酚的pKa值": [
+      {
+        "value": "9.96",
+        "unit": null,
+        "ref_doi": "10.1016/j.seppur.2007.11.005",
+        "source_file": "Fan 等 - 2008 - Solvent extraction of selected endocrine-disrupting phenols using ionic liquids.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "污染物极性 pollutant polarity": [
+      {
+        "value": "chlorophenols include polar compounds (2-CP, 2,4-DCP, 2,4,6-TCP) and non-polar compound (PCP)",
+        "unit": null,
+        "ref_doi": "10.1016/j.chroma.2012.09.083",
+        "source_file": "Li 等 - 2012 - Preparation of magnetic poly(diethyl vinylphosphonate-co-ethylene glycol dimethacrylate) for the det.pdf",
+        "confidence": 0.8,
+        "low_confidence": false
+      }
+    ],
+    "污染物毒性与环境归类": [
+      {
+        "value": "高毒性（雌激素活性和致癌性）、抗生物降解、潜在生物累积性、优先污染物",
+        "unit": null,
+        "ref_doi": "10.1016/j.ecoleng.2016.01.039",
+        "source_file": "Peng 等 - 2016 - Adsorption behavior and mechanism of pentachlorophenol on reed biochars pH effect, pyrolysis temper.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "污染物物理化学性质 - 亲脂性 (log Kow)": [
+      {
+        "value": "1.46",
+        "unit": null,
+        "ref_doi": "10.1007/s11270-014-2048-0",
+        "source_file": "Sun 等 - 2014 - Sorption of Pyrene on Different Constituents of Rice Straw in the Presence of Phenanthrene, Benzo[a].pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "5.24",
+        "unit": null,
+        "ref_doi": "10.1007/s11270-014-2048-0",
+        "source_file": "Sun 等 - 2014 - Sorption of Pyrene on Different Constituents of Rice Straw in the Presence of Phenanthrene, Benzo[a].pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "污染物物理化学性质 - 分子体积": [
+      {
+        "value": "172",
+        "unit": "cm³/mol",
+        "ref_doi": "10.1007/s11270-014-2048-0",
+        "source_file": "Sun 等 - 2014 - Sorption of Pyrene on Different Constituents of Rice Straw in the Presence of Phenanthrene, Benzo[a].pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "160",
+        "unit": "cm³/mol",
+        "ref_doi": "10.1007/s11270-014-2048-0",
+        "source_file": "Sun 等 - 2014 - Sorption of Pyrene on Different Constituents of Rice Straw in the Presence of Phenanthrene, Benzo[a].pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "196",
+        "unit": "cm³/mol",
+        "ref_doi": "10.1007/s11270-014-2048-0",
+        "source_file": "Sun 等 - 2014 - Sorption of Pyrene on Different Constituents of Rice Straw in the Presence of Phenanthrene, Benzo[a].pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "污染物物理化学性质 - 酸解离常数 (pKa)": [
+      {
+        "value": "4.74",
+        "unit": null,
+        "ref_doi": "10.1007/s11270-014-2048-0",
+        "source_file": "Sun 等 - 2014 - Sorption of Pyrene on Different Constituents of Rice Straw in the Presence of Phenanthrene, Benzo[a].pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "污染物疏水性 (Pollutant hydrophobicity logP)": [
+      {
+        "value": "1.46, 1.95, 2.23, 2.45, 2.55, 3.06, 3.19, 3.56, 5.12, 5.20, 5.76",
+        "unit": null,
+        "ref_doi": "10.1016/j.chroma.2020.461463",
+        "source_file": "Abu-Alsoud 等 - 2020 - Assessment of cross-reactivity in a tailor-made molecularly imprinted polymer for phenolic compounds.pdf",
+        "confidence": 0.9,
+        "low_confidence": false
+      }
+    ],
+    "污染物疏水性与吸附亲和力的关系": [
+      {
+        "value": "ln K 与 log Kow 呈近似线性正相关关系。随着 log Kow 增加，吸附亲和力 (ln K) 增大。",
+        "unit": null,
+        "ref_doi": "10.1021/es980628y",
+        "source_file": "Li和Sengupta - 1998 - Genesis of selectivity and reversibility for sorption of synthetic aromatic anions onto polymeric so.pdf",
+        "confidence": 0.9,
+        "low_confidence": false
+      }
+    ],
+    "污染物疏水性与吸附量关系": [
+      {
+        "value": "Hydrophobicity of chlorophenols is an important factor controlling their desorptive behavior",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "You和Liu - 1996 - Desorptive behavior of chlorophenols in contaminated soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "污染物的辛醇-水分配系数（logKow）相关性": [
+      {
+        "value": "Lindane, Diazinon, Pentachlorophenol, 2-Chlorobiphenyl 的生物吸附量（q）与其logKow呈正相关",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "TSEZOS和BELL - 1989 - COMPARISON OF THE BIOSORPTION AND DESORPTION OF HAZARDOUS ORGANIC POLLUTANTS BY LIVE AND DEAD BIOMAS.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "污染物相对疏水性比较": [
+      {
+        "value": "2,4,6-TCP比苯甲酸更疏水，导致更高的r和Ks值",
+        "unit": null,
+        "ref_doi": "10.1016/j.chemosphere.2012.04.031",
+        "source_file": "Kim 等 - 2012 - Solubility of organic acids in various methanol and salt concentrations The implication on organic.pdf",
+        "confidence": 0.9,
+        "low_confidence": false
+      }
+    ],
+    "污染物类型与特性": [
+      {
+        "value": "五氯苯酚（PCP）是美国环境保护局（EPA）列出的优先污染物，属于疏水性有机化合物（HOC）。",
+        "unit": null,
+        "ref_doi": "10.2175/106143001X138769",
+        "source_file": "Fall 等 - 2001 - Generalized model of pentachlorophenol distribution in amended soil-water systems.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "污染物选用特征 (定性)": [
+      {
+        "value": "reasonably high water solubility, low volatility, high environmental hazard, currently in use",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "BELL和TSEZOS - 1988 - THE SELECTIVITY OF BIOSORPTION OF HAZARDOUS ORGANICS BY MICROBIAL BIOMASS.pdf",
+        "confidence": 0.9,
+        "low_confidence": false
+      }
+    ],
+    "污染物酸性 (Pollutant Acidity)": [
+      {
+        "value": "五氯苯酚 (PCP) 是酸性污染物",
+        "unit": null,
+        "ref_doi": "10.1021/am401718p",
+        "source_file": "Jiang 等 - 2013 - Cysteamine-Modified Silver Nanoparticle Aggregates for Quantitative SERS Sensing of Pentachloropheno.pdf",
+        "confidence": 0.8,
+        "low_confidence": false
+      }
+    ],
+    "污染物酸碱性与存在形态": [
+      {
+        "value": "weak acid, present as neutral and charged (anionic) forms",
+        "unit": null,
+        "ref_doi": "10.1016/j.jcis.2012.04.054",
+        "source_file": "Lezehari 等 - 2012 - Fixed-bed column studies of pentachlorophenol removal by use of alginate-encapsulated pillared clay.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "污染物重要性定性描述": [
+      {
+        "value": "Chlorophenols are important pollutants, in the environment because of their high toxicity and tendency for bioaccumulation.",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "PRAUS和DOMBEK - 1993 - SEPARATION OF CHLOROPHENOLS BY CAPILLARY ISOTACHOPHORESIS.pdf",
+        "confidence": 0.9,
+        "low_confidence": false
+      }
+    ],
+    "溶解度 Solubility in ethanol-water mixtures": [
+      {
+        "value": "从约 10^1 mg/L (0% 乙醇) 至约 10^6 mg/L (100% 乙醇) 呈对数线性增长",
+        "unit": "mg/L",
+        "ref_doi": "10.2175/106143095X133095",
+        "source_file": "SOERENS - 1995 - SOLVENT WASHING OF PCP-CONTAMINATED SOILS WITH ANAEROBIC TREATMENT OF WASH FLUIDS - DISCUSSION.pdf",
+        "confidence": 0.8,
+        "low_confidence": false
+      }
+    ],
+    "溶解度 Sw (在水中的溶解度)": [
+      {
+        "value": "3400, 56, 580, 1200",
+        "unit": "mg/L",
+        "ref_doi": "10.1007/s11356-015-4742-x",
+        "source_file": "Kim 等 - 2015 - Factors influencing inapplicability of cosolvency-induced model on organic acid sorption onto humic.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "电离常数 Ka": [
+      {
+        "value": "1 × 10⁻⁵",
+        "unit": null,
+        "ref_doi": "10.1080/01496398608056150",
+        "source_file": "VALSARAJ和SPRINGER - 1986 - REMOVAL OF TRACES OF PENTACHLOROPHENOL FROM AQUEOUS ACIDIC SOLUTIONS BY SOLVENT-EXTRACTION AND SOLVE.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "电荷状态（随pH变化）": [
+      {
+        "value": "pH > 6: 阴离子为主 (COO⁻); pH 2-3.9: 中性分子为主 (COOH); pH < 2: 阳离子为主 (⁺NH)",
+        "unit": null,
+        "ref_doi": "10.1080/03601239909373237",
+        "source_file": "Celis 等 - 1999 - Sorption of the ionizable pesticide imazamox by organo-clays and organohydrotalcites.pdf",
+        "confidence": 0.8,
+        "low_confidence": false
+      }
+    ],
+    "疏水性随氯原子数增加": [
+      {
+        "value": "hydrophobicity increases with the number of chlorine atoms in the molecule",
+        "unit": null,
+        "ref_doi": "10.1016/j.fluid.2015.03.026",
+        "source_file": "Martins 等 - 2015 - Prediction of diffusion coefficients of chlorophenols in water by computer simulation.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "目标污染物特性": [
+      {
+        "value": "五氯苯酚(PCP) 是一种疏水性有机污染物(HOC)",
+        "unit": null,
+        "ref_doi": "10.1016/j.biortech.2012.02.058",
+        "source_file": "Lou 等 - 2012 - The sorption of pentachlorophenol by aged sediment supplemented with black carbon produced from rice.pdf",
+        "confidence": 0.9,
+        "low_confidence": false
+      }
+    ],
+    "羟基阿特拉津的疏水性系数 logP": [
+      {
+        "value": "8.31",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "Schulten - 1999 - Interactions of dissolved organic matter with xenobiotic compounds Molecular modeling in water.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "苯 benzene 溶解度 solubility": [
+      {
+        "value": "1800",
+        "unit": "ppm",
+        "ref_doi": "10.1080/10934529209375720",
+        "source_file": "BADER和JENNINGS - 1992 - SEPARATION OF PRIORITY ORGANIC POLLUTANTS FROM TAP WATER BY LOW-PRESSURE COMPOSITE MEMBRANE.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "苯酚 (Phenol) 物理化学性质": [
+      {
+        "value": "分子量 94.11 g/mol, pKa 9.95, logKow 1.46",
+        "unit": null,
+        "ref_doi": "10.1016/j.jece.2018.05.034",
+        "source_file": "Ololade 等 - 2018 - In-situ modification of soil organic matter towards adsorption and desorption of phenol and its chlo.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "苯酚 pKa": [
+      {
+        "value": "10.08",
+        "unit": null,
+        "ref_doi": "10.1134/S1061934811050145",
+        "source_file": "Prokhorova 等 - 2011 - Use of Lignins as Components of Background Electrolyte in Capillary Electrophoresis.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "苯酚的分子式": [
+      {
+        "value": "C6H5OH",
+        "unit": null,
+        "ref_doi": "10.1021/jp801605y",
+        "source_file": "Cuypers 等 - 2008 - Complexation of Phenols and Thiophenol by Phosphine Oxides and Phosphates. Extraction, Isothermal Ti.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "菲（PHE）的水溶解度": [
+      {
+        "value": "1.29",
+        "unit": "mg L⁻¹",
+        "ref_doi": "10.1016/j.envpol.2015.05.021",
+        "source_file": "He 等 - 2015 - Natural soil mineral nanoparticles are novel sorbents for pentachlorophenol and phenanthrene removal.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "萘 (NAPH) logKow": [
+      {
+        "value": "3.37",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "VALSARAJ 等 - 1991 - CONTINUOUS COUNTERCURRENT SOLVENT SUBLATION FOR THE REMOVAL OF HYDROPHOBIC ORGANICS FROM WATER.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "萘 (NAPH) 分子量": [
+      {
+        "value": "128.19",
+        "unit": "g/mol",
+        "ref_doi": null,
+        "source_file": "VALSARAJ 等 - 1991 - CONTINUOUS COUNTERCURRENT SOLVENT SUBLATION FOR THE REMOVAL OF HYDROPHOBIC ORGANICS FROM WATER.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "角质层/水分配系数与辛醇/水分配系数的线性回归关系": [
+      {
+        "value": "log KCM/W 和 log KOW 呈线性相关，相关系数0.980到0.988",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "KERLER和SCHONHERR - 1988 - ACCUMULATION OF LIPOPHILIC CHEMICALS IN PLANT CUTICLES - PREDICTION FROM OCTANOL WATER PARTITION-COE.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "辛醇-水分配比 Dow 随 pH 变化公式": [
+      {
+        "value": "Dow = Kow(1 + 10^(pH-pKa))^-1",
+        "unit": null,
+        "ref_doi": "10.1016/j.jenvman.2004.01.001",
+        "source_file": "Hanna 等 - 2004 - Cyclodextrin-enhanced solubilization of pentachlorophenol in water.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "辛醇-水分配系数": [
+      {
+        "value": "1 × 10^5.01",
+        "unit": null,
+        "ref_doi": "10.1080/01496398608056150",
+        "source_file": "VALSARAJ和SPRINGER - 1986 - REMOVAL OF TRACES OF PENTACHLOROPHENOL FROM AQUEOUS ACIDIC SOLUTIONS BY SOLVENT-EXTRACTION AND SOLVE.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "辛醇-水分配系数 (logKow)": [
+      {
+        "value": "5.89",
+        "unit": null,
+        "ref_doi": "10.1016/j.apsusc.2014.09.175",
+        "source_file": "Yang 等 - 2014 - Magnetic solid phase extraction of brominated flame retardants and pentachlorophenol from environmen.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "辛醇-水分配系数 (logKow) 2,4,5-TCP > 2,4-DCP": [
+      {
+        "value": "2,4,5-TCP的logKow高于2,4-DCP",
+        "unit": null,
+        "ref_doi": "10.1023/B:WATE.0000061727.72025.1d",
+        "source_file": "Kim 等 - 2005 - Multi-step competitive sorption and desorption of chlorophenols in surfactant modified montmorilloni.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "辛醇-水分配系数 Log P": [
+      {
+        "value": "2.7",
+        "unit": null,
+        "ref_doi": "10.1021/jf063048q",
+        "source_file": "Kah和Brown - 2007 - Prediction of the adsorption of ionizable pesticides in soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "2.3",
+        "unit": null,
+        "ref_doi": "10.1021/jf063048q",
+        "source_file": "Kah和Brown - 2007 - Prediction of the adsorption of ionizable pesticides in soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "2.2",
+        "unit": null,
+        "ref_doi": "10.1021/jf063048q",
+        "source_file": "Kah和Brown - 2007 - Prediction of the adsorption of ionizable pesticides in soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "3.1",
+        "unit": null,
+        "ref_doi": "10.1021/jf063048q",
+        "source_file": "Kah和Brown - 2007 - Prediction of the adsorption of ionizable pesticides in soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "1.2",
+        "unit": null,
+        "ref_doi": "10.1021/jf063048q",
+        "source_file": "Kah和Brown - 2007 - Prediction of the adsorption of ionizable pesticides in soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "辛醇-水分配系数 log Kow": [
+      {
+        "value": "1.45",
+        "unit": null,
+        "ref_doi": "10.1080/00032719508001106",
+        "source_file": "BESOMBES 等 - 1995 - DETERMINATION OF PHENOL AND CHLORINATED PHENOLIC-COMPOUNDS BASED ON A PPO-BIOELECTRODE AND ITS INHIB.pdf",
+        "confidence": 0.9,
+        "low_confidence": false
+      },
+      {
+        "value": "3.69",
+        "unit": null,
+        "ref_doi": "10.1080/00032719508001106",
+        "source_file": "BESOMBES 等 - 1995 - DETERMINATION OF PHENOL AND CHLORINATED PHENOLIC-COMPOUNDS BASED ON A PPO-BIOELECTRODE AND ITS INHIB.pdf",
+        "confidence": 0.9,
+        "low_confidence": false
+      },
+      {
+        "value": "4.01",
+        "unit": null,
+        "ref_doi": "10.1080/00032719508001106",
+        "source_file": "BESOMBES 等 - 1995 - DETERMINATION OF PHENOL AND CHLORINATED PHENOLIC-COMPOUNDS BASED ON A PPO-BIOELECTRODE AND ITS INHIB.pdf",
+        "confidence": 0.9,
+        "low_confidence": false
+      }
+    ],
+    "辛醇-水分配系数 log Kow (在 pH 3)": [
+      {
+        "value": "5",
+        "unit": "log",
+        "ref_doi": "10.1016/j.jenvman.2004.01.001",
+        "source_file": "Hanna 等 - 2004 - Cyclodextrin-enhanced solubilization of pentachlorophenol in water.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "辛醇-水分配系数 logKow": [
+      {
+        "value": "2.89",
+        "unit": null,
+        "ref_doi": "10.1016/j.jenvman.2018.06.041",
+        "source_file": "Miao和Bi - 2018 - Effects of soil components and solution inorganic cations on interactions of imidazolium-based ionic.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "2.15",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "Saitoh 等 - 2002 - Concentration of chlorophenols in water with sodium dodecylsulfate-γ-alumina admicelles for high-per.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "3.17",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "Saitoh 等 - 2002 - Concentration of chlorophenols in water with sodium dodecylsulfate-γ-alumina admicelles for high-per.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "3.61",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "Saitoh 等 - 2002 - Concentration of chlorophenols in water with sodium dodecylsulfate-γ-alumina admicelles for high-per.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "4.45",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "Saitoh 等 - 2002 - Concentration of chlorophenols in water with sodium dodecylsulfate-γ-alumina admicelles for high-per.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "5.18",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "Saitoh 等 - 2002 - Concentration of chlorophenols in water with sodium dodecylsulfate-γ-alumina admicelles for high-per.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "辛醇-水分配系数 logKow (2,3,4,6-tetrachlorophenol)": [
+      {
+        "value": "4.42",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "FROBE 等 - 1994 - SORPTION BEHAVIOR OF SOME CHLOROPHENOLS IN NATURAL SORBENTS .1. VALIDITY OF THE PARTITION MODEL FOR.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "辛醇-水分配系数 logKow (2,4,6-trichlorophenol)": [
+      {
+        "value": "3.72",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "FROBE 等 - 1994 - SORPTION BEHAVIOR OF SOME CHLOROPHENOLS IN NATURAL SORBENTS .1. VALIDITY OF THE PARTITION MODEL FOR.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "辛醇-水分配系数 logKow (pentachlorophenol)": [
+      {
+        "value": "5.24",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "FROBE 等 - 1994 - SORPTION BEHAVIOR OF SOME CHLOROPHENOLS IN NATURAL SORBENTS .1. VALIDITY OF THE PARTITION MODEL FOR.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "辛醇-水分配系数 logKow (中性)": [
+      {
+        "value": "5.12",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "LEE 等 - 1990 - INFLUENCE OF SOLVENT AND SORBENT CHARACTERISTICS ON DISTRIBUTION OF PENTACHLOROPHENOL IN OCTANOL-WAT.pdf",
+        "confidence": 0.6,
+        "low_confidence": true
+      }
+    ],
+    "辛醇-水分配系数 logKow of DCP": [
+      {
+        "value": "3.20",
+        "unit": null,
+        "ref_doi": "10.1016/j.jenvman.2018.11.064",
+        "source_file": "Oh和Seo - 2019 - Factors affecting the sorption of halogenated phenols onto polymerbiomass-derived biochar Effects.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "辛醇-水分配系数 logKow of DFP": [
+      {
+        "value": "1.91",
+        "unit": null,
+        "ref_doi": "10.1016/j.jenvman.2018.11.064",
+        "source_file": "Oh和Seo - 2019 - Factors affecting the sorption of halogenated phenols onto polymerbiomass-derived biochar Effects.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "辛醇-水分配系数 logP": [
+      {
+        "value": "5.12",
+        "unit": null,
+        "ref_doi": "10.1016/j.jhazmat.2007.10.060",
+        "source_file": "Kumar 等 - 2008 - Pentachlorophenol removal from water using surfactant-enhanced filtration through low-pressure thin.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "酚-胺体系质子转移临界ΔpKa范围": [
+      {
+        "value": "存在一个ΔpKa临界范围",
+        "unit": null,
+        "ref_doi": "10.1002/bbpc.19981020315",
+        "source_file": "Sobczyk - 1998 - X-ray diffraction, IR, UV and NMR studies on proton transfer equilibrating phenol-N-base systems.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "酚类化合物的酸解离常数 pKa 范围": [
+      {
+        "value": "4.9-10.8",
+        "unit": null,
+        "ref_doi": "10.1002/elps.1150180724",
+        "source_file": "Groom和Luong - 1997 - Sulfobutylether-beta-cyclodextrin-mediated capillary electrophoresis for separation of chlorinated a.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "酚类溶质的电荷状态（pH 9.8下）": [
+      {
+        "value": "部分解离或完全解离",
+        "unit": null,
+        "ref_doi": "10.1016/S0021-9673(95)01301-6",
+        "source_file": "Li和Locke - 1996 - Nonionic surfactants for improving resolution of the priority pollutant phenols by micelle-modified.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "酸度电离常数 pKa": [
+      {
+        "value": "4.75",
+        "unit": null,
+        "ref_doi": "10.1016/j.jhazmat.2010.09.066",
+        "source_file": "Luo 等 - 2011 - Sorption and desorption of pentachlorophenol to black carbon of three different origins.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "酸电离常数 (pKa)": [
+      {
+        "value": "4.69",
+        "unit": null,
+        "ref_doi": "10.1016/j.apsusc.2014.09.175",
+        "source_file": "Yang 等 - 2014 - Magnetic solid phase extraction of brominated flame retardants and pentachlorophenol from environmen.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "酸解离常数 pKa": [
+      {
+        "value": "4.75",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "SHIMIZU 等 - 1992 - SORPTION OF ANIONIC PENTACHLOROPHENOL (PCP) IN AQUATIC ENVIRONMENTS - THE EFFECT OF PH.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "9.89",
+        "unit": null,
+        "ref_doi": "10.1002/elps.201200703",
+        "source_file": "Lu 等 - 2013 - Pressurized CEC with amperometric detection using mixed-mode monolithic column for rapid analysis of.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "8.52",
+        "unit": null,
+        "ref_doi": "10.1002/elps.201200703",
+        "source_file": "Lu 等 - 2013 - Pressurized CEC with amperometric detection using mixed-mode monolithic column for rapid analysis of.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "7.90",
+        "unit": null,
+        "ref_doi": "10.1002/elps.201200703",
+        "source_file": "Lu 等 - 2013 - Pressurized CEC with amperometric detection using mixed-mode monolithic column for rapid analysis of.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "6.00",
+        "unit": null,
+        "ref_doi": "10.1002/elps.201200703",
+        "source_file": "Lu 等 - 2013 - Pressurized CEC with amperometric detection using mixed-mode monolithic column for rapid analysis of.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "4.74",
+        "unit": null,
+        "ref_doi": "10.1002/elps.201200703",
+        "source_file": "Lu 等 - 2013 - Pressurized CEC with amperometric detection using mixed-mode monolithic column for rapid analysis of.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "4.75",
+        "unit": null,
+        "ref_doi": "10.1021/ie101766e",
+        "source_file": "Gao 等 - 2011 - Adsorption of Pentachlorophenol from Aqueous Solution on Dodecylbenzenesulfonate Modified Nickel-Tit.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "4.7",
+        "unit": null,
+        "ref_doi": "10.2175/106143095X133095",
+        "source_file": "SOERENS - 1995 - SOLVENT WASHING OF PCP-CONTAMINATED SOILS WITH ANAEROBIC TREATMENT OF WASH FLUIDS - DISCUSSION.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "2.8",
+        "unit": null,
+        "ref_doi": "10.1021/es048820p",
+        "source_file": "Hyun和Lee - 2005 - Quantifying the contribution of different sorption mechanisms for 2,4-dichlorophenoxyacetic acid sor.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "4.75",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "LEE 等 - 1990 - INFLUENCE OF SOLVENT AND SORBENT CHARACTERISTICS ON DISTRIBUTION OF PENTACHLOROPHENOL IN OCTANOL-WAT.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "10.0-10.1",
+        "unit": null,
+        "ref_doi": "10.1016/j.jenvman.2018.06.041",
+        "source_file": "Miao和Bi - 2018 - Effects of soil components and solution inorganic cations on interactions of imidazolium-based ionic.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "5.22",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "Saitoh 等 - 2002 - Concentration of chlorophenols in water with sodium dodecylsulfate-γ-alumina admicelles for high-per.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "4.75",
+        "unit": null,
+        "ref_doi": "10.1016/j.scitotenv.2011.11.005",
+        "source_file": "Xu 等 - 2012 - Effect of bamboo biochar on pentachlorophenol leachability and bioavailability in agricultural soil.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "4.74",
+        "unit": null,
+        "ref_doi": "10.1016/j.watres.2012.04.003",
+        "source_file": "Influences of pH, heavy metals and phosphate and their co-influences on the sorption of pentachlorophenol on cyanobacterial biomass.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "4.75",
+        "unit": null,
+        "ref_doi": "10.1016/j.envpol.2021.116991",
+        "source_file": "Cheng 等 - 2021 - Quantification of the sorption of organic pollutants to minerals via an improved mathematical model.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "2.97",
+        "unit": null,
+        "ref_doi": "10.1021/jf063048q",
+        "source_file": "Kah和Brown - 2007 - Prediction of the adsorption of ionizable pesticides in soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "1.97",
+        "unit": null,
+        "ref_doi": "10.1021/jf063048q",
+        "source_file": "Kah和Brown - 2007 - Prediction of the adsorption of ionizable pesticides in soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "2.94",
+        "unit": null,
+        "ref_doi": "10.1021/jf063048q",
+        "source_file": "Kah和Brown - 2007 - Prediction of the adsorption of ionizable pesticides in soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "2.98",
+        "unit": null,
+        "ref_doi": "10.1021/jf063048q",
+        "source_file": "Kah和Brown - 2007 - Prediction of the adsorption of ionizable pesticides in soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "3.75",
+        "unit": null,
+        "ref_doi": "10.1021/jf063048q",
+        "source_file": "Kah和Brown - 2007 - Prediction of the adsorption of ionizable pesticides in soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "4.94",
+        "unit": null,
+        "ref_doi": "10.1021/jf063048q",
+        "source_file": "Kah和Brown - 2007 - Prediction of the adsorption of ionizable pesticides in soils.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "7.85",
+        "unit": null,
+        "ref_doi": "10.1016/j.jcis.2005.05.074",
+        "source_file": "Cea 等 - 2005 - Describing chlorophenol sorption on variable-charge soil using the triple-layer model.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "5.99",
+        "unit": null,
+        "ref_doi": "10.1016/j.jcis.2005.05.074",
+        "source_file": "Cea 等 - 2005 - Describing chlorophenol sorption on variable-charge soil using the triple-layer model.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "4.75",
+        "unit": null,
+        "ref_doi": "10.1016/j.jcis.2005.05.074",
+        "source_file": "Cea 等 - 2005 - Describing chlorophenol sorption on variable-charge soil using the triple-layer model.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "酸解离常数 pKa (2,3,4,6-tetrachlorophenol)": [
+      {
+        "value": "5.40",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "FROBE 等 - 1994 - SORPTION BEHAVIOR OF SOME CHLOROPHENOLS IN NATURAL SORBENTS .1. VALIDITY OF THE PARTITION MODEL FOR.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "酸解离常数 pKa (2,4,6-trichlorophenol)": [
+      {
+        "value": "6.15",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "FROBE 等 - 1994 - SORPTION BEHAVIOR OF SOME CHLOROPHENOLS IN NATURAL SORBENTS .1. VALIDITY OF THE PARTITION MODEL FOR.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "酸解离常数 pKa (pentachlorophenol)": [
+      {
+        "value": "5.25",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "FROBE 等 - 1994 - SORPTION BEHAVIOR OF SOME CHLOROPHENOLS IN NATURAL SORBENTS .1. VALIDITY OF THE PARTITION MODEL FOR.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "酸解离常数 pKa of 4CP": [
+      {
+        "value": "9.41",
+        "unit": null,
+        "ref_doi": "10.1016/j.jenvman.2018.11.064",
+        "source_file": "Oh和Seo - 2019 - Factors affecting the sorption of halogenated phenols onto polymerbiomass-derived biochar Effects.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "酸解离常数 pKa of PCP": [
+      {
+        "value": "4.71",
+        "unit": null,
+        "ref_doi": "10.1002/jccs.200300179",
+        "source_file": "Wang和Liu - 2003 - Cetyltrimethylammonium bromide as a regulator in paper separation of pentachlorophenol herbicide and.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "酸解离常数 pKa of TCP": [
+      {
+        "value": "6.23",
+        "unit": null,
+        "ref_doi": "10.1016/j.jenvman.2018.11.064",
+        "source_file": "Oh和Seo - 2019 - Factors affecting the sorption of halogenated phenols onto polymerbiomass-derived biochar Effects.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "间甲酚 pKa": [
+      {
+        "value": "10.08",
+        "unit": null,
+        "ref_doi": "10.1134/S1061934811050145",
+        "source_file": "Prokhorova 等 - 2011 - Use of Lignins as Components of Background Electrolyte in Capillary Electrophoresis.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ]
+  },
+  "removal_mechanisms": [
+    {
+      "mechanism": "吸附",
+      "evidence_count": 213,
+      "key_references": [
+        "10.1016/j.apsusc.2014.09.175",
+        "10.1080/03601234.2012.601949",
+        "10.1016/j.colsurfa.2004.12.016",
+        "10.1016/j.eti.2018.01.002",
+        "10.1177/0263617416688475"
+      ],
+      "details": [
+        {
+          "parameter": "吸附和分配贡献分离模型",
+          "value": "QT = QA + QP, 其中 QA = a ln Ce + b - Koc·foc·Ce (非线性吸附部分), QP = Koc·foc·Ce (线性分配部分)",
+          "ref_doi": "10.1021/es990177x"
+        },
+        {
+          "parameter": "浓度对吸附/分配主导地位的影响",
+          "value": "低浓度时吸附主导，高浓度时分配主导",
+          "ref_doi": "10.1021/es990177x"
+        },
+        {
+          "parameter": "亲水吸附贡献比例回归方程 (fHphilic vs. pKa)",
+          "value": "fHphilic = m * pKa + b (斜率 m 对于 A1 土壤为 0.13，对于 DRC 土壤为 0.05)",
+          "ref_doi": "10.1021/es0494914"
+        }
+      ]
+    },
+    {
+      "mechanism": "疏水",
+      "evidence_count": 70,
+      "key_references": [
+        "10.1016/j.envres.2006.01.002",
+        "10.1007/s10450-016-9796-7",
+        "10.1016/j.apsusc.2014.09.175",
+        "10.1021/es048820p",
+        "10.1080/01496399108050488"
+      ],
+      "details": [
+        {
+          "parameter": "疏水吸附预测模型 log Koc^pH vs log Kow^pH",
+          "value": "log Koc^pH = 0.41 log Kow^pH + 1.03, r² = 0.80",
+          "ref_doi": "10.1021/es0494914"
+        },
+        {
+          "parameter": "2,4-D 在 A1 土壤上疏水吸附与 Kow^pH 的相关性",
+          "value": "数据点与整体 log Koc^pH - log Kow^pH 线性关系吻合良好",
+          "ref_doi": "10.1021/es0494914"
+        },
+        {
+          "parameter": "吸附机理 - 竞争效应主导机制",
+          "value": "疏水性竞争、分子尺寸、π-π EDA作用",
+          "ref_doi": "10.1007/s11270-014-2048-0"
+        }
+      ]
+    },
+    {
+      "mechanism": "静电",
+      "evidence_count": 38,
+      "key_references": [
+        "10.1016/j.apsusc.2014.09.175",
+        "10.1080/03601234.2012.601949",
+        "10.1016/j.colsurfa.2004.12.016",
+        "10.1016/j.clay.2010.07.002",
+        "10.1016/S1001-0742(08)62294-9"
+      ],
+      "details": [
+        {
+          "parameter": "去除机理 - 静电排斥 (Electrostatic Repulsion)",
+          "value": "SDS阴离子头基导致膜表面负电荷增强，对带负电的缔合分子产生排斥，提高分离效果。",
+          "ref_doi": "10.1016/j.jhazmat.2007.10.060"
+        },
+        {
+          "parameter": "去除机理 - 疏水作用 (Hydrophobic Effect)",
+          "value": "PCP的高logP值(5.12)使其倾向于分配至有机相而非水相，从而倾向于远离亲水性的膜表面，协同增强了尺寸排阻和静电排斥效果。",
+          "ref_doi": "10.1016/j.jhazmat.2007.10.060"
+        },
+        {
+          "parameter": "pH对吸附的主导机理影响",
+          "value": "pH > 6 (阴离子为主): 静电作用 (阳离子有机黏土上的-COO⁻与-NH₃⁺) 和层状结构重建 (HT500) 主导；pH < 5.5 (分子为主): 分配作用 (有机相) 主导；pH < 4: 水滑石溶解，吸附受限制。",
+          "ref_doi": "10.1080/03601239909373237"
+        }
+      ]
+    },
+    {
+      "mechanism": "氢键",
+      "evidence_count": 28,
+      "key_references": [
+        "10.1016/j.apsusc.2014.09.175",
+        "10.1021/acsami.6b04381",
+        "10.1007/s11356-016-7614-0",
+        "10.1016/j.fluid.2015.03.026",
+        "10.1016/j.seppur.2007.11.005"
+      ],
+      "details": [
+        {
+          "parameter": "吸附机理 - 酚抑制芘吸附的机理",
+          "value": "酚竞争有限的疏水位点；酚的羟基与纤维素/半纤维素中的含氧基团形成氢键，占据吸附位点并阻碍芘进入",
+          "ref_doi": "10.1007/s11270-014-2048-0"
+        },
+        {
+          "parameter": "脱附机理：溶质-吸附剂相互作用 (氢键、离子交换等)",
+          "value": "PCP的脱附还可能受氢键（酚羟基与土壤表面基团）、离子交换（阴离子形式PCP与碱性粘土）、以及PCP被整合到土壤有机质中（共价键、氧化耦合）等溶质-吸附剂相互作用的阻碍。",
+          "ref_doi": "10.1021/es980759z"
+        },
+        {
+          "parameter": "萃取机理：氢键作用强度对比",
+          "value": "离子液体阴离子与酚类之间的氢键作用中，[BF4]-的作用强度显著强于[PF6]-",
+          "ref_doi": "10.1016/j.seppur.2007.11.005"
+        }
+      ]
+    },
+    {
+      "mechanism": "π-π",
+      "evidence_count": 16,
+      "key_references": [
+        "10.1039/c5ra03395k",
+        "10.1016/j.ecoleng.2016.01.039",
+        "10.1016/j.snb.2014.10.046",
+        "10.3390/cryst12091205",
+        "10.1016/j.chroma.2020.461463"
+      ],
+      "details": [
+        {
+          "parameter": "吸附机理 - 竞争效应主导机制",
+          "value": "疏水性竞争、分子尺寸、π-π EDA作用",
+          "ref_doi": "10.1007/s11270-014-2048-0"
+        },
+        {
+          "parameter": "吸附机理 - 酚促进芘吸附的机理",
+          "value": "酚吸附增强吸附剂表面电子供给能力，从而增强与芘的π-π EDA作用",
+          "ref_doi": "10.1007/s11270-014-2048-0"
+        },
+        {
+          "parameter": "主要吸附机理",
+          "value": "π-π和疏水相互作用",
+          "ref_doi": "10.1016/j.ecoleng.2016.01.039"
+        }
+      ]
+    },
+    {
+      "mechanism": "离子交换",
+      "evidence_count": 12,
+      "key_references": [
+        "10.1021/es980759z",
+        "10.1016/j.chemosphere.2007.06.027",
+        "10.1021/es048820p",
+        "10.1021/es0494914",
+        "10.1007/s11356-018-2261-2"
+      ],
+      "details": [
+        {
+          "parameter": "亲水吸附贡献比例回归方程 (fHphilic vs. pKa)",
+          "value": "fHphilic = m * pKa + b (斜率 m 对于 A1 土壤为 0.13，对于 DRC 土壤为 0.05)",
+          "ref_doi": "10.1021/es0494914"
+        },
+        {
+          "parameter": "五氯苯酚在A1土壤上阴离子交换的贡献比例",
+          "value": "34%",
+          "ref_doi": "10.1021/es0494914"
+        },
+        {
+          "parameter": "脱附机理：溶质-吸附剂相互作用 (氢键、离子交换等)",
+          "value": "PCP的脱附还可能受氢键（酚羟基与土壤表面基团）、离子交换（阴离子形式PCP与碱性粘土）、以及PCP被整合到土壤有机质中（共价键、氧化耦合）等溶质-吸附剂相互作用的阻碍。",
+          "ref_doi": "10.1021/es980759z"
+        }
+      ]
+    },
+    {
+      "mechanism": "氧化",
+      "evidence_count": 12,
+      "key_references": [
+        "10.1021/es980759z",
+        "10.1016/j.envpol.2019.113580",
+        "10.1016/j.jhazmat.2007.01.029",
+        "10.1016/j.biortech.2012.02.058",
+        "10.1007/s42832-020-0063-1"
+      ],
+      "details": [
+        {
+          "parameter": "脱附机理：溶质-吸附剂相互作用 (氢键、离子交换等)",
+          "value": "PCP的脱附还可能受氢键（酚羟基与土壤表面基团）、离子交换（阴离子形式PCP与碱性粘土）、以及PCP被整合到土壤有机质中（共价键、氧化耦合）等溶质-吸附剂相互作用的阻碍。",
+          "ref_doi": "10.1021/es980759z"
+        },
+        {
+          "parameter": "五氯苯酚（PCP）作为抑制剂与SQR醌结合位点残基的相互作用距离",
+          "value": "2.7, 2.6",
+          "ref_doi": "10.1074/jbc.M109.010058"
+        },
+        {
+          "parameter": "五氯苯酚（PCP）结合引起的蛋白质局部构象变化",
+          "value": "PCP结合导致Trp-B164和His-B207残基发生小的局部构象变化。",
+          "ref_doi": "10.1074/jbc.M109.010058"
+        }
+      ]
+    },
+    {
+      "mechanism": "还原",
+      "evidence_count": 8,
+      "key_references": [
+        "10.1016/j.scitotenv.2013.12.022",
+        "10.1016/j.carbon.2021.05.010",
+        "10.1016/j.envpol.2019.113580",
+        "10.1016/j.jhazmat.2007.01.029",
+        "10.1007/s42832-020-0063-1"
+      ],
+      "details": [
+        {
+          "parameter": "PCP 脱氯增强机制",
+          "value": "C. beijerinckii Z 通过异化Fe(III)还原生成吸附态Fe(II)，吸附态Fe(II)作为还原剂通过非生物反应将电子转移至PCP，从而加速其脱氯过程。",
+          "ref_doi": "10.1016/j.scitotenv.2013.12.022"
+        },
+        {
+          "parameter": "五氯苯酚（PCP）作为抑制剂与SQR醌结合位点残基的相互作用距离",
+          "value": "2.7, 2.6",
+          "ref_doi": "10.1074/jbc.M109.010058"
+        },
+        {
+          "parameter": "五氯苯酚（PCP）结合引起的蛋白质局部构象变化",
+          "value": "PCP结合导致Trp-B164和His-B207残基发生小的局部构象变化。",
+          "ref_doi": "10.1074/jbc.M109.010058"
+        }
+      ]
+    },
+    {
+      "mechanism": "生物降解",
+      "evidence_count": 5,
+      "key_references": [
+        "10.1002/ep.670130213"
+      ],
+      "details": [
+        {
+          "parameter": "污染物去除机理的定量贡献比例",
+          "value": "氯酚: 吸附为主(>4-16% of influent load)，生物降解贡献小；氯仿及氯化对聚伞花素: 挥发为主(+++重要)，生物降解贡献小或无",
+          "ref_doi": null
+        },
+        {
+          "parameter": "活性污泥处理对氯仿的去除主要机制",
+          "value": "挥发",
+          "ref_doi": null
+        },
+        {
+          "parameter": "生物降解速率与污泥龄(SRT)的依赖关系",
+          "value": "依赖",
+          "ref_doi": "10.1002/ep.670130213"
+        }
+      ]
+    },
+    {
+      "mechanism": "配位",
+      "evidence_count": 4,
+      "key_references": [
+        "10.1007/s11356-018-2261-2",
+        "10.1007/s00232-005-0737-8",
+        "10.2175/106143095X133103",
+        "10.1016/j.snb.2015.04.032"
+      ],
+      "details": [
+        {
+          "parameter": "三甲胺-酞菁配位机制",
+          "value": "三甲胺分子与酞菁环中心的锌离子配位，形成五配位锌酞菁物种，并发生从三甲胺到酞菁分子的电荷转移。",
+          "ref_doi": "10.1016/j.snb.2015.04.032"
+        },
+        {
+          "parameter": "Cr(VI)阴离子在生物膜上的可能吸附反应",
+          "value": "在酸性条件下（低pH），HCrO₄⁻可与质子化位点≡S-OH₂⁺发生离子交换或配位反应，生成≡S-OH₂⁺HCrO₄⁻或≡S-HCrO₄。",
+          "ref_doi": "10.1007/s11356-018-2261-2"
+        },
+        {
+          "parameter": "分配位点面积与脂质分子表面积之比 (As/AL)",
+          "value": "0.7-0.9",
+          "ref_doi": "10.1007/s00232-005-0737-8"
+        }
+      ]
+    },
+    {
+      "mechanism": "沉淀",
+      "evidence_count": 3,
+      "key_references": [
+        "10.1016/j.colsurfa.2004.12.016"
+      ],
+      "details": [
+        {
+          "parameter": "阳离子表面活性剂与五氯苯酚沉淀物组成与性质",
+          "value": "等摩尔化学计量比，形成如TTA-PCP或CTA-PCP的新化学物种",
+          "ref_doi": "10.1016/j.colsurfa.2004.12.016"
+        },
+        {
+          "parameter": "PCP与TTA-PCP沉淀物相互作用焓",
+          "value": "~40",
+          "ref_doi": "10.1016/j.colsurfa.2004.12.016"
+        },
+        {
+          "parameter": "PCP在介孔结构中吸附的主导机理",
+          "value": "非离子和离子形式均可被吸附；低pH时疏水作用主导，高pH时静电作用贡献显著",
+          "ref_doi": "10.1016/j.colsurfa.2004.12.016"
+        }
+      ]
+    }
+  ],
+  "adsorption_performance": {
+    "best_materials": [
+      {
+        "material": "biochar",
+        "qmax_mg_g": 122.0,
+        "qmax_avg": 30.7,
+        "evidence_count": 16,
+        "ref_dois": [
+          "10.1016/j.ecoleng.2016.01.039",
+          "10.1016/j.biortech.2012.02.058",
+          "10.1016/j.scitotenv.2011.11.005",
+          "10.1016/j.jenvman.2018.11.064"
+        ]
+      },
+      {
+        "material": "壳聚糖",
+        "qmax_mg_g": 0.66,
+        "qmax_avg": 0.3,
+        "evidence_count": 5,
+        "ref_dois": [
+          "10.1007/s10450-016-9796-7"
+        ]
+      },
+      {
+        "material": "活性炭",
+        "qmax_mg_g": 25.16,
+        "qmax_avg": 18.8,
+        "evidence_count": 13,
+        "ref_dois": [
+          "10.1002/(SICI)1097-4660(199909)74:9<870::AID-JCTB116>3.0.CO;2-C",
+          "10.2175/106143095X133103",
+          "10.1016/j.jct.2006.12.016"
+        ]
+      },
+      {
+        "material": "graphene",
+        "qmax_mg_g": 1457.4,
+        "qmax_avg": 1141.9,
+        "evidence_count": 3,
+        "ref_dois": [
+          "10.1016/j.carbon.2021.05.010"
+        ]
+      },
+      {
+        "material": "膜",
+        "qmax_mg_g": 67.7,
+        "qmax_avg": 67.7,
+        "evidence_count": 19,
+        "ref_dois": [
+          "10.1016/j.jhazmat.2007.10.060",
+          "10.5004/dwt.2011.2087",
+          "10.1080/10934529209375720",
+          "10.1007/s11356-018-2261-2",
+          "10.1007/s00232-005-0737-8"
+        ]
+      },
+      {
+        "material": "cellulose",
+        "qmax_mg_g": null,
+        "qmax_avg": null,
+        "evidence_count": 3,
+        "ref_dois": [
+          "10.1007/s11270-014-2048-0"
+        ]
+      },
+      {
+        "material": "membrane",
+        "qmax_mg_g": null,
+        "qmax_avg": null,
+        "evidence_count": 12,
+        "ref_dois": [
+          "10.1016/j.chroma.2004.06.085",
+          "10.1021/acs.iecr.3c03383"
+        ]
+      },
+      {
+        "material": "生物炭",
+        "qmax_mg_g": null,
+        "qmax_avg": null,
+        "evidence_count": 1,
+        "ref_dois": [
+          "10.1016/j.apgeochem.2013.02.002"
+        ]
+      },
+      {
+        "material": "碳纳米管",
+        "qmax_mg_g": null,
+        "qmax_avg": null,
+        "evidence_count": 1,
+        "ref_dois": [
+          "10.1016/j.chroma.2006.06.052"
+        ]
+      },
+      {
+        "material": "magnetic",
+        "qmax_mg_g": null,
+        "qmax_avg": null,
+        "evidence_count": 1,
+        "ref_dois": [
+          "10.1016/j.chroma.2012.09.083"
+        ]
+      },
+      {
+        "material": "CNT",
+        "qmax_mg_g": null,
+        "qmax_avg": null,
+        "evidence_count": 3,
+        "ref_dois": [
+          "10.1039/c5ra03395k",
+          "10.1016/j.snb.2014.10.046"
+        ]
+      },
+      {
+        "material": "silica",
+        "qmax_mg_g": null,
+        "qmax_avg": null,
+        "evidence_count": 1,
+        "ref_dois": [
+          "10.1016/j.chroma.2009.07.047"
+        ]
+      },
+      {
+        "material": "GO",
+        "qmax_mg_g": null,
+        "qmax_avg": null,
+        "evidence_count": 3,
+        "ref_dois": [
+          "10.1002/wer.11101",
+          "10.1007/s00244-003-0185-3"
+        ]
+      },
+      {
+        "material": "树脂",
+        "qmax_mg_g": null,
+        "qmax_avg": null,
+        "evidence_count": 2,
+        "ref_dois": [
+          "10.1021/es980628y"
+        ]
+      },
+      {
+        "material": "resin",
+        "qmax_mg_g": null,
+        "qmax_avg": null,
+        "evidence_count": 5,
+        "ref_dois": [
+          "10.1021/es980628y"
+        ]
+      },
+      {
+        "material": "硅胶",
+        "qmax_mg_g": null,
+        "qmax_avg": null,
+        "evidence_count": 2,
+        "ref_dois": [
+          "10.1016/j.chroma.2007.07.021"
+        ]
+      },
+      {
+        "material": "chitosan",
+        "qmax_mg_g": null,
+        "qmax_avg": null,
+        "evidence_count": 4,
+        "ref_dois": [
+          "10.1007/s10450-016-9796-7"
+        ]
+      }
+    ],
+    "total_performance_ki": 597
+  },
+  "engineering_constraints": [
+    {
+      "parameter": "毛细管等速电泳分离氯酚的优化操作体系",
+      "value": "包含前导电解质、终止电解质、添加剂和伪固定相的完整操作体系。",
+      "ref_doi": null
+    },
+    {
+      "parameter": "最佳分离聚乙二醇浓度",
+      "value": "4% (w/v)",
+      "ref_doi": null
+    },
+    {
+      "parameter": "双阳离子有机膨润土优势",
+      "value": "结合了吸附型（强吸附，尤其在低浓度）和分配型（无竞争效应，适用于多污染物高浓度）有机膨润土的优点，成为宽浓度范围内的强效吸附剂。",
+      "ref_doi": "10.1021/es990177x"
+    },
+    {
+      "parameter": "实际废水联合处理工艺的总去除率",
+      "value": "99.7",
+      "ref_doi": "10.1080/01496398608056150"
+    },
+    {
+      "parameter": "操作参数范围（温度）",
+      "value": "30-55 °C",
+      "ref_doi": "10.1016/j.chroma.2004.06.085"
+    },
+    {
+      "parameter": "pH范围",
+      "value": "4.0 - 8.5",
+      "ref_doi": null
+    },
+    {
+      "parameter": "离子强度影响",
+      "value": "pH<6时，离子强度(0.001 vs 0.1 M NaCl)对吸附无显著影响；pH>8时，较高离子强度显著增加吸附量",
+      "ref_doi": null
+    },
+    {
+      "parameter": "通量损失 (Flux Loss) 因SDS添加",
+      "value": "约40%",
+      "ref_doi": "10.1016/j.jhazmat.2007.10.060"
+    },
+    {
+      "parameter": "实验操作压力",
+      "value": "1.4",
+      "ref_doi": "10.1016/j.jhazmat.2007.10.060"
+    },
+    {
+      "parameter": "进料溶液pH",
+      "value": "6.8",
+      "ref_doi": "10.1016/j.jhazmat.2007.10.060"
+    },
+    {
+      "parameter": "pH适用范围（有机黏土）",
+      "value": "pH < 5.5 时吸附容量显著增加；pH < 4 时，部分阳离子形态吸附略降。",
+      "ref_doi": "10.1080/03601239909373237"
+    },
+    {
+      "parameter": "pH适用范围（水滑石类材料）",
+      "value": "pH < 4 时，氢氧化物结构溶解，限制其用作吸附剂。",
+      "ref_doi": "10.1080/03601239909373237"
+    },
+    {
+      "parameter": "非分离相导致的五氯苯酚表观水溶性增强",
+      "value": "2% 至 96% (不同土壤和氧化还原条件下)",
+      "ref_doi": "10.2136/sssaj2003.7870"
+    },
+    {
+      "parameter": "非分离相导致的2,3,4,5-四氯苯酚表观水溶性增强",
+      "value": "2% 至 247% (不同土壤和氧化还原条件下)",
+      "ref_doi": "10.2136/sssaj2003.7870"
+    },
+    {
+      "parameter": "非分离相质量占比",
+      "value": "高达总固相质量的8.6%",
+      "ref_doi": "10.2136/sssaj2003.7870"
+    },
+    {
+      "parameter": "氧化还原条件对土壤pH的影响",
+      "value": "好氧处理比厌氧处理pH降低0.1至2.7个单位",
+      "ref_doi": "10.2136/sssaj2003.7870"
+    },
+    {
+      "parameter": "床层高度对突破时间的影响",
+      "value": "bed height increases, breakthrough time increases",
+      "ref_doi": "10.1016/j.jcis.2012.04.054"
+    },
+    {
+      "parameter": "进料浓度对突破时间的影响",
+      "value": "concentration increases, breakthrough time decreases",
+      "ref_doi": "10.1016/j.jcis.2012.04.054"
+    },
+    {
+      "parameter": "流速对突破时间的影响",
+      "value": "flow rate increases, breakthrough time decreases",
+      "ref_doi": "10.1016/j.jcis.2012.04.054"
+    },
+    {
+      "parameter": "pH 对吸附容量的影响",
+      "value": "12.8–40.6% 增加（bush BC），26.0–106.4% 增加（peanut BC），7.2–45.1% 增加（wheat BC），1.6–42.5% 增加（corn BC）",
+      "ref_doi": null
+    }
+  ],
+  "occurrence_patterns": [
+    {
+      "parameter": "A1 土壤零净电荷点 PZNC",
+      "value": "≈6.7",
+      "ref_doi": "10.1021/es0494914"
+    },
+    {
+      "parameter": "DRC 土壤零净电荷点 PZNC",
+      "value": "≈4.0",
+      "ref_doi": "10.1021/es0494914"
+    },
+    {
+      "parameter": "A1 土壤在 pH 5.8 时的有效阳离子交换位点比例 AEC/(AEC+CEC)",
+      "value": "≈0.27",
+      "ref_doi": "10.1021/es0494914"
+    },
+    {
+      "parameter": "DRC 土壤在 pH 4.2 时的有效阳离子交换位点比例 AEC/(AEC+CEC)",
+      "value": "≈0.27",
+      "ref_doi": "10.1021/es0494914"
+    },
+    {
+      "parameter": "地表水最大允许浓度",
+      "value": "1.0",
+      "ref_doi": "10.1016/j.ecoleng.2016.01.039"
+    },
+    {
+      "parameter": "污染物来源与使用情况",
+      "value": "木材防腐剂、杀虫剂和软体动物杀灭剂；中国产量占全球20%，1960s至2000年广泛用于灭杀钉螺；现已被禁用或限制使用",
+      "ref_doi": "10.1016/j.ecoleng.2016.01.039"
+    },
+    {
+      "parameter": "环境内分泌干扰物示例及来源",
+      "value": "列举了包括PCP、DDT、双酚A、邻苯二甲酸酯等在内的多种常见EDCs，及其潜在来源（如杀虫剂、塑料制造、工业用途等）。",
+      "ref_doi": "10.1016/j.jiec.2012.05.017"
+    },
+    {
+      "parameter": "检测限 detection limit",
+      "value": "0.02-0.1",
+      "ref_doi": "10.1002/(SICI)1522-2683(19991001)20:14<2922::AID-ELPS2922>3.0.CO;2-N"
+    },
+    {
+      "parameter": "加标回收率 spiked recovery",
+      "value": "80-110",
+      "ref_doi": "10.1002/(SICI)1522-2683(19991001)20:14<2922::AID-ELPS2922>3.0.CO;2-N"
+    },
+    {
+      "parameter": "实际尿液样品中氯酚浓度 chlorophenol concentration in real urine samples",
+      "value": "0.05-1.2",
+      "ref_doi": "10.1002/(SICI)1522-2683(19991001)20:14<2922::AID-ELPS2922>3.0.CO;2-N"
+    },
+    {
+      "parameter": "PCP在土壤中的高浓度检出案例",
+      "value": "13200",
+      "ref_doi": "10.1016/j.watres.2003.08.005"
+    },
+    {
+      "parameter": "提取动力学阶段特征",
+      "value": "二氯甲烷对土壤中芘的提取量可分为两个阶段：初始的快速提取期和更长、更慢的提取期。",
+      "ref_doi": "10.1016/j.chemosphere.2009.03.068"
+    },
+    {
+      "parameter": "冻融循环对提取性的影响",
+      "value": "冻融循环频率对两种土壤类型中芘的提取性有影响，但影响是不同且相互矛盾的。",
+      "ref_doi": "10.1016/j.chemosphere.2009.03.068"
+    },
+    {
+      "parameter": "土壤湿度对提取性的影响",
+      "value": "土壤湿度对芘提取性的影响在两种土壤中是不同且相反的。",
+      "ref_doi": "10.1016/j.chemosphere.2009.03.068"
+    },
+    {
+      "parameter": "老化过程对冻融影响的调制",
+      "value": "冻融循环对未老化土壤中芘提取性的影响比对1年老化土壤的影响更显著，这归因于冻融过程中土壤有机质的变化。",
+      "ref_doi": "10.1016/j.chemosphere.2009.03.068"
+    },
+    {
+      "parameter": "污染物老化过程的物理化学机制",
+      "value": "污染物（如HOCs）在土壤中的老化是一个复杂过程，主要机制包括：从可及土壤区域向不易或不可及区域迁移；缓慢的吸附/解吸动力学（后续的慢速过程）；以及污染物在土壤微孔中的扩散（受曲折路径和孔壁有机质分配作用控制）。",
+      "ref_doi": "10.1016/j.chemosphere.2009.03.068"
+    },
+    {
+      "parameter": "多环芳烃 (PAHs) 环境浓度范围",
+      "value": "10–250 ng/L",
+      "ref_doi": "10.5004/dwt.2011.2087"
+    },
+    {
+      "parameter": "农药 (阿特拉津、甲草胺、五氯苯酚) 环境浓度范围",
+      "value": "2–13,000 ng/L",
+      "ref_doi": "10.5004/dwt.2011.2087"
+    },
+    {
+      "parameter": "天然水基质特性对比",
+      "value": "地表水：高TOC，高浊度，低碱度，低硬度。泉水和地下水：高碱度，高硬度。沉降后地表水：离子组成类似未处理地表水，但TOC和浊度大幅降低。",
+      "ref_doi": "10.5004/dwt.2011.2087"
+    },
+    {
+      "parameter": "环境浓度限值",
+      "value": "WHO指导浓度：2,4,6-三氯酚 < 200 µg/L，五氯酚 < 9 µg/L。EEC最大容许浓度(MAC)：2-氯酚 10 µg/L，2,4-二氯酚 40 µg/L。",
+      "ref_doi": null
+    }
+  ],
+  "molecular_features_for_biomimetic_matching": [
+    "可电离",
+    "可配位",
+    "大分子",
+    "弱酸性",
+    "氯代",
+    "水溶性",
+    "疏水性",
+    "芳香环",
+    "酚羟基"
+  ],
+  "recommended_biomimetic_prototypes": [
+    "chitosan",
+    "lotus-leaf",
+    "plant-tannin",
+    "polydopamine-coating"
+  ]
+}

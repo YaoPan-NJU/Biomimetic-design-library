@@ -1,0 +1,495 @@
+{
+  "id": "oyster-shell",
+  "name_zh": "牡蛎壳",
+  "name_en": "Oyster Shell",
+  "organism": {
+    "scientific": "Ostreidae",
+    "category": "动物"
+  },
+  "biomimetic_dimension": "过程仿生",
+  "features": [
+    "层次孔",
+    "层状",
+    "离子交换",
+    "生物矿化模板"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": [
+      5.0,
+      7.0
+    ],
+    "tested_temp_range": null,
+    "salinity": "moderate",
+    "note": "测过的 pH/温度范围，不是适用范围。仅从 performance_data 中实际测试过的条件聚合。"
+  },
+  "performance_data": [
+    {
+      "parameter": "牡蛎壳改性花生壳生物炭最大吸附容量 qmax",
+      "value": "197.3",
+      "unit": "mg/g",
+      "pollutant": "phosphorus (PO₄³⁻, 以KH₂PO₄配制)",
+      "material": "牡蛎壳改性花生壳生物炭(oyster shell modified peanut shell biochar)",
+      "ph": "未明确报告",
+      "temperature": "25°C",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.16663/j.cnki.lskj.2021.02.025",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第4组-生物矿化/2017-李-牡蛎壳-生物炭-吸附-废水.pdf",
+      "page": 1,
+      "locator": "摘要",
+      "verification": "partial",
+      "confidence": 0.9,
+      "source_locator": "李2017 p.72 / 摘要",
+      "verification_quote": "牡蛎壳改性花生壳生物炭磷吸附容量为197.3mg/g，约为未改性花生壳生物炭的17倍"
+    },
+    {
+      "parameter": "改性前后吸附容量对比倍数",
+      "value": "约17",
+      "unit": "倍",
+      "pollutant": "phosphorus (PO₄³⁻, 以KH₂PO₄配制)",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.16663/j.cnki.lskj.2021.02.025",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第4组-生物矿化/2017-李-牡蛎壳-生物炭-吸附-废水.pdf",
+      "page": 1,
+      "locator": "摘要",
+      "verification": "partial",
+      "confidence": 0.9,
+      "source_locator": "李2017 p.72 / 摘要",
+      "verification_quote": "牡蛎壳改性花生壳生物炭磷吸附容量为197.3mg/g，约为未改性花生壳生物炭的17倍"
+    },
+    {
+      "parameter": "CAs-4(废物)与CA-4(试剂)吸附容量对比",
+      "value": "CAs-4: 127.50 mg/g (实测), 126.41 mg/g (Langmuir); CA-4: 126.67 mg/g (实测), 127.43 mg/g (Langmuir)",
+      "unit": "mg/g",
+      "pollutant": "phosphate",
+      "material": "",
+      "ph": "7",
+      "temperature": "25°C",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jenvman.2021.114235",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第4组-生物矿化/2021-Qiu-oyster-shell-adsorption-adsorbent.pdf",
+      "page": 1,
+      "locator": "Abstract",
+      "verification": "unverified",
+      "confidence": 0.8,
+      "source_locator": "Qiu2021 — PDF not found at 仿生文献库/论文/第4组-生物矿化/2021-Qiu-oyster-shell-adsorption-adsorbent.pdf",
+      "verification_quote": "waste oyster shell was used as the source of calcium and waste cans as the source of aluminum"
+    },
+    {
+      "parameter": "CaBC最大吸附容量(初始浓度优化)",
+      "value": "144.35",
+      "unit": "mg/g",
+      "pollutant": "磷酸盐(以P计)",
+      "material": "CaBC(牡蛎壳改性花生壳生物炭，花生壳:牡蛎壳=2:1)",
+      "ph": null,
+      "temperature": "28°C",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.19319/j.cnki.issn.1008-021x.2022.15.005",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第4组-生物矿化/2022-许-羟基磷灰石-牡蛎壳-生物炭-吸附.pdf",
+      "page": 2,
+      "locator": "Section 2.1; Fig.1",
+      "verification": "partial",
+      "confidence": 0.95,
+      "source_locator": "许2022 p.39 / Section 2.1",
+      "verification_quote": "CaBC的最大吸附量达到144.35 mg/g，而BC的最大吸附量为24.13 mg/g，改性生物炭的吸附量为未改性的7倍"
+    },
+    {
+      "parameter": "煅烧牡蛎壳(800℃)最大吸附容量",
+      "value": "Cd2+: 2184.29, Pb2+: 1949.39",
+      "unit": "mg/g",
+      "pollutant": "Pb(II)",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.13254/j.jare.2020.0504",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2021-Zhang-shellfish-heavy-metal-passivation-review.pdf",
+      "page": 6,
+      "locator": "Table 1 煅烧处理对贝壳类材料孔径和比表面积的影响",
+      "verification": "partial",
+      "confidence": 0.9,
+      "source_locator": "Zhang2021 p.791 / Table 1 (800℃ 牡蛎壳行)",
+      "verification_quote": "对 Cd2+ 最大吸附量达 2 184.29 mg·g-1，对 Pb2+最大吸附量达 1 949.39 mg·g-1"
+    },
+    {
+      "parameter": "煅烧双色牡蛎壳去除率(Cu/Co/Pb)",
+      "value": "Cu: 94.4%, Co: 96.5%, Pb: 96.7%",
+      "unit": "%",
+      "pollutant": "Cu(II)",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "材料添加量2 g·L⁻¹, 金属离子浓度10 mg·L⁻¹",
+      "source": "literature",
+      "ref_doi": "10.13254/j.jare.2020.0504",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2021-Zhang-shellfish-heavy-metal-passivation-review.pdf",
+      "page": 5,
+      "locator": "Section 3.3 煅烧处理",
+      "verification": "partial",
+      "confidence": 0.9,
+      "source_locator": "Zhang2021 p.791 / Section 3.3 (ref [74] ESMAEILI等)",
+      "verification_quote": "煅烧贝壳对铜、钴、铅的去除率可分别达到 94.4%、96.5%、96.7%（材料添加量为 2 g·L-1；金属离子浓度为 10 mg·L-1）"
+    }
+  ],
+  "mechanisms": [
+    {
+      "name": "牡蛎壳文石碳酸钙离子交换与煅烧钙氧化物碱性沉淀",
+      "description": "CaCO₃在800℃缺氧条件下分解为CaO→CaO负载在花生壳生物炭上→CaO在含磷废水中释放Ca²⁺和OH⁻→OH⁻使水体呈弱碱性→Ca²⁺与磷酸盐在碱性条件下生成羟基磷灰石沉淀",
+      "functional_groups": [
+        "离子交换位点",
+        "CaO/Ca(OH)₂",
+        "含氧阴离子吸附",
+        "CaCO₃碳酸根",
+        "碱性环境还原",
+        "-PO₄³⁻（磷酸基）",
+        "-OH（羟基）",
+        "Ca²⁺位点",
+        "-O-（醚键）"
+      ],
+      "source": "literature",
+      "ref_doi": "10.16663/j.cnki.lskj.2021.02.025",
+      "verification": "partial",
+      "基本原理": "煅烧牡蛎壳（CaO）在水中生成Ca(OH)₂，提供碱性环境和Ca²⁺，可与磷酸盐形成羟基磷灰石沉淀，同时重金属通过表面配位吸附",
+      "locator": "Abstract",
+      "source_file": "仿生文献库/论文/第4组-生物矿化/2017-李-牡蛎壳-生物炭-吸附-废水 2.pdf",
+      "verification_quote": "牡蛎壳改性后的花生壳生物炭对磷的吸附量显著高于未改性的花生壳生物炭",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "重金属离子（Pb²⁺、Cu²⁺、Cd²⁺）和含氧阴离子（磷酸盐）",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "牡蛎壳的文石型CaCO₃层状结构，煅烧后生成CaO",
+          "basis": "from_source",
+          "source": "10.16663/j.cnki.lskj.2021.02.025",
+          "locator": "p.2",
+          "quote": "CaCO3在缺氧800℃高温下发生以下反应：CaCO3(s)+heat→CaO(s)+CO2(g)，生成CaO负载在花生壳生物炭上",
+          "scope_match": "Keywords: CaCO3, CaO, 800℃, decompose"
+        },
+        "interaction": {
+          "text": "CaCO₃/CaO与重金属的离子交换和表面沉淀；磷酸盐与Ca²⁺形成Ca₃(PO₄)₂沉淀",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "煅烧牡蛎壳（CaO）在水中生成Ca(OH)₂，提供碱性环境和Ca²⁺，可与磷酸盐形成羟基磷灰石沉淀，同时重金属通过表面配位吸附",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "未煅烧的CaCO₃吸附容量远低于煅烧产物CaO",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": "visual_cache PDF text",
+            "quote": "ＣＯ２（ｇ）\n生成ＣａＯ负载在花生壳生物炭上。ＣａＯ在含磷废\n水中能够快速释放Ｃａ\n２＋和ＯＨ\n－，ＯＨ\n－会导致水体的\nｐＨ呈弱碱性，Ｃａ\n２＋与溶液中磷酸盐在碱性条件下反应\n生成羟基磷酸钙。因而，牡蛎壳改性花生壳生物炭对磷\n的吸附得到显著提高。\n图１　牡蛎壳改性花生壳生物炭和花生壳生物炭在\n不同初始磷浓度溶液中对磷的吸附量\n４　结论\n与未改性的花生壳生物炭相比，通过牡蛎壳高温改\n性花生壳吸附剂",
+            "source_asset": null,
+            "source": "10.16663/j.cnki.lskj.2021.02.025",
+            "scope_match": "Keywords: 吸附, 牡蛎, 水, 生物炭, 改性",
+            "verification_method": "pdf_visual_reading"
+          },
+          {
+            "text": "未煅烧CaCO₃吸附容量远低于煅烧产物CaO",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": "visual_cache PDF text",
+            "quote": "ＣＯ２（ｇ）\n生成ＣａＯ负载在花生壳生物炭上。ＣａＯ在含磷废\n水中能够快速释放Ｃａ\n２＋和ＯＨ\n－，ＯＨ\n－会导致水体的\nｐＨ呈弱碱性，Ｃａ\n２＋与溶液中磷酸盐在碱性条件下反应\n生成羟基磷酸钙。因而，牡蛎壳改性花生壳生物炭对磷\n的吸附得到显著提高。\n图１　牡蛎壳改性花生壳生物炭和花生壳生物炭在\n不同初始磷浓度溶液中对磷的吸附量\n４　结论\n与未改性的花生壳生物炭相比，通过牡蛎壳高温改\n性花生壳吸附剂",
+            "source_asset": "domain_knowledge",
+            "source": "10.16663/j.cnki.lskj.2021.02.025",
+            "scope_match": "Keywords: 吸附, 牡蛎, 水, 生物炭, 改性",
+            "verification_method": "pdf_visual_reading"
+          }
+        ],
+        "transferable_principle": "贝壳类CaCO₃经煅烧生成CaO后，可同时通过碱性沉淀和离子交换去除重金属和磷酸盐",
+        "verification_quote": "oyster shell biochar for heavy metal adsorption",
+        "source_doi": "10.16663/j.cnki.lskj.2021.02.025",
+        "source_locator": "p.2 / 3节 结果与讨论"
+      },
+      "evidence_type": "partial_source",
+      "evidence_note": "Upgraded from llm_inferred using visual_cache PDF text (matched 7 keywords: ['吸附', '牡蛎', '水', '生物炭', '改性'])",
+      "key_structures": [
+        "煅烧CaO碱性释放",
+        "吸附结构",
+        "HAp羟基磷灰石晶体",
+        "羟基磷灰石沉淀",
+        "离子交换",
+        "方解石CaCO₃层状结构"
+      ],
+      "molecular_feature_links": [
+        "六价铬",
+        "含氧阴离子",
+        "强氧化性",
+        "静电吸引",
+        "还原沉淀"
+      ]
+    },
+    {
+      "name": "钝化机理",
+      "description": "石灰效应, 沉淀效应, 物理吸附, 离子交换",
+      "functional_groups": [
+        "离子交换位点",
+        "Ca²⁺/Mg²⁺位点",
+        "CaCO₃碳酸根",
+        "碳酸盐沉淀"
+      ],
+      "source": "literature",
+      "ref_doi": "10.13254/j.jare.2020.0504",
+      "verification": "partial",
+      "verification_quote": "The remediation mechanisms predominantly include liming effects, precipitation and adsorption effects, but the molecular mechanisms underlying the microscopic solidification are still unclear",
+      "causal_chain": {
+        "transferable_principle": "基于机制: 钝化机理",
+        "pollutant_feature": {
+          "text": "石灰效应, 沉淀效应, 物理吸附, 离子交换",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.7524/AJE.1673⁃5897.20220113002",
+          "locator": "p.6",
+          "quote": "离子交换Ion exchange",
+          "scope_match": "Keywords: 离子, 离子交, 离子交换, 子交, 子交换"
+        },
+        "bio_structure": {
+          "text": "钝化功能结构",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "石灰效应, 沉淀效应, 物理吸附, 离子交换",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.7524/AJE.1673⁃5897.20220113002",
+          "locator": "p.6",
+          "quote": "离子交换Ion exchange",
+          "scope_match": "Keywords: 离子, 离子交, 离子交换, 子交, 子交换"
+        },
+        "why_it_works": {
+          "text": "表面活性位点与目标物相互作用",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "unverifiable_generic_text"
+          }
+        ]
+      },
+      "source_locator": "p.1",
+      "key_structures": [
+        "沉淀效应",
+        "吸附结构",
+        "石灰效应(liming)",
+        "物理吸附",
+        "离子交换"
+      ],
+      "molecular_feature_links": [
+        "二价阳离子",
+        "可与含硫/氮配体配位"
+      ]
+    }
+  ],
+  "narrative": {
+    "entries": [
+      {
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2017-李-牡蛎壳-生物炭-吸附-废水.json",
+        "paper_id": "2017-李-牡蛎壳-生物炭-吸附-废水",
+        "sections": {
+          "problem_definition": "自然界中磷过量引发水体富营养化与生态失衡，而传统生物炭因金属阳离子匮乏对阴离子(磷酸盐)吸附能力弱，且化学钙改性剂成本高且存在二次污染风险",
+          "biological_solution": "海洋贝类通过生物矿化作用富集>90%的CaCO₃构建坚固外壳；借鉴此策略，将废弃牡蛎壳在800℃热解转化为高活性CaO负载于生物炭上，利用其在水中释放Ca²⁺与OH⁻，原位诱导磷酸盐生成羟基磷灰石沉淀，实现吸附容量提升17倍至197.3mg/g的成功案例",
+          "key_features": "必须保留特征: 高钙生物矿化组分(>90% CaCO₃)、800℃热解活化生成CaO、Ca²⁺/OH⁻协同驱动羟基磷灰石沉淀机制；可灵活调整特征: 碳基底类型(其他农林废弃物)、钙源种类(蛋壳/珊瑚等)、热解工艺参数(温度/升温速率)、改性剂与碳基配比",
+          "design_mapping": "生物→材料映射: 牡蛎壳生物矿化CaCO₃ → 活性钙改性源(CaO)；花生壳多孔碳骨架 → 高分散载体与吸附基质；软约束建议: 优选高钙含量(>80%)生物废弃物替代化学试剂；控制热解温度750-850℃平衡CaO生成率与碳骨架完整性；实际应用中需监测进水pH，必要时辅以弱碱调节以保障沉淀效率",
+          "explainability_anchors": "仿生故事线: 从海洋贝类‘生物矿化筑壳’到‘以废治废’的水处理材料设计，将自然界的钙循环机制转化为人工除磷的化学沉淀路径；设计溯源: 针对生物炭阴离子吸附瓶颈与化学改性高成本痛点，通过提取牡蛎壳天然CaCO₃组分，经热解重构为CaO活性位点，实现低成本、高容量、环境友好的磷吸附材料开发"
+        }
+      },
+      {
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2021-Qiu-oyster-shell-adsorption-adsorbent.json",
+        "paper_id": "2021-Qiu-oyster-shell-Ca-Al-LDHs-phosphate",
+        "sections": {
+          "problem_definition": "自然界中生物矿化过程高效捕获并固定磷酸盐等阴离子以维持生态平衡；对应水处理中富营养化水体除磷需求迫切，且传统化学沉淀法成本高、易产生污泥二次污染。",
+          "biological_solution": "牡蛎壳天然碳酸钙矿物经生物矿化形成稳定多孔骨架，结合层状双氢氧化物(LDH)的仿生层间化学，通过离子交换、静电作用与溶解沉淀三重机制高效捕获磷酸根；成功案例为利用牡蛎壳(钙源)与易拉罐(铝源)废弃物共沉淀制备Ca-Al-LDHs，实现与试剂级材料相当的吸附性能(qmax 126-127 mg/g)。",
+          "key_features": "必须保留特征：LDH层状阴离子交换结构、Ca/Al 4:1最优摩尔比、三重协同吸附机制(离子交换+静电+溶解沉淀)；可灵活调整特征：工业废钙/废铝的具体来源、热处理温度与化学转化工艺参数、表面官能团修饰策略。",
+          "design_mapping": "生物→材料映射：牡蛎壳CaCO₃→活性钙源前驱体；易拉罐Al→活性铝源前驱体；生物矿化层间化学→LDH层状阴离子交换位点；软约束建议：控制合成pH与陈化时间以优化结晶度，实际应用中需预留抗碳酸盐干扰的设计余量并探索原位再生路径。",
+          "explainability_anchors": "仿生故事线：从海洋生物矿化固磷机制出发，提取“天然矿物骨架+层间离子交换”核心逻辑，转化为“双废协同共沉淀制备LDH”的循环经济材料设计路径；设计溯源：吸附性能对标试剂级材料验证了仿生结构的等效性，宽pH窗口(4-10)证明了环境鲁棒性，CO₃²⁻竞争数据明确了工程应用的边界条件与优化方向。"
+        }
+      },
+      {
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2022-许-羟基磷灰石-牡蛎壳-生物炭-吸附.json",
+        "paper_id": "2022-Xu-oyster-shell-peanut-biochar-phosphate",
+        "sections": {
+          "problem_definition": "自然界中贝壳通过生物矿化形成坚固结构；在水处理中，传统静电吸附材料对磷酸盐等阴离子污染物存在容量低、选择性差的问题，亟需高效、高选择性的去除机制。",
+          "biological_solution": "借鉴贝壳生物矿化策略，利用废弃牡蛎壳中的碳酸钙作为钙源，热解转化为CaO/Ca(OH)₂。在水中释放钙离子并与磷酸盐反应，诱导羟基磷灰石结晶沉淀。这种仿生矿化沉淀机制突破了静电吸附局限，实现了高容量(144.35 mg/g)和高选择性去除。",
+          "key_features": "必须保留特征：钙源负载与原位矿化沉淀机制、羟基磷灰石结晶生成；可灵活调整特征：生物炭基底材料(如花生壳)、生物质与钙源的比例(如2:1)、热解与改性工艺参数。",
+          "design_mapping": "生物贝壳(CaCO₃) → 废弃牡蛎壳热解产物(CaO/Ca(OH)₂)；生物矿化过程 → 钙离子释放与磷酸盐诱导羟基磷灰石结晶。软约束建议：建议将反应体系pH控制在4左右以最大化吸附容量，并保证60分钟以上的接触时间以达到吸附平衡。",
+          "explainability_anchors": "仿生故事线：从‘贝壳的矿化成壳’到‘废水中磷酸盐的矿化沉淀去除’，实现废弃物资源化与高效水处理的统一。设计溯源：吸附量从未改性生物炭的24.13 mg/g提升至144.35 mg/g(提升6倍)，证实了仿生矿化沉淀机制相较于单一静电吸附的显著优势。"
+        }
+      },
+      {
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\第三波\\json\\2021-Zhang-shellfish-heavy-metal-passivation-review.json",
+        "paper_id": "2021-Zhang-shellfish-heavy-metal-passivation-review",
+        "sections": {
+          "problem_definition": "农田土壤重金属(Cd, Pb等)污染导致作物富集，威胁食品安全；天然贝壳废弃物堆积造成资源浪费和环境污染。需要低成本、环境友好的材料来原位钝化重金属。",
+          "biological_solution": "贝壳是自然界经生物矿化形成的碳酸钙(CaCO3)生物陶瓷复合材料，具有95%的无机矿物成分和5%的有机质(贝壳素)。其独特的微层结构(棱柱层和珍珠层)和2-10 µm微孔网络提供了巨大的比表面积和离子交换位点。贝壳中的Ca2+、Mg2+可与重金属发生离子交换，其碱性(CaCO3或煅烧后的CaO)可提升土壤pH，促使重金属生成碳酸盐/氢氧化物沉淀。",
+          "key_features": "必须保留：贝壳的微孔结构(物理吸附)、碳酸钙晶格(离子交换/沉淀)、天然碱性(pH提升)。可灵活调整：煅烧温度(400-1000℃)、球磨细化程度、与功能材料复配比例。",
+          "design_mapping": "生物结构→材料设计：贝壳微层/微孔→高比表面积吸附骨架；CaCO3晶格→Ca2+与重金属离子交换位点；天然碱性→土壤pH调节剂(石灰效应)；有机质残留→表面络合官能团。软约束建议：控制煅烧温度在900℃以上实现CaO转化与孔隙爆发；利用晶型差异(文石vs方解石)靶向吸附特定重金属。",
+          "explainability_anchors": "仿生故事线：利用生物矿化天然产物(贝壳)的多孔碳酸钙骨架，通过物理粉碎/化学煅烧激活其离子交换和沉淀能力，实现‘以废治废’的土壤重金属原位钝化。设计溯源：天然贝壳→粉碎/球磨/煅烧→多孔CaO/CaCO3复合材料→离子交换+表面沉淀+pH提升→重金属固定化。"
+        }
+      }
+    ]
+  },
+  "engineering_constraints": [
+    {
+      "constraint": "未煅烧的CaCO₃吸附容量远低于煅烧产物CaO，工程应用需煅烧活化",
+      "value": null,
+      "unit": null,
+      "relevance": "high",
+      "explanation": "CaCO₃比表面积低且活性位点少；煅烧后CaO具有更高反应活性",
+      "source": "mechanism_context",
+      "ref_doi": null
+    },
+    {
+      "constraint": "CaO在水中水化放热，需控制接触方式避免结构崩解",
+      "value": null,
+      "unit": null,
+      "relevance": "high",
+      "explanation": "CaO + H₂O → Ca(OH)₂ 放热反应，快速水化会导致颗粒崩解",
+      "source": "mechanism_context",
+      "ref_doi": null
+    },
+    {
+      "constraint": "竞争阳离子(Ca²⁺、Mg²⁺)显著干扰目标污染物吸附",
+      "value": null,
+      "unit": null,
+      "relevance": "high",
+      "explanation": "高硬度水体中Ca²⁺、Mg²⁺与目标金属离子竞争吸附位点",
+      "source": "literature_aggregate",
+      "ref_doi": null
+    }
+  ],
+  "provenance_summary": {
+    "n_papers": 6,
+    "n_verified": 12,
+    "n_unverified": 4
+  },
+  "coverage": "normal",
+  "status": "active",
+  "design_translation": [
+    {
+      "idea": "利用牡蛎壳的方解石结构进行重金属固定和pH缓冲",
+      "specific_functional_group": "方解石/文石型 CaCO₃",
+      "material_handle": "牡蛎壳粉碎、煅烧或酸活化",
+      "target_interaction": "CaCO₃ 溶解提供 CO₃²⁻ 和 Ca²⁺，沉淀重金属碳酸盐",
+      "source_tier": "llm_inference",
+      "examples": [],
+      "design_principle": "牡蛎壳方解石(CaCO₃)通过离子交换与Pb²⁺形成PbCO₃沉淀，煅烧后CaO具有更强的吸附能力和pH缓冲作用",
+      "implementation_example": "牡蛎壳清洗→800°C煅烧2h→研磨→CaO粉末→直接用于柱吸附；或酸活化(HCl)→CaCl₂溶液→再生",
+      "constraints": "煅烧能耗高；CaO在水中放热需控制；竞争阳离子(Ca²⁺、Mg²⁺)干扰",
+      "failure_modes": "煅烧不完全；CaO水化放热；竞争离子降低容量",
+      "evidence_tier": "inference"
+    }
+  ],
+  "library_tier": "core",
+  "lifecycle_status": "active",
+  "honesty_ledger": {
+    "facts": [],
+    "leads": [
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "牡蛎壳改性吸附机制",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "mechanism",
+        "index": 1,
+        "name": "钝化机理",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 0,
+        "parameter": "牡蛎壳改性花生壳生物炭最大吸附容量 qmax",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 1,
+        "parameter": "改性前后吸附容量对比倍数",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 3,
+        "parameter": "CaBC最大吸附容量(初始浓度优化)",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 4,
+        "parameter": "煅烧牡蛎壳(800℃)最大吸附容量",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 5,
+        "parameter": "煅烧双色牡蛎壳去除率(Cu/Co/Pb)",
+        "basis": "partial_with_quote"
+      }
+    ],
+    "inferences": [
+      {
+        "type": "performance",
+        "index": 2,
+        "parameter": "CAs-4(废物)与CA-4(试剂)吸附容量对比",
+        "basis": "unverified"
+      }
+    ],
+    "generated_by": "P1c-auto",
+    "note": "Classification based on verification label + quote presence + source type"
+  },
+  "mechanism_tags": [
+    "离子交换",
+    "氢键",
+    "孔道限域分子筛分",
+    "沉淀共沉淀",
+    "生物矿化",
+    "还原催化降解",
+    "几何识别"
+  ]
+}

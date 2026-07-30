@@ -1,0 +1,596 @@
+{
+  "pollutant_name": "三氯甲烷",
+  "paper_count": 26,
+  "total_ki": 254,
+  "empty_papers": 1,
+  "skipped_low_confidence": 0,
+  "ki_by_domain": {
+    "D1_adsorption_performance": 108,
+    "D4_adsorption_mechanism": 61,
+    "D2_material_structure": 29,
+    "D11_pollutant_property": 25,
+    "D5_engineering_constraint": 10,
+    "D7_synthesis_method": 8,
+    "D8_characterization": 6,
+    "D6_pollutant_application": 4,
+    "D12_occurrence_pattern": 2,
+    "D9_comparison_review": 1
+  },
+  "properties": {
+    "HOMO能级 (HOMO energy level)": [
+      {
+        "value": "3.1",
+        "unit": "eV",
+        "ref_doi": "10.1021/acsanm.1c02153",
+        "source_file": "kinetic-study-on-the-adsorption-of-2-3-5-6-tetrafluoro-7-7-8-8-tetracyanoquinodimethane-on-ag-nanoparticles-in.pdf",
+        "confidence": 0.8,
+        "low_confidence": false
+      }
+    ],
+    "三卤甲烷（THMs）的环境特性与健康危害": [
+      {
+        "value": "液体，水中溶解度低，在水中以低浓度存在，但即使在这些低水平下也对人类健康有害，需要严格法规控制其在水中的含量。",
+        "unit": null,
+        "ref_doi": "10.1039/b916955e",
+        "source_file": "Functionalization of single-wall carbon nanotubes through chloroform adsorption theory and experiment.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "三氯甲烷 (Trichloromethane) 物理化学性质": [
+      {
+        "value": "分子量: 119.38 g/mol; 沸点: 61.2°C; 临界温度: 536.4°C",
+        "unit": null,
+        "ref_doi": "10.1039/c6ra07637h",
+        "source_file": "Amino-functionalized metal-organic framework for adsorption and separation of dichloromethane and trichloromethane.pdf",
+        "confidence": 0.8,
+        "low_confidence": false
+      }
+    ],
+    "二氯甲烷 (Dichloromethane) 物理化学性质": [
+      {
+        "value": "分子量: 84.93 g/mol; 沸点: 39.8°C; 临界温度: 510°C",
+        "unit": null,
+        "ref_doi": "10.1039/c6ra07637h",
+        "source_file": "Amino-functionalized metal-organic framework for adsorption and separation of dichloromethane and trichloromethane.pdf",
+        "confidence": 0.8,
+        "low_confidence": false
+      }
+    ],
+    "二甲氧磷分子结构 dimethoxon molecular structure": [
+      {
+        "value": "包含磷原子、氧原子、硫原子，以及甲基、乙基、甲基氨基等官能团",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "Effect of Surface Oxides and Steric Hindrance on the Adsorption of Dimethoxon from Chloroform on Activated Carbons.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "氯仿介电常数": [
+      {
+        "value": "4.81",
+        "unit": null,
+        "ref_doi": "10.1016/j.carbon.2020.08.020",
+        "source_file": "Structural adsorption mechanism of chloroform in narrow micropores of pitch-based activated carbon fibres.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "氯仿偶极矩": [
+      {
+        "value": "1.01",
+        "unit": "D",
+        "ref_doi": "10.1016/j.carbon.2020.08.020",
+        "source_file": "Structural adsorption mechanism of chloroform in narrow micropores of pitch-based activated carbon fibres.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "氯仿分子尺寸 (approximation)": [
+      {
+        "value": "0.58",
+        "unit": "nm",
+        "ref_doi": "10.1016/j.carbon.2020.08.020",
+        "source_file": "Structural adsorption mechanism of chloroform in narrow micropores of pitch-based activated carbon fibres.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "氯仿疏水性": [
+      {
+        "value": "疏水性",
+        "unit": null,
+        "ref_doi": "10.1016/j.jmgm.2018.05.002",
+        "source_file": "Separation of chloroform from a dilute solution using a cyclic peptide nanotube A molecular dynamics study.pdf",
+        "confidence": 0.8,
+        "low_confidence": false
+      }
+    ],
+    "氯仿的偶极矩": [
+      {
+        "value": "1.06",
+        "unit": "D",
+        "ref_doi": null,
+        "source_file": "adsorption-of-chloroform-in-nay-zeolite-a-computational-and-vibrational-spectroscopy-study.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "污染物分子式-四氯化碳": [
+      {
+        "value": "CCl4",
+        "unit": null,
+        "ref_doi": "10.1021/ie061041s",
+        "source_file": "adsorption-of-chlorinated-compounds-(chlorobenzene-chloroform-and-carbon-tetrachloride)-on-microporous-sio2-ag-doped.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "污染物分子式-氯仿": [
+      {
+        "value": "CHCl3",
+        "unit": null,
+        "ref_doi": "10.1021/ie061041s",
+        "source_file": "adsorption-of-chlorinated-compounds-(chlorobenzene-chloroform-and-carbon-tetrachloride)-on-microporous-sio2-ag-doped.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "污染物分子式-氯苯": [
+      {
+        "value": "C6H5Cl",
+        "unit": null,
+        "ref_doi": "10.1021/ie061041s",
+        "source_file": "adsorption-of-chlorinated-compounds-(chlorobenzene-chloroform-and-carbon-tetrachloride)-on-microporous-sio2-ag-doped.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "污染物分子量与吸附容量的关系": [
+      {
+        "value": "三种VOCs的饱和吸附量与其分子量呈正线性关系，R²高达0.95。",
+        "unit": null,
+        "ref_doi": "10.1007/s11356-018-3103-y",
+        "source_file": "Adsorption behavior of chloroform, carbon disulfide, and acetone on coconut shell-derived carbon experimental investigation, simulation, and model study.pdf",
+        "confidence": 0.9,
+        "low_confidence": false
+      }
+    ],
+    "污染物性质": [
+      {
+        "value": "氯仿（Chloroform）是致癌的三卤甲烷（THM）",
+        "unit": null,
+        "ref_doi": null,
+        "source_file": "ADSORPTION CHARACTERISTICS OF CHLOROFORM ON MODIFIED ZEOLITES FROM GASEOUS-PHASE AS WELL AS ITS AQUEOUS-SOLUTION.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "污染物环境持久性": [
+      {
+        "value": "可稳定存在于大气中数十年",
+        "unit": null,
+        "ref_doi": "10.1007/s11051-025-06213-5",
+        "source_file": "Computational exploration of the chemical impact of cobalt group transition metals (TM Co, Rh, Ir) on surface-tailored silicon carbide nanotubes (TM@SiCNTs) for trichloromethane gas adsorption.pdf",
+        "confidence": 0.9,
+        "low_confidence": false
+      }
+    ],
+    "污染物相对极性与竞争吸附顺序": [
+      {
+        "value": "极性: CCl₄ (最低) < CHCl₃ (中等) < 1,1,1-TCA (最高)；竞争吸附减弱（分布系数降幅）顺序: CCl₄ > 1,1,1-TCA > CHCl₃",
+        "unit": null,
+        "ref_doi": "10.1021/je970081a",
+        "source_file": "multicomponent-adsorption-of-chloroform-carbon-tetrachloride-and-1-1-1-trichloroethane-on-soils.pdf",
+        "confidence": 0.9,
+        "low_confidence": false
+      }
+    ],
+    "污染物类别与特性": [
+      {
+        "value": "苯酚是常见环境污染物，有毒弱酸，即使低浓度也会引起水的不良味道和气味。",
+        "unit": null,
+        "ref_doi": "10.1002/ceat.201000561",
+        "source_file": "Chem Eng   Technol - 2011 - Alwary - Liquid Phase Adsorption of Phenol and Chloroform by Activated Charcoal.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "氯仿是氯化消毒副产物，三卤甲烷的一种，具有潜在危害和致癌性，存在于所有氯化自来水中。",
+        "unit": null,
+        "ref_doi": "10.1002/ceat.201000561",
+        "source_file": "Chem Eng   Technol - 2011 - Alwary - Liquid Phase Adsorption of Phenol and Chloroform by Activated Charcoal.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "污染物类型与基本性质": [
+      {
+        "value": "氯仿是氯化有机化合物，强挥发性，可致癌，水中含痕量",
+        "unit": null,
+        "ref_doi": "10.1016/j.cplett.2017.08.001",
+        "source_file": "Adsorption of chloroform on N-doped and Al-doped graphene A first-principle study.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "流体-流体碰撞直径 (σff)": [
+      {
+        "value": "0.3575",
+        "unit": "nm",
+        "ref_doi": "10.1016/j.carbon.2005.04.028",
+        "source_file": "Adsorption of N2, Ar, acetone, chloroform and acetone-chloroform mixture on carbon black in the framework of molecular layer structure theory (MLST).pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      },
+      {
+        "value": "0.3305",
+        "unit": "nm",
+        "ref_doi": "10.1016/j.carbon.2005.04.028",
+        "source_file": "Adsorption of N2, Ar, acetone, chloroform and acetone-chloroform mixture on carbon black in the framework of molecular layer structure theory (MLST).pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "液体氮密度": [
+      {
+        "value": "28.2",
+        "unit": "mmol/cm³",
+        "ref_doi": "10.1016/j.carbon.2005.04.028",
+        "source_file": "Adsorption of N2, Ar, acetone, chloroform and acetone-chloroform mixture on carbon black in the framework of molecular layer structure theory (MLST).pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "电子亲和能 (Electron affinity)": [
+      {
+        "value": "4.93",
+        "unit": "eV",
+        "ref_doi": "10.1021/acsanm.1c02153",
+        "source_file": "kinetic-study-on-the-adsorption-of-2-3-5-6-tetrafluoro-7-7-8-8-tetracyanoquinodimethane-on-ag-nanoparticles-in.pdf",
+        "confidence": 1.0,
+        "low_confidence": false
+      }
+    ],
+    "臭氧消耗潜力分类": [
+      {
+        "value": "Class 1 (臭氧消耗水平>0.2)",
+        "unit": null,
+        "ref_doi": "10.1007/s11051-025-06213-5",
+        "source_file": "Computational exploration of the chemical impact of cobalt group transition metals (TM Co, Rh, Ir) on surface-tailored silicon carbide nanotubes (TM@SiCNTs) for trichloromethane gas adsorption.pdf",
+        "confidence": 0.9,
+        "low_confidence": false
+      }
+    ]
+  },
+  "removal_mechanisms": [
+    {
+      "mechanism": "吸附",
+      "evidence_count": 40,
+      "key_references": [
+        "10.1021/je020109h",
+        "10.1016/j.carbon.2005.04.028",
+        "10.1016/S0008-6223(00)00230-X",
+        "10.1039/c5ra23888a",
+        "10.1007/s11051-025-06213-5"
+      ],
+      "details": [
+        {
+          "parameter": "氯仿在SWCNT上的吸附类型",
+          "value": "物理吸附 (physisorption)",
+          "ref_doi": "10.1039/b916955e"
+        },
+        {
+          "parameter": "氯仿与原始SWCNT的物理吸附结合能 (Eb)",
+          "value": "-0.18 至 -0.24",
+          "ref_doi": "10.1039/b916955e"
+        },
+        {
+          "parameter": "主要吸附机理",
+          "value": "疏水作用和范德华力（vdW）",
+          "ref_doi": "10.1016/j.jmgm.2018.05.002"
+        }
+      ]
+    },
+    {
+      "mechanism": "氧化",
+      "evidence_count": 4,
+      "key_references": [
+        "10.1080/10934529709376620",
+        "10.1021/acsanm.1c02153"
+      ],
+      "details": [
+        {
+          "parameter": "二氧化硅壳层对相互作用的阻断效应 (Blocking effect of SiO2 shell)",
+          "value": "18 nm的二氧化硅壳层完全阻止了Ag NPs与F4TCNQ之间的电荷转移和复合物形成",
+          "ref_doi": "10.1021/acsanm.1c02153"
+        },
+        {
+          "parameter": "表面氧化物与吸附量线性相关性 linear correlation between surface oxides and adsorption",
+          "value": "R² = 0.95",
+          "ref_doi": null
+        },
+        {
+          "parameter": "立体位阻对吸附的影响 steric hindrance effect on adsorption",
+          "value": "立体位阻越大，与活性炭表面氧化物竞争的能力越弱，置换二甲氧磷越困难",
+          "ref_doi": null
+        }
+      ]
+    },
+    {
+      "mechanism": "疏水",
+      "evidence_count": 3,
+      "key_references": [
+        "10.1016/j.jmgm.2018.05.002",
+        "10.1080/10934529709376620"
+      ],
+      "details": [
+        {
+          "parameter": "主要吸附机理",
+          "value": "疏水作用和范德华力（vdW）",
+          "ref_doi": "10.1016/j.jmgm.2018.05.002"
+        },
+        {
+          "parameter": "氯仿吸附机理",
+          "value": "孔填充机理，主要由疏水作用驱动",
+          "ref_doi": null
+        },
+        {
+          "parameter": "表面疏水化增强氯仿吸附",
+          "value": "表面疏水化活性炭（HT-AC）吸附氯仿量最大，比未处理活性炭（UT-AC）高1.2倍，比氧化处理活性炭（NT-ACs）高2.0-12.8倍",
+          "ref_doi": "10.1080/10934529709376620"
+        }
+      ]
+    },
+    {
+      "mechanism": "静电",
+      "evidence_count": 3,
+      "key_references": [
+        "10.1039/c5ra23888a",
+        "10.1007/s11051-025-06213-5"
+      ],
+      "details": [
+        {
+          "parameter": "吸附机理 (静电相互作用)",
+          "value": "DCM与TCM分子具有小的偶极矩，其负端（氯原子）与HKUST-1开放铜位点产生静电相互作用。DCM由于尺寸小，可在大小孔道中均与开放金属位点作用，而TCM仅能在大孔中作用，因此DCM与框架的静电相互作用更强，主导了吸附选择性。",
+          "ref_doi": "10.1039/c5ra23888a"
+        },
+        {
+          "parameter": "氯仿-沸石宿主-客体相互作用能分解",
+          "value": "短程相互作用 41 kJ/mol，静电相互作用 25 kJ/mol",
+          "ref_doi": null
+        },
+        {
+          "parameter": "主要吸附机理",
+          "value": "静电相互作用（电子转移）、范德华力、π-π相互作用",
+          "ref_doi": "10.1007/s11051-025-06213-5"
+        }
+      ]
+    },
+    {
+      "mechanism": "π-π",
+      "evidence_count": 3,
+      "key_references": [
+        "10.3390/ijms19102851",
+        "10.1007/s11051-025-06213-5",
+        "10.1016/j.cplett.2017.08.001"
+      ],
+      "details": [
+        {
+          "parameter": "主要吸附机理",
+          "value": "静电相互作用（电子转移）、范德华力、π-π相互作用",
+          "ref_doi": "10.1007/s11051-025-06213-5"
+        },
+        {
+          "parameter": "主要吸附机理 Main Adsorption Mechanism",
+          "value": "强偶极-偶极相互作用 (strong dipole-dipole interaction) 为主导，π-π络合作用 (π-π complexation) 非主要力量",
+          "ref_doi": "10.3390/ijms19102851"
+        },
+        {
+          "parameter": "吸附机理 - π-π轨道耦合",
+          "value": "Al和Cl之间的π-π轨道耦合强于C-Cl和N-Cl",
+          "ref_doi": "10.1016/j.cplett.2017.08.001"
+        }
+      ]
+    },
+    {
+      "mechanism": "氢键",
+      "evidence_count": 1,
+      "key_references": [],
+      "details": [
+        {
+          "parameter": "氯仿在沸石中形成氢键的键能估计范围",
+          "value": "10-15",
+          "ref_doi": null
+        }
+      ]
+    }
+  ],
+  "adsorption_performance": {
+    "best_materials": [
+      {
+        "material": "活性炭",
+        "qmax_mg_g": 600.0,
+        "qmax_avg": 122.0,
+        "evidence_count": 16,
+        "ref_dois": [
+          "10.1021/je020109h",
+          "10.1016/S0008-6223(00)00230-X",
+          "10.1016/j.jhazmat.2007.11.065",
+          "10.1002/ceat.201000561"
+        ]
+      },
+      {
+        "material": "GO",
+        "qmax_mg_g": 11.8,
+        "qmax_avg": 11.8,
+        "evidence_count": 4,
+        "ref_dois": [
+          "10.1002/pi.1148",
+          "10.1016/j.carbon.2005.04.028",
+          "10.1016/S0008-6223(00)00230-X"
+        ]
+      },
+      {
+        "material": "zeolite",
+        "qmax_mg_g": null,
+        "qmax_avg": null,
+        "evidence_count": 4,
+        "ref_dois": [
+          "10.1021/ie061041s",
+          "10.1002/ep.10593"
+        ]
+      },
+      {
+        "material": "膜",
+        "qmax_mg_g": null,
+        "qmax_avg": null,
+        "evidence_count": 3,
+        "ref_dois": [
+          "10.1021/acsami.3c09009"
+        ]
+      },
+      {
+        "material": "沸石",
+        "qmax_mg_g": null,
+        "qmax_avg": null,
+        "evidence_count": 1,
+        "ref_dois": []
+      },
+      {
+        "material": "graphene",
+        "qmax_mg_g": null,
+        "qmax_avg": null,
+        "evidence_count": 4,
+        "ref_dois": [
+          "10.1142/S0217984917503353",
+          "10.1016/j.cplett.2017.08.001"
+        ]
+      },
+      {
+        "material": "CNT",
+        "qmax_mg_g": null,
+        "qmax_avg": null,
+        "evidence_count": 2,
+        "ref_dois": [
+          "10.1007/s11051-025-06213-5"
+        ]
+      },
+      {
+        "material": "硅胶",
+        "qmax_mg_g": null,
+        "qmax_avg": null,
+        "evidence_count": 1,
+        "ref_dois": [
+          "10.3390/ijms19102851"
+        ]
+      },
+      {
+        "material": "silica",
+        "qmax_mg_g": null,
+        "qmax_avg": null,
+        "evidence_count": 1,
+        "ref_dois": [
+          "10.3390/ijms19102851"
+        ]
+      },
+      {
+        "material": "MOF",
+        "qmax_mg_g": null,
+        "qmax_avg": null,
+        "evidence_count": 6,
+        "ref_dois": [
+          "10.1039/c6ra07637h"
+        ]
+      },
+      {
+        "material": "石墨烯",
+        "qmax_mg_g": null,
+        "qmax_avg": null,
+        "evidence_count": 2,
+        "ref_dois": [
+          "10.1016/j.cplett.2017.08.001"
+        ]
+      }
+    ],
+    "total_performance_ki": 108
+  },
+  "engineering_constraints": [
+    {
+      "parameter": "实验温度 (Experimental temperature)",
+      "value": "20",
+      "ref_doi": "10.1021/acsanm.1c02153"
+    },
+    {
+      "parameter": "氯仿检测方法 Chloroform detection method",
+      "value": "顶空气相色谱法 (Headspace GC with ECD)",
+      "ref_doi": "10.1016/S0008-6223(00)00230-X"
+    },
+    {
+      "parameter": "多组分竞争吸附选择性范围",
+      "value": "1.17 - 2.22",
+      "ref_doi": "10.1021/je970081a"
+    },
+    {
+      "parameter": "共溶剂(甲醇)存在下的选择性范围",
+      "value": "1.01 - 2.07",
+      "ref_doi": "10.1021/je970081a"
+    },
+    {
+      "parameter": "共溶剂对土壤吸附容量的影响",
+      "value": "土壤的平衡吸附容量随甲醇体积分数增加而显著下降",
+      "ref_doi": "10.1021/je970081a"
+    },
+    {
+      "parameter": "工程约束 - 再生方法",
+      "value": "可通过在氧气流中高温煅烧去除吸附的有机物",
+      "ref_doi": null
+    },
+    {
+      "parameter": "4L1-Zn@NR膜对水的接触角",
+      "value": "112",
+      "ref_doi": "10.1021/acsami.3c09009"
+    },
+    {
+      "parameter": "4L1-Zn@NR膜的循环稳定性",
+      "value": "10次",
+      "ref_doi": "10.1021/acsami.3c09009"
+    },
+    {
+      "parameter": "乙腈吸附的工程约束",
+      "value": "需要在低温（<50°C）和较高浓度下才能有效吸附；高温（>50°C）和低浓度（<300 ppm）下效果差",
+      "ref_doi": "10.1016/j.jhazmat.2007.11.065"
+    },
+    {
+      "parameter": "添加剂对吸附的影响 Effect of Additives",
+      "value": "酸（乙酸）和醚类添加剂会与分析物竞争木质素分子上的结合位点，导致吸附比例显著下降。",
+      "ref_doi": "10.3390/ijms19102851"
+    }
+  ],
+  "occurrence_patterns": [
+    {
+      "parameter": "氯仿环境浓度",
+      "value": "海水和土壤中高达数十 mg/L；全球大气平均浓度 90 × 10⁻⁶ mg/L；室内空气浓度是室外的5-12倍",
+      "ref_doi": "10.1016/j.carbon.2020.08.020"
+    },
+    {
+      "parameter": "氯仿在水中的环境浓度",
+      "value": "数十至数百微克每升",
+      "ref_doi": "10.1021/acsami.3c09009"
+    }
+  ],
+  "molecular_features_for_biomimetic_matching": [
+    "可电离",
+    "可配位",
+    "大分子",
+    "氯代",
+    "疏水性",
+    "芳香环"
+  ],
+  "recommended_biomimetic_prototypes": [
+    "lotus-leaf",
+    "plant-tannin",
+    "polydopamine-coating"
+  ]
+}

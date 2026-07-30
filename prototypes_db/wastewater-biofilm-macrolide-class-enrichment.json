@@ -1,0 +1,209 @@
+{
+  "id": "wastewater-biofilm-macrolide-class-enrichment",
+  "name_zh": "成熟污水生物膜大环内酯类别富集界面",
+  "name_en": "Mature Wastewater Biofilm Macrolide-Class Enrichment Interface",
+  "organism": {
+    "scientific": "混合微生物群落（成熟失活污水生物膜 / MBBR 载体生物膜；EPS 与磷脂界面构成）",
+    "category": "微生物"
+  },
+  "biomimetic_dimension": "系统仿生",
+  "features": [
+    "网状"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": null,
+    "note": "系统级界面富集原型；performance_data 为空，未从姊妹项目搬运任何分配系数/去除率数值。"
+  },
+  "library_tier": "exploratory",
+  "lifecycle_status": "active",
+  "coverage": "partial",
+  "status": "active",
+  "provenance_summary": {
+    "n_papers": 2,
+    "n_verified": 0,
+    "n_unverified": 1,
+    "note": "Torresi 2017 和 Burzio 2024 已作为来源线索识别，但未完成全文页码和逐字引文审计。可保留的文献线索是成熟生物膜/颗粒污泥对部分正电微污染物的分配；‘浅层阴离子—相邻低极性区’为空间机制假说，不是来源事实。performance_data 为空。"
+  },
+  "mechanisms": [
+    {
+      "mechanism_id": "BIOFILM-001",
+      "name": "成熟污水生物膜对大环内酯类的类别级分配富集",
+      "description": "Torresi 2017 在痕量、真实二级出水、失活生物膜条件下研究多种微污染物在不同厚度生物膜中的扩散与吸附；较厚的成熟生物膜对克拉霉素/红霉素/罗红霉素等大环内酯表现出接近的高分配，而对若干无关阳离子药物明显较低——呈现‘大环内酯类别级富集’现象（失活生物膜已排除生物降解为唯一解释）",
+      "基本原理": "来源提示较厚生物膜的孔隙/可达性可能提高部分正电微污染物分配；‘重复出现的浅层弱阴离子区 + 相邻低极性区’是用于材料设计的解释假说，当前不能作为已证实生物膜微结构。",
+      "source": "literature",
+      "ref_doi": "10.1016/j.watres.2017.06.027",
+      "verification": "needs_review",
+      "verification_quote": "Diffusion and sorption of organic micropollutants in biofilms with varying thicknesses",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "两亲性大环内酯抗生素（克拉霉素/红霉素/罗红霉素）：带正电去氧糖区 + 较大低极性内酯宏环，是被类别级富集的客体",
+          "basis": "llm_inferred",
+          "evidence_label": "needs_review",
+          "source": "10.1016/j.watres.2017.06.027",
+          "locator": "title",
+          "quote": "Diffusion and sorption of organic micropollutants in biofilms with varying thicknesses",
+          "scope_match": "Keywords: sorption, micropollutants, biofilms"
+        },
+        "bio_structure": {
+          "text": "成熟（失活）污水生物膜为水化多孔基质；较厚膜可能通过更高孔隙与可达性提高部分正电微污染物分配。EPS/磷脂空间界面的具体成因仍待验证。",
+          "basis": "llm_inferred",
+          "evidence_label": "needs_review",
+          "source": "10.1016/j.watres.2017.06.027",
+          "locator": "title",
+          "quote": "biofilms with varying thicknesses",
+          "scope_match": "Keywords: biofilms, thicknesses"
+        },
+        "interaction": {
+          "text": "大环内酯带正电区在水化阴离子浅层被静电锚定，较大低极性骨架同时接触相邻疏水区，形成界面取向分配；Burzio 2024 亦观察到正电微污染物(含克拉霉素/红霉素)向颗粒污泥/泡沫分配",
+          "basis": "llm_inferred",
+          "evidence_label": "needs_review",
+          "source": "10.1016/j.watres.2017.06.027",
+          "locator": "title",
+          "quote": "sorption of organic micropollutants in biofilms",
+          "scope_match": "Keywords: sorption, micropollutants, biofilms"
+        },
+        "why_it_works": {
+          "text": "重复出现的‘浅层弱阴离子—相邻低极性’界面比随机官能团分布更利于体积较大的两亲大环内酯分配；界面数量、可达路径与组织方式可能比酸量总和更重要（机理层解释，待 EPS/磷脂扰动实验证实）",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "厚度依赖：较厚成熟膜可能显示更高分配，较薄膜未稳定显示同样优势；富集现象和界面成因均须通过全文及结构对照复核（定性）",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": "title",
+            "quote": "biofilms with varying thicknesses",
+            "scope_match": "Keywords: biofilms, thicknesses",
+            "source_asset": null
+          },
+          {
+            "text": "存在最佳浅层覆盖度：酸量继续增加但低极性面被遮蔽后性能可能下降（非单调，材料层假说）",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "把‘水化弱阴离子浅层 + 相邻低极性区、在多孔界面中重复出现’的空间规则迁移为材料：在多孔颗粒孔壁浅层稀疏布置弱阴离子位点并紧邻疏水区，可对体积较大的两亲大环内酯形成类别级分配；关键是空间组织与浅层覆盖度而非酸量最大化",
+        "verification_quote": "Diffusion and sorption of organic micropollutants in biofilms with varying thicknesses"
+      },
+      "source_doi": "10.1016/j.watres.2017.06.027",
+      "source_page": null,
+      "source_locator": "Water Res 2017 (PMID 28686941)（题录接地；未做全文 PDF 审计）",
+      "source_file": "Torresi et al. 2017 Water Research（DOI 10.1016/j.watres.2017.06.027，PMID 28686941）+ Burzio et al. 2024（正电微污染物向颗粒污泥/泡沫分配）",
+      "functional_groups": [
+        "水化弱阴离子浅层界面",
+        "相邻低极性(疏水)区"
+      ],
+      "key_structures": [
+        "网络结构"
+      ]
+    }
+  ],
+  "performance_data": [],
+  "engineering_constraints": [
+    {
+      "constraint": "系统级界面原型，非单分子",
+      "value": "本原型是‘生物膜界面的空间组织规则’，转译为材料时须在多孔颗粒中实现高密度连通孔壁界面 + 浅层稀疏弱阴离子/相邻疏水区，而非单一官能团",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "题录接地：生物膜厚度影响微污染物吸附分配(Torresi 2017)",
+      "source": "literature",
+      "ref_doi": "10.1016/j.watres.2017.06.027"
+    }
+  ],
+  "narrative": {
+    "entries": [
+      {
+        "source_file": "Torresi et al. 2017 Water Research（DOI 10.1016/j.watres.2017.06.027，PMID 28686941）+ Burzio et al. 2024",
+        "paper_id": "2017-Torresi-biofilm-micropollutant-sorption",
+        "sections": {
+          "problem_definition": "痕量大环内酯抗生素(克拉霉素/红霉素/罗红霉素)在市政二级出水中需选择性去除；如何在真实水基质下对‘一类’两亲大分子形成类别级富集，而非依赖单一分子印迹。",
+          "biological_solution": "Torresi 2017(Water Res, PMID 28686941)在痕量、真实二级出水、失活生物膜条件下研究 23 种微污染物在不同厚度生物膜中的扩散与吸附：较厚成熟生物膜对克拉霉素/红霉素/罗红霉素表现出接近的高分配，而若干无关阳离子药物明显较低，呈‘大环内酯类别级富集’；失活膜排除了生物降解为唯一解释。Burzio 2024 亦观察到正电微污染物(含克拉霉素/红霉素)向颗粒污泥/泡沫分配。机制解释：成熟生物膜水化多孔界面(EPS/磷脂)以重复出现的浅层弱阴离子区+相邻低极性区，对带正电区+大低极性骨架的两亲大环内酯提供类别级分配环境。",
+          "key_features": "必须保留：① 水化弱阴离子浅层位点；② 紧邻的低极性(疏水)区；③ 该‘阴离子—低极性相邻界面’在多孔结构中重复出现且水可接近。可灵活调整：孔壁覆盖度、界面密度。须警惕：类别富集是事实，‘由某一 EPS/磷脂界面造成’待验证；薄膜无同样优势。",
+          "design_mapping": "仿生映射：成熟生物膜的‘浅层阴离子—相邻低极性重复界面’→ 多孔颗粒孔壁浅层稀疏弱阴离子+相邻疏水区，对大环内酯类别级富集(源项目 MAC-IF1 概念)。注意：为系统级空间规则的转译假说；须以‘均匀分布/深层分布/物理混合/总酸量梯度’为因果对照，检验空间组织(而非酸量)是否带来非单调的类别选择。",
+          "explainability_anchors": "设计溯源：成熟生物膜对部分正电微污染物分配为待全文复核的来源线索；浅层阴离子-相邻疏水重复界面及其材料实现均为 llm_inferred 假说。"
+        }
+      }
+    ]
+  },
+  "design_translation": [
+    {
+      "idea": "把成熟污水生物膜的‘水化弱阴离子浅层 + 相邻低极性区、在多孔界面重复出现’的空间规则移植到多孔颗粒：在孔壁浅层稀疏布置弱阴离子位点(羧酸)并紧邻疏水区，构建对大环内酯(克拉霉素/红霉素/罗红霉素)类别级富集的高密度连通界面，而非追求酸量最大化或单分子印迹",
+      "specific_functional_group": "浅层稀疏弱阴离子位点(羧酸/弱酸)+ 紧邻低极性(烃/芳香)区；高密度连通孔壁界面",
+      "material_handle": "St–DVB 多孔球上短时光接枝低覆盖度丙烯酸(AA)形成浅层弱阴离子区，控制覆盖度与空间分布；避免连续功能壳(源项目 MAC-IF1 路线)",
+      "target_interaction": "大环内酯带正电去氧糖区的浅层静电锚定 + 大低极性内酯宏环与相邻疏水区接触",
+      "source_tier": "llm_inference",
+      "evidence_tier": "inspiration（类别富集为事实层(Torresi 2017)，界面成因与材料转译为空间规则假说，须以空间分布/总酸量对照分离贡献；无搬运分配系数数值）",
+      "examples": [],
+      "design_principle": "对‘一类’两亲大分子的选择性可来自界面的空间组织(浅层阴离子-相邻低极性重复界面)而非单一官能团总量或分子印迹",
+      "implementation_example": "低覆盖度 AA 光接枝 St–DVB 多孔球，浅层弱阴离子+相邻疏水区(源项目 MAC-IF1 假说，无实验数据)",
+      "constraints": "薄层/均匀分布无类别优势；毫米多孔球内部能否形成可重复、可达且不堵孔的浅层结构待证；蛋白样 DOM 堵孔与传质限制辨识度",
+      "failure_modes": "退化为普通 mixed-mode 工程材料；酸量最大化反而遮蔽低极性面致性能下降；无法区分大环内酯与其他阳离子药物",
+      "material_realization_examples": []
+    }
+  ],
+  "honesty_ledger": {
+    "facts": [],
+    "leads": [
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "成熟污水生物膜对大环内酯类的类别级分配富集",
+        "basis": "source_identified_needs_review",
+        "note": "Torresi 2017 Water Res(PMID 28686941，DOI 10.1016/j.watres.2017.06.027)题录级接地(DOI 联网核验真实，未做全文 PDF 页码审计)；Burzio 2024 佐证正电微污染物向颗粒污泥分配。类别富集为事实层，界面成因待验证"
+      }
+    ],
+    "inferences": [
+      {
+        "type": "design_translation",
+        "index": 0,
+        "idea": "生物膜浅层阴离子-相邻低极性重复界面转译为多孔孔壁类别富集位点",
+        "basis": "llm_inferred",
+        "label": "inspiration",
+        "note": "系统级空间规则的转译假说(源项目 MAC-IF1)；须以空间分布/总酸量/物理混合对照分离‘空间组织’的独立贡献；无搬运分配系数数值"
+      }
+    ],
+    "boundary_notes": [
+      "Torresi 2017 + Burzio 2024 仅完成来源识别，尚未完成全文页码和逐字引文审计，不得把空间界面解释标成来源事实",
+      "‘大环内酯类别富集’为事实层；‘由某一 EPS/磷脂界面造成’与材料浅层结构可制造性均待验证(源项目 B0/M0 门)",
+      "较薄膜未显示同样类别优势；是否存在最佳浅层覆盖度仍待验证",
+      "performance_data 为空：未从姊妹项目搬运任何分配系数/去除率数值(知识隔离红线)",
+      "所有 llm_inferred 边界为定性，无数值阈值，gate_level=soft"
+    ],
+    "missing_pdf_items": [
+      "Torresi et al. 2017 Water Research 全文 PDF(quote 取自题录)",
+      "Burzio et al. 2024 全文"
+    ],
+    "generated_by": "track2b-extraction-2026-07-29",
+    "note": "诚实优先：类别富集事实题录级接地；界面成因与材料转译为 inspiration/假说；无搬运数值。系统级(系统仿生)原型。"
+  },
+  "boundary_rules": [
+    {
+      "rule": "类别富集依赖‘浅层弱阴离子—相邻低极性’界面在多孔结构中重复出现且水可接近；薄层/均匀/深层分布无同样类别优势",
+      "source_mechanism": "成熟污水生物膜对大环内酯类的类别级分配富集",
+      "gate_level": "soft",
+      "basis": "llm_inferred"
+    }
+  ],
+  "mechanism_tags": [
+    "静电吸附",
+    "疏水分配",
+    "孔道限域分子筛分"
+  ]
+}

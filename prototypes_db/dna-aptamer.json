@@ -1,0 +1,172 @@
+{
+  "id": "dna-aptamer",
+  "name_zh": "DNA 适配体",
+  "name_en": "Dna Aptamer",
+  "organism": {
+    "scientific": "Synthetic DNA (合成DNA)",
+    "category": "仿生材料"
+  },
+  "biomimetic_dimension": "分子仿生",
+  "features": [],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": null,
+    "note": "测过的 pH/温度范围，不是适用范围。仅从 performance_data 中实际测试过的条件聚合。"
+  },
+  "performance_data": [],
+  "mechanisms": [
+    {
+      "name": "DNA 适配体特异性识别捕获",
+      "description": "DNA 适配体通过三维构象特异性识别并结合目标污染物分子",
+      "source": "llm_inference",
+      "causal_chain": {
+        "transferable_principle": "DNA 适配体的特异性识别能力可用于目标污染物的选择性捕获（placeholder）",
+        "pollutant_feature": {
+          "text": "未验证 — 需补充 DNA 适配体吸附文献",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "DNA 适配体的三维构象识别结构",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "适配体-目标分子特异性结合",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "placeholder — 需补充文献后方可用于设计决策",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "placeholder 原型 — 无 verified 性能数据，design_translation 为 llm_inference",
+            "parameter": "prototype_status",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "no_reference_available"
+          }
+        ]
+      },
+      "evidence_type": "lead_inference",
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "brief_visibility": "hidden"
+    }
+  ],
+  "narrative": {
+    "entries": []
+  },
+  "engineering_constraints": [
+    {
+      "constraint": "不适用于高温环境(>60°C)，DNA链热变性导致识别结构丧失",
+      "value": "60",
+      "unit": "°C",
+      "relevance": "high",
+      "explanation": "DNA aptamer 的三级结构在高温下变性，失去靶标识别能力",
+      "source": "domain_knowledge",
+      "ref_doi": null
+    },
+    {
+      "constraint": "不适用于核酸酶丰富的环境，DNA链被酶切降解",
+      "value": null,
+      "unit": null,
+      "relevance": "high",
+      "explanation": "环境中 DNase 会水解 DNA aptamer，导致功能丧失",
+      "source": "domain_knowledge",
+      "ref_doi": null
+    },
+    {
+      "constraint": "未接地前不得给高权重——当前 performance_data=0，match_weights=0",
+      "value": null,
+      "unit": null,
+      "relevance": "high",
+      "explanation": "BMDL rebalance Q3 decision: 保留为 root prototype 但标记 needs_literature / low-evidence",
+      "source": "bmdl_rebalance",
+      "ref_doi": null
+    }
+  ],
+  "provenance_summary": {
+    "n_papers": 0,
+    "n_verified": 0,
+    "n_unverified": 0
+  },
+  "coverage": "none",
+  "status": "needs_literature",
+  "design_translation": [
+    {
+      "idea": "利用 DNA 适配体的特异性识别和结合能力进行目标污染物检测和捕获",
+      "specific_functional_group": "适配体的碱基序列形成的三维构象",
+      "material_handle": "化学合成适配体，固定化在载体上",
+      "target_interaction": "适配体与目标分子的特异性结合（Kd 纳摩尔级）",
+      "source_tier": "llm_inference",
+      "examples": [],
+      "design_principle": "DNA适配体通过三维构象特异性识别并结合目标分子。可用于设计高选择性污染物捕获系统",
+      "constraints": "核酸酶降解；合成成本高；温度/pH敏感；规模化困难",
+      "implementation_example": "SELEX筛选→DNA合成→固定化在载体上→选择性吸附柱"
+    }
+  ],
+  "library_tier": "core",
+  "lifecycle_status": "active",
+  "honesty_ledger": {
+    "facts": [
+      {
+        "type": "evidence_status",
+        "status": "placeholder",
+        "note": "Placeholder prototype — no verified adsorption data. DNA aptamer literature for pollutant capture needed.",
+        "basis": "yao_decision_2026_06_20"
+      }
+    ],
+    "leads": [],
+    "inferences": [
+      {
+        "type": "design_translation",
+        "index": 0,
+        "idea": "利用 DNA 适配体的特异性识别和结合能力进行目标污染物检测和捕获",
+        "basis": "llm_inference"
+      },
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "DNA 适配体特异性识别捕获",
+        "basis": "llm_inference"
+      }
+    ],
+    "generated_by": "P1d-补全",
+    "note": "Empty shell prototype — mechanism is llm_inference placeholder with boundary_conditions",
+    "boundary_notes": [
+      "DNA aptamer is synthetic but mimics natural nucleic acid recognition — classified as molecular_biomimetic (分子仿生)",
+      "Current evidence status: needs_literature — 0 performance_data, 0 match_weights",
+      "Must not receive high match_weights until grounded with from-source mechanism evidence",
+      "Temperature and nuclease stability are critical boundary conditions"
+    ]
+  },
+  "boundary_conditions": [
+    {
+      "text": "当前无 verified 性能数据，design_translation 为 llm_inference。需补充 DNA 适配体吸附文献后方可用于设计决策",
+      "parameter": "literature_coverage",
+      "condition": {
+        "operator": "qualitative",
+        "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+    }
+  ],
+  "scope_note": "Placeholder prototype — no verified adsorption data. DNA aptamer literature for pollutant capture needed.",
+  "evidence_status": "placeholder",
+  "mechanism_tags": [
+    "几何识别"
+  ]
+}

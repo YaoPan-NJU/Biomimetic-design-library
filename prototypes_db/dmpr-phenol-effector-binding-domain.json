@@ -1,0 +1,359 @@
+{
+  "id": "dmpr-phenol-effector-binding-domain",
+  "name_zh": "DmpR 苯酚效应物结合域（A 域）",
+  "name_en": "DmpR Phenol Effector-Binding Domain (A domain / sensory domain)",
+  "organism": {
+    "scientific": "Pseudomonas putida KCTC 1452（DmpR 苯酚响应转录调控蛋白，又称 CapR）",
+    "category": "微生物"
+  },
+  "biomimetic_dimension": "分子仿生",
+  "features": [
+    "分子筛分"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": null,
+    "note": "DmpR A 域为胞内转录调控蛋白的效应物结合域（分子识别原型），本库无其吸附性能测试条件；performance_data 为空，故吸附测试条件全空。"
+  },
+  "library_tier": "extended",
+  "lifecycle_status": "active",
+  "coverage": "full",
+  "status": "active",
+  "source_scheme": "S14_A01 (BPA, score 86, passed) — DmpR 酚效应物传感器固定酚锚 + 桥连区空间门转译",
+  "provenance_summary": {
+    "n_papers": 1,
+    "n_verified": 9,
+    "n_unverified": 0,
+    "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与硬边界条数（DMPR-001 四要素+1 硬边界=5，DMPR-002 四要素=4）。机制接地限于 DmpR A 域与苯酚/烷基取代酚效应物的天然结合模式及构象激活（PDB 6IY8 + Park 2020 Nat Commun）；2,6-DCP 水相吸附转译为 design_translation（llm_inferred/inspiration），无吸附性能数据。正文 quote 逐字取自 RCSB PDB 6IY8 沉积记录（TITLE/HETNAM/SITE）与 PMC7264223 开放获取全文 XML 及 Crossref 摘要（可核验），未做全文 PDF 审计。"
+  },
+  "mechanisms": [
+    {
+      "mechanism_id": "DMPR-001",
+      "name": "疏水腔与 His100/Trp128 酚羟基定位对芳香效应物的识别",
+      "description": "DmpR 的 A 域（感觉域）以 vinyl-4-reductase（V4R）支架的（β/α）4 桶构成反平行发夹基序围成的封闭疏水腔（约 24–36 Å³）；苯酚芳环入腔，腔壁主要为 Phe93、Trp128、Tyr155、Tyr170、Tyr159 等疏水残基，酚羟基定位于 His100 与 Trp128 之间（氢键/定位功能）。PDB 6IY8（chain A）SITE AC1 记录的苯酚结合位点残基为 Pro97、His100、Val108、Met126、Trp128、Ala156、Ser160，与正文 His100/Trp128 描述一致。苯酚与 DmpR 的结合亲和力为低微摩尔级（DmpRΔD Kd 约 12 μM，全长约 16 μM）",
+      "基本原理": "疏水腔按尺寸/形状容纳芳环（范德华/疏水效应），保守 His100 与 Trp128 方向性定位酚羟基；'疏水腔形状读出 + 酚羟基头基锚定'的组合使 A 域在无金属参与下选择性识别苯酚与烷基取代酚等芳香效应物，并区别于无羟基的甲苯/二甲苯类效应物",
+      "source": "literature",
+      "ref_doi": "10.1038/s41467-020-16562-5",
+      "verification": "verified",
+      "verification_quote": "The hydroxyl group of the phenol is located between His100 and Trp128, indicating a ligand-positioning function of these residues.",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "苯酚（DmpR 天然芳香效应物；单苯环 + 酚羟基的小芳香分子；PDB 6IY8 配体 IPH 即 PHENOL，分子式 C6H6O）。DmpR（di-methyl phenol regulator，又称 CapR）源于 Pseudomonas putida KCTC 1452，为感应酚类化合物的单组分 bEBP，其 A 域天然结合苯酚及烷基取代酚效应物",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1038/s41467-020-16562-5",
+          "locator": "PDB 6IY8, HETNAM (IPH) / Nat Commun 11:2728",
+          "quote": "IPH PHENOL",
+          "scope_match": "Keywords: IPH, phenol"
+        },
+        "bio_structure": {
+          "text": "A 域为 N 端感觉域，以 vinyl-4-reductase（V4R）支架构成核心（β/α）4 桶，经反平行发夹基序围成封闭腔（约 24–36 Å³）；腔壁主要由疏水残基 Phe93、Trp128、Tyr155、Tyr170、Tyr159 构成；保守 Trp128 位于苯酚结合位点与锌结合位点之间（残基按 PDB 6IY8 chain A / 论文编号，结晶构建体为 DmpRΔD）",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1038/s41467-020-16562-5",
+          "locator": "PMC7264223, Results/Fig. 3 / article 2728",
+          "quote": "The cavity is primarily lined by hydrophobic residues, including Phe93, Trp128, Tyr155, Tyr170, and Tyr159",
+          "scope_match": "Keywords: hydrophobic, Phe93, Trp128, cavity"
+        },
+        "interaction": {
+          "text": "酚羟基定位于 His100 与 Trp128 之间（氢键/配体定位功能）；芳环由疏水腔（Phe93、Trp128、Tyr155、Tyr170、Tyr159）容纳。PDB 6IY8 SITE AC1（chain A）记录的苯酚结合位点残基为 Pro97、His100、Val108、Met126、Trp128、Ala156、Ser160，与正文 His100/Trp128 定位描述一致",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1038/s41467-020-16562-5",
+          "locator": "PMC7264223, Results/Fig. 3; PDB 6IY8 SITE AC1 / article 2728",
+          "quote": "The hydroxyl group of the phenol is located between His100 and Trp128, indicating a ligand-positioning function of these residues.",
+          "scope_match": "Keywords: hydroxyl, His100, Trp128, phenol"
+        },
+        "why_it_works": {
+          "text": "His100 保守存在于其他酚响应调控蛋白（PoxR、MopR），而在甲苯/二甲苯响应 XylR 中被酪氨酸取代，提示 His100 介导的酚羟基定位是酚类与甲苯类效应物特异性的关键决定簇；疏水腔与羟基定位的组合赋予 DmpR 对苯酚的低微摩尔级亲和力（DmpRΔD Kd 约 12 μM，全长约 16 μM）",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1038/s41467-020-16562-5",
+          "locator": "PMC7264223, Results/Fig. 3 / article 2728",
+          "quote": "His100 is conserved in other phenol-responsive regulatory proteins, such as PoxR and MopR, while it is substituted by tyrosine in the toluene/xylene-responsive XylR",
+          "scope_match": "Keywords: His100, phenol-responsive, PoxR, XylR, tyrosine"
+        },
+        "boundary_conditions": [
+          {
+            "text": "口袋几何-尺寸互补：疏水腔为反平行发夹基序围成的封闭小腔（约 24–36 Å³），与单苯环尺寸/形状互补；腔体体积随 lining 残基位移而变（P1 约 23.59 Å³ 对 P2 约 36.91 Å³），取代基过大的效应物可能无法适配",
+            "parameter": "pocket_volume",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "from_source",
+            "verification": "verified",
+            "gate_level": "hard",
+            "locator": "PMC7264223, Results/Suppl. Fig. 6",
+            "quote": "due to marginal shifts in the residues lining the pocket, including Tyr90, Phe93, His100, Val113, Phe122, Tyr159 and Phe170",
+            "scope_match": "Keywords: pocket, residues, Phe93, His100",
+            "source_asset": null
+          },
+          {
+            "text": "邻位取代位阻：2,6-二氯苯酚（2,6-DCP）的 2,6 双邻位氯可能改变酚羟基可及性（影响其在 His100 与 Trp128 间的定位），大体积邻位氯亦可能与封闭发夹腔冲突；DmpR 已表征效应物为苯酚与烷基取代酚，其对双邻位氯取代卤代酚的亲和未在此接地，须实验验证（定性，无数值阈值）",
+            "parameter": "ortho_substituent",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          },
+          {
+            "text": "预组织与水竞争：疏水腔与酚羟基定位残基须在 A 域三级结构内维持预组织几何；完全暴露于体相水时水分子竞争羟基氢键、疏水效应削弱，识别减弱（定性，无数值阈值）",
+            "parameter": "wet_stability",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "预组织封闭疏水腔（与芳环尺寸/形状互补）+ 保守极性残基（His100/Trp128 型氢键给体/受体）对酚羟基的方向性定位，二者组合可在无金属参与下选择性识别'芳环 + 酚羟基头基'型分子，并区别于无羟基芳烃",
+        "verification_quote": "The hydroxyl group of the phenol is located between His100 and Trp128, indicating a ligand-positioning function of these residues."
+      },
+      "source_doi": "10.1038/s41467-020-16562-5",
+      "source_page": 2728,
+      "source_locator": "PDB 6IY8 / PMC7264223, Results (Fig. 3) / article 2728",
+      "source_file": "PDB 6IY8（RCSB 沉积数据：TITLE/HETNAM/SITE AC1）+ Nat Commun 11:2728（PMC7264223 全文 XML；未做本地全文 PDF 审计）",
+      "functional_groups": [
+        "疏水腔壁残基（Phe93、Trp128、Tyr155、Tyr170、Tyr159）",
+        "酚羟基定位残基（His100、Trp128）",
+        "V4R/（β/α）4 桶支架"
+      ],
+      "key_structures": [
+        "识别结构"
+      ]
+    },
+    {
+      "mechanism_id": "DMPR-002",
+      "name": "效应物结合诱导感觉域构象变化与下游信号传递",
+      "description": "苯酚结合 A 域诱导配体结合口袋构象变化，继而使感觉域 C 端柔性 α6 螺旋位移，经卷曲螺旋 B-linker 将效应物结合信号传递至下游 AAA+ ATPase 域，促进头对头二聚体进一步组装为活性四聚体并与 σ54-RNAP 相互作用，激活苯酚降解操纵子的 σ54 依赖转录",
+      "基本原理": "A 域的效应物识别与下游结构域激活经构象传播变构偶联：配体结合重塑口袋与感觉域 C 端，B-linker 传递该变化；此'识别-转录'偶联是 DmpR 作为单组分 bEBP 的工作方式，其识别部分（A 域）可作为酚类分子识别元件独立提取用于仿生设计",
+      "source": "literature",
+      "ref_doi": "10.1038/s41467-020-16562-5",
+      "verification": "verified",
+      "verification_quote": "The structural changes within the phenol binding sites and the downstream ATPase domains suggest that the effector binding signal is propagated through the coiled-coil helixes",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "苯酚（芳香效应物）结合 DmpR 感觉域形成 DmpR-苯酚复合物（PDB 6IY8 标题即 DmpR-phenol complex of Pseudomonas putida；苯酚结合 DmpR 形成两个头对头二聚体以头尾排列组成的四聚体）",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1038/s41467-020-16562-5",
+          "locator": "PDB 6IY8, TITLE / Nat Commun 11:2728",
+          "quote": "DMPR-PHENOL COMPLEX OF PSEUDOMONAS PUTIDA",
+          "scope_match": "Keywords: DMPR, phenol, complex"
+        },
+        "bio_structure": {
+          "text": "感觉（A）域经卷曲螺旋 B-linker 连接下游 AAA+ ATPase 域；苯酚复合物中感觉域 C 端构象改变，B-linker 呈非对称取向与角度，构成信号传递的结构基础",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1038/s41467-020-16562-5",
+          "locator": "PMC7264223, Abstract / article 2728",
+          "quote": "The DmpR-phenol complex exhibits altered conformations within the C-termini of the sensory domains and shows an asymmetric orientation and angle in its coiled-coil linkers",
+          "scope_match": "Keywords: DmpR-phenol, sensory domains, coiled-coil"
+        },
+        "interaction": {
+          "text": "苯酚结合感觉域诱导配体结合口袋构象变化，继而使感觉域 C 端柔性 α6 螺旋位移，进而改变卷曲螺旋 B-linker 位置与角度，将信号传至 ATPase 域",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1038/s41467-020-16562-5",
+          "locator": "PMC7264223, Discussion / article 2728",
+          "quote": "phenol binding in the sensory domain would induce a conformational change in the ligand binding pocket followed by the shift of the flexible α6 helix",
+          "scope_match": "Keywords: phenol binding, sensory domain, conformational change, α6 helix"
+        },
+        "why_it_works": {
+          "text": "效应物结合信号经卷曲螺旋螺旋（B-linker）传至下游 ATPase 域构象，使四聚 DmpR-苯酚复合物得以与 RNA 聚合酶 σ54 亚基相互作用并激活 σ54 依赖转录，构成'效应物识别-转录激活'的偶联通路",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1038/s41467-020-16562-5",
+          "locator": "PMC7264223, Abstract / article 2728",
+          "quote": "The structural changes within the phenol binding sites and the downstream ATPase domains suggest that the effector binding signal is propagated through the coiled-coil helixes",
+          "scope_match": "Keywords: effector binding, ATPase, coiled-coil, propagated"
+        },
+        "boundary_conditions": [
+          {
+            "text": "识别-激活偶联边界：完整转录激活需要 A 域与 B-linker、AAA+ ATPase 域的偶联；若仅提取 A 域分子识别元件用于吸附设计，则其变构激活输出不被移植，仅移植酚类结合口袋几何（定性，无数值阈值）",
+            "parameter": "domain_coupling",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "感觉域的效应物识别可经构象传播变构偶联至下游功能输出；用于吸附设计时可独立提取识别元件的口袋几何，变构输出为可选项（可转译为刺激响应开关）",
+        "verification_quote": "The structural changes within the phenol binding sites and the downstream ATPase domains suggest that the effector binding signal is propagated through the coiled-coil helixes"
+      },
+      "source_doi": "10.1038/s41467-020-16562-5",
+      "source_page": 2728,
+      "source_locator": "PMC7264223, Abstract/Results/Discussion; PDB 6IY8 TITLE",
+      "source_file": "Nat Commun 11:2728（PMC7264223 全文 XML）+ PDB 6IY8（RCSB 沉积数据：TITLE）",
+      "functional_groups": [
+        "苯酚结合口袋（同 DMPR-001）",
+        "卷曲螺旋 B-linker（信号传递）"
+      ],
+      "key_structures": [
+        "识别结构"
+      ]
+    }
+  ],
+  "performance_data": [],
+  "engineering_constraints": [
+    {
+      "constraint": "可溶蛋白/多聚体形态",
+      "value": "DmpR 为胞内可溶蛋白（单体约 66 kDa，苯酚结合活性四聚体约 264 kDa）；A 域识别依赖完整 V4R/（β/α）4 桶折叠，用作吸附须固定化/移植于固体载体",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "Park 2020：DmpR WT 约 66 kDa，苯酚存在下形成约 264 kDa 四聚体（BN-PAGE 与单分子光漂白 SMPB）",
+      "source": "literature",
+      "ref_doi": "10.1038/s41467-020-16562-5"
+    },
+    {
+      "constraint": "苯酚结合亲和力低微摩尔级",
+      "value": "DmpR-苯酚结合解离常数为低微摩尔级（DmpRΔD Kd 约 12 μM，全长约 16 μM）；识别低浓度酚类污染物受亲和力约束，材料化须以多价/局部浓缩增强有效亲和",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "Park 2020 正文（PMC7264223）：DmpRΔD 苯酚结合 Kd 约 12 μM，全长 DmpR 约 16 μM",
+      "source": "literature",
+      "ref_doi": "10.1038/s41467-020-16562-5"
+    },
+    {
+      "constraint": "口袋几何与邻位取代容忍度",
+      "value": "疏水腔为约 24–36 Å³ 封闭小腔，与单苯环互补；DmpR 已表征效应物为苯酚与烷基取代酚，双邻位卤代酚（如 2,6-DCP）的适配性未知",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "机理推断（基于正文口袋体积事实与 DmpR 效应物谱外推）",
+      "source": "llm_inference",
+      "ref_doi": null
+    }
+  ],
+  "narrative": {
+    "entries": [
+      {
+        "source_file": "Nat Commun 11:2728 / PDB 6IY8（Park et al. 2020，DOI 10.1038/s41467-020-16562-5，PMC7264223）",
+        "paper_id": "2020-Park-DmpR-phenol-bound-tetramer",
+        "sections": {
+          "problem_definition": "苯酚及取代酚是常见芳香族环境污染物，细菌需特异性感应它们以启动降解操纵子。DmpR（di-methyl phenol regulator，又称 CapR）源于 Pseudomonas putida KCTC 1452，是 σ54 依赖苯酚降解操纵子的单组分 AAA+ 转录激活蛋白（bEBP），其 N 端 A 域（感觉域）特异识别苯酚/取代酚效应物。A 域如何在分子层面识别酚类效应物、并将结合信号转化为转录激活，是芳香烃感应的机制基础问题。",
+          "biological_solution": "Park 等测定了苯酚结合活性态 DmpR 的晶体结构（PDB 6IY8，DmpRΔD 构建体）：苯酚结合 A 域形成由两个头对头二聚体以头尾排列组成的四聚体。A 域以 V4R 支架的（β/α）4 桶构成反平行发夹基序围成的封闭疏水腔（约 24–36 Å³）容纳苯酚芳环，腔壁主要为 Phe93、Trp128、Tyr155、Tyr170、Tyr159 等疏水残基；酚羟基定位于 His100 与 Trp128 之间（氢键/定位功能；PDB SITE AC1 记录结合残基 Pro97/His100/Val108/Met126/Trp128/Ala156/Ser160）。His100 保守存在于酚响应调控蛋白 PoxR/MopR，而在甲苯/二甲苯响应 XylR 中被酪氨酸取代，是酚类与甲苯类效应物特异性的关键决定簇。苯酚结合诱导口袋构象变化与感觉域 C 端 α6 螺旋位移，经卷曲螺旋 B-linker 将信号传至下游 AAA+ ATPase 域，激活 σ54 依赖转录。苯酚与 DmpR 的结合亲和力为低微摩尔级（DmpRΔD Kd 约 12 μM，全长约 16 μM）。",
+          "key_features": "必须保留：① 与单苯环尺寸/形状互补的封闭疏水腔（芳环容纳，范德华/疏水）；② 与酚羟基几何互补的保守极性锚（His100/Trp128 型氢键给体/受体）；③ 预组织的发夹/桶状口袋几何。可灵活调整：载体骨架、腔尺寸与疏水微环境、锚定基团化学（咪唑/脲/硫脲/硼酸酯）、是否保留变构输出。",
+          "design_mapping": "仿生映射：DmpR A 域'封闭疏水腔 + 酚羟基定位锚'→ 面向酚类（2,6-DCP）的识别位点两要素。边界声明：DmpR 天然结合苯酚/烷基取代酚（from_source），但其已表征效应物不含双邻位卤代酚；2,6-DCP 的 2,6 双邻位氯可能改变酚羟基可及性与封闭腔适配（llm_inferred 边界），DmpR 对 2,6-DCP 的结合未经实验验证；蛋白本身（可溶、约 66 kDa、四聚/折叠依赖）不可直接复制为吸附剂，只提取设计原则。",
+          "explainability_anchors": "设计溯源：苯酚在 DmpR A 域疏水腔的结合模式与 His100/Trp128 酚羟基定位（PDB 6IY8 + Park 2020，from_source）→ '封闭疏水腔 + 酚羟基极性锚'可迁移原理（from_source）→ 2,6-DCP 酚类识别位点设计（llm_inferred 启发，须实验验证）。"
+        }
+      }
+    ]
+  },
+  "design_translation": [
+    {
+      "idea": "将 DmpR A 域的'封闭疏水腔（与芳环尺寸/形状互补）+ His100/Trp128 型酚羟基定位锚'移植到多孔吸附材料，面向 2,6-二氯苯酚（2,6-DCP）：在孔壁构筑与氯代苯环尺寸/形状互补的疏水微腔，并按与酚羟基几何互补的方式预组织咪唑/脲/硫脲/硼酸酯类方向性氢键给体/受体锚，模拟 His100/Trp128 对酚羟基的夹持定位",
+      "specific_functional_group": "酚羟基锚定基团（咪唑型 N 给体/受体、脲/硫脲中性氢键给体、硼酸酯/邻位羟基），按与酚羟基二方向几何互补预组织排布；孔壁芳香/烷基链构成与氯代苯环互补的疏水微腔",
+      "material_handle": "介孔二氧化硅或交联聚合物骨架经硅烷偶联/表面引发聚合接枝咪唑/脲/硫脲/苯硼酸单体；以 2,6-DCP 或其形状模拟物分子印迹、刚性间隔臂控制腔尺寸与锚定基团间距/取向；孔壁以芳香/烷基链修饰营造疏水微环境",
+      "target_interaction": "酚羟基与预组织锚的方向性氢键（供体/受体）+ 芳环在疏水微腔的形状/疏水互补（π-π/范德华），2,6 邻位氯另提供卤键/疏水接触机会",
+      "source_tier": "llm_inference",
+      "evidence_tier": "inspiration（原理层外推：DmpR A 域天然结合苯酚/烷基取代酚接地于 PDB 6IY8 与 Park 2020；2,6-DCP 双邻位氯取代卤代酚的结合/吸附为 llm_inferred，DmpR 对 2,6-DCP 的结合未经验证，无吸附实验数据）",
+      "examples": [],
+      "design_principle": "DmpR A 域证明封闭疏水腔 + 保守 His100/Trp128 酚羟基定位可对酚类芳香效应物实现低微摩尔级特异识别（PDB 6IY8）；口袋几何与羟基锚两要素可独立于蛋白支架移植到人工孔壁",
+      "implementation_example": "咪唑/脲功能化、具 2,6-DCP 印迹疏水微腔的介孔二氧化硅或交联聚合物（无实验数据，仅为设计假设）",
+      "constraints": "2,6-DCP 的 2,6 双邻位氯可能改变酚羟基可及性与封闭腔适配（DmpR 天然口袋位阻边界）；DmpR 本身对卤代酚结合未验证，属原理层外推；水相中锚的水合竞争与共存酚/芳烃干扰是关键挑战；蛋白不可直接复制（可溶、约 66 kDa、四聚/折叠依赖），只提取设计原则",
+      "failure_modes": "邻位氯位阻使预组织酚羟基锚几何失效；疏水微腔对一切芳烃非特异吸附而降低 2,6-DCP 选择性；锚暴露体相水被氢键竞争淬灭；pH 改变酚羟基/锚的质子化态削弱识别",
+      "material_realization_examples": []
+    }
+  ],
+  "honesty_ledger": {
+    "facts": [
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "疏水腔与 His100/Trp128 酚羟基定位对芳香效应物的识别",
+        "basis": "from_source_verified",
+        "note": "Park 2020 Nat Commun（PDB 6IY8：配体 IPH=PHENOL；封闭疏水腔约 24–36 Å³，腔壁 Phe93/Trp128/Tyr155/Tyr170/Tyr159；酚羟基定位于 His100 与 Trp128 间；SITE AC1 残基 Pro97/His100/Val108/Met126/Trp128/Ala156/Ser160；His100 保守于 PoxR/MopR 而在 XylR 被 Tyr 取代；Kd 约 12–16 μM）。quote 逐字取自 PDB 沉积记录（HETNAM/SITE/TITLE）与 PMC7264223 全文 XML（可核验），未做全文 PDF 审计"
+      },
+      {
+        "type": "mechanism",
+        "index": 1,
+        "name": "效应物结合诱导感觉域构象变化与下游信号传递",
+        "basis": "from_source_verified",
+        "note": "Park 2020：苯酚结合诱导口袋构象变化与感觉域 C 端 α6 螺旋位移，经卷曲螺旋 B-linker 传至 AAA+ ATPase 域，四聚体与 σ54-RNAP 作用激活转录；quote 取自 PMC7264223 摘要/讨论与 PDB 6IY8 TITLE"
+      }
+    ],
+    "leads": [],
+    "inferences": [
+      {
+        "type": "design_translation",
+        "index": 0,
+        "idea": "将 DmpR A 域封闭疏水腔 + 酚羟基定位锚移植到多孔材料以识别 2,6-DCP",
+        "basis": "llm_inferred",
+        "label": "inspiration",
+        "note": "DmpR 已表征效应物为苯酚与烷基取代酚，不含双邻位卤代酚；2,6-DCP 的 2,6 双邻位氯可能改变酚羟基可及性与封闭腔适配，DmpR 对 2,6-DCP 的结合未经验证；转译为'2,6-DCP 选择性吸附材料'属原理层外推，无吸附实验数据，亲和力与选择性须实验验证"
+      },
+      {
+        "type": "fact_derivation",
+        "index": 0,
+        "name": "残基编号体系：正文残基号（His100/Trp128 等）按 PDB 6IY8 chain A / 论文编号，结晶构建体为 DmpRΔD（N 端 6×His 标签替换前 15 残基、缺 DNA 结合域、C119S/C137S）",
+        "basis": "llm_inferred",
+        "label": "numbering_derivation",
+        "note": "PDB SITE AC1（HIS A 100、TRP A 128 等）与正文 His100/Trp128 一致；条目残基名沿用论文/PDB chain A 编号。注：正文锌配位残基（Cys151/Glu172/Cys177/Cys185）与 PDB SITE AC2（CYS 149/GLU 172/CYS 175/CYS 183）编号略有出入，故条目不依赖锌位点编号"
+      }
+    ],
+    "boundary_notes": [
+      "本原型天然效应物为苯酚与烷基取代酚；机制 from_source 接地限于 A 域与这些效应物的结合模式及构象激活（PDB 6IY8 + Park 2020）",
+      "2,6-DCP 吸附材料转译为 design_translation（llm_inferred/inspiration），不得用作 2,6-DCP 吸附的 direct evidence；DmpR 对 2,6-DCP（双邻位氯卤代酚）的结合未在此接地",
+      "2,6 双邻位氯位阻可能改变酚羟基可及性与封闭腔适配，作 llm_inferred/soft 边界，不带数值阈值",
+      "无 2,6-DCP 吸附性能数据（qmax 等）；performance_data 为空，严格未从外部污染物知识库搬运任何性能数值（知识隔离红线）",
+      "DMPR-002 构象激活/信号传递要素用于说明识别-激活偶联，转译为吸附设计时仅提取识别口袋几何，变构输出为可选刺激响应开关"
+    ],
+    "missing_pdf_items": [
+      "Park 2020 Nat Commun 全文 PDF（quote 逐字取自 PMC7264223 开放获取全文 XML 与 RCSB PDB 6IY8 沉积记录，可核验；正文内精确页码未审计，locator 用 article 2728 与章节/图号）"
+    ],
+    "generated_by": "manual-curation-2026-07-21",
+    "note": "诚实优先：机制接地限于 DmpR A 域与苯酚/烷基取代酚的天然结合及构象激活（PDB 6IY8 + Park 2020）；2,6-DCP 吸附材料转译全部为 inspiration/外推"
+  },
+  "boundary_rules": [
+    {
+      "rule": "口袋几何-尺寸互补：封闭疏水腔（约 24–36 Å³）与单苯环互补，腔体体积随 protomer 构象/lining 残基位移而变，过大取代基效应物适配差",
+      "source_mechanism": "疏水腔与 His100/Trp128 酚羟基定位对芳香效应物的识别",
+      "gate_level": "hard",
+      "basis": "from_source"
+    },
+    {
+      "rule": "2,6-DCP 邻位取代位阻：2,6 双邻位氯可能改变酚羟基可及性与封闭腔适配，DmpR 对双邻位卤代酚亲和未接地（定性，无数值阈值）",
+      "source_mechanism": "疏水腔与 His100/Trp128 酚羟基定位对芳香效应物的识别",
+      "gate_level": "soft",
+      "basis": "llm_inferred"
+    },
+    {
+      "rule": "预组织与水竞争：疏水腔与酚羟基定位残基须维持预组织三级结构，水竞争削弱识别（定性，无数值阈值）",
+      "source_mechanism": "疏水腔与 His100/Trp128 酚羟基定位对芳香效应物的识别",
+      "gate_level": "soft",
+      "basis": "llm_inferred"
+    },
+    {
+      "rule": "识别-激活偶联边界：完整转录激活需 A 域-B-linker-ATPase 域偶联，仅提取识别元件时变构输出不被移植（定性，无数值阈值）",
+      "source_mechanism": "效应物结合诱导感觉域构象变化与下游信号传递",
+      "gate_level": "soft",
+      "basis": "llm_inferred"
+    }
+  ],
+  "mechanism_tags": [
+    "氢键",
+    "π-π堆积",
+    "疏水分配",
+    "孔道限域分子筛分",
+    "几何识别"
+  ]
+}

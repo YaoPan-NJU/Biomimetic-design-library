@@ -1,0 +1,143 @@
+{
+  "id": "biomineralization-template",
+  "name_zh": "生物矿化模板",
+  "name_en": "Biomineralization Template",
+  "organism": {
+    "scientific": "Biomineralization organisms (生物矿化生物)",
+    "category": "仿生材料"
+  },
+  "biomimetic_dimension": "过程仿生",
+  "features": [],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": null,
+    "note": "测过的 pH/温度范围，不是适用范围。仅从 performance_data 中实际测试过的条件聚合。"
+  },
+  "performance_data": [],
+  "mechanisms": [
+    {
+      "name": "生物矿化模板控制无机相成核生长",
+      "description": "有机基质（蛋白质、多糖）通过官能团（羧基、磷酸基）控制无机晶体的成核、取向和形貌",
+      "source": "llm_inference",
+      "causal_chain": {
+        "transferable_principle": "生物矿化模板控制无机相成核生长（placeholder — 无验证数据）",
+        "pollutant_feature": {
+          "text": "未验证 — 需补充生物矿化吸附文献",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "有机基质（蛋白质、多糖）的官能团（-COOH、-PO₄）",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.16085/j.issn.1000-6613.2021-2532",
+          "locator": "p.5",
+          "quote": "的EPS包裹，其通常含有多糖、蛋白质、核酸、腐",
+          "scope_match": "Keywords: 蛋白质, 多糖"
+        },
+        "interaction": {
+          "text": "有机模板官能团控制无机相成核和生长方向",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "placeholder — 需补充文献后方可用于设计决策",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "placeholder 原型 — 无 verified 性能数据，design_translation 为 llm_inference",
+            "parameter": "prototype_status",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "no_reference_available"
+          }
+        ]
+      },
+      "evidence_type": "lead_inference",
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "brief_visibility": "hidden"
+    }
+  ],
+  "narrative": {
+    "entries": []
+  },
+  "engineering_constraints": [],
+  "provenance_summary": {
+    "n_papers": 0,
+    "n_verified": 0,
+    "n_unverified": 0
+  },
+  "coverage": "none",
+  "status": "needs_literature",
+  "design_translation": [
+    {
+      "idea": "利用生物矿化模板控制无机材料的形貌和晶相",
+      "specific_functional_group": "有机基质的官能团（羧基、磷酸基）",
+      "material_handle": "有机模板（蛋白质、多糖）引导矿化",
+      "target_interaction": "有机基质的官能团控制无机相的成核和生长",
+      "source_tier": "llm_inference",
+      "examples": [],
+      "design_principle": "有机模板（蛋白质、多糖）的官能团（-COOH、-PO₄）控制无机晶体的成核、取向和形貌。可用于设计仿生矿化吸附剂",
+      "constraints": "模板降解后矿化形貌不可控；矿化速率受pH/温度影响；规模化困难",
+      "implementation_example": "有机模板（如胶原蛋白、纤维素）→ 矿化溶液浸泡 → 控制晶体生长 → 仿生矿化材料"
+    }
+  ],
+  "library_tier": "core",
+  "lifecycle_status": "active",
+  "honesty_ledger": {
+    "facts": [
+      {
+        "type": "evidence_status",
+        "status": "placeholder",
+        "note": "Placeholder prototype — no verified adsorption data. Design translation is llm_inference only. Needs literature before use in design decisions.",
+        "basis": "yao_decision_2026_06_20"
+      }
+    ],
+    "leads": [],
+    "inferences": [
+      {
+        "type": "design_translation",
+        "index": 0,
+        "idea": "利用生物矿化模板控制无机材料的形貌和晶相",
+        "basis": "llm_inference"
+      },
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "生物矿化模板控制无机相成核生长",
+        "basis": "llm_inference"
+      }
+    ],
+    "generated_by": "P1d-补全",
+    "note": "Empty shell prototype — mechanism is llm_inference placeholder with boundary_conditions"
+  },
+  "boundary_conditions": [
+    {
+      "text": "当前无 verified 性能数据，design_translation 为 llm_inference。需补充生物矿化吸附文献后方可用于设计决策",
+      "parameter": "literature_coverage",
+      "condition": {
+        "operator": "qualitative",
+        "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+    }
+  ],
+  "scope_note": "Placeholder prototype — no verified adsorption data. Design translation is llm_inference only. Needs literature before use in design decisions.",
+  "evidence_status": "placeholder",
+  "mechanism_tags": [
+    "生物矿化"
+  ]
+}

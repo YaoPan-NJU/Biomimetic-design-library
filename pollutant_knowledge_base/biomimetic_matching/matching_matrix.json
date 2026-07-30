@@ -1,0 +1,3317 @@
+{
+  "壬基酚": {
+    "molecular_features": [
+      "可电离",
+      "可配位",
+      "大分子",
+      "弱酸性",
+      "水溶性",
+      "疏水性",
+      "芳香环",
+      "酚羟基"
+    ],
+    "matched_prototypes": [
+      {
+        "prototype": "chitosan",
+        "total_weight": 6,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "水溶性→chitosan 规则命中"
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "氢键 机理匹配 (氢键)",
+          "evidence_count": 55
+        },
+        "performance_match": {
+          "hit": true,
+          "weight": 3,
+          "reason": "chitosan 实测 qmax=123.0 mg/g",
+          "ref_doi": "10.1021/acsami.5b08709"
+        },
+        "has_qmax": true,
+        "qmax_mg_g": 123.0
+      },
+      {
+        "prototype": "magnetic-bacteria",
+        "total_weight": 3,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": true,
+          "weight": 3,
+          "reason": "magnetic 实测 qmax=80.0 mg/g",
+          "ref_doi": "10.1016/j.jmmm.2005.02.034"
+        },
+        "has_qmax": true,
+        "qmax_mg_g": 80.0
+      },
+      {
+        "prototype": "alginate",
+        "total_weight": 3,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": true,
+          "weight": 3,
+          "reason": "alginate 有性能数据",
+          "ref_doi": "10.1016/j.jhazmat.2009.06.015"
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "cell-membrane-ion-channel",
+        "total_weight": 3,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": true,
+          "weight": 3,
+          "reason": "membrane 有性能数据",
+          "ref_doi": "10.1016/j.jes.2018.01.004"
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "sulfate-reducing-bacteria",
+        "total_weight": 2,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "沉淀 机理匹配 (沉淀)",
+          "evidence_count": 4
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "bone-structure",
+        "total_weight": 2,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "配位 机理匹配 (配位)",
+          "evidence_count": 2
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "oyster-shell",
+        "total_weight": 2,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "离子交换 机理匹配 (离子交换)",
+          "evidence_count": 1
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "lotus-leaf",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "疏水性→lotus-leaf 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "polydopamine-coating",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "疏水性→polydopamine-coating 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "plant-tannin",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "芳香环→plant-tannin 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      }
+    ],
+    "unmatched_mechanisms": [
+      "氧化",
+      "π-π"
+    ]
+  },
+  "罗红霉素": {
+    "molecular_features": [
+      "可电离",
+      "可配位",
+      "大分子",
+      "弱酸性",
+      "水溶性",
+      "疏水性",
+      "芳香环"
+    ],
+    "matched_prototypes": [
+      {
+        "prototype": "chitosan",
+        "total_weight": 3,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "水溶性→chitosan 规则命中"
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "氢键 机理匹配 (氢键)",
+          "evidence_count": 5
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "bone-structure",
+        "total_weight": 2,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "配位 机理匹配 (配位)",
+          "evidence_count": 2
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "lotus-leaf",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "疏水性→lotus-leaf 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "polydopamine-coating",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "疏水性→polydopamine-coating 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "plant-tannin",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "芳香环→plant-tannin 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      }
+    ],
+    "unmatched_mechanisms": [
+      "π-π",
+      "生物降解",
+      "氧化"
+    ]
+  },
+  "三氯甲烷": {
+    "molecular_features": [
+      "可电离",
+      "可配位",
+      "大分子",
+      "氯代",
+      "疏水性",
+      "芳香环"
+    ],
+    "matched_prototypes": [
+      {
+        "prototype": "chitosan",
+        "total_weight": 2,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "氢键 机理匹配 (氢键)",
+          "evidence_count": 1
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "lotus-leaf",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "疏水性→lotus-leaf 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "polydopamine-coating",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "疏水性→polydopamine-coating 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "plant-tannin",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "芳香环→plant-tannin 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      }
+    ],
+    "unmatched_mechanisms": [
+      "氧化",
+      "π-π"
+    ]
+  },
+  "β-六氯环己烷": {
+    "molecular_features": [
+      "可电离",
+      "可配位",
+      "弱酸性",
+      "氯代",
+      "水溶性",
+      "疏水性",
+      "芳香环"
+    ],
+    "matched_prototypes": [
+      {
+        "prototype": "chitosan",
+        "total_weight": 3,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "水溶性→chitosan 规则命中"
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "氢键 机理匹配 (氢键)",
+          "evidence_count": 6
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "lotus-leaf",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "疏水性→lotus-leaf 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "polydopamine-coating",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "疏水性→polydopamine-coating 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "plant-tannin",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "芳香环→plant-tannin 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      }
+    ],
+    "unmatched_mechanisms": [
+      "π-π"
+    ]
+  },
+  "双酚A（BPA）": {
+    "molecular_features": [
+      "内分泌干扰",
+      "可电离",
+      "可配位",
+      "大分子",
+      "弱酸性",
+      "水溶性",
+      "疏水性",
+      "芳香环",
+      "酚羟基"
+    ],
+    "matched_prototypes": [
+      {
+        "prototype": "chitosan",
+        "total_weight": 6,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "水溶性→chitosan 规则命中"
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "氢键 机理匹配 (氢键)",
+          "evidence_count": 363
+        },
+        "performance_match": {
+          "hit": true,
+          "weight": 3,
+          "reason": "chitosan 实测 qmax=250.0 mg/g",
+          "ref_doi": "10.1016/j.jtice.2017.04.030"
+        },
+        "has_qmax": true,
+        "qmax_mg_g": 250.0
+      },
+      {
+        "prototype": "magnetic-bacteria",
+        "total_weight": 3,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": true,
+          "weight": 3,
+          "reason": "magnetic 实测 qmax=256.0 mg/g",
+          "ref_doi": "10.1016/j.apt.2017.04.018"
+        },
+        "has_qmax": true,
+        "qmax_mg_g": 256.0
+      },
+      {
+        "prototype": "cell-membrane-ion-channel",
+        "total_weight": 3,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": true,
+          "weight": 3,
+          "reason": "membrane 实测 qmax=161.29 mg/g",
+          "ref_doi": "10.1016/j.watres.2006.09.011"
+        },
+        "has_qmax": true,
+        "qmax_mg_g": 161.29
+      },
+      {
+        "prototype": "polydopamine-coating",
+        "total_weight": 3,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "疏水性→polydopamine-coating 规则命中"
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "还原 机理匹配 (还原)",
+          "evidence_count": 16
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "bone-structure",
+        "total_weight": 2,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "离子交换 机理匹配 (离子交换)",
+          "evidence_count": 32
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "oyster-shell",
+        "total_weight": 2,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "离子交换 机理匹配 (离子交换)",
+          "evidence_count": 32
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "sulfate-reducing-bacteria",
+        "total_weight": 2,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "还原 机理匹配 (还原)",
+          "evidence_count": 16
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "lotus-leaf",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "疏水性→lotus-leaf 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "plant-tannin",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "芳香环→plant-tannin 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      }
+    ],
+    "unmatched_mechanisms": [
+      "π-π",
+      "氧化",
+      "生物降解",
+      "螯合",
+      "沉淀"
+    ]
+  },
+  "全氟己烷磺酸（PFHxS）": {
+    "molecular_features": [
+      "可电离",
+      "可配位",
+      "大分子",
+      "弱酸性",
+      "氟碳链",
+      "疏水性",
+      "芳香环"
+    ],
+    "matched_prototypes": [
+      {
+        "prototype": "chitosan",
+        "total_weight": 2,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "离子交换 机理匹配 (离子交换)",
+          "evidence_count": 8
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "bone-structure",
+        "total_weight": 2,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "离子交换 机理匹配 (离子交换)",
+          "evidence_count": 8
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "oyster-shell",
+        "total_weight": 2,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "离子交换 机理匹配 (离子交换)",
+          "evidence_count": 8
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "lotus-leaf",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "疏水性→lotus-leaf 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "polydopamine-coating",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "疏水性→polydopamine-coating 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "plant-tannin",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "芳香环→plant-tannin 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      }
+    ],
+    "unmatched_mechanisms": [
+      "氧化",
+      "π-π"
+    ]
+  },
+  "六氟环氧丙烷二聚酸": {
+    "molecular_features": [
+      "可电离",
+      "可配位",
+      "大分子",
+      "弱酸性",
+      "氟碳链",
+      "水溶性",
+      "疏水性"
+    ],
+    "matched_prototypes": [
+      {
+        "prototype": "cell-membrane-ion-channel",
+        "total_weight": 3,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": true,
+          "weight": 3,
+          "reason": "membrane 实测 qmax=8.26 mg/g",
+          "ref_doi": "10.1021/acsestengg.3c00515"
+        },
+        "has_qmax": true,
+        "qmax_mg_g": 8.26
+      },
+      {
+        "prototype": "chitosan",
+        "total_weight": 3,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "水溶性→chitosan 规则命中"
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "离子交换 机理匹配 (离子交换)",
+          "evidence_count": 6
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "bone-structure",
+        "total_weight": 2,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "离子交换 机理匹配 (离子交换)",
+          "evidence_count": 6
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "oyster-shell",
+        "total_weight": 2,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "离子交换 机理匹配 (离子交换)",
+          "evidence_count": 6
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "lotus-leaf",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "疏水性→lotus-leaf 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "polydopamine-coating",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "疏水性→polydopamine-coating 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      }
+    ],
+    "unmatched_mechanisms": [
+      "氧化"
+    ]
+  },
+  "五氯苯酚": {
+    "molecular_features": [
+      "可电离",
+      "可配位",
+      "大分子",
+      "弱酸性",
+      "氯代",
+      "水溶性",
+      "疏水性",
+      "芳香环",
+      "酚羟基"
+    ],
+    "matched_prototypes": [
+      {
+        "prototype": "chitosan",
+        "total_weight": 6,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "水溶性→chitosan 规则命中"
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "氢键 机理匹配 (氢键)",
+          "evidence_count": 28
+        },
+        "performance_match": {
+          "hit": true,
+          "weight": 3,
+          "reason": "chitosan 有性能数据",
+          "ref_doi": "10.1007/s10450-016-9796-7"
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "polydopamine-coating",
+        "total_weight": 3,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "疏水性→polydopamine-coating 规则命中"
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "还原 机理匹配 (还原)",
+          "evidence_count": 8
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "chlorella-cell-wall",
+        "total_weight": 3,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": true,
+          "weight": 3,
+          "reason": "cellulose 有性能数据",
+          "ref_doi": "10.1007/s11270-014-2048-0"
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "cellulose-nanocrystal",
+        "total_weight": 3,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": true,
+          "weight": 3,
+          "reason": "cellulose 有性能数据",
+          "ref_doi": "10.1007/s11270-014-2048-0"
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "cell-membrane-ion-channel",
+        "total_weight": 3,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": true,
+          "weight": 3,
+          "reason": "cellulose 有性能数据",
+          "ref_doi": "10.1007/s11270-014-2048-0"
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "bacterial-cellulose",
+        "total_weight": 3,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": true,
+          "weight": 3,
+          "reason": "cellulose 有性能数据",
+          "ref_doi": "10.1007/s11270-014-2048-0"
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "magnetic-bacteria",
+        "total_weight": 3,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": true,
+          "weight": 3,
+          "reason": "magnetic 有性能数据",
+          "ref_doi": "10.1016/j.chroma.2012.09.083"
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "bone-structure",
+        "total_weight": 2,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "离子交换 机理匹配 (离子交换)",
+          "evidence_count": 12
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "oyster-shell",
+        "total_weight": 2,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "离子交换 机理匹配 (离子交换)",
+          "evidence_count": 12
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "sulfate-reducing-bacteria",
+        "total_weight": 2,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "还原 机理匹配 (还原)",
+          "evidence_count": 8
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "lotus-leaf",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "疏水性→lotus-leaf 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "plant-tannin",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "芳香环→plant-tannin 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      }
+    ],
+    "unmatched_mechanisms": [
+      "π-π",
+      "氧化",
+      "生物降解",
+      "沉淀"
+    ]
+  },
+  "多氯联苯-209（PCB-209）": {
+    "molecular_features": [
+      "可配位",
+      "氯代",
+      "疏水性",
+      "芳香环"
+    ],
+    "matched_prototypes": [
+      {
+        "prototype": "chitosan",
+        "total_weight": 2,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "氢键 机理匹配 (氢键)",
+          "evidence_count": 3
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "lotus-leaf",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "疏水性→lotus-leaf 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "polydopamine-coating",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "疏水性→polydopamine-coating 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "plant-tannin",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "芳香环→plant-tannin 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      }
+    ],
+    "unmatched_mechanisms": [
+      "光降解",
+      "π-π"
+    ]
+  },
+  "2,3,7,8-四氯二苯并-p-二噁英（TCDD）": {
+    "molecular_features": [
+      "可电离",
+      "可配位",
+      "大分子",
+      "弱酸性",
+      "氯代",
+      "水溶性",
+      "疏水性",
+      "芳香环"
+    ],
+    "matched_prototypes": [
+      {
+        "prototype": "chitosan",
+        "total_weight": 3,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "水溶性→chitosan 规则命中"
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "氢键 机理匹配 (氢键)",
+          "evidence_count": 8
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "polydopamine-coating",
+        "total_weight": 3,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "疏水性→polydopamine-coating 规则命中"
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "还原 机理匹配 (还原)",
+          "evidence_count": 5
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "bone-structure",
+        "total_weight": 2,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "配位 机理匹配 (配位)",
+          "evidence_count": 8
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "sulfate-reducing-bacteria",
+        "total_weight": 2,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "还原 机理匹配 (还原)",
+          "evidence_count": 5
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "oyster-shell",
+        "total_weight": 2,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "离子交换 机理匹配 (离子交换)",
+          "evidence_count": 2
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "lotus-leaf",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "疏水性→lotus-leaf 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "plant-tannin",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "芳香环→plant-tannin 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      }
+    ],
+    "unmatched_mechanisms": [
+      "氧化",
+      "π-π",
+      "生物降解",
+      "光降解",
+      "沉淀"
+    ]
+  },
+  "2,6-二氯苯酚": {
+    "molecular_features": [
+      "可电离",
+      "可配位",
+      "弱酸性",
+      "氯代",
+      "水溶性",
+      "疏水性",
+      "芳香环",
+      "酚羟基"
+    ],
+    "matched_prototypes": [
+      {
+        "prototype": "magnetic-bacteria",
+        "total_weight": 3,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": true,
+          "weight": 3,
+          "reason": "magnetic 实测 qmax=49.6 mg/g",
+          "ref_doi": "10.1007/s10653-010-9301-2"
+        },
+        "has_qmax": true,
+        "qmax_mg_g": 49.6
+      },
+      {
+        "prototype": "chitosan",
+        "total_weight": 3,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "水溶性→chitosan 规则命中"
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "氢键 机理匹配 (氢键)",
+          "evidence_count": 7
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "lotus-leaf",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "疏水性→lotus-leaf 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "polydopamine-coating",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "疏水性→polydopamine-coating 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "plant-tannin",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "芳香环→plant-tannin 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      }
+    ],
+    "unmatched_mechanisms": [
+      "π-π",
+      "氧化"
+    ]
+  },
+  "奥克立林": {
+    "molecular_features": [
+      "可电离",
+      "可配位",
+      "大分子",
+      "弱酸性",
+      "疏水性",
+      "芳香环"
+    ],
+    "matched_prototypes": [
+      {
+        "prototype": "magnetic-bacteria",
+        "total_weight": 3,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": true,
+          "weight": 3,
+          "reason": "magnetic 有性能数据",
+          "ref_doi": "10.3390/ijerph19106037"
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "lotus-leaf",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "疏水性→lotus-leaf 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "polydopamine-coating",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "疏水性→polydopamine-coating 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "plant-tannin",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "芳香环→plant-tannin 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      }
+    ],
+    "unmatched_mechanisms": [
+      "π-π",
+      "氧化"
+    ]
+  },
+  "滴滴涕（DDT）": {
+    "molecular_features": [
+      "可电离",
+      "可配位",
+      "大分子",
+      "弱酸性",
+      "水溶性",
+      "疏水性",
+      "芳香环"
+    ],
+    "matched_prototypes": [
+      {
+        "prototype": "chitosan",
+        "total_weight": 3,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "水溶性→chitosan 规则命中"
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "氢键 机理匹配 (氢键)",
+          "evidence_count": 14
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "polydopamine-coating",
+        "total_weight": 3,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "疏水性→polydopamine-coating 规则命中"
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "还原 机理匹配 (还原)",
+          "evidence_count": 6
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "sulfate-reducing-bacteria",
+        "total_weight": 2,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "还原 机理匹配 (还原)",
+          "evidence_count": 6
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "bone-structure",
+        "total_weight": 2,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "配位 机理匹配 (配位)",
+          "evidence_count": 4
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "oyster-shell",
+        "total_weight": 2,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "离子交换 机理匹配 (离子交换)",
+          "evidence_count": 1
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "lotus-leaf",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "疏水性→lotus-leaf 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "plant-tannin",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "芳香环→plant-tannin 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      }
+    ],
+    "unmatched_mechanisms": [
+      "氧化",
+      "π-π",
+      "螯合",
+      "生物降解"
+    ]
+  },
+  "六氯丁二烯": {
+    "molecular_features": [
+      "可电离",
+      "可配位",
+      "氯代",
+      "芳香环"
+    ],
+    "matched_prototypes": [
+      {
+        "prototype": "polydopamine-coating",
+        "total_weight": 3,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "芳香环→polydopamine-coating 规则命中"
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "还原 机理匹配 (还原)",
+          "evidence_count": 1
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "chitosan",
+        "total_weight": 2,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "氢键 机理匹配 (氢键)",
+          "evidence_count": 1
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "sulfate-reducing-bacteria",
+        "total_weight": 2,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "还原 机理匹配 (还原)",
+          "evidence_count": 1
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "plant-tannin",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "芳香环→plant-tannin 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      }
+    ],
+    "unmatched_mechanisms": [
+      "氧化",
+      "π-π"
+    ]
+  },
+  "狄氏剂（Dieldrin）": {
+    "molecular_features": [
+      "可电离",
+      "可配位",
+      "大分子",
+      "弱酸性",
+      "水溶性",
+      "疏水性",
+      "芳香环"
+    ],
+    "matched_prototypes": [
+      {
+        "prototype": "chitosan",
+        "total_weight": 3,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "水溶性→chitosan 规则命中"
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "氢键 机理匹配 (氢键)",
+          "evidence_count": 3
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "cell-membrane-ion-channel",
+        "total_weight": 3,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": true,
+          "weight": 3,
+          "reason": "membrane 有性能数据",
+          "ref_doi": "10.1080/09542299.1995.11083249"
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "chlorella-cell-wall",
+        "total_weight": 3,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": true,
+          "weight": 3,
+          "reason": "cellulose 有性能数据",
+          "ref_doi": "10.1016/j.biortech.2009.01.026"
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "cellulose-nanocrystal",
+        "total_weight": 3,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": true,
+          "weight": 3,
+          "reason": "cellulose 有性能数据",
+          "ref_doi": "10.1016/j.biortech.2009.01.026"
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "bacterial-cellulose",
+        "total_weight": 3,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": true,
+          "weight": 3,
+          "reason": "cellulose 有性能数据",
+          "ref_doi": "10.1016/j.biortech.2009.01.026"
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "bone-structure",
+        "total_weight": 2,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "配位 机理匹配 (配位)",
+          "evidence_count": 1
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "lotus-leaf",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "疏水性→lotus-leaf 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "polydopamine-coating",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "疏水性→polydopamine-coating 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "plant-tannin",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "芳香环→plant-tannin 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      }
+    ],
+    "unmatched_mechanisms": [
+      "氧化",
+      "π-π"
+    ]
+  },
+  "全氟辛酸（PFOA）": {
+    "molecular_features": [
+      "可电离",
+      "可配位",
+      "大分子",
+      "弱酸性",
+      "氟碳链",
+      "水溶性",
+      "疏水性",
+      "芳香环"
+    ],
+    "matched_prototypes": [
+      {
+        "prototype": "magnetic-bacteria",
+        "total_weight": 3,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": true,
+          "weight": 3,
+          "reason": "magnetic 实测 qmax=454.55 mg/g",
+          "ref_doi": "10.1016/j.chroma.2013.10.067"
+        },
+        "has_qmax": true,
+        "qmax_mg_g": 454.55
+      },
+      {
+        "prototype": "alginate",
+        "total_weight": 3,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": true,
+          "weight": 3,
+          "reason": "alginate 实测 qmax=382.8 mg/g",
+          "ref_doi": "10.1021/acsestwater.4c00319"
+        },
+        "has_qmax": true,
+        "qmax_mg_g": 382.8
+      },
+      {
+        "prototype": "chitosan",
+        "total_weight": 3,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "水溶性→chitosan 规则命中"
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "氢键 机理匹配 (氢键)",
+          "evidence_count": 47
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "polydopamine-coating",
+        "total_weight": 3,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "疏水性→polydopamine-coating 规则命中"
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "还原 机理匹配 (还原)",
+          "evidence_count": 4
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "cell-membrane-ion-channel",
+        "total_weight": 3,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": true,
+          "weight": 3,
+          "reason": "membrane 有性能数据",
+          "ref_doi": "10.1007/s13762-023-05399-2"
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "bone-structure",
+        "total_weight": 2,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "离子交换 机理匹配 (离子交换)",
+          "evidence_count": 30
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "oyster-shell",
+        "total_weight": 2,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "离子交换 机理匹配 (离子交换)",
+          "evidence_count": 30
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "sulfate-reducing-bacteria",
+        "total_weight": 2,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "还原 机理匹配 (还原)",
+          "evidence_count": 4
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "lotus-leaf",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "疏水性→lotus-leaf 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "plant-tannin",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "芳香环→plant-tannin 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      }
+    ],
+    "unmatched_mechanisms": [
+      "氧化",
+      "π-π",
+      "沉淀",
+      "螯合"
+    ]
+  },
+  "十溴二苯醚": {
+    "molecular_features": [
+      "可电离",
+      "可配位",
+      "大分子",
+      "弱酸性",
+      "水溶性",
+      "疏水性",
+      "芳香环"
+    ],
+    "matched_prototypes": [
+      {
+        "prototype": "chitosan",
+        "total_weight": 6,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "水溶性→chitosan 规则命中"
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "氢键 机理匹配 (氢键)",
+          "evidence_count": 14
+        },
+        "performance_match": {
+          "hit": true,
+          "weight": 3,
+          "reason": "chitosan 有性能数据",
+          "ref_doi": "10.3390/microorganisms10020402"
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "polydopamine-coating",
+        "total_weight": 3,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "疏水性→polydopamine-coating 规则命中"
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "还原 机理匹配 (还原)",
+          "evidence_count": 64
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "diatom-frustule",
+        "total_weight": 3,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": true,
+          "weight": 3,
+          "reason": "diatomite 有性能数据",
+          "ref_doi": "10.1016/j.cej.2019.123550"
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "diatom-inspired-porous",
+        "total_weight": 3,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": true,
+          "weight": 3,
+          "reason": "diatomite 有性能数据",
+          "ref_doi": "10.1016/j.cej.2019.123550"
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "sulfate-reducing-bacteria",
+        "total_weight": 2,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "还原 机理匹配 (还原)",
+          "evidence_count": 64
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "bone-structure",
+        "total_weight": 2,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "配位 机理匹配 (配位)",
+          "evidence_count": 1
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "lotus-leaf",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "疏水性→lotus-leaf 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "plant-tannin",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "芳香环→plant-tannin 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      }
+    ],
+    "unmatched_mechanisms": [
+      "氧化",
+      "生物降解",
+      "沉淀",
+      "光降解",
+      "π-π"
+    ]
+  },
+  "全氟丁烷磺酸（PFBS）": {
+    "molecular_features": [
+      "可电离",
+      "可配位",
+      "大分子",
+      "弱酸性",
+      "氟碳链",
+      "疏水性"
+    ],
+    "matched_prototypes": [
+      {
+        "prototype": "chitosan",
+        "total_weight": 5,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "氢键 机理匹配 (氢键)",
+          "evidence_count": 18
+        },
+        "performance_match": {
+          "hit": true,
+          "weight": 3,
+          "reason": "chitosan 有性能数据",
+          "ref_doi": "10.1016/j.cej.2024.151173"
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "cell-membrane-ion-channel",
+        "total_weight": 3,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": true,
+          "weight": 3,
+          "reason": "membrane 有性能数据",
+          "ref_doi": "10.1016/j.cej.2017.09.061"
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "alginate",
+        "total_weight": 3,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": true,
+          "weight": 3,
+          "reason": "alginate 有性能数据",
+          "ref_doi": "10.1016/j.cej.2017.09.061"
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "bone-structure",
+        "total_weight": 2,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "离子交换 机理匹配 (离子交换)",
+          "evidence_count": 6
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "oyster-shell",
+        "total_weight": 2,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "离子交换 机理匹配 (离子交换)",
+          "evidence_count": 6
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "lotus-leaf",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "疏水性→lotus-leaf 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "polydopamine-coating",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "疏水性→polydopamine-coating 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      }
+    ],
+    "unmatched_mechanisms": [
+      "氧化",
+      "膜分离"
+    ]
+  },
+  "滴滴伊（DDE）": {
+    "molecular_features": [
+      "可电离",
+      "可配位",
+      "疏水性",
+      "芳香环"
+    ],
+    "matched_prototypes": [
+      {
+        "prototype": "lotus-leaf",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "疏水性→lotus-leaf 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "polydopamine-coating",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "疏水性→polydopamine-coating 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "plant-tannin",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "芳香环→plant-tannin 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      }
+    ],
+    "unmatched_mechanisms": [
+      "π-π"
+    ]
+  },
+  "硫丹": {
+    "molecular_features": [
+      "可电离",
+      "可配位",
+      "大分子",
+      "弱酸性",
+      "水溶性",
+      "疏水性",
+      "芳香环"
+    ],
+    "matched_prototypes": [
+      {
+        "prototype": "chitosan",
+        "total_weight": 3,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "水溶性→chitosan 规则命中"
+        },
+        "mechanism_match": {
+          "hit": true,
+          "weight": 2,
+          "reason": "氢键 机理匹配 (氢键)",
+          "evidence_count": 1
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "cell-membrane-ion-channel",
+        "total_weight": 3,
+        "feature_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": ""
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": true,
+          "weight": 3,
+          "reason": "membrane 有性能数据",
+          "ref_doi": "10.1016/j.watres.2013.03.055"
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "lotus-leaf",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "疏水性→lotus-leaf 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "polydopamine-coating",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "疏水性→polydopamine-coating 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      },
+      {
+        "prototype": "plant-tannin",
+        "total_weight": 1,
+        "feature_match": {
+          "hit": true,
+          "weight": 1,
+          "reason": "芳香环→plant-tannin 规则命中"
+        },
+        "mechanism_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "evidence_count": 0
+        },
+        "performance_match": {
+          "hit": false,
+          "weight": 0,
+          "reason": "",
+          "ref_doi": ""
+        },
+        "has_qmax": false,
+        "qmax_mg_g": null
+      }
+    ],
+    "unmatched_mechanisms": [
+      "π-π"
+    ]
+  }
+}

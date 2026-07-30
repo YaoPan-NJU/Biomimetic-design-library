@@ -1,0 +1,178 @@
+{
+  "mechanisms": {
+    "HAp膜重金属去除性能": {
+      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[1]"
+        },
+        "bio_structure": {
+          "text": "壳聚糖/HAp纳米纤维膜(静电纺丝)：Pb(II) 296.7 mg/g、Co(II) 180.2 mg/g、Ni(II) 213.8 mg/g，5次循环无明显下降；nHAp凝胶/玉米醇溶蛋白膜(10% nHAp)→机械性能最强",
+          "basis": "from_source",
+          "locator": "mechanism[1]"
+        },
+        "interaction": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[1]"
+        },
+        "why_it_works": {
+          "text": "HAp/PU复合泡沫(50%HAp)：Pb(II) 150 mg/g；nHAp增至50%→Cu(II)从27.2增至67.8 mg/g",
+          "basis": "from_source",
+          "locator": "mechanism[1]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "HAp四种重金属吸附机制": {
+      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "Pb²⁺、Cd²⁺、Cu²⁺、Zn²⁺等二价重金属离子",
+          "basis": "from_source",
+          "locator": "Bambaeero2021 p.221 / Abstract + Sec.1"
+        },
+        "bio_structure": {
+          "text": "羟基磷灰石（HAp, Ca₁₀(PO₄)₆(OH)₂）的晶体结构和表面Ca²⁺/OH⁻位点",
+          "basis": "from_source",
+          "locator": "Bambaeero2021 p.221 / Abstract + Sec.1"
+        },
+        "interaction": {
+          "text": "表面离子交换（Ca²⁺↔Pb²⁺/Cd²⁺）、表面配位（OH⁻与金属离子）、共沉淀（磷酸盐沉淀）",
+          "basis": "from_source",
+          "locator": "Bambaeero2021 p.221 / Abstract + Sec.1"
+        },
+        "why_it_works": {
+          "text": "HAp的Ca²⁺位点可被重金属离子交换取代，且磷酸根可与重金属形成难溶磷酸盐沉淀，实现双重去除机制",
+          "basis": "llm_inferred",
+          "locator": null
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件下HAp开始溶解，释放Ca²⁺，配位/沉淀能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          },
+          {
+            "text": "酸性条件下HAp溶解，释放Ca²⁺，吸附能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": "domain_knowledge"
+          }
+        ],
+        "transferable_principle": "羟基磷灰石通过离子交换+共沉淀双重机制去除重金属，是骨骼/牙齿启发的无机吸附剂",
+        "verification_quote": "HAP has been used as an adsorbent in the removal of Sr, Zn, Co, Cd ions in various environments including electrolyte solutions"
+      }
+    },
+    "HAp膜制备方法": {
+      "基本原理": "needs_review",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[3]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[3]"
+        },
+        "interaction": {
+          "text": "聚合物膜：NIPS(非溶剂致相分离,最常用)、TIPS(热致相分离,高重现性,窄孔径)、静电纺丝(纳米纤维膜)；陶瓷膜：浆料浇注(最早)、挤出、粉末压制、相转化/烧结",
+          "basis": "from_source",
+          "locator": "mechanism[3]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[3]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "HAp膜类型与制备技术": {
+      "基本原理": "needs_review",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[4]"
+        },
+        "bio_structure": {
+          "text": "聚合物膜：NIPS/静电纺丝/TIPS/干压缩；陶瓷膜：多孔(支撑层)+刚性(分离层)；平板/中空纤维两种构型",
+          "basis": "from_source",
+          "locator": "mechanism[4]"
+        },
+        "interaction": {
+          "text": "聚合物膜：NIPS/静电纺丝/TIPS/干压缩；有机材料：PA/CA/CE/PSf/PES/PTFE/PVDF/PP/PAN；",
+          "basis": "from_source",
+          "locator": "mechanism[4]"
+        },
+        "why_it_works": {
+          "text": "无机材料：Al₂O₃/SiO₂/TiO₂/ZrO₂+黏土；陶瓷膜：多孔(支撑层)+刚性(分离层)；平板/中空纤维两种构型",
+          "basis": "from_source",
+          "locator": "mechanism[4]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "MOFs光催化降解染料的机理": {
+      "基本原理": "needs_review",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[0]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[0]"
+        },
+        "interaction": {
+          "text": "VB电子→CB→·OH和O₂⁻·自由基降解",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[0]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[0]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    }
+  }
+}

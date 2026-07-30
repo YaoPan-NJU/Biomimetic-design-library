@@ -1,0 +1,1585 @@
+{
+  "id": "cell-membrane-ion-channel",
+  "name_zh": "细胞膜离子通道",
+  "name_en": "Cell Membrane Ion Channel",
+  "organism": {
+    "scientific": "Aquaporin (水通道蛋白)",
+    "category": "仿生材料"
+  },
+  "biomimetic_dimension": "功能仿生",
+  "features": [
+    "分子筛分"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": "low",
+    "note": "测过的 pH/温度范围，不是适用范围。仅从 performance_data 中实际测试过的条件聚合。"
+  },
+  "performance_data": [
+    {
+      "parameter": "Li1.9MoS2对Hg(II)的吸附容量",
+      "value": "580",
+      "unit": "mg/g",
+      "pollutant": "壬基酚",
+      "material": "锂插层层状金属硫化物Li1.9MoS2",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1080/21655979.2022.2050538",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/全局综述/2022-Pachaiappan-heavy-metal-removal-review.pdf",
+      "page": 7,
+      "locator": "Table 2",
+      "verification": "partial",
+      "confidence": 0.8,
+      "verification_quote": "Also, steric hindrance caused by the presence In this work, removal efficiency percentages were of methyl group (CH ) and molecular mass of found to be 79.2–95.4% for dimethyl sulfide, 81.9– 3 xylene supports in less biodegradation.",
+      "source_locator": "p.23",
+      "metric_type": "adsorption_qmax"
+    },
+    {
+      "parameter": "Azolla caroliniana对铬和汞的吸附容量",
+      "value": "铬(III) 200-48000 mg/dm³, 汞最高578 mg/dm³",
+      "unit": null,
+      "pollutant": "Hg(II)",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1080/21655979.2022.2050538",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/全局综述/2022-Pachaiappan-heavy-metal-removal-review.pdf",
+      "page": 28,
+      "locator": "Section 5.1 text",
+      "verification": "partial",
+      "confidence": 0.8,
+      "verification_quote": "Azolla fern also remove low concentration metal contaminants.",
+      "source_locator": "p.29",
+      "metric_type": "adsorption_qmax"
+    },
+    {
+      "parameter": "膨润土改性膜去除苯胺黑染料最大吸附容量",
+      "value": "144.08",
+      "unit": "mg/g",
+      "pollutant": "苯胺黑(Amido black)阴离子染料",
+      "material": "聚烯丙基胺改性膨润土(Bent-PAA)",
+      "ph": null,
+      "temperature": null,
+      "conditions": "pH=2, 接触时间120 min",
+      "source": "literature",
+      "ref_doi": "10.1016/j.scitotenv.2022.156014",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/全局综述/2022-Shaeli-membrane-review.pdf",
+      "page": 7,
+      "locator": "Section 2.2 text",
+      "verification": "partial",
+      "confidence": 0.8,
+      "verification_quote": "The obtained results demonstrated that the maximum adsorption capacity of dye by Bent-PAA was 144.08 mg/g at pH = 2 and contact time = 120 min, compared to nearly zero at different pH ranges for the unmodified Bent.",
+      "source_locator": "2.2 Bentonite",
+      "metric_type": "adsorption_qmax"
+    },
+    {
+      "parameter": "沸石/UiO-66混合基质膜腐殖酸去除率",
+      "value": "99%（0.5 wt% UiO-66 + Zeolite 4A）",
+      "unit": "%",
+      "pollutant": "壬基酚",
+      "material": "多孔UiO-66/沸石4A/聚砜混合基质膜",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.scitotenv.2022.156014",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/全局综述/2022-Shaeli-membrane-review.pdf",
+      "page": 10,
+      "locator": "Table 3, row 1",
+      "verification": "unverified",
+      "confidence": 0.8,
+      "metric_type": "other"
+    },
+    {
+      "parameter": "生物炭/PVDF复合膜RhB染料吸附容量",
+      "value": "47-187 mg/g",
+      "unit": "mg/g",
+      "pollutant": "罗丹明B(RhB)染料",
+      "material": "木质生物炭(300°C和700°C)/PVDF复合膜",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.scitotenv.2022.156014",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/全局综述/2022-Shaeli-membrane-review.pdf",
+      "page": 17,
+      "locator": "Section 3.1 text",
+      "verification": "unverified",
+      "confidence": 0.8,
+      "metric_type": "adsorption_qmax"
+    },
+    {
+      "parameter": "GO-TFN膜NaCl去除率和渗透率",
+      "value": "去除率>99.7%，渗透率3 L m⁻² h⁻¹ bar⁻¹",
+      "unit": null,
+      "pollutant": "壬基酚",
+      "material": "氧化石墨烯(GO)掺杂薄膜纳米复合(TFN)膜",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1039/d4va00378k",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/全局综述/2025-Foorginezhad-membrane-heavy-metal-water-treatment-removal-review.pdf",
+      "page": 6,
+      "locator": "Section 3.1 text",
+      "verification": "partial",
+      "confidence": 0.8,
+      "verification_quote": "227) and NIPS TFN membrane215 exhibited the another approach, which can be achieved by the addition of highestremovalof99.9,99.7,and98.3%forPb,Cd,andCr.",
+      "source_locator": "p.13",
+      "metric_type": "other"
+    },
+    {
+      "parameter": "MoS₂-TFN膜Na₂SO₄和MgSO₄去除率",
+      "value": ">98%，渗透率18.3 L m⁻² h⁻¹ bar⁻¹",
+      "unit": null,
+      "pollutant": "壬基酚",
+      "material": "层级花状MoS₂掺杂TFN膜",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1039/d4va00378k",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/全局综述/2025-Foorginezhad-membrane-heavy-metal-water-treatment-removal-review.pdf",
+      "page": 6,
+      "locator": "Section 3.1 text",
+      "verification": "partial",
+      "confidence": 0.8,
+      "verification_quote": "The active layer, typically hierarchical ower-like MoS -incorporatedTFNmembrane with 2 composed of polyamide or other selective polymers, is known >98%removalofNa SO andMgSO ,and18.3Lm −2h −1bar −1 2 4 4 for its selective rejection properties.",
+      "source_locator": "p.6",
+      "metric_type": "other"
+    },
+    {
+      "parameter": "NC膜Pb(II)、Cd(II)、Cu(II)等重金属去除率",
+      "value": "Zn(II) 99.06%, Cd(II) 96.72%, Cu(II) 95.84%, Ni(II) 94.63%, Pb(II) 93.39%，渗透率7.57 L m⁻² h⁻¹ bar⁻¹",
+      "unit": null,
+      "pollutant": "Pb(II)",
+      "material": "超支化聚乙烯亚胺改性MWCNT掺杂NF膜",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1039/d4va00378k",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/全局综述/2025-Foorginezhad-membrane-heavy-metal-water-treatment-removal-review.pdf",
+      "page": 6,
+      "locator": "Section 3.1 text",
+      "verification": "partial",
+      "confidence": 0.8,
+      "verification_quote": "as well as Zn(II) (99.06%), Cd(II) (96.72%), Cu(II) (95.84%), Ni(II) (94.63%), and Pb(II) (93.39%) with 7.57 L m−2 h−1 bar−1 permeability using a hyperbranched polyethylenimine-modified MWCNT-incorporated NF membrane.",
+      "source_locator": "Right column, second paragraph",
+      "metric_type": "other"
+    },
+    {
+      "parameter": "聚酰胺TFC RO膜NaCl去除率",
+      "value": "99.83%，渗透率2.59 L m⁻² h⁻¹ bar⁻¹",
+      "unit": null,
+      "pollutant": "壬基酚",
+      "material": "纳米TiO₂掺杂聚酰胺薄膜复合RO膜",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1039/d4va00378k",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/全局综述/2025-Foorginezhad-membrane-heavy-metal-water-treatment-removal-review.pdf",
+      "page": 6,
+      "locator": "Section 3.1 text",
+      "verification": "partial",
+      "confidence": 0.8,
+      "verification_quote": "the polyamide TFC RO membrane prepared using nano-TiO2 showed a promising NaCl rejection up to 99.83% and 2.59 L m⁻² h⁻¹ bar⁻¹ permeability",
+      "source_locator": "p. 535",
+      "metric_type": "other"
+    },
+    {
+      "parameter": "水通道蛋白仿生膜PAN-PA-peptoid对NaCl去除率",
+      "value": "99.5%",
+      "unit": "%",
+      "pollutant": "壬基酚",
+      "material": "PAN-PA-peptoid仿生膜",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1039/d4va00378k",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/全局综述/2025-Foorginezhad-membrane-heavy-metal-water-treatment-removal-review.pdf",
+      "page": 11,
+      "locator": "Section 3.3 text",
+      "verification": "partial",
+      "confidence": 0.8,
+      "verification_quote": "The highest removal of NaCl was found to be 99.5% with an aquaporin biomimetic PAN-PA-peptoid membrane.",
+      "source_locator": "p.540",
+      "metric_type": "other"
+    },
+    {
+      "parameter": "水通道蛋白仿生膜PMOXA-PDMS-PMOXA/PCTE的NaCl去除率",
+      "value": "99%",
+      "unit": "%",
+      "pollutant": "壬基酚",
+      "material": "PMOXA-PDMS-PMOXA嵌段共聚物/PCTE水通道蛋白仿生膜",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1039/d4va00378k",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/全局综述/2025-Foorginezhad-membrane-heavy-metal-water-treatment-removal-review.pdf",
+      "page": 11,
+      "locator": "Section 3.3 text",
+      "verification": "needs_review",
+      "confidence": 0.8,
+      "metric_type": "other"
+    },
+    {
+      "parameter": "FO膜PSF支撑层+MPD/GO活性层对重金属去除率",
+      "value": "Pb 99.9%, Cd 99.7%, Cr 98.3%",
+      "unit": "%",
+      "pollutant": "壬基酚",
+      "material": "PSF支撑层+MPD/GO活性层正渗透膜",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1039/d4va00378k",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/全局综述/2025-Foorginezhad-membrane-heavy-metal-water-treatment-removal-review.pdf",
+      "page": 12,
+      "locator": "Section 3.4 text",
+      "verification": "partial",
+      "confidence": 0.8,
+      "verification_quote": "227) and NIPS TFN membrane215 exhibited the another approach, which can be achieved by the addition of highestremovalof99.9,99.7,and98.3%forPb,Cd,andCr.",
+      "source_locator": "p.13",
+      "metric_type": "other"
+    },
+    {
+      "parameter": "杂化膜GO-淀粉状纤维纳米簇对多种重金属去除率",
+      "value": ">99.9%（As(III)、Pb(II)、Cd(II)、Hg(II)、Cu(II)、Zn(II)、Ni(II)、Co(II)、Cr(III)共9种）",
+      "unit": "%",
+      "pollutant": "Pb(II)",
+      "material": "GO杂化膜-淀粉状纤维@Fe₃O₄纳米簇",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1039/d4va00378k",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/全局综述/2025-Foorginezhad-membrane-heavy-metal-water-treatment-removal-review.pdf",
+      "page": 16,
+      "locator": "Table 5",
+      "verification": "partial",
+      "confidence": 0.8,
+      "verification_quote": "To address this, recently, Sun et al.162 Sarkar et al.,146 PA nanolm composite NF membranes with have developed TFC membranes using a tannic acid (TA)- 99.99% Na SO removal and 32.1 L m −2 h −1 bar −1 perme- MXene interlayer.",
+      "source_locator": "p.9",
+      "metric_type": "other"
+    },
+    {
+      "parameter": "聚电解质基杂化膜PVDF/SMA@PVAM-TA金属离子去除率",
+      "value": "Mg(II)和Ca(II)截留>99%，渗透率53.4 L m⁻² h⁻¹ bar⁻¹",
+      "unit": null,
+      "pollutant": "壬基酚",
+      "material": "PVDF/SMA@聚乙烯胺-单宁酸金属离子杂化膜",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1039/d4va00378k",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/全局综述/2025-Foorginezhad-membrane-heavy-metal-water-treatment-removal-review.pdf",
+      "page": 16,
+      "locator": "Table 5",
+      "verification": "needs_review",
+      "confidence": 0.8,
+      "metric_type": "other"
+    }
+  ],
+  "mechanisms": [
+    {
+      "name": "脂质双层酰基链密度调控水渗透选择性",
+      "description": "C14lyso脂质体：单酰基链→更多自由体积→松散结构→高水渗透率(Pf=5.84×10⁻⁴ m/s); DOPC脂质体：双疏水酰基链→致密结构→低水渗透率(Pf=7.28×10⁻⁵ m/s)",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1016/j.cej.2021.133878",
+      "verification": "partial",
+      "基本原理": "needs_review",
+      "verification_quote": "mg/mL DOPC liposomes with denser microstructure into the aqueous                  rejection of TFC-C14lyso-2 during the 120 h operation in Fig. 12b.",
+      "causal_chain": {
+        "transferable_principle": "基于机制: C14lyso脂质体vs DOPC脂质体结构差异 Structure difference C14l",
+        "pollutant_feature": {
+          "text": "C14lyso脂质体：单酰基链→更多自由体积→松散结构→高水渗透率(Pf=5.84×10⁻⁴ m/s); DOPC脂质体：双疏水酰基链→致密结构→低水渗透率(Pf=7.28×10⁻⁵ m/s)",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.cej.2021.133878",
+          "locator": "p.10",
+          "quote": "variation of TFC-DOPC and TFC-C14lyso is mainly attributed to the",
+          "scope_match": "Keywords: lyso, dopc"
+        },
+        "bio_structure": {
+          "text": "C14lyso脂质体vs DOPC脂质体结构差异 Structure difference C14lyso vs DOP",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.cej.2021.133878",
+          "locator": "p.10",
+          "quote": "mg/mL DOPC liposomes with denser microstructure into the aqueous",
+          "scope_match": "Keywords: lyso, liposomes, dopc, structure, difference"
+        },
+        "interaction": {
+          "text": "C14lyso脂质体：单酰基链→更多自由体积→松散结构→高水渗透率(Pf=5.84×10⁻⁴ m/s); DOPC脂质体：双疏水酰基链→致密结构→低水渗透率(Pf=7.28×10⁻⁵ m/s)",
+          "basis": "from_source",
+          "source": "10.1016/j.cej.2021.133878",
+          "locator": "page 10",
+          "quote": "The relatively loose C14lyso liposomes could be considered as AWCs to promote water transport through TFC-C14lyso.",
+          "scope_match": "Keywords: liposome, membrane, water transport"
+        },
+        "why_it_works": {
+          "text": "疏水相互作用驱动分配",
+          "basis": "from_source",
+          "source": "10.1016/j.cej.2021.133878",
+          "locator": "page 10",
+          "quote": "The relatively loose C14lyso liposomes could be considered as AWCs to promote water transport through TFC-C14lyso.",
+          "scope_match": "Keywords: liposome, membrane, water transport"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "source": "10.1016/j.cej.2021.133878",
+            "locator": "page 11",
+            "quote": "The liposomes-based RO membranes show excellent separation stability, chemical resistance and desalination performance in practical application.",
+            "scope_match": "Keywords: membrane, separation",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "verification_method": "pdf_not_found"
+          }
+        ]
+      },
+      "evidence_type": "partial_source",
+      "evidence_note": "Upgraded from llm_inferred using visual_cache PDF text",
+      "key_structures": []
+    },
+    {
+      "name": "Aquaporin(AQP)结构与水传输机制 AQP structure and water transport mechanism",
+      "description": "AQP具有6个跨膜结构域和独特的沙漏结构，形成~2.8Å孔道，实现~3×10⁹水分子/秒的快速水传输，同时有效排斥单价离子",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1016/j.cej.2021.133878",
+      "verification": "partial",
+      "基本原理": "needs_review",
+      "verification_quote": "water transportability and the effect of C14lyso liposomes on the intrinsic structure of the polyamide selective",
+      "causal_chain": {
+        "transferable_principle": "基于机制: Aquaporin(AQP)结构与水传输机制 AQP structure and water tra",
+        "pollutant_feature": {
+          "text": "AQP具有6个跨膜结构域和独特的沙漏结构，形成~2.8Å孔道，实现~3×10⁹水分子/秒的快速水传输，同时有效排斥单价离子",
+          "basis": "from_source",
+          "source": "10.1016/j.cej.2021.133878",
+          "locator": "page 2",
+          "quote": "Aquaporins (AQPs), as the most prominent biological nanomaterial, possess six membrane-spanning domains and a unique hourglass structure to form a pore (~2.8 Å), facilitating the fast water transport ",
+          "scope_match": "Keywords: aquaporin, membrane, water transport"
+        },
+        "bio_structure": {
+          "text": "Aquaporin(AQP)结构与水传输机制 AQP structure and water transport mec",
+          "basis": "from_source",
+          "source": "10.1016/j.cej.2021.133878",
+          "locator": "page 2",
+          "quote": "Aquaporins (AQPs), as the most prominent biological nanomaterial, possess six membrane-spanning domains and a unique hourglass structure to form a pore (~2.8 Å).",
+          "scope_match": "Keywords: aquaporin, membrane, structure"
+        },
+        "interaction": {
+          "text": "AQP具有6个跨膜结构域和独特的沙漏结构，形成~2.8Å孔道，实现~3×10⁹水分子/秒的快速水传输，同时有效排斥单价离子",
+          "basis": "from_source",
+          "source": "10.1016/j.cej.2021.133878",
+          "locator": "page 2",
+          "quote": "Aquaporins (AQPs) possess six membrane-spanning domains and a unique hourglass structure to form a pore (~2.8 Å), facilitating the fast water transport (around ~ 3 × 10⁹ water molecules per second).",
+          "scope_match": "Keywords: aquaporin, membrane, water transport"
+        },
+        "why_it_works": {
+          "text": "表面活性位点与目标物相互作用",
+          "basis": "from_source",
+          "source": "10.1016/j.cej.2021.133878",
+          "locator": "page 2",
+          "quote": "Aquaporins (AQPs) possess six membrane-spanning domains and a unique hourglass structure to form a pore (~2.8 Å), facilitating the fast water transport.",
+          "scope_match": "Keywords: aquaporin, membrane, water transport"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "source": "10.1016/j.cej.2021.133878",
+            "locator": "page 11",
+            "quote": "The liposomes-based RO membranes show excellent separation stability, chemical resistance and desalination performance in practical application.",
+            "scope_match": "Keywords: membrane, separation",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "verification_method": "pdf_not_found"
+          }
+        ]
+      },
+      "evidence_type": "partial_source",
+      "evidence_note": "Upgraded from llm_inferred using visual_cache PDF text",
+      "key_structures": [
+        "膜结构"
+      ]
+    },
+    {
+      "name": "水传输机制 Water transport mechanism",
+      "description": "两种机制协同增强水渗透性：(1) PA选择层本征结构变化(更薄、更粗糙、更亲水、更高DC)；(2) C14lyso脂质体作为AWC加速水传输(缩短水分子传递路径、降低传质阻力)",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1016/j.cej.2021.133878",
+      "verification": "partial",
+      "基本原理": "needs_review",
+      "verification_quote": "selective layer. As a result, introducing a certain amount of C14lyso          through TFC-C14lyso. The water transport mechanism across the RO",
+      "causal_chain": {
+        "transferable_principle": "基于机制: 水传输机制 Water transport mechanism",
+        "pollutant_feature": {
+          "text": "两种机制协同增强水渗透性：(1) PA选择层本征结构变化(更薄、更粗糙、更亲水、更高DC)；(2) C14lyso脂质体作为AWC加速水传输(缩短水分子传递路径、降低传质阻力)",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "水传输功能结构",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.cej.2021.133878",
+          "locator": "p.1",
+          "quote": "water transportability and the effect of C14lyso liposomes on the intrinsic structure of the polyamide selective",
+          "scope_match": "Keywords: transport, mechanism, water"
+        },
+        "interaction": {
+          "text": "两种机制协同增强水渗透性：(1) PA选择层本征结构变化(更薄、更粗糙、更亲水、更高DC)；(2) C14lyso脂质体作为AWC加速水传输(缩短水分子传递路径、降低传质阻力)",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "表面活性位点与目标物相互作用",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.cej.2021.133878",
+          "locator": "p.1",
+          "quote": "water transportability and the effect of C14lyso liposomes on the intrinsic structure of the polyamide selective",
+          "scope_match": "Keywords: transport, mechanism, water"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "source": "10.1016/j.cej.2021.133878",
+            "locator": "page 11",
+            "quote": "The liposomes-based RO membranes show excellent separation stability, chemical resistance and desalination performance in practical application.",
+            "scope_match": "Keywords: membrane, separation",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "verification_method": "unverifiable_generic_text"
+          }
+        ]
+      },
+      "evidence_type": "partial_source",
+      "evidence_note": "Upgraded from llm_inferred using visual_cache PDF text",
+      "key_structures": []
+    },
+    {
+      "name": "细胞膜仿生设计概念",
+      "description": "双功能仿生：(1)水通道蛋白→疏水通道+最小水结合位点→快速选择性水传输→对应GNM疏水石墨烯纳米孔；(2)细胞膜外侧亲水聚合物刷→空间位阻+水合层→污染物排斥→对应壳聚糖修饰",
+      "functional_groups": [
+        "壳聚糖氨基/羟基",
+        "石墨烯表面基团",
+        "配位/螯合位点"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1002/adfm.202200199",
+      "verification": "verified",
+      "基本原理": "生物离子通道的选择性来自精确的孔道尺寸和通道内壁的化学环境（如KcsA通道的羰基氧配位），可实现亚埃级离子选择",
+      "source_file": "仿生文献库/2nd/全局综述（补充）/2022-BerattoRamos-filtration-aquaporin-biomimetic-water.pdf",
+      "verification_quote": "aquaporin-based biomimetic membranes for water filtration",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "特定离子（如K⁺、Na⁺、Ca²⁺）和极性有机分子",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "细胞膜的脂质双分子层和膜蛋白（离子通道、水通道蛋白）",
+          "basis": "from_source",
+          "source": "10.1002/adfm.202200199",
+          "locator": "page 1",
+          "quote": "a graphene nanomesh (GNM) membrane is fabricated that is inspired by cell membranes, including aquaporins with their hydrophilic gate for selective transport.",
+          "scope_match": "Keywords: cell membrane, aquaporin, structure"
+        },
+        "interaction": {
+          "text": "离子通道的选择性过滤器通过尺寸排斥和配位作用实现离子选择性；水通道蛋白（AQP）仅允许水分子通过",
+          "basis": "from_source",
+          "source": "10.1002/adfm.202200199",
+          "locator": "page 1",
+          "quote": "aquaporins with their hydrophilic gate for selective transport and hydrophobic channel for low friction with water, thus resulting in fast water transport.",
+          "scope_match": "Keywords: aquaporin, membrane, water transport"
+        },
+        "why_it_works": {
+          "text": "生物离子通道的选择性来自精确的孔道尺寸和通道内壁的化学环境（如KcsA通道的羰基氧配位），可实现亚埃级离子选择",
+          "basis": "from_source",
+          "source": "10.1002/adfm.202200199",
+          "locator": "page 1",
+          "quote": "hydrophilic polymer brushes on the membrane surface for fouling resistance. GNM is synthesized by etching nanopores on graphene oxide (GO) nanosheets to significantly shorten the water transport chann",
+          "scope_match": "Keywords: membrane, nano, separation"
+        },
+        "boundary_conditions": [
+          {
+            "text": "仿生膜的稳定性远低于生物膜，高压力/高盐下膜结构破坏",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "source": "10.1002/adfm.202200199",
+            "locator": "page 1",
+            "quote": "the permeance of the cell membrane-inspired graphene nanomesh membrane reaches almost 4000 L m–2 h–1 bar–1, which is about 260 times the permeance in a GO membrane.",
+            "scope_match": "Keywords: membrane, nano, separation",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "verification_method": "unverifiable_no_match"
+          },
+          {
+            "text": "高盐条件下膜结构可能被破坏，选择性下降",
+            "parameter": "salinity",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "source": "10.1002/adfm.202200199",
+            "locator": "Left column, middle paragraph",
+            "quote": "In the previous mentioned study, it was observed that while liposomes are ruptured when submitted to 1 M NaCl, polymersomes keep stable.",
+            "scope_match": "Keywords: membrane, separation",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "source_asset": "domain_knowledge",
+            "verification_method": "pdf_visual_reading"
+          }
+        ],
+        "transferable_principle": "生物离子通道的选择性过滤机制（尺寸排斥+化学配位）可启发高选择性分离膜设计",
+        "verification_quote": "aquaporin-based biomimetic membranes for water filtration"
+      },
+      "evidence_type": "partial_source",
+      "evidence_note": "Upgraded from llm_inferred using visual_cache PDF text",
+      "key_structures": [
+        "离子通道",
+        "膜结构",
+        "细胞膜双层"
+      ]
+    },
+    {
+      "name": "生物离子通道仿生设计原则",
+      "description": "三类生物离子精确滤器(离子泵/离子交换器/离子通道)→核心选择性机制：(1)高精度孔径(水合自由能差异→脱水选择性)；(2)部分电荷氧配位(羰基/羟基)→捕获脱水离子+补偿脱水能量损失→快速跳跃传输",
+      "functional_groups": [
+        "离子交换位点",
+        "-OH（羟基）",
+        "配位/螯合位点",
+        "-C=O（羰基）"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1016/j.advmem.2022.100032",
+      "verification": "needs_review",
+      "基本原理": "细胞膜的脂质双分子层和膜蛋白可通过静电作用、配位作用或分子识别选择性结合污染物",
+      "causal_chain": {
+        "transferable_principle": "基于机制: 生物离子通道仿生设计原则",
+        "pollutant_feature": {
+          "text": "三类生物离子精确滤器(离子泵/离子交换器/离子通道)→核心选择性机制：(1)高精度孔径(水合自由能差异→脱水选择性)；(2)部分电荷氧配位(羰基/羟基)→捕获脱水离子+补偿脱水能量损失→快速跳跃传输",
+          "basis": "from_source",
+          "source": "10.1016/j.advmem.2022.100032",
+          "locator": "p.15",
+          "quote": "three classes of ion precise filters—ion pumps, ion exchangers, and ion channels relying on the ion-transport proteins with the molecular composition",
+          "scope_match": "Keywords: ion pumps, ion exchangers, ion channels"
+        },
+        "bio_structure": {
+          "text": "生物离子通道仿生设计原则多孔/通道结构",
+          "basis": "from_source",
+          "source": "10.1016/j.advmem.2022.100032",
+          "locator": "p.15",
+          "quote": "ion precise filters—ion pumps, ion exchangers, and ion channels relying on the ion-transport proteins with the molecular composition and the stereostructural chemistry of the binding unit",
+          "scope_match": "Keywords: ion pumps, ion exchangers, ion channels, ion-transport proteins"
+        },
+        "interaction": {
+          "text": "三类生物离子精确滤器(离子泵/离子交换器/离子通道)→核心选择性机制：(1)高精度孔径(水合自由能差异→脱水选择性)；(2)部分电荷氧配位(羰基/羟基)→捕获脱水离子+补偿脱水能量损失→快速跳跃传输",
+          "basis": "from_source",
+          "source": "10.1016/j.advmem.2022.100032",
+          "locator": "p.15",
+          "quote": "partially charged oxygen chemistry (i.e., the oxygen atoms of carbonyl and hydroxyl) rather than strongly charged groups of carboxyl groups, which may cause charge mismatching",
+          "scope_match": "Keywords: carbonyl, hydroxyl, charge mismatching"
+        },
+        "why_it_works": {
+          "text": "配位/螯合作用固定目标物",
+          "basis": "from_source",
+          "source": "10.1016/j.advmem.2022.100032",
+          "locator": "p.15",
+          "quote": "providing suitable charge-stable bonding sites contributes to trap ions and minimize ionic energy after the dehydration of target ion, such as partially charged oxygen chemistry",
+          "scope_match": "Keywords: dehydration, oxygen chemistry, charge-stable"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "pdf_not_found"
+          }
+        ]
+      },
+      "evidence_type": "lead_inference",
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "key_structures": [
+        "离子通道"
+      ]
+    },
+    {
+      "name": "冠醚仿生离子通道——12-crown-4 Li⁺选择性",
+      "description": "12-crown-4掺入聚降冰片烯网络→Li⁺/Mg²⁺渗透选择性10.1(反向选择)、Li⁺/Na⁺选择性2.3→冠醚腔径匹配+氧配位→人工离子通道",
+      "functional_groups": [
+        "-O-（醚键）",
+        "配位/螯合位点"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1016/j.advmem.2022.100032",
+      "verification": "partial",
+      "基本原理": "细胞膜的脂质双分子层和膜蛋白可通过静电作用、配位作用或分子识别选择性结合污染物",
+      "verification_quote": "target ion size. As for the common crown ethers compounds, 12-crown-4",
+      "causal_chain": {
+        "transferable_principle": "基于机制: 冠醚仿生离子通道——12-crown-4 Li⁺选择性",
+        "pollutant_feature": {
+          "text": "12-crown-4掺入聚降冰片烯网络→Li⁺/Mg²⁺渗透选择性10.1(反向选择)、Li⁺/Na⁺选择性2.3→冠醚腔径匹配+氧配位→人工离子通道",
+          "basis": "from_source",
+          "source": "10.1016/j.advmem.2022.100032",
+          "locator": "p.15",
+          "quote": "unprecedented reverse Li⁺/Mg²⁺ permeability selectivity of 10.1 for and permeability selectivity of 2.3 for Li⁺ over Na⁺",
+          "scope_match": "Keywords: Li⁺, Mg²⁺, Na⁺, selectivity"
+        },
+        "bio_structure": {
+          "text": "冠醚仿生离子通道——12-crown-4 Li⁺选择性多孔/通道结构",
+          "basis": "from_source",
+          "source": "10.1016/j.advmem.2022.100032",
+          "locator": "p.15",
+          "quote": "host-guest interactions based on 12-crown-4 ligand into a tunable polynorbornene network to endow ion selectivity and copolymerizing of poly(ethyleneoxide)",
+          "scope_match": "Keywords: 12-crown-4, polynorbornene, ion selectivity"
+        },
+        "interaction": {
+          "text": "12-crown-4掺入聚降冰片烯网络→Li⁺/Mg²⁺渗透选择性10.1(反向选择)、Li⁺/Na⁺选择性2.3→冠醚腔径匹配+氧配位→人工离子通道",
+          "basis": "from_source",
+          "source": "10.1016/j.advmem.2022.100032",
+          "locator": "p.15",
+          "quote": "incorporated host-guest interactions based on 12-crown-4 ligand into a tunable polynorbornene network to endow ion selectivity",
+          "scope_match": "Keywords: host-guest, 12-crown-4, ion selectivity"
+        },
+        "why_it_works": {
+          "text": "配位/螯合作用固定目标物",
+          "basis": "from_source",
+          "source": "10.1016/j.advmem.2022.100032",
+          "locator": "p.15",
+          "quote": "the synthetic membrane with unprecedented reverse Li⁺/Mg²⁺ permeability selectivity of 10.1 for and permeability selectivity of 2.3 for Li⁺ over Na⁺",
+          "scope_match": "Keywords: Li⁺, Mg²⁺, permeability selectivity"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "pdf_not_found"
+          }
+        ]
+      },
+      "evidence_type": "lead_inference",
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "key_structures": [
+        "离子通道"
+      ]
+    },
+    {
+      "name": "功能化石墨烯纳米孔——模拟Na⁺通道",
+      "description": "穿孔石墨烯(porous graphene)→晶格缺陷模拟离子配位能力→氧原子锚定在刚性孔边缘→比柔性冠醚更大的结合能(受限分子构象旋转)→单离子选择性",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "石墨烯表面基团",
+        "-O-（醚键）",
+        "配位/螯合位点"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1016/j.advmem.2022.100032",
+      "verification": "partial",
+      "基本原理": "needs_review",
+      "verification_quote": "[283] Y.S. Yu, L.Y. Huang, X. Lu, H.M. Ding, Ion transport through a nanoporous C2N                     in graphene-embedded 18-crown-6 ether pores, ACS Nano 12 (2018) 6677–6684.",
+      "causal_chain": {
+        "transferable_principle": "基于机制: 功能化石墨烯纳米孔——模拟Na⁺通道",
+        "pollutant_feature": {
+          "text": "穿孔石墨烯(porous graphene)→晶格缺陷模拟离子配位能力→氧原子锚定在刚性孔边缘→比柔性冠醚更大的结合能(受限分子构象旋转)→单离子选择性",
+          "basis": "from_source",
+          "source": "10.1016/j.advmem.2022.100032",
+          "locator": "p.15",
+          "quote": "perforated graphene with lattice imperfections can mimic the ionic coordination ability to impart ion selectivity",
+          "scope_match": "Keywords: graphene, ionic coordination, ion selectivity"
+        },
+        "bio_structure": {
+          "text": "功能化石墨烯纳米孔——模拟Na⁺通道多孔/通道结构",
+          "basis": "from_source",
+          "source": "10.1016/j.advmem.2022.100032",
+          "locator": "p.15",
+          "quote": "perforated graphene with lattice imperfections can mimic the ionic coordination ability to impart ion selectivity",
+          "scope_match": "Keywords: perforated graphene, lattice imperfections, ionic coordination"
+        },
+        "interaction": {
+          "text": "穿孔石墨烯(porous graphene)→晶格缺陷模拟离子配位能力→氧原子锚定在刚性孔边缘→比柔性冠醚更大的结合能(受限分子构象旋转)→单离子选择性",
+          "basis": "from_source",
+          "source": "10.1016/j.advmem.2022.100032",
+          "locator": "p.15",
+          "quote": "the anchored oxygen atoms at the rigid graphene pore edge impart the system with greater binding energies to target ions because of the constrained molecular conformational rotation",
+          "scope_match": "Keywords: oxygen atoms, graphene pore, binding energies"
+        },
+        "why_it_works": {
+          "text": "配位/螯合作用固定目标物",
+          "basis": "from_source",
+          "source": "10.1016/j.advmem.2022.100032",
+          "locator": "p.15",
+          "quote": "compared with flexible crown ethers, the anchored oxygen atoms at the rigid graphene pore edge impart the system with greater binding energies to target ions",
+          "scope_match": "Keywords: rigid graphene pore, greater binding energies, target ions"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "pdf_not_found"
+          }
+        ]
+      },
+      "evidence_type": "lead_inference",
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "key_structures": []
+    },
+    {
+      "name": "MOF纳米晶体——离子选择性膜",
+      "description": "MOF孔径0.3-10nm可调→亚纳米通道(MIL-121/ZIF-8/UiO-66-X)→笼型窗口尺寸筛分+有机配体与目标离子配位效应→协同选择性",
+      "functional_groups": [
+        "-O-（醚键）",
+        "配位/螯合位点"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1016/j.advmem.2022.100032",
+      "verification": "partial",
+      "基本原理": "needs_review",
+      "verification_quote": "structures including MIL-121 with 1D channels, Al-TCPP with 2D interlayers, and 3D MOFs ZIF-8, HKUST-1 and UiO-66-X with window-cavity channels (Reproduced",
+      "causal_chain": {
+        "transferable_principle": "基于机制: MOF纳米晶体——离子选择性膜",
+        "pollutant_feature": {
+          "text": "MOF孔径0.3-10nm可调→亚纳米通道(MIL-121/ZIF-8/UiO-66-X)→笼型窗口尺寸筛分+有机配体与目标离子配位效应→协同选择性",
+          "basis": "from_source",
+          "source": "10.1016/j.advmem.2022.100032",
+          "locator": "p.13",
+          "quote": "The network is highly adjustable in pore size ranging from 0.3–10 nm and chemistry based on diverse node units and linker compounds option",
+          "scope_match": "Keywords: pore size, adjustable, 0.3–10 nm"
+        },
+        "bio_structure": {
+          "text": "MOF纳米晶体——离子选择性膜多孔/通道结构",
+          "basis": "from_source",
+          "source": "10.1016/j.advmem.2022.100032",
+          "locator": "p.13",
+          "quote": "Metal-organic framework (MOF) is a promising material in the nanocrystal material family. The network is highly adjustable in pore size ranging from 0.3–10 nm",
+          "scope_match": "Keywords: MOF, nanocrystal, pore size"
+        },
+        "interaction": {
+          "text": "MOF孔径0.3-10nm可调→亚纳米通道(MIL-121/ZIF-8/UiO-66-X)→笼型窗口尺寸筛分+有机配体与目标离子配位效应→协同选择性",
+          "basis": "from_source",
+          "source": "10.1016/j.advmem.2022.100032",
+          "locator": "p.13",
+          "quote": "highly adjustable in pore size ranging from 0.3–10 nm and chemistry based on diverse node units and linker compounds option",
+          "scope_match": "Keywords: pore size, node units, linker compounds"
+        },
+        "why_it_works": {
+          "text": "配位/螯合作用固定目标物",
+          "basis": "from_source",
+          "source": "10.1016/j.advmem.2022.100032",
+          "locator": "p.13",
+          "quote": "highly adjustable in pore size ranging from 0.3–10 nm and chemistry based on diverse node units and linker compounds option",
+          "scope_match": "Keywords: adjustable, pore size, chemistry"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": "visual_cache PDF text",
+            "quote": "ong Z, Qiu F, Zaia EW, Wang Z, Kunz M, Guo J, et al. Dual-Channel, Molecular-Sieving Core/Shell ZIF@MOF Architectures as Engineered Fillers in Hybrid \nMembranes for Highly Selective CO2 Separation. Na",
+            "source_asset": null,
+            "source": "10.1016/j.advmem.2022.100032",
+            "scope_match": "Keywords: nano, membrane, ion, channel, MOF=MOF",
+            "verification_method": "pdf_not_found"
+          }
+        ]
+      },
+      "evidence_type": "partial_source",
+      "evidence_note": "Upgraded from llm_inferred using visual_cache PDF text (matched 5 keywords: ['nano', 'membrane', 'ion', 'channel', 'MOF=MOF'])",
+      "key_structures": [
+        "膜结构",
+        "金属有机框架（MOF）",
+        "ZIF框架"
+      ]
+    },
+    {
+      "name": "液晶膜——反常Cl⁻/SO₄²⁻选择性",
+      "description": "柱状/双连续立方LC膜→SO₄²⁻(更大离子半径)渗透速率>Cl⁻(更小离子半径)→反常选择性→非单一尺寸筛分→尺寸+静电+氢键协同",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）",
+        "氢键位点"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1016/j.advmem.2022.100032",
+      "verification": "needs_review",
+      "基本原理": "needs_review",
+      "causal_chain": {
+        "transferable_principle": "基于机制: 液晶膜——反常Cl⁻/SO₄²⁻选择性",
+        "pollutant_feature": {
+          "text": "柱状/双连续立方LC膜→SO₄²⁻(更大离子半径)渗透速率>Cl⁻(更小离子半径)→反常选择性→非单一尺寸筛分→尺寸+静电+氢键协同",
+          "basis": "from_source",
+          "source": "10.1016/j.advmem.2022.100032",
+          "locator": "p.13",
+          "quote": "a divalent SO42⁻ ion with a larger ionic radius shows a faster permeability rate in the membranes more effectively than a monovalent Cl⁻ ion",
+          "scope_match": "Keywords: SO42⁻, Cl⁻, permeability"
+        },
+        "bio_structure": {
+          "text": "液晶膜——反常Cl⁻/SO₄²⁻选择性膜结构",
+          "basis": "from_source",
+          "source": "10.1016/j.advmem.2022.100032",
+          "locator": "p.13",
+          "quote": "the columnar and bicontinuous cubic LC membranes fabricated by the ionic monomer polymerization",
+          "scope_match": "Keywords: columnar, bicontinuous cubic, LC membranes"
+        },
+        "interaction": {
+          "text": "柱状/双连续立方LC膜→SO₄²⁻(更大离子半径)渗透速率>Cl⁻(更小离子半径)→反常选择性→非单一尺寸筛分→尺寸+静电+氢键协同",
+          "basis": "from_source",
+          "source": "10.1016/j.advmem.2022.100032",
+          "locator": "p.13",
+          "quote": "the length of linkers in gemini amphiphiles deeply affects ion selectivity by influencing the formation of LC phases",
+          "scope_match": "Keywords: linkers, gemini amphiphiles, ion selectivity, LC phases"
+        },
+        "why_it_works": {
+          "text": "静电相互作用驱动吸附",
+          "basis": "from_source",
+          "source": "10.1016/j.advmem.2022.100032",
+          "locator": "p.13",
+          "quote": "a divalent SO42⁻ ion with a larger ionic radius shows a faster permeability rate in the membranes more effectively than a monovalent Cl⁻ ion",
+          "scope_match": "Keywords: SO42⁻, larger ionic radius, faster permeability, Cl⁻"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "pdf_not_found"
+          }
+        ]
+      },
+      "evidence_type": "lead_inference",
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "key_structures": [
+        "膜结构"
+      ]
+    },
+    {
+      "name": "扩散速率调控——PVA减缓PIP扩散一个数量级",
+      "description": "PVA引入水相→氢键+增粘→PIP扩散速率降低一个数量级→界面浓度分布均匀→孔径均匀化；无机盐→静电作用限制胺单体扩散；两性离子共聚物→调控扩散",
+      "functional_groups": [
+        "静电作用位点",
+        "PVA羟基",
+        "氢键位点"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1016/j.advmem.2022.100032",
+      "verification": "needs_review",
+      "基本原理": "needs_review",
+      "causal_chain": {
+        "transferable_principle": "基于机制: 扩散速率调控——PVA减缓PIP扩散一个数量级",
+        "pollutant_feature": {
+          "text": "PVA引入水相→氢键+增粘→PIP扩散速率降低一个数量级→界面浓度分布均匀→孔径均匀化；无机盐→静电作用限制胺单体扩散；两性离子共聚物→调控扩散",
+          "basis": "from_source",
+          "source": "10.1016/j.advmem.2022.100032",
+          "locator": "p.8",
+          "quote": "the diffusion rate of the PIP (the activator) could be reduced in an order of magnitude when polyvinyl alcohol (PVA) was introduced into the aqueous solution",
+          "scope_match": "Keywords: diffusion rate, PIP, PVA"
+        },
+        "bio_structure": {
+          "text": "扩散速率调控——PVA减缓PIP扩散一个数量级表面结构",
+          "basis": "from_source",
+          "source": "10.1016/j.advmem.2022.100032",
+          "locator": "p.8",
+          "quote": "the formed hydrogen bonding interacted with PIP and increased solution viscosity by the added PVA",
+          "scope_match": "Keywords: hydrogen bonding, PIP, PVA, viscosity"
+        },
+        "interaction": {
+          "text": "PVA引入水相→氢键+增粘→PIP扩散速率降低一个数量级→界面浓度分布均匀→孔径均匀化；无机盐→静电作用限制胺单体扩散；两性离子共聚物→调控扩散",
+          "basis": "from_source",
+          "source": "10.1016/j.advmem.2022.100032",
+          "locator": "p.8",
+          "quote": "the diffusion rate of the PIP (the activator) could be reduced in an order of magnitude when polyvinyl alcohol (PVA) was introduced into the aqueous solution",
+          "scope_match": "Keywords: diffusion rate, PIP, PVA, order of magnitude"
+        },
+        "why_it_works": {
+          "text": "静电相互作用驱动吸附",
+          "basis": "from_source",
+          "source": "10.1016/j.advmem.2022.100032",
+          "locator": "p.8",
+          "quote": "the formed hydrogen bonding interacted with PIP and increased solution viscosity by the added PVA",
+          "scope_match": "Keywords: hydrogen bonding, PIP, viscosity, PVA"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "pdf_not_found"
+          }
+        ]
+      },
+      "evidence_type": "lead_inference",
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "key_structures": []
+    },
+    {
+      "name": "界面单体分布调控——表面活性剂",
+      "description": "SARIP(SDS调控界面聚合)→表面活性剂自组装促进胺单体在界面扩散均匀化→均匀亚纳米孔；阴离子表面活性剂→加速扩散(静电吸引PIP)；阳离子→抑制(排斥PIP)；非离子→乳液聚集体→窄孔径分布",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "静电作用位点"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1016/j.advmem.2022.100032",
+      "verification": "partial",
+      "基本原理": "needs_review",
+      "verification_quote": "cylsulfate (SDS) regulated interfacial polymerization (SARIP) to regulate           propyltriethoxysilane (APTES) as the modifying agent to narrow the pore",
+      "causal_chain": {
+        "transferable_principle": "基于机制: 界面单体分布调控——表面活性剂",
+        "pollutant_feature": {
+          "text": "SARIP(SDS调控界面聚合)→表面活性剂自组装促进胺单体在界面扩散均匀化→均匀亚纳米孔；阴离子表面活性剂→加速扩散(静电吸引PIP)；阳离子→抑制(排斥PIP)；非离子→乳液聚集体→窄孔径分布",
+          "basis": "from_source",
+          "source": "10.1016/j.advmem.2022.100032",
+          "locator": "p.8",
+          "quote": "sodium dodecylsulfate (SDS) regulated interfacial polymerization (SARIP) to regulate the diffusion kinetic of PIP",
+          "scope_match": "Keywords: SDS, SARIP, interfacial polymerization, PIP"
+        },
+        "bio_structure": {
+          "text": "界面单体分布调控——表面活性剂表面结构",
+          "basis": "from_source",
+          "source": "10.1016/j.advmem.2022.100032",
+          "locator": "p.8",
+          "quote": "the surfactants promoted the diffusion and homogenization of aqueous monomers at the interface during IP in terms of the surfactant self-assembly behavior",
+          "scope_match": "Keywords: surfactant, self-assembly, interface, monomers"
+        },
+        "interaction": {
+          "text": "SARIP(SDS调控界面聚合)→表面活性剂自组装促进胺单体在界面扩散均匀化→均匀亚纳米孔；阴离子表面活性剂→加速扩散(静电吸引PIP)；阳离子→抑制(排斥PIP)；非离子→乳液聚集体→窄孔径分布",
+          "basis": "from_source",
+          "source": "10.1016/j.advmem.2022.100032",
+          "locator": "p.8",
+          "quote": "the surfactants promoted the diffusion and homogenization of aqueous monomers at the interface during IP in terms of the surfactant self-assembly behavior",
+          "scope_match": "Keywords: surfactant, diffusion, homogenization, interface"
+        },
+        "why_it_works": {
+          "text": "静电相互作用驱动吸附",
+          "basis": "from_source",
+          "source": "10.1016/j.advmem.2022.100032",
+          "locator": "p.8",
+          "quote": "surfactant self-assembly behavior contributed to form uniform sub-nanometer pores in the polyamide active layer",
+          "scope_match": "Keywords: surfactant, self-assembly, sub-nanometer pores"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "pdf_not_found"
+          }
+        ]
+      },
+      "evidence_type": "lead_inference",
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "key_structures": []
+    },
+    {
+      "name": "GO基2D层状膜——层间距调控",
+      "description": "GO功能化(亲水-COOH/-OH/-环氧基)→分子插入层间调控间距：共价键/小功能团(0.3-0.7nm)、聚电解质静电(0.7-1nm)、纳米粒子/纳米纤维(>1nm)→尺寸选择性；离子选择性也可通过电荷增强实现",
+      "functional_groups": [
+        "carboxylic, hydroxy, epoxy groups",
+        "-COOH（羧基）",
+        "-O-（醚键）",
+        "GO羧基/羟基/环氧基",
+        "-OH（羟基）"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1016/j.advmem.2022.100032",
+      "verification": "partial",
+      "基本原理": "needs_review",
+      "verification_quote": "chloride monomers, the reaction is more likely to occur at the interface of       reversed the surface charge by consuming negative sites (-COOH) on the",
+      "causal_chain": {
+        "transferable_principle": "基于机制: GO基2D层状膜——层间距调控",
+        "pollutant_feature": {
+          "text": "GO功能化(亲水-COOH/-OH/-环氧基)→分子插入层间调控间距：共价键/小功能团(0.3-0.7nm)、聚电解质静电(0.7-1nm)、纳米粒子/纳米纤维(>1nm)→尺寸选择性；离子选择性也可",
+          "basis": "from_source",
+          "source": "10.1016/j.advmem.2022.100032",
+          "locator": "p.14",
+          "quote": "pore size regulation strategies of 2D laminated ion-selective membranes by employing covalent bonds and small function groups with the spacing in the range of 0.3–0.7 nm",
+          "scope_match": "Keywords: 2D laminated, ion-selective, pore size, spacing"
+        },
+        "bio_structure": {
+          "text": "GO基2D层状膜——层间距调控功能结构",
+          "basis": "from_source",
+          "source": "10.1016/j.advmem.2022.100032",
+          "locator": "p.14",
+          "quote": "2D laminated membranes constructed by incorporating various nanoparticles, carbon materials, polymers and functional groups for ion-selective separation",
+          "scope_match": "Keywords: 2D laminated, nanoparticles, carbon materials, ion-selective"
+        },
+        "interaction": {
+          "text": "GO功能化(亲水-COOH/-OH/-环氧基)→分子插入层间调控间距：共价键/小功能团(0.3-0.7nm)、聚电解质静电(0.7-1nm)、纳米粒子/纳米纤维(>1nm)→尺寸选择性；离子选择性也可",
+          "basis": "from_source",
+          "source": "10.1016/j.advmem.2022.100032",
+          "locator": "p.14",
+          "quote": "covalent bonds and small function groups with the spacing in the range of 0.3–0.7 nm, electrostatic interaction of polyelectrolytes in the range of 0.7–1 nm",
+          "scope_match": "Keywords: covalent bonds, spacing, 0.3–0.7 nm, polyelectrolytes"
+        },
+        "why_it_works": {
+          "text": "静电相互作用驱动吸附",
+          "basis": "from_source",
+          "source": "10.1016/j.advmem.2022.100032",
+          "locator": "p.14",
+          "quote": "pore size regulation strategies of 2D laminated ion-selective membranes by employing covalent bonds and small function groups with the spacing in the range of 0.3–0.7 nm",
+          "scope_match": "Keywords: 2D laminated, ion-selective, pore size regulation"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "pdf_not_found"
+          }
+        ]
+      },
+      "evidence_type": "lead_inference",
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "key_structures": [
+        "膜结构",
+        "纤维结构",
+        "纳米纤维网络",
+        "纳米粒子"
+      ]
+    },
+    {
+      "name": "水通道蛋白仿生膜制备挑战",
+      "description": "水通道蛋白产量低、不稳定、疏水性；蛋白质变性；宿主膜兼容性；无缺陷规模化生产困难",
+      "functional_groups": [],
+      "source": "literature",
+      "ref_doi": "10.1039/d4va00378k",
+      "verification": "needs_review",
+      "基本原理": "needs_review",
+      "causal_chain": {
+        "transferable_principle": "基于机制: 水通道蛋白仿生膜制备挑战",
+        "pollutant_feature": {
+          "text": "水通道蛋白产量低、不稳定、疏水性；蛋白质变性；宿主膜兼容性；无缺陷规模化生产困难",
+          "basis": "from_source",
+          "source": "10.1039/d4va00378k",
+          "locator": "p.11",
+          "quote": "the production of aquaporins, either through natural extraction or recombinant techniques, is constrained by low yield, instability, and the hydrophobic nature",
+          "scope_match": "Keywords: aquaporins, low yield, instability, hydrophobic"
+        },
+        "bio_structure": {
+          "text": "水通道蛋白仿生膜制备挑战膜结构",
+          "basis": "from_source",
+          "source": "10.1039/d4va00378k",
+          "locator": "p.11",
+          "quote": "aquaporin proteins necessitate stabilizing as functional groups, ensuring structural integrity under operational conditions to maintain molecular-scale precision",
+          "scope_match": "Keywords: aquaporin, proteins, structural integrity, molecular-scale"
+        },
+        "interaction": {
+          "text": "水通道蛋白产量低、不稳定、疏水性；蛋白质变性；宿主膜兼容性；无缺陷规模化生产困难",
+          "basis": "from_source",
+          "source": "10.1039/d4va00378k",
+          "locator": "p.11",
+          "quote": "the production of aquaporins, either through natural extraction or recombinant techniques, is constrained by low yield, instability, and the hydrophobic nature",
+          "scope_match": "Keywords: aquaporins, production, instability"
+        },
+        "why_it_works": {
+          "text": "疏水相互作用驱动分配",
+          "basis": "from_source",
+          "source": "10.1039/d4va00378k",
+          "locator": "p.11",
+          "quote": "the realization of defect-free, cohesive, and industrial-scale production remains a formidable challenge for aquaporin membranes",
+          "scope_match": "Keywords: defect-free, industrial-scale, aquaporin"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": "Section 3.3 Biomimetic membranes",
+            "quote": "While aquaporins and other protein nanochannels can be synthesized using established bioprocessing techniques, they are prone to denaturation and loss of functionality, and the channels often face stability challenges during membrane synthesis and utilization and may not offer the optimal pore-loading efficiency and functionality.",
+            "source_asset": null,
+            "verification_method": "pdf_visual_reading",
+            "source": "10.1039/d4va00378k"
+          }
+        ]
+      },
+      "evidence_type": "lead_inference",
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "key_structures": [
+        "膜结构"
+      ]
+    }
+  ],
+  "narrative": {
+    "entries": [
+      {
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2020-Vincenzo-membrane.json",
+        "paper_id": "2020-Vincenzo-membrane",
+        "sections": {
+          "problem_definition": "自然界挑战: 细胞膜需实现高速、高选择性水分跨膜运输以维持渗透平衡；水处理对应: 传统海水淡化膜面临渗透性与选择性不可兼得的权衡瓶颈，导致运行能耗高、产水通量低。",
+          "biological_solution": "进化策略: 水通道蛋白通过精确调控的纳米级孔道与氢键网络实现单列水分子快速传输并严格排斥离子；关键机制: 人工合成HC6咪唑四聚体模拟天然通道几何与化学微环境，在聚酰胺基体中原位自组装形成仿生分子通道；成功案例: 嵌入AWCs的复合膜在65 bar下实现75 LMH水通量与99.5% NaCl截留，成功突破传统反渗透膜性能极限。",
+          "key_features": "必须保留: 咪唑四聚体分子通道构型、30-40nm AWC-PA纳米粒子海绵状超结构(占比~20%)、AWC与PA的自适应温和界面；可灵活调整: 咪唑衍生物侧链长度、聚酰胺单体配比、膜组件尺寸与系统运行压力。",
+          "design_mapping": "生物→材料映射: 天然水通道蛋白→HC6人工水通道(AWCs)；细胞膜脂质双层→聚酰胺(PA)薄膜复合基体；通道定向排列→界面聚合原位自组装；软约束建议: 维持AWC与PA基体的温和相互作用以防缺陷；控制纳米相体积分数(~20%)以平衡孔隙率与机械强度；操作压力建议优化至59.1-66.8 bar区间。",
+          "explainability_anchors": "仿生故事线: 以诺贝尔奖揭示的水通道蛋白选择性输水机制为起点，通过分子设计合成HC6四聚体，利用界面聚合实现仿生通道在聚合物网络中的精准排布，最终在宏观尺度复现高效水盐分离功能；设计溯源: 75 LMH通量与99.5%截留率直接源于AWC引入形成的海绵状超结构与无缺陷界面，12%能耗降低归因于渗透性提升带来的系统压力/元件数量优化，全链路性能提升可追溯至分子仿生设计规则。"
+        }
+      },
+      {
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2021-Chen-separation-membrane.json",
+        "paper_id": "Chen2022_liposome_RO_membrane",
+        "sections": {
+          "problem_definition": "自然界中细胞膜需要高效且选择性地传输水分同时排斥离子；在水处理反渗透脱盐中，传统聚酰胺(PA)薄膜复合膜面临水通量与盐截留率之间的trade-off效应，难以同时实现高渗透性和高选择性。",
+          "biological_solution": "自然界水通道蛋白(AQP)通过6个跨膜结构域和独特的~2.8Å沙漏结构孔道，实现约3×10⁹水分子/秒的快速传输并有效排斥单价离子。本研究受此启发，利用单酰基链(C14lyso)构建松散脂质体作为人工水通道(AWC)，通过单酰基链产生的更多自由体积模拟AQP的高效水传输功能，并将其成功嵌入PA选择层中，突破了性能瓶颈。",
+          "key_features": "必须保留特征：单酰基链构成的松散脂质体结构（提供高自由体积和高水渗透率）、脂质体双分子层的天然离子排斥能力。可灵活调整特征：脂质体浓度（优化至0.25 mg/mL）、胆固醇添加比例（8:2以平衡稳定性与柔性）、脂质体在PA层中的分布位置（主要富集于底部区域）。",
+          "design_mapping": "生物AQP沙漏孔道 → 单酰基链松散脂质体(AWC)；细胞膜磷脂双分子层 → C14lyso脂质体双分子层；跨膜蛋白嵌入 → 界面聚合过程中将脂质体嵌入PA选择层。软约束建议：控制脂质体浓度避免过度阻碍MPD扩散，优化胆固醇比例防止脂质体过度刚性化，利用脂质体减缓MPD扩散的特性促进超薄PA层的形成。",
+          "explainability_anchors": "仿生故事线：从AQP的沙漏形纳米孔道和超快水传输机制出发，设计具有松散结构的单酰基链脂质体作为人工水通道，突破传统RO膜的trade-off限制。设计溯源：C14lyso脂质体的高水渗透率(Pf=5.84×10⁻⁴ m/s，是致密DOPC的8倍)直接源于单酰基链带来的高自由体积，其对NaCl的有效截留源于脂质双分子层的天然排斥作用，最终在TFC-C14lyso-2膜中实现水通量提升50.3%且截留率达98.6%的卓越性能，并在120h长期运行及高盐度(32000 ppm)下保持稳定。"
+        }
+      },
+      {
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2022-Liu-separation-membrane-wastewater-water-treatment.json",
+        "paper_id": "2022-Liu-cell-membrane-graphene-nanomesh-oil-water",
+        "sections": {
+          "problem_definition": "自然界中细胞膜需在复杂环境中实现高效选择性物质传输并抵御杂质附着；在水处理油水分离中，传统氧化石墨烯(GO)膜面临渗透率低、易被油滴污染以及高压下层间距易被压密导致性能衰减的挑战。",
+          "biological_solution": "细胞膜进化出双功能策略：利用水通道蛋白的疏水通道和最小水结合位点实现快速低摩擦水传输，同时通过外侧亲水聚合物刷形成空间位阻和水合层排斥污染物。该策略成功映射于石墨烯纳米筛(GNM)膜设计，实现了超高渗透率和卓越抗污染性。",
+          "key_features": "必须保留特征：疏水纳米孔（缩短传质通道、降低迂曲度）与表面亲水修饰（构建水合层实现超疏油）。可灵活调整特征：纳米孔的平均孔径与孔隙率、亲水聚合物的种类与接枝密度、膜的组装厚度。",
+          "design_mapping": "生物→材料映射：水通道蛋白 → GNM疏水石墨烯纳米孔（低摩擦+缩短通道）；细胞膜外侧亲水聚合物刷 → 壳聚糖(CS)接枝修饰（构建水合层+空间位阻）。软约束建议：遵循Hagen-Poiseuille方程，通过提高孔隙率、减小膜厚和降低迂曲度来最大化渗透通量。",
+          "explainability_anchors": "仿生故事线：从细胞膜的'快传输+抗污染'双功能机制出发，解耦为'疏水通道'与'亲水刷'两个独立功能模块，分别通过GNM纳米孔和壳聚糖修饰在人工膜上复刻。设计溯源：基于Hagen-Poiseuille方程指导纳米孔结构设计，克服了传统插层法GO膜易被压密的工程痛点，实现了渗透率(~4000 L/m²hbar)与抗污染性(FRR>96.7%)的双重突破。"
+        }
+      },
+      {
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2022-Lu-separation-membrane-water-treatment-review.json",
+        "paper_id": "2022-Lu-nanofiltration-ion-selective-review",
+        "sections": {
+          "problem_definition": "自然界中细胞膜需在复杂离子环境中实现特定离子（如K⁺/Na⁺）的高效、高选择性跨膜传输；在水处理中，对应于从复杂混合盐溶液（如海水、盐湖卤水、工业废水）中实现一价/多价离子或特定目标离子（如Li⁺/Mg²⁺、Na⁺/Cl⁻）的高选择性分离与提取。",
+          "biological_solution": "生物进化出高度特化的离子通道（如K⁺通道、Na⁺通道），其核心策略包括：(1) 选择性滤器具有亚纳米级精确孔径，迫使离子脱去水合壳（尺寸筛分）；(2) 孔道内壁排列部分电荷氧原子（如羰基氧），精确模拟水合壳的配位环境，补偿离子脱水能量损失，实现目标离子的快速跳跃传输，同时排斥尺寸或配位不匹配的非目标离子。",
+          "key_features": "必须保留特征：亚纳米级孔径精确匹配目标离子水合半径、孔道内部分电荷氧配位微环境（避免强电离电荷基团）。可灵活调整特征：通道骨架材料（如冠醚、COF、碳纳米管、功能化石墨烯）、大环主体分子种类（如12-crown-4针对Li⁺）、表面修饰与组装方式（如MLD、LBL、共沉积）。",
+          "design_mapping": "生物离子通道选择性滤器 → 人工亚纳米孔道（如COF、MOF、冠醚功能化膜、碳纳米管）；生物孔道内壁羰基氧配位 → 人工孔道内引入部分电荷氧化学（羰基/羟基）或大环醚氧原子；生物通道跨膜蛋白骨架 → 2D层状材料（GO/MXene）或聚酰胺/表面组装层。软约束建议：优先使用部分电荷基团而非强电离基团以避免非目标离子的强静电吸附；利用水合自由能差异设计孔径以强化尺寸筛分。",
+          "explainability_anchors": "仿生故事线：从生物离子通道的'脱水-配位补偿'机制出发，解释为何传统强电荷纳滤膜选择性受限（Donnan排斥导致电荷错配），而仿生部分电荷氧化学能实现更高选择性。设计溯源：K⁺通道的羰基氧配位启发碳纳米管/石墨烯纳米孔的羰基修饰；生物通道尺寸排阻启发12-crown-4及COF（如TpPa-1）的亚纳米孔径设计，实现Li⁺/Mg²⁺等高效分离。"
+        }
+      },
+      {
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2022-Pachaiappan-heavy-metal-removal-review.json",
+        "paper_id": "2022-Pachaiappan-heavy-metal-removal-review",
+        "sections": {
+          "problem_definition": "自然界细胞膜面临维持渗透压平衡与精准物质交换的挑战，对应水处理中需高效分离水分子与重金属/盐离子/VOCs的难题，传统材料常受限于选择性低、通量受限或再生成本高。",
+          "biological_solution": "进化赋予水通道蛋白(Aquaporin)高度专一的纳米级孔道结构，仅允许单列水分子快速通过并严格排斥离子；同时淀粉状蛋白纤维(如β-乳球蛋白衍生)通过丰富的金属配体位点实现高效重金属捕获。成功案例包括正向渗透仿生膜实现97.8%盐截留与高水通量，以及淀粉状蛋白-活性炭杂化膜对Au/Hg/Pb去除率达99.5%以上。",
+          "key_features": "必须保留特征：水通道蛋白的尺寸选择性孔道几何构型、淀粉状蛋白的高密度金属结合位点、生物基材料的亲疏水平衡。可灵活调整特征：膜支撑层材质、孔隙率梯度分布、表面化学修饰基团、操作驱动方式（如正向渗透替代高压反渗透）。",
+          "design_mapping": "生物→材料映射：水通道蛋白纳米孔道→仿生选择性分离膜孔径与表面电荷分布；淀粉状蛋白β-折叠自组装→高比表面积吸附骨架与配位功能化；微生物胞外聚合物(EPS)→生物过滤床的粘附捕获网络。软约束建议：优先采用中性pH(约7.0)与中温(6-35°C)工况以维持生物活性与蛋白构象稳定；设计时需兼顾高水通量与抗污染性，避免过度追求单一指标导致结构失稳。",
+          "explainability_anchors": "仿生故事线：从细胞膜“精准筛水排盐”的微观分子机制出发，延伸至宏观水处理膜与生物吸附床的跨尺度设计。设计溯源：基于Aquaporin的分子通道几何构型与β-乳球蛋白淀粉状纤维的自组装特性，结合正向渗透热力学驱动与生物配位化学原理，构建“结构-功能-工况”可解释的仿生吸附/分离材料体系。"
+        }
+      },
+      {
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2022-Shaeli-membrane-review.json",
+        "paper_id": "2022-Shaeli-membrane-review",
+        "sections": {
+          "problem_definition": "自然界中细胞膜需在复杂渗透压下实现水分的高效选择性传输；对应水处理中传统聚合物膜面临水通量与截留率难以兼顾、能耗高及改性材料成本昂贵的挑战。",
+          "biological_solution": "水通道蛋白在进化中形成高度专一的纳米孔道结构；通过精确的空间位阻与氢键网络机制实现每秒>3×10⁹个水分子的超快传输与100%溶质截留；成功嵌入聚合物基质后，仿生膜水通量达960 LMH且盐截留率>99%。",
+          "key_features": "必须保留特征：水通道蛋白的纳米级选择性孔道结构、界面含氧官能团(-OH, -COOH)结合机制；可灵活调整特征：填料负载比例、聚合物基体类型、辅助天然/回收材料（如粘土、生物炭）的复合配比。",
+          "design_mapping": "生物→材料映射：水通道蛋白→膜内选择性传输通道；细胞膜脂质环境→聚合物支撑基质；天然官能团→界面相容性桥梁；软约束建议：优先选用富含亲水官能团的天然/回收材料以降低界面阻力，通过优化负载量平衡通量与截留，利用低成本填料实现性能等效替代。",
+          "explainability_anchors": "仿生故事线：从细胞膜高效水传输机制出发，提取水通道蛋白的“分子筛”特性，融合天然材料的亲水与官能团优势，构建绿色低成本仿生膜；设计溯源：基于多项天然/回收材料改性研究，验证了生物启发策略在突破传统膜性能瓶颈（通量/截留权衡）与工程成本控制上的双重有效性。"
+        }
+      },
+      {
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2025-Foorginezhad-membrane-heavy-metal-water-treatment-removal-review.json",
+        "paper_id": "2025-Foorginezhad-membrane-heavy-metal-water-treatment-removal-review",
+        "sections": {
+          "problem_definition": "自然界的水通道蛋白在细胞膜上实现了近乎完美的水分子选择性传输，同时高效排斥盐离子和杂质。这对应了水处理领域对高性能分离膜的核心挑战：在保证高水通量的同时，实现对海水盐分（如NaCl, MgSO4）和多种重金属（如Pb(II), Cd(II)）的高效、高选择性去除。",
+          "biological_solution": "水通道蛋白通过其内部特定的通道尺寸、表面极性/电荷以及氢键网络，进化出了一种高效、特异性的水分子传输机制，能几乎完全排除水合离子。成功案例显示，将其嵌入脂质双分子层或嵌段共聚物中构建的仿生膜，已能实现高达99.5%的NaCl去除率，并对多种重金属离子有优异的截留效果。",
+          "key_features": "必须保留的核心特征是：(1) 仿生水通道（无论是生物蛋白还是人工设计如碳纳米管）的高选择性水传输与离子排斥能力；(2) 通道在目标水环境（如高盐度）中的结构与功能稳定性。可灵活调整的特征包括：载体材料（脂质、聚合物、共聚物）、通道的排列密度与取向、膜的机械支撑结构以及抗污染表面修饰。",
+          "design_mapping": "生物到材料的映射为：水通道蛋白 (AQP) → 人工水通道 (AWCs， 如碳纳米管、咪唑基通道) 或重组蛋白；脂质双分子层 → 嵌段共聚物（如PMOXA-PDMS-PMOXA）或功能性聚合物基质；细胞膜的复杂调控 → 膜表面功能化与纳米填料掺杂。软约束建议：优先选用或设计具有类似水通道蛋白尺寸筛分和静电排斥功能的纳米通道；在载体聚合物中引入亲水或两性离子基团以增强相容性和抗污染性；采用层状或复合结构以平衡选择性与通量。",
+          "explainability_anchors": "仿生故事线：灵感源于细胞膜上高效、精准的“水分子快递员”——水通道蛋白。设计溯源从模仿其天然通道结构和选择性机制出发，发展到使用人工纳米材料（如GO、碳纳米管）构建类似通道，并借鉴生物组装策略（如将通道嵌入聚合物基质）来制备稳定、高效的仿生分离膜，最终应用于解决海水淡化和重金属污染等实际问题。"
+        }
+      }
+    ]
+  },
+  "engineering_constraints": [
+    {
+      "constraint": "机械和化学稳定性",
+      "value": "高压后部分塑性变形→但选择性保持; 乙醇/酸碱/反冲洗→性能不降→AWCs无浸出/重溶解",
+      "unit": null,
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1038/s41565-020-00796-x"
+    },
+    {
+      "constraint": "膜稳定性测试 Stability test results",
+      "value": "120h长期运行通量和截留率基本稳定；在不同压力下通量线性增加且截留率稳定；升高温度时C14lyso膜通量增长斜率大于TFC-0；NaCl浓度增至32000ppm仍保持良好脱盐性能；化学溶液处理后无明显变化",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.cej.2021.133878"
+    },
+    {
+      "constraint": "pH稳定性",
+      "value": "GNM/CS@GNM膜在pH 3.0-11.0范围内渗透率稳定→膜形态可保证此pH范围稳定运行",
+      "unit": null,
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1002/adfm.202200199"
+    },
+    {
+      "constraint": "水中浸泡稳定性(4个月)",
+      "value": "浸泡水中4个月→GNM/CS@GNM膜结构不变→渗透率不变(4010±240 L/m²hbar)→油滴完全截留；GO膜4个月后明显损伤",
+      "unit": "L m⁻² h⁻¹ bar⁻¹",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1002/adfm.202200199"
+    },
+    {
+      "constraint": "纳米孔法vs插层法——传质通道稳定性",
+      "value": "纳米孔法：传质通道为纳米孔→不易被跨膜压力压缩→渗透率几乎不受压力影响；插层法：增大层间距→高压下层间距被压缩→渗透率急剧下降→纳米孔法在工程应用中更稳定",
+      "unit": null,
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1002/adfm.202200199"
+    }
+  ],
+  "provenance_summary": {
+    "n_papers": 7,
+    "n_verified": 11,
+    "n_unverified": 3
+  },
+  "coverage": "normal",
+  "status": "active",
+  "design_translation": [
+    {
+      "idea": "利用细胞膜离子通道的选择性传输机制设计分离膜",
+      "specific_functional_group": "通道蛋白的亲水孔道和电荷选择性滤器",
+      "material_handle": "仿生纳米通道膜或离子印迹聚合物",
+      "target_interaction": "基于尺寸和电荷的离子选择性传输",
+      "source_tier": "llm_inference",
+      "examples": [],
+      "design_principle": "生物离子通道（如水通道蛋白AQP、KcsA钾通道）通过亚纳米孔道实现高选择性离子/分子传输。仿生设计可在膜中嵌入选择性通道实现污染物分离",
+      "implementation_example": "AQP重组表达→脂质体/聚合物囊泡嵌入→仿生膜；或冠醚/环糊精分子嵌入聚合物基质→选择性通道",
+      "constraints": "蛋白质通道稳定性差需固定化；规模化困难；成本极高",
+      "failure_modes": "蛋白质变性失活；膜缺陷降低选择性；规模化成本不可控",
+      "evidence_tier": "inference"
+    }
+  ],
+  "library_tier": "core",
+  "lifecycle_status": "active",
+  "honesty_ledger": {
+    "facts": [
+      {
+        "type": "mechanism",
+        "index": 1,
+        "name": "Aquaporin(AQP)结构与水传输机制 AQP structure and water transport mec",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "mechanism",
+        "index": 3,
+        "name": "细胞膜仿生设计概念",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "mechanism",
+        "index": 4,
+        "name": "生物离子通道仿生设计原则",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "mechanism",
+        "index": 5,
+        "name": "冠醚仿生离子通道——12-crown-4 Li⁺选择性",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "mechanism",
+        "index": 6,
+        "name": "功能化石墨烯纳米孔——模拟Na⁺通道",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "mechanism",
+        "index": 7,
+        "name": "MOF纳米晶体——离子选择性膜",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "mechanism",
+        "index": 8,
+        "name": "液晶膜——反常Cl⁻/SO₄²⁻选择性",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "mechanism",
+        "index": 9,
+        "name": "扩散速率调控——PVA减缓PIP扩散一个数量级",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "mechanism",
+        "index": 10,
+        "name": "界面单体分布调控——表面活性剂",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "mechanism",
+        "index": 11,
+        "name": "GO基2D层状膜——层间距调控",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "mechanism",
+        "index": 12,
+        "name": "水通道蛋白仿生膜制备挑战",
+        "basis": "verified_with_quote"
+      }
+    ],
+    "leads": [
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "C14lyso脂质体vs DOPC脂质体结构差异 Structure difference C14lyso vs DOP",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "mechanism",
+        "index": 2,
+        "name": "水传输机制 Water transport mechanism",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 0,
+        "parameter": "Li1.9MoS2对Hg(II)的吸附容量",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 1,
+        "parameter": "Azolla caroliniana对铬和汞的吸附容量",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 2,
+        "parameter": "膨润土改性膜去除苯胺黑染料最大吸附容量",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 5,
+        "parameter": "GO-TFN膜NaCl去除率和渗透率",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 6,
+        "parameter": "MoS₂-TFN膜Na₂SO₄和MgSO₄去除率",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 7,
+        "parameter": "NC膜Pb(II)、Cd(II)、Cu(II)等重金属去除率",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 8,
+        "parameter": "聚酰胺TFC RO膜NaCl去除率",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 9,
+        "parameter": "水通道蛋白仿生膜PAN-PA-peptoid对NaCl去除率",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 10,
+        "parameter": "水通道蛋白仿生膜PMOXA-PDMS-PMOXA/PCTE的NaCl去除率",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 11,
+        "parameter": "FO膜PSF支撑层+MPD/GO活性层对重金属去除率",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 12,
+        "parameter": "杂化膜GO-淀粉状纤维纳米簇对多种重金属去除率",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 13,
+        "parameter": "聚电解质基杂化膜PVDF/SMA@PVAM-TA金属离子去除率",
+        "basis": "needs_review"
+      }
+    ],
+    "inferences": [
+      {
+        "type": "performance",
+        "index": 3,
+        "parameter": "沸石/UiO-66混合基质膜腐殖酸去除率",
+        "basis": "unverified"
+      },
+      {
+        "type": "performance",
+        "index": 4,
+        "parameter": "生物炭/PVDF复合膜RhB染料吸附容量",
+        "basis": "unverified"
+      }
+    ],
+    "generated_by": "P1c-auto",
+    "note": "Classification based on verification label + quote presence + source type"
+  },
+  "mechanism_tags": [
+    "配位螯合",
+    "静电吸附",
+    "离子交换",
+    "氢键",
+    "π-π堆积",
+    "疏水分配",
+    "孔道限域分子筛分",
+    "几何识别"
+  ]
+}

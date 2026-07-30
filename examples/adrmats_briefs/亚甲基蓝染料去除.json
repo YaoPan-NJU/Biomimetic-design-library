@@ -1,0 +1,1200 @@
+{
+  "brief": {
+    "context": {
+      "water_quality": {
+        "pH": 7,
+        "temperature": 25,
+        "salinity": "low"
+      },
+      "removal_target": {
+        "污染物": "Methylene Blue"
+      },
+      "pollutant_profile": {
+        "canonical_name": "MB（Methylene Blue）",
+        "pollutant_class": "阳离子染料",
+        "molecular_features": [
+          "芳香环",
+          "正电荷",
+          "平面结构",
+          "水溶性"
+        ],
+        "likely_interactions": [
+          "静电吸引",
+          "π-π堆积",
+          "氢键"
+        ],
+        "profile_basis": "database"
+      },
+      "engineering_constraints": []
+    },
+    "candidates": [
+      {
+        "prototype_id": "chlorella-cell-wall",
+        "organism": "Chlorella vulgaris (小球藻)",
+        "candidate_honesty": "inference",
+        "lane": "exploratory",
+        "prototype_status": {
+          "is_background": false,
+          "is_placeholder": false,
+          "scope_note": ""
+        },
+        "domain_caveat": "organic micropollutant evidence weak",
+        "match": {
+          "reason": "污染物类别匹配: 阳离子染料",
+          "weight": 0.8,
+          "applicability_fit": "盐度 any",
+          "match_basis": "molecular_feature_inference",
+          "direct_evidence": false
+        },
+        "mechanism": {
+          "name": "小球藻细胞壁含氧含氮官能团络合与静电吸附",
+          "selected_mechanism_reason": "Query-conditioned scoring selected this mechanism for Methylene Blue based on relevance to matched features/interactions",
+          "selected_mechanism_alignment": {
+            "query_pollutant": "Methylene Blue",
+            "query_class": "阳离子染料",
+            "mechanism_keywords": "小球藻细胞壁含氧含氮官能团络合与静电吸附",
+            "alignment_basis": "query_relevance_scoring",
+            "query_features": [
+              "芳香环",
+              "正电荷",
+              "平面结构",
+              "水溶性"
+            ],
+            "mechanism_functional_groups": [
+              "羧基 carboxyl (-COOH)",
+              "磷酸基 -PO₄",
+              "羟基 hydroxyl (-OH)",
+              "-O-（醚键）",
+              "氨基 amino (-NH₂)"
+            ],
+            "mechanism_key_structures": [
+              "细胞壁结构",
+              "静电吸引+络合+氢键",
+              "吸附结构",
+              "pH响应表面电荷",
+              "藻类细胞壁多糖-蛋白质基质"
+            ],
+            "feature_binding_score": 2
+          },
+          "基本原理": "needs_review",
+          "key_structures": [
+            "细胞壁结构",
+            "静电吸引+络合+氢键",
+            "吸附结构",
+            "pH响应表面电荷",
+            "藻类细胞壁多糖-蛋白质基质"
+          ],
+          "functional_groups": [
+            "羧基 carboxyl (-COOH)",
+            "磷酸基 -PO₄",
+            "羟基 hydroxyl (-OH)",
+            "-O-（醚键）",
+            "氨基 amino (-NH₂)"
+          ],
+          "molecular_feature_links": [
+            "芳香环",
+            "正电荷",
+            "水溶性"
+          ],
+          "attribution": {
+            "source": "literature",
+            "ref": "10.1155/2021/9923643",
+            "verification_tier": "partial",
+            "confidence": "normal"
+          }
+        },
+        "design_translation": {
+          "idea": "利用藻类细胞壁的多官能团表面进行生物吸附",
+          "material_handle": "藻类生物质或藻类生物炭",
+          "design_principle": "微藻细胞壁的多糖和蛋白质含丰富官能团(-COOH、-NH₂、-OH)，可通过螯合和静电吸引吸附重金属",
+          "implementation_example": "微藻培养→收获→干燥→直接使用；或化学改性(碱处理、交联)→增强吸附容量",
+          "constraints": "活藻培养成本高；干藻机械强度低；竞争离子干扰",
+          "failure_modes": "培养污染；机械破碎；竞争吸附",
+          "evidence_tier": "lead",
+          "source_tier": "literature",
+          "material_realization_examples": [
+            "藻类生物质或藻类生物炭"
+          ]
+        },
+        "boundaries": [
+          {
+            "text": "pH影响表面电荷和染料离子化状态",
+            "parameter": "pH",
+            "gate_level": "hard",
+            "basis": "from_source",
+            "verification": "corroborated"
+          }
+        ],
+        "honesty_summary": "基于分子特征推断，非直接证据",
+        "boundary_summary": "1 条硬限制（DO-NOT）",
+        "evidence_context": {
+          "performance_leads": [
+            {
+              "pollutant": "MB (methylene blue)",
+              "material": "Caulerpa scalpelliformis",
+              "value": "Caulerpa scalpelliformis: MB从11.8增至33.8 mg/g (浓度从25增至200 mg/L)",
+              "unit": "mg/g",
+              "verification_tier": "needs_review"
+            },
+            {
+              "pollutant": "MB (methylene blue)",
+              "material": "Caulerpa scalpelliformis",
+              "value": "生物量浓度增加导致单位吸附量降低：Caulerpa 50→200 mg/L, MB吸附从37.6→24.6 mg/g",
+              "unit": "mg/g",
+              "verification_tier": "needs_review"
+            }
+          ]
+        },
+        "charge_state": {
+          "has_charge_state": true,
+          "pka_values": [],
+          "ion_dependence": [],
+          "ph_sensitive": true,
+          "charge_mechanisms": [
+            {
+              "mechanism_id": "",
+              "description": "藻类细胞壁上的羧基(-COOH)、氨基(-NH₂)、羟基(-OH)和磷酸基(-PO₄)通过静电吸引、离子交换和表面络合机制吸附重金属离子",
+              "charge_terms": [
+                "氨基",
+                "羧基",
+                "羟基",
+                "磷酸"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "金属去除机制：(1)离子交换——生物炭上Ca²⁺/Mg²⁺与重金属交换；(2)表面络合——含氧官能团与金属配位；(3)静电吸引——表面电荷与离子型金属；(4)沉淀——碳酸盐/磷酸盐沉淀；(5)还原——",
+              "charge_terms": [
+                "磷酸"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "藻类细胞壁富含多种功能基团：羧基(-COOH)、氨基(-NH₂)、羟基(-OH)、磷酸基(-PO₄)、硫基(-SH)等，这些基团是生物吸附的活性位点",
+              "charge_terms": [
+                "氨基",
+                "羧基",
+                "羟基",
+                "磷酸"
+              ]
+            }
+          ]
+        },
+        "relevance_gating": {
+          "is_excluded": false,
+          "exclusion_reason": "",
+          "do_not_list": [
+            {
+              "rule_id": "",
+              "description": "",
+              "source": "",
+              "gate_level": "hard"
+            },
+            {
+              "rule_id": "",
+              "description": "",
+              "source": "",
+              "gate_level": "hard"
+            },
+            {
+              "rule_id": "",
+              "description": "",
+              "source": "",
+              "gate_level": "hard"
+            },
+            {
+              "rule_id": "",
+              "description": "",
+              "source": "",
+              "gate_level": "hard"
+            },
+            {
+              "rule_id": "",
+              "description": "",
+              "source": "",
+              "gate_level": "hard"
+            },
+            {
+              "rule_id": "",
+              "description": "",
+              "source": "",
+              "gate_level": "hard"
+            },
+            {
+              "rule_id": "",
+              "description": "",
+              "source": "",
+              "gate_level": "hard"
+            },
+            {
+              "rule_id": "",
+              "description": "",
+              "source": "",
+              "gate_level": "hard"
+            },
+            {
+              "rule_id": "",
+              "description": "",
+              "source": "",
+              "gate_level": "hard"
+            },
+            {
+              "rule_id": "",
+              "description": "",
+              "source": "",
+              "gate_level": "hard"
+            },
+            {
+              "rule_id": "",
+              "description": "",
+              "source": "",
+              "gate_level": "hard"
+            },
+            {
+              "rule_id": "",
+              "description": "",
+              "source": "",
+              "gate_level": "hard"
+            },
+            {
+              "rule_id": "",
+              "description": "",
+              "source": "",
+              "gate_level": "hard"
+            },
+            {
+              "rule_id": "_bc",
+              "description": "pH影响表面电荷和染料离子化状态",
+              "source": "10.1155/2021/9923643",
+              "gate_level": "hard"
+            },
+            {
+              "rule_id": "_bc",
+              "description": "pH影响官能团质子化状态和金属离子形态",
+              "source": "10.1155/2021/9923643",
+              "gate_level": "hard"
+            },
+            {
+              "rule_id": "_bc",
+              "description": "复合材料的稳定性和再生成本",
+              "source": "10.1016/j.biortech.2021.124868",
+              "gate_level": "hard"
+            },
+            {
+              "rule_id": "_bc",
+              "description": "酸性条件有利于Cr(VI)还原，但可能溶解Fe₃O₄",
+              "source": "10.1016/j.scitotenv.2021.14567",
+              "gate_level": "hard"
+            },
+            {
+              "rule_id": "_bc",
+              "description": "固定化条件影响细胞活性和吸附性能",
+              "source": "10.1016/j.scitotenv.2021.14567",
+              "gate_level": "hard"
+            },
+            {
+              "rule_id": "_bc",
+              "description": "N掺杂量和碳化温度影响吸附性能",
+              "source": "10.1016/j.scitotenv.2021.14567",
+              "gate_level": "hard"
+            },
+            {
+              "rule_id": "_bc",
+              "description": "pH影响金属离子形态和表面电荷",
+              "source": "10.1016/j.scitotenv.2021.14567",
+              "gate_level": "hard"
+            },
+            {
+              "rule_id": "_bc",
+              "description": "接触时间影响吸附阶段和容量",
+              "source": "10.19824/j.cnki.cn32-1786/x.20",
+              "gate_level": "hard"
+            },
+            {
+              "rule_id": "_bc",
+              "description": "凝胶珠的机械强度和传质限制",
+              "source": "10.1016/j.ese.2022.100227",
+              "gate_level": "hard"
+            },
+            {
+              "rule_id": "_bc",
+              "description": "光照条件影响光降解效率",
+              "source": "10.3390/molecules27031141",
+              "gate_level": "hard"
+            },
+            {
+              "rule_id": "_bc",
+              "description": "官能团密度受藻种和培养条件影响",
+              "source": "10.3390/molecules27031141",
+              "gate_level": "hard"
+            },
+            {
+              "rule_id": "_bc",
+              "description": "表面活性剂浓度和类型影响增溶效果",
+              "source": "10.3390/molecules27031141",
+              "gate_level": "hard"
+            },
+            {
+              "rule_id": "_bc",
+              "description": "光照和温度影响光催化和酶促降解效率",
+              "source": "10.3390/molecules27031141",
+              "gate_level": "hard"
+            }
+          ]
+        }
+      },
+      {
+        "prototype_id": "silk-fibroin",
+        "organism": "Bombyx mori",
+        "candidate_honesty": "inference",
+        "lane": "exploratory",
+        "prototype_status": {
+          "is_background": false,
+          "is_placeholder": false,
+          "scope_note": ""
+        },
+        "domain_caveat": "organic micropollutant evidence weak",
+        "match": {
+          "reason": "污染物类别匹配: 阳离子染料",
+          "weight": 0.8,
+          "applicability_fit": "pH 3.0-7.0, 盐度 low",
+          "match_basis": "molecular_feature_inference",
+          "direct_evidence": false
+        },
+        "mechanism": {
+          "name": "吸附机制——静电作用",
+          "selected_mechanism_reason": "Query-conditioned scoring selected this mechanism for Methylene Blue based on relevance to matched features/interactions",
+          "selected_mechanism_alignment": {
+            "query_pollutant": "Methylene Blue",
+            "query_class": "阳离子染料",
+            "mechanism_keywords": "吸附机制——静电作用",
+            "alignment_basis": "query_relevance_scoring",
+            "query_features": [
+              "芳香环",
+              "正电荷",
+              "平面结构",
+              "水溶性"
+            ],
+            "mechanism_functional_groups": [
+              "-COOH（羧基）",
+              "静电作用位点",
+              "-COO⁻（羧基阴离子）",
+              "丝素蛋白酰胺基",
+              "-OH（羟基）",
+              "-NH₂（氨基）",
+              "氢键位点",
+              "羟基 hydroxyl (-OH)",
+              "-O-（醚键）",
+              "羧基 carboxyl (-COO⁻)",
+              "氨基 amino (-NH₂)"
+            ],
+            "mechanism_key_structures": [
+              "氢键",
+              "吸附结构",
+              "羧基-COO⁻",
+              "阳离子染料吸附",
+              "静电吸引"
+            ],
+            "feature_binding_score": 4
+          },
+          "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+          "key_structures": [
+            "氢键",
+            "吸附结构",
+            "羧基-COO⁻",
+            "阳离子染料吸附",
+            "静电吸引"
+          ],
+          "functional_groups": [
+            "-COOH（羧基）",
+            "静电作用位点",
+            "-COO⁻（羧基阴离子）",
+            "丝素蛋白酰胺基",
+            "-OH（羟基）",
+            "-NH₂（氨基）",
+            "氢键位点",
+            "羟基 hydroxyl (-OH)",
+            "-O-（醚键）",
+            "羧基 carboxyl (-COO⁻)",
+            "氨基 amino (-NH₂)"
+          ],
+          "molecular_feature_links": [],
+          "attribution": {
+            "source": "literature",
+            "ref": "10.1039/d1va00047k",
+            "verification_tier": "partial",
+            "confidence": "normal"
+          }
+        },
+        "design_translation": {
+          "idea": "利用丝素蛋白的 β-折叠结构和氨基酸侧链进行吸附",
+          "material_handle": "丝素蛋白提取、再生或交联成型",
+          "design_principle": "丝素蛋白的β-折叠结晶区提供机械强度，无定形区的-NH₂、-COOH、-OH提供吸附位点。可通过再生/改性调控溶解性和功能化",
+          "implementation_example": "蚕丝脱胶→SF溶液→静电纺丝纳米纤维膜；或SF/壳聚糖复合微球→柱吸附",
+          "constraints": "SF水溶性需甲醇/乙醇处理交联；机械强度低于合成聚合物；成本高于壳聚糖",
+          "failure_modes": "未交联SF溶解；机械强度不足；交联后官能团减少",
+          "evidence_tier": "lead",
+          "source_tier": "llm_inference",
+          "material_realization_examples": [
+            "丝素蛋白提取、再生或交联成型"
+          ]
+        },
+        "boundaries": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          }
+        ],
+        "honesty_summary": "基于分子特征推断，非直接证据",
+        "boundary_summary": "1 条软限制（caution）",
+        "evidence_context": {
+          "performance_leads": [
+            {
+              "pollutant": "methylene blue (MB)",
+              "material": "",
+              "value": "SF: 235.84 mg/g; SF/GO: 381.67 mg/g",
+              "unit": "mg/g",
+              "verification_tier": "partial"
+            },
+            {
+              "pollutant": "Methylene blue (MB)",
+              "material": "FK/SF(CTAB+EtOH) aerogel",
+              "value": "163.84",
+              "unit": "mg/g",
+              "verification_tier": "partial"
+            }
+          ]
+        },
+        "charge_state": {
+          "has_charge_state": true,
+          "pka_values": [],
+          "ion_dependence": [],
+          "ph_sensitive": true,
+          "charge_mechanisms": [
+            {
+              "mechanism_id": "",
+              "description": "主导：PEI质子化氨基(-NH₃⁺)与阴离子染料MO静电吸引；辅助(GO部分)：MO芳香环与GO的π-π堆叠",
+              "charge_terms": [
+                "氨基",
+                "质子化"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "PEI氨基(-NH₂)螯合Cu²⁺→化学吸附；中心发散孔道→快速扩散→活性位点可及；低密度+高孔隙→快速传质",
+              "charge_terms": [
+                "氨基"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "羟基(-OH)、氨基(-NH₂)、羧基(-COOH)、酰胺键(-CONH-)→金属离子螯合+染料静电吸附",
+              "charge_terms": [
+                "氨基",
+                "羧基",
+                "羟基"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "pH升高→COO⁻形成→负电荷密度增加→静电吸引 阳离子亚甲基蓝(MB, Methylene Blue)→去除率从7.93%升至94-96%。丝素蛋白羧基(-COO⁻)与阳离子染料静电吸引，羟基(-O",
+              "charge_terms": [
+                "氨基",
+                "羧基",
+                "羟基"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "多重机制协同: 静电作用+离子交换+范德华力+交联+氢键",
+              "charge_terms": [
+                "氨基",
+                "羧基"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "静电吸引为主：pH>6时SF和GO表面-COOH解离为-COO⁻，与阳离子MB通过静电作用结合",
+              "charge_terms": [
+                "氨基",
+                "羧基"
+              ]
+            }
+          ]
+        },
+        "relevance_gating": {
+          "is_excluded": false,
+          "exclusion_reason": "",
+          "do_not_list": []
+        }
+      },
+      {
+        "prototype_id": "chitosan",
+        "organism": "Crustacea (甲壳类外骨骼几丁质)",
+        "candidate_honesty": "inference",
+        "lane": "exploratory",
+        "prototype_status": {
+          "is_background": false,
+          "is_placeholder": false,
+          "scope_note": ""
+        },
+        "domain_caveat": "organic micropollutant evidence weak",
+        "match": {
+          "reason": "正电荷污染物可与带负电的吸附剂通过静电吸引结合",
+          "weight": 0.675,
+          "applicability_fit": "pH 3.0-7.0, 盐度 low_to_moderate",
+          "match_basis": "molecular_feature_inference",
+          "direct_evidence": false
+        },
+        "mechanism": {
+          "name": "抗生素在CS/GO复合物上的吸附机制",
+          "selected_mechanism_reason": "Query-conditioned scoring selected this mechanism for Methylene Blue based on relevance to matched features/interactions",
+          "selected_mechanism_alignment": {
+            "query_pollutant": "Methylene Blue",
+            "query_class": "阳离子染料",
+            "mechanism_keywords": "抗生素在CS/GO复合物上的吸附机制",
+            "alignment_basis": "query_relevance_scoring",
+            "query_features": [
+              "芳香环",
+              "正电荷",
+              "平面结构",
+              "水溶性"
+            ],
+            "mechanism_functional_groups": [
+              "-NH-（亚氨基）",
+              "离子交换位点",
+              "静电作用位点",
+              "芳香环",
+              "疏水相互作用",
+              "壳聚糖氨基/羟基",
+              "配位/螯合位点",
+              "GO羧基/羟基/环氧基",
+              "-OH（羟基）",
+              "-NH₂（氨基）",
+              "氢键位点",
+              "-S-（硫醚键）",
+              "-O-（醚键）",
+              "-C=O（羰基）"
+            ],
+            "mechanism_key_structures": [
+              "吸附结构"
+            ],
+            "feature_binding_score": 5
+          },
+          "基本原理": "壳聚糖分子链上的氨基（-NH₂）可通过质子化带正电，与带负电的污染物（如染料、重金属阴离子）通过静电吸引结合",
+          "key_structures": [
+            "吸附结构"
+          ],
+          "functional_groups": [
+            "-NH-（亚氨基）",
+            "离子交换位点",
+            "静电作用位点",
+            "芳香环",
+            "疏水相互作用",
+            "壳聚糖氨基/羟基",
+            "配位/螯合位点",
+            "GO羧基/羟基/环氧基",
+            "-OH（羟基）",
+            "-NH₂（氨基）",
+            "氢键位点",
+            "-S-（硫醚键）",
+            "-O-（醚键）",
+            "-C=O（羰基）"
+          ],
+          "molecular_feature_links": [
+            "正电荷",
+            "水溶性"
+          ],
+          "attribution": {
+            "source": "literature",
+            "ref": "10.3390/molecules26030594",
+            "verification_tier": "partial",
+            "confidence": "normal"
+          }
+        },
+        "design_translation": {
+          "idea": "利用壳聚糖的氨基和羟基进行络合吸附，pH 响应控制吸附/脱附",
+          "material_handle": "壳聚糖直接使用或交联改性（如戊二醛、环氧氯丙烷）",
+          "design_principle": "壳聚糖的-NH₂和-OH通过螯合配位、离子交换和静电吸引捕获重金属离子。pH<pKa(~6.3)时-NH₃⁺质子化释放金属（可再生）",
+          "implementation_example": "壳聚糖珠粒（NaOH凝固浴）→ 浸泡金属溶液 → pH 3-4 酸洗再生；或交联壳聚糖/沸石复合微球提高机械强度",
+          "constraints": "酸性条件(pH<3)吸附能力下降；水中溶解性需交联控制；机械强度低需复合增强",
+          "failure_modes": "强酸环境溶解；高盐竞争吸附；有机物堵塞孔道",
+          "evidence_tier": "lead (有性能数据但缺 verification_quote)",
+          "source_tier": "llm_inference",
+          "material_realization_examples": [
+            "壳聚糖直接使用或交联改性（如戊二醛、环氧氯丙烷）"
+          ]
+        },
+        "boundaries": [
+          {
+            "text": "酸性条件(强酸性条件)-NH₃⁺质子化，螯合能力下降",
+            "parameter": "pH",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          }
+        ],
+        "honesty_summary": "基于分子特征推断，非直接证据",
+        "boundary_summary": "1 条软限制（caution）",
+        "evidence_context": {
+          "performance_leads": [
+            {
+              "pollutant": "MB (methylene blue)",
+              "material": "deacetylated cellulose acetate@polydopamine (DA@PDA) composite ENM",
+              "value": "88.15",
+              "unit": "mg/g",
+              "verification_tier": "needs_review"
+            },
+            {
+              "pollutant": "MB (methylene blue)",
+              "material": "CaCl2 cross-linked sodium alginate ENM",
+              "value": "2230",
+              "unit": "mg/g",
+              "verification_tier": "needs_review"
+            }
+          ]
+        },
+        "charge_state": {
+          "has_charge_state": true,
+          "pka_values": [],
+          "ion_dependence": [],
+          "ph_sensitive": true,
+          "charge_mechanisms": [
+            {
+              "mechanism_id": "",
+              "description": "La(OH)3与磷酸盐结合形成内球配合物进行除磷",
+              "charge_terms": [
+                "氨基",
+                "羟基",
+                "磷酸"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "主机制：壳聚糖自由-NH2和-OH上的孤对电子捐赠给缺电子金属阳离子的D轨道形成络合物/螯合物；桥模型（多氨基链间/链内络合）和 pendant模型（氨基悬挂式附着）",
+              "charge_terms": [
+                "氨基",
+                "羟基"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "羧基化壳聚糖(CYCS)+羧基化纳米纤维素(CNC)在CaCl₂溶液中螯合交联→形成水凝胶珠；CYCS通过壳聚糖羧甲基取代获得→取代度>60%；成本显著低于CMCS",
+              "charge_terms": [
+                "羧基"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "As(V)通过静电相互作用吸附(阴离子砷酸盐与质子化氨基)；As(III)通过络合机制吸附(中性H3AsO3)；铁-壳聚糖复合材料涉及内球配合物形成",
+              "charge_terms": [
+                "氨基",
+                "质子化"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "低pH适合去除硝酸盐（正电荷表面静电吸引负电NO3-）；高pH适合去除氨（去质子化活性基团）",
+              "charge_terms": [
+                "氨基",
+                "羟基",
+                "质子化"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "41.9 mg/g (Langmuir); 机制: H键、FeCl3引入Cl-与NO3-离子交换、酸性介质中质子化羟基/氨基/Fe静电作用",
+              "charge_terms": [
+                "氨基",
+                "羟基",
+                "质子化"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "疏水空腔+亲水外表面→包合有机分子(PAH/药物/染料); 同时羧基/羰基→静电吸附金属离子",
+              "charge_terms": [
+                "羧基"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "(1) Electrostatic interaction; (2) Complexation; (3) Ion exchange",
+              "charge_terms": [
+                "electrostatic"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "Amino groups and carboxyl groups participate in cationic exchange with divalent metal ions; XPS conf",
+              "charge_terms": [
+                "amino",
+                "carboxyl",
+                "ionic"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "Hydrogen bonding, Electrostatic, π-π",
+              "charge_terms": [
+                "electrostatic"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "CrO₄²⁻/Cr₂O₇²⁻与壳聚糖质子化—NH₃⁺基团之间的静电吸引",
+              "charge_terms": [
+                "质子化"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "壳聚糖：黏均分子量8.99×10⁵，脱乙酰度94%。甲壳素碱性条件下部分脱乙酰化产物。无毒、可生物降解、生物相容性。含大量-NH₂(酸性质子化→螯合金属)和-OH(吸附F⁻)",
+              "charge_terms": [
+                "质子化"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "脱乙酰度94%→意味着94%的N-乙酰基被去除→释放大量游离-NH₂。NH₂在酸性条件下质子化→正电荷→螯合金属离子+吸附阴离子(F⁻通过氢键/静电)",
+              "charge_terms": [
+                "质子化"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "pHpzc=7.24。CR: pH 5-8去除率稳定→氢键主导(非静电)。pH 9-11去除率剧降→静电排斥。Cu²⁺: pH 2-6去除率递增→pH 6最佳→90%去除。pH<6:质子化–NH₂/–",
+              "charge_terms": [
+                "质子化"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "At pH > pHpzc, adsorbent surface deprotonated creating negative charge that attracts cations; at pH ",
+              "charge_terms": [
+                "protonat",
+                "deprotonat",
+                "electrostatic"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "At pH < pHpzc, positively charged Cu2+ exchanges with H+ ions on protonated adsorbent surface; slowe",
+              "charge_terms": [
+                "protonat"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "含配位原子(N、S、O)的基团（羧基、羟基、巯基、氨基）与重金属离子进行螯合",
+              "charge_terms": [
+                "氨基",
+                "羧基",
+                "羟基",
+                "巯基"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "静电作用(electrostatic interaction)、络合(complexation)、氢键(hydrogen bonding)、酸碱作用(acid-base interaction)、配位",
+              "charge_terms": [
+                "electrostatic"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "Pb(II)通过-COOH静电吸引+H键+氨基络合；MB通过磺酸基增强Pb(II)吸附+Pb(II)作为阳离子桥增强MB吸附",
+              "charge_terms": [
+                "氨基"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "pH>3.86时凝胶表面去质子化呈负电性，-NH₂和-COO⁻增强螯合作用",
+              "charge_terms": [
+                "质子化"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "LS和CCS与环氧氯丙烷交联修饰氨基；SA和CCS的羧酸盐基团与Ca²⁺交联；CCS的氨基/羧基和PEI的亚胺基提供吸附位点；LS的磺酸基增强配位",
+              "charge_terms": [
+                "氨基",
+                "羧基"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "海藻酸钠通过G单元羧基与Ca²⁺配位形成'蛋盒'结构三维网络凝胶",
+              "charge_terms": [
+                "羧基"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "electrostatic interaction + surface complexation + pore filling",
+              "charge_terms": [
+                "electrostatic"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "electrostatic interaction between positively charged surface (H+) and MO- (SO3-)",
+              "charge_terms": [
+                "electrostatic"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "electrostatic interaction between anionic MO and chitosan-based nanocomposite surface (dominant mech",
+              "charge_terms": [
+                "ionic",
+                "electrostatic"
+              ]
+            }
+          ]
+        },
+        "relevance_gating": {
+          "is_excluded": false,
+          "exclusion_reason": "",
+          "do_not_list": []
+        }
+      },
+      {
+        "prototype_id": "polydopamine-coating",
+        "organism": "Mytilus edulis",
+        "candidate_honesty": "inference",
+        "lane": "exploratory",
+        "prototype_status": {
+          "is_background": false,
+          "is_placeholder": false,
+          "scope_note": ""
+        },
+        "domain_caveat": "organic micropollutant evidence weak",
+        "match": {
+          "reason": "芳香环可通过π-π堆积作用与含芳香环的吸附剂结合",
+          "weight": 0.6666666666666666,
+          "applicability_fit": "pH 3.0-7.0, 盐度 moderate",
+          "match_basis": "molecular_feature_inference",
+          "direct_evidence": false
+        },
+        "mechanism": {
+          "name": "CR吸附机制总结",
+          "selected_mechanism_reason": "Query-conditioned scoring selected this mechanism for Methylene Blue based on relevance to matched features/interactions",
+          "selected_mechanism_alignment": {
+            "query_pollutant": "Methylene Blue",
+            "query_class": "阳离子染料",
+            "mechanism_keywords": "CR吸附机制总结",
+            "alignment_basis": "query_relevance_scoring",
+            "query_features": [
+              "芳香环",
+              "正电荷",
+              "平面结构",
+              "水溶性"
+            ],
+            "mechanism_functional_groups": [
+              "邻苯二酚 catechol (-OH)",
+              "静电作用位点",
+              "胺基 amine (-NH₂)",
+              "氢键位点",
+              "吲哚环 indole"
+            ],
+            "mechanism_key_structures": [
+              "π-π堆叠",
+              "胺基静电吸附",
+              "吸附结构",
+              "PDA邻苯二酚螯合",
+              "席夫碱反应"
+            ],
+            "feature_binding_score": 1
+          },
+          "基本原理": "needs_review",
+          "key_structures": [
+            "π-π堆叠",
+            "胺基静电吸附",
+            "吸附结构",
+            "PDA邻苯二酚螯合",
+            "席夫碱反应"
+          ],
+          "functional_groups": [
+            "邻苯二酚 catechol (-OH)",
+            "静电作用位点",
+            "胺基 amine (-NH₂)",
+            "氢键位点",
+            "吲哚环 indole"
+          ],
+          "molecular_feature_links": [
+            "芳香环",
+            "平面结构"
+          ],
+          "attribution": {
+            "source": "literature",
+            "ref": "10.1016/j.seppur.2024.127979",
+            "verification_tier": "partial",
+            "confidence": "normal"
+          }
+        },
+        "design_translation": {
+          "idea": "利用 PDA 涂层的邻苯二酚和胺基双功能基团进行表面改性，实现普适性粘附和污染物捕获",
+          "material_handle": "多巴胺在弱碱性（pH 8.5）条件下自聚成 PDA 涂层",
+          "design_principle": "PDA 的邻苯二酚(-OH)和胺基(-NH₂)双功能基团：(1)邻苯二酚螯合软金属(Pb²⁺、Cu²⁺、UO₂²⁺)；(2)胺基提供正电荷吸附阴离子(如Cr₂O₇²⁻)；(3)通用粘附性可在任意基底表面成膜",
+          "implementation_example": "多巴胺盐酸盐(2 mg/mL)溶于 Tris-HCl(pH 8.5)，浸渍基底12-24h → PDA涂层 → 可进一步接枝功能分子(如EDTA、SH)",
+          "constraints": "涂层厚度控制(通常<100nm)；pH 8.5碱性条件；多巴胺成本较高；长期稳定性",
+          "failure_modes": "涂层不均匀；碱性条件限制基底选择；多次循环后涂层脱落",
+          "evidence_tier": "fact (有 CN114887602A 专利支撑 P 吸附)",
+          "source_tier": "literature",
+          "material_realization_examples": [
+            "多巴胺在弱碱性（pH 8.5）条件下自聚成 PDA 涂层"
+          ]
+        },
+        "boundaries": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          }
+        ],
+        "honesty_summary": "基于分子特征推断，非直接证据",
+        "boundary_summary": "1 条软限制（caution）",
+        "evidence_context": {
+          "performance_leads": []
+        },
+        "charge_state": {
+          "has_charge_state": true,
+          "pka_values": [],
+          "ion_dependence": [],
+          "ph_sensitive": true,
+          "charge_mechanisms": [
+            {
+              "mechanism_id": "",
+              "description": "La与磷酸根配位生成磷酸镧化合物",
+              "charge_terms": [
+                "磷酸"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "phenolic hydroxyl groups participate in adsorption (C-O and O 1s binding energy shifts)",
+              "charge_terms": [
+                "hydroxyl"
+              ]
+            }
+          ]
+        },
+        "relevance_gating": {
+          "is_excluded": false,
+          "exclusion_reason": "",
+          "do_not_list": []
+        }
+      },
+      {
+        "prototype_id": "plant-tannin",
+        "organism": "Plant sources (单宁酸)",
+        "candidate_honesty": "inference",
+        "lane": "exploratory",
+        "prototype_status": {
+          "is_background": false,
+          "is_placeholder": false,
+          "scope_note": ""
+        },
+        "domain_caveat": "organic micropollutant evidence weak",
+        "match": {
+          "reason": "芳香环可通过π-π堆积作用与含芳香环的吸附剂结合",
+          "weight": 0.6666666666666666,
+          "applicability_fit": "pH 2.5-7.0, 盐度 low_to_moderate",
+          "match_basis": "molecular_feature_inference",
+          "direct_evidence": false
+        },
+        "mechanism": {
+          "name": "植物单宁芳香环π-π堆积与酚羟基氢键静电吸附",
+          "selected_mechanism_reason": "Query-conditioned scoring selected this mechanism for Methylene Blue based on relevance to matched features/interactions",
+          "selected_mechanism_alignment": {
+            "query_pollutant": "Methylene Blue",
+            "query_class": "阳离子染料",
+            "mechanism_keywords": "植物单宁芳香环π-π堆积与酚羟基氢键静电吸附",
+            "alignment_basis": "query_relevance_scoring",
+            "query_features": [
+              "芳香环",
+              "正电荷",
+              "平面结构",
+              "水溶性"
+            ],
+            "mechanism_functional_groups": [
+              "-COOH（羧基）",
+              "静电作用位点",
+              "芳香环",
+              "-COO⁻（羧基阴离子）",
+              "-S-（硫醚键）",
+              "GO羧基/羟基/环氧基",
+              "-OH（羟基）",
+              "氢键位点",
+              "π-π堆积位点",
+              "-O-（醚键）"
+            ],
+            "mechanism_key_structures": [
+              "吸附结构"
+            ],
+            "feature_binding_score": 4
+          },
+          "基本原理": "needs_review",
+          "key_structures": [
+            "吸附结构"
+          ],
+          "functional_groups": [
+            "-COOH（羧基）",
+            "静电作用位点",
+            "芳香环",
+            "-COO⁻（羧基阴离子）",
+            "-S-（硫醚键）",
+            "GO羧基/羟基/环氧基",
+            "-OH（羟基）",
+            "氢键位点",
+            "π-π堆积位点",
+            "-O-（醚键）"
+          ],
+          "molecular_feature_links": [
+            "芳香环",
+            "平面结构"
+          ],
+          "attribution": {
+            "source": "literature",
+            "ref": "10.1016/j.colsurfa.2021.126972",
+            "verification_tier": "partial",
+            "confidence": "normal"
+          }
+        },
+        "design_translation": {
+          "idea": "利用植物单宁的多酚结构进行金属离子络合和蛋白质沉淀",
+          "material_handle": "单宁酸直接使用或固定化在载体上",
+          "design_principle": "单宁酸的邻苯二酚/邻苯三酚基团通过邻位-OH与金属离子形成五元螯合环，结合常数高(log K 8-15)，对软酸金属(Pb²⁺、Cu²⁺)选择性强",
+          "implementation_example": "单宁酸固定化在壳聚糖基质（TA/CS复合微球）或氨基功能化磁性纳米颗粒（TA@Fe₃O₄-NH₂）→ 磁分离回收",
+          "constraints": "水溶性单宁需固定化防止流失；碱性条件氧化降低活性；蛋白质共存时非特异性沉淀",
+          "failure_modes": "固定化后官能团减少；碱性氧化失活；有机溶剂洗脱不完全",
+          "evidence_tier": "lead (有 Mao2024 Cr(VI) 数据但缺其他金属 quote)",
+          "source_tier": "llm_inference",
+          "material_realization_examples": [
+            "单宁酸直接使用或固定化在载体上"
+          ]
+        },
+        "boundaries": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "gate_level": "soft",
+            "basis": "llm_inferred",
+            "verification": "needs_review"
+          }
+        ],
+        "honesty_summary": "基于分子特征推断，非直接证据",
+        "boundary_summary": "1 条软限制（caution）",
+        "evidence_context": {
+          "performance_leads": []
+        },
+        "charge_state": {
+          "has_charge_state": true,
+          "pka_values": [],
+          "ion_dependence": [],
+          "ph_sensitive": false,
+          "charge_mechanisms": [
+            {
+              "mechanism_id": "",
+              "description": "单宁的邻苯二酚基团通过螯合作用与重金属离子形成五元环螯合物；石墨烯提供π共轭结构和三维多孔传质通道；含氧官能团（—OH、—C=O）作为吸附活性位点",
+              "charge_terms": [
+                "羟基"
+              ]
+            },
+            {
+              "mechanism_id": "",
+              "description": "DOLE分子通过羟基、羰基和共轭环上的孤对电子与Fe空d轨道配位形成化学吸附，同时范德华力和静电作用贡献物理吸附，在X70钢表面形成保护性吸附膜，同时阻滞阴极（H+还原）和阳极（Fe溶解）反应",
+              "charge_terms": [
+                "羟基"
+              ]
+            }
+          ]
+        },
+        "relevance_gating": {
+          "is_excluded": false,
+          "exclusion_reason": "",
+          "do_not_list": []
+        }
+      }
+    ],
+    "applicable_rules": [],
+    "rule_based_cautions": {
+      "do_not": [
+        {
+          "prototype_id": "chlorella-cell-wall",
+          "mechanism_name": "生物聚合物与其他材料的复合策略 Biopolymer composite strategies",
+          "parameter": "regeneration",
+          "text": "复合材料的稳定性和再生成本",
+          "basis": "from_source",
+          "verification": "corroborated",
+          "source_asset": null
+        }
+      ],
+      "cautions": [
+        {
+          "prototype_id": "silk-fibroin",
+          "mechanism_name": "丝素蛋白氨基酸残基氨基/羧基配位与氢键吸附",
+          "parameter": "other",
+          "text": "适用条件需根据具体机制验证",
+          "basis": "llm_inferred",
+          "verification": "needs_review",
+          "source_asset": null
+        },
+        {
+          "prototype_id": "chitosan",
+          "mechanism_name": "金属离子络合机制 Metal ion complexation mechanism",
+          "parameter": "competing_ion",
+          "text": "高浓度Ca²⁺、Mg²⁺竞争配位位点",
+          "basis": "llm_inferred",
+          "verification": "needs_review",
+          "source_asset": null
+        },
+        {
+          "prototype_id": "chitosan",
+          "mechanism_name": "pH对氮污染物吸附的影响机制 pH effect on N-pollutants adsorption",
+          "parameter": "salinity",
+          "text": "高盐浓度下静电屏蔽效应减弱阴离子吸附",
+          "basis": "llm_inferred",
+          "verification": "needs_review",
+          "source_asset": null
+        },
+        {
+          "prototype_id": "polydopamine-coating",
+          "mechanism_name": "聚多巴胺儿茶酚/胺基多价协同表面黏附",
+          "parameter": "other",
+          "text": "适用条件需根据具体机制验证",
+          "basis": "llm_inferred",
+          "verification": "needs_review",
+          "source_asset": null
+        },
+        {
+          "prototype_id": "plant-tannin",
+          "mechanism_name": "植物单宁芳香环π-π堆积与酚羟基氢键静电吸附",
+          "parameter": "other",
+          "text": "适用条件需根据具体机制验证",
+          "basis": "llm_inferred",
+          "verification": "needs_review",
+          "source_asset": null
+        }
+      ]
+    },
+    "honesty_ledger": {
+      "facts": [],
+      "leads": [],
+      "inferences": [
+        "chlorella-cell-wall: 基于分子特征推断，非直接证据",
+        "silk-fibroin: 基于分子特征推断，非直接证据",
+        "chitosan: 基于分子特征推断，非直接证据",
+        "polydopamine-coating: 基于分子特征推断，非直接证据",
+        "plant-tannin: 基于分子特征推断，非直接证据"
+      ]
+    }
+  }
+}

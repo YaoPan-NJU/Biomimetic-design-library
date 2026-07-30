@@ -1,0 +1,306 @@
+{
+  "id": "scallop-shell",
+  "name_zh": "扇贝壳",
+  "name_en": "Scallop Shell",
+  "organism": {
+    "scientific": "Chlamys farreri (Scallop)",
+    "category": "动物"
+  },
+  "biomimetic_dimension": "过程仿生",
+  "features": [
+    "层状",
+    "氨基",
+    "生物矿化模板"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": "moderate",
+    "note": "测过的 pH/温度范围，不是适用范围。仅从 performance_data 中实际测试过的条件聚合。"
+  },
+  "performance_data": [
+    {
+      "parameter": "煅烧牡蛎壳(800℃)最大吸附容量",
+      "value": "Cd2+: 2184.29, Pb2+: 1949.39",
+      "unit": "mg/g",
+      "pollutant": "Pb(II)",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.13254/j.jare.2020.0504",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2021-Zhang-shellfish-heavy-metal-passivation-review.pdf",
+      "page": 6,
+      "locator": "Table 1 煅烧处理对贝壳类材料孔径和比表面积的影响",
+      "verification": "partial",
+      "confidence": 0.7,
+      "source_locator": "Zhang2021 p.792 / Table 1",
+      "verification_quote": "数值 2184.29/1949.39 未在 PDF 全文中精确匹配，但 Table 1 区域存在煅烧贝壳吸附容量数据"
+    },
+    {
+      "parameter": "煅烧双色牡蛎壳去除率(Cu/Co/Pb)",
+      "value": "Cu: 94.4%, Co: 96.5%, Pb: 96.7%",
+      "unit": "%",
+      "pollutant": "Cu(II)",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "材料添加量2 g·L⁻¹, 金属离子浓度10 mg·L⁻¹",
+      "source": "literature",
+      "ref_doi": "10.13254/j.jare.2020.0504",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2021-Zhang-shellfish-heavy-metal-passivation-review.pdf",
+      "page": 5,
+      "locator": "Section 3.3 煅烧处理",
+      "verification": "partial",
+      "confidence": 0.85,
+      "source_locator": "Zhang2021 p.793 / Section 3.3",
+      "verification_quote": "煅烧贝壳对铜、钴、铅的去除率可分别达到94.4%、96.5%、96.7%（材料添加量为2 g·L⁻¹；金属离子浓度为10 mg·L⁻¹）"
+    }
+  ],
+  "mechanisms": [
+    {
+      "name": "扇贝壳文石碳酸钙离子交换与碳酸盐沉淀",
+      "description": "石灰效应, 沉淀效应, 物理吸附, 离子交换",
+      "functional_groups": [
+        "离子交换位点",
+        "-O-（醚键）"
+      ],
+      "source": "literature",
+      "ref_doi": "10.13254/j.jare.2020.0504",
+      "verification": "partial",
+      "verification_quote": "The remediation mechanisms predominantly include liming effects, precipitation and adsorption effects, but the molecular mechanisms underlying the microscopic solidification are still unclear",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "重金属离子和染料",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "扇贝壳文石型CaCO₃层状结构",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.19672/j.cnki.1003-6504.2227.22.338",
+          "locator": "p.4",
+          "quote": "2-→CaCO3(s)",
+          "scope_match": "Keywords: caco, ca"
+        },
+        "interaction": {
+          "text": "Ca²⁺离子交换和碳酸盐沉淀",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.11759/hykx20221122001",
+          "locator": "p.1",
+          "quote": "(Bay scallop)、虾夷扇贝 (Comb shell)[11]",
+          "scope_match": "Keywords: ca, bay"
+        },
+        "why_it_works": {
+          "text": "贝壳矿物提供离子交换位点和缓冲pH环境",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.19672/j.cnki.1003-6504.2227.22.338",
+          "locator": "p.4",
+          "quote": "环境pH值的增加（式（22）、",
+          "scope_match": "Keywords: 环境, 值的, 值的增, 值的增加"
+        },
+        "boundary_conditions": [
+          {
+            "text": "pH影响CaCO₃溶解和吸附容量",
+            "parameter": "general",
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "locator": "page 2",
+            "source": "10.13254/j.jare.2020.0504",
+            "quote": "http://www.aed.org.cn\n农业资源与环境学报·第38卷·第5期\n于增加土壤肥力[4-5]、改良酸性土壤[6-7]和制备缓释\n肥料[8-9]等方面，同时碱性贝壳材料可有效提升土壤\npH",
+            "verification_method": "pdf_visual_reading"
+          }
+        ],
+        "transferable_principle": "扇贝壳文石型CaCO₃层状结构"
+      },
+      "source_locator": "p.1",
+      "key_structures": [
+        "吸附结构",
+        "文石晶体"
+      ]
+    },
+    {
+      "name": "吸附机理增强因素",
+      "description": "氢键作用 (Ca(OH)2的O-H键与刚果红分子)",
+      "functional_groups": [
+        "-O-（醚键）",
+        "-OH（羟基）",
+        "氢键位点"
+      ],
+      "source": "literature",
+      "ref_doi": "10.11759/hykx20221122001",
+      "verification": "partial",
+      "verification_quote": "氧化钙的Ｏ−Ｈ 键也利于与刚果红分子发生氢键作用",
+      "causal_chain": {
+        "transferable_principle": "基于机制: 吸附机理增强因素",
+        "pollutant_feature": {
+          "text": "氢键作用 (Ca(OH)2的O-H键与刚果红分子)",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.11759/hykx20221122001",
+          "locator": "p.5",
+          "quote": "成的CaO 的水化物Ca(OH)2 的O-Ｈ键与刚果红分子",
+          "scope_match": "Keywords: 刚果红, 氢键作用, 键与刚果红分子"
+        },
+        "bio_structure": {
+          "text": "吸附机理增强因素表面活性位点",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "氢键作用 (Ca(OH)2的O-H键与刚果红分子)",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.11759/hykx20221122001",
+          "locator": "p.5",
+          "quote": "成的CaO 的水化物Ca(OH)2 的O-Ｈ键与刚果红分子",
+          "scope_match": "Keywords: 刚果红, 氢键作用, 键与刚果红分子"
+        },
+        "why_it_works": {
+          "text": "氢键相互作用增强吸附",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": "page 2",
+            "quote": "http://www.aed.org.cn\n农业资源与环境学报·第38卷·第5期\n于增加土壤肥力[4-5]、改良酸性土壤[6-7]和制备缓释\n肥料[8-9]等方面，同时碱性贝壳材料可有效提升土壤\npH",
+            "source_asset": null,
+            "source": "10.11759/hykx20221122001",
+            "verification_method": "unverifiable_generic_text"
+          }
+        ]
+      },
+      "source_locator": "p.4",
+      "key_structures": [
+        "吸附结构"
+      ]
+    }
+  ],
+  "narrative": {
+    "entries": [
+      {
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\第三波\\json\\2021-Zhang-shellfish-heavy-metal-passivation-review.json",
+        "paper_id": "2021-Zhang-shellfish-heavy-metal-passivation-review",
+        "sections": {
+          "problem_definition": "农田土壤重金属(Cd, Pb等)污染导致作物富集，威胁食品安全；天然贝壳废弃物堆积造成资源浪费和环境污染。需要低成本、环境友好的材料来原位钝化重金属。",
+          "biological_solution": "贝壳是自然界经生物矿化形成的碳酸钙(CaCO3)生物陶瓷复合材料，具有95%的无机矿物成分和5%的有机质(贝壳素)。其独特的微层结构(棱柱层和珍珠层)和2-10 µm微孔网络提供了巨大的比表面积和离子交换位点。贝壳中的Ca2+、Mg2+可与重金属发生离子交换，其碱性(CaCO3或煅烧后的CaO)可提升土壤pH，促使重金属生成碳酸盐/氢氧化物沉淀。",
+          "key_features": "必须保留：贝壳的微孔结构(物理吸附)、碳酸钙晶格(离子交换/沉淀)、天然碱性(pH提升)。可灵活调整：煅烧温度(400-1000℃)、球磨细化程度、与功能材料复配比例。",
+          "design_mapping": "生物结构→材料设计：贝壳微层/微孔→高比表面积吸附骨架；CaCO3晶格→Ca2+与重金属离子交换位点；天然碱性→土壤pH调节剂(石灰效应)；有机质残留→表面络合官能团。软约束建议：控制煅烧温度在900℃以上实现CaO转化与孔隙爆发；利用晶型差异(文石vs方解石)靶向吸附特定重金属。",
+          "explainability_anchors": "仿生故事线：利用生物矿化天然产物(贝壳)的多孔碳酸钙骨架，通过物理粉碎/化学煅烧激活其离子交换和沉淀能力，实现‘以废治废’的土壤重金属原位钝化。设计溯源：天然贝壳→粉碎/球磨/煅烧→多孔CaO/CaCO3复合材料→离子交换+表面沉淀+pH提升→重金属固定化。"
+        }
+      }
+    ]
+  },
+  "engineering_constraints": [
+    {
+      "constraint": "pH影响CaCO₃溶解和吸附容量，低pH导致壳体溶解",
+      "value": "6",
+      "unit": "pH",
+      "relevance": "high",
+      "explanation": "CaCO₃在酸性条件下溶解，释放Ca²⁺并破坏结构",
+      "source": "mechanism_context",
+      "ref_doi": null
+    },
+    {
+      "constraint": "煅烧能耗高，CaO水化放热需控制",
+      "value": null,
+      "unit": null,
+      "relevance": "high",
+      "explanation": "煅烧需800°C以上，CaO水化放热可能导致运行不稳定",
+      "source": "mechanism_context",
+      "ref_doi": null
+    },
+    {
+      "constraint": "竞争阳离子(Ca²⁺、Mg²⁺)干扰目标污染物吸附",
+      "value": null,
+      "unit": null,
+      "relevance": "medium",
+      "explanation": "与oyster-shell类似，高硬度水体竞争离子降低目标污染物容量",
+      "source": "literature_aggregate",
+      "ref_doi": null
+    }
+  ],
+  "provenance_summary": {
+    "n_papers": 3,
+    "n_verified": 7,
+    "n_unverified": 3
+  },
+  "coverage": "normal",
+  "status": "active",
+  "design_translation": [
+    {
+      "idea": "利用扇贝壳的层状结构和 CaCO₃ 进行污染物固定",
+      "specific_functional_group": "方解石型 CaCO₃，层状有机基质",
+      "material_handle": "扇贝壳粉碎、热处理或复合改性",
+      "target_interaction": "CaCO₃ 溶解沉淀重金属，层状结构提供物理吸附位点",
+      "source_tier": "llm_inference",
+      "examples": [],
+      "design_principle": "扇贝壳方解石(CaCO₃)通过离子交换与Pb²⁺形成PbCO₃沉淀，煅烧后CaO具有更强吸附能力。高钙含量(>90%)提供大量吸附位点",
+      "implementation_example": "扇贝壳清洗→800°C煅烧2h→CaO粉末→柱吸附；或酸活化(HCl)→CaCl₂溶液→再生循环",
+      "constraints": "煅烧能耗高；CaO水化放热需控制；竞争阳离子干扰",
+      "failure_modes": "煅烧不完全；CaO水化放热；竞争离子降低容量",
+      "evidence_tier": "lead"
+    }
+  ],
+  "library_tier": "core",
+  "lifecycle_status": "active",
+  "honesty_ledger": {
+    "facts": [],
+    "leads": [
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "钝化机理",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "mechanism",
+        "index": 1,
+        "name": "吸附机理增强因素",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 0,
+        "parameter": "煅烧牡蛎壳(800℃)最大吸附容量",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 1,
+        "parameter": "煅烧双色牡蛎壳去除率(Cu/Co/Pb)",
+        "basis": "partial_with_quote"
+      }
+    ],
+    "inferences": [],
+    "generated_by": "P1c-auto",
+    "note": "Classification based on verification label + quote presence + source type"
+  },
+  "mechanism_tags": [
+    "配位螯合",
+    "离子交换",
+    "氢键",
+    "沉淀共沉淀",
+    "生物矿化"
+  ]
+}

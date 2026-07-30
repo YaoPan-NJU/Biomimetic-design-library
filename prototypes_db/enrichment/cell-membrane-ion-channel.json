@@ -1,0 +1,410 @@
+{
+  "mechanisms": {
+    "细胞膜仿生设计概念": {
+      "基本原理": "细胞膜的脂质双分子层和膜蛋白可通过静电作用、配位作用或分子识别选择性结合污染物",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "特定离子（如K⁺、Na⁺、Ca²⁺）和极性有机分子",
+          "basis": "from_source",
+          "locator": "BerattoRamos2022 p.1 / Abstract"
+        },
+        "bio_structure": {
+          "text": "细胞膜的脂质双分子层和膜蛋白（离子通道、水通道蛋白）",
+          "basis": "from_source",
+          "locator": "BerattoRamos2022 p.1 / Abstract"
+        },
+        "interaction": {
+          "text": "离子通道的选择性过滤器通过尺寸排斥和配位作用实现离子选择性；水通道蛋白（AQP）仅允许水分子通过",
+          "basis": "from_source",
+          "locator": "BerattoRamos2022 p.1 / Abstract"
+        },
+        "why_it_works": {
+          "text": "生物离子通道的选择性来自精确的孔道尺寸和通道内壁的化学环境（如KcsA通道的羰基氧配位），可实现亚埃级离子选择",
+          "basis": "from_source",
+          "locator": "BerattoRamos2022 p.1 / Abstract"
+        },
+        "boundary_conditions": [
+          {
+            "text": "仿生膜的稳定性远低于生物膜，高压力/高盐下膜结构破坏",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          },
+          {
+            "text": "高盐条件下膜结构可能被破坏，选择性下降",
+            "parameter": "salinity",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": "domain_knowledge"
+          }
+        ],
+        "transferable_principle": "生物离子通道的选择性过滤机制（尺寸排斥+化学配位）可启发高选择性分离膜设计",
+        "verification_quote": "aquaporin-based biomimetic membranes for water filtration"
+      }
+    },
+    "C14lyso脂质体vs DOPC脂质体结构差异 Structure difference C14lyso vs DOPC liposomes": {
+      "基本原理": "needs_review",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[0]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[0]"
+        },
+        "interaction": {
+          "text": "C14lyso脂质体：单酰基链→更多自由体积→松散结构→高水渗透率(Pf=5.84×10⁻⁴ m/s); DOPC脂质体：双疏水酰基链→致密结构→低水渗透率(Pf=7.28×10⁻⁵ m/s)",
+          "basis": "from_source",
+          "locator": "mechanism[0]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[0]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "Aquaporin(AQP)结构与水传输机制 AQP structure and water transport mechanism": {
+      "基本原理": "needs_review",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[1]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[1]"
+        },
+        "interaction": {
+          "text": "AQP具有6个跨膜结构域和独特的沙漏结构，形成~2.8Å孔道，实现~3×10⁹水分子/秒的快速水传输，同时有效排斥单价离子",
+          "basis": "from_source",
+          "locator": "mechanism[1]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[1]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "水传输机制 Water transport mechanism": {
+      "基本原理": "needs_review",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[2]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[2]"
+        },
+        "interaction": {
+          "text": "两种机制协同增强水渗透性：(1) PA选择层本征结构变化(更薄、更粗糙、更亲水、更高DC)；(2) C14lyso脂质体作为AWC加速水传输(缩短水分子传递路径、降低传质阻力)",
+          "basis": "from_source",
+          "locator": "mechanism[2]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[2]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "生物离子通道仿生设计原则": {
+      "基本原理": "细胞膜的脂质双分子层和膜蛋白可通过静电作用、配位作用或分子识别选择性结合污染物",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[4]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[4]"
+        },
+        "interaction": {
+          "text": "三类生物离子精确滤器(离子泵/离子交换器/离子通道)→核心选择性机制：(1)高精度孔径(水合自由能差异→脱水选择性)；(2)部分电荷氧配位(羰基/羟基)→捕获脱水离子+补偿脱水能量损失→快速跳跃传输",
+          "basis": "from_source",
+          "locator": "mechanism[4]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[4]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "冠醚仿生离子通道——12-crown-4 Li⁺选择性": {
+      "基本原理": "细胞膜的脂质双分子层和膜蛋白可通过静电作用、配位作用或分子识别选择性结合污染物",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[5]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[5]"
+        },
+        "interaction": {
+          "text": "12-crown-4掺入聚降冰片烯网络→Li⁺/Mg²⁺渗透选择性10.1(反向选择)、Li⁺/Na⁺选择性2.3→冠醚腔径匹配+氧配位→人工离子通道",
+          "basis": "from_source",
+          "locator": "mechanism[5]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[5]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "功能化石墨烯纳米孔——模拟Na⁺通道": {
+      "基本原理": "needs_review",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[6]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[6]"
+        },
+        "interaction": {
+          "text": "穿孔石墨烯(porous graphene)→晶格缺陷模拟离子配位能力→氧原子锚定在刚性孔边缘→比柔性冠醚更大的结合能(受限分子构象旋转)→单离子选择性",
+          "basis": "from_source",
+          "locator": "mechanism[6]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[6]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "MOF纳米晶体——离子选择性膜": {
+      "基本原理": "needs_review",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[7]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[7]"
+        },
+        "interaction": {
+          "text": "MOF孔径0.3-10nm可调→亚纳米通道(MIL-121/ZIF-8/UiO-66-X)→笼型窗口尺寸筛分+有机配体与目标离子配位效应→协同选择性",
+          "basis": "from_source",
+          "locator": "mechanism[7]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[7]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "液晶膜——反常Cl⁻/SO₄²⁻选择性": {
+      "基本原理": "needs_review",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[8]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[8]"
+        },
+        "interaction": {
+          "text": "柱状/双连续立方LC膜→SO₄²⁻(更大离子半径)渗透速率>Cl⁻(更小离子半径)→反常选择性→非单一尺寸筛分→尺寸+静电+氢键协同",
+          "basis": "from_source",
+          "locator": "mechanism[8]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[8]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "扩散速率调控——PVA减缓PIP扩散一个数量级": {
+      "基本原理": "needs_review",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[9]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[9]"
+        },
+        "interaction": {
+          "text": "PVA引入水相→氢键+增粘→PIP扩散速率降低一个数量级→界面浓度分布均匀→孔径均匀化；无机盐→静电作用限制胺单体扩散；两性离子共聚物→调控扩散",
+          "basis": "from_source",
+          "locator": "mechanism[9]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[9]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "界面单体分布调控——表面活性剂": {
+      "基本原理": "needs_review",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[10]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[10]"
+        },
+        "interaction": {
+          "text": "SARIP(SDS调控界面聚合)→表面活性剂自组装促进胺单体在界面扩散均匀化→均匀亚纳米孔；阴离子表面活性剂→加速扩散(静电吸引PIP)；阳离子→抑制(排斥PIP)；非离子→乳液聚集体→窄孔径分布",
+          "basis": "from_source",
+          "locator": "mechanism[10]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[10]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "GO基2D层状膜——层间距调控": {
+      "基本原理": "needs_review",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "GO功能化(亲水-COOH/-OH/-环氧基)→分子插入层间调控间距：共价键/小功能团(0.3-0.7nm)、聚电解质静电(0.7-1nm)、纳米粒子/纳米纤维(>1nm)→尺寸选择性",
+          "basis": "from_source",
+          "locator": "mechanism[11]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[11]"
+        },
+        "interaction": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[11]"
+        },
+        "why_it_works": {
+          "text": "离子选择性也可通过电荷增强实现",
+          "basis": "from_source",
+          "locator": "mechanism[11]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "水通道蛋白仿生膜制备挑战": {
+      "基本原理": "needs_review",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[12]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[12]"
+        },
+        "interaction": {
+          "text": "水通道蛋白产量低、不稳定、疏水性；蛋白质变性；宿主膜兼容性；无缺陷规模化生产困难",
+          "basis": "from_source",
+          "locator": "mechanism[12]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[12]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    }
+  }
+}

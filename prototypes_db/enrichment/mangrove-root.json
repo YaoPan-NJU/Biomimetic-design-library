@@ -1,0 +1,48 @@
+{
+  "mechanisms": {
+    "人工湿地净化机制途径 Constructed wetland purification mechanisms": {
+      "基本原理": "needs_review",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "多种水体污染物（重金属、有机物、营养盐）",
+          "basis": "from_source",
+          "locator": "刘2022 p.1 / Abstract"
+        },
+        "bio_structure": {
+          "text": "红树林根系的盐排斥机制和选择性离子输运",
+          "basis": "from_source",
+          "locator": "刘2022 p.1 / Abstract"
+        },
+        "interaction": {
+          "text": "根系表面吸附、微生物降解、植物吸收、根际沉淀",
+          "basis": "from_source",
+          "locator": "刘2022 p.1 / Abstract"
+        },
+        "why_it_works": {
+          "text": "红树林根系可在高盐环境中选择性排斥Na⁺/Cl⁻而吸收K⁺/NO₃⁻，根际微生物群落可降解有机污染物",
+          "basis": "llm_inferred",
+          "locator": null
+        },
+        "boundary_conditions": [
+          {
+            "text": "高盐度条件下盐排斥机制趋于饱和，选择性下降",
+            "parameter": "salinity",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "红树林的盐排斥-选择性输运机制可启发高盐环境下的选择性离子分离材料",
+        "verification_quote": "mangrove constructed wetland for pollutant removal"
+      }
+    }
+  }
+}

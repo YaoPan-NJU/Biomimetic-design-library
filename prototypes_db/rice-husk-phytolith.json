@@ -1,0 +1,145 @@
+{
+  "id": "rice-husk-phytolith",
+  "name_zh": "稻壳植硅体",
+  "name_en": "Rice Husk Phytolith",
+  "organism": {
+    "scientific": "Oryza sativa (rice husk)",
+    "category": "植物"
+  },
+  "biomimetic_dimension": "phytolith_biomineralization",
+  "features": [],
+  "tested_conditions": [],
+  "library_tier": "extended",
+  "lifecycle_status": "active",
+  "coverage": "partial",
+  "status": "active",
+  "provenance_summary": "V1-B biological expansion wave. Rice husk phytolith (biogenic silica microstructure) as bio-adsorbent.",
+  "mechanisms": [
+    {
+      "mechanism_id": "RHS-001",
+      "description": "Rice husk silica surface adsorption: silanol groups (Si-OH) on rice husk-derived silica provide binding sites for heavy metals via complexation and ion exchange",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "Heavy metal ions and organic pollutants",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.jclepro.2020.125390",
+          "locator": "p.2",
+          "quote": "the most serious pollution of heavy metal on the Chinese mainland",
+          "scope_match": "Keywords: heavy, metal, eav, eavy"
+        },
+        "bio_structure": {
+          "text": "Silanol (Si-OH) and silicate (Si-O-Si) groups",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.jclepro.2020.125390",
+          "locator": "p.1",
+          "quote": "Silicate-modiﬁed oiltea camellia shell-derived biochar: A novel and",
+          "scope_match": "Keywords: silicate, Sil"
+        },
+        "interaction": {
+          "text": "Complexation and ion exchange with silanol groups",
+          "basis": "from_source",
+          "scope_match": "Keywords: exchange, ion",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.jclepro.2020.125390",
+          "locator": "p.4",
+          "quote": "FTIR and XPS analyses suggest that ion exchange with Naþ, surface precipitation"
+        },
+        "why_it_works": {
+          "text": "Enhanced adsorption with high silica content rice husk biochar",
+          "basis": "from_source",
+          "source": "10.1016/j.jclepro.2020.125390",
+          "scope_match": "Keywords: adsorption, biochar, content, high, silica",
+          "evidence_label": "from_source",
+          "locator": "p.4",
+          "quote": "Rice-straw biochar with high silica content shows a greater adsorption capacity for Cd over pure biochar."
+        },
+        "boundary_conditions": [
+          {
+            "text": "Thermal extraction conditions",
+            "parameter": "temperature",
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "source": "2021-Cai-shell-biochar-cadmium-adsorption.pdf",
+            "quote": "The sample was pyrolyzed at 500 °C for 120 min.",
+            "locator": "Section 2.2",
+            "verification_method": "pdf_visual_reading"
+          }
+        ],
+        "transferable_principle": "Rice husk phytolith biogenic silica microstructure provides high surface area for adsorption"
+      },
+      "verification": "partial",
+      "verification_quote": "Rice-straw biochar with high silica content shows a greater adsorption capacity for Cd over pure biochar.",
+      "source_doi": "10.1016/j.jclepro.2020.125390",
+      "source_page": 4,
+      "source_file": "仿生文献库/3rd/第B组-新方向/B2-生物矿化模板/2021-Cai-shell-biochar-cadmium-adsorption.pdf",
+      "source_locator": "p.4",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "离子交换位点",
+        "-O-（醚键）",
+        "-OH（羟基）"
+      ],
+      "key_structures": [
+        "吸附结构"
+      ],
+      "name": "稻壳植硅体硅醇基络合与离子交换"
+    }
+  ],
+  "performance_data": [],
+  "engineering_constraints": [
+    {
+      "constraint_id": "RHS-E001",
+      "description": "Rice husk silica extraction: combustion at 500-700°C or acid leaching followed by calcination",
+      "source_doi": "",
+      "evidence_type": "llm_inferred"
+    }
+  ],
+  "narrative": [
+    {
+      "narrative_id": "RHS-N001",
+      "text": "Rice husks contain 15-20% silica by weight, making them an abundant source of biosilica. The silica exists in amorphous form and can be extracted via simple combustion, creating high-surface-area adsorbent material.",
+      "source_doi": ""
+    }
+  ],
+  "design_translation": [
+    {
+      "idea": "Extract silica from rice husk agricultural waste via combustion or acid treatment, use as adsorbent for heavy metals and organic pollutants",
+      "material_handle": "Rice husk biochar with high silica for Cd adsorption",
+      "design_principle": "Rice husk phytolith (amorphous SiO₂) provides silanol groups (Si-OH) for metal ion adsorption and phosphate removal",
+      "implementation_example": "Rice husk biochar with high silica for Cd adsorption; Rice husk silica nanoparticles for pollutant removal",
+      "constraints": "Low adsorption capacity without activation; high-temperature calcination needed for optimal performance",
+      "failure_modes": "",
+      "evidence_tier": "inference",
+      "source_tier": "llm_inference",
+      "material_realization_examples": [
+        "Rice husk biochar with high silica for Cd adsorption",
+        "Rice husk silica nanoparticles for pollutant removal"
+      ],
+      "specific_functional_group": "silanol groups (Si-OH), amorphous SiO₂",
+      "target_interaction": "metal ion adsorption and phosphate removal via silanol coordination"
+    }
+  ],
+  "honesty_ledger": {
+    "from_source_mechanisms": 1,
+    "llm_inferred_mechanisms": 0,
+    "verified_performance_data": 0,
+    "missing_pdf_items": 0,
+    "knowledge_gaps": [
+      "Need primary research papers with quantitative performance data",
+      "Silica extraction optimization",
+      "Comparison with synthetic silica"
+    ]
+  },
+  "mechanism_tags": [
+    "配位螯合",
+    "离子交换",
+    "氢键"
+  ]
+}

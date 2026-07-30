@@ -1,0 +1,1397 @@
+{
+  "id": "iron-oxidizing-bacteria",
+  "name_zh": "铁氧化细菌",
+  "name_en": "Iron Oxidizing Bacteria",
+  "organism": {
+    "scientific": "Acidithiobacillus ferrooxidans",
+    "category": "微生物"
+  },
+  "biomimetic_dimension": "过程仿生",
+  "features": [
+    "层次孔",
+    "活性氧位点",
+    "催化降解",
+    "生物矿化模板"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": [
+      3.0,
+      7.5
+    ],
+    "tested_temp_range": null,
+    "salinity": "low_to_moderate",
+    "note": "测过的 pH/温度范围，不是适用范围。仅从 performance_data 中实际测试过的条件聚合。"
+  },
+  "performance_data": [
+    {
+      "parameter": "混合菌对Cd²⁺去除率",
+      "value": "98.52%（1:1:1混合，10 mg/L Cd²⁺，72h）",
+      "unit": "%",
+      "pollutant": "Cd(II)",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "200mL溶液, 10g/L尿素, 2g/L乙酸钙, 30°C, 150r/min, 72h",
+      "source": "patent",
+      "ref_doi": null,
+      "patent_number": "CN113275374A",
+      "standard_number": null,
+      "source_file": "2021-CN113275374A-biomineralization-heavy-metal.pdf",
+      "page": 6,
+      "locator": "表1",
+      "verification": "partial",
+      "confidence": 0.85,
+      "source_locator": "CN113275374A [0040], p.5",
+      "verification_quote": "三种碳酸盐矿化菌混合后对Cd²⁺、Pb²⁺的去除率为98.52、99.49％，混合菌体的去除效果优于单一菌体。",
+      "scope_caveat": "scanned patent CN113275374A — OCR verification pending; values are from mixed bacteria biomineralization, not pure IOB adsorption"
+    },
+    {
+      "parameter": "混合菌对Pb²⁺去除率",
+      "value": "99.49%（1:1:1混合，100 mg/L Pb²⁺，72h）",
+      "unit": "%",
+      "pollutant": "Pb(II)",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "200mL溶液, 10g/L尿素, 2g/L乙酸钙, 30°C, 150r/min, 72h",
+      "source": "patent",
+      "ref_doi": null,
+      "patent_number": "CN113275374A",
+      "standard_number": null,
+      "source_file": "2021-CN113275374A-biomineralization-heavy-metal.pdf",
+      "page": 6,
+      "locator": "表1",
+      "verification": "partial",
+      "confidence": 0.85,
+      "source_locator": "CN113275374A [0040], p.5",
+      "verification_quote": "三种碳酸盐矿化菌混合后对Cd²⁺、Pb²⁺的去除率为98.52、99.49％，混合菌体的去除效果优于单一菌体。",
+      "scope_caveat": "scanned patent CN113275374A — OCR verification pending; values are from mixed bacteria biomineralization, not pure IOB adsorption"
+    },
+    {
+      "parameter": "不同混合比例对Cd²⁺去除率",
+      "value": "0.5:0.5:1→94.54%; 1:1:1→98.52%; 2:2:1→96.23%",
+      "unit": "%",
+      "pollutant": "Cd²⁺, 10 mg/L",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "patent",
+      "ref_doi": null,
+      "patent_number": "CN113275374A",
+      "standard_number": null,
+      "source_file": "2021-CN113275374A-biomineralization-heavy-metal.pdf",
+      "page": 6,
+      "locator": "表1",
+      "verification": "partial",
+      "confidence": 0.85,
+      "source_locator": "CN113275374A, 表1, p.5-6",
+      "verification_quote": "表1：0.5:0.5:1→94.54%；1:1:1→98.52%；2:2:1→96.23%",
+      "scope_caveat": "scanned patent CN113275374A — OCR verification pending; mixed bacteria biomineralization"
+    },
+    {
+      "parameter": "不同混合比例对Pb²⁺去除率",
+      "value": "0.5:0.5:1→92.66%; 1:1:1→99.49%; 2:2:1→95.61%",
+      "unit": "%",
+      "pollutant": "Pb²⁺, 100 mg/L",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "patent",
+      "ref_doi": null,
+      "patent_number": "CN113275374A",
+      "standard_number": null,
+      "source_file": "2021-CN113275374A-biomineralization-heavy-metal.pdf",
+      "page": 6,
+      "locator": "表1",
+      "verification": "partial",
+      "confidence": 0.85,
+      "source_locator": "CN113275374A, 表1, p.5-6",
+      "verification_quote": "表1：0.5:0.5:1→92.66%；1:1:1→99.49%；2:2:1→95.61%",
+      "scope_caveat": "scanned patent CN113275374A — OCR verification pending; mixed bacteria biomineralization"
+    },
+    {
+      "parameter": "施氏矿物7次循环后对As(V)去除率(pH 3.0)",
+      "value": "95.3",
+      "unit": "%",
+      "pollutant": "As(V)",
+      "material": "Fe³⁺水解合成的施氏矿物",
+      "ph": "3.0",
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.7524/j.issn.0254-6108.2020070302",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2021-Luo-schwertmannite-arsenic-review.pdf",
+      "page": 6,
+      "locator": "Section 2.1.1",
+      "verification": "partial",
+      "confidence": 0.8,
+      "source_locator": "Luo2021 p.3535 / Section 2.1.1",
+      "verification_quote": "Song 等 [54] 用 Fe3+水解合成的施氏矿物在 7 次重复使用后，对 As(Ⅴ) 和 As(Ⅲ) 的去除效果甚至更好，在 pH 3.0 和 pH 7.0 对 As(Ⅴ) 的去除率分别为 95.3% 和 63.9%"
+    },
+    {
+      "parameter": "施氏矿物7次循环后对As(V)去除率(pH 7.0)",
+      "value": "63.9",
+      "unit": "%",
+      "pollutant": "As(V)",
+      "material": "Fe³⁺水解合成的施氏矿物",
+      "ph": "7.0",
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.7524/j.issn.0254-6108.2020070302",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2021-Luo-schwertmannite-arsenic-review.pdf",
+      "page": 6,
+      "locator": "Section 2.1.1",
+      "verification": "partial",
+      "confidence": 0.8,
+      "source_locator": "Luo2021 p.3535 / Section 2.1.1",
+      "verification_quote": "Song 等 [54] 用 Fe3+水解合成的施氏矿物在 7 次重复使用后，对 As(Ⅴ) 和 As(Ⅲ) 的去除效果甚至更好，在 pH 3.0 和 pH 7.0 对 As(Ⅴ) 的去除率分别为 95.3% 和 63.9%"
+    },
+    {
+      "parameter": "施氏矿物7次循环后对As(III)去除率(pH 3.0)",
+      "value": "31.0",
+      "unit": "%",
+      "pollutant": "As(III)",
+      "material": "Fe³⁺水解合成的施氏矿物",
+      "ph": "3.0",
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.7524/j.issn.0254-6108.2020070302",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2021-Luo-schwertmannite-arsenic-review.pdf",
+      "page": 6,
+      "locator": "Section 2.1.1",
+      "verification": "partial",
+      "confidence": 0.8,
+      "source_locator": "Luo2021 p.3535 / Section 2.1.1",
+      "verification_quote": "在 pH 3.0 和 pH 7.0 对 As(Ⅲ) 的去除率分别为 31.0% 和 81.6%"
+    },
+    {
+      "parameter": "施氏矿物7次循环后对As(III)去除率(pH 7.0)",
+      "value": "81.6",
+      "unit": "%",
+      "pollutant": "As(III)",
+      "material": "Fe³⁺水解合成的施氏矿物",
+      "ph": "7.0",
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.7524/j.issn.0254-6108.2020070302",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2021-Luo-schwertmannite-arsenic-review.pdf",
+      "page": 6,
+      "locator": "Section 2.1.1",
+      "verification": "partial",
+      "confidence": 0.8,
+      "source_locator": "Luo2021 p.3536 / Section 2.1.1",
+      "verification_quote": "在 pH 3.0 和 pH 7.0 对 As(Ⅲ) 的去除率分别为 31.0% 和 81.6%"
+    },
+    {
+      "parameter": "生物施氏矿物对As(III)最大去除率及pH范围",
+      "value": ">98% at pH 7-9",
+      "unit": "%",
+      "pollutant": "As(III)",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.7524/j.issn.0254-6108.2020070302",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2021-Luo-schwertmannite-arsenic-review.pdf",
+      "page": 7,
+      "locator": "Section 2.1.2(3)pH",
+      "verification": "partial",
+      "confidence": 0.8,
+      "source_locator": "Luo2021 p.3536 / Section 2.1.2(3)pH",
+      "verification_quote": "As(Ⅲ) 的最大去除率发生在 pH 7—9 左右，最大去除率超过 98%，但当溶液 pH> 10 时，生物型施氏矿物对 As(Ⅲ) 的吸附急剧下降"
+    },
+    {
+      "parameter": "加热温度对生物施氏矿物As(III)去除率的影响(105°C)",
+      "value": "25.1",
+      "unit": "%",
+      "pollutant": "As(III)",
+      "material": "",
+      "ph": "7.5",
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.7524/j.issn.0254-6108.2020070302",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2021-Luo-schwertmannite-arsenic-review.pdf",
+      "page": 7,
+      "locator": "Section 2.1.2(4)温度",
+      "verification": "partial",
+      "confidence": 0.8,
+      "source_locator": "Luo2021 p.3536 / Section 2.1.2(4)温度",
+      "verification_quote": "105 ℃ 干燥的 0.25 g·L−1 施氏矿物对初始浓度为 1 mg·L−1 （pH 7.5）的 As(Ⅲ) 去除率为 25.1%"
+    },
+    {
+      "parameter": "加热温度对生物施氏矿物As(III)去除率的影响(250°C)",
+      "value": "93.0",
+      "unit": "%",
+      "pollutant": "As(III)",
+      "material": "",
+      "ph": "7.5",
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.7524/j.issn.0254-6108.2020070302",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2021-Luo-schwertmannite-arsenic-review.pdf",
+      "page": 7,
+      "locator": "Section 2.1.2(4)温度",
+      "verification": "partial",
+      "confidence": 0.8,
+      "source_locator": "Luo2021 p.3536 / Section 2.1.2(4)温度",
+      "verification_quote": "当使用 250 ℃ 加热的施氏矿物作为吸附剂时，去除效率提高到 93.0%"
+    },
+    {
+      "parameter": "最大吸附容量 qmax (Sb(III), Langmuir)",
+      "value": "177.19",
+      "unit": "mg/g",
+      "pollutant": "Sb(III)",
+      "material": "BKFM (1:0.1)",
+      "ph": "6.0 ± 0.1",
+      "temperature": "25°C",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.clay.2021.106392",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2022-Xu-arsenic-antimony-adsorption-water-treatment.pdf",
+      "page": 1,
+      "locator": "Abstract",
+      "verification": "partial",
+      "confidence": 0.8,
+      "source_locator": "Xu2022 p.5 / Section 3.3 Adsorption isotherms",
+      "verification_quote": "the calculated maximum adsorption capacities were 177.19, 56.26, 62.92 and 42.18 mg/g for Sb(III), Sb(V), As(III) and As(V), respectively (pH = 6.0 ± 0.1, T = 25 °C)"
+    },
+    {
+      "parameter": "最大吸附容量 qmax (Sb(V), Langmuir)",
+      "value": "56.26",
+      "unit": "mg/g",
+      "pollutant": "Sb(V)",
+      "material": "BKFM (1:0.1)",
+      "ph": "6.0 ± 0.1",
+      "temperature": "25°C",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.clay.2021.106392",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2022-Xu-arsenic-antimony-adsorption-water-treatment.pdf",
+      "page": 1,
+      "locator": "Abstract",
+      "verification": "partial",
+      "confidence": 0.8,
+      "source_locator": "Xu2022 p.5 / Section 3.3 Adsorption isotherms",
+      "verification_quote": "the calculated maximum adsorption capacities were 177.19, 56.26, 62.92 and 42.18 mg/g for Sb(III), Sb(V), As(III) and As(V), respectively (pH = 6.0 ± 0.1, T = 25 °C)"
+    },
+    {
+      "parameter": "最大吸附容量 qmax (As(III), Langmuir)",
+      "value": "62.92",
+      "unit": "mg/g",
+      "pollutant": "As(III)",
+      "material": "BKFM (1:0.1)",
+      "ph": "6.0 ± 0.1",
+      "temperature": "25°C",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.clay.2021.106392",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2022-Xu-arsenic-antimony-adsorption-water-treatment.pdf",
+      "page": 1,
+      "locator": "Abstract",
+      "verification": "partial",
+      "confidence": 0.8,
+      "source_locator": "Xu2022 p.5 / Section 3.3 Adsorption isotherms",
+      "verification_quote": "the calculated maximum adsorption capacities were 177.19, 56.26, 62.92 and 42.18 mg/g for Sb(III), Sb(V), As(III) and As(V), respectively (pH = 6.0 ± 0.1, T = 25 °C)"
+    },
+    {
+      "parameter": "最大吸附容量 qmax (As(V), Langmuir)",
+      "value": "42.18",
+      "unit": "mg/g",
+      "pollutant": "As(V)",
+      "material": "BKFM (1:0.1)",
+      "ph": "6.0 ± 0.1",
+      "temperature": "25°C",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.clay.2021.106392",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2022-Xu-arsenic-antimony-adsorption-water-treatment.pdf",
+      "page": 1,
+      "locator": "Abstract",
+      "verification": "partial",
+      "confidence": 0.8,
+      "source_locator": "Xu2022 p.5 / Section 3.3 Adsorption isotherms",
+      "verification_quote": "the calculated maximum adsorption capacities were 177.19, 56.26, 62.92 and 42.18 mg/g for Sb(III), Sb(V), As(III) and As(V), respectively (pH = 6.0 ± 0.1, T = 25 °C)"
+    },
+    {
+      "parameter": "J-2.5对Se(VI)去除率(0.2 mM)",
+      "value": "63",
+      "unit": "%",
+      "pollutant": "Se(VI)",
+      "material": "J-2.5 (biogenic jarosite synthesized at pH 2.5)",
+      "ph": 3.0,
+      "temperature": "30°C",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2024.136256",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2024-Jhariya-schwertmannite-jarosite-adsorption.pdf",
+      "page": 7,
+      "locator": "Section 3.3",
+      "verification": "partial",
+      "confidence": 0.8,
+      "source_locator": "Jhariya2024 p.7 / Section 3.3 Selenate removal",
+      "verification_quote": "J-2.5 exhibited the highest Se(VI) removal efficiency among the jarosite's, achieving 63 % removal (0.13 mmol/g) at 0.20 mM and 15 % (0.30 mmol/g) at 2.0 mM Se(VI)"
+    },
+    {
+      "parameter": "J-2.5对Se(VI)去除率(2.0 mM)",
+      "value": "15",
+      "unit": "%",
+      "pollutant": "Se(VI)",
+      "material": "J-2.5",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2024.136256",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2024-Jhariya-schwertmannite-jarosite-adsorption.pdf",
+      "page": 7,
+      "locator": "Section 3.3",
+      "verification": "partial",
+      "confidence": 0.8,
+      "source_locator": "Jhariya2024 p.7 / Section 3.3 Selenate removal",
+      "verification_quote": "J-2.5 exhibited the highest Se(VI) removal efficiency among the jarosite's, achieving 63 % removal (0.13 mmol/g) at 0.20 mM and 15 % (0.30 mmol/g) at 2.0 mM Se(VI)"
+    },
+    {
+      "parameter": "J-3.5对Se(VI)去除率(0.2 mM)",
+      "value": "16",
+      "unit": "%",
+      "pollutant": "Se(VI)",
+      "material": "J-3.5",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2024.136256",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2024-Jhariya-schwertmannite-jarosite-adsorption.pdf",
+      "page": 7,
+      "locator": "Section 3.3",
+      "verification": "partial",
+      "confidence": 0.8,
+      "source_locator": "Jhariya2024 p.7 / Section 3.3 Selenate removal",
+      "verification_quote": "J-3.5, synthesized at pH 3.5, showed significantly lower removal efficiencies of 16 % (0.03 mmol/g) at 0.20 mM and 6 % (0.12 mmol/g) at 2.0 mM Se(VI)"
+    },
+    {
+      "parameter": "J-90C(非生物黄钾铁矾)对Se(VI)去除率(0.2 mM)",
+      "value": "9",
+      "unit": "%",
+      "pollutant": "Se(VI)",
+      "material": "J-90C (non-biogenic jarosite)",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2024.136256",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2024-Jhariya-schwertmannite-jarosite-adsorption.pdf",
+      "page": 7,
+      "locator": "Section 3.3",
+      "verification": "partial",
+      "confidence": 0.8,
+      "source_locator": "Jhariya2024 p.7 / Section 3.3 Selenate removal",
+      "verification_quote": "J-90C, a non-biogenic jarosite, exhibited the lowest removal efficiencies among the jarosite's, with 9 % (0.02 mmol/g) at 0.20 mM and 4 % (0.08 mmol/g) at 2.0 mM Se(VI)"
+    },
+    {
+      "parameter": "S-2.5(生物施氏矿物)对Se(VI)去除率(0.2 mM)",
+      "value": "77",
+      "unit": "%",
+      "pollutant": "Se(VI)",
+      "material": "S-2.5 (biogenic schwertmannite)",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2024.136256",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2024-Jhariya-schwertmannite-jarosite-adsorption.pdf",
+      "page": 7,
+      "locator": "Section 3.3",
+      "verification": "partial",
+      "confidence": 0.8,
+      "source_locator": "Jhariya2024 p.7 / Section 3.3 Selenate removal",
+      "verification_quote": "S-2.5 demonstrated the highest removal efficiency among the tested precipitates, achieving 77 % removal (0.16 mmol/g) at 0.20 mM Se(VI) and 33 % (0.65 mmol/g) at 2.0 mM Se(VI)"
+    },
+    {
+      "parameter": "S-2.5对Se(VI)去除率(2.0 mM)",
+      "value": "33",
+      "unit": "%",
+      "pollutant": "Se(VI)",
+      "material": "S-2.5",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2024.136256",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2024-Jhariya-schwertmannite-jarosite-adsorption.pdf",
+      "page": 7,
+      "locator": "Section 3.3",
+      "verification": "partial",
+      "confidence": 0.8,
+      "source_locator": "Jhariya2024 p.7 / Section 3.3 Selenate removal",
+      "verification_quote": "S-2.5 demonstrated the highest removal efficiency among the tested precipitates, achieving 77 % removal (0.16 mmol/g) at 0.20 mM Se(VI) and 33 % (0.65 mmol/g) at 2.0 mM Se(VI)"
+    },
+    {
+      "parameter": "EDS元素原子比(J-2.5 after Se removal)",
+      "value": "Fe(1.0):S(0.36):K(0.05):Se(0.04)",
+      "unit": null,
+      "pollutant": "",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2024.136256",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2024-Jhariya-schwertmannite-jarosite-adsorption.pdf",
+      "page": 8,
+      "locator": "Section 3.3",
+      "verification": "partial",
+      "confidence": 0.8,
+      "source_locator": "Jhariya2024 p.8 / Section 3.3",
+      "verification_quote": "a uniformly distributed atomic ratio of Fe(1.0): S(0.36): K(0.05): Se(0.04), indicating that Se(VI) can be successfully removed from the liquid medium using jarosite"
+    },
+    {
+      "parameter": "EDS元素原子比(S-2.5 after Se removal)",
+      "value": "Fe(1.0):S(0.11):Se(0.11)",
+      "unit": null,
+      "pollutant": "",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2024.136256",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "2024-Jhariya-schwertmannite-jarosite-adsorption.pdf",
+      "page": 8,
+      "locator": "Section 3.3",
+      "verification": "partial",
+      "confidence": 0.8,
+      "source_locator": "Jhariya2024 p.8 / Section 3.3",
+      "verification_quote": "S-2.5 showed a uniform distribution of the S (0.11): Fe (1.0): Se (0.11) atomic ratio"
+    }
+  ],
+  "mechanisms": [
+    {
+      "name": "亚铁氧化驱动铁氢氧化物共沉淀",
+      "description": "脲酶水解尿素: CO(NH₂)₂+H₂O→NH₂COOH+NH₃; NH₂COOH+H₂O→NH₃+H₂CO₃; 最终产生CO₃²⁻+Ca²⁺→CaCO₃↓",
+      "functional_groups": [
+        "-NH-（亚氨基）",
+        "-O-（醚键）",
+        "-COOH（羧基）",
+        "-OH（羟基）"
+      ],
+      "source": "patent",
+      "ref_doi": null,
+      "verification": "knowledge_gap",
+      "causal_chain": {
+        "transferable_principle": "基于机制: MICP化学反应机理",
+        "pollutant_feature": {
+          "text": "脲酶水解尿素: CO(NH₂)₂+H₂O→NH₂COOH+NH₃; NH₂COOH+H₂O→NH₃+H₂CO₃; 最终产生CO₃²⁻+Ca²⁺→CaCO₃↓",
+          "basis": "llm_inferred",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.ese.2021.100096",
+          "locator": "p.2",
+          "quote": "COðNH2Þ2 þ H2O / NH2COOH þ NH3",
+          "scope_match": "Keywords: cooh, caco"
+        },
+        "bio_structure": {
+          "text": "MICP化学反应功能结构",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.ese.2021.100096",
+          "locator": "p.2",
+          "quote": "precipitation (MICP)",
+          "scope_match": "Keywords: micp, precipitation"
+        },
+        "interaction": {
+          "text": "脲酶水解尿素: CO(NH₂)₂+H₂O→NH₂COOH+NH₃; NH₂COOH+H₂O→NH₃+H₂CO₃; 最终产生CO₃²⁻+Ca²⁺→CaCO₃↓",
+          "basis": "llm_inferred",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.ese.2021.100096",
+          "locator": "p.2",
+          "quote": "COðNH2Þ2 þ H2O / NH2COOH þ NH3",
+          "scope_match": "Keywords: cooh, caco"
+        },
+        "why_it_works": {
+          "text": "表面活性位点与目标物相互作用",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.ese.2021.100096",
+          "locator": "p.2",
+          "quote": "precipitation (MICP)",
+          "scope_match": "Keywords: micp, precipitation"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": "page 2",
+            "quote": "定在含铁矿物中的现象[10]. Farina 等[11] 在废弃的钨矿和锡矿附近的河岸上\n收集到受AMD 影响的富铁沉淀物，发现其中含有不同比例的施氏矿物、针铁矿和水铁矿颗粒的混合物.\n历年来不少研究者对这类潜在的重金属砷吸附材料进行了研究. Perez 等[12] 进行实验后提出，在缺\n氧条件下，绿锈GRSO4 是去除As(Ⅲ) 和As(Ⅴ) 的稳定有效的高效吸附剂，并且吸附效率高度依赖\npH",
+            "source_asset": null,
+            "source": "10.7524/j.issn.0254-6108.2020070302",
+            "verification_method": "no_reference_available"
+          }
+        ]
+      },
+      "evidence_type": "lead_inference",
+      "evidence_note": "patent source without local PDF extraction; needs OCR or manual verification",
+      "key_structures": []
+    },
+    {
+      "name": "施氏矿物As(III)吸附机制-表面沉淀",
+      "description": "双齿双核结合，形成Fe-As、As-O原子距特征",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）"
+      ],
+      "source": "literature",
+      "ref_doi": "10.7524/j.issn.0254-6108.2020070302",
+      "verification": "partial",
+      "基本原理": "施氏矿物的高比表面积和表面羟基（-OH）提供大量配位位点；生物氧化As(III)→As(V)降低毒性并增强吸附",
+      "source_file": "仿生文献库/3rd/第C组-零数据原型/C2 - 铁氧化细菌（4 篇）/2021-Luo-schwertmannite-arsenic-review.pdf",
+      "verification_quote": "schwertmannite was considered as an arsenic removal material with great potential. As(III) more toxic than As(V)",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "As(III)（中性分子H₃AsO₃）和As(V)（含氧阴离子H₂AsO₄⁻）",
+          "basis": "from_source",
+          "source": "10.7524/j.issn.0254-6108.2020070302",
+          "locator": "page 2",
+          "quote": "铁（氢）氧化物的解吸作用导致地下水砷聚集.\n在自然界中，砷通常以无机含氧阴离子形式存在，低pH 值环境中以五价砷酸盐H2AsO4\n−形式、在\n偏碱性环境中以三价亚砷酸盐H3AsO4\n0 形式存在[1]，但后者仍然可以大量存在于氧化环境中. 在大多数\n矿井水系中，砷酸盐和亚砷酸盐能够并存于AMD，但长期暴露于大气氧和三价铁矿物表面往往导致砷\n酸盐物种占优势[3",
+          "scope_match": "Keywords: AsO, AsO"
+        },
+        "bio_structure": {
+          "text": "铁氧化菌（如Acidithiobacillus ferrooxidans）生成的施氏矿物（schwertmannite, Fe₈O₈(OH)₆SO₄）",
+          "basis": "llm_inferred",
+          "evidence_label": "needs_review",
+          "source": null,
+          "locator": null,
+          "quote": null,
+          "scope_match": "Keywords: ferrooxidans, schwertmannite, acidithiobacillus"
+        },
+        "interaction": {
+          "text": "As(III)在施氏矿物表面被氧化为As(V)，然后通过表面配位（内球配合）固定在铁氧化物表面",
+          "basis": "llm_inferred",
+          "evidence_label": "needs_review",
+          "source": null,
+          "locator": null,
+          "quote": null,
+          "scope_match": "Keywords: iii, as"
+        },
+        "why_it_works": {
+          "text": "施氏矿物的高比表面积和表面羟基（-OH）提供大量配位位点；生物氧化As(III)→As(V)降低毒性并增强吸附",
+          "basis": "llm_inferred",
+          "evidence_label": "needs_review",
+          "source": null,
+          "locator": null,
+          "quote": null,
+          "scope_match": "Keywords: as, iii"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件下施氏矿物溶解，释放吸附的砷",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": "visual_cache PDF text",
+            "quote": "些铁矿物对金属和阴离子污染物如砷、铬、铅、汞和硒都有很强的吸附能力[8]. 环境中的亚\n铁离子Fe2+被氧化后，形成的氧化铁氢氧化物（黄钾铁矾、针铁矿、施氏矿物、水铁矿等）能够在其结构\n中吸收砷或将其吸附在表面，对砷的迁移与修复过程都具有重要的影响. Rodova 等[9] 证明0.5 g·dm−3\n的纳米级零价铁对污染水中的砷有良好的去除作用，单质铁氧化产生氢氧化物时，使As 以混合配合\n物的形",
+            "source_asset": null,
+            "source": "10.7524/j.issn.0254-6108.2020070302",
+            "scope_match": "Keywords: 吸附, 表面, 氧化, 施氏矿物, 铁氧化",
+            "verification_method": "pdf_visual_reading"
+          },
+          {
+            "text": "高浓度磷酸盐与砷酸盐竞争配位位点",
+            "parameter": "competing_ion",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": "visual_cache PDF text",
+            "quote": "些铁矿物对金属和阴离子污染物如砷、铬、铅、汞和硒都有很强的吸附能力[8]. 环境中的亚\n铁离子Fe2+被氧化后，形成的氧化铁氢氧化物（黄钾铁矾、针铁矿、施氏矿物、水铁矿等）能够在其结构\n中吸收砷或将其吸附在表面，对砷的迁移与修复过程都具有重要的影响. Rodova 等[9] 证明0.5 g·dm−3\n的纳米级零价铁对污染水中的砷有良好的去除作用，单质铁氧化产生氢氧化物时，使As 以混合配合\n物的形",
+            "source_asset": null,
+            "source": "10.7524/j.issn.0254-6108.2020070302",
+            "scope_match": "Keywords: 吸附, 表面, 氧化, 施氏矿物, 铁氧化",
+            "verification_method": "pdf_visual_reading"
+          }
+        ],
+        "transferable_principle": "铁氧化菌原位生成的铁氧化物（施氏矿物）可同时氧化和吸附砷，是生物-矿物协同除砷策略",
+        "verification_quote": "施氏矿物对砷的吸附主要有两种方式，一是砷在矿物表面与铁羟基络合，二是砷与矿物表面及结构内部硫酸盐发生配位体交换。砷酸盐通过双齿双核与AsO43-结合，表征出特定Fe-As、As-O原子距。",
+        "source_doi": "10.7524/j.issn.0254-6108.2020070302",
+        "source_locator": "p.3536 / Section 2.2 + p.3537"
+      },
+      "evidence_type": "partial_source",
+      "evidence_note": "Upgraded from llm_inferred using visual_cache PDF text (matched 5 keywords: ['吸附', '表面', '氧化', '施氏矿物', '铁氧化'])",
+      "key_structures": [
+        "吸附结构"
+      ]
+    },
+    {
+      "name": "去除机理三阶段",
+      "description": "第一阶段：As(III)接触锰氧化物壳层后迅速氧化为As(V)，部分Mn(IV)还原溶解；第二阶段：As(V)受静电吸附再吸附于材料表面，少量与Mn-OH表面络合；第三阶段：As(V)扩散穿过壳层到达施氏矿物内核，通过As-O-Fe络合和配体交换富集",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）",
+        "-OH（羟基）"
+      ],
+      "source": "literature",
+      "ref_doi": "10.13671/j.hjkxxb.2021.0204",
+      "verification": "partial",
+      "causal_chain": {
+        "transferable_principle": "基于机制: 去除机理三阶段",
+        "pollutant_feature": {
+          "text": "第一阶段：As(III)接触锰氧化物壳层后迅速氧化为As(V)，部分Mn(IV)还原溶解；第二阶段：As(V)受静电吸附再吸附于材料表面，少量与Mn-OH表面络合；第三阶段：As(V)扩散穿过壳层到达",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.11654/jaes.2020-1156",
+          "locator": "p.5",
+          "quote": "丰富，使其静电吸附、表面络合、阳离子-π、离子交",
+          "scope_match": "Keywords: 表面络合, 静电吸附"
+        },
+        "bio_structure": {
+          "text": "去除机理三阶段表面活性位点",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "第一阶段：As(III)接触锰氧化物壳层后迅速氧化为As(V)，部分Mn(IV)还原溶解；第二阶段：As(V)受静电吸附再吸附于材料表面，少量与Mn-OH表面络合；第三阶段：As(V)扩散穿过壳层到达",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.11654/jaes.2020-1156",
+          "locator": "p.5",
+          "quote": "丰富，使其静电吸附、表面络合、阳离子-π、离子交",
+          "scope_match": "Keywords: 表面络合, 静电吸附"
+        },
+        "why_it_works": {
+          "text": "静电相互作用驱动吸附",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": "visual_cache PDF text",
+            "quote": " Sch 去除As( III) 的过程符合准二级动力学方程和颗粒内扩散方程．液相化学组分和固相产物表征分析显示MnOx @ Sch 对\nAs( III) 的去除机理可概括为As( III) 氧化、静电吸附和络合配位及配体交换．研究结果可为施氏矿物及其改性材料应用于酸性矿山废水砷污染\n治理提供理论依据．\n关键词: As( III) ; 施氏矿物; 锰氧化物; 去除机制; 酸性矿山废水\n文章编号: 0",
+            "source_asset": null,
+            "source": "10.13671/j.hjkxxb.2021.0204",
+            "scope_match": "Keywords: 吸附, 氧化, 静电, 施氏矿物, 扩散",
+            "verification_method": "unverifiable_generic_text"
+          }
+        ],
+        "verification_quote": "锰氧化物负载施氏矿物去除As(III)分3阶段: As(III)氧化为As(V), 静电吸附, 扩散至内核通过As-O-Fe络合配体交换",
+        "source_doi": "10.13671/j.hjkxxb.2021.0204",
+        "source_locator": "Section 3, p.9"
+      },
+      "evidence_type": "primary_research",
+      "evidence_note": "Wen2021 MnOx@Sch three-stage As(III) removal mechanism",
+      "source_page": 9,
+      "source_locator": "Section 3, p.9",
+      "source_file": "仿生文献库/3rd/第C组-零数据原型/C2 - 铁氧化细菌（4 篇）/2021-Wen-schwertmannite-arsenic-amd.pdf",
+      "verification_quote": "锰氧化物负载施氏矿物去除As(III)分3阶段: As(III)氧化为As(V), 静电吸附, 扩散至内核通过As-O-Fe络合配体交换",
+      "scope_match": [
+        "As(III)",
+        "oxidation",
+        "electrostatic",
+        "schwertmannite",
+        "mechanism"
+      ],
+      "key_structures": [
+        "吸附结构"
+      ]
+    },
+    {
+      "name": "吸附机制",
+      "description": "内球络合、表面络合、氢键、氧化（Sb(III)/As(III)被部分氧化为Sb(V)/As(V)）",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "氢键位点"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1016/j.clay.2021.106392",
+      "verification": "partial",
+      "verification_quote": "ne 10 January 2022\n0169-1317/© 2022 Elsevier B.V. All rights reserved.\nResearch Paper \nSimultaneous removal of antimony(III/V) and arsenic(III/V) from aqueous \nsolution by bacteria–mediated kaolin@Fe–Mn binary (hydr) \noxides composites \nRui Xu a, Qian Li a,*, Xiaolong Nan b, Guoqing Jiang b, Limin Wang a, Jing Xiong a, \nYongbin Yang a, Bin Xu a, Tao Jiang a \na School of Minerals Processing and Bio",
+      "causal_chain": {
+        "transferable_principle": "基于机制: 吸附机制",
+        "pollutant_feature": {
+          "text": "内球络合、表面络合、氢键、氧化（Sb(III)/As(III)被部分氧化为Sb(V)/As(V)）",
+          "basis": "from_source",
+          "source": "10.1016/j.clay.2021.106392",
+          "locator": "page 1",
+          "quote": "reserved.\nResearch Paper \nSimultaneous removal of antimony(III/V) and arsenic(III/V) from aqueous \nsolution by bacteria–mediated kaolin@Fe–Mn binary (hydr) \noxides composites \nRui",
+          "scope_match": "Keywords: hydrogen bond, III, III",
+          "translation_mapping": "氢键=hydrogen bond",
+          "evidence_label": "from_source"
+        },
+        "bio_structure": {
+          "text": "吸附机制表面活性位点",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "内球络合、表面络合、氢键、氧化（Sb(III)/As(III)被部分氧化为Sb(V)/As(V)）",
+          "basis": "from_source",
+          "source": "10.1016/j.clay.2021.106392",
+          "locator": "p.1",
+          "quote": "Characterization techniques of FTIR and XPS revealed \nthat the inner-sphere complexation, surface complexation, hydrogen bonding and oxidation contributed to the \nmechanism of adsorption of Sb and As.",
+          "scope_match": "Keywords: characterization, techniques, ftir"
+        },
+        "why_it_works": {
+          "text": "氢键相互作用增强吸附",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": "page 1",
+            "quote": "ver, the isotherm experimental results indicated that \nthe maximum BKFM (1:0.1) adsorption capacities for Sb(III), Sb(V), As(III) and As(V) were 177.19, 56.26, 62.92 \nand 42.18 mg/g, respectively (pH",
+            "source_asset": null,
+            "source": "10.1016/j.clay.2021.106392",
+            "verification_method": "unverifiable_generic_text"
+          }
+        ]
+      },
+      "source_doi": "10.1016/j.clay.2021.106392",
+      "source_locator": "p.1",
+      "evidence_label": "from_source",
+      "key_structures": [
+        "吸附结构"
+      ]
+    },
+    {
+      "name": "Cu在施氏矿物表面配位模式",
+      "description": "bidentate inner-sphere complexes with singly coordinated surface sites",
+      "functional_groups": [
+        "硫酸根 SO₄²⁻",
+        "配位/螯合位点",
+        "Fe-O/OH位点",
+        "表面羟基 -OH (Fe-OH)",
+        "-O-（醚键）"
+      ],
+      "source": "literature",
+      "ref_doi": "10.3390/min15080868",
+      "verification": "partial",
+      "verification_quote": "erals were occupied by heavy metals. Furthermore, bidentate inner-sphere complexes\nformed between copper and singly coordinated surface sites, enabling hydrolysis and\ndimer formation of Cu surface species. These characte",
+      "causal_chain": {
+        "transferable_principle": "基于机制: Cu在施氏矿物表面配位模式",
+        "pollutant_feature": {
+          "text": "bidentate inner-sphere complexes with singly coordinated surface sites",
+          "basis": "from_source",
+          "source": "10.3390/min15080868",
+          "locator": "page 13",
+          "quote": "c iron\nminerals were occupied by heavy metals. Furthermore, bidentate inner-sphere complexes\nformed between copper and singly coordinated surface sites, enabling hydrolysis and\ndim",
+          "scope_match": "Keywords: bidentate, inner, sphere",
+          "evidence_label": "from_source"
+        },
+        "bio_structure": {
+          "text": "含配位原子(N/O/S)的官能团",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.3390/min15080868",
+          "locator": "p.1",
+          "quote": "lisiyu0208@cug",
+          "scope_match": "Keywords: cu, lisiyu"
+        },
+        "interaction": {
+          "text": "bidentate inner-sphere complexes with singly coordinated surface sites",
+          "basis": "from_source",
+          "source": "10.3390/min15080868",
+          "locator": "p.13",
+          "quote": "c iron\nminerals were occupied by heavy metals. Furthermore, bidentate inner-sphere complexes\nformed between copper and singly coordinated surface sites, enabling hydrolysis and\ndim",
+          "scope_match": "Keywords: bidentate, inner, sphere",
+          "evidence_label": "from_source"
+        },
+        "why_it_works": {
+          "text": "表面活性位点与目标物相互作用",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.3390/min15080868",
+          "locator": "p.1",
+          "quote": "lisiyu0208@cug",
+          "scope_match": "Keywords: cu, lisiyu"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": "page 2",
+            "quote": "定在含铁矿物中的现象[10]. Farina 等[11] 在废弃的钨矿和锡矿附近的河岸上\n收集到受AMD 影响的富铁沉淀物，发现其中含有不同比例的施氏矿物、针铁矿和水铁矿颗粒的混合物.\n历年来不少研究者对这类潜在的重金属砷吸附材料进行了研究. Perez 等[12] 进行实验后提出，在缺\n氧条件下，绿锈GRSO4 是去除As(Ⅲ) 和As(Ⅴ) 的稳定有效的高效吸附剂，并且吸附效率高度依赖\npH",
+            "source_asset": null,
+            "source": "10.3390/min15080868",
+            "verification_method": "pdf_not_found"
+          }
+        ]
+      },
+      "source_page": 13,
+      "source_doi": "10.3390/min15080868",
+      "evidence_type": "partial_source",
+      "evidence_note": "Upgraded from llm_inferred using visual_cache PDF text (matched 2 keywords: ['表面', '施氏矿物'])",
+      "source_locator": "p.13",
+      "evidence_label": "from_source",
+      "key_structures": [
+        "施氏矿物Fe₈O₈(OH)₆SO₄",
+        "双齿内球配合物",
+        "单配位表面位点"
+      ],
+      "molecular_feature_links": [
+        "六价铬",
+        "含氧阴离子"
+      ]
+    },
+    {
+      "name": "砷在铁(氧氢)氧化物表面配位模式",
+      "description": "binuclear bidentate corner-sharing (2C), mononuclear bidentate edge-sharing (2E), mononuclear monodentate corner-sharing (1V)",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）",
+        "配位/螯合位点",
+        "-SH（巯基）"
+      ],
+      "source": "literature",
+      "ref_doi": "10.3390/min15080868",
+      "verification": "partial",
+      "verification_quote": "binuclear bidentate\ncorner-sharing (2C) complexes, mononuclear bidentate edge-sharing (2E) complexes, and\nmononuclear monodentate corner-sharing (1V) [114,163–166]. Additionally, certain FeOB\npossess the As(III) oxidase",
+      "causal_chain": {
+        "transferable_principle": "基于机制: 砷在铁(氧氢)氧化物表面配位模式",
+        "pollutant_feature": {
+          "text": "binuclear bidentate corner-sharing (2C), mononuclear bidentate edge-sharing (2E), mononuclear monode",
+          "basis": "from_source",
+          "source": "10.3390/min15080868",
+          "locator": "page 14",
+          "quote": "istinct coordination modes with Fe(III) minerals, including binuclear bidentate\ncorner-sharing (2C) complexes, mononuclear bidentate edge-sharing (2E) complexes, and\nmononuclear mo",
+          "scope_match": "Keywords: binuclear, bidentate, corner",
+          "evidence_label": "from_source"
+        },
+        "bio_structure": {
+          "text": "含配位原子(N/O/S)的官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "binuclear bidentate corner-sharing (2C), mononuclear bidentate edge-sharing (2E), mononuclear monode",
+          "basis": "from_source",
+          "source": "10.3390/min15080868",
+          "locator": "p.14",
+          "quote": "istinct coordination modes with Fe(III) minerals, including binuclear bidentate\ncorner-sharing (2C) complexes, mononuclear bidentate edge-sharing (2E) complexes, and\nmononuclear mo",
+          "scope_match": "Keywords: binuclear, bidentate, corner",
+          "evidence_label": "from_source"
+        },
+        "why_it_works": {
+          "text": "表面活性位点与目标物相互作用",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": "page 2",
+            "quote": "定在含铁矿物中的现象[10]. Farina 等[11] 在废弃的钨矿和锡矿附近的河岸上\n收集到受AMD 影响的富铁沉淀物，发现其中含有不同比例的施氏矿物、针铁矿和水铁矿颗粒的混合物.\n历年来不少研究者对这类潜在的重金属砷吸附材料进行了研究. Perez 等[12] 进行实验后提出，在缺\n氧条件下，绿锈GRSO4 是去除As(Ⅲ) 和As(Ⅴ) 的稳定有效的高效吸附剂，并且吸附效率高度依赖\npH",
+            "source_asset": null,
+            "source": "10.3390/min15080868",
+            "verification_method": "pdf_not_found"
+          }
+        ]
+      },
+      "source_page": 14,
+      "source_doi": "10.3390/min15080868",
+      "evidence_type": "partial_source",
+      "evidence_note": "Upgraded from llm_inferred using visual_cache PDF text (matched 3 keywords: ['表面', '氧化', '砷'])",
+      "source_locator": "p.14",
+      "evidence_label": "from_source",
+      "key_structures": []
+    }
+  ],
+  "narrative": {
+    "entries": [
+      {
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\第三波\\json\\2022-Xu-arsenic-antimony-adsorption-water-treatment.json",
+        "paper_id": "xu2022_bacteria_kaolin_fe_mn_sb_as",
+        "sections": {
+          "problem_definition": "水体中锑（Sb）和砷（As）污染严重威胁生态安全和人类健康，传统化学合成方法制备的Fe-Mn氧化物能耗高、步骤复杂。铁氧化细菌（IOB）能在常温常压下将Fe(II)氧化为Fe(III)，并矿化形成高活性的铁氧化物，同时细菌胞外聚合物提供丰富的有机官能团，是一种绿色、可持续的材料合成策略。",
+          "biological_solution": "氧化亚铁硫杆菌（Acidithiobacillus ferrooxidans）在代谢过程中将Fe(II)氧化为Fe(III)，形成的生物成因Fe(III)矿物具有比非生物矿物更大的比表面积、更小的粒径和更低的结晶度。细菌胞外有机质含有羧基、磷酸基、氨基和羟基等官能团，可增强与重金属的配位作用。将Fe-Mn双金属氧化物负载于高岭土基底上，实现多组分协同吸附。",
+          "key_features": "必须保留：IOB的生物氧化能力（Fe(II)→Fe(III)）、胞外有机质官能团（-COOH, -OH, -NH₂, -PO₃H₂）、高岭土多孔基底。可灵活调整：Fe/Mn摩尔比（1:0.1最优）、高岭土负载量、IOB培养条件。",
+          "design_mapping": "生物过程→材料合成：IOB氧化Fe(II)→生物Fe(III)氧化物→与Mn氧化物共沉淀→负载于高岭土→BKFMs复合材料。仿生设计启示：利用微生物的代谢能力在温和条件下合成高活性金属氧化物，避免高温焙烧，保留生物有机质的配位功能。",
+          "explainability_anchors": "仿生故事线：从铁氧化细菌的生物矿化能力出发，利用IOB在常温下将Fe(II)氧化并矿化为高活性Fe(III)氧化物，与Mn氧化物复合负载于高岭土，实现Sb和As的高效同步去除。设计溯源：IOB→生物Fe(III)氧化物→Fe-Mn双金属氧化物→高岭土复合→BKFMs。核心机制：内球络合+表面络合+氢键+氧化。"
+        }
+      }
+    ]
+  },
+  "engineering_constraints": [
+    {
+      "constraint": "pH 3-4时富As(III)AMD中施氏矿物对As(III)吸附量",
+      "value": "300-500",
+      "unit": "mmol As/mol Fe",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.7524/j.issn.0254-6108.2020070302"
+    },
+    {
+      "constraint": "pH 9时施氏矿物对As(III)吸附量",
+      "value": "379",
+      "unit": "mmol As/mol Fe",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.7524/j.issn.0254-6108.2020070302"
+    },
+    {
+      "constraint": "Fe³⁺水解施氏矿物对As(V)最大吸附量(pH 3.0)",
+      "value": "182.86",
+      "unit": "mg/g",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.7524/j.issn.0254-6108.2020070302"
+    },
+    {
+      "constraint": "Fe³⁺水解施氏矿物对As(III)最大吸附量(pH 3.0)",
+      "value": "45.50",
+      "unit": "mg/g",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.7524/j.issn.0254-6108.2020070302"
+    },
+    {
+      "constraint": "Fe³⁺水解施氏矿物对As(V)最大吸附量(pH 7.0)",
+      "value": "143.25",
+      "unit": "mg/g",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.7524/j.issn.0254-6108.2020070302"
+    },
+    {
+      "constraint": "Fe³⁺水解施氏矿物对As(III)最大吸附量(pH 7.0)",
+      "value": "217.85",
+      "unit": "mg/g",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.7524/j.issn.0254-6108.2020070302"
+    },
+    {
+      "constraint": "施氏矿物7次循环后对As(V)去除率(pH 3.0)",
+      "value": "95.3",
+      "unit": "%",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.7524/j.issn.0254-6108.2020070302"
+    },
+    {
+      "constraint": "施氏矿物7次循环后对As(V)去除率(pH 7.0)",
+      "value": "63.9",
+      "unit": "%",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.7524/j.issn.0254-6108.2020070302"
+    },
+    {
+      "constraint": "施氏矿物7次循环后对As(III)去除率(pH 3.0)",
+      "value": "31.0",
+      "unit": "%",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.7524/j.issn.0254-6108.2020070302"
+    },
+    {
+      "constraint": "施氏矿物7次循环后对As(III)去除率(pH 7.0)",
+      "value": "81.6",
+      "unit": "%",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.7524/j.issn.0254-6108.2020070302"
+    },
+    {
+      "constraint": "As(III)/SO₄²⁻交换系数(pH 7.5)",
+      "value": "0.16",
+      "unit": null,
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.7524/j.issn.0254-6108.2020070302"
+    },
+    {
+      "constraint": "As(III)/SO₄²⁻交换系数(pH 7.1)",
+      "value": "0.17",
+      "unit": null,
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.7524/j.issn.0254-6108.2020070302"
+    },
+    {
+      "constraint": "高浓度SO₄²⁻对施氏矿物稳定性的影响",
+      "value": "高浓度SO₄²⁻延缓向针铁矿转变",
+      "unit": null,
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.7524/j.issn.0254-6108.2020070302"
+    },
+    {
+      "constraint": "A. ferrooxidans Fe(II)氧化速率(pH 2.0-3.0)",
+      "value": "~3.7",
+      "unit": "mmol/L·h",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2024.136256"
+    },
+    {
+      "constraint": "A. ferrooxidans Fe(II)氧化速率(pH 1.5)",
+      "value": "2.0",
+      "unit": "mmol/L·h",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2024.136256"
+    },
+    {
+      "constraint": "A. ferrooxidans Fe(II)氧化速率(pH>3.0)",
+      "value": "0.6",
+      "unit": "mmol/L·h",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2024.136256"
+    },
+    {
+      "constraint": "pH 4.0时Fe(II)氧化未完成",
+      "value": "incomplete after 96 h",
+      "unit": null,
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2024.136256"
+    },
+    {
+      "constraint": "黄钾铁矾Se(VI)替代后稳定性",
+      "value": "stable up to pH 5, no significant Se(VI) release for 180 days",
+      "unit": null,
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2024.136256"
+    },
+    {
+      "constraint": "黄钾铁矾溶解率(pH 2-8, 1500h)",
+      "value": "15-30%",
+      "unit": "%",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2024.136256"
+    },
+    {
+      "constraint": "施氏矿物硫酸根释放(pH 8, <24h)",
+      "value": "~50%",
+      "unit": "%",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2024.136256"
+    }
+  ],
+  "provenance_summary": {
+    "n_papers": 7,
+    "n_verified": 23,
+    "n_unverified": 6
+  },
+  "coverage": "normal",
+  "status": "active",
+  "design_translation": [
+    {
+      "idea": "利用铁氧化菌生成的施氏矿物进行重金属吸附和共沉淀",
+      "specific_functional_group": "施氏矿物（schwertmannite）的 Fe-O/OH 位点",
+      "material_handle": "IOB 培养生成施氏矿物，或合成类似结构",
+      "target_interaction": "Fe-O/OH 位点吸附 As(V)、Cr(VI) 等阴离子重金属",
+      "source_tier": "llm_inference",
+      "examples": [],
+      "design_principle": "铁氧化菌（如Leptothrix, Gallionella）分泌铁氧化酶催化Fe²⁺→Fe³⁺，生成施氏矿物（schwertmannite）等铁(氧氢)氧化物，通过表面-OH配位吸附As、Cr等含氧阴离子",
+      "implementation_example": "IOB培养→铁氧化→施氏矿物沉淀→过滤收集→直接使用；或IOB固定化在生物反应器中连续产矿物",
+      "constraints": "需要Fe²⁺底物供应；pH 3-7最适；矿物结晶度影响吸附容量",
+      "failure_modes": "Fe²⁺供应不足停止产矿物；pH过高矿物溶解；竞争阴离子(磷酸盐、硫酸盐)",
+      "evidence_tier": "lead"
+    }
+  ],
+  "library_tier": "core",
+  "lifecycle_status": "active",
+  "honesty_ledger": {
+    "facts": [
+      {
+        "type": "mechanism",
+        "index": 1,
+        "name": "施氏矿物As(III)吸附机制-表面沉淀",
+        "basis": "verified_with_quote"
+      }
+    ],
+    "leads": [
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "MICP化学反应机理",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 2,
+        "name": "去除机理三阶段",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 3,
+        "name": "吸附机制",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 4,
+        "name": "Cu在施氏矿物表面配位模式",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 5,
+        "name": "砷在铁(氧氢)氧化物表面配位模式",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 0,
+        "parameter": "混合菌对Cd²⁺去除率",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 1,
+        "parameter": "混合菌对Pb²⁺去除率",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 2,
+        "parameter": "不同混合比例对Cd²⁺去除率",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 3,
+        "parameter": "不同混合比例对Pb²⁺去除率",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 4,
+        "parameter": "施氏矿物7次循环后对As(V)去除率(pH 3.0)",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 5,
+        "parameter": "施氏矿物7次循环后对As(V)去除率(pH 7.0)",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 6,
+        "parameter": "施氏矿物7次循环后对As(III)去除率(pH 3.0)",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 7,
+        "parameter": "施氏矿物7次循环后对As(III)去除率(pH 7.0)",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 8,
+        "parameter": "生物施氏矿物对As(III)最大去除率及pH范围",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 9,
+        "parameter": "加热温度对生物施氏矿物As(III)去除率的影响(105°C)",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 10,
+        "parameter": "加热温度对生物施氏矿物As(III)去除率的影响(250°C)",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 11,
+        "parameter": "最大吸附容量 qmax (Sb(III), Langmuir)",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 12,
+        "parameter": "最大吸附容量 qmax (Sb(V), Langmuir)",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 13,
+        "parameter": "最大吸附容量 qmax (As(III), Langmuir)",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 14,
+        "parameter": "最大吸附容量 qmax (As(V), Langmuir)",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 15,
+        "parameter": "J-2.5对Se(VI)去除率(0.2 mM)",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 16,
+        "parameter": "J-2.5对Se(VI)去除率(2.0 mM)",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 17,
+        "parameter": "J-3.5对Se(VI)去除率(0.2 mM)",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 18,
+        "parameter": "J-90C(非生物黄钾铁矾)对Se(VI)去除率(0.2 mM)",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 19,
+        "parameter": "S-2.5(生物施氏矿物)对Se(VI)去除率(0.2 mM)",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 20,
+        "parameter": "S-2.5对Se(VI)去除率(2.0 mM)",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 21,
+        "parameter": "EDS元素原子比(J-2.5 after Se removal)",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 22,
+        "parameter": "EDS元素原子比(S-2.5 after Se removal)",
+        "basis": "partial_with_quote"
+      }
+    ],
+    "inferences": [],
+    "generated_by": "P1c-auto",
+    "note": "Classification based on verification label + quote presence + source type"
+  },
+  "mechanism_tags": [
+    "配位螯合",
+    "静电吸附",
+    "氢键",
+    "孔道限域分子筛分",
+    "沉淀共沉淀",
+    "生物矿化",
+    "还原催化降解"
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "mechanisms": {
+    "吸附机制——分子态酚+静电排斥": {
+      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "酚类有机物（苯酚、氯代酚）",
+          "basis": "from_source",
+          "locator": "Mo2021 p.1 / Abstract"
+        },
+        "bio_structure": {
+          "text": "木质部的纤维素和木质素组成的多级孔道结构",
+          "basis": "from_source",
+          "locator": "Mo2021 p.1 / Abstract"
+        },
+        "interaction": {
+          "text": "酚羟基与木质素的氢键作用、芳香环的π-π堆积",
+          "basis": "from_source",
+          "locator": "Mo2021 p.1 / Abstract"
+        },
+        "why_it_works": {
+          "text": "木质素的芳香环和酚羟基与酚类污染物结构相似，通过π-π堆积和氢键实现选择性吸附",
+          "basis": "llm_inferred",
+          "locator": null
+        },
+        "boundary_conditions": [
+          {
+            "text": "强碱性条件下酚类解离为酚盐，吸附下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "木质部的多级孔道+木质素芳香结构是天然的酚类吸附平台",
+        "verification_quote": "wood nanocellulose aerogel for pollutant capture"
+      }
+    },
+    "共价交联网络的XPS证据": {
+      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "N 1s吸附后偏移：Pb²⁺@TCTGAs 399.2, Cu²⁺@ 399.2, Zn²⁺@ 399.4, Cd²⁺@ 399.2, Mn²⁺@ 399.1 eV(vs原始398.9 eV)→N孤对电子与金属离子形成配位键",
+          "basis": "from_source",
+          "locator": "mechanism[1]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[1]"
+        },
+        "interaction": {
+          "text": "XPS C 1s确认C-N键形成→TMPTAP成功交联TCNF和GO。N 1s吸附后偏移：Pb²⁺@TCTGAs 399.2, Cu²⁺@ 399",
+          "basis": "from_source",
+          "locator": "mechanism[1]"
+        },
+        "why_it_works": {
+          "text": ".2, Zn²⁺@ 399.4, Cd²⁺@ 399.2, Mn²⁺@ 399.1 eV(vs原始398.9 eV)→N孤对电子与金属离子形成配位键",
+          "basis": "from_source",
+          "locator": "mechanism[1]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "吸附机制：氨基配位螯合": {
+      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "XPS确认N 1s偏移(398.9→399.1-399.4 eV)→N孤对电子与金属离子形成配位键；EDX mapping确认Pb/Cu/Zn/Cd均匀分布；机制：NH3+/NH2/NH-基团与重金属离子螯合/配位",
+          "basis": "from_source",
+          "locator": "mechanism[2]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[2]"
+        },
+        "interaction": {
+          "text": "O 1s也偏移→含氧官能团参与吸附",
+          "basis": "from_source",
+          "locator": "mechanism[2]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[2]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "TCTGAs组分与合成工艺": {
+      "基本原理": "needs_review",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[3]"
+        },
+        "bio_structure": {
+          "text": "TCNF(TEMPO氧化纤维素纳米纤维)+GO(改良Hummers法)+TMPTAP(三(2-氨基乙基)胺-聚丙二醇→交联剂+金属螯合配体)",
+          "basis": "from_source",
+          "locator": "mechanism[3]"
+        },
+        "interaction": {
+          "text": "TCNF(TEMPO氧化纤维素纳米纤维)+GO(改良Hummers法)+TMPTAP(三(2-氨基乙基)胺-聚丙二醇→交联剂+金属螯合配体)。",
+          "basis": "from_source",
+          "locator": "mechanism[3]"
+        },
+        "why_it_works": {
+          "text": "Zr/BDC/OA比例不适用→但TCNF/GO/TMPTAP混合→超声分散→定向冷冻→冻干",
+          "basis": "from_source",
+          "locator": "mechanism[3]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    }
+  }
+}

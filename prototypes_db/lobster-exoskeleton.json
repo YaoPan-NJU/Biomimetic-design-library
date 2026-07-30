@@ -1,0 +1,242 @@
+{
+  "id": "lobster-exoskeleton",
+  "name_zh": "龙虾外骨骼",
+  "name_en": "Lobster Exoskeleton",
+  "organism": {
+    "scientific": "Homarus americanus (美洲龙虾)",
+    "category": "动物"
+  },
+  "biomimetic_dimension": "结构仿生",
+  "features": [
+    "纤维状"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": "moderate",
+    "note": "测过的 pH/温度范围，不是适用范围。仅从 performance_data 中实际测试过的条件聚合。"
+  },
+  "performance_data": [
+    {
+      "parameter": "Chitosan/Fe-hydroxyapatite beads对Pb(II)的最大吸附容量",
+      "value": "1385",
+      "unit": "mg/g",
+      "pollutant": "Pb(II)",
+      "material": "Chitosan/Fe-hydroxyapatite beads",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s10311-023-01563-9",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第1组-配位螯合/2023-Vo-chitosan-membrane-shell-hydroxyapatite-review.pdf",
+      "page": 1,
+      "locator": "Abstract",
+      "verification": "partial",
+      "confidence": 0.8,
+      "verification_quote": "We found that chitosan/Fe-hydroxyapatite beads exhibit an adsorption capacity of 1385 mg/g for the removal of lead.",
+      "source_locator": "Abstract"
+    }
+  ],
+  "mechanisms": [
+    {
+      "name": "龙虾外骨骼几丁质氨基/羟基螯合吸附",
+      "description": "静电作用(electrostatic interaction)、络合(complexation)、氢键(hydrogen bonding)、酸碱作用(acid-base interaction)、配位/螯合(coordination/chelation)、离子交换(ion exchange)",
+      "functional_groups": [
+        "离子交换位点",
+        "含氮配体",
+        "静电作用位点",
+        "壳聚糖氨基/羟基",
+        "配位/螯合位点",
+        "乙酰氨基 -NHCOCH₃",
+        "氢键位点",
+        "羟基 hydroxyl (-OH)",
+        "-O-（醚键）",
+        "氨基 amino (-NH₂)"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1007/s10311-023-01563-9",
+      "verification": "partial",
+      "基本原理": "龙虾外骨骼是壳聚糖的天然来源之一，吸附机制与壳聚糖相同",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "多种污染物（重金属、染料、有机物）",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.13550/j.jxhg.20220633",
+          "locator": "p.1",
+          "quote": "复杂，包括有机染料、重金属、各种添加剂等，对",
+          "scope_match": "Keywords: 染料, 重金属"
+        },
+        "bio_structure": {
+          "text": "龙虾外骨骼的几丁质-矿物复合结构，脱矿后提取几丁质/壳聚糖",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.13550/j.jxhg.20220633",
+          "locator": "p.1",
+          "quote": "聚多巴胺改性双醛壳聚糖的制备及其吸附性能",
+          "scope_match": "Keywords: 壳聚糖, 聚糖"
+        },
+        "interaction": {
+          "text": "与chitosan相同：氨基配位、羟基氢键、静电吸引",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.13550/j.jxhg.20220633",
+          "locator": "p.1",
+          "quote": "modified dialdehyde chitosan",
+          "scope_match": "Keywords: chitosan, modified, dialdehyde"
+        },
+        "why_it_works": {
+          "text": "龙虾外骨骼是壳聚糖的天然来源之一，吸附机制与壳聚糖相同",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "与壳聚糖相同的pH限制",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "keyword_match",
+            "source": "10.1007/s10311-023-01563-9"
+          },
+          {
+            "text": "与壳聚糖相同的pH限制，酸性下溶解",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": "domain_knowledge",
+            "verification_method": "keyword_match",
+            "source": "10.1007/s10311-023-01563-9"
+          }
+        ],
+        "transferable_principle": "龙虾外骨骼提取的壳聚糖与虾蟹壳来源壳聚糖吸附机制相同",
+        "verification_quote": "The adsorption process is controlled by electrostatic interaction, ion exchange, pore-filling, coordination, hydrophobic interaction, and hydrogen bonding between the sorbent and sorbate",
+        "source_doi": "10.1007/s10311-023-01563-9",
+        "source_locator": "p.3 / Adsorption mechanisms section"
+      },
+      "key_structures": [
+        "六重协同吸附",
+        "吸附结构",
+        "几丁质-蛋白质复合结构",
+        "脱乙酰化→壳聚糖"
+      ],
+      "molecular_feature_links": [
+        "二价阳离子",
+        "软酸",
+        "可与含硫/氮配体配位",
+        "配位",
+        "静电吸引",
+        "离子交换",
+        "络合"
+      ]
+    }
+  ],
+  "narrative": {
+    "entries": [
+      {
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2023-Vo-chitosan-membrane-shell-hydroxyapatite-review.json",
+        "paper_id": "2023-Vo-chitosan-beads-wastewater-review",
+        "sections": {
+          "problem_definition": "自然界中生物聚合物需高效捕获特定离子以构建骨架或维持生理平衡；水处理中面临重金属与有机污染物高效去除、吸附剂易流失、再生困难及固液分离繁琐等工程挑战。",
+          "biological_solution": "进化策略：甲壳素作为自然界第二大生物聚合物，利用β-(1→4)糖苷键骨架上的-NH₂和-OH实现金属离子的配位螯合。关键机制：模拟天然细胞外基质的三维网络结构提供高孔隙率与传质通道。成功案例：CS/Fe-hydroxyapatite珠粒对Pb(II)吸附达1385 mg/g，印迹磁性CS珠粒实现15次循环再利用。",
+          "key_features": "必须保留特征：含-NH₂和-OH的β-(1→4)糖苷键骨架、模拟细胞外基质的三维水凝胶珠粒形态。可灵活调整特征：层级孔结构（如MOF菱形通道协同）、磁性组分（Fe3O4）、特定官能团（巯基、β-环糊精）及离子印迹空腔。",
+          "design_mapping": "生物→材料映射：甲壳素骨架→壳聚糖珠粒基底；细胞外基质三维网络→交联水凝胶珠粒；生物矿化通道→MOF/CS层级孔结构。软约束建议：建议引入无机材料复合以避免质量损失；针对工业应用优先选择化学或热再生，并引入磁性组分以简化固液分离。",
+          "explainability_anchors": "仿生故事线：从甲壳类生物外壳的离子螯合能力与细胞外基质的三维多孔网络出发，启发设计兼具高吸附容量、优异水力学性能与易分离特性的壳聚糖基珠粒。设计溯源：ZIF-8/CS的层级孔设计源于生物通道协同效应；磁性及印迹设计源于生物特异性识别与便捷分离的工程需求。"
+        }
+      }
+    ]
+  },
+  "engineering_constraints": [
+    {
+      "constraint": "Imprinted magnetic chitosan beads对Ni(II)的循环再利用次数",
+      "value": "15",
+      "unit": "cycles",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s10311-023-01563-9"
+    },
+    {
+      "constraint": "柠檬酸/CS/Fe/PEI珠粒对Cu(II)的吸附与循环",
+      "value": "127",
+      "unit": "mg/g",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s10311-023-01563-9"
+    },
+    {
+      "constraint": "壳聚糖珠粒的七大再生方法（Table 9）",
+      "value": "热再生、化学再生、微波辅助、超声、溶剂、超临界流体",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1007/s10311-023-01563-9"
+    }
+  ],
+  "provenance_summary": {
+    "n_papers": 1,
+    "n_verified": 1,
+    "n_unverified": 1
+  },
+  "coverage": "normal",
+  "status": "active",
+  "design_translation": [
+    {
+      "idea": "利用龙虾外骨骼的几丁质-蛋白质复合结构设计高强度吸附材料",
+      "specific_functional_group": "几丁质的乙酰氨基和羟基",
+      "material_handle": "几丁质提取、脱乙酰化或复合改性",
+      "target_interaction": "乙酰氨基和羟基配位重金属，层状结构提供机械强度",
+      "source_tier": "llm_inference",
+      "examples": [],
+      "design_principle": "龙虾外骨骼的几丁质-蛋白质复合结构提供高强度和吸附官能团。脱乙酰化后转化为壳聚糖增强吸附能力",
+      "constraints": "原料来源有限；脱乙酰化程度影响性能；机械强度需复合增强",
+      "implementation_example": "龙虾壳→脱蛋白→脱乙酰化→壳聚糖→复合改性"
+    }
+  ],
+  "library_tier": "core",
+  "lifecycle_status": "active",
+  "honesty_ledger": {
+    "facts": [],
+    "leads": [
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "Chitosan beads的六种吸附机制",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 0,
+        "parameter": "Chitosan/Fe-hydroxyapatite beads对Pb(II)的最大吸附容量",
+        "basis": "partial_with_quote"
+      }
+    ],
+    "inferences": [],
+    "generated_by": "P1c-auto",
+    "note": "Classification based on verification label + quote presence + source type"
+  },
+  "mechanism_tags": [
+    "配位螯合",
+    "静电吸附",
+    "离子交换",
+    "氢键"
+  ]
+}

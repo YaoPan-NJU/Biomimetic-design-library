@@ -1,0 +1,136 @@
+{
+  "id": "microbial-exopolysaccharide",
+  "name_zh": "微生物胞外多糖",
+  "name_en": "Microbial Exopolysaccharide",
+  "organism": {
+    "scientific": "Bacteria/Fungi (EPS-producing)",
+    "category": "微生物"
+  },
+  "biomimetic_dimension": "microbial_biopolymer",
+  "features": [],
+  "tested_conditions": [],
+  "library_tier": "extended",
+  "lifecycle_status": "active",
+  "coverage": "partial",
+  "status": "active",
+  "provenance_summary": "V1-B biological expansion wave. Microbial exopolysaccharides (EPS) produced by bacteria and fungi as bio-adsorbents for heavy metals and dyes. Rich in functional groups for pollutant binding.",
+  "mechanisms": [
+    {
+      "mechanism_id": "MEP-001",
+      "description": "EPS functional group binding: carboxyl, hydroxyl, and sulfate groups on exopolysaccharides coordinate heavy metal ions and cationic dyes",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "Heavy metal ions and cationic dyes",
+          "basis": "llm_inferred",
+          "evidence_label": "llm_inferred",
+          "source": "10.1016/j.jwpe.2022.102884",
+          "locator": "p.3",
+          "quote": "viable for cationic metal attachment [20]",
+          "scope_match": "Keywords: heavy, cationic, ions, metal"
+        },
+        "bio_structure": {
+          "text": "Carboxyl (-COOH), hydroxyl (-OH), sulfate (-OSO₃H) groups",
+          "basis": "llm_inferred",
+          "evidence_label": "llm_inferred",
+          "source": "10.1016/j.jwpe.2022.102884",
+          "locator": "p.3",
+          "quote": "protons convert phosphate, carboxyl, and sulfate groups into neutral,",
+          "scope_match": "Keywords: sulfate, groups, hydroxyl, carboxyl"
+        },
+        "interaction": {
+          "text": "Coordination with carboxyl, hydroxyl, sulfate groups on EPS",
+          "basis": "llm_inferred",
+          "evidence_label": "llm_inferred",
+          "source": "10.1016/j.jwpe.2022.102884",
+          "locator": "p.3",
+          "quote": "and hydroxyl-carboxyl groups interact in coordination with heavy metal",
+          "scope_match": "Keywords: sulfate, groups, hydroxyl, coordination, carboxyl"
+        },
+        "why_it_works": {
+          "text": "EPS can bind significant amounts of heavy metals",
+          "basis": "llm_inferred",
+          "source": "10.1016/j.jwpe.2022.102884",
+          "evidence_label": "llm_inferred",
+          "locator": "p.3",
+          "quote": "Recent research outcomes on bacterial biosorption of heavy metals",
+          "scope_match": "Keywords: heavy, significant, metals, bind"
+        },
+        "boundary_conditions": [
+          {
+            "text": "Acidic to neutral pH",
+            "parameter": "pH",
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "verification_method": "no_reference_available"
+          }
+        ],
+        "transferable_principle": "Microbial EPS carboxyl/hydroxyl/sulfate groups coordinate heavy metals and dyes"
+      },
+      "verification": "llm_inferred",
+      "source_doi": "",
+      "source_page": 0,
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）",
+        "-COOH（羧基）",
+        "-OH（羟基）"
+      ],
+      "key_structures": [],
+      "name": "微生物胞外多糖羧基/羟基/硫酸基配位"
+    }
+  ],
+  "performance_data": [],
+  "engineering_constraints": [
+    {
+      "constraint_id": "MEP-E001",
+      "description": "EPS production: microbial fermentation, yield depends on species and conditions",
+      "source_doi": "",
+      "evidence_type": "llm_inferred"
+    }
+  ],
+  "narrative": [
+    {
+      "narrative_id": "MEP-N001",
+      "text": "Microbial exopolysaccharides are natural biopolymers secreted by bacteria and fungi. They contain abundant functional groups (carboxyl, hydroxyl, sulfate) that can bind heavy metals and dyes. Production is scalable via fermentation.",
+      "source_doi": ""
+    }
+  ],
+  "design_translation": [
+    {
+      "idea": "Produce exopolysaccharides via microbial fermentation and use as bio-adsorbents for heavy metals and dyes",
+      "material_handle": "Microbial exopolysaccharide hydrogel (xanthan, dextran, pullulan)",
+      "design_principle": "Carboxyl, hydroxyl, and sulfate groups on exopolysaccharides coordinate heavy metal ions and cationic dyes via electrostatic attraction and complexation",
+      "implementation_example": "Xanthan gum for heavy metal adsorption; Dextran-based hydrogel for dye removal",
+      "constraints": "Production cost depends on microbial fermentation efficiency; mechanical strength may need crosslinking enhancement",
+      "failure_modes": "Low mechanical strength in wet state; competitive adsorption from co-existing ions",
+      "evidence_tier": "inference",
+      "source_tier": "llm_inference",
+      "material_realization_examples": [
+        "Xanthan gum for heavy metal adsorption",
+        "Dextran-based hydrogel for dye removal"
+      ],
+      "specific_functional_group": "carboxyl, hydroxyl, sulfate groups",
+      "target_interaction": "electrostatic attraction and complexation with metal ions and cationic dyes"
+    }
+  ],
+  "honesty_ledger": {
+    "from_source_mechanisms": 0,
+    "llm_inferred_mechanisms": 1,
+    "verified_performance_data": 0,
+    "missing_pdf_items": 1,
+    "knowledge_gaps": [
+      "[QC 2026-07-23] 现引 10.1016/j.jwpe.2022.102884 为细菌生物修复综述（复用、范围偏，仅作 background）；待补一手源并提取全文 quote+页码以升 from_source：Ciempiel 2025 (10.1038/s41598-025-94372-9, EPS Pb 生物吸附) 与 Qu 2022 (Environ Pollut, DOI 待核实)",
+      "EPS-specific adsorption capacity comparison",
+      "Production cost analysis"
+    ]
+  },
+  "mechanism_tags": [
+    "配位螯合",
+    "氢键"
+  ]
+}

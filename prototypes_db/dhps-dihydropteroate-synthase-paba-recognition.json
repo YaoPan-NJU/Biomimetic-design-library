@@ -1,0 +1,211 @@
+{
+  "id": "dhps-dihydropteroate-synthase-paba-recognition",
+  "name_zh": "二氢蝶酸合酶(DHPS) PABA/磺胺识别位点",
+  "name_en": "Dihydropteroate Synthase (DHPS) PABA/Sulfonamide Recognition Site",
+  "organism": {
+    "scientific": "Bacillus anthracis / Escherichia coli 等细菌的二氢蝶酸合酶（DHPS，叶酸合成关键酶）",
+    "category": "微生物"
+  },
+  "biomimetic_dimension": "分子仿生",
+  "features": [
+    "特异性识别",
+    "分子筛分"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": null,
+    "note": "DHPS 为酶识别原型；performance_data 为空，未搬运姊妹项目任何吸附数值。"
+  },
+  "library_tier": "exploratory",
+  "lifecycle_status": "active",
+  "coverage": "partial",
+  "status": "active",
+  "provenance_summary": {
+    "n_papers": 2,
+    "n_verified": 0,
+    "n_unverified": 1,
+    "note": "Hevener 2010/PDB 3H26 研究的是 pterin-based inhibitors，不能直接支持 SMX 占据 pABA 位点；Babaoglu 2004 尚未完成全文定位。条目已降为 exploratory，并改写为 DHPP 先行结合、柔性 loop 组织后形成条件性 pABA 位点的待复核启发。performance_data 为空。"
+  },
+  "mechanisms": [
+    {
+      "mechanism_id": "DHPS-001",
+      "name": "DHPP 先行结合后形成的 pABA/磺胺条件性识别位点",
+      "description": "DHPS 催化 DHPP 与 pABA 缩合。现有结构与动力学表明 pterin/DHPP 侧先结合并组织柔性 loop，随后才形成 pABA/磺胺可进入的条件性位点；磺胺类是 pABA 类似物，但当前所引 Hevener 2010 主要研究 pterin 抑制剂，不能作为 SMX 占据 pABA 位点的直接结构证据。",
+      "基本原理": "可迁移的生物启发不是预成型刚性 pABA 模板，而是‘辅助底物先行组织柔性 loop，再读取 pABA 类似物’的有序结合与诱导契合；SMX 专属残基和构象仍需直接来源。",
+      "source": "literature",
+      "ref_doi": "10.1021/jm900861d",
+      "verification": "needs_review",
+      "verification_quote": "Structural Studies of Pterin-Based Inhibitors of Dihydropteroate Synthase",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "磺胺类抗生素(磺胺甲噁唑 SMX)含苯胺氨基 + 磺酰胺基，是 pABA(对氨基苯甲酸)的结构类似物，可占据 DHPS 的 pABA 识别口袋",
+          "basis": "llm_inferred",
+          "evidence_label": "needs_review",
+          "source": "10.1021/jm900861d",
+          "locator": "title / abstract",
+          "quote": "Structural Studies of Pterin-Based Inhibitors of Dihydropteroate Synthase",
+          "scope_match": "Keywords: dihydropteroate synthase, inhibitors"
+        },
+        "bio_structure": {
+          "text": "DHPS 为 TIM-barrel 折叠酶，含相邻的 pterin 口袋与 pABA 口袋；pABA 口袋由保守残基与柔性 loop 构成（Babaoglu 2004 炭疽 DHPS 结构）",
+          "basis": "llm_inferred",
+          "evidence_label": "needs_review",
+          "source": "10.1021/jm900861d",
+          "locator": "title / abstract",
+          "quote": "Dihydropteroate Synthase",
+          "scope_match": "Keywords: dihydropteroate synthase"
+        },
+        "interaction": {
+          "text": "磺胺苯胺氨基与 pABA 口袋保守残基定向氢键/静电作用，芳香环占据口袋芳香面，形成竞争性识别（磺胺=pABA 类似物，形成假产物）",
+          "basis": "llm_inferred",
+          "evidence_label": "needs_review",
+          "source": "10.1021/jm900861d",
+          "locator": "title / abstract",
+          "quote": "Pterin-Based Inhibitors of Dihydropteroate Synthase",
+          "scope_match": "Keywords: inhibitors, dihydropteroate synthase"
+        },
+        "why_it_works": {
+          "text": "有限 pABA 口袋的几何+对苯胺氨基的定向极性作用，使磺胺骨架被高选择识别；可迁移为对磺胺类的‘苯胺氨基读取+芳香口袋’识别位点（材料层外推）",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "识别依赖有限 pABA 口袋几何与对苯胺氨基的定向作用；单纯疏水/π 吸附会同时吸附一切芳香有机物，须以口袋几何+极性锚点提供磺胺选择性（定性）",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": "title / abstract",
+            "quote": "Dihydropteroate Synthase",
+            "scope_match": "Keywords: dihydropteroate synthase",
+            "source_asset": null
+          },
+          {
+            "text": "‘配体进入后柔性 loop 封口并可逆释放’为动态候选假说，缺原始动力学证据（源项目亦标待补）",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "把 DHPS 的‘辅助底物先行组织柔性 loop，随后形成 pABA 类似物识别位点’迁移为条件性吸附门：以共因子/环境触发位点成形，再读取磺胺骨架；SMX 专属几何须待直接结构证据，不得宣称为已验证刚性模板。",
+        "verification_quote": "Structural Studies of Pterin-Based Inhibitors of Dihydropteroate Synthase"
+      },
+      "source_doi": "10.1021/jm900861d",
+      "source_page": null,
+      "source_locator": "J Med Chem（PMC2804029，PDB 3H26；题录接地，未做全文 PDF 审计）",
+      "source_file": "Hevener et al. 2010 J Med Chem（DOI 10.1021/jm900861d，PMC2804029，PDB 3H26）+ Babaoglu et al. 2004 Structure（炭疽 DHPS 晶体结构）",
+      "functional_groups": [
+        "DHPP/pterin 先行结合位点",
+        "形成条件性 pABA 位点的柔性 loop"
+      ],
+      "key_structures": [
+        "识别结构"
+      ]
+    }
+  ],
+  "performance_data": [],
+  "engineering_constraints": [
+    {
+      "constraint": "酶识别原型，非可直接固定的吸附剂",
+      "value": "DHPS 为胞内酶；其 pABA 位点受 DHPP/pterin 先行结合和柔性 loop 组织影响，不能直接简化成预成型刚性吸附腔。任何材料转译都必须先验证条件性位点形成。",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "Hevener 2010 直接范围为 pterin-based inhibitors；SMX/pABA 条件性识别仍待直接来源",
+      "source": "literature",
+      "ref_doi": "10.1021/jm900861d"
+    }
+  ],
+  "narrative": {
+    "entries": [
+      {
+        "source_file": "Hevener et al. 2010 J Med Chem（DOI 10.1021/jm900861d，PMC2804029，PDB 3H26）+ Babaoglu et al. 2004 Structure",
+        "paper_id": "2010-Hevener-DHPS-pterin-inhibitors",
+        "sections": {
+          "problem_definition": "磺胺甲噁唑(SMX)等磺胺类抗生素在污水二级出水中需选择性去除；分子层面须在众多芳香有机物中读取磺胺的苯胺氨基+磺酰胺几何，而非仅靠疏水吸附。",
+          "biological_solution": "DHPS 是双底物酶：pterin/DHPP 侧先行结合并组织柔性 loop，随后形成可接纳 pABA 类似物的条件性位点。磺胺类与 pABA 的竞争关系是合理来源方向，但 PDB 3H26/Hevener 2010 研究 pterin 抑制剂，不能当作 SMX 直接结合结构。",
+          "key_features": "待验证要点：① DHPP/pterin 先行结合；② 柔性 loop 诱导形成条件性位点；③ SMX/磺胺同系物是否共享足够稳定的结合几何。不得把动态位点误写成预成型刚性模板。",
+          "design_mapping": "仿生映射暂限于‘共因子或环境触发位点成形’这一有序结合原则；材料方案必须以无触发条件、刚性口袋和随机官能团为对照，不能宣称已复制 SMX 结合残基。",
+          "explainability_anchors": "设计溯源：Hevener 2010 仅支持 DHPS/pterin 抑制剂结构，不能直接证明 SMX 位点；条件性 pABA/磺胺识别与材料转译均待直接来源和实验复核。"
+        }
+      }
+    ]
+  },
+  "design_translation": [
+    {
+      "idea": "将 DHPS 的‘辅助底物先行组织柔性 loop，随后形成 pABA 类似物位点’作为条件性识别启发：构建由环境或共因子触发成形的柔性口袋，再测试其对 SMX/磺胺同系物的差异；当前不得把 Hevener 的 pterin 抑制剂结构表述为 SMX 直接结合结构。",
+      "specific_functional_group": "可由共因子/环境触发重排的柔性极性位点；SMX 专属锚点尚未确定",
+      "material_handle": "带可逆构象单元的交联凝胶或动态印迹网络；设置无触发、刚性模板和随机位点对照",
+      "target_interaction": "先触发位点成形，再测试对 pABA/SMX/磺胺同系物的条件性极性与形状识别",
+      "source_tier": "llm_inference",
+      "evidence_tier": "inspiration（DHPS 来源方向存在，但当前 Hevener 证据属于 pterin 抑制剂；SMX 位点、动态顺序和材料转译均待直接复核）",
+      "examples": [],
+      "design_principle": "探索有序结合/诱导契合是否能提供比预成型疏水口袋更可控的条件性识别",
+      "implementation_example": "触发响应型动态印迹凝胶（研究假说，无实验数据）",
+      "constraints": "SMX 直接结构证据缺失；辅助底物条件可能无法迁移；纯疏水/π 吸附无磺胺选择性",
+      "failure_modes": "退化为普通芳香吸附；无法区分 SMX 与其他磺胺/芳香药物；封口机制不成立",
+      "material_realization_examples": []
+    }
+  ],
+  "honesty_ledger": {
+    "facts": [],
+    "leads": [
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "pABA 结合口袋对磺胺骨架的竞争性识别",
+        "basis": "source_scope_mismatch_needs_review",
+        "note": "Hevener 2010 J Med Chem(DOI 10.1021/jm900861d，PMC2804029，PDB 3H26)+ Babaoglu 2004 Structure；DOI/PDB 联网核验真实，题录级接地，未做全文 PDF 页码审计。磺胺=pABA 类似物竞争性占据 pABA 口袋为已知抗菌机制"
+      }
+    ],
+    "inferences": [
+      {
+        "type": "design_translation",
+        "index": 0,
+        "idea": "DHPS pABA 口袋转译为 SMX 苯胺氨基+芳香口袋识别位点",
+        "basis": "llm_inferred",
+        "label": "lead",
+        "note": "识别化学有结构依据；柔性 loop 封口动态为假说；须以磺胺同系物/删锚点对照分离几何识别贡献；无搬运数值"
+      }
+    ],
+    "boundary_notes": [
+      "Hevener 2010 的来源范围是 pterin-based inhibitors，不是 SMX 结合结构；Babaoglu 2004 尚待全文定位",
+      "磺胺=pABA 结构类似物、竞争性占据 pABA 口袋为公认抗菌机制；SMX 专属材料构象须实验裁决",
+      "柔性 loop 封口动态缺原始动力学证据(源项目亦标待补)",
+      "performance_data 为空：未从姊妹项目搬运任何数值(知识隔离红线)",
+      "所有 llm_inferred 边界为定性，无数值阈值，gate_level=soft"
+    ],
+    "missing_pdf_items": [
+      "Hevener et al. 2010 J Med Chem 全文 PDF 与 PDB 3H26 SITE 记录(quote 取自题录)",
+      "Babaoglu et al. 2004 Structure 全文 PDF"
+    ],
+    "generated_by": "track2b-extraction-2026-07-29",
+    "note": "诚实优先：DHPS pABA/磺胺竞争性识别题录级接地(DOI/PDB 核验)；转译为 lead；无搬运数值。"
+  },
+  "boundary_rules": [
+    {
+      "rule": "磺胺选择性依赖‘对苯胺氨基的定向锚定+有限芳香口袋几何’；单纯疏水/π 吸附无选择性",
+      "source_mechanism": "pABA 结合口袋对磺胺骨架的竞争性识别",
+      "gate_level": "soft",
+      "basis": "llm_inferred"
+    }
+  ],
+  "mechanism_tags": [
+    "几何识别",
+    "氢键",
+    "π-π堆积",
+    "静电吸附"
+  ]
+}

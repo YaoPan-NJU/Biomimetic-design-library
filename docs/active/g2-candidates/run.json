@@ -1,0 +1,23 @@
+{
+  "run_id": "G2-audit-run-2026-06-19",
+  "timestamp": "2026-06-19T15:49:30.040762Z",
+  "tested_commit": "75345bf",
+  "models_used": {
+    "CC_subagents": "mimo-v2.5-pro (xiaomi key_slot_1)"
+  },
+  "prototypes_processed": 24,
+  "candidates_generated": 78,
+  "validation": {
+    "canon_metrics_guard": "GREEN",
+    "check_chimera": "0 violations",
+    "test_canon_safety": "6/6 PASS",
+    "test_apply_recovery": "9/9 PASS",
+    "test_invariant_guard": "7/7 PASS"
+  },
+  "disposition_counts": {
+    "unchanged": 4,
+    "removed": 41,
+    "downgraded": 29,
+    "scope_caveat": 4
+  }
+}

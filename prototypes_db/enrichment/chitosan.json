@@ -1,0 +1,3938 @@
+{
+  "mechanisms": {
+    "pH对氮污染物吸附的影响机制 pH effect on N-pollutants adsorption": {
+      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "带负电的污染物（含氧阴离子、阴离子染料、酸性pH下的重金属离子）",
+          "basis": "from_source",
+          "locator": "Lei2021 p.2 / Sec.1"
+        },
+        "bio_structure": {
+          "text": "壳聚糖分子链上的氨基（-NH₂）和羟基（-OH）",
+          "basis": "from_source",
+          "locator": "Lei2021 p.2 / Sec.1"
+        },
+        "interaction": {
+          "text": "氨基质子化（-NH₃⁺）→静电吸引阴离子污染物；羟基与金属离子配位或氢键结合",
+          "basis": "from_source",
+          "locator": "Lei2021 p.2 / Sec.1"
+        },
+        "why_it_works": {
+          "text": "壳聚糖在酸性条件下氨基质子化带正电（pKa~6.3），与带负电的污染物通过库仑引力结合；在中性至碱性条件下，游离氨基通过配位作用结合金属离子",
+          "basis": "from_source",
+          "locator": "Lei2021 p.2 / Sec.1"
+        },
+        "boundary_conditions": [
+          {
+            "text": "强酸性条件下壳聚糖溶解，失去吸附能力",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          },
+          {
+            "text": "碱性条件下氨基去质子化，对阴离子吸附能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          },
+          {
+            "text": "高盐浓度下静电屏蔽效应减弱阴离子吸附",
+            "parameter": "salinity",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          },
+          {
+            "text": "强酸性条件下壳聚糖溶解，氨基完全质子化失去配位能力",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": "CM-004: amino-protonation-anion-adsorption"
+          }
+        ],
+        "transferable_principle": "含氨基聚合物在酸性条件下通过质子化-静电吸引捕获阴离子污染物，在中性条件下通过配位捕获金属离子——pH是切换机制的开关",
+        "verification_quote": "chitosan-based adsorbents exhibit excellent adsorption properties owing to reactive groups containing numerous amino groups (-NH2) and hydroxyl groups (-OH) on chitosan polymer chains"
+      }
+    },
+    "酸浸碳/壳聚糖/FeCl3吸附机制 Acid-leached carbon/chitosan/FeCl3 mechanisms": {
+      "基本原理": "壳聚糖分子链上的氨基（-NH₂）可通过质子化带正电，与带负电的污染物（如染料、重金属阴离子）通过静电吸引结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[20]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[20]"
+        },
+        "interaction": {
+          "text": "41.9 mg/g (Langmuir); 机制: H键、FeCl3引入Cl-与NO3-离子交换、酸性介质中质子化羟基/氨基/Fe静电作用",
+          "basis": "from_source",
+          "locator": "mechanism[20]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[20]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "La3+掺入壳聚糖膜HSAB机制 La3+-chitosan HSAB mechanism": {
+      "基本原理": "壳聚糖分子链上的羟基（-OH）可与污染物形成氢键，或通过配位作用结合金属离子",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[21]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[21]"
+        },
+        "interaction": {
+          "text": "基于HSAB硬酸-硬碱静电吸引：-NH3+、-OH2+、La3+（硬酸）与NO3-（硬碱）作用",
+          "basis": "from_source",
+          "locator": "mechanism[21]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[21]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "金属离子络合机制 Metal ion complexation mechanism": {
+      "基本原理": "壳聚糖分子链上的氨基（-NH₂）可通过质子化带正电，与带负电的污染物（如染料、重金属阴离子）通过静电吸引结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "软酸金属离子（Pb²⁺、Cu²⁺、Hg²⁺、Cd²⁺）",
+          "basis": "from_source",
+          "locator": "Lei2021 p.2 / Sec.1"
+        },
+        "bio_structure": {
+          "text": "壳聚糖的-NH₂和-OH组成的双齿配位位点",
+          "basis": "from_source",
+          "locator": "Lei2021 p.2 / Sec.1"
+        },
+        "interaction": {
+          "text": "氨基和羟基与金属离子形成配位键（N,O-螯合），遵循HSAB原理和Irving-Williams序列",
+          "basis": "from_source",
+          "locator": "Lei2021 p.2 / Sec.1"
+        },
+        "why_it_works": {
+          "text": "壳聚糖的氨基对软酸金属（Hg²⁺、Pb²⁺、Cu²⁺）有高亲和力，形成稳定的五元或六元螯合环；Cu²⁺在Irving-Williams序列中稳定性最高（log K~8）",
+          "basis": "llm_inferred",
+          "locator": null
+        },
+        "boundary_conditions": [
+          {
+            "text": "强酸性条件下氨基完全质子化，失去金属配位能力",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          },
+          {
+            "text": "高浓度Ca²⁺、Mg²⁺竞争配位位点",
+            "parameter": "competing_ion",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          },
+          {
+            "text": "强酸性条件下壳聚糖溶解，氨基完全质子化失去配位能力",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": "CM-004: amino-protonation-anion-adsorption"
+          },
+          {
+            "text": "碱性条件下氨基去质子化，对阴离子吸附能力下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": "CM-005: amino-deprotonation-metal-coordination"
+          }
+        ],
+        "transferable_principle": "含-NH₂/-OH双齿配位位点的聚合物可按HSAB原理选择性捕获软酸金属离子，Ca²⁺/Mg²⁺竞争是主要干扰",
+        "verification_quote": "chelation, hydrogen bonds, van der Waals force and pi-pi stacking interaction"
+      }
+    },
+    "pHpzc对吸附机制的影响 pHpzc effect on adsorption mechanism": {
+      "基本原理": "壳聚糖表面的活性基团（-NH₂、-OH）与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[2]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[2]"
+        },
+        "interaction": {
+          "text": "CCS pHpzc=5.74, PACCS pHpzc=4.85; CCS最佳pH=6, PACCS最佳pH=5",
+          "basis": "from_source",
+          "locator": "mechanism[2]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[2]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "表面沉淀机制 Surface precipitation mechanism": {
+      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[3]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[3]"
+        },
+        "interaction": {
+          "text": "仅Cr(III)观察到沉淀（因Cr(OH)3第一稳定常数远高于其他离子）；其他离子（Cu, Zn, Ni, Pb, Cd, Mn, Co）遵循络合、离子交换和静电机制",
+          "basis": "from_source",
+          "locator": "mechanism[3]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[3]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "磁性壳聚糖的三大吸附机制分类": {
+      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[72]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[72]"
+        },
+        "interaction": {
+          "text": "物理吸附(静电作用/范德华力)、化学吸附(离子交换/表面络合/氧化还原)、协同吸附",
+          "basis": "from_source",
+          "locator": "mechanism[72]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[72]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "Cr(VI)的氧化还原吸附机制（VMCP案例）": {
+      "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[73]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[73]"
+        },
+        "interaction": {
+          "text": "Cr(VI)在正电荷VMCP表面吸附→还原为Cr(III)→与N原子配位",
+          "basis": "from_source",
+          "locator": "mechanism[73]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[73]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "磁性壳聚糖的五种制备方法": {
+      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[74]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[74]"
+        },
+        "interaction": {
+          "text": "共沉淀法、交联法、喷雾干燥法、光化学法、静电滴落法",
+          "basis": "from_source",
+          "locator": "mechanism[74]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[74]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "协同吸附案例：FFO@Sil@Chi-DTPA同时去除MB和Pb(II)": {
+      "基本原理": "壳聚糖分子链上的氨基（-NH₂）可通过质子化带正电，与带负电的污染物（如染料、重金属阴离子）通过静电吸引结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[75]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[75]"
+        },
+        "interaction": {
+          "text": "Pb(II)通过-COOH静电吸引+H键+氨基络合；MB通过磺酸基增强Pb(II)吸附+Pb(II)作为阳离子桥增强MB吸附",
+          "basis": "from_source",
+          "locator": "mechanism[75]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[75]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "壳聚糖的七种染料吸附机制": {
+      "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[13]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[13]"
+        },
+        "interaction": {
+          "text": "离子交换、络合、配位/螯合、静电相互作用、酸碱相互作用、氢键、疏水相互作用",
+          "basis": "from_source",
+          "locator": "mechanism[13]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[13]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "Cu(II)配位壳聚糖磁性材料对RBR的吸附容量": {
+      "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[14]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[14]"
+        },
+        "interaction": {
+          "text": "880.84",
+          "basis": "from_source",
+          "locator": "mechanism[14]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[14]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "MCM两大改性方向": {
+      "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[64]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[64]"
+        },
+        "interaction": {
+          "text": "磁性纳米粒子改性(修饰/替换Fe₃O₄) + 壳聚糖改性(分子印迹/接枝/螯合/烷基化)",
+          "basis": "from_source",
+          "locator": "mechanism[64]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[64]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "MCM吸附机制汇总": {
+      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[65]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[65]"
+        },
+        "interaction": {
+          "text": "离子交换、静电吸附、范德华力、氢键、络合、化学键合",
+          "basis": "from_source",
+          "locator": "mechanism[65]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[65]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "Chitosan beads的六种吸附机制": {
+      "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[71]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[71]"
+        },
+        "interaction": {
+          "text": "静电作用(electrostatic interaction)、络合(complexation)、氢键(hydrogen bonding)、酸碱作用(acid-base interaction)、配位/螯合(coordination/chelation)、离子交换(ion exchange)",
+          "basis": "from_source",
+          "locator": "mechanism[71]"
+        },
+        "why_it_works": {
+          "text": "用(acid-base interaction)、配位/螯合(coordination/chelation)、离子交换(ion exchange)",
+          "basis": "from_source",
+          "locator": "mechanism[71]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "活性炭表面性质对BPA吸附的影响 Effect of activated carbon surface properties on BPA adsorption": {
+      "基本原理": "壳聚糖分子链上的羟基（-OH）可与污染物形成氢键，或通过配位作用结合金属离子",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[90]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[90]"
+        },
+        "interaction": {
+          "text": "活性炭表面高比表面积(500-1500 m²/g)和丰富含氧官能团(羧基、羟基、酚羟基)通过孔隙填充、范德华力、静电作用和氢键实现BPA吸附",
+          "basis": "from_source",
+          "locator": "mechanism[90]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[90]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "碳纳米管对BPA的吸附机制 Adsorption mechanism of CNTs for BPA": {
+      "基本原理": "壳聚糖表面的活性基团（-NH₂、-OH）与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[91]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[91]"
+        },
+        "interaction": {
+          "text": "BPA分子中两个苯环可通过π-π电子供体-受体机制平行吸附在CNT表面；三种吸附位点：表面、沟槽区、间隙孔；CNT吸附容量范围43.76-580 mg/g",
+          "basis": "from_source",
+          "locator": "mechanism[91]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[91]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "BPA吸附的主要机制 Main adsorption mechanisms for BPA": {
+      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[92]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[92]"
+        },
+        "interaction": {
+          "text": "六种主要机制：静电相互作用、π-π相互作用、疏水作用、酸碱作用、氢键、孔隙填充，以及这些机制的组合",
+          "basis": "from_source",
+          "locator": "mechanism[92]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[92]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "pH对BPA吸附的影响 pH effect on BPA adsorption": {
+      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[93]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[93]"
+        },
+        "interaction": {
+          "text": "pH 2-8范围内对去除效率影响较小；pH 9-11时BPA吸附效率下降(BPA在pH>8开始去质子化，阴离子形态与带负电吸附剂表面产生静电排斥)",
+          "basis": "from_source",
+          "locator": "mechanism[93]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[93]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "膜分离技术对BPA的去除效率比较 Membrane separation efficiency comparison": {
+      "基本原理": "壳聚糖表面的活性基团（-NH₂、-OH）与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[94]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[94]"
+        },
+        "interaction": {
+          "text": "BPA截留效率顺序：RO > NF > UF > MF；MF通过吸附机制(非尺寸排阻)去除BPA，去除率18-95%；NF去除率>90%；RO最为有效但成本最高",
+          "basis": "from_source",
+          "locator": "mechanism[94]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[94]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "NF膜去除BPA的机制 NF membrane BPA removal mechanism": {
+      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[95]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[95]"
+        },
+        "interaction": {
+          "text": "NF膜通过尺寸排阻、吸附、静电排斥和Donnan效应的组合作用去除BPA；NF膜通常带负电荷(表面可离解基团电离)，与BPA阴离子产生静电排斥",
+          "basis": "from_source",
+          "locator": "mechanism[95]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[95]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "DFT和MD在BPA吸附机制研究中的应用 DFT and MD in BPA adsorption mechanism studies": {
+      "基本原理": "壳聚糖的-NH₂和-OH基团可与污染物的极性基团形成氢键，增强结合力",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[96]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[96]"
+        },
+        "interaction": {
+          "text": "DFT可计算电子结构和吸附能(如rGO-BPA吸附能6.71 kcal/mol, GO-BPA 11.85 kcal/mol)；MD可模拟吸附动力学和分子间相互作用(如π-π堆积、色散力、氢键)；EDA可分解不同吸附力的贡献比例",
+          "basis": "from_source",
+          "locator": "mechanism[96]"
+        },
+        "why_it_works": {
+          "text": "MD可模拟吸附动力学和分子间相互作用(如π-π堆积、色散力、氢键)；EDA可分解不同吸附力的贡献比例",
+          "basis": "from_source",
+          "locator": "mechanism[96]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "MF膜去除BPA的机制 MF membrane BPA removal mechanism": {
+      "基本原理": "壳聚糖表面的活性基团（-NH₂、-OH）与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[97]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[97]"
+        },
+        "interaction": {
+          "text": "MF膜孔径(0.1-10μm)大于BPA分子尺寸(7.52Å)，BPA去除主要通过大颗粒吸附和膜表面吸附(非尺寸排阻)；去除率18-95%",
+          "basis": "from_source",
+          "locator": "mechanism[97]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[97]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "膜分离的影响因素 Membrane separation influencing factors": {
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[98]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[98]"
+        },
+        "interaction": {
+          "text": "影响因素包括：膜性能(孔径、表面电荷、疏水性、材料组成)、进水特性(BPA浓度、pH、温度、共存污染物)、跨膜压力(升高增加通量但增加膜污染)、膜污染(减少有效表面积)、浓差极化",
+          "basis": "from_source",
+          "locator": "mechanism[98]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[98]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "BPA吸附的设计原则总结 Design principles for BPA adsorption": {
+      "基本原理": "壳聚糖表面的活性基团（-NH₂、-OH）与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[99]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[99]"
+        },
+        "interaction": {
+          "text": "(3)吸附机制定量化(DFT/MD计算、分析技术开发、跨学科合作)",
+          "basis": "from_source",
+          "locator": "mechanism[99]"
+        },
+        "why_it_works": {
+          "text": "(3)吸附机制定量化(DFT/MD计算、分析技术开发、跨学科合作)；(4)工艺优化和技术集成",
+          "basis": "from_source",
+          "locator": "mechanism[99]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "壳聚糖与石墨烯复合的关键协同优势": {
+      "基本原理": "壳聚糖分子链上的羟基（-OH）可与污染物形成氢键，或通过配位作用结合金属离子",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[100]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[100]"
+        },
+        "interaction": {
+          "text": "壳聚糖提供-OH/-NH₂螯合位点和生物相容性；石墨烯提供高比表面积和机械强度；复合后吸附性能显著提升",
+          "basis": "from_source",
+          "locator": "mechanism[100]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[100]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "壳聚糖的基本结构与吸附活性位点": {
+      "基本原理": "壳聚糖分子链上的羟基（-OH）可与污染物形成氢键，或通过配位作用结合金属离子",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[69]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[69]"
+        },
+        "interaction": {
+          "text": "β-(1→4)糖苷键骨架，含-NH₂和-OH活性官能团，可与重金属离子配位螯合",
+          "basis": "from_source",
+          "locator": "mechanism[69]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[69]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "壳聚糖基吸附剂的三大未来研究方向": {
+      "基本原理": "壳聚糖表面的活性基团（-NH₂、-OH）与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[70]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[70]"
+        },
+        "interaction": {
+          "text": "1.新型无毒交联剂开发；2.解吸再生与金属回收研究(碳达峰碳中和)；3.吸附机理深入研究(响应面方法RSM)",
+          "basis": "from_source",
+          "locator": "mechanism[70]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[70]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "壳聚糖化学吸附的通用机理": {
+      "基本原理": "壳聚糖分子链上的氨基（-NH₂）可通过质子化带正电，与带负电的污染物（如染料、重金属阴离子）通过静电吸引结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[66]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[66]"
+        },
+        "interaction": {
+          "text": "含配位原子(N、S、O)的基团（羧基、羟基、巯基、氨基）与重金属离子进行螯合",
+          "basis": "from_source",
+          "locator": "mechanism[66]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[66]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "Mechanism of Microplastic Removal by Chitin/GO Sponges": {
+      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[30]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[30]"
+        },
+        "interaction": {
+          "text": "Hydrogen bonding, Electrostatic, π-π",
+          "basis": "from_source",
+          "locator": "mechanism[30]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[30]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "壳聚糖吸附金属离子的机理": {
+      "基本原理": "壳聚糖表面的活性基团（-NH₂、-OH）与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[32]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[32]"
+        },
+        "interaction": {
+          "text": "物理吸附与化学吸附 (Physical and Chemical adsorption)",
+          "basis": "from_source",
+          "locator": "mechanism[32]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[32]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "壳聚糖材料特性": {
+      "基本原理": "壳聚糖分子链上的羟基（-OH）可与污染物形成氢键，或通过配位作用结合金属离子",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[35]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[35]"
+        },
+        "interaction": {
+          "text": "壳聚糖：黏均分子量8.99×10⁵，脱乙酰度94%。甲壳素碱性条件下部分脱乙酰化产物。无毒、可生物降解、生物相容性。含大量-NH₂(酸性质子化→螯合金属)和-OH(吸附F⁻)",
+          "basis": "from_source",
+          "locator": "mechanism[35]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[35]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "壳聚糖-HAP复合的协同优势": {
+      "基本原理": "壳聚糖分子链上的羟基（-OH）可与污染物形成氢键，或通过配位作用结合金属离子",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[36]"
+        },
+        "bio_structure": {
+          "text": "壳聚糖分子搭接缠绕→新孔隙+表面粗糙度↑→SSA↑(106.75→127.58 m²/g)；壳聚糖-NH₂和-OH双官能团→提供额外吸附位点；但过量壳聚糖→堵塞HAP孔隙→效率下降",
+          "basis": "from_source",
+          "locator": "mechanism[36]"
+        },
+        "interaction": {
+          "text": "壳聚糖表面正电荷→提高F⁻结合能力(增强静电吸引)",
+          "basis": "from_source",
+          "locator": "mechanism[36]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[36]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "吸附机理综合分析": {
+      "基本原理": "壳聚糖分子链上的羟基（-OH）可与污染物形成氢键，或通过配位作用结合金属离子",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[37]"
+        },
+        "bio_structure": {
+          "text": "FTIR证据：3423→3432 cm⁻¹红移→HAP-OH与CS-NH₂化学键合",
+          "basis": "from_source",
+          "locator": "mechanism[37]"
+        },
+        "interaction": {
+          "text": "吸附后峰强减弱→结晶度降低；XRD：吸附后峰进一步减弱→F⁻进入晶格；E=7.64 kJ/mol→物理吸附为主；Ea=15.03 kJ/mol→存在化学吸附成分；综合：物理吸附(静电+扩散)+弱化学吸附(配体交换)",
+          "basis": "from_source",
+          "locator": "mechanism[37]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[37]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "壳聚糖脱乙酰度对功能基团的影响": {
+      "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[38]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[38]"
+        },
+        "interaction": {
+          "text": "脱乙酰度94%→意味着94%的N-乙酰基被去除→释放大量游离-NH₂。NH₂在酸性条件下质子化→正电荷→螯合金属离子+吸附阴离子(F⁻通过氢键/静电)",
+          "basis": "from_source",
+          "locator": "mechanism[38]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[38]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "pH对CR和Cu²⁺吸附的影响": {
+      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[56]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[56]"
+        },
+        "interaction": {
+          "text": "CR: pH 5-8去除率稳定→氢键主导(非静电)；pH 9-11去除率剧降→静电排斥；pH<6:质子化–NH₂/–OH与H⁺竞争+静电排斥",
+          "basis": "from_source",
+          "locator": "mechanism[56]"
+        },
+        "why_it_works": {
+          "text": "Cu²⁺: pH 2-6去除率递增→pH 6最佳→90%去除",
+          "basis": "from_source",
+          "locator": "mechanism[56]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "吸附机制——CR的三重作用": {
+      "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[57]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[57]"
+        },
+        "interaction": {
+          "text": "CR吸附于CE/CSA-1通过：(1)氢键(–NH₂/–SO₃与O/N官能团)；(2)静电作用(pH>7.24时)；ATR-FTIR证据：吸附后O-H/N-H峰变化→氢键形成；XPS：C-N和C-O峰向低结合能偏移→氢键/配位",
+          "basis": "from_source",
+          "locator": "mechanism[57]"
+        },
+        "why_it_works": {
+          "text": "ATR-FTIR证据：吸附后O-H/N-H峰变化→氢键形成。XPS：C-N和C-O峰向低结合能偏移→氢键/配位",
+          "basis": "from_source",
+          "locator": "mechanism[57]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "吸附机制——Cu²⁺的配位作用": {
+      "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[58]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[58]"
+        },
+        "interaction": {
+          "text": "Cu²⁺通过与–OH和–NH₂的配位反应结合于CE/CSA-1。XPS：吸附后–OH和–NH/–NH₂峰消失→新峰Cu–O 532.1 eV和Cu–N 406.7 eV出现→配位反应直接证据",
+          "basis": "from_source",
+          "locator": "mechanism[58]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[58]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "二元体系中的Cu²⁺桥联对CR的影响": {
+      "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "Cu²⁺不仅与吸附剂–OH/–NH₂反应，还与CR的–NH₂/–SO₃反应→CR桥接Cu²⁺；XPS：二元体系中–OH和–NH/–NH₂峰重新出现(比单体系Cu²⁺吸附后)→Cu²⁺同时与吸附剂和CR配位→形成[Cu²⁺-CR]配合物→增强CR亲和力",
+          "basis": "from_source",
+          "locator": "mechanism[59]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[59]"
+        },
+        "interaction": {
+          "text": "Cu²⁺不仅与吸附剂–OH/–NH₂反应，还与CR的–NH₂/–SO₃反应→CR桥接Cu²⁺。XPS：二元体系中–OH和–N",
+          "basis": "from_source",
+          "locator": "mechanism[59]"
+        },
+        "why_it_works": {
+          "text": "H/–NH₂峰重新出现(比单体系Cu²⁺吸附后)→Cu²⁺同时与吸附剂和CR配位→形成[Cu²⁺-CR]配合物→增强CR亲和力",
+          "basis": "from_source",
+          "locator": "mechanism[59]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "BET比表面积与孔体积(文中提及但数据在Table S1)": {
+      "基本原理": "壳聚糖表面的活性基团（-NH₂、-OH）与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[60]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[60]"
+        },
+        "interaction": {
+          "text": "CE/CSA-x的SSA和孔体积比纯CEA和CSA略有增加。但CE/CSA-x吸附能力远高于CEA/CSA→推断孔填充不是关键吸附机制→官能团主导",
+          "basis": "from_source",
+          "locator": "mechanism[60]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[60]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "Cr(VI)吸附机制——静电吸引": {
+      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[33]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[33]"
+        },
+        "interaction": {
+          "text": "CrO₄²⁻/Cr₂O₇²⁻与壳聚糖质子化—NH₃⁺基团之间的静电吸引",
+          "basis": "from_source",
+          "locator": "mechanism[33]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[33]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "荷叶超疏水仿生机制": {
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[76]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[76]"
+        },
+        "interaction": {
+          "text": "低表面能蜡质层+乳突状粗糙结构协同产生超疏水性",
+          "basis": "from_source",
+          "locator": "mechanism[76]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[76]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "超浸润膜分离乳化油的双重机理": {
+      "基本原理": "needs_review",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[77]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[77]"
+        },
+        "interaction": {
+          "text": "筛分效应（膜孔径<乳液尺寸）+ 界面破乳选择性分离",
+          "basis": "from_source",
+          "locator": "mechanism[77]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[77]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "超疏水/超亲油膜分离W/O乳液机理": {
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[78]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[78]"
+        },
+        "interaction": {
+          "text": "油滴被挤压进入微孔→乳化剂脱离→大油滴聚集渗透；水滴被超疏水膜截留",
+          "basis": "from_source",
+          "locator": "mechanism[78]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[78]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "超亲水/水下超疏油膜分离O/W乳液机理": {
+      "基本原理": "needs_review",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[79]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[79]"
+        },
+        "interaction": {
+          "text": "膜表面形成水膜作为屏蔽层→阻碍油扩散和渗透→重力驱动下选择性透过水",
+          "basis": "from_source",
+          "locator": "mechanism[79]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[79]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "TiO₂纳米线/不锈钢网超疏水膜": {
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[80]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[80]"
+        },
+        "interaction": {
+          "text": "50次循环后仍保持超疏水性；24h强酸碱或有机溶剂浸泡后分离效率仍达99%",
+          "basis": "from_source",
+          "locator": "mechanism[80]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[80]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "PVDF/PDMS超疏水纳米纤维膜": {
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[81]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[81]"
+        },
+        "interaction": {
+          "text": "渗透系数35751 L/(m²·h)，分离效率99.6%，可去除>150nm水滴",
+          "basis": "from_source",
+          "locator": "mechanism[81]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[81]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "F-SiO₂/PVDF-P-SiO₂/PVDF Janus膜": {
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[82]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[82]"
+        },
+        "interaction": {
+          "text": "氟化后WCA 157.7°（超疏水），等离子刻蚀后水下油CA 150.8°（水下超疏油），通量6800 L/(m²·h)以上，分离效率~99%",
+          "basis": "from_source",
+          "locator": "mechanism[82]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[82]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "pH响应PMMA-b-P4VP智能纤维膜": {
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[83]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[83]"
+        },
+        "interaction": {
+          "text": "初始WCA 152°（超疏水/超亲油），碱性条件下转为水下超疏油",
+          "basis": "from_source",
+          "locator": "mechanism[83]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[83]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "热响应PNIPAAm改性尼龙膜": {
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[84]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[84]"
+        },
+        "interaction": {
+          "text": "25°C超亲水/水下超疏油（分离O/W乳液效率>98%），45°C超疏水（可分离16种稳定油水乳液）",
+          "basis": "from_source",
+          "locator": "mechanism[84]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[84]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "超浸润膜四大类型分类": {
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[85]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[85]"
+        },
+        "interaction": {
+          "text": "超疏水-超亲油膜、超亲水-水下超疏油膜、Janus膜、Smart膜",
+          "basis": "from_source",
+          "locator": "mechanism[85]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[85]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "Freeze drying mechanism and conditions": {
+      "基本原理": "needs_review",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "Liquid phase → gaseous phase via sublimation under vacuum at low temperature/pressure；avoids liquid-gas phase boundary；creates more meso-pores",
+          "basis": "from_source",
+          "locator": "mechanism[25]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[25]"
+        },
+        "interaction": {
+          "text": "Liquid phase → gaseous phase via sublimation under vacuum at low temperature/pressure;",
+          "basis": "from_source",
+          "locator": "mechanism[25]"
+        },
+        "why_it_works": {
+          "text": "avoids liquid-gas phase boundary; creates more meso-pores",
+          "basis": "from_source",
+          "locator": "mechanism[25]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "Three main adsorption mechanisms": {
+      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[26]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[26]"
+        },
+        "interaction": {
+          "text": "(1) Electrostatic interaction; (2) Complexation; (3) Ion exchange",
+          "basis": "from_source",
+          "locator": "mechanism[26]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[26]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "PEI-grafted cellulose aerogel - Cr(VI) removal mechanism": {
+      "基本原理": "壳聚糖的氨基和羟基可与重金属离子形成配位键，实现特异性吸附",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "Amino groups and carboxyl groups participate in cationic exchange with divalent metal ions；XPS confirms N 1s spectral changes after Cr adsorption",
+          "basis": "from_source",
+          "locator": "mechanism[27]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[27]"
+        },
+        "interaction": {
+          "text": "Amino groups and carboxyl groups participate in cationic exchange with divalent metal ions;",
+          "basis": "from_source",
+          "locator": "mechanism[27]"
+        },
+        "why_it_works": {
+          "text": "XPS confirms N 1s spectral changes after Cr adsorption",
+          "basis": "from_source",
+          "locator": "mechanism[27]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "电纺膜功能化——防污策略": {
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[28]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[28]"
+        },
+        "interaction": {
+          "text": "3种防污策略：(1)纳米材料掺杂→减少污染+降低能耗; (2)添加剂/分散剂→改善表面性能; (3)油酸/表面活性剂→疏水改性",
+          "basis": "from_source",
+          "locator": "mechanism[28]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[28]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "电纺膜——优势与局限性总结": {
+      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[29]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[29]"
+        },
+        "interaction": {
+          "text": "优势: 高比表面积; 高孔隙率; 可调孔径; 无需化学品; 高效省时; 局限: 机械强度差(需支撑); 污染问题; 静电积累; 纤维处理困难",
+          "basis": "from_source",
+          "locator": "mechanism[29]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[29]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "壳聚糖对Cr(VI)的两种主要吸附机制": {
+      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[34]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[34]"
+        },
+        "interaction": {
+          "text": "静电吸附机理和吸附-耦合还原机理",
+          "basis": "from_source",
+          "locator": "mechanism[34]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[34]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "吸附剂-机理-目标污染物对应表": {
+      "基本原理": "壳聚糖的正电表面可与阴离子染料通过静电吸引结合，同时氨基和羟基可与染料分子形成氢键",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "活化碳(物理吸附→有机物/染料/VOCs)；环糊精聚合物(化学吸附→药物/有机污染物)；石墨烯复合物(物理/化学→有机物/金属)；纳米纤维素(物理吸附→染料/药物)",
+          "basis": "from_source",
+          "locator": "mechanism[101]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[101]"
+        },
+        "interaction": {
+          "text": "生物炭(物理吸附→有机污染物/营养物)；碳纳米管(物理吸附→有机污染物/气体)；壳聚糖纳米复合物(化学吸附→金属/染料)；地质聚合物(化学吸附→金属/铵)；HAP纳米粒子(化学吸附→金属/放射性核素)；MOFs(化学吸附→金属/气体)；沸石(化学吸附→金属/铵)",
+          "basis": "from_source",
+          "locator": "mechanism[101]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[101]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "石墨烯复合物表面官能团": {
+      "基本原理": "壳聚糖分子链上的羟基（-OH）可与污染物形成氢键，或通过配位作用结合金属离子",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[102]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[102]"
+        },
+        "interaction": {
+          "text": "GO表面-OH, -COOH, -epoxy基团→静电相互作用/π-π堆叠/氢键",
+          "basis": "from_source",
+          "locator": "mechanism[102]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[102]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "壳聚糖纳米复合物吸附机制": {
+      "基本原理": "壳聚糖分子链上的羟基（-OH）可与污染物形成氢键，或通过配位作用结合金属离子",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[103]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[103]"
+        },
+        "interaction": {
+          "text": "-NH₂/-OH高密度→螯合+静电+氢键→协同效应(壳聚糖+纳米粒子)",
+          "basis": "from_source",
+          "locator": "mechanism[103]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[103]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "环糊精聚合物选择性吸附": {
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[104]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[104]"
+        },
+        "interaction": {
+          "text": "环状寡糖→疏水内腔+亲水外壳→尺寸/形状选择性包合有机物",
+          "basis": "from_source",
+          "locator": "mechanism[104]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[104]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "选择性提升策略": {
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[105]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[105]"
+        },
+        "interaction": {
+          "text": "MIPs(模板空腔); 环糊精(疏水空腔包合); 功能化(-SH→Hg²⁺选择; -NH₂→酸性污染物选择); MOFs(可调孔径)",
+          "basis": "from_source",
+          "locator": "mechanism[105]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[105]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "吸附机理类型汇总": {
+      "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[106]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[106]"
+        },
+        "interaction": {
+          "text": "Van der Waals力 + 氢键 + 静电相互作用 + 化学键(共价/离子) + 配位螯合 + 离子交换 + π-π堆叠 + 疏水相互作用 + 主客体包合(环糊精/杯芳烃) + 分子印迹特异性识别",
+          "basis": "from_source",
+          "locator": "mechanism[106]"
+        },
+        "why_it_works": {
+          "text": "离子交换 + π-π堆叠 + 疏水相互作用 + 主客体包合(环糊精/杯芳烃) + 分子印迹特异性识别",
+          "basis": "from_source",
+          "locator": "mechanism[106]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "Primary adsorption mechanism - complexation/chelation / 主要吸附机制-配位螯合": {
+      "基本原理": "壳聚糖分子链上的氨基（-NH₂）可通过质子化带正电，与带负电的污染物（如染料、重金属阴离子）通过静电吸引结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "Metal ion complexation (chelation/coordination) is the leading sorption mechanism；Cu2+ forms Cu-chitosan complex via coordination interactions with lone pair electrons from -NH2, -OH, -COOH groups",
+          "basis": "from_source",
+          "locator": "mechanism[61]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[61]"
+        },
+        "interaction": {
+          "text": "Metal ion complexation (chelation/coordination) is the leading sorption mechanism; Cu2+ forms Cu-c",
+          "basis": "from_source",
+          "locator": "mechanism[61]"
+        },
+        "why_it_works": {
+          "text": "hitosan complex via coordination interactions with lone pair electrons from -NH2, -OH, -COOH groups",
+          "basis": "from_source",
+          "locator": "mechanism[61]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "Electrostatic interaction and pHpzc / 静电相互作用与零电点": {
+      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "At pH > pHpzc, adsorbent surface deprotonated creating negative charge that attracts cations；at pH < pHpzc, surface protonated causing electrostatic repulsion with Cu2+",
+          "basis": "from_source",
+          "locator": "mechanism[62]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[62]"
+        },
+        "interaction": {
+          "text": "At pH > pHpzc, adsorbent surface deprotonated creating negative charge that attracts cations;",
+          "basis": "from_source",
+          "locator": "mechanism[62]"
+        },
+        "why_it_works": {
+          "text": "at pH < pHpzc, surface protonated causing electrostatic repulsion with Cu2+",
+          "basis": "from_source",
+          "locator": "mechanism[62]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "Ion-exchange mechanism / 离子交换机制": {
+      "基本原理": "壳聚糖骨架上的可交换阳离子（如H⁺、Na⁺）与溶液中的金属离子进行等当量交换",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "At pH < pHpzc, positively charged Cu2+ exchanges with H+ ions on protonated adsorbent surface；slower kinetics than other mechanisms",
+          "basis": "from_source",
+          "locator": "mechanism[63]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[63]"
+        },
+        "interaction": {
+          "text": "At pH < pHpzc, positively charged Cu2+ exchanges with H+ ions on protonated adsorbent surface;",
+          "basis": "from_source",
+          "locator": "mechanism[63]"
+        },
+        "why_it_works": {
+          "text": "slower kinetics than other mechanisms",
+          "basis": "from_source",
+          "locator": "mechanism[63]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "吸附机理：螯合作用": {
+      "基本原理": "壳聚糖分子链上的羟基（-OH）可与污染物形成氢键，或通过配位作用结合金属离子",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[88]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[88]"
+        },
+        "interaction": {
+          "text": "内部-OH和-COO⁻与Pb²⁺发生螯合作用",
+          "basis": "from_source",
+          "locator": "mechanism[88]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[88]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "吸附机理：静电引力与去质子化": {
+      "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[89]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[89]"
+        },
+        "interaction": {
+          "text": "pH>3.86时凝胶表面去质子化呈负电性，-NH₂和-COO⁻增强螯合作用",
+          "basis": "from_source",
+          "locator": "mechanism[89]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[89]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "壳聚糖基吸附剂重金属吸附机制": {
+      "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[31]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[31]"
+        },
+        "interaction": {
+          "text": "物理吸附（范德华力）和化学吸附（配位键），准二级动力学模型拟合良好",
+          "basis": "from_source",
+          "locator": "mechanism[31]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[31]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "吸附机制判断": {
+      "基本原理": "壳聚糖表面的活性基团（-NH₂、-OH）与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[67]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[67]"
+        },
+        "interaction": {
+          "text": "化学吸附为主(chemisorption dominated)",
+          "basis": "from_source",
+          "locator": "mechanism[67]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[67]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "CS对Cr(VI)选择性吸附机制": {
+      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[68]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[68]"
+        },
+        "interaction": {
+          "text": "壳聚糖-NH₂与Cr(VI)阴离子(CrO₄²⁻/HCrO₄⁻/Cr₂O₇²⁻)静电吸引",
+          "basis": "from_source",
+          "locator": "mechanism[68]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[68]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "FS/CA仿荷叶超疏水ENM——油水分离": {
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[22]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[22]"
+        },
+        "interaction": {
+          "text": "水接触角~155°; 24h浸泡无水溶胀",
+          "basis": "from_source",
+          "locator": "mechanism[22]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[22]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "环糊精宿主-客体包合——有机污染物选择性去除": {
+      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[23]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[23]"
+        },
+        "interaction": {
+          "text": "疏水空腔+亲水外表面→包合有机分子(PAH/药物/染料); 同时羧基/羰基→静电吸附金属离子",
+          "basis": "from_source",
+          "locator": "mechanism[23]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[23]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "铁掺杂壳聚糖ENM——As(III)去除机理": {
+      "基本原理": "壳聚糖表面的活性基团（-NH₂、-OH）与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[24]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[24]"
+        },
+        "interaction": {
+          "text": "内球络合(iron oxide + As(III))",
+          "basis": "from_source",
+          "locator": "mechanism[24]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[24]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "CS/GO复合物对MB吸附的π-π堆积机制": {
+      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[8]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[8]"
+        },
+        "interaction": {
+          "text": "MB通过π-π堆积与GO层相互作用，GO-COO-与阳离子MB的静电相互作用辅助吸附",
+          "basis": "from_source",
+          "locator": "mechanism[8]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[8]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "壳聚糖对阴离子染料的吸附机制": {
+      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[9]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[9]"
+        },
+        "interaction": {
+          "text": "低pH时壳聚糖阳离子中心与阴离子染料的静电相互作用；中性pH时静电、范德华力和氢键共同作用",
+          "basis": "from_source",
+          "locator": "mechanism[9]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[9]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "抗生素在CS/GO复合物上的吸附机制": {
+      "基本原理": "壳聚糖分子链上的氨基（-NH₂）可通过质子化带正电，与带负电的污染物（如染料、重金属阴离子）通过静电吸引结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[10]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[10]"
+        },
+        "interaction": {
+          "text": "π-π电子供体-受体相互作用（苯环与碳表面）+氢键（-OH、C=O、-NH2与碳表面含氧基团）+疏水相互作用",
+          "basis": "from_source",
+          "locator": "mechanism[10]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[10]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "CS/GO水凝胶形成机制": {
+      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[11]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[11]"
+        },
+        "interaction": {
+          "text": "壳聚糖-NH基团与GO-COOH基团反应形成-NHCO-连接基团，加上静电相互作用和氢键",
+          "basis": "from_source",
+          "locator": "mechanism[11]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[11]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "壳聚糖对阴离子染料吸附的pH依赖性": {
+      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[12]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[12]"
+        },
+        "interaction": {
+          "text": "低pH时壳聚糖-NH3+与阴离子染料静电吸引占主导；中性pH时静电+范德华力+氢键共同作用",
+          "basis": "from_source",
+          "locator": "mechanism[12]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[12]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "超疏水抗菌表面'双重保险'原理": {
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[39]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[39]"
+        },
+        "interaction": {
+          "text": "疏水材料减少细菌黏附+抗菌材料主动杀菌，实现长效抗菌",
+          "basis": "from_source",
+          "locator": "mechanism[39]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[39]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "超疏水抗菌表面分类体系": {
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[40]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[40]"
+        },
+        "interaction": {
+          "text": "三类：无机、有机、无机-有机",
+          "basis": "from_source",
+          "locator": "mechanism[40]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[40]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "铜基超疏水抗菌表面 — 花瓣状Cu2O": {
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[41]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[41]"
+        },
+        "interaction": {
+          "text": "WCA 154°，对大肠杆菌抗菌效果较好",
+          "basis": "from_source",
+          "locator": "mechanism[41]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[41]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "铜纳米粒子超疏水抗菌表面": {
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[42]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[42]"
+        },
+        "interaction": {
+          "text": "WCA 164°，对革兰氏阴性/阳性菌均有抗菌活性",
+          "basis": "from_source",
+          "locator": "mechanism[42]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[42]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "CuO/SiO2透明超疏水涂层": {
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[43]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[43]"
+        },
+        "interaction": {
+          "text": "300~2500 nm范围内透光率96.6%",
+          "basis": "from_source",
+          "locator": "mechanism[43]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[43]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "纳米Ag棉织物超疏水抗菌": {
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[44]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[44]"
+        },
+        "interaction": {
+          "text": "WCA 148.7°，良好抗菌性能",
+          "basis": "from_source",
+          "locator": "mechanism[44]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[44]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "中空多孔碳球封装纳米Ag超疏水抗菌": {
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[45]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[45]"
+        },
+        "interaction": {
+          "text": "WCA 160.6°，大肠杆菌抑菌率96%，金黄色葡萄球菌抑菌率83%",
+          "basis": "from_source",
+          "locator": "mechanism[45]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[45]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "含氟季铵盐抗菌机理": {
+      "基本原理": "needs_review",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[46]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[46]"
+        },
+        "interaction": {
+          "text": "C-F键能497 kJ/mol，全氟烷基协同抗菌基团向表面迁移实现高效抗菌",
+          "basis": "from_source",
+          "locator": "mechanism[46]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[46]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "纳米Ag/硅烷棉织物超疏水抗菌": {
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[47]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[47]"
+        },
+        "interaction": {
+          "text": "WCA 153°±2°，优异抗菌性能",
+          "basis": "from_source",
+          "locator": "mechanism[47]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[47]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "树枝状纳米银超疏水表面": {
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[48]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[48]"
+        },
+        "interaction": {
+          "text": "WCA >150°，较好抗菌性",
+          "basis": "from_source",
+          "locator": "mechanism[48]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[48]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "Cu纳米线/PDMS超疏水表面": {
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[49]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[49]"
+        },
+        "interaction": {
+          "text": "拉伸、扭曲、砂纸磨损下仍具有超疏水性",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[49]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[49]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "ZIF-8/PVDF超疏水抗菌涂层": {
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[50]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[50]"
+        },
+        "interaction": {
+          "text": "WCA 160°，对大肠杆菌有良好抗菌活性",
+          "basis": "from_source",
+          "locator": "mechanism[50]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[50]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "pH响应型超疏水抗菌棉织物": {
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[51]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[51]"
+        },
+        "interaction": {
+          "text": "杀菌率>80%",
+          "basis": "from_source",
+          "locator": "mechanism[51]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[51]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "超疏水医用纱布": {
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[52]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[52]"
+        },
+        "interaction": {
+          "text": "WCA 158°，对金黄色葡萄球菌和大肠杆菌抗菌作用显著",
+          "basis": "from_source",
+          "locator": "mechanism[52]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[52]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "多巴胺黏附固定无机抗菌剂策略": {
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[53]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[53]"
+        },
+        "interaction": {
+          "text": "多巴胺直接黏附固定无机抗菌剂可简化超疏水表面制备过程",
+          "basis": "from_source",
+          "locator": "mechanism[53]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[53]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "未来发展方向：多功能化智能化": {
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[54]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[54]"
+        },
+        "interaction": {
+          "text": "阻燃+超疏水+抗菌、导电+超疏水+抗菌、自修复+超疏水、响应性+超疏水+抗菌",
+          "basis": "from_source",
+          "locator": "mechanism[54]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[54]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "无机-有机复合策略优势": {
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[55]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[55]"
+        },
+        "interaction": {
+          "text": "无机纳米粒子提供粗糙度+有机物提供低表面能/抗菌性，协同实现超疏水抗菌",
+          "basis": "from_source",
+          "locator": "mechanism[55]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[55]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "吸附机制-内球配合物 Adsorption mechanism - inner-sphere complexation": {
+      "基本原理": "壳聚糖表面的活性基团（-NH₂、-OH）与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[0]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[0]"
+        },
+        "interaction": {
+          "text": "La(OH)3与磷酸盐结合形成内球配合物进行除磷",
+          "basis": "from_source",
+          "locator": "mechanism[0]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[0]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "FTIR表征——吸附前后对比": {
+      "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[4]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[4]"
+        },
+        "interaction": {
+          "text": "吸附后：3446→3429 cm⁻¹偏移(Pb与-COO⁻静电/配位)；2923/2854/1641/1383/1049 cm⁻¹峰强度显著降低→Pb与-COO⁻和-NHCOO⁻形成静电和配位键",
+          "basis": "from_source",
+          "locator": "mechanism[4]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[4]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "XPS表征——C 1s和N 1s": {
+      "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "C 1s：284.7(C-O)/286.55(C=O)/288.45(COO⁻)→吸附前后无显著变化→Pb不与C配位；N 1s：吸附前399.8 eV(-NH₂)→吸附后三峰399.55(-NH₂)/400.2(-NH₃⁺)/400.7(O=C-N)→N原子孤对电子与Pb形成共价键",
+          "basis": "from_source",
+          "locator": "mechanism[5]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[5]"
+        },
+        "interaction": {
+          "text": "C 1s：284.7(C-O)/286.55(C=O)/288.45(COO⁻)→吸附前后无显著变化→Pb不与C配位；N 1s：吸附前399",
+          "basis": "from_source",
+          "locator": "mechanism[5]"
+        },
+        "why_it_works": {
+          "text": ".8 eV(-NH₂)→吸附后三峰399.55(-NH₂)/400.2(-NH₃⁺)/400.7(O=C-N)→N原子孤对电子与Pb形成共价键",
+          "basis": "from_source",
+          "locator": "mechanism[5]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "制备方法": {
+      "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[6]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[6]"
+        },
+        "interaction": {
+          "text": "羧基化壳聚糖(CYCS)+羧基化纳米纤维素(CNC)在CaCl₂溶液中螯合交联→形成水凝胶珠；CYCS通过壳聚糖羧甲基取代获得→取代度>60%；成本显著低于CMCS",
+          "basis": "from_source",
+          "locator": "mechanism[6]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[6]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "吸附机制——综合分析": {
+      "基本原理": "壳聚糖分子链上的羟基（-OH）可与污染物形成氢键，或通过配位作用结合金属离子",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[7]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[7]"
+        },
+        "interaction": {
+          "text": "化学吸附为主(PSO拟合+XPS证据)；-COO⁻与Pb²⁺静电吸引+配位；-NH₂孤对电子与Pb形成共价键；可能生成碳酸铅/氧化铅沉淀；三种官能团(-OH/-COO⁻/-NH₂)协同参与",
+          "basis": "from_source",
+          "locator": "mechanism[7]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[7]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "吸附机制 Ad sorption mechanism": {
+      "基本原理": "壳聚糖分子链上的氨基（-NH₂）可通过质子化带正电，与带负电的污染物（如染料、重金属阴离子）通过静电吸引结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[86]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[86]"
+        },
+        "interaction": {
+          "text": "主要通过静电吸引和含氮官能团(-NH, -NH2, C=N)与金属离子的螯合作用去除Pb2+和Cu2+",
+          "basis": "from_source",
+          "locator": "mechanism[86]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[86]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "XPS表征揭示吸附机制 XPS characterization revealing adsorption mechanism": {
+      "基本原理": "壳聚糖分子链上的氨基（-NH₂）可通过质子化带正电，与带负电的污染物（如染料、重金属阴离子）通过静电吸引结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[87]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[87]"
+        },
+        "interaction": {
+          "text": "XPS分析显示吸附前后功能团变化，吡咯中的-NH、壳聚糖中的-NH2和C=N是与Pb2+和Cu2+螯合的主要官能团",
+          "basis": "from_source",
+          "locator": "mechanism[87]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[87]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "壳聚糖吸附砷的机制 Arsenic adsorption mechanisms on chitosan": {
+      "基本原理": "壳聚糖分子链上的氨基（-NH₂）可通过质子化带正电，与带负电的污染物（如染料、重金属阴离子）通过静电吸引结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[15]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[15]"
+        },
+        "interaction": {
+          "text": "As(V)通过静电相互作用吸附(阴离子砷酸盐与质子化氨基)；As(III)通过络合机制吸附(中性H3AsO3)；铁-壳聚糖复合材料涉及内球配合物形成",
+          "basis": "from_source",
+          "locator": "mechanism[15]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[15]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "壳聚糖-氧化铝复合材料的砷吸附机制 As adsorption on chitosan-alumina composite": {
+      "基本原理": "壳聚糖在酸性条件下质子化带正电，与带负电的污染物通过库仑引力结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[16]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[16]"
+        },
+        "interaction": {
+          "text": "氧化铝在复合珠表面产生正电荷，通过静电吸引吸附阴离子砷物种；复合物涉及络合和离子交换机制",
+          "basis": "from_source",
+          "locator": "mechanism[16]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[16]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "壳聚糖基生物吸附剂的内球/外球吸附机制 Inner/outer sphere adsorption mechanisms": {
+      "基本原理": "壳聚糖表面的活性基团（-NH₂、-OH）与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[17]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[17]"
+        },
+        "interaction": {
+          "text": "外球机制：金属离子仅与复合物表面相互作用(受离子强度影响)；内球机制：金属离子扩散进入复合物内部形成配合物(不受离子强度影响)",
+          "basis": "from_source",
+          "locator": "mechanism[17]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[17]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "壳聚糖基吸附剂的氧化铝/二氧化钛嵌入机制 Al2O3/TiO2-impregnated chitosan arsenic removal mechanism": {
+      "基本原理": "壳聚糖表面的活性基团（-NH₂、-OH）与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[18]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[18]"
+        },
+        "interaction": {
+          "text": "三步机制：扩散→氧化→吸附；As(III)先扩散至TiO2附近被氧化为As(V)，Al2O3接收砷酸盐离子使TiO2空出继续氧化",
+          "basis": "from_source",
+          "locator": "mechanism[18]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[18]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "疏水改性剂种类": {
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[119]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[119]"
+        },
+        "interaction": {
+          "text": "甲基三甲氧基硅烷、聚二甲基硅氧烷、十六烷基三乙氧基硅烷、1H,1H,2H,2H-全氟癸基三氯硅烷、三甲基氯硅烷中的任意一种或多种组合",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[119]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[119]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "实施例4-明胶-ZIF-8-TMCS疏水改性-吸附容量": {
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[120]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[120]"
+        },
+        "interaction": {
+          "text": "81",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[120]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[120]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "实施例4-明胶-ZIF-8-TMCS疏水改性-接触角": {
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[121]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[121]"
+        },
+        "interaction": {
+          "text": "138.25",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[121]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[121]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "实施例4-明胶-ZIF-8-TMCS疏水改性-抗压强度": {
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[122]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[122]"
+        },
+        "interaction": {
+          "text": "0.32",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[122]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[122]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "吸附机制-π-π相互作用": {
+      "基本原理": "壳聚糖表面的活性基团（-NH₂、-OH）与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[123]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[123]"
+        },
+        "interaction": {
+          "text": "偶氮基团带有π电子，可与油分子产生π-π相互作用，协同增加有机污染物捕获量",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[123]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[123]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "吸附机制分析 adsorption mechanism": {
+      "基本原理": "壳聚糖分子链上的氨基（-NH₂）可通过质子化带正电，与带负电的污染物（如染料、重金属阴离子）通过静电吸引结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[112]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[112]"
+        },
+        "interaction": {
+          "text": "LS和CCS与环氧氯丙烷交联修饰氨基；SA和CCS的羧酸盐基团与Ca²⁺交联；CCS的氨基/羧基和PEI的亚胺基提供吸附位点；LS的磺酸基增强配位",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[112]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[112]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "蛋盒结构交联机制 egg-box crosslinking mechanism": {
+      "基本原理": "壳聚糖的氨基和羟基可作为配体，与金属离子形成配位键，实现特异性结合",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[113]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[113]"
+        },
+        "interaction": {
+          "text": "海藻酸钠通过G单元羧基与Ca²⁺配位形成'蛋盒'结构三维网络凝胶",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[113]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[113]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "PDA吸附机制-姜黄素": {
+      "基本原理": "壳聚糖表面的活性基团（-NH₂、-OH）与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "interaction": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "PDA吸附机制-番茄红素": {
+      "基本原理": "壳聚糖表面的活性基团（-NH₂、-OH）与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "interaction": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "",
+          "locator": ""
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "权利要求限定的材料组成": {
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[114]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[114]"
+        },
+        "interaction": {
+          "text": "生物基聚合物0.1-10份+吸附剂0.01-5份+交联剂0.1-10份+增强剂0.01-5份+疏水改性剂0.01-5份",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[114]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[114]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "实施例3配方（循环测试对象）": {
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[115]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[115]"
+        },
+        "interaction": {
+          "text": "纤维素纳米纤维2.0g+埃洛石1.5g+玻璃纤维0.25g+PEI-ECH 0.5g/100g水+MTMS疏水改性3min",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[115]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[115]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "实施例5配方（壳聚糖基）": {
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[116]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[116]"
+        },
+        "interaction": {
+          "text": "壳聚糖2.0g+埃洛石0.5g+玻璃纤维0.25g+PEI-ECH 0.5g/100g水+MTMS疏水改性3min",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[116]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[116]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "制备方法核心流程": {
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[117]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[117]"
+        },
+        "interaction": {
+          "text": "四步法：混合→交联→冷冻干燥→疏水改性",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[117]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[117]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "接触角测试": {
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[118]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[118]"
+        },
+        "interaction": {
+          "text": "实施例1疏水改性后接触角显著增大",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[118]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[118]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "有机改性凹凸棒土的作用 Effect of organic modification on attapulgite": {
+      "基本原理": "壳聚糖的乙酰基团提供疏水区域，可通过疏水相互作用吸附非极性污染物",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[107]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[107]"
+        },
+        "interaction": {
+          "text": "表面活性剂接枝到凹凸棒土表面，改善疏水性，提升重金属离子去除效果",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[107]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[107]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "海藻酸钙微球吸附重金属的机制 Heavy metal adsorption mechanism of calcium alginate microspheres": {
+      "基本原理": "壳聚糖的氨基和羟基可与重金属离子形成配位键，实现特异性吸附",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[108]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[108]"
+        },
+        "interaction": {
+          "text": "海藻酸钙中大量负电荷羧酸根离子能与Pb2+和Cd2+结合，生成藻酸重金属盐沉淀储存在囊腔内，与沸石活性点相互独立，削弱铅镉相互抑制性",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[108]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[108]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "Fe3+改性活性炭吸附磺胺类抗生素的机制 Mechanism of Fe3+-modified activated carbon adsorbing sulfonamide antibiotics": {
+      "基本原理": "壳聚糖表面的活性基团（-NH₂、-OH）与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[109]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[109]"
+        },
+        "interaction": {
+          "text": "以化学吸附为主",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[109]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_mechanism_description",
+          "locator": "mechanism[109]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "吸附机制-静电相互作用": {
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "electrostatic interaction between anionic MO and chitosan-based nanocomposite surface (dominant mechanism)",
+          "basis": "from_source",
+          "locator": "mechanism[129]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[129]"
+        },
+        "interaction": {
+          "text": "electrostatic interaction between anionic MO and chit",
+          "basis": "from_source",
+          "locator": "mechanism[129]"
+        },
+        "why_it_works": {
+          "text": "osan-based nanocomposite surface (dominant mechanism)",
+          "basis": "from_source",
+          "locator": "mechanism[129]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "吸附机制-π-π堆叠": {
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[130]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[130]"
+        },
+        "interaction": {
+          "text": "π-π stacking between chitosan-containing aromatics and benzene ring of MO",
+          "basis": "from_source",
+          "locator": "mechanism[130]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[130]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "吸附机制-配位作用": {
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[131]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[131]"
+        },
+        "interaction": {
+          "text": "coordination between N in MO and chitosan-based nanocomposite",
+          "basis": "from_source",
+          "locator": "mechanism[131]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[131]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "XPS分析-吸附机理": {
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[124]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[124]"
+        },
+        "interaction": {
+          "text": "C 1s红移形成吸附剂-金属络合物；N 1s出现—NH—(402 eV)和—NH₂(406 eV)两个峰；吸附后出现Gd 4d特征峰(149 eV和143 eV)",
+          "basis": "from_source",
+          "locator": "mechanism[124]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[124]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "吸附活性基团协同": {
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[125]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[125]"
+        },
+        "interaction": {
+          "text": "—NH₂(壳聚糖+PDA)、—OH(壳聚糖+GO+PDA)、—COOH(MWCNT-COOH)三类基团协同参与Gd(III)螯合",
+          "basis": "from_source",
+          "locator": "mechanism[125]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[125]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "XPS吸附机理": {
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "Cu 2p₃/₂峰932.5-933.7 eV",
+          "basis": "from_source",
+          "locator": "mechanism[126]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[126]"
+        },
+        "interaction": {
+          "text": "N 1s峰从398.4/401.6 eV移至399.4 eV；O 1s峰从531.9/530.0 eV移至530.8/532.1 eV；",
+          "basis": "from_source",
+          "locator": "mechanism[126]"
+        },
+        "why_it_works": {
+          "text": "C 1s峰C=N从284.2 eV移至285.5 eV；Cu 2p₃/₂峰932.5-933.7 eV",
+          "basis": "from_source",
+          "locator": "mechanism[126]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "CSBC吸附机制": {
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[127]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[127]"
+        },
+        "interaction": {
+          "text": "electrostatic interaction + surface complexation + pore filling",
+          "basis": "from_source",
+          "locator": "mechanism[127]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[127]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "RHB吸附机制": {
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[128]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[128]"
+        },
+        "interaction": {
+          "text": "electrostatic interaction between positively charged surface (H+) and MO- (SO3-)",
+          "basis": "from_source",
+          "locator": "mechanism[128]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[128]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    }
+  }
+}

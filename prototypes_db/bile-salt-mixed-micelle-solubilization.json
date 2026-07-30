@@ -1,0 +1,369 @@
+{
+ "id": "bile-salt-mixed-micelle-solubilization",
+ "name_zh": "胆盐混合胶束肠道脂质增溶传质",
+ "name_en": "Bile Salt Mixed Micelle Intestinal Lipid Solubilization Mass Transfer",
+ "organism": {
+  "scientific": "哺乳动物胆汁混合胶束系统",
+  "category": "动物"
+ },
+ "biomimetic_dimension": "系统仿生",
+ "features": [
+  "传质强化",
+  "疏水性"
+ ],
+ "tested_conditions": {
+  "tested_ph_range": null,
+  "tested_temp_range": null,
+  "salinity": null,
+  "note": "胆盐混合胶束为哺乳动物肠道脂质增溶-传质的超分子体系原型（mass_transfer），无单一蛋白结构（非蛋白聚集体，无 PDB）；本库无其吸附/传质性能测试条件，performance_data 为空，故测试条件全空。"
+ },
+ "library_tier": "extended",
+ "lifecycle_status": "active",
+ "coverage": "partial",
+ "status": "active",
+ "provenance_summary": {
+  "n_papers": 3,
+  "n_verified": 10,
+  "n_unverified": 0,
+  "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与硬边界条数（BILE-001 四要素+1 硬边界=5，BILE-002 四要素+1 硬边界=5）。机制接地限于胆盐/混合胶束对天然底物（膳食脂质、胆固醇）与超疏水难溶药地西泮（diazepam）的增溶-摄取功能证据（Serajuddin 1985 Pharm Res）与增溶容量/胶束热力学（Carey & Small 1978 JCI、Mazer 1979 Biochemistry）；DDT 应用为设计转译（llm_inferred/inspiration，approach-2 传质强化），无吸附/传质性能数据。quote 逐字取自 PubMed/PMC 摘要与文献标题（可核验），未做全文 PDF 审计。"
+ },
+ "mechanisms": [
+  {
+   "mechanism_id": "BILE-001",
+   "name": "胆盐混合胶束疏水核对超疏水溶质的增溶",
+   "description": "胆盐（代表性为牛磺胆酸钠）为面部两亲分子，在生理离子强度下于临界胶束浓度以上自组装为小胶束，并与脂质水解产物（单甘油酯、脂肪酸）及卵磷脂形成混合胶束；混合胶束的疏水核可容纳并增溶膳食脂质（含胆固醇）与超疏水分子，使原本几乎不水的溶质表观溶解度大幅提升。功能证据：胆盐提升超疏水难溶药地西泮（diazepam）的溶解度；增溶容量在胆盐-卵磷脂-胆固醇体系中被定量测定",
+   "基本原理": "两亲分子自组装形成疏水核-亲水壳的胶束/混合胶束，超疏水溶质按疏水分配进入胶束疏水核，绕过其极低本征水溶度的限制，宏观表现为表观溶解度提升数个量级",
+   "source": "literature",
+   "ref_doi": "10.1023/A:1016312827680",
+   "verification": "corroborated",
+   "verification_quote": "the bile salt increased the solubility of diazepam",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "膳食脂质与超疏水溶质（胆盐混合胶束的天然底物为膳食脂质与胆固醇；功能模型溶质为超疏水难溶药地西泮 diazepam）：极低本征水溶度、高疏水性，须靠胶束增溶方能在水相中达到可观表观浓度",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1023/A:1016312827680",
+     "locator": "title, p.221",
+     "quote": "In situ intestinal absorption of a poorly water-soluble drug from mixed micellar solutions of bile salt and lipolysis products in rats",
+     "scope_match": "Keywords: mixed micellar, bile salt, water-soluble, lipolysis"
+    },
+    "bio_structure": {
+     "text": "胆盐-脂质水解产物混合胶束（牛磺胆酸钠 + 单甘油酯 + 脂肪酸，辅以卵磷脂）：两亲分子自组装的胶体聚集体，具疏水核-亲水壳；胶束尺寸、形状与形成热力学经准弹性光散射表征（Mazer 1979 对胆盐胶束）。非单一蛋白结构，无 PDB 沉积",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1021/bi00581a024",
+     "locator": "title, p.3064",
+     "quote": "Quasielastic light scattering studies of aqueous biliary lipid systems. Size, shape, and thermodynamics of bile salt micelles",
+     "scope_match": "Keywords: bile salt micelles, size, thermodynamics"
+    },
+    "interaction": {
+     "text": "胆盐（牛磺胆酸钠）提升超疏水难溶药地西泮的溶解度，即胶束疏水核对疏水溶质的增溶分配；脂质水解产物掺入胆盐胶束形成混合胶束进一步增强增溶（Serajuddin 1985 原位大鼠肠吸收实验）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1023/A:1016312827680",
+     "locator": "Abstract, p.221",
+     "quote": "the bile salt increased the solubility of diazepam",
+     "scope_match": "Keywords: bile salt, solubility, diazepam"
+    },
+    "why_it_works": {
+     "text": "增溶源于胶束疏水核对疏水溶质的容纳；混合胶束增溶容量受胆盐种类、胆盐:卵磷脂比与总脂质浓度等物理化学变量控制，Carey & Small 1978 在胆盐-卵磷脂-胆固醇体系中定量测定了胆固醇的最大增溶度",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1172/JCI109025",
+     "locator": "Abstract, p.998",
+     "quote": "We determined the maximum solubilities of cholesterol in aqueous conjugated bile salt-egg lecithin-cholesterol systems as a function of several physical-chemical variables",
+     "scope_match": "Keywords: solubilities, cholesterol, bile salt, lecithin"
+    },
+    "boundary_conditions": [
+     {
+      "text": "增溶容量门控：混合胶束对疏水溶质的增溶容量受胆盐种类、胆盐:卵磷脂比与总脂质浓度控制，其中总脂质浓度是生理上的主导决定因素（Carey & Small 1978 对胆固醇增溶）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "Abstract, p.998",
+      "quote": "the total lipid concentration is the predominant determinant physiologically",
+      "scope_match": "Keywords: total lipid concentration, predominant, determinant",
+      "source_asset": null
+     },
+     {
+      "text": "增溶需两亲分子浓度高于临界胶束浓度（CMC）以维持胶束相；低于 CMC 胶束解体，增溶容量急剧下降（胆盐 CMC 处于毫摩尔量级，定性，精确值未取逐字接地，无数值阈值）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "两亲分子在 CMC 以上自组装为具疏水核的胶束/混合胶束，超疏水溶质按疏水分配进入疏水核而获大幅表观增溶；增溶容量由胶束组成与总两亲浓度决定，可移植为对超疏水溶质的水相增溶-预富集手段",
+    "verification_quote": "the bile salt increased the solubility of diazepam"
+   },
+   "source_doi": "10.1023/A:1016312827680",
+   "source_page": 221,
+   "source_locator": "title / Abstract, p.221",
+   "source_file": "Pharm Res 2(5):221-224（PubMed PMID 24272840 摘要；未做全文 PDF 页码审计）+ J Clin Invest 61(4):998-1026（PMC372618 摘要）+ Biochemistry 18(14):3064-3075（标题接地）",
+   "functional_groups": [
+    "胶束疏水核（胆盐甾体骨架烃面 + 脂质水解产物烃链构成的疏水微相）",
+    "亲水壳（胆盐羟基/酰胺-磺酸盐侧链、卵磷脂与脂质水解产物极性头基）"
+   ],
+   "key_structures": [
+    "增溶结构（胶束/混合胶束超分子聚集体）"
+   ]
+  },
+  {
+   "mechanism_id": "BILE-002",
+   "name": "混合胶束载体的增溶-传质增强与胶束截留权衡",
+   "description": "肠道中混合胶束作为胶体载体将增溶的疏水溶质经非搅动水层输运至刷状缘吸收面。但溶质在胶束相与游离相之间分配平衡：胶束增溶在提升表观溶解度的同时可降低游离溶质的吸收动力学（胶束截留）。功能证据：纯胆盐胶束提升地西泮溶解度却降低其吸收速率常数（净表观吸收下降）；含脂质水解产物的混合胶束提升溶解度而不影响吸收速率常数，净表观吸收增加",
+   "基本原理": "胶束载体提升表观溶解度并以胶体扩散输运溶质，但跨界面传质驱动力来自游离溶质活度（而非总溶解度）；只有不显著降低游离分数吸收动力学的混合胶束组成才能实现净增溶-传质增强，否则胶束截留抵消增溶收益",
+   "source": "literature",
+   "ref_doi": "10.1023/A:1016312827680",
+   "verification": "verified",
+   "verification_quote": "the lipolysis products incorporated in the bile salt micelles increased the solubility of diazepam without affecting the absorption rate constant",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "超疏水难溶药地西泮（diazepam，Serajuddin 1985 的功能模型溶质）：本征水溶度极低，其肠道吸收受溶出/传质限制，是检验胶束增溶-传质权衡的理想模型",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1023/A:1016312827680",
+     "locator": "title, p.221",
+     "quote": "In situ intestinal absorption of a poorly water-soluble drug from mixed micellar solutions of bile salt and lipolysis products in rats",
+     "scope_match": "Keywords: mixed micellar, bile salt, water-soluble, lipolysis"
+    },
+    "bio_structure": {
+     "text": "胆盐-脂质水解产物混合胶束（牛磺胆酸钠胶束中掺入单甘油酯与脂肪酸）：相较纯胆盐胶束，脂质水解产物改变胶束组成与溶质分配行为，是肠道脂质消化后形成的生理增溶-传质载体",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1023/A:1016312827680",
+     "locator": "Abstract, p.221",
+     "quote": "the lipolysis products incorporated in the bile salt micelles increased the solubility of diazepam without affecting the absorption rate constant",
+     "scope_match": "Keywords: lipolysis products, bile salt micelles, solubility, absorption rate constant"
+    },
+    "interaction": {
+     "text": "脂质水解产物掺入胆盐胶束提升地西泮溶解度而不影响其吸收速率常数，净表观吸收速率增加；表明混合胶束组成可解耦'增溶'与'游离溶质传质动力学'，避免纯胆盐胶束的截留惩罚",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1023/A:1016312827680",
+     "locator": "Abstract, p.221",
+     "quote": "the lipolysis products incorporated in the bile salt micelles increased the solubility of diazepam without affecting the absorption rate constant",
+     "scope_match": "Keywords: lipolysis products, bile salt micelles, solubility, absorption rate constant"
+    },
+    "why_it_works": {
+     "text": "纯胆盐胶束虽增溶却降低吸收速率常数：随胆盐浓度升高，更多地西泮被截留于胶束相，游离分数下降，跨膜传质驱动力减弱，净表观吸收下降。该'增溶-截留'权衡说明表观溶解度提升不必然等于传质增强",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1023/A:1016312827680",
+     "locator": "Abstract, p.221",
+     "quote": "The absorption rate constant of diazepam decreased with the increase in bile salt concentration",
+     "scope_match": "Keywords: absorption rate constant, diazepam, bile salt concentration"
+    },
+    "boundary_conditions": [
+     {
+      "text": "胶束截留权衡：胶束增溶提升表观溶解度但可降低溶质吸收速率常数；纯胆盐胶束对地西泮的净效应是表观吸收下降，仅特定混合胶束组成（含脂质水解产物）实现净增强",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "Abstract, p.221",
+      "quote": "the bile salt increased the solubility of diazepam, the net effect was a decrease in apparent diazepam absorption rate",
+      "scope_match": "Keywords: bile salt, solubility, absorption rate",
+      "source_asset": null
+     },
+     {
+      "text": "面向固体识别位点的传质：胶束-溶质分配须维持足够游离溶质分数以提供跨界面传质驱动力；若胶束/载体相对识别位点的结合过强，增溶反而降低有效驱动力并可能竞争占据位点（定性，无数值阈值）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "胶束/载体增溶提升超疏水溶质的表观溶解度，但跨界面传质由游离溶质活度驱动；须调控载体组成与载体-溶质结合强度以兼顾增溶与游离分数，避免胶束截留抵消传质收益",
+    "verification_quote": "the lipolysis products incorporated in the bile salt micelles increased the solubility of diazepam without affecting the absorption rate constant"
+   },
+   "source_doi": "10.1023/A:1016312827680",
+   "source_page": 221,
+   "source_locator": "Abstract, p.221",
+   "source_file": "Pharm Res 2(5):221-224（PubMed PMID 24272840 摘要；未做全文 PDF 页码审计）",
+   "functional_groups": [
+    "胶束疏水核（溶质增溶分配微相）",
+    "亲水壳（维持胶体分散与水相输运）"
+   ],
+   "key_structures": [
+    "增溶-传质结构（混合胶束胶体载体）"
+   ]
+  }
+ ],
+ "performance_data": [],
+ "engineering_constraints": [
+  {
+   "constraint": "临界胶束浓度门控",
+   "value": "增溶需两亲分子浓度高于临界胶束浓度（CMC）以维持胶束相；胆盐 CMC 处于毫摩尔量级（生理离子强度，定性，精确值未取逐字接地）",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（基于 Mazer 1979 胆盐胶束形成热力学与胶束增溶通识的外推），具体 CMC 数值未做逐字接地",
+   "source": "llm_inference",
+   "ref_doi": "10.1021/bi00581a024"
+  },
+  {
+   "constraint": "增溶容量受限且组成依赖",
+   "value": "单位胶束增溶容量有限，受胆盐种类、胆盐:卵磷脂比与总脂质浓度控制，其中总脂质浓度为生理主导因素",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "Carey & Small 1978 JCI：在胆盐-卵磷脂-胆固醇体系中定量测定胆固醇最大增溶度，总脂质浓度为主导决定因素（PMC372618 摘要）",
+   "source": "literature",
+   "ref_doi": "10.1172/JCI109025"
+  },
+  {
+   "constraint": "增溶-传质权衡（胶束截留）",
+   "value": "胶束结合提升表观溶解度但降低游离溶质分数与跨界面传质驱动力；纯胆盐胶束净降低地西泮表观吸收，须以混合胶束组成或控制载体-溶质结合强度规避",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "Serajuddin 1985 Pharm Res：胆盐提升地西泮溶解度但降低吸收速率常数，净表观吸收下降；含脂质水解产物的混合胶束净增强（PMID 24272840 摘要）",
+   "source": "literature",
+   "ref_doi": "10.1023/A:1016312827680"
+  },
+  {
+   "constraint": "超分子动态自组装形态",
+   "value": "混合胶束为动态非共价聚集体，无固定三级结构（无 PDB），尺寸/形状随组成、浓度、离子强度与温度变化；用作传质介质须维持胶体稳定并与下游识别位点相容（不占据/不毒化位点）",
+   "unit": null,
+   "relevance": "medium",
+   "explanation": "机理推断（基于 Mazer 1979 胆盐胶束尺寸/形状/热力学随条件变化的事实外推）",
+   "source": "llm_inference",
+   "ref_doi": "10.1021/bi00581a024"
+  }
+ ],
+ "narrative": {
+  "entries": [
+   {
+    "source_file": "Pharm Res 2(5):221-224（Serajuddin, Rosoff, Goldberg 1985，DOI 10.1023/A:1016312827680，PMID 24272840）+ J Clin Invest 61(4):998-1026（Carey & Small 1978，DOI 10.1172/JCI109025，PMC372618）+ Biochemistry 18(14):3064-3075（Mazer et al. 1979，DOI 10.1021/bi00581a024）",
+    "paper_id": "1985-Serajuddin-bile-salt-mixed-micelle-solubilization-absorption",
+    "sections": {
+     "problem_definition": "膳食脂质（甘油三酯、胆固醇、脂溶性维生素）本征水溶度极低，须在肠道水相环境中被增溶并输运至刷状缘方能消化吸收。胆盐是脊椎动物进化形成的两亲分子，在肠腔自组装为胶束与混合胶束，承担对超疏水溶质的增溶-传质功能。如何在极低本征溶解度下实现可观的表观浓度与跨界面传质，是疏水溶质处理的普遍物理化学问题。",
+     "biological_solution": "胆盐（代表性为牛磺胆酸钠）为面部两亲分子，在生理离子强度下于临界胶束浓度以上自组装为小胶束（Mazer 1979 以准弹性光散射表征其尺寸、形状与形成热力学），并与脂质水解产物（单甘油酯、脂肪酸）及卵磷脂形成混合胶束；混合胶束的疏水核容纳并增溶膳食脂质与超疏水分子。Serajuddin 等（1985）以超疏水难溶药地西泮为功能模型，在大鼠原位肠吸收实验中证明：胆盐提升地西泮溶解度（增溶），脂质水解产物掺入胆盐胶束形成混合胶束进一步增强增溶。Carey & Small（1978）在胆盐-卵磷脂-胆固醇体系中定量测定了胆固醇的最大增溶度，表明增溶容量受胆盐种类、胆盐:卵磷脂比与总脂质浓度控制，总脂质浓度为生理主导因素。Serajuddin 等同时揭示胶束截留权衡：纯胆盐胶束虽增溶却降低地西泮吸收速率常数，净表观吸收下降；含脂质水解产物的混合胶束提升溶解度而不影响吸收速率常数，净吸收增加。",
+     "key_features": "必须保留：① 两亲分子在 CMC 以上自组装形成具疏水核-亲水壳的胶束/混合胶束（增溶微相）；② 疏水核对超疏水溶质的非特异疏水分配（增溶来源）；③ 调控胶束组成以兼顾增溶与游离溶质传质动力学，规避胶束截留。可灵活调整：两亲分子化学（胆盐型/环糊精-表面活性剂/非离子型）、胶束组成与总浓度、亲水壳稳定化、与下游识别位点的相容性。",
+     "design_mapping": "仿生映射：胆盐混合胶束的'疏水核增溶 + 胶体载体输运 + 组成调控规避截留'→ 面向超疏水有机氯农药 DDT 的水相增溶-传质强化。边界声明：这是设计转译/启发（llm_inferred），非 from_source 事实：胆盐混合胶束的天然靶标是膳食脂质/胆固醇，DDT 的增溶属碰巧的胶束疏水分配（approach-2 传质强化），非进化靶标；胶束对一切超疏水物非特异，不提供选择性；且增溶-传质存在胶束截留权衡，净效果须实验验证。",
+     "explainability_anchors": "设计溯源：胆盐/混合胶束对胆固醇与地西泮的增溶-摄取功能（Serajuddin 1985 + Carey & Small 1978，from_source）→ '疏水核增溶 + 胶体载体输运 + 胶束截留权衡'可迁移原理（from_source）→ DDT 水相增溶-传质强化（llm_inferred 启发，approach-2，须实验验证）。"
+    }
+   }
+  ]
+ },
+ "design_translation": [
+  {
+   "idea": "在吸附体系引入生物相容两亲胶束（胆盐型）或环糊精-表面活性剂混合胶束作为水相增溶-传质介质，以疏水核增溶超疏水有机氯农药 DDT，提升其从水相到识别位点的表观溶解度与传质速率，缓解 ng/L 级超疏水溶质本征溶解度极低导致的传质驱动力不足",
+   "specific_functional_group": "两亲分子的疏水核（胆盐甾体烃面、烃链胶束核或环糊精疏水空腔）作为增溶微相；亲水壳（胆盐羟基/酰胺-磺酸盐侧链、环糊精羟基、PEG/非离子头基）维持胶体分散与水相相容",
+   "material_handle": "在吸附柱或反应器中以牛磺胆酸盐型生物相容胶束、环糊精-表面活性剂混合胶束或可回收胶束相作为水相增溶-传质介质，将疏水 DDT 从体相水'泵送'至下游识别/富集位点；亦可作为预富集后的洗脱/增溶相",
+   "target_interaction": "超疏水 DDT 按疏水分配进入胶束/环糊精疏水核（非特异范德华与疏水效应），无方向性识别；属增溶-传质强化而非特异结合",
+   "source_tier": "llm_inference",
+   "evidence_tier": "inspiration（原理层外推：胆盐/混合胶束对膳食脂质、胆固醇与地西泮的增溶-摄取功能接地于 Serajuddin 1985 与 Carey & Small 1978；将胶束增溶转译为 DDT 水相传质强化为 llm_inferred 的 approach-2 传质强化，无 DDT 吸附/传质实验数据）",
+   "examples": [],
+   "design_principle": "胆盐混合胶束证明两亲分子自组装的疏水核可大幅增溶超疏水溶质并以胶体载体输运，且通过胶束组成调控可兼顾增溶与游离溶质传质动力学（Serajuddin 1985、Carey & Small 1978、Mazer 1979）；疏水核增溶原理与载体组成调控可独立于胆盐骨架移植到生物相容胶束或环糊精-表面活性剂体系",
+   "implementation_example": "牛磺胆酸盐型胶束或环糊精-表面活性剂混合胶束作为水相增溶-预富集介质，串联下游疏水识别/富集位点（无实验数据，仅为设计假设）",
+   "constraints": "DDT 增溶为碰巧胶束疏水分配（approach-2），非胆盐混合胶束的进化靶标；胶束对一切超疏水物非特异，不提供选择性，须由下游识别位点承担选择性；增溶-传质存在胶束截留权衡（Serajuddin 1985），须维持足够游离 DDT 分数与适度载体-溶质结合强度；CMC 以下胶束解体增溶失效；胶束浓度须达毫摩尔量级",
+   "failure_modes": "胶束截留：载体对 DDT 结合过强使游离分数过低，净传质驱动力下降甚至抵消增溶收益；胶束/环糊精竞争占据下游识别位点而毒化吸附；增溶非特异导致共存超疏水物（多环芳烃、其他有机氯农药、腐殖质疏水组分）共增溶而降低选择性；离子强度/温度/pH 改变使胶束解体或相分离",
+   "material_realization_examples": []
+  }
+ ],
+ "honesty_ledger": {
+  "facts": [
+   {
+    "type": "mechanism",
+    "index": 0,
+    "name": "胆盐混合胶束疏水核对超疏水溶质的增溶",
+    "basis": "from_source_corroborated",
+    "note": "Serajuddin 1985 Pharm Res（胆盐/牛磺胆酸钠提升超疏水难溶药地西泮溶解度；脂质水解产物掺入胆盐胶束增强增溶）+ Carey & Small 1978 JCI（胆盐-卵磷脂-胆固醇体系胆固醇最大增溶度的定量测定，总脂质浓度为主导）+ Mazer 1979 Biochemistry（胆盐胶束尺寸/形状/形成热力学）；quote 逐字取自 PubMed/PMC 摘要与标题（可核验），未做全文 PDF 审计"
+   },
+   {
+    "type": "mechanism",
+    "index": 1,
+    "name": "混合胶束载体的增溶-传质增强与胶束截留权衡",
+    "basis": "from_source_verified",
+    "note": "Serajuddin 1985 Pharm Res 摘要直接陈述：纯胆盐胶束提升地西泮溶解度但降低吸收速率常数（净表观吸收下降），含脂质水解产物的混合胶束提升溶解度而不影响吸收速率常数（净吸收增加）；quote 逐字取自 PMID 24272840 摘要"
+   }
+  ],
+  "leads": [],
+  "inferences": [
+   {
+    "type": "design_translation",
+    "index": 0,
+    "idea": "以生物相容胶束/环糊精-表面活性剂载体增溶-传质强化 DDT 从水相到识别位点的输运",
+    "basis": "llm_inferred",
+    "label": "inspiration",
+    "note": "胆盐混合胶束天然靶标为膳食脂质/胆固醇，DDT 增溶属碰巧胶束疏水分配（approach-2 传质强化），非进化靶标；胶束对超疏水物非特异、无选择性，选择性须由下游识别位点承担；增溶-传质存在胶束截留权衡，净效果须实验验证"
+   },
+   {
+    "type": "fact_derivation",
+    "index": 0,
+    "name": "胆盐临界胶束浓度处于毫摩尔量级（生理离子强度）",
+    "basis": "llm_inferred",
+    "label": "needs_review",
+    "note": "基于胆盐胶束形成通识与 Mazer 1979 胶束热力学的外推，具体 CMC 数值未做逐字接地，仅作定性边界，未写入任何性能数值"
+   }
+  ],
+  "boundary_notes": [
+   "本原型天然底物为膳食脂质与胆固醇（增溶-摄取功能）；机制 from_source 接地限于胆盐/混合胶束对天然底物与超疏水难溶药地西泮的增溶-摄取功能证据及增溶容量/胶束热力学",
+   "DDT 应用为设计转译（llm_inferred / inspiration，approach-2 传质强化），非 from_source 事实，不得用作 DDT 吸附/去除的 direct evidence；DDT 增溶为碰巧胶束分配，非胆盐胶束的进化靶标",
+   "无 DDT 吸附/传质性能数据（qmax、传质系数等）；严格未从外部污染物知识库或姊妹项目 biomimetic-adsorbent-design 搬运任何性能数值（知识隔离红线）",
+   "混合胶束为超分子聚集体，无单一蛋白结构，故无 PDB；接地依赖功能文献与小角/准弹性光散射胶束模型，已诚实标注",
+   "胶束截留权衡（BILE-002 硬边界）为 from_source 接地；CMC 门控与固体识别位点传质边界为定性 llm_inferred，不带数值阈值，gate_level=soft"
+  ],
+  "missing_pdf_items": [
+   "Serajuddin 1985 Pharm Res 全文 PDF（quote 取自 PubMed PMID 24272840 摘要与标题，精确正文页码未核验，locator 用文章页域 p.221）",
+   "Carey & Small 1978 JCI 全文 PDF（quote 取自 PMC372618 摘要；增溶容量精确数值表未核验）",
+   "Mazer 1979 Biochemistry 全文 PDF（仅标题接地，无摘要文本；CMC/尺寸精确数值未取逐字）"
+  ],
+  "generated_by": "manual-curation-2026-07-22",
+  "note": "诚实优先：机制接地限于胆盐/混合胶束对膳食脂质、胆固醇与地西泮的增溶-摄取功能（Serajuddin 1985 + Carey & Small 1978 + Mazer 1979）；一切 DDT 应用为 inspiration/approach-2 外推，无性能数据"
+ },
+ "boundary_rules": [
+  {
+   "rule": "增溶容量门控：混合胶束增溶容量受胆盐种类、胆盐:卵磷脂比与总脂质浓度控制，总脂质浓度为生理主导因素",
+   "source_mechanism": "胆盐混合胶束疏水核对超疏水溶质的增溶",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "胶束截留权衡：胶束增溶提升表观溶解度但可降低溶质传质动力学，纯胆盐胶束净降低地西泮表观吸收，仅特定混合胶束组成实现净增强",
+   "source_mechanism": "混合胶束载体的增溶-传质增强与胶束截留权衡",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "增溶需两亲分子浓度高于 CMC 以维持胶束相，低于 CMC 增溶容量急剧下降（定性，无数值阈值）",
+   "source_mechanism": "胆盐混合胶束疏水核对超疏水溶质的增溶",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  },
+  {
+   "rule": "面向固体识别位点须维持足够游离溶质分数以提供跨界面传质驱动力，载体结合过强将抵消增溶收益（定性，无数值阈值）",
+   "source_mechanism": "混合胶束载体的增溶-传质增强与胶束截留权衡",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  }
+ ],
+ "mechanism_tags": [
+  "氢键",
+  "疏水分配",
+  "超浸润分离",
+  "孔道限域分子筛分"
+ ]
+}

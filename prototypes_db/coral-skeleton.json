@@ -1,0 +1,157 @@
+{
+  "id": "coral-skeleton",
+  "name_zh": "珊瑚骨架",
+  "name_en": "Coral Skeleton",
+  "organism": {
+    "scientific": "Corallium (珊瑚)",
+    "category": "动物"
+  },
+  "biomimetic_dimension": "结构仿生",
+  "features": [
+    "大孔",
+    "生物矿化模板"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": "moderate",
+    "note": "测过的 pH/温度范围，不是适用范围。仅从 performance_data 中实际测试过的条件聚合。"
+  },
+  "performance_data": [],
+  "mechanisms": [
+    {
+      "name": "珊瑚文石碳酸钙钙位点吸附与重金属碳酸盐共沉淀",
+      "description": "珊瑚骨骼的文石型 CaCO₃ 通过 Ca²⁺ 位点吸附和共沉淀重金属碳酸盐",
+      "source": "llm_inference",
+      "causal_chain": {
+        "transferable_principle": "珊瑚文石型 CaCO₃ 通过 Ca²⁺ 位点吸附和共沉淀重金属碳酸盐（placeholder）",
+        "pollutant_feature": {
+          "text": "未验证 — 需补充珊瑚骨架吸附文献",
+          "basis": "llm_inferred",
+          "locator": "p.9 / Section 4.3 text"
+        },
+        "bio_structure": {
+          "text": "珊瑚骨骼的文石型 CaCO₃ 结构",
+          "basis": "from_source",
+          "locator": "p.33",
+          "evidence_label": "from_source",
+          "source": "10.3390/polym14245439",
+          "quote": "The most common alkaline scaling is CaCO3",
+          "scope_match": "Keywords: caco, common"
+        },
+        "interaction": {
+          "text": "Ca²⁺ 位点吸附和共沉淀重金属碳酸盐",
+          "basis": "from_source",
+          "locator": "p.1",
+          "evidence_label": "from_source",
+          "source": "10.3390/polym14245439",
+          "quote": "Carraro, M",
+          "scope_match": "Keywords: ca, carraro"
+        },
+        "why_it_works": {
+          "text": "placeholder — 需补充文献后方可用于设计决策",
+          "basis": "llm_inferred",
+          "locator": "p.9 / Section 4.3 text"
+        },
+        "boundary_conditions": [
+          {
+            "text": "placeholder 原型 — 无 verified 性能数据，design_translation 为 llm_inference",
+            "parameter": "prototype_status",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "no_reference_available"
+          }
+        ],
+        "verification_quote": "注意：原引用DOI(10.1016/j.jmst.2020.07.002)对应的是防污涂层论文，非珊瑚吸附论文。该机制需要重新获取正确的文献来源。",
+        "source_doi": "10.1016/j.jmst.2020.07.002",
+        "source_locator": "p.9 / Section 4.3 text"
+      },
+      "evidence_type": "lead_inference",
+      "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
+      "brief_visibility": "hidden"
+    }
+  ],
+  "narrative": {
+    "entries": []
+  },
+  "engineering_constraints": [],
+  "provenance_summary": {
+    "n_papers": 1,
+    "n_verified": 0,
+    "n_unverified": 0
+  },
+  "coverage": "none",
+  "status": "active",
+  "design_translation": [
+    {
+      "idea": "利用珊瑚骨骼的文石结构进行重金属固定",
+      "specific_functional_group": "文石型 CaCO₃ 的 Ca²⁺ 位点",
+      "material_handle": "珊瑚骨骼粉末或合成文石",
+      "target_interaction": "Ca²⁺ 位点吸附和共沉淀重金属碳酸盐",
+      "source_tier": "llm_inference",
+      "examples": [],
+      "design_principle": "珊瑚文石(CaCO3)的多孔结构提供高比表面积，Ca2+位点可通过离子交换吸附重金属",
+      "constraints": "珊瑚文石在酸性条件下溶解，pH<4时结构破坏；机械强度低"
+    }
+  ],
+  "library_tier": "core",
+  "lifecycle_status": "active",
+  "honesty_ledger": {
+    "facts": [
+      {
+        "type": "evidence_status",
+        "status": "placeholder",
+        "note": "Placeholder prototype — no verified adsorption data. Design translation is llm_inference only. Coral/CaCO3 adsorption literature needed.",
+        "basis": "yao_decision_2026_06_20"
+      }
+    ],
+    "leads": [],
+    "inferences": [
+      {
+        "type": "design_translation",
+        "index": 0,
+        "idea": "利用珊瑚骨骼的文石结构进行重金属固定",
+        "basis": "llm_inference"
+      },
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "珊瑚文石结构重金属固定",
+        "basis": "llm_inference"
+      }
+    ],
+    "generated_by": "P1d-补全",
+    "note": "Empty shell prototype — mechanism is llm_inference placeholder with boundary_conditions"
+  },
+  "boundary_conditions": [
+    {
+      "text": "当前无 verified 性能数据，design_translation 为 llm_inference。需补充珊瑚骨架吸附文献后方可用于设计决策",
+      "parameter": "literature_coverage",
+      "condition": {
+        "operator": "qualitative",
+        "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+    }
+  ],
+  "scope_note": "Placeholder prototype — no verified adsorption data. Design translation is llm_inference only. Coral/CaCO3 adsorption literature needed.",
+  "evidence_status": "placeholder",
+  "mechanism_tags": [
+    "孔道限域分子筛分",
+    "沉淀共沉淀",
+    "生物矿化"
+  ]
+}

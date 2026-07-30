@@ -1,0 +1,1595 @@
+{
+  "id": "chlorella-cell-wall",
+  "name_zh": "小球藻细胞壁",
+  "name_en": "Chlorella Cell Wall",
+  "organism": {
+    "scientific": "Chlorella vulgaris (小球藻)",
+    "category": "微生物"
+  },
+  "biomimetic_dimension": "结构仿生",
+  "features": [
+    "细胞壁吸附",
+    "表面官能团"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": "any",
+    "note": "测过的 pH/温度范围，不是适用范围。仅从 performance_data 中实际测试过的条件聚合。"
+  },
+  "performance_data": [
+    {
+      "parameter": "藻类去除合成染料的三种机制 Three mechanisms of dye removal by algae",
+      "value": "(1)同化利用发色团产生藻类生物量、CO₂和H₂O；(2)将有色分子转化为无色分子；(3)发色团在藻类生物量上的吸附",
+      "unit": null,
+      "pollutant": "dyes",
+      "material": "algae",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1155/2021/9923643",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第7组-系统仿生/2021-Ayele-dye-wastewater-review.pdf",
+      "page": 5,
+      "locator": "Table 2",
+      "verification": "needs_review",
+      "confidence": 0.8,
+      "label_fix": "P1b: downgraded from verified — no verification_quote"
+    },
+    {
+      "parameter": "初始染料浓度对吸附量的影响 Effect of initial dye concentration on adsorption",
+      "value": "Caulerpa scalpelliformis: MB从11.8增至33.8 mg/g (浓度从25增至200 mg/L)",
+      "unit": "mg/g",
+      "pollutant": "MB (methylene blue)",
+      "material": "Caulerpa scalpelliformis",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1155/2021/9923643",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第7组-系统仿生/2021-Ayele-dye-wastewater-review.pdf",
+      "page": 5,
+      "locator": "Table 2",
+      "verification": "needs_review",
+      "confidence": 0.8,
+      "label_fix": "P1b: downgraded from verified — no verification_quote"
+    },
+    {
+      "parameter": "生物量浓度对单位吸附量的影响 Effect of biomass dosage on unit adsorption",
+      "value": "生物量浓度增加导致单位吸附量降低：Caulerpa 50→200 mg/L, MB吸附从37.6→24.6 mg/g",
+      "unit": "mg/g",
+      "pollutant": "MB (methylene blue)",
+      "material": "Caulerpa scalpelliformis",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1155/2021/9923643",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第7组-系统仿生/2021-Ayele-dye-wastewater-review.pdf",
+      "page": 5,
+      "locator": "Table 2",
+      "verification": "needs_review",
+      "confidence": 0.8,
+      "label_fix": "P1b: downgraded from verified — no verification_quote"
+    },
+    {
+      "parameter": "藻类染料去除方法对比 Comparison of dye removal methods",
+      "value": "Table 2对比了物理方法(吸附/辐射)、化学方法(氧化/沉淀)和生物方法(藻类/真菌)的去除效率",
+      "unit": null,
+      "pollutant": "dyes",
+      "material": "various algae",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1155/2021/9923643",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第7组-系统仿生/2021-Ayele-dye-wastewater-review.pdf",
+      "page": 5,
+      "locator": "Table 2",
+      "verification": "needs_review",
+      "confidence": 0.8,
+      "label_fix": "P1b: downgraded from verified — no verification_quote"
+    },
+    {
+      "parameter": "生物聚合物去除重金属PTE的总体效率 Overall PTE removal efficiency",
+      "value": "生物聚合物对潜在有毒元素(PTE)的去除效率>40 mg PTE/g biopolymer",
+      "unit": "mg/g",
+      "pollutant": "potentially toxic elements (PTE)",
+      "material": "biopolymer from algae",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.biortech.2021.124868",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第7组-系统仿生/2021-Kartik-adsorbent-wastewater-review.pdf",
+      "page": 5,
+      "locator": "Table 1",
+      "verification": "needs_review",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "PANI-ODOB复合材料去除染料 PANI-ODOB composite for dye removal",
+      "value": "PANI-ODOB(聚苯胺+Oscillatoria生物炭): MB 92%、CV 88%、RhB 78%",
+      "unit": "%",
+      "pollutant": "MB, CV, RhB",
+      "material": "PANI-ODOB composite",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.biortech.2021.124868",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第7组-系统仿生/2021-Kartik-adsorbent-wastewater-review.pdf",
+      "page": 5,
+      "locator": "Table 1",
+      "verification": "needs_review",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "Fe改性生物炭去除As/Mo/Se Fe-biochar for As/Mo/Se removal",
+      "value": "Gracilaria Fe-biochar: As(V) 11.8, Mo(VI) 7.9, Se(IV) 4.2 mg/g",
+      "unit": "mg/g",
+      "pollutant": "As(V), Mo(VI), Se(IV)",
+      "material": "Gracilaria Fe-biochar",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.scitotenv.2021.14567",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第7组-系统仿生/2021-Fei-algal-biochar-heavy-metal.pdf",
+      "page": 5,
+      "locator": "3.2节",
+      "verification": "needs_review",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "磁性改性生物炭去除Cr(VI) Magnetic biochar for Cr(VI) removal",
+      "value": "Enteromorpha prolifera磁性生物炭: Cr(VI) 120.5 mg/g",
+      "unit": "mg/g",
+      "pollutant": "Cr(VI)",
+      "material": "Enteromorpha prolifera magnetic biochar",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.scitotenv.2021.14567",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第7组-系统仿生/2021-Fei-algal-biochar-heavy-metal.pdf",
+      "page": 5,
+      "locator": "3.2节",
+      "verification": "needs_review",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "N掺杂藻类生物炭去除BPA N-doped algal biochar for BPA removal",
+      "value": "Ulva prolifera N掺杂生物炭: BPA 285.7 mg/g",
+      "unit": "mg/g",
+      "pollutant": "BPA",
+      "material": "Ulva prolifera N-doped biochar",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.scitotenv.2021.14567",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第7组-系统仿生/2021-Fei-algal-biochar-heavy-metal.pdf",
+      "page": 5,
+      "locator": "3.2节",
+      "verification": "needs_review",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "藻类生物炭去除金属的五种机制 Five mechanisms for metal removal by algal biochar",
+      "value": "金属去除机制：(1)离子交换——生物炭上Ca²⁺/Mg²⁺与重金属交换；(2)表面络合——含氧官能团与金属配位；(3)静电吸引——表面电荷与离子型金属；(4)沉淀——碳酸盐/磷酸盐沉淀；(5)还原——Fe⁰还原Cr(VI)→Cr(III)",
+      "unit": null,
+      "pollutant": "heavy metals",
+      "material": "algal biochar",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.scitotenv.2021.14567",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第7组-系统仿生/2021-Fei-algal-biochar-heavy-metal.pdf",
+      "page": 5,
+      "locator": "3.2节",
+      "verification": "needs_review",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "藻类生物炭与其他材料的去除性能对比 Comparison of removal performance",
+      "value": "S. japonica生物炭对Cu2+去除 197.2 mg/g，优于多数活性炭",
+      "unit": "mg/g",
+      "pollutant": "Cu(II)",
+      "material": "Sargassum japonica biochar",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.scitotenv.2021.14567",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第7组-系统仿生/2021-Fei-algal-biochar-heavy-metal.pdf",
+      "page": 5,
+      "locator": "3.2节",
+      "verification": "needs_review",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "AlBcTNC三元纳米复合材料去除孔雀石绿 AlBcTNC for malachite green removal",
+      "value": "藻类生物炭增强三元纳米复合材料(AlBcTNC): MG 98.5%去除率",
+      "unit": "%",
+      "pollutant": "MG (malachite green)",
+      "material": "AlBcTNC nanocomposite",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.scitotenv.2021.14567",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第7组-系统仿生/2021-Fei-algal-biochar-heavy-metal.pdf",
+      "page": 5,
+      "locator": "3.2节",
+      "verification": "needs_review",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "非悬浮微藻对污染物的去除效率 Distribution of pollutant removal by non-suspended microalgae",
+      "value": "Zhuang等(2020)分析了60+篇文献：固定化微藻对N/P去除率比悬浮态高15-30%",
+      "unit": "%",
+      "pollutant": "N, P",
+      "material": "immobilized microalgae",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.ese.2022.100227",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第7组-系统仿生/2022-Li-microalgae-wastewater-review.pdf",
+      "page": 5,
+      "locator": "3.1节",
+      "verification": "needs_review",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "固定化微藻污染物去除的空间和时间分布 Spatial and temporal distribution",
+      "value": "固定化微藻系统中污染物去除和分布呈现空间异质性：表层>深层",
+      "unit": null,
+      "pollutant": "various",
+      "material": "immobilized microalgae",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.ese.2022.100227",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第7组-系统仿生/2022-Li-microalgae-wastewater-review.pdf",
+      "page": 5,
+      "locator": "3.1节",
+      "verification": "needs_review",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "最大吸附容量 Maximum adsorption capacity",
+      "value": "286.4",
+      "unit": "mg/g",
+      "pollutant": "RhB (rhodamine B)",
+      "material": "Chlorella-derived nano iron oxide modified biochar",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.3390/nano12132271",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第7组-系统仿生/2022-Peng-algal-biochar-RhB.pdf",
+      "page": 5,
+      "locator": "3.2节",
+      "verification": "needs_review",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "投加量对去除率的影响 Effect of adsorbent dosage on removal rate",
+      "value": "100 mg/L RhB: 10mg→~60%, 30mg→~85%, 50mg→~92%",
+      "unit": "%",
+      "pollutant": "RhB (rhodamine B)",
+      "material": "Chlorella-derived nano iron oxide modified biochar",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.3390/nano12132271",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第7组-系统仿生/2022-Peng-algal-biochar-RhB.pdf",
+      "page": 5,
+      "locator": "3.2节",
+      "verification": "needs_review",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "藻类去除有机污染物的五种机制 Five mechanisms of organic pollutant removal by algae",
+      "value": "藻类通过5种机制去除有机污染物：(1)生物吸附；(2)生物降解；(3)生物转化；(4)光降解；(5)共代谢",
+      "unit": null,
+      "pollutant": "organic pollutants",
+      "material": "various algae",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.3390/molecules27031141",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第7组-系统仿生/2022-Razzak-algae-wastewater-review.pdf",
+      "page": 5,
+      "locator": "3.1节",
+      "verification": "needs_review",
+      "confidence": 0.8
+    },
+    {
+      "parameter": "藻类去除染料的三种途径 Three pathways for dye removal by algae",
+      "value": "藻类通过三种途径去除染料：(1)通过静电吸引吸附在细胞壁上；(2)通过酶促降解断裂染料分子；(3)通过光催化产生活性氧降解染料",
+      "unit": null,
+      "pollutant": "dyes",
+      "material": "various algae",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.3390/molecules27031141",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第7组-系统仿生/2022-Razzak-algae-wastewater-review.pdf",
+      "page": 5,
+      "locator": "3.1节",
+      "verification": "needs_review",
+      "confidence": 0.8
+    }
+  ],
+  "mechanisms": [
+    {
+      "name": "小球藻细胞壁含氧含氮官能团络合与静电吸附",
+      "description": "pH影响藻类表面电荷和染料离子化状态：低pH时表面正电荷利于阴离子染料吸附，高pH时表面负电荷利于阳离子染料吸附",
+      "functional_groups": [
+        "羧基 carboxyl (-COOH)",
+        "磷酸基 -PO₄",
+        "羟基 hydroxyl (-OH)",
+        "-O-（醚键）",
+        "氨基 amino (-NH₂)"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1155/2021/9923643",
+      "verification": "partial",
+      "verification_quote": "The effect of pH on dye adsorption by algae is primarily governed by the surface charge of the biomass and the ionization state of the dye molecules.",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "阳离子染料（MB、CV、MG）和阴离子染料（CR、MO）",
+          "basis": "from_source",
+          "source": "10.1155/2021/9923643",
+          "locator": "p.6",
+          "quote": "pH is one of the most important parameters that affects the biosorption efficiency of algae",
+          "scope_match": "Keywords: biosorption, algae"
+        },
+        "bio_structure": {
+          "text": "藻类细胞壁表面的含氧/含氮官能团（-COOH、-NH₂、-OH）",
+          "basis": "from_source",
+          "source": "10.1155/2021/9923643",
+          "locator": "p.8",
+          "quote": "The presence of the heteropolysaccharide and lipid compound on the cell wall of algae contains many functional groups such as amino, carboxyl, hydroxyl, and phosphate groups",
+          "scope_match": "Keywords: cell wall, algae, functional groups, amino, carboxyl, hydroxyl, phosphate"
+        },
+        "interaction": {
+          "text": "静电吸引+表面络合+氢键",
+          "basis": "from_source",
+          "source": "10.1155/2021/9923643",
+          "locator": "p.6",
+          "quote": "At lower pH, the biosorbent surface had more positively charged sites, which were favorable to the adsorption of dye anions due to the electrostatic attraction",
+          "scope_match": "Keywords: biosorbent surface, electrostatic attraction, dye anions"
+        },
+        "why_it_works": {
+          "text": "藻类细胞壁富含官能团，可通过多种机制吸附染料分子",
+          "basis": "from_source",
+          "source": "10.1155/2021/9923643",
+          "locator": "p.8",
+          "quote": "The presence of the heteropolysaccharide and lipid compound on the cell wall of algae contains many functional groups such as amino, carboxyl, hydroxyl, and phosphate groups",
+          "scope_match": "Keywords: cell wall, functional groups, amino, carboxyl"
+        },
+        "boundary_conditions": [
+          {
+            "text": "pH影响表面电荷和染料离子化状态",
+            "parameter": "pH",
+            "condition": {
+              "operator": "range",
+              "value": "2-12"
+            },
+            "basis": "from_source",
+            "verification": "corroborated",
+            "gate_level": "hard",
+            "locator": "10.1155/2021/9923643",
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "keyword_match",
+            "source": "10.1155/2021/9923643"
+          }
+        ],
+        "transferable_principle": "藻类细胞壁的官能团密度和多样性是高效生物吸附的关键",
+        "verification_quote": "The effect of pH on dye adsorption by algae is primarily governed by the surface charge of the biomass",
+        "source_doi": "10.1155/2021/9923643",
+        "source_locator": "p.6 / Section 5.1"
+      },
+      "key_structures": [
+        "细胞壁结构",
+        "静电吸引+络合+氢键",
+        "吸附结构",
+        "pH响应表面电荷",
+        "藻类细胞壁多糖-蛋白质基质"
+      ],
+      "molecular_feature_links": [
+        "芳香环",
+        "正电荷",
+        "水溶性"
+      ]
+    },
+    {
+      "name": "藻类生物吸附的静电吸引和络合机制 Electrostatic attraction and complexation in algal biosorption",
+      "description": "藻类细胞壁上的羧基(-COOH)、氨基(-NH₂)、羟基(-OH)和磷酸基(-PO₄)通过静电吸引、离子交换和表面络合机制吸附重金属离子",
+      "functional_groups": [
+        "离子交换位点",
+        "-COOH（羧基）",
+        "静电作用位点",
+        "-PO₄³⁻（磷酸基）",
+        "-COOH, -NH₂, -OH, -PO₄",
+        "-OH（羟基）",
+        "-NH₂（氨基）",
+        "-O-（醚键）"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1155/2021/9923643",
+      "verification": "partial",
+      "verification_quote": "The cell wall of algae contains various functional groups including carboxyl, amino, hydroxyl, and phosphate groups that can bind metal ions through electrostatic attraction, ion exchange, and surface complexation.",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "重金属阳离子（Pb²⁺、Cu²⁺、Cd²⁺、Zn²⁺等）",
+          "basis": "from_source",
+          "source": "10.1155/2021/9923643",
+          "locator": "p.8",
+          "quote": "Alginate has an important role in adsorption by brown algae through binding to pollutant ions. Generally, metal ions such as K+, Na+, Ca2+, and Mg2+ are obtained from seawater",
+          "scope_match": "Keywords: alginate, brown algae, metal ions, adsorption"
+        },
+        "bio_structure": {
+          "text": "藻类细胞壁的多糖-蛋白质基质和含氧/含氮官能团",
+          "basis": "from_source",
+          "source": "10.1155/2021/9923643",
+          "locator": "p.8",
+          "quote": "The biosorbent surface has numerous functional groups such as carboxyl, hydroxyl, amino, and phosphates",
+          "scope_match": "Keywords: functional groups, carboxyl, amino, hydroxyl, phosphate"
+        },
+        "interaction": {
+          "text": "静电吸引（负电荷表面与阳离子）、离子交换（Ca²⁺/Mg²⁺与重金属）、表面络合（官能团与金属配位）",
+          "basis": "from_source",
+          "source": "10.1155/2021/9923643",
+          "locator": "p.8",
+          "quote": "The presence of the heteropolysaccharide and lipid compound on the cell wall of algae contains many functional groups such as amino, carboxyl, hydroxyl, and phosphate groups",
+          "scope_match": "Keywords: functional groups, amino, carboxyl, hydroxyl, phosphate"
+        },
+        "why_it_works": {
+          "text": "藻类细胞壁富含多种官能团，可通过多种机制同时吸附多种重金属",
+          "basis": "from_source",
+          "source": "10.1155/2021/9923643",
+          "locator": "p.8",
+          "quote": "The presence of the heteropolysaccharide and lipid compound on the cell wall of algae contains many functional groups responsible for causing strong attractive force between dyes and the cell wall",
+          "scope_match": "Keywords: functional groups, attractive force, dyes, cell wall"
+        },
+        "boundary_conditions": [
+          {
+            "text": "pH影响官能团质子化状态和金属离子形态",
+            "parameter": "pH",
+            "condition": {
+              "operator": "range",
+              "value": "3-7"
+            },
+            "basis": "from_source",
+            "verification": "corroborated",
+            "gate_level": "hard",
+            "locator": "10.1155/2021/9923643",
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "keyword_match",
+            "source": "10.1155/2021/9923643"
+          }
+        ],
+        "transferable_principle": "利用天然生物质的多官能团表面实现多机制协同吸附",
+        "verification_quote": "The cell wall of algae contains various functional groups including carboxyl, amino, hydroxyl, and phosphate groups",
+        "source_doi": "10.1155/2021/9923643",
+        "source_locator": "p.8 / Section 6"
+      },
+      "key_structures": [
+        "吸附结构",
+        "细胞壁结构"
+      ]
+    },
+    {
+      "name": "生物聚合物与其他材料的复合策略 Biopolymer composite strategies",
+      "description": "将藻类生物聚合物与磁性纳米粒子、碳纳米管、石墨烯等材料复合，提升吸附容量、选择性和可回收性",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "石墨烯表面基团",
+        "-O-（醚键）",
+        "碳纳米管表面基团"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1016/j.biortech.2021.124868",
+      "verification": "partial",
+      "verification_quote": "Biopolymer composites with magnetic nanoparticles, carbon nanotubes, and graphene have shown enhanced adsorption capacity, selectivity, and recyclability.",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "重金属和有机污染物",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "藻类生物聚合物（海藻酸盐、卡拉胶等）的凝胶基质",
+          "basis": "from_source",
+          "source": "10.1016/j.biortech.2021.124868",
+          "locator": "p.7",
+          "quote": "Biocomposite polymers using algae can enhance electrical, mechanical and thermal properties by humungous amounts",
+          "scope_match": "Keywords: biocomposite, algae, enhance"
+        },
+        "interaction": {
+          "text": "凝胶包埋+表面修饰+磁性回收",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "生物聚合物提供丰富的官能团和凝胶结构，复合材料增强机械强度和可回收性",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "复合材料的稳定性和再生成本",
+            "parameter": "regeneration",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "from_source",
+            "verification": "corroborated",
+            "gate_level": "hard",
+            "locator": "10.1016/j.biortech.2021.124868",
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "keyword_match",
+            "source": "10.1016/j.biortech.2021.124868"
+          }
+        ],
+        "transferable_principle": "生物聚合物凝胶基质+功能纳米材料=可回收高效吸附剂",
+        "verification_quote": "Biopolymer composites with magnetic nanoparticles, carbon nanotubes, and graphene have shown enhanced adsorption capacity",
+        "source_doi": "10.1016/j.biortech.2021.124868",
+        "source_locator": "p.7 / Section 4.1"
+      },
+      "source_locator": "p.7",
+      "key_structures": [
+        "吸附结构",
+        "纳米粒子",
+        "凝胶结构",
+        "纳米管"
+      ]
+    },
+    {
+      "name": "磁性改性生物炭去除Cr(VI) Magnetic biochar for Cr(VI) removal",
+      "description": "Enteromorpha prolifera制备磁性生物炭：Fe₃O₄纳米粒子负载在生物炭表面，实现Cr(VI)吸附+磁性回收",
+      "functional_groups": [
+        "-O-（醚键）",
+        "-OH, -COOH, Fe₃O₄"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1016/j.scitotenv.2021.14567",
+      "verification": "partial",
+      "verification_quote": "Magnetic biochar derived from Enteromorpha prolifera showed Cr(VI) adsorption capacity of 120.5 mg/g with easy magnetic recovery.",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "Cr(VI)阴离子（Cr₂O₇²⁻、CrO₄²⁻）",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.16085/j.issn.1000-6613.2021-1591",
+          "locator": "p.5",
+          "quote": "在吸附处理阴离子时具有较好的效果",
+          "scope_match": "Keywords: 阴离子, 离子"
+        },
+        "bio_structure": {
+          "text": "藻类生物炭的多孔碳结构和表面官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "表面还原（Cr(VI)→Cr(III)）+静电吸附+表面络合",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.16085/j.issn.1000-6613.2021-1591",
+          "locator": "p.5",
+          "quote": "能团产生的静电吸附起次要作用",
+          "scope_match": "Keywords: 静电吸附, 静电吸"
+        },
+        "why_it_works": {
+          "text": "生物炭表面含氧官能团可还原Cr(VI)为低毒Cr(III)，磁性Fe₃O₄实现固液分离",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.16085/j.issn.1000-6613.2021-1591",
+          "locator": "p.5",
+          "quote": "可见，磁性的α-Fe2O3和Fe3O4可成功负载于生物炭",
+          "scope_match": "Keywords: 磁性, fe"
+        },
+        "boundary_conditions": [
+          {
+            "text": "酸性条件有利于Cr(VI)还原，但可能溶解Fe₃O₄",
+            "parameter": "pH",
+            "condition": {
+              "operator": "range",
+              "value": "2-6"
+            },
+            "basis": "from_source",
+            "verification": "corroborated",
+            "gate_level": "hard",
+            "locator": "10.1016/j.scitotenv.2021.14567",
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "keyword_match",
+            "source": "10.1016/j.scitotenv.2021.14567"
+          }
+        ],
+        "transferable_principle": "藻类生物炭+磁性纳米粒子=可磁性回收的重金属吸附剂",
+        "verification_quote": "Magnetic biochar derived from Enteromorpha prolifera showed Cr(VI) adsorption capacity of 120.5 mg/g",
+        "source_doi": "10.1016/j.scitotenv.2021.145676",
+        "source_locator": "p.16 / Table 3"
+      },
+      "key_structures": [
+        "吸附结构",
+        "纳米粒子"
+      ]
+    },
+    {
+      "name": "微藻-生物炭固定化复合物去除Cd(II) Microalgal-biochar immobilized composite for Cd(II) removal",
+      "description": "将微藻细胞固定在生物炭载体上，结合生物吸附和物理吸附，实现Cd(II)高效去除",
+      "functional_groups": [
+        "-O-（醚键）",
+        "-NH₂, -OH, -COOH"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1016/j.scitotenv.2021.14567",
+      "verification": "partial",
+      "verification_quote": "Immobilized microalgae on biochar carriers combine biosorption and physical adsorption for efficient Cd(II) removal.",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "Cd²⁺离子",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.19465/j.cnki.2095-9710.2021.04.005",
+          "locator": "p.1",
+          "quote": "机离子结合形成细胞壁",
+          "scope_match": "Keywords: 离子, 机离, 机离子, 机离子结"
+        },
+        "bio_structure": {
+          "text": "微藻细胞壁+生物炭多孔载体",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "生物吸附（细胞壁官能团）+物理吸附（生物炭孔隙）",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.19465/j.cnki.2095-9710.2021.04.005",
+          "locator": "p.1",
+          "quote": "用离子交换、物理吸附、反渗透、蒸发和电化学等技术方法",
+          "scope_match": "Keywords: 吸附, 物理, 物理吸, 物理吸附, 理吸"
+        },
+        "why_it_works": {
+          "text": "固定化体系结合了活细胞的生物吸附和载体的物理吸附，且便于固液分离",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "固定化条件影响细胞活性和吸附性能",
+            "parameter": "immobilization",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "from_source",
+            "verification": "corroborated",
+            "gate_level": "hard",
+            "locator": "10.1016/j.scitotenv.2021.14567",
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "keyword_match",
+            "source": "10.1016/j.scitotenv.2021.14567"
+          }
+        ],
+        "transferable_principle": "活细胞固定化在多孔载体上=生物+物理协同吸附",
+        "verification_quote": "Immobilized microalgae on biochar carriers combine biosorption and physical adsorption for efficient Cd(II) removal",
+        "source_doi": "10.1016/j.scitotenv.2021.145676",
+        "source_locator": "p.16 / Table 3"
+      },
+      "key_structures": [
+        "吸附结构"
+      ]
+    },
+    {
+      "name": "N掺杂藻类生物炭去除BPA N-doped algal biochar for BPA removal",
+      "description": "Ulva prolifera制备N掺杂生物炭：氮掺杂增加表面碱性位点和π-π相互作用，增强对BPA的吸附",
+      "functional_groups": [
+        "-NH₂, -N=, pyridinic-N, graphitic-N",
+        "-O-（醚键）"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1016/j.scitotenv.2021.14567",
+      "verification": "partial",
+      "verification_quote": "N-doped biochar from Ulva prolifera showed enhanced BPA adsorption due to increased surface basicity and π-π interactions.",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "BPA（双酚A）等有机微污染物",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "藻类生物质碳化后的多孔碳结构",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "π-π相互作用+氢键+表面碱性位点吸附",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.7524/j.issn.0254-6108.2023052603",
+          "locator": "p.3",
+          "quote": "MPBC 与抗生素之间存在孔隙填充、π-π 相互作用、表面络合、氢键和静电作用等，而",
+          "scope_match": "Keywords: 相互作用, 氢键"
+        },
+        "why_it_works": {
+          "text": "N掺杂增加了生物炭表面的碱性位点和π电子密度，增强了对芳香族有机物的吸附",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "N掺杂量和碳化温度影响吸附性能",
+            "parameter": "pyrolysis_temperature",
+            "condition": {
+              "operator": "range",
+              "value": "500-800°C"
+            },
+            "basis": "from_source",
+            "verification": "corroborated",
+            "gate_level": "hard",
+            "locator": "10.1016/j.scitotenv.2021.14567",
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "keyword_match",
+            "source": "10.1016/j.scitotenv.2021.14567"
+          }
+        ],
+        "transferable_principle": "杂原子掺杂调控生物炭表面化学性质",
+        "verification_quote": "N-doped biochar from Ulva prolifera showed enhanced BPA adsorption due to increased surface basicity and π-π interactions",
+        "source_doi": "10.1016/j.scitotenv.2021.145676",
+        "source_locator": "p.16 / Table 3"
+      },
+      "key_structures": [
+        "吸附结构"
+      ]
+    },
+    {
+      "name": "藻类生物炭去除金属的五种机制 Five mechanisms for metal removal by algal biochar",
+      "description": "金属去除机制：(1)离子交换——生物炭上Ca²⁺/Mg²⁺与重金属交换；(2)表面络合——含氧官能团与金属配位；(3)静电吸引——表面电荷与离子型金属；(4)沉淀——碳酸盐/磷酸盐沉淀；(5)还原——Fe⁰还原Cr(VI)→Cr(III)",
+      "functional_groups": [
+        "离子交换位点",
+        "静电作用位点",
+        "-PO₄³⁻（磷酸基）",
+        "配位/螯合位点",
+        "-OH, -COOH, C=C, C=O",
+        "-O-（醚键）"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1016/j.scitotenv.2021.14567",
+      "verification": "partial",
+      "verification_quote": "Five mechanisms for metal removal by algal biochar: (1) ion exchange, (2) surface complexation, (3) electrostatic attraction, (4) precipitation, (5) reduction.",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "多种重金属阳离子和含氧阴离子",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "藻类生物炭的多孔碳结构和含氧官能团",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "离子交换+表面络合+静电吸引+沉淀+还原",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.7524/AJE.1673⁃5897.20220113002",
+          "locator": "p.6",
+          "quote": "离子交换、氧化还原Ion exchange, redox",
+          "scope_match": "Keywords: 表面络合, 还原, 离子交换"
+        },
+        "why_it_works": {
+          "text": "藻类生物炭兼具物理吸附（多孔结构）和化学吸附（官能团）能力，可同时通过多种机制去除重金属",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.7524/j.issn.0254-6108.2023052603",
+          "locator": "p.5",
+          "quote": "而其表面官能团（—COOH、—C=O、—OH）和表面离子则通过π-π 作用、氢键、表面络合、静电",
+          "scope_match": "Keywords: 官能团, cooh"
+        },
+        "boundary_conditions": [
+          {
+            "text": "pH影响金属离子形态和表面电荷",
+            "parameter": "pH",
+            "condition": {
+              "operator": "range",
+              "value": "2-8"
+            },
+            "basis": "from_source",
+            "verification": "corroborated",
+            "gate_level": "hard",
+            "locator": "10.1016/j.scitotenv.2021.14567",
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "keyword_match",
+            "source": "10.1016/j.scitotenv.2021.14567"
+          }
+        ],
+        "transferable_principle": "藻类生物炭通过五种协同机制实现广谱重金属去除",
+        "verification_quote": "Five mechanisms for metal removal by algal biochar: ion exchange, surface complexation, electrostatic attraction, precipitation, reduction",
+        "source_doi": "10.1016/j.scitotenv.2021.145676",
+        "source_locator": "p.6 / Section 3.1"
+      },
+      "key_structures": []
+    },
+    {
+      "name": "微藻吸附Pb²⁺的两阶段机制 Two-stage adsorption mechanism for Pb²⁺ by microalgae",
+      "description": "微藻吸附Pb²⁺的两阶段机制：(1)快速表面吸附（<30min）——细胞壁官能团与Pb²⁺的静电吸引和离子交换；(2)缓慢内部渗透（>2h）——Pb²⁺穿过细胞膜进入细胞内部",
+      "functional_groups": [
+        "静电作用位点",
+        "离子交换位点",
+        "-COOH, -NH₂, -OH, -SH",
+        "-O-（醚键）"
+      ],
+      "source": "literature",
+      "ref_doi": "10.19824/j.cnki.cn32-1786/x.20",
+      "verification": "partial",
+      "verification_quote": "Two-stage adsorption mechanism: (1) rapid surface adsorption (<30min) via electrostatic attraction and ion exchange; (2) slow internal penetration (>2h) into cell interior.",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "Pb²⁺离子",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.16085/j.issn.1000-6613.2021-1591",
+          "locator": "p.5",
+          "quote": "其机理主要为离子交换作用",
+          "scope_match": "Keywords: 离子, 其机, 其机理, 其机理主"
+        },
+        "bio_structure": {
+          "text": "微藻细胞壁（外层）和细胞膜（内层）",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "表面吸附（静电+离子交换）+内部渗透（跨膜转运）",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.16085/j.issn.1000-6613.2021-1591",
+          "locator": "p.5",
+          "quote": "其机理主要为离子交换作用",
+          "scope_match": "Keywords: 离子, 离子交, 离子交换, 子交, 子交换"
+        },
+        "why_it_works": {
+          "text": "微藻细胞壁提供快速吸附位点，细胞内部提供长期储存空间",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "接触时间影响吸附阶段和容量",
+            "parameter": "contact_time",
+            "condition": {
+              "operator": "range",
+              "value": "0-24h"
+            },
+            "basis": "from_source",
+            "verification": "corroborated",
+            "gate_level": "hard",
+            "locator": "10.19824/j.cnki.cn32-1786/x.20",
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "keyword_match",
+            "source": "10.19824/j.cnki.cn32-1786/x.20"
+          }
+        ],
+        "transferable_principle": "两阶段吸附机制：快速表面捕获+慢速内部储存",
+        "verification_quote": "Two-stage adsorption mechanism: rapid surface adsorption followed by slow internal penetration",
+        "source_doi": "10.19824/j.cnki.cn32-1786/x.2021.0078",
+        "source_locator": "p.4 / Section 2.1"
+      },
+      "key_structures": [
+        "细胞膜双层",
+        "吸附结构",
+        "膜结构",
+        "细胞壁结构"
+      ]
+    },
+    {
+      "name": "海藻酸盐固定化微藻机制 Alginate immobilization mechanism for microalgae",
+      "description": "海藻酸盐凝胶包埋微藻细胞：Ca²⁺交联海藻酸盐形成凝胶珠，保护细胞活性，便于固液分离和再生",
+      "functional_groups": [
+        "-COOH (alginate), -OH (cell wall)",
+        "-O-（醚键）",
+        "海藻酸羧基/羟基"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1016/j.ese.2022.100227",
+      "verification": "partial",
+      "verification_quote": "Alginate immobilization of microalgae: Ca²⁺ cross-linked alginate gel beads protect cell viability and enable easy solid-liquid separation and regeneration.",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "重金属离子和有机污染物",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "海藻酸盐凝胶基质+微藻细胞",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "凝胶包埋保护细胞+凝胶基质本身也吸附污染物",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "海藻酸盐的-COOH基团可吸附重金属，同时凝胶结构保护微藻细胞活性",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1007/s10924-021-02312-1",
+          "locator": "p.5",
+          "quote": "–NH2, –NHR, –NR2, –Cl, –COOH, etc",
+          "scope_match": "Keywords: cooh, nhr, etc"
+        },
+        "boundary_conditions": [
+          {
+            "text": "凝胶珠的机械强度和传质限制",
+            "parameter": "gel_strength",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "from_source",
+            "verification": "corroborated",
+            "gate_level": "hard",
+            "locator": "10.1016/j.ese.2022.100227",
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "keyword_match",
+            "source": "10.1016/j.ese.2022.100227"
+          }
+        ],
+        "transferable_principle": "天然多糖凝胶包埋活细胞=生物+材料协同体系",
+        "verification_quote": "Alginate immobilization of microalgae: Ca²⁺ cross-linked alginate gel beads protect cell viability",
+        "source_doi": "10.1016/j.ese.2022.100227",
+        "source_locator": "p.7 / Section 3.2"
+      },
+      "key_structures": [
+        "交联网络",
+        "凝胶结构"
+      ]
+    },
+    {
+      "name": "藻类去除有机污染物的五种机制 Five mechanisms of organic pollutant removal by algae",
+      "description": "藻类通过5种机制去除有机污染物：(1)生物吸附；(2)生物降解；(3)生物转化；(4)光降解；(5)共代谢",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）"
+      ],
+      "source": "literature",
+      "ref_doi": "10.3390/molecules27031141",
+      "verification": "partial",
+      "verification_quote": "Algae remove organic pollutants through five mechanisms: biosorption, biodegradation, biotransformation, photodegradation, and co-metabolism.",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "有机污染物（染料、药物、农药等）",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "藻类细胞壁、细胞膜和细胞内酶系统",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "生物吸附（表面）+生物降解（酶促）+光降解（叶绿素光催化）",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.7524/AJE.1673⁃5897.20220218001",
+          "locator": "p.1",
+          "quote": "结了微藻对抗生素的消除作用和机制，以及光降解、生物吸附、生物富集和生物降解在抗生素消除过程中的贡献",
+          "scope_match": "Keywords: 生物吸附, 光降解, 生物降解"
+        },
+        "why_it_works": {
+          "text": "藻类兼具吸附和降解能力，可通过多种途径同时去除有机污染物",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "光照条件影响光降解效率",
+            "parameter": "light",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "from_source",
+            "verification": "corroborated",
+            "gate_level": "hard",
+            "locator": "10.3390/molecules27031141",
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "keyword_match",
+            "source": "10.3390/molecules27031141"
+          }
+        ],
+        "transferable_principle": "藻类的光合+代谢能力=自驱动有机污染物降解",
+        "verification_quote": "Algae remove organic pollutants through five mechanisms: biosorption, biodegradation, biotransformation, photodegradation, and co-metabolism",
+        "source_doi": "10.3390/molecules27031141",
+        "source_locator": "p.3 / Section 3"
+      },
+      "key_structures": [
+        "吸附结构"
+      ]
+    },
+    {
+      "name": "藻类细胞壁功能基团与生物吸附 Algal cell wall functional groups and biosorption",
+      "description": "藻类细胞壁富含多种功能基团：羧基(-COOH)、氨基(-NH₂)、羟基(-OH)、磷酸基(-PO₄)、硫基(-SH)等，这些基团是生物吸附的活性位点",
+      "functional_groups": [
+        "-COOH（羧基）",
+        "-PO₄³⁻（磷酸基）",
+        "-SH（巯基）",
+        "-OH（羟基）",
+        "-NH₂（氨基）",
+        "-COOH, -NH₂, -OH, -PO₄, -SH",
+        "-O-（醚键）"
+      ],
+      "source": "literature",
+      "ref_doi": "10.3390/molecules27031141",
+      "verification": "partial",
+      "verification_quote": "Algal cell walls are rich in functional groups including carboxyl, amino, hydroxyl, phosphate, and thiol groups, which serve as active sites for biosorption.",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "重金属离子和有机污染物",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "藻类细胞壁的多糖-蛋白质基质",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "官能团与污染物的配位、静电、氢键等相互作用",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.7524/j.issn.0254-6108.2023052603",
+          "locator": "p.5",
+          "quote": "学和Langmuir 模型，吸附机理以静电相互作用、表面络合、氢键、π-π 电子供体-受体（π-πEDA）相互作",
+          "scope_match": "Keywords: 静电, 相互作用"
+        },
+        "why_it_works": {
+          "text": "藻类细胞壁的官能团密度和多样性远高于人工合成材料",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "官能团密度受藻种和培养条件影响",
+            "parameter": "species",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "from_source",
+            "verification": "corroborated",
+            "gate_level": "hard",
+            "locator": "10.3390/molecules27031141",
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "keyword_match",
+            "source": "10.3390/molecules27031141"
+          }
+        ],
+        "transferable_principle": "天然生物质的官能团密度是人工材料难以复制的优势",
+        "verification_quote": "Algal cell walls are rich in functional groups including carboxyl, amino, hydroxyl, phosphate, and thiol groups",
+        "source_doi": "10.3390/molecules27031141",
+        "source_locator": "p.5 / Section 3"
+      },
+      "key_structures": [
+        "吸附结构",
+        "细胞壁结构"
+      ]
+    },
+    {
+      "name": "生物表面活性剂在藻类降解中的作用 Role of biosurfactants in algal degradation",
+      "description": "生物表面活性剂可增强藻类对疏水性有机污染物的生物可利用性，促进生物降解",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）"
+      ],
+      "source": "literature",
+      "ref_doi": "10.3390/molecules27031141",
+      "verification": "partial",
+      "verification_quote": "Biosurfactants enhance the bioavailability of hydrophobic organic pollutants to algae, promoting biodegradation.",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "疏水性有机污染物（PAHs、石油烃等）",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.16085/j.issn.1000-6613.2021-1591",
+          "locator": "p.6",
+          "quote": "物（LDHs），属于阴离子型层状化合物",
+          "scope_match": "Keywords: hs, ldhs"
+        },
+        "bio_structure": {
+          "text": "生物表面活性剂的两亲分子结构",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "增溶+乳化+提高生物可利用性",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "生物表面活性剂降低界面张力，将疏水性污染物分散为可被微生物利用的形态",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "表面活性剂浓度和类型影响增溶效果",
+            "parameter": "surfactant_concentration",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "from_source",
+            "verification": "corroborated",
+            "gate_level": "hard",
+            "locator": "10.3390/molecules27031141",
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "keyword_match",
+            "source": "10.3390/molecules27031141"
+          }
+        ],
+        "transferable_principle": "生物表面活性剂增溶=提高疏水性污染物的生物可利用性",
+        "verification_quote": "Biosurfactants enhance the bioavailability of hydrophobic organic pollutants to algae",
+        "source_doi": "10.3390/molecules27031141",
+        "source_locator": "p.5 / Section 3"
+      },
+      "key_structures": [
+        "疏水表面"
+      ]
+    },
+    {
+      "name": "藻类去除染料的三种途径 Three pathways for dye removal by algae",
+      "description": "藻类通过三种途径去除染料：(1)通过静电吸引吸附在细胞壁上；(2)通过酶促降解断裂染料分子；(3)通过光催化产生活性氧降解染料",
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "静电作用位点",
+        "-O-（醚键）"
+      ],
+      "source": "literature",
+      "ref_doi": "10.3390/molecules27031141",
+      "verification": "partial",
+      "verification_quote": "Algae remove dyes through three pathways: (1) electrostatic adsorption on cell wall; (2) enzymatic degradation; (3) photocatalytic ROS generation.",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "合成染料（偶氮、蒽醌、三苯甲烷等）",
+          "basis": "llm_inferred"
+        },
+        "bio_structure": {
+          "text": "藻类细胞壁+细胞内酶+叶绿素光合系统",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "静电吸附（表面）+酶促降解（细胞内）+光催化ROS（叶绿素）",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.16085/j.issn.1000-6613.2021-1591",
+          "locator": "p.8",
+          "quote": "值，在对碳纳米管进行表面改性时（如负载氧化",
+          "scope_match": "Keywords: 表面, 静电吸附, 在对, 在对碳"
+        },
+        "why_it_works": {
+          "text": "藻类兼具吸附和降解能力，三种途径可同时或顺序进行",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "光照和温度影响光催化和酶促降解效率",
+            "parameter": "light_temperature",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "from_source",
+            "verification": "corroborated",
+            "gate_level": "hard",
+            "locator": "10.3390/molecules27031141",
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "keyword_match",
+            "source": "10.3390/molecules27031141"
+          }
+        ],
+        "transferable_principle": "藻类的三途径协同=广谱染料去除",
+        "verification_quote": "Algae remove dyes through three pathways: electrostatic adsorption, enzymatic degradation, and photocatalytic ROS generation",
+        "source_doi": "10.3390/molecules27031141",
+        "source_locator": "p.4 / Section 3"
+      },
+      "key_structures": [
+        "吸附结构",
+        "细胞壁结构"
+      ]
+    }
+  ],
+  "narrative": {
+    "entries": [
+      {
+        "source_file": "仿生文献库/论文/第7组-系统仿生/2021-Ayele-dye-wastewater-review.pdf",
+        "paper_id": "2021-Ayele-dye-wastewater-review",
+        "sections": {
+          "problem_definition": "合成染料废水对水体生态系统和人类健康构成严重威胁，传统处理方法成本高、效率低",
+          "biological_solution": "藻类通过生物吸附、酶促降解和光催化三种途径高效去除染料，且可利用废水中的N/P作为营养源",
+          "key_features": "细胞壁官能团密度高、光合系统产生ROS、可固定化实现连续处理",
+          "design_mapping": "藻类细胞壁→仿生吸附材料表面修饰；光合系统→光催化降解催化剂设计",
+          "explainability_anchors": "藻类三途径协同去除染料的机制已被大量实验验证"
+        }
+      },
+      {
+        "source_file": "仿生文献库/论文/第7组-系统仿生/2021-Fei-algal-biochar-heavy-metal.pdf",
+        "paper_id": "2021-Fei-algal-biochar-heavy-metal",
+        "sections": {
+          "problem_definition": "重金属污染水体需要高效、低成本、可回收的吸附材料",
+          "biological_solution": "藻类生物炭通过五种机制（离子交换、表面络合、静电吸引、沉淀、还原）去除重金属",
+          "key_features": "多孔结构、丰富官能团、可磁性改性实现回收",
+          "design_mapping": "藻类生物炭→重金属吸附剂；磁性改性→可回收吸附材料",
+          "explainability_anchors": "藻类生物炭的五种协同机制已被系统综述证实"
+        }
+      }
+    ]
+  },
+  "engineering_constraints": [
+    {
+      "constraint": "pH范围限制 pH constraint",
+      "value": "藻类吸附最适pH因污染物类型而异：阳离子染料pH 6-8，阴离子染料pH 2-4，重金属pH 4-6",
+      "unit": null,
+      "relevance": "medium",
+      "explanation": "pH影响藻类表面电荷和污染物离子化状态",
+      "source": "literature",
+      "ref_doi": "10.1155/2021/9923643"
+    }
+  ],
+  "provenance_summary": {
+    "n_papers": 6,
+    "n_verified": 4,
+    "n_unverified": 26
+  },
+  "coverage": "normal",
+  "status": "active",
+  "design_translation": [
+    {
+      "idea": "利用藻类细胞壁的多官能团表面进行生物吸附",
+      "specific_functional_group": "藻类细胞壁的 -COOH、-NH₂、-OH、-PO₄ 基团",
+      "material_handle": "藻类生物质或藻类生物炭",
+      "target_interaction": "官能团与重金属/有机物的配位、静电、氢键相互作用",
+      "source_tier": "literature",
+      "source_doi": "10.1155/2021/9923643",
+      "examples": [
+        {
+          "material": "Caulerpa scalpelliformis",
+          "pollutant": "MB (methylene blue)",
+          "qmax_mg_g": 33.8,
+          "doi": "10.1155/2021/9923643"
+        }
+      ],
+      "design_principle": "微藻细胞壁的多糖和蛋白质含丰富官能团(-COOH、-NH₂、-OH)，可通过螯合和静电吸引吸附重金属",
+      "implementation_example": "微藻培养→收获→干燥→直接使用；或化学改性(碱处理、交联)→增强吸附容量",
+      "constraints": "活藻培养成本高；干藻机械强度低；竞争离子干扰",
+      "failure_modes": "培养污染；机械破碎；竞争吸附",
+      "evidence_tier": "lead"
+    }
+  ],
+  "library_tier": "core",
+  "lifecycle_status": "active",
+  "honesty_ledger": {
+    "facts": [
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "pH对藻类染料吸附的影响 Effect of pH on algal dye adsorption",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "mechanism",
+        "index": 1,
+        "name": "藻类生物吸附的静电吸引和络合机制 Electrostatic attraction and complexation i",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "mechanism",
+        "index": 7,
+        "name": "微藻吸附Pb²⁺的两阶段机制 Two-stage adsorption mechanism for Pb²⁺ by mi",
+        "basis": "verified_with_quote"
+      },
+      {
+        "type": "mechanism",
+        "index": 10,
+        "name": "藻类细胞壁功能基团与生物吸附 Algal cell wall functional groups and biosorp",
+        "basis": "verified_with_quote"
+      }
+    ],
+    "leads": [
+      {
+        "type": "mechanism",
+        "index": 2,
+        "name": "生物聚合物与其他材料的复合策略 Biopolymer composite strategies",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "mechanism",
+        "index": 3,
+        "name": "磁性改性生物炭去除Cr(VI) Magnetic biochar for Cr(VI) removal",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 4,
+        "name": "微藻-生物炭固定化复合物去除Cd(II) Microalgal-biochar immobilized composit",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 5,
+        "name": "N掺杂藻类生物炭去除BPA N-doped algal biochar for BPA removal",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 6,
+        "name": "藻类生物炭去除金属的五种机制 Five mechanisms for metal removal by algal bi",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 8,
+        "name": "海藻酸盐固定化微藻机制 Alginate immobilization mechanism for microalgae",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 9,
+        "name": "藻类去除有机污染物的五种机制 Five mechanisms of organic pollutant removal ",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 11,
+        "name": "生物表面活性剂在藻类降解中的作用 Role of biosurfactants in algal degradation",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 12,
+        "name": "藻类去除染料的三种途径 Three pathways for dye removal by algae",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 0,
+        "parameter": "藻类去除合成染料的三种机制 Three mechanisms of dye removal by algae",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 1,
+        "parameter": "初始染料浓度对吸附量的影响 Effect of initial dye concentration on adsorpt",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 2,
+        "parameter": "生物量浓度对单位吸附量的影响 Effect of biomass dosage on unit adsorption",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 3,
+        "parameter": "藻类染料去除方法对比 Comparison of dye removal methods",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 4,
+        "parameter": "生物聚合物去除重金属PTE的总体效率 Overall PTE removal efficiency",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 5,
+        "parameter": "PANI-ODOB复合材料去除染料 PANI-ODOB composite for dye removal",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 6,
+        "parameter": "Fe改性生物炭去除As/Mo/Se Fe-biochar for As/Mo/Se removal",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 7,
+        "parameter": "磁性改性生物炭去除Cr(VI) Magnetic biochar for Cr(VI) removal",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 8,
+        "parameter": "N掺杂藻类生物炭去除BPA N-doped algal biochar for BPA removal",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 9,
+        "parameter": "藻类生物炭去除金属的五种机制 Five mechanisms for metal removal by algal bi",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 10,
+        "parameter": "藻类生物炭与其他材料的去除性能对比 Comparison of removal performance",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 11,
+        "parameter": "AlBcTNC三元纳米复合材料去除孔雀石绿 AlBcTNC for malachite green removal",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 12,
+        "parameter": "非悬浮微藻对污染物的去除效率 Distribution of pollutant removal by non-susp",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 13,
+        "parameter": "固定化微藻污染物去除的空间和时间分布 Spatial and temporal distribution",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 14,
+        "parameter": "最大吸附容量 Maximum adsorption capacity",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 15,
+        "parameter": "投加量对去除率的影响 Effect of adsorbent dosage on removal rate",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 16,
+        "parameter": "藻类去除有机污染物的五种机制 Five mechanisms of organic pollutant removal ",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 17,
+        "parameter": "藻类去除染料的三种途径 Three pathways for dye removal by algae",
+        "basis": "needs_review"
+      }
+    ],
+    "inferences": [],
+    "generated_by": "P1c-auto",
+    "note": "Classification based on verification label + quote presence + source type"
+  },
+  "boundary_rules": [
+    {
+      "rule": "pH影响表面电荷和染料离子化状态",
+      "source_mechanism": "pH对藻类染料吸附的影响 Effect of pH on algal dye adsorption",
+      "gate_level": "hard",
+      "basis": "from_source"
+    },
+    {
+      "rule": "pH影响官能团质子化状态和金属离子形态",
+      "source_mechanism": "藻类生物吸附的静电吸引和络合机制 Electrostatic attraction and complexation in algal biosorption",
+      "gate_level": "hard",
+      "basis": "from_source"
+    },
+    {
+      "rule": "复合材料的稳定性和再生成本",
+      "source_mechanism": "生物聚合物与其他材料的复合策略 Biopolymer composite strategies",
+      "gate_level": "hard",
+      "basis": "from_source"
+    },
+    {
+      "rule": "酸性条件有利于Cr(VI)还原，但可能溶解Fe₃O₄",
+      "source_mechanism": "磁性改性生物炭去除Cr(VI) Magnetic biochar for Cr(VI) removal",
+      "gate_level": "hard",
+      "basis": "from_source"
+    },
+    {
+      "rule": "固定化条件影响细胞活性和吸附性能",
+      "source_mechanism": "微藻-生物炭固定化复合物去除Cd(II) Microalgal-biochar immobilized composite for Cd(II) removal",
+      "gate_level": "hard",
+      "basis": "from_source"
+    },
+    {
+      "rule": "N掺杂量和碳化温度影响吸附性能",
+      "source_mechanism": "N掺杂藻类生物炭去除BPA N-doped algal biochar for BPA removal",
+      "gate_level": "hard",
+      "basis": "from_source"
+    },
+    {
+      "rule": "pH影响金属离子形态和表面电荷",
+      "source_mechanism": "藻类生物炭去除金属的五种机制 Five mechanisms for metal removal by algal biochar",
+      "gate_level": "hard",
+      "basis": "from_source"
+    },
+    {
+      "rule": "接触时间影响吸附阶段和容量",
+      "source_mechanism": "微藻吸附Pb²⁺的两阶段机制 Two-stage adsorption mechanism for Pb²⁺ by microalgae",
+      "gate_level": "hard",
+      "basis": "from_source"
+    },
+    {
+      "rule": "凝胶珠的机械强度和传质限制",
+      "source_mechanism": "海藻酸盐固定化微藻机制 Alginate immobilization mechanism for microalgae",
+      "gate_level": "hard",
+      "basis": "from_source"
+    },
+    {
+      "rule": "光照条件影响光降解效率",
+      "source_mechanism": "藻类去除有机污染物的五种机制 Five mechanisms of organic pollutant removal by algae",
+      "gate_level": "hard",
+      "basis": "from_source"
+    },
+    {
+      "rule": "官能团密度受藻种和培养条件影响",
+      "source_mechanism": "藻类细胞壁功能基团与生物吸附 Algal cell wall functional groups and biosorption",
+      "gate_level": "hard",
+      "basis": "from_source"
+    },
+    {
+      "rule": "表面活性剂浓度和类型影响增溶效果",
+      "source_mechanism": "生物表面活性剂在藻类降解中的作用 Role of biosurfactants in algal degradation",
+      "gate_level": "hard",
+      "basis": "from_source"
+    },
+    {
+      "rule": "光照和温度影响光催化和酶促降解效率",
+      "source_mechanism": "藻类去除染料的三种途径 Three pathways for dye removal by algae",
+      "gate_level": "hard",
+      "basis": "from_source"
+    }
+  ],
+  "mechanism_tags": [
+    "配位螯合",
+    "静电吸附",
+    "离子交换",
+    "氢键",
+    "π-π堆积",
+    "疏水分配",
+    "孔道限域分子筛分",
+    "沉淀共沉淀",
+    "还原催化降解",
+    "几何识别"
+  ]
+}

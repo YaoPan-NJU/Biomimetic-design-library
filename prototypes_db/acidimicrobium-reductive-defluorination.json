@@ -1,0 +1,353 @@
+{
+ "id": "acidimicrobium-reductive-defluorination",
+ "name_zh": "Acidimicrobium sp. A6 还原脱氟微生物原型",
+ "name_en": "Acidimicrobium sp. Strain A6 Reductive Defluorination Prototype",
+ "organism": {
+  "scientific": "Acidimicrobium sp. strain A6（铁还原偶联铵氧化自养菌，Feammox；可还原脱氟）；结构先例还原脱卤酶来自 Nitratireductor pacificus pht-3B（PDB 4RAS）",
+  "category": "微生物"
+ },
+ "biomimetic_dimension": "分子仿生",
+ "features": [
+  "催化降解"
+ ],
+ "tested_conditions": {
+  "tested_ph_range": null,
+  "tested_temp_range": null,
+  "salinity": null,
+  "note": "Acidimicrobium sp. A6 为还原脱氟微生物原型（降解/转化类），本库无其吸附性能测试条件；performance_data 一律为空，故吸附测试条件全空。原文记录的是纯培养与富集培养在厌氧还原条件下的脱氟活性，非吸附剂性能。"
+ },
+ "library_tier": "extended",
+ "lifecycle_status": "active",
+ "coverage": "partial",
+ "status": "active",
+ "provenance_summary": {
+  "n_papers": 2,
+  "n_verified": 9,
+  "n_unverified": 0,
+  "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与硬边界条数（ACDM-001 四要素+2 硬边界=6，ACDM-002 三要素=3）。机制接地限于 A6 在厌氧还原条件下对 PFOA/PFOS 的还原脱氟现象（Huang & Jaffe 2019 ES&T，PMID 31529965 摘要逐字 quote）与 B12 依赖型还原脱卤酶结构先例（PDB 4RAS / Payne 2015 Nature）。A6 自身执行 C-F 键断裂的具体酶尚未鉴定/表征（结构 llm_inferred）；PFAS 人工还原脱氟材料为设计转译（llm_inferred/inspiration），无性能数据。quote 取自 PubMed 摘要与 RCSB 沉积记录/题录（可核验），未做全文 PDF 审计。"
+ },
+ "mechanisms": [
+  {
+   "mechanism_id": "ACDM-001",
+   "name": "厌氧还原条件下 Acidimicrobium sp. A6 对 PFOA/PFOS 的还原脱氟",
+   "description": "Acidimicrobium sp. strain A6（一种以铁还原偶联铵氧化的化能自养菌，可营 Feammox）在厌氧还原条件下可将 PFOA 与 PFOS 还原脱氟：孵育体系中观察到氟离子累积、更短链全氟化产物与乙酸的生成，以及单位铵氧化所还原 Fe(III) 的下降；以氢为唯一电子供体时同样发生脱氟。该过程与铁还原偶联，以铵或氢为电子供体。执行 C-F 键断裂的具体酶在 A6 中尚未被鉴定/表征",
+   "基本原理": "在厌氧低氧化还原电位条件下，以末端电子受体（Fe(III)）为电子汇、以电子供体（铵经 Feammox 或氢）提供还原当量，可向全氟烷基 C-F 键提供电子并使其还原断裂、以氟离子形式释放氟；这是自然界少数能攻击全氟烷基 C-F 键的微生物过程之一，但其分子机制（具体酶与电子传递链）尚未阐明",
+   "source": "literature",
+   "ref_doi": "10.1021/acs.est.9b04047",
+   "verification": "verified",
+   "verification_quote": "Buildup of fluoride, shorter-chain perfluorinated products, and acetate was observed",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "全氟辛酸 PFOA 与全氟辛烷磺酸 PFOS（全氟烷基 C-F 键构成的持久性有机污染物）；Huang & Jaffe 2019 以 0.1 mg/L 与 100 mg/L 两浓度对 A6 孵育 PFOA 或 PFOS，观察其还原脱氟",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1021/acs.est.9b04047",
+     "locator": "title, p.11410",
+     "quote": "Defluorination of Perfluorooctanoic Acid (PFOA) and Perfluorooctane Sulfonate (PFOS) by Acidimicrobium sp. Strain A6",
+     "scope_match": "Keywords: defluorination, PFOA, PFOS, Acidimicrobium"
+    },
+    "bio_structure": {
+     "text": "Acidimicrobium sp. strain A6 为一种化能自养菌，可在还原三价铁的同时将铵氧化为亚硝酸盐（Feammox）；其脱氟活性与铁还原过程关联。原文未鉴定执行 C-F 键断裂的具体酶，A6 脱氟的分子结构基础属 llm_inferred（未表征）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1021/acs.est.9b04047",
+     "locator": "abstract, p.11410",
+     "quote": "an autotroph that oxidizes ammonium to nitrite while reducing ferric iron",
+     "scope_match": "Keywords: autotroph, ammonium, ferric, reducing"
+    },
+    "interaction": {
+     "text": "A6 孵育 PFOA/PFOS 时观察到氟离子累积、更短链全氟化产物与乙酸生成，以及单位铵氧化所还原 Fe(III) 下降；即以氟离子释放与短链全氟产物为表征的 C-F 键还原断裂，并与铁还原过程相偶联",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1021/acs.est.9b04047",
+     "locator": "abstract, p.11410",
+     "quote": "Buildup of fluoride, shorter-chain perfluorinated products, and acetate was observed",
+     "scope_match": "Keywords: fluoride, shorter-chain, perfluorinated, products"
+    },
+    "why_it_works": {
+     "text": "A6 可在还原铁的同时以铵或氢为电子供体对 PFOA/PFOS 脱氟，表明还原脱氟由低氧化还原电位下的电子供体驱动、以铁还原为末端电子汇；具体电子传递与催化位点尚未阐明（机制细节 llm_inferred）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1021/acs.est.9b04047",
+     "locator": "abstract, p.11410",
+     "quote": "A6 can defluorinate PFOA/PFOS while reducing iron, using ammonium or hydrogen as the electron donor",
+     "scope_match": "Keywords: defluorinate, reducing, iron, ammonium, hydrogen, electron"
+    },
+    "boundary_conditions": [
+     {
+      "text": "电子供体/还原条件门控：脱氟依赖厌氧还原条件与电子供体；以氢为唯一电子供体时同样发生 PFOA/PFOS 脱氟，并经铁还原偶联（缺电子供体或非还原条件则过程不成立）",
+      "parameter": "electron_donor",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "abstract, p.11410",
+      "quote": "Incubations with hydrogen as a sole electron donor also resulted in the defluorination of these PFAS",
+      "scope_match": "Keywords: hydrogen, electron, donor, defluorination, PFAS",
+      "source_asset": null
+     },
+     {
+      "text": "效率/动力学边界：天然 A6 体系脱氟缓慢且不完全，百日尺度孵育仅观察到 PFOA 与 PFOS 至多约六成被去除，全氟碳骨架未被完全矿化（生成更短链全氟产物）；不构成高效降解方案",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "abstract, p.11410",
+      "quote": "Removal of up to 60% of PFOA and PFOS was observed during 100 day incubations",
+      "scope_match": "Keywords: removal, PFOA, PFOS, incubations",
+      "source_asset": null
+     },
+     {
+      "text": "酶未表征边界：A6 中执行 C-F 键断裂的具体酶尚未鉴定/表征，无法在分子层面直接复制；向人工材料的转译限于原理层，须实验验证（定性，无数值阈值）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "在厌氧低氧化还原电位下，以末端电子受体（如 Fe(III)）为电子汇、以电子供体（铵或氢）驱动还原当量，可使全氟烷基 C-F 键还原断裂并以氟离子释放氟；该还原脱氟原理原则上可迁移到人工还原体系，但天然体系效率低、酶未表征，C-F 键断裂属高能垒过程",
+    "verification_quote": "Buildup of fluoride, shorter-chain perfluorinated products, and acetate was observed"
+   },
+   "source_doi": "10.1021/acs.est.9b04047",
+   "source_page": 11410,
+   "source_locator": "title/abstract, p.11410",
+   "source_file": "Environ Sci Technol 53(19):11410-11419（Huang & Jaffe 2019；PubMed PMID 31529965 摘要逐字接地，未做本地全文 PDF 审计）",
+   "functional_groups": [
+    "低氧化还原电位还原中心（与铁还原偶联，具体酶未表征）",
+    "电子供体（铵经 Feammox / 氢）",
+    "末端电子受体（Fe(III)）"
+   ],
+   "key_structures": [
+    "降解/转化结构（酶未表征，原理层）"
+   ]
+  },
+  {
+   "mechanism_id": "ACDM-002",
+   "name": "B12（咕啉）依赖型还原脱卤酶作为还原性碳-卤键断裂的结构先例",
+   "description": "Nitratireductor pacificus pht-3B 来源的还原脱卤酶（PDB 4RAS，Payne 2015 Nature）含咕啉（维生素 B12）辅因子与铁硫簇，其结构提示 B12 依赖型脱卤的机制，为还原性碳-卤键断裂提供了结构生物学先例。该酶属有机卤化物呼吸的还原脱卤酶（作用对象为卤代烃，非全氟烷基 C-F 键脱氟酶），在此仅作为还原脱卤化学原理的结构先例，并非 Acidimicrobium sp. A6 自身的脱氟酶",
+   "基本原理": "低电位的咕啉（Co-咕啉）辅基配合铁硫电子中继，可在还原条件下介导碳-卤键的还原断裂；这一还原脱卤化学为理解 A6 等微生物还原脱氟可能涉及的辅因子化学提供结构先例，但 C-F 键键能远高于 C-Cl，向全氟烷基 C-F 键的外推属原理层",
+   "source": "literature",
+   "ref_doi": "10.1038/nature13901",
+   "verification": "corroborated",
+   "verification_quote": "Reductive dehalogenase structure suggests a mechanism for B12-dependent dehalogenation",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "卤代有机底物（还原脱卤酶的天然底物为有机卤化物，如卤代烃）；与全氟烷基 C-F 键同属碳-卤键，但 C-F 键键能显著高于该酶所作用的较重卤素碳-卤键",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/nature13901",
+     "locator": "PDB 4RAS / p.513",
+     "quote": "Reductive dehalogenase structure suggests a mechanism for B12-dependent dehalogenation",
+     "scope_match": "Keywords: reductive, dehalogenase, B12, dehalogenation"
+    },
+    "bio_structure": {
+     "text": "PDB 4RAS 为还原脱卤酶（77.4 kDa），含咕啉（维生素 B12）辅因子与铁硫簇（RCSB 非聚合物实体记 COBALAMIN 与 IRON/SULFUR CLUSTER）；KEYWDS 记 cobalamin-binding、iron sulfur binding、Reductive dehalogenase",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/nature13901",
+     "locator": "PDB 4RAS, KEYWDS / p.513",
+     "quote": "ferrodoxin and cobalamin-binding domain, Reductive dehalogenase, iron sulfur binding, cobalamin binding, OXIDOREDUCTASE",
+     "scope_match": "Keywords: cobalamin, Reductive dehalogenase, iron sulfur, binding"
+    },
+    "interaction": {
+     "text": "该结构提示 B12 依赖型脱卤的机制，即咕啉（Co-咕啉）辅因子参与还原性脱卤（PDB 4RAS 含 COBALAMIN 辅基，作用于有机卤化物）；具体基元步骤（如低价钴的亲核/内层电子转移）为机制推断（llm_inferred）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/nature13901",
+     "locator": "PDB 4RAS / p.513",
+     "quote": "Reductive dehalogenase structure suggests a mechanism for B12-dependent dehalogenation",
+     "scope_match": "Keywords: B12, dehalogenation, reductive, dehalogenase"
+    },
+    "why_it_works": {
+     "text": "咕啉辅因子在低电位下可经钴中心介导还原性碳-卤键断裂，铁硫簇承担电子中继；该还原脱卤化学为还原脱氟可能的辅因子化学提供先例，但 C-F 键键能远高于 C-Cl，向全氟烷基 C-F 键的外推及具体氧化还原理据属机理层推断（llm_inferred）",
+     "basis": "llm_inferred"
+    },
+    "boundary_conditions": [
+     {
+      "text": "先例适用域边界：4RAS 表征的是有机卤化物（较重卤素碳-卤键，如 C-Cl）还原脱卤的 B12 依赖型机制，未被表征为全氟烷基 C-F 键脱氟酶，亦非 Acidimicrobium sp. A6 自身脱氟酶；C-F 键键能显著更高，向 C-F 脱氟迁移属原理层（定性）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "低电位咕啉（B12）辅基配合铁硫电子中继可介导还原性碳-卤键断裂；该还原脱卤化学为还原脱氟的辅因子化学提供结构先例，但向高键能 C-F 键的外推属原理层，须实验验证",
+    "verification_quote": "Reductive dehalogenase structure suggests a mechanism for B12-dependent dehalogenation"
+   },
+   "source_doi": "10.1038/nature13901",
+   "source_page": 513,
+   "source_locator": "PDB 4RAS / p.513",
+   "source_file": "PDB 4RAS（RCSB 沉积数据：TITLE/KEYWDS/非聚合物实体 COBALAMIN 与 IRON/SULFUR CLUSTER）+ Nature 517:513-516（Payne 2015，PMID 25327251 题录；未做本地全文 PDF 审计）",
+   "functional_groups": [
+    "咕啉（维生素 B12 / Co-咕啉）辅因子",
+    "铁硫簇（电子中继）"
+   ],
+   "key_structures": [
+    "降解/转化结构（还原脱卤酶，结构先例）"
+   ]
+  }
+ ],
+ "performance_data": [],
+ "engineering_constraints": [
+  {
+   "constraint": "严格厌氧/还原条件与电子供体依赖",
+   "value": "A6 还原脱氟须在厌氧还原条件下进行，以铁还原为末端电子汇、以铵（经 Feammox）或氢为电子供体；脱离该还原偶联则脱氟不成立",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "Huang & Jaffe 2019 摘要：'A6 can defluorinate PFOA/PFOS while reducing iron, using ammonium or hydrogen as the electron donor'；以氢为唯一电子供体亦发生脱氟",
+   "source": "literature",
+   "ref_doi": "10.1021/acs.est.9b04047"
+  },
+  {
+   "constraint": "低效率与慢动力学",
+   "value": "天然 A6 体系对 PFOA/PFOS 的脱氟缓慢且不完全：百日尺度孵育仅观察到至多约六成去除，并停留在更短链全氟产物，未完全矿化；不构成高效降解方案",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "Huang & Jaffe 2019 摘要：'Removal of up to 60% of PFOA and PFOS was observed during 100 day incubations'（原文现象记录，非吸附剂性能；performance_data 仍为空）",
+   "source": "literature",
+   "ref_doi": "10.1021/acs.est.9b04047"
+  },
+  {
+   "constraint": "脱氟酶未表征，转译限原理层",
+   "value": "A6 中执行 C-F 键断裂的具体酶尚未鉴定/表征，B12 依赖型还原脱卤酶（PDB 4RAS）仅为有机卤化物还原脱卤的结构先例，非 A6 脱氟酶；仿生还原脱氟材料转译限于原理层，须实验验证",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（基于原文未鉴定脱氟酶与 4RAS 还原脱卤先例的事实外推）",
+   "source": "llm_inference",
+   "ref_doi": null
+  }
+ ],
+ "narrative": {
+  "entries": [
+   {
+    "source_file": "Environ Sci Technol 53(19):11410-11419（Huang & Jaffe 2019，DOI 10.1021/acs.est.9b04047，PMID 31529965）+ PDB 4RAS / Nature 517:513-516（Payne 2015，DOI 10.1038/nature13901）",
+    "paper_id": "2019-Huang-Jaffe-Acidimicrobium-A6-reductive-defluorination",
+    "sections": {
+     "problem_definition": "PFOA 与 PFOS 等全氟烷基物质因全氟碳骨架极难被破坏而在环境中高度持久，常规处理难以断裂其 C-F 键。自然界是否存在能攻击全氟烷基 C-F 键的生物过程，是 PFAS 去除的基础问题。Acidimicrobium sp. strain A6 是一种可营 Feammox（铁还原偶联铵氧化）的化能自养菌，被发现可在厌氧还原条件下对 PFOA/PFOS 还原脱氟，属降解/转化类生物原型，而非吸附识别类原型。",
+     "biological_solution": "Huang & Jaffe（2019）以 A6 纯培养与富集培养在 0.1 与 100 mg/L 两浓度孵育 PFOA 或 PFOS：观察到氟离子累积、更短链全氟化产物与乙酸生成，以及单位铵氧化所还原 Fe(III) 的下降；以氢为唯一电子供体时同样发生脱氟。百日孵育中 PFOA/PFOS 至多约六成被去除，期间总氟（有机氟加氟离子）守恒，证明发生了还原性 C-F 键断裂而非单纯吸附。A6 在还原铁的同时以铵或氢为电子供体完成脱氟。需明确：执行 C-F 键断裂的具体酶在 A6 中尚未被鉴定/表征。作为还原脱卤化学的结构先例，Nitratireductor pacificus pht-3B 来源的还原脱卤酶（PDB 4RAS，Payne 2015）含咕啉（维生素 B12）辅因子与铁硫簇，其结构提示 B12 依赖型脱卤机制；该酶作用于有机卤化物（较重卤素碳-卤键），并非全氟烷基 C-F 脱氟酶，亦非 A6 自身脱氟酶，仅作为还原脱卤化学原理的结构先例。",
+     "key_features": "必须保留：① 厌氧低氧化还原电位微环境；② 电子供体（铵经 Feammox 或氢）与末端电子受体（Fe(III)）的还原偶联；③ 可介导还原性碳-卤键断裂的低电位辅因子化学（咕啉/B12 类，先例层）。可灵活调整：载体/反应器形态、电子供体供给方式、还原性矿物或人工还原剂、辅因子/催化剂固定化方式。",
+     "design_mapping": "仿生映射：A6 的'厌氧还原微环境 + 电子供体/铁还原偶联 + 还原性辅因子化学'→ 面向 PFAS 还原脱氟降解的原理框架。边界声明：这是设计转译/启发（llm_inferred），非 from_source 事实，A6 脱氟效率低（百日约六成、不完全）、C-F 键键能远高于 C-Cl、A6 脱氟酶未表征；蛋白/菌体本身不可直接复制为材料，只提取还原脱氟的设计原则，且无任何材料脱氟性能数据。",
+     "explainability_anchors": "设计溯源：A6 厌氧还原脱氟现象（氟离子累积+短链全氟产物，Huang & Jaffe 2019，from_source）→ B12 依赖型还原脱卤酶结构先例（PDB 4RAS，from_source）→ '厌氧低电位 + 电子供体/末端受体偶联 + 还原性辅因子化学'可迁移原理 → PFAS 人工还原脱氟材料（llm_inferred 启发，须实验验证）。"
+    }
+   }
+  ]
+ },
+ "design_translation": [
+  {
+   "idea": "将 A6 的'厌氧低氧化还原电位微环境 + 电子供体/铁还原偶联 + 还原性辅因子化学'三要素移植到人工体系，面向 PFOA/PFOS 还原脱氟降解：在严格厌氧还原微环境中以低电位电子供体（类咕啉/维生素 B12 仿生还原中心、还原态矿物/零价金属、或光生/水合电子等还原体系）配合末端电子受体（Fe(III) 或矿物电子汇），驱动全氟烷基 C-F 键还原断裂并以氟离子释放氟",
+   "specific_functional_group": "低电位还原中心/电子供体（还原态咕啉/钴胺素仿生位点、还原态铁/矿物表面、零价金属、光催化或水合电子供体）+ 末端电子受体中继（Fe(III)/矿物）",
+   "material_handle": "在厌氧反应器或还原性矿物/电极/光催化骨架上构建并维持低电位还原位点，固定化类咕啉辅因子或还原态金属中心，配套电子供体供给与 Fe(III)/矿物电子汇；以还原电位与电子通量为调控变量",
+   "target_interaction": "低电位还原当量向全氟烷基 C-F 键 σ* 的电子转移，使 C-F 键还原断裂、以氟离子形式释放氟（还原脱氟），短链全氟产物为中间步骤",
+   "source_tier": "llm_inference",
+   "evidence_tier": "inspiration（原理层外推：A6 厌氧还原脱氟现象接地于 Huang & Jaffe 2019 ES&T；B12 依赖型还原脱卤酶结构接地于 PDB 4RAS / Payne 2015 Nature；将其转译为人工还原脱氟材料为 llm_inferred，无材料脱氟性能数据）",
+   "examples": [],
+   "design_principle": "A6 证明厌氧低氧化还原电位下、以铁还原为末端电子汇、以铵/氢为电子供体的还原体系可断裂 PFOA/PFOS 的 C-F 键并释放氟离子（Huang & Jaffe 2019）；还原脱卤酶（PDB 4RAS）表明低电位咕啉辅因子可介导还原性碳-卤键断裂，二者共同支撑'还原电位 + 电子供体/受体偶联 + 还原性辅因子化学'的还原脱氟原理，原则上可迁移到人工体系",
+   "implementation_example": "厌氧条件下类咕啉/还原态矿物/零价金属或光生电子还原体系，配合 Fe(III)/矿物电子汇的 PFAS 还原脱氟反应器（无实验数据，仅为设计假设）",
+   "constraints": "C-F 键是有机化学中最强的单键之一，键能显著高于 C-Cl，非生物还原脱氟能垒高、速率慢；天然 A6 仅百日约六成去除且不完全矿化；A6 脱氟酶未表征，无法在分子层面直接复制；电子供体的持续供给、严格厌氧还原条件的维持、对目标 PFAS 的选择性以及与竞争还原反应的耦合是关键挑战；转译限原理层",
+   "failure_modes": "还原电位不足无法断裂 C-F 键；氧气或氧化性条件淬灭还原当量；还原非选择性导致电子浪费；脱氟停滞于更短链全氟中间体（不完全矿化、二次污染）；氟离子再结合或副反应；辅因子/还原中心失活",
+   "material_realization_examples": []
+  }
+ ],
+ "honesty_ledger": {
+  "facts": [
+   {
+    "type": "mechanism",
+    "index": 0,
+    "name": "厌氧还原条件下 Acidimicrobium sp. A6 对 PFOA/PFOS 的还原脱氟",
+    "basis": "from_source_verified",
+    "note": "Huang & Jaffe 2019 ES&T 53(19):11410-11419（PMID 31529965）摘要逐字 quote：氟离子累积+更短链全氟产物+乙酸生成；以氢为唯一电子供体亦脱氟；百日至多约六成去除、总氟守恒；以铵/氢为电子供体并与铁还原偶联。原文未鉴定执行 C-F 断裂的具体酶（该点如实标注）。quote 取自 PubMed 摘要（可核验），未做全文 PDF 审计"
+   },
+   {
+    "type": "mechanism",
+    "index": 1,
+    "name": "B12（咕啉）依赖型还原脱卤酶作为还原性碳-卤键断裂的结构先例",
+    "basis": "from_source_corroborated",
+    "note": "PDB 4RAS（RCSB 沉积记录：TITLE 'Reductive dehalogenase structure suggests a mechanism for B12-dependent dehalogenation'；KEYWDS 含 cobalamin binding / iron sulfur binding / Reductive dehalogenase；非聚合物实体 COBALAMIN 与 IRON/SULFUR CLUSTER）+ Payne 2015 Nature 517:513-516（PMID 25327251）。来源菌为 Nitratireductor pacificus pht-3B，非 Acidimicrobium；该酶为有机卤化物还原脱卤酶，非 PFAS C-F 脱氟酶，仅作结构先例"
+   }
+  ],
+  "leads": [],
+  "inferences": [
+   {
+    "type": "design_translation",
+    "index": 0,
+    "idea": "将 A6 厌氧还原脱氟的'低电位微环境 + 电子供体/铁还原偶联 + 还原性辅因子化学'移植到人工体系以还原脱氟 PFOA/PFOS",
+    "basis": "llm_inferred",
+    "label": "inspiration",
+    "note": "A6 脱氟效率低（百日约六成、不完全）、C-F 键键能远高于 C-Cl、脱氟酶未表征；转译为人工还原脱氟材料属原理层外推，无任何材料脱氟性能数据，效率与可行性须实验验证"
+   },
+   {
+    "type": "mechanism_detail",
+    "index": 0,
+    "name": "ACDM-002 还原脱卤酶的具体基元步骤（低价钴亲核/内层电子转移）与氧化还原理据，及向高键能 C-F 键的外推",
+    "basis": "llm_inferred",
+    "label": "mechanism_inference",
+    "note": "4RAS 结构仅'提示'B12 依赖型脱卤机制，未给出 C-F 断裂理据；C-F 与 C-Cl 键能差异及向 C-F 的迁移为机理层推断"
+   }
+  ],
+  "boundary_notes": [
+   "本原型为降解/转化类（微生物还原脱氟），非分子识别/吸附类；performance_data 一律为空，原文脱氟活性记录不作为吸附剂性能",
+   "机制 from_source 接地限于 A6 在厌氧还原条件下对 PFOA/PFOS 的还原脱氟现象（Huang & Jaffe 2019）与 B12 依赖型还原脱卤酶结构先例（PDB 4RAS / Payne 2015）",
+   "A6 自身执行 C-F 键断裂的具体酶尚未鉴定/表征，相关结构基础为 llm_inferred；B12 还原脱卤酶（4RAS）来源菌为 Nitratireductor pacificus，非 A6，亦非 PFAS C-F 脱氟酶",
+   "PFAS 人工还原脱氟材料转译为 design_translation（llm_inferred/inspiration），不得用作 PFAS 脱氟去除的 direct evidence",
+   "无 PFAS 脱氟去除性能数据（去除率/速率等）；严格未从姊妹项目 biomimetic-adsorbent-design 的污染物知识库搬运任何性能数值（知识隔离红线）；原文'百日约六成去除'仅作为天然体系效率/动力学的边界条件与工程约束（原文现象），未入 performance_data",
+   "天然体系效率低（百日约六成、不完全矿化）、C-F 键键能高，一切相关边界为定性或原文现象记录，转译层无数值阈值"
+  ],
+  "missing_pdf_items": [
+   "Huang & Jaffe 2019 ES&T 全文 PDF（quote 取自 PubMed PMID 31529965 摘要；正文/Table 精确数据未核验，locator 用 p.11410）",
+   "Payne 2015 Nature 全文 PDF（quote 取自 RCSB PDB 4RAS 沉积记录 TITLE/KEYWDS 与 Crossref 题录）"
+  ],
+  "generated_by": "manual-curation-2026-07-22",
+  "note": "诚实优先：A6 还原脱氟现象接地于原文摘要；脱氟酶未表征、C-F 键高能垒、天然效率低均如实标注；PFAS 还原脱氟材料转译全部为 inspiration/外推"
+ },
+ "boundary_rules": [
+  {
+   "rule": "还原条件/电子供体门控：A6 还原脱氟须厌氧低氧化还原电位、以铁还原为末端电子汇、以铵或氢为电子供体偶联",
+   "source_mechanism": "厌氧还原条件下 Acidimicrobium sp. A6 对 PFOA/PFOS 的还原脱氟",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "效率/动力学边界：天然 A6 脱氟缓慢且不完全（百日尺度至多约六成去除、停留在更短链全氟产物、未完全矿化），不构成高效降解方案",
+   "source_mechanism": "厌氧还原条件下 Acidimicrobium sp. A6 对 PFOA/PFOS 的还原脱氟",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "先例适用域边界：B12 依赖型还原脱卤酶（PDB 4RAS）为有机卤化物（较重卤素碳-卤键）还原脱卤的结构先例，未被表征为全氟烷基 C-F 键脱氟酶，亦非 A6 自身脱氟酶；向 C-F 脱氟迁移属原理层（定性，无数值阈值）",
+   "source_mechanism": "B12（咕啉）依赖型还原脱卤酶作为还原性碳-卤键断裂的结构先例",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  },
+  {
+   "rule": "酶未表征边界：A6 执行 C-F 键断裂的具体酶尚未鉴定/表征，仿生还原脱氟材料转译限于原理层，须实验验证（定性，无数值阈值）",
+   "source_mechanism": "厌氧还原条件下 Acidimicrobium sp. A6 对 PFOA/PFOS 的还原脱氟",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  }
+ ],
+ "mechanism_tags": [
+  "还原催化降解",
+  "几何识别"
+ ]
+}

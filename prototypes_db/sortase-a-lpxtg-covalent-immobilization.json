@@ -1,0 +1,396 @@
+{
+ "id": "sortase-a-lpxtg-covalent-immobilization",
+ "name_zh": "Sortase A LPXTG 位点特异性共价固定转肽酶",
+ "name_en": "Sortase A LPXTG Site-Specific Covalent Immobilization Transpeptidase",
+ "organism": {
+  "scientific": "Staphylococcus aureus（金黄色葡萄球菌 sortase A，SrtA，LPXTG 特异性转肽酶）",
+  "category": "微生物"
+ },
+ "biomimetic_dimension": "分子仿生",
+ "features": [
+  "位点特异性共价固定"
+ ],
+ "tested_conditions": {
+  "tested_ph_range": null,
+  "tested_temp_range": null,
+  "salinity": null,
+  "note": "sortase A 为可溶性转肽酶（位点特异性共价固定工具蛋白，非污染物吸附识别原型），本库无其吸附性能测试条件；performance_data 为空，故测试条件全空。转肽反应条件（pH 7.5、25 °C、Ca2+）见 engineering_constraints，属固定化工艺而非吸附测试。"
+ },
+ "library_tier": "extended",
+ "lifecycle_status": "active",
+ "coverage": "partial",
+ "status": "active",
+ "provenance_summary": {
+  "n_papers": 1,
+  "n_verified": 10,
+  "n_unverified": 0,
+  "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与硬边界条数（SRTA-001 四要素+1 硬边界=5，SRTA-002 四要素+1 硬边界=5）。机制接地限于 sortase A 天然 LPXTG 转肽共价锚定机制（PDB 1T2P 野生型催化域 + 1T2W C184A/LPETG 底物捕获复合物 + Zong 2004 JBC 摘要 PMID 15117963）。sortase A 本身不识别 PFOA；PFOA 识别蛋白的取向化共价固定为设计转译（llm_inferred/inspiration），无吸附性能数据。quote 逐字取自 RCSB PDB 沉积记录（TITLE/COMPND/REMARK）与 PubMed 摘要（可核验），未做全文 PDF 审计。"
+ },
+ "mechanisms": [
+  {
+   "mechanism_id": "SRTA-001",
+   "name": "LPXTG 分选基序在活性位裂谷的位点特异性识别",
+   "description": "金黄色葡萄球菌 sortase A 以β桶催化域的活性位裂谷识别底物表面蛋白 C 端的 LPXTG 五肽分选基序：高度保守的 Pro 与 Thr 经疏水接触被预组织定位，X 位残基（LPETG 中为 Glu）指向溶剂；PDB 1T2W（C184A 底物捕获突变体）中 LPETG 肽（链 D，Leu331-Pro332-Glu333-Thr334-Gly335）结合于 Glu105/Ser116/Ile182/Arg197 构成的口袋（SITE AC3），使 Thr-Gly 切割键摆向催化残基",
+   "基本原理": "短肽标签 LPXTG 的保守 Pro/Thr 经形状与疏水互补被酶活性位预组织识别，X 位可变并暴露溶剂，使酶在 LPXTG 家族底物蛋白 C 端特异性定位 Thr-Gly 切割位点，而不依赖底物蛋白其余部分",
+   "source": "literature",
+   "ref_doi": "10.1074/jbc.M401374200",
+   "verification": "verified",
+   "verification_quote": "Highly conserved proline (P) and threonine (T) residues of the LPXTG motif are held in position by hydrophobic contacts, whereas the glutamic acid residue (E) at the X position points out",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "LPXTG 五肽分选基序（sortase A 的天然分子底物，非 PFOA）：革兰氏阳性菌表面蛋白 C 端的 Leu-Pro-X-Thr-Gly 基序；PDB 1T2W 复合物中底物为 LPETG 肽（链 D，X=Glu，残基 Leu331-Pro332-Glu333-Thr334-Gly335）。诚实标注：PFOA 不由 sortase A 识别，PFOA 识别由经 sortase 固定于载体的独立识别蛋白承担，本机制仅提供位点特异性共价固定",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1074/jbc.M401374200",
+     "locator": "PDB 1T2W, COMPND / p.31383",
+     "quote": "MOLECULE: PEPTIDE LEU-PRO-GLU-THR-GLY",
+     "scope_match": "Keywords: peptide, leu, thr"
+    },
+    "bio_structure": {
+     "text": "sortase A 催化域为β桶（残基 62-206，约 16.4 kDa）；PDB 1T2W 为该催化域（C184A 底物捕获突变体）与 LPETG 肽的复合物，SITE AC3 记录 LPETG 接触残基为 Glu105、Ser116、Ile182、Arg197 与 LPETG 的 Leu331/Pro332/Thr334",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1074/jbc.M401374200",
+     "locator": "PDB 1T2W, COMPND / p.31383",
+     "quote": "FRAGMENT: SORTASE A (RESIDUES 62-206) COMPLEXED WITH LPETG",
+     "scope_match": "Keywords: sortase, residues, lpetg"
+    },
+    "interaction": {
+     "text": "LPXTG 基序中高度保守的 Pro 与 Thr 经疏水接触被活性位预组织定位，X 位 Glu 指向溶剂；该排布使 Thr-Gly 切割键被特异识别并摆向催化残基（Zong 2004 描述的底物结合口袋）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1074/jbc.M401374200",
+     "locator": "p.31383 (Abstract; PMID 15117963)",
+     "quote": "Highly conserved proline (P) and threonine (T) residues of the LPXTG motif are held in position by hydrophobic contacts, whereas the glutamic acid residue (E) at the X position points out",
+     "scope_match": "Keywords: proline, threonine, lpxtg, hydrophobic"
+    },
+    "why_it_works": {
+     "text": "保守 Pro/Thr 的疏水定位配合 X 位溶剂暴露，使酶对 LPXTG 家族基序特异识别而容忍 X 位变化；该酶即以 LPXTG 特异性命名（PDB 1T2W COMPND 同义名 LPXTG SPECIFIC SORTASE A），从而在底物蛋白 C 端特异定位 T-G 切割位点",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1074/jbc.M401374200",
+     "locator": "PDB 1T2W, COMPND / p.31383",
+     "quote": "LPXTG SPECIFIC SORTASE A",
+     "scope_match": "Keywords: lpxtg, specific, sortase"
+    },
+    "boundary_conditions": [
+     {
+      "text": "LPXTG 基序特异性：识别依赖 LPXTG 的保守 Pro 与 Thr 经疏水接触定位，X 位可变并暴露溶剂；底物蛋白须携带 LPXTG 分选信号方可被 sortase A 识别与加工",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "PDB 1T2W, COMPND / p.31383",
+      "quote": "LPXTG SPECIFIC SORTASE A",
+      "scope_match": "Keywords: lpxtg, specific, sortase",
+      "source_asset": null
+     },
+     {
+      "text": "X 位与底物偏好：LPXTG 中 X 位残基可变（LPETG 为 Glu），不同 X 位及不同 sortase 同源物（如 sortase B）的底物偏好可能影响转肽效率（定性，无数值阈值）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "scope_match": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "一个识别短肽标签（LPXTG）并在固定位置切割/连接的酶，可对任何携带该标签的蛋白实现位点特异性的化学操作；这是'以酶识别肽标签实现底物蛋白定位'的可迁移原理，标签与底物蛋白的功能（含污染物识别功能）可独立设计",
+    "verification_quote": "Highly conserved proline (P) and threonine (T) residues of the LPXTG motif are held in position by hydrophobic contacts, whereas the glutamic acid residue (E) at the X position points out"
+   },
+   "source_doi": "10.1074/jbc.M401374200",
+   "source_page": 31383,
+   "source_locator": "PDB 1T2W / p.31383 (Abstract; PMID 15117963)",
+   "source_file": "PDB 1T2W（RCSB 沉积数据）+ J Biol Chem 279(30):31383-31389（PubMed 摘要 PMID 15117963；未做本地全文 PDF 审计）",
+   "functional_groups": [
+    "LPXTG 识别口袋残基（Ile182、Arg197、Glu105、Ser116）",
+    "疏水接触面（识别 LPXTG 保守 Pro/Thr）"
+   ],
+   "key_structures": [
+    "识别结构"
+   ]
+  },
+  {
+   "mechanism_id": "SRTA-002",
+   "name": "活性位 Cys184 亲核转肽与氨基受体的共价锚定结点",
+   "description": "活性位 Cys184 硫醇盐亲核攻击 LPXTG 的 Thr-Gly 肽键，形成硫酯（thioacyl）中间体；天然条件下细胞壁肽聚糖五甘氨酸交联桥的氨基亲核解离该中间体，在底物蛋白 C 端 Thr 与细胞壁之间形成酰胺键，将表面蛋白共价锚定于细胞壁。催化装置 Cys184（亲核体）、His120、Arg197 在革兰氏阳性菌 sortase 中保守；Thr-Gly 切割键置于 Cys184 与 Arg197 之间、远离 His120 咪唑鎓（PDB 1T2W）",
+   "基本原理": "活性位半胱氨酸（Cys184）作为亲核体在 LPXTG 的 Thr-Gly 键形成可被外源氨基亲核解离的硫酯中间体，使酶催化转肽而非水解，将一个蛋白的 C 端共价连接到含游离氨基的受体（天然为细胞壁肽聚糖）；这一'亲核转肽→共价酰胺结点'机制是位点特异性共价固定的化学基础",
+   "source": "literature",
+   "ref_doi": "10.1074/jbc.M401374200",
+   "verification": "verified",
+   "verification_quote": "The scissile T-G peptide bond is positioned between the active site Cys(184) and Arg(197) residues and at a greater distance from the imidazolium side chain of His(120).",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "LPXTG 底物的 Thr-Gly 切割键（转肽反应的化学位点，非 PFOA）：sortase A 在 LPXTG 的 Thr 与 Gly 之间切割并催化酰胺键形成。诚实标注：转肽的氨基受体天然为细胞壁肽聚糖交联桥，工程转译中替换为载体表面的氨基/甘氨酸手柄；PFOA 不由该转肽反应识别，而由所固定的识别蛋白承担",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1074/jbc.M401374200",
+     "locator": "p.31383 (Abstract; PMID 15117963)",
+     "quote": "Sortase (SrtA) cleaves surface proteins between the threonine (T) and the glycine (G) of the LPXTG motif and catalyzes the formation of an amide bond",
+     "scope_match": "Keywords: cleaves, threonine, glycine, lpxtg"
+    },
+    "bio_structure": {
+     "text": "活性位由亲核体 Cys184 与 His120、Arg197 组成；PDB 1T2P（金黄色葡萄球菌 sortase A 野生型 ΔN59 催化域，残基 61-206）链 A 含 Cys184（唯一半胱氨酸）；PDB 1T2W 将该位突变为 Ala（C184A）以捕获 LPETG 底物，其 SEQADV 记录 ALA A 184 对应 UniProt Q9S446 的 CYS 184（工程突变），反向证明 Cys184 为野生型活性位亲核体；三残基在革兰氏阳性菌 sortase 中保守",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1074/jbc.M401374200",
+     "locator": "PDB 1T2P, TITLE / p.31383",
+     "quote": "CRYSTAL STRUCTURE OF SORTASE A FROM STAPHYLOCOCCUS AUREUS",
+     "scope_match": "Keywords: sortase, aureus, crystal"
+    },
+    "interaction": {
+     "text": "Thr-Gly 切割键置于活性位 Cys184 与 Arg197 之间、距 His120 咪唑鎓较远（Zong 2004）；Cys184 亲核攻击该键形成硫酯中间体，随后细胞壁肽聚糖交联桥的氨基亲核解离中间体形成酰胺键",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1074/jbc.M401374200",
+     "locator": "p.31383 (Abstract; PMID 15117963)",
+     "quote": "The scissile T-G peptide bond is positioned between the active site Cys(184) and Arg(197) residues and at a greater distance from the imidazolium side chain of His(120).",
+     "scope_match": "Keywords: cys(184), arg(197), his(120), active site"
+    },
+    "why_it_works": {
+     "text": "Cys184/His120/Arg197 催化装置在革兰氏阳性菌 sortase 中保守；转肽（而非水解）将表面蛋白 C 端 Thr 与细胞壁交联桥形成酰胺键，实现不可逆共价锚定，这是金黄色葡萄球菌表面蛋白共价连接于细胞壁被膜的机制（Zong 2004）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1074/jbc.M401374200",
+     "locator": "p.31383 (Abstract; PMID 15117963)",
+     "quote": "Surface proteins of Staphylococcus aureus are covalently linked to the cell wall envelope by a mechanism requiring C-terminal sorting signals with an LPXTG motif.",
+     "scope_match": "Keywords: covalently, cell wall, lpxtg"
+    },
+    "boundary_conditions": [
+     {
+      "text": "活性位半胱氨酸必需：Cys184 为转肽亲核体，C184A 突变体可结合 LPETG 底物但不能催化转肽（PDB 1T2W 即 C184A 底物捕获态，REMARK 900 记 C184-ALA）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "PDB 1T2W, REMARK 900 / p.31384",
+      "quote": "CRYSTAL STRUCTURE OF SE-SRTA, C184-ALA",
+      "scope_match": "Keywords: c184, ala",
+      "source_asset": null
+     },
+     {
+      "text": "转肽/水解竞争：硫酯中间体可被水（水解副反应）或目标氨基（转肽）解离；水相固定化须使转肽对水解的化学选择性偏向目标氨基受体方可高效共价锚定（定性，无数值阈值）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "scope_match": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "'活性位半胱氨酸亲核转肽→与外源氨基受体形成共价酰胺结点'是将蛋白在确定位置共价锚定的可迁移化学机制；将氨基受体由天然细胞壁肽聚糖替换为人工载体表面手柄，即可对任意 LPXTG 标签蛋白实现位点特异性共价固定",
+    "verification_quote": "The scissile T-G peptide bond is positioned between the active site Cys(184) and Arg(197) residues and at a greater distance from the imidazolium side chain of His(120)."
+   },
+   "source_doi": "10.1074/jbc.M401374200",
+   "source_page": 31383,
+   "source_locator": "PDB 1T2P / 1T2W（RCSB）/ p.31383 (Abstract; PMID 15117963)",
+   "source_file": "PDB 1T2P / 1T2W（RCSB 沉积数据）+ J Biol Chem 279(30):31383-31389（PubMed 摘要 PMID 15117963；未做本地全文 PDF 审计）",
+   "functional_groups": [
+    "活性位亲核半胱氨酸 Cys184",
+    "催化残基 His120、Arg197",
+    "β桶催化域骨架"
+   ],
+   "key_structures": [
+    "催化结构",
+    "识别结构"
+   ]
+  }
+ ],
+ "performance_data": [],
+ "engineering_constraints": [
+  {
+   "constraint": "可溶催化域形态",
+   "value": "sortase A 全长 206 aa 含 N 端跨膜段；工程使用 ΔN59/Δ59 可溶催化域（残基约 61/62-206，约 16.4 kDa），需重组表达纯化后使用",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "PDB 1T2P 为 ΔN59（残基 61-206）催化域，1T2W 为残基 62-206，聚合物实体 formula_weight 约 16.4 kDa（RCSB 沉积数据）",
+   "source": "literature",
+   "ref_doi": "10.1074/jbc.M401374200"
+  },
+  {
+   "constraint": "酶身份与活性单位门（SORTASE-ID-01）",
+   "value": "冻结 S. aureus sortase A Δ59-His6；SDS-PAGE 纯度≥90%、intact LC-MS 与理论质量相差≤0.02%；定义 1 U 为 25 °C、pH 7.5 下每分钟生成 1 nmol 转肽产物，水解不计活性；任一身份字段缺失禁止固定化",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "D1B_FINAL §4.4 SORTASE-ID-01 项目冻结阈值（待测放行门，非已测性能值）；与 Zong 2004/PDB 描述的 sortase A Δ59 催化域一致",
+   "source": "llm_inference",
+   "ref_doi": null
+  },
+  {
+   "constraint": "转肽对水解的化学选择性门",
+   "value": "以同一 LPETG/甘氨酸底物测定，转肽/水解摩尔比须≥10",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "D1B_FINAL §4.4 冻结放行门（待测，非已测值）；对应机制 SRTA-002 中水与目标氨基竞争同一硫酯中间体的化学选择性边界",
+   "source": "llm_inference",
+   "ref_doi": null
+  },
+  {
+   "constraint": "共价结点验证门",
+   "value": "靶向 LC-MS/MS 须检出跨结点 LPET-GGGK 肽并量化水解副产物；8 M 尿素 + 1 M NaCl 室温 1 h 变性/竞争洗涤后共价蛋白保留须≥90%；结点不可检出、水解/非特异吸附主导或酶残留超限即整批报废",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "D1B_FINAL §4.4 冻结放行门（待测，非已测值）；8 M 尿素/盐共价保留用于证明固定为共价结点而非非特异吸附",
+   "source": "llm_inference",
+   "ref_doi": null
+  },
+  {
+   "constraint": "取向/活性增量不自动成立",
+   "value": "生物来源不证明 C 端单点共价固定优于随机固定，故不以固定方式本身主张取向增量；取向与活性增量须由随机偶联对照（B-RAND，仅作可选探索）、单位固定蛋白活性分数 factive 与失活对照（如 D56N）分别验证",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "D1B_FINAL §4.x 设计原则（'生物来源不证明 C 端固定优于随机固定，故不主张取向增量'）；为本原型转译的核心诚实边界",
+   "source": "llm_inference",
+   "ref_doi": null
+  },
+  {
+   "constraint": "Ca2+ 依赖与酶残留清除",
+   "value": "sortase A 转肽需 Ca2+（工程反应液 50 mM Tris、150 mM NaCl、10 mM CaCl2、pH 7.5、25 °C）；酶为可溶 His6 融合体，反应后须经 Ni-NTA 清除至 sortase 特征肽低于方法定量限",
+   "unit": null,
+   "relevance": "medium",
+   "explanation": "D1B_FINAL §4.4 反应条件冻结；Ca2+ 依赖为 sortase A 已知属性（机理层）",
+   "source": "llm_inference",
+   "ref_doi": null
+  }
+ ],
+ "narrative": {
+  "entries": [
+   {
+    "source_file": "J Biol Chem 279(30):31383-31389 / PDB 1T2P·1T2W（Zong et al. 2004，DOI 10.1074/jbc.M401374200，PMID 15117963）",
+    "paper_id": "2004-Zong-sortaseA-LPETG-crystal-structure",
+    "sections": {
+     "problem_definition": "革兰氏阳性菌须将多种表面蛋白稳定展示于细胞壁以介导与宿主的相互作用。这些蛋白分泌后须被锚定于细胞壁肽聚糖，而非随机释放或随机偶联。金黄色葡萄球菌 sortase A（SrtA）承担这一任务：识别表面蛋白 C 端的 LPXTG 分选基序，并经转肽反应将蛋白共价连接于细胞壁肽聚糖交联桥。这是自然界中成熟且通用的位点特异性共价固定机制。本条目关注该机制作为'蛋白在固体表面取向化共价固定'工具的可转译性，而非 sortase A 对某一污染物的直接识别。",
+     "biological_solution": "金黄色葡萄球菌 sortase A 为β桶转肽酶。Zong 等测定了天然 SrtA（PDB 1T2P，ΔN59 催化域，残基 61-206）、活性位突变体及其与 LPETG 底物肽复合物（PDB 1T2W，C184A）的晶体结构：活性位以疏水接触定位 LPXTG 中高度保守的 Pro 与 Thr，X 位残基（LPETG 中为 Glu）指向溶剂（SITE AC3 记 LPETG 接触残基 Glu105/Ser116/Ile182/Arg197）。催化装置由 Cys184（亲核体）、His120、Arg197 组成：Thr-Gly 切割键置于 Cys184 与 Arg197 之间、远离 His120 咪唑鎓；Cys184 亲核攻击该键形成硫酯中间体，随后细胞壁肽聚糖五甘氨酸交联桥的氨基解离中间体，在底物蛋白 C 端 Thr 与细胞壁之间形成酰胺键，将蛋白共价锚定于细胞壁（摘要：surface proteins are covalently linked to the cell wall ... LPXTG motif）。PDB 1T2P 链 A 中 Cys184 为唯一半胱氨酸；1T2W 将该位突变为 Ala（SEQADV：ALA A 184 对应 UniProt Q9S446 CYS 184）以捕获 LPETG 底物，反向证明 Cys184 为野生型活性位亲核体。His120、Cys184、Arg197 在革兰氏阳性菌 sortase 中保守。",
+     "key_features": "必须保留：① 识别短肽标签 LPXTG 的活性位裂谷（保守 Pro/Thr 经疏水接触定位，X 位可变并暴露溶剂）；② 以活性位半胱氨酸（Cys184）为亲核体的转肽催化装置（Cys184/His120/Arg197），形成可被外源氨基解离的硫酯中间体；③ 以共价酰胺结点完成不可逆锚定。可灵活调整：氨基受体由天然细胞壁肽聚糖替换为人工载体表面手柄（伯胺/甘氨酸/五甘氨酸），标签蛋白的种类与其识别功能（含 PFOA 识别蛋白）。",
+     "design_mapping": "仿生映射：sortase A '识别 LPXTG 标签 + Cys184 转肽 + 与氨基受体形成共价结点' → 将任意 LPXTG 标签蛋白（含 PFOA 识别蛋白）在 C 端单点共价锚定于功能化活性炭/聚合物载体。边界声明：其一，这是设计转译/启发（llm_inferred），非 from_source 事实；sortase A 天然底物为 LPXTG 基序与细胞壁肽聚糖氨基受体，本身不识别也不结合 PFOA，PFOA 识别由所固定的独立识别蛋白承担。其二，单点 C 端共价固定不自动带来取向或活性增量，须由随机偶联对照（如 B-RAND）、单位固定蛋白活性分数 factive 与失活对照分别验证，不得以固定方式本身主张取向优势。",
+     "explainability_anchors": "设计溯源：LPXTG 位点特异性识别（PDB 1T2W，from_source）+ Cys184 亲核转肽共价锚定（PDB 1T2P/1T2W 与 Zong 2004，from_source）→ '以酶识别肽标签实现底物蛋白位点特异性共价固定'可迁移原理（from_source）→ PFOA 识别蛋白在人工载体上的取向化共价固定（llm_inferred 启发；取向/活性增量须对照验证，无 PFOA 吸附性能数据）。"
+    }
+   }
+  ]
+ },
+ "design_translation": [
+  {
+   "idea": "以 sortase A 介导的 LPXTG 转肽，将携带 C 端 LPXTG（LPETG）标签的 PFOA 识别蛋白（如设计的 PFOA 结合蛋白、抗体或适配体）在 C 端单点共价锚定于胺基/甘氨酸手柄功能化的活性炭或聚合物载体，获得身份明确、结点可测、泄漏可量的取向化共价固定床。诚实标注：sortase A 本身不结合 PFOA，PFOA 识别由所固定的识别蛋白承担；单点 C 端固定不自动带来取向或活性增量，须由随机偶联与失活对照验证",
+   "specific_functional_group": "载体表面伯胺/甘氨酸/五甘氨酸手柄（转肽的氨基受体）；识别蛋白 C 端 LPXTG（LPETG）标签（转肽的酰基供体）",
+   "material_handle": "功能化活性炭/琼脂糖/交联聚合物经间隔臂（如寡聚乙二醇 OEG）预装 DBCO-胺或叠氮-甘氨酸手柄（点击或胺化学），提供游离氨基受体；识别蛋白基因融合 C 端 LPETG-His6，以 sortase A Δ59-His6 催化转肽后 Ni-NTA 去除酶",
+   "target_interaction": "酶催化形成的酰胺共价结点（LPET-G-载体）将识别蛋白以确定取向锚定于载体；PFOA 识别由所固定识别蛋白（非 sortase）的独立结合位点承担",
+   "source_tier": "llm_inference",
+   "evidence_tier": "inspiration（原理层外推：sortase A 天然将表面蛋白经 LPXTG 转肽共价锚定于细胞壁肽聚糖，PDB 1T2P/1T2W 与 Zong 2004；将该机制转译为 PFOA 识别蛋白在人工载体上的取向化共价固定为 llm_inferred，无 PFOA 吸附实验数据，取向/活性增量须对照验证）",
+   "examples": [],
+   "design_principle": "sortase A 证明'识别短肽标签 LPXTG + Cys184 亲核转肽 + 与氨基受体形成共价酰胺结点'可对任意 LPXTG 标签蛋白实现位点特异性共价固定（PDB 1T2P/1T2W，Zong 2004）；将氨基受体由细胞壁肽聚糖替换为人工载体表面手柄即为转译核心，标签蛋白的识别功能可独立设计",
+   "implementation_example": "C 端 LPETG 标签的 PFOA 识别蛋白 + 胺/甘氨酸手柄功能化活性炭或琼脂糖，sortase A Δ59-His6 转肽固定（无实验数据，仅为设计假设）",
+   "constraints": "sortase A 本身不结合 PFOA，PFOA 识别完全依赖所固定的识别蛋白；单点 C 端共价固定不自动带来取向或活性增量，须由随机偶联对照、单位固定蛋白活性分数 factive 与失活对照验证；水相转肽须偏向转肽而非水解（工程冻结转肽/水解摩尔比≥10 为待测放行门）；酶残留、跨结点肽不可检出或 8 M 尿素共价保留不足须报废",
+   "failure_modes": "识别蛋白在固定中失活或活性位被掩蔽；转肽被水解竞争压制；非特异吸附冒充共价固定（须 8 M 尿素/盐洗涤甄别）；实现取向固定但未提升单位点可及性（factive 不增）；酶残留污染床层",
+   "material_realization_examples": []
+  }
+ ],
+ "honesty_ledger": {
+  "facts": [
+   {
+    "type": "mechanism",
+    "index": 0,
+    "name": "LPXTG 分选基序在活性位裂谷的位点特异性识别",
+    "basis": "from_source_verified",
+    "note": "Zong 2004 JBC + PDB 1T2W（C184A 与 LPETG 复合物；COMPND 记残基 62-206 与 LPETG、同义名 LPXTG SPECIFIC SORTASE A、底物肽 LEU-PRO-GLU-THR-GLY；SITE AC3 接触残基 Glu105/Ser116/Ile182/Arg197）；摘要逐字陈述保守 Pro/Thr 经疏水接触定位、X 位 Glu 指向溶剂。quote 取自 PDB 沉积记录与 PubMed 摘要 PMID 15117963（可核验），未做全文 PDF 审计"
+   },
+   {
+    "type": "mechanism",
+    "index": 1,
+    "name": "活性位 Cys184 亲核转肽与氨基受体的共价锚定结点",
+    "basis": "from_source_verified",
+    "note": "Zong 2004 JBC + PDB 1T2P（野生型 ΔN59，残基 61-206，链 A 含 Cys184 唯一半胱氨酸、His120、Arg197）与 1T2W（C184A 底物捕获态，SEQADV 证 ALA A 184 对应 UniProt Q9S446 CYS 184，REMARK 900 记 C184-ALA）；摘要逐字陈述 Thr-Gly 切割键置于 Cys184/Arg197 之间、表面蛋白经 LPXTG 机制共价连接于细胞壁、His120/Cys184/Arg197 保守。quote 取自 PDB 沉积记录与 PubMed 摘要（可核验），未做全文 PDF 审计"
+   }
+  ],
+  "leads": [],
+  "inferences": [
+   {
+    "type": "design_translation",
+    "index": 0,
+    "idea": "以 sortase A LPXTG 转肽将 PFOA 识别蛋白取向化共价固定于功能化载体",
+    "basis": "llm_inferred",
+    "label": "inspiration",
+    "note": "sortase A 天然底物为 LPXTG 基序与细胞壁肽聚糖氨基受体，本身不识别也不结合 PFOA；PFOA 识别由所固定的独立识别蛋白承担。转译为 PFOA 识别蛋白的人工载体固定属原理层外推，无 PFOA 吸附实验数据，取向/活性增量与亲和力/选择性须实验验证"
+   },
+   {
+    "type": "engineering_gate",
+    "index": 0,
+    "idea": "sortase 身份门、转肽/水解摩尔比≥10、跨结点肽 LC-MS/MS、8 M 尿素共价保留≥90%",
+    "basis": "llm_inferred",
+    "label": "project_design_freeze",
+    "note": "取自姊妹项目 biomimetic-adsorbent-design D1B_FINAL §4.4 的冻结放行门（待测验收阈值），非已测性能值，亦非外部同行评议文献；仅作固定化工艺的工程约束记录，不构成 PFOA 吸附性能数据"
+   },
+   {
+    "type": "fact_derivation",
+    "index": 0,
+    "name": "Cys184 为野生型活性位亲核体的反向证明",
+    "basis": "llm_inferred",
+    "label": "structure_derivation",
+    "note": "由 PDB 1T2P 链 A 唯一半胱氨酸位于 184、1T2W SEQADV 记 ALA A 184 对应 UniProt Q9S446 CYS 184（工程突变）、REMARK 900 记 C184-ALA 综合得出；残基编号为 PDB 作者编号（即 UniProt Q9S446 天然编号），未做本地序列重比对"
+   }
+  ],
+  "boundary_notes": [
+   "本原型天然底物为表面蛋白 C 端 LPXTG 基序与细胞壁肽聚糖氨基受体；机制 from_source 接地限于该天然 LPXTG 转肽共价锚定机制（PDB 1T2P/1T2W + Zong 2004）",
+   "sortase A 本身不识别也不结合 PFOA；PFOA 识别由经 sortase 固定的独立识别蛋白承担。PFOA 应用全部为 design_translation（llm_inferred/inspiration），不得用作 PFOA 吸附的 direct evidence",
+   "取向/活性增量不自动成立：生物来源不证明 C 端单点固定优于随机固定，须由随机偶联对照、单位固定蛋白活性分数 factive 与失活对照分别验证（D1B_FINAL §4.4 设计原则）",
+   "无 PFOA 吸附性能数据；performance_data 为空数组。转肽/水解摩尔比≥10 与 8 M 尿素共价保留≥90% 为 D1B_FINAL 冻结的待测放行门（工程约束），非已测性能值；严格未从姊妹项目污染物知识库搬运任何 qmax/Kd/去除率等性能数值（知识隔离红线）"
+  ],
+  "missing_pdf_items": [
+   "Zong 2004 J Biol Chem 全文 PDF（quote 逐字取自 PubMed 摘要 PMID 15117963 与 RCSB PDB 沉积记录 TITLE/COMPND/REMARK；正文内精确页码未核验，locator 用文章页域 p.31383-31389）",
+   "D1B_FINAL §4.4 全文为姊妹项目内部设计文档，非外部可核验文献，其阈值为冻结放行门而非已测数据"
+  ],
+  "generated_by": "manual-curation-2026-07-22",
+  "note": "诚实优先：机制接地限于 sortase A 天然 LPXTG 转肽共价锚定（PDB 1T2P/1T2W + Zong 2004）；PFOA 识别蛋白固定转译为 inspiration；sortase 不结合 PFOA；取向增量须对照验证"
+ },
+ "boundary_rules": [
+  {
+   "rule": "LPXTG 基序特异性：识别依赖 LPXTG 的保守 Pro 与 Thr 经疏水接触定位，X 位可变并暴露溶剂；底物蛋白须携带 LPXTG 分选信号方可被加工",
+   "source_mechanism": "LPXTG 分选基序在活性位裂谷的位点特异性识别",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "活性位半胱氨酸必需：Cys184 为转肽亲核体，C184A 突变体结合 LPETG 底物但不能催化转肽",
+   "source_mechanism": "活性位 Cys184 亲核转肽与氨基受体的共价锚定结点",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "转肽/水解竞争：水相固定化须使转肽对水解的化学选择性偏向目标氨基受体（定性，无数值阈值；工程冻结转肽/水解摩尔比≥10 为待测放行门）",
+   "source_mechanism": "活性位 Cys184 亲核转肽与氨基受体的共价锚定结点",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  },
+  {
+   "rule": "取向/活性增量不自动成立：单点 C 端共价固定不证明优于随机固定，须由随机偶联对照、单位固定蛋白活性分数与失活对照分别验证",
+   "source_mechanism": "活性位 Cys184 亲核转肽与氨基受体的共价锚定结点",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  }
+ ],
+ "mechanism_tags": [
+  "配位螯合",
+  "疏水分配",
+  "还原催化降解",
+  "几何识别"
+ ]
+}

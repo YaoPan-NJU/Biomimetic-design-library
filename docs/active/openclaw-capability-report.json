@@ -1,0 +1,79 @@
+{
+  "report_id": "R0-capability-2026-06-19-v3",
+  "version": 3,
+  "date": "2026-06-19",
+  "tested_commit": "75345bf",
+  "cloud_baseline": "origin/review@e4dc2d0",
+  "openclaw_version": "2026.6.8 (844f405)",
+  "environment": "macOS Darwin 25.4.0, /opt/homebrew/bin/openclaw",
+  "key_slots": {
+    "slot_1": {
+      "logical_name": "key_slot_1",
+      "provider": "xiaomi",
+      "key_masked": "key_slot_1",
+      "agents": ["main (mimo-v2.5-pro)", "bmdl-text (mimo-v2.5-pro, no-fallback)", "bmdl-visual (mimo-v2.5, no-fallback)"]
+    },
+    "slot_2": {
+      "logical_name": "key_slot_2",
+      "provider": "xiaomi-2",
+      "key_masked": "key_slot_2",
+      "agents": ["yang-s-clawedbot (mimo-v2.5-pro)", "bmdl-visual-2 (mimo-v2.5)"]
+    }
+  },
+  "multimodal_tests": [
+    {
+      "test_id": "G0-T1",
+      "key_slot": "slot_1",
+      "provider": "xiaomi",
+      "model": "mimo-v2.5",
+      "method": "direct API base64 to /v1/chat/completions",
+      "fixture_sha256": "ff687ab658005d4eb85ef577273f7d9194b2dc8235bc9cc0d562884aab75aca6",
+      "prompt": "What is the number after (21) on this page? Reply with only the digits.",
+      "expected": "202210352494.4",
+      "observed": "202210352494.4",
+      "result": "PASS",
+      "fallback_used": false,
+      "usage": {"total_tokens": 5508, "reasoning_tokens": 1427, "image_tokens": 3796},
+      "elapsed_seconds": 16.8,
+      "session_id": "99838fb8-2e08-4159-bbca-446a021e7c64",
+      "timestamp": "2026-06-19T14:05:00Z",
+      "evidence_file": "r0-multimodal-sessions/g0-slot1-evidence.json"
+    },
+    {
+      "test_id": "G0-T2",
+      "key_slot": "slot_2",
+      "provider": "xiaomi-2",
+      "model": "mimo-v2.5",
+      "method": "OpenClaw exec→requests.post base64",
+      "fixture_sha256": "ff687ab658005d4eb85ef577273f7d9194b2dc8235bc9cc0d562884aab75aca6",
+      "prompt": "What is the number after (21) on this page? Reply with only the digits.",
+      "expected": "202210352494.4",
+      "observed": "202210352494.4",
+      "result": "PASS",
+      "fallback_used": false,
+      "usage": {"reasoning_tokens": 930},
+      "session_id": "a052955e (yang-s-clawedbot)",
+      "timestamp": "2026-06-19T14:09:00Z",
+      "evidence_file": "r0-multimodal-sessions/g0-slot2-evidence.json"
+    }
+  ],
+  "text_tests": [
+    {"test_id": "R0-T1", "key_slot": "slot_1", "provider": "xiaomi", "model": "mimo-v2.5-pro", "result": "PASS", "fallback_used": false},
+    {"test_id": "R0-T2", "key_slot": "slot_2", "provider": "xiaomi-2", "model": "mimo-v2.5-pro", "result": "PASS", "fallback_used": false},
+    {"test_id": "R0-T5", "key_slot": "slot_1", "provider": "xiaomi", "model": "mimo-v2.5-pro", "result": "PASS", "fallback_used": false, "description": "workspace file access"},
+    {"test_id": "R0-T8b", "key_slot": "slot_2", "provider": "xiaomi-2", "model": "mimo-v2.5-pro", "result": "PASS", "fallback_used": false}
+  ],
+  "concurrency_tests": [
+    {"test_id": "R0-T6-T7-T8", "workers": 3, "all_completed": true, "unique_ids": true, "result": "PASS"}
+  ],
+  "pass_criteria": {
+    "both_key_slots_independent": true,
+    "mimo_v2_5_pro_text_each_slot": true,
+    "genuine_pixel_multimodal_each_slot": true,
+    "per_dispatch_model_switching": true,
+    "zero_unintended_fallback": true,
+    "workspace_file_access": true,
+    "max_three_concurrent_workers": true
+  },
+  "overall_result": "PASS"
+}

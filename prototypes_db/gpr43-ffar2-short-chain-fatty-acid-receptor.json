@@ -1,0 +1,354 @@
+{
+ "id": "gpr43-ffar2-short-chain-fatty-acid-receptor",
+ "name_zh": "GPR43/FFAR2 短链脂肪酸受体",
+ "name_en": "GPR43/FFAR2 Short-Chain Fatty Acid Receptor",
+ "organism": {
+  "scientific": "Homo sapiens（人源 GPR43/FFAR2，游离脂肪酸受体 2，A 类 G 蛋白偶联受体）",
+  "category": "动物"
+ },
+ "biomimetic_dimension": "分子仿生",
+ "features": [
+  "特异性识别",
+  "分子筛分"
+ ],
+ "tested_conditions": {
+  "tested_ph_range": null,
+  "tested_temp_range": null,
+  "salinity": null,
+  "note": "GPR43/FFAR2 为膜整合 G 蛋白偶联受体（分子识别原型），本库无其吸附性能测试条件；performance_data 为空，故测试条件全空。"
+ },
+ "library_tier": "extended",
+ "lifecycle_status": "active",
+ "coverage": "partial",
+ "status": "active",
+ "provenance_summary": {
+  "n_papers": 2,
+  "n_verified": 10,
+  "n_unverified": 0,
+  "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与硬边界条数（GPR43-001 四要素+1 硬边界=5，GPR43-002 四要素+1 硬边界=5）。机制接地限于 FFAR2 与短链脂肪酸（丁酸/乙酸等）在正构口袋的羧酸根头基识别与链长选择性（PDB 8T3S 丁酸复合物 + 8Y6Y；Zhang 2024 Sci Adv、Kugawa 2025 Nat Commun）。短链 PFAS（PFBS/短链全氟羧酸）应用为设计转译（llm_inferred/inspiration），无性能数据。quote 逐字取自 PMC10780892 开放获取全文 XML 与 Europe PMC 摘要、RCSB PDB 沉积记录（可核验），未做全文 PDF 审计。另有 8J24（乙酸复合物，Cell Res 2024 沉积引文）作旁证结构，仅经 RCSB 沉积记录核验，未取全文。"
+ },
+ "mechanisms": [
+  {
+   "mechanism_id": "GPR43-001",
+   "name": "短链脂肪酸羧酸根头基的成对精氨酸离子对锚定",
+   "description": "人源 FFAR2 以正构口袋中一对相邻精氨酸 Arg180(5.39) 与 Arg255(7.35) 配位短链脂肪酸（丁酸）的羧酸根头基（离子对/氢键）；His242(6.55) 与 Arg255 作用以组织羧酸根结合口袋，Tyr165(ECL2) 与羧酸根形成氢键，Gln148(ECL2) 稳定 Arg180。该精氨酸对在 FFA1-FFA3 间高度保守。突变为丙氨酸/赖氨酸消除对短链脂肪酸的响应",
+   "基本原理": "预组织的成对阳离子（精氨酸胍基）与短链羧酸根头基形成方向性离子对/氢键锚定，辅助极性残基（His/Tyr/Gln）组织并稳定该锚定，使短链脂肪酸羧酸根头基在无金属参与下被高亲和力、头基选择性地识别",
+   "source": "literature",
+   "ref_doi": "10.1126/sciadv.adj2384",
+   "verification": "verified",
+   "verification_quote": "the carboxylate group of butyrate is coordinated by a pair of adjacent arginine residues, R180 and R255",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "丁酸/丁酸根（butyrate，butanoic acid，C4 短链脂肪酸，肠道菌群发酵产物）是 FFAR2 的内源性激动剂配体；PDB 8T3S 为丁酸结合的活性态 FFAR2-miniGq 复合物（配体 BUA = butanoic acid），与 PFBS/短链全氟羧酸的阴离子头基+短链尾链拓扑同源",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1126/sciadv.adj2384",
+     "locator": "Abstract, Science Advances vol. 10 / PMC10780892",
+     "quote": "butyrate-bound FFA2, each complexed with an engineered heterotrimeric Gq protein (miniGq), by cryo-electron microscopy",
+     "scope_match": "Keywords: butyrate, FFA2, cryo-electron"
+    },
+    "bio_structure": {
+     "text": "FFAR2（游离脂肪酸受体 2，A 类 GPCR）选择性识别短链脂肪酸；其正构结合口袋含一对相邻精氨酸 Arg180(5.39)/Arg255(7.35)（PDB 8T3S，人源 FFAR2 UniProt O15552，EM 分辨率 3.07 Å），构成羧酸根头基的预组织阳离子锚",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/s41467-025-57983-4",
+     "locator": "Abstract, Nature Communications 16:2809 / PMC11947310",
+     "quote": "The free fatty acid receptor 2 (FFA2) is a G protein-coupled receptor (GPCR) that selectively recognizes short-chain fatty acids to regulate metabolic and immune functions.",
+     "scope_match": "Keywords: free fatty acid receptor 2, GPCR, short-chain fatty acids"
+    },
+    "interaction": {
+     "text": "丁酸羧酸根由一对相邻精氨酸 Arg180(5.39) 与 Arg255(7.35) 配位（离子对/氢键）；Tyr165(ECL2) 与丁酸羧酸根形成氢键，Gln148(ECL2) 稳定 Arg180，His242(6.55) 与 Arg255 作用以组织羧酸根结合口袋（PDB 8T3S，Fig. 4B；残基按论文作者编号，含 Ballesteros-Weinstein 上标）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1126/sciadv.adj2384",
+     "locator": "Fig. 4, panel B / PMC10780892",
+     "quote": "the carboxylate group of butyrate is coordinated by a pair of adjacent arginine residues, R180 and R255",
+     "scope_match": "Keywords: carboxylate, butyrate, arginine"
+    },
+    "why_it_works": {
+     "text": "成对精氨酸是羧酸根识别所必需：将 Arg180 突变为丙氨酸/赖氨酸、Arg255 突变为丙氨酸消除对短链脂肪酸的响应，His242 突变同样废除短链脂肪酸功能（正构拮抗剂亲和力仅略微下降而短链脂肪酸无法竞争结合），证明该阳离子锚对短链羧酸根头基的特异性识别",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1126/sciadv.adj2384",
+     "locator": "Results, Science Advances vol. 10 / PMC10780892",
+     "quote": "In FFA2, mutating R180 to other amino acids, including Ala and Lys, as well as mutating R255 to Ala, eliminates the response to SCFAs",
+     "scope_match": "Keywords: FFA2, R180, R255, SCFAs"
+    },
+    "boundary_conditions": [
+     {
+      "text": "保守阳离子锚基序：配位羧酸根的一对精氨酸（Arg180/Arg255）在 FFA1 至 FFA3 间高度保守，构成短链/邻近脂肪酸受体共有的羧酸根识别基序；缺失或突变该基序即丧失短链脂肪酸识别",
+      "parameter": "competing_ion",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "Results, Science Advances vol. 10 / PMC10780892",
+      "quote": "These two arginine residues are highly conserved among FFA1 to FFA3",
+      "scope_match": "Keywords: arginine, conserved, FFA1",
+      "source_asset": null
+     },
+     {
+      "text": "预组织阳离子锚需维持于正构口袋的低介电微环境与完整跨膜三级结构；给体若完全暴露于体相水，水分子与共存阴离子的竞争将削弱羧酸根结合（定性，无数值阈值）",
+      "parameter": "wet_stability",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "预组织的成对阳离子（精氨酸胍基）配合辅助极性残基，可在无金属参与下对短链羧酸根头基实现方向性离子对/氢键锚定，提供高亲和力与头基选择性",
+    "verification_quote": "the carboxylate group of butyrate is coordinated by a pair of adjacent arginine residues, R180 and R255"
+   },
+   "source_doi": "10.1126/sciadv.adj2384",
+   "source_page": null,
+   "source_locator": "Fig. 4B / PMC10780892（文章号 eadj2384）",
+   "source_file": "PDB 8T3S（RCSB 沉积数据）+ Science Advances 10(2):eadj2384（PMC10780892 全文 XML；未做本地全文 PDF 页码审计）",
+   "functional_groups": [
+    "阳离子/氢键给体（Arg180、Arg255 胍基；His242、Tyr165、Gln148 侧链）",
+    "正构结合口袋"
+   ],
+   "key_structures": [
+    "识别结构"
+   ]
+  },
+  {
+   "mechanism_id": "GPR43-002",
+   "name": "疏水腔对短链尾链的容纳与链长选择性",
+   "description": "FFAR2 正构口袋含一疏水亚腔（Cys141(4.57)、Val144(4.60)、Val179(5.38)、Leu183(5.42)）容纳丁酸的短烷基尾链，Tyr90(3.29) 与短链直接形成疏水相互作用；FFAR2 选择性识别短链脂肪酸（C2-C4），长链脂肪酸由 FFA1/FFA4 识别，链长选择性由结构比较与突变研究揭示",
+   "基本原理": "疏水亚腔的几何（腔深/腔径）与短烷基尾链匹配，赋予对短链脂肪酸的链长选择性；头基离子锚与链长匹配腔的组合使 FFAR2 偏好短链而非长链两亲阴离子",
+   "source": "literature",
+   "ref_doi": "10.1038/s41467-025-57983-4",
+   "verification": "verified",
+   "verification_quote": "Structural comparisons with FFA1 and mutational studies reveal how FFA2 selects specific fatty acid chain lengths.",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "短链脂肪酸（乙酸/丙酸/丁酸，C2-C4，肠道菌群发酵产物）是 FFAR2 的天然配体；其短烷基尾链（丁酸 C4）与短链 PFAS（如 PFBS C4 全氟丁基、全氟丁酸 C4 全氟尾链）的链长拓扑相近",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1126/sciadv.adj2384",
+     "locator": "Abstract, Science Advances vol. 10 / PMC10780892",
+     "quote": "FFA2 and FFA3 respond to short-chain fatty acids generated by intestinal microbiota",
+     "scope_match": "Keywords: FFA2, short-chain fatty acids, microbiota"
+    },
+    "bio_structure": {
+     "text": "FFAR2 正构口袋的疏水亚腔由 Cys141(4.57)、Val144(4.60)、Val179(5.38)、Leu183(5.42) 围成，容纳丁酸的疏水尾链（PDB 8T3S，Fig. 4D；作者编号含 Ballesteros-Weinstein 上标）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1126/sciadv.adj2384",
+     "locator": "Fig. 4, panel D / PMC10780892",
+     "quote": "the hydrophobic pocket involving C141, V144, V179, and L183 in FFA2 that accommodates the hydrophobic tail of butyrate",
+     "scope_match": "Keywords: hydrophobic pocket, butyrate, FFA2"
+    },
+    "interaction": {
+     "text": "Tyr90(3.29) 与丁酸的短烷基尾链直接形成疏水相互作用，Tyr238(6.51) 与精氨酸 Arg255 形成氢键/阳离子-π 作用以稳定其取向（PDB 8T3S，Fig. 4B）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1126/sciadv.adj2384",
+     "locator": "Fig. 4, panel B / PMC10780892",
+     "quote": "Y90 forms direct hydrophobic interactions with the short chain of butyrate",
+     "scope_match": "Keywords: Y90, hydrophobic, butyrate"
+    },
+    "why_it_works": {
+     "text": "FFAR2 的链长选择性来自其正构口袋与 FFA1 的结构差异；与 FFA1 的结构比较及突变研究揭示 FFAR2 如何选择特定脂肪酸链长，使 FFAR2 偏好短链脂肪酸（Kugawa 2025 Nat Commun，PDB 8Y6Y）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/s41467-025-57983-4",
+     "locator": "Abstract, Nature Communications 16:2809 / PMC11947310",
+     "quote": "Structural comparisons with FFA1 and mutational studies reveal how FFA2 selects specific fatty acid chain lengths.",
+     "scope_match": "Keywords: FFA1, FFA2, chain lengths"
+    },
+    "boundary_conditions": [
+     {
+      "text": "链长类别窗口：FFA1 与 FFA4 由长链脂肪酸激活，而 FFA2 与 FFA3 响应短链脂肪酸；FFAR2 的选择性限于短链（C2-C4）尾链，长链脂肪酸不被 FFAR2 优先识别",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "Abstract, Science Advances vol. 10 / PMC10780892",
+      "quote": "FFA1 and FFA4 are activated by long-chain fatty acids, while FFA2 and FFA3 respond to short-chain fatty acids",
+      "scope_match": "Keywords: long-chain fatty acids, FFA2, short-chain fatty acids",
+      "source_asset": null
+     },
+     {
+      "text": "疏水腔对全氟烷基尾链的容纳性未知：全氟 C4 链较烃类丁基更刚硬、体积更大、疏水性更强，能否适配同一疏水亚腔须实验验证（定性，无数值阈值）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "与短链尾链几何匹配的疏水腔（限定腔深/腔径）赋予链长选择性；头基离子锚与链长匹配腔的组合可实现对特定链长两亲阴离子的选择识别",
+    "verification_quote": "Structural comparisons with FFA1 and mutational studies reveal how FFA2 selects specific fatty acid chain lengths."
+   },
+   "source_doi": "10.1038/s41467-025-57983-4",
+   "source_page": null,
+   "source_locator": "Abstract / PMC11947310（Nat Commun 16:2809）；疏水腔残基见 PDB 8T3S / PMC10780892",
+   "source_file": "PDB 8Y6Y / 8T3S（RCSB 沉积数据）+ Nature Communications 16:2809（PMC11947310 摘要）+ Science Advances 10(2):eadj2384（PMC10780892 全文 XML）；未做本地全文 PDF 审计",
+   "functional_groups": [
+    "疏水腔壁残基（Cys141、Val144、Val179、Leu183、Tyr90）"
+   ],
+   "key_structures": [
+    "识别结构"
+   ]
+  }
+ ],
+ "performance_data": [],
+ "engineering_constraints": [
+  {
+   "constraint": "膜蛋白/复合物形态",
+   "value": "FFAR2 为 A 类 G 蛋白偶联受体（膜整合蛋白），已解析结构为 FFAR2-G 蛋白复合物（8T3S 复合物约 126 kDa，8J24 约 157 kDa，冷冻电镜），其识别基序依赖跨膜束与膜环境，用作吸附须固定化/移植于固体载体",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "RCSB 8T3S：molecular_weight 125.96 kDa，KEYWDS 'GPCR, agonist, MEMBRANE PROTEIN'，EM 分辨率 3.07 Å；8J24：156.52 kDa，KEYWDS 'FFAR2, GPCR, Complex, MEMBRANE PROTEIN'，分辨率 2.6 Å",
+   "source": "literature",
+   "ref_doi": "10.1126/sciadv.adj2384"
+  },
+  {
+   "constraint": "头基化学偏好（羧酸根）",
+   "value": "FFAR2 识别的是短链脂肪酸的羧酸根头基（由精氨酸对锚定）；PFBS 为磺酸根头基，与羧酸根在电荷分布、几何与 pKa 上不同，转译为磺酸根识别较软，最直接的头基同源物为短链全氟羧酸（如全氟丁酸 PFBA，C4 羧酸根）",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（基于 FFAR2 羧酸根-精氨酸锚定事实的外推；无 PFAS 头基结合证据）",
+   "source": "llm_inference",
+   "ref_doi": null
+  },
+  {
+   "constraint": "链长选择性窗口",
+   "value": "FFAR2 疏水腔适配短链烷基（C2-C4）；全氟 C4 尾链较烃类丁基更刚硬、更大、更疏水，能否适配同一疏水腔未知",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（基于 FFAR2 短链选择性与疏水腔残基事实的外推）",
+   "source": "llm_inference",
+   "ref_doi": null
+  }
+ ],
+ "narrative": {
+  "entries": [
+   {
+    "source_file": "Science Advances 10(2):eadj2384 / PDB 8T3S（Zhang et al. 2024，DOI 10.1126/sciadv.adj2384，PMC10780892）；旁证 Nature Communications 16:2809 / PDB 8Y6Y（Kugawa et al. 2025，DOI 10.1038/s41467-025-57983-4，PMC11947310）",
+    "paper_id": "2024-Zhang-FFAR2-butyrate-cryoEM",
+    "sections": {
+     "problem_definition": "短链脂肪酸（乙酸/丙酸/丁酸）是肠道菌群发酵产物，经游离脂肪酸受体 FFAR2（GPR43）调控代谢与免疫功能。FFAR2 如何从化学相似的有机阴离子中选择性识别短链脂肪酸的羧酸根头基并分辨其链长，是分子识别的结构基础问题。FFAR2 属 A 类 G 蛋白偶联受体，与识别长链脂肪酸的 FFA1/FFA4 同家族但配体链长偏好不同。",
+     "biological_solution": "Zhang 等以冷冻电镜解析丁酸结合的活性态 FFAR2-miniGq 复合物（PDB 8T3S，分辨率 3.07 Å）：丁酸的羧酸根头基由正构口袋中一对相邻精氨酸 Arg180(5.39) 与 Arg255(7.35) 配位（离子对/氢键），His242(6.55) 与 Arg255 作用以组织羧酸根结合口袋，Tyr165(ECL2) 与羧酸根形成氢键，Gln148(ECL2) 稳定 Arg180；该精氨酸对在 FFA1-FFA3 间高度保守。丁酸的短烷基尾链由疏水亚腔 Cys141/Val144/Val179/Leu183 容纳，Tyr90(3.29) 与短链直接形成疏水作用。突变 Arg180/Arg255/His242 消除对短链脂肪酸的响应（正构拮抗剂结合仅略微受影响），证明该阳离子锚对短链羧酸根头基的特异性。Kugawa 等（PDB 8Y6Y）通过 FFAR2 与 FFA1 的结构比较及突变研究揭示 FFAR2 的链长选择性，并显示拮抗剂 GLPG0974 结合于正构口袋旁侧。同一研究的 FFAR2-乙酸（PDB 8J24，分辨率 2.6 Å）与 FFAR2/3-戊酸（PDB 8J20）结构进一步印证短链羧酸根识别的保守性（Cell Res 2024 沉积引文，仅经 RCSB 沉积记录核验）。",
+     "key_features": "必须保留：① 与短链羧酸根头基几何互补的成对阳离子锚（精氨酸胍基型，模拟 Arg180/Arg255）；② 辅助极性残基（His/Tyr/Gln 型）组织并稳定锚定；③ 与短链（C2-C4）尾链几何匹配的疏水腔。可灵活调整：载体骨架、阳离子/氢键给体化学（胍基/脒基/脲/硫脲）、疏水腔壁修饰（烃/氟碳链）与腔深/孔径。",
+     "design_mapping": "仿生映射：FFAR2 的'成对精氨酸羧酸根锚 + 短链疏水腔'→ 面向短链 PFAS 阴离子头基的识别位点。边界声明：这是设计转译/启发（llm_inferred），非 from_source 事实。FFAR2 天然识别的是短链脂肪酸的羧酸根头基；最直接的头基同源物为短链全氟羧酸（如全氟丁酸 PFBA，C4 羧酸根，与丁酸根头基等构）。PFBS 为磺酸根头基，与羧酸根在电荷分布、几何与 pKa 上不同，转译为磺酸根识别属更松的阴离子类别类比，须实验验证；全氟 C4 尾链与烃类丁基的疏水腔适配性亦未知。",
+     "explainability_anchors": "设计溯源：丁酸在 FFAR2 正构口袋的羧酸根-双精氨酸锚定与短链疏水容纳（PDB 8T3S，from_source，Zhang 2024）+ 链长选择性（PDB 8Y6Y，from_source，Kugawa 2025）→ '成对阳离子羧酸根锚 + 链长匹配疏水腔'可迁移原理（from_source）→ 短链 PFAS 阴离子头基识别位点设计（llm_inferred 启发，须实验验证）。"
+    }
+   }
+  ]
+ },
+ "design_translation": [
+  {
+   "idea": "将 FFAR2 的'成对精氨酸羧酸根离子锚（Arg180/Arg255 型）+ 短链疏水腔（Cys141/Val144/Val179/Leu183 型）'移植到多孔固体载体，构建对短链 PFAS 阴离子头基的识别位点：以成对预组织的胍基/脒基阳离子按与羧酸根二氧几何互补的方式锚定头基，并以匹配 C4 链长的疏水腔容纳全氟尾链；最直接面向短链全氟羧酸（如全氟丁酸 PFBA，C4 羧酸根，与丁酸根头基等构），对 PFBS 磺酸根则为阴离子类别层面的较松类比",
+   "specific_functional_group": "成对胍基/脒基阳离子（模拟精氨酸胍基），按与短链羧酸根/磺酸根头基氧几何互补的方式预组织排布；脲/硫脲/羟基辅助氢键（模拟 Tyr/Gln/His）",
+   "material_handle": "介孔二氧化硅或交联聚合物骨架经硅烷偶联/表面引发聚合接枝胍基/脒基单体，借分子印迹或刚性间隔臂控制双阳离子间距与取向以匹配头基二氧间距；孔壁以短链烃/氟碳链修饰营造匹配 C4 链长的疏水腔并降低局部介电常数",
+   "target_interaction": "成对阳离子与 PFAS 阴离子头基（羧酸根直接、磺酸根为类级）的方向性离子对/氢键锚定 + 疏水腔对 C4 全氟尾链的范德华/氟亲容纳 + 埋藏微环境排除水竞争",
+   "source_tier": "llm_inference",
+   "evidence_tier": "inspiration（原理层外推：FFAR2 与短链脂肪酸的羧酸根锚定与链长选择性接地于 PDB 8T3S/8Y6Y 与 Zhang 2024/Kugawa 2025；将受体识别机制转译为短链 PFAS 吸附材料为 llm_inferred，无 PFAS 结合或吸附证据）",
+   "examples": [],
+   "design_principle": "FFAR2 证明成对精氨酸 + 辅助极性残基可在无金属参与下高亲和、头基选择性地识别短链羧酸根，且疏水腔几何赋予短链选择性（PDB 8T3S/8Y6Y）；两要素可独立于 GPCR 跨膜骨架移植到人工孔道",
+   "implementation_example": "双胍基功能化、具 C4 链长匹配疏水孔壁的介孔二氧化硅或交联聚合物（无实验数据，仅为设计假设）",
+   "constraints": "头基化学差异：FFAR2 识别羧酸根，PFBS 为磺酸根（电荷分布/几何/pKa 不同），最直接同源物为短链全氟羧酸（PFBA）；全氟 C4 尾链较烃类丁基更刚硬、更大、更疏水，疏水腔匹配须验证；水相中阳离子锚的水合竞争与共存阴离子（氯离子、硫酸根、天然有机酸）干扰是关键挑战；蛋白为膜整合 GPCR，不可直接复制为吸附剂，仅提取设计原则",
+   "failure_modes": "成对阳离子暴露于体相水被氢键/离子竞争淬灭；磺酸根头基与为羧酸根预组织的锚定几何失配；氟碳腔对一切全氟物种非特异吸附降低选择性；疏水腔与全氟 C4 链失配使头基锚定几何失效；长链 PFAS（PFOA/PFOS）按 FFAR2 短链选择性规律应结合更弱，但环境中常共存仍须实验排查",
+   "material_realization_examples": []
+  }
+ ],
+ "honesty_ledger": {
+  "facts": [
+   {
+    "type": "mechanism",
+    "index": 0,
+    "name": "短链脂肪酸羧酸根头基的成对精氨酸离子对锚定",
+    "basis": "from_source_verified",
+    "note": "Zhang 2024 Sci Adv（PDB 8T3S 丁酸-FFAR2：羧酸根由 Arg180(5.39)/Arg255(7.35) 配位，Tyr165 氢键、His242 组织口袋、Gln148 稳定 Arg180；Arg180/Arg255 突变消除 SCFA 响应；精氨酸对在 FFA1-FFA3 保守）；quote 逐字取自 PMC10780892 全文 XML（可核验），残基按论文作者编号（含 Ballesteros-Weinstein 上标），未做全文 PDF 审计"
+   },
+   {
+    "type": "mechanism",
+    "index": 1,
+    "name": "疏水腔对短链尾链的容纳与链长选择性",
+    "basis": "from_source_verified",
+    "note": "Zhang 2024 Sci Adv（PDB 8T3S：疏水亚腔 Cys141/Val144/Val179/Leu183 容纳丁酸尾链，Tyr90 与短链疏水作用；FFA2/FFA3 响应短链、FFA1/FFA4 响应长链）+ Kugawa 2025 Nat Commun（PDB 8Y6Y：与 FFA1 结构比较及突变揭示 FFAR2 链长选择性）；quote 取自 PMC10780892 全文 XML 与 PMC11947310 摘要"
+   }
+  ],
+  "leads": [],
+  "inferences": [
+   {
+    "type": "design_translation",
+    "index": 0,
+    "idea": "将 FFAR2 成对精氨酸羧酸根锚 + 短链疏水腔移植到多孔材料以识别短链 PFAS 阴离子头基",
+    "basis": "llm_inferred",
+    "label": "inspiration",
+    "note": "FFAR2 天然识别短链脂肪酸羧酸根；最直接头基同源物为短链全氟羧酸（PFBA，C4 羧酸根，与丁酸根等构）。PFBS 为磺酸根头基，与羧酸根电荷分布/几何/pKa 不同，转译为磺酸根识别属较松的阴离子类别类比；全氟 C4 尾链与烃类丁基的疏水腔适配性未知。均属原理层外推，无 PFAS 结合/吸附证据，亲和力与选择性须实验验证"
+   }
+  ],
+  "boundary_notes": [
+   "本原型天然配体为短链脂肪酸（乙酸/丙酸/丁酸，C2-C4 羧酸根）；机制 from_source 接地限于 FFAR2 与短链脂肪酸在正构口袋的羧酸根锚定与链长选择性",
+   "短链 PFAS（PFBS/短链全氟羧酸）应用为设计转译（llm_inferred/inspiration），非 from_source 事实，不得用作这些污染物的 direct evidence",
+   "头基化学差异须明示：FFAR2 识别羧酸根；PFBS 为磺酸根头基，最直接同源物为短链全氟羧酸（PFBA），PFBS 转译属阴离子类别层面的较松类比",
+   "无 PFBS/短链 PFAS 吸附性能数据（qmax 等）；严格未从外部污染物知识库搬运任何性能数值",
+   "一切 PFAS 相关边界（磺酸根头基差异、全氟尾链容纳）均为定性 llm_inferred，不带数值阈值，gate_level=soft",
+   "旁证结构 8J24（FFAR2-乙酸，Cell Res 2024 沉积引文，分辨率 2.6 Å）与 8J20（FFAR2/3-戊酸）仅经 RCSB 沉积记录核验，未取全文；该 Cell Res 文献（vol 34:323-326，4 页）疑为 Research Highlight 而非长篇研究论文，故未据其构建 from_source 四件套 quote"
+  ],
+  "missing_pdf_items": [
+   "Zhang 2024 Sci Adv 正文 PDF（quote 取自 PMC10780892 开放获取全文 XML，可核验；文章号 eadj2384）",
+   "Kugawa 2025 Nat Commun 全文 PDF（quote 取自 Europe PMC 摘要 PMC11947310；链长选择性残基层细节未取全文）",
+   "Cell Res 2024（10.1038/s41422-023-00914-z）8J24/8J20 相关全文（仅 RCSB 沉积记录核验，未取全文，且疑为 Research Highlight）"
+  ],
+  "generated_by": "manual-curation-2026-07-22",
+  "note": "诚实优先：机制接地限于 FFAR2 与短链脂肪酸的羧酸根头基识别与链长选择性（PDB 8T3S/8Y6Y + Zhang 2024/Kugawa 2025）；一切短链 PFAS 应用为 inspiration/外推，且明示 PFBS 磺酸根与 SCFA 羧酸根头基差异"
+ },
+ "boundary_rules": [
+  {
+   "rule": "保守阳离子锚基序：配位羧酸根的一对精氨酸（Arg180/Arg255）在 FFA1-FFA3 高度保守，缺失或突变即丧失短链脂肪酸识别",
+   "source_mechanism": "短链脂肪酸羧酸根头基的成对精氨酸离子对锚定",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "链长类别窗口：FFA1/FFA4 响应长链脂肪酸、FFA2/FFA3 响应短链脂肪酸，FFAR2 选择性限于短链（C2-C4）尾链",
+   "source_mechanism": "疏水腔对短链尾链的容纳与链长选择性",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "预组织阳离子锚需维持正构口袋低介电微环境与完整跨膜三级结构，水竞争与共存阴离子削弱结合（定性，无数值阈值）",
+   "source_mechanism": "短链脂肪酸羧酸根头基的成对精氨酸离子对锚定",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  },
+  {
+   "rule": "疏水腔对全氟 C4 尾链的容纳性未知（全氟链更刚硬/更大/更疏水），须实验验证（定性，无数值阈值）",
+   "source_mechanism": "疏水腔对短链尾链的容纳与链长选择性",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  }
+ ],
+ "mechanism_tags": [
+  "配位螯合",
+  "氢键",
+  "π-π堆积",
+  "疏水分配",
+  "孔道限域分子筛分",
+  "几何识别"
+ ]
+}

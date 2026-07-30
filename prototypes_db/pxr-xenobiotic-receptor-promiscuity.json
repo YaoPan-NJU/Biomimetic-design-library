@@ -1,0 +1,377 @@
+{
+ "id": "pxr-xenobiotic-receptor-promiscuity",
+ "name_zh": "孕烷 X 受体 PXR 异生物质定向混杂核受体",
+ "name_en": "Pregnane X Receptor PXR Xenobiotic Directed-Promiscuity Nuclear Receptor",
+ "organism": {
+  "scientific": "Homo sapiens（人孕烷 X 受体 PXR / NR1I2，异生物质-甾体核受体）",
+  "category": "动物"
+ },
+ "biomimetic_dimension": "分子仿生",
+ "features": [
+  "广谱识别",
+  "疏水性"
+ ],
+ "tested_conditions": {
+  "tested_ph_range": null,
+  "tested_temp_range": null,
+  "salinity": null,
+  "note": "PXR 为核受体配体结合域（分子识别原型），本库无其吸附性能测试条件；performance_data 为空，故测试条件全空。"
+ },
+ "library_tier": "extended",
+ "lifecycle_status": "active",
+ "coverage": "partial",
+ "status": "active",
+ "provenance_summary": {
+  "n_papers": 2,
+  "n_verified": 10,
+  "n_unverified": 0,
+  "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与硬边界条数（PXR-001 四要素+1 硬边界=5，PXR-002 四要素+1 硬边界=5）。机制接地限于人 PXR LBD 与异生物质配体（大环内酯利福平 PDB 1SKX、膦酸酯 SR12813 PDB 1ILH）的结合模式与定向混杂结构基础，辅以 Watkins 2001 Science 摘要（大体积疏水腔含少量极性残基、SR12813 取三种取向、感知异生物质并上调 CYP3A 解毒）。quote 逐字取自 RCSB PDB 沉积记录（TITLE/COMPND/SOURCE/HETNAM/SITE）与 CrossRef 核验的 Watkins 2001 摘要与标题（可核验），两篇正文 PDF 均未做全文审计，正文内精确页码未核验（页码用论文首页）。双酚类为碰巧/混杂配体、BPA 识别与水相吸附转译全部为 design_translation（llm_inferred/inspiration），无吸附性能数据。"
+ },
+ "mechanisms": [
+  {
+   "mechanism_id": "PXR-001",
+   "name": "大体积柔性疏水腔加少量极性锚对结构多样异生物质配体的定向混杂（多取向）识别",
+   "description": "人 PXR 配体结合域（LBD）具大体积疏水腔，腔壁以疏水残基为主、仅含少量极性残基；该腔以定向混杂方式结合结构差异显著的异生物质配体：大环内酯抗生素利福平（PDB 1SKX，配体 RFP，chain A）与膦酸酯类降脂药 SR12813（PDB 1ILH，配体 SRL，chain A）。PDB 1ILH SITE AC1 列 21 个结合位点残基（Leu206、Ser208、Leu209、Val211、Leu240、Met243、Ala244、Met246、Ser247、Phe251、Phe281、Cys284、Gln285、Phe288、Trp299、Met323、Leu324、His407、Arg410、Phe420、HOH1595），PDB 1SKX SITE AC1 列 15 个（Lys210、Val211、Leu240、Met243、Ser247、Phe251、Phe281、Cys284、Gln285、Trp299、Leu308、Met323、His407、Phe420、HOH608），二者共享 Val211/Leu240/Met243/Ser247/Phe251/Phe281/Cys284/Gln285/Trp299/Met323/His407/Phe420 等腔壁残基；Watkins 2001 摘要指出 SR12813 可在腔内取三种不同取向，少量极性残基的位置与性质决定激活谱。残基编号为 PDB 链 A 编号（1SKX construct 残基 130-431），未做与 UniProt O75469 的逐位偏移核对",
+   "基本原理": "大体积疏水腔提供容纳多种亲脂骨架的范德华接触面，少量极性残基提供有限而关键的方向性锚定；腔壁柔性使同一腔可适配结构多样的配体并允许多重取向，二者的组合构成定向混杂的结构基础，使 PXR 以单一口袋感知一类亲脂异生物质而非单一锁钥底物",
+   "source": "literature",
+   "ref_doi": "10.1126/science.1060762",
+   "verification": "verified",
+   "verification_quote": "The hydrophobic ligand-binding cavity of hPXR contains a small number of polar residues, permitting SR12813 to bind in three distinct orientations.",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "亲脂异生物质配体（PXR 的识别对象）：大环内酯抗生素利福平（rifampicin）是人 PXR 的异生物质配体，PDB 1SKX 为人 PXR LBD 与利福平复合物的晶体结构（标题逐字记录于 RCSB 沉积）。利福平为大体积亲脂大环内酯，代表 PXR 所感知的结构多样异生物质中的一类",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1210/me.2004-0346",
+     "locator": "PDB 1SKX, TITLE (p.1125)",
+     "quote": "Structural Disorder in the Complex of Human PXR and the Macrolide Antibiotic Rifampicin",
+     "scope_match": "Keywords: PXR, macrolide, rifampicin, disorder"
+    },
+    "bio_structure": {
+     "text": "人 PXR LBD 的配体结合腔为大体积疏水腔、仅含少量极性残基；Watkins 2001 摘要逐字陈述该疏水腔含少量极性残基并使 SR12813 取三种取向。腔壁残基见 PDB 1ILH SITE AC1（21 残基，含极性 Ser208/Ser247/Gln285/His407/Arg410 散布于 Leu/Val/Met/Ala/Phe/Cys/Trp 疏水壁之间）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1126/science.1060762",
+     "locator": "Abstract, p.2329",
+     "quote": "The hydrophobic ligand-binding cavity of hPXR contains a small number of polar residues, permitting SR12813 to bind in three distinct orientations.",
+     "scope_match": "Keywords: hydrophobic, cavity, polar, orientations"
+    },
+    "interaction": {
+     "text": "PDB 1ILH SITE AC1（逐字沉积记录）列出 SR12813（配体 SRL，chain A）结合位点的 21 个残基（Leu206、Ser208、Leu209、Val211、Leu240、Met243、Ala244、Met246、Ser247、Phe251、Phe281、Cys284、Gln285、Phe288、Trp299、Met323、Leu324、His407、Arg410、Phe420、HOH1595），即腔壁疏水残基与少量极性残基共同接触配体；配体以疏水/范德华接触为主、辅以极性残基的方向性锚定，并可取多重取向（见 bio_structure 引文）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1126/science.1060762",
+     "locator": "PDB 1ILH, SITE AC1 (p.2329)",
+     "quote": "SITE     1 AC1 21 LEU A 206  SER A 208  LEU A 209  VAL A 211",
+     "scope_match": "Keywords: AC1, LEU, SER, VAL"
+    },
+    "why_it_works": {
+     "text": "PXR 是人的核异生物质受体，其定向混杂具有明确的结构基础：Watkins 2001 论文标题逐字陈述为'结构决定定向混杂'。大体积疏水腔加少量极性残基的组合，正是 PXR 以单一口袋感知多种亲脂异生物质的结构原理",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1126/science.1060762",
+     "locator": "title, p.2329",
+     "quote": "The Human Nuclear Xenobiotic Receptor PXR: Structural Determinants of Directed Promiscuity",
+     "scope_match": "Keywords: xenobiotic, promiscuity, receptor"
+    },
+    "boundary_conditions": [
+     {
+      "text": "同腔跨配体定向混杂：同一 PXR LBD 疏水腔以重叠残基集合结合结构差异显著的两种异生物质：利福平（大环内酯，PDB 1SKX SITE AC1 15 残基）与 SR12813（膦酸酯，PDB 1ILH SITE AC1 21 残基），二者共享 Val211/Leu240/Met243/Ser247/Phe251/Phe281/Cys284/Gln285/Trp299/Met323/His407/Phe420 等腔壁残基；且 SR12813 在腔内取三种不同取向（Watkins 2001 摘要）。即腔对配体结构呈定向混杂而非专一锁钥",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "PDB 1SKX, SITE AC1 (p.1125)",
+      "quote": "SITE     1 AC1 15 LYS A 210  VAL A 211  LEU A 240  MET A 243",
+      "scope_match": "Keywords: AC1, LYS, VAL",
+      "source_asset": null
+     },
+     {
+      "text": "定向混杂部分依赖腔壁构象柔性/无序：PDB 1SKX 标题即记'人 PXR-利福平复合物中的结构无序'，提示结合环/腔壁柔性参与多配体适配；材料移植若将腔刚性化，可能收窄可识别配体范围、降低混杂容量（定性，无数值阈值）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "scope_match": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "大体积构象自适应疏水腔（以疏水/范德华接触为主）加稀疏分布的预组织极性锚，可对一类结构多样的亲脂配体呈定向混杂识别（多配体、多取向），而非单一锁钥识别；该原理可独立于蛋白骨架移植到人工柔性孔腔",
+    "verification_quote": "The hydrophobic ligand-binding cavity of hPXR contains a small number of polar residues, permitting SR12813 to bind in three distinct orientations."
+   },
+   "source_doi": "10.1126/science.1060762",
+   "source_page": 2329,
+   "source_locator": "Abstract / title, p.2329 + PDB 1ILH / 1SKX 沉积记录",
+   "source_file": "PDB 1ILH（Watkins 2001 Science 292:2329-2333, DOI 10.1126/science.1060762）+ PDB 1SKX（Chrencik 2005 Mol Endocrinol 19:1125-1134, DOI 10.1210/me.2004-0346）；quote 取自 RCSB 沉积记录与 CrossRef 核验摘要/标题，未做本地全文 PDF 审计",
+   "functional_groups": [
+    "大体积疏水腔壁残基（Leu/Val/Met/Ala/Phe/Cys/Trp，范德华接触）",
+    "稀疏极性锚残基（Ser208、Ser247、Gln285、His407、Arg410）"
+   ],
+   "key_structures": [
+    "识别结构"
+   ]
+  },
+  {
+   "mechanism_id": "PXR-002",
+   "name": "定向混杂作为进化的异生物质感知-解毒功能（机制层级声明）",
+   "description": "PXR 进化为广谱异生物质/甾体传感器：被多种亲脂异生物质激活后经转录上调细胞色素 P450 3A（CYP3A）等解毒/外排通路。Watkins 2001 摘要逐字陈述 hPXR 响应多种异生物质激活 CYP3A 表达、并在药物-药物相互作用中起关键作用，其感知异生物质的能力即由该定向混杂腔提供。故定向混杂本身是进化的功能（感知异生物质并启动解毒），而非碰巧结合；PXR 的天然读出是转录激活（解毒上调），并非配体的物理去除或隔离",
+   "基本原理": "对解毒通路而言，广谱感知比单一专一更有适应价值：一个大体积定向混杂腔可一次性监测多种亲脂异生物质并以转录激活上调解毒酶，混杂即功能。该机制层级（异生物质感知-解毒）与内分泌干扰毒性机制（如库内 ERRγ-BPA 高亲和结合）性质不同",
+   "source": "literature",
+   "ref_doi": "10.1126/science.1060762",
+   "verification": "verified",
+   "verification_quote": "activates cytochrome P450-3A expression in response to a wide variety of xenobiotics and plays a critical role in mediating dangerous drug-drug interactions.",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "PXR 的触发配体为多种异生物质：hPXR 响应多种异生物质而激活 CYP3A 表达（Watkins 2001 摘要逐字陈述），即结构多样的亲脂异生物质（含大环内酯利福平等）均可作为 PXR 配体触发解毒应答",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1126/science.1060762",
+     "locator": "Abstract, p.2329",
+     "quote": "activates cytochrome P450-3A expression in response to a wide variety of xenobiotics and plays a critical role in mediating dangerous drug-drug interactions.",
+     "scope_match": "Keywords: cytochrome, xenobiotics, drug-drug"
+    },
+    "bio_structure": {
+     "text": "PXR 是人的核异生物质/甾体受体：PDB 1SKX 沉积 COMPND 逐字记其同义名含'甾体与异生物质受体（STEROID AND XENOBIOTIC RECEPTOR, SXR）'，基因 NR1I2（SOURCE 记 GENE: NR1I2, PXR），属核受体超家族的异生物质传感器",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1210/me.2004-0346",
+     "locator": "PDB 1SKX, COMPND (p.1125)",
+     "quote": "PREGNANE X RECEPTOR, ORPHAN NUCLEAR RECEPTOR PAR1, STEROID AND XENOBIOTIC RECEPTOR, SXR",
+     "scope_match": "Keywords: xenobiotic, steroid, receptor"
+    },
+    "interaction": {
+     "text": "异生物质配体结合 PXR 腔即被'感知'：Watkins 2001 摘要逐字陈述其发现为' hPXR 如何感知异生物质'提供重要洞见；配体-腔结合事件经构象/激活谱转变为转录信号（感知-应答耦合）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1126/science.1060762",
+     "locator": "Abstract, p.2329",
+     "quote": "Our findings provide important insights into how hPXR detects xenobiotics and may prove useful in predicting and avoiding drug-drug interactions.",
+     "scope_match": "Keywords: detects, xenobiotics, drug-drug"
+    },
+    "why_it_works": {
+     "text": "定向混杂是 PXR 的结构-功能设计：少量极性残基的位置与性质对建立 PXR 精确的药理激活谱至关重要（Watkins 2001 摘要逐字陈述），即混杂并非无序碰巧，而是经极性残基精调、对多种异生物质产生确定激活谱的进化功能",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1126/science.1060762",
+     "locator": "Abstract, p.2329",
+     "quote": "The position and nature of these polar residues were found to be critical for establishing the precise pharmacologic activation profile of PXR.",
+     "scope_match": "Keywords: polar, pharmacologic, PXR"
+    },
+    "boundary_conditions": [
+     {
+      "text": "PXR LBD 直接结合异生物质配体是其结构属性：人 PXR LBD 与异生物质 SR12813 的复合物晶体结构（PDB 1ILH，标题逐字记录）连同 PDB 1SKX（利福平复合物）证明混杂结合异生物质是该 LBD 的固有结构属性，而非偶发事件",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "PDB 1ILH, TITLE (p.2329)",
+      "quote": "Crystal Structure of Human Pregnane X Receptor Ligand Binding Domain Bound to SR12813",
+      "scope_match": "Keywords: Pregnane X Receptor, SR12813, Ligand Binding Domain",
+      "source_asset": null
+     },
+     {
+      "text": "机制层级为异生物质感知-解毒而非专一去除：PXR 天然读出是转录激活（CYP3A 等解毒酶上调），并非配体的物理捕获/隔离；双酚类（含 BPA）作为亲脂异生物质属碰巧/混杂配体而非进化专一靶点。转译为吸附材料仅可借用其'大体积柔性疏水腔加极性锚'的识别原理，不得假设蛋白解毒功能或 BPA 专一去除（定性，无数值阈值）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "scope_match": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "定向混杂腔的天然功能是广谱感知一类亲脂异生物质并触发下游应答；作仿生识别原理时可提取'大体积柔性疏水腔加稀疏极性锚对配体类的广谱/类选择性结合'，但解毒式转录应答与配体专一去除不在可迁移之列",
+    "verification_quote": "activates cytochrome P450-3A expression in response to a wide variety of xenobiotics and plays a critical role in mediating dangerous drug-drug interactions."
+   },
+   "source_doi": "10.1126/science.1060762",
+   "source_page": 2329,
+   "source_locator": "Abstract, p.2329 + PDB 1SKX/1ILH COMPND/TITLE",
+   "source_file": "Watkins 2001 Science 292:2329-2333（DOI 10.1126/science.1060762，quote 取自 CrossRef 核验摘要/标题）+ PDB 1SKX（DOI 10.1210/me.2004-0346）沉积 COMPND；未做本地全文 PDF 审计",
+   "functional_groups": [
+    "异生物质感知腔（大体积疏水腔加稀疏极性锚）",
+    "激活谱决定残基（少量极性残基的位置与性质）"
+   ],
+   "key_structures": [
+    "识别结构"
+   ]
+  }
+ ],
+ "performance_data": [],
+ "engineering_constraints": [
+  {
+   "constraint": "可溶核受体结构域形态",
+   "value": "PXR LBD construct 残基 130-431（人 NR1I2，PDB 1SKX COMPND），识别依赖三级疏水腔，用作吸附须将腔壁/极性锚基序移植或固定于固体载体",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "RCSB 1SKX：COMPND 'PXR LIGAND BINDING DOMAIN; RESIDUES 130-431'，SOURCE 'HOMO SAPIENS / GENE: NR1I2, PXR'",
+   "source": "literature",
+   "ref_doi": "10.1210/me.2004-0346"
+  },
+  {
+   "constraint": "定向混杂=广谱而非专一",
+   "value": "PXR 腔对结构多样的亲脂异生物质呈定向混杂识别（利福平/SR12813 共享腔壁残基且 SR12813 取三种取向），材料转译只得类/混合物水平的广谱识别，不构成对 BPA 的专一锁钥选择性",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（基于 PDB 1SKX/1ILH SITE 共享残基与 Watkins 2001 摘要'三种取向/多种异生物质'的外推）",
+   "source": "llm_inference",
+   "ref_doi": null
+  },
+  {
+   "constraint": "双酚为碰巧/混杂配体，机制层级为感知非去除",
+   "value": "双酚类（含 BPA）作为亲脂异生物质属 PXR 的碰巧/混杂配体，本条目未核验任何 PXR-双酚复合物结构或亲和力数据；PXR 天然功能为异生物质感知-解毒（CYP3A 转录上调），非配体物理去除",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（基于 Watkins 2001 摘要的感知-解毒功能陈述；PXR-双酚结合为未核验的文献线索，见 honesty_ledger.leads）",
+   "source": "llm_inference",
+   "ref_doi": null
+  },
+  {
+   "constraint": "构象柔性/无序依赖",
+   "value": "定向混杂部分依赖腔壁构象柔性（PDB 1SKX 标题记复合物中'结构无序'）；材料移植若刚性化腔体，可能降低对多样配体的混杂容量",
+   "unit": null,
+   "relevance": "medium",
+   "explanation": "PDB 1SKX 标题'Structural Disorder in the Complex of Human PXR and the Macrolide Antibiotic Rifampicin'（结构无序为沉积记录可核验事实，柔性-混杂因果为机理推断）",
+   "source": "literature",
+   "ref_doi": "10.1210/me.2004-0346"
+  }
+ ],
+ "narrative": {
+  "entries": [
+   {
+    "source_file": "PDB 1ILH / Watkins 2001 Science 292:2329-2333 (DOI 10.1126/science.1060762) + PDB 1SKX / Chrencik 2005 Mol Endocrinol 19:1125-1134 (DOI 10.1210/me.2004-0346)",
+    "paper_id": "2001-Watkins-PXR-directed-promiscuity-structure",
+    "sections": {
+     "problem_definition": "机体需在接触多种结构各异的亲脂异生物质（药物、外源化学物）时迅速启动解毒。若每种异生物质都需一个专一受体，则监测成本极高。孕烷 X 受体 PXR（人 NR1I2，曾称甾体与异生物质受体 SXR）进化为广谱异生物质传感器：被多种异生物质激活后转录上调 CYP3A 等解毒/外排酶。其分子基础问题是，单一配体结合腔如何识别结构多样的异生物质。",
+     "biological_solution": "Watkins 等（2001）测定人 PXR LBD 单独及其与降脂药 SR12813 复合物的晶体结构（PDB 1ILH，2.5/2.75 Å）：配体结合腔为大体积疏水腔、仅含少量极性残基，SR12813 可在腔内取三种不同取向，少量极性残基的位置与性质对建立精确药理激活谱至关重要；论文标题概括为'人核异生物质受体 PXR：定向混杂的结构基础'。Chrencik 等（2005）解析人 PXR LBD 与大环内酯利福平的复合物（PDB 1SKX），揭示复合物中存在结构无序（腔壁柔性）。比较两结构：利福平（PDB 1SKX SITE AC1 15 残基）与 SR12813（PDB 1ILH SITE AC1 21 残基）共享 Val211/Leu240/Met243/Ser247/Phe251/Phe281/Cys284/Gln285/Trp299/Met323/His407/Phe420 等腔壁残基，即同一柔性疏水腔以重叠残基集合容纳结构迥异的配体，这正是定向混杂的结构基础：混杂本身即进化的异生物质感知功能，而非碰巧结合。",
+     "key_features": "必须保留：① 大体积疏水腔（容纳多样亲脂骨架的范德华接触面）；② 稀疏分布的预组织极性锚（Ser/Gln/His/Arg 型，有限而关键的方向性锚定，决定激活/结合谱）；③ 腔壁构象柔性（多配体/多取向适配）。可灵活调整：载体骨架、腔容积与孔径、极性锚种类与密度、柔性间隔臂。",
+     "design_mapping": "仿生映射：PXR 的'大体积构象自适应疏水腔 + 稀疏极性锚'→ 对双酚类混合物的广谱识别位点。边界声明：这是设计转译/启发（llm_inferred），非 from_source 事实。PXR 天然功能是异生物质感知-解毒（转录上调 CYP3A），并非配体物理去除；双酚类（含 BPA）作为亲脂异生物质属碰巧/混杂配体，本条目未核验任何 PXR-双酚结构或亲和力。蛋白本身（可溶核受体结构域、构象依赖）不可直接复制为吸附剂，只提取'柔性疏水腔 + 极性锚广谱识别'设计原则；水相对双酚混合物的亲和力、类选择性与再生须实验验证。与库内 ERRγ-BPA（内分泌干扰毒性机制、高亲和专一结合）性质不同：PXR 提供的是异生物质感知这一自然解决方案，目标为双酚类混合物的广谱/类选择性捕获而非 BPA 专一去除。",
+     "explainability_anchors": "设计溯源：PXR LBD 大体积疏水腔含少量极性残基、SR12813 取三种取向、利福平与 SR12813 共享腔壁残基（PDB 1ILH/1SKX + Watkins 2001 摘要，from_source）→ '大体积柔性疏水腔 + 稀疏极性锚对亲脂配体类的定向混杂识别'可迁移原理（from_source）→ 双酚类混合物广谱识别位点设计（llm_inferred 启发，须实验验证；BPA 为碰巧配体，机制层级为感知非去除）。"
+    }
+   }
+  ]
+ },
+ "design_translation": [
+  {
+   "idea": "将 PXR 的'大体积构象自适应疏水腔 + 稀疏预组织极性锚 + 腔壁柔性'三要素移植到多孔固体载体，面向水相双酚类混合物（BPA、双酚 S、双酚 F、双酚 AF 等）构建广谱/类选择性识别位点：以柔性疏水孔腔容纳双酚类的二芳基骨架与多样取代基，以稀疏极性锚（识别酚羟基）提供有限而关键的方向性锚定，取广谱捕获而非单一锁钥，模仿 PXR 以单一柔性腔结合多种亲脂异生物质的定向混杂逻辑",
+   "specific_functional_group": "稀疏分布的极性锚（脲/硫脲/酰胺/弱碱含氮基团，模拟 PXR 腔内 Ser/Gln/His 型极性残基，识别双酚羟基）+ 大体积疏水/芳亲孔腔壁（烃链/芳环，模拟 Leu/Val/Met/Phe/Trp 疏水壁，范德华容纳双酚二芳基骨架）",
+   "material_handle": "在介孔二氧化硅或柔性交联聚合物骨架上构筑容积偏大的疏水孔腔（孔径/腔容匹配双酚二芳基骨架并预留多取代基空间），经硅烷偶联/表面引发聚合稀疏接枝极性锚单体（低密度，避免过度锁钥化），以柔性间隔臂或弱交联维持腔壁构象自适应；可用双酚类混合物（而非单一 BPA）作模板印迹以保留广谱容量",
+   "target_interaction": "双酚二芳基骨架与疏水腔壁的范德华/形状互补埋藏 + 酚羟基与稀疏极性锚的方向性氢键 + 低极性微环境排除水竞争；多取代基双酚借腔壁柔性自适应容纳（多取向/多配体）",
+   "source_tier": "llm_inference",
+   "evidence_tier": "inspiration（原理层外推：PXR 定向混杂结构基础接地于 PDB 1ILH/1SKX 与 Watkins 2001 摘要：大体积疏水腔含少量极性残基、SR12813 三种取向、利福平与 SR12813 共享腔壁残基；双酚类为碰巧/混杂配体，本条目未核验 PXR-双酚结构，水相双酚混合物吸附转译无实验证据）",
+   "examples": [],
+   "design_principle": "PXR 以大体积柔性疏水腔加稀疏极性锚对结构多样的亲脂异生物质呈定向混杂识别（PDB 1ILH/1SKX；SR12813 取三种取向、利福平与 SR12813 共享 Val211/Phe251/Phe281/Gln285/Trp299/His407 等腔壁残基）；'柔性疏水腔 + 稀疏极性锚'的广谱/类选择性识别原理可独立于蛋白骨架移植到人工孔腔",
+   "implementation_example": "大孔径疏水介孔二氧化硅或弱交联柔性聚合物，稀疏接枝脲/酰胺极性锚，以双酚类混合物为模板印迹（无实验数据，仅为设计假设）",
+   "constraints": "PXR 天然功能为异生物质感知-解毒（CYP3A 转录上调）而非配体去除，本转译仅借识别原理；双酚类（含 BPA）为碰巧/混杂配体，未核验 PXR-双酚结合，水相亲和力与类选择性须实验验证；BPA 酚羟基碱性下电离改变锚定电荷态；水相水分子氢键竞争与共存亲脂芳环物（壬基酚、多氯联苯、腐殖酸芳环、其他药物）干扰类选择性；蛋白本身不可直接复制，只提取设计原则",
+   "failure_modes": "腔过度刚性化丧失多配体/多取向混杂容量、退化为单一锁钥而排斥取代双酚；极性锚密度过高使广谱性收窄；疏水腔对一切亲脂芳环物非特异吸附、类选择性不足；目标定位错误（误把感知-解毒原型当作 BPA 专一去除方案）；水相氢键竞争淬灭酚羟基锚定",
+   "material_realization_examples": []
+  }
+ ],
+ "honesty_ledger": {
+  "facts": [
+   {
+    "type": "mechanism",
+    "index": 0,
+    "name": "大体积柔性疏水腔加少量极性锚对结构多样异生物质配体的定向混杂（多取向）识别",
+    "basis": "from_source_verified",
+    "note": "PDB 1ILH 沉积记录（TITLE/SR12813 配体 SRL HETNAM/SITE AC1 21 残基）+ PDB 1SKX 沉积记录（TITLE 利福平复合物/RFP HETNAM/SITE AC1 15 残基/COMPND NR1I2/SOURCE HOMO SAPIENS）+ Watkins 2001 摘要（大体积疏水腔含少量极性残基、SR12813 三种取向）与标题（定向混杂的结构基础）；两 PDB SITE AC1 共享 Val211/Leu240/Met243/Ser247/Phe251/Phe281/Cys284/Gln285/Trp299/Met323/His407/Phe420。quote 取自 RCSB 沉积记录与 CrossRef 核验摘要/标题（可核验），未做全文 PDF 审计；残基为 PDB 链 A 编号，未做与 UniProt O75469 的逐位偏移核对"
+   },
+   {
+    "type": "mechanism",
+    "index": 1,
+    "name": "定向混杂作为进化的异生物质感知-解毒功能（机制层级声明）",
+    "basis": "from_source_verified",
+    "note": "Watkins 2001 摘要（hPXR 响应多种异生物质激活 CYP3A、感知异生物质、少量极性残基决定激活谱）+ PDB 1SKX COMPND（STEROID AND XENOBIOTIC RECEPTOR, SXR）+ PDB 1ILH TITLE（人 PXR LBD 结合 SR12813）；quote 取自 CrossRef 核验摘要与 RCSB 沉积记录"
+   },
+   {
+    "type": "fact_derivation",
+    "index": 0,
+    "name": "两 PDB 结构种属与配体经 RCSB REST 与文件核验",
+    "basis": "from_source",
+    "note": "RCSB data.rcsb.org/rest/v1/core/entry/1SKX 与 1ILH：struct.title 与 rcsb_primary_citation 核验；1ILH 主引用即 Watkins 2001 Science（DOI 10.1126/science.1060762, 292:2329-2333），1SKX 主引用为 Chrencik 2005 Mol Endocrinol（DOI 10.1210/me.2004-0346, 19:1125-1134）；两 DOI 经 CrossRef api 核验标题/期刊/卷页/年份"
+   }
+  ],
+  "leads": [
+   {
+    "type": "literature_lead",
+    "index": 0,
+    "name": "双酚类被报道为 PXR 混杂配体（未核验）",
+    "basis": "llm_inferred",
+    "note": "文献中双酚类（含 BPA）作为亲脂异生物质可能被 PXR 定向混杂腔结合/激活，但本条目未核验任何 PXR-双酚复合物 PDB 或亲和力数据，亦未核验具体 PXR-双酚文献；作为待查证线索登记，不作 from_source 事实，亦不作 BPA 识别的 direct evidence"
+   }
+  ],
+  "inferences": [
+   {
+    "type": "design_translation",
+    "index": 0,
+    "idea": "将 PXR 大体积柔性疏水腔 + 稀疏极性锚移植到多孔载体以广谱/类选择性捕获水相双酚类混合物",
+    "basis": "llm_inferred",
+    "label": "inspiration",
+    "note": "PXR 天然功能为异生物质感知-解毒（CYP3A 转录上调）而非配体去除；双酚类为碰巧/混杂配体，未核验 PXR-双酚结构；转译为水相双酚类混合物广谱吸附属原理层外推，无吸附实验数据，亲和力/类选择性/再生须实验验证"
+   }
+  ],
+  "boundary_notes": [
+   "PXR 天然机制层级为异生物质感知-解毒（被多种亲脂异生物质激活后转录上调 CYP3A 等解毒酶），并非配体的物理去除或隔离；机制 from_source 接地限于该感知功能与定向混杂腔的结构基础",
+   "双酚类（含主目标 BPA）作为亲脂异生物质属 PXR 的碰巧/混杂配体，本条目未核验任何 PXR-双酚结构或亲和力；将 PXR 识别原理转译为双酚类/BPA 吸附全部为 design_translation（llm_inferred/inspiration），不得用作 BPA 的 direct evidence",
+   "与库内 errg-bpa-endocrine-receptor 性质不同：ERRγ-BPA 属内分泌干扰毒性机制（孤儿受体高亲和专一结合 BPA），PXR 定向混杂属异生物质感知-解毒这一自然解决方案，目标为双酚类混合物的广谱/类选择性捕获而非 BPA 专一去除",
+   "无 BPA/双酚类吸附性能数据（qmax 等）；严格未从任何外部污染物知识库搬运性能数值（知识隔离红线）",
+   "软边界（构象柔性依赖、机制层级/感知非去除）均为定性 llm_inferred，不带数值阈值，gate_level=soft"
+  ],
+  "missing_pdf_items": [
+   "Watkins 2001 Science 全文 PDF（quote 取自 CrossRef 核验摘要与标题；正文内精确页码、腔容积数值与相互作用参数未审计）",
+   "Chrencik 2005 Mol Endocrinol 全文 PDF（quote 取自 RCSB 沉积记录标题与 SITE/HETNAM/COMPND；CrossRef 无该 DOI 摘要，正文未审计）",
+   "任何 PXR-双酚（BPA 等）复合物结构或亲和力文献（未核验，登记于 leads）"
+  ],
+  "generated_by": "manual-curation-2026-07-22",
+  "note": "诚实优先：机制接地限于人 PXR LBD 与异生物质配体（利福平/SR12813）的定向混杂结构基础与感知-解毒功能（PDB 1ILH/1SKX + Watkins 2001 摘要/标题）；双酚为碰巧配体、机制层级为感知非去除，双酚类/BPA 吸附转译全部为 inspiration/外推"
+ },
+ "boundary_rules": [
+  {
+   "rule": "同腔跨配体定向混杂：同一 PXR LBD 疏水腔以重叠残基集合结合利福平（PDB 1SKX）与 SR12813（PDB 1ILH），SR12813 取三种取向，腔对配体结构呈定向混杂而非专一锁钥",
+   "source_mechanism": "大体积柔性疏水腔加少量极性锚对结构多样异生物质配体的定向混杂（多取向）识别",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "混杂结合异生物质是 PXR LBD 的固有结构属性（人 PXR LBD-SR12813 复合物 PDB 1ILH），非偶发事件；定向混杂经少量极性残基精调而具确定激活谱",
+   "source_mechanism": "定向混杂作为进化的异生物质感知-解毒功能（机制层级声明）",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "机制层级为异生物质感知-解毒而非专一去除：天然读出为 CYP3A 转录上调，双酚类为碰巧/混杂配体；转译仅借识别原理，不假设解毒功能或 BPA 专一去除（定性，无数值阈值）",
+   "source_mechanism": "定向混杂作为进化的异生物质感知-解毒功能（机制层级声明）",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  },
+  {
+   "rule": "定向混杂部分依赖腔壁构象柔性/无序（PDB 1SKX 标题记结构无序），材料刚性化可能收窄配体范围（定性，无数值阈值）",
+   "source_mechanism": "大体积柔性疏水腔加少量极性锚对结构多样异生物质配体的定向混杂（多取向）识别",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  }
+ ],
+ "mechanism_tags": [
+  "疏水分配",
+  "孔道限域分子筛分",
+  "几何识别"
+ ]
+}

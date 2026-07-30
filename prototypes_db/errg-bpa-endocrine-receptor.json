@@ -1,0 +1,356 @@
+{
+ "id": "errg-bpa-endocrine-receptor",
+ "name_zh": "雌激素相关受体 γ ERRγ（双酚 A 识别）",
+ "name_en": "Estrogen-Related Receptor Gamma ERRγ (Bisphenol A Recognition)",
+ "organism": {
+  "scientific": "Homo sapiens（人源雌激素相关受体 γ ERRγ, NR3B3）",
+  "category": "动物"
+ },
+ "biomimetic_dimension": "分子仿生",
+ "features": [
+  "分子筛分",
+  "疏水性"
+ ],
+ "tested_conditions": {
+  "tested_ph_range": null,
+  "tested_temp_range": null,
+  "salinity": null,
+  "note": "ERRγ 为核受体配体结合域（分子识别原型），本库无其吸附性能测试条件；performance_data 为空，故测试条件全空。"
+ },
+ "library_tier": "extended",
+ "lifecycle_status": "active",
+ "coverage": "partial",
+ "status": "active",
+ "provenance_summary": {
+  "n_papers": 3,
+  "n_verified": 10,
+  "n_unverified": 0,
+  "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与硬边界条数（ERRG-001 四要素+1 硬边界=5，ERRG-002 四要素+1 硬边界=5）。机制接地限于 ERRγ LBD 与 BPA/双酚类似物的结合模式（PDB 2E2R/2ZKC/2ZAS + Matsushima 2007 与 2008、Takayanagi 2006 摘要）。quote 逐字取自 RCSB PDB 沉积记录与 PubMed 摘要（可核验），三篇正文 PDF 均未做全文审计，正文内精确页码未核验。水相 BPA 吸附转译为 design_translation（llm_inferred/inspiration），无吸附性能数据。"
+ },
+ "mechanisms": [
+  {
+   "mechanism_id": "ERRG-001",
+   "name": "双酚 A 的双酚羟基氢键锚定与狭长疏水口袋接触",
+   "description": "人源 ERRγ LBD（PDB 2E2R，分辨率 1.60 Å，Rfree 0.197，chain A）结合 BPA（配体 2OH，即 4,4'-propane-2,2-diyldiphenol，chain A 残基 1401）：BPA 两个酚羟基中一个同时与 Glu275 和 Arg316 氢键，另一个与 Asn346 氢键，周围疏水接触（尤其 Tyr326）完成强结合；结合位点 AC1 含 11 个残基（Leu268、Ala272、Glu275、Met306、Leu309、Arg316、Tyr326、Leu345、Asn346、Ile349、Phe435）。异丙叉桥与两苯环占据狭长疏水口袋。残基编号与 UniProt P62508（ERR3_HUMAN，chain A 222-458）一一对应，无偏移",
+   "基本原理": "预组织极性锚（Glu/Arg 羧酸根-胍基型与 Asn 酰胺型）方向性识别两个酚羟基，疏水口袋与双酚骨架（两苯环加异丙叉桥）几何互补容纳，二者的组合使 ERRγ 在无金属参与下对 BPA 获得纳摩尔级亲和力",
+   "source": "literature",
+   "ref_doi": "10.1093/jb/mvm158",
+   "verification": "verified",
+   "verification_quote": "The hydrogen bonds of two phenol-hydroxyl groups, one with both Glu275 and Arg316, the other with Asn346, anchor BPA in the pocket",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "双酚 A（BPA，4,4'-异丙叉二苯酚）：两个酚羟基 + 异丙叉桥 + 两苯环的内分泌干扰物；PDB 2E2R 配体 2OH（HETNAM 记 4,4'-PROPANE-2,2-DIYLDIPHENOL）位于 chain A 1401 位，即 BPA 分子",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1093/jb/mvm158",
+     "locator": "PDB 2E2R, HETNAM (p.517)",
+     "quote": "2OH 4,4'-PROPANE-2,2-DIYLDIPHENOL",
+     "scope_match": "Keywords: 2OH, PROPANE, DIPHENOL"
+    },
+    "bio_structure": {
+     "text": "ERRγ LBD 疏水口袋结合位点 AC1（REMARK 800 记为配体 2OH A 1401 的结合位点）含 11 个残基（SITE AC1：Leu268、Ala272、Glu275、Met306、Leu309、Arg316、Tyr326、Leu345、Asn346、Ile349、Phe435，chain A），构成极性锚 + 疏水壁组合的狭长口袋；construct 残基 216-459，其中 222-458 对应 UniProt P62508（DBREF 一一对应，216-221 为表达标签）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1093/jb/mvm158",
+     "locator": "PDB 2E2R, REMARK 800 / SITE AC1 (p.517)",
+     "quote": "SITE_DESCRIPTION: BINDING SITE FOR RESIDUE 2OH A 1401",
+     "scope_match": "Keywords: BINDING SITE, 2OH, 1401"
+    },
+    "interaction": {
+     "text": "BPA 两个酚羟基一个同时与 Glu275 和 Arg316 氢键、另一个与 Asn346 氢键（Matsushima 2007 摘要）。PDB 2E2R chain A 坐标直测：酚氧 O2 距 Glu275 OE2 2.55 Å、距 Arg316 NH2 2.98 Å；酚氧 O1 距 Asn346 OD1 2.77 Å（均为氢键距离），O1 距 Tyr326 OH 3.64 Å（芳环疏水接触距离）。残基编号为 PDB 链 A 编号，与 UniProt P62508 无偏移",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1093/jb/mvm158",
+     "locator": "Abstract, p.517 (PMID 17761695)",
+     "quote": "The hydrogen bonds of two phenol-hydroxyl groups, one with both Glu275 and Arg316, the other with Asn346, anchor BPA in the pocket",
+     "scope_match": "Keywords: Glu275, Arg316, Asn346"
+    },
+    "why_it_works": {
+     "text": "酚羟基氢键锚定之外，周围疏水接触（尤其 Tyr326）完成 BPA 的强结合；Matsushima 2007 摘要报道 BPA 与 ERRγ 结合 K(D) = 5.5 nM 且不与雌激素受体 ER 结合，Takayanagi 2006 以 [3H]4-OHT 示踪竞争测得 IC50 13.1 nM。纳摩尔亲和力来自极性锚定与疏水容纳的组合",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1093/jb/mvm158",
+     "locator": "Abstract, p.517 (PMID 17761695)",
+     "quote": "surrounding hydrophobic bonds, especially with Tyr326, complete BPA's strong binding",
+     "scope_match": "Keywords: hydrophobic, Tyr326, binding"
+    },
+    "boundary_conditions": [
+     {
+      "text": "同口袋双酚骨架容忍：同一 ERRγ LBD 口袋还结合 4-α-枯基酚（BPA 衍生物，PDB 2ZAS，配体 1OH A 460）与双酚 Z（PDB 2ZKC），显示口袋形状读出面向双酚/二芳基骨架而非 BPA 独有；单环烷基酚与 DES 类骨架结合显著更弱（见 ERRG-002 边界）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "PDB 2ZAS, TITLE / p.408",
+      "quote": "Crystal structure of human estrogen-related receptor gamma ligand binding domain complex with 4-alpha-cumylphenol, a bisphenol A derivative",
+      "scope_match": "Keywords: bisphenol, cumylphenol, receptor gamma",
+      "source_asset": null
+     },
+     {
+      "text": "双酚羟基氢键锚定与疏水口袋依赖预组织空间几何；给体-受体对若完全暴露于体相水，水分子竞争氢键将削弱酚羟基锚定（定性，无数值阈值）",
+      "parameter": "wet_stability",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "scope_match": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "与两酚羟基几何互补的预组织成对极性锚（羧酸根/胍基型与酰胺型氢键基序）加上与双酚骨架形状互补的预组织疏水腔，可在无金属参与下方向性强结合双酚类分子",
+    "verification_quote": "The hydrogen bonds of two phenol-hydroxyl groups, one with both Glu275 and Arg316, the other with Asn346, anchor BPA in the pocket"
+   },
+   "source_doi": "10.1093/jb/mvm158",
+   "source_page": 517,
+   "source_locator": "PDB 2E2R / p.517",
+   "source_file": "PDB 2E2R（RCSB 沉积数据，1.60 Å）+ J Biochem 142(4):517-524（quote 取自 PubMed 摘要 PMID 17761695；未做本地全文 PDF 审计）",
+   "functional_groups": [
+    "酚羟基氢键锚（Glu275 羧酸根、Arg316 胍基、Asn346 酰胺）",
+    "疏水口袋壁残基（Tyr326、Leu268、Ala272、Met306、Leu309、Leu345、Ile349、Phe435）"
+   ],
+   "key_structures": [
+    "识别结构"
+   ]
+  },
+  {
+   "mechanism_id": "ERRG-002",
+   "name": "组成型激活孤儿受体的预组织口袋与双酚骨架形状读出",
+   "description": "ERRγ 是孤儿核受体（内源配体未知）与组成型转录激活因子；其 LBD 疏水口袋在 apo 形式即为预组织构象。BPA 结合受体腔而口袋内部结构与 apo 形式相比无任何改变，并维持激活螺旋（helix 12）活性构象从而保留组成型活性（Matsushima 2007 摘要），故 ERRγ 对 BPA 的识别以预组织口袋形状读出为主。亲和力与选择性具定量窗口：BPA 结合 ERRγ 的 IC50 为 13.1 nM（[3H]4-OHT 示踪竞争实验），4-壬基酚与己烯雌酚弱 5-50 倍（Takayanagi 2006 摘要）。对类似物 4-α-枯基酚报道有诱导契合结合成分（Matsushima 2008 BBRC），显示形状读出并非绝对刚性锁钥",
+   "基本原理": "组成型孤儿受体的口袋天然预组织以接纳配体，BPA 双酚骨架与口袋固有形状互补即可获得高亲和结合；选择性来自口袋固有形状对配体骨架的读出，而非受体整体重塑",
+   "source": "literature",
+   "ref_doi": "10.1093/jb/mvm158",
+   "verification": "verified",
+   "verification_quote": "BPA binds to the receptor cavity without changing any internal structures of the pocket of the ERR gamma-LBD apo form",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "BPA 作为内分泌干扰物强结合 ERRγ：ERRγ 是孤儿核受体、人 48 个核受体之一（Takayanagi 2006 摘要）；BPA 与雌激素受体 ER 的结合与激素活性极弱，ERRγ 才是其高亲和核受体靶点",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1016/j.toxlet.2006.08.012",
+     "locator": "Abstract, p.95 (PMID 17049190)",
+     "quote": "Here we show that BPA strongly binds to human estrogen-related receptor gamma (ERRgamma), an orphan receptor and one of 48 human nuclear receptors",
+     "scope_match": "Keywords: BPA, ERRgamma, orphan receptor"
+    },
+    "bio_structure": {
+     "text": "ERRγ LBD 口袋在 apo 形式即预组织：BPA 结合受体腔而口袋内部结构与 apo 形式相比无任何改变（Matsushima 2007 摘要），表明识别位点几何先于配体存在，BPA 以双酚骨架适配既有腔形",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1093/jb/mvm158",
+     "locator": "Abstract, p.517 (PMID 17761695)",
+     "quote": "BPA binds to the receptor cavity without changing any internal structures of the pocket of the ERR gamma-LBD apo form",
+     "scope_match": "Keywords: pocket, apo form, ERR gamma"
+    },
+    "interaction": {
+     "text": "BPA 结合使激活螺旋（helix 12）维持活性构象，从而保留受体的组成型转录激活活性；BPA 还对抗 4-OHT 对 ERRγ 组成型活性的抑制（Matsushima 2007 与 Takayanagi 2006 摘要）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1093/jb/mvm158",
+     "locator": "Abstract, p.517 (PMID 17761695)",
+     "quote": "Maintaining the 'activation helix' (helix 12) in an active conformation would as a result preserve receptor constitutive activity",
+     "scope_match": "Keywords: activation helix, helix 12, constitutive activity"
+    },
+    "why_it_works": {
+     "text": "ERRγ 是组成型转录激活因子而内源配体未知（Matsushima 2007 摘要），其口袋天然预组织以接纳配体；BPA 双酚骨架之所以契合，源于口袋固有形状与双酚骨架的几何互补（形状读出），而非配体诱导的整体重塑。对 4-α-枯基酚报道的诱导契合成分（Matsushima 2008 BBRC 标题）提示该读出对类似物存在柔性成分",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1093/jb/mvm158",
+     "locator": "Abstract, p.517 (PMID 17761695)",
+     "quote": "The human estrogen-related receptor gamma (ERR gamma) behaves as a constitutive activator of transcription, although the endogenous ligand is unknown",
+     "scope_match": "Keywords: ERR gamma, constitutive activator, endogenous ligand"
+    },
+    "boundary_conditions": [
+     {
+      "text": "亲和力与选择性定量窗口：[3H]4-OHT 示踪竞争实验中 BPA 对 ERRγ 呈剂量依赖结合曲线（IC50 13.1 nM）；4-壬基酚与己烯雌酚结合显著更弱（弱 5-50 倍），即口袋对双酚 A 骨架的读出强于单环烷基酚与 DES 型骨架（Takayanagi 2006 摘要）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "Abstract, p.95 (PMID 17049190)",
+      "quote": "BPA exhibited a definite dose-dependent receptor binding curve with the IC50 value of 13.1 nM",
+      "scope_match": "Keywords: BPA, IC50, receptor binding",
+      "source_asset": null
+     },
+     {
+      "text": "形状读出选择性依赖口袋预组织刚性几何；材料移植若改变腔形或锚定基团排布，对双酚类似物的选择性窗口将丧失；类似物结合可能引入诱导契合柔性成分（定性，无数值阈值）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "scope_match": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "组成型孤儿受体的预组织刚性口袋通过形状读出实现对特定双酚分子的高亲和识别；口袋预组织与腔形互补原则可独立于蛋白骨架移植到人工孔腔",
+    "verification_quote": "BPA binds to the receptor cavity without changing any internal structures of the pocket of the ERR gamma-LBD apo form"
+   },
+   "source_doi": "10.1093/jb/mvm158",
+   "source_page": 517,
+   "source_locator": "p.517 / p.95 (Abstracts)",
+   "source_file": "J Biochem 142(4):517-524 + Toxicol Lett 167(2):95-105（quote 取自 PubMed 摘要 PMID 17761695 / 17049190；未做本地全文 PDF 审计）",
+   "functional_groups": [
+    "预组织疏水口袋（LBD 螺旋围成的固有腔形）",
+    "组成型激活螺旋 helix 12"
+   ],
+   "key_structures": [
+    "识别结构"
+   ]
+  }
+ ],
+ "performance_data": [],
+ "engineering_constraints": [
+  {
+   "constraint": "可溶核受体结构域形态",
+   "value": "ERRγ LBD construct 残基 216-459（222-458 对应 UniProt P62508，216-221 为表达标签），识别依赖预组织口袋三级结构，用作吸附须将识别基序移植/固定于固体载体",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "RCSB 2E2R：COMPND (LIGAND BINDING DOMAIN, RESIDUES 232-459) / DBREF A 222-458 → UniProt P62508 / SEQADV 216-221 EXPRESSION TAG",
+   "source": "literature",
+   "ref_doi": "10.1093/jb/mvm158"
+  },
+  {
+   "constraint": "孤儿受体（内源配体未知）",
+   "value": "ERRγ 内源配体未知，BPA 结合属有文献记载的内分泌干扰物-核受体相互作用（内分泌/毒理语境）；作 BPA 识别原型时提供机制层原理，而非可假设的天然生理识别方案",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "Matsushima 2007 摘要：endogenous ligand is unknown；Takayanagi 2006 摘要：orphan receptor",
+   "source": "literature",
+   "ref_doi": "10.1016/j.toxlet.2006.08.012"
+  },
+  {
+   "constraint": "纳摩尔亲和依赖锚-腔组合",
+   "value": "K(D) 5.5 nM（Matsushima 2007 摘要）与 IC50 13.1 nM（Takayanagi 2006 摘要）依赖 Glu275/Arg316/Asn346 氢键锚与疏水口袋的组合；材料移植中锚定几何或口袋形状丧失可能使亲和力与选择性大幅下降（机理推断）",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（基于两篇摘要的亲和力事实与 PDB 2E2R 结合模式的外推）",
+   "source": "llm_inference",
+   "ref_doi": null
+  }
+ ],
+ "narrative": {
+  "entries": [
+   {
+    "source_file": "PDB 2E2R / Matsushima 2007 J Biochem 142:517-524 (DOI 10.1093/jb/mvm158) + Takayanagi 2006 Toxicol Lett 167:95-105 (DOI 10.1016/j.toxlet.2006.08.012)",
+    "paper_id": "2007-Matsushima-ERRgamma-BPA-crystal-structure",
+    "sections": {
+     "problem_definition": "BPA 是典型内分泌干扰物：其与雌激素受体 ER 的结合和激素活性极弱，却在很低剂量即显示效应，真正的高亲和核受体靶点长期不明。ERRγ 是人 48 个核受体之一的孤儿核受体，呈组成型转录激活，高表达于发育期脑等组织，内源配体未知。BPA 如何高亲和结合 ERRγ，是内分泌干扰物-核受体相互作用的分子基础问题。",
+     "biological_solution": "Takayanagi 等（2006）发现 BPA 强结合 ERRγ：以 [3H]4-OHT 为示踪剂的竞争结合实验给出剂量依赖曲线（IC50 13.1 nM），4-壬基酚与己烯雌酚弱 5-50 倍；BPA 完全保留 ERRγ 的组成型转录激活活性。Matsushima 等（2007）测定 ERRγ LBD 与 BPA 的 1.60 Å 晶体结构（PDB 2E2R）：BPA（配体 2OH，4,4'-propane-2,2-diyldiphenol，chain A 1401）结合于 LBD 疏水口袋，两个酚羟基一个同时与 Glu275 和 Arg316 氢键、另一个与 Asn346 氢键，周围疏水接触（尤其 Tyr326）完成强结合（结合位点 AC1 含 Leu268/Ala272/Glu275/Met306/Leu309/Arg316/Tyr326/Leu345/Asn346/Ile349/Phe435 共 11 残基）；坐标直测酚氧 O2 距 Glu275 OE2 2.55 Å、距 Arg316 NH2 2.98 Å，酚氧 O1 距 Asn346 OD1 2.77 Å。BPA 结合不改变 apo 口袋内部结构并维持 helix 12 活性构象；K(D) = 5.5 nM 且不与 ER 结合。同一口袋还结合双酚 Z（PDB 2ZKC）与 4-α-枯基酚（PDB 2ZAS，BPA 衍生物；后者报道有诱导契合成分）。残基编号与 UniProt P62508 一一对应，无偏移。",
+     "key_features": "必须保留：① 与 BPA 两酚羟基互补的成对极性锚（Glu275/Arg316 羧酸根-胍基型 + Asn346 酰胺型氢键基序）；② 与双酚骨架（两苯环 + 异丙叉桥）几何互补的疏水口袋；③ 口袋预组织（apo 形式即成型，结合不重塑口袋内部）。可灵活调整：载体骨架、锚定基团化学（羧基/胍基/脲/硫脲）、孔壁疏水修饰程度、腔深与孔径。",
+     "design_mapping": "仿生映射：ERRγ 的'双酚羟基氢键锚 + 双酚骨架形状读出疏水口袋'→ 水相 BPA 识别位点三要素。边界声明：这是设计转译/启发（llm_inferred），非 from_source 事实。ERRγ 内源配体未知，BPA 结合属有文献记载的内分泌干扰物-核受体相互作用（内分泌/毒理语境）；蛋白本身（可溶核受体结构域、构象依赖）不可直接复制为吸附剂，只提取设计原则，水相亲和力与选择性须实验验证。",
+     "explainability_anchors": "设计溯源：BPA 在 ERRγ LBD 腔内的双酚羟基锚定与疏水接触模式（PDB 2E2R，from_source，Matsushima 2007；IC50 与组成型活性，Takayanagi 2006）→ '成对酚羟基极性锚 + 双酚骨架预组织疏水口袋形状读出'可迁移原理（from_source）→ 水相 BPA 识别位点设计（llm_inferred 启发，须实验验证）。"
+    }
+   }
+  ]
+ },
+ "design_translation": [
+  {
+   "idea": "将 ERRγ 的'双酚羟基双位氢键锚定 + 双酚骨架形状读出疏水口袋'三要素移植到多孔固体载体，面向水相双酚 A 构建识别位点：在低极性孔壁上按与 BPA 两酚羟基间距几何互补的方式预组织成对极性锚（模拟 Glu275/Arg316 的羧酸根/胍基型氢键基序 + 模拟 Asn346 的酰胺型氢键基序），并按双酚骨架（两苯环 + 异丙叉桥）设定孔腔几何以最大化形状互补",
+   "specific_functional_group": "酚羟基锚定基团：羧酸根/胍基型与脲/硫脲/酰胺型氢键给体-受体对，按与 BPA 两酚羟基间距几何互补的方式成对预组织排布；孔壁烃链提供疏水/芳环接触",
+   "material_handle": "介孔二氧化硅或交联聚合物骨架经硅烷偶联/表面引发聚合接枝羧基/胍基/脲单体；以 BPA 为模板的分子印迹或刚性间隔臂固定成对锚的间距与取向；孔壁烃链修饰降低局部极性，腔深/孔径匹配双酚骨架",
+   "target_interaction": "BPA 两酚羟基与成对锚的方向性氢键锚定 + 两苯环与异丙叉桥在疏水腔内的范德华/形状互补埋藏 + 低极性微环境排除水竞争",
+   "source_tier": "llm_inference",
+   "evidence_tier": "inspiration（原理层外推：ERRγ-BPA 结合模式接地于 PDB 2E2R 与 Matsushima 2007 / Takayanagi 2006 摘要；ERRγ 内源配体未知，BPA 结合属内分泌干扰物-核受体相互作用，转译为水相吸附材料无吸附实验证据）",
+   "examples": [],
+   "design_principle": "ERRγ 以预组织疏水口袋 + 双酚羟基氢键锚 + 双酚骨架形状读出对 BPA 实现纳摩尔级结合（PDB 2E2R；K(D) 5.5 nM，Matsushima 2007 摘要）；三要素中锚定几何与腔形可独立于蛋白骨架移植到人工孔腔",
+   "implementation_example": "羧基/胍基/脲功能化、BPA 印迹、具低极性孔壁的介孔二氧化硅或交联聚合物（无实验数据，仅为设计假设）",
+   "constraints": "ERRγ 内源配体未知，BPA 结合属内分泌干扰物-核受体相互作用语境，原型只提供机制层启发；BPA 酚羟基在碱性条件下电离将改变锚定电荷态；水相中水分子氢键竞争与共存的酚类/芳环物质（壬基酚、雌二醇、腐殖酸酚羟基）干扰选择性；蛋白本身（可溶核受体结构域、构象依赖）不可直接复制，只提取设计原则",
+   "failure_modes": "水相氢键竞争淬灭酚羟基锚定；印迹/预组织几何不足使形状读出失效；疏水孔壁对一切疏水芳环物（壬基酚、多氯联苯、腐殖酸芳环）非特异吸附降低选择性；BPA 类似物（双酚 S、双酚 AF、四溴双酚 A）按同口袋形状读出规则可能竞争结合",
+   "material_realization_examples": []
+  }
+ ],
+ "honesty_ledger": {
+  "facts": [
+   {
+    "type": "mechanism",
+    "index": 0,
+    "name": "双酚 A 的双酚羟基氢键锚定与狭长疏水口袋接触",
+    "basis": "from_source_verified",
+    "note": "PDB 2E2R 沉积记录（TITLE/KEYWDS/HETNAM 2OH/SITE AC1 11 残基/REMARK 800/DBREF P62508）+ 坐标直测氢键距离（O2--Glu275 OE2 2.55 Å、O2--Arg316 NH2 2.98 Å、O1--Asn346 OD1 2.77 Å、O1--Tyr326 OH 3.64 Å）+ Matsushima 2007 摘要（PMID 17761695：Glu275/Arg316/Asn346 氢键锚 + Tyr326 疏水接触，K(D) 5.5 nM）；quote 取自 PDB 沉积记录与 PubMed 摘要（可核验），未做全文 PDF 审计"
+   },
+   {
+    "type": "mechanism",
+    "index": 1,
+    "name": "组成型激活孤儿受体的预组织口袋与双酚骨架形状读出",
+    "basis": "from_source_verified",
+    "note": "Matsushima 2007 摘要（apo 口袋结构不变、helix 12 活性构象、组成型激活因子/内源配体未知）+ Takayanagi 2006 摘要（PMID 17049190：孤儿核受体、IC50 13.1 nM、4-壬基酚与己烯雌酚弱 5-50 倍）；quote 取自 PubMed 摘要"
+   },
+   {
+    "type": "fact_derivation",
+    "index": 0,
+    "name": "残基编号与 UniProt P62508 无偏移（Glu275/Arg316/Asn346/Tyr326 即 P62508 编号）",
+    "basis": "from_source",
+    "note": "DBREF 2E2R A 222-458 → UNP P62508 ERR3_HUMAN 222-458（一一对应）；SEQADV 记 216-221 为表达标签；残基编号与 Matsushima 2007 摘要所用编号一致"
+   }
+  ],
+  "leads": [],
+  "inferences": [
+   {
+    "type": "design_translation",
+    "index": 0,
+    "idea": "将 ERRγ 双酚羟基氢键锚 + 双酚骨架形状读出疏水口袋移植到多孔载体以吸附水相 BPA",
+    "basis": "llm_inferred",
+    "label": "inspiration",
+    "note": "ERRγ 内源配体未知，BPA-ERRγ 属内分泌干扰物-核受体相互作用（内分泌/毒理语境）；转译为水相 BPA 选择性吸附材料属原理层外推，无吸附实验数据，亲和力与选择性须实验验证"
+   }
+  ],
+  "boundary_notes": [
+   "ERRγ 内源配体未知（孤儿核受体）；BPA-ERRγ 结合为有文献记载的内分泌干扰物-核受体相互作用（内分泌/毒理语境），机制 from_source 接地限于该结合模式本身",
+   "将 ERRγ 结合机制转译为水相 BPA 吸附材料设计全部为 design_translation（llm_inferred/inspiration），不得用作 BPA 吸附的 direct evidence",
+   "对类似物 4-α-枯基酚报道有诱导契合结合成分（Matsushima 2008 BBRC 373:408），形状读出并非绝对刚性锁钥；同口袋还结合双酚 Z（PDB 2ZKC），故口袋读出面向双酚/二芳基骨架而非 BPA 独有",
+   "无 BPA 吸附性能数据（qmax 等）；严格未从任何外部污染物知识库搬运性能数值（知识隔离红线）",
+   "软边界（水竞争、预组织依赖）均为定性 llm_inferred，不带数值阈值，gate_level=soft"
+  ],
+  "missing_pdf_items": [
+   "Matsushima 2007 J Biochem 全文 PDF（quote 取自 PubMed 摘要 PMID 17761695；正文内精确页码与相互作用参数未审计，条目内氢键距离为 PDB 2E2R 坐标直测）",
+   "Takayanagi 2006 Toxicol Lett 全文 PDF（quote 取自 PubMed 摘要 PMID 17049190）",
+   "Matsushima 2008 BBRC 全文 PDF（接地限于 PDB 2ZAS 的 JRNL 记录与 Crossref 题录：BBRC 373:408-413）"
+  ],
+  "generated_by": "manual-curation-2026-07-21",
+  "note": "诚实优先：机制接地限于 ERRγ LBD 与 BPA/双酚类似物的结合模式（PDB 2E2R/2ZKC/2ZAS + 三篇文献摘要/题录）；水相 BPA 吸附转译全部为 inspiration/外推"
+ },
+ "boundary_rules": [
+  {
+   "rule": "双酚羟基氢键锚定：BPA 两酚羟基分别与 Glu275+Arg316 和 Asn346 氢键锚定（PDB 2E2R / Matsushima 2007）",
+   "source_mechanism": "双酚 A 的双酚羟基氢键锚定与狭长疏水口袋接触",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "口袋形状读出面向双酚骨架：同口袋结合双酚 Z（PDB 2ZKC）与 4-α-枯基酚（PDB 2ZAS，BPA 衍生物）；单环 4-壬基酚与己烯雌酚结合显著更弱（5-50 倍），口袋读出非 BPA 独有但对双酚 A 骨架最强",
+   "source_mechanism": "组成型激活孤儿受体的预组织口袋与双酚骨架形状读出",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "水相移植须维持极性锚预组织与疏水口袋低极性微环境，水分子竞争氢键削弱识别（定性，无数值阈值）",
+   "source_mechanism": "双酚 A 的双酚羟基氢键锚定与狭长疏水口袋接触",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  }
+ ],
+ "mechanism_tags": [
+  "配位螯合",
+  "氢键",
+  "疏水分配",
+  "孔道限域分子筛分",
+  "几何识别"
+ ]
+}

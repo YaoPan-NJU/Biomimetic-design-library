@@ -1,0 +1,304 @@
+{
+  "id": "mangrove-root",
+  "name_zh": "红树林根系",
+  "name_en": "Mangrove Root",
+  "organism": {
+    "scientific": "Kandelia obovata",
+    "category": "植物"
+  },
+  "biomimetic_dimension": "系统仿生",
+  "features": [
+    "网状"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": "moderate",
+    "note": "测过的 pH/温度范围，不是适用范围。仅从 performance_data 中实际测试过的条件聚合。"
+  },
+  "performance_data": [
+    {
+      "parameter": "三种红树植物对NH4+-N的去除率范围 Removal range of NH4+-N by three mangrove species",
+      "value": "62%-99",
+      "unit": "%",
+      "pollutant": "NH₄⁺-N",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.11654/jaes.2021-1478",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第7组-系统仿生/2022-刘-红树林-去除.pdf",
+      "page": 9,
+      "locator": "Section 3.2",
+      "verification": "needs_review",
+      "confidence": 0.8,
+      "label_fix": "P1b: downgraded from verified — no verification_quote"
+    },
+    {
+      "parameter": "磷酸盐快速去除效果 Rapid PO43--P removal in early stage",
+      "value": "80",
+      "unit": "%",
+      "pollutant": "PO₄³⁻",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.11654/jaes.2021-1478",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第7组-系统仿生/2022-刘-红树林-去除.pdf",
+      "page": 9,
+      "locator": "Section 3.2",
+      "verification": "needs_review",
+      "confidence": 0.8,
+      "label_fix": "P1b: downgraded from verified — no verification_quote"
+    },
+    {
+      "parameter": "25倍浓度处理下NO2--N去除率 NO2--N removal at 25x concentration",
+      "value": null,
+      "unit": null,
+      "pollutant": "",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.11654/jaes.2021-1478",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第7组-系统仿生/2022-刘-红树林-去除.pdf",
+      "page": 7,
+      "locator": "Section 2.4",
+      "verification": "needs_review",
+      "confidence": 0.8,
+      "label_fix": "P1b: downgraded from verified — no verification_quote"
+    },
+    {
+      "parameter": "秋茄在15倍浓度下NH4+-N去除优势 K. candel superiority at 15x NH4+-N removal",
+      "value": null,
+      "unit": null,
+      "pollutant": "NH₄⁺-N",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.11654/jaes.2021-1478",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第7组-系统仿生/2022-刘-红树林-去除.pdf",
+      "page": 9,
+      "locator": "Section 3.2",
+      "verification": "needs_review",
+      "confidence": 0.8,
+      "label_fix": "P1b: downgraded from verified — no verification_quote"
+    },
+    {
+      "parameter": "红树林人工湿地氮磷去除临界浓度 Critical concentration for N/P removal saturation",
+      "value": null,
+      "unit": null,
+      "pollutant": "",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.11654/jaes.2021-1478",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第7组-系统仿生/2022-刘-红树林-去除.pdf",
+      "page": 9,
+      "locator": "Section 3.2",
+      "verification": "needs_review",
+      "confidence": 0.8,
+      "label_fix": "P1b: downgraded from verified — no verification_quote"
+    }
+  ],
+  "mechanisms": [
+    {
+      "name": "红树林根盐排斥选择性离子输运与根际微生物降解",
+      "description": null,
+      "functional_groups": [
+        "-S-（硫醚键）",
+        "-O-（醚键）"
+      ],
+      "source": "literature",
+      "ref_doi": "10.11654/jaes.2021-1478",
+      "verification": "partial",
+      "基本原理": "红树林根系可在高盐环境中选择性排斥Na⁺/Cl⁻而吸收K⁺/NO₃⁻，根际微生物群落可降解有机污染物",
+      "source_file": "仿生文献库/论文/第7组-系统仿生/2022-刘-红树林-去除 2.pdf",
+      "verification_quote": "人工湿地由人工模拟自然湿地建造和控制，是由土壤-植物-底栖生物-微生物形成的生态系统，是通过过滤、吸附、沉淀、离子交换、植物吸收和微生物降解等途径实现污水高效净化处理的一种新型废水处理技术",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "多种水体污染物（重金属、有机物、营养盐）",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.11840/j.issn.1001-6392.2021.06.001",
+          "locator": "p.3",
+          "quote": "指标即沉积物指标，包括有机物含量和沉积物粒度",
+          "scope_match": "Keywords: 有机, 有机物, 机物"
+        },
+        "bio_structure": {
+          "text": "红树林根系的盐排斥机制和选择性离子输运",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "根系表面吸附、微生物降解、植物吸收、根际沉淀",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.13343/j.cnki.wsxb.20210321",
+          "locator": "p.10",
+          "quote": "微生物降解，微生物的共代谢作用在PAHs 的",
+          "scope_match": "Keywords: 微生物降解, 微生物降"
+        },
+        "why_it_works": {
+          "text": "红树林根系可在高盐环境中选择性排斥Na⁺/Cl⁻而吸收K⁺/NO₃⁻，根际微生物群落可降解有机污染物",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.11840/j.issn.1001-6392.2021.06.001",
+          "locator": "p.1",
+          "quote": "Third Institute of Oceanography, Ministry of Natural Resources, Xiamen 361005, China",
+          "scope_match": "Keywords: na, third"
+        },
+        "boundary_conditions": [
+          {
+            "text": "高盐度条件下盐排斥机制趋于饱和，选择性下降",
+            "parameter": "salinity",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "pdf_not_found"
+          }
+        ],
+        "transferable_principle": "红树林的盐排斥-选择性输运机制可启发高盐环境下的选择性离子分离材料",
+        "verification_quote": "mangrove constructed wetland for pollutant removal",
+        "source_doi": "10.11654/jaes.2021-1478",
+        "source_locator": "p.9 / Section 3.1"
+      },
+      "source_locator": "p.9",
+      "key_structures": []
+    }
+  ],
+  "narrative": {
+    "entries": [
+      {
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2021-吴-红树林-研究进展-综述.json",
+        "paper_id": "Wu2021_marine_ecological_restoration_review",
+        "sections": {
+          "problem_definition": "自然界挑战：全球滨海湿地（如红树林、盐沼）大面积退化导致水质净化与生态功能丧失。水处理对应：复杂水环境中污染物的高效去除及材料长期运行性能缺乏系统化、多维度的评估框架。",
+          "biological_solution": "进化策略：红树林等滨海湿地通过植被-沉积物-微生物协同作用实现水质净化与生态恢复。关键机制：植被根系物理过滤、沉积物化学吸附、微生物生物降解。成功案例：红树林生态修复中通过监测生境和生物指标，成功恢复植物健康、碳库功能和食物网支持功能。",
+          "key_features": "必须保留特征：多级过滤与吸附协同机制（根系-沉积物）、多维度性能评估框架（生境非生物指标+生物指标）。可灵活调整特征：具体的植被形态结构、沉积物有机质比例、评估指标的权重分配。",
+          "design_mapping": "生物→材料映射：红树林根系→多孔/纤维状吸附材料骨架；沉积物→负载吸附活性位点的基质；微生物→表面协同降解基团；生态修复评估指标→材料吸附容量、选择性、稳定性及环境友好性的多维评价体系。软约束建议：建议引入类似盐沼沉积物理化性质的环境耐受性测试，并采用直接对比法和轨迹分析法进行材料长期性能评估。",
+          "explainability_anchors": "仿生故事线：从红树林根系在潮间带复杂生境中过滤净化水质的自然智慧出发，提取‘根系-沉积物-微生物’协同净化机制，并将其生态修复的多维评估体系迁移至水处理材料的性能评价中。设计溯源：设计灵感直接来源于红树林、盐沼湿地等海洋生态系统的修复评估指标体系（如生境指标与生物指标的结合），确保材料设计不仅关注单一吸附性能，更兼顾系统级的环境适应性和生态功能。"
+        }
+      },
+      {
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2022-刘-红树林-去除.json",
+        "paper_id": "Liu2022_mangrove_wetland_NP_removal",
+        "sections": {
+          "problem_definition": "自然界挑战：海水养殖尾水具有高盐度、高氮磷负荷的特点，常规淡水植物和单一净化机制在高盐环境下易失效且极易达到吸附饱和。水处理对应：需要开发适用于高盐环境、具备高吸附容量和多重去除机制的脱氮除磷材料，解决高盐废水中营养盐去除效率低和材料易失活、易产生二次污染的问题。",
+          "biological_solution": "进化策略：红树植物（如秋茄）进化出在盐碱环境中的渗透调节和高效营养吸收机制，并通过多年生木本结构减少凋落物，降低二次污染风险。关键机制：通过过滤、吸附、沉淀、离子交换、植物吸收和微生物降解等多途径协同，以及植物-基质-微生物生态系统的相互作用实现高效净化。成功案例：秋茄在15-25倍高浓度养殖尾水中仍保持显著的NH4+-N和NO2--N去除率（最高达99%和86%），且3天内磷酸盐去除率达80%以上。",
+          "key_features": "必须保留特征：高盐环境下的结构稳定性与抗盐离子干扰能力（耐盐碱）、多途径协同吸附与离子交换机制。可灵活调整特征：植物-基质-微生物的三维宏观空间分布可简化为多组分复合材料的微观/介观结构设计，具体的生物降解过程可替换为纯化学吸附或催化机制。",
+          "design_mapping": "生物→材料映射：红树植物根系→具有高比表面积和丰富离子交换位点的仿生多孔吸附基质；植物-基质-微生物协同→多组分复合材料（如碳基-金属氧化物-聚合物复合）；渗透调节机制→材料表面的亲疏水微区或抗盐离子屏蔽层。软约束建议：在设计复合材料时，建议引入类似红树植物凋落物少的特性，选择不易溶出、化学稳定性高的基材以降低长期运行中的二次污染风险。",
+          "explainability_anchors": "仿生故事线：从红树林在海岸带高盐环境中高效净化水质的自然现象出发，提取其根系耐盐吸收与多组分协同净化的核心智慧，转化为高盐废水处理的仿生吸附材料设计。设计溯源：材料的高盐适应性源于红树植物的渗透调节机制；多重脱氮除磷性能源于湿地系统的过滤、吸附、离子交换等多途径协同；长效稳定性源于多年生木本植物低二次污染的生态优势。"
+        }
+      }
+    ]
+  },
+  "engineering_constraints": [
+    {
+      "constraint": "NO3--N浓度稳定性 Stability of NO3--N concentration in mangrove systems",
+      "value": null,
+      "unit": null,
+      "relevance": "high",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.11654/jaes.2021-1478"
+    }
+  ],
+  "provenance_summary": {
+    "n_papers": 3,
+    "n_verified": 5,
+    "n_unverified": 1
+  },
+  "coverage": "normal",
+  "status": "active",
+  "design_translation": [
+    {
+      "idea": "利用红树林根系的多孔结构和表面官能团进行污染物过滤和吸附",
+      "specific_functional_group": "木质素衍生的酚羟基和羧基",
+      "material_handle": "红树林生物质碳化或直接使用",
+      "target_interaction": "酚羟基和羧基配位重金属离子，多孔结构物理截留",
+      "source_tier": "llm_inference",
+      "examples": [],
+      "design_principle": "红树林根系的通气组织(aerenchyma)提供多孔结构，根表铁膜(iron plaque)含Fe(III)氧化物可吸附As、P等含氧阴离子。根际微生物群落可转化/沉淀重金属",
+      "implementation_example": "红树林根系废弃物→干燥研磨→直接使用；或根表铁膜模拟→FeOOH涂层多孔载体→吸附柱",
+      "constraints": "天然根系来源有限；铁膜脱落；微生物群落不稳定",
+      "failure_modes": "来源有限；铁膜脱落；微生物群落波动",
+      "evidence_tier": "lead"
+    }
+  ],
+  "library_tier": "core",
+  "lifecycle_status": "active",
+  "honesty_ledger": {
+    "facts": [
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "人工湿地净化机制途径 Constructed wetland purification mechanisms",
+        "basis": "verified_with_quote"
+      }
+    ],
+    "leads": [
+      {
+        "type": "performance",
+        "index": 0,
+        "parameter": "三种红树植物对NH4+-N的去除率范围 Removal range of NH4+-N by three mangrov",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 1,
+        "parameter": "磷酸盐快速去除效果 Rapid PO43--P removal in early stage",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 2,
+        "parameter": "25倍浓度处理下NO2--N去除率 NO2--N removal at 25x concentration",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 3,
+        "parameter": "秋茄在15倍浓度下NH4+-N去除优势 K. candel superiority at 15x NH4+-N remo",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 4,
+        "parameter": "红树林人工湿地氮磷去除临界浓度 Critical concentration for N/P removal satur",
+        "basis": "needs_review"
+      }
+    ],
+    "inferences": [],
+    "generated_by": "P1c-auto",
+    "note": "Classification based on verification label + quote presence + source type"
+  },
+  "mechanism_tags": [
+    "配位螯合",
+    "沉淀共沉淀",
+    "还原催化降解"
+  ]
+}

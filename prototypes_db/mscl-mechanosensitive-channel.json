@@ -1,0 +1,358 @@
+{
+ "id": "mscl-mechanosensitive-channel",
+ "name_zh": "MscL 大电导机械敏感通道",
+ "name_en": "MscL Mechanosensitive Channel of Large Conductance",
+ "organism": {
+  "scientific": "Mycobacterium tuberculosis H37Ra / Escherichia coli（MscL 大电导机械敏感通道）",
+  "category": "微生物"
+ },
+ "biomimetic_dimension": "分子仿生",
+ "features": [
+  "动态响应"
+ ],
+ "tested_conditions": {
+  "tested_ph_range": null,
+  "tested_temp_range": null,
+  "salinity": null,
+  "note": "MscL 为机械门控大电导通道（刺激门控可逆开闭/动态响应原型），本库无其吸附性能测试条件；performance_data 为空，故测试条件全空。天然机制类别为刺激门控可逆开闭，转译限原理层。"
+ },
+ "library_tier": "extended",
+ "lifecycle_status": "active",
+ "coverage": "partial",
+ "status": "active",
+ "provenance_summary": {
+  "n_papers": 4,
+  "n_verified": 8,
+  "n_unverified": 0,
+  "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与边界条数（MSCL-001 四要素+1 边界=5，MSCL-002 三要素=3，合计 8）。机制接地限于 MscL 天然机械门控（膜张力刺激、闭-开构象转换、分级导通）；PFOA/BPA 刺激门控再生为设计转译（llm_inferred），无性能数据。quote 取自 RCSB PDB 2OAR 沉积记录、Crossref 题录与 JGP 1999 摘要（2026-07-22 在线核验），未做全文 PDF 审计。候选 PDB 2OAU 经核验为 MscS（小电导）而非 MscL，按反伪造协议改用 MscL 结构 2OAR；1MSL 在 RCSB REST 无记录（404），3T9N 为 MscS，均排除。"
+ },
+ "mechanisms": [
+  {
+   "mechanism_id": "MSCL-001",
+   "name": "膜张力驱动的关闭-开放可逆构象门控",
+   "description": "MscL 为同源五聚体大电导机械敏感通道（PDB 2OAR，M. tuberculosis H37Ra，X 射线 3.5 Å，沉积模型含 5 条聚合物链，单体 174 残基）；膜张力经脂双层传递，作用于闭态→开态转变的面内面积增量 ΔA，驱动关闭态（紧缩）与开放态（扩张）间的可逆构象转换。E. coli MscL 脂质体重建单通道记录给出定量门控参数：开放概率 Po 对绝对张力呈陡 S 形依赖（中点 T1/2 ≈ 11.8 dyn/cm），ΔA = 6.5 nm²，闭-开能差 ΔE = 18.6 kBT，导通分 4 个导通态与 1 个闭态；未受力膜中闭态为低能态，张力撤除后通道自发回闭，全程无化学配体参与",
+   "基本原理": "膜张力对开放态扩张的面内面积变化做功（TΔA），补偿闭-开能差，使开闭由单一物理刺激阈值化触发；未受力膜中闭态为低能态，刺激撤除即自发复位，构成无需配体、可反复循环的力学-构象门控",
+   "source": "literature",
+   "ref_doi": "10.1085/jgp.113.4.525",
+   "verification": "corroborated",
+   "verification_quote": "Mechanosensitive Channel of Large Conductance (MscL)",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "天然门控刺激为膜张力（脂双层面内张力）：E. coli MscL 开放概率 Po 对绝对张力呈陡 S 形依赖，中点 T1/2 ≈ 11.8 dyn/cm（脂质体重建单通道记录，Sukharev 1999）。MscL 本身为机械门控通道而非分子识别蛋白，对通透物无化学特异性（原理层描述）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1085/jgp.113.4.525",
+     "locator": "p.525 (abstract)",
+     "quote": "The probability of being open (Po) has a steep sigmoidal dependence on T, with a midpoint (T1/2) of 11.8 dyn/cm.",
+     "scope_match": "Keywords: probability, open, midpoint, sigmoidal"
+    },
+    "bio_structure": {
+     "text": "PDB 2OAR（M. tuberculosis H37Ra，X 射线衍射 3.5 Å，单体 174 残基约 18.8 kDa，沉积模型含 5 条聚合物链即同源五聚体，条目分子量 94.68 kDa）为 MscL 关闭态晶体结构；RCSB 题录标题 'Mechanosensitive Channel of Large Conductance (MscL)'，结构文献为 Chang 1998 Science 'A gated mechanosensitive ion channel'（p.2220-2226）。五聚体与关闭态判定基于 RCSB 沉积数据与该文献题录",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1126/science.282.5397.2220",
+     "locator": "PDB 2OAR, citation 1 / p.2220",
+     "quote": "Structure of the MscL homolog from Mycobacterium tuberculosis: A gated mechanosensitive ion channel",
+     "scope_match": "Keywords: MscL, Mycobacterium tuberculosis, gated"
+    },
+    "interaction": {
+     "text": "门控的力学转导：膜张力 T 作用于闭态→开态转变的面内面积增量 ΔA，机械功 TΔA 补偿闭-开能差驱动通道开放；Sukharev 1999 由 Po(T) 拟合得 ΔA = 6.5 nm²，Po 随张力陡 S 形上升",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1085/jgp.113.4.525",
+     "locator": "p.525 (abstract)",
+     "quote": "If the mechanosensitivity arises from tension acting on a change of in-plane area (ΔA), the free energy, TΔA, would correspond to ΔA = 6.5 nm2.",
+     "scope_match": "Keywords: mechanosensitivity, tension, in-plane area"
+    },
+    "why_it_works": {
+     "text": "可逆性的能量基础：未受力膜中闭态与全开态能差 ΔE = 18.6 kBT，闭态为低能态，故张力撤除后通道自发回闭；门控全程无化学配体参与，为纯力学-构象耦合过程，可反复循环。导通分 4 个导通态与 1 个闭态，开度随张力分级可调",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1085/jgp.113.4.525",
+     "locator": "p.525 (abstract)",
+     "quote": "the energy difference between the closed and fully open states in the unstressed membrane was ΔE = 18.6 kBT.",
+     "scope_match": "Keywords: energy, closed, open, unstressed"
+    },
+    "boundary_conditions": [
+     {
+      "text": "张力阈值：Po(T) 陡 S 形，中点 T1/2 ≈ 11.8 dyn/cm（E. coli MscL 脂质体重建，接近裂解张力），低张力下 Po≈0，门控仅在阈值张力区间触发",
+      "parameter": "membrane_tension",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "corroborated",
+      "gate_level": "hard",
+      "locator": "p.525 (abstract)",
+      "quote": "The probability of being open (Po) has a steep sigmoidal dependence on T, with a midpoint (T1/2) of 11.8 dyn/cm.",
+      "scope_match": "Keywords: probability, open, midpoint, sigmoidal",
+      "source_asset": null
+     },
+     {
+      "text": "力学传导环境依赖：天然门控力经脂双层传递，游离水相或刚性固体载体中不存在等效膜张力场；转译须重建弹性膜/界面环境或以化学刺激替代（定性，无数值阈值）",
+      "parameter": "environment",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "scope_match": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "膜/界面上阈值化、可逆的力致构象开闭（闭态紧缩、开态扩张，刺激撤除自发复位）构成'刺激门控吸附-释放再生'的动态响应骨架；MscL 自身无底物选择性，污染物识别须另耦识别模块",
+    "verification_quote": "Mechanosensitive Channel of Large Conductance (MscL)"
+   },
+   "source_doi": "10.1126/science.282.5397.2220",
+   "source_page": 2220,
+   "source_locator": "PDB 2OAR / p.2220",
+   "source_file": "RCSB PDB 2OAR 沉积记录 / Chang 1998 Science 282:2220-2226 / Sukharev 1999 J Gen Physiol 113:525-540 摘要（题录与摘要接地；未做全文 PDF 审计）",
+   "functional_groups": [
+    "跨膜螺旋束（每单体两条跨膜螺旋，五聚体成孔）",
+    "膜-蛋白界面（脂双层力传导）"
+   ],
+   "key_structures": [
+    "门控构象结构"
+   ]
+  },
+  {
+   "mechanism_id": "MSCL-002",
+   "name": "开放态瞬时非选择性大孔（可逆通透/释放窗口）",
+   "description": "开放态 MscL 形成大电导水相孔道，允许水、离子与小渗透物双向通过（Sukharev 1994：大电导机械敏感通道由 mscL 单基因编码）；导通分 4 个分级导通态而非二元开关（Sukharev 1999），开放随张力撤除松弛回闭，提供可反复开闭的瞬时传质窗口",
+   "基本原理": "大电导开放孔道叠加张力阈值化可逆开闭，得到可程序化的传质窗口：仅在触发刺激存在期间开放传质，刺激撤除后自关闭，传质与关断可循环重复",
+   "source": "literature",
+   "ref_doi": "10.1038/368265a0",
+   "verification": "corroborated",
+   "verification_quote": "A large-conductance mechanosensitive channel in E. coli encoded by mscL alone",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "通透物谱（原理层）：开放孔道对水、离子与小分子渗透物非选择性双向通透，无分子识别特异性；MscL 不提供对特定污染物的化学选择性（孔径与选择性数值未经全文审计，仅作原理层描述）",
+     "basis": "llm_inferred"
+    },
+    "bio_structure": {
+     "text": "孔道导通分级：MscL 并非二元开关，而具 4 个导通态与 1 个闭态（Sukharev 1999 单通道记录），开度随张力分级变化而非全有全无",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1085/jgp.113.4.525",
+     "locator": "p.525 (abstract)",
+     "quote": "MscL is not a binary channel, but has four conducting states and a closed state.",
+     "scope_match": "Keywords: binary, conducting states, closed"
+    },
+    "interaction": {
+     "text": "大电导通透：MscL 形成大电导机械敏感通道，Sukharev 1994 证明 mscL 单基因产物即足以在脂质体中重建该大电导机械敏感活性",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1038/368265a0",
+     "locator": "title, p.265",
+     "quote": "A large-conductance mechanosensitive channel in E. coli encoded by mscL alone",
+     "scope_match": "Keywords: large-conductance, mechanosensitive, mscL"
+    },
+    "why_it_works": {
+     "text": "门控由经脂双层传递的张力驱动，故开放仅发生在张力存在期间，张力撤除即回闭：通透窗口可逆、可重复，开放与关闭无需其他化学因素参与",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1085/jgp.113.4.525",
+     "locator": "p.525 (abstract)",
+     "quote": "Since MscL is gated by tension transmitted through the lipid bilayer, we have been able to measure its gating parameters as a function of absolute tension.",
+     "scope_match": "Keywords: gated, tension, lipid bilayer"
+    },
+    "boundary_conditions": [
+     {
+      "text": "传质窗口无化学选择性：开放孔道为大电导非选择性通道，对目标污染物的选择性须由耦合的识别模块提供（定性，无数值阈值）",
+      "parameter": "selectivity",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "scope_match": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "阈值化可逆开闭的传质窗口可将'吸附/结合态'与'释放/洗脱态'分离为两个刺激可切换的状态，实现刺激门控再生",
+    "verification_quote": "A large-conductance mechanosensitive channel in E. coli encoded by mscL alone"
+   },
+   "source_doi": "10.1038/368265a0",
+   "source_page": 265,
+   "source_locator": "title, p.265",
+   "source_file": "Sukharev 1994 Nature 368:265-268 题录 / Sukharev 1999 J Gen Physiol 113:525-540 摘要（题录与摘要接地；未做全文 PDF 审计）",
+   "functional_groups": [
+    "水相孔道（开放态）",
+    "分级导通态（4 导通态 + 闭态）"
+   ],
+   "key_structures": [
+    "传质结构"
+   ]
+  }
+ ],
+ "performance_data": [],
+ "engineering_constraints": [
+  {
+   "constraint": "膜环境依赖",
+   "value": "MscL 门控力经脂双层传递（gated by tension transmitted through the lipid bilayer）；脱离膜或等效弹性界面环境，张力门控无法直接工作",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "Sukharev 1999 J Gen Physiol 摘要原文（p.525）",
+   "source": "literature",
+   "ref_doi": "10.1085/jgp.113.4.525"
+  },
+  {
+   "constraint": "张力工作点高",
+   "value": "E. coli MscL 开放概率中点 T1/2 ≈ 11.8 dyn/cm（脂质体重建，接近裂解张力），低张力下几乎不开放",
+   "unit": "dyn/cm",
+   "relevance": "high",
+   "explanation": "Sukharev 1999 J Gen Physiol 摘要（p.525）",
+   "source": "literature",
+   "ref_doi": "10.1085/jgp.113.4.525"
+  },
+  {
+   "constraint": "通透非选择性",
+   "value": "开放孔道为大电导非选择性通道，不提供污染物分子特异性；吸附选择性须由耦合的识别模块承担",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "原理层推断（基于大电导机械敏感通道的非选择性通透性质）",
+   "source": "llm_inference",
+   "ref_doi": null
+  },
+  {
+   "constraint": "固载转译需刺激替代",
+   "value": "水相固体吸附剂中不存在膜张力场，须以 pH、温度、离子强度、氧化还原等化学刺激或弹性体应变替代机械门控输入",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（基于门控力经脂双层传递的事实）",
+   "source": "llm_inference",
+   "ref_doi": null
+  },
+  {
+   "constraint": "门控构象完整性",
+   "value": "MscL 门控机制为张力驱动的跨膜螺旋重排（闭态→扩张开态），构象开关依赖五聚体组装的完整性",
+   "unit": null,
+   "relevance": "medium",
+   "explanation": "Sukharev 2001 Nature 409:720-724 题录级接地（题录核验，未做全文审计）",
+   "source": "literature",
+   "ref_doi": "10.1038/35055559"
+  }
+ ],
+ "narrative": {
+  "entries": [
+   {
+    "source_file": "RCSB PDB 2OAR / Chang 1998 Science (DOI 10.1126/science.282.5397.2220) / Sukharev 1999 J Gen Physiol (DOI 10.1085/jgp.113.4.525)",
+    "paper_id": "1998-Chang-MscL-gated-structure-1999-Sukharev-gating-energetics",
+    "sections": {
+     "problem_definition": "细菌面临低渗冲击时胞内膨压骤升，若无快速泄压途径将裂解。MscL 作为应急安全阀，须在膜张力达到危险区间时快速、可逆地打开通透窗口，张力解除后自行关闭。其基础问题是：蛋白如何将脂双层面内张力这一纯物理刺激阈值化地转导为大尺度可逆构象开闭。",
+     "biological_solution": "MscL 是同源五聚体的大电导机械敏感通道（PDB 2OAR：M. tuberculosis H37Ra，X 射线 3.5 Å，沉积模型含 5 条链，RCSB 题录 'Mechanosensitive Channel of Large Conductance (MscL)'，结构文献 Chang 1998 Science 'A gated mechanosensitive ion channel'，p.2220）。门控力经脂双层传递（Sukharev 1999 JGP：'Since MscL is gated by tension transmitted through the lipid bilayer'）。E. coli MscL 脂质体重建单通道记录给出定量门控参数：开放概率 Po 对绝对张力呈陡 S 形依赖，中点 T1/2 ≈ 11.8 dyn/cm；闭态→全开态的面内面积增量 ΔA = 6.5 nm²，张力对 ΔA 做功 TΔA 补偿闭-开能差 ΔE = 18.6 kBT；导通分 4 个导通态与 1 个闭态，未受力膜中闭态为低能态，故张力撤除后通道自发回闭，全程无化学配体参与。大电导开放孔道瞬时、非选择性地通透水、离子与小渗透物（Sukharev 1994 Nature：'A large-conductance mechanosensitive channel in E. coli encoded by mscL alone'），构成可反复开闭的传质窗口。",
+     "key_features": "必须保留：① 阈值化刺激-构象耦合（开闭由单一刺激陡 S 形触发，存在明确工作点）；② 可逆性与自发复位（未刺激态为低能态，刺激撤除自动回初态，可循环）；③ 闭/开两态间大构象差（MscL 面内面积增量 ΔA = 6.5 nm² 量级）。可灵活调整：刺激类型（天然为膜张力，转译可换 pH、温度、离子强度、氧化还原）、载体骨架、开关与识别位点的耦合方式。",
+     "design_mapping": "仿生映射：MscL 张力门控可逆开闭 → 吸附剂的'吸附态-释放态'刺激门控再生。对 PFOA/BPA：识别内核承担选择性结合（PFOA 羧酸根与全氟尾，或 BPA 双酚羟基，由其他识别原型提供），刺激响应外壳/孔门承担再生：吸附工况处于'闭/结合'态富集污染物，再生刺激切换为'开/释放'态（构象、电荷态或孔道可及性转变）实现温和洗脱。注意：MscL 本身无污染物选择性，天然刺激为膜张力；本映射为设计转译/启发（llm_inferred），外壳-内核耦合、刺激窗口与循环稳定性均须实验验证。",
+     "explainability_anchors": "设计溯源：MscL 膜张力门控可逆开闭（PDB 2OAR 结构 + Sukharev 1999 定量门控参数，from_source）→ '阈值化可逆开闭 + 自发复位 + 分级传质窗口'可迁移原理 → PFOA/BPA 刺激门控吸附-释放再生（llm_inferred 启发，须实验验证）。"
+    }
+   }
+  ]
+ },
+ "design_translation": [
+  {
+   "idea": "将 MscL 的'阈值化、可逆、刺激门控开闭'原理转译为吸附剂的'吸附态-释放态'双稳再生设计：识别内核（对 PFOA 羧酸根/全氟尾或 BPA 酚羟基的识别位点，由其他识别原型提供）耦合一个刺激响应外壳/孔门，吸附工况下处于'闭/结合'构象富集污染物，再生刺激（pH 切换、温度、离子强度、氧化还原）下切换到'开/释放'构象，降低结合亲和力或开放传质窗口，实现温和洗脱与循环。MscL 证明大构象开闭可由单一物理刺激阈值化触发（Po 对张力陡 S 形依赖）并在刺激撤除后自发复位",
+   "specific_functional_group": "刺激响应门控基元（pH 响应弱聚电解质如聚丙烯酸/壳聚糖链段、温敏聚 N-异丙基丙烯酰胺链段、离子强度或氧化还原可切换连接）与识别内核的构象耦合",
+   "material_handle": "在介孔二氧化硅或聚合物骨架上构建'识别内核 + 响应外壳'：孔口/孔壁接枝刺激响应聚合物刷或可切换交联网络，使刺激切换改变孔道可及性或结合位点几何/电荷态，而非仅改变表面电荷",
+   "target_interaction": "吸附态：识别位点与 PFOA（羧酸根 + 全氟尾）或 BPA（双酚羟基）结合；再生态：刺激触发外壳构象转变（溶胀/塌缩、电荷态切换、配位解离），削弱结合并打开传质通道实现洗脱",
+   "source_tier": "llm_inference",
+   "evidence_tier": "inspiration（原理层外推：MscL 机制接地于天然机械门控与膜张力刺激；PFOA/BPA 刺激门控再生转译为 llm_inferred，无直接污染物结合或再生证据）",
+   "examples": [],
+   "design_principle": "MscL 证明单一物理刺激（膜张力）可阈值化触发大构象开闭、撤除后自发复位（Sukharev 1999：Po 对 T 陡 S 形依赖，T1/2 ≈ 11.8 dyn/cm，ΔE = 18.6 kBT）；该'阈值化可逆开闭'骨架可外推至化学刺激门控的吸附-释放再生",
+   "implementation_example": "pH 门控再生：PFOA 在中性 pH 由识别位点结合，pH 切换触发响应外壳构象/电荷态转变而洗脱（无实验数据，仅为设计假设）；或温敏门控：PNIPAM 外壳低温溶胀结合、升温塌缩挤出污染物",
+   "constraints": "天然门控刺激为膜张力，水相固载吸附剂须刺激替代；门控外壳须与识别内核机械或化学耦合，否则开关与结合解耦、再生失效；非选择性通透原理本身不提供选择性，选择性全由识别内核承担；刺激阈值窗口须与工况兼容",
+   "failure_modes": "门控外壳与识别内核解耦（刺激只改变外壳、不改变位点亲和力）；响应聚合物迟滞或疲劳导致循环衰减；再生刺激同时破坏识别位点；开关阈值与工况刺激窗口不匹配（过早泄漏或再生不完全）",
+   "material_realization_examples": []
+  }
+ ],
+ "honesty_ledger": {
+  "facts": [
+   {
+    "type": "mechanism",
+    "index": 0,
+    "name": "膜张力驱动的关闭-开放可逆构象门控",
+    "basis": "from_source_corroborated",
+    "note": "Chang 1998 Science（DOI 10.1126/science.282.5397.2220，Mtb MscL 五聚体关闭态晶体结构 PDB 2OAR）+ Sukharev 1999 J Gen Physiol（DOI 10.1085/jgp.113.4.525，E. coli MscL 脂质体重建：Po-T 陡 S 形、T1/2=11.8 dyn/cm、ΔA=6.5 nm²、ΔE=18.6 kBT）；quote 取自 RCSB 沉积题录、Crossref 题录与 JGP 摘要（2026-07-22 在线核验），未做全文 PDF 审计"
+   },
+   {
+    "type": "mechanism",
+    "index": 1,
+    "name": "开放态瞬时非选择性大孔（可逆通透/释放窗口）",
+    "basis": "from_source_corroborated",
+    "note": "Sukharev 1994 Nature（DOI 10.1038/368265a0，题录：large-conductance mechanosensitive channel encoded by mscL alone）+ Sukharev 1999 JGP 摘要（gated by tension transmitted through the lipid bilayer；four conducting states and a closed state）；quote 取自 Crossref 题录与摘要，未做全文 PDF 审计"
+   },
+   {
+    "type": "data_correction",
+    "index": null,
+    "name": "候选 PDB 2OAU 更正为 2OAR",
+    "basis": "from_source",
+    "note": "2026-07-22 RCSB REST 核验：2OAU 题录为 'Mechanosensitive Channel of Small Conductance (MscS)'，为小电导通道 MscS 而非 MscL，按反伪造协议改用 2OAR 'Mechanosensitive Channel of Large Conductance (MscL)'（M. tuberculosis H37Ra，关闭态五聚体）；1MSL 在 RCSB REST core/entry 返回 404，3T9N 为 Thermoanaerobacter tengcongensis MscS，均排除"
+   }
+  ],
+  "leads": [],
+  "inferences": [
+   {
+    "type": "design_translation",
+    "index": 0,
+    "idea": "将 MscL 阈值化可逆开闭原理转译为 PFOA/BPA 吸附剂的刺激门控'吸附态-释放态'再生设计",
+    "basis": "llm_inferred",
+    "label": "inspiration",
+    "note": "天然门控刺激为膜张力，水相固载须刺激替代（pH、温度、离子强度、氧化还原）；门控外壳须与识别内核耦合；MscL 非选择性通透原理不提供污染物选择性，选择性须另耦识别模块；无直接污染物结合或再生实验证据，转译限原理层"
+   }
+  ],
+  "boundary_notes": [
+   "本原型天然机制类别为刺激门控可逆开闭（动态响应）：膜张力触发闭态→开态构象转换，张力撤除自发回闭；机制 from_source 接地限于 MscL 自身机械门控",
+   "MscL 为机械门控通道，非分子识别蛋白，对污染物无化学选择性；PFOA/BPA 选择性须由耦合的识别模块承担",
+   "PFOA/BPA 刺激门控再生为设计转译（llm_inferred / inspiration），非 from_source 事实，不得用作其 direct evidence",
+   "无 PFOA/BPA 吸附或再生性能数据；严格未从外部污染物知识库搬运任何性能数值",
+   "定量门控参数（T1/2、ΔA、ΔE）来自 E. coli MscL 脂质体重建（Sukharev 1999），与 Mtb MscL 结构（PDB 2OAR）非同源同条件，跨种属引用仅作量级参考",
+   "llm_inferred 边界（膜环境依赖、非选择性、刺激替代）均为定性，无数值阈值，gate_level=soft"
+  ],
+  "missing_pdf_items": [
+   "Chang 1998 Science 282:2220-2226 全文 PDF（quote 取自 RCSB 沉积题录与 Crossref 题录）",
+   "Sukharev 1994 Nature 368:265-268 全文 PDF（quote 取自 Crossref 题录）",
+   "Sukharev 1999 J Gen Physiol 113:525-540 全文 PDF（quote 取自 Crossref 收录摘要）",
+   "Sukharev 2001 Nature 409:720-724 全文 PDF（仅 Crossref 题录核验）"
+  ],
+  "generated_by": "manual-curation-2026-07-22",
+  "note": "诚实优先：机制接地限于 MscL 天然机械门控（膜张力刺激、闭-开构象转换、分级导通）；PFOA/BPA 应用全部为 inspiration/外推，转译限原理层"
+ },
+ "boundary_rules": [
+  {
+   "rule": "门控张力阈值：E. coli MscL 开放概率中点 T1/2 ≈ 11.8 dyn/cm，低张力下不开放，门控仅在阈值张力区间触发",
+   "source_mechanism": "膜张力驱动的关闭-开放可逆构象门控",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "门控可逆性：未受力膜中闭态为低能态（闭-开能差 ΔE = 18.6 kBT），张力撤除自发回闭，开闭可反复循环",
+   "source_mechanism": "膜张力驱动的关闭-开放可逆构象门控",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "通透非选择性：开放孔道为大电导非选择性通道，不提供污染物分子特异性，选择性须由耦合识别模块承担（定性）",
+   "source_mechanism": "开放态瞬时非选择性大孔（可逆通透/释放窗口）",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  },
+  {
+   "rule": "膜环境依赖与刺激替代：天然门控力经脂双层传递，固载水相转译须以化学刺激替代或重建弹性界面（定性，无数值阈值）",
+   "source_mechanism": "膜张力驱动的关闭-开放可逆构象门控",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  }
+ ],
+ "mechanism_tags": [
+  "孔道限域分子筛分",
+  "几何识别"
+ ]
+}

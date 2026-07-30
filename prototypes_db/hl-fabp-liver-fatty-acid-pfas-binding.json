@@ -1,0 +1,341 @@
+{
+  "id": "hl-fabp-liver-fatty-acid-pfas-binding",
+  "name_zh": "hL-FABP 肝脂肪酸/PFAS 结合蛋白",
+  "name_en": "hL-FABP (FABP1) Liver Fatty Acid / PFAS Binding Protein",
+  "organism": {
+    "scientific": "Homo sapiens（人肝脂肪酸结合蛋白 FABP1 / L-FABP，具异常大结合腔、可同时容纳两个配体）",
+    "category": "动物"
+  },
+  "biomimetic_dimension": "分子仿生",
+  "features": [
+    "疏水性",
+    "分子筛分"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": null,
+    "note": "hL-FABP 为胞内可溶结合蛋白（分子识别原型），本库无其吸附性能测试条件；performance_data 仅涉蛋白-配体结合亲和力（非吸附剂性能），故吸附测试条件全空。"
+  },
+  "library_tier": "extended",
+  "lifecycle_status": "active",
+  "coverage": "partial",
+  "status": "active",
+  "provenance_summary": {
+    "n_papers": 5,
+    "n_verified": 0,
+    "n_unverified": 5,
+    "note": "机制接地限于人肝 FABP 对 PFOA/全氟化合物的直接结合与其结构（Sheng 2016 荧光置换/ITC/突变/模拟；Cai 2012 溶液结构与 portal 骨架动力学，PDB 2LKK；Zhang 2013 基于结构的全氟化合物相互作用）。均为摘要级核验（题录/摘要一致，未做本地全文 PDF 审计）。设计转译为非蛋白识别单元属 llm_inferred。诚实边界：FABP 敲除不改变 PFOS 体内组织分布（Modaresi 2025）；Cheng & Ng 2018（DOI 10.1021/acs.est.8b01268）是 h/rL-FABP 对 15 种 PFAS 相对亲和力的分子对接/动力学模拟研究，但尚未全文核验到足以排除定向 C–F 贡献，故不得把该排除性结论标作 from_source。"
+  },
+  "mechanisms": [
+    {
+      "mechanism_id": "HLFABP-001",
+      "name": "羧酸头基定点识别 + 有限低极性链段容纳对长链全氟羧酸的结合",
+      "description": "人肝 FABP 以其大疏水腔容纳长链全氟羧酸（PFOA/PFNA）的全氟碳链，并以极性残基（Asn111、Arg122 等）与羧酸头基作用；结合呈链长依赖，短链亲和显著弱于长链。此为'羧酸头基定向识别 + 有限低极性链段容纳'的分子识别范式。",
+      "基本原理": "极性残基对阴离子羧酸头基的定向作用提供选择性锚定，疏水大腔对有限长度低极性（全氟碳）链段的容纳提供亲和与链长选择；二者组合区分长链羧酸与短链/非羧酸竞争物。",
+      "source": "literature",
+      "ref_doi": "10.1007/s00204-014-1391-7",
+      "verification": "needs_review",
+      "verification_quote": "Interaction of perfluoroalkyl acids with human liver fatty acid-binding protein",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "长链全氟羧酸（PFOA C8、PFNA C9）：阴离子羧酸头基 + 刚性疏水全氟碳链；结合呈链长依赖（短链亲和弱）",
+          "basis": "llm_inferred",
+          "evidence_label": "source_lead_abstract",
+          "source": "10.1007/s00204-014-1391-7",
+          "locator": "title / abstract（摘要级）",
+          "quote": "Interaction of perfluoroalkyl acids with human liver fatty acid-binding protein",
+          "scope_match": "Keywords: perfluoroalkyl acids, human liver fatty acid-binding protein"
+        },
+        "bio_structure": {
+          "text": "hL-FABP（FABP1）具异常大的结合腔，可同时容纳两个配体；Cai 2012 报道人 L-FABP/油酸复合物溶液结构与 portal/gap 区骨架动力学（PDB 2LKK）",
+          "basis": "llm_inferred",
+          "evidence_label": "source_lead_abstract",
+          "source": "10.1016/j.bpj.2012.04.039",
+          "locator": "abstract / PDB 2LKK",
+          "quote": "Solution Structure and Backbone Dynamics of Human Liver Fatty Acid Binding Protein: Fatty Acid Binding Revisited",
+          "scope_match": "Keywords: human liver fatty acid binding protein, solution structure, fatty acid binding"
+        },
+        "interaction": {
+          "text": "Sheng 2016 以荧光置换、ITC、定点突变与分子模拟支持 PFOA/PFNA 与 hL-FABP 结合，Asn111/Arg122 参与头基作用；Arg122 取代扩大外口袋并破坏 PFOA 疏水堆积与氢键（模拟）",
+          "basis": "llm_inferred",
+          "evidence_label": "source_lead_abstract",
+          "source": "10.1007/s00204-014-1391-7",
+          "locator": "abstract（摘要级；证据台账 E002）",
+          "quote": "Interaction of perfluoroalkyl acids with human liver fatty acid-binding protein",
+          "scope_match": "Keywords: PFOA, binding, Arg122, Asn111（摘要级归因）"
+        },
+        "why_it_works": {
+          "text": "Zhang 2013 基于结构考察多种全氟化合物与 hL-FABP 的相互作用，支持'羧酸头基极性作用 + 疏水腔对链段容纳'共同决定结合与链长选择性；组合识别使长链全氟羧酸区别于短链与非羧酸竞争物",
+          "basis": "llm_inferred",
+          "evidence_label": "source_lead_abstract",
+          "source": "10.1021/es4026722",
+          "locator": "title / abstract（摘要级）",
+          "quote": "Structure-Based Investigation on the Interaction of Perfluorinated Compounds with Human Liver Fatty Acid Binding Protein",
+          "scope_match": "Keywords: perfluorinated compounds, human liver fatty acid binding protein, structure-based"
+        },
+        "boundary_conditions": [
+          {
+            "text": "链长依赖：短链全氟羧酸/磺酸亲和显著弱于长链；本原型对短链 PFAS（如 PFBA/PFBS）不构成强识别依据",
+            "parameter": "chain_length",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": "10.1007/s00204-014-1391-7 abstract",
+            "quote": "Interaction of perfluoroalkyl acids with human liver fatty acid-binding protein",
+            "scope_match": "Keywords: perfluoroalkyl acids, chain",
+            "source_asset": null
+          },
+          {
+            "text": "氟代亲和机制尚未充分接地：现有模拟研究支持链长、体积与疏水/色散贡献，但本轮未找到可直接排除定向 C–F 贡献的原文证据；在完成全文审计前不得主张'氟亲和仿生'或把选择性归因于单一氟特异作用",
+            "parameter": "selectivity_basis",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "阴离子羧酸头基的定向极性锚定 + 有限长度低极性链段的疏水腔容纳，可组合出对长链全氟羧酸的链长选择性识别；选择性来自头基极性作用与链段体积匹配，而非定向 C–F 或氟亲和。",
+        "verification_quote": "Interaction of perfluoroalkyl acids with human liver fatty acid-binding protein"
+      },
+      "source_doi": "10.1007/s00204-014-1391-7",
+      "source_page": null,
+      "source_locator": "Arch Toxicol 2016（摘要级；证据台账 E002 verified_with_boundary）",
+      "source_file": "Sheng 2016 Arch Toxicol / Cai 2012 Biophys J（PDB 2LKK）/ Zhang 2013 ES&T（均摘要级，未做本地全文 PDF 审计）",
+      "functional_groups": [
+        "极性头基锚定残基（Asn/Arg 类，识别羧酸头基）",
+        "疏水大腔（容纳低极性链段）"
+      ],
+      "key_structures": [
+        "识别结构"
+      ]
+    },
+    {
+      "mechanism_id": "HLFABP-002",
+      "name": "portal/gap 区骨架动态（动态对应边界，勿过度主张）",
+      "description": "hL-FABP 的 portal/gap 区存在骨架运动（Cai 2012）；但 NMR 研究指出其本征慢（毫秒）动力学不太可能是配体进入所需的关键构象重排（Long & Yang），故本原型不作'目标诱导门控'的动态硬对应主张。",
+      "基本原理": "portal 区柔性为脂肪酸结合蛋白家族共性，可能利于配体进出，但无 PFOA 诱导门户构象的直接测量，动态对应仅为边界记录而非承重机制。",
+      "source": "literature",
+      "ref_doi": "10.1016/j.bpj.2012.04.039",
+      "verification": "needs_review",
+      "verification_quote": "Solution Structure and Backbone Dynamics of Human Liver Fatty Acid Binding Protein",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "天然配体（油酸等长链脂肪酸）；PFOA 为类似物，无 PFOA 诱导门户构象的直接测量",
+          "basis": "llm_inferred",
+          "evidence_label": "source_lead_abstract",
+          "source": "10.1016/j.bpj.2012.04.039",
+          "locator": "abstract / PDB 2LKK",
+          "quote": "Solution Structure and Backbone Dynamics of Human Liver Fatty Acid Binding Protein: Fatty Acid Binding Revisited",
+          "scope_match": "Keywords: backbone dynamics, fatty acid binding"
+        },
+        "bio_structure": {
+          "text": "portal/gap 区骨架柔性（Cai 2012）",
+          "basis": "llm_inferred",
+          "evidence_label": "source_lead_abstract",
+          "source": "10.1016/j.bpj.2012.04.039",
+          "locator": "abstract",
+          "quote": "Backbone Dynamics of Human Liver Fatty Acid Binding Protein",
+          "scope_match": "Keywords: backbone dynamics, portal"
+        },
+        "interaction": {
+          "text": "本征慢（ms）动力学不太可能是配体进入所需的关键构象重排（进入相关动力学可能在 µs/亚 µs 尺度），且非 PFOA 语境",
+          "basis": "llm_inferred",
+          "evidence_label": "source_lead_abstract",
+          "source": "10.1016/j.bpj.2010.03.047",
+          "locator": "abstract",
+          "quote": "intrinsic slow dynamics unlikely to be the key conformational rearrangement required for ligand entry",
+          "scope_match": "Keywords: dynamics, ligand entry"
+        },
+        "why_it_works": {
+          "text": "portal 柔性利于配体进出为家族共性推断，但无目标诱导门控的直接证据，故仅作动态对应边界",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "无 PFOA 诱导门户构象的直接测量；不得将 portal 动态转译为'目标诱导门控'的动态硬对应",
+            "parameter": "dynamic_claim",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": "10.1016/j.bpj.2010.03.047 abstract",
+            "quote": "intrinsic slow dynamics unlikely to be the key conformational rearrangement required for ligand entry",
+            "scope_match": "Keywords: dynamics, ligand entry",
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "刚性预组织的静态识别（头基锚定 + 链段容纳）已足以支撑材料转译；portal 动态不作承重对应，避免把蛋白构象动力学强行转入人工材料。",
+        "verification_quote": "Solution Structure and Backbone Dynamics of Human Liver Fatty Acid Binding Protein"
+      },
+      "source_doi": "10.1016/j.bpj.2012.04.039",
+      "source_page": null,
+      "source_locator": "Biophys J 2012（摘要级；PDB 2LKK）",
+      "source_file": "Cai 2012 Biophys J / Long & Yang Biophys J（均摘要级，未做本地全文 PDF 审计）",
+      "functional_groups": [
+        "portal/gap 柔性区（动态边界，非承重）"
+      ],
+      "key_structures": [
+        "动态结构"
+      ]
+    }
+  ],
+  "performance_data": [],
+  "engineering_constraints": [
+    {
+      "constraint": "可溶蛋白形态",
+      "value": "hL-FABP 为胞内可溶结合蛋白（约 14 kDa），其识别基序需以非蛋白方式抽象/移植于固体载体方可用作吸附",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "FABP 家族为约 14 kDa 胞内脂肪酸结合蛋白",
+      "source": "literature",
+      "ref_doi": "10.1016/j.bpj.2012.04.039"
+    },
+    {
+      "constraint": "双配体大腔",
+      "value": "hL-FABP 结合腔异常大、可同时容纳两个配体，直接照搬腔体几何不利于单一 PFOA 的高选择性识别",
+      "unit": null,
+      "relevance": "medium",
+      "explanation": "FABP1 双配体结合特性（Cai 2012）",
+      "source": "literature",
+      "ref_doi": "10.1016/j.bpj.2012.04.039"
+    },
+    {
+      "constraint": "体内归因禁区",
+      "value": "FABP 敲除不改变 PFOS 体内组织分布（Modaresi 2025），本原型仅用于体外几何/化学识别原则，不得主张体内富集因果",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "体内归因反证（摘要级）",
+      "source": "literature",
+      "ref_doi": "10.1021/acs.chemrestox.5c00199"
+    }
+  ],
+  "narrative": {
+    "entries": [
+      {
+        "source_file": "Sheng 2016 Arch Toxicol (DOI 10.1007/s00204-014-1391-7) / Cai 2012 Biophys J (PDB 2LKK)",
+        "paper_id": "2016-Sheng-hLFABP-PFAA-interaction",
+        "sections": {
+          "problem_definition": "长链全氟羧酸（PFOA/PFNA）在水与生物体内广泛存在，如何在阴离子头基相似、仅链长/骨架不同的干扰下选择性识别长链全氟羧酸，是分子识别的难题。",
+          "biological_solution": "人肝脂肪酸结合蛋白（hL-FABP/FABP1）以大疏水腔容纳全氟碳链，并以极性残基（Asn111、Arg122 等）作用于阴离子羧酸头基，实现链长依赖的结合（Sheng 2016，荧光置换/ITC/突变/模拟）；其溶液结构与 portal 骨架动力学见 Cai 2012（PDB 2LKK），多种全氟化合物的结构基础相互作用见 Zhang 2013。",
+          "key_features": "必须保留：① 对阴离子羧酸头基的定向极性锚定；② 对有限长度低极性链段的疏水容纳（链长选择）。可灵活调整：载体骨架、锚定基团化学与密度。勿保留：蛋白双配体大腔的非选择性、portal 动态（无目标诱导门控证据）。",
+          "design_mapping": "仿生映射：hL-FABP'头基锚定 + 链段容纳' → 非蛋白识别单元（阴离子头基受体 + 有限低极性链段孔道）。此为设计转译/启发（llm_inferred），非 from_source 事实——须以匹配的删除/错配对照实验验证对长链全氟羧酸的选择性。",
+          "explainability_anchors": "设计溯源：PFOA/hL-FABP 直接结合与链长依赖（Sheng 2016，from_source 摘要级）→ '头基锚定 + 有限链段容纳'可迁移原理 → 非蛋白识别单元（llm_inferred 启发，须实验验证）。边界：Cheng & Ng 2018（DOI 10.1021/acs.est.8b01268）支持对 h/rL-FABP–PFAS 相对亲和力的分子模拟，但不能据当前摘要排除定向 C–F 贡献；体内分布非 FABP 因果（Modaresi 2025）。"
+        }
+      }
+    ]
+  },
+  "design_translation": [
+    {
+      "idea": "将 hL-FABP 的'阴离子羧酸头基定向锚定 + 有限长度低极性链段容纳'抽象为非蛋白识别单元：以胍基/酰胺类中性或阳离子头基受体锚定全氟羧酸头基，并以有限深度/直径的低极性孔道容纳全氟碳链，控制链长选择，固定于多孔载体",
+      "specific_functional_group": "阴离子头基受体（胍基/脒基/酰胺、氢键给体），配以有限尺寸低极性（氟碳/烃）链段孔道",
+      "material_handle": "在多孔聚合物/介孔硅上接枝头基受体基团，并以刚性间隔臂/印迹控制孔道深度与直径以实现链长选择",
+      "target_interaction": "头基受体与 PFOA 羧酸头基的定向作用 + 低极性孔道对全氟碳链的疏水/体积匹配容纳",
+      "source_tier": "llm_inference",
+      "evidence_tier": "inspiration（原理层外推：机制接地于 hL-FABP 对 PFOA/PFNA 的直接结合；非蛋白识别单元为 llm_inferred，无直接吸附性能证据）",
+      "examples": [],
+      "design_principle": "头基定向锚定 + 有限链段容纳的组合识别（Sheng 2016）可外推为非蛋白链长选择性 PFOA 识别单元",
+      "implementation_example": "胍基/酰胺功能化多孔材料 + 有限尺寸低极性孔道（无实验数据，仅为设计假设）",
+      "constraints": "短链 PFAS 不适用（链长依赖）；氟特异作用与疏水/体积贡献尚需全文和实验拆分，不得预设定向 C–F 或氟亲和机制；水相头基水竞争与共存阴离子（硫酸根/羧酸）干扰须实验验证",
+      "failure_modes": "头基受体被体相水/共存阴离子淬灭；孔道对链长区分不足；直接照搬蛋白双配体大腔导致非选择性",
+      "material_realization_examples": []
+    }
+  ],
+  "honesty_ledger": {
+    "facts": [
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "羧酸头基定点识别 + 有限低极性链段容纳对长链全氟羧酸的结合",
+        "basis": "source_lead_abstract",
+        "note": "Sheng 2016 Arch Toxicol（荧光置换/ITC/突变/模拟，Asn111/Arg122；DOI 10.1007/s00204-014-1391-7，摘要级/证据台账 E002 verified_with_boundary）+ Zhang 2013 ES&T（DOI 10.1021/es4026722）；均摘要级核验，未做全文 PDF 审计"
+      },
+      {
+        "type": "mechanism",
+        "index": 1,
+        "name": "portal/gap 区骨架动态（动态对应边界）",
+        "basis": "source_lead_abstract",
+        "note": "Cai 2012 Biophys J（PDB 2LKK，portal 骨架动力学；DOI 10.1016/j.bpj.2012.04.039）；Long & Yang 指出本征慢动力学不太可能是配体进入所需构象重排（DOI 10.1016/j.bpj.2010.03.047）——动态不作承重对应"
+      }
+    ],
+    "leads": [
+      {
+        "type": "computational_affinity_literature",
+        "doi": "10.1021/acs.est.8b01268",
+        "verification": "corroborated",
+        "note": "Cheng & Ng 2018 Environmental Science & Technology 52:7972-7980（PMID 29897239）：以分子对接和分子动力学估算 15 种传统/替代 PFAS 对人和大鼠 L-FABP 的相对亲和力。题录与摘要已核验；全文尚未取得，因此不能用它证明'不存在定向 C-F 相互作用'。原记录误把 HSA-PFOA 论文 DOI 10.1002/pro.4036 署名为 Cheng & Ng 2021，现已纠正。"
+      }
+    ],
+    "inferences": [
+      {
+        "type": "design_translation",
+        "index": 0,
+        "idea": "将 hL-FABP 头基锚定+链段容纳抽象为非蛋白链长选择性 PFOA 识别单元",
+        "basis": "llm_inferred",
+        "label": "inspiration",
+        "note": "属原理层设计外推，无直接吸附性能证据；选择性与亲和力须以删除/错配对照实验验证"
+      }
+    ],
+    "boundary_notes": [
+      "机制 from_source 接地限于 hL-FABP 对 PFOA/PFNA 的直接结合与其结构；非蛋白材料转译为 llm_inferred/inspiration",
+      "体内归因反证：FABP 敲除不改变 PFOS 体内组织分布（Modaresi 2025），不得主张体内富集因果",
+      "Cheng & Ng 2018（DOI 10.1021/acs.est.8b01268）支持 PFAS-L-FABP 相对亲和力的分子模拟，但当前摘要不足以排除定向 C-F 贡献；原 DOI 10.1002/pro.4036 归属错误已撤销。全文审计前不得主张氟亲和仿生",
+      "短链 PFAS 不适用（链长依赖）；无任何 PFOA 吸附性能数据（qmax 等）",
+      "所有承重文献为摘要级/题录核验，未做本地全文 PDF 审计（后续审计应补全文与残基级定位）"
+    ],
+    "missing_pdf_items": [
+      "Sheng 2016 Arch Toxicol 全文 PDF（quote 取自标题/摘要）",
+      "Cai 2012 Biophys J 全文 PDF（PDB 2LKK；quote 取自标题）",
+      "Zhang 2013 ES&T 全文 PDF（quote 取自标题）",
+      "Long & Yang Biophys J、Cheng & Ng 2018 ES&T（DOI 10.1021/acs.est.8b01268）、Modaresi 2025 Chem Res Toxicol 全文 PDF"
+    ],
+    "generated_by": "manual-curation-2026-07-22",
+    "note": "诚实优先：机制接地于 hL-FABP 对 PFOA 的直接结合（摘要级）；非蛋白转译全部为 inspiration/外推；体内富集与氟亲和均设明确禁区。此条目为广度优先入库，证据层级偏摘要级，待后续审计补全文与残基级定位后可升 tier。"
+  },
+  "boundary_rules": [
+    {
+      "rule": "链长依赖：短链全氟羧酸/磺酸亲和显著弱，本原型不支持短链 PFAS 识别",
+      "source_mechanism": "羧酸头基定点识别 + 有限低极性链段容纳对长链全氟羧酸的结合",
+      "gate_level": "hard",
+      "basis": "llm_inferred"
+    },
+    {
+      "rule": "氟亲和禁区：链长、体积与疏水/色散贡献有模拟依据，但当前证据不足以排除定向 C–F 贡献；全文审计与实验拆分前不得主张氟亲和仿生",
+      "source_mechanism": "羧酸头基定点识别 + 有限低极性链段容纳对长链全氟羧酸的结合",
+      "gate_level": "hard",
+      "basis": "llm_inferred"
+    },
+    {
+      "rule": "体内归因禁区：FABP 敲除不改变 PFOS 体内分布，仅用于体外几何/化学识别原则",
+      "source_mechanism": "羧酸头基定点识别 + 有限低极性链段容纳对长链全氟羧酸的结合",
+      "gate_level": "hard",
+      "basis": "llm_inferred"
+    },
+    {
+      "rule": "动态对应边界：无 PFOA 诱导门户构象直接测量，portal 动态不作动态硬对应",
+      "source_mechanism": "portal/gap 区骨架动态（动态对应边界）",
+      "gate_level": "soft",
+      "basis": "llm_inferred"
+    }
+  ],
+  "mechanism_tags": [
+    "配位螯合",
+    "氢键",
+    "疏水分配",
+    "孔道限域分子筛分",
+    "几何识别"
+  ]
+}

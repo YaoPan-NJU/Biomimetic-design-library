@@ -1,0 +1,394 @@
+{
+ "id": "ecdysis-renewable-interface",
+ "name_zh": "蜕皮式可更新界面",
+ "name_en": "Ecdysis Renewable Interface",
+ "organism": {
+  "scientific": "Arthropoda：Manduca sexta（烟草天蛾，蜕皮内分泌生理模型）/ Ostrinia furnacalis（亚洲玉米螟，表皮蛋白 OfLCP30-C 结构，PDB 9L0P）",
+  "category": "动物"
+ },
+ "biomimetic_dimension": "结构仿生",
+ "features": [
+  "自清洁",
+  "抗生物污染"
+ ],
+ "tested_conditions": {
+  "tested_ph_range": null,
+  "tested_temp_range": null,
+  "salinity": null,
+  "note": "蜕皮（ecdysis）为节肢动物周期性体表更新的生理过程（动态响应/结构原型），本库无其吸附性能测试条件；performance_data 为空，故测试条件全空。"
+ },
+ "library_tier": "extended",
+ "lifecycle_status": "active",
+ "coverage": "partial",
+ "status": "active",
+ "provenance_summary": {
+  "n_papers": 5,
+  "n_verified": 8,
+  "n_unverified": 0,
+  "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与硬边界条数（ECD-001 三要素+1 硬边界=4，ECD-002 三要素+1 硬边界=4）。机制接地限于节肢动物蜕皮生物学（Manduca sexta ETH 生理）与几丁质-表皮蛋白复合表皮结构（PDB 9L0P，Ostrinia furnacalis OfLCP30-C）；PFOA/BPA 抗污自更新吸附界面应用为设计转译（llm_inferred），无性能数据。quote 逐字取自 PubMed 摘要与文献标题/PDB 沉积记录（可核验），未做全文 PDF 审计。记忆 DOI 经核认证伪剔除 3 条（10.1126/science.273.5271.88、10.1016/S0965-1748(01)00046-7、10.1016/B0-44-451924-6/00059-X）。"
+ },
+ "mechanisms": [
+  {
+   "mechanism_id": "ECD-001",
+   "name": "蜕皮（ecdysis）：周期性整体蜕除表皮以物理更新界面",
+   "description": "发育中的昆虫通过名为蜕皮的刻板行为周期性蜕除旧表皮并以新表皮替代（Zitnan 1996 摘要逐字：repeatedly shed their cuticle by means of a stereotyped behavior called ecdysis）。蜕除行为由 ETH/EH 内分泌正反馈级联触发：Manduca sexta 上表皮腺（epitracheal glands/Inka 细胞）释放蜕皮触发激素 Mas-ETH，中枢 VM 神经元释放羽化激素 EH，两组内分泌细胞相互激发，条件满足后血淋巴 EH/ETH 激增，触发 preecdysis 与 ecdysis 运动程序（Ewer & Truman 1997）；行为与蜕皮后期的发育变化（新表皮预成）精确协调。蜕除物为整张旧表皮（exuvia），旧界面上的附着物随旧层整体丢弃，暴露其下预成的新表皮界面",
+   "基本原理": "体表外层以离散事件方式周期性整体丢弃并由新合成材料替代，使界面在不经化学清洗或再生的情况下获得物理更新；更新为离散事件（preecdysis→ecdysis），在蜕间期之间反复发生",
+   "source": "literature",
+   "ref_doi": "10.1126/science.271.5245.88",
+   "verification": "corroborated",
+   "verification_quote": "Developing insects repeatedly shed their cuticle by means of a stereotyped behavior called ecdysis, thought to be initiated by the brain peptide eclosion hormone.",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "面向 PFOA/BPA 等污染物的吸附/抗污界面，其运行问题是表面吸附质与污损物随服役时间逐步积累（吸附饱和、有机污损、生物膜附着），界面功能随之衰减，需更新界面以恢复功能；此为转译所针对的界面问题域，蜕皮生物学文献本身不涉及这些污染物",
+     "basis": "llm_inferred"
+    },
+    "bio_structure": {
+     "text": "节肢动物表皮（cuticle）为周期性蜕除与重建的体表外层结构：发育中的昆虫反复蜕除表皮（repeatedly shed their cuticle），蜕皮行为刻板而可重复，旧表皮以整张蜕（exuvia）形式脱离虫体",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1126/science.271.5245.88",
+     "locator": "Abstract, p.88 (PMID 8539606)",
+     "quote": "Developing insects repeatedly shed their cuticle by means of a stereotyped behavior called ecdysis, thought to be initiated by the brain peptide eclosion hormone.",
+     "scope_match": "Keywords: cuticle, ecdysis, shed"
+    },
+    "interaction": {
+     "text": "蜕除行为由内分泌级联触发：外周 Inka 细胞（Manduca sexta 上表皮腺）释放蜕皮触发激素 ETH，中枢 VM 神经元释放羽化激素 EH，两组内分泌细胞经正反馈相互激发，条件满足后触发 EH/ETH 激增与蜕皮运动程序；合成 Mas-ETH 注射可在数分钟内启动 preecdysis 继而 ecdysis",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1242/jeb.200.5.869",
+     "locator": "Abstract, p.869 (PMID 9100362)",
+     "quote": "This coordination involves two sets of endocrine cells: the peripherally located Inka cells, which release ecdysis triggering hormone (ETH)",
+     "scope_match": "Keywords: endocrine cells, Inka cells, ecdysis triggering hormone"
+    },
+    "why_it_works": {
+     "text": "蜕除行为与蜕皮后期的发育变化精确协调，新表皮在旧表皮蜕除前已在其下预成；一次成功的蜕皮在丢弃整张旧表皮（连同旧表面附着物）的同时即暴露预成的新界面，实现物理更新而无需化学再生",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1242/jeb.200.5.869",
+     "locator": "Abstract, p.869 (PMID 9100362)",
+     "quote": "A successful ecdysis in insects requires the precise coordination of behaviour with the developmental changes that occur late in a moult.",
+     "scope_match": "Keywords: ecdysis, behaviour, moult"
+    },
+    "boundary_conditions": [
+     {
+      "text": "更新为离散周期性事件：蜕除以 preecdysis→ecdysis 的阶段性刻板序列发生（Mas-ETH 注射后 2-10 分钟启动 preecdysis，继以 ecdysis），更新事件之间为蜕间期，界面非连续更新",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "Abstract, p.88 (PMID 8539606)",
+      "quote": "Injection of EGs extract or synthetic Mas-ETH into pharate larvae, pupae, or adults initiates preecdysis within 2 to 10 minutes, followed by ecdysis",
+      "scope_match": "Keywords: Mas-ETH, preecdysis, ecdysis",
+      "source_asset": null
+     },
+     {
+      "text": "蜕皮的首要进化功能是替代不能随生长扩张的刚性外骨骼（生长/发育约束），表面更新/抗污是周期性蜕除的衍生后果，并非自然选择直接优化的目标（定性，无数值阈值）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     },
+     {
+      "text": "蜕除物为整张旧表皮（exuvia），更新以整层丢弃为代价；蜕皮前后存在新表皮未完全骨化的软弱窗口期，动物在此窗口机械脆弱（定性，无数值阈值）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "将界面外层构建为可周期性整体蜕除并由预成新层替代的离散可更换单元（整层蜕除 + 新层预成 + 阈值信号触发），即可在不经化学再生的情况下物理更新界面",
+    "verification_quote": "Developing insects repeatedly shed their cuticle by means of a stereotyped behavior called ecdysis, thought to be initiated by the brain peptide eclosion hormone."
+   },
+   "source_doi": "10.1126/science.271.5245.88",
+   "source_page": 88,
+   "source_locator": "Abstract, p.88 (PMID 8539606) / Abstract, p.869 (PMID 9100362)",
+   "source_file": "Science 271:88-91（Zitnan 1996，PubMed 摘要逐字）+ J Exp Biol 200:869-881（Ewer & Truman 1997，PubMed 摘要逐字）；未做本地全文 PDF 审计",
+   "functional_groups": [
+    "内分泌触发肽（ETH 蜕皮触发激素、EH 羽化激素）",
+    "表皮外层（上表皮/外表皮/内表皮，蜕除单元）",
+    "蜕皮运动程序（preecdysis/ecdysis）"
+   ],
+   "key_structures": [
+    "动态响应结构"
+   ]
+  },
+  {
+   "mechanism_id": "ECD-002",
+   "name": "几丁质-表皮蛋白复合表皮：离散可重建的结构单元",
+   "description": "蜕皮蜕除与重建的结构单元是节肢动物表皮：几丁质（β-1,4-N-乙酰氨基葡聚糖）纳米原纤嵌入表皮蛋白基质的复合材料。表皮蛋白（CPR 家族）以保守 R&R 结构域（Rebers-Riddiford 结构域，RR-1/RR-2 型）结合几丁质（Rebers & Willis 2001 标题：A conserved domain in arthropod cuticular proteins binds chitin）。PDB 9L0P（Hu 2025，固体核磁结构）显示亚洲玉米螟幼虫表皮蛋白 OfLCP30-C 的 R&R 结构域在水溶液中本征无序、结合几丁质时发生去折叠→折叠转变，以平面结构同一侧的芳香族氨基酸黏附片（adhesive patches）贴附几丁质表面。表皮组织在每个蜕皮周期从头重建该复合体，使表层成为离散、可按需合成、可更换的结构单元",
+   "基本原理": "可更新界面由离散结构单元（几丁质原纤骨架 + 按需分泌并原位折叠黏附的表皮蛋白）复合而成；组分按需分泌、原位组装，使整个表层可被其下组织（或人工模拟工艺）反复重建",
+   "source": "literature",
+   "ref_doi": "10.1021/jacs.5c05099",
+   "verification": "verified",
+   "verification_quote": "Aromatic amino acids located on the same side of the planar-shaped structure act as adhesive patches, adhering to the chitin surface",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "面向 PFOA/BPA 的界面转译所针对的结构问题是：表面功能层须设计为离散可更换单元，方能在污损/饱和后整层替换；此为转译层问题，表皮结构文献不涉及这些污染物",
+     "basis": "llm_inferred"
+    },
+    "bio_structure": {
+     "text": "昆虫表皮的主要组分为表皮蛋白与几丁质多糖（PDB 9L0P 沉积记录：Structure of R&R Chitin-binding domain bound to Chitin），二者复合构成表皮结构单元；几丁质原纤为骨架，表皮蛋白经 R&R 结构域结合于其表面",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1021/jacs.5c05099",
+     "locator": "Abstract, p.25429 (PMID 40627553)",
+     "quote": "cuticular proteins and chitin polysaccharides, which are prominent components of the insect cuticle",
+     "scope_match": "Keywords: cuticular proteins, chitin polysaccharides, insect cuticle"
+    },
+    "interaction": {
+     "text": "表皮蛋白与几丁质的结合界面：OfLCP30-C R&R 结构域平面结构同一侧的芳香族氨基酸构成黏附片（adhesive patches），贴附于几丁质表面，在几丁质-蛋白结合过程中起关键作用（PDB 9L0P 固体核磁结构，Ostrinia furnacalis/UniProt Q08738）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1021/jacs.5c05099",
+     "locator": "Abstract, p.25429-25440 (PMID 40627553)",
+     "quote": "Aromatic amino acids located on the same side of the planar-shaped structure act as adhesive patches, adhering to the chitin surface",
+     "scope_match": "Keywords: Aromatic amino acids, adhesive patches, chitin surface"
+    },
+    "why_it_works": {
+     "text": "表皮蛋白在溶液中本征无序、结合几丁质时发生去折叠→折叠的构象转变，以黏附片原位折叠黏附于几丁质原纤；按需分泌加原位折叠组装使复合表皮可由底层组织在每个周期从头重建，这是表层可反复更换的材料学基础",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1021/jacs.5c05099",
+     "locator": "Abstract, p.25429 (PMID 40627553)",
+     "quote": "undergo a conformational transition from unfolded to folded upon binding to chitin polysaccharides",
+     "scope_match": "Keywords: conformational transition, unfolded, folded"
+    },
+    "boundary_conditions": [
+     {
+      "text": "表皮蛋白的几丁质结合由保守 R&R 结构域介导：节肢动物表皮蛋白中保守的结构域结合几丁质；复合单元的组装依赖该域介导的蛋白-几丁质界面",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "verified",
+      "gate_level": "hard",
+      "locator": "title, p.1083",
+      "quote": "A conserved domain in arthropod cuticular proteins binds chitin",
+      "scope_match": "Keywords: conserved domain, cuticular proteins, chitin",
+      "source_asset": null
+     },
+     {
+      "text": "表皮的力学性能（硬度、抗磨）还依赖组装后的交联骨化（外表皮 sclerotization/tanning）；人工可更换层若无等效稳定化步骤，新表面可能过软或过快损耗（定性，无数值阈值）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     },
+     {
+      "text": "新表皮须在旧表皮蜕除前预成于其下；层交换窗口期新表面暴露、功能可能短暂下降，人工类比须管理更新窗口的功能连续性（定性，无数值阈值）",
+      "parameter": "other",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "将界面功能层构建为骨架层加按需组装结合组分的离散复合单元，单元可整体移除并由新组装的单元替代，界面即可反复更新",
+    "verification_quote": "Aromatic amino acids located on the same side of the planar-shaped structure act as adhesive patches, adhering to the chitin surface"
+   },
+   "source_doi": "10.1021/jacs.5c05099",
+   "source_page": 25429,
+   "source_locator": "PDB 9L0P / Abstract, p.25429 (PMID 40627553)",
+   "source_file": "PDB 9L0P（RCSB 沉积数据，固体核磁结构，Ostrinia furnacalis OfLCP30-C/UniProt Q08738）+ J Am Chem Soc 147:25429-25440（Hu 2025，PubMed 摘要逐字）+ Insect Biochem Mol Biol 31:1083-1093（Rebers & Willis 2001，标题接地）；未做本地全文 PDF 审计",
+   "functional_groups": [
+    "几丁质纳米原纤（β-1,4-N-乙酰氨基葡聚糖）",
+    "表皮蛋白 CPR 家族（保守 R&R 结构域，RR-1/RR-2）",
+    "芳香族氨基酸黏附片（几丁质结合界面）"
+   ],
+   "key_structures": [
+    "界面结构"
+   ]
+  }
+ ],
+ "performance_data": [],
+ "engineering_constraints": [
+  {
+   "constraint": "离散周期性更新",
+   "value": "蜕皮以离散周期事件发生（repeatedly shed），界面非连续更新，更新事件之间为蜕间期；人工类比须接受批次式更新而非连续再生",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "Zitnan 1996 摘要逐字：repeatedly shed their cuticle by means of a stereotyped behavior called ecdysis（PMID 8539606）",
+   "source": "literature",
+   "ref_doi": "10.1126/science.271.5245.88"
+  },
+  {
+   "constraint": "更新窗口功能间断",
+   "value": "蜕除旧层后至新层稳定（骨化）前存在软弱窗口期；人工可剥落外层的更换窗口同样存在功能骤降，须做连续性设计（多层预成、分区更换）",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（基于蜕皮行为与蜕皮后期发育变化协调及骨化事实的外推）",
+   "source": "llm_inference",
+   "ref_doi": null
+  },
+  {
+   "constraint": "天然功能归属为生长发育",
+   "value": "蜕皮首要功能为替代刚性外骨骼以支持生长；抗污自更新为周期性蜕除的衍生后果，转译时不得假托为自然选择直接优化的抗污策略",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（功能诚实归属）",
+   "source": "llm_inference",
+   "ref_doi": null
+  },
+  {
+   "constraint": "可更换单元的材料组成依赖",
+   "value": "天然可更换单元为几丁质原纤-表皮蛋白复合体（R&R 结构域芳香黏附片结合几丁质）；人工类比须自设等效的骨架层加可移除面层材料体系",
+   "unit": null,
+   "relevance": "medium",
+   "explanation": "Hu 2025 JACS / PDB 9L0P（PMID 40627553，摘要逐字）",
+   "source": "literature",
+   "ref_doi": "10.1021/jacs.5c05099"
+  }
+ ],
+ "narrative": {
+  "entries": [
+   {
+    "source_file": "Science 271:88-91（Zitnan 1996，DOI 10.1126/science.271.5245.88）/ J Exp Biol 200:869-881（Ewer & Truman 1997，DOI 10.1242/jeb.200.5.869）/ JACS 147:25429-25440（Hu 2025，DOI 10.1021/jacs.5c05099，PDB 9L0P）",
+    "paper_id": "1996-Zitnan-ecdysis-triggering-hormone",
+    "sections": {
+     "problem_definition": "吸附/抗污界面材料在服役中不可避免地在表面积累吸附质（如 PFOA、BPA）、有机污损物与生物膜，界面功能随饱和与污损逐步衰减；常规再生依赖化学洗脱或整体更换。节肢动物则以蜕皮（ecdysis）周期性蜕除并重建体表表皮，天然实现了界面物理更新。须诚实注明：蜕皮的首要功能是生长/发育（替代不能扩张的刚性外骨骼），表面更新是其衍生后果。",
+     "biological_solution": "发育中的昆虫通过刻板蜕皮行为反复蜕除表皮（Zitnan 1996 摘要逐字：Developing insects repeatedly shed their cuticle by means of a stereotyped behavior called ecdysis）；蜕除行为由 ETH/EH 内分泌正反馈级联触发（Manduca sexta 上表皮腺/Inka 细胞释放 Mas-ETH，中枢 VM 神经元释放 EH，两组细胞相互激发，条件满足后 EH/ETH 激增触发 preecdysis 与 ecdysis，Ewer & Truman 1997），且行为与蜕皮后期的发育变化（新表皮预成）精确协调。蜕除物为整张旧表皮（exuvia，几丁质-表皮蛋白复合体），旧表面附着物随旧层整体丢弃，暴露其下预成的新表皮。可更换的结构单元为几丁质纳米原纤嵌入表皮蛋白基质的复合体：表皮蛋白（CPR 家族）以保守 R&R 结构域结合几丁质（Rebers & Willis 2001 标题：A conserved domain in arthropod cuticular proteins binds chitin）；2025 年固体核磁结构（PDB 9L0P，Ostrinia furnacalis OfLCP30-C/UniProt Q08738）显示该域以平面结构同一侧芳香族氨基酸黏附片贴附几丁质表面，并在结合时发生去折叠→折叠转变（Hu 2025）。",
+     "key_features": "必须保留：① 外层周期性整体蜕除（整层丢弃以移除表面积累）；② 离散可更换复合结构单元（表层为可合成、可移除的离散单元）；③ 新层预成后更换（先在其下预成新界面再蜕除旧层）；④ 阈值信号触发离散事件（内分泌级联正反馈触发）。可灵活调整：人工外层材料与厚度、触发方式（pH/温度/溶解/机械剥离）、更新周期、底层功能层化学。",
+     "design_mapping": "仿生映射：节肢动物蜕皮的周期性整层蜕除加预成新层替代 → 具牺牲式可更新外层的吸附/抗污界面。面向 PFOA/BPA：在功能吸附层之上设置可剥落或可溶解的牺牲外层，外层污损/饱和后整层移除，暴露新鲜底层表面。边界声明：这是设计转译/启发（llm_inferred），非 from_source 事实；蜕皮为整体生理过程且首要功能是生长，转译为材料的牺牲外层更新属原理层外推，更新频率、材料成本与窗口期功能连续性须实验验证。",
+     "explainability_anchors": "设计溯源：节肢动物周期性蜕除表皮更新界面（Zitnan 1996 / Ewer & Truman 1997，from_source）+ 几丁质-表皮蛋白复合体为可更换结构单元（PDB 9L0P / Rebers & Willis 2001，from_source）→ 整层蜕除 + 预成更换 + 阈值触发的可迁移原理 → PFOA/BPA 牺牲式可更新外层抗污/吸附界面（llm_inferred 启发，须实验验证）。"
+    }
+   }
+  ]
+ },
+ "design_translation": [
+  {
+   "idea": "将节肢动物蜕皮的周期性整层蜕除加预成新层替代原理转译到 PFOA/BPA 吸附/抗污界面：在功能吸附层之上（或材料外表面）构筑可整体剥落或溶解移除的牺牲外层，外层积累 PFOA/BPA 与污损物至饱和后，以刺激（pH、离子强度、温度）或操作动作（机械剥离、流道剪切、选择性溶解）将外层整体移除，暴露新鲜底层功能表面；极限情况下以多层预成结构逐层剥落，实现多次物理更新",
+   "specific_functional_group": "牺牲外层：水溶性/弱交联聚合物、层层自组装聚电解质膜、可酸碱溶解的盐或氧化层、弱界面结合的可剥离涂层；底层功能面：面向 PFOA/BPA 的吸附基团（季铵/胍基阳离子、脲/硫脲氢键给体、疏水/氟亲链段）",
+   "material_handle": "在吸附颗粒、膜或通道表面以浸涂、层层自组装或多层复合预成牺牲层-功能层序列；以特定 pH/离子强度触发牺牲层溶解，或以层间弱结合实现机械剥离更换",
+   "target_interaction": "牺牲外层物理隔离或预吸附污损物，整层剥落时将积累的 PFOA/BPA 与生物污损一并移除；新暴露底层恢复新鲜吸附/抗污功能",
+   "source_tier": "llm_inference",
+   "evidence_tier": "inspiration（原理层外推：节肢动物周期性蜕除表皮更新与几丁质-表皮蛋白可更换复合体接地于 Zitnan 1996、Ewer & Truman 1997 与 PDB 9L0P；转译为 PFOA/BPA 牺牲外层更新界面为 llm_inferred，无吸附/抗污实验数据）",
+   "examples": [],
+   "design_principle": "蜕皮证明体表界面可经整层蜕除加预成新层替代的离散事件反复物理更新（Zitnan 1996、Ewer & Truman 1997）；可更换单元为几丁质-表皮蛋白离散复合体（PDB 9L0P）；整层移除、预成更换、阈值触发三要素原则上可移植到人工界面外层设计",
+   "implementation_example": "在吸附颗粒或膜材料表面以层层自组装或多层涂覆预成 pH 可溶或机械可剥的牺牲外层序列（无实验数据，仅为设计假设）",
+   "constraints": "每次更新消耗外层材料，可更新次数受预成层总量限制；更新窗口期新表面暴露、功能短暂骤降；牺牲层剥落条件（pH/溶解/剪切）可能扰动底层功能面与受纳水体；对溶解态 PFOA/BPA，蜕除式更新更契合膜/表面抗污场景，不能替代体相吸附剂的容量再生",
+   "failure_modes": "牺牲层未触发即提前脱落或剥落不完全导致更新失败；剥落碎片造成二次污染；更新窗口期底层功能面受损或受触发条件侵蚀；预成层耗尽后不可继续更新；强酸碱溶解触发条件与实际水质不兼容",
+   "material_realization_examples": []
+  }
+ ],
+ "honesty_ledger": {
+  "facts": [
+   {
+    "type": "mechanism",
+    "index": 0,
+    "name": "蜕皮（ecdysis）：周期性整体蜕除表皮物理更新界面",
+    "basis": "from_source_corroborated",
+    "note": "Zitnan 1996 Science（PMID 8539606，摘要逐字 repeatedly shed their cuticle by means of a stereotyped behavior called ecdysis；Mas-ETH 注射触发 preecdysis→ecdysis）+ Ewer & Truman 1997 J Exp Biol（PMID 9100362，Inka 细胞 ETH 与 VM 神经元 EH 正反馈级联，行为与蜕皮后期发育变化协调）；quote 逐字取自 PubMed 摘要，未做全文 PDF 审计"
+   },
+   {
+    "type": "mechanism",
+    "index": 1,
+    "name": "几丁质-表皮蛋白复合表皮为可更换结构单元",
+    "basis": "from_source_verified",
+    "note": "Hu 2025 JACS / PDB 9L0P（Ostrinia furnacalis OfLCP30-C R&R 结构域几丁质结合固体核磁结构；芳香黏附片贴附几丁质表面；无序→折叠转变；PMID 40627553，摘要逐字）+ Rebers & Willis 2001 Insect Biochem Mol Biol（标题 A conserved domain in arthropod cuticular proteins binds chitin，p.1083）；quote 逐字取自 PDB 沉积记录与 PubMed 摘要/文献标题，未做全文 PDF 审计"
+   }
+  ],
+  "leads": [],
+  "inferences": [
+   {
+    "type": "design_translation",
+    "index": 0,
+    "idea": "将整层蜕除加预成更换转译为 PFOA/BPA 吸附/抗污界面的牺牲式可更新外层",
+    "basis": "llm_inferred",
+    "label": "inspiration",
+    "note": "蜕皮首要进化功能为替代刚性外骨骼以支持生长，表面更新/抗污为衍生后果；将整体生理过程转译为材料的牺牲外层更新属原理层外推，无吸附/抗污实验数据，更新频率/成本/窗口期连续性须实验验证"
+   }
+  ],
+  "boundary_notes": [
+   "机制 from_source 接地限于节肢动物蜕皮生物学（Manduca sexta ETH 生理）与几丁质-表皮蛋白复合表皮结构（PDB 9L0P，Ostrinia furnacalis OfLCP30-C），均不涉及 PFOA/BPA 等任何污染物",
+   "PFOA/BPA 抗污自更新吸附界面转译全部为 design_translation（llm_inferred/inspiration），不得用作 PFOA/BPA 去除的 direct evidence",
+   "无吸附性能数据（qmax 等）；严格未从外部污染物知识库搬运任何性能数值（知识隔离红线）",
+   "蜕皮天然功能归属为生长/发育（替代刚性外骨骼），抗污自更新为周期性蜕除的衍生后果，已如实归属，未夸大为自然选择直接优化的抗污适应",
+   "一切动态响应/结构转译边界均为定性 llm_inferred，无数值阈值，gate_level=soft",
+   "记忆 DOI 经联网核认证伪剔除 3 条：10.1126/science.273.5271.88（不存在）、10.1016/S0965-1748(01)00046-7（实为 Darboux 2001）、10.1016/B0-44-451924-6/00059-X（不存在）；已改用正确 DOI 10.1126/science.271.5245.88、10.1016/s0965-1748(01)00056-x、10.1016/b0-44-451924-6/00032-6"
+  ],
+  "missing_pdf_items": [
+   "Zitnan 1996 Science 全文 PDF（quote 取自 PubMed 摘要 PMID 8539606 与标题）",
+   "Ewer & Truman 1997 J Exp Biol 全文 PDF（quote 取自 PubMed 摘要 PMID 9100362）",
+   "Rebers & Willis 2001 Insect Biochem Mol Biol 全文 PDF（quote 取自标题，p.1083-1093）",
+   "Zitnan & Adams 2005 Comprehensive Molecular Insect Science 章节全文（仅标题核验，DOI 10.1016/b0-44-451924-6/00032-6，p.1-60）",
+   "Hu 2025 JACS 全文 PDF（quote 取自 PubMed 摘要 PMID 40627553 与 PDB 9L0P 沉积记录）"
+  ],
+  "generated_by": "bmdl-subagent-ecdysis-2026-07-22",
+  "note": "诚实优先：机制接地限于节肢动物蜕皮更新生物学与几丁质-表皮蛋白复合结构；一切 PFOA/BPA 抗污自更新界面转译为 inspiration/外推"
+ },
+ "boundary_rules": [
+  {
+   "rule": "更新为离散周期性事件：界面更新以 preecdysis→ecdysis 的阶段性刻板序列反复发生，更新事件之间为蜕间期，非连续更新",
+   "source_mechanism": "蜕皮（ecdysis）：周期性整体蜕除表皮以物理更新界面",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "表皮蛋白几丁质结合由保守 R&R 结构域介导，复合结构单元的组装依赖该域介导的蛋白-几丁质界面",
+   "source_mechanism": "几丁质-表皮蛋白复合表皮：离散可重建的结构单元",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "蜕皮首要功能为生长/发育（替代不能扩张的刚性外骨骼），表面更新/抗污为周期性蜕除的衍生后果（定性，无数值阈值）",
+   "source_mechanism": "蜕皮（ecdysis）：周期性整体蜕除表皮以物理更新界面",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  },
+  {
+   "rule": "整层蜕除以材料消耗为代价且存在软弱窗口期；人工类比须管理更新窗口的功能连续性与可更新次数（定性，无数值阈值）",
+   "source_mechanism": "蜕皮（ecdysis）：周期性整体蜕除表皮以物理更新界面",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  },
+  {
+   "rule": "人工可更换外层须有等效稳定化（骨化类比），否则新表面过软或过快损耗（定性，无数值阈值）",
+   "source_mechanism": "几丁质-表皮蛋白复合表皮：离散可重建的结构单元",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  },
+  {
+   "rule": "面向 PFOA/BPA 的一切界面转译属原理层外推，更新频率、材料成本与触发条件须实验验证（定性，无数值阈值）",
+   "source_mechanism": "蜕皮（ecdysis）：周期性整体蜕除表皮以物理更新界面",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  }
+ ],
+ "mechanism_tags": [
+  "配位螯合",
+  "π-π堆积"
+ ]
+}

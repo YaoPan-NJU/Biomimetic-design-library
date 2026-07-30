@@ -1,0 +1,28 @@
+{
+  "test_id": "G0-T2",
+  "description": "Key slot 2 OpenClaw exec base64 multimodal OCR",
+  "key_slot": "slot_2",
+  "logical_key": "key_slot_2",
+  "provider": "xiaomi-2",
+  "model": "mimo-v2.5",
+  "method": "OpenClaw exec→requests.post base64 to /v1/chat/completions",
+  "session_id": "a052955e (yang-s-clawedbot agent)",
+  "timestamp": "2026-06-19T14:09:00Z",
+  "fixture": {
+    "file": "cn114849640a_p1-1.png",
+    "source_pdf_relative": "仿生文献库/专利/2022-CN114849640A-羟基磷灰石-吸附-染料 2.pdf",
+    "page": 1,
+    "dpi": 200,
+    "sha256": "ff687ab658005d4eb85ef577273f7d9194b2dc8235bc9cc0d562884aab75aca6",
+    "size_bytes": 420767
+  },
+  "prompt": "What is the number after (21) on this page? Reply with only the digits.",
+  "expected_answer": "202210352494.4",
+  "observed_answer": "202210352494.4",
+  "result": "PASS",
+  "fallback_used": false,
+  "usage": {
+    "reasoning_tokens": 930
+  },
+  "notes": "OpenClaw agent used exec tool to run Python script that called MIMO API directly with base64 image. API key redacted."
+}

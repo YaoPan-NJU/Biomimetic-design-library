@@ -1,0 +1,417 @@
+{
+ "id": "lignin-peroxidase-white-rot",
+ "name_zh": "木质素过氧化物酶（白腐真菌）",
+ "name_en": "Lignin Peroxidase (White-Rot Fungi, EC 1.11.1.14)",
+ "organism": {
+  "scientific": "Phanerochaete chrysosporium（木质素过氧化物酶 LiP，同工酶 H2/H8；白腐真菌，PDB 1B85 SOURCE 记 ORGANISM_COMMON: WHITE-ROT FUNGUS）",
+  "category": "微生物"
+ },
+ "biomimetic_dimension": "分子仿生",
+ "features": [
+  "催化降解",
+  "活性氧位点"
+ ],
+ "tested_conditions": {
+  "tested_ph_range": null,
+  "tested_temp_range": null,
+  "salinity": null,
+  "note": "木质素过氧化物酶为胞外酶催化降解/转化原型（血红素一电子自由基介体氧化），本库无其吸附性能测试条件；performance_data 为空，故测试条件全空。其天然功能处于酸性胞外环境（Son 2021 标题，定性）。"
+ },
+ "library_tier": "extended",
+ "lifecycle_status": "active",
+ "coverage": "partial",
+ "status": "active",
+ "provenance_summary": {
+  "n_papers": 9,
+  "n_verified": 12,
+  "n_unverified": 0,
+  "note": "n_papers 计 5 篇期刊论文（Choinowski 1999 JMB, DOI 10.1006/jmbi.1998.2507；Blodig 2001 JMB, DOI 10.1006/jmbi.2000.4346；Hammel 1986 PNAS, DOI 10.1073/pnas.83.11.3708；Valli 1990 Biochemistry, DOI 10.1021/bi00489a005；Son 2021 Enzyme Microb Technol, DOI 10.1016/j.enzmictec.2021.109803）与 4 个 PDB 沉积（1LGA/1LLP/1B85/1B80，经 RCSB REST 核验）；全部 DOI 经 Crossref 核验。n_verified 计 from_source 四件套齐全的 causal_chain 要素与边界条数（LIP-001 四要素+3 硬边界=7，LIP-002 四要素+1 硬边界=5）。机制接地限于天然底物木质素/藜芦基芳香化合物与酶自身氧化还原机制；有机氯农药/PAH 降解转译为设计启发（llm_inferred），无性能数据。quote 取自 Crossref 论文标题与 PDB 沉积记录（LINK/SOURCE/KEYWDS，逐字，≤200 字符），未做全文 PDF 审计。"
+ },
+ "mechanisms": [
+  {
+   "mechanism_id": "LIP-001",
+   "name": "藜芦醇氧化还原介体对非酚型芳香底物的一电子自由基氧化",
+   "description": "LiP（白腐真菌 P. chrysosporium 分泌的胞外血红素糖蛋白过氧化物酶，PDB KEYWDS: HEME PROTEIN, GLYCO PROTEIN, OXIDOREDUCTASE）以 H2O2 为共底物激活血红素铁，生成高价血红素中间体（化合物 I，机理层命名），经一电子转移氧化内源小分子介体藜芦醇（veratryl alcohol, 3,4-二甲氧基苄醇）；介体自由基再经扩散或表面 relay 将一电子氧化传递给难以进入埋藏血红素口袋的非酚型（单甲氧基化）芳香底物与木质素聚合物，完成非特异自由基氧化降解",
+   "基本原理": "埋藏的高氧化电位血红素中心与表面可及的小分子氧化还原介体、一电子转移自由基化学耦合：酶只需氧化小分子介体，介体自由基再 relay 氧化大分子/难进入底物，从而以介体 relay 扩展氧化可达范围，实现温和条件下对顽固芳香聚合物的非特异氧化降解",
+   "source": "literature",
+   "ref_doi": "10.1021/bi00489a005",
+   "verification": "corroborated",
+   "verification_quote": "Oxidation of monomethoxylated aromatic compounds by lignin peroxidase: role of veratryl alcohol in lignin biodegradation",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "LiP 天然底物：木质素中非酚型（单甲氧基化）芳香结构单元；藜芦醇（3,4-二甲氧基苄醇）为内源氧化还原介体。Valli 1990 标题直陈 LiP 对单甲氧基化芳香化合物的氧化及藜芦醇在木质素生物降解中的介体角色（降解/转化类底物，非吸附质）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1021/bi00489a005",
+     "locator": "Biochemistry 29:8535, title (DOI 10.1021/bi00489a005)",
+     "quote": "Oxidation of monomethoxylated aromatic compounds by lignin peroxidase: role of veratryl alcohol in lignin biodegradation",
+     "scope_match": "Keywords: monomethoxylated aromatic, veratryl alcohol, lignin biodegradation"
+    },
+    "bio_structure": {
+     "text": "LiP 为白腐真菌 P. chrysosporium 单体血红素糖蛋白（PDB 1LLP SOURCE: PHANEROCHAETE CHRYSOSPORIUM, BKM-F1267, ATCC 24725；RCSB 报告 1LLP 分子量 37.95 kDa，KEYWDS: HEME PROTEIN, GLYCO PROTEIN, OXIDOREDUCTASE；HETNAM 列 HEM、NAG/MAN 糖基与 CA）；含一枚铁原卟啉 IX（HEM），血红素 Fe 与 His176 NE2 轴向配位（chain A, 2.15 Å，PDB 1LLP LINK 记录；1LGA/1B85 同位点 His176-Fe 键保守），远端由水/氢氧占据；血红素活性中心埋藏，大分子底物经表面 relay 途径氧化（见 LIP-002）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.2210/pdb1llp/pdb",
+     "locator": "PDB 1LLP, LINK record (deposition, 1996)",
+     "quote": "LINK NE2 HIS A 176 FE HEM A 350 1555 1555 2.15",
+     "scope_match": "Keywords: HIS A 176, HEM A 350"
+    },
+    "interaction": {
+     "text": "LiP 催化按一电子转移途径进行：H2O2 激活血红素形成高价中间体（化合物 I，机理层命名）后，从芳香底物夺取一个电子生成底物自由基中间体（Hammel 1986 PNAS 标题直陈 'Substrate free radicals are intermediates in ligninase catalysis'）；藜芦醇经同一途径生成的阳离子自由基 relay 后续一电子氧化（介体阳离子自由基扩散 relay 的细节为机理层推断）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1073/pnas.83.11.3708",
+     "locator": "PNAS 83:3708, title (DOI 10.1073/pnas.83.11.3708)",
+     "quote": "Substrate free radicals are intermediates in ligninase catalysis.",
+     "scope_match": "Keywords: free radicals, intermediates, ligninase"
+    },
+    "why_it_works": {
+     "text": "藜芦醇介体使 LiP 得以氧化自身难以直接接触的非酚型单甲氧基化芳香底物：Valli 1990 证明 LiP 对单甲氧基化芳香化合物的氧化及藜芦醇在木质素生物降解中的必需角色（标题直陈），即介体把埋藏血红素中心的一电子氧化 relay 到不能进入活性口袋的底物，扩展了氧化可达范围（介体 relay 大分子底物的空间论证为机理层推断）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1021/bi00489a005",
+     "locator": "Biochemistry 29:8535, title (DOI 10.1021/bi00489a005)",
+     "quote": "Oxidation of monomethoxylated aromatic compounds by lignin peroxidase: role of veratryl alcohol in lignin biodegradation",
+     "scope_match": "Keywords: veratryl alcohol, lignin biodegradation, lignin peroxidase"
+    },
+    "boundary_conditions": [
+     {
+      "text": "介体依赖：非酚型（单甲氧基化芳香）底物的高效氧化依赖藜芦醇介体 relay（Valli 1990 标题直陈藜芦醇在木质素生物降解中的角色）；缺乏介体时该类底物难以被有效氧化",
+      "parameter": "redox_mediator_requirement",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "corroborated",
+      "gate_level": "hard",
+      "locator": "Biochemistry 29:8535, title (DOI 10.1021/bi00489a005)",
+      "quote": "Oxidation of monomethoxylated aromatic compounds by lignin peroxidase: role of veratryl alcohol in lignin biodegradation",
+      "scope_match": "Keywords: veratryl alcohol, lignin biodegradation, lignin peroxidase",
+      "source_asset": null
+     },
+     {
+      "text": "电子转移模式：氧化经一电子转移/底物自由基中间体途径（Hammel 1986 标题），而非双电子氧插入；自由基中间体伴生偶联/聚合等非靶副反应倾向",
+      "parameter": "electron_transfer_mode",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "corroborated",
+      "gate_level": "hard",
+      "locator": "PNAS 83:3708, title (DOI 10.1073/pnas.83.11.3708)",
+      "quote": "Substrate free radicals are intermediates in ligninase catalysis.",
+      "scope_match": "Keywords: free radicals, intermediates, ligninase",
+      "source_asset": null
+     },
+     {
+      "text": "酸性环境：LiP H8 在酸性条件下行使功能（Son 2021 标题直陈 'thermostability of lignin peroxidase H8 under acidic condition'）；天然白腐木质素降解亦发生于酸性胞外环境",
+      "parameter": "pH_environment",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "corroborated",
+      "gate_level": "hard",
+      "locator": "Enzyme Microb Technol 148:109803, title (DOI 10.1016/j.enzmictec.2021.109803)",
+      "quote": "Extra disulfide and ionic salt bridge improves the thermostability of lignin peroxidase H8 under acidic condition",
+      "scope_match": "Keywords: lignin peroxidase H8, acidic, thermostability",
+      "source_asset": null
+     },
+     {
+      "text": "底物类别外推未证实：该机制天然底物为木质素/藜芦基芳香化合物；向有机氯农药（DDT 等）与 PAH 的自由基氧化外推属原理层推断，无 LiP 对其降解活性的直接证据，降解路径与矿化度须实验验证（定性，无数值阈值）",
+      "parameter": "substrate_class_extrapolation",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "scope_match": null,
+      "source_asset": null
+     },
+     {
+      "text": "H2O2 共底物与氧化失活：氧化还原循环需 H2O2 共底物启动；过量 H2O2 致酶氧化加工/失活（PDB 1B80 沉积标题记录 'oxidatively processed' 重组 LiP H8 形态），氧化剂供给需计量控制（定性，无数值阈值）",
+      "parameter": "oxidant_dosing",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "scope_match": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "埋藏高氧化电位血红素氧化还原中心 + 表面可及小分子氧化还原介体 + 一电子转移自由基化学，构成'介体 relay 非特异自由基氧化'体系：酶只需氧化小分子介体，介体自由基经扩散或表面 relay 氧化大分子/难溶底物；该'氧化还原中心—介体 relay'组合是可迁移的降解催化原理",
+    "verification_quote": "Oxidation of monomethoxylated aromatic compounds by lignin peroxidase: role of veratryl alcohol in lignin biodegradation"
+   },
+   "source_doi": "10.1021/bi00489a005",
+   "source_page": 8535,
+   "source_locator": "Biochemistry 29:8535-8539 (DOI 10.1021/bi00489a005)",
+   "source_file": "Valli 1990 Biochemistry + Hammel 1986 PNAS + Son 2021 EMT（标题接地）+ RCSB PDB 1LLP/1LGA/1B80 沉积记录（LINK/SOURCE/HETNAM/KEYWDS；未做本地全文 PDF 审计）",
+   "functional_groups": [
+    "血红素铁氧化还原中心（铁原卟啉 IX，His176 轴向配位）",
+    "小分子氧化还原介体（藜芦醇/3,4-二甲氧基苄醇）",
+    "一电子转移自由基化学"
+   ],
+   "key_structures": [
+    "催化结构"
+   ]
+  },
+  {
+   "mechanism_id": "LIP-002",
+   "name": "表面色氨酸 171 自由基 relay 位点（W171 氧化还原活性位点）",
+   "description": "PDB 1LLP（同工酶 H2，1.70 Å）在表面色氨酸 171 的 Cβ 上解析出羟基，提示该色氨酸在氧化还原循环中形成自由基（Choinowski 1999 JMB 标题：a novel radical site formed during the redox cycle）；W171F 突变消除该氧化还原活性色氨酸并改变反应机制（Blodig 2001 JMB 标题）。Trp171 受高价血红素中间体氧化后在蛋白表面 relay 电子，使难以进入埋藏活性口袋的大分子底物经表面途径完成一电子氧化",
+   "基本原理": "表面氧化还原活性色氨酸构成自由基 relay 位点，将埋藏血红素中心的氧化当量经蛋白表面 relay 至吸附于表面的大分子底物，扩展氧化可达范围；表面 relay 与介体 relay 互补，共同支撑对大分子/不溶性底物的氧化",
+   "source": "literature",
+   "ref_doi": "10.1006/jmbi.1998.2507",
+   "verification": "corroborated",
+   "verification_quote": "reveals a hydroxy group on the C β of tryptophan 171: A novel radical site formed during the redox cycle",
+   "causal_chain": {
+    "pollutant_feature": {
+     "text": "大分子非酚型芳香底物（木质素聚合物及其模型化合物）为 LiP 天然底物类别（Valli 1990：藜芦醇在木质素生物降解中的角色）；大分子聚合物难以进入埋藏血红素口袋，须经表面 relay 途径氧化（表面定位为机理层推断）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1021/bi00489a005",
+     "locator": "Biochemistry 29:8535, title (DOI 10.1021/bi00489a005)",
+     "quote": "Oxidation of monomethoxylated aromatic compounds by lignin peroxidase: role of veratryl alcohol in lignin biodegradation",
+     "scope_match": "Keywords: lignin biodegradation, lignin peroxidase, veratryl alcohol"
+    },
+    "bio_structure": {
+     "text": "Trp171（成熟蛋白/作者残基编号；PDB 1B85 ATOM 记录 PHE A 171 即 W171F 突变位点，同一残基在 1B85 表达构建体序列中为第 178 位）位于 LiP 表面；PDB 1LLP（同工酶 H2，1.70 Å）在其 Cβ 解析出羟基，表明该色氨酸在氧化还原循环中形成自由基并被羟基化淬灭（Choinowski 1999 JMB 标题直陈 'a novel radical site formed during the redox cycle'）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1006/jmbi.1998.2507",
+     "locator": "J Mol Biol 286:809, title (DOI 10.1006/jmbi.1998.2507)",
+     "quote": "reveals a hydroxy group on the C β of tryptophan 171: A novel radical site formed during the redox cycle",
+     "scope_match": "Keywords: tryptophan 171, radical site, redox cycle"
+    },
+    "interaction": {
+     "text": "W171 为氧化还原活性色氨酸：其苯丙氨酸突变（W171F）消除氧化还原活性色氨酸 171 并改变反应机制（Blodig 2001 JMB 标题直陈 'the W171F variant that eliminates the redox active tryptophan 171. Implications for the reaction mechanism'）；野生型中 Trp171 被化合物 I 氧化为表面色氨酸自由基，再向表面吸附底物 relay 电子（长程电子转移的机理细节为推断）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1006/jmbi.2000.4346",
+     "locator": "J Mol Biol 305:851, title (DOI 10.1006/jmbi.2000.4346)",
+     "quote": "the W171F variant that eliminates the redox active tryptophan 171. Implications for the reaction mechanism",
+     "scope_match": "Keywords: W171F, redox active, tryptophan 171"
+    },
+    "why_it_works": {
+     "text": "W171 自由基 relay 是 LiP 反应机制的固有组分：消除氧化还原活性 Trp171（W171F）即改变反应机制（Blodig 2001 标题），且氧化还原循环中 W171 被羟基化（PDB 1LLP）表明该表面位点真实参与周转；表面可及的色氨酸使大分子底物无需进入埋藏血红素口袋即可完成一电子氧化（大分子底物尺寸论证为机理层推断）",
+     "basis": "from_source",
+     "evidence_label": "from_source",
+     "source": "10.1006/jmbi.2000.4346",
+     "locator": "J Mol Biol 305:851, title (DOI 10.1006/jmbi.2000.4346)",
+     "quote": "the W171F variant that eliminates the redox active tryptophan 171. Implications for the reaction mechanism",
+     "scope_match": "Keywords: W171F, redox active tryptophan 171, reaction mechanism"
+    },
+    "boundary_conditions": [
+     {
+      "text": "W171 依赖：表面 Trp171 自由基 relay 为天然反应机制的必需组分，W171F 突变消除氧化还原活性 Trp171 并改变反应机制（Blodig 2001 标题直陈）",
+      "parameter": "surface_trp_residue",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "from_source",
+      "verification": "corroborated",
+      "gate_level": "hard",
+      "locator": "J Mol Biol 305:851, title (DOI 10.1006/jmbi.2000.4346)",
+      "quote": "the W171F variant that eliminates the redox active tryptophan 171. Implications for the reaction mechanism",
+      "scope_match": "Keywords: W171F, redox active, tryptophan 171",
+      "source_asset": null
+     },
+     {
+      "text": "材料表面外推未证实：将'表面色氨酸自由基 relay'转译为材料界面设计（在固体载体表面锚定氧化还原活性芳香残基/仿生介体以 relay 氧化吸附态有机物）属原理层推断，界面 relay 效率与稳定性无证据（定性，无数值阈值）",
+      "parameter": "surface_relay_extrapolation",
+      "condition": {
+       "operator": "qualitative",
+       "value": null
+      },
+      "basis": "llm_inferred",
+      "verification": "needs_review",
+      "gate_level": "soft",
+      "locator": null,
+      "quote": null,
+      "scope_match": null,
+      "source_asset": null
+     }
+    ],
+    "transferable_principle": "将氧化还原活性芳香氨基酸（色氨酸/酪氨酸）或其仿生类似物置于催化剂表面作为自由基 relay 位点，可把埋藏/束缚氧化还原中心的氧化当量 relay 至表面吸附的大分子底物；'表面自由基 relay 位点'是可迁移的界面催化原理",
+    "verification_quote": "reveals a hydroxy group on the C β of tryptophan 171: A novel radical site formed during the redox cycle"
+   },
+   "source_doi": "10.1006/jmbi.1998.2507",
+   "source_page": 809,
+   "source_locator": "J Mol Biol 286:809-827 (DOI 10.1006/jmbi.1998.2507)",
+   "source_file": "Choinowski 1999 JMB + Blodig 2001 JMB（标题接地）+ RCSB PDB 1LLP/1B85 沉积记录（ATOM/LINK/SOURCE；未做本地全文 PDF 审计）",
+   "functional_groups": [
+    "表面色氨酸吲哚（Trp171 自由基 relay 位点）",
+    "血红素铁氧化还原中心（经 Trp171 与表面 relay 耦合）"
+   ],
+   "key_structures": [
+    "催化结构"
+   ]
+  }
+ ],
+ "performance_data": [],
+ "engineering_constraints": [
+  {
+   "constraint": "胞外血红素糖蛋白形态",
+   "value": "LiP 为白腐真菌 P. chrysosporium 分泌的胞外单体血红素糖蛋白（RCSB 1LLP 分子量 37.95 kDa；KEYWDS: HEME PROTEIN, GLYCO PROTEIN, OXIDOREDUCTASE；含 HEM 铁原卟啉 IX 与 NAG/MAN 糖基）；材料化需固定化或全细胞（白腐真菌）部署",
+   "unit": "kDa",
+   "relevance": "high",
+   "explanation": "RCSB 1LLP rcsb_entry_info（molecular_weight 37.95）与 PDB 沉积 KEYWDS/SOURCE/HETNAM 记录（PDB 1B85 SOURCE 记 ORGANISM_COMMON: WHITE-ROT FUNGUS）",
+   "source": "literature",
+   "ref_doi": "10.2210/pdb1llp/pdb"
+  },
+  {
+   "constraint": "酸性工作窗口",
+   "value": "LiP H8 在酸性条件下行使功能，天然白腐木质素降解发生于酸性胞外环境；中性水相应用需酶工程改造或仿生催化体系替代",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "Son 2021 Enzyme Microb Technol 标题直陈 'thermostability of lignin peroxidase H8 under acidic condition'（DOI 10.1016/j.enzmictec.2021.109803）",
+   "source": "literature",
+   "ref_doi": "10.1016/j.enzmictec.2021.109803"
+  },
+  {
+   "constraint": "H2O2 共底物与氧化自失活",
+   "value": "氧化还原循环需 H2O2 共底物启动；过量 H2O2 引起酶氧化加工与失活（PDB 1B80 沉积标题记录 'oxidatively processed' 重组 LiP H8 形态），氧化剂需计量/流加供给",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "机理推断（基于 Blodig 2001 JMB 标题 'pristine and oxidatively processed lignin peroxidase' 与过氧化物酶通性）",
+   "source": "llm_inference",
+   "ref_doi": null
+  },
+  {
+   "constraint": "介体供给依赖",
+   "value": "非酚型大分子底物的高效氧化依赖藜芦醇等小分子介体 relay；实际体系中需维持介体再生或持续供给，介体的浸出与消耗是工程化约束",
+   "unit": null,
+   "relevance": "high",
+   "explanation": "Valli 1990 Biochemistry 标题直陈藜芦醇在木质素生物降解中的角色（DOI 10.1021/bi00489a005）",
+   "source": "literature",
+   "ref_doi": "10.1021/bi00489a005"
+  }
+ ],
+ "narrative": {
+  "entries": [
+   {
+    "source_file": "RCSB PDB 1LLP / 1LGA / 1B85 / 1B80 + Choinowski 1999 JMB (DOI 10.1006/jmbi.1998.2507) / Blodig 2001 JMB (DOI 10.1006/jmbi.2000.4346) / Hammel 1986 PNAS (DOI 10.1073/pnas.83.11.3708) / Valli 1990 Biochemistry (DOI 10.1021/bi00489a005) / Son 2021 EMT (DOI 10.1016/j.enzmictec.2021.109803)",
+    "paper_id": "1999-Choinowski-LiP-1.70A-W171-radical-site",
+    "sections": {
+     "problem_definition": "木质素是植物细胞壁中由非酚型芳香单元交联的顽固聚合物，其生物降解是碳循环的关键环节，也是难降解芳香污染物（有机氯农药、PAH 等）转化研究的原理参照。白腐真菌 Phanerochaete chrysosporium 分泌的木质素过氧化物酶（LiP）可在胞外以 H2O2 驱动氧化降解木质素，其分子机制（高氧化电位血红素化学、介体 relay、表面自由基位点）是降解仿生设计的原理源头。",
+     "biological_solution": "LiP 为单体血红素糖蛋白（PDB 1LLP，同工酶 H2，1.70 Å，P. chrysosporium BKM-F1267；RCSB 分子量 37.95 kDa，KEYWDS: HEME PROTEIN, GLYCO PROTEIN, OXIDOREDUCTASE），含一枚铁原卟啉 IX，血红素 Fe 与 His176 NE2 轴向配位（PDB 1LLP/1LGA/1B85 LINK 记录，2.15–2.19 Å，同工酶间保守；Poulos 等 1993 年以 PDB 1LGA 完成 2 Å 精修）。催化按一电子转移途径进行：H2O2 激活血红素生成高价中间体（化合物 I），从底物夺取一个电子生成底物自由基（Hammel 1986 PNAS 标题：'Substrate free radicals are intermediates in ligninase catalysis'）；内源小分子介体藜芦醇被氧化为阳离子自由基，relay 氧化难以进入埋藏血红素口袋的非酚型单甲氧基化芳香底物（Valli 1990 标题直陈藜芦醇在木质素生物降解中的必需角色）。第二条 relay 途径在蛋白表面：PDB 1LLP 在表面 Trp171 的 Cβ 解析出羟基，揭示氧化还原循环中形成的新型自由基位点（Choinowski 1999 JMB 标题），W171F 突变消除该氧化还原活性色氨酸并改变反应机制（Blodig 2001 JMB 标题）。该酶执行的是降解/转化（非特异自由基氧化），而非吸附。",
+     "key_features": "必须保留：① 高氧化电位血红素氧化还原中心（铁原卟啉 IX + His 轴向配位）；② H2O2 驱动的一电子转移自由基化学；③ 小分子氧化还原介体 relay（藜芦醇类）；④ 表面氧化还原活性芳香残基 relay 位点（Trp171）；⑤ 酸性工作环境。可灵活调整：蛋白骨架（可经突变增强稳定性，如 Son 2021 引入二硫键/盐桥）、介体种类、载体与部署形式（固定化酶/全细胞/仿生催化材料）。",
+     "design_mapping": "仿生映射：LiP'血红素中心 + 介体 relay + 表面自由基位点'→ 顽固芳香污染物（DDT 等有机氯农药、PAH）的氧化降解催化体系。注意：此为设计转译/启发（llm_inferred），非 from_source 事实。LiP 机制接地于天然底物木质素与藜芦基芳香化合物；有机氯/PAH 的底物类别、氯化度与疏水性均与木质素差异显著，LiP 对其降解活性无直接证据，转译限原理层，活性、产物谱与矿化度须实验验证。",
+     "explainability_anchors": "设计溯源：木质素/藜芦基底物自由基介体氧化与 W171 表面自由基位点（PDB 1LLP/1LGA/1B85，Valli 1990，Hammel 1986，Choinowski 1999，Blodig 2001，from_source）→ '氧化还原中心—介体 relay—表面自由基 relay'可迁移降解催化原理 → 有机氯/PAH 氧化降解（llm_inferred 启发，底物类别外推为明确软边界，须实验验证）。"
+    }
+   }
+  ]
+ },
+ "design_translation": [
+  {
+   "idea": "将 LiP 的'血红素高氧化电位中心 + 小分子介体一电子 relay + 表面自由基 relay 位点'组合转译为顽固芳香污染物（有机氯农药 DDT、PAH）的氧化降解催化体系：路径一为固定化 LiP 或白腐真菌全细胞反应器（介体外加或内源再生，H2O2 计量供给，酸性工况或工程化稳性突变体）；路径二为仿生非均相催化材料，在多孔载体孔壁锚定金属卟啉（血红素仿）氧化还原中心并共固定可再生的小分子氧化还原介体（藜芦醇及木质素衍生酚类仿介体），以绿色氧化剂（H2O2）驱动介体自由基对目标污染物的 relay 氧化",
+   "specific_functional_group": "金属卟啉氧化还原中心（血红素铁仿，His 咪唑轴向配位仿）+ 小分子氧化还原介体（藜芦醇/3,4-二甲氧基苄醇及酚类仿介体）+ 可选表面自由基 relay 芳香位点（色氨酸/酪氨酸仿）",
+   "material_handle": "金属卟啉经共价偶联或配位锚定于介孔二氧化硅/共价有机骨架/聚合物孔壁；小分子介体以可聚合单体共聚固定或以木质素衍生酚作牺牲介体流加；H2O2 经计量泵/连续流供给以规避过量失活；孔壁疏水修饰改善高疏水性有机氯/PAH 的界面接触",
+   "target_interaction": "金属卟啉高价氧中间体对介体的一电子氧化；介体自由基对有机氯芳香环/PAH π 体系的电子转移与自由基 relay，引发开环与逐步矿化（降解/转化机制，非吸附）",
+   "source_tier": "llm_inference",
+   "evidence_tier": "inspiration（原理层外推：LiP 机制接地于天然底物木质素与藜芦基芳香化合物；LiP 对 DDT/PAH 的降解活性无直接证据，转译限原理层）",
+   "examples": [],
+   "design_principle": "LiP 证明埋藏血红素中心经小分子介体 relay 与表面 Trp171 自由基 relay，可在温和条件下非特异氧化降解顽固芳香聚合物木质素（PDB 1LLP/1LGA，Valli 1990，Hammel 1986，Choinowski 1999，Blodig 2001）；'氧化还原中心—介体 relay—表面自由基 relay'原理上可扩展至其他顽固芳香污染物，但活性、选择性与产物毒性须实验验证",
+   "implementation_example": "金属卟啉功能化介孔二氧化硅 + 固定化藜芦醇仿介体 + H2O2 连续流氧化降解反应器（无实验数据，仅为设计假设）",
+   "constraints": "自由基氧化非特异，伴生偶联/聚合与非靶氧化副反应；介体浸出与牺牲消耗需再生循环；LiP 天然 pH 偏酸、中性水相稳定性差（Son 2021 酸性条件约束）；H2O2 过量致酶/仿酶中心氧化失活；DDT 等高氯化、高疏水污染物水相溶解度低，界面接触与传质受限，降解中间体的氯化度与毒性须全程评估",
+   "failure_modes": "自由基偶联生成更大分子缩合产物（污染物寡聚化而非矿化）；介体消耗后氧化 relay 中断；金属卟啉自氧化破坏；氧化深度不足时累积含氯中间体；疏水污染物非特异吸附于载体而未被氧化，退化为无催化吸附",
+   "material_realization_examples": []
+  }
+ ],
+ "honesty_ledger": {
+  "facts": [
+   {
+    "type": "mechanism",
+    "index": 0,
+    "name": "藜芦醇氧化还原介体对非酚型芳香底物的一电子自由基氧化",
+    "basis": "from_source_corroborated",
+    "note": "Valli 1990 Biochemistry（DOI 10.1021/bi00489a005，标题直陈介体角色）+ Hammel 1986 PNAS（DOI 10.1073/pnas.83.11.3708，底物自由基为中间体）+ Son 2021 EMT（DOI 10.1016/j.enzmictec.2021.109803，酸性条件）+ PDB 1LLP/1LGA/1B80 沉积记录（His176-HEM Fe LINK、KEYWDS、oxidatively processed 标题）；quote 取自 Crossref 标题与 PDB 沉积记录（逐字，≤200 字符），未做全文 PDF 审计；化合物 I 命名为机理层通识术语"
+   },
+   {
+    "type": "mechanism",
+    "index": 1,
+    "name": "表面色氨酸 171 自由基 relay 位点（W171 氧化还原活性位点）",
+    "basis": "from_source_corroborated",
+    "note": "Choinowski 1999 JMB（DOI 10.1006/jmbi.1998.2507，PDB 1LLP 同工酶 H2，1.70 Å，Trp171 Cβ 羟基/新型自由基位点）+ Blodig 2001 JMB（DOI 10.1006/jmbi.2000.4346，W171F 消除氧化还原活性 Trp171）+ PDB 1B85 ATOM 记录（PHE A 171，W171F 作者编号确认；实体序列第 178 位）；quote 取自 Crossref 标题与 PDB 沉积记录，未做全文 PDF 审计；长程电子转移细节为机理层推断"
+   }
+  ],
+  "leads": [],
+  "inferences": [
+   {
+    "type": "design_translation",
+    "index": 0,
+    "idea": "将 LiP'血红素中心 + 介体 relay + 表面自由基 relay'组合转译为 DDT/有机氯/PAH 氧化降解催化体系（固定化酶/全细胞反应器或金属卟啉 + 介体仿生非均相催化材料）",
+    "basis": "llm_inferred",
+    "label": "inspiration",
+    "note": "本原型天然机制为降解/转化（自由基介体氧化木质素），非吸附；有机氯农药与 PAH 在底物类别、氯化度、疏水性上与木质素差异显著，LiP 对其降解活性无直接证据，转译限原理层，活性、产物谱与矿化度须实验验证"
+   }
+  ],
+  "boundary_notes": [
+   "本原型天然机制为酶催化降解/转化（H2O2 驱动的血红素一电子自由基介体氧化木质素），非吸附机制；机制 from_source 接地限于天然底物木质素/藜芦基芳香化合物与酶自身氧化还原结构",
+   "有机氯农药（DDT 等）与 PAH 的氧化降解应用为设计转译（llm_inferred / inspiration），非 from_source 事实，不得用作这些污染物的 direct evidence",
+   "无 DDT/PAH 降解性能数据（降解率、速率常数等）；严格未从外部污染物知识库搬运任何性能数值",
+   "介体依赖、一电子自由基途径、酸性环境、W171 表面 relay 四条硬边界为 from_source；底物类别外推、H2O2 计量、材料表面 relay 外推三条边界为定性 llm_inferred，不带数值阈值，gate_level=soft",
+   "候选 PDB 1B8P（简报给出）经 RCSB REST 核验为 Aquaspirillum arcticum 苹果酸脱氢酶，与木质素过氧化物酶不符，已剔除并改用 1LLP/1LGA/1B85/1B80；凭记忆误记 DOI 10.1021/bi00489a009（实为二氢叶酸还原酶论文）经 Crossref 证伪后剔除，订正为 10.1021/bi00489a005"
+  ],
+  "missing_pdf_items": [
+   "Choinowski 1999 J Mol Biol 全文 PDF（quote 取自 Crossref 标题）",
+   "Blodig 2001 J Mol Biol 全文 PDF（quote 取自 Crossref 标题与 RCSB 沉积标题）",
+   "Hammel 1986 PNAS 全文 PDF（quote 取自 Crossref 标题）",
+   "Valli 1990 Biochemistry 全文 PDF（quote 取自 Crossref 标题）",
+   "Son 2021 Enzyme Microb Technol 全文 PDF（quote 取自 Crossref 标题）",
+   "Poulos 1993 J Biol Chem 原始论文（RCSB 主引文无 DOI，以 PDB 1LGA 沉积标题接地，DOI 10.2210/pdb1lga/pdb）"
+  ],
+  "generated_by": "subagent-bmdl-wave2-lignin-peroxidase-white-rot-2026-07-22",
+  "note": "诚实优先：机制接地限于 LiP 天然底物（木质素/藜芦基芳香化合物）与酶自身氧化还原结构；有机氯/PAH 降解应用全部为 inspiration/外推；天然机制如实标注为降解/转化"
+ },
+ "boundary_rules": [
+  {
+   "rule": "介体依赖：非酚型单甲氧基化芳香底物的高效氧化依赖藜芦醇介体 relay，缺乏介体时该类底物难以被有效氧化",
+   "source_mechanism": "藜芦醇氧化还原介体对非酚型芳香底物的一电子自由基氧化",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "电子转移模式：氧化经一电子转移/底物自由基中间体途径而非双电子氧插入，自由基中间体伴生偶联/聚合副反应倾向",
+   "source_mechanism": "藜芦醇氧化还原介体对非酚型芳香底物的一电子自由基氧化",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "酸性环境：LiP H8 在酸性条件下行使功能，中性水相应用需酶工程改造或仿生催化体系替代",
+   "source_mechanism": "藜芦醇氧化还原介体对非酚型芳香底物的一电子自由基氧化",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "W171 依赖：表面 Trp171 自由基 relay 为天然反应机制的必需组分，W171F 突变消除氧化还原活性 Trp171 并改变反应机制",
+   "source_mechanism": "表面色氨酸 171 自由基 relay 位点（W171 氧化还原活性位点）",
+   "gate_level": "hard",
+   "basis": "from_source"
+  },
+  {
+   "rule": "底物类别外推未证实：向有机氯农药（DDT 等）与 PAH 的自由基氧化降解外推属原理层推断，无直接降解活性证据（定性，无数值阈值）",
+   "source_mechanism": "藜芦醇氧化还原介体对非酚型芳香底物的一电子自由基氧化",
+   "gate_level": "soft",
+   "basis": "llm_inferred"
+  }
+ ],
+ "mechanism_tags": [
+  "配位螯合",
+  "π-π堆积",
+  "还原催化降解"
+ ]
+}

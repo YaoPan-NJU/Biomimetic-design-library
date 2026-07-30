@@ -1,0 +1,397 @@
+{
+  "id": "fabp4-fatty-acid-pfas-binding",
+  "name_zh": "FABP4 脂肪酸/PFAS 结合蛋白",
+  "name_en": "FABP4 Fatty Acid / PFAS Binding Protein",
+  "organism": {
+    "scientific": "Homo sapiens（人源 FABP4，脂肪细胞型脂肪酸结合蛋白）",
+    "category": "动物"
+  },
+  "biomimetic_dimension": "分子仿生",
+  "features": [
+    "疏水性",
+    "分子筛分"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": null,
+    "note": "FABP4 为胞内可溶结合蛋白（分子识别原型），本库无其吸附性能测试条件；performance_data 仅含蛋白-配体结合亲和力（非吸附剂性能），故吸附测试条件全空。"
+  },
+  "library_tier": "extended",
+  "lifecycle_status": "active",
+  "coverage": "partial",
+  "status": "active",
+  "provenance_summary": {
+    "n_papers": 1,
+    "n_verified": 10,
+    "n_unverified": 0,
+    "note": "n_verified 计 from_source 四件套齐全的 causal_chain 要素与硬边界条数（FABP4-001 四要素+1 硬边界=5，FABP4-002 四要素+1 硬边界=5）。机制接地限于 FABP4 与长链脂肪酸/PFOA 在疏水腔的结合模式（PDB 9MIW/9OB7 + Birchfield 2025 JACS Au）；PFOA 吸附材料转译为 design_translation（llm_inferred/inspiration），无吸附性能数据。正文 quote 逐字取自 PMC12188406 开放获取全文 XML 与 RCSB PDB 沉积记录（可核验），正文 PDF 被 Cloudflare/PMC PoW 墙拦截，正文内精确页码未核验（locator 用文章页域 p.2469-2474），未做全文 PDF 审计，故为 extended 而非 core。"
+  },
+  "mechanisms": [
+    {
+      "mechanism_id": "FABP4-001",
+      "name": "埋藏疏水腔与羧酸根极性锚对全氟辛酸的双位点结合",
+      "description": "人源 FABP4 以β桶围成的埋藏疏水腔结合 PFOA；PFOA 在腔内占据主、次两个分离位点：主位点羧酸根由 Arg126 与 Tyr128 氢键（并有 Arg106 水介导氢键）锚定，Ala75、Thr29、Ala33、Phe16 经烃基侧链提供疏水接触；次位点羧酸根与 Thr29 氢键。配体结合诱导 Phe57 由 apo 闭合转为开放构象以扩大疏水腔",
+      "基本原理": "埋藏疏水腔容纳全氟碳尾链（范德华/疏水效应），预组织的阳离子与氢键给体（Arg/Tyr 侧链）方向性锚定羧酸根头基；头基锚定与尾链疏水容纳的组合使两亲性全氟羧酸在无金属参与下获得低微摩尔级结合",
+      "source": "literature",
+      "ref_doi": "10.1021/jacsau.5c00504",
+      "verification": "verified",
+      "verification_quote": "At the “primary site”, the carboxylate group is stabilized through hydrogen bonding with Arg 126 and Tyr 128",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "全氟辛酸 PFOA（全氟辛烷羧酸）：羧酸根极性头基 + C8 全氟碳尾链的两亲性阴离子；PDB 9MIW 中配体 8PF（pentadecafluorooctanoic acid，即 PFOA）以两个分子分别占据链 A 的 201 与 202 位，对应主、次两个分离结合位点",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1021/jacsau.5c00504",
+          "locator": "PDB 9MIW, HET/HETNAM (A 201-202) / p.2469",
+          "quote": "8PF PENTADECAFLUOROOCTANOIC ACID",
+          "scope_match": "Keywords: 8PF, pentadecafluorooctanoic"
+        },
+        "bio_structure": {
+          "text": "FABP4 为约 15 kDa 的β桶蛋白，桶内围成埋藏疏水腔（PDB 9OB7 KEYWDS 记 'HYDROPHOBIC CAVITY, BETA-BARREL'；9MIW KEYWDS 记 'PFAS, HYDROPHOBIC, BETA-BARREL'）；Phe57 位于腔口，其开放/闭合构象调控腔体大小与配体出入",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1021/jacsau.5c00504",
+          "locator": "PDB 9OB7, KEYWDS / p.2469",
+          "quote": "APO FORM, HYDROPHOBIC CAVITY, BETA-BARREL, ADIPOCYTE, LIPID BINDING PROTEIN",
+          "scope_match": "Keywords: hydrophobic, cavity, beta-barrel"
+        },
+        "interaction": {
+          "text": "主位点：PFOA 羧酸根由 Arg126 与 Tyr128 氢键稳定，并有 Arg106 水介导氢键；次位点：PFOA 羧酸根与 Thr29 氢键（Birchfield 2025 正文，PDB 9MIW 结构）。残基编号按论文/PDB 链 A 编号，对应 UniProt P15090 为 R127/T30（偏移 +1，比对推断）",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1021/jacsau.5c00504",
+          "locator": "p.2469-2474 (Results; PMC12188406 全文 XML)",
+          "quote": "At the “primary site”, the carboxylate group is stabilized through hydrogen bonding with Arg 126 and Tyr 128",
+          "scope_match": "Keywords: carboxylate, Arg 126, Tyr 128"
+        },
+        "why_it_works": {
+          "text": "Ala75、Thr29、Ala33、Phe16 主要经烃基侧链与 PFOA 全氟碳链形成疏水接触；PFOA/PFDA 诱导 Phe57 开放构象扩大疏水腔以容纳次位点配体。羧酸根极性锚定与疏水腔容纳的组合解释荧光竞争实验观测的低微摩尔级解离常数",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1021/jacsau.5c00504",
+          "locator": "p.2469-2474 (Results; PMC12188406 全文 XML)",
+          "quote": "The residues, Ala75, Thr29, Ala33, and Phe16 primarily interact through their hydrocarbon groups, contributing to hydrophobic interactions.",
+          "scope_match": "Keywords: hydrocarbon, hydrophobic, Ala75"
+        },
+        "boundary_conditions": [
+          {
+            "text": "头基化学门控：全氟羧酸根头基（PFOA/PFNA 类）结合紧于磺酸根/磺酰胺头基（PFOS/PFOSA/8:2 FtS），后者干扰羧酸根配体通常可获得的稳定接触而降低亲和力",
+            "parameter": "competing_ion",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "from_source",
+            "verification": "verified",
+            "gate_level": "hard",
+            "locator": "p.2469-2474 (Results; PMC12188406 全文 XML)",
+            "quote": "PFNA binds more tightly to FABP4 than PFOS, PFOSA, or 8:2 FtS, which suggests that sulfonate and sulfonamide headgroups slightly diminish affinity",
+            "scope_match": "Keywords: PFNA, PFOS, sulfonate, headgroups",
+            "source_asset": null
+          },
+          {
+            "text": "预组织β桶疏水腔须维持完整三级结构；蛋白变性或口袋完全溶剂化使疏水埋藏与锚定几何丧失（定性，无数值阈值）",
+            "parameter": "wet_stability",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "埋藏疏水腔 + 与羧酸根几何互补的预组织阳离子/氢键给体锚 + 与尾链长度匹配的腔体几何，三者组合可在无金属参与下高亲和结合'极性头基 + 疏水/氟化尾链'型两亲性阴离子",
+        "verification_quote": "At the “primary site”, the carboxylate group is stabilized through hydrogen bonding with Arg 126 and Tyr 128"
+      },
+      "source_doi": "10.1021/jacsau.5c00504",
+      "source_page": 2469,
+      "source_locator": "PDB 9MIW / 9OB7（RCSB 沉积数据）与 p.2469-2474 (Results)",
+      "source_file": "PDB 9MIW / 9OB7（RCSB 沉积数据）+ JACS Au 5(6):2469-2474（PMC12188406 全文 XML；未做本地全文 PDF 页码审计）",
+      "functional_groups": [
+        "阳离子/氢键给体（Arg126、Tyr128、Arg106、Thr29 侧链）",
+        "疏水腔壁残基（Ala75、Thr29、Ala33、Phe16、Phe57）",
+        "β桶骨架"
+      ],
+      "key_structures": [
+        "识别结构"
+      ]
+    },
+    {
+      "mechanism_id": "FABP4-002",
+      "name": "全氟羧酸结合的链长单调依赖与腔体几何容纳",
+      "description": "全氟羧酸（PFCA）与 FABP4 的亲和力随全氟碳链链长单调增加：长链 PFTeDA/PFTrDA/PFDoA（C12-C14）的解离常数低于 1 μM，短链 PFCA 显著更弱但仍可测且强于非氟化类似物；长链在腔内需弯折容纳。结合增强源于更大疏水表面积与范德华接触，与血清白蛋白及肝型 FABP 的既有报道一致",
+      "基本原理": "腔体结合器对两亲性阴离子的亲和力随疏水/氟化尾链的表面积单调放大（范德华接触与疏水效应）；链长分辨来自腔体几何匹配而非头基化学特异性，故该机制本身不提供对某一链长的特异选择性",
+      "source": "literature",
+      "ref_doi": "10.1021/jacsau.5c00504",
+      "verification": "verified",
+      "verification_quote": "the binding affinities of PFCAs are markedly dependent on chain length",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "PFCA 同系物系列（C4-C16 全氟羧酸）：结合随链长系统性变化，C12-C14 长链（PFTeDA/PFTrDA/PFDoA）解离常数低于 1 μM，构成链长依赖的定量锚点",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1021/jacsau.5c00504",
+          "locator": "p.2469-2474 (Results; PMC12188406 全文 XML)",
+          "quote": "perfluorotetradecanoic acid (PFTeDA), perfluorotridecanoic acid (PFTrDA), and perfluorododecanoic acid (PFDoA), which all display K d values below 1 μM",
+          "scope_match": "Keywords: PFTeDA, PFTrDA, PFDoA"
+        },
+        "bio_structure": {
+          "text": "FABP4 疏水腔容积有限，长全氟链须在腔内弯折以适配口袋几何；腔体几何对尾链构象的约束是链长容纳的结构基础（PFOA 复合体为 PDB 9MIW）",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1021/jacsau.5c00504",
+          "locator": "p.2469-2474 (Discussion; PMC12188406 全文 XML)",
+          "quote": "those with longer chains must adopt a bent conformation to fit within the binding pocket",
+          "scope_match": "Keywords: bent conformation, binding pocket"
+        },
+        "interaction": {
+          "text": "不同结合位点/构象排布增强腔内疏水相互作用；链长增加经更大疏水表面积与范德华接触提高亲和力，全氟化链的弯折能耗部分被全氟化增强的疏水性补偿",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1021/jacsau.5c00504",
+          "locator": "p.2469 (Abstract; PMC12188406 全文 XML)",
+          "quote": "These arrangements enhance hydrophobic interactions within the binding cavity",
+          "scope_match": "Keywords: hydrophobic, binding cavity"
+        },
+        "why_it_works": {
+          "text": "链长-亲和单调趋势反映更长全氟链提供更大疏水表面积与范德华接触；该趋势与血清白蛋白、肝型 FABP 等其他蛋白靶点的既有链长依赖报道一致，属腔体-尾链疏水匹配的普遍规律",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1021/jacsau.5c00504",
+          "locator": "p.2469-2474 (Results; PMC12188406 全文 XML)",
+          "quote": "This trend reflects the greater hydrophobic surface area and enhanced van der Waals interactions afforded by longer perfluorinated chains",
+          "scope_match": "Keywords: hydrophobic surface, van der waals, perfluorinated"
+        },
+        "boundary_conditions": [
+          {
+            "text": "链长单调依赖：PFCA 亲和力随全氟碳链链长单调增加（长链显著强于短链），趋势源于疏水表面积与范德华接触增加；短链 PFCA 结合更弱但仍强于其非氟化类似物",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "from_source",
+            "verification": "verified",
+            "gate_level": "hard",
+            "locator": "p.2469 (Abstract; PMC12188406 全文 XML)",
+            "quote": "Shorter-chain PFAS, although weaker binders, still displayed measurable affinities, surpassing those of their nonfluorinated analogs",
+            "scope_match": "Keywords: shorter-chain, affinities, nonfluorinated",
+            "source_asset": null
+          },
+          {
+            "text": "选择性边界：FABP4 对 PFOA 不具有相对更长链 PFCA 的特异选择性（长链结合更强）；将'区分 PFOA 与 PFOS/短链 PFAS/无机阴离子'归于 FABP4 天然机制属误用，特异性须在材料设计层面另行构建（定性）",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "腔体结合器中两亲性阴离子的亲和力随疏水/氟化尾链表面积单调增加（范德华接触），链长分辨本质是腔体几何匹配问题而非头基特异识别",
+        "verification_quote": "the binding affinities of PFCAs are markedly dependent on chain length"
+      },
+      "source_doi": "10.1021/jacsau.5c00504",
+      "source_page": 2469,
+      "source_locator": "p.2469-2474 (Results/Discussion)",
+      "source_file": "JACS Au 5(6):2469-2474（PMC12188406 全文 XML；未做本地全文 PDF 页码审计）",
+      "functional_groups": [
+        "疏水腔（范德华/氟亲接触面）"
+      ],
+      "key_structures": [
+        "识别结构"
+      ]
+    }
+  ],
+  "performance_data": [
+    {
+      "parameter": "FABP4–PFOA 结合解离常数 Kd（蛋白-配体结合，非吸附剂性能）",
+      "value": "低微摩尔级（low micromolar，ANS 竞争置换荧光测定）",
+      "unit": null,
+      "pollutant": "PFOA（全氟辛酸）",
+      "material": "重组人源 FABP4（可溶蛋白）",
+      "ph": null,
+      "temperature": null,
+      "conditions": "ANS 竞争置换荧光实验；精确数值在原文 Table S2（SI PDF 未取得）",
+      "source": "literature",
+      "ref_doi": "10.1021/jacsau.5c00504",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "JACS Au 5(6):2469-2474（PMC12188406 全文 XML）",
+      "page": 2469,
+      "locator": "Abstract, p.2469",
+      "verification": "verified",
+      "confidence": 0.9,
+      "source_locator": "Birchfield 2025 p.2469 / Abstract",
+      "verification_quote": "low micromolar dissociation constants observed in fluorescence competition assays"
+    },
+    {
+      "parameter": "长链 PFCA（C12-C14）与 FABP4 结合 Kd（蛋白-配体结合，非吸附剂性能）",
+      "value": "<1 (PFTeDA/PFTrDA/PFDoA)",
+      "unit": "μM",
+      "pollutant": "PFTeDA/PFTrDA/PFDoA（C12-C14 全氟羧酸）",
+      "material": "重组人源 FABP4（可溶蛋白）",
+      "ph": null,
+      "temperature": null,
+      "conditions": "ANS 竞争置换荧光实验（Kd 由 IC50 换算）",
+      "source": "literature",
+      "ref_doi": "10.1021/jacsau.5c00504",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "JACS Au 5(6):2469-2474（PMC12188406 全文 XML）",
+      "page": null,
+      "locator": "Results, p.2469-2474",
+      "verification": "verified",
+      "confidence": 0.9,
+      "source_locator": "Birchfield 2025 Results / p.2469-2474",
+      "verification_quote": "perfluorotetradecanoic acid (PFTeDA), perfluorotridecanoic acid (PFTrDA), and perfluorododecanoic acid (PFDoA), which all display K d values below 1 μM"
+    }
+  ],
+  "engineering_constraints": [
+    {
+      "constraint": "可溶蛋白形态",
+      "value": "FABP4 为胞内可溶性蛋白（约 15 kDa），识别依赖完整β桶三级结构，用作吸附须固定化/移植于固体载体",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "RCSB 9OB7：molecular_weight 15.13 kDa（条目），聚合物实体 14.935 kDa；SOURCE 记 HOMO SAPIENS / GENE FABP4",
+      "source": "literature",
+      "ref_doi": "10.1021/jacsau.5c00504"
+    },
+    {
+      "constraint": "Phe57 构象门控",
+      "value": "配体结合需 Phe57 呈开放构象以扩大疏水腔；apo 态 Phe57 为闭合构象，固定化或变性若锁闭腔口将丧失结合",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "Birchfield 2025 正文：PFOA/PFDA 诱导 Phe57 开放构象，大于 apo 闭合构象的腔体（PMC12188406 全文 XML，p.2469-2474）",
+      "source": "literature",
+      "ref_doi": "10.1021/jacsau.5c00504"
+    },
+    {
+      "constraint": "链长单调亲和（非特异选择性）",
+      "value": "PFCA 亲和力随链长单调增加（长链更强），FABP4 对 PFOA 无相对更长链 PFCA 的特异选择性；头基偏好为羧酸根紧于磺酸根",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "机理推断（基于正文链长依赖与头基依赖事实的外推）",
+      "source": "llm_inference",
+      "ref_doi": null
+    }
+  ],
+  "narrative": {
+    "entries": [
+      {
+        "source_file": "JACS Au 5(6):2469-2474 / PDB 9MIW·9OB7（Birchfield et al. 2025，DOI 10.1021/jacsau.5c00504，PMC12188406）",
+        "paper_id": "2025-Birchfield-FABP4-PFAS-variable-binding-modes",
+        "sections": {
+          "problem_definition": "PFAS 在环境与人畜体内广泛检出并沿食物链蓄积，其与脂质转运/结合蛋白的相互作用是理解生物蓄积、转运与毒性的分子基础，但分子层面认识不足。FABP4（脂肪细胞型脂肪酸结合蛋白）的天然底物为长链脂肪酸，作为胞内脂质载体参与代谢与内分泌调控；PFAS 与 FABP4 的结合属有文献记载的外源污染物-蛋白相互作用（毒理/内分泌语境），而非 FABP4 的天然功能。",
+          "biological_solution": "人源 FABP4 以β桶围成的内部埋藏疏水腔结合两亲性阴离子。Birchfield 等测定了 FABP4 与 PFOA（PDB 9MIW）、PFDA、PFHxDA 的晶体结构并结合 ANS 竞争置换荧光实验：PFOA 在腔内占据两个分离位点（配体 8PF 位于链 A 201/202 位）；主位点羧酸根由 Arg126 与 Tyr128 氢键稳定、并有 Arg106 水介导氢键，Ala75/Thr29/Ala33/Phe16 经烃基侧链提供疏水接触；次位点羧酸根与 Thr29 氢键。PFOA/PFDA 诱导 Phe57 由 apo 闭合转为开放构象以扩大疏水腔。结合呈链长单调依赖（C12-C14 PFCA 的 Kd 低于 1 μM，短链显著更弱但仍强于非氟化类似物），且头基化学起关键作用（羧酸根头基结合紧于磺酸/磺酰胺头基）。",
+          "key_features": "必须保留：① β桶围成的埋藏疏水腔（容纳全氟碳链，范德华/氟亲接触）；② 与羧酸根头基互补的预组织极性锚（Arg/Tyr 型阳离子与氢键给体）；③ 与目标链长匹配的腔体几何（长链需弯折容纳，Phe57 开放构象扩容）。可灵活调整：载体骨架、锚定基团化学（胍基/脒基/脲/硫脲）、孔壁疏水/氟亲修饰程度、腔深与孔径。",
+          "design_mapping": "仿生映射：FABP4 的'疏水腔 + 羧酸根极性锚 + 链长容纳几何'→ 面向全氟羧酸的吸附位点三要素。边界声明：这是设计转译/启发（llm_inferred），非 from_source 事实——FABP4 对 PFAS 的亲和为链长单调型，PFOA 属外源污染物结合，FABP4 不提供区分 PFOA 与 PFOS/短链 PFAS/无机阴离子的特异选择性；蛋白本身（可溶、约 15 kDa、构象依赖）不可直接复制为吸附剂，只提取设计原则。",
+          "explainability_anchors": "设计溯源：PFOA 在 FABP4 腔内的双位点结合模式（PDB 9MIW，from_source，Birchfield 2025）→ '埋藏疏水腔 + 羧酸根极性锚 + 链长几何匹配'可迁移原理（from_source）→ 全氟羧酸吸附位点设计（llm_inferred 启发，须实验验证）。"
+        }
+      }
+    ]
+  },
+  "design_translation": [
+    {
+      "idea": "将 FABP4 的'β桶埋藏疏水腔 + 羧酸根极性锚（Arg126/Tyr128 型阳离子与氢键给体）+ C8 链长容纳几何'三要素移植到多孔吸附材料，面向全氟辛酸（PFOA）：在疏水/氟亲孔壁构筑与羧酸根头基几何互补的预组织阳离子/氢键给体锚，并按全氟 C8 链长设定腔深/孔径以最大化链壁范德华接触",
+      "specific_functional_group": "羧酸根锚定基团（胍基/脒基阳离子、脲/硫脲中性氢键给体、季铵）按与 PFOA 羧酸根二氧几何互补的方式预组织排布；孔壁烃链或全氟烷基链提供氟亲/疏水接触",
+      "material_handle": "介孔二氧化硅或交联聚合物骨架经硅烷偶联/表面引发聚合接枝胍基或脲/硫脲单体；以分子印迹或刚性间隔臂控制锚定基团间距与取向；孔壁以烃链/氟碳链修饰降低局部极性，调控孔径/腔深匹配 C8 全氟链",
+      "target_interaction": "PFOA 羧酸根头基的方向性静电/氢键锚定 + 全氟碳链在疏水腔内的范德华/氟亲接触 + 疏水埋藏排除水竞争",
+      "source_tier": "llm_inference",
+      "evidence_tier": "inspiration（原理层外推：FABP4–PFOA 结合模式与链长/头基依赖接地于 PDB 9MIW 与 Birchfield 2025；将蛋白结合机制转译为 PFOA 选择性吸附材料为 llm_inferred，无吸附实验数据）",
+      "examples": [],
+      "design_principle": "FABP4 证明埋藏疏水腔 + 羧酸根极性锚 + 链长匹配几何可对全氟羧酸实现低微摩尔级高亲和结合（PDB 9MIW/9OB7，Birchfield 2025）；三要素中锚定几何与腔深可独立于蛋白骨架移植到人工孔道",
+      "implementation_example": "胍基/脲功能化、具疏水孔壁与 C8 链长匹配孔径的介孔二氧化硅或交联聚合物（无实验数据，仅为设计假设）",
+      "constraints": "FABP4 对 PFCA 的亲和为链长单调型（长链更强），不提供 PFOA 相对长链 PFCA 的特异选择性；水相中锚定基团的水合竞争与共存阴离子（氯离子、硫酸根、天然有机酸）干扰是关键挑战；蛋白不可直接复制（可溶、约 15 kDa、构象依赖），只提取设计原则",
+      "failure_modes": "链长单调亲和导致更长链 PFCA（PFNA/PFDA）竞争强于 PFOA 而降低选择性；胍基/脲锚暴露于体相水被氢键竞争淬灭；氟亲孔壁对一切全氟物种非特异吸附；腔深与 C8 链失配使锚定几何失效；PFOS 类磺酸根头基 PFAS 按 FABP4 头基依赖规律结合较弱但环境中常共存，仍须实验排查",
+      "material_realization_examples": []
+    }
+  ],
+  "honesty_ledger": {
+    "facts": [
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "埋藏疏水腔与羧酸根极性锚对全氟辛酸的双位点结合",
+        "basis": "from_source_verified",
+        "note": "Birchfield 2025 JACS Au（PDB 9MIW：PFOA 配体 8PF 位于链 A 201/202 两位点；主位点羧酸根-Arg126/Tyr128 氢键 + Arg106 水介导；次位点羧酸根-Thr29；Phe57 开放构象）；quote 取自 PDB 沉积记录（TITLE/KEYWDS/HETNAM）与 PMC12188406 全文 XML（逐字可核验），正文 PDF 未取得，正文内精确页码未核验"
+      },
+      {
+        "type": "mechanism",
+        "index": 1,
+        "name": "全氟羧酸结合的链长单调依赖与腔体几何容纳",
+        "basis": "from_source_verified",
+        "note": "Birchfield 2025：PFCA 亲和力随链长单调增加，C12-C14 的 Kd 低于 1 μM，短链更弱但强于非氟化类似物，长链弯折容纳；quote 取自 PMC12188406 全文 XML"
+      }
+    ],
+    "leads": [],
+    "inferences": [
+      {
+        "type": "design_translation",
+        "index": 0,
+        "idea": "将 FABP4 疏水腔 + 羧酸根极性锚 + 链长容纳几何移植到多孔材料以吸附 PFOA",
+        "basis": "llm_inferred",
+        "label": "inspiration",
+        "note": "FABP4–PFOA 属外源污染物-蛋白结合（毒理语境），且 FABP4 对 PFCA 为链长单调亲和、无 PFOA 特异选择性；转译为'PFOA 选择性吸附材料'属原理层外推，无吸附实验数据，亲和力与选择性须实验验证"
+      },
+      {
+        "type": "fact_derivation",
+        "index": 0,
+        "name": "作者残基编号与 UniProt P15090 的 +1 偏移对应（Phe57=F58、Thr29=T30、Arg126=R127）",
+        "basis": "llm_inferred",
+        "label": "alignment_derivation",
+        "note": "由 RCSB 9MIW 聚合物序列（GHM... 起始，含表达标签）与 UniProt P15090 序列比对得出，非论文直接陈述；条目正文残基名沿用论文/PDB 链 A 编号"
+      }
+    ],
+    "boundary_notes": [
+      "本原型天然底物为长链脂肪酸；PFOA/PFAS 结合为有文献记载的外源污染物-蛋白相互作用（毒理/内分泌语境），机制 from_source 接地限于该结合模式本身",
+      "将 FABP4 结合机制转译为 PFOA 选择性吸附材料设计全部为 design_translation（llm_inferred/inspiration），不得用作 PFOA 吸附的 direct evidence",
+      "FABP4 对 PFCA 呈链长单调亲和（长链更强）、对头基化学有偏好（羧酸根紧于磺酸根），但不提供 PFOA 特异的'选择性'；区分 PFOA 与 PFOS/PFHxS/短链 PFAS/无机阴离子属转译层问题",
+      "无 PFOA 吸附性能数据（qmax 等）；performance_data 仅记蛋白-配体结合亲和力（低微摩尔级 Kd），严格未从姊妹项目 biomimetic-adsorbent-design 的 pollutant_knowledge_base 搬运任何性能数值（知识隔离红线）",
+      "人源肝型 L-FABP（FABP1，如 Sheng 2014 Arch Toxicol DOI 10.1007/s00204-014-1391-7）、血清白蛋白等其他蛋白的 PFAS 结合数据不属本原型主语，未搬运"
+    ],
+    "missing_pdf_items": [
+      "Birchfield 2025 正文 PDF（Cloudflare/PMC PoW 墙拦截）；正文 quote 逐字取自 PMC12188406 开放获取全文 XML（可核验），正文内精确页码未核验，locator 用文章页域 p.2469-2474",
+      "Table S2（SI PDF 同被拦截）：PFOA 与 FABP4 结合的精确 Kd 数值未取得，仅记'低微摩尔级'（摘要 p.2469）与 C12-C14 PFCA 的低于 1 μM（正文）"
+    ],
+    "generated_by": "manual-curation-2026-07-21",
+    "note": "诚实优先：机制接地限于 FABP4 与脂肪酸/PFOA 在疏水腔的结合模式（PDB 9MIW/9OB7 + Birchfield 2025）；一切 PFOA 吸附材料转译为 inspiration/外推"
+  },
+  "boundary_rules": [
+    {
+      "rule": "头基化学门控：全氟羧酸根头基结合紧于磺酸根/磺酰胺头基（PFOS/PFOSA/8:2 FtS 类），后者干扰羧酸根配体的稳定接触",
+      "source_mechanism": "埋藏疏水腔与羧酸根极性锚对全氟辛酸的双位点结合",
+      "gate_level": "hard",
+      "basis": "from_source"
+    },
+    {
+      "rule": "链长单调亲和：PFCA 亲和力随全氟碳链链长单调增加，FABP4 本身不提供 PFOA 相对更长链 PFCA 的特异选择性",
+      "source_mechanism": "全氟羧酸结合的链长单调依赖与腔体几何容纳",
+      "gate_level": "hard",
+      "basis": "from_source"
+    },
+    {
+      "rule": "预组织β桶疏水腔须维持完整三级结构，水竞争与变性削弱结合（定性，无数值阈值）",
+      "source_mechanism": "埋藏疏水腔与羧酸根极性锚对全氟辛酸的双位点结合",
+      "gate_level": "soft",
+      "basis": "llm_inferred"
+    }
+  ],
+  "mechanism_tags": [
+    "配位螯合",
+    "氢键",
+    "疏水分配",
+    "孔道限域分子筛分",
+    "几何识别"
+  ]
+}

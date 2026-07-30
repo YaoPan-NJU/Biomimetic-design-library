@@ -1,0 +1,659 @@
+{
+  "summary": {
+    "total_rows": 130,
+    "changed": 84,
+    "unchanged": 46,
+    "by_rule": {
+      "exploratory_no_source_capped_0.3": 44,
+      "non_direct_capped_0.5": 15,
+      "exploratory_capped_0.3": 25
+    }
+  },
+  "top5_before": [
+    {
+      "proto": "chitosan",
+      "total_weight": 20.64,
+      "share_pct": 20.6
+    },
+    {
+      "proto": "bone-structure",
+      "total_weight": 14.62,
+      "share_pct": 14.6
+    },
+    {
+      "proto": "polydopamine-coating",
+      "total_weight": 12.99,
+      "share_pct": 13.0
+    },
+    {
+      "proto": "oyster-shell",
+      "total_weight": 11.77,
+      "share_pct": 11.8
+    },
+    {
+      "proto": "plant-tannin",
+      "total_weight": 8.98,
+      "share_pct": 9.0
+    }
+  ],
+  "top5_after": [
+    {
+      "proto": "chitosan",
+      "total_weight": 13.95,
+      "share_pct": 21.8
+    },
+    {
+      "proto": "polydopamine-coating",
+      "total_weight": 8.3,
+      "share_pct": 13.0
+    },
+    {
+      "proto": "bone-structure",
+      "total_weight": 8.2,
+      "share_pct": 12.8
+    },
+    {
+      "proto": "silk-fibroin",
+      "total_weight": 5.2,
+      "share_pct": 8.1
+    },
+    {
+      "proto": "oyster-shell",
+      "total_weight": 5.2,
+      "share_pct": 8.1
+    }
+  ],
+  "quarantined_after": 0,
+  "exploratory_high_after": 0,
+  "pfoa_bpa_matches_after": 6,
+  "changes": [
+    {
+      "proto": "plant-tannin",
+      "poll": "2,6-Dichlorophenol",
+      "original": 0.7,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "polydopamine-coating",
+      "poll": "2,6-Dichlorophenol",
+      "original": 0.7,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "chitosan",
+      "poll": "2,6-Dichlorophenol",
+      "original": 0.7,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "bone-structure",
+      "poll": "As(III)",
+      "original": 0.9,
+      "new": 0.5,
+      "rule": "non_direct_capped_0.5"
+    },
+    {
+      "proto": "sulfate-reducing-bacteria",
+      "poll": "As(III)",
+      "original": 0.9,
+      "new": 0.3,
+      "rule": "exploratory_capped_0.3"
+    },
+    {
+      "proto": "oyster-shell",
+      "poll": "As(III)",
+      "original": 0.9,
+      "new": 0.3,
+      "rule": "exploratory_capped_0.3"
+    },
+    {
+      "proto": "bone-structure",
+      "poll": "As(V)",
+      "original": 0.9,
+      "new": 0.5,
+      "rule": "non_direct_capped_0.5"
+    },
+    {
+      "proto": "sulfate-reducing-bacteria",
+      "poll": "As(V)",
+      "original": 0.9,
+      "new": 0.3,
+      "rule": "exploratory_capped_0.3"
+    },
+    {
+      "proto": "oyster-shell",
+      "poll": "As(V)",
+      "original": 0.9,
+      "new": 0.3,
+      "rule": "exploratory_capped_0.3"
+    },
+    {
+      "proto": "chitosan",
+      "poll": "BPA",
+      "original": 0.75,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "plant-tannin",
+      "poll": "BPA",
+      "original": 0.7,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "polydopamine-coating",
+      "poll": "BPA",
+      "original": 0.6666666666666666,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "bone-structure",
+      "poll": "CIP",
+      "original": 0.9,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "chitosan",
+      "poll": "CIP",
+      "original": 0.7999999999999999,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "plant-tannin",
+      "poll": "CIP",
+      "original": 0.7,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "polydopamine-coating",
+      "poll": "CIP",
+      "original": 0.6999999999999998,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "bone-structure",
+      "poll": "CR",
+      "original": 0.9,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "oyster-shell",
+      "poll": "CR",
+      "original": 0.9,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "bone-structure",
+      "poll": "Cd(II)",
+      "original": 0.85,
+      "new": 0.5,
+      "rule": "non_direct_capped_0.5"
+    },
+    {
+      "proto": "oyster-shell",
+      "poll": "Cd(II)",
+      "original": 0.8333333333333334,
+      "new": 0.3,
+      "rule": "exploratory_capped_0.3"
+    },
+    {
+      "proto": "sulfate-reducing-bacteria",
+      "poll": "Cd(II)",
+      "original": 0.8,
+      "new": 0.3,
+      "rule": "exploratory_capped_0.3"
+    },
+    {
+      "proto": "bone-structure",
+      "poll": "Cr(VI)",
+      "original": 0.9,
+      "new": 0.5,
+      "rule": "non_direct_capped_0.5"
+    },
+    {
+      "proto": "oyster-shell",
+      "poll": "Cr(VI)",
+      "original": 0.9,
+      "new": 0.3,
+      "rule": "exploratory_capped_0.3"
+    },
+    {
+      "proto": "bone-structure",
+      "poll": "Cu(II)",
+      "original": 0.85,
+      "new": 0.5,
+      "rule": "non_direct_capped_0.5"
+    },
+    {
+      "proto": "oyster-shell",
+      "poll": "Cu(II)",
+      "original": 0.8333333333333334,
+      "new": 0.3,
+      "rule": "exploratory_capped_0.3"
+    },
+    {
+      "proto": "chitosan",
+      "poll": "F-",
+      "original": 0.7999999999999999,
+      "new": 0.3,
+      "rule": "exploratory_capped_0.3"
+    },
+    {
+      "proto": "bone-structure",
+      "poll": "Hg(II)",
+      "original": 0.85,
+      "new": 0.5,
+      "rule": "non_direct_capped_0.5"
+    },
+    {
+      "proto": "chitosan",
+      "poll": "Hg(II)",
+      "original": 0.8400000000000001,
+      "new": 0.3,
+      "rule": "exploratory_capped_0.3"
+    },
+    {
+      "proto": "oyster-shell",
+      "poll": "Hg(II)",
+      "original": 0.8333333333333334,
+      "new": 0.3,
+      "rule": "exploratory_capped_0.3"
+    },
+    {
+      "proto": "chlorella-cell-wall",
+      "poll": "MB",
+      "original": 0.8,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "chitosan",
+      "poll": "MB",
+      "original": 0.675,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "polydopamine-coating",
+      "poll": "MB",
+      "original": 0.6666666666666666,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "plant-tannin",
+      "poll": "MB",
+      "original": 0.6666666666666666,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "chlorella-cell-wall",
+      "poll": "MO",
+      "original": 0.8,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "polydopamine-coating",
+      "poll": "MO",
+      "original": 0.6666666666666666,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "plant-tannin",
+      "poll": "MO",
+      "original": 0.6666666666666666,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "bone-structure",
+      "poll": "NH4+",
+      "original": 0.8,
+      "new": 0.5,
+      "rule": "non_direct_capped_0.5"
+    },
+    {
+      "proto": "oyster-shell",
+      "poll": "NH4+",
+      "original": 0.8,
+      "new": 0.3,
+      "rule": "exploratory_capped_0.3"
+    },
+    {
+      "proto": "chitosan",
+      "poll": "NH4+",
+      "original": 0.75,
+      "new": 0.3,
+      "rule": "exploratory_capped_0.3"
+    },
+    {
+      "proto": "bone-structure",
+      "poll": "NO3-",
+      "original": 0.8,
+      "new": 0.5,
+      "rule": "non_direct_capped_0.5"
+    },
+    {
+      "proto": "oyster-shell",
+      "poll": "NO3-",
+      "original": 0.8,
+      "new": 0.3,
+      "rule": "exploratory_capped_0.3"
+    },
+    {
+      "proto": "polydopamine-coating",
+      "poll": "NO3-",
+      "original": 0.6,
+      "new": 0.5,
+      "rule": "non_direct_capped_0.5"
+    },
+    {
+      "proto": "plant-tannin",
+      "poll": "NO3-",
+      "original": 0.6,
+      "new": 0.3,
+      "rule": "exploratory_capped_0.3"
+    },
+    {
+      "proto": "bone-structure",
+      "poll": "Ni(II)",
+      "original": 0.85,
+      "new": 0.5,
+      "rule": "non_direct_capped_0.5"
+    },
+    {
+      "proto": "oyster-shell",
+      "poll": "Ni(II)",
+      "original": 0.8333333333333334,
+      "new": 0.3,
+      "rule": "exploratory_capped_0.3"
+    },
+    {
+      "proto": "plant-tannin",
+      "poll": "Nonylphenol",
+      "original": 0.7,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "polydopamine-coating",
+      "poll": "Nonylphenol",
+      "original": 0.7,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "chitosan",
+      "poll": "Nonylphenol",
+      "original": 0.7,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "chitosan",
+      "poll": "PFOA",
+      "original": 0.75,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "diatom-frustule",
+      "poll": "PFOA",
+      "original": 0.7,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "polydopamine-coating",
+      "poll": "PFOA",
+      "original": 0.6,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "chitosan",
+      "poll": "PFOS",
+      "original": 0.75,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "diatom-frustule",
+      "poll": "PFOS",
+      "original": 0.7,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "lotus-leaf",
+      "poll": "PFOS",
+      "original": 0.6,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "polydopamine-coating",
+      "poll": "PFOS",
+      "original": 0.6,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "bone-structure",
+      "poll": "PO43-",
+      "original": 0.9,
+      "new": 0.5,
+      "rule": "non_direct_capped_0.5"
+    },
+    {
+      "proto": "sulfate-reducing-bacteria",
+      "poll": "PO43-",
+      "original": 0.9,
+      "new": 0.3,
+      "rule": "exploratory_capped_0.3"
+    },
+    {
+      "proto": "chitosan",
+      "poll": "PO43-",
+      "original": 0.8500000000000001,
+      "new": 0.3,
+      "rule": "exploratory_capped_0.3"
+    },
+    {
+      "proto": "bone-structure",
+      "poll": "Pb(II)",
+      "original": 0.85,
+      "new": 0.5,
+      "rule": "non_direct_capped_0.5"
+    },
+    {
+      "proto": "sulfate-reducing-bacteria",
+      "poll": "Pb(II)",
+      "original": 0.8,
+      "new": 0.3,
+      "rule": "exploratory_capped_0.3"
+    },
+    {
+      "proto": "plant-tannin",
+      "poll": "Pentachlorophenol",
+      "original": 0.7,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "polydopamine-coating",
+      "poll": "Pentachlorophenol",
+      "original": 0.7,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "chlorella-cell-wall",
+      "poll": "RhB",
+      "original": 0.8,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "polydopamine-coating",
+      "poll": "RhB",
+      "original": 0.7,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "plant-tannin",
+      "poll": "RhB",
+      "original": 0.7,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "chitosan",
+      "poll": "RhB",
+      "original": 0.675,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "chitosan",
+      "poll": "Roxithromycin",
+      "original": 0.7,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "plant-tannin",
+      "poll": "SMX",
+      "original": 0.7,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "chitosan",
+      "poll": "SMX",
+      "original": 0.6999999999999998,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "polydopamine-coating",
+      "poll": "SMX",
+      "original": 0.675,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "bone-structure",
+      "poll": "TC",
+      "original": 0.9,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "chitosan",
+      "poll": "TC",
+      "original": 0.7499999999999999,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "polydopamine-coating",
+      "poll": "TC",
+      "original": 0.7,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "plant-tannin",
+      "poll": "TC",
+      "original": 0.6999999999999998,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "silk-fibroin",
+      "poll": "TC",
+      "original": 0.6,
+      "new": 0.3,
+      "rule": "exploratory_no_source_capped_0.3"
+    },
+    {
+      "proto": "plant-tannin",
+      "poll": "TCE",
+      "original": 0.7,
+      "new": 0.3,
+      "rule": "exploratory_capped_0.3"
+    },
+    {
+      "proto": "diatom-frustule",
+      "poll": "TCE",
+      "original": 0.7,
+      "new": 0.3,
+      "rule": "exploratory_capped_0.3"
+    },
+    {
+      "proto": "polydopamine-coating",
+      "poll": "TCE",
+      "original": 0.62,
+      "new": 0.5,
+      "rule": "non_direct_capped_0.5"
+    },
+    {
+      "proto": "lotus-leaf",
+      "poll": "TCE",
+      "original": 0.6,
+      "new": 0.3,
+      "rule": "exploratory_capped_0.3"
+    },
+    {
+      "proto": "sulfate-reducing-bacteria",
+      "poll": "U(VI)",
+      "original": 0.9,
+      "new": 0.3,
+      "rule": "exploratory_capped_0.3"
+    },
+    {
+      "proto": "bone-structure",
+      "poll": "U(VI)",
+      "original": 0.825,
+      "new": 0.5,
+      "rule": "non_direct_capped_0.5"
+    },
+    {
+      "proto": "oyster-shell",
+      "poll": "U(VI)",
+      "original": 0.8000000000000002,
+      "new": 0.3,
+      "rule": "exploratory_capped_0.3"
+    },
+    {
+      "proto": "bone-structure",
+      "poll": "Zn(II)",
+      "original": 0.85,
+      "new": 0.5,
+      "rule": "non_direct_capped_0.5"
+    },
+    {
+      "proto": "oyster-shell",
+      "poll": "Zn(II)",
+      "original": 0.8333333333333334,
+      "new": 0.3,
+      "rule": "exploratory_capped_0.3"
+    }
+  ]
+}

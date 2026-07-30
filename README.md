@@ -1,99 +1,141 @@
-# 生物原型知识库 / Biological Prototype Knowledge Base
+# Biomimetic Design Library（BMDL）
 
-水处理仿生吸附材料开发智能体系统的核心组件。
+BMDL 是面向水质风险控制与吸附材料设计的仿生原型知识库。它把生物原型、作用机制、污染物特征、材料转译原则和失效边界组织为可查询、可审计的数据，为设计智能体提供有证据等级的仿生启发。
 
-## 项目状态
+本库不是材料性能排行榜，也不把生物结合、传感响应或规则命中当作已验证的材料去除性能。下游系统应依据证据 lane 使用候选，并在真实水体、竞争离子、再生和制造条件下继续验证。
 
-**框架已就绪，原型条目待填充。**
+## 项目职责
 
-- 已完成：taxonomy、template、feature-mapping.json、检索方案
-- 待完成：35个原型的 prototype.md 文件（需按检索方案查文献后用 LLM 提取填充）
+BMDL 接收目标污染物、水质条件和工程约束，返回结构化的 `BiomimeticDesignBrief`。它负责检索、证据分级、机制解释和材料转译提示，不直接给出最终材料配方，也不替代下游的组合设计与实验验证。
 
-## 简介
-
-本知识库为"水处理仿生吸附材料开发智能体系统"提供生物原型的结构化数据支撑。当用户输入目标污染物和水质条件后，需求解析Agent从本知识库中检索匹配的生物原型，获取其吸附机制和结构特征信息。
-
-## 架构
-
-```
-Biomimetic-design-library/
-├── README.md                    # 本文件
-├── feature-mapping.json         # 特征-原型映射表（四层结构）
-├── prototypes/                  # 生物原型条目（每个原型一个目录）
-│   ├── lotus-leaf/
-│   │   └── prototype.md
-│   ├── mussel-foot-adhesion/
-│   │   └── prototype.md
-│   └── ...（共33个原型目录）
-├── taxonomy/                    # 分类体系定义
-│   ├── organisms.md             # 生物分类
-│   ├── mechanisms.md            # 吸附机制分类
-│   └── pollutants.md            # 污染物分类
-├── templates/
-│   └── prototype-template.md    # 原型条目模板
-└── docs/
-    └── design.md                # 设计文档
+```text
+结构化需求
+  → BMDL 条件预筛与特征/污染物匹配
+  → 原型、绑定机制、材料转译与边界
+  → BiomimeticDesignBrief
+  → 下游材料设计与验证
 ```
 
-## feature-mapping.json 结构
+## 库中有什么
 
-四层结构，支持三层匹配机制：
+- 100 个根原型，覆盖微生物、植物、动物和人工仿生体系。
+- 630 条机制卡，包含因果链、可转译原则、来源定位和边界条件。
+- 501 条性能记录，用于区分严格事实、待核验线索和一般启发。
+- 污染物画像、别名、特征—机制规则和原型映射。
+- `BiomimeticContext` 查询接口与 ADRMATS 可直接消费的导出快照。
 
-| 层级 | 字段 | 作用 |
-|------|------|------|
-| Layer 1 条件预筛 | `prototype_metadata[id].applicability` | 按 pH、温度、盐度过滤 |
-| Layer 2 污染物匹配 | `pollutant_prototype_map[污染物]` | 按污染物检索 + weight 排序 |
-| Layer 2 特征匹配 | `feature_prototype_map[特征]` | 按特征检索（无明确污染物时） |
-| Layer 3 机制解释 | `mechanism_feature_bridge` | 特征↔机理桥接 |
+## 权威数据与功能
 
-**设计原则**：库只做匹配响应，不负责推理。约束识别归前置推理模块，组合推理归下游模块。
+| 路径 | 作用 |
+|---|---|
+| `prototypes_db/*.json` | 原型与机制正典数据，是内容权威来源 |
+| `prototypes/` | 面向人工阅读的原型文档 |
+| `feature-mapping.json` | 污染物、特征与原型的策展映射 |
+| `feature_matching_rules.json` | 分子特征到机制的规则词表 |
+| `pollutant_profiles.json` | 污染物分子特征与相互作用画像 |
+| `tools/biomimetic_context.py` | 查询、证据分级、机制绑定和 brief 生成 |
+| `adrmats_export/` | 下游系统使用的匹配快照 |
 
-**weight 定义**：0-1 连续值，表示该原型对某个污染物/特征的匹配强度。
+## 匹配架构
 
-## ID 命名规范
+| 匹配面 | 主要数据 | 作用 |
+|---|---|---|
+| 条件预筛 | `prototype_metadata[id].applicability`、`tested_conditions` | 根据 pH、温度、盐度和工程约束识别适用边界 |
+| 污染物匹配 | `pollutant_prototype_map`、性能证据 | 返回有污染物专项依据的候选，并区分 `fact` 与 `lead` |
+| 特征匹配 | `pollutant_profiles.json`、`feature_prototype_map` | 在专项证据不足时，以分子特征和可能相互作用寻找启发 |
+| 机制解释 | `mechanism_feature_bridge`、`prototypes_db/*.json` | 绑定具体机制，给出因果链、材料转译和边界条件 |
 
-所有原型 ID 统一使用**英文小写 + 连字符**：
+`weight` 只表示检索相关性。库先按证据 lane 区分事实、线索和启发，再在同一 lane 内使用相关性排序。
 
-| ID | 原型 |
-|----|------|
-| `lotus-leaf` | 荷叶表面 |
-| `mussel-foot-adhesion` | 贻贝足丝 |
-| `sulfate-reducing-bacteria` | 硫酸盐还原菌 |
-| `polydopamine-coating` | 聚多巴胺(PDA)涂层 |
-| ... | ... |
+查询流程为：
 
-完整列表见 `feature-mapping.json` 中的 `prototype_metadata`。
+```text
+污染物与工况
+  → 名称归一化与污染物画像
+  → 材料去除性能证据
+  → 污染物专项映射
+  → 特征—机制—原型检索
+  → 机制绑定、边界检查与证据分级
+  → BiomimeticDesignBrief
+```
 
-## 三层匹配机制
+## 证据分级
 
-1. **条件预筛**：根据 pH、温度、浓度等工况约束排除不适用的原型
-2. **加权特征匹配**：按 weight×匹配强度计算综合得分
-3. **组合推理**：LLM 读取 top 原型详情，提出跨原型的组合方案
+| lane | 判定与用途 |
+|---|---|
+| `fact` | 污染物特异材料去除性能具备来源、定位、原文引文和严格核验，且展示机制已核验；可作为事实依据 |
+| `lead` | 性能记录具备来源、定位和原文引文但仍为 `partial`，或性能严格而展示机制仍待核验；可作为优先验证线索 |
+| `exploratory` | 生物结合、传感、规则映射或机制类比；只用于生成假设 |
 
-## 覆盖范围
+`direct_evidence=true` 只表示严格的污染物特异材料去除性能。`weight` 表示同一 lane 内的检索相关性，不是实验置信度，也不应跨 lane 直接比较。
 
-- **生物类别**：微生物、植物、动物、仿生材料
-- **仿生维度**：分子仿生、结构仿生、形态仿生、过程仿生、功能仿生、系统仿生
-- **吸附机制**：配位螯合、超疏水分离、多孔吸附、生物矿化、纤维结构、功能仿生
+## 快速开始
 
-## 如何开始
+```python
+from tools.biomimetic_context import BiomimeticContext
 
-### 新会话/新 AI 上手流程
+ctx = BiomimeticContext()
+result = ctx.query(
+    pollutant="PFOA",
+    water_quality={"pH": 7.0, "temperature": 25, "salinity": "low"},
+    engineering_constraints=["真实二级出水", "可再生"],
+)
 
-1. 读取本 README 了解项目全貌
-2. 读取 `docs/design.md` 了解详细设计
-3. 读取 `SESSION-SUMMARY.md`（如存在）了解跨会话上下文
-4. 查看 `feature-mapping.json` 了解当前映射状态
-5. 查看 `templates/prototype-template.md` 了解条目格式
+for candidate in result["brief"]["candidates"]:
+    print(
+        candidate["prototype_id"],
+        candidate["lane"],
+        candidate["mechanism"]["mechanism_id"] or candidate["mechanism"]["name"],
+    )
+```
 
-### 建库工作流
+返回结果包含：
 
-1. 按检索方案（见项目根目录的检索词清单）在 Web of Science 下载文献
-2. 用 LLM 提取 Prompt 从文献中提取结构化数据
-3. 按模板填写 `prototypes/[id]/prototype.md`
-4. 同步更新 `feature-mapping.json` 中的三个映射表
-5. 每完成一批原型就 git commit + push
+- 被选中的原型及其匹配原因；
+- 与本次查询绑定的具体机制（优先使用 ID，旧机制以完整名称绑定）；
+- `fact / lead / exploratory` 证据 lane；
+- 可转译的材料设计原则；
+- 已知边界、DO-NOT 和性能线索来源。
 
-## 相关专利
+## ADRMATS 导出
 
-隶属于《一种水处理仿生吸附材料开发智能体系统》
+重新生成匹配快照：
+
+```bash
+python -X utf8 tools/export_adrmats_snapshot.py
+```
+
+下游集成应优先读取 `adrmats_export/match_export.json`。其中保留 `lane`、`direct_evidence`、`performance_evidence_tier`、`candidate_honesty`、`bound_mechanism_id` 和 `bound_mechanism`；五列 CSV 仅用于兼容旧导入器。
+
+BioADRMATS 侧需要完成的导入与适配改动见 [BioADRMATS 集成指南](docs/handoff/BIOADRMATS_INTEGRATION_GUIDE.md)。
+
+## 验证
+
+```bash
+python -m pytest
+python -X utf8 tools/validate_consistency.py --strict
+python -X utf8 tools/check_chimera.py --strict
+python -X utf8 tools/check_causal_chain.py
+python -X utf8 tools/check_source_authenticity.py
+python -X utf8 tools/check_repo_hygiene.py
+python -X utf8 tools/verify_adrmats_delivery.py
+```
+
+`check_source_authenticity.py` 的 `0 ERROR` 只表示来源标识符和字段结构通过检查，不等于 DOI、定位页和具体声明已经逐条人工复核。
+
+## 文档
+
+- [设计与 brief 结构](docs/design.md)
+- [证据与字段定义](docs/references/definitions.md)
+- [ADRMATS 调用说明](docs/ADRMATS_CALL_GUIDE.md)
+- [BioADRMATS 集成指南](docs/handoff/BIOADRMATS_INTEGRATION_GUIDE.md)
+- [支持范围与风险](docs/SUPPORT_SCOPE_AND_RISKS.md)
+- [仓库治理规范](docs/REPOSITORY_HYGIENE.md)
+
+## 数据修改原则
+
+1. 原型、机制和性能记录必须能追溯到明确来源；缺失定位或引文时不得升级证据等级。
+2. 生物结合、传感和材料去除性能必须分开表述。
+3. 映射命中只表示设计相关性，不能自动升级为直接证据。
+4. 原型的生物机制与材料转译必须显式分层，避免把工程材料行为倒写成天然机制。
+5. 被否决、缺失或存在范围冲突的证据应保留审计状态，不得静默改写为已验证事实。

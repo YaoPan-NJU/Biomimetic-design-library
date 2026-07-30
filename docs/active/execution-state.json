@@ -1,0 +1,169 @@
+{
+  "baseline_commit": "fdf6105",
+  "tested_commit": "commit containing this snapshot on codex/fix-massive-audit",
+  "branch": "codex/fix-massive-audit",
+  "active_goal": "massive-quality-remediation",
+  "state_scope": "Current massive remediation snapshot. Milestone-specific sections below are retained as historical audit context and are not current counts.",
+  "authorized_milestones": [
+    "R0",
+    "R1",
+    "P0",
+    "P1",
+    "P2",
+    "P3",
+    "P4",
+    "P5",
+    "M6",
+    "M7",
+    "M8",
+    "M9",
+    "M10",
+    "M11",
+    "M12",
+    "M13",
+    "M14"
+  ],
+  "current_gate": "local-hard-gates-pass-source-coverage-open",
+  "completed_phases": [
+    "R0-capability-v3-real-multimodal",
+    "R1-A-build-safety",
+    "R1-B-identity-ambiguity",
+    "R1-C-ledger-v2",
+    "R1-D-m2-correction",
+    "R1-E-validation-docs",
+    "P0-interface-contract",
+    "P1a-scope-wrong-source-removal",
+    "P1b-label-honesty",
+    "P1c-honesty-ledger",
+    "P1d-design-translation",
+    "P2-extended-audit",
+    "P3-literature-extraction",
+    "P4-validation-documentation",
+    "P5-B-preflight",
+    "P5-B-completion",
+    "M6-ADRMATS-dogfood",
+    "M7-ADRMATS-usefulness-hardening",
+    "M8-v02-terminal-evidence",
+    "M9-evidence-uplift",
+    "M10-v02-rc-packaging",
+    "M12-full-pdf-evidence-audit",
+    "M13-v02-handoff-and-regression",
+    "G5-yao-review"
+  ],
+  "pending_phases": [
+    "M14-v10-expansion-wave1",
+    "M15-v10-expansion-wave2"
+  ],
+  "library_statistics": {
+    "total_prototypes": 100,
+    "root_prototypes": 100,
+    "core": 24,
+    "extended": 65,
+    "exploratory": 11,
+    "active": 93,
+    "pending_extraction": 5,
+    "parked": 2,
+    "mechanisms": 630,
+    "performance_data": 501,
+    "from_source_mechanisms": 557,
+    "llm_inferred_only_mechanisms": 73,
+    "qualified_causal_cards": 630,
+    "boundary_conditions": 792,
+    "honesty_ledgers": 100,
+    "count_note": "Counts are for root prototypes_db/*.json only; quarantined and supplemental collections are excluded. A mechanism is counted as from_source when at least one causal-chain element has basis=from_source."
+  },
+  "validation_results": {
+    "pytest": "36 passed",
+    "validate_consistency_strict": "0 errors, 231 warnings",
+    "check_chimera_strict": "0 violations",
+    "check_causal_chain": "630/630 qualified, 0 empty-basis, 0 prototypes without card",
+    "check_translation_specificity": "101/101 pass",
+    "check_boundary_guardrail": "PASS",
+    "check_no_inferred_hard_do_not": "PASS",
+    "check_source_tier_consistency": "PASS",
+    "check_source_authenticity": "0 errors, 0 warnings; identifier/label hygiene only, not full claim validation",
+    "check_from_source_integrity": "1596/1596 compliant",
+    "check_fact_requires_locator": "PASS",
+    "check_brief_usefulness": "7/7 pass",
+    "check_brief_mechanism_binding": "7/7 pass",
+    "check_brief_ledger_consistency": "PASS",
+    "check_brief_do_not_behavior": "PASS",
+    "check_gold_set_usefulness": "7/7 pass",
+    "check_repo_hygiene": "PASS",
+    "verify_adrmats_delivery": "6/6 PASS",
+    "test_interface_honesty": "3/3 PASS"
+  },
+  "p5b_changes": {
+    "boundary_fixes": "7 empty-shell prototypes fixed",
+    "lotus_leaf_promotion": "Core tier with narrow scope",
+    "litextract_security": "Submodule pointer updated"
+  },
+  "protected_user_assets": {
+    "tools/litextract": "submodule, security fix landed",
+    "docs/optimization-v1/": "untracked, excluded"
+  },
+  "last_checkpoint": "2026-07-29T00:00:00+08:00",
+  "next_action": "Build a branch-by-branch source-design disposition manifest for fresh_1000 and EreA/EreB before claiming migration completeness.",
+  "git_status_note": "massive repair is isolated on codex/fix-massive-audit; original expand work is checkpointed separately at 6be0a82.",
+  "m9_summary": {
+    "mechanisms_upgraded": 103,
+    "from_source_total": "98/510 (19%)",
+    "llm_inferred_remaining": 412,
+    "pdfs_read": 25,
+    "prototypes_touched": 20,
+    "method": "25 PDFs + keyword matching + 7 single-mechanism D4 extractions",
+    "validators": "all green"
+  },
+  "m10_summary": {
+    "status": "v0.2 RC complete, M12+M13 pass — see latest REVIEW_REQUEST for HEAD",
+    "validators_all_green": "15/15 passed",
+    "briefs_frozen": "7 ADRMATS gold-set briefs verified",
+    "evidence_caveat": "98/510 from_source (19%), remaining 412 are source-backed inference"
+  },
+  "v02_plan": {
+    "M8": "complete",
+    "M9": "accepted — 98/510 from_source (19%)",
+    "M10": "accepted — v0.2 RC frozen",
+    "M11": "accepted — v0.2 RC at 473327c",
+    "M12": "accepted — full PDF audit complete",
+    "M13": "accepted — handoff and regression complete",
+    "M14": "in progress — v10 expansion wave 1"
+  },
+  "yao_decisions": {
+    "accept_v02_rc": true,
+    "authorize_v10_expansion": true,
+    "evidence_uplift_412": true,
+    "spider_silk_uranium": "reclassify_not_remove",
+    "ocr_pipeline": "not_authorized_yet"
+  },
+  "v1a_debloat": {
+    "status": "complete",
+    "mechanisms_reclassified": 184,
+    "prototypes_touched": [
+      "superhydrophobic-artificial",
+      "water-strider-leg",
+      "lotus-leaf",
+      "shark-skin",
+      "pitcher-plant-slippery-surface"
+    ],
+    "reclassification_types": {
+      "background_only_surface_physics": 163,
+      "background_only_liquid_repellent": 21
+    },
+    "pushed_commit": "de65d72",
+    "validators": "all 8 pass (0 errors, 171 pre-existing warnings)"
+  },
+  "v1a_evidence_uplift": {
+    "status": "significant_progress",
+    "waves_completed": 5,
+    "total_upgraded": 86,
+    "from_source_start": 98,
+    "from_source_current": 184,
+    "llm_inferred_start": 412,
+    "llm_inferred_current": 326,
+    "percentage_start": "19.2%",
+    "percentage_current": "36.1%",
+    "visible_llm_inferred_marked": 153,
+    "method": "visual_cache DOI matching + keyword/formula/number extraction"
+  }
+}

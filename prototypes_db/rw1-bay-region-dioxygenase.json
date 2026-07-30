@@ -1,0 +1,183 @@
+{
+  "id": "rw1-bay-region-dioxygenase",
+  "name_zh": "Sphingomonas RW1 芳醚角位双加氧途径",
+  "name_en": "Sphingomonas RW1 Angular Dioxygenation of Diaryl Ethers",
+  "organism": {
+    "scientific": "Sphingomonas wittichii RW1",
+    "category": "微生物"
+  },
+  "biomimetic_dimension": "过程仿生",
+  "features": ["骨架适用性", "角位氧化"],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": null,
+    "note": "天然机制为芳醚氧化降解，不是可逆吸附；高氯代二噁英适用性受限。"
+  },
+  "library_tier": "exploratory",
+  "lifecycle_status": "pending_extraction",
+  "coverage": "partial",
+  "status": "pending_extraction",
+  "source_scheme": "SL11_A04 (TCDD, score 69, revise)",
+  "provenance_summary": {
+    "n_papers": 4,
+    "n_verified": 0,
+    "n_unverified": 4,
+    "note": "原条目把 MIP 醚氧锚定和轮廓窗口误标为文献已验证的生物机制；已恢复为 RW1 的真实角位双加氧路径。"
+  },
+  "mechanisms": [
+    {
+      "mechanism_id": "RW1-001",
+      "name": "芳醚桥邻位的角位双加氧",
+      "description": "RW1 的多组分双加氧酶在二苯并二噁英或二苯并呋喃的桥连原子邻位引入两个氧原子，启动后续开环代谢。",
+      "基本原理": "酶系统识别可接近的芳醚角位并进行反应性活化，而不是依靠可逆醚氧吸附。",
+      "source": "literature",
+      "ref_doi": "10.1128/jb.180.15.3954-3966.1998",
+      "verification": "partial",
+      "verification_quote": null,
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "二苯并二噁英和二苯并呋喃具有桥连原子相邻的芳香角位，可作为初始氧化位置。",
+          "basis": "llm_inferred",
+          "source": null,
+          "locator": null,
+          "quote": null
+        },
+        "bio_structure": {
+          "text": "RW1 以多组分双加氧酶和电子供给系统协同完成角位氧化。",
+          "basis": "llm_inferred",
+          "source": null,
+          "locator": null,
+          "quote": null
+        },
+        "interaction": {
+          "text": "酶将可接近的桥连邻位对准非血红素铁活性中心，进行双氧插入。",
+          "basis": "llm_inferred",
+          "source": null,
+          "locator": null,
+          "quote": null
+        },
+        "why_it_works": {
+          "text": "角位氧化生成不稳定中间体，为后续断键和芳环裂解创造反应入口。",
+          "basis": "llm_inferred",
+          "source": null,
+          "locator": null,
+          "quote": null
+        },
+        "boundary_conditions": [
+          {
+            "text": "该机制需要可接近的未取代角位，不能据此宣称对高度氯代同系物有效。",
+            "parameter": "angular_site_accessibility",
+            "condition": {"operator": "qualitative", "value": null},
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "把桥连原子邻位的可接近性作为反应入口判据，可用于设计芳醚选择性氧化路径。"
+      },
+      "functional_groups": ["芳醚桥", "非血红素铁双加氧中心"],
+      "key_structures": ["角位反应几何", "多组分电子传递系统"]
+    },
+    {
+      "mechanism_id": "RW1-002",
+      "name": "取代模式限制角位氧化适用范围",
+      "description": "氯取代会减少可接近的初始攻击位置并改变代谢产物；较高氯代程度不能从未取代或低氯代底物结果直接外推。",
+      "基本原理": "底物是否保留可反应角位决定路径能否启动，骨架相似不等于具有相同降解性。",
+      "source": "literature",
+      "ref_doi": "10.1128/aem.72.1.112-116.2006",
+      "verification": "partial",
+      "verification_quote": null,
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "氯取代位置和程度共同决定芳醚骨架上是否仍有可接近的角位。",
+          "basis": "llm_inferred",
+          "source": null,
+          "locator": null,
+          "quote": null
+        },
+        "bio_structure": {
+          "text": "RW1 的初始双加氧步骤需要同时满足骨架进入和反应位点可接近。",
+          "basis": "llm_inferred",
+          "source": null,
+          "locator": null,
+          "quote": null
+        },
+        "interaction": {
+          "text": "取代基遮挡或取消角位时，底物不能按同一路径有效对准活性中心。",
+          "basis": "llm_inferred",
+          "source": null,
+          "locator": null,
+          "quote": null
+        },
+        "why_it_works": {
+          "text": "以反应位点可接近性而非仅以疏水性或骨架名称判断，可以避免跨同系物过度外推。",
+          "basis": "llm_inferred",
+          "source": null,
+          "locator": null,
+          "quote": null
+        },
+        "boundary_conditions": [
+          {
+            "text": "对目标同系物没有直接转化数据时，只能作为路径启发，不能标记直接去除证据。",
+            "parameter": "congener_scope",
+            "condition": {"operator": "qualitative", "value": null},
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "用反应位点可接近性为同系物适用范围设边界，避免把低取代底物结果外推到高度取代目标。"
+      },
+      "functional_groups": ["芳醚桥", "氯取代芳环"],
+      "key_structures": ["可接近角位", "同系物取代模式"]
+    }
+  ],
+  "performance_data": [],
+  "design_translation": [
+    {
+      "idea": "将 RW1 的角位可接近性判据转译为芳醚客体的轮廓筛选，但把 MIP 锚定明确标为独立工程假设。",
+      "specific_functional_group": "弱氢键供体和疏水芳香腔壁",
+      "material_handle": "以目标同系物或无毒结构类似物制备的分子印迹孔",
+      "target_interaction": "芳醚骨架轮廓匹配加弱偶极锚定",
+      "source_tier": "llm_inference",
+      "evidence_tier": "inspiration",
+      "examples": [],
+      "design_principle": "只迁移角位可接近性和同系物边界，不把 MIP 识别冒充天然酶结合事实。",
+      "implementation_example": "无毒模板构建的芳醚分子印迹聚合物",
+      "constraints": "高度氯代目标的水相传质和模板安全性必须单独验证。",
+      "failure_modes": "疏水分配掩盖轮廓选择；模板泄漏；对 PCB 或 PCDF 交叉结合。",
+      "material_realization_examples": []
+    }
+  ],
+  "honesty_ledger": {
+    "facts": [],
+    "leads": [
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "RW1 芳醚角位双加氧",
+        "basis": "literature_backed",
+        "note": "原始论文支持角位氧化路径，全文 quote 和 locator 尚待本库提取。"
+      }
+    ],
+    "inferences": [
+      {
+        "type": "design_translation",
+        "index": 0,
+        "idea": "MIP 芳醚轮廓识别",
+        "basis": "llm_inferred",
+        "label": "inspiration"
+      }
+    ],
+    "boundary_notes": ["天然功能是氧化降解；不支持把 TCDD 或 MIP 吸附标为直接证据。"],
+    "missing_pdf_items": ["RW1 角位双加氧和氯代同系物论文全文证据提取"],
+    "generated_by": "codex-2026-07-28"
+  }
+}

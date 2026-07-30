@@ -1,0 +1,142 @@
+{
+  "id": "insect-chitin",
+  "name_zh": "昆虫甲壳素",
+  "name_en": "Insect Chitin",
+  "organism": {
+    "scientific": "Insecta (insect exoskeleton)",
+    "category": "动物"
+  },
+  "biomimetic_dimension": "arthropod_exoskeleton_polysaccharide",
+  "features": [],
+  "tested_conditions": [],
+  "library_tier": "extended",
+  "lifecycle_status": "active",
+  "coverage": "partial",
+  "status": "active",
+  "provenance_summary": "V1-B biological expansion wave. Chitin from insect/arthropod exoskeletons as bio-adsorbent for heavy metals and dyes. Second most abundant natural polysaccharide after cellulose.",
+  "mechanisms": [
+    {
+      "mechanism_id": "IC-001",
+      "description": "Chitin amino group coordination: acetamido groups (-NHCOCH₃) and amino groups (after deacetylation to chitosan) coordinate heavy metal ions",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "Heavy metal ions and dye molecules",
+          "basis": "llm_inferred",
+          "evidence_label": "llm_inferred",
+          "source": "10.1007/s10924-021-02312-1",
+          "locator": "p.12",
+          "quote": "ble coordination/chelation with various heavy metal ions",
+          "scope_match": "Keywords: ions, molecules, heavy, metal"
+        },
+        "bio_structure": {
+          "text": "Acetamido (-NHCOCH₃) and hydroxyl (-OH) groups",
+          "basis": "llm_inferred",
+          "evidence_label": "llm_inferred",
+          "source": "10.1007/s10924-021-02312-1",
+          "locator": "p.12",
+          "quote": "The amine and hydroxyl groups in chitosan molecules ena-",
+          "scope_match": "Keywords: hydroxyl, groups"
+        },
+        "interaction": {
+          "text": "Coordination with acetamido/amino groups on chitin backbone",
+          "basis": "llm_inferred",
+          "evidence_label": "llm_inferred",
+          "source": "10.1007/s10924-021-02312-1",
+          "locator": "p.12",
+          "quote": "non-protonated amino groups of chitosan allow formation",
+          "scope_match": "Keywords: amino, groups, coordination, chitin"
+        },
+        "why_it_works": {
+          "text": "Adsorption capacity varies by metal and chitin source",
+          "basis": "llm_inferred",
+          "source": "10.1007/s10924-021-02312-1",
+          "evidence_label": "llm_inferred",
+          "locator": "p.12",
+          "quote": "improve its adsorption capacity of heavy metal ion in water",
+          "scope_match": "Keywords: capacity, metal, adsorption, chitin"
+        },
+        "boundary_conditions": [
+          {
+            "text": "Acidic to neutral pH",
+            "parameter": "pH",
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "verification_method": "no_reference_available"
+          }
+        ],
+        "transferable_principle": "Arthropod exoskeleton chitin provides acetamido and hydroxyl groups for pollutant binding"
+      },
+      "verification": "llm_inferred",
+      "source_doi": "",
+      "source_page": 0,
+      "functional_groups": [
+        "-NH-（亚氨基）",
+        "几丁质乙酰胺基/羟基",
+        "壳聚糖氨基/羟基",
+        "配位/螯合位点",
+        "-S-（硫醚键）",
+        "配位氧",
+        "-OH（羟基）",
+        "-NH₂（氨基）",
+        "配位氮",
+        "-O-（醚键）"
+      ],
+      "key_structures": [],
+      "name": "昆虫外骨骼几丁质乙酰胺基/羟基配位"
+    }
+  ],
+  "performance_data": [],
+  "engineering_constraints": [
+    {
+      "constraint_id": "IC-E001",
+      "description": "Chitin extraction: demineralization (HCl), deproteinization (NaOH), decolorization",
+      "source_doi": "",
+      "evidence_type": "llm_inferred"
+    }
+  ],
+  "narrative": [
+    {
+      "narrative_id": "IC-N001",
+      "text": "Chitin is the second most abundant natural polysaccharide, found in insect exoskeletons, crustacean shells, and fungal cell walls. It can be converted to chitosan by deacetylation, enhancing its adsorption capacity for heavy metals and dyes.",
+      "source_doi": ""
+    }
+  ],
+  "design_translation": [
+    {
+      "idea": "Extract chitin from insect/arthropod waste (shrimp shells, cricket exoskeletons) and use as bio-adsorbent or convert to chitosan for enhanced performance",
+      "material_handle": "Shrimp shell chitin for heavy metal adsorption",
+      "design_principle": "Chitin (poly-β-(1→4)-N-acetyl-D-glucosamine) provides amino and hydroxyl groups for metal ion chelation and dye adsorption",
+      "implementation_example": "Shrimp shell chitin for heavy metal adsorption; Silkworm pupa chitin for dye removal",
+      "constraints": "Chitin insolubility limits processing; deacetylation to chitosan improves adsorption but adds processing cost",
+      "failure_modes": "",
+      "evidence_tier": "inference",
+      "source_tier": "llm_inference",
+      "material_realization_examples": [
+        "Shrimp shell chitin for heavy metal adsorption",
+        "Silkworm pupa chitin for dye removal"
+      ],
+      "specific_functional_group": "N-acetylglucosamine (amino, hydroxyl)",
+      "target_interaction": "metal ion chelation and dye adsorption"
+    }
+  ],
+  "honesty_ledger": {
+    "from_source_mechanisms": 0,
+    "llm_inferred_mechanisms": 1,
+    "verified_performance_data": 0,
+    "missing_pdf_items": 1,
+    "knowledge_gaps": [
+      "[QC 2026-07-23] 现引 10.1007/s10924-021-02312-1 为泛几丁质/壳聚糖膜综述（quote 实为 chitosan，非昆虫专属，仅作 background）；昆虫外骨骼几丁质吸附一手源稀缺（多为虾蟹壳，与 chitosan/lobster-exoskeleton 原型重叠），需确认是否冗余；检索：black soldier fly larvae chitin adsorption / insect cuticle chitin biosorption Pb Cd FTIR",
+      "Insect-specific chitin extraction optimization",
+      "Comparison with crustacean-derived chitin"
+    ]
+  },
+  "mechanism_tags": [
+    "配位螯合",
+    "氢键"
+  ]
+}

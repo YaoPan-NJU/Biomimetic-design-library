@@ -1,0 +1,127 @@
+{
+  "id": "laccase-t1-cu-phenol-coordination",
+  "name_zh": "漆酶 T1 铜邻近底物口袋与外球电子转移",
+  "name_en": "Laccase T1-Copper-Adjacent Substrate Pocket and Outer-Sphere Electron Transfer",
+  "organism": {
+    "scientific": "Trametes versicolor 漆酶",
+    "category": "微生物"
+  },
+  "biomimetic_dimension": "分子仿生",
+  "features": ["底物预定位", "外球电子转移"],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": null,
+    "note": "天然机制为酚类氧化，不是吸附；人工材料转译尚无实验验证。"
+  },
+  "library_tier": "exploratory",
+  "lifecycle_status": "pending_extraction",
+  "coverage": "partial",
+  "status": "pending_extraction",
+  "source_scheme": "BPA-U01 (BPA, score 79, revise)",
+  "provenance_summary": {
+    "n_papers": 2,
+    "n_verified": 0,
+    "n_unverified": 2,
+    "note": "原条目将邻近口袋中的外球电子转移误写成酚氧直接配位 T1 Cu；已纠正，仍待全文证据提取。"
+  },
+  "mechanisms": [
+    {
+      "mechanism_id": "LACC-001",
+      "name": "T1 铜邻近底物口袋预定位与外球电子转移",
+      "description": "酚类底物在 T1 铜邻近的疏水口袋中由氢键和形状互补预定位，电子经 T1 配位组氨酸传给铜中心；底物酚氧不直接配位 T1 Cu。",
+      "基本原理": "邻近口袋控制底物姿态与电子转移距离，T1 铜承担电子接收而非直接吸附位点。",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jmb.2009.06.053",
+      "verification": "partial",
+      "verification_quote": null,
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "双酚类具有可氧化酚羟基和疏水芳香骨架，但不同桥连基团会改变氧化电位与口袋适配。",
+          "basis": "llm_inferred",
+          "source": null,
+          "locator": null,
+          "quote": null
+        },
+        "bio_structure": {
+          "text": "漆酶在 T1 铜邻近设置疏水底物口袋，口袋残基和铜配位组氨酸共同预定位酚类底物。",
+          "basis": "llm_inferred",
+          "source": null,
+          "locator": null,
+          "quote": null
+        },
+        "interaction": {
+          "text": "底物以非共价作用停留在邻近口袋，并通过铜配位组氨酸完成外球电子转移。",
+          "basis": "llm_inferred",
+          "source": null,
+          "locator": null,
+          "quote": null
+        },
+        "why_it_works": {
+          "text": "预定位缩短并约束电子转移路径，而底物氧化倾向决定反应是否有利。",
+          "basis": "llm_inferred",
+          "source": null,
+          "locator": null,
+          "quote": null
+        },
+        "boundary_conditions": [
+          {
+            "text": "天然漆酶机制支持氧化反应，不直接证明可逆吸附或双酚选择性。",
+            "parameter": "function_context",
+            "condition": {"operator": "qualitative", "value": null},
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "把疏水口袋预定位与邻近电子接收中心组合，可调节酚类底物的反应性识别。"
+      },
+      "functional_groups": ["酚羟基底物", "疏水芳香口袋", "T1 铜配位组氨酸"],
+      "key_structures": ["底物结合口袋", "电子转移路径"]
+    }
+  ],
+  "performance_data": [],
+  "design_translation": [
+    {
+      "idea": "在稳定载体上把疏水芳香口袋布置在可逆氧化还原中心附近，以口袋定位和电子环境共同区分双酚类。",
+      "specific_functional_group": "疏水芳香壁与固定化氧化还原中心",
+      "material_handle": "含氮配位位点固定的铜中心邻接微孔碳芳香壁",
+      "target_interaction": "芳香骨架预富集加近程外球电子转移",
+      "source_tier": "llm_inference",
+      "evidence_tier": "inspiration",
+      "examples": [],
+      "design_principle": "保留邻近口袋和电子转移距离控制，不把人工铜配位误称为天然机制。",
+      "implementation_example": "微孔碳上的含氮铜位点与相邻芳香孔壁",
+      "constraints": "必须区分可逆吸附、催化氧化和不可逆聚合三种结果。",
+      "failure_modes": "疏水分配主导而无电子环境增量；铜浸出；氧化产物产生新的环境风险。",
+      "material_realization_examples": []
+    }
+  ],
+  "honesty_ledger": {
+    "facts": [],
+    "leads": [
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "T1 铜邻近底物口袋与外球电子转移",
+        "basis": "literature_backed",
+        "note": "结构研究已定位酚类底物口袋，但本库尚未提取全文 quote 和 locator。"
+      }
+    ],
+    "inferences": [
+      {
+        "type": "design_translation",
+        "index": 0,
+        "idea": "人工铜中心邻接微孔芳香壁用于双酚区分",
+        "basis": "llm_inferred",
+        "label": "inspiration"
+      }
+    ],
+    "boundary_notes": ["天然功能是氧化而非吸附；人工 Cu 位点是工程假设。"],
+    "missing_pdf_items": ["10.1016/j.jmb.2009.06.053 全文证据提取"],
+    "generated_by": "codex-2026-07-28"
+  }
+}

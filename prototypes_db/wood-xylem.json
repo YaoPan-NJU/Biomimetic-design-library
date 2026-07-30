@@ -1,0 +1,523 @@
+{
+  "id": "wood-xylem",
+  "name_zh": "木材木质部",
+  "name_en": "Wood Xylem",
+  "organism": {
+    "scientific": "Limonia acidissima",
+    "category": "植物"
+  },
+  "biomimetic_dimension": "结构仿生",
+  "features": [
+    "大孔",
+    "层次孔"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": [
+      6.0,
+      6.0
+    ],
+    "tested_temp_range": null,
+    "salinity": "low",
+    "note": "测过的 pH/温度范围，不是适用范围。仅从 performance_data 中实际测试过的条件聚合。"
+  },
+  "performance_data": [
+    {
+      "parameter": "Langmuir最大吸附容量——三种酚类",
+      "value": "苯酚102.71、4-CPh 172.24、2,4-DCPh 226.55 mg/g",
+      "unit": "mg/g",
+      "pollutant": "phenol; 4-CPh; 2,4-DCPh",
+      "material": "WAS-BC",
+      "ph": "6.0",
+      "temperature": "30 ± 1 °C",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1038/s41598-021-82277-2",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第4组-生物矿化/2021-Kumar-wood-shell-biochar-wastewater.pdf",
+      "page": 14,
+      "locator": "Conclusion",
+      "verification": "partial",
+      "confidence": 0.8,
+      "source_locator": "Kumar2021 p.14 / Conclusion",
+      "verification_quote": "The monolayer maximum uptake capacity Q0(max) achieved for phenol, 4-CPh, and 2,4-DCPh was 102.71, 172.24, and 226.55 mg/g, respectively.",
+      "applicability_note": "biomass biochar, not preserved xylem-channel"
+    },
+    {
+      "parameter": "氯取代基对吸附容量的影响——构效关系",
+      "value": "2,4-DCPh(二氯) > 4-CPh(一氯) > 苯酚(无氯)；226.55 > 172.24 > 102.71 mg/g",
+      "unit": "mg/g",
+      "pollutant": "phenol; 4-CPh; 2,4-DCPh",
+      "material": "",
+      "ph": null,
+      "temperature": null,
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1038/s41598-021-82277-2",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第4组-生物矿化/2021-Kumar-wood-shell-biochar-wastewater.pdf",
+      "page": 14,
+      "locator": "Conclusion",
+      "verification": "partial",
+      "confidence": 0.8,
+      "source_locator": "Kumar2021 p.14 / Conclusion",
+      "verification_quote": "The monolayer maximum uptake capacity Q0(max) achieved for phenol, 4-CPh, and 2,4-DCPh was 102.71, 172.24, and 226.55 mg/g, respectively.",
+      "applicability_note": "biomass biochar, not preserved xylem-channel"
+    },
+    {
+      "parameter": "TCTGAs对五种重金属的Langmuir最大吸附容量 qmax",
+      "value": "Pb(II) 571, Cu(II) 462, Zn(II) 361, Cd(II) 263, Mn(II) 208",
+      "unit": "mg/g",
+      "pollutant": "Pb(II); Cu(II); Zn(II); Cd(II); Mn(II)",
+      "material": "",
+      "ph": null,
+      "temperature": "25°C",
+      "conditions": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2021.125612",
+      "patent_number": null,
+      "standard_number": null,
+      "source_file": "仿生文献库/论文/第3组-多孔结构/2021-Mo-cellulose-nanocellulose-wood-adsorption.pdf",
+      "page": 1,
+      "locator": "Abstract",
+      "verification": "partial",
+      "confidence": 0.8,
+      "source_locator": "Mo2021 p.1 / Abstract",
+      "verification_quote": "The as-obtained adsorbent showed the maximum adsorption capacity for Pb(II), Cu(II), Zn(II), Cd(II), and Mn(II) of 571 mg g−1, 462 mg g−1, 361 mg g−1, 263 mg g−1, and 208 mg g−1, respectively."
+    }
+  ],
+  "mechanisms": [
+    {
+      "name": "木质部多级孔道木质素芳香结构π-π堆积与氢键选择性吸附",
+      "description": "pH<pKa时分子态酚占优→利于吸附；高pH酚酸根阴离子→与负电荷WAS-BC排斥",
+      "functional_groups": [
+        "-S-（硫醚键）"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1038/s41598-021-82277-2",
+      "verification": "partial",
+      "基本原理": "木质素的芳香环和酚羟基与酚类污染物结构相似，通过π-π堆积和氢键实现选择性吸附",
+      "source_file": "仿生文献库/2nd/第12组-仿生案例/2021-Mo-wood-nanocellulose-aerogel-excellent-capture-superfast.pdf",
+      "verification_quote": "In aqueous solution, phenols are weakly acidic. For solutions containing more H+, the dominant form is molecular state phenols, and the ability to ionize H+ is suppressed. At smaller values of pH, protonated phenol and CPhs had higher sorption than their ionizable forms. Moreover, at high pH values, the magnitude of electrostatic repulsion force between the negatively charged adsorbent surface of WAS-BC and phenolate anions/dichlorophenate anions in solution tends to increase",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "酚类有机物（苯酚、氯代酚）",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.16796/j.cnki.1000⁃3770.2021.02.004",
+          "locator": "p.3",
+          "quote": "苯酚、对氯酚、间硝基苯酚和对硝基苯酚的吸附去除",
+          "scope_match": "Keywords: 苯酚, 酚类有机物, 对氯, 对氯酚"
+        },
+        "bio_structure": {
+          "text": "木质部的纤维素和木质素组成的多级孔道结构",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "酚羟基与木质素的氢键作用、芳香环的π-π堆积",
+          "basis": "llm_inferred"
+        },
+        "why_it_works": {
+          "text": "木质素的芳香环和酚羟基与酚类污染物结构相似，通过π-π堆积和氢键实现选择性吸附",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.16796/j.cnki.1000⁃3770.2021.02.004",
+          "locator": "p.3",
+          "quote": "高吸附性能，张栓红等以改性硅胶作为中心核，通过",
+          "scope_match": "Keywords: 通过, 吸附"
+        },
+        "boundary_conditions": [
+          {
+            "text": "强碱性条件下酚类解离为酚盐，吸附下降",
+            "parameter": "pH",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "pdf_not_found",
+            "source": "10.1038/s41598-021-82277-2"
+          }
+        ],
+        "transferable_principle": "木质部的多级孔道+木质素芳香结构是天然的酚类吸附平台",
+        "verification_quote": "wood nanocellulose aerogel for pollutant capture",
+        "source_file": "仿生文献库/论文/第4组-生物矿化/2021-Kumar-wood-shell-biochar-wastewater 2.pdf",
+        "source_doi": "10.1038/s41598-021-82277-2"
+      },
+      "key_structures": [
+        "吸附结构"
+      ]
+    },
+    {
+      "name": "共价交联网络的XPS证据",
+      "description": "XPS C 1s确认C-N键形成→TMPTAP成功交联TCNF和GO。N 1s吸附后偏移：Pb²⁺@TCTGAs 399.2, Cu²⁺@ 399.2, Zn²⁺@ 399.4, Cd²⁺@ 399.2, Mn²⁺@ 399.1 eV(vs原始398.9 eV)→N孤对电子与金属离子形成配位键",
+      "functional_groups": [
+        "-O-（醚键）",
+        "配位/螯合位点",
+        "NH3+, -NH2, -NH- responsible for divalent metal cation adsorption (HSAB)",
+        "GO羧基/羟基/环氧基"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2021.125612",
+      "verification": "partial",
+      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "verification_quote": "e accessibility and utilization, and also en­\ndows the TCNF/TMPTAP/GO aerogels (TCTGAs) with smart adsorption \nselectivity capability yet structural and mechanical integrity. Therefore, \nthe as-obtained TCTGAs can serve as a host realizing the selective \nrecognition and capture o",
+      "causal_chain": {
+        "transferable_principle": "基于机制: 共价交联网络的XPS证据",
+        "pollutant_feature": {
+          "text": "XPS C 1s确认C-N键形成→TMPTAP成功交联TCNF和GO。N 1s吸附后偏移：Pb²⁺@TCTGAs 399.2, Cu²⁺@ 399.2, Zn²⁺@ 399.4, Cd²⁺@ 399.",
+          "basis": "from_source",
+          "source": "10.1016/j.jhazmat.2021.125612",
+          "locator": "page 2",
+          "quote": "utilization, and also en­\ndows the TCNF/TMPTAP/GO aerogels (TCTGAs) with smart adsorption \nselectivity capability yet structural and mechanical integrity. Therefore, \nthe as-obtain",
+          "scope_match": "Keywords: XPS, TMPTAP, TCNF",
+          "evidence_label": "from_source"
+        },
+        "bio_structure": {
+          "text": "共价交联网络的XPS证据功能结构",
+          "basis": "from_source",
+          "source": "10.1016/j.jhazmat.2021.125612",
+          "locator": "p.2",
+          "quote": "In a typical adsorption, TCTGA (0.020 g) was added into a flask \ncontaining 100 ml stock solution of heavy metal ions at the concentra­\ntion of 100 mg L−1.",
+          "scope_match": "Keywords: typical, adsorption, tctga"
+        },
+        "interaction": {
+          "text": "XPS C 1s确认C-N键形成→TMPTAP成功交联TCNF和GO。N 1s吸附后偏移：Pb²⁺@TCTGAs 399.2, Cu²⁺@ 399.2, Zn²⁺@ 399.4, Cd²⁺@ 399.",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.jhazmat.2021.125612",
+          "locator": "p.2",
+          "quote": "dows the TCNF/TMPTAP/GO aerogels (TCTGAs) with smart adsorption",
+          "scope_match": "Keywords: tmptap, tctgas, tcnf"
+        },
+        "why_it_works": {
+          "text": "配位/螯合作用固定目标物",
+          "basis": "from_source",
+          "source": "10.1016/j.jhazmat.2021.125612",
+          "locator": "p.2",
+          "quote": "In a typical adsorption, TCTGA (0.020 g) was added into a flask \ncontaining 100 ml stock solution of heavy metal ions at the concentra­\ntion of 100 mg L−1.",
+          "scope_match": "Keywords: typical, adsorption, tctga"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "pdf_not_found"
+          }
+        ]
+      },
+      "source_page": 2,
+      "source_doi": "10.1016/j.jhazmat.2021.125612",
+      "source_locator": "p.2",
+      "evidence_label": "from_source",
+      "key_structures": [
+        "交联网络",
+        "吸附结构"
+      ]
+    },
+    {
+      "name": "吸附机制：氨基配位螯合",
+      "description": "XPS确认N 1s偏移(398.9→399.1-399.4 eV)→N孤对电子与金属离子形成配位键。O 1s也偏移→含氧官能团参与吸附。EDX mapping确认Pb/Cu/Zn/Cd均匀分布。机制：NH3+/NH2/NH-基团与重金属离子螯合/配位",
+      "functional_groups": [
+        "NH3+, -NH2, -NH- → borderline base → complex borderline acids (Pb²⁺, Cu²⁺, Zn²⁺)",
+        "-NH₃⁺（质子化氨基）",
+        "配位/螯合位点",
+        "-NH₂（氨基）",
+        "-O-（醚键）"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2021.125612",
+      "verification": "partial",
+      "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
+      "verification_quote": "nding energy upon metal loading (399.2 eV, 399.2 eV, 399.4 eV, \n399.2 eV, \nand \n399.1 eV \nfor \nPb2+@TCTGAs, \nCu2+@TCTGAs, \nZn2+@TCTGAs, Cd2+@TCTGAs, and Mn2+@TCTGAs, respectively) \ncompared with the as-fabrication analog (398.9 eV), suggesting that the \nvalence of N in O˭C-O-C-C-",
+      "causal_chain": {
+        "transferable_principle": "基于机制: 吸附机制：氨基配位螯合",
+        "pollutant_feature": {
+          "text": "XPS确认N 1s偏移(398.9→399.1-399.4 eV)→N孤对电子与金属离子形成配位键。O 1s也偏移→含氧官能团参与吸附。EDX mapping确认Pb/Cu/Zn/Cd均匀分布。机制：",
+          "basis": "from_source",
+          "source": "10.1016/j.jhazmat.2021.125612",
+          "locator": "page 8",
+          "quote": "of TCTGAs \nbefore and after adsorption of Pb(II) ions. (c) EDX mapping image of Pb, Cu, Zn, and Cd elements on TCTGAs. (d) The adsorption mechanism of capture for Pb(II) ions \nby",
+          "scope_match": "Keywords: XPS, EDX, mapping",
+          "evidence_label": "from_source"
+        },
+        "bio_structure": {
+          "text": "吸附机制：氨基配位螯合表面活性位点",
+          "basis": "llm_inferred"
+        },
+        "interaction": {
+          "text": "XPS确认N 1s偏移(398.9→399.1-399.4 eV)→N孤对电子与金属离子形成配位键。O 1s也偏移→含氧官能团参与吸附。EDX mapping确认Pb/Cu/Zn/Cd均匀分布。机制：",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.jhazmat.2021.125612",
+          "locator": "p.7",
+          "quote": "EDX mapping images demonstrated heavy metal ions disperse uniformly",
+          "scope_match": "Keywords: mapping, images"
+        },
+        "why_it_works": {
+          "text": "配位/螯合作用固定目标物",
+          "basis": "llm_inferred"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "pdf_not_found"
+          }
+        ],
+        "source_file": "仿生文献库/论文/第4组-生物矿化/2021-Kumar-wood-shell-biochar-wastewater 2.pdf",
+        "source_doi": "10.1038/s41598-021-82277-2"
+      },
+      "source_page": 6,
+      "source_doi": "10.1016/j.jhazmat.2021.125612",
+      "source_locator": "p.6",
+      "evidence_label": "from_source",
+      "key_structures": [
+        "吸附结构"
+      ]
+    },
+    {
+      "name": "TCTGAs组分与合成工艺",
+      "description": "TCNF(TEMPO氧化纤维素纳米纤维)+GO(改良Hummers法)+TMPTAP(三(2-氨基乙基)胺-聚丙二醇→交联剂+金属螯合配体)。Zr/BDC/OA比例不适用→但TCNF/GO/TMPTAP混合→超声分散→定向冷冻→冻干",
+      "functional_groups": [
+        "配位/螯合位点",
+        "GO羧基/羟基/环氧基",
+        "纤维素羟基",
+        "-NH₂（氨基）",
+        "-S-（硫醚键）",
+        "-O-（醚键）"
+      ],
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2021.125612",
+      "verification": "partial",
+      "基本原理": "needs_review",
+      "verification_quote": "fabricate wood-inspired highly \nelastic 3D TEMPO-oxidized cellulose nanofiber (TCNF) aerogels \n(TCNFAs) with selective capture capacity and superfast adsorption \nthrough the integration of graphene oxide (GO) and trimethylolpropane- \ntris-(2-methyl-1-aziridine) propionate (TMPTA",
+      "causal_chain": {
+        "transferable_principle": "基于机制: TCTGAs组分与合成工艺",
+        "pollutant_feature": {
+          "text": "TCNF(TEMPO氧化纤维素纳米纤维)+GO(改良Hummers法)+TMPTAP(三(2-氨基乙基)胺-聚丙二醇→交联剂+金属螯合配体)。Zr/BDC/OA比例不适用→但TCNF/GO/TMPTA",
+          "basis": "from_source",
+          "source": "10.1016/j.jhazmat.2021.125612",
+          "locator": "page 2",
+          "quote": "ired highly \nelastic 3D TEMPO-oxidized cellulose nanofiber (TCNF) aerogels \n(TCNFAs) with selective capture capacity and superfast adsorption \nthrough the integration of graphene o",
+          "scope_match": "Keywords: TCNF, TEMPO, Hummers",
+          "evidence_label": "from_source"
+        },
+        "bio_structure": {
+          "text": "TCTGAs组分与合成功能结构",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.jhazmat.2021.125612",
+          "locator": "p.2",
+          "quote": "dows the TCNF/TMPTAP/GO aerogels (TCTGAs) with smart adsorption",
+          "scope_match": "Keywords: tctgas, dows"
+        },
+        "interaction": {
+          "text": "TCNF(TEMPO氧化纤维素纳米纤维)+GO(改良Hummers法)+TMPTAP(三(2-氨基乙基)胺-聚丙二醇→交联剂+金属螯合配体)。Zr/BDC/OA比例不适用→但TCNF/GO/TMPTA",
+          "basis": "from_source",
+          "source": "10.1016/j.jhazmat.2021.125612",
+          "locator": "p.2",
+          "quote": "ired highly \nelastic 3D TEMPO-oxidized cellulose nanofiber (TCNF) aerogels \n(TCNFAs) with selective capture capacity and superfast adsorption \nthrough the integration of graphene o",
+          "scope_match": "Keywords: TCNF, TEMPO, 氧化纤维素纳米纤维",
+          "evidence_label": "from_source"
+        },
+        "why_it_works": {
+          "text": "配位/螯合作用固定目标物",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.jhazmat.2021.125612",
+          "locator": "p.2",
+          "quote": "dows the TCNF/TMPTAP/GO aerogels (TCTGAs) with smart adsorption",
+          "scope_match": "Keywords: tctgas, dows"
+        },
+        "boundary_conditions": [
+          {
+            "text": "适用条件需根据具体机制验证",
+            "parameter": "other",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null,
+            "verification_method": "pdf_not_found"
+          }
+        ]
+      },
+      "source_page": 2,
+      "source_doi": "10.1016/j.jhazmat.2021.125612",
+      "source_locator": "p.2",
+      "evidence_label": "from_source",
+      "key_structures": [
+        "交联网络",
+        "纤维结构",
+        "纤维素纳米结构",
+        "纳米纤维网络"
+      ]
+    }
+  ],
+  "narrative": {
+    "entries": [
+      {
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2021-Kumar-wood-shell-biochar-wastewater.json",
+        "paper_id": "2021-Kumar-wood-shell-biochar-wastewater",
+        "sections": {
+          "problem_definition": "自然界中植物果壳需形成抗降解的致密复合结构以保护内部组织；对应水处理中面临低浓度酚类及卤代酚类污染物的高效、低成本去除难题。",
+          "biological_solution": "木苹果壳在进化中形成纤维素/半纤维素/木质素三组分天然结构，经碳化后保留稳定的芳香碳骨架与丰富含氧官能团，提供多机制吸附位点；结合绿色物理球磨细化策略，成功实现120 min内快速吸附平衡，对2,4-DCPh吸附容量达226.55 mg/g。",
+          "key_features": "必须保留：天然生物质碳化衍生的芳香碳骨架、纳米级多孔形貌、表面-OH/-COOH/C=O官能团；可灵活调整：球磨强度与时间（调控粒径与比表面积）、热解温度（调控孔隙与官能团比例）、表面化学修饰（靶向增强卤素-π或疏水作用）。",
+          "design_mapping": "生物果壳三组分结构→热解碳化制备多孔生物炭基质；细胞壁微结构→球磨物理破碎暴露纳米级活性位点；木质素芳香环→提供π-π堆积与卤素-π作用核心；软约束建议：优先选用高木质素农业废弃物，控制焙烧温度600-800°C，实际废水需预调pH至5.5-6.5以规避静电排斥。",
+          "explainability_anchors": "仿生故事线：“天然抗降解结构→碳化保留骨架→物理细化暴露位点→多机制协同捕获”；设计溯源：吸附容量随氯取代基增加直接验证卤素-π与疏水增强机制，Langmuir单层吸附与准二级动力学印证化学吸附主导，球磨改性策略可平移至其他生物质炭效能优化。"
+        }
+      },
+      {
+        "source_file": "C:\\Users\\15995\\Desktop\\Biomimetic-design-library\\tools\\litextract\\outputs\\extractions\\论文\\json\\2021-Mo-cellulose-nanocellulose-wood-adsorption.json",
+        "paper_id": "2021-Mo-wood-nanocellulose-aerogel",
+        "sections": {
+          "problem_definition": "自然界挑战：植物木质部需在极低密度下实现水分/养分的高效纵向传输，同时抵抗重力与风载带来的机械应力。水处理对应：传统多孔吸附剂面临传质阻力大、吸附动力学慢、机械强度低易粉化、以及复杂水体中目标重金属选择性差的工程瓶颈。",
+          "biological_solution": "进化策略：木材演化出“宏观蜂窝骨架+介观纤维管胞+分子级细胞壁”的三尺度层级结构，结合纵向对齐导管实现低阻力流体通道。关键机制：薄壁细胞提供柔韧性与弹性屈曲吸能，细胞壁内纤维素微纤丝与基质共价交联赋予结构完整性与抗疲劳性。成功案例：受此启发的TCTGAs气凝胶成功复现对齐微通道与蜂窝网络，实现Pb(II)超快吸附(2min达87%)、571 mg/g超高容量及优异的水下循环压缩稳定性。",
+          "key_features": "必须保留特征：定向对齐的直管微通道(保障超快离子扩散)、三尺度力学层级(宏观蜂窝/介观纤维/分子交联协同抗变形)、氨基配位识别位点(基于HSAB理论的选择性络合)。可灵活调整特征：GO与交联剂(TMPTAP)的相对比例(调控孔隙率与交联密度)、气凝胶宏观几何形态(可塑造成圆柱/星形等适配不同反应器模块)、表面官能团类型(可替换为其他边界碱基团以靶向不同重金属离子)。",
+          "design_mapping": "生物→材料映射：木材纵向导管/纤维管胞 → 定向冷冻法构筑的对齐微通道与蜂窝状宏观孔道；细胞壁纤维素-木质素共价网络 → TCNF/GO/TMPTAP共价交联网络(形成C-N键)；水分高效传输与结构支撑 → 超快离子扩散路径与三尺度力学抗压缩机制。软约束建议：优先采用定向冷冻工艺控制冰晶生长方向以复刻各向异性通道；交联剂添加量需控制在0.5 wt% GO最优阈值附近以避免相分离；材料设计需兼顾孔隙率(>99%)与骨架强度的平衡，确保水下可压缩过滤器件的长期服役。",
+          "explainability_anchors": "仿生故事线：从“木材如何以极低密度实现高效输水与抗风载”出发，提炼出“对齐通道降阻+三尺度交联强韧”的核心法则，将其平移至重金属吸附场景，解决传统吸附剂“传质慢、易破碎、选择性弱”的痛点。设计溯源：所有性能指标(571 mg/g吸附量、2min超快动力学、20次循环90%形貌保持)均可直接追溯至定向冷冻形成的仿生孔道结构、共价交联网络的力学支撑以及HSAB理论指导的氨基选择性配位机制，形成“结构-传质-力学-化学”四位一体的可解释设计闭环。"
+        }
+      }
+    ]
+  },
+  "engineering_constraints": [
+    {
+      "constraint": "TGA热稳定性分析",
+      "value": "生物质200-750°C主要热解；生物炭500°C仅~10wt%质量损失→高温稳定",
+      "unit": "°C",
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1038/s41598-021-82277-2"
+    },
+    {
+      "constraint": "再生性能与循环稳定性",
+      "value": "0.05 mol/L EDTA-2Na洗脱，25°C，3h。5次循环后保持良好吸附性能。可制成压缩过滤装置原型",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2021.125612"
+    },
+    {
+      "constraint": "水下力学稳定性",
+      "value": "TCTGAs在水下表现出优异的力学结构稳定性→有利于水处理中的循环回收。普通冷冻法制备的气凝胶无法承受大变形",
+      "unit": null,
+      "relevance": "medium",
+      "explanation": "",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jhazmat.2021.125612"
+    }
+  ],
+  "provenance_summary": {
+    "n_papers": 2,
+    "n_verified": 3,
+    "n_unverified": 4
+  },
+  "coverage": "normal",
+  "status": "active",
+  "design_translation": [
+    {
+      "idea": "利用木材木质部的纤维素和木质素进行吸附和过滤",
+      "specific_functional_group": "纤维素的羟基，木质素的酚羟基",
+      "material_handle": "木材切片、碳化或化学改性",
+      "target_interaction": "羟基通过氢键吸附极性污染物，多孔结构物理过滤",
+      "source_tier": "llm_inference",
+      "examples": [],
+      "design_principle": "木材导管的定向多孔结构和纤维素/木质素官能团提供吸附位点。可用于设计低成本多孔吸附材料",
+      "constraints": "机械强度低需复合增强；酸性条件水解；微生物降解",
+      "implementation_example": "木材切片→化学处理（碱/酸）→多孔吸附基材"
+    }
+  ],
+  "library_tier": "core",
+  "lifecycle_status": "active",
+  "honesty_ledger": {
+    "facts": [],
+    "leads": [
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "吸附机制——分子态酚+静电排斥",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "mechanism",
+        "index": 1,
+        "name": "共价交联网络的XPS证据",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 2,
+        "name": "吸附机制：氨基配位螯合",
+        "basis": "needs_review"
+      },
+      {
+        "type": "mechanism",
+        "index": 3,
+        "name": "TCTGAs组分与合成工艺",
+        "basis": "needs_review"
+      },
+      {
+        "type": "performance",
+        "index": 0,
+        "parameter": "Langmuir最大吸附容量——三种酚类",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 1,
+        "parameter": "氯取代基对吸附容量的影响——构效关系",
+        "basis": "partial_with_quote"
+      },
+      {
+        "type": "performance",
+        "index": 2,
+        "parameter": "TCTGAs对五种重金属的Langmuir最大吸附容量 qmax",
+        "basis": "partial_with_quote"
+      }
+    ],
+    "inferences": [],
+    "generated_by": "P1c-auto",
+    "note": "Classification based on verification label + quote presence + source type"
+  },
+  "mechanism_tags": [
+    "配位螯合",
+    "静电吸附",
+    "氢键",
+    "π-π堆积",
+    "孔道限域分子筛分"
+  ]
+}

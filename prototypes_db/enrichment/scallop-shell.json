@@ -1,0 +1,103 @@
+{
+  "mechanisms": {
+    "吸附机理三步骤": {
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "重金属离子和磷酸盐",
+          "basis": "llm_inferred",
+          "locator": null
+        },
+        "bio_structure": {
+          "text": "扇贝壳的文石型CaCO₃层状结构",
+          "basis": "from_source",
+          "locator": "Wang2024 p.36 / Abstract + Sec.1"
+        },
+        "interaction": {
+          "text": "离子交换（Ca²⁺↔重金属）、表面沉淀、物理吸附",
+          "basis": "from_source",
+          "locator": "Wang2024 p.36 / Abstract + Sec.1"
+        },
+        "why_it_works": {
+          "text": "与牡蛎壳类似，扇贝壳的CaCO₃结构提供Ca²⁺交换位点和碱性环境",
+          "basis": "llm_inferred",
+          "locator": null
+        },
+        "boundary_conditions": [
+          {
+            "text": "煅烧温度影响晶型转变和吸附性能",
+            "parameter": "temperature",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "贝壳类CaCO₃的吸附机制与牡蛎壳相同，煅烧可显著提升性能",
+        "verification_quote": "scallops contain ~95% CaCO3. Calcination creates complex porous structure. Freundlich model fits multi-layer adsorption"
+      }
+    },
+    "钝化机理": {
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[0]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[0]"
+        },
+        "interaction": {
+          "text": "石灰效应, 沉淀效应, 物理吸附, 离子交换",
+          "basis": "from_source",
+          "locator": "mechanism[0]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[0]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    },
+    "吸附机理增强因素": {
+      "verification": "needs_review",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[1]"
+        },
+        "bio_structure": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[1]"
+        },
+        "interaction": {
+          "text": "氢键作用 (Ca(OH)2的O-H键与刚果红分子)",
+          "basis": "from_source",
+          "locator": "mechanism[1]"
+        },
+        "why_it_works": {
+          "text": "",
+          "basis": "from_source",
+          "locator": "mechanism[1]"
+        },
+        "boundary_conditions": [],
+        "transferable_principle": "",
+        "verification_quote": null
+      }
+    }
+  }
+}
