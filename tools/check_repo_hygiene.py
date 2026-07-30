@@ -128,7 +128,7 @@ def check_root_directory():
     # 允许的根目录文件
     allowed_files = {
         'README.md',
-        'CLAUDE.md',
+        'AGENTS.md',
         '.gitignore',
         '.gitmodules',
         'feature-mapping.json',
