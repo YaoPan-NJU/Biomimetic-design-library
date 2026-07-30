@@ -24,17 +24,68 @@ BMDL 接收目标污染物、水质条件和工程约束，返回结构化的 `B
 - 污染物画像、别名、特征—机制规则和原型映射。
 - `BiomimeticContext` 查询接口与 ADRMATS 可直接消费的导出快照。
 
-## 权威数据与功能
+## 数据库架构
 
-| 路径 | 作用 |
-|---|---|
-| `prototypes_db/*.json` | 原型与机制正典数据，是内容权威来源 |
-| `prototypes/` | 面向人工阅读的原型文档 |
-| `feature-mapping.json` | 污染物、特征与原型的策展映射 |
-| `feature_matching_rules.json` | 分子特征到机制的规则词表 |
-| `pollutant_profiles.json` | 污染物分子特征与相互作用画像 |
-| `tools/biomimetic_context.py` | 查询、证据分级、机制绑定和 brief 生成 |
-| `adrmats_export/` | 下游系统使用的匹配快照 |
+BMDL 不是单表数据库，而是一个以版本化 JSON 为正典、由查询代码组装的知识库。数据分为四层：
+
+```text
+正典层
+  prototypes_db/*.json
+    └─ Prototype
+       ├─ mechanisms[]
+       ├─ performance_data[]
+       ├─ design_translation[]
+       ├─ boundary_rules[]
+       └─ honesty_ledger
+
+检索层
+  pollutant_aliases.json + pollutant_profiles.json
+  feature_matching_rules.json + feature-mapping.json
+
+组装层
+  tools/biomimetic_context.py
+    └─ 条件过滤、候选召回、机制绑定、证据分级
+
+交付层
+  BiomimeticDesignBrief + adrmats_export/match_export.json
+```
+
+| 层 | 权威路径 | 作用 |
+|---|---|---|
+| 原型正典 | `prototypes_db/*.json` | 保存 100 个默认可查询原型及其机制、证据、转译和边界 |
+| 人工阅读 | `prototypes/**/prototype.md` | 原型的可读版本；不是机器查询的权威来源 |
+| 污染物画像 | `pollutant_aliases.json`、`pollutant_profiles.json` | 统一名称，并描述分子特征、形态和可能相互作用 |
+| 检索映射 | `feature-mapping.json` | 保存污染物—原型、特征—原型、机制—特征及条件映射 |
+| 匹配规则 | `feature_matching_rules.json` | 把污染物分子特征转换为可检索的机制需求 |
+| 查询接口 | `tools/biomimetic_context.py` | 加载正典与映射，生成有机制绑定和证据等级的 brief |
+| 下游快照 | `adrmats_export/match_export.json` | 面向 ADRMATS/BioADRMATS 的稳定交换格式 |
+
+运行时默认只加载 `prototypes_db/` 顶层的 `*.json`。`enrichment/`、`materials_reference/`、`separation/` 是辅助或历史分组，`parked/`、`quarantined/` 保存停用或隔离条目；这些子目录不会自动成为默认查询候选。
+
+## 核心数据模型
+
+| 实体 | 关键字段 | 含义 |
+|---|---|---|
+| Prototype | `id`、`organism`、`biomimetic_dimension`、`features`、`tested_conditions` | 一个可独立检索的生物原型、自然结构或仿生机制载体 |
+| Mechanism | `mechanism_id`、`name`、`基本原理`、`causal_chain`、`functional_groups`、`key_structures` | 描述“污染物特征—生物结构—相互作用—有效原因—可迁移原则”的因果链 |
+| PerformanceEvidence | `pollutant`、`material`、`parameter`、`value`、`unit`、`conditions`、`verification`、来源定位 | 材料去除性能记录；与天然生物机制证据分开保存 |
+| DesignTranslation | `idea`、`material_handle`、`target_interaction`、`constraints`、`failure_modes`、`material_realization_examples` | 把生物原理转译为可操作但仍需验证的材料设计提示 |
+| BoundaryRule | `rule`、`source_mechanism`、`gate_level`、`basis` | 记录不适用条件、禁止外推和工程失效边界 |
+| HonestyLedger | `facts`、`leads`、`inferences` 等审计字段 | 区分已接地事实、待核验线索与推断，防止证据等级膨胀 |
+
+实体关系可以简化为：
+
+```text
+PollutantProfile
+  → molecular_features / likely_interactions
+  → feature and mechanism rules
+  → Prototype
+  → bound Mechanism
+  → DesignTranslation + BoundaryRule + PerformanceEvidence
+  → evidence-laned candidate
+```
+
+导出快照中的每一行以 `pollutant_id`、`prototype_id` 和绑定的 `bound_mechanism_id`（旧条目可回退到完整机制名）表达一次具体匹配，并携带 `lane`、`direct_evidence`、`candidate_honesty` 与 `performance_evidence_tier`，避免下游重新猜测候选机制或证据等级。
 
 ## 匹配架构
 
