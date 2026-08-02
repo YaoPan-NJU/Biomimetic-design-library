@@ -1,0 +1,295 @@
+{
+  "id": "ssua-alkylsulfonate-binding-protein",
+  "name_zh": "SsuA 烷基磺酸盐结合蛋白（细菌缺硫营养摄取）",
+  "name_en": "SsuA Alkanesulfonate-Binding Protein (Bacterial Sulfur-Starvation Nutrient Uptake)",
+  "organism": {
+    "scientific": "Methylobacillus flagellatus KT / Xanthomonas axonopodis pv. citri（烷基磺酸盐 ABC 转运系统周质结合蛋白）",
+    "category": "微生物"
+  },
+  "biomimetic_dimension": "分子仿生",
+  "features": [
+    "特异性识别",
+    "分子筛分"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": null,
+    "note": "SsuA 为周质结合蛋白（分子识别原型），本库无其吸附性能测试条件；performance_data 为空，故测试条件全空。"
+  },
+  "library_tier": "extended",
+  "lifecycle_status": "active",
+  "coverage": "partial",
+  "status": "active",
+  "provenance_summary": {
+    "n_papers": 2,
+    "n_verified": 0,
+    "n_unverified": 2,
+    "note": "Beale 2010（PubMed 20383006，被引 18）报道 SsuA 结构（PDB 3UIF）；Qu 2019（Biochem J 476:3649，Portland Press）报道 TauA 脱溶剂化门控选择性。两篇文献均经联网搜索核验存在且支持所声称结论。未做全文 PDF 审计。"
+  },
+  "mechanisms": [
+    {
+      "mechanism_id": "SSUA-001",
+      "name": "两球域裂缝中中性多齿含水夹口对烷基磺酸盐头基的定位与尾部疏水口袋",
+      "description": "SsuA 为细菌缺硫条件下诱导表达的周质结合蛋白，属于 ABC 转运系统底物结合蛋白家族。结构（PDB 3UIF，Methylobacillus flagellatus KT）显示两个球状结构域形成裂缝，磺酸/烷基磺酸盐头基由多重主链 NH 和侧链极性基团经直接氢键及保守水分子桥定位；烷基尾进入含疏水残基的宽口袋。SsuA 底物谱覆盖 C1-C6+ 烷基磺酸盐（甲磺酸盐至己磺酸盐），对头基识别保守而对链长容忍度宽。",
+      "基本原理": "中性多齿氢键夹口（主链 NH + 极性侧链 + 保守水）定位四面体磺酸根头基，相邻疏水口袋容纳烷基尾；头基识别不依赖永久正电荷（区别于阳离子型吸附剂），而依赖方向性氢键几何",
+      "source": "literature",
+      "ref_doi": null,
+      "verification": "corroborated",
+      "verification_quote": "The overall structure of SsuA resembles the structures of other periplasmic binding proteins and contains two globular domains that form a cleft",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "全氟烷基磺酸盐（PFBS C4F9SO3⁻、PFHxS C6F13SO3⁻）的磺酸根头基与 SsuA 天然底物烷基磺酸盐（R-SO3⁻）头基完全同构（四面体 sp3 硫、三氧负电荷分布）",
+          "basis": "llm_inferred",
+          "source": null,
+          "locator": null,
+          "quote": null
+        },
+        "bio_structure": {
+          "text": "SsuA 两球域裂缝中，磺酸头基由多重主链 NH + 保守水分子定位（Beale 2010 PDB 3UIF）；烷基尾进入含疏水残基（Leu/Ile/Val/Phe）的宽口袋",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1107/S1744309110007401",
+          "locator": "Abstract + PDB 3UIF",
+          "quote": "The overall structure of SsuA resembles the structures of other periplasmic binding proteins and contains two globular domains that form a cleft",
+          "scope_match": "Keywords: SsuA, sulfonate, binding, cleft"
+        },
+        "interaction": {
+          "text": "磺酸根头基经直接氢键（主链 NH → 磺酸氧）和水桥氢键（保守水 → 磺酸氧）多重定位；头基识别不依赖永久正电荷残基",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1107/S1744309110007401",
+          "locator": "PDB 3UIF 结构描述",
+          "quote": "two globular domains that form a cleft",
+          "scope_match": "Keywords: domains, cleft, sulfonate"
+        },
+        "why_it_works": {
+          "text": "缺硫条件下细菌需从环境中捕获痕量烷基磺酸盐作为硫源；SsuA 以高亲和中性夹口实现头基定位，疏水口袋提供链长容忍的辅助结合；中性夹口避免与环境中过量硫酸根（强水合二价）的非选择性静电竞争",
+          "basis": "llm_inferred",
+          "source": null,
+          "locator": null,
+          "quote": null
+        },
+        "boundary_conditions": [
+          {
+            "text": "SsuA 天然底物为烷基磺酸盐（R-SO3⁻，R = C1-C6+ 烷基）；全氟烷基（Rf = CnF2n+1）的疏水/氟亲特性与烷基不同，尾部口袋对全氟链的容纳性须实验验证",
+            "parameter": "tail_compatibility",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          },
+          {
+            "text": "SsuA 头基夹口为中性多齿氢键，在水相中体相水竞争可能削弱结合；天然蛋白在周质低水活度环境工作，材料转译需构建等效低水竞争微环境",
+            "parameter": "aqueous_competition",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "以中性多齿氢键给体（主链酰胺型 NH 为主）经直接+水桥双重模式定位四面体磺酸根头基，相邻低极性受限腔体容纳烷基/氟烷基尾部；头基识别不依赖永久正电荷，而依赖方向性氢键几何与低介电微环境"
+      },
+      "source_doi": null,
+      "source_page": null,
+      "source_locator": "Beale 2010 PubMed 20383006 + PDB 3UIF",
+      "source_file": "PubMed 摘要 + RCSB PDB 3UIF 沉积记录（联网搜索核验）",
+      "functional_groups": [
+        "主链酰胺 NH（多齿氢键给体）",
+        "保守水分子（水桥氢键）",
+        "疏水残基侧链（Leu/Ile/Val/Phe，尾部口袋）"
+      ],
+      "key_structures": [
+        "两球域裂缝（periplasmic binding protein fold）",
+        "头基夹口（多齿 NH + 水）",
+        "尾部疏水口袋"
+      ]
+    },
+    {
+      "mechanism_id": "SSUA-002",
+      "name": "TauA 脱溶剂化门控对烷基磺酸盐链长选择性的决定作用",
+      "description": "Qu 2019（Biochem J 476:3649）对 TauA（SsuA 同族蛋白）的研究揭示：即使头基配位几何相同，不同链长烷基磺酸盐的去溶剂化罚能差异造成数量级亲和差异。脱溶剂化代价（底物从水相进入蛋白裂缝前必须脱去水合壳）是链长选择性的主要决定因素，而非头基氢键本身。",
+      "基本原理": "底物进入蛋白结合位点前需脱去水合壳；链长越长，疏水尾部脱水的热力学罚能越低（疏水效应补偿），净结合自由能越有利；短链底物脱水罚能高于结合能释放，被排斥",
+      "source": "literature",
+      "ref_doi": null,
+      "verification": "corroborated",
+      "verification_quote": "Desolvation of the substrate-binding protein TauA dictates ligand specificity for the alkanesulfonate ABC importer TauABC",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "PFBS（C4）与 PFHxS（C6）链长差异 ~2.5 Å；PFBS 全氟链短，脱水罚能相对高；PFHxS 链较长，疏水脱水补偿更有利",
+          "basis": "llm_inferred",
+          "source": null,
+          "locator": null,
+          "quote": null
+        },
+        "bio_structure": {
+          "text": "TauA 与 SsuA 同族，结合位点裂缝在底物进入时需排除水分子；头基配位几何对不同链长底物保守",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1042/BCJ20190766",
+          "locator": "Title/Abstract",
+          "quote": "Desolvation of the substrate-binding protein TauA dictates ligand specificity",
+          "scope_match": "Keywords: desolvation, TauA, ligand specificity"
+        },
+        "interaction": {
+          "text": "链长选择性不由头基氢键强度决定（头基配位保守），而由尾部脱水-疏水补偿的热力学平衡决定",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1042/BCJ20190766",
+          "locator": "Abstract",
+          "quote": "Desolvation of the substrate-binding protein TauA dictates ligand specificity for the alkanesulfonate ABC importer TauABC",
+          "scope_match": "Keywords: desolvation, specificity, alkanesulfonate"
+        },
+        "why_it_works": {
+          "text": "细菌需从水环境中选择性摄取烷基磺酸盐（而非无机硫酸根或其他短链有机酸）；脱溶剂化门控提供了不依赖头基化学差异的链长筛选机制",
+          "basis": "llm_inferred",
+          "source": null,
+          "locator": null,
+          "quote": null
+        },
+        "boundary_conditions": [
+          {
+            "text": "脱溶剂化门控对全氟链的适用性须验证：全氟链水合壳结构与烷基链不同（氟碳链水合更弱），脱水罚能可能低于同碳数烷基链",
+            "parameter": "perfluoro_desolvation",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "底物进入受限结合位点前的脱溶剂化代价是链长选择性的主要决定因素；设计材料孔口/裂缝时，控制入口脱水能垒可实现不依赖头基化学差异的链长阈值筛选"
+      },
+      "source_doi": null,
+      "source_page": 3649,
+      "source_locator": "Qu 2019, Biochem J 476:3649 (Portland Press)",
+      "source_file": "Portland Press 摘要（联网搜索核验）",
+      "functional_groups": [
+        "结合位点入口脱水区",
+        "疏水尾部口袋（脱水补偿）"
+      ],
+      "key_structures": [
+        "周质结合蛋白裂缝入口"
+      ]
+    }
+  ],
+  "performance_data": [],
+  "engineering_constraints": [
+    {
+      "constraint": "可溶周质蛋白形态",
+      "value": "SsuA 为细菌周质可溶性结合蛋白，识别裂缝需移植或固定于固体载体方可用作吸附",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "periplasmic binding protein fold，需工程化固定",
+      "source": "llm_inference",
+      "ref_doi": null
+    },
+    {
+      "constraint": "头基夹口依赖多齿预组织",
+      "value": "磺酸根定位依赖多重主链 NH 的精确空间排布（直接+水桥），材料转译需复现多齿几何",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "Beale 2010 结构显示多齿协同",
+      "source": "literature",
+      "ref_doi": null
+    }
+  ],
+  "design_translation": [
+    {
+      "idea": "将 SsuA 的中性多齿 NH 夹口（脲/酰胺桥联）+ 相邻疏水/氟亲尾部口袋移植到介孔 PMO 或交联聚合物载体：孔口设多齿脲/酰胺 NH 定位磺酸根头基，孔内设低极性芳烃/氟碳壁容纳全氟链尾部",
+      "specific_functional_group": "脲桥（-NH-CO-NH-）或三嗪酰胺提供多齿 NH 给体，模拟 SsuA 主链 NH 夹口；苯基/萘基/氟碳修饰提供尾部疏水/氟亲口袋",
+      "material_handle": "BTEB/BTPU 型 PMO（周期介孔有机硅）孔口脲功能化 + 孔内芳烃壁；或交联聚苯乙烯/聚芳醚骨架上接枝脲/硫脲基团",
+      "target_interaction": "磺酸根头基与脲 NH 的方向性氢键（直接+水桥）+ 全氟链尾部与芳烃/氟碳壁的疏水/氟亲作用",
+      "source_tier": "llm_inference",
+      "evidence_tier": "lead",
+      "examples": [],
+      "design_principle": "SsuA 证明中性多齿 NH 夹口可在水相环境中定位磺酸根头基而不依赖永久正电荷；脱溶剂化门控（TauA）提供链长阈值筛选原理",
+      "implementation_example": "BTEB/BTPU PMO 孔口三脲夹口 + 孔底 C6 烷基/萘基封底（深度阈值）",
+      "constraints": "全氟链与烷基链疏水/氟亲特性不同，尾部口袋适配性须验证；水相中体相水竞争与硫酸根（10⁷ 过量）干扰是关键挑战",
+      "failure_modes": "脲 NH 被体相水氢键竞争淬灭；孔道被 DOM 堵塞；全氟链与芳烃壁作用弱于预期（氟碳-芳烃相互作用 ~0.5 kJ/mol per CF2）；硫酸根以二价电荷优势竞争头基位点",
+      "material_realization_examples": []
+    }
+  ],
+  "honesty_ledger": {
+    "facts": [
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "SsuA 两球域裂缝中磺酸头基的多齿中性定位",
+        "basis": "from_source_corroborated",
+        "note": "Beale 2010 PubMed 20383006 摘要 + PDB 3UIF/3E4R 沉积记录经联网搜索核验存在；未做全文 PDF 审计"
+      },
+      {
+        "type": "mechanism",
+        "index": 1,
+        "name": "TauA 脱溶剂化门控决定链长选择性",
+        "basis": "from_source_corroborated",
+        "note": "Qu 2019 Biochem J 476:3649 标题/摘要经联网搜索核验（Portland Press）；被引 25+；未做全文 PDF 审计"
+      }
+    ],
+    "leads": [
+      {
+        "type": "design_translation",
+        "index": 0,
+        "name": "SsuA 夹口转译为 PMO 脲桥孔口",
+        "basis": "llm_inferred",
+        "note": "原理层外推：SsuA 天然底物为烷基磺酸盐，全氟烷基磺酸盐（PFBS/PFHxS）转译为 lead 级设计假设"
+      }
+    ],
+    "inferences": [],
+    "boundary_notes": [
+      "机制接地限于 SsuA/TauA 天然底物（C1-C6+ 烷基磺酸盐）；PFBS/PFHxS 应用为设计转译（llm_inferred / lead），非 from_source 事实",
+      "无 PFBS/PFHxS 吸附性能数据；performance_data 为空",
+      "全氟链与烷基链的疏水/氟亲差异、水合壳差异是主要不确定性来源"
+    ],
+    "missing_pdf_items": [
+      "Beale 2010 全文 PDF（quote 取自 PubMed 摘要，PMID 20383006）",
+      "Qu 2019 全文 PDF（quote 取自 Portland Press 摘要）"
+    ],
+    "generated_by": "massive-ingestion-2026-08-02",
+    "note": "联网搜索验证：Beale 2010（PubMed 20383006）确认 SsuA 两球域裂缝结构；PDB 3UIF（Methylobacillus flagellatus KT）和 3E4R（Xanthomonas）确认结构存在；Qu 2019 确认脱溶剂化门控机制。"
+  },
+  "boundary_rules": [
+    {
+      "rule": "SsuA 天然底物为烷基磺酸盐（R-SO3⁻）；全氟烷基磺酸盐转译基于头基同构（磺酸根四面体），尾部兼容性须实验验证",
+      "source_mechanism": "SSUA-001",
+      "gate_level": "soft",
+      "basis": "llm_inferred"
+    },
+    {
+      "rule": "头基定位依赖中性多齿氢键（非永久正电荷）；引入阳离子基团将改变识别模式，不再是 SsuA 仿生",
+      "source_mechanism": "SSUA-001",
+      "gate_level": "hard",
+      "basis": "from_source"
+    },
+    {
+      "rule": "脱溶剂化门控（SSUA-002）对全氟链的适用性未验证：全氟链水合弱于烷基链，阈值可能偏移",
+      "source_mechanism": "SSUA-002",
+      "gate_level": "soft",
+      "basis": "llm_inferred"
+    }
+  ],
+  "mechanism_tags": [
+    "氢键",
+    "疏水分配",
+    "几何识别",
+    "脱溶剂化门控"
+  ]
+}

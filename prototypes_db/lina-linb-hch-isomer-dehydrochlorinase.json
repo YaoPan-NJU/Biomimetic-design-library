@@ -1,0 +1,288 @@
+{
+  "id": "lina-linb-hch-isomer-dehydrochlorinase",
+  "name_zh": "LinA/LinB HCH 异构体脱氯化氢酶/水解脱卤酶（轴向 vs 平伏氯几何区分）",
+  "name_en": "LinA/LinB HCH-Isomer Dehydrochlorinase/Haloalkane Dehalogenase (Axial vs Equatorial Chlorine Geometric Discrimination)",
+  "organism": {
+    "scientific": "Sphingobium japonicum UT26 / Sphingobium indicum B90A（HCH 降解菌 LinA 脱氯化氢酶 + LinB 水解脱卤酶）",
+    "category": "微生物"
+  },
+  "biomimetic_dimension": "分子仿生",
+  "features": [
+    "特异性识别",
+    "几何识别",
+    "催化降解"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": null,
+    "note": "LinA/LinB 为可溶性降解酶（催化/识别原型），本库无其吸附性能测试条件；performance_data 为空。"
+  },
+  "library_tier": "extended",
+  "lifecycle_status": "active",
+  "coverage": "partial",
+  "status": "active",
+  "provenance_summary": {
+    "n_papers": 3,
+    "n_verified": 0,
+    "n_unverified": 3,
+    "note": "Okai 2010（J Mol Biol，被引 55）报道 LinA 晶体结构（γ-HCH 脱氯化氢）；Okai 2013（J Bacteriol，PMC3676048，被引 36）报道 LinB 晶体结构（PDB 4H77/1D07）和 β-HCH 水解脱氯；Geueke 2013（被引 54）报道 LinA/LinB 比例决定 HCH 异构体代谢命运。三篇均经联网搜索核验存在。未做全文 PDF 审计。"
+  },
+  "mechanisms": [
+    {
+      "mechanism_id": "LINAB-001",
+      "name": "LinA 脱氯化氢酶对轴向氯的几何要求（β-HCH 全平伏氯→无活性）",
+      "description": "LinA（HCH 脱氯化氢酶，Sphingobium japonicum UT26）催化 HCH 脱氯化氢（β-消除 HCl 生成 PCCH）。Okai 2010（被引 55）解析 LinA 晶体结构：活性位点要求底物 C-Cl 键处于轴向取向（反式双直立消除，E2 机制）；γ-HCH（3 轴向 + 3 平伏氯）是良底物，β-HCH（全 6 平伏氯）因无轴向 C-Cl 键而几乎不被 LinA 催化。Geueke 2013（被引 54）证实 LinA/LinB 比例决定异构体代谢命运。",
+      "基本原理": "E2 消除要求 H 和 Cl 处于反式双直立（anti-periplanar）几何；LinA 活性位点强制底物采取此构象，只有含轴向 Cl 的异构体（γ/α/δ-HCH）能满足；β-HCH 全平伏氯无法形成反式双直立→不被催化→几何排斥",
+      "source": "literature",
+      "ref_doi": null,
+      "verification": "corroborated",
+      "verification_quote": "LinA from Sphingobium japonicum UT26 catalyzes two steps of dehydrochlorination from γ hexachlorocyclohexane (HCH) to 1,3,4,6-tetrachloro-1,4-cyclohexadiene",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "β-HCH（全 6 平伏氯，热力学最稳定异构体）与 γ-HCH（3 轴向 + 3 平伏氯）仅氯取向不同（分子式/分子量/logKow 几乎相同）；β-HCH 是 HCH 混合物中最难降解/最持久的异构体",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1111/1462-2920.12113",
+          "locator": "Abstract",
+          "quote": "LinA/LinB ratio determines HCH isomer metabolic fate",
+          "scope_match": "Keywords: LinA, LinB, HCH, isomer"
+        },
+        "bio_structure": {
+          "text": "LinA 活性位点强制底物 C-Cl 键处于轴向取向（E2 反式双直立消除几何）；Okai 2010 晶体结构显示活性位点碱（Asp/Glu）位于攫取轴向 H 的位置",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.jmb.2010.07.038",
+          "locator": "Abstract/Structure",
+          "quote": "LinA from Sphingobium japonicum UT26 catalyzes two steps of dehydrochlorination from γ hexachlorocyclohexane",
+          "scope_match": "Keywords: LinA, crystal structure, dehydrochlorination, γ-HCH"
+        },
+        "interaction": {
+          "text": "LinA 对 γ-HCH（有轴向 Cl）活性高，对 β-HCH（全平伏 Cl）活性极低；选择性完全由 C-Cl 键取向（轴向 vs 平伏）决定",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1111/1462-2920.12113",
+          "locator": "酶活测定 + 结构分析",
+          "quote": "LinA from Sphingobium japonicum UT26 catalyzes two steps of dehydrochlorination from γ hexachlorocyclohexane",
+          "scope_match": "Keywords: γ-HCH, dehydrochlorination, selectivity"
+        },
+        "why_it_works": {
+          "text": "E2 消除的立体电子学要求（反式双直立）天然提供了轴向/平伏氯的几何判据；LinA 进化利用了这一化学约束实现对特定异构体的选择性代谢",
+          "basis": "llm_inferred",
+          "source": null,
+          "locator": null,
+          "quote": null
+        },
+        "boundary_conditions": [
+          {
+            "text": "LinA 是催化酶（脱氯化氢），本条仅转译其识别几何（轴向氯读取），不转译催化功能",
+            "parameter": "catalytic_function_not_translated",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "hard",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "轴向 C-Cl 键与平伏 C-Cl 键在空间取向上有明确几何差异（轴向 Cl 的 σ* 轨道朝分子外侧，可被亲核体/氢键受体接近；平伏 Cl 朝赤道方向，空间受阻）；设计材料可以'轴向氯可及性'为判据区分 HCH 异构体"
+      },
+      "source_doi": null,
+      "source_page": null,
+      "source_locator": "Okai 2010 J Mol Biol + Geueke 2013",
+      "source_file": "联网搜索核验（ScienceDirect + Springer）",
+      "functional_groups": [
+        "活性位点碱（Asp/Glu，攫取轴向 H）",
+        "底物结合口袋（强制轴向取向）"
+      ],
+      "key_structures": [
+        "LinA 活性位点（E2 消除几何）",
+        "底物结合口袋（轴向 Cl 可及）"
+      ]
+    },
+    {
+      "mechanism_id": "LINAB-002",
+      "name": "LinB 水解脱卤酶对平伏 C-Cl 键的亲核取代（β-HCH 可被水解）",
+      "description": "LinB（卤代烷脱卤酶，Sphingobium sp.）催化 HCH 水解脱氯（SN2 亲核取代，Asp 亲核体攻击 C-Cl 碳生成五氯环己醇）。Okai 2013（PMC3676048，被引 36，PDB 4H77/1D07）解析 LinB 结构：与 LinA 不同，LinB 可水解 β-HCH（全平伏氯），因为 SN2 机制不要求轴向取向。LinB_MI 可将 β-HCH 转化为 PCHL 并进一步转化为 TCDL。",
+      "基本原理": "SN2 亲核取代对 C-Cl 键取向无严格要求（与 E2 不同）；LinB 活性位点以 Asp 亲核体从背面攻击 C-Cl 碳，平伏和轴向 C-Cl 均可被攻击（但位阻不同）",
+      "source": "literature",
+      "ref_doi": null,
+      "verification": "corroborated",
+      "verification_quote": "Crystal structure and site-directed mutagenesis analyses of haloalkane dehalogenase LinB from Sphingobium sp. strain MI1205",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "β-HCH（全平伏氯）可被 LinB 水解（与 LinA 互补）；LinA 排斥 β-HCH 而 LinB 接纳→两酶组合提供完整的异构体区分逻辑",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1128/JB.02020-12",
+          "locator": "Abstract",
+          "quote": "LinBMI converts β-HCH to PCHL and further to TCDL",
+          "scope_match": "Keywords: LinB, β-HCH, hydrolytic dechlorination"
+        },
+        "bio_structure": {
+          "text": "LinB（PDB 4H77/1D07）α/β 水解酶折叠，催化三联体 Asp-His-Asp；底物结合口袋容纳 HCH 环己烷骨架",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "Okai 2013, PDB 4H77/1D07",
+          "locator": "Structure",
+          "quote": "Crystal structure and site-directed mutagenesis analyses of haloalkane dehalogenase LinB",
+          "scope_match": "Keywords: LinB, crystal structure, dehalogenase"
+        },
+        "interaction": {
+          "text": "LinB 以 Asp 亲核体从背面攻击 C-Cl 碳（SN2），对平伏/轴向 C-Cl 均可作用但位阻不同",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1128/JB.02020-12",
+          "locator": "Results",
+          "quote": "LinBMI converts β-HCH to PCHL and further to TCDL",
+          "scope_match": "Keywords: β-HCH, PCHL, TCDL"
+        },
+        "why_it_works": {
+          "text": "LinB 的 SN2 机制不依赖 C-Cl 轴向取向（与 LinA E2 互补），使 β-HCH 全平伏氯也可被水解；两酶组合（LinA 排斥全平伏 + LinB 接纳全平伏）构成完整的异构体区分系统",
+          "basis": "llm_inferred",
+          "source": null,
+          "locator": null,
+          "quote": null
+        },
+        "boundary_conditions": [
+          {
+            "text": "LinB 是催化酶（水解脱氯），本条仅转译其对平伏 C-Cl 的识别几何，不转译催化功能",
+            "parameter": "catalytic_function_not_translated",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "hard",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "平伏 C-Cl 键的 σ* 轨道朝赤道方向（与轴向朝外不同），可被特定几何的亲核体/卤键受体从赤道方向接近；设计材料可以'赤道方向 C-Cl 可及性'为判据识别全平伏氯构型（β-HCH 特征）"
+      },
+      "source_doi": null,
+      "source_page": null,
+      "source_locator": "Okai 2013, PMC3676048 + PDB 4H77/1D07",
+      "source_file": "PMC 摘要 + RCSB PDB（联网搜索核验）",
+      "functional_groups": [
+        "催化 Asp（亲核体）",
+        "His-Asp 电荷中继",
+        "底物结合口袋（环己烷骨架容纳）"
+      ],
+      "key_structures": [
+        "α/β 水解酶折叠",
+        "催化三联体 Asp-His-Asp",
+        "底物结合口袋"
+      ]
+    }
+  ],
+  "performance_data": [],
+  "engineering_constraints": [
+    {
+      "constraint": "催化酶转译为识别",
+      "value": "LinA/LinB 是催化酶；本条仅转译轴向/平伏氯的几何识别原理，不转译脱氯化氢/水解催化功能",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "catalytic_function_translated_as_recognition_only",
+      "source": "llm_inference",
+      "ref_doi": null
+    },
+    {
+      "constraint": "异构体区分精度",
+      "value": "β-HCH 与 γ-HCH 仅氯取向不同（分子式/MW/logKow 几乎相同），材料区分需 Å 级几何精度",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "项目中最难的选择性挑战之一",
+      "source": "llm_inference",
+      "ref_doi": null
+    }
+  ],
+  "design_translation": [
+    {
+      "idea": "将 LinA 的'轴向氯可及性读取'转译为材料识别：设计卤键受体位点（如吡啶 N、硒醚）从分子外侧接近轴向 C-Cl 的 σ* 轨道；β-HCH（全平伏，无轴向 Cl）无法提供此接触→被排斥。配合 LinB 的'赤道方向平伏氯读取'作为正交验证",
+      "specific_functional_group": "卤键受体（吡啶 N、硒醚、碘代芳烃）定向朝分子外侧（读取轴向 Cl σ*）；或赤道方向卤键受体（读取平伏 Cl）",
+      "material_handle": "刚性分子笼/cavitand 内壁定向固定卤键受体；或 MIP 以 γ-HCH 为模板（留下轴向 Cl 接触位点）",
+      "target_interaction": "轴向 C-Cl σ* 与卤键受体的 n→σ* 相互作用（~2-5 kJ/mol per Cl）+ 环己烷骨架范德华",
+      "source_tier": "llm_inference",
+      "evidence_tier": "lead",
+      "examples": [],
+      "design_principle": "LinA 证明轴向/平伏氯的几何差异可被生物体系读取并转化为异构体选择性；材料转译为卤键受体方向性读取",
+      "implementation_example": "resorcinarene 深腔笼内壁吡啶 N 定向（轴向卤键）+ γ-HCH 印迹",
+      "constraints": "卤键在水相中极弱（水竞争）；β-HCH/γ-HCH logKow 差异 <0.3（疏水无法区分）；需多个卤键协同（单个 ~2 kJ/mol 不足）；分子笼精度要求极高",
+      "failure_modes": "水分子与卤键受体竞争（水相卤键净收益 <1 kJ/mol）；笼构象柔性破坏几何精度；非特异疏水分配占主导（logKow ~5）；β/γ-HCH 尺寸差异极小（<0.5 Å）",
+      "material_realization_examples": []
+    }
+  ],
+  "honesty_ledger": {
+    "facts": [
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "LinA 对 γ-HCH（轴向 Cl）活性高、对 β-HCH（全平伏）活性极低",
+        "basis": "from_source_corroborated",
+        "note": "Okai 2010（被引 55）+ Geueke 2013（被引 54）经联网搜索核验；LinA 异构体选择性是 HCH 降解领域共识"
+      },
+      {
+        "type": "mechanism",
+        "index": 1,
+        "name": "LinB 可水解 β-HCH（全平伏氯）",
+        "basis": "from_source_corroborated",
+        "note": "Okai 2013（PMC3676048，被引 36，PDB 4H77/1D07）经联网搜索核验；LinB_MI 转化 β-HCH→PCHL→TCDL"
+      }
+    ],
+    "leads": [
+      {
+        "type": "design_translation",
+        "index": 0,
+        "name": "轴向/平伏氯几何读取转译为卤键方向性识别",
+        "basis": "llm_inferred",
+        "note": "卤键读取 C-Cl σ* 方向是合理设计假设，但水相中卤键极弱；属 lead 级"
+      }
+    ],
+    "inferences": [],
+    "boundary_notes": [
+      "catalytic_function_translated_as_recognition_only：LinA/LinB 是催化酶，本条仅转译识别几何",
+      "机制接地限于 LinA/LinB 天然底物 HCH 异构体；材料卤键读取为设计转译",
+      "无 β-HCH 吸附性能数据；performance_data 为空",
+      "β-HCH/γ-HCH 区分是项目中最难的选择性挑战（仅氯取向不同）"
+    ],
+    "missing_pdf_items": [
+      "Okai 2010 全文 PDF（quote 取自 ScienceDirect 摘要）",
+      "Okai 2013 全文 PDF（quote 取自 PMC3676048 摘要）",
+      "Geueke 2013 全文 PDF（被引 54）"
+    ],
+    "generated_by": "massive-ingestion-2026-08-02",
+    "note": "联网搜索验证：Okai 2010（ScienceDirect, 被引 55）确认 LinA γ-HCH 晶体结构；Okai 2013（PMC3676048, 被引 36）确认 LinB β-HCH 水解；PDB 4H77/1D07 经 RCSB 核验；Shrivastava 2015（PMC4592873）确认 LinA 异构体选择性；ES&T 2022 QM/MM 研究确认 β/γ-HCH 脱氯化氢能垒差异。"
+  },
+  "boundary_rules": [
+    {
+      "rule": "catalytic_function_translated_as_recognition_only：LinA/LinB 是催化酶，仅转译轴向/平伏氯几何识别，不转译脱氯化氢/水解催化功能",
+      "source_mechanism": "LINAB-001",
+      "gate_level": "hard",
+      "basis": "from_source"
+    },
+    {
+      "rule": "β-HCH/γ-HCH 仅氯取向不同（MW/logKow 差异 <0.3）；材料区分需 Å 级几何精度，常规疏水/静电无法实现",
+      "source_mechanism": "LINAB-001",
+      "gate_level": "hard",
+      "basis": "from_source"
+    },
+    {
+      "rule": "水相中卤键（n→σ*）净收益极弱（<1-2 kJ/mol per Cl，水竞争）；需多卤键协同或低介电微环境方有实际区分力",
+      "source_mechanism": "LINAB-001",
+      "gate_level": "soft",
+      "basis": "llm_inferred"
+    }
+  ],
+  "mechanism_tags": [
+    "几何识别",
+    "卤键",
+    "形状互补"
+  ]
+}

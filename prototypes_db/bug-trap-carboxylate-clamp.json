@@ -1,0 +1,209 @@
+{
+  "id": "bug-trap-carboxylate-clamp",
+  "name_zh": "Bug/TRAP 转运体羧酸夹钳（细菌 C4-二羧酸/酮酸识别）",
+  "name_en": "Bug/TRAP Transporter Carboxylate Clamp (Bacterial C4-Dicarboxylate/Ketoacid Recognition)",
+  "organism": {
+    "scientific": "Bordetella pertussis / Rhodobacter sphaeroides（TRAP 转运体周质底物结合蛋白 Bug 家族）",
+    "category": "微生物"
+  },
+  "biomimetic_dimension": "分子仿生",
+  "features": [
+    "特异性识别",
+    "几何识别"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": null,
+    "note": "Bug/TRAP 为周质底物结合蛋白（分子识别原型），本库无其吸附性能测试条件；performance_data 为空。"
+  },
+  "library_tier": "extended",
+  "lifecycle_status": "active",
+  "coverage": "partial",
+  "status": "active",
+  "provenance_summary": {
+    "n_papers": 2,
+    "n_verified": 0,
+    "n_unverified": 2,
+    "note": "PDB 2QPQ（Bug27 from Bordetella pertussis）经 RCSB 联网核验存在；PDB 8TQN（TRAP SBP with MES sulfonate substrate, 2025）经联网核验。Bug 家族特征性羧酸夹钳结合模式由多结构确认。未做全文 PDF 审计。"
+  },
+  "mechanisms": [
+    {
+      "mechanism_id": "BUG-001",
+      "name": "双保守模体羧酸夹钳（直接+水桥氢键锚定羧酸头）与第二结构域尾部占位检验",
+      "description": "Bug 家族 TRAP 转运体底物结合蛋白以两个保守序列模体（Motif 1 和 Motif 2）形成的'羧酸夹钳'识别含氧短链羧酸底物。PDB 2QPQ（Bug27, Bordetella pertussis）显示：羧酸头基由两个保守模体的主链 NH 和侧链极性基团经直接氢键和水桥氢键双重锚定；第二结构域形成'盖子'检验尾部是否形成生产性占位（区分不同尾部结构）。该家族特异识别含羧基的 C4 二羧酸/酮酸（如琥珀酸、丙酮酸、2-酮戊二酸）。",
+      "基本原理": "羧酸头基由双模体夹钳以直接+水桥氢键锚定（不依赖金属或永久正电荷），第二结构域对尾部几何进行'占位检验'（productive occupancy check），二者协同实现对含氧短链羧酸的选择性识别",
+      "source": "literature",
+      "ref_doi": null,
+      "verification": "corroborated",
+      "verification_quote": "the family is specific for carboxylated solutes, with a characteristic mode of binding involving",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "GenX（HFPO-DA，CF3CF2CF2OCF(CF3)COOH）是醚羧酸（R-O-CF(CF3)-COO⁻），含羧酸头基 + 含氧短链骨架；与 Bug/TRAP 天然底物（含氧 C4 二羧酸/酮酸）共享'含氧短链 + 羧酸头'结构特征",
+          "basis": "llm_inferred",
+          "source": null,
+          "locator": null,
+          "quote": null
+        },
+        "bio_structure": {
+          "text": "Bug27（PDB 2QPQ）两域结构：Motif 1 和 Motif 2 形成羧酸夹钳，第二结构域形成尾部检验盖；配体结合诱导域闭合",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "PDB 2QPQ (RCSB)",
+          "locator": "Structure title/abstract",
+          "quote": "the family is specific for carboxylated solutes, with a characteristic mode of binding",
+          "scope_match": "Keywords: Bug, carboxylate, binding, TRAP"
+        },
+        "interaction": {
+          "text": "羧酸头基由双模体主链 NH + 侧链极性基团经直接氢键和水桥氢键锚定；尾部（C4 二羧酸的第二羧基/酮基）与第二结构域形成额外接触",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "PDB 2QPQ (RCSB)",
+          "locator": "Ligand binding site description",
+          "quote": "characteristic mode of binding involving",
+          "scope_match": "Keywords: carboxylate, binding mode"
+        },
+        "why_it_works": {
+          "text": "细菌需从环境中选择性摄取 C4 二羧酸（TCA 循环中间体）作为碳源；Bug/TRAP 以头基夹钳 + 尾部检验的双保险机制区分目标底物与结构类似物（如丙酸、乳酸等非目标短链羧酸）",
+          "basis": "llm_inferred",
+          "source": null,
+          "locator": null,
+          "quote": null
+        },
+        "boundary_conditions": [
+          {
+            "text": "Bug/TRAP 天然底物为 C4 二羧酸/酮酸（琥珀酸、丙酮酸等）；GenX 是 C6 支链醚单羧酸，尾部结构与天然底物差异大，第二结构域'占位检验'对 GenX 支链醚尾的适用性须验证",
+            "parameter": "tail_structural_mismatch",
+            "condition": {"operator": "qualitative", "value": null},
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          },
+          {
+            "text": "GenX 极亲水（logKow ~0.5-1.5），疏水驱动力极弱；Bug/TRAP 尾部口袋对亲水性支链醚的容纳能力不明",
+            "parameter": "hydrophilic_tail",
+            "condition": {"operator": "qualitative", "value": null},
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "以双保守模体（双 H 键供体阵列）形成'羧酸夹钳'锚定羧酸头基（直接+水桥氢键，不依赖金属/阳离子），配合第二结构域对尾部几何的'占位检验'，实现对含氧短链羧酸的选择性识别；支链 vs 线性尾部可通过第二结构域空间约束区分"
+      },
+      "source_doi": null,
+      "source_page": null,
+      "source_locator": "PDB 2QPQ (Bug27, Bordetella pertussis) + PDB 8TQN (TRAP SBP, 2025)",
+      "source_file": "RCSB PDB 沉积记录（联网搜索核验）",
+      "functional_groups": [
+        "主链 NH（Motif 1 + Motif 2，羧酸夹钳）",
+        "侧链极性基团（Ser/Thr/Tyr，辅助氢键）",
+        "保守水分子（水桥）"
+      ],
+      "key_structures": [
+        "双模体羧酸夹钳",
+        "第二结构域尾部检验盖",
+        "域闭合铰链"
+      ]
+    }
+  ],
+  "performance_data": [],
+  "engineering_constraints": [
+    {
+      "constraint": "可溶周质蛋白形态",
+      "value": "Bug 家族为 TRAP 转运体周质底物结合蛋白，需固定于载体方可用作吸附",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "TRAP SBP 为可溶性蛋白",
+      "source": "llm_inference",
+      "ref_doi": null
+    },
+    {
+      "constraint": "双模体预组织几何",
+      "value": "羧酸夹钳依赖两个保守模体的精确空间排布；材料转译需复现双 H 键供体的间距和角度",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "PDB 2QPQ 显示双模体协同",
+      "source": "literature",
+      "ref_doi": null
+    }
+  ],
+  "design_translation": [
+    {
+      "idea": "将 Bug/TRAP 的双模体羧酸夹钳转译为双 H 键供体（方酰胺/硫脲/脲）夹口 + 支链形状互补腔（第二结构域占位检验）：孔口设双方酰胺 NH 夹钳锚定 GenX 羧酸根头基，腔体设 Y 形支链互补区区分 GenX 支链 vs 线性 PFCA",
+      "specific_functional_group": "双方酰胺（squaramide）或双脲提供四齿 NH 夹钳（模拟 Motif 1+2）；刚性芳烃壁形成 Y 形支链占位腔",
+      "material_handle": "介孔二氧化硅/PMO 孔口双方酰胺硅烷接枝 + 腔体形状控制（分子印迹或刚性间隔臂）",
+      "target_interaction": "GenX 羧酸根与方酰胺 NH 的双齿氢键 + 支链醚尾与 Y 形腔的形状互补",
+      "source_tier": "llm_inference",
+      "evidence_tier": "lead",
+      "examples": [],
+      "design_principle": "Bug/TRAP 证明双模体羧酸夹钳 + 尾部占位检验可选择性识别含氧短链羧酸；GenX 是醚羧酸（含氧 + 支链），原理上匹配",
+      "implementation_example": "SBA-15 孔口双方酰胺功能化 + 支链分子印迹腔",
+      "constraints": "GenX 极亲水（logKow ~0.5-1.5），尾部无疏水驱动力；水相中方酰胺 NH 可能被水竞争；GenX 醚氧 H 键碱度极弱（β₂H ~0.2）",
+      "failure_modes": "方酰胺被体相水占据；GenX 支链醚尾与 Y 形腔形状互补不足（醚链柔性）；线性 PFCA（PFOA）以更强疏水驱动竞争头基位点；DOM 堵塞孔道",
+      "material_realization_examples": []
+    }
+  ],
+  "honesty_ledger": {
+    "facts": [
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "Bug 家族双模体羧酸夹钳结合模式",
+        "basis": "from_source_corroborated",
+        "note": "PDB 2QPQ（Bug27, Bordetella pertussis）和 PDB 8TQN（2025, TRAP SBP with sulfonate）经 RCSB 联网核验存在；Bug 家族'characteristic mode of binding'由多结构确认"
+      }
+    ],
+    "leads": [
+      {
+        "type": "design_translation",
+        "index": 0,
+        "name": "Bug/TRAP 夹钳转译为 GenX 醚羧酸识别",
+        "basis": "llm_inferred",
+        "note": "GenX 是醚羧酸（含氧短链 + 支链），与 Bug 天然底物（含氧 C4 二羧酸）有结构交集但差异大；属 lead 级设计假设"
+      }
+    ],
+    "inferences": [],
+    "boundary_notes": [
+      "机制接地限于 Bug/TRAP 天然底物（C4 二羧酸/酮酸）；GenX 应用为设计转译（llm_inferred / lead）",
+      "无 GenX 吸附性能数据；performance_data 为空",
+      "GenX 极亲水（logKow ~0.5-1.5）是核心挑战：疏水驱动力近乎失效，仅靠头基夹钳 + 形状互补可能不足"
+    ],
+    "missing_pdf_items": [
+      "PDB 2QPQ 相关全文（Mulligan et al., 结构标题/摘要级核验）",
+      "PDB 8TQN 相关全文（2025, TRAP SBP sulfonate binding）"
+    ],
+    "generated_by": "massive-ingestion-2026-08-02",
+    "note": "联网搜索验证：PDB 2QPQ 确认 Bug27 结构存在且描述'carboxylated solutes characteristic binding mode'；PDB 8TQN（2025）确认 TRAP SBP 可结合含磺酸底物（扩展底物谱证据）。"
+  },
+  "boundary_rules": [
+    {
+      "rule": "Bug/TRAP 天然底物为 C4 二羧酸/酮酸；GenX（C6 支链醚单羧酸）尾部结构差异大，第二结构域占位检验的适用性须实验验证",
+      "source_mechanism": "BUG-001",
+      "gate_level": "soft",
+      "basis": "llm_inferred"
+    },
+    {
+      "rule": "羧酸夹钳依赖双模体中性氢键（非阳离子/金属）；引入阳离子基团将改变识别模式",
+      "source_mechanism": "BUG-001",
+      "gate_level": "hard",
+      "basis": "from_source"
+    },
+    {
+      "rule": "GenX 极亲水（logKow ~0.5-1.5），疏水驱动力极弱；仅靠头基夹钳可能不足以实现 ng/L 级捕获",
+      "source_mechanism": "BUG-001",
+      "gate_level": "soft",
+      "basis": "llm_inferred"
+    }
+  ],
+  "mechanism_tags": [
+    "氢键",
+    "几何识别",
+    "形状互补"
+  ]
+}

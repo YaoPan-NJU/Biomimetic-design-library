@@ -1,0 +1,214 @@
+{
+  "id": "oxlt-short-chain-dicarboxylate-transporter",
+  "name_zh": "OxlT 草酸/甲酸反向转运体（短链羧酸特异识别，不依赖长疏水链）",
+  "name_en": "OxlT Oxalate/Formate Antiporter (Short-Chain Carboxylate Specific Recognition Without Long Hydrophobic Tail)",
+  "organism": {
+    "scientific": "Oxalobacter formigenes（产甲酸草酸杆菌，肠道草酸降解专性菌）",
+    "category": "微生物"
+  },
+  "biomimetic_dimension": "分子仿生",
+  "features": [
+    "特异性识别",
+    "分子筛分"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": null,
+    "note": "OxlT 为膜转运体（分子识别/转运原型），本库无其吸附性能测试条件；performance_data 为空。"
+  },
+  "library_tier": "extended",
+  "lifecycle_status": "active",
+  "coverage": "partial",
+  "status": "active",
+  "provenance_summary": {
+    "n_papers": 1,
+    "n_verified": 0,
+    "n_unverified": 1,
+    "note": "Jaunet-Lahary 2023（Nature Communications, PMC10070484，被引 24）报道 OxlT 晶体结构（PDB 8HPJ）和草酸识别机制。经联网搜索核验存在且支持所声称结论。未做全文 PDF 审计。"
+  },
+  "mechanisms": [
+    {
+      "mechanism_id": "OXLT-001",
+      "name": "双碱性残基盐桥对最小二羧酸（草酸）的特异识别与严格底物区分",
+      "description": "OxlT 为 Oxalobacter formigenes 的草酸/甲酸反向转运体（12 次跨膜螺旋，MFS 超家族）。Jaunet-Lahary 2023（PMC10070484，被引 24）报道 PDB 8HPJ 结构：草酸结合位点含两个碱性残基（Arg/Lys）形成盐桥锚定草酸二羧酸根；位点严格区分草酸（C2 二羧酸）与其他营养羧酸盐（琥珀酸 C4、柠檬酸 C6 等）。OxlT 选择性摄取草酸（最小二羧酸）的机制不依赖长疏水链，而依赖双电荷锚定 + 尺寸排阻。",
+      "基本原理": "两个碱性残基（Arg/Lys）的胍基/氨基与草酸双羧酸根形成双盐桥；结合位点尺寸精确匹配 C2 二羧酸（草酸），较大底物被空间排斥；识别完全不依赖疏水链（草酸无疏水链）",
+      "source": "literature",
+      "ref_doi": null,
+      "verification": "corroborated",
+      "verification_quote": "The bacterial oxalate transporter OxlT selectively uptakes oxalate from the gut to bacterial cells with a strict discrimination from other nutrient carboxylates",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "GenX（HFPO-DA）是短链醚羧酸（有效疏水链极短，logKow ~0.5-1.5），含羧酸根头基；与草酸共享'短链/无长疏水链 + 羧酸根'特征。传统疏水机制对 GenX 近乎失效，需要不依赖疏水链的识别原理",
+          "basis": "llm_inferred",
+          "source": null,
+          "locator": null,
+          "quote": null
+        },
+        "bio_structure": {
+          "text": "OxlT（PDB 8HPJ）12 次跨膜螺旋，草酸结合位点位于跨膜域中心；两个碱性残基（Arg/Lys）形成双盐桥锚定草酸双羧酸根",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1038/s41467-023-36883-5",
+          "locator": "Abstract + PDB 8HPJ",
+          "quote": "The oxalate binding site contains two basic residues that form salt bridges with a dicarboxylate substrate",
+          "scope_match": "Keywords: oxalate, binding site, basic residues, salt bridges"
+        },
+        "interaction": {
+          "text": "草酸双羧酸根与两个碱性残基形成双盐桥（电荷互补）；位点尺寸排阻较大底物（琥珀酸、柠檬酸等）",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1038/s41467-023-36883-5",
+          "locator": "Abstract",
+          "quote": "selectively uptakes oxalate from the gut to bacterial cells with a strict discrimination from other nutrient carboxylates",
+          "scope_match": "Keywords: selectively, oxalate, discrimination, carboxylates"
+        },
+        "why_it_works": {
+          "text": "Oxalobacter formigenes 是肠道专性草酸降解菌，需从复杂肠道环境（含多种二羧酸/单羧酸）中特异性摄取草酸；OxlT 以双盐桥 + 尺寸排阻实现不依赖疏水链的高选择性",
+          "basis": "llm_inferred",
+          "source": null,
+          "locator": null,
+          "quote": null
+        },
+        "boundary_conditions": [
+          {
+            "text": "OxlT 天然底物为草酸（C2 二羧酸，双负电荷）；GenX 是单羧酸（单负电荷）+ 支链醚骨架，电荷数和骨架结构均不同；双盐桥模式对单羧酸的适用性须重新设计",
+            "parameter": "charge_and_size_mismatch",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "hard",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          },
+          {
+            "text": "OxlT 工作于肠道环境（pH 5-7，高离子强度）；材料转译的水化学条件适配性须验证",
+            "parameter": "environment_transfer",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "短链羧酸的特异识别可不依赖长疏水链，而以双电荷锚定（碱性残基盐桥）+ 尺寸/形状排阻实现；这为极亲水短链羧酸污染物（如 GenX）提供了'非疏水'识别原理"
+      },
+      "source_doi": null,
+      "source_page": null,
+      "source_locator": "Jaunet-Lahary 2023, PMC10070484 + PDB 8HPJ",
+      "source_file": "PMC 摘要 + RCSB PDB 8HPJ 沉积记录（联网搜索核验）",
+      "functional_groups": [
+        "碱性残基（Arg 胍基 / Lys 氨基，双盐桥）",
+        "跨膜螺旋骨架（尺寸排阻壁）"
+      ],
+      "key_structures": [
+        "12 次跨膜螺旋（MFS fold）",
+        "双碱性残基草酸结合位点",
+        "底物通道（尺寸选择性）"
+      ]
+    }
+  ],
+  "performance_data": [],
+  "engineering_constraints": [
+    {
+      "constraint": "膜蛋白形态",
+      "value": "OxlT 为 12 次跨膜螺旋膜蛋白，识别位点埋藏于跨膜域中心；材料转译需提取识别原理而非直接固定蛋白",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "膜蛋白难以直接用作吸附剂",
+      "source": "llm_inference",
+      "ref_doi": null
+    },
+    {
+      "constraint": "双盐桥对单羧酸的适配",
+      "value": "OxlT 天然识别二羧酸（双负电荷）；GenX 为单羧酸，需将双盐桥简化/重设计为单羧酸锚定",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "电荷数不匹配",
+      "source": "llm_inference",
+      "ref_doi": null
+    }
+  ],
+  "design_translation": [
+    {
+      "idea": "提取 OxlT '不依赖疏水链的短链羧酸识别'原理：以预组织碱性/阳离子位点（胍基/季铵）锚定 GenX 羧酸根头基 + 尺寸/形状排阻腔区分短链 vs 长链；核心创新：放弃疏水驱动，转向电荷锚定 + 尺寸选择",
+      "specific_functional_group": "胍基功能化（模拟 Arg）或季铵位点锚定羧酸根；刚性孔壁控制底物可及尺寸",
+      "material_handle": "胍基功能化介孔二氧化硅（胍基硅烷接枝）或胍基交联聚合物；孔径控制 ~6-8 Å（允许 GenX 进入，排除 DOM 大分子）",
+      "target_interaction": "GenX 羧酸根与胍基/季铵的离子对/盐桥 + 尺寸排阻",
+      "source_tier": "llm_inference",
+      "evidence_tier": "lead",
+      "examples": [],
+      "design_principle": "OxlT 证明短链羧酸可不依赖疏水链而被高选择性识别（双盐桥 + 尺寸排阻）；GenX 极亲水（疏水机制失效），需要此类'非疏水'识别原理",
+      "implementation_example": "胍基功能化 SBA-15（孔径 ~6 nm）+ 支链形状印迹",
+      "constraints": "GenX 是单羧酸（非二羧酸），双盐桥需简化；胍基/季铵对共存阴离子（Cl⁻、SO₄²⁻、HCO₃⁻）的非选择性竞争；GenX ng/L 级浓度下离子对驱动力有限",
+      "failure_modes": "胍基/季铵被过量共存阴离子占据（SO₄²⁻ 浓度 >> GenX）；尺寸排阻无法区分 GenX 与同尺寸有机酸；DOM 竞争阳离子位点；pH 变化改变 GenX 解离态",
+      "material_realization_examples": []
+    }
+  ],
+  "honesty_ledger": {
+    "facts": [
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "OxlT 双碱性残基盐桥对草酸的特异识别",
+        "basis": "from_source_corroborated",
+        "note": "Jaunet-Lahary 2023（PMC10070484，被引 24）+ PDB 8HPJ 经联网搜索核验存在；摘要明确描述'two basic residues form salt bridges with dicarboxylate substrate'和'strict discrimination from other nutrient carboxylates'"
+      }
+    ],
+    "leads": [
+      {
+        "type": "design_translation",
+        "index": 0,
+        "name": "OxlT 非疏水识别原理转译为 GenX 羧酸根锚定",
+        "basis": "llm_inferred",
+        "note": "GenX 是单羧酸（非二羧酸），电荷数不匹配；属 lead 级设计假设，核心原理（不依赖疏水链）可迁移但具体实现需重设计"
+      }
+    ],
+    "inferences": [],
+    "boundary_notes": [
+      "机制接地限于 OxlT 天然底物草酸（C2 二羧酸）；GenX 应用为设计转译（llm_inferred / lead）",
+      "无 GenX 吸附性能数据；performance_data 为空",
+      "OxlT 的核心价值在于提供'不依赖疏水链的短链羧酸识别'原理——这对极亲水 GenX 有独特意义",
+      "先例密度为零（从未用于 PFAS 设计）"
+    ],
+    "missing_pdf_items": [
+      "Jaunet-Lahary 2023 全文 PDF（quote 取自 PMC 摘要，PMC10070484）"
+    ],
+    "generated_by": "massive-ingestion-2026-08-02",
+    "note": "联网搜索验证：PMC10070484 确认 OxlT 结构（PDB 8HPJ）和草酸选择机制；被引 24 确认学术影响力；PDB 8HPJ 经 RCSB 核验存在。"
+  },
+  "boundary_rules": [
+    {
+      "rule": "OxlT 天然底物为草酸（C2 二羧酸，双负电荷）；GenX 是单羧酸（单负电荷），双盐桥模式需重设计为单羧酸锚定",
+      "source_mechanism": "OXLT-001",
+      "gate_level": "hard",
+      "basis": "from_source"
+    },
+    {
+      "rule": "OxlT 核心价值为'不依赖疏水链的短链羧酸识别'原理；不可外推为长链 PFAS（PFOA/PFOS）识别（长链有强疏水驱动，不需要此机制）",
+      "source_mechanism": "OXLT-001",
+      "gate_level": "hard",
+      "basis": "llm_inferred"
+    },
+    {
+      "rule": "胍基/阳离子位点对共存阴离子的非选择性竞争是材料转译的核心挑战（环境水中 SO₄²⁻/Cl⁻/HCO₃⁻ 远超 GenX 浓度）",
+      "source_mechanism": "OXLT-001",
+      "gate_level": "soft",
+      "basis": "llm_inferred"
+    }
+  ],
+  "mechanism_tags": [
+    "静电吸附",
+    "几何识别",
+    "尺寸排阻"
+  ]
+}

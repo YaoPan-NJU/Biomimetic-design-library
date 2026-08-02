@@ -1427,6 +1427,18 @@
       "weight": 0.35,
       "mechanism_summary": "β-CD环腔对短链PFBS包合较弱，需调腔径/交联密度（exploratory）",
       "design_hint": "短链PFAS宜α-CD或调腔径/交联"
+     },
+     {
+      "id": "ssua-alkylsulfonate-binding-protein",
+      "weight": 0.75,
+      "mechanism_summary": "SsuA 以两球域裂缝中中性多齿 NH 夹口（主链酰胺 + 保守水桥）定位烷基磺酸盐头基，相邻疏水口袋容纳烷基尾；PFBS 磺酸根头基与 SsuA 天然底物完全同构（四面体 R-SO3⁻），TauA 脱溶剂化门控提供链长选择性",
+      "design_hint": "PMO 孔口多齿脲/酰胺 NH 夹口定位磺酸根 + 孔内疏水/氟亲壁容纳全氟丁基尾；中性夹口避免阳离子型非选择性"
+     },
+     {
+      "id": "ssua-alkylsulfonate-binding-protein",
+      "weight": 0.75,
+      "mechanism_summary": "SsuA 以两球域裂缝中中性多齿 NH 夹口（主链酰胺 + 保守水桥）定位烷基磺酸盐头基，相邻疏水口袋容纳烷基尾；PFBS 磺酸根头基与 SsuA 天然底物完全同构（四面体 R-SO3⁻），TauA 脱溶剂化门控提供链长选择性",
+      "design_hint": "PMO 孔口多齿脲/酰胺 NH 夹口定位磺酸根 + 孔内疏水/氟亲壁容纳全氟丁基尾；中性夹口避免阳离子型非选择性"
      }
     ]
    },
@@ -1439,9 +1451,41 @@
       "design_hint": "仅在脱氟耦合型 PFAS 降解体系中借鉴：以窄孔 + 缺电子芳香四极给体阵列选择性识别/移出脱氟产物 F−（驱动脱氟平衡、防再氟化）或作 F− 响应门控报告脱氟进程；不得用作完整 PFAS 的直接吸附，F− 在真实水体中受 Cl−/HCO3−/SO4²⁻ 竞争须实验验证，转译限原理层。"
      }
     ]
+   },
+   "GenX（HFPO-DA）": {
+    "prototypes": [
+     {
+      "id": "bug-trap-carboxylate-clamp",
+      "weight": 0.7,
+      "mechanism_summary": "Bug/TRAP 以双保守模体羧酸夹钳（直接+水桥氢键）锚定含氧短链羧酸头基，第二结构域检验尾部占位；GenX 是醚羧酸（含氧短链+支链），与 Bug 天然底物结构交集最大",
+      "design_hint": "双方酰胺/脲夹钳锚定 GenX 羧酸根 + Y 形支链互补腔区分 GenX vs 线性 PFCA"
+     },
+     {
+      "id": "livbp-branched-chain-amino-acid-binding",
+      "weight": 0.6,
+      "mechanism_summary": "LIVBP Y 形疏水腔专门容纳支链氨基酸的分支侧链（异丙基/仲丁基），支链/线性区分纯靠拓扑几何；GenX 支链全氟异丙氧基在拓扑上类似",
+      "design_hint": "Y 形刚性腔匹配 GenX 支链拓扑 + 腔口羧酸根锚定；区分支链 GenX vs 线性 PFOA/PFBS"
+     },
+     {
+      "id": "oxlt-short-chain-dicarboxylate-transporter",
+      "weight": 0.65,
+      "mechanism_summary": "OxlT 以双碱性残基盐桥识别最小二羧酸（草酸），严格不依赖长疏水链；为极亲水 GenX（logKow~0.5-1.5，疏水机制失效）提供非疏水识别原理",
+      "design_hint": "胍基/季铵锚定 GenX 羧酸根（不依赖疏水链）+ 尺寸排阻；核心挑战：共存阴离子竞争"
+     }
+    ]
    }
   },
   "有机氯农药": {
+   "β-HCH（β-六氯环己烷）": {
+    "prototypes": [
+     {
+      "id": "lina-linb-hch-isomer-dehydrochlorinase",
+      "weight": 0.7,
+      "mechanism_summary": "LinA 脱氯化氢酶要求 C-Cl 键轴向取向（E2 反式双直立），β-HCH 全平伏氯不被催化；LinB 水解脱卤酶可攻击平伏 C-Cl（SN2）。两酶组合提供轴向/平伏氯几何区分的完整判据",
+      "design_hint": "卤键受体方向性读取轴向/平伏 C-Cl σ*（catalytic_function_translated_as_recognition_only）；核心挑战：水相卤键极弱，β/γ-HCH 差异 <0.5 Å"
+     }
+    ]
+   },
    "DDT": {
     "prototypes": [
      {
@@ -2421,14 +2465,142 @@
   }
  },
  "prototype_metadata": {
-  "alkb-alkane-hydroxylase-chain-length": {"applicability": {"pH_range": null, "temp_range": null, "salinity": null, "note": "原方案已终止；仅作为链长门控灵感，无吸附性能数据"}, "features": ["底物范围", "链长筛分"], "biomimetic_dimension": "过程仿生", "organism": {"scientific": "Alcanivorax borkumensis", "category": "微生物"}},
-  "bacterial-photosynthetic-reaction-center": {"applicability": {"pH_range": null, "temp_range": null, "salinity": null, "note": "光驱电荷分离原型；水相电荷转移吸附为待验证工程假设"}, "features": ["空间预组织", "定向电子转移"], "biomimetic_dimension": "过程仿生", "organism": {"scientific": "Blastochloris viridis", "category": "微生物"}},
-  "beta-cyclodextrin-hostguest-inclusion": {"applicability": {"pH_range": null, "temp_range": null, "salinity": null, "note": "β-CD 天然环状寡糖主客体识别单元，吸附性能以交联多孔聚合物形态报道，无独立适用性测试，全空"}, "features": ["疏水性", "分子筛分"], "biomimetic_dimension": "分子仿生", "organism": {"scientific": "环糊精：直链淀粉经细菌 CGTase 环化的天然环状寡糖；β-CD 为 7 葡萄糖大环", "category": "植物"}},
-  "gaba-rdl-rigid-hydrophobic-cavity": {"applicability": {"pH_range": null, "temp_range": null, "salinity": null, "note": "抗性突变原型；无直接结合结构或吸附性能数据"}, "features": ["疏水孔环境", "极性位点调制"], "biomimetic_dimension": "分子仿生", "organism": {"scientific": "Drosophila melanogaster", "category": "动物"}},
-  "ipso-hydroxylation-pathway": {"applicability": {"pH_range": null, "temp_range": null, "salinity": null, "note": "降解途径原型；人工形状识别为待验证工程假设"}, "features": ["反应位点选择", "取代基脱除"], "biomimetic_dimension": "过程仿生", "organism": {"scientific": "Sphingobium xenophagum Bayram", "category": "微生物"}},
-  "laccase-t1-cu-phenol-coordination": {"applicability": {"pH_range": null, "temp_range": null, "salinity": null, "note": "酚氧化原型；天然机制为邻近口袋外球电子转移，不是 T1 铜直接吸附"}, "features": ["底物预定位", "外球电子转移"], "biomimetic_dimension": "分子仿生", "organism": {"scientific": "Trametes versicolor 漆酶", "category": "微生物"}},
-  "rw1-bay-region-dioxygenase": {"applicability": {"pH_range": null, "temp_range": null, "salinity": null, "note": "二噁英氧化原型；MIP 吸附转译为独立假设"}, "features": ["角位双加氧", "取代模式范围"], "biomimetic_dimension": "过程仿生", "organism": {"scientific": "Sphingomonas wittichii RW1", "category": "微生物"}},
-  "hl-fabp-liver-fatty-acid-pfas-binding": {"applicability": {"pH_range": null, "temp_range": null, "salinity": null, "note": "hL-FABP 为胞内可溶结合蛋白原型，无吸附适用性测试数据，故全空"}, "features": ["疏水性", "分子筛分"], "biomimetic_dimension": "分子仿生", "organism": {"scientific": "Homo sapiens（人肝脂肪酸结合蛋白 FABP1 / L-FABP，具异常大结合腔）", "category": "动物"}},
+  "alkb-alkane-hydroxylase-chain-length": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "原方案已终止；仅作为链长门控灵感，无吸附性能数据"
+   },
+   "features": [
+    "底物范围",
+    "链长筛分"
+   ],
+   "biomimetic_dimension": "过程仿生",
+   "organism": {
+    "scientific": "Alcanivorax borkumensis",
+    "category": "微生物"
+   }
+  },
+  "bacterial-photosynthetic-reaction-center": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "光驱电荷分离原型；水相电荷转移吸附为待验证工程假设"
+   },
+   "features": [
+    "空间预组织",
+    "定向电子转移"
+   ],
+   "biomimetic_dimension": "过程仿生",
+   "organism": {
+    "scientific": "Blastochloris viridis",
+    "category": "微生物"
+   }
+  },
+  "beta-cyclodextrin-hostguest-inclusion": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "β-CD 天然环状寡糖主客体识别单元，吸附性能以交联多孔聚合物形态报道，无独立适用性测试，全空"
+   },
+   "features": [
+    "疏水性",
+    "分子筛分"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "环糊精：直链淀粉经细菌 CGTase 环化的天然环状寡糖；β-CD 为 7 葡萄糖大环",
+    "category": "植物"
+   }
+  },
+  "gaba-rdl-rigid-hydrophobic-cavity": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "抗性突变原型；无直接结合结构或吸附性能数据"
+   },
+   "features": [
+    "疏水孔环境",
+    "极性位点调制"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Drosophila melanogaster",
+    "category": "动物"
+   }
+  },
+  "ipso-hydroxylation-pathway": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "降解途径原型；人工形状识别为待验证工程假设"
+   },
+   "features": [
+    "反应位点选择",
+    "取代基脱除"
+   ],
+   "biomimetic_dimension": "过程仿生",
+   "organism": {
+    "scientific": "Sphingobium xenophagum Bayram",
+    "category": "微生物"
+   }
+  },
+  "laccase-t1-cu-phenol-coordination": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "酚氧化原型；天然机制为邻近口袋外球电子转移，不是 T1 铜直接吸附"
+   },
+   "features": [
+    "底物预定位",
+    "外球电子转移"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Trametes versicolor 漆酶",
+    "category": "微生物"
+   }
+  },
+  "rw1-bay-region-dioxygenase": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "二噁英氧化原型；MIP 吸附转译为独立假设"
+   },
+   "features": [
+    "角位双加氧",
+    "取代模式范围"
+   ],
+   "biomimetic_dimension": "过程仿生",
+   "organism": {
+    "scientific": "Sphingomonas wittichii RW1",
+    "category": "微生物"
+   }
+  },
+  "hl-fabp-liver-fatty-acid-pfas-binding": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "hL-FABP 为胞内可溶结合蛋白原型，无吸附适用性测试数据，故全空"
+   },
+   "features": [
+    "疏水性",
+    "分子筛分"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Homo sapiens（人肝脂肪酸结合蛋白 FABP1 / L-FABP，具异常大结合腔）",
+    "category": "动物"
+   }
+  },
   "moda-oxyanion-geometric-recognition": {
    "applicability": {
     "pH_range": null,
@@ -4038,6 +4210,92 @@
    "biomimetic_dimension": "分子仿生",
    "organism": {
     "scientific": "Acidithiobacillus ferrooxidans 等细菌的 ArsR/SmtB 家族 As(III) 感应转录抑制蛋白（AfArsR）",
+    "category": "微生物"
+   }
+  },
+  "ssua-alkylsulfonate-binding-protein": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "SsuA 周质结合蛋白识别原型；PFBS/PFHxS 转译为 lead 级设计假设"
+   },
+   "features": [
+    "特异性识别",
+    "分子筛分"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Methylobacillus flagellatus KT",
+    "category": "微生物"
+   }
+  },
+  "bug-trap-carboxylate-clamp": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "Bug/TRAP 周质结合蛋白识别原型；GenX 转译为 lead 级设计假设"
+   },
+   "features": [
+    "特异性识别",
+    "几何识别"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Bordetella pertussis",
+    "category": "微生物"
+   }
+  },
+  "livbp-branched-chain-amino-acid-binding": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "LIVBP 周质结合蛋白识别原型；GenX 支链转译为 exploratory 级设计假设"
+   },
+   "features": [
+    "几何识别",
+    "形状互补"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Escherichia coli",
+    "category": "微生物"
+   }
+  },
+  "oxlt-short-chain-dicarboxylate-transporter": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "OxlT 膜转运体识别原型；GenX 转译为 lead 级设计假设"
+   },
+   "features": [
+    "特异性识别",
+    "分子筛分"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Oxalobacter formigenes",
+    "category": "微生物"
+   }
+  },
+  "lina-linb-hch-isomer-dehydrochlorinase": {
+   "applicability": {
+    "pH_range": null,
+    "temp_range": null,
+    "salinity": null,
+    "note": "LinA/LinB 催化酶识别几何转译；β-HCH 转译为 lead 级设计假设"
+   },
+   "features": [
+    "特异性识别",
+    "几何识别",
+    "催化降解"
+   ],
+   "biomimetic_dimension": "分子仿生",
+   "organism": {
+    "scientific": "Sphingobium japonicum UT26",
     "category": "微生物"
    }
   }
