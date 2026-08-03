@@ -1,0 +1,214 @@
+{
+  "id": "bug-family-carboxylate-pincer",
+  "name_zh": "Bug 家族羧酸夹钳底物结合蛋白",
+  "name_en": "Bug-Family Carboxylate-Pincer Solute-Binding Protein",
+  "organism": {
+    "scientific": "Bordetella pertussis",
+    "category": "微生物"
+  },
+  "biomimetic_dimension": "分子仿生",
+  "features": [
+    "特异性识别",
+    "几何识别"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": null,
+    "note": "Bug27 是周质底物结合蛋白；本库没有其作为吸附材料的性能测试，故工况字段留空。"
+  },
+  "library_tier": "extended",
+  "lifecycle_status": "active",
+  "coverage": "full",
+  "status": "active",
+  "provenance_summary": {
+    "n_papers": 1,
+    "n_verified": 4,
+    "n_unverified": 0,
+    "note": "天然机制以 Bug27 的开态、柠檬酸结合开态和 Bug 家族闭态比较接地。原 massive 条目将 Bug/TTT 与 TRAP/IseP 混写并把天然底物泛化为 C4 二羧酸；本条只保留 DOI 10.1016/j.jmb.2007.08.006 支持的 Bug 家族羧酸夹钳与双域生产性闭合机制。GenX 映射为 exploratory。"
+  },
+  "mechanisms": [
+    {
+      "mechanism_id": "BUG-001",
+      "name": "羧酸夹钳初始锚定与第二结构域生产性占位判别",
+      "description": "Bug 家族底物结合蛋白采用 Venus flytrap 双域折叠。来自两结构域的保守 β-strand–β-turn–α-helix 模体通过直接和水介导氢键形成羧酸夹钳。Bug27 的开态结构表明，配体羧酸可先由第一结构域的一半夹钳锚定；只有与第二结构域形成合适接触时，闭合构象才被稳定，从而区分生产性与非生产性结合。",
+      "基本原理": "把头基锚定与整体占位判别分成串联的两个检查：第一位点识别羧酸头基，第二结构域只有在配体其余部分的形状和接触满足要求时才稳定闭合。",
+      "source": "literature",
+      "ref_doi": "10.1016/j.jmb.2007.08.006",
+      "verification": "verified",
+      "query_pollutant_allowlist": [
+        "GenX",
+        "HFPO-DA (GenX)"
+      ],
+      "verification_quote": "domain 2 discriminates between productively and non-productively bound ligands",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "HFPO-DA（GenX）含羧酸根头基和支化全氟醚骨架；羧酸头基可用于第一位点类比，但其余骨架与 Bug27 已研究配体不同，第二位点兼容性未知。",
+          "basis": "llm_inferred",
+          "source": null,
+          "locator": null,
+          "quote": null
+        },
+        "bio_structure": {
+          "text": "Bug 蛋白具有两个球状结构域和位于其间的配体裂隙，构成可开闭的 Venus flytrap 折叠。",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.jmb.2007.08.006",
+          "locator": "J Mol Biol 373, p.954, abstract sentences 1-2",
+          "quote": "They adopt a characteristic Venus flytrap fold with two globular domains bisected by a ligand-binding cleft.",
+          "scope_match": "Keywords: Venus flytrap, globular domains, ligand-binding cleft"
+        },
+        "interaction": {
+          "text": "来自两结构域的两个保守模体以直接和保守水介导的氢键夹持配体羧酸基。",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.jmb.2007.08.006",
+          "locator": "J Mol Biol 373, p.954, abstract sentences 3-4",
+          "quote": "These two motifs form hydrogen bonds with a carboxylate group of the ligand, both directly and via conserved water molecules",
+          "scope_match": "Keywords: motifs, hydrogen bonds, carboxylate, water molecules"
+        },
+        "why_it_works": {
+          "text": "第一结构域负责初始羧酸识别；第二结构域只有在配体其余部分建立合适接触时才稳定闭合，因此把头基命中与整体生产性占位区分开。",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1016/j.jmb.2007.08.006",
+          "locator": "J Mol Biol 373, p.954, abstract final sentences",
+          "quote": "domain 2 discriminates between productively and non-productively bound ligands",
+          "scope_match": "Keywords: domain 2, discriminates, productively, ligands"
+        },
+        "boundary_conditions": [
+          {
+            "text": "Bug 式选择性要求第二结构域的合适接触稳定闭合；只有羧酸头基命中而不能完成第二位点占位的配体属于非生产性结合。",
+            "parameter": "productive_domain_closure",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "from_source",
+            "verification": "verified",
+            "gate_level": "hard",
+            "locator": "J Mol Biol 373, p.954, abstract final sentences",
+            "quote": "Stabilization of the closed conformation requires proper interactions to be established with domain 2",
+            "scope_match": "Keywords: closed conformation, proper interactions, domain 2",
+            "source_asset": "10.1016/j.jmb.2007.08.006"
+          },
+          {
+            "text": "GenX 不是该研究验证的 Bug27 配体；任何羧酸受体加任意疏水腔都不能自动称为 Bug 式识别，必须证明第二位点带来的选择性增量。",
+            "parameter": "genx_transfer_scope",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "用串联的头基锚定和第二位点整体占位检查实现选择性；合成转译必须以第二位点相对头基单点受体的选择性增量作为判据。"
+      },
+      "source_doi": "10.1016/j.jmb.2007.08.006",
+      "source_page": 954,
+      "source_locator": "J Mol Biol 373:954-964; PubMed PMID 17870093; PDB 2QPQ",
+      "source_file": "Journal of Molecular Biology primary article and PDB 2QPQ",
+      "functional_groups": [
+        "主链酰胺 NH",
+        "保守极性侧链",
+        "保守水分子"
+      ],
+      "key_structures": [
+        "双域 Venus flytrap 折叠",
+        "羧酸夹钳",
+        "第二结构域占位判别"
+      ]
+    }
+  ],
+  "performance_data": [],
+  "engineering_constraints": [
+    {
+      "constraint": "双位点空间耦合",
+      "value": "合成材料必须让羧酸头基位点与第二占位位点保持确定的相对位置；随机混合两类官能团不能复现 Bug 的闭合判别。",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "选择性来自先锚定、后闭合的协同。",
+      "source": "llm_inference",
+      "ref_doi": null
+    },
+    {
+      "constraint": "水相氢键竞争",
+      "value": "天然羧酸夹钳位于可闭合蛋白裂隙；暴露在体相水中的孤立氢键给体不能假定具有同等作用。",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "材料转译需提供受限和可去溶剂化的局部环境。",
+      "source": "llm_inference",
+      "ref_doi": null
+    }
+  ],
+  "design_translation": [
+    {
+      "idea": "在刚性分子笼、印迹腔或限域孔口中构建两个空间耦合的检查位点：以中性多齿氢键给体锚定羧酸头基，再由第二受限腔读取配体剩余骨架。对 GenX 的探索应设置头基单点受体、第二位点失活体和线性 PFCA 对照，以证明第二位点确实带来支化全氟醚骨架的选择性增量。",
+      "specific_functional_group": "预组织脲、酰胺或方酰胺类羧酸氢键给体；第二位点采用经对照验证的刚性形状互补腔",
+      "material_handle": "刚性多孔有机骨架、可定义分子笼或分子印迹位点；不限定未经验证的特定骨架",
+      "target_interaction": "羧酸根的多点方向性氢键加第二位点的整体形状占位；第二位点贡献须由差分对照量化",
+      "source_tier": "llm_inference",
+      "evidence_tier": "exploratory",
+      "examples": [],
+      "design_principle": "Bug 原型贡献的是二阶段生产性占位判别，而不是通用羧酸吸附配方。",
+      "implementation_example": "先比较完整双位点、仅头基位点和几何错配位点对 GenX 与线性全氟羧酸的相对结合，再进入真实水体。",
+      "constraints": "没有 GenX-Bug27 直接结合证据，也没有对应材料性能；全氟醚骨架与天然配体的化学和体积差异可能阻止第二位点匹配。",
+      "failure_modes": "羧酸头基位点产生广谱阴离子结合；第二腔只增加非特异分配；位点柔性过大而失去占位判别；水和共存阴离子压制氢键。",
+      "material_realization_examples": []
+    }
+  ],
+  "honesty_ledger": {
+    "facts": [
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "Bug 家族羧酸夹钳与第二结构域生产性判别",
+        "basis": "from_source_verified",
+        "note": "DOI 10.1016/j.jmb.2007.08.006 和 PDB 2QPQ 接地；事实限于 Bug 家族天然配体识别机制。"
+      }
+    ],
+    "leads": [],
+    "inferences": [
+      {
+        "type": "design_translation",
+        "index": 0,
+        "idea": "以双位点串联判别探索 GenX 选择性",
+        "basis": "llm_inferred",
+        "label": "exploratory",
+        "note": "GenX 只与天然配体共享羧酸头基类别；第二位点相容性完全待验证。"
+      }
+    ],
+    "boundary_notes": [
+      "Bug27/TTT 家族与 TRAP/IseP 不再混写；PDB 8TQN 不属于本原型的接地证据。",
+      "不再声称 Bug27 天然识别特定 C4 二羧酸或酮酸；论文证明的是羧酸夹钳和域闭合判别。",
+      "GenX 映射为低权重 exploratory；performance_data 为空。"
+    ],
+    "missing_pdf_items": [],
+    "generated_by": "manual-curation-2026-08-03",
+    "note": "从 massive 候选重建并更换错误的 bug-trap id，删除家族混淆、Y 形腔结论、未接地 GenX 物性和过度外推。"
+  },
+  "boundary_rules": [
+    {
+      "rule": "Bug 式选择性必须包含第二结构域或等效第二位点的生产性占位检查；只有羧酸头基锚定不得宣称复制了 Bug 机制。",
+      "source_mechanism": "BUG-001",
+      "gate_level": "hard",
+      "basis": "from_source"
+    },
+    {
+      "rule": "GenX 转译只在双位点相对头基单点受体产生可复现选择性增量后才能升级；否则保持 exploratory 或淘汰。",
+      "source_mechanism": "BUG-001",
+      "gate_level": "soft",
+      "basis": "llm_inferred"
+    }
+  ],
+  "mechanism_tags": [
+    "氢键",
+    "几何识别",
+    "形状互补"
+  ]
+}

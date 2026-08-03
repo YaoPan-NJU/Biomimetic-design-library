@@ -1,0 +1,214 @@
+{
+  "id": "ssua-alkylsulfonate-binding-protein",
+  "name_zh": "SsuA 烷基磺酸盐结合蛋白",
+  "name_en": "SsuA Alkanesulfonate-Binding Protein",
+  "organism": {
+    "scientific": "Xanthomonas citri subsp. citri 306",
+    "category": "微生物"
+  },
+  "biomimetic_dimension": "分子仿生",
+  "features": [
+    "特异性识别",
+    "分子筛分"
+  ],
+  "tested_conditions": {
+    "tested_ph_range": null,
+    "tested_temp_range": null,
+    "salinity": null,
+    "note": "SsuA 是周质底物结合蛋白；本库没有其作为吸附材料的性能测试，故工况字段留空。"
+  },
+  "library_tier": "extended",
+  "lifecycle_status": "active",
+  "coverage": "full",
+  "status": "active",
+  "provenance_summary": {
+    "n_papers": 1,
+    "n_verified": 4,
+    "n_unverified": 0,
+    "note": "天然机制由 X. citri SsuA 的配体结合结构、光谱结合实验和敲除实验共同接地；from_source 的三个因果要素和一个边界均有 DOI、页码、短引文和范围匹配。PFBS 转译没有直接结合或材料去除证据，单独标为 exploratory。"
+  },
+  "mechanisms": [
+    {
+      "mechanism_id": "SSUA-001",
+      "name": "磺酸头基多齿氢键定位与宽疏水口袋协同识别",
+      "description": "X. citri SsuA 的两个结构域在界面形成可闭合裂隙。配体磺酸氧与 Gly68、Gly86、Ser141 的主链 NH、Gln36 侧链 NH 和 Ser141 羟基形成多点极性相互作用；水分子与疏水残基参与稳定不同大小和形状的烷基部分。该结构解释了 SsuA 对多种烷基磺酸盐的识别，同时不等同于对无机硫酸根或全氟磺酸盐的已验证结合。",
+      "基本原理": "用预组织的多齿氢键给体阵列定向识别磺酸头基，并以相邻的低极性宽口袋和结构域闭合容纳有机尾部；选择性来自头基几何、口袋环境与整体占位的协同，而不是单一永久正电荷。",
+      "source": "literature",
+      "ref_doi": "10.1371/journal.pone.0080083",
+      "verification": "verified",
+      "query_pollutant_allowlist": [
+        "PFBS"
+      ],
+      "verification_quote": "ligand binding is stabilised primarily through a range of polar interactions",
+      "causal_chain": {
+        "pollutant_feature": {
+          "text": "PFBS 含磺酸根头基和短全氟烷基尾；其头基可与 SsuA 天然烷基磺酸盐共享磺酸基几何，但全氟尾的尺寸、溶剂化和口袋相容性没有由该研究验证。",
+          "basis": "llm_inferred",
+          "source": null,
+          "locator": null,
+          "quote": null
+        },
+        "bio_structure": {
+          "text": "SsuA 采用周质结合蛋白的双结构域构型，结合位点位于两域之间的裂隙，配体被包埋在口袋内。",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1371/journal.pone.0080083",
+          "locator": "PLoS ONE 8:e80083, article p.3, Results lines 192-200",
+          "quote": "two domains (I and II) separated by a cleft at the binding site, with the ligand remaining hidden inside the pocket",
+          "scope_match": "Keywords: domains, cleft, ligand, pocket"
+        },
+        "interaction": {
+          "text": "磺酸氧由多个主链 NH、Gln36 侧链 NH 和 Ser141 羟基以多点极性相互作用定位，水分子参与稳定配体的烷基部分。",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1371/journal.pone.0080083",
+          "locator": "PLoS ONE 8:e80083, article p.4, Results lines 215-227",
+          "quote": "polar interactions between the sulphonic acid oxygen atoms and the NH groups of main-chain peptide hydrogen bonds",
+          "scope_match": "Keywords: interactions, sulphonic acid, oxygen, NH"
+        },
+        "why_it_works": {
+          "text": "宽口袋和至少十二个疏水残基为不同大小、形状的烷基磺酸盐提供可调容积；保守水进一步增加适配柔性。",
+          "basis": "from_source",
+          "evidence_label": "from_source",
+          "source": "10.1371/journal.pone.0080083",
+          "locator": "PLoS ONE 8:e80083, article p.4, Results lines 228-236",
+          "quote": "The large binding pocket and the participation of at least 12 hydrophobic residues in forming this site",
+          "scope_match": "Keywords: large, binding pocket, hydrophobic residues"
+        },
+        "boundary_conditions": [
+          {
+            "text": "X. citri SsuA 的实验选择性对象是烷基磺酸盐；实验未观察到对硫酸根等被测非目标含硫物的同类响应，因此不得把该原型泛化为任意含硫阴离子受体。",
+            "parameter": "natural_ligand_scope",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "from_source",
+            "verification": "verified",
+            "gate_level": "hard",
+            "locator": "PLoS ONE 8:e80083, article p.8, Discussion lines 408-413",
+            "quote": "specific binding to MOPS, MES, CHES and HEPES but not after exposure to taurine, sulphate, thiosulphate or hydroxylamine",
+            "scope_match": "Keywords: specific binding, MOPS, sulphate",
+            "source_asset": "10.1371/journal.pone.0080083"
+          },
+          {
+            "text": "PFBS 的全氟尾不是该研究的天然配体；只有在独立验证头基定位、全氟尾入腔和真实水体竞争后，才能把这一转译提升为材料线索。",
+            "parameter": "perfluoro_tail_transfer",
+            "condition": {
+              "operator": "qualitative",
+              "value": null
+            },
+            "basis": "llm_inferred",
+            "verification": "needs_review",
+            "gate_level": "soft",
+            "locator": null,
+            "quote": null,
+            "source_asset": null
+          }
+        ],
+        "transferable_principle": "在受限低极性口袋中预组织多个中性氢键给体以定向锚定磺酸头基，并为有机尾部保留可调容积和水介导适配；材料转译必须同时验证头基锚定和尾部占位。"
+      },
+      "source_doi": "10.1371/journal.pone.0080083",
+      "source_page": 4,
+      "source_locator": "PLoS ONE 8:e80083, article pp.3-4 and 8; PDB 3E4R/3KSJ/3KSX",
+      "source_file": "PLOS ONE article and associated PDB depositions",
+      "functional_groups": [
+        "主链酰胺 NH",
+        "Gln 侧链酰胺",
+        "Ser 羟基",
+        "口袋疏水残基"
+      ],
+      "key_structures": [
+        "双结构域结合裂隙",
+        "磺酸头基多齿配位簇",
+        "宽低极性尾部口袋"
+      ]
+    }
+  ],
+  "performance_data": [],
+  "engineering_constraints": [
+    {
+      "constraint": "可溶周质蛋白形态",
+      "value": "SsuA 本身不是可直接投加的耐用吸附介质；若采用蛋白路线需定向固定并验证活性保持、泄漏和寿命。",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "材料应用需要把分子识别与可回收载体耦合。",
+      "source": "llm_inference",
+      "ref_doi": null
+    },
+    {
+      "constraint": "多齿几何与微环境必须共同复现",
+      "value": "仅增加脲或胺密度不能等价于 SsuA；给体取向、口袋低极性和尾部容积均需受控。",
+      "unit": null,
+      "relevance": "high",
+      "explanation": "天然识别来自结构协同，而非单官能团。",
+      "source": "llm_inference",
+      "ref_doi": null
+    }
+  ],
+  "design_translation": [
+    {
+      "idea": "在刚性多孔骨架的孔口预组织多点脲/酰胺氢键给体，模拟 SsuA 的磺酸头基定位；在其后设置低极性、尺寸受限的尾部容纳区。将 PFBS 作为探索对象时，以空白骨架、随机给体、头基阻断和线性烷基磺酸盐对照分别检验几何预组织、磺酸头基贡献和全氟尾相容性。",
+      "specific_functional_group": "预组织脲或酰胺 NH 给体阵列；低极性芳香或其他经验证的尾部容纳壁",
+      "material_handle": "刚性多孔有机聚合物、周期介孔有机硅或定向固定的工程化 SsuA；具体骨架需以水稳定性和位点可达性筛选",
+      "target_interaction": "磺酸氧的多点方向性氢键加受限口袋内的尾部占位；不预设全氟尾与烃壁存在特殊亲和",
+      "source_tier": "llm_inference",
+      "evidence_tier": "exploratory",
+      "examples": [],
+      "design_principle": "复制头基几何、口袋微环境和尾部占位的组合，不把单个脲基或非特异疏水分配称为 SsuA 仿生。",
+      "implementation_example": "先用配体竞争与等温结合验证磺酸头基位点，再进入真实二级出水的 PFBS/PFHxS 竞争吸附测试。",
+      "constraints": "没有 PFBS/PFHxS 直接结合或材料性能证据；体相水、无机阴离子和溶解性有机质可能竞争或堵塞位点。",
+      "failure_modes": "给体被水占据；尾部不相容导致只有弱头基结合；随机高密度官能化转为非选择性阴离子吸附；固定化后口袋被载体遮蔽。",
+      "material_realization_examples": []
+    }
+  ],
+  "honesty_ledger": {
+    "facts": [
+      {
+        "type": "mechanism",
+        "index": 0,
+        "name": "X. citri SsuA 的烷基磺酸盐结合结构",
+        "basis": "from_source_verified",
+        "note": "DOI 10.1371/journal.pone.0080083 的结构、光谱和敲除结果接地；引文定位到文章具体页码。"
+      }
+    ],
+    "leads": [],
+    "inferences": [
+      {
+        "type": "design_translation",
+        "index": 0,
+        "idea": "将 SsuA 头基定位与尾部口袋转译为 PFBS 识别材料",
+        "basis": "llm_inferred",
+        "label": "exploratory",
+        "note": "头基类别相近不证明全氟尾适配，也不构成 PFBS 材料去除证据。"
+      }
+    ],
+    "boundary_notes": [
+      "天然事实限于 X. citri SsuA 对所测烷基磺酸盐的结合与摄取作用。",
+      "PFBS/PFHxS 映射是探索性材料转译，不能标作直接证据或性能线索。",
+      "performance_data 为空；不得从蛋白结合推导吸附容量、选择性或再生性能。"
+    ],
+    "missing_pdf_items": [],
+    "generated_by": "manual-curation-2026-08-03",
+    "note": "从 massive 候选重建；删除错误 DOI、混合物种、TauA 串并、未接地数值和过度材料结论。"
+  },
+  "boundary_rules": [
+    {
+      "rule": "天然机制只证明 SsuA 识别所测烷基磺酸盐；不得扩写为对任意含硫阴离子或 PFAS 的已验证识别。",
+      "source_mechanism": "SSUA-001",
+      "gate_level": "hard",
+      "basis": "from_source"
+    },
+    {
+      "rule": "PFBS 转译必须分别验证磺酸头基定位、全氟尾口袋相容性和真实水体竞争；任一未通过均不得升级证据等级。",
+      "source_mechanism": "SSUA-001",
+      "gate_level": "soft",
+      "basis": "llm_inferred"
+    }
+  ],
+  "mechanism_tags": [
+    "氢键",
+    "疏水分配",
+    "几何识别"
+  ]
+}

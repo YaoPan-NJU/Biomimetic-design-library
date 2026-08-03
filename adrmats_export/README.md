@@ -1,6 +1,6 @@
 # ADRMATS Match Export
 
-由 `tools/export_adrmats_snapshot.py` 在 `2026-07-30T06:58Z` 从 `BiomimeticContext.query()` 生成。这是下游集成的权威匹配快照；不要从规则文件重新推导。
+由 `tools/export_adrmats_snapshot.py` 在 `2026-08-03T12:43Z` 从 `BiomimeticContext.query()` 生成。这是下游集成的权威匹配快照；不要从规则文件重新推导。
 
 ## 文件
 

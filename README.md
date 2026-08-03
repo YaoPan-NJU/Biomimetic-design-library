@@ -18,8 +18,8 @@ BMDL 接收目标污染物、水质条件和工程约束，返回结构化的 `B
 
 ## 库中有什么
 
-- 100 个根原型，覆盖微生物、植物、动物和人工仿生体系。
-- 630 条机制卡，包含因果链、可转译原则、来源定位和边界条件。
+- 102 个根原型，覆盖微生物、植物、动物和人工仿生体系。
+- 632 条机制卡，包含因果链、可转译原则、来源定位和边界条件。
 - 501 条性能记录，用于区分严格事实、待核验线索和一般启发。
 - 污染物画像、别名、特征—机制规则和原型映射。
 - `BiomimeticContext` 查询接口与 ADRMATS 可直接消费的导出快照。
@@ -52,7 +52,7 @@ BMDL 不是单表数据库，而是一个以版本化 JSON 为正典、由查询
 
 | 层 | 权威路径 | 作用 |
 |---|---|---|
-| 原型正典 | `prototypes_db/*.json` | 保存 100 个默认可查询原型及其机制、证据、转译和边界 |
+| 原型正典 | `prototypes_db/*.json` | 保存 102 个默认可查询原型及其机制、证据、转译和边界 |
 | 人工阅读 | `prototypes/**/prototype.md` | 原型的可读版本；不是机器查询的权威来源 |
 | 污染物画像 | `pollutant_aliases.json`、`pollutant_profiles.json` | 统一名称，并描述分子特征、形态和可能相互作用 |
 | 检索映射 | `feature-mapping.json` | 保存污染物—原型、特征—原型、机制—特征及条件映射 |
@@ -67,7 +67,7 @@ BMDL 不是单表数据库，而是一个以版本化 JSON 为正典、由查询
 | 实体 | 关键字段 | 含义 |
 |---|---|---|
 | Prototype | `id`、`organism`、`biomimetic_dimension`、`features`、`tested_conditions` | 一个可独立检索的生物原型、自然结构或仿生机制载体 |
-| Mechanism | `mechanism_id`、`name`、`基本原理`、`causal_chain`、`functional_groups`、`key_structures` | 描述“污染物特征—生物结构—相互作用—有效原因—可迁移原则”的因果链 |
+| Mechanism | `mechanism_id`、`name`、`基本原理`、`causal_chain`、`functional_groups`、`key_structures`、可选 `query_pollutant_allowlist` | 描述“污染物特征—生物结构—相互作用—有效原因—可迁移原则”的因果链；对易被通用关键词误召回的机制，可将机制发现限制在已审查污染物范围 |
 | PerformanceEvidence | `pollutant`、`material`、`parameter`、`value`、`unit`、`conditions`、`verification`、来源定位 | 材料去除性能记录；与天然生物机制证据分开保存 |
 | DesignTranslation | `idea`、`material_handle`、`target_interaction`、`constraints`、`failure_modes`、`material_realization_examples` | 把生物原理转译为可操作但仍需验证的材料设计提示 |
 | BoundaryRule | `rule`、`source_mechanism`、`gate_level`、`basis` | 记录不适用条件、禁止外推和工程失效边界 |

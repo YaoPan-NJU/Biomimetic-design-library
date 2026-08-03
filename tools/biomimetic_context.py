@@ -319,6 +319,12 @@ class BiomimeticContext:
             + list(pollutant_profile.get('likely_interactions', []) or [])
         )
         query_keywords = _extract_keywords(query_text)
+        query_names = {
+            str(name).strip().lower()
+            for name in self._pollutant_aliases(pollutant)
+            if str(name).strip()
+        }
+        query_names.add(self._get_canonical_name(pollutant).strip().lower())
         # 原型级 mechanism_tags 只用于盘点，不能作为检索权威；它会把一个原型
         # 任意机制的标签传播给该原型全部机制。运行时直接在具体机制卡中识别标签，
         # 并把命中的 mechanism_id 传给 brief 渲染层。
@@ -344,6 +350,17 @@ class BiomimeticContext:
             for mechanism in proto.get('mechanisms', []) or []:
                 if mechanism.get('brief_visibility', 'visible') == 'hidden':
                     continue
+                allowlist = mechanism.get('query_pollutant_allowlist', []) or []
+                if allowlist:
+                    allowed_names = set()
+                    for allowed in allowlist:
+                        allowed_text = str(allowed).strip()
+                        if not allowed_text:
+                            continue
+                        allowed_names.add(allowed_text.lower())
+                        allowed_names.add(self._get_canonical_name(allowed_text).strip().lower())
+                    if not query_names.intersection(allowed_names):
+                        continue
                 cc = mechanism.get('causal_chain', {}) or {}
                 text_parts = [
                     mechanism.get('name', ''), mechanism.get('description', ''),

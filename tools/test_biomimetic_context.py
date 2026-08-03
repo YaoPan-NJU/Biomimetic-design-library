@@ -196,6 +196,29 @@ def test_mechanism_lane_binds_selected_mechanism():
 
     print("✅ test_mechanism_lane_binds_selected_mechanism passed")
 
+def test_massive_curated_prototypes_are_reachable_and_exploratory():
+    """Curated massive candidates must be queryable without evidence inflation."""
+    ctx = BiomimeticContext()
+
+    pfbs_candidates = ctx.query('PFBS', {}, [])['brief']['candidates']
+    ssua = next(item for item in pfbs_candidates if item['prototype_id'] == 'ssua-alkylsulfonate-binding-protein')
+    assert ssua['lane'] == 'exploratory'
+    assert ssua['match']['direct_evidence'] is False
+    assert ssua['match']['mapping_source'] == 'pollutant_prototype_map'
+
+    genx_candidates = ctx.query('GenX', {}, [])['brief']['candidates']
+    bug = next(item for item in genx_candidates if item['prototype_id'] == 'bug-family-carboxylate-pincer')
+    assert bug['lane'] == 'exploratory'
+    assert bug['match']['direct_evidence'] is False
+    assert bug['match']['mapping_quality'] == 'inspiration_only'
+
+    ddt_ids = {item['prototype_id'] for item in ctx.query('DDT', {}, [])['brief']['candidates']}
+    pfoa_ids = {item['prototype_id'] for item in ctx.query('PFOA', {}, [])['brief']['candidates']}
+    assert 'ssua-alkylsulfonate-binding-protein' not in ddt_ids
+    assert 'bug-family-carboxylate-pincer' not in pfoa_ids
+
+    print("✅ test_massive_curated_prototypes_are_reachable_and_exploratory passed")
+
 def main():
     print("=== BiomimeticContext Unit Tests ===\n")
 
@@ -212,6 +235,7 @@ def main():
         test_pollutant_mapping_requires_source_grounding_and_keeps_lane_diversity()
         test_use_case_can_select_background_mechanisms()
         test_mechanism_lane_binds_selected_mechanism()
+        test_massive_curated_prototypes_are_reachable_and_exploratory()
         print("\n✅ All tests passed!")
         return 0
     except AssertionError as e:
