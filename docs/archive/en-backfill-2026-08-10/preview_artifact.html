@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>BMDL 英文标量字段补全 — Dry-run 预览</title>
+<style>
+  :root {
+    --bg: #F6F5F0;
+    --surface: #FCFBF7;
+    --text: #1B2A26;
+    --muted: #5C6B66;
+    --accent: #A9742F;
+    --accent-soft: #E9DCC4;
+    --line: #DCD8CC;
+    --ok: #2F6B4F;
+    --mono: "SF Mono", ui-monospace, Menlo, Consolas, monospace;
+    --serif: Georgia, "Times New Roman", "Songti SC", "SimSun", serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #141B18;
+      --surface: #1A211E;
+      --text: #E4EBE7;
+      --muted: #96A49E;
+      --accent: #D9A05A;
+      --accent-soft: #3A3323;
+      --line: #2C3733;
+      --ok: #7FBF9C;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #141B18;
+    --surface: #1A211E;
+    --text: #E4EBE7;
+    --muted: #96A49E;
+    --accent: #D9A05A;
+    --accent-soft: #3A3323;
+    --line: #2C3733;
+    --ok: #7FBF9C;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    line-height: 1.65;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 56px 28px 80px; }
+  header .kicker {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 14px;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-size: 34px;
+    line-height: 1.2;
+    margin: 0 0 10px;
+    text-wrap: balance;
+    font-weight: 600;
+  }
+  .lede { color: var(--muted); font-size: 15px; margin: 0 0 6px; }
+  .meta { font-family: var(--mono); font-size: 12px; color: var(--muted); margin: 0 0 34px; }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 0 0 40px; }
+  .stat { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; }
+  .stat .num { font-family: var(--mono); font-size: 26px; font-weight: 600; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .stat .lbl { font-size: 12.5px; color: var(--muted); margin-top: 4px; }
+  .stat .denom { font-size: 13px; color: var(--muted); font-family: var(--mono); }
+  .stat.total { border-color: var(--accent); }
+  .stat.total .num { color: var(--ok); }
+  section { margin: 0 0 40px; }
+  h2 {
+    font-family: var(--serif);
+    font-size: 20px;
+    margin: 0 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--line);
+  }
+  h2 .n { color: var(--accent); font-family: var(--mono); font-size: 14px; margin-right: 8px; }
+  ul.check { margin: 0; padding: 0; list-style: none; }
+  ul.check li { padding: 7px 0 7px 26px; position: relative; }
+  ul.check li::before {
+    content: "✓";
+    position: absolute; left: 0; top: 7px;
+    color: var(--ok); font-weight: 700;
+  }
+  .proto {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 22px 24px;
+    margin-bottom: 18px;
+  }
+  .proto-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 12px; }
+  .proto-head h3 { font-family: var(--mono); font-size: 14px; margin: 0; font-weight: 600; }
+  .badge { font-family: var(--mono); font-size: 11px; color: var(--accent); border: 1px solid var(--accent); border-radius: 999px; padding: 1px 9px; }
+  .org-row { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; padding: 10px 0 12px; border-bottom: 1px dashed var(--line); margin-bottom: 14px; font-size: 13.5px; }
+  .org-label { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+  .org-zh { color: var(--muted); }
+  .org-arrow { color: var(--accent); }
+  .org-en { font-weight: 600; }
+  .pair { margin-bottom: 14px; }
+  .pair-label { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-bottom: 5px; }
+  .pair-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .zh, .en { font-size: 13.5px; border-radius: 8px; padding: 10px 12px; }
+  .zh { background: var(--bg); border: 1px solid var(--line); color: var(--muted); }
+  .en { background: var(--accent-soft); border: 1px solid var(--line); }
+  footer { border-top: 2px solid var(--line); padding-top: 18px; color: var(--muted); font-size: 13px; }
+  @media (max-width: 640px) {
+    .pair-grid { grid-template-columns: 1fr; }
+    h1 { font-size: 27px; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="kicker">BMDL · Biomimetic Design Library · Dry-run Preview</p>
+    <h1>英文标量字段补全 — 写入前预览</h1>
+    <p class="lede">102 原型 / 632 机制 · 4 类英文标量字段 · Claude 直接翻译（未调用 DashScope API）</p>
+    <p class="meta">2026-08-10 · 纯新增字段，不改动既有内容 · 确认后 surgical 写入</p>
+  </header>
+
+  <div class="stats">
+    <div class="stat"><div class="num">102<span class="denom">/102</span></div><div class="lbl">organism.scientific_en</div></div>
+    <div class="stat"><div class="num">632<span class="denom">/632</span></div><div class="lbl">mechanism.name_en</div></div>
+    <div class="stat"><div class="num">625<span class="denom">/632</span></div><div class="lbl">mechanism.description_en</div></div>
+    <div class="stat"><div class="num">632<span class="denom">/632</span></div><div class="lbl">transferable_principle_en</div></div>
+    <div class="stat total"><div class="num">1991</div><div class="lbl">合计新增英文字段</div></div>
+  </div>
+
+  <section>
+    <h2><span class="n">A</span>质量检查（全部通过）</h2>
+    <ul class="check">
+      <li>机制数与源文件完全对齐（632/632），数组下标连续一致</li>
+      <li>无中文字符、无全角标点残留（对全部英文字段正则扫描）</li>
+      <li>源字段为空 → 英文输出空串（7 个 description）</li>
+      <li>源字段非空 → 英文输出非空</li>
+      <li>忠实翻译：保留 PDB ID、基因名、物种学名、化学式、数字、单位、文献引用（如 Cha 2000）</li>
+      <li>源字段本身已是英文的按忠实原则原样保留（organism 34 / name 16 / description 67 / tp 10）</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="n">B</span>改动范围（surgical）</h2>
+    <ul class="check">
+      <li>每个原型仅新增 4 类 <span style="font-family:var(--mono)">*_en</span> 键，紧邻对应中文源键之后</li>
+      <li>文本级插入已验证：<span style="font-family:var(--mono)">git diff</span> 只有新增行、0 行删改（不格式化、不重排）</li>
+      <li>不触碰：<span style="font-family:var(--mono)">mechanisms</span> 顺序、<span style="font-family:var(--mono)">causal_chain</span> 其他要素、<span style="font-family:var(--mono)">boundary_rules / narrative / honesty_ledger</span> 等一切既有内容</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="n">C</span>抽查翻译示例（中英对照）</h2>
+    
+    <section class="proto">
+      <div class="proto-head">
+        <h3>oat4-organic-anion-transporter</h3>
+        <span class="badge">3 mechanisms</span>
+      </div>
+      <div class="org-row">
+        <span class="org-label">organism</span>
+        <span class="org-zh">Homo sapiens OAT4 有机阴离子转运体</span>
+        <span class="org-arrow">→</span>
+        <span class="org-en">Homo sapiens OAT4 organic anion transporter</span>
+      </div>
+      
+        <div class="pair">
+          <div class="pair-label">name</div>
+          <div class="pair-grid">
+            <div class="zh">阴离子头基与芳香-阳离子底物口袋的两点位识别（硫酸结合型有机阴离子）</div>
+            <div class="en">Two-point recognition of anionic head group by an aromatic-cationic substrate pocket (sulfate-conjugated organic anions)</div>
+          </div>
+        </div>
+        <div class="pair">
+          <div class="pair-label">description</div>
+          <div class="pair-grid">
+            <div class="zh">人 OAT4（SLC22A11，550 氨基酸残基、12 跨膜域）表达于肾近端小管顶端膜与胎盘，以高亲和力、钠离子非依赖方式转运硫酸结合型有机阴离子：雌酮硫酸酯 E1S（Km 1.01 µM）与硫酸脱氢表雄酮 DHEAS（Km 0.63 µM），并转运赭曲霉毒素 A（Cha 2000）。人 OAT4·DHEAS 冷冻电镜结构 PDB 9U5A（2025-06-18 释放）坐标直测：配体 ZWY（DHEAS，17-氧代雄甾-5-烯-3β-基硫酸氢酯）4.0 Å 内含芳香残基 Phe211、Phe238、Tyr360、Tyr361、Met231 与阳离子 Arg389、极性 Gln242（chain A，PDB 编号）；该芳香笼加阳离子锚为 SLC22 家族保守底物结合基序（大鼠 OAT1 PDB 8SDY 同源直测：Tyr230/Phe438/Tyr353/Phe443 芳香笼 + Lys382/Arg466 阳离子残基，Dou 2023）</div>
+            <div class="en">Human OAT4 (SLC22A11; 550 amino acid residues, 12 transmembrane domains), expressed on the apical membrane of renal proximal tubule cells and in placenta, transports sulfate-conjugated organic anions in a high-affinity, sodium-independent manner: estrone sulfate E1S (Km 1.01 uM) and dehydroepiandrosterone sulfate DHEAS (Km 0.63 uM), and also transports ochratoxin A (Cha 2000). In the human OAT4-DHEAS cryo-EM structure (PDB 9U5A, released 2025-06-18), the ligand ZWY (DHEAS, 17-oxoandrost-5-en-3beta-yl hydrogen sulfate) is within 4.0 A of the aromatic residues Phe211, Phe238, Tyr360, Tyr361, Met231, the cation Arg389, and the polar residue Gln242 (chain A, PDB numbering). This aromatic cage plus cationic anchor constitutes a conserved substrate-binding motif of the SLC22 family (rat OAT1 PDB 8SDY homologous measurement: aromatic cage Tyr230/Phe438/Tyr353/Phe443 plus cationic residues Lys382/Arg466, Dou 2023).</div>
+          </div>
+        </div>
+        <div class="pair">
+          <div class="pair-label">transferable principle</div>
+          <div class="pair-grid">
+            <div class="zh">阳离子/极性头基锚加芳香-疏水骨架笼的两点位识别构型，可以钠离子非依赖方式识别化学结构多样的阴离子分子；头基化学（硫酸结合物优先于葡萄糖醛酸结合物）与阴离子电荷是选择性的关键决定因素</div>
+            <div class="en">A two-point recognition configuration of a cationic/polar head-group anchor plus an aromatic-hydrophobic scaffold cage can recognize chemically diverse anionic molecules in a sodium-independent manner; head-group chemistry (sulfate conjugates preferred over glucuronide conjugates) and anionic charge are key determinants of selectivity.</div>
+          </div>
+        </div>
+    </section>
+
+    <section class="proto">
+      <div class="proto-head">
+        <h3>polydopamine-coating</h3>
+        <span class="badge">35 mechanisms</span>
+      </div>
+      <div class="org-row">
+        <span class="org-label">organism</span>
+        <span class="org-zh">Mytilus edulis</span>
+        <span class="org-arrow">→</span>
+        <span class="org-en">Mytilus edulis (blue mussel)</span>
+      </div>
+      
+        <div class="pair">
+          <div class="pair-label">name</div>
+          <div class="pair-grid">
+            <div class="zh">聚多巴胺儿茶酚/胺基多价协同表面黏附</div>
+            <div class="en">Polydopamine catechol/amino multivalent synergistic surface adhesion</div>
+          </div>
+        </div>
+        <div class="pair">
+          <div class="pair-label">description</div>
+          <div class="pair-grid">
+            <div class="zh">疏水材料减少细菌黏附+抗菌材料主动杀菌，实现长效抗菌</div>
+            <div class="en">Hydrophobic materials reduce bacterial adhesion, while antibacterial materials actively kill bacteria, achieving long-lasting antibacterial performance.</div>
+          </div>
+        </div>
+        <div class="pair">
+          <div class="pair-label">transferable principle</div>
+          <div class="pair-grid">
+            <div class="zh">基于机制: 超疏水抗菌表面&#x27;双重保险&#x27;原理</div>
+            <div class="en">Based on the mechanism: the &#x27;double insurance&#x27; principle of superhydrophobic antibacterial surfaces.</div>
+          </div>
+        </div>
+    </section>
+
+    <section class="proto">
+      <div class="proto-head">
+        <h3>water-strider-leg</h3>
+        <span class="badge">52 mechanisms</span>
+      </div>
+      <div class="org-row">
+        <span class="org-label">organism</span>
+        <span class="org-zh">Gerridae</span>
+        <span class="org-arrow">→</span>
+        <span class="org-en">Gerridae (water striders)</span>
+      </div>
+      
+        <div class="pair">
+          <div class="pair-label">name</div>
+          <div class="pair-grid">
+            <div class="zh">水黾腿微纳刚毛疏水蜡质层气垫超疏水承载</div>
+            <div class="en">Superhydrophobic load-bearing of water strider legs via micro/nano setae, hydrophobic waxy layer, and air cushion</div>
+          </div>
+        </div>
+        <div class="pair">
+          <div class="pair-label">description</div>
+          <div class="pair-grid">
+            <div class="zh">超疏水材料是指水的接触角超过150°，滞后角低于10°的表面材料</div>
+            <div class="en">Superhydrophobic materials are surface materials on which the water contact angle exceeds 150 degrees and the contact angle hysteresis is below 10 degrees.</div>
+          </div>
+        </div>
+        <div class="pair">
+          <div class="pair-label">transferable principle</div>
+          <div class="pair-grid">
+            <div class="zh">水黾腿微纳刚毛+疏水蜡质层</div>
+            <div class="en">Micro/nano setae on water strider legs combined with a hydrophobic waxy layer.</div>
+          </div>
+        </div>
+    </section>
+
+    <section class="proto">
+      <div class="proto-head">
+        <h3>bone-structure</h3>
+        <span class="badge">4 mechanisms</span>
+      </div>
+      <div class="org-row">
+        <span class="org-label">organism</span>
+        <span class="org-zh">Mammalian bone (哺乳动物骨骼)</span>
+        <span class="org-arrow">→</span>
+        <span class="org-en">Mammalian bone</span>
+      </div>
+      
+        <div class="pair">
+          <div class="pair-label">name</div>
+          <div class="pair-grid">
+            <div class="zh">骨羟基磷灰石钙离子交换与表面配位</div>
+            <div class="en">Calcium ion exchange and surface coordination of bone hydroxyapatite</div>
+          </div>
+        </div>
+        <div class="pair">
+          <div class="pair-label">description</div>
+          <div class="pair-grid">
+            <div class="zh">壳聚糖/HAp纳米纤维膜(静电纺丝)：Pb(II) 296.7 mg/g、Co(II) 180.2 mg/g、Ni(II) 213.8 mg/g，5次循环无明显下降；HAp/PU复合泡沫(50%HAp)：Pb(II) 150 mg/g；nHAp凝胶/玉米醇溶蛋白膜(10% nHAp)→机械性能最强；nHAp增至50%→Cu(II)从27.2增至67.8 mg/g</div>
+            <div class="en">Chitosan/HAp nanofiber membranes (electrospinning) achieved Pb(II) 296.7 mg/g, Co(II) 180.2 mg/g, and Ni(II) 213.8 mg/g, with no significant decline over 5 cycles; HAp/PU composite foam (50% HAp) reached Pb(II) 150 mg/g; nHAp gel/zein membrane (10% nHAp) showed the strongest mechanical performance; increasing nHAp to 50% increased Cu(II) from 27.2 to 67.8 mg/g.</div>
+          </div>
+        </div>
+        <div class="pair">
+          <div class="pair-label">transferable principle</div>
+          <div class="pair-grid">
+            <div class="zh">基于机制: HAp膜重金属去除性能</div>
+            <div class="en">Based on the mechanism: heavy metal removal performance of HAp membranes.</div>
+          </div>
+        </div>
+    </section>
+
+    <section class="proto">
+      <div class="proto-head">
+        <h3>beta-cyclodextrin-hostguest-inclusion</h3>
+        <span class="badge">1 mechanisms</span>
+      </div>
+      <div class="org-row">
+        <span class="org-label">organism</span>
+        <span class="org-zh">环糊精：直链淀粉（植物多糖，α-D-吡喃葡萄糖 α-1,4 连接）经细菌 CGTase 酶促环化的天然环状寡糖；β-CD 为 7 葡萄糖单元大环，具疏水内腔、亲水外缘</span>
+        <span class="org-arrow">→</span>
+        <span class="org-en">Cyclodextrin: a naturally occurring cyclic oligosaccharide formed by enzymatic cyclization of amylose (a plant polysaccharide of α-D-glucopyranose units linked α-1,4) by bacterial CGTase; β-CD is a macrocycle of 7 glucose units with a hydrophobic inner cavity and a hydrophilic outer rim</span>
+      </div>
+      
+        <div class="pair">
+          <div class="pair-label">name</div>
+          <div class="pair-grid">
+            <div class="zh">β-环糊精疏水内腔的主客体包结识别</div>
+            <div class="en">Host-guest inclusion recognition by the hydrophobic inner cavity of β-cyclodextrin</div>
+          </div>
+        </div>
+        <div class="pair">
+          <div class="pair-label">description</div>
+          <div class="pair-grid">
+            <div class="zh">β-环糊精由 7 个 α-D-葡萄糖以 α-1,4 连接成锥筒，外缘羟基亲水、内腔疏水；水相中经疏水效应与范德华/尺寸互补将芳香或疏水客体（如双酚 A、氯酚、多环麝香、紫外过滤剂等）包结进内腔形成 1:1（或 2:1）主客体复合物，客体自体相水去溶剂进入低极性腔是主要驱动力。</div>
+            <div class="en">β-Cyclodextrin is a truncated cone formed by 7 α-D-glucose units linked via α-1,4 bonds, with a hydrophilic outer rim of hydroxyls and a hydrophobic inner cavity. In the aqueous phase, aromatic or hydrophobic guests (e.g., bisphenol A, chlorophenols, polycyclic musks, UV filters) are included into the cavity through hydrophobic effects and van der Waals/size complementarity, forming 1:1 (or 2:1) host-guest complexes; desolvation of the guest from bulk water into the low-polarity cavity is the main driving force.</div>
+          </div>
+        </div>
+        <div class="pair">
+          <div class="pair-label">transferable principle</div>
+          <div class="pair-grid">
+            <div class="zh">两亲环状寡糖以疏水内腔 + 尺寸/形状互补包结疏水芳香客体；交联为多孔聚合物即得快速、可再生、耐基质的广谱微污染物吸附材料；选择性上限受 1:1 容量与广谱疏水包结约束。</div>
+            <div class="en">An amphiphilic cyclic oligosaccharide includes hydrophobic aromatic guests via its hydrophobic cavity plus size/shape complementarity; crosslinking it into a porous polymer yields a fast, regenerable, matrix-tolerant broad-spectrum adsorption material for micropollutants; the selectivity ceiling is constrained by 1:1 capacity and broad-spectrum hydrophobic inclusion.</div>
+          </div>
+        </div>
+    </section>
+
+    <section class="proto">
+      <div class="proto-head">
+        <h3>bacterial-cellulose</h3>
+        <span class="badge">2 mechanisms</span>
+      </div>
+      <div class="org-row">
+        <span class="org-label">organism</span>
+        <span class="org-zh">Acetobacter xylinum</span>
+        <span class="org-arrow">→</span>
+        <span class="org-en">Acetobacter xylinum</span>
+      </div>
+      
+        <div class="pair">
+          <div class="pair-label">name</div>
+          <div class="pair-grid">
+            <div class="zh">细菌纤维素纳米纤维网物理筛分与表面羟基吸附</div>
+            <div class="en">Physical sieving by bacterial cellulose nanofiber network and surface hydroxyl adsorption</div>
+          </div>
+        </div>
+        <div class="pair">
+          <div class="pair-label">description</div>
+          <div class="pair-grid">
+            <div class="zh">3D nanofiber network: BC ultrafine nanofibers (10-100 nm) form interconnected porous structure acting as ideal barrier matrix, allowing water molecules to pass while blocking pollutants</div>
+            <div class="en">3D nanofiber network: BC ultrafine nanofibers (10-100 nm) form interconnected porous structure acting as ideal barrier matrix, allowing water molecules to pass while blocking pollutants</div>
+          </div>
+        </div>
+        <div class="pair">
+          <div class="pair-label">transferable principle</div>
+          <div class="pair-grid">
+            <div class="zh">3D nanofiber network from microbial fermentation provides hierarchical porous structure for filtration and adsorption</div>
+            <div class="en">3D nanofiber network from microbial fermentation provides hierarchical porous structure for filtration and adsorption</div>
+          </div>
+        </div>
+    </section>
+  </section>
+
+  <footer>
+    下一步：确认本预览后，将 1991 处英文字段 surgical 写入 prototypes_db/*.json，随后运行 BMDL Required validation 并提交。
+  </footer>
+</div>
+</body>
+</html>

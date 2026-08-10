@@ -1,0 +1,59 @@
+{
+ "review_method": "12 adversarial reviewers, each comparing Chinese source vs English translation, all 102 prototypes / 632 mechanisms",
+ "machine_validation": "102/102 OK after fixes (alignment, no CJK, empty->empty)",
+ "fixes": [
+  {
+   "proto": "lotus-leaf",
+   "idx": 2,
+   "severity": "high",
+   "issue": "attribution error: Song Meihui & Duan Fenghua results merged into Gupta/Torun",
+   "status": "fixed"
+  },
+  {
+   "proto": "lotus-leaf",
+   "idx": 7,
+   "severity": "medium",
+   "issue": "missing Jiang Lei attribution for 2002 discovery",
+   "status": "fixed"
+  },
+  {
+   "proto": "lotus-leaf",
+   "idx": 8,
+   "severity": "medium",
+   "issue": "missing Jiang Lei attribution for 2002 discovery",
+   "status": "fixed"
+  },
+  {
+   "proto": "superhydrophobic-artificial",
+   "idx": 0,
+   "severity": "medium",
+   "issue": "\"滞后角/contact angle hysteresis\" mistranslated as sliding angle",
+   "status": "fixed"
+  },
+  {
+   "proto": "mscl-mechanosensitive-channel",
+   "idx": 0,
+   "severity": "low",
+   "issue": "dA/dE should be ΔA/ΔE (finite difference vs differential)",
+   "status": "fixed"
+  },
+  {
+   "proto": "ecdysis-renewable-interface",
+   "idx": 1,
+   "severity": "low",
+   "issue": "missing paper title citation (Rebers & Willis 2001)",
+   "status": "fixed"
+  },
+  {
+   "proto": "spider-silk",
+   "idx": 16,
+   "severity": "low",
+   "issue": "Å typographically written as A",
+   "status": "fixed (27 occurrences across corpus)"
+  }
+ ],
+ "not_fixed_notes": [
+  "fish-scale-hydroxyapatite idx0: source \"阳阳-π\" likely a typo for cation-π; translation keeps faithful \"cation-cation-pi\". User to decide whether to edit source.",
+  "rw1-bay-region-dioxygenase: pre-existing top-level name_en \"Diaryl Ethers\" is overly narrow vs source \"芳醚/aryl ethers\", but top-level name_en is out of this task scope."
+ ]
+}
