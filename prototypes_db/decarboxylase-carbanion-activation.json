@@ -4,6 +4,7 @@
  "name_en": "OMPDC Orotidine 5'-Monophosphate Decarboxylase (Carboxylate Headgroup Activation Prototype)",
  "organism": {
   "scientific": "Methanothermobacter thermautotrophicus / Saccharomyces cerevisiae（OMPDC 乳清苷 5'-磷酸脱羧酶，EC 4.1.1.23）",
+  "scientific_en": "Methanothermobacter thermautotrophicus / Saccharomyces cerevisiae (OMPDC orotidine 5'-phosphate decarboxylase, EC 4.1.1.23)",
   "category": "微生物"
  },
  "biomimetic_dimension": "分子仿生",
@@ -31,7 +32,9 @@
   {
    "mechanism_id": "DCX-001",
    "name": "活性位点交替电荷阵列对羧酸底物的基态去稳定化（静电应力）",
+   "name_en": "Ground-state destabilization of carboxylate substrates by an alternating charge array in the active site (electrostatic stress)",
    "description": "Methanothermobacter thermautotrophicus OMPDC（MtODCase）为 TIM 桶折叠同源二聚体（PDB 1DV7，KEYWDS: TIM barrel, dimer；配体游离态 1.8 Å，6-氮杂尿苷 5'-磷酸复合物 1DVJ 1.5 Å）；活性位点具独特交替电荷阵列（Lys-Asp-Lys-Asp）；抑制剂 6-azaUMP（配体 UP6）在 PDB 1DVJ 中与 ASP A 20、LYS A 42、LYS A 72、MET A 126、SER A 127、PRO A 180、GLN A 185、GLY A 202、ARG A 203 接触（chain A，PDB 编号）。量子力学/分子动力学计算表明催化能力几乎完全来自对底物反应部分的去稳定化（基态去稳定化），由磷酸与核糖基团的强结合补偿（Jencks Circe 效应）",
+   "description_en": "Methanothermobacter thermautotrophicus OMPDC (MtODCase) is a TIM-barrel-fold homodimer (PDB 1DV7, KEYWDS: TIM barrel, dimer; ligand-free form 1.8 Å, 6-azauridine 5'-phosphate complex 1DVJ at 1.5 Å); the active site bears a distinctive alternating charge array (Lys-Asp-Lys-Asp); the inhibitor 6-azaUMP (ligand UP6) in PDB 1DVJ contacts ASP A 20, LYS A 42, LYS A 72, MET A 126, SER A 127, PRO A 180, GLN A 185, GLY A 202, ARG A 203 (chain A, PDB numbering). Quantum mechanics/molecular dynamics calculations indicate that the catalytic power arises almost entirely from destabilization of the reactive part of the substrate (ground-state destabilization), compensated by strong binding of the phosphate and ribose groups (Jencks Circe effect).",
    "基本原理": "预组织的交替电荷阵列对底物反应性羧酸部分施加静电应力（基态去稳定化），同时远端磷酸/核糖锚定基团被强结合而提供补偿，使羧酸头基以「锚定补偿的基态去稳定化」方式被活化并趋向脱羧",
    "source": "literature",
    "ref_doi": "10.1073/pnas.050417797",
@@ -106,6 +109,7 @@
      }
     ],
     "transferable_principle": "预组织的互补电荷/氢键阵列可以「远端锚定部分强结合 + 反应性头基静电活化（基态去稳定化，Circe 效应）」的策略高效催化转化羧酸底物；该「锚定补偿的头基活化」策略在原理层可外推至其他羧酸头基的活化与转化",
+    "transferable_principle_en": "A preorganized array of complementary charges/hydrogen bonds can efficiently catalyze the transformation of carboxylate substrates via the strategy of strong binding of the distal anchoring moiety plus electrostatic activation of the reactive headgroup (ground-state destabilization, Circe effect); this anchoring-compensated headgroup activation strategy is, at the principle level, extrapolable to the activation and transformation of other carboxylate headgroups.",
     "verification_quote": "The remarkable catalytic power of orotidine 5'-monophosphate decarboxylase is almost exclusively achieved via destabilization of the reactive part of the substrate"
    },
    "source_doi": "10.1073/pnas.050417797",
@@ -124,7 +128,9 @@
   {
    "mechanism_id": "DCX-002",
    "name": "过渡态电荷稳定化与质子递送（过渡态类似物结构证据）",
+   "name_en": "Transition-state charge stabilization and proton delivery (structural evidence from a transition-state analogue)",
    "description": "酿酒酵母重组 OMPDC（Miller 2000，TIM 桶折叠，配体结合位点近桶开口端）与提议的过渡态类似物 6-羟基尿苷 5'-磷酸（BMP）复合时，蛋白环运动几乎完全包埋配体；Lysine-93（酿酒酵母 OMPDC 编号）被锚定于优化与嘧啶环 C-6 发展负电荷之静电相互作用的位置，并递送取代产物 C-6 羧基的质子；活性位点对 O-2/O-4 的氢键协助离域过渡态负电荷。注意：Lysine-93 为酿酒酵母酶编号，与 PDB 1DV7/1DVJ 的 Methanothermobacter 酶编号（如 Lys 72）分属不同物种同源酶，此处不做跨物种编号换算",
+   "description_en": "When recombinant Saccharomyces cerevisiae OMPDC (Miller 2000, TIM-barrel fold, ligand-binding site near the barrel opening) is complexed with the proposed transition-state analogue 6-hydroxyuridine 5'-phosphate (BMP), protein loop movements almost completely bury the ligand; Lysine-93 (Saccharomyces cerevisiae OMPDC numbering) is anchored in a position that optimizes electrostatic interaction with the developing negative charge at pyrimidine C-6 and delivers the proton that replaces the C-6 carboxylate group; hydrogen bonds to O-2/O-4 in the active site help delocalize the transition-state negative charge. Note: Lysine-93 is the Saccharomyces cerevisiae enzyme numbering, belonging to a homologous enzyme of a different species than the Methanothermobacter enzyme numbering in PDB 1DV7/1DVJ (e.g. Lys 72); no cross-species numbering conversion is performed here.",
    "基本原理": "脱羧位点发展中的负电荷（碳负离子特征）经定位的阳离子残基静电稳定并经 O-2/O-4 氢键离域，同一残基随即递送质子完成产物生成，三者协同降低过渡态能量",
    "source": "literature",
    "ref_doi": "10.1073/pnas.030409797",
@@ -199,6 +205,7 @@
      }
     ],
     "transferable_principle": "在羧酸反应位点以正确几何关系安置质子给体与静电稳定基团，同步完成过渡态电荷稳定化（含碳负离子特征）与质子递送，是高效脱羧的化学核心；该「电荷稳定 + 质子接力」头基活化逻辑在原理层可转译至羧酸头基化学",
+    "transferable_principle_en": "Placing a proton donor and electrostatic-stabilizing groups at the carboxylate reaction site with the correct geometric relationship, so as to simultaneously achieve transition-state charge stabilization (including carbanion character) and proton delivery, is the chemical core of efficient decarboxylation; this charge stabilization plus proton relay headgroup activation logic can, at the principle level, be translated to carboxylate headgroup chemistry.",
     "verification_quote": "Lysine-93 appears to be anchored in such a way as to optimize electrostatic interactions with developing negative charge at C-6 of the pyrimidine ring"
    },
    "source_doi": "10.1073/pnas.030409797",
@@ -217,7 +224,9 @@
   {
    "mechanism_id": "DCX-003",
    "name": "催化效能定量基准与物理化学上限（proficiency）",
+   "name_en": "Quantitative benchmark of catalytic proficiency and the physicochemical ceiling (proficiency)",
    "description": "OMPDC 是迄今报道催化效能最高的酶：乳清酸在中性水溶液、室温下自发脱羧半衰期约 7800 万年，OMPDC 将反应速率提高 10^17 倍，估算对过渡态（变化底物）的结合解离常数小于 5×10⁻²⁴ M；而不同底物对应的 proficient 酶反应 kcat/Km 被限制在仅约 600 倍的窄范围内，提示酶催化效能存在共同物理化学上限",
+   "description_en": "OMPDC is the most catalytically proficient enzyme reported to date: orotate decarboxylates spontaneously in neutral aqueous solution at room temperature with a half-life of about 78 million years, OMPDC accelerates the reaction rate by 10^17-fold, and the estimated dissociation constant for the altered substrate (transition state) is less than 5x10^-24 M; meanwhile, the kcat/Km of proficient enzyme reactions across different substrates is confined to a narrow range of only about 600-fold, suggesting that enzyme catalytic proficiency has a common physicochemical ceiling.",
    "基本原理": "酶经接近热力学极限的过渡态结合降低过渡态能量而实现超大速率增强；以自发反应半衰期与酶促速率的对比定量定义催化效能（proficiency），为头基活化潜力提供可迁移的定量评价框架",
    "source": "literature",
    "ref_doi": "10.1126/science.7809611",
@@ -287,6 +296,7 @@
      }
     ],
     "transferable_principle": "以速率增强因子与过渡态结合常数对「自发反应极慢 → 酶促极快」的定量锚定，为羧酸头基的活化与转化潜力提供可迁移评价框架：头基反应无催化时动力学障碍越大，预组织活性位点的催化设计空间越大；proficient 酶 kcat/Km 约 600 倍收敛的共同上限则提示，向非天然底物外推不可预设等效率",
+    "transferable_principle_en": "The quantitative anchoring of extremely slow spontaneous reaction versus extremely fast enzymatic reaction via rate-enhancement factors and transition-state binding constants provides a transferable evaluation framework for the activation and transformation potential of carboxylate headgroups: the greater the kinetic barrier of the uncatalyzed headgroup reaction, the larger the catalytic design space of a preorganized active site; the common ceiling of about 600-fold convergence in kcat/Km among proficient enzymes indicates that extrapolation to non-natural substrates cannot assume equal efficiency.",
     "verification_quote": "Orotidine 5'-phosphate decarboxylase, an extremely proficient enzyme, enhances the rate of reaction by a factor of 10(17)"
    },
    "source_doi": "10.1126/science.7809611",

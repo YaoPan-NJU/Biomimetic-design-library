@@ -4,6 +4,7 @@
  "name_en": "Neonatal Fc Receptor (FcRn) pH-Dependent Binding-Release Recycling",
  "organism": {
   "scientific": "Rattus norvegicus（大鼠新生 Fc 受体 FcRn/FCGRT，MHC I 类相关受体，与 β2-微球蛋白结合，识别 IgG Fc）",
+  "scientific_en": "Rattus norvegicus (rat neonatal Fc receptor FcRn/FCGRT, MHC class I-related receptor that binds beta-2-microglobulin and recognizes the IgG Fc)",
   "category": "动物"
  },
  "biomimetic_dimension": "分子仿生",
@@ -31,7 +32,9 @@
   {
    "mechanism_id": "FCRN-001",
    "name": "组氨酸质子化介导的 pH 门控可逆结合-释放（分子开关）",
+   "name_en": "Histidine protonation-mediated pH-gated reversible binding-release (molecular switch)",
    "description": "FcRn 经其 α2 与 β2-微球蛋白结构域界面识别 IgG Fc 的 Cγ2-Cγ3 界面；该界面两侧分布可滴定组氨酸（IgG Fc His310、His433 位于 CH2-CH3 交界，FcRn 重链 His250、His251）。酸性内体（pH 6.0-6.5）下组氨酸质子化形成可滴定盐桥，高亲和结合 Fc；中性血液（pH 7.0-7.5）下去质子化、盐桥断裂，亲和力下降约两个数量级并释放 Fc，构成 pH 门控的结合-释放分子开关",
+   "description_en": "FcRn recognizes the Cγ2-Cγ3 interface of the IgG Fc through the interface between its α2 and β2-microglobulin domains; titratable histidines flank this interface (IgG Fc His310 and His433 at the CH2-CH3 boundary, and FcRn heavy chain His250 and His251). Under acidic endosomal conditions (pH 6.0-6.5), histidine protonation forms titratable salt bridges that bind Fc with high affinity. At neutral blood pH (7.0-7.5), deprotonation disrupts the salt bridges, reducing affinity by about two orders of magnitude and releasing Fc, constituting a pH-gated binding-release molecular switch.",
    "基本原理": "组氨酸侧链 pKa 落于内体酸性 pH 与血液中性 pH 之间，其质子化态在 FcRn-Fc 界面形成盐桥、去质子化态盐桥断裂，使结合亲和力随 pH 可逆切换约两个数量级，实现酸性结合、中性释放",
    "source": "literature",
    "ref_doi": "10.1021/bi00045a005",
@@ -106,6 +109,7 @@
      }
     ],
     "transferable_principle": "在识别界面布置 pKa 落于捕获 pH 与再生 pH 之间的可滴定基团（如组氨酸咪唑基），使其质子化态形成、去质子化态断裂与靶标的盐桥/氢键相互作用，即可用 pH 摆动可逆切换结合亲和力（约两个数量级），实现酸性结合、中性释放",
+    "transferable_principle_en": "Place titratable groups (e.g., the histidine imidazole group) with pKa between the capture pH and the regeneration pH at the recognition interface, so that their protonated state forms and their deprotonated state disrupts salt bridge/hydrogen bond interactions with the target. A pH swing can then reversibly toggle binding affinity by about two orders of magnitude, achieving acidic binding and neutral release.",
     "verification_quote": "A soluble version of FcRn reproduces the physiological pH-dependent interaction with IgG, showing high-affinity binding at pH 6.0-6.5 but weak or no binding at pH 7.0-7.5."
    },
    "source_doi": "10.1016/S1097-2765(01)00230-1",
@@ -125,7 +129,9 @@
   {
    "mechanism_id": "FCRN-002",
    "name": "内体-循环 pH 双区室回收循环（吸附-再生循环原型）",
+   "name_en": "Endosomal-circulatory pH two-compartment recycling loop (adsorption-regeneration cycle archetype)",
    "description": "FcRn 作为 β2-微球蛋白依赖性保护受体，在胞吞空泡（酸性）结合 IgG，将其重定向回循环、避免溶酶体分解代谢；饱和时未结合 IgG 进入溶酶体降解。酸性内体结合、中性血液释放的 pH 依赖门控驱动 IgG 回收循环并延长血清半衰期",
+   "description_en": "As a β2-microglobulin-dependent protective receptor, FcRn binds IgG in acidic endocytic vacuoles, redirecting it back to circulation and sparing it from lysosomal catabolism; when saturated, unbound IgG enters lysosomes for degradation. This pH-dependent gating of acidic endosomal binding and neutral blood release drives the IgG recycling cycle and extends serum half-life.",
    "基本原理": "酸性内体与中性血液构成天然 pH 双区室，FcRn 在其中以 pH 门控反复结合-释放 IgG，将其从分解代谢途径回收再利用，实现循环吸附-再生，延长 IgG 在体循环中的存续",
    "source": "literature",
    "ref_doi": "10.1073/pnas.93.11.5512",
@@ -185,6 +191,7 @@
      }
     ],
     "transferable_principle": "以 pH 双区室（酸性捕获、中性释放）驱动受体反复结合-释放底物并将其从降解途径回收，可构成循环式吸附-再生操作：在捕获 pH 吸附靶标、在再生 pH 脱附回收吸附剂与靶标，循环再利用",
+    "transferable_principle_en": "Driving a receptor to repeatedly bind and release a substrate and recover it from the degradation pathway using a pH two-compartment scheme (acidic capture, neutral release) constitutes a cyclic adsorption-regeneration operation: adsorb the target at the capture pH, desorb and recover both adsorbent and target at the regeneration pH, and reuse the cycle.",
     "verification_quote": "The protection receptor for IgG catabolism is the beta2-microglobulin-containing neonatal intestinal transport receptor."
    },
    "source_doi": "10.1073/pnas.93.11.5512",

@@ -4,6 +4,7 @@
   "name_en": "Lipocalin Hydrophobic Calyx (incl. SCP-2 Sterol Carrier Protein-2)",
   "organism": {
     "scientific": "Mus musculus（鼠主尿蛋白 MUP） / Aedes aegypti（埃及伊蚊 SCP-2 固醇载体蛋白-2）",
+    "scientific_en": "Mus musculus (mouse major urinary protein MUP) / Aedes aegypti (yellow fever mosquito SCP-2 sterol carrier protein-2)",
     "category": "动物"
   },
   "biomimetic_dimension": "分子仿生",
@@ -31,7 +32,9 @@
     {
       "mechanism_id": "LCN-001",
       "name": "鼠主尿蛋白 MUP-I 疏水 calyx 对信息素小疏水分子的包结",
+      "name_en": "Inclusion of small hydrophobic pheromone molecules by the hydrophobic calyx of mouse major urinary protein MUP-I",
       "description": "脂运载蛋白（lipocalin）成员共享单一八链连续氢键反平行β桶，桶内围成内部配体结合位点（calyx）。鼠主尿蛋白 MUP-I（PDB 1MUP）在 calyx 内包结信息素配体 2-(仲丁基)噻唑（配体 TZL，chain A 第 167 位），calyx 壁由 SITE 记录残基 Leu44、Leu58、Phe60、Phe94、Ala107、Leu109、Leu120、Tyr124 构成，以脂肪族/芳香族疏水残基为主",
+      "description_en": "Lipocalin members share a single eight-stranded continuous hydrogen-bonded antiparallel beta barrel enclosing an internal ligand binding site (calyx) within the barrel. Mouse major urinary protein MUP-I (PDB 1MUP) encloses the pheromone ligand 2-(sec-butyl)thiazole (ligand TZL, residue 167 of chain A) within the calyx. The calyx wall is formed by the SITE-recorded residues Leu44, Leu58, Phe60, Phe94, Ala107, Leu109, Leu120, and Tyr124, dominated by aliphatic/aromatic hydrophobic residues.",
       "基本原理": "八链β桶围成埋藏疏水 calyx，以范德华接触与体积/形状互补包结小疏水分子；calyx 对配体轮廓做尺寸/形状读出，预组织桶骨架使结合的组织化熵代价预先支付，化学特异性弱",
       "source": "literature",
       "ref_doi": "10.1038/360186a0",
@@ -106,6 +109,7 @@
           }
         ],
         "transferable_principle": "八链β桶围成的埋藏疏水 calyx 以范德华接触与体积/形状互补包结小疏水分子，calyx 本身对配体轮廓做尺寸/形状读出，化学特异性弱、须由 calyx 壁功能化另行引入",
+        "transferable_principle_en": "A buried hydrophobic calyx enclosed by an eight-stranded beta barrel encloses small hydrophobic molecules via van der Waals contacts and volume/shape complementarity. The calyx itself performs a size/shape readout of the ligand contour with weak chemical specificity, which must be separately introduced by functionalizing the calyx wall.",
         "verification_quote": "The results corroborate the role of these proteins in pheromone transport and elaborate the structural basis of ligand binding."
       },
       "source_doi": "10.1038/360186a0",
@@ -123,7 +127,9 @@
     {
       "mechanism_id": "LCN-002",
       "name": "SCP-2 大疏水腔对固醇与脂肪酸的结合与转运",
+      "name_en": "Binding and transport of sterols and fatty acids by the large hydrophobic cavity of SCP-2",
       "description": "SCP-2（固醇载体蛋白-2）以五链β片层与四个α螺旋层在界面围成大疏水腔。埃及伊蚊 SCP-2（PDB 1PZ4，1.35 Å）以该腔结合 C16 脂肪酸：棕榈酸配体（PLM，chain A 第 200 位）羧基端由连接第一α螺旋与第一β链的短 loop（SITE AC1 记录 Arg24、Gln25、Val26、Ile99、Phe105）协调，酰基链伸入蛋白内部疏水腔；SCP-2 已知亦结合胆固醇",
+      "description_en": "SCP-2 (sterol carrier protein-2) forms a large hydrophobic cavity at the interface of a five-stranded beta sheet and four alpha helices. Aedes aegypti SCP-2 (PDB 1PZ4, 1.35 Å) binds C16 fatty acids with this cavity: the carboxylate end of the palmitate ligand (PLM, residue 200 of chain A) is coordinated by a short loop connecting the first alpha helix and the first beta strand (SITE AC1 records Arg24, Gln25, Val26, Ile99, and Phe105), and the acyl chain extends into the internal hydrophobic cavity of the protein. SCP-2 is also known to bind cholesterol.",
       "基本原理": "α螺旋层/β片层界面疏水腔以范德华/疏水效应容纳疏水脂质的烃链，loop 极性残基辅助头基协调；腔具构象柔性、可容纳多种脂质，属混杂型疏水腔载体而非形状特异受体",
       "source": "literature",
       "ref_doi": "10.1074/jbc.M306214200",
@@ -198,6 +204,7 @@
           }
         ],
         "transferable_principle": "α螺旋/β片层界面疏水腔以范德华/疏水效应容纳疏水脂质烃链（或疏水分子骨架），loop 极性基团可辅助头基协调；腔体积、腔壁化学与柔性共同决定可包结分子的轮廓容许范围",
+        "transferable_principle_en": "A hydrophobic cavity at the alpha helix/beta sheet interface accommodates hydrophobic lipid hydrocarbon chains (or hydrophobic molecular scaffolds) via van der Waals/hydrophobic effects, and polar loop groups can assist head-group coordination. Cavity volume, wall chemistry, and flexibility together determine the tolerable profile range of molecules that can be enclosed.",
         "verification_quote": "A large cavity exists at the interface of the layer alpha-helices and the beta-sheet, which serves as the fatty acid binding site."
       },
       "source_doi": "10.1074/jbc.M306214200",

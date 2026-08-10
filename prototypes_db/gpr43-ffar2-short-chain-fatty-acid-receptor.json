@@ -4,6 +4,7 @@
  "name_en": "GPR43/FFAR2 Short-Chain Fatty Acid Receptor",
  "organism": {
   "scientific": "Homo sapiens（人源 GPR43/FFAR2，游离脂肪酸受体 2，A 类 G 蛋白偶联受体）",
+  "scientific_en": "Homo sapiens (human GPR43/FFAR2, free fatty acid receptor 2, class A G protein-coupled receptor)",
   "category": "动物"
  },
  "biomimetic_dimension": "分子仿生",
@@ -31,7 +32,9 @@
   {
    "mechanism_id": "GPR43-001",
    "name": "短链脂肪酸羧酸根头基的成对精氨酸离子对锚定",
+   "name_en": "Paired arginine ion-pair anchoring of the short-chain fatty acid carboxylate head group",
    "description": "人源 FFAR2 以正构口袋中一对相邻精氨酸 Arg180(5.39) 与 Arg255(7.35) 配位短链脂肪酸（丁酸）的羧酸根头基（离子对/氢键）；His242(6.55) 与 Arg255 作用以组织羧酸根结合口袋，Tyr165(ECL2) 与羧酸根形成氢键，Gln148(ECL2) 稳定 Arg180。该精氨酸对在 FFA1-FFA3 间高度保守。突变为丙氨酸/赖氨酸消除对短链脂肪酸的响应",
+   "description_en": "In human FFAR2, a pair of adjacent arginines, Arg180(5.39) and Arg255(7.35), in the orthosteric pocket coordinates the carboxylate head group of short-chain fatty acids (butyrate) via ion-pair/hydrogen-bonding interactions. His242(6.55) interacts with Arg255 to organize the carboxylate-binding pocket, Tyr165(ECL2) forms a hydrogen bond with the carboxylate, and Gln148(ECL2) stabilizes Arg180. This arginine pair is highly conserved across FFA1-FFA3. Mutation to alanine/lysine abolishes the response to short-chain fatty acids.",
    "基本原理": "预组织的成对阳离子（精氨酸胍基）与短链羧酸根头基形成方向性离子对/氢键锚定，辅助极性残基（His/Tyr/Gln）组织并稳定该锚定，使短链脂肪酸羧酸根头基在无金属参与下被高亲和力、头基选择性地识别",
    "source": "literature",
    "ref_doi": "10.1126/sciadv.adj2384",
@@ -106,6 +109,7 @@
      }
     ],
     "transferable_principle": "预组织的成对阳离子（精氨酸胍基）配合辅助极性残基，可在无金属参与下对短链羧酸根头基实现方向性离子对/氢键锚定，提供高亲和力与头基选择性",
+    "transferable_principle_en": "Preorganized paired cations (arginine guanidinium groups) combined with auxiliary polar residues can achieve directional ion-pair/hydrogen-bond anchoring of short-chain carboxylate head groups without metal involvement, providing high affinity and head-group selectivity.",
     "verification_quote": "the carboxylate group of butyrate is coordinated by a pair of adjacent arginine residues, R180 and R255"
    },
    "source_doi": "10.1126/sciadv.adj2384",
@@ -123,7 +127,9 @@
   {
    "mechanism_id": "GPR43-002",
    "name": "疏水腔对短链尾链的容纳与链长选择性",
+   "name_en": "Accommodation of the short-chain tail by a hydrophobic cavity and chain-length selectivity",
    "description": "FFAR2 正构口袋含一疏水亚腔（Cys141(4.57)、Val144(4.60)、Val179(5.38)、Leu183(5.42)）容纳丁酸的短烷基尾链，Tyr90(3.29) 与短链直接形成疏水相互作用；FFAR2 选择性识别短链脂肪酸（C2-C4），长链脂肪酸由 FFA1/FFA4 识别，链长选择性由结构比较与突变研究揭示",
+   "description_en": "The FFAR2 orthosteric pocket contains a hydrophobic subcavity (Cys141(4.57), Val144(4.60), Val179(5.38), Leu183(5.42)) that accommodates the short alkyl tail of butyrate, and Tyr90(3.29) forms direct hydrophobic interactions with the short chain. FFAR2 selectively recognizes short-chain fatty acids (C2-C4), whereas long-chain fatty acids are recognized by FFA1/FFA4; this chain-length selectivity was revealed by structural comparison and mutagenesis studies.",
    "基本原理": "疏水亚腔的几何（腔深/腔径）与短烷基尾链匹配，赋予对短链脂肪酸的链长选择性；头基离子锚与链长匹配腔的组合使 FFAR2 偏好短链而非长链两亲阴离子",
    "source": "literature",
    "ref_doi": "10.1038/s41467-025-57983-4",
@@ -198,6 +204,7 @@
      }
     ],
     "transferable_principle": "与短链尾链几何匹配的疏水腔（限定腔深/腔径）赋予链长选择性；头基离子锚与链长匹配腔的组合可实现对特定链长两亲阴离子的选择识别",
+    "transferable_principle_en": "A hydrophobic cavity geometrically matched to the short-chain tail (with constrained cavity depth/diameter) confers chain-length selectivity; the combination of a head-group ionic anchor and a chain-length-matched cavity enables selective recognition of amphiphilic anions of a specific chain length.",
     "verification_quote": "Structural comparisons with FFA1 and mutational studies reveal how FFA2 selects specific fatty acid chain lengths."
    },
    "source_doi": "10.1038/s41467-025-57983-4",

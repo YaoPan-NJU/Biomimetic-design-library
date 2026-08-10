@@ -4,6 +4,7 @@
  "name_en": "Mammalian Lung Bronchial Tree Murray-Law Hierarchical Mass-Transfer Network",
  "organism": {
   "scientific": "Homo sapiens（哺乳动物肺支气管树；Weibel 人肺形态测量）",
+  "scientific_en": "Homo sapiens (mammalian lung bronchial tree; Weibel human lung morphometry)",
   "category": "动物"
  },
  "biomimetic_dimension": "结构仿生",
@@ -32,7 +33,9 @@
   {
    "mechanism_id": "MLB-001",
    "name": "Murray 律立方递减分级传质网络（最小功原理）",
+   "name_en": "Murray-law cubic-decrement hierarchical mass-transfer network (minimum-work principle)",
    "description": "哺乳动物肺支气管树以对称二叉分支将主干逐级细分为约 3 亿末端交换单元，分支半径按 Murray 律（平均流量正比于半径立方）递减；该几何源自 Murray 1926 最小功原理——在泵送功耗与代谢/血液体积代价间取最小总代价，使分支管网逼近全局最优、逐级维持恒定单位输运代价，是长程低驱动力输运的几何最优模板",
+   "description_en": "The mammalian lung bronchial tree successively subdivides the main trunk into about 300 million terminal exchange units through symmetric dichotomous branching, with branch radii decreasing according to Murray's law (mean flow proportional to the cube of the radius). This geometry originates from the Murray 1926 minimum-work principle, which minimizes the total cost between pumping work and metabolic/blood-volume costs, bringing the branching network close to global optimality while maintaining a constant unit transport cost at each level. It serves as a geometrically optimal template for long-range transport under low driving force.",
    "基本原理": "对称二叉分支中令半径立方正比于流量，可以最小的构造-维持代价将流体高通量分配至广布传质末端，逐级保持恒定的单位输运代价",
    "source": "literature",
    "ref_doi": "10.1073/pnas.12.3.207",
@@ -103,6 +106,7 @@
      }
     ],
     "transferable_principle": "对称二叉分支管网中，令分支半径立方正比于流量（Murray 律），可在逐级保持恒定单位输运代价的同时，以最小构造-维持代价将流体分配至广布传质末端，是长程低驱动力输运的几何最优模板",
+    "transferable_principle_en": "In a symmetric dichotomous branching network, making the cube of the branch radius proportional to flow (Murray's law) distributes fluid to widely distributed mass-transfer terminals at minimum construction-maintenance cost while maintaining a constant unit transport cost at each level. This provides a geometrically optimal template for long-range, low-driving-force transport.",
     "verification_quote": "a complex branching hierarchy of vessels approximating a globally optimal system that minimizes the costs of the construction and maintenance of the fluid transport system"
    },
    "source_doi": "10.1073/pnas.12.3.207",
@@ -120,7 +124,9 @@
   {
    "mechanism_id": "MLB-002",
    "name": "人肺约 23 级对称二叉分支至约 3 亿肺泡末端的形态测量几何",
+   "name_en": "Morphometric geometry of the human lung with about 23 generations of symmetric dichotomous branching to about 300 million alveolar terminals",
    "description": "Weibel 人肺形态测量（1962/1963）确立：气道平均约 23 级对称二叉分支，终止于约 3 亿肺泡（配约 1400 万肺泡管、约 2800 亿毛细血管段），逐级气道与血管直径遵循'最优'尺寸，交换面积约 40-80 m²；该形态测量是 Murray 律分支几何在哺乳动物肺的器官级实例",
+   "description_en": "Weibel's human lung morphometry (1962/1963) established that the airways undergo about 23 generations of symmetric dichotomous branching on average, terminating in about 300 million alveoli (with about 14 million alveolar ducts and about 280 billion capillary segments); the diameters of airways and vessels at successive levels follow 'optimal' sizes, and the exchange area is about 40-80 m2. This morphometry is an organ-level instance of Murray-law branching geometry in the mammalian lung.",
    "基本原理": "约 23 级对称二叉分支将单一主干逐级细分为约 3 亿末端交换单元，逐级直径遵循最优尺寸，在巨大交换面积与低驱动力间取得平衡",
    "source": "literature",
    "ref_doi": "10.1126/science.137.3530.577",
@@ -191,6 +197,7 @@
      }
     ],
     "transferable_principle": "约 23 级对称二叉分支将单一主干逐级细分为约 3 亿末端交换单元，逐级直径遵循最优尺寸，在巨大交换面积与低驱动力间取得平衡，为分级孔道吸附床提供级数-径缩-末端面积的几何标度参照",
+    "transferable_principle_en": "About 23 generations of symmetric dichotomous branching successively subdivide a single trunk into about 300 million terminal exchange units, with diameters at each level following optimal sizes and balancing a huge exchange area against a low driving force. This provides a geometric scaling reference for generation count, diameter reduction, and terminal area that can be applied to hierarchically porous adsorption beds.",
     "verification_quote": "The airways have, on the average, 23 generations of dichotomous branching; the pulmonary arteries reach the precapillaries after about 28 generations."
    },
    "source_doi": "10.1126/science.137.3530.577",

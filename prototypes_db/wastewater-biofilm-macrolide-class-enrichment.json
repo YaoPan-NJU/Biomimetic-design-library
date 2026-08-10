@@ -4,6 +4,7 @@
   "name_en": "Mature Wastewater Biofilm Macrolide-Class Enrichment Interface",
   "organism": {
     "scientific": "混合微生物群落（成熟失活污水生物膜 / MBBR 载体生物膜；EPS 与磷脂界面构成）",
+    "scientific_en": "Mixed microbial community (mature inactivated wastewater biofilm / MBBR carrier biofilm; composed of EPS and phospholipid interface)",
     "category": "微生物"
   },
   "biomimetic_dimension": "系统仿生",
@@ -30,7 +31,9 @@
     {
       "mechanism_id": "BIOFILM-001",
       "name": "成熟污水生物膜对大环内酯类的类别级分配富集",
+      "name_en": "Class-level partition enrichment of macrolides by mature wastewater biofilm",
       "description": "Torresi 2017 在痕量、真实二级出水、失活生物膜条件下研究多种微污染物在不同厚度生物膜中的扩散与吸附；较厚的成熟生物膜对克拉霉素/红霉素/罗红霉素等大环内酯表现出接近的高分配，而对若干无关阳离子药物明显较低——呈现‘大环内酯类别级富集’现象（失活生物膜已排除生物降解为唯一解释）",
+      "description_en": "Torresi 2017 investigated the diffusion and sorption of multiple micropollutants in biofilms of different thickness under trace, real secondary effluent, and inactivated biofilm conditions. Thicker mature biofilms showed nearly comparable high partitioning of macrolides such as clarithromycin, erythromycin, and roxithromycin, whereas partitioning of several unrelated cationic drugs was markedly lower, exhibiting a class-level macrolide enrichment phenomenon. The use of inactivated biofilms ruled out biodegradation as the sole explanation.",
       "基本原理": "来源提示较厚生物膜的孔隙/可达性可能提高部分正电微污染物分配；‘重复出现的浅层弱阴离子区 + 相邻低极性区’是用于材料设计的解释假说，当前不能作为已证实生物膜微结构。",
       "source": "literature",
       "ref_doi": "10.1016/j.watres.2017.06.027",
@@ -100,6 +103,7 @@
           }
         ],
         "transferable_principle": "把‘水化弱阴离子浅层 + 相邻低极性区、在多孔界面中重复出现’的空间规则迁移为材料：在多孔颗粒孔壁浅层稀疏布置弱阴离子位点并紧邻疏水区，可对体积较大的两亲大环内酯形成类别级分配；关键是空间组织与浅层覆盖度而非酸量最大化",
+        "transferable_principle_en": "Translate the spatial rule of a hydrated weak-anion shallow layer adjacent to a low-polarity region, repeated at porous interfaces, into materials: sparsely arranging weak-anion sites in the shallow layer of porous particle pore walls next to hydrophobic regions can achieve class-level partitioning of bulky amphiphilic macrolides. The key is spatial organization and shallow coverage, not maximizing acid content.",
         "verification_quote": "Diffusion and sorption of organic micropollutants in biofilms with varying thicknesses"
       },
       "source_doi": "10.1016/j.watres.2017.06.027",

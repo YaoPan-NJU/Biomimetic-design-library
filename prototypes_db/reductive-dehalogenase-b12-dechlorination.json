@@ -4,6 +4,7 @@
  "name_en": "B12/Corrinoid-Dependent Reductive Dehalogenase Organochlorine Reductive Dechlorination",
  "organism": {
   "scientific": "Nitratireductor pacificus pht-3B（还原脱卤酶 RdhA，PDB 4RAS；有机卤呼吸厌氧菌的钴胺素依赖还原脱卤酶）",
+  "scientific_en": "Nitratireductor pacificus pht-3B (reductive dehalogenase RdhA, PDB 4RAS; corrinoid-dependent reductive dehalogenase of organohalide-respiring anaerobes)",
   "category": "微生物"
  },
  "biomimetic_dimension": "分子仿生",
@@ -30,7 +31,9 @@
   {
    "mechanism_id": "RDH-001",
    "name": "钴胺素（B12）辅酶经钴-卤素相互作用介导的有机氯还原脱卤",
+   "name_en": "Cobalamin (B12) coenzyme-mediated organochlorine reductive dehalogenation via cobalt-halogen interaction",
    "description": "还原脱卤酶是有机卤呼吸菌中负责生物脱卤的钴胺素（B12）依赖酶亚家族。其活性位点的咕啉钴中心与底物卤素发生直接相互作用，经卤素-钴键形成实现对有机卤底物的还原，区别于其他钴胺素亚家族的碳-钴键化学。PDB 4RAS（Payne 2015，Nitratireductor pacificus pht-3B 的可溶耐氧还原脱卤酶）含 COBALAMIN（B12）与 IRON/SULFUR CLUSTER（SF4，[4Fe-4S]）辅因子及 CHLORIDE ION（CL，脱卤产物卤离子）",
+   "description_en": "Reductive dehalogenases are a subfamily of cobalamin (B12)-dependent enzymes responsible for biological dehalogenation in organohalide-respiring bacteria. The corrinoid cobalt center in the active site interacts directly with the substrate halogen, achieving reduction of the organohalide substrate through halogen-cobalt bond formation, distinct from the carbon-cobalt bond chemistry of other cobalamin subfamilies. PDB 4RAS (Payne 2015, soluble oxygen-tolerant reductive dehalogenase from Nitratireductor pacificus pht-3B) contains COBALAMIN (B12) and IRON/SULFUR CLUSTER (SF4, [4Fe-4S]) cofactors and a CHLORIDE ION (CL, the halide ion of the dehalogenation product).",
    "基本原理": "低电位钴中心（Co(I)/Co(II) 氧化还原对）作为强还原剂，与底物 C-卤键的卤素直接相互作用并经卤素-钴键形成转移电子，断裂 C-卤键并释放卤离子；[4Fe-4S] 簇与还原型铁氧还蛋白供电子，咕啉环提供电子离域与轴向配位以调谐钴中心还原电位",
    "source": "literature",
    "ref_doi": "10.1038/nature13901",
@@ -105,6 +108,7 @@
      }
     ],
     "transferable_principle": "低电位钴胺素/类咕啉中心经与底物卤素的直接钴-卤相互作用（卤素-钴键形成）转移电子、断裂有机氯 C-Cl 键并释放氯离子；该电子转移反应位原理（低电位中心 + 钴/金属-卤素相互作用 + 还原态再生）可独立于蛋白骨架移植到非酶还原体系",
+    "transferable_principle_en": "A low-potential cobalamin/corrinoid center transfers electrons via direct cobalt-halogen interaction with the substrate halogen (halogen-cobalt bond formation), breaking the organochlorine C-Cl bond and releasing chloride ion; this electron-transfer active-site principle (low-potential center + cobalt/metal-halogen interaction + reduced-state regeneration) can be transplanted to non-enzymatic reductive systems independent of the protein scaffold.",
     "verification_quote": "a direct interaction between the cobalamin cobalt and the substrate halogen underpins catalysis"
    },
    "source_doi": "10.1038/nature13901",
@@ -123,7 +127,9 @@
   {
    "mechanism_id": "RDH-002",
    "name": "辅酶化学介导的 DDT 还原脱氯（维生素 B12 与还原型黄素/血红素，DDT→DDD）",
+   "name_en": "Coenzyme chemistry-mediated reductive dechlorination of DDT (vitamin B12 and reduced flavin/heme, DDT to DDD)",
    "description": "游离钴胺素（维生素 B12）在温和还原条件下即可使 DDT 脱氯（Berry 与 Stotter 1977）；大鼠血液在还原型吡啶核苷酸与黄素存在下，由还原型黄素（FAD/FMN/核黄素，经 NADPH/NADH 还原）经血红蛋白血红素催化，对 DDT 进行非酶还原脱氯生成 DDD（Sugihara 1998）。这表明 DDT 的还原脱氯本质上是低电位辅酶/辅基的电子转移化学，而非整酶专属，构成辅酶化学层先例",
+   "description_en": "Free cobalamin (vitamin B12) dechlorinates DDT under mild reducing conditions (Berry and Stotter 1977); in rat blood, in the presence of reduced pyridine nucleotides and flavins, reduced flavins (FAD/FMN/riboflavin, reduced by NADPH/NADH) catalyze non-enzymatic reductive dechlorination of DDT to DDD via the heme of hemoglobin (Sugihara 1998). This indicates that reductive dechlorination of DDT is essentially electron-transfer chemistry of low-potential coenzymes/prosthetic groups rather than a whole-enzyme-exclusive process, constituting a precedent for the coenzyme chemistry layer.",
    "基本原理": "低电位还原型辅酶（Co(I) 钴胺素、还原型黄素）作为电子供体，在血红素/金属中心辅助下向 DDT 三氯甲基的 C-Cl 键转移电子，断裂 C-Cl 释放氯离子，DDT 转化为 DDD；还原电位与辅酶再生（由 NADPH/NADH 或外源还原剂补给）决定反应持续",
    "source": "literature",
    "ref_doi": "10.1016/0045-6535(77)90151-5",
@@ -198,6 +204,7 @@
      }
     ],
     "transferable_principle": "DDT 三氯甲基 C-Cl 键可被低电位还原型辅酶/辅基（钴胺素、还原型黄素）经电子转移还原断裂为 DDD，且该过程可独立于完整酶发生；还原脱氯对底物桥键结构敏感（DDT 反应、DDE 不反应），构成对有机氯桥键的反应性读出先例",
+    "transferable_principle_en": "The C-Cl bond of the DDT trichloromethyl group can be reductively cleaved to DDD via electron transfer by low-potential reduced coenzymes/prosthetic groups (cobalamin, reduced flavins), and this process can occur independently of the intact enzyme; reductive dechlorination is sensitive to the substrate bridge bond structure (DDT reacts, DDE does not), constituting a precedent for a reactivity readout of organochlorine bridge bonds.",
     "verification_quote": "Dechlorination of DDT by vitamin B12 under mildly reducing conditions"
    },
    "source_doi": "10.1016/0045-6535(77)90151-5",

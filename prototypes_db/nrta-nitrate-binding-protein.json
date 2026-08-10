@@ -4,6 +4,7 @@
  "name_en": "NrtA Nitrate-Binding Protein",
  "organism": {
   "scientific": "Synechocystis sp. PCC 6803（NrtA 硝酸盐结合蛋白，蓝细菌高亲和硝酸盐 ABC 转运系统底物结合组分）",
+  "scientific_en": "Synechocystis sp. PCC 6803 (NrtA nitrate-binding protein, substrate-binding component of the cyanobacterial high-affinity nitrate ABC transport system)",
   "category": "微生物"
  },
  "biomimetic_dimension": "分子仿生",
@@ -31,7 +32,9 @@
   {
    "mechanism_id": "NRTA-001",
    "name": "预组织被围口袋与 Lys269 阳离子锚对平面硝酸根的几何氢键识别",
+   "name_en": "Geometric hydrogen-bond recognition of planar nitrate by a preorganized enclosed pocket and a Lys269 cation anchor",
    "description": "蓝细菌 Synechocystis sp. PCC 6803 的 NrtA 是高亲和硝酸盐 ABC 转运系统的周质底物结合蛋白，天然配体即硝酸根。PDB 2G29（1.5 Å，硝酸根结合态）显示硝酸根（配体 NO3，chain A 700）埋藏于由 N 与 C 结构域围成的口袋中；PDB SITE AC1 记录围成结合位点的十个残基为 Leu71、Trp102、Leu124、Gln155、Thr190、His196、Pro222、Val239、Gly240、Lys269（chain A），其中带正电的 Lys269 构成对平面硝酸根的阳离子锚，与中性氢键给体共同按几何互补识别平面三角形硝酸根",
+   "description_en": "NrtA from the cyanobacterium Synechocystis sp. PCC 6803 is the periplasmic substrate-binding protein of the high-affinity nitrate ABC transport system, and its native ligand is nitrate. PDB 2G29 (1.5 Å resolution, nitrate-bound form) shows the nitrate ion (ligand NO3, chain A residue 700) buried in a pocket enclosed by the N- and C-terminal domains. PDB SITE AC1 records the ten residues lining the binding site as Leu71, Trp102, Leu124, Gln155, Thr190, His196, Pro222, Val239, Gly240, and Lys269 (chain A), among which the positively charged Lys269 forms a cation anchor for the planar nitrate and, together with neutral hydrogen-bond donors, recognizes the planar triangular nitrate by geometric complementarity.",
    "基本原理": "被围口袋以预组织的阳离子锚（Lys269 侧链铵基）与中性氢键给体阵列对平面三角形硝酸根提供几何与静电互补：阳离子锚稳定氧阴离子电荷，方向性氢键固定其平面三氧取向，埋藏口袋排除水竞争，使硝酸根在高背景阴离子中被选择性识别",
    "source": "literature",
    "ref_doi": "10.1073/pnas.0602517103",
@@ -120,6 +123,7 @@
      }
     ],
     "transferable_principle": "对被围口袋内平面三角形氧阴离子的选择性识别，可由几何互补的预组织阳离子锚（稳定氧阴离子电荷）与中性氢键给体阵列（方向性固定氧取向）配合埋藏低介电微环境实现，无需金属配位",
+    "transferable_principle_en": "Selective recognition of planar triangular oxyanions within an enclosed pocket can be achieved by a geometrically complementary preorganized cation anchor (which stabilizes the oxyanion charge) combined with a neutral hydrogen-bond donor array (which directionally fixes the oxygen orientation), within a buried low-dielectric microenvironment, without requiring metal coordination.",
     "verification_quote": "a nitrate-specific receptor, NrtA from Synechocystis sp. PCC 6803, complexed with nitrate and determined to a resolution of 1.5 Å"
    },
    "source_doi": "10.1073/pnas.0602517103",

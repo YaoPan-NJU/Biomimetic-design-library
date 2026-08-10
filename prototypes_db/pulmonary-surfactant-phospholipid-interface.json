@@ -4,6 +4,7 @@
  "name_en": "Pulmonary Surfactant Phospholipid Interface Partitioning",
  "organism": {
   "scientific": "Homo sapiens 肺表面活性物质系统",
+  "scientific_en": "Homo sapiens pulmonary surfactant system",
   "category": "动物"
  },
  "biomimetic_dimension": "功能仿生",
@@ -31,7 +32,9 @@
   {
    "mechanism_id": "PSI-001",
    "name": "肺表面活性物质磷脂单层的动态界面屏障与表面张力调节",
+   "name_en": "Dynamic interfacial barrier of pulmonary surfactant phospholipid monolayer and surface tension regulation",
    "description": "肺表面活性物质在肺泡气液界面形成以 DPPC（二棕榈酰磷脂酰胆碱）为主、辅以疏水表面活性剂蛋白 SP-B/SP-C 的动态磷脂单层/膜网络：层状体分泌后快速吸附并高效覆盖整个呼吸表面，在呼吸压缩-膨胀循环中降低并调节表面张力，构成动态界面屏障，介导上皮表面分子的相遇与分配",
+   "description_en": "Pulmonary surfactant forms a dynamic phospholipid monolayer/membrane network at the alveolar air-liquid interface, dominated by DPPC (dipalmitoylphosphatidylcholine) and assisted by the hydrophobic surfactant proteins SP-B/SP-C. After secretion from lamellar bodies, it rapidly adsorbs and efficiently covers the entire respiratory surface, lowering and regulating surface tension during respiratory compression-expansion cycles. It thereby constitutes a dynamic interfacial barrier that mediates the encounter and partitioning of molecules at the epithelial surface.",
    "基本原理": "动态两亲磷脂界面（疏水酰链域 + 水化极性头基面）经膜多形性与特异性脂质-脂质/脂质-蛋白相互作用组装，可快速吸附覆盖界面、降低表面张力并形成动态界面屏障，介导两亲分子在界面的相遇与分配",
    "source": "literature",
    "ref_doi": "10.1016/j.bbamem.2008.05.003",
@@ -107,6 +110,7 @@
      }
     ],
     "transferable_principle": "动态两亲磷脂界面层（疏水酰链域 + 水化极性头基面，疏水界面蛋白辅助）可快速吸附覆盖界面并介导两亲分子的界面相遇与分配，形成可动态更新的界面屏障",
+    "transferable_principle_en": "A dynamic amphiphilic phospholipid interfacial layer (hydrophobic acyl chain domain plus hydrated polar headgroup face, assisted by hydrophobic interfacial proteins) can rapidly adsorb and cover an interface and mediate the interfacial encounter and partitioning of amphiphilic molecules, forming a dynamically renewable interfacial barrier.",
     "verification_quote": "an excellent example of how dynamic membrane polymorphism governs some biological functions through specific lipid-lipid, lipid-protein and protein-protein interactions"
    },
    "source_doi": "10.1016/j.bbamem.2008.05.003",
@@ -125,7 +129,9 @@
   {
    "mechanism_id": "PSI-002",
    "name": "两亲性污染物向脂质界面疏水域的分配（碰巧疏水利用）",
+   "name_en": "Partitioning of amphiphilic contaminants into the hydrophobic domain of the lipid interface (fortuitous hydrophobic exploitation)",
    "description": "两亲性 PFOA（全氟碳尾 + 羧酸根头）可分配入磷脂模型膜并产生类似胆固醇的膜凝聚与刚化效应（Brüning 2014，DMPC 双层囊泡），表明其全氟碳尾进入脂质界面疏水域；该分配由两亲性/疏水效应驱动，氟碳链入烃基酰链区属碰巧的疏水利用，而非氟特异性亲和",
+   "description_en": "The amphiphilic PFOA (perfluorocarbon tail plus carboxylate head group) can partition into phospholipid model membranes and produce cholesterol-like membrane condensation and rigidification effects (Brüning 2014, DMPC bilayer vesicles), indicating that its perfluorocarbon tail enters the hydrophobic domain of the lipid interface. This partitioning is driven by amphiphilic/hydrophobic effects; entry of the fluorocarbon chain into the hydrocarbon acyl chain region is a fortuitous hydrophobic exploitation rather than fluorine-specific affinity.",
    "基本原理": "两亲磷脂界面的疏水域可经疏水效应富集两亲分子的疏水尾链；碰巧疏水利用提供两亲污染物的界面富集，但本身不提供氟特异性选择性",
    "source": "literature",
    "ref_doi": "10.1103/PhysRevE.89.040702",
@@ -211,6 +217,7 @@
      }
     ],
     "transferable_principle": "两亲磷脂界面疏水域可经疏水效应（碰巧疏水利用）富集两亲分子的疏水尾链；该界面富集为两亲污染物提供界面捕获把手，但本身不提供氟特异性选择性，选择性须由头基锚定、链长几何或其他维度另行引入",
+    "transferable_principle_en": "The hydrophobic domain of an amphiphilic phospholipid interface can, via hydrophobic effects (fortuitous hydrophobic exploitation), enrich the hydrophobic tail chains of amphiphilic molecules. This interfacial enrichment provides an interfacial capture handle for amphiphilic contaminants, but by itself does not provide fluorine-specific selectivity; selectivity must be introduced separately through headgroup anchoring, chain-length geometry, or other dimensions.",
     "verification_quote": "Similar to the effect evoked by cholesterol, we attribute the observed lipid bilayer stiffening to a condensing effect of the perfluorinated compound on the membrane."
    },
    "source_doi": "10.1103/PhysRevE.89.040702",

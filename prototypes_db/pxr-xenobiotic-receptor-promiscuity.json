@@ -4,6 +4,7 @@
  "name_en": "Pregnane X Receptor PXR Xenobiotic Directed-Promiscuity Nuclear Receptor",
  "organism": {
   "scientific": "Homo sapiens（人孕烷 X 受体 PXR / NR1I2，异生物质-甾体核受体）",
+  "scientific_en": "Homo sapiens (human pregnane X receptor PXR / NR1I2, xenobiotic-steroid nuclear receptor)",
   "category": "动物"
  },
  "biomimetic_dimension": "分子仿生",
@@ -31,7 +32,9 @@
   {
    "mechanism_id": "PXR-001",
    "name": "大体积柔性疏水腔加少量极性锚对结构多样异生物质配体的定向混杂（多取向）识别",
+   "name_en": "Directed-promiscuous (multi-orientation) recognition of structurally diverse xenobiotic ligands by a large flexible hydrophobic cavity with sparse polar anchors",
    "description": "人 PXR 配体结合域（LBD）具大体积疏水腔，腔壁以疏水残基为主、仅含少量极性残基；该腔以定向混杂方式结合结构差异显著的异生物质配体：大环内酯抗生素利福平（PDB 1SKX，配体 RFP，chain A）与膦酸酯类降脂药 SR12813（PDB 1ILH，配体 SRL，chain A）。PDB 1ILH SITE AC1 列 21 个结合位点残基（Leu206、Ser208、Leu209、Val211、Leu240、Met243、Ala244、Met246、Ser247、Phe251、Phe281、Cys284、Gln285、Phe288、Trp299、Met323、Leu324、His407、Arg410、Phe420、HOH1595），PDB 1SKX SITE AC1 列 15 个（Lys210、Val211、Leu240、Met243、Ser247、Phe251、Phe281、Cys284、Gln285、Trp299、Leu308、Met323、His407、Phe420、HOH608），二者共享 Val211/Leu240/Met243/Ser247/Phe251/Phe281/Cys284/Gln285/Trp299/Met323/His407/Phe420 等腔壁残基；Watkins 2001 摘要指出 SR12813 可在腔内取三种不同取向，少量极性残基的位置与性质决定激活谱。残基编号为 PDB 链 A 编号（1SKX construct 残基 130-431），未做与 UniProt O75469 的逐位偏移核对",
+   "description_en": "The human PXR ligand-binding domain (LBD) has a large hydrophobic cavity whose wall is dominated by hydrophobic residues with only a few polar residues; this cavity binds structurally distinct xenobiotic ligands in a directed-promiscuous manner, including the macrolide antibiotic rifampicin (PDB 1SKX, ligand RFP, chain A) and the phosphonate lipid-lowering drug SR12813 (PDB 1ILH, ligand SRL, chain A). PDB 1ILH SITE AC1 lists 21 binding-site residues (Leu206, Ser208, Leu209, Val211, Leu240, Met243, Ala244, Met246, Ser247, Phe251, Phe281, Cys284, Gln285, Phe288, Trp299, Met323, Leu324, His407, Arg410, Phe420, HOH1595), and PDB 1SKX SITE AC1 lists 15 (Lys210, Val211, Leu240, Met243, Ser247, Phe251, Phe281, Cys284, Gln285, Trp299, Leu308, Met323, His407, Phe420, HOH608); the two share cavity-wall residues Val211/Leu240/Met243/Ser247/Phe251/Phe281/Cys284/Gln285/Trp299/Met323/His407/Phe420. The Watkins 2001 abstract notes that SR12813 can adopt three different orientations within the cavity, and that the position and nature of the few polar residues determine the activation profile. Residue numbering follows the PDB chain A numbering (1SKX construct residues 130-431) and has not been cross-checked for per-residue offset against UniProt O75469.",
    "基本原理": "大体积疏水腔提供容纳多种亲脂骨架的范德华接触面，少量极性残基提供有限而关键的方向性锚定；腔壁柔性使同一腔可适配结构多样的配体并允许多重取向，二者的组合构成定向混杂的结构基础，使 PXR 以单一口袋感知一类亲脂异生物质而非单一锁钥底物",
    "source": "literature",
    "ref_doi": "10.1126/science.1060762",
@@ -107,6 +110,7 @@
      }
     ],
     "transferable_principle": "大体积构象自适应疏水腔（以疏水/范德华接触为主）加稀疏分布的预组织极性锚，可对一类结构多样的亲脂配体呈定向混杂识别（多配体、多取向），而非单一锁钥识别；该原理可独立于蛋白骨架移植到人工柔性孔腔",
+    "transferable_principle_en": "A large conformationally adaptive hydrophobic cavity (predominantly hydrophobic/van der Waals contacts) combined with sparsely distributed pre-organized polar anchors can provide directed-promiscuous recognition (multiple ligands, multiple orientations) of a class of structurally diverse lipophilic ligands, rather than a single lock-and-key recognition; this principle can be transferred to artificial flexible cavity pores independently of the protein scaffold.",
     "verification_quote": "The hydrophobic ligand-binding cavity of hPXR contains a small number of polar residues, permitting SR12813 to bind in three distinct orientations."
    },
    "source_doi": "10.1126/science.1060762",
@@ -124,7 +128,9 @@
   {
    "mechanism_id": "PXR-002",
    "name": "定向混杂作为进化的异生物质感知-解毒功能（机制层级声明）",
+   "name_en": "Directed promiscuity as an evolved xenobiotic-sensing and detoxification function (mechanism-level statement)",
    "description": "PXR 进化为广谱异生物质/甾体传感器：被多种亲脂异生物质激活后经转录上调细胞色素 P450 3A（CYP3A）等解毒/外排通路。Watkins 2001 摘要逐字陈述 hPXR 响应多种异生物质激活 CYP3A 表达、并在药物-药物相互作用中起关键作用，其感知异生物质的能力即由该定向混杂腔提供。故定向混杂本身是进化的功能（感知异生物质并启动解毒），而非碰巧结合；PXR 的天然读出是转录激活（解毒上调），并非配体的物理去除或隔离",
+   "description_en": "PXR evolved as a broad-spectrum xenobiotic/steroid sensor: upon activation by diverse lipophilic xenobiotics, it transcriptionally upregulates detoxification/efflux pathways such as cytochrome P450 3A (CYP3A). The Watkins 2001 abstract states verbatim that hPXR responds to multiple xenobiotics, activates CYP3A expression, and plays a key role in drug-drug interactions, and that its capability to sense xenobiotics is provided by this directed-promiscuous cavity. Directed promiscuity is thus itself an evolved function (sensing xenobiotics and initiating detoxification), not fortuitous binding; PXR's natural readout is transcriptional activation (detoxification upregulation), not physical removal or sequestration of ligands.",
    "基本原理": "对解毒通路而言，广谱感知比单一专一更有适应价值：一个大体积定向混杂腔可一次性监测多种亲脂异生物质并以转录激活上调解毒酶，混杂即功能。该机制层级（异生物质感知-解毒）与内分泌干扰毒性机制（如库内 ERRγ-BPA 高亲和结合）性质不同",
    "source": "literature",
    "ref_doi": "10.1126/science.1060762",
@@ -200,6 +206,7 @@
      }
     ],
     "transferable_principle": "定向混杂腔的天然功能是广谱感知一类亲脂异生物质并触发下游应答；作仿生识别原理时可提取'大体积柔性疏水腔加稀疏极性锚对配体类的广谱/类选择性结合'，但解毒式转录应答与配体专一去除不在可迁移之列",
+    "transferable_principle_en": "The natural function of the directed-promiscuous cavity is broad-spectrum sensing of a class of lipophilic xenobiotics and triggering downstream responses; when extracted as a biomimetic recognition principle, broad-spectrum/class-selective binding of a ligand class by a large flexible hydrophobic cavity with sparse polar anchors can be taken away, but detoxification-type transcriptional responses and specific ligand removal are not transferable.",
     "verification_quote": "activates cytochrome P450-3A expression in response to a wide variety of xenobiotics and plays a critical role in mediating dangerous drug-drug interactions."
    },
    "source_doi": "10.1126/science.1060762",

@@ -4,6 +4,7 @@
  "name_en": "Anaerobic Sequential Dechlorination Cascade (Ordered Multi-Site Reductive Dechlorination of DDT/DDE)",
  "organism": {
   "scientific": "厌氧沉积物还原脱氯功能群落",
+  "scientific_en": "Anaerobic sediment reductive dechlorination functional community",
   "category": "微生物"
  },
  "biomimetic_dimension": "分子仿生",
@@ -30,7 +31,9 @@
   {
    "mechanism_id": "ASCD-001",
    "name": "厌氧菌群对 DDT 及其持久代谢物的有序顺序还原脱氯级联（DDT→DDD/DDE→DDMU）",
+   "name_en": "Ordered sequential reductive dechlorination cascade of DDT and its persistent metabolites by anaerobic communities (DDT→DDD/DDE→DDMU)",
    "description": "厌氧微生物群落在产甲烷与硫酸盐还原条件下对 DDT 进行顺序脱氯：DDT 先经还原脱氯生成 DDD、经脱氯化氢生成 DDE；其后 DDE 被进一步还原脱氯为 DDMU，而 DDD 脱氯化氢为 DDMU 慢约三个数量级，故这些沉积物中 DDMU 的主要前体是 DDE 而非 DDD。该功能由混合厌氧菌群完成（无单一模式种），各步由不同功能种群衔接电子供体与产物，形成有次序的多位点级联。DDE 曾长期被认为在环境中不再进一步降解，Quensen 等 1998 在海洋沉积物微宇宙中证明其可被顺序脱氯，确立了高氯代有机氯在厌氧群落中被逐步有序转化的自然解决路径。",
+   "description_en": "Under methanogenic and sulfate-reducing conditions, anaerobic microbial communities sequentially dechlorinate DDT: DDT is first reductively dechlorinated to DDD and dehydrochlorinated to DDE; DDE is then further reductively dechlorinated to DDMU, whereas dehydrochlorination of DDD to DDMU is about three orders of magnitude slower, so DDMU in these sediments is derived mainly from DDE rather than DDD. This function is carried out by a mixed anaerobic consortium (no single model species), in which different functional populations link electron donors and products, forming an ordered multi-site cascade. DDE was long considered resistant to further degradation in the environment, but Quensen et al. (1998) demonstrated in marine sediment microcosms that it can be sequentially dechlorinated, establishing the natural pathway by which highly chlorinated organochlorines are progressively and orderly transformed in anaerobic communities.",
    "基本原理": "单一反应位点难以独自完全转化高氯化、高疏水的有机氯分子；厌氧群落以多位点分工与中间产物通道化将各步脱氯按次序串联，前一种群的产物成为后一种群的底物，且各步速率差异（DDE→DDMU 远快于 DDD→DDMU）决定级联次序与中间产物去向，使曾被认为顽固的 DDE 得以继续转化而非累积为终端产物。",
    "source": "literature",
    "ref_doi": "10.1126/science.280.5364.722",
@@ -106,6 +109,7 @@
      }
     ],
     "transferable_principle": "厌氧群落以多位点顺序分工与中间产物通道化对高氯代有机氯实施有次序的级联脱氯：前一步产物被通道化进入下一步（DDE 而非 DDD 为主要中间体），各步相对速率差异决定级联次序；该「级联次序加中间产物通道化」架构原理可独立于具体辅酶化学与单一酶机制而被抽象为多位点串联转化的设计思路",
+    "transferable_principle_en": "Anaerobic communities achieve ordered cascade dechlorination of highly chlorinated organochlorines through multi-site sequential division of labor and intermediate channeling: the product of each step is channeled into the next step (with DDE, not DDD, as the major intermediate), and differences in the relative rates of the steps determine the cascade order. This architecture of \"cascade order plus intermediate channeling\" can be abstracted, independently of specific coenzyme chemistry and single-enzyme mechanisms, into a design concept for multi-site serial transformation.",
     "verification_quote": "DDE is dechlorinated to DDMU in both methanogenic and sulfidogenic microcosms and that DDD is dehydrochlorinated to DDMU three orders of magnitude more slowly"
    },
    "source_doi": "10.1126/science.280.5364.722",
@@ -123,7 +127,9 @@
   {
    "mechanism_id": "ASCD-002",
    "name": "各位点依托的低电位辅酶/辅基电子转移化学（B12/类咕啉、F430、血红素）——群落次序之下的单位点还原脱氯层",
+   "name_en": "Low-potential coenzyme/prosthetic-group electron-transfer chemistry underlying each site (B12/corrinoids, F430, heme) - the single-site reductive dechlorination layer beneath community ordering",
    "description": "级联中每一步脱氯在化学上由低电位过渡金属辅酶/辅基介导：游离维生素 B12（钴胺素/类咕啉）在温和还原条件下即可使 DDT 还原脱氯（Berry 与 Stotter 1977）；细菌过渡金属辅酶（包括钴胺素、辅酶 F430 与血红素类）催化有机氯的还原脱氯（Gantzer 与 Wackett 1991）。该层是各位点功能种群执行单步脱氯所依托的电子转移化学，属单位点共转化。本条将其作为边界层引用：辅酶化学层已由库内 reductive-dehalogenase-b12-dechlorination 原型专司，本原型不复述其化学，仅在其上叠加群落级次序。",
+   "description_en": "Each dechlorination step in the cascade is chemically mediated by low-potential transition-metal coenzymes/prosthetic groups: free vitamin B12 (cobalamin/corrinoids) can reductively dechlorinate DDT under mild reducing conditions (Berry and Stotter 1977); bacterial transition-metal cofactors (including cobalamin, coenzyme F430, and hemes) catalyze reductive dechlorination of organochlorines (Gantzer and Wackett 1991). This layer is the electron-transfer chemistry on which the functional population at each site relies to perform a single dechlorination step, constituting a single-site co-transformation. This entry references it as a boundary layer: the coenzyme chemistry layer is already the remit of the reductive-dehalogenase-b12-dechlorination prototype in this library, so this prototype does not restate its chemistry but only superimposes community-level ordering on top of it.",
    "基本原理": "低电位还原态过渡金属辅酶/辅基经电子转移断裂有机氯 C-Cl 键；该化学本质为单位点、单步的共转化，单个辅酶类型催化一步脱氯，本身不携带跨步次序，跨步次序由群落级架构赋予（见 ASCD-001）。",
    "source": "literature",
    "ref_doi": "10.1021/es00016a017",
@@ -199,6 +205,7 @@
      }
     ],
     "transferable_principle": "低电位细菌过渡金属辅酶/辅基（钴胺素、F430、血红素）经电子转移介导有机氯单步还原脱氯，是群落级联中各步所依托的单位点化学；该化学为单位点共转化、不提供跨步次序，次序由群落级架构（ASCD-001）赋予",
+    "transferable_principle_en": "Low-potential bacterial transition-metal coenzymes/prosthetic groups (cobalamin, F430, heme) mediate single-step reductive dechlorination of organochlorines via electron transfer, providing the single-site chemistry on which each step of the community cascade relies. This chemistry is a single-site co-transformation that does not provide cross-step ordering; such ordering is conferred instead by the community-level architecture (ASCD-001).",
     "verification_quote": "Reductive dechlorination catalyzed by bacterial transition-metal coenzymes"
    },
    "source_doi": "10.1021/es00016a017",

@@ -5,6 +5,7 @@
   "organism": {
     "common": "仙人掌",
     "scientific": "Cactaceae",
+    "scientific_en": "Cactaceae (cactus family)",
     "category": "植物"
   },
   "biomimetic_dimension": "形态仿生",
@@ -22,7 +23,9 @@
   "mechanisms": [
     {
       "name": "仙人掌刺锥形梯度润湿定向集水",
+      "name_en": "Cactus spine conical gradient wetting for directional water collection",
       "description": "160.4 ± 1.2",
+      "description_en": "160.4 ± 1.2",
       "functional_groups": [
         "-S-（硫醚键）"
       ],
@@ -68,7 +71,8 @@
             "verification_method": "pdf_visual_reading"
           }
         ],
-        "transferable_principle": "仙人掌刺锥形微结构+梯度润湿性"
+        "transferable_principle": "仙人掌刺锥形微结构+梯度润湿性",
+        "transferable_principle_en": "Cactus spine conical microstructure and gradient wettability"
       },
       "evidence_type": "lead_inference",
       "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
@@ -83,13 +87,16 @@
     },
     {
       "name": "静电纺丝纤维形貌调控因素",
+      "name_en": "Factors controlling electrospun fiber morphology",
       "description": "溶液粘度、表面张力、溶剂、电导率、介电性能；电压、喂料速度、接收距离、喷丝头直径；温度、湿度、气体介质",
+      "description_en": "Solution viscosity, surface tension, solvent, electrical conductivity, and dielectric properties; voltage, feed rate, collector distance, and spinneret diameter; temperature, humidity, and gaseous medium",
       "functional_groups": [],
       "source": "literature",
       "ref_doi": "10.1007/s40242-021-0010-4",
       "verification": "unverified",
       "causal_chain": {
         "transferable_principle": "基于机制: 静电纺丝纤维形貌调控因素",
+        "transferable_principle_en": "Based on mechanism: factors controlling electrospun fiber morphology",
         "pollutant_feature": {
           "text": "溶液粘度、表面张力、溶剂、电导率、介电性能；电压、喂料速度、接收距离、喷丝头直径；温度、湿度、气体介质",
           "basis": "from_source",
@@ -143,7 +150,9 @@
     },
     {
       "name": "PAN/热解PAN Janus织物润湿性",
+      "name_en": "PAN/pyrolyzed PAN Janus fabric wettability",
       "description": "PAN侧超疏水，热解PAN侧超亲水",
+      "description_en": "The PAN side is superhydrophobic, while the pyrolyzed PAN side is superhydrophilic",
       "functional_groups": [
         "-S-（硫醚键）"
       ],
@@ -152,6 +161,7 @@
       "verification": "unverified",
       "causal_chain": {
         "transferable_principle": "基于机制: PAN/热解PAN Janus织物润湿性",
+        "transferable_principle_en": "Based on mechanism: PAN/pyrolyzed PAN Janus fabric wettability",
         "pollutant_feature": {
           "text": "PAN侧超疏水，热解PAN侧超亲水",
           "basis": "from_source",
@@ -217,13 +227,16 @@
     },
     {
       "name": "单向渗透三力竞争机制",
+      "name_en": "Three-force competition mechanism for unidirectional liquid penetration",
       "description": "静水压(HP)+毛细力(CF)+疏水力(HF)共同决定液滴渗透行为",
+      "description_en": "Hydrostatic pressure (HP), capillary force (CF), and hydrophobic force (HF) jointly determine the droplet penetration behavior",
       "functional_groups": [],
       "source": "literature",
       "ref_doi": "10.1007/s40242-021-0010-4",
       "verification": "unverified",
       "causal_chain": {
         "transferable_principle": "基于机制: 单向渗透三力竞争机制",
+        "transferable_principle_en": "Based on mechanism: three-force competition mechanism for unidirectional liquid penetration",
         "pollutant_feature": {
           "text": "静水压(HP)+毛细力(CF)+疏水力(HF)共同决定液滴渗透行为",
           "basis": "llm_inferred"
@@ -264,13 +277,16 @@
     },
     {
       "name": "仿生集水生物原型及机制",
+      "name_en": "Biomimetic water-collection biological prototypes and their mechanisms",
       "description": "沙漠甲虫(交替亲水岛/疏水路径)、蜘蛛丝(纺锤节-关节结构)、仙人掌刺(锥形+定向刚毛)、猪笼草(二级微沟槽)",
+      "description_en": "Desert beetle (alternating hydrophilic islands/hydrophobic pathways), spider silk (spindle-knot and joint structure), cactus spine (conical shape and directional barbs), and pitcher plant (two-level microgrooves)",
       "functional_groups": [],
       "source": "literature",
       "ref_doi": "10.1007/s40242-021-0010-4",
       "verification": "unverified",
       "causal_chain": {
         "transferable_principle": "基于机制: 仿生集水生物原型及机制",
+        "transferable_principle_en": "Based on mechanism: biomimetic water-collection biological prototypes and their mechanisms",
         "pollutant_feature": {
           "text": "沙漠甲虫(交替亲水岛/疏水路径)、蜘蛛丝(纺锤节-关节结构)、仙人掌刺(锥形+定向刚毛)、猪笼草(二级微沟槽)",
           "basis": "from_source",
@@ -323,7 +339,9 @@
     },
     {
       "name": "PCL/Teflon AF核壳纤维超疏水/超疏油",
+      "name_en": "PCL/Teflon AF core-shell fiber superhydrophobicity and superoleophobicity",
       "description": "超疏水且超疏油",
+      "description_en": "Superhydrophobic and superoleophobic",
       "functional_groups": [
         "-O-（醚键）"
       ],
@@ -332,6 +350,7 @@
       "verification": "unverified",
       "causal_chain": {
         "transferable_principle": "基于机制: PCL/Teflon AF核壳纤维超疏水/超疏油",
+        "transferable_principle_en": "Based on mechanism: PCL/Teflon AF core-shell fiber superhydrophobicity and superoleophobicity",
         "pollutant_feature": {
           "text": "超疏水且超疏油",
           "basis": "llm_inferred"
@@ -385,7 +404,9 @@
     },
     {
       "name": "Janus膜在膜蒸馏中的抗污染性能",
+      "name_en": "Anti-fouling performance of Janus membranes in membrane distillation",
       "description": "全疏水Janus膜同时具备抗油污染和抗表面活性剂润湿能力",
+      "description_en": "A fully hydrophobic Janus membrane simultaneously provides resistance to oil fouling and surfactant-induced wetting",
       "functional_groups": [
         "-S-（硫醚键）"
       ],
@@ -394,6 +415,7 @@
       "verification": "unverified",
       "causal_chain": {
         "transferable_principle": "基于机制: Janus膜在膜蒸馏中的抗污染性能",
+        "transferable_principle_en": "Based on mechanism: anti-fouling performance of Janus membranes in membrane distillation",
         "pollutant_feature": {
           "text": "全疏水Janus膜同时具备抗油污染和抗表面活性剂润湿能力",
           "basis": "from_source",
@@ -460,7 +482,9 @@
     },
     {
       "name": "Janus膜水下气泡单向传输",
+      "name_en": "Unidirectional underwater bubble transport of Janus membranes",
       "description": "气泡从亲水向超疏水方向单向渗透",
+      "description_en": "Bubbles penetrate unidirectionally from the hydrophilic side toward the superhydrophobic side",
       "functional_groups": [
         "-S-（硫醚键）"
       ],
@@ -469,6 +493,7 @@
       "verification": "unverified",
       "causal_chain": {
         "transferable_principle": "基于机制: Janus膜水下气泡单向传输",
+        "transferable_principle_en": "Based on mechanism: unidirectional underwater bubble transport of Janus membranes",
         "pollutant_feature": {
           "text": "气泡从亲水向超疏水方向单向渗透",
           "basis": "llm_inferred"
@@ -523,7 +548,9 @@
     },
     {
       "name": "Janus膜油水分离性能优势",
+      "name_en": "Advantages of Janus membranes in oil-water separation performance",
       "description": "双层Janus材料油水分离效率优于单层疏水/亲油膜",
+      "description_en": "Bilayer Janus materials achieve higher oil-water separation efficiency than single-layer hydrophobic/oleophilic membranes",
       "functional_groups": [
         "-S-（硫醚键）"
       ],
@@ -532,6 +559,7 @@
       "verification": "unverified",
       "causal_chain": {
         "transferable_principle": "基于机制: Janus膜油水分离性能优势",
+        "transferable_principle_en": "Based on mechanism: advantages of Janus membranes in oil-water separation performance",
         "pollutant_feature": {
           "text": "双层Janus材料油水分离效率优于单层疏水/亲油膜",
           "basis": "from_source",
@@ -596,13 +624,16 @@
     },
     {
       "name": "HHNCM亲水-疏水纳米纤维铜网（三仿生：甲虫+蜂窝网+猪笼草）",
+      "name_en": "HHNCM hydrophilic-hydrophobic nanofiber copper mesh (triple biomimicry: beetle + honeycomb mesh + pitcher plant)",
       "description": "1110",
+      "description_en": "1110",
       "functional_groups": [],
       "source": "literature",
       "ref_doi": "10.1002/adfm.202200359",
       "verification": "unverified",
       "causal_chain": {
         "transferable_principle": "基于机制: HHNCM亲水-疏水纳米纤维铜网（三仿生：甲虫+蜂窝网+猪笼草）",
+        "transferable_principle_en": "Based on mechanism: HHNCM hydrophilic-hydrophobic nanofiber copper mesh (triple biomimicry: beetle + honeycomb mesh + pitcher plant)",
         "pollutant_feature": {
           "text": "1110",
           "basis": "llm_inferred"
@@ -656,13 +687,16 @@
     },
     {
       "name": "纳米布沙漠甲虫雾水收集机制",
+      "name_en": "Fog water collection mechanism of the Namib desert beetle",
       "description": "亲水凸起捕获雾滴，疏水凹槽定向运输",
+      "description_en": "Hydrophilic bumps capture fog droplets, while hydrophobic grooves transport them directionally",
       "functional_groups": [],
       "source": "literature",
       "ref_doi": "10.1002/adfm.202200359",
       "verification": "unverified",
       "causal_chain": {
         "transferable_principle": "基于机制: 纳米布沙漠甲虫雾水收集机制",
+        "transferable_principle_en": "Based on mechanism: fog water collection mechanism of the Namib desert beetle",
         "pollutant_feature": {
           "text": "亲水凸起捕获雾滴，疏水凹槽定向运输",
           "basis": "llm_inferred"

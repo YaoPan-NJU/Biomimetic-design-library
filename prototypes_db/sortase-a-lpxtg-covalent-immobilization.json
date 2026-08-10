@@ -4,6 +4,7 @@
  "name_en": "Sortase A LPXTG Site-Specific Covalent Immobilization Transpeptidase",
  "organism": {
   "scientific": "Staphylococcus aureus（金黄色葡萄球菌 sortase A，SrtA，LPXTG 特异性转肽酶）",
+  "scientific_en": "Staphylococcus aureus (golden staphylococcus sortase A, SrtA, LPXTG-specific transpeptidase)",
   "category": "微生物"
  },
  "biomimetic_dimension": "分子仿生",
@@ -30,7 +31,9 @@
   {
    "mechanism_id": "SRTA-001",
    "name": "LPXTG 分选基序在活性位裂谷的位点特异性识别",
+   "name_en": "Site-specific recognition of the LPXTG sorting motif in the active-site cleft",
    "description": "金黄色葡萄球菌 sortase A 以β桶催化域的活性位裂谷识别底物表面蛋白 C 端的 LPXTG 五肽分选基序：高度保守的 Pro 与 Thr 经疏水接触被预组织定位，X 位残基（LPETG 中为 Glu）指向溶剂；PDB 1T2W（C184A 底物捕获突变体）中 LPETG 肽（链 D，Leu331-Pro332-Glu333-Thr334-Gly335）结合于 Glu105/Ser116/Ile182/Arg197 构成的口袋（SITE AC3），使 Thr-Gly 切割键摆向催化残基",
+   "description_en": "Staphylococcus aureus sortase A recognizes the C-terminal LPXTG pentapeptide sorting motif of substrate surface proteins in the active-site cleft of its beta-barrel catalytic domain: the highly conserved Pro and Thr are pre-positioned via hydrophobic contacts, while the residue at the X position (Glu in LPETG) points toward the solvent. In PDB 1T2W (C184A substrate-trapping mutant), the LPETG peptide (chain D, Leu331-Pro332-Glu333-Thr334-Gly335) binds in a pocket formed by Glu105/Ser116/Ile182/Arg197 (SITE AC3), steering the Thr-Gly scissile bond toward the catalytic residues",
    "基本原理": "短肽标签 LPXTG 的保守 Pro/Thr 经形状与疏水互补被酶活性位预组织识别，X 位可变并暴露溶剂，使酶在 LPXTG 家族底物蛋白 C 端特异性定位 Thr-Gly 切割位点，而不依赖底物蛋白其余部分",
    "source": "literature",
    "ref_doi": "10.1074/jbc.M401374200",
@@ -106,6 +109,7 @@
      }
     ],
     "transferable_principle": "一个识别短肽标签（LPXTG）并在固定位置切割/连接的酶，可对任何携带该标签的蛋白实现位点特异性的化学操作；这是'以酶识别肽标签实现底物蛋白定位'的可迁移原理，标签与底物蛋白的功能（含污染物识别功能）可独立设计",
+    "transferable_principle_en": "An enzyme that recognizes a short peptide tag (LPXTG) and cleaves/ligates at a fixed position can perform site-specific chemical operations on any protein carrying the tag. This is a transferable principle of using enzyme recognition of a peptide tag to localize a substrate protein, and the tag and the function of the substrate protein (including contaminant-recognition function) can be designed independently",
     "verification_quote": "Highly conserved proline (P) and threonine (T) residues of the LPXTG motif are held in position by hydrophobic contacts, whereas the glutamic acid residue (E) at the X position points out"
    },
    "source_doi": "10.1074/jbc.M401374200",
@@ -123,7 +127,9 @@
   {
    "mechanism_id": "SRTA-002",
    "name": "活性位 Cys184 亲核转肽与氨基受体的共价锚定结点",
+   "name_en": "Active-site Cys184 nucleophilic transpeptidation as the covalent anchoring junction with an amino acceptor",
    "description": "活性位 Cys184 硫醇盐亲核攻击 LPXTG 的 Thr-Gly 肽键，形成硫酯（thioacyl）中间体；天然条件下细胞壁肽聚糖五甘氨酸交联桥的氨基亲核解离该中间体，在底物蛋白 C 端 Thr 与细胞壁之间形成酰胺键，将表面蛋白共价锚定于细胞壁。催化装置 Cys184（亲核体）、His120、Arg197 在革兰氏阳性菌 sortase 中保守；Thr-Gly 切割键置于 Cys184 与 Arg197 之间、远离 His120 咪唑鎓（PDB 1T2W）",
+   "description_en": "The active-site Cys184 thiolate nucleophilically attacks the Thr-Gly peptide bond of LPXTG, forming a thioacyl intermediate. Under native conditions, the amino group of the pentaglycine cross-bridge of cell-wall peptidoglycan nucleophilically resolves this intermediate, forming an amide bond between the C-terminal Thr of the substrate protein and the cell wall, covalently anchoring the surface protein to the cell wall. The catalytic machinery Cys184 (nucleophile), His120, and Arg197 is conserved in sortases of Gram-positive bacteria. The Thr-Gly scissile bond is positioned between Cys184 and Arg197, away from the His120 imidazolium (PDB 1T2W)",
    "基本原理": "活性位半胱氨酸（Cys184）作为亲核体在 LPXTG 的 Thr-Gly 键形成可被外源氨基亲核解离的硫酯中间体，使酶催化转肽而非水解，将一个蛋白的 C 端共价连接到含游离氨基的受体（天然为细胞壁肽聚糖）；这一'亲核转肽→共价酰胺结点'机制是位点特异性共价固定的化学基础",
    "source": "literature",
    "ref_doi": "10.1074/jbc.M401374200",
@@ -199,6 +205,7 @@
      }
     ],
     "transferable_principle": "'活性位半胱氨酸亲核转肽→与外源氨基受体形成共价酰胺结点'是将蛋白在确定位置共价锚定的可迁移化学机制；将氨基受体由天然细胞壁肽聚糖替换为人工载体表面手柄，即可对任意 LPXTG 标签蛋白实现位点特异性共价固定",
+    "transferable_principle_en": "Active-site cysteine nucleophilic transpeptidation forming a covalent amide junction with an exogenous amino acceptor is a transferable chemical mechanism for covalently anchoring proteins at defined positions. By replacing the amino acceptor from native cell-wall peptidoglycan with a handle on the surface of an artificial carrier, any LPXTG-tagged protein can be site-specifically and covalently immobilized",
     "verification_quote": "The scissile T-G peptide bond is positioned between the active site Cys(184) and Arg(197) residues and at a greater distance from the imidazolium side chain of His(120)."
    },
    "source_doi": "10.1074/jbc.M401374200",

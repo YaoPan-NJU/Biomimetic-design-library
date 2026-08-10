@@ -4,6 +4,7 @@
  "name_en": "Natural Riboswitch Metabolite-Selective Recognition",
  "organism": {
   "scientific": "Escherichia coli thiM mRNA（TPP 核糖开关适配体域；PDB 2GDI 为体外转录构建体，天然 TPP 核糖开关遍及细菌、植物、真菌）",
+  "scientific_en": "Escherichia coli thiM mRNA (TPP riboswitch aptamer domain; PDB 2GDI is an in vitro transcribed construct; native TPP riboswitches are widespread in bacteria, plants, and fungi)",
   "category": "微生物"
  },
  "biomimetic_dimension": "分子仿生",
@@ -31,7 +32,9 @@
   {
    "mechanism_id": "RSW-001",
    "name": "预组织适配体域精密结合口袋对代谢物的高选择性识别",
+   "name_en": "High-selectivity recognition of metabolites by a preorganized aptamer-domain precision binding pocket",
    "description": "大肠杆菌 thiM mRNA 的 TPP 核糖开关适配体域以两个亚结构域构成精密结合口袋：一个形成插入式口袋容纳 TPP 的 4-氨基-5-羟甲基-2-甲基嘧啶部分（方向性氢键与碱基堆积），另一形成较宽口袋经二价金属离子（Mg2+）与水分子桥接焦磷酸部分；两个口袋定位成分子量测装置，以伸展构象识别 TPP，对配体官能团几何高度判别（中央噻唑部分不被识别）",
+   "description_en": "The TPP riboswitch aptamer domain of Escherichia coli thiM mRNA forms a precision binding pocket from two subdomains. One forms an insertion-type pocket that accommodates the 4-amino-5-hydroxymethyl-2-methylpyrimidine moiety of TPP through directional hydrogen bonds and base stacking. The other forms a wider pocket that bridges the pyrophosphate moiety via divalent metal ions (Mg2+) and water molecules. Positioned as a molecular measuring device, the two pockets recognize TPP in an extended conformation and are highly discriminating toward the geometry of ligand functional groups (the central thiazole moiety is not recognized).",
    "基本原理": "预组织的 RNA 碱基与核糖官能团阵列对代谢物配体的方向性氢键、插入式碱基堆积与金属水桥接组合，形成媲美蛋白的精密结合口袋，在无蛋白骨架参与下实现对特定小分子表位的高选择性识别",
    "source": "literature",
    "ref_doi": "10.1038/nature04740",
@@ -106,6 +109,7 @@
      }
     ],
     "transferable_principle": "预组织的方向性氢键给体/受体阵列、插入式碱基堆积口袋与金属水桥接组合，可形成精密结合口袋，在无蛋白骨架参与下对特定小分子表位实现高选择性识别",
+    "transferable_principle_en": "Preorganized arrays of directional hydrogen-bond donors/acceptors, an insertion-type base-stacking pocket, and metal-water bridging can combine to form a precision binding pocket that achieves high-selectivity recognition of a specific small-molecule epitope without any protein scaffold involvement.",
     "verification_quote": "The two pockets are positioned to function as a molecular measuring device that recognizes TPP in an extended conformation"
    },
    "source_doi": "10.1038/nature04740",
@@ -124,7 +128,9 @@
   {
    "mechanism_id": "RSW-002",
    "name": "配体诱导的适配体域构象开关调控下游基因（动态响应）",
+   "name_en": "Ligand-induced conformational switch of the aptamer domain regulating downstream gene expression (dynamic response)",
    "description": "TPP 核糖开关的代谢物结合事件触发构象开关：天然配体 TPP 与其药物类似物结合后稳定适配体域的二级与三级结构元件，该折叠结构经与表达平台（终止子/抗终止子发夹）的偶联调控 mRNA 编码蛋白的合成，实现代谢物感应到基因表达的动态响应",
+   "description_en": "Metabolite binding in the TPP riboswitch triggers a conformational switch: binding of the natural ligand TPP and its drug analogs stabilizes the secondary and tertiary structural elements of the aptamer domain. This folded structure, coupled to the expression platform (terminator/antiterminator hairpins), regulates the synthesis of mRNA-encoded proteins, producing a dynamic response that links metabolite sensing to gene expression.",
    "基本原理": "小分子配体结合热力学稳定适配体域的折叠态，折叠态与未折叠态的构象平衡移动经结构偶联传递至表达平台，将配体结合事件转换为下游基因调控信号；蛋白级精密口袋使该构象开关具备选择性",
    "source": "literature",
    "ref_doi": "10.1038/nature04740",
@@ -199,6 +205,7 @@
      }
     ],
     "transferable_principle": "小分子配体结合热力学稳定识别元件的折叠/有序态，经结构偶联将结合事件转换为可输出的构象/状态切换，构成选择性动态响应的通用机制",
+    "transferable_principle_en": "Binding of a small-molecule ligand thermodynamically stabilizes the folded/ordered state of the recognition element, and structural coupling converts the binding event into an outputtable conformational/state switch, constituting a general mechanism for selective dynamic responses.",
     "verification_quote": "Both the natural ligand and its drug-like analogue stabilize secondary and tertiary structure elements"
    },
    "source_doi": "10.1038/nature04740",

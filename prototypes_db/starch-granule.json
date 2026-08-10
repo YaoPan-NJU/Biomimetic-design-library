@@ -3,6 +3,7 @@
   "organism": {
     "common": "淀粉颗粒",
     "scientific": "Zea mays / Solanum tuberosum",
+    "scientific_en": "Zea mays / Solanum tuberosum",
     "category": "植物"
   },
   "category": "biopolymer",
@@ -927,11 +928,14 @@
   "mechanisms": [
     {
       "name": "淀粉颗粒羟基吸附与改性增强",
+      "name_en": "Hydroxyl adsorption and modification-enhanced adsorption of starch granules",
       "description": "淀粉颗粒的-OH通过氢键和络合作用吸附污染物，改性后引入-COOH/-NH₂可显著增强重金属吸附容量。",
+      "description_en": "The -OH groups of starch granules adsorb pollutants through hydrogen bonding and complexation. Modification introduces -COOH/-NH2 groups, which can significantly enhance the adsorption capacity for heavy metals.",
       "source": "literature",
       "ref_doi": "10.1016/j.ijbiomac.2022.06.060",
       "causal_chain": {
         "transferable_principle": "淀粉颗粒-OH通过氢键/络合吸附，改性（接枝、交联、酯化）引入新官能团可大幅增强吸附容量",
+        "transferable_principle_en": "The -OH groups of starch granules adsorb via hydrogen bonding/complexation. Modification (grafting, crosslinking, esterification) introduces new functional groups that can greatly enhance adsorption capacity.",
         "pollutant_feature": {
           "text": "重金属阳离子、染料、有机污染物",
           "basis": "from_source",

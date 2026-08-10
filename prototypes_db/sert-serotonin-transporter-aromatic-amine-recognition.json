@@ -4,6 +4,7 @@
   "name_en": "Serotonin Transporter (SERT) Central Aromatic-Amine Site Alternating-Access Recognition",
   "organism": {
     "scientific": "Homo sapiens（人血清素转运体 SERT / SLC6A4，NSS 家族跨膜转运蛋白）",
+    "scientific_en": "Homo sapiens serotonin transporter SERT / SLC6A4, an NSS-family transmembrane transporter",
     "category": "动物"
   },
   "biomimetic_dimension": "分子仿生",
@@ -31,7 +32,9 @@
     {
       "mechanism_id": "SERT-001",
       "name": "中央结合位点对芳香胺配体的有限腔体+芳香/离子识别",
+      "name_en": "Limited-cavity aromatic/ionic recognition of aromatic-amine ligands at the central binding site",
       "description": "人 SERT 的中央底物/抑制剂结合位点位于跨膜螺旋 TM1、3、6、8、10 之间，为芳香胺类配体提供有限空间、芳香相互作用与离子性锚定环境；Coleman 2016 以 3.15 Å 晶体结构解析 SERT 结合抗抑郁药((S)-西酞普兰、帕罗西汀)，配体锁定于该中央位点",
+      "description_en": "The central substrate/inhibitor binding site of human SERT lies between transmembrane helices TM1, 3, 6, 8, and 10, providing limited space, aromatic interactions, and an ionic anchoring environment for aromatic-amine ligands. Coleman 2016 resolved SERT bound to the antidepressants (S)-citalopram and paroxetine at 3.15 Å resolution, with the ligands locked in this central site.",
       "基本原理": "有限尺寸的中央腔以芳香残基的 π 相互作用、极性/离子残基对配体胺基/酚羟基的定向作用，识别两亲性芳香胺配体；识别来自腔体几何与芳香/离子作用的组合而非单纯疏水分配",
       "source": "literature",
       "ref_doi": "10.1038/nature17629",
@@ -86,6 +89,7 @@
           }
         ],
         "transferable_principle": "有限尺寸中央腔配合芳香残基 π 作用与极性/离子锚定，可识别两亲性芳香胺配体；迁移为材料时以芳香壁+定向氢键/离子位点构建芳香胺药物识别腔，选择性来自几何+芳香/离子组合而非纯疏水",
+        "transferable_principle_en": "A finite-size central cavity combined with aromatic-residue pi interactions and polar/ionic anchoring can recognize amphiphilic aromatic-amine ligands. When translated to materials, an aromatic wall plus oriented hydrogen-bonding/ionic sites builds a recognition cavity for aromatic-amine drugs; selectivity arises from the geometric plus aromatic/ionic combination rather than pure hydrophobicity.",
         "verification_quote": "X-ray structures and mechanism of the human serotonin transporter"
       },
       "source_doi": "10.1038/nature17629",
@@ -103,7 +107,9 @@
     {
       "mechanism_id": "SERT-002",
       "name": "Na+/Cl- 耦合的交替开放构象循环门控",
+      "name_en": "Na+/Cl- coupled alternating-access gating of the conformational cycle",
       "description": "SERT 通过 Na+/Cl- 耦合在外向开放、闭塞与内向开放状态间交替切换（alternating access），以离子梯度驱动配体的定向摄取与释放（Coleman 2016 提出机制）",
+      "description_en": "SERT alternates (alternating access) among outward-open, occluded, and inward-open states through coupling to Na+/Cl-, using the ion gradient to drive directional uptake and release of ligands (mechanism proposed by Coleman 2016).",
       "基本原理": "离子（Na+/Cl-）结合与构象循环耦合，为配体进出提供方向性门控；该门控是‘识别+可逆释放+再生’的天然实现，而非静态结合",
       "source": "literature",
       "ref_doi": "10.1038/nature17629",
@@ -153,6 +159,7 @@
           }
         ],
         "transferable_principle": "离子/pH 响应的构象门控可迁移为吸附材料的‘刺激响应再生’隐喻：以 pH/离子强度切换识别腔可达性实现温和再生；但被动材料不能复制主动转运的方向性",
+        "transferable_principle_en": "Ion/pH-responsive conformational gating can be translated as a 'stimulus-responsive regeneration' metaphor for adsorbent materials: switching recognition-cavity accessibility by pH or ionic strength enables mild regeneration. However, passive materials cannot replicate the directionality of active transport.",
         "verification_quote": "X-ray structures and mechanism of the human serotonin transporter"
       },
       "source_doi": "10.1038/nature17629",

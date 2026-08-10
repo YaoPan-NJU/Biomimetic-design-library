@@ -4,6 +4,7 @@
   "name_en": "Mussel Foot Adhesion",
   "organism": {
     "scientific": "Mytilus spp.",
+    "scientific_en": "Mytilus spp.",
     "category": "动物"
   },
   "biomimetic_dimension": "分子仿生",
@@ -889,7 +890,9 @@
   "mechanisms": [
     {
       "name": "贻贝足丝DOPA儿茶酚-金属多齿配位与胺基静电黏附",
+      "name_en": "Mussel foot DOPA catechol-metal multidentate coordination and amine electrostatic adhesion",
       "description": "两性离子通过静电作用可结合多达8个水分子，而PEG每个重复单元(-CH2CH2O-)仅能通过氢键结合1个水分子",
+      "description_en": "Zwitterions can bind up to eight water molecules through electrostatic interactions, whereas each repeat unit (-CH2CH2O-) of PEG binds only one water molecule through hydrogen bonding.",
       "functional_groups": [
         "静电作用位点",
         "PEG醚键",
@@ -902,6 +905,7 @@
       "verification": "needs_review",
       "causal_chain": {
         "transferable_principle": "基于机制: 两性离子水合能力 vs PEG Zwitterion hydration capacity vs P",
+        "transferable_principle_en": "Based on mechanism: Zwitterion hydration capacity vs PEG Zwitterion hydration capacity vs P",
         "pollutant_feature": {
           "text": "两性离子通过静电作用可结合多达8个水分子，而PEG每个重复单元(-CH2CH2O-)仅能通过氢键结合1个水分子",
           "basis": "from_source",
@@ -964,7 +968,9 @@
     },
     {
       "name": "磷酸胆碱仿生机制 Phosphorylcholine biomimetic mechanism",
+      "name_en": "Phosphorylcholine biomimetic mechanism",
       "description": "磷酸甜菜碱基两性离子聚合物被视为仿生抗污材料，因其具有通常存在于细胞膜外层的磷酸胆碱头基",
+      "description_en": "Phosphobetaine-based zwitterionic polymers are regarded as biomimetic antifouling materials because they bear phosphorylcholine head groups commonly found on the outer leaflet of cell membranes.",
       "functional_groups": [
         "-S-（硫醚键）",
         "-PO₄³⁻（磷酸基）",
@@ -982,6 +988,7 @@
       ],
       "causal_chain": {
         "transferable_principle": "基于机制: 磷酸胆碱仿生机制 Phosphorylcholine biomimetic mechanism",
+        "transferable_principle_en": "Based on mechanism: Phosphorylcholine biomimetic mechanism",
         "pollutant_feature": {
           "text": "磷酸甜菜碱基两性离子聚合物被视为仿生抗污材料，因其具有通常存在于细胞膜外层的磷酸胆碱头基",
           "basis": "llm_inferred"
@@ -1035,7 +1042,9 @@
     },
     {
       "name": "PDA自聚合形成机制 PDA self-polymerization mechanism",
+      "name_en": "PDA self-polymerization mechanism",
       "description": "氧化条件下羟基自发去质子化形成多巴胺醌，经亲核分子内环化变为leukodopaminechrome，再经进一步氧化重排形成5,6-二羟基吲哚或5,6-吲哚醌，最终通过2,3,4,7位分支反应交联形成类真黑素聚合物PDA",
+      "description_en": "Under oxidative conditions, hydroxyl groups spontaneously deprotonate to form dopaminequinone, which is converted to leukodopaminechrome via nucleophilic intramolecular cyclization, then to 5,6-dihydroxyindole or 5,6-indolequinone via further oxidative rearrangement, and finally crosslinks through branching reactions at the 2, 3, 4, and 7 positions to form the eumelanin-like polymer PDA.",
       "functional_groups": [
         "PAM酰胺基",
         "吲哚环",
@@ -1153,6 +1162,7 @@
           }
         ],
         "transferable_principle": "多巴胺自聚可在任意基底上沉积含catechol/amine的活性涂层，是通用的表面功能化平台技术",
+        "transferable_principle_en": "Dopamine self-polymerization can deposit an active coating containing catechol/amine groups on any substrate and is a general platform technology for surface functionalization.",
         "verification_quote": "polydopamine (PDA), abundant functional groups on its surface, which was formed by the self-polymerization of dopamine in an alkaline saline solution, can be used as a surface modifier for adsorbents for heavy metal elimination.",
         "source_doi": "10.1016/j.apsusc.2020.148379",
         "source_locator": "p.2 / Section 1"
@@ -1169,7 +1179,9 @@
     },
     {
       "name": "PDA涂层 vs 传统涂层技术对比 PDA coating vs traditional coating techniques",
+      "name_en": "PDA coating vs traditional coating techniques",
       "description": "PDA可沉积于任何表面（有机/无机、亲水/疏水、块状/纤维状/颗粒状、金属/聚合物/活细胞），而SAM仅限贵金属表面（Cu/Pt/Ag/Au）通过巯基金属键或氧化物表面通过烷基硅烷；LbL需多步沉积且耗时费力",
+      "description_en": "PDA can be deposited on any surface (organic/inorganic, hydrophilic/hydrophobic, bulk/fibrous/particulate, metal/polymer/living cells), whereas SAM is limited to noble metal surfaces (Cu/Pt/Ag/Au) via thiol-metal bonds or oxide surfaces via alkylsilanes; LbL requires multi-step deposition and is time-consuming and laborious.",
       "functional_groups": [
         "硅烷偶联剂",
         "聚多巴胺（PDA）邻苯二酚/胺基",
@@ -1199,6 +1211,7 @@
       ],
       "causal_chain": {
         "transferable_principle": "基于机制: PDA涂层 vs 传统涂层技术对比 PDA coating vs traditional coati",
+        "transferable_principle_en": "Based on mechanism: PDA coating vs traditional coati",
         "pollutant_feature": {
           "text": "PDA可沉积于任何表面（有机/无机、亲水/疏水、块状/纤维状/颗粒状、金属/聚合物/活细胞），而SAM仅限贵金属表面（Cu/Pt/Ag/Au）通过巯基金属键或氧化物表面通过烷基硅烷；LbL需多步沉积且",
           "basis": "from_source",
@@ -1266,7 +1279,9 @@
     },
     {
       "name": "多巴胺辅助共沉积机制 Dopamine-assisted co-deposition mechanism",
+      "name_en": "Dopamine-assisted co-deposition mechanism",
       "description": "多巴胺辅助共沉积涉及多巴胺与第二组分之间的单/多共价或非共价相互作用。共价共沉积提供更强网络以促进涂层稳定性。poly(SBMA)通过去质子化酚基与季铵的局部静电作用与PDA交互；poly(MPC)通过酚-磷脂氢键和阳离子-π相互作用与PDA交互",
+      "description_en": "Dopamine-assisted co-deposition involves single or multiple covalent or non-covalent interactions between dopamine and a second component. Covalent co-deposition provides a stronger network that promotes coating stability. poly(SBMA) interacts with PDA through local electrostatic interactions between deprotonated phenolic groups and quaternary ammonium groups; poly(MPC) interacts with PDA through phenol-phospholipid hydrogen bonding and cation-pi interactions.",
       "functional_groups": [
         "PAM酰胺基",
         "静电作用位点",
@@ -1300,6 +1315,7 @@
       ],
       "causal_chain": {
         "transferable_principle": "基于机制: 多巴胺辅助共沉积机制 Dopamine-assisted co-deposition mechani",
+        "transferable_principle_en": "Based on mechanism: Dopamine-assisted co-deposition mechani",
         "pollutant_feature": {
           "text": "多巴胺辅助共沉积涉及多巴胺与第二组分之间的单/多共价或非共价相互作用。共价共沉积提供更强网络以促进涂层稳定性。poly(SBMA)通过去质子化酚基与季铵的局部静电作用与PDA交互；poly(MPC)通",
           "basis": "from_source",
@@ -1371,7 +1387,9 @@
     },
     {
       "name": "三种驱动力协同机制",
+      "name_en": "Synergistic mechanism of three driving forces",
       "description": "静电吸引/排斥(主导) + π-π堆积 + 氢键→协同或竞争效应→决定选择性吸附",
+      "description_en": "Electrostatic attraction/repulsion (dominant), pi-pi stacking, and hydrogen bonding produce synergistic or competitive effects that determine selective adsorption.",
       "functional_groups": [
         "π-π堆积位点",
         "静电作用位点",
@@ -1389,6 +1407,7 @@
       ],
       "causal_chain": {
         "transferable_principle": "基于机制: 三种驱动力协同机制",
+        "transferable_principle_en": "Based on mechanism: Synergistic mechanism of three driving forces",
         "pollutant_feature": {
           "text": "静电吸引/排斥(主导) + π-π堆积 + 氢键→协同或竞争效应→决定选择性吸附",
           "basis": "from_source",
@@ -1441,13 +1460,16 @@
     },
     {
       "name": "染料絮凝实验——盐浓度效应确认静电机制",
+      "name_en": "Dye flocculation experiment - salt concentration effect confirming the electrostatic mechanism",
       "description": "KCl浓度从1→50→100mM: 絮凝量随盐浓度增加而降低→静电屏蔽效应→与ITC结果一致",
+      "description_en": "As the KCl concentration increases from 1 to 50 to 100 mM, the amount of flocculation decreases due to the electrostatic screening effect, consistent with ITC results.",
       "functional_groups": [],
       "source": "literature",
       "ref_doi": "10.1016/j.cej.2021.129237",
       "verification": "needs_review",
       "causal_chain": {
         "transferable_principle": "基于机制: 染料絮凝实验——盐浓度效应确认静电机制",
+        "transferable_principle_en": "Based on mechanism: Dye flocculation experiment - salt concentration effect confirming the electrostatic mechanism",
         "pollutant_feature": {
           "text": "KCl浓度从1→50→100mM: 絮凝量随盐浓度增加而降低→静电屏蔽效应→与ITC结果一致",
           "basis": "from_source",
@@ -1499,7 +1521,9 @@
     },
     {
       "name": "疏水改性方法分类",
+      "name_en": "Classification of hydrophobic modification methods",
       "description": "CVD, AHSM, Dip coating, Carbonization",
+      "description_en": "CVD, AHSM, dip coating, carbonization.",
       "functional_groups": [
         "-S-（硫醚键）",
         "-O-（醚键）"
@@ -1517,6 +1541,7 @@
       "verification_quote": "the NAs with good \nwaterproof properties for utilization in oil/water separation, as the NAs \ncould selectively absorb oil from the water. For this purpose, various \nmethods to modify NAs, such as chemical",
       "causal_chain": {
         "transferable_principle": "基于机制: 疏水改性方法分类",
+        "transferable_principle_en": "Based on mechanism: Classification of hydrophobic modification methods",
         "pollutant_feature": {
           "text": "CVD, AHSM, Dip coating, Carbonization",
           "basis": "from_source",
@@ -1583,7 +1608,9 @@
     },
     {
       "name": "CVD法均匀性问题",
+      "name_en": "Uniformity issue of the CVD method",
       "description": "Uneven hydrophobic functionalization in 3D porous structure",
+      "description_en": "Uneven hydrophobic functionalization in 3D porous structure.",
       "functional_groups": [
         "-S-（硫醚键）",
         "-O-（醚键）"
@@ -1601,6 +1628,7 @@
       "verification_quote": ". Due to their low cost, three- \ndimensional (3D) structure and convenient design, NAs have attracted \nwide attention from researchers studying oil/water separation. Fig. 1.1 \nshows the number of publications",
       "causal_chain": {
         "transferable_principle": "基于机制: CVD法均匀性问题",
+        "transferable_principle_en": "Based on mechanism: Uniformity issue of the CVD method",
         "pollutant_feature": {
           "text": "Uneven hydrophobic functionalization in 3D porous structure",
           "basis": "from_source",
@@ -1661,13 +1689,16 @@
     },
     {
       "name": "疏水改性材料分布统计",
+      "name_en": "Distribution statistics of hydrophobic modification materials",
       "description": "~70",
+      "description_en": "~70",
       "functional_groups": [],
       "source": "literature",
       "ref_doi": "10.1016/j.carbpol.2022.120242",
       "verification": "needs_review",
       "causal_chain": {
         "transferable_principle": "基于机制: 疏水改性材料分布统计",
+        "transferable_principle_en": "Based on mechanism: Distribution statistics of hydrophobic modification materials",
         "pollutant_feature": {
           "text": "~70",
           "basis": "from_source",
@@ -1726,7 +1757,9 @@
     },
     {
       "name": "铀酰离子配位化学",
+      "name_en": "Uranyl ion coordination chemistry",
       "description": "UO2^2+线性对称[O=U=O]^2+, U-O键长1.76 Å, 4-6个配体在赤道面配位, 四方/五方/六方双锥",
+      "description_en": "UO2^2+ is a linear, symmetric [O=U=O]^2+ ion with a U-O bond length of 1.76 Å; 4-6 ligands coordinate in the equatorial plane, forming square, pentagonal, or hexagonal bipyramidal geometries.",
       "functional_groups": [
         "-CONH-（酰胺键）",
         "-O-（醚键）",
@@ -1840,6 +1873,7 @@
           }
         ],
         "transferable_principle": "酰胺肟功能化可在海水条件下选择性捕获铀酰离子，可迁移到任何含酰胺肟基团的吸附材料",
+        "transferable_principle_en": "Amidoxime functionalization can selectively capture uranyl ions under seawater conditions and can be transferred to any adsorbent material bearing amidoxime groups.",
         "verification_quote": "function-oriented design principles for uranium adsorbent"
       },
       "verification_quote": "In an alkaline environment (pH 7.5-10.0), the uranyl anion UO2(CO3)3^4- becomes the predominant form. According to the HSAB principle, UO2^2+ is classified as a hard acid",
@@ -1855,7 +1889,9 @@
     },
     {
       "name": "酰胺肟配位模式",
+      "name_en": "Amidoxime coordination modes",
       "description": "四种结合模式：单齿(单氧配位)/三齿(环状酰亚胺二肟)/侧向η2(开链酰胺肟)/螯合",
+      "description_en": "Four binding modes: monodentate (single-oxygen coordination), tridentate (cyclic imide dioxime), lateral eta2 (open-chain amidoxime), and chelating.",
       "functional_groups": [
         "-CONH-（酰胺键）",
         "配位/螯合位点"
@@ -1865,6 +1901,7 @@
       "verification": "partial",
       "causal_chain": {
         "transferable_principle": "基于机制: 酰胺肟配位模式",
+        "transferable_principle_en": "Based on mechanism: Amidoxime coordination modes",
         "pollutant_feature": {
           "text": "四种结合模式：单齿(单氧配位)/三齿(环状酰亚胺二肟)/侧向η2(开链酰胺肟)/螯合",
           "basis": "from_source",
@@ -1929,7 +1966,9 @@
     },
     {
       "name": "配体优化六大策略",
+      "name_en": "Six strategies for ligand optimization",
       "description": "(1)高含量开链AO (2)增加AO亲水性 (3)高柔性配体链 (4)合适PAO链长 (5)引入给电子取代基 (6)空间协同螯合",
+      "description_en": "(1) high content of open-chain AO; (2) increased AO hydrophilicity; (3) highly flexible ligand chains; (4) suitable PAO chain length; (5) introduction of electron-donating substituents; (6) spatial synergistic chelation.",
       "functional_groups": [
         "-O-（醚键）",
         "配位/螯合位点"
@@ -1939,6 +1978,7 @@
       "verification": "partial",
       "causal_chain": {
         "transferable_principle": "基于机制: 配体优化六大策略",
+        "transferable_principle_en": "Based on mechanism: Six strategies for ligand optimization",
         "pollutant_feature": {
           "text": "(1)高含量开链AO (2)增加AO亲水性 (3)高柔性配体链 (4)合适PAO链长 (5)引入给电子取代基 (6)空间协同螯合",
           "basis": "from_source",
@@ -2005,7 +2045,9 @@
     },
     {
       "name": "双功能协同策略",
+      "name_en": "Bifunctional synergistic strategy",
       "description": "三种机制：(1)第二配体提供额外配位位点 (2)增强AO碱性→更强U(VI)络合 (3)酸性基团解离碳酸盐→释放UO2^2+",
+      "description_en": "Three mechanisms: (1) the second ligand provides additional coordination sites; (2) enhanced AO basicity leads to stronger U(VI) complexation; (3) acidic groups dissociate carbonate to release UO2^2+.",
       "functional_groups": [
         "DOPA 3,4-二羟基苯丙氨酸",
         "邻苯二酚 catechol (-OH)",
@@ -2018,6 +2060,7 @@
       "verification": "partial",
       "causal_chain": {
         "transferable_principle": "基于机制: 双功能协同策略",
+        "transferable_principle_en": "Based on mechanism: Bifunctional synergistic strategy",
         "pollutant_feature": {
           "text": "三种机制：(1)第二配体提供额外配位位点 (2)增强AO碱性→更强U(VI)络合 (3)酸性基团解离碳酸盐→释放UO2^2+",
           "basis": "from_source",
@@ -2093,7 +2136,9 @@
     },
     {
       "name": "离子印迹策略——三种改进方向",
+      "name_en": "Ion-imprinting strategy - three improvement directions",
       "description": "(1)高孔隙材料增加可及位点 (2)2D/表面印迹提高可及性 (3)强化功能基-铀酰配位",
+      "description_en": "(1) highly porous materials increase accessible sites; (2) 2D/surface imprinting improves accessibility; (3) strengthened functional-group-uranyl coordination.",
       "functional_groups": [
         "配位/螯合位点"
       ],
@@ -2102,6 +2147,7 @@
       "verification": "partial",
       "causal_chain": {
         "transferable_principle": "基于机制: 离子印迹策略——三种改进方向",
+        "transferable_principle_en": "Based on mechanism: Ion-imprinting strategy - three improvement directions",
         "pollutant_feature": {
           "text": "(1)高孔隙材料增加可及位点 (2)2D/表面印迹提高可及性 (3)强化功能基-铀酰配位",
           "basis": "from_source",
@@ -2166,7 +2212,9 @@
     },
     {
       "name": "电化学提取三阶段机理",
+      "name_en": "Three-stage mechanism of electrochemical extraction",
       "description": "电迁移→电吸附→电化学沉积; UO2^2+→U(IV)还原沉淀→突破热力学平衡",
+      "description_en": "Electromigration, electroadsorption, and electrochemical deposition in sequence; UO2^2+ is reductively precipitated to U(IV), breaking the thermodynamic equilibrium.",
       "functional_groups": [
         "-O-（醚键）"
       ],
@@ -2187,6 +2235,7 @@
       ],
       "causal_chain": {
         "transferable_principle": "基于机制: 电化学提取三阶段机理",
+        "transferable_principle_en": "Based on mechanism: Three-stage mechanism of electrochemical extraction",
         "pollutant_feature": {
           "text": "电迁移→电吸附→电化学沉积; UO2^2+→U(IV)还原沉淀→突破热力学平衡",
           "basis": "from_source",
@@ -2254,7 +2303,9 @@
     },
     {
       "name": "MOF光催化协同机制",
+      "name_en": "MOF photocatalytic synergistic mechanism",
       "description": "MOF SCU-19(POM+MOF)：三重机制——配体配位+光催化还原+部分化学还原",
+      "description_en": "MOF SCU-19 (POM + MOF) operates through a triple mechanism: ligand coordination, photocatalytic reduction, and partial chemical reduction.",
       "functional_groups": [
         "-S-（硫醚键）",
         "-O-（醚键）",
@@ -2266,6 +2317,7 @@
       "verification_quote": "ogether to substantially increase \nthe uranium extraction efficiency [133]. As shown in Fig. 8a, this new \nmaterial MOF SCU-19 presented three distinct mechanisms involving \nthe ligand coordination originating its exposed oxoatoms, the photo­\ncatalytic reduction caused by the low-valent Mo atoms in the POM, and \nthe partial chemical reduction. The combined actions resulted in a \nhigher U(VI) uptak",
       "causal_chain": {
         "transferable_principle": "基于机制: MOF光催化协同机制",
+        "transferable_principle_en": "Based on mechanism: MOF photocatalytic synergistic mechanism",
         "pollutant_feature": {
           "text": "MOF SCU-19(POM+MOF)：三重机制——配体配位+光催化还原+部分化学还原",
           "basis": "from_source",
@@ -2330,7 +2382,9 @@
     },
     {
       "name": "N位点激活PDS生成¹O₂的机制 Mechanism of N site activating PDS to generate ¹O₂",
+      "name_en": "Mechanism of N site activating PDS to generate ¹O₂",
       "description": "PDS吸附在MI-PDA缺电子N位点上→电子从PDS的S原子转移到N原子→O-O键缩短→S-O键断裂→产生¹O₂；N位点吸附能(-31.42 eV)高于O位点(-17.09 eV)，优先产生¹O₂",
+      "description_en": "PDS adsorbs onto the electron-deficient N sites of MI-PDA; electrons transfer from the S atoms of PDS to the N atoms, shortening the O-O bond and cleaving the S-O bond to generate ¹O₂. The adsorption energy at N sites (-31.42 eV) is higher than at O sites (-17.09 eV), preferentially generating ¹O₂.",
       "functional_groups": [
         "-S-（硫醚键）",
         "聚多巴胺（PDA）邻苯二酚/胺基",
@@ -2349,6 +2403,7 @@
       "verification_quote": "the N site of nitrogenous groups can efficiently in-situ activate PDS to generate singlet oxygen (1O2). PDS adsorbed on the electron-deficient N site of MI-PDA would transfer the electron to the N atom",
       "causal_chain": {
         "transferable_principle": "基于机制: N位点激活PDS生成¹O₂的机制 Mechanism of N site activating PD",
+        "transferable_principle_en": "Based on mechanism: Mechanism of N site activating PD",
         "pollutant_feature": {
           "text": "PDS吸附在MI-PDA缺电子N位点上→电子从PDS的S原子转移到N原子→O-O键缩短→S-O键断裂→产生¹O₂；N位点吸附能(-31.42 eV)高于O位点(-17.09 eV)，优先产生¹O₂",
           "basis": "from_source",
@@ -2414,7 +2469,9 @@
     },
     {
       "name": "MI-PDA表面官能团识别机制 Surface functional group recognition mechanism of MI-PDA",
+      "name_en": "Surface functional group recognition mechanism of MI-PDA",
       "description": "N 1s谱中-N=(399.1eV)、-NH-(400.0eV)、-NH₂(400.7eV)对应吲哚环中的环化氮和开链低聚物；含氮和含氧基团(-NH₂、-OH)作为识别位点，通过氢键选择性结合SMX",
+      "description_en": "In the N 1s spectrum, -N= (399.1 eV), -NH- (400.0 eV), and -NH2 (400.7 eV) correspond to cyclized nitrogen in the indole ring and open-chain oligomers. Nitrogen- and oxygen-containing groups (-NH2, -OH) act as recognition sites that selectively bind SMX through hydrogen bonding.",
       "functional_groups": [
         "-NH-（亚氨基）",
         "吲哚环",
@@ -2437,6 +2494,7 @@
       "verification_quote": "The molecularly imprinted polydopamine (MI-PDA) can selectively re-bonded target pollutant (sulfamethoxazole, SMX) by nitrogenous and oxygenated functional groups",
       "causal_chain": {
         "transferable_principle": "基于机制: MI-PDA表面官能团识别机制 Surface functional group recogniti",
+        "transferable_principle_en": "Based on mechanism: Surface functional group recogniti",
         "pollutant_feature": {
           "text": "N 1s谱中-N=(399.1eV)、-NH-(400.0eV)、-NH₂(400.7eV)对应吲哚环中的环化氮和开链低聚物；含氮和含氧基团(-NH₂、-OH)作为识别位点，通过氢键选择性结合SMX",
           "basis": "from_source",
@@ -2506,7 +2564,9 @@
     },
     {
       "name": "PDA涂层粘附机制",
+      "name_en": "PDA coating adhesion mechanism",
       "description": "金属配位、Michael加成、Schiff碱形成、氢键、π-π堆积五种相互作用",
+      "description_en": "Five types of interactions: metal coordination, Michael addition, Schiff base formation, hydrogen bonding, and pi-pi stacking.",
       "functional_groups": [
         "聚多巴胺（PDA）邻苯二酚/胺基",
         "配位/螯合位点",
@@ -2613,6 +2673,7 @@
           }
         ],
         "transferable_principle": "邻苯二酚基团可在湿态、高盐条件下通过双齿配位捕获软金属离子，可迁移到任何含catechol功能化的材料表面",
+        "transferable_principle_en": "Catechol groups can capture soft metal ions through bidentate coordination under wet, high-salinity conditions, and this can be transferred to any material surface functionalized with catechol.",
         "verification_quote": "DOPA and lysine (amines) groups found in byssal plaque proteins...dopamine is a small-molecule compound that contains both functionalities"
       },
       "evidence_type": "lead_inference",
@@ -2623,7 +2684,9 @@
     },
     {
       "name": "PDA-ODA超疏水棉花织物接触角",
+      "name_en": "Contact angle of PDA-ODA superhydrophobic cotton fabric",
       "description": "WCA 162°, WSA 7°",
+      "description_en": "WCA 162°, WSA 7°.",
       "functional_groups": [
         "-S-（硫醚键）",
         "聚多巴胺（PDA）邻苯二酚/胺基",
@@ -2634,6 +2697,7 @@
       "verification": "needs_review",
       "causal_chain": {
         "transferable_principle": "基于机制: PDA-ODA超疏水棉花织物接触角",
+        "transferable_principle_en": "Based on mechanism: Contact angle of PDA-ODA superhydrophobic cotton fabric",
         "pollutant_feature": {
           "text": "WCA 162°, WSA 7°",
           "basis": "from_source",
@@ -2697,7 +2761,9 @@
     },
     {
       "name": "PDA微胶囊自修复超疏水棉花织物",
+      "name_en": "PDA microcapsule self-healing superhydrophobic cotton fabric",
       "description": "机械刺激后完全恢复超疏水性",
+      "description_en": "Superhydrophobicity is fully restored after mechanical stimulation.",
       "functional_groups": [
         "聚多巴胺（PDA）邻苯二酚/胺基"
       ],
@@ -2706,6 +2772,7 @@
       "verification": "needs_review",
       "causal_chain": {
         "transferable_principle": "基于机制: PDA微胶囊自修复超疏水棉花织物",
+        "transferable_principle_en": "Based on mechanism: PDA microcapsule self-healing superhydrophobic cotton fabric",
         "pollutant_feature": {
           "text": "机械刺激后完全恢复超疏水性",
           "basis": "llm_inferred"
@@ -2758,7 +2825,9 @@
     },
     {
       "name": "PDA-TA/硼砂阻燃超疏水棉花织物",
+      "name_en": "PDA-TA/borax flame-retardant superhydrophobic cotton fabric",
       "description": "WCA 153.3°±1.2°, WSA 9°±0.8°, 分离效率>98%",
+      "description_en": "WCA 153.3°±1.2°, WSA 9°±0.8°, separation efficiency >98%.",
       "functional_groups": [
         "-S-（硫醚键）",
         "聚多巴胺（PDA）邻苯二酚/胺基"
@@ -2768,6 +2837,7 @@
       "verification": "needs_review",
       "causal_chain": {
         "transferable_principle": "基于机制: PDA-TA/硼砂阻燃超疏水棉花织物",
+        "transferable_principle_en": "Based on mechanism: PDA-TA/borax flame-retardant superhydrophobic cotton fabric",
         "pollutant_feature": {
           "text": "WCA 153.3°±1.2°, WSA 9°±0.8°, 分离效率>98%",
           "basis": "from_source",
@@ -2832,7 +2902,9 @@
     },
     {
       "name": "超疏水PDA涂层棉花织物耐久性测试",
+      "name_en": "Durability test of superhydrophobic PDA-coated cotton fabric",
       "description": "1000次胶带剥离/手指擦拭/刀片划痕/砂纸磨损/锤击后仍保持超疏水性",
+      "description_en": "Superhydrophobicity is retained after 1000 cycles of tape peeling, finger rubbing, blade scratching, sandpaper abrasion, and hammering.",
       "functional_groups": [
         "聚多巴胺（PDA）邻苯二酚/胺基"
       ],
@@ -2848,6 +2920,7 @@
       ],
       "causal_chain": {
         "transferable_principle": "基于机制: 超疏水PDA涂层棉花织物耐久性测试",
+        "transferable_principle_en": "Based on mechanism: Durability test of superhydrophobic PDA-coated cotton fabric",
         "pollutant_feature": {
           "text": "1000次胶带剥离/手指擦拭/刀片划痕/砂纸磨损/锤击后仍保持超疏水性",
           "basis": "llm_inferred"
@@ -2901,7 +2974,9 @@
     },
     {
       "name": "PLA非织造织物超疏水磁性油水分离",
+      "name_en": "Superhydrophobic magnetic oil-water separation by PLA nonwoven fabric",
       "description": "WCA 151.7°, 吸附容量16-36倍自重",
+      "description_en": "WCA 151.7°; adsorption capacity of 16-36 times its own weight.",
       "functional_groups": [
         "PLA酯基"
       ],
@@ -2910,6 +2985,7 @@
       "verification": "needs_review",
       "causal_chain": {
         "transferable_principle": "基于机制: PLA非织造织物超疏水磁性油水分离",
+        "transferable_principle_en": "Based on mechanism: Superhydrophobic magnetic oil-water separation by PLA nonwoven fabric",
         "pollutant_feature": {
           "text": "WCA 151.7°, 吸附容量16-36倍自重",
           "basis": "from_source",
@@ -2975,7 +3051,9 @@
     },
     {
       "name": "氨水诱导超疏水/超亲油PVDF膜 Ammonia-water induced superhydrophobic PVDF membrane",
+      "name_en": "Ammonia-water induced superhydrophobic/superoleophilic PVDF membrane",
       "description": "油通量高达3400 L·m⁻²·h⁻¹ (重力驱动); 油纯度高达99.999%; 通量衰减率<5% (20次循环)",
+      "description_en": "Oil flux up to 3400 L·m⁻²·h⁻¹ (gravity-driven); oil purity up to 99.999%; flux decay rate <5% over 20 cycles.",
       "functional_groups": [
         "-S-（硫醚键）",
         "-O-（醚键）",
@@ -2987,6 +3065,7 @@
       "verification_quote": "r-in-oil emulsions driven\nsolely by gravity, achieving high oil fluxes of up to 3400 L m−2\nh−1, ultrahigh oil purities of up to 99.999%, and low flux\ndecline ratios below 5% over 20 emulsion separation cycles.\nThe significance of the structure-inducer-mediated NIPS\nmethodology li",
       "causal_chain": {
         "transferable_principle": "基于机制: 氨水诱导超疏水/超亲油PVDF膜 Ammonia-water induced superhydrop",
+        "transferable_principle_en": "Based on mechanism: Ammonia-water induced superhydrop",
         "pollutant_feature": {
           "text": "油通量高达3400 L·m⁻²·h⁻¹ (重力驱动); 油纯度高达99.999%; 通量衰减率<5% (20次循环)",
           "basis": "llm_inferred"
@@ -3049,7 +3128,9 @@
     },
     {
       "name": "CO2响应润湿性反转机制 CO2-responsive wettability reversal mechanism",
+      "name_en": "CO2-responsive wettability reversal mechanism",
       "description": "含氨基聚合物经CO2暴露质子化增强亲水性（水合增强）；去除CO2去质子化恢复中性态，聚合物链塌缩恢复疏水",
+      "description_en": "Amino-containing polymers protonate upon CO2 exposure, enhancing hydrophilicity (enhanced hydration); removing CO2 deprotonates them back to the neutral state, and the polymer chains collapse to restore hydrophobicity.",
       "functional_groups": [
         "-S-（硫醚键）",
         "-O-（醚键）",
@@ -3068,6 +3149,7 @@
       "verification_quote": "ty reversal and switchable separation\nperformance of a dual CO2- and photothermal-responsive membrane for double emulsions. Adapted with permission from ref 86. Copyright\n2024, Wil",
       "causal_chain": {
         "transferable_principle": "基于机制: CO2响应润湿性反转机制 CO2-responsive wettability reversal m",
+        "transferable_principle_en": "Based on mechanism: CO2-responsive wettability reversal m",
         "pollutant_feature": {
           "text": "含氨基聚合物经CO2暴露质子化增强亲水性（水合增强）；去除CO2去质子化恢复中性态，聚合物链塌缩恢复疏水",
           "basis": "from_source",
@@ -3134,7 +3216,9 @@
     },
     {
       "name": "电响应润湿性反转机制 Electro-responsive wettability reversal mechanism",
+      "name_en": "Electro-responsive wettability reversal mechanism",
       "description": "电压诱导表面带电聚合物构象重组；施加电位改变聚合物链取向和离子化状态，暴露疏水或亲水部分调节润湿性",
+      "description_en": "Voltage induces conformational reorganization of surface-charged polymers; applying an electrical potential changes the orientation and ionization state of the polymer chains, exposing hydrophobic or hydrophilic moieties to modulate wettability.",
       "functional_groups": [
         "-S-（硫醚键）",
         "-O-（醚键）"
@@ -3145,6 +3229,7 @@
       "verification_quote": "Stimuli-responsive reversal of superwettability.",
       "causal_chain": {
         "transferable_principle": "基于机制: 电响应润湿性反转机制 Electro-responsive wettability reversal",
+        "transferable_principle_en": "Based on mechanism: Electro-responsive wettability reversal",
         "pollutant_feature": {
           "text": "电压诱导表面带电聚合物构象重组；施加电位改变聚合物链取向和离子化状态，暴露疏水或亲水部分调节润湿性",
           "basis": "from_source",
@@ -3206,7 +3291,9 @@
     },
     {
       "name": "光热响应润湿性反转机制 Photothermal-responsive wettability reversal mechanism",
+      "name_en": "Photothermal-responsive wettability reversal mechanism",
       "description": "光吸收材料将光转化为热，触发热响应聚合物（如PNIPAM）塌缩脱水，润湿性从亲水转为疏水",
+      "description_en": "Light-absorbing materials convert light into heat, triggering thermoresponsive polymers (e.g., PNIPAM) to collapse and dehydrate, switching wettability from hydrophilic to hydrophobic.",
       "functional_groups": [
         "-S-（硫醚键）",
         "PNIPAM酰胺基",
@@ -3219,6 +3306,7 @@
       "verification_quote": "Stimuli-responsive reversal of superwettability.",
       "causal_chain": {
         "transferable_principle": "基于机制: 光热响应润湿性反转机制 Photothermal-responsive wettability re",
+        "transferable_principle_en": "Based on mechanism: Photothermal-responsive wettability re",
         "pollutant_feature": {
           "text": "光吸收材料将光转化为热，触发热响应聚合物（如PNIPAM）塌缩脱水，润湿性从亲水转为疏水",
           "basis": "from_source",
@@ -3280,7 +3368,9 @@
     },
     {
       "name": "pH响应润湿性反转机制 pH-responsive wettability reversal mechanism",
+      "name_en": "pH-responsive wettability reversal mechanism",
       "description": "可离子化和可水解聚合物响应pH变化质子化/去质子化，改变水合状态，在亲水和疏水间切换",
+      "description_en": "Ionizable and hydrolyzable polymers protonate/deprotonate in response to pH changes, altering their hydration state and switching between hydrophilic and hydrophobic states.",
       "functional_groups": [
         "-S-（硫醚键）",
         "-O-（醚键）"
@@ -3291,6 +3381,7 @@
       "verification_quote": "Stimuli-responsive reversal of superwettability.",
       "causal_chain": {
         "transferable_principle": "基于机制: pH响应润湿性反转机制 pH-responsive wettability reversal mec",
+        "transferable_principle_en": "Based on mechanism: pH-responsive wettability reversal mec",
         "pollutant_feature": {
           "text": "可离子化和可水解聚合物响应pH变化质子化/去质子化，改变水合状态，在亲水和疏水间切换",
           "basis": "from_source",
@@ -3352,7 +3443,9 @@
     },
     {
       "name": "Janus膜电荷聚合物协同破乳 Janus membrane with charged polymers for demulsification",
+      "name_en": "Janus membrane with charged polymers for demulsification",
       "description": "超亲水侧带电聚合物链剥离表面活性剂层 destabilize 油滴；超疏水侧因界面压力差产生油芯吸力，促进油滴聚并和油渗透",
+      "description_en": "On the superhydrophilic side, charged polymer chains strip the surfactant layer and destabilize oil droplets; on the superhydrophobic side, an interfacial pressure difference generates an oil-wicking force that promotes oil droplet coalescence and oil permeation.",
       "functional_groups": [
         "-S-（硫醚键）",
         "-O-（醚键）"
@@ -3370,6 +3463,7 @@
       "verification_quote": "water separation, thereby achieving rapid water purification                 polymers and Janus membranes enables demulsification,",
       "causal_chain": {
         "transferable_principle": "基于机制: Janus膜电荷聚合物协同破乳 Janus membrane with charged polyme",
+        "transferable_principle_en": "Based on mechanism: Janus membrane with charged polyme",
         "pollutant_feature": {
           "text": "超亲水侧带电聚合物链剥离表面活性剂层 destabilize 油滴；超疏水侧因界面压力差产生油芯吸力，促进油滴聚并和油渗透",
           "basis": "from_source",
@@ -3438,7 +3532,9 @@
     },
     {
       "name": "传统膜疏水/水下亲油致命缺陷 Traditional membrane hydrophobic/underwater oleophilic drawbacks",
+      "name_en": "Fatal drawbacks of traditional hydrophobic/underwater oleophilic membranes",
       "description": "低水渗透通量和严重油污染；需要高施加压力导致油更容易穿透膜孔；难以同时实现高水通量和高除油效率",
+      "description_en": "Low water permeation flux and severe oil fouling; high applied pressure is required, causing oil to penetrate membrane pores more easily; and it is difficult to simultaneously achieve high water flux and high oil removal efficiency.",
       "functional_groups": [
         "-S-（硫醚键）",
         "-O-（醚键）"
@@ -3449,6 +3545,7 @@
       "verification_quote": "Schematic illustration of interfaces and interfacial pressures within the pores of (a) traditional hydrophobic and underwater",
       "causal_chain": {
         "transferable_principle": "基于机制: 传统膜疏水/水下亲油致命缺陷 Traditional membrane hydrophobic/un",
+        "transferable_principle_en": "Based on mechanism: Traditional membrane hydrophobic/un",
         "pollutant_feature": {
           "text": "低水渗透通量和严重油污染；需要高施加压力导致油更容易穿透膜孔；难以同时实现高水通量和高除油效率",
           "basis": "from_source",
@@ -3510,7 +3607,9 @@
     },
     {
       "name": "PNIPAM刷温度响应润湿性切换",
+      "name_en": "Temperature-responsive wettability switching of PNIPAM brushes",
       "description": "WCA从63°（25°C，亲水）切换到93°（40°C，疏水）",
+      "description_en": "WCA switches from 63° (25°C, hydrophilic) to 93° (40°C, hydrophobic).",
       "functional_groups": [
         "PNIPAM酰胺基",
         "PAM酰胺基"
@@ -3520,6 +3619,7 @@
       "verification": "needs_review",
       "causal_chain": {
         "transferable_principle": "基于机制: PNIPAM刷温度响应润湿性切换",
+        "transferable_principle_en": "Based on mechanism: Temperature-responsive wettability switching of PNIPAM brushes",
         "pollutant_feature": {
           "text": "WCA从63°（25°C，亲水）切换到93°（40°C，疏水）",
           "basis": "from_source",
@@ -3574,7 +3674,9 @@
     },
     {
       "name": "亲疏水刷仿鲨鱼皮水减阻率",
+      "name_en": "Drag reduction rate of hydrophilic/hydrophobic brushes mimicking shark skin",
       "description": "疏水PFMA刷最高减阻率21.7%，超天然鲨鱼皮5.4%",
+      "description_en": "Hydrophobic PFMA brushes achieve a maximum drag reduction rate of 21.7%, exceeding natural shark skin by 5.4%.",
       "functional_groups": [
         "PFMA氟碳基团"
       ],
@@ -3583,6 +3685,7 @@
       "verification": "needs_review",
       "causal_chain": {
         "transferable_principle": "基于机制: 亲疏水刷仿鲨鱼皮水减阻率",
+        "transferable_principle_en": "Based on mechanism: Drag reduction rate of hydrophilic/hydrophobic brushes mimicking shark skin",
         "pollutant_feature": {
           "text": "疏水PFMA刷最高减阻率21.7%，超天然鲨鱼皮5.4%",
           "basis": "llm_inferred"
@@ -3623,7 +3726,9 @@
     },
     {
       "name": "PPFEMA刷疏水减阻最大减阻率",
+      "name_en": "Maximum drag reduction rate of hydrophobic PPFEMA brushes",
       "description": "52%（转速≤210 rpm）",
+      "description_en": "52% (rotation speed <= 210 rpm).",
       "functional_groups": [
         "PPFEMA氟碳基团"
       ],
@@ -3632,6 +3737,7 @@
       "verification": "needs_review",
       "causal_chain": {
         "transferable_principle": "基于机制: PPFEMA刷疏水减阻最大减阻率",
+        "transferable_principle_en": "Based on mechanism: Maximum drag reduction rate of hydrophobic PPFEMA brushes",
         "pollutant_feature": {
           "text": "52%（转速≤210 rpm）",
           "basis": "from_source",
@@ -3682,7 +3788,9 @@
     },
     {
       "name": "超疏水表面+响应刷边界滑移调控",
+      "name_en": "Boundary slip control by superhydrophobic surface combined with responsive brushes",
       "description": "滑移长度范围~87 μm可通过温度在LCST上下可逆调控",
+      "description_en": "Slip length in the range of ~87 μm can be reversibly tuned by temperature above and below the LCST.",
       "functional_groups": [
         "-S-（硫醚键）"
       ],
@@ -3691,6 +3799,7 @@
       "verification": "needs_review",
       "causal_chain": {
         "transferable_principle": "基于机制: 超疏水表面+响应刷边界滑移调控",
+        "transferable_principle_en": "Based on mechanism: Boundary slip control by superhydrophobic surface combined with responsive brushes",
         "pollutant_feature": {
           "text": "滑移长度范围~87 μm可通过温度在LCST上下可逆调控",
           "basis": "llm_inferred"
@@ -3744,7 +3853,9 @@
     },
     {
       "name": "NP-GLIDE涂层设计原理",
+      "name_en": "Design principle of NP-GLIDE coating",
       "description": "PDMS或PFPE纳米储库通过微相分离形成，可持续补充表面保证全疏水性",
+      "description_en": "PDMS or PFPE nanoreservoirs formed via microphase separation continuously replenish the surface to guarantee omniphobicity.",
       "functional_groups": [
         "-S-（硫醚键）",
         "PDMS硅氧烷"
@@ -3761,6 +3872,7 @@
       ],
       "causal_chain": {
         "transferable_principle": "基于机制: NP-GLIDE涂层设计原理",
+        "transferable_principle_en": "Based on mechanism: Design principle of NP-GLIDE coating",
         "pollutant_feature": {
           "text": "PDMS或PFPE纳米储库通过微相分离形成，可持续补充表面保证全疏水性",
           "basis": "from_source",
@@ -3813,7 +3925,9 @@
     },
     {
       "name": "聚合物刷减阻性能对比（亲水vs疏水）",
+      "name_en": "Comparison of drag reduction performance of polymer brushes (hydrophilic vs hydrophobic)",
       "description": "亲水POEGMA刷几乎无减阻效果，疏水PPFEMA刷最大减阻率52%",
+      "description_en": "Hydrophilic POEGMA brushes show almost no drag reduction, whereas hydrophobic PPFEMA brushes achieve a maximum drag reduction rate of 52%.",
       "functional_groups": [
         "-S-（硫醚键）",
         "-O-（醚键）",
@@ -3824,6 +3938,7 @@
       "verification": "needs_review",
       "causal_chain": {
         "transferable_principle": "基于机制: 聚合物刷减阻性能对比（亲水vs疏水）",
+        "transferable_principle_en": "Based on mechanism: Comparison of drag reduction performance of polymer brushes (hydrophilic vs hydrophobic)",
         "pollutant_feature": {
           "text": "亲水POEGMA刷几乎无减阻效果，疏水PPFEMA刷最大减阻率52%",
           "basis": "from_source",
@@ -3884,7 +3999,9 @@
     },
     {
       "name": "聚合物刷防雾涂层厚度与亲水性关系",
+      "name_en": "Relationship between coating thickness and hydrophilicity of polymer brush antifogging coatings",
       "description": "厚度<50 nm时强水合亲水；厚度>50 nm时趋于疏水自缔合",
+      "description_en": "At a thickness below 50 nm, the coating is strongly hydrated and hydrophilic; at a thickness above 50 nm, it tends toward hydrophobic self-association.",
       "functional_groups": [],
       "source": "literature",
       "ref_doi": "10.1021/acsnano.4c18335",
@@ -3898,6 +4015,7 @@
       ],
       "causal_chain": {
         "transferable_principle": "基于机制: 聚合物刷防雾涂层厚度与亲水性关系",
+        "transferable_principle_en": "Based on mechanism: Relationship between coating thickness and hydrophilicity of polymer brush antifogging coatings",
         "pollutant_feature": {
           "text": "厚度<50 nm时强水合亲水；厚度>50 nm时趋于疏水自缔合",
           "basis": "from_source",
@@ -3950,7 +4068,9 @@
     },
     {
       "name": "吸附机制-螯合作用 / Adsorption mechanism - chelation",
+      "name_en": "Adsorption mechanism - chelation",
       "description": "聚多巴胺结构中的含氮基团与重金属离子的鳌合作用",
+      "description_en": "Chelation of heavy metal ions by nitrogen-containing groups in the polydopamine structure.",
       "functional_groups": [
         "含氮基团（儿茶酚/胺基）",
         "聚多巴胺（PDA）邻苯二酚/胺基",
@@ -3969,6 +4089,7 @@
       ],
       "causal_chain": {
         "transferable_principle": "基于机制: 吸附机制-螯合作用 / Adsorption mechanism - chelation",
+        "transferable_principle_en": "Based on mechanism: Adsorption mechanism - chelation",
         "pollutant_feature": {
           "text": "聚多巴胺结构中的含氮基团与重金属离子的鳌合作用",
           "basis": "llm_inferred"
@@ -4022,7 +4143,9 @@
     },
     {
       "name": "贻贝仿生启发机制 / Mussel-inspired biomimetic mechanism",
+      "name_en": "Mussel-inspired biomimetic mechanism",
       "description": "通过聚多巴胺自组装单分子层技术对聚酯纤维织物进行表面修饰，受贻贝足丝蛋白粘附机制启发",
+      "description_en": "Polyester fiber fabric is surface-modified via polydopamine self-assembled monolayer technology, inspired by the adhesion mechanism of mussel foot proteins.",
       "functional_groups": [
         "-S-（硫醚键）",
         "聚多巴胺（PDA）邻苯二酚/胺基",
@@ -4045,6 +4168,7 @@
       ],
       "causal_chain": {
         "transferable_principle": "基于机制: 贻贝仿生启发机制 / Mussel-inspired biomimetic mechanism",
+        "transferable_principle_en": "Based on mechanism: Mussel-inspired biomimetic mechanism",
         "pollutant_feature": {
           "text": "通过聚多巴胺自组装单分子层技术对聚酯纤维织物进行表面修饰，受贻贝足丝蛋白粘附机制启发",
           "basis": "llm_inferred"
@@ -4097,7 +4221,9 @@
     },
     {
       "name": "聚多巴胺聚合机理 Polydopamine polymerization mechanism",
+      "name_en": "Polydopamine polymerization mechanism",
       "description": "多巴胺在弱碱性环境下通过酚羟基氧化成醌，醌式相互叠加实现聚合；聚多巴胺在Fe3O4外以羟基间氢键或物理堆积形式沉积，不涉及与Fe元素的配位作用",
+      "description_en": "In a weakly alkaline environment, dopamine is oxidized through phenolic hydroxyl groups to quinones, which stack together to achieve polymerization. Polydopamine deposits on the outside of Fe3O4 through inter-hydroxyl hydrogen bonding or physical stacking, without involving coordination with Fe.",
       "functional_groups": [
         "PAM酰胺基",
         "聚多巴胺（PDA）邻苯二酚/胺基",
@@ -4126,6 +4252,7 @@
       ],
       "causal_chain": {
         "transferable_principle": "基于机制: 聚多巴胺聚合机理 Polydopamine polymerization mechanism",
+        "transferable_principle_en": "Based on mechanism: Polydopamine polymerization mechanism",
         "pollutant_feature": {
           "text": "多巴胺在弱碱性环境下通过酚羟基氧化成醌，醌式相互叠加实现聚合；聚多巴胺在Fe3O4外以羟基间氢键或物理堆积形式沉积，不涉及与Fe元素的配位作用",
           "basis": "from_source",
@@ -4186,7 +4313,9 @@
     },
     {
       "name": "铀吸附机制 Uranium adsorption mechanism",
+      "name_en": "Uranium adsorption mechanism",
       "description": "聚多巴胺壳层大量羟基为主要吸附位点，氨基主要参与苯环成环，仅部分氨基参与与铀的作用",
+      "description_en": "The abundant hydroxyl groups in the polydopamine shell are the main adsorption sites; amino groups mainly participate in benzene ring formation, and only some amino groups are involved in interaction with uranium.",
       "functional_groups": [
         "芳香环",
         "聚多巴胺（PDA）邻苯二酚/胺基",
@@ -4217,6 +4346,7 @@
       ],
       "causal_chain": {
         "transferable_principle": "基于机制: 铀吸附机制 Uranium adsorption mechanism",
+        "transferable_principle_en": "Based on mechanism: Uranium adsorption mechanism",
         "pollutant_feature": {
           "text": "聚多巴胺壳层大量羟基为主要吸附位点，氨基主要参与苯环成环，仅部分氨基参与与铀的作用",
           "basis": "llm_inferred"
@@ -4270,7 +4400,9 @@
     },
     {
       "name": "贻贝仿生改性机制 / Mussel-inspired biomimetic modification mechanism",
+      "name_en": "Mussel-inspired biomimetic modification mechanism",
       "description": "利用贻贝仿生学，通过多巴胺的氧化自聚作用，形成黏附力极强的聚多巴胺涂覆在磁性壳聚糖基体表面",
+      "description_en": "Using mussel biomimicry, the oxidative self-polymerization of dopamine forms strongly adhesive polydopamine that coats the surface of a magnetic chitosan matrix.",
       "functional_groups": [
         "-S-（硫醚键）",
         "壳聚糖氨基/羟基",
@@ -4282,6 +4414,7 @@
       "verification": "needs_review",
       "causal_chain": {
         "transferable_principle": "基于机制: 贻贝仿生改性机制 / Mussel-inspired biomimetic modification",
+        "transferable_principle_en": "Based on mechanism: Mussel-inspired biomimetic modification",
         "pollutant_feature": {
           "text": "利用贻贝仿生学，通过多巴胺的氧化自聚作用，形成黏附力极强的聚多巴胺涂覆在磁性壳聚糖基体表面",
           "basis": "llm_inferred"
@@ -4332,7 +4465,9 @@
     },
     {
       "name": "仿贻贝聚多巴胺改性机制 / Mussel-inspired PDA modification mechanism",
+      "name_en": "Mussel-inspired PDA modification mechanism",
       "description": "多巴胺自聚合形成聚多巴胺对PAO薄膜进行表面改性",
+      "description_en": "Dopamine self-polymerizes to form polydopamine, which surface-modifies the PAO film.",
       "functional_groups": [
         "聚多巴胺（PDA）邻苯二酚/胺基",
         "-O-（醚键）",
@@ -4350,6 +4485,7 @@
       ],
       "causal_chain": {
         "transferable_principle": "基于机制: 仿贻贝聚多巴胺改性机制 / Mussel-inspired PDA modification mec",
+        "transferable_principle_en": "Based on mechanism: Mussel-inspired PDA modification mec",
         "pollutant_feature": {
           "text": "多巴胺自聚合形成聚多巴胺对PAO薄膜进行表面改性",
           "basis": "llm_inferred"
@@ -4402,6 +4538,7 @@
     },
     {
       "name": "PDA吸附机制-姜黄素",
+      "name_en": "PDA adsorption mechanism - curcumin",
       "description": null,
       "functional_groups": [
         "聚多巴胺（PDA）邻苯二酚/胺基"
@@ -4418,6 +4555,7 @@
       ],
       "causal_chain": {
         "transferable_principle": "基于机制: PDA吸附机制-姜黄素",
+        "transferable_principle_en": "Based on mechanism: PDA adsorption mechanism - curcumin",
         "pollutant_feature": {
           "text": "目标污染物",
           "basis": "from_source",
@@ -4480,6 +4618,7 @@
     },
     {
       "name": "PDA吸附机制-番茄红素",
+      "name_en": "PDA adsorption mechanism - lycopene",
       "description": null,
       "functional_groups": [
         "聚多巴胺（PDA）邻苯二酚/胺基"
@@ -4496,6 +4635,7 @@
       ],
       "causal_chain": {
         "transferable_principle": "基于机制: PDA吸附机制-番茄红素",
+        "transferable_principle_en": "Based on mechanism: PDA adsorption mechanism - lycopene",
         "pollutant_feature": {
           "text": "目标污染物",
           "basis": "from_source",
@@ -4558,7 +4698,9 @@
     },
     {
       "name": "吸附机制类型",
+      "name_en": "Adsorption mechanism type",
       "description": "physical mechanism",
+      "description_en": "physical mechanism",
       "functional_groups": [
         "-S-（硫醚键）"
       ],
@@ -4568,6 +4710,7 @@
       "verification_quote": "I), and Ni(II) removal using \nHAp/Fe3O4/PDA has a physical mechanism. The highest elimination capacity (qm) for Hg(II), Co(II), and Ni(II) \nwas set at 51.73 mg/g, 49.32 mg/g, and 48.09 mg/g, respectively. The effect of",
       "causal_chain": {
         "transferable_principle": "基于机制: 吸附机制类型",
+        "transferable_principle_en": "Based on mechanism: Adsorption mechanism type",
         "pollutant_feature": {
           "text": "physical mechanism",
           "basis": "from_source",
@@ -4634,7 +4777,9 @@
     },
     {
       "name": "吸附机制",
+      "name_en": "Adsorption mechanism",
       "description": "表面络合和离子交换",
+      "description_en": "Surface complexation and ion exchange.",
       "functional_groups": [
         "离子交换位点"
       ],
@@ -4643,6 +4788,7 @@
       "verification": "partial",
       "causal_chain": {
         "transferable_principle": "基于机制: 吸附机制",
+        "transferable_principle_en": "Based on mechanism: Adsorption mechanism",
         "pollutant_feature": {
           "text": "表面络合和离子交换",
           "basis": "from_source",
@@ -4709,7 +4855,9 @@
     },
     {
       "name": "吸附机制-酚羟基参与",
+      "name_en": "Adsorption mechanism - involvement of phenolic hydroxyl groups",
       "description": "phenolic hydroxyl groups participate in adsorption (C-O and O 1s binding energy shifts)",
+      "description_en": "phenolic hydroxyl groups participate in adsorption (C-O and O 1s binding energy shifts)",
       "functional_groups": [
         "-S-（硫醚键）",
         "-O-（醚键）",
@@ -4722,6 +4870,7 @@
       "verification_quote": "ing \nenergy (Fig. 7(d-f)). It is deduced that the phenolic hydroxyl groups \nparticipate in the adsorption process. \nFig. 7. High-resolution (a–c) C 1s and (d–f) O 1s XPS spectra for COF@PDA@Fe2+, COF@PDA@Co2+ and COF@PDA",
       "causal_chain": {
         "transferable_principle": "基于机制: 吸附机制-酚羟基参与",
+        "transferable_principle_en": "Based on mechanism: Adsorption mechanism - involvement of phenolic hydroxyl groups",
         "pollutant_feature": {
           "text": "phenolic hydroxyl groups participate in adsorption (C-O and O 1s binding energy shifts)",
           "basis": "from_source",
@@ -4788,7 +4937,9 @@
     },
     {
       "name": "XPS分析-吸附机理",
+      "name_en": "XPS analysis - adsorption mechanism",
       "description": "C 1s红移形成吸附剂-金属络合物；N 1s出现—NH—(402 eV)和—NH₂(406 eV)两个峰；吸附后出现Gd 4d特征峰(149 eV和143 eV)",
+      "description_en": "C 1s red shift indicates the formation of adsorbent-metal complexes; two peaks for -NH- (402 eV) and -NH2 (406 eV) appear in the N 1s spectrum; characteristic Gd 4d peaks (149 eV and 143 eV) appear after adsorption.",
       "functional_groups": [
         "-NH-（亚氨基）",
         "-S-（硫醚键）"
@@ -4799,6 +4950,7 @@
       "verification_quote": "DA-CS-GO after Gd(III) \nadsorption shows two N 1s peaks, corresponding to ˭NH– (402 eV) and \n–NH2 (406 eV). This indicates that amine is the main active group of the \nadsorbent and that ˭NH– and –NH2 functional groups participate in the \nadsorption process of Gd(III). The collect",
       "causal_chain": {
         "transferable_principle": "基于机制: XPS分析-吸附机理",
+        "transferable_principle_en": "Based on mechanism: XPS analysis - adsorption mechanism",
         "pollutant_feature": {
           "text": "C 1s红移形成吸附剂-金属络合物；N 1s出现—NH—(402 eV)和—NH₂(406 eV)两个峰；吸附后出现Gd 4d特征峰(149 eV和143 eV)",
           "basis": "from_source",
@@ -4865,7 +5017,9 @@
     },
     {
       "name": "吸附活性基团协同",
+      "name_en": "Synergy of active adsorption groups",
       "description": "—NH₂(壳聚糖+PDA)、—OH(壳聚糖+GO+PDA)、—COOH(MWCNT-COOH)三类基团协同参与Gd(III)螯合",
+      "description_en": "Three types of groups - -NH2 (chitosan + PDA), -OH (chitosan + GO + PDA), and -COOH (MWCNT-COOH) - synergistically participate in Gd(III) chelation.",
       "functional_groups": [
         "-NH-（亚氨基）",
         "-COOH（羧基）",
@@ -4884,6 +5038,7 @@
       "verification_quote": "s (MWCNT) makes up for this shortcoming. \nThe acidified carbon nanotubes (MWCNT-COOH) have defects on the \nsurface and carry carboxyl groups, which is conducive to the loading of \nother substances on its surface Anjum et al. (2019). The quality of car­\nbon nanotubes is very small",
       "causal_chain": {
         "transferable_principle": "基于机制: 吸附活性基团协同",
+        "transferable_principle_en": "Based on mechanism: Synergy of active adsorption groups",
         "pollutant_feature": {
           "text": "—NH₂(壳聚糖+PDA)、—OH(壳聚糖+GO+PDA)、—COOH(MWCNT-COOH)三类基团协同参与Gd(III)螯合",
           "basis": "llm_inferred",
@@ -4951,7 +5106,9 @@
     },
     {
       "name": "吸附机理-pH依赖性",
+      "name_en": "Adsorption mechanism - pH dependence",
       "description": "酸性条件：静电作用为主；碱性条件：配位作用为主",
+      "description_en": "Under acidic conditions, electrostatic interactions dominate; under alkaline conditions, coordination interactions dominate.",
       "functional_groups": [
         "静电作用位点",
         "配位/螯合位点"
@@ -4961,6 +5118,7 @@
       "verification": "needs_review",
       "causal_chain": {
         "transferable_principle": "基于机制: 吸附机理-pH依赖性",
+        "transferable_principle_en": "Based on mechanism: Adsorption mechanism - pH dependence",
         "pollutant_feature": {
           "text": "酸性条件：静电作用为主；碱性条件：配位作用为主",
           "basis": "llm_inferred"
@@ -5013,7 +5171,9 @@
     },
     {
       "name": "XPS吸附机理",
+      "name_en": "XPS adsorption mechanism",
       "description": "N 1s峰从398.4/401.6 eV移至399.4 eV；O 1s峰从531.9/530.0 eV移至530.8/532.1 eV；C 1s峰C=N从284.2 eV移至285.5 eV；Cu 2p₃/₂峰932.5-933.7 eV",
+      "description_en": "The N 1s peak shifts from 398.4/401.6 eV to 399.4 eV; the O 1s peak shifts from 531.9/530.0 eV to 530.8/532.1 eV; the C 1s C=N peak shifts from 284.2 eV to 285.5 eV; the Cu 2p3/2 peak is at 932.5-933.7 eV.",
       "functional_groups": [
         "-S-（硫醚键）",
         "-O-（醚键）"
@@ -5024,6 +5184,7 @@
       "verification_quote": "involves the peaks related to the \nC––O/C–O moieties at the binding energy of ~531.9 eV, and a shoulder \npeak at ~530.0 eV (Hage et al., 2021), which were shifted to ~530.8 \nand ~532.1 eV, respectively, after the Cu2+ adsorption (Fig. 6b). In the \nC 1 S spectra of MCC10 before t",
       "causal_chain": {
         "transferable_principle": "基于机制: XPS吸附机理",
+        "transferable_principle_en": "Based on mechanism: XPS adsorption mechanism",
         "pollutant_feature": {
           "text": "N 1s峰从398.4/401.6 eV移至399.4 eV；O 1s峰从531.9/530.0 eV移至530.8/532.1 eV；C 1s峰C=N从284.2 eV移至285.5 eV；Cu 2",
           "basis": "from_source",
@@ -5090,7 +5251,9 @@
     },
     {
       "name": "PDA吸附机制补充",
+      "name_en": "Supplement to the PDA adsorption mechanism",
       "description": "π-π interaction (π-π 相互作用)",
+      "description_en": "π-π interaction (π-π interaction).",
       "functional_groups": [
         "聚多巴胺（PDA）邻苯二酚/胺基",
         "-O-（醚键）"
@@ -5101,6 +5264,7 @@
       "verification_quote": "DCS\n分子链中引入了大量的苯醌、氨基和羟基，增加了\n静电吸引和氢键作用等；此外，PDA 的芳香环结构\n是一个共轭体系，含有丰富的π 电子云[22]，能与胭\n脂红结构中萘环上的π 电子之间形成π-π 相互作用\n力，最终导致吸附胭脂红分子的pH 适用区间有所",
       "causal_chain": {
         "transferable_principle": "基于机制: PDA吸附机制补充",
+        "transferable_principle_en": "Based on mechanism: Supplement to the PDA adsorption mechanism",
         "pollutant_feature": {
           "text": "π-π interaction (π-π 相互作用)",
           "basis": "from_source",

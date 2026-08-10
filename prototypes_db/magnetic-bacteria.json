@@ -4,6 +4,7 @@
   "name_en": "Magnetic Bacteria",
   "organism": {
     "scientific": "Magnetotactic bacteria (MTB)",
+    "scientific_en": "Magnetotactic bacteria (MTB)",
     "category": "微生物"
   },
   "biomimetic_dimension": "功能仿生",
@@ -20,10 +21,13 @@
   "mechanisms": [
     {
       "name": "磁小体磁分离吸附",
+      "name_en": "Magnetosome magnetic separation and adsorption",
       "description": "磁性细菌的磁小体（Fe₃O₄ 纳米颗粒）提供磁分离能力，细菌表面官能团提供吸附位点",
+      "description_en": "The magnetosomes of magnetotactic bacteria (Fe3O4 nanoparticles) provide magnetic separation capability. Functional groups on the bacterial surface provide adsorption sites.",
       "source": "llm_inference",
       "causal_chain": {
         "transferable_principle": "磁性细菌磁小体提供磁分离 + 细菌表面官能团吸附（placeholder）",
+        "transferable_principle_en": "Magnetosomes of magnetotactic bacteria provide magnetic separation, and functional groups on the bacterial surface provide adsorption (placeholder).",
         "pollutant_feature": {
           "text": "未验证 — 需补充磁性细菌吸附文献",
           "basis": "llm_inferred"

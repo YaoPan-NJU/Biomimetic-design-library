@@ -4,6 +4,7 @@
   "name_en": "Sphingobium Ipso-Hydroxylation Pathway for para-Alkylphenols",
   "organism": {
     "scientific": "Sphingobium xenophagum Bayram",
+    "scientific_en": "Sphingobium xenophagum Bayram",
     "category": "微生物"
   },
   "biomimetic_dimension": "过程仿生",
@@ -29,7 +30,9 @@
     {
       "mechanism_id": "IPSO-001",
       "name": "α-四级碳取代酚的 ipso 羟基化入口",
+      "name_en": "Ipso-hydroxylation entry for phenols bearing an α-quaternary-carbon substituent",
       "description": "细菌代谢以芳环 ipso 位羟基化启动对位烷基酚转化；该反应说明底物需要满足化学反应条件，但不等于存在可直接移植的形状互补结合腔。",
+      "description_en": "Bacterial metabolism initiates the transformation of para-alkylphenols via hydroxylation at the ipso position of the aromatic ring; the reaction shows that the substrate must satisfy chemical reaction conditions, but it does not imply the existence of a directly transferable shape-complementary binding cavity.",
       "基本原理": "在连接侧链的芳环 ipso 位发生氧化，形成可继续裂解的反应中间体。",
       "source": "literature",
       "ref_doi": "10.1074/jbc.M413446200",
@@ -77,7 +80,8 @@
             "source_asset": null
           }
         ],
-        "transferable_principle": "可把底物的反应位点与支化拓扑同时用于候选筛选，但人工形状识别必须独立验证。"
+        "transferable_principle": "可把底物的反应位点与支化拓扑同时用于候选筛选，但人工形状识别必须独立验证。",
+        "transferable_principle_en": "The substrate's reactive site and branching topology can both be used for candidate screening, but artificial shape recognition must be independently validated."
       },
       "functional_groups": ["酚环", "对位支化烷基"],
       "key_structures": ["ipso 反应位点"]
@@ -85,7 +89,9 @@
     {
       "mechanism_id": "IPSO-002",
       "name": "侧链裂解与水捕获",
+      "name_en": "Side-chain cleavage and water capture",
       "description": "ipso 羟基化后的中间体发生侧链裂解，并由水参与生成后续产物；这是降解步骤，不是孔穴识别证据。",
+      "description_en": "After ipso hydroxylation, the intermediate undergoes side-chain cleavage, and water participates in generating subsequent products; this is a degradation step, not evidence for cavity recognition.",
       "基本原理": "先活化芳环连接位点，再裂解侧链以推进代谢。",
       "source": "literature",
       "ref_doi": "10.1128/AEM.02994-06",
@@ -109,7 +115,8 @@
             "source_asset": null
           }
         ],
-        "transferable_principle": "反应级联可启发先活化后脱除的处理路线。"
+        "transferable_principle": "反应级联可启发先活化后脱除的处理路线。",
+        "transferable_principle_en": "The reaction cascade can inspire a treatment route that first activates the substrate and then removes it."
       },
       "functional_groups": ["氧化中间体"],
       "key_structures": ["连续反应途径"]

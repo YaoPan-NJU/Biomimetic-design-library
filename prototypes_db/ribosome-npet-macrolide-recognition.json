@@ -4,6 +4,7 @@
  "name_en": "Ribosomal Nascent Polypeptide Exit Tunnel (NPET) Macrolide Recognition",
  "organism": {
   "scientific": "Deinococcus radiodurans（50S 核糖体亚基新生肽出口隧道 NPET / 肽基转移酶中心 PTC；大环内酯为链霉菌属 Streptomyces 次级代谢产物）",
+  "scientific_en": "Deinococcus radiodurans (50S ribosomal subunit nascent polypeptide exit tunnel NPET / peptidyl transferase center PTC; macrolides are secondary metabolites of the genus Streptomyces)",
   "category": "微生物"
  },
  "biomimetic_dimension": "分子仿生",
@@ -31,7 +32,9 @@
   {
    "mechanism_id": "NPET-001",
    "name": "NPET/PTC 受限几何对 14 元大环内酯（罗红霉素）的形状读出",
+   "name_en": "Shape readout of the 14-membered macrolide roxithromycin by the constrained NPET/PTC geometry",
    "description": "大环内酯抗生素与细菌长期共进化，作为次级代谢产物天然占据 50S 核糖体亚基新生肽出口隧道（NPET）近肽基转移酶中心（PTC）的受限区域并抑制翻译。PDB 1JZZ 为 Deinococcus radiodurans 50S 与罗红霉素（roxithromycin，14 元大环内酯）复合物，罗红霉素为沉积配体实体 5；受限隧道以尺寸匹配狭缝加多点氢键网络对 14 元大环内酯骨架作形状读出",
+   "description_en": "Macrolide antibiotics have co-evolved with bacteria over long periods and, as secondary metabolites, naturally occupy the constrained region of the 50S ribosomal subunit nascent polypeptide exit tunnel (NPET) near the peptidyl transferase center (PTC) and inhibit translation. PDB 1JZZ is the complex of the Deinococcus radiodurans 50S subunit with roxithromycin (a 14-membered macrolide), with roxithromycin deposited as ligand entity 5; the constrained tunnel performs shape readout of the 14-membered macrolide scaffold through a size-matched slit combined with a multi-point hydrogen-bonding network.",
    "基本原理": "受限且与 14 元大环内酯骨架几何互补的隧道/狭缝提供范德华形状互补，隧道衬里（23S rRNA 与核糖体蛋白）的极性基团与大环内酯糖基羟基、内酯羰基等形成多点氢键，使大环内酯在进化形成的受限位点被选择性容纳",
    "source": "literature",
    "ref_doi": "10.1038/35101544",
@@ -120,6 +123,7 @@
      }
     ],
     "transferable_principle": "受限且与 14 元大环内酯骨架几何互补的狭缝/隧道，配合多点氢键网络，可对大环内酯作形状读出式选择性识别；该受限几何识别源于大环内酯-核糖体共进化，可作原理层转译",
+    "transferable_principle_en": "A constrained slit/tunnel that is geometrically complementary to the 14-membered macrolide scaffold, combined with a multi-point hydrogen-bonding network, can achieve shape-readout-based selective recognition of macrolides. This constrained-geometry recognition originates from macrolide-ribosome co-evolution and can be translated at the principle level.",
     "verification_quote": "Structural Basis for the Interaction of Antibiotics with the Peptidyl Transferase Center in Eubacteria"
    },
    "source_doi": "10.1038/35101544",
@@ -138,7 +142,9 @@
   {
    "mechanism_id": "NPET-002",
    "name": "14 元大环内酯在核糖体肽键形成位点的慢结合竞争动力学",
+   "name_en": "Slow-binding competitive kinetics of 14-membered macrolides at the ribosomal peptide-bond-forming site",
    "description": "红霉素、罗红霉素、克拉霉素（均为 14 元大环内酯）以慢结合动力学竞争同一具有肽键形成活性的细菌核糖体复合物位点（Kalpaxis 2003），表明 NPET/PTC 对 14 元大环内酯存在共享的受限识别位点",
+   "description_en": "Erythromycin, roxithromycin, and clarithromycin (all 14-membered macrolides) compete with slow-binding kinetics for the same peptide-bond-forming site of the bacterial ribosome complex (Kalpaxis 2003), indicating that the NPET/PTC contains a shared constrained recognition site for 14-membered macrolides.",
    "基本原理": "慢结合（slow-binding）特征反映大环内酯进入受限 NPET 位点需经历构象适配；三种 14 元大环内酯竞争同一核糖体位点说明该位点对此类骨架的共享几何与化学互补",
    "source": "literature",
    "ref_doi": "10.1124/mol.63.3.617",
@@ -193,6 +199,7 @@
      }
     ],
     "transferable_principle": "受限识别位点对一类几何/化学互补的配体可表现为慢结合竞争动力学；共享位点的竞争可用作选择性识别与位点单一性的判据",
+    "transferable_principle_en": "A constrained recognition site can exhibit slow-binding competitive kinetics toward a class of geometrically/chemically complementary ligands; competition for the shared site can serve as a criterion for selective recognition and site uniqueness.",
     "verification_quote": "Erythromycin, Roxithromycin, and Clarithromycin: Use of Slow-Binding Kinetics to Compare Their in Vitro Interaction with a Bacterial Ribosomal Complex Active in Peptide Bond Formation"
    },
    "source_doi": "10.1124/mol.63.3.617",

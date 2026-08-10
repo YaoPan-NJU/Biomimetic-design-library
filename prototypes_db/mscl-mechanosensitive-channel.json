@@ -4,6 +4,7 @@
  "name_en": "MscL Mechanosensitive Channel of Large Conductance",
  "organism": {
   "scientific": "Mycobacterium tuberculosis H37Ra / Escherichia coli（MscL 大电导机械敏感通道）",
+  "scientific_en": "Mycobacterium tuberculosis H37Ra / Escherichia coli (MscL mechanosensitive channel of large conductance)",
   "category": "微生物"
  },
  "biomimetic_dimension": "分子仿生",
@@ -30,7 +31,9 @@
   {
    "mechanism_id": "MSCL-001",
    "name": "膜张力驱动的关闭-开放可逆构象门控",
+   "name_en": "Membrane-tension-driven reversible closed-open conformational gating",
    "description": "MscL 为同源五聚体大电导机械敏感通道（PDB 2OAR，M. tuberculosis H37Ra，X 射线 3.5 Å，沉积模型含 5 条聚合物链，单体 174 残基）；膜张力经脂双层传递，作用于闭态→开态转变的面内面积增量 ΔA，驱动关闭态（紧缩）与开放态（扩张）间的可逆构象转换。E. coli MscL 脂质体重建单通道记录给出定量门控参数：开放概率 Po 对绝对张力呈陡 S 形依赖（中点 T1/2 ≈ 11.8 dyn/cm），ΔA = 6.5 nm²，闭-开能差 ΔE = 18.6 kBT，导通分 4 个导通态与 1 个闭态；未受力膜中闭态为低能态，张力撤除后通道自发回闭，全程无化学配体参与",
+   "description_en": "MscL is a homopentameric mechanosensitive channel of large conductance (PDB 2OAR, M. tuberculosis H37Ra, X-ray 3.5 Å; the deposited model contains 5 polymer chains, with a 174-residue monomer). Membrane tension is transmitted through the lipid bilayer and acts on the in-plane area increment ΔA of the closed-to-open transition, driving reversible conformational switching between the closed (constricted) and open (expanded) states. Single-channel recordings of E. coli MscL reconstituted in liposomes give quantitative gating parameters: the open probability Po depends steeply and S-shaped on absolute tension (midpoint T1/2 ~ 11.8 dyn/cm), ΔA = 6.5 nm2, the closed-open energy difference ΔE = 18.6 kBT, and conduction resolves into 4 sub-states plus 1 closed state. In an unstressed membrane the closed state is the low-energy state; after tension removal the channel closes spontaneously, and no chemical ligand is involved throughout.",
    "基本原理": "膜张力对开放态扩张的面内面积变化做功（TΔA），补偿闭-开能差，使开闭由单一物理刺激阈值化触发；未受力膜中闭态为低能态，刺激撤除即自发复位，构成无需配体、可反复循环的力学-构象门控",
    "source": "literature",
    "ref_doi": "10.1085/jgp.113.4.525",
@@ -106,6 +109,7 @@
      }
     ],
     "transferable_principle": "膜/界面上阈值化、可逆的力致构象开闭（闭态紧缩、开态扩张，刺激撤除自发复位）构成'刺激门控吸附-释放再生'的动态响应骨架；MscL 自身无底物选择性，污染物识别须另耦识别模块",
+    "transferable_principle_en": "Thresholded, reversible force-induced conformational opening and closing at a membrane/interface (constricted closed state, expanded open state, spontaneous reset upon stimulus removal) constitutes the dynamic response backbone of 'stimulus-gated adsorption-release regeneration'; MscL itself has no substrate selectivity, so pollutant recognition must be coupled to an additional recognition module.",
     "verification_quote": "Mechanosensitive Channel of Large Conductance (MscL)"
    },
    "source_doi": "10.1126/science.282.5397.2220",
@@ -123,7 +127,9 @@
   {
    "mechanism_id": "MSCL-002",
    "name": "开放态瞬时非选择性大孔（可逆通透/释放窗口）",
+   "name_en": "Transient non-selective large pore in the open state (reversible permeability/release window)",
    "description": "开放态 MscL 形成大电导水相孔道，允许水、离子与小渗透物双向通过（Sukharev 1994：大电导机械敏感通道由 mscL 单基因编码）；导通分 4 个分级导通态而非二元开关（Sukharev 1999），开放随张力撤除松弛回闭，提供可反复开闭的瞬时传质窗口",
+   "description_en": "In the open state MscL forms a large-conductance aqueous pore that allows bidirectional passage of water, ions and small permeants (Sukharev 1994: the large-conductance mechanosensitive channel is encoded by the single mscL gene). Conduction resolves into 4 graded sub-states rather than a binary switch (Sukharev 1999); the opening relaxes back to closed upon tension removal, providing a transient mass-transfer window that can be repeatedly opened and closed.",
    "基本原理": "大电导开放孔道叠加张力阈值化可逆开闭，得到可程序化的传质窗口：仅在触发刺激存在期间开放传质，刺激撤除后自关闭，传质与关断可循环重复",
    "source": "literature",
    "ref_doi": "10.1038/368265a0",
@@ -179,6 +185,7 @@
      }
     ],
     "transferable_principle": "阈值化可逆开闭的传质窗口可将'吸附/结合态'与'释放/洗脱态'分离为两个刺激可切换的状态，实现刺激门控再生",
+    "transferable_principle_en": "A thresholded, reversibly openable mass-transfer window can separate the 'adsorbed/bound state' and the 'release/elution state' into two stimulus-switchable states, realizing stimulus-gated regeneration.",
     "verification_quote": "A large-conductance mechanosensitive channel in E. coli encoded by mscL alone"
    },
    "source_doi": "10.1038/368265a0",

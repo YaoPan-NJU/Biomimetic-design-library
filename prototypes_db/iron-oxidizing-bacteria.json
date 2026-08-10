@@ -4,6 +4,7 @@
   "name_en": "Iron Oxidizing Bacteria",
   "organism": {
     "scientific": "Acidithiobacillus ferrooxidans",
+    "scientific_en": "Acidithiobacillus ferrooxidans (iron-oxidizing bacterium)",
     "category": "微生物"
   },
   "biomimetic_dimension": "过程仿生",
@@ -514,7 +515,9 @@
   "mechanisms": [
     {
       "name": "亚铁氧化驱动铁氢氧化物共沉淀",
+      "name_en": "Ferrous iron oxidation driving coprecipitation of iron hydroxides",
       "description": "脲酶水解尿素: CO(NH₂)₂+H₂O→NH₂COOH+NH₃; NH₂COOH+H₂O→NH₃+H₂CO₃; 最终产生CO₃²⁻+Ca²⁺→CaCO₃↓",
+      "description_en": "Urease hydrolyzes urea: CO(NH₂)₂+H₂O→NH₂COOH+NH₃; NH₂COOH+H₂O→NH₃+H₂CO₃; ultimately producing CO₃²⁻+Ca²⁺→CaCO₃↓",
       "functional_groups": [
         "-NH-（亚氨基）",
         "-O-（醚键）",
@@ -526,6 +529,7 @@
       "verification": "knowledge_gap",
       "causal_chain": {
         "transferable_principle": "基于机制: MICP化学反应机理",
+        "transferable_principle_en": "Based on the mechanism: MICP chemical reaction mechanism",
         "pollutant_feature": {
           "text": "脲酶水解尿素: CO(NH₂)₂+H₂O→NH₂COOH+NH₃; NH₂COOH+H₂O→NH₃+H₂CO₃; 最终产生CO₃²⁻+Ca²⁺→CaCO₃↓",
           "basis": "llm_inferred",
@@ -587,7 +591,9 @@
     },
     {
       "name": "施氏矿物As(III)吸附机制-表面沉淀",
+      "name_en": "Schwertmannite As(III) adsorption mechanism - surface precipitation",
       "description": "双齿双核结合，形成Fe-As、As-O原子距特征",
+      "description_en": "Bidentate binuclear binding, forming characteristic Fe-As and As-O atomic distances",
       "functional_groups": [
         "-S-（硫醚键）",
         "-O-（醚键）"
@@ -671,6 +677,7 @@
           }
         ],
         "transferable_principle": "铁氧化菌原位生成的铁氧化物（施氏矿物）可同时氧化和吸附砷，是生物-矿物协同除砷策略",
+        "transferable_principle_en": "Iron oxides (schwertmannite) generated in situ by iron-oxidizing bacteria can simultaneously oxidize and adsorb arsenic, constituting a bio-mineral synergistic arsenic removal strategy",
         "verification_quote": "施氏矿物对砷的吸附主要有两种方式，一是砷在矿物表面与铁羟基络合，二是砷与矿物表面及结构内部硫酸盐发生配位体交换。砷酸盐通过双齿双核与AsO43-结合，表征出特定Fe-As、As-O原子距。",
         "source_doi": "10.7524/j.issn.0254-6108.2020070302",
         "source_locator": "p.3536 / Section 2.2 + p.3537"
@@ -683,7 +690,9 @@
     },
     {
       "name": "去除机理三阶段",
+      "name_en": "Three-stage removal mechanism",
       "description": "第一阶段：As(III)接触锰氧化物壳层后迅速氧化为As(V)，部分Mn(IV)还原溶解；第二阶段：As(V)受静电吸附再吸附于材料表面，少量与Mn-OH表面络合；第三阶段：As(V)扩散穿过壳层到达施氏矿物内核，通过As-O-Fe络合和配体交换富集",
+      "description_en": "Stage 1: As(III) contacts the manganese oxide shell layer and is rapidly oxidized to As(V), with partial reductive dissolution of Mn(IV); Stage 2: As(V) is readsorbed onto the material surface via electrostatic adsorption, with a small amount forming surface complexes with Mn-OH; Stage 3: As(V) diffuses through the shell layer to reach the schwertmannite core, where it is enriched through As-O-Fe complexation and ligand exchange",
       "functional_groups": [
         "-S-（硫醚键）",
         "-O-（醚键）",
@@ -694,6 +703,7 @@
       "verification": "partial",
       "causal_chain": {
         "transferable_principle": "基于机制: 去除机理三阶段",
+        "transferable_principle_en": "Based on the mechanism: three-stage removal mechanism",
         "pollutant_feature": {
           "text": "第一阶段：As(III)接触锰氧化物壳层后迅速氧化为As(V)，部分Mn(IV)还原溶解；第二阶段：As(V)受静电吸附再吸附于材料表面，少量与Mn-OH表面络合；第三阶段：As(V)扩散穿过壳层到达",
           "basis": "from_source",
@@ -762,7 +772,9 @@
     },
     {
       "name": "吸附机制",
+      "name_en": "Adsorption mechanism",
       "description": "内球络合、表面络合、氢键、氧化（Sb(III)/As(III)被部分氧化为Sb(V)/As(V)）",
+      "description_en": "Inner-sphere complexation, surface complexation, hydrogen bonding, oxidation (Sb(III)/As(III) partially oxidized to Sb(V)/As(V))",
       "functional_groups": [
         "-S-（硫醚键）",
         "氢键位点"
@@ -773,6 +785,7 @@
       "verification_quote": "ne 10 January 2022\n0169-1317/© 2022 Elsevier B.V. All rights reserved.\nResearch Paper \nSimultaneous removal of antimony(III/V) and arsenic(III/V) from aqueous \nsolution by bacteria–mediated kaolin@Fe–Mn binary (hydr) \noxides composites \nRui Xu a, Qian Li a,*, Xiaolong Nan b, Guoqing Jiang b, Limin Wang a, Jing Xiong a, \nYongbin Yang a, Bin Xu a, Tao Jiang a \na School of Minerals Processing and Bio",
       "causal_chain": {
         "transferable_principle": "基于机制: 吸附机制",
+        "transferable_principle_en": "Based on the mechanism: adsorption mechanism",
         "pollutant_feature": {
           "text": "内球络合、表面络合、氢键、氧化（Sb(III)/As(III)被部分氧化为Sb(V)/As(V)）",
           "basis": "from_source",
@@ -827,7 +840,9 @@
     },
     {
       "name": "Cu在施氏矿物表面配位模式",
+      "name_en": "Coordination mode of Cu on the schwertmannite surface",
       "description": "bidentate inner-sphere complexes with singly coordinated surface sites",
+      "description_en": "Bidentate inner-sphere complexes with singly coordinated surface sites",
       "functional_groups": [
         "硫酸根 SO₄²⁻",
         "配位/螯合位点",
@@ -841,6 +856,7 @@
       "verification_quote": "erals were occupied by heavy metals. Furthermore, bidentate inner-sphere complexes\nformed between copper and singly coordinated surface sites, enabling hydrolysis and\ndimer formation of Cu surface species. These characte",
       "causal_chain": {
         "transferable_principle": "基于机制: Cu在施氏矿物表面配位模式",
+        "transferable_principle_en": "Based on the mechanism: coordination mode of Cu on the schwertmannite surface",
         "pollutant_feature": {
           "text": "bidentate inner-sphere complexes with singly coordinated surface sites",
           "basis": "from_source",
@@ -914,7 +930,9 @@
     },
     {
       "name": "砷在铁(氧氢)氧化物表面配位模式",
+      "name_en": "Coordination mode of arsenic on iron (oxyhydr)oxide surfaces",
       "description": "binuclear bidentate corner-sharing (2C), mononuclear bidentate edge-sharing (2E), mononuclear monodentate corner-sharing (1V)",
+      "description_en": "Binuclear bidentate corner-sharing (2C), mononuclear bidentate edge-sharing (2E), mononuclear monodentate corner-sharing (1V)",
       "functional_groups": [
         "-S-（硫醚键）",
         "-O-（醚键）",
@@ -927,6 +945,7 @@
       "verification_quote": "binuclear bidentate\ncorner-sharing (2C) complexes, mononuclear bidentate edge-sharing (2E) complexes, and\nmononuclear monodentate corner-sharing (1V) [114,163–166]. Additionally, certain FeOB\npossess the As(III) oxidase",
       "causal_chain": {
         "transferable_principle": "基于机制: 砷在铁(氧氢)氧化物表面配位模式",
+        "transferable_principle_en": "Based on the mechanism: coordination mode of arsenic on iron (oxyhydr)oxide surfaces",
         "pollutant_feature": {
           "text": "binuclear bidentate corner-sharing (2C), mononuclear bidentate edge-sharing (2E), mononuclear monode",
           "basis": "from_source",

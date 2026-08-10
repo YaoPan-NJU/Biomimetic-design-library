@@ -4,6 +4,7 @@
  "name_en": "Transthyretin Thyroxine / Halophenol Binding Channel",
  "organism": {
   "scientific": "Homo sapiens（人源甲状腺素转运蛋白 TTR）",
+  "scientific_en": "Homo sapiens (human transthyretin, TTR)",
   "category": "动物"
  },
  "biomimetic_dimension": "分子仿生",
@@ -31,7 +32,9 @@
   {
    "mechanism_id": "TTR-001",
    "name": "甲状腺素通道中酚羟基氢键锚簇与碘取代疏水容纳",
+   "name_en": "Phenolic hydroxyl hydrogen-bond anchor cluster and hydrophobic accommodation of iodine substituents in the thyroxine channel",
    "description": "人源 TTR 四聚体在二聚体-二聚体界面（AC/BD）形成两条甲状腺激素通道。在人 TTR-T4 复合物（PDB 2ROX）中，配体甲状腺素（T44，3,5,3',5'-四碘-L-甲状腺原氨酸）位于通道内，其结合位点（SITE AC2/AC3）含 Lys15、Leu17、Glu54、Ala108、Ala109、Leu110；在人 TTR-OH-PCB 复合物（PDB 2G5U）同一通道的位点（SITE AC1/AC2）中另见 Ser117、Thr119，Lys15/Ser117/Thr119 构成通道口酚羟基极性锚簇，Leu17/Ala108/Ala109/Leu110 疏水壁容纳碘取代",
+   "description_en": "The human TTR tetramer forms two thyroid hormone channels at the dimer-dimer interface (AC/BD). In the human TTR-T4 complex (PDB 2ROX), the ligand thyroxine (T44, 3,5,3',5'-tetraiodo-L-thyronine) is located in the channel, and its binding site (SITE AC2/AC3) contains Lys15, Leu17, Glu54, Ala108, Ala109, and Leu110. In the human TTR-OH-PCB complex (PDB 2G5U), the same channel site (SITE AC1/AC2) additionally shows Ser117 and Thr119: Lys15/Ser117/Thr119 form the polar anchor cluster for the phenolic hydroxyl at the channel mouth, while the Leu17/Ala108/Ala109/Leu110 hydrophobic wall accommodates the iodine substituents.",
    "基本原理": "通道口预组织的阳离子与氢键给体锚簇方向性锚定配体酚羟基，疏水通道壁按形状容纳卤素取代的联芳骨架；锚定与疏水容纳的组合使卤代酚型配体在无金属参与下被通道识别",
    "source": "literature",
    "ref_doi": "10.1107/S0907444996003046",
@@ -106,6 +109,7 @@
      }
     ],
     "transferable_principle": "通道口预组织的阳离子/氢键给体锚簇（Lys15/Ser117/Thr119 型）方向性锚定酚羟基，配合按形状容纳卤素取代联芳骨架的疏水通道壁，可在无金属参与下按'酚羟基位点 + 卤素取代'模式识别卤代酚型配体",
+    "transferable_principle_en": "A preorganized cationic/hydrogen-bond donor anchor cluster (Lys15/Ser117/Thr119 type) at the channel mouth directionally anchors the phenolic hydroxyl, together with a hydrophobic channel wall that accommodates halogen-substituted biaryl scaffolds by shape, enabling recognition of halogenated phenolic ligands by the 'phenolic hydroxyl site + halogen substitution' pattern without metal participation.",
     "verification_quote": "TRANSTHYRETIN (ALSO CALLED PREALBUMIN) COMPLEX WITH THYROXINE (T4)"
    },
    "source_doi": "10.1107/S0907444996003046",
@@ -123,7 +127,9 @@
   {
    "mechanism_id": "TTR-002",
    "name": "卤代酚与 PCB 羟基代谢物对 T4 通道的竞争性结合（内分泌干扰机制）",
+   "name_en": "Competitive binding of halogenated phenols and PCB hydroxy metabolites to the T4 channel (endocrine disruption mechanism)",
    "description": "羟基化多氯联苯（OH-PCB）等卤代酚型外源物模拟 T4 的酚羟基 + 卤素取代模式，竞争性结合同一 TTR 通道并置换 T4，是既有文献记载的内分泌干扰分子机制。PDB 2G5U 示 OH-PCB 配体 PCQ（3,5,3',5'-四氯联苯-4,4'-二醇）同时占据两条通道（PCQ A 240 与 PCQ B 239），位点残基含 Lys15/Ser117/Thr119 锚簇与疏水壁",
+   "description_en": "Halogenated phenolic xenobiotics such as hydroxylated polychlorinated biphenyls (OH-PCBs) mimic the phenolic hydroxyl plus halogen substitution pattern of T4, competitively bind the same TTR channel, and displace T4, constituting a molecular mechanism of endocrine disruption documented in the literature. PDB 2G5U shows the OH-PCB ligand PCQ (3,5,3',5'-tetrachlorobiphenyl-4,4'-diol) simultaneously occupying both channels (PCQ A 240 and PCQ B 239), with site residues including the Lys15/Ser117/Thr119 anchor cluster and the hydrophobic wall.",
    "基本原理": "卤代酚型外源物以与 T4 相同的酚羟基锚簇与卤素疏水容纳模式进入通道，其结合竞争 T4 的生理结合位点；通道对'卤代酚羟基'基序的模式识别本身不区分天然激素与外源污染物",
    "source": "literature",
    "ref_doi": "10.1016/j.chembiol.2004.10.009",
@@ -198,6 +204,7 @@
      }
     ],
     "transferable_principle": "以'酚羟基氢键锚簇 + 卤素疏水口袋'为识别模式的通道会竞争性结合一切与 T4 模式相似的卤代酚/羟基化卤代芳烃；该模式可迁移为卤代酚与双酚类酚污染物的识别位点设计，但模式识别本身不提供对单一污染物的特异选择性",
+    "transferable_principle_en": "A channel that recognizes ligands by the 'phenolic hydroxyl hydrogen-bond anchor cluster + halogen hydrophobic pocket' pattern will competitively bind any halogenated phenol or hydroxylated halogenated aromatic resembling the T4 pattern. This pattern can be transferred to the design of recognition sites for halogenated phenols and bisphenol-type phenolic pollutants, but pattern recognition itself does not provide specific selectivity for a single pollutant.",
     "verification_quote": "Hydroxylated Polychlorinated Biphenyls Selectively Bind Transthyretin in Blood and Inhibit Amyloidogenesis: Rationalizing Rodent PCB Toxicity"
    },
    "source_doi": "10.1016/j.chembiol.2004.10.009",

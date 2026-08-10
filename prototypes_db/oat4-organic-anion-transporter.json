@@ -4,6 +4,7 @@
  "name_en": "OAT4 Organic Anion Transporter (SLC22A11)",
  "organism": {
   "scientific": "Homo sapiens OAT4 有机阴离子转运体",
+  "scientific_en": "Homo sapiens OAT4 organic anion transporter",
   "category": "动物"
  },
  "biomimetic_dimension": "分子仿生",
@@ -31,7 +32,9 @@
   {
    "mechanism_id": "OAT4-001",
    "name": "阴离子头基与芳香-阳离子底物口袋的两点位识别（硫酸结合型有机阴离子）",
+   "name_en": "Two-point recognition of anionic head group by an aromatic-cationic substrate pocket (sulfate-conjugated organic anions)",
    "description": "人 OAT4（SLC22A11，550 氨基酸残基、12 跨膜域）表达于肾近端小管顶端膜与胎盘，以高亲和力、钠离子非依赖方式转运硫酸结合型有机阴离子：雌酮硫酸酯 E1S（Km 1.01 µM）与硫酸脱氢表雄酮 DHEAS（Km 0.63 µM），并转运赭曲霉毒素 A（Cha 2000）。人 OAT4·DHEAS 冷冻电镜结构 PDB 9U5A（2025-06-18 释放）坐标直测：配体 ZWY（DHEAS，17-氧代雄甾-5-烯-3β-基硫酸氢酯）4.0 Å 内含芳香残基 Phe211、Phe238、Tyr360、Tyr361、Met231 与阳离子 Arg389、极性 Gln242（chain A，PDB 编号）；该芳香笼加阳离子锚为 SLC22 家族保守底物结合基序（大鼠 OAT1 PDB 8SDY 同源直测：Tyr230/Phe438/Tyr353/Phe443 芳香笼 + Lys382/Arg466 阳离子残基，Dou 2023）",
+   "description_en": "Human OAT4 (SLC22A11; 550 amino acid residues, 12 transmembrane domains), expressed on the apical membrane of renal proximal tubule cells and in placenta, transports sulfate-conjugated organic anions in a high-affinity, sodium-independent manner: estrone sulfate E1S (Km 1.01 uM) and dehydroepiandrosterone sulfate DHEAS (Km 0.63 uM), and also transports ochratoxin A (Cha 2000). In the human OAT4-DHEAS cryo-EM structure (PDB 9U5A, released 2025-06-18), the ligand ZWY (DHEAS, 17-oxoandrost-5-en-3beta-yl hydrogen sulfate) is within 4.0 Å of the aromatic residues Phe211, Phe238, Tyr360, Tyr361, Met231, the cation Arg389, and the polar residue Gln242 (chain A, PDB numbering). This aromatic cage plus cationic anchor constitutes a conserved substrate-binding motif of the SLC22 family (rat OAT1 PDB 8SDY homologous measurement: aromatic cage Tyr230/Phe438/Tyr353/Phe443 plus cationic residues Lys382/Arg466, Dou 2023).",
    "基本原理": "疏水/芳香笼钳夹底物疏水骨架，阳离子/极性残基锚定阴离子头基，构成头基锚定加骨架容纳的两点位识别，使化学结构多样的有机阴离子被钠离子非依赖地高效识别",
    "source": "pdb + literature",
    "ref_doi": "10.1074/jbc.275.6.4507",
@@ -137,6 +140,7 @@
      }
     ],
     "transferable_principle": "阳离子/极性头基锚加芳香-疏水骨架笼的两点位识别构型，可以钠离子非依赖方式识别化学结构多样的阴离子分子；头基化学（硫酸结合物优先于葡萄糖醛酸结合物）与阴离子电荷是选择性的关键决定因素",
+    "transferable_principle_en": "A two-point recognition configuration of a cationic/polar head-group anchor plus an aromatic-hydrophobic scaffold cage can recognize chemically diverse anionic molecules in a sodium-independent manner; head-group chemistry (sulfate conjugates preferred over glucuronide conjugates) and anionic charge are key determinants of selectivity.",
     "verification_quote": "CRYO-EM STRUCTURE OF HUMAN OAT4 IN COMPLEX WITH DHEAS"
    },
    "source_doi": "10.1074/jbc.275.6.4507",
@@ -155,7 +159,9 @@
   {
    "mechanism_id": "OAT4-002",
    "name": "顶端有机阴离子/二羧酸交换（二羧酸外排梯度驱动的向量重吸收）",
+   "name_en": "Apical organic anion/dicarboxylate exchange (vectorial reabsorption driven by the dicarboxylate efflux gradient)",
    "description": "OAT4 是顶端有机阴离子/二羧酸交换体：戊二酸（glutarate, GA）抑制 E1S 摄取（IC50 1.25 mM）；预载 GA 反式刺激 E1S 摄取，胞外 E1S 反式刺激 GA 外排；E1S 与 PAH 的摄取与外排均可被 GA 或 PAH 反式刺激（Ekaratanawong 2004）。免疫组化示 OAT4 位于肾近端小管顶端膜（与基底侧 hOAT1/hOAT3 同一管群），主要作为顶端重吸收通路",
+   "description_en": "OAT4 is an apical organic anion/dicarboxylate exchanger: glutarate (GA) inhibits E1S uptake (IC50 1.25 mM); preloaded GA trans-stimulates E1S uptake, while extracellular E1S trans-stimulates GA efflux; both uptake and efflux of E1S and PAH can be trans-stimulated by GA or PAH (Ekaratanawong 2004). Immunohistochemistry shows OAT4 localized on the apical membrane of renal proximal tubule cells (in the same tubular segment as basolateral hOAT1/hOAT3), functioning mainly as an apical reabsorptive pathway.",
    "基本原理": "胞内外向二羧酸（α-酮戊二酸/戊二酸）梯度提供交换驱动力，将二羧酸下坡外排与有机阴离子上坡重吸收相偶联，构成近端小管的向量重吸收通路",
    "source": "literature",
    "ref_doi": "10.1254/jphs.94.297",
@@ -231,6 +237,7 @@
      }
     ],
     "transferable_principle": "以可逆交换偶联底物梯度驱动有机阴离子的向量摄取与释放，摄取与再生共用同一识别位点、以梯度反向或竞争置换实现循环",
+    "transferable_principle_en": "A reversible exchange couples substrate gradients to drive vectorial uptake and release of organic anions; uptake and regeneration share the same recognition site and cycle via gradient reversal or competitive displacement.",
     "verification_quote": "OAT4 is an apical organic anion/dicarboxylate exchanger and mainly functions as an apical pathway for the reabsorption of some organic anions in renal proximal tubules"
    },
    "source_doi": "10.1254/jphs.94.297",
@@ -249,7 +256,9 @@
   {
    "mechanism_id": "OAT4-003",
    "name": "疏水骨架容纳与有限容积口袋的尺寸窗口（链长选择性结构基础）",
+   "name_en": "Hydrophobic scaffold accommodation and the size window of a finite-volume pocket (structural basis of chain-length selectivity)",
    "description": "OAT 底物口袋为 NTD 与 CTD 之间的大腔：大鼠 OAT1·PAH/丙磺舒复合物直测口袋约 15 Å 宽 × 7 Å 深 × 13 Å 高（Dou 2023）；PAH 芳基被 Tyr230 与 Phe438 钳夹、Tyr353 以 edge-to-face 方式参与，底物可在笼内调整取向（柔性结合），且 PAH 与丙磺舒结合于 NTD/CTD 腔末端同一位点。OAT4 与化学异质的阴离子化合物相互作用（NSAIDs、利尿剂、磺溴酞钠、青霉素 G、胆汁酸盐、甾体硫酸酯、赭曲霉毒素 A），呈多特异性；9U5A 中 DHEAS 甾体骨架被 Phe211/Phe238/Tyr360/Tyr361/Met231 包围（坐标直测 ≤4.0 Å）",
+   "description_en": "The OAT substrate pocket is a large cavity between the NTD and CTD: the pocket measured directly in the rat OAT1-PAH/probenecid complex is about 15 Å wide x 7 Å deep x 13 Å high (Dou 2023); the PAH aryl group is clamped by Tyr230 and Phe438, with Tyr353 participating in an edge-to-face manner, so the substrate can reorient within the cage (flexible binding), and PAH and probenecid bind to the same site at the end of the NTD/CTD cavity. OAT4 interacts with chemically heterogeneous anionic compounds (NSAIDs, diuretics, sulfobromophthalein, penicillin G, bile salts, steroidal sulfates, ochratoxin A), exhibiting multispecificity; in 9U5A the DHEAS steroidal scaffold is surrounded by Phe211/Phe238/Tyr360/Tyr361/Met231 (measured from coordinates, within 4.0 Å).",
    "基本原理": "有限容积口袋与保守芳香笼的组合对容纳骨架的尺寸与伸展范围构成位阻上限，同时容忍化学变异（多特异性），为链长/骨架尺寸依赖的选择性提供尺寸窗口基础",
    "source": "literature + pdb",
    "ref_doi": "10.1038/s41594-023-01123-3",
@@ -340,6 +349,7 @@
      }
     ],
     "transferable_principle": "有限容积的疏水/芳香口袋在容忍骨架化学变异的同时对骨架尺寸设限，可作为链长/尺寸依赖选择性的仿生尺寸窗口",
+    "transferable_principle_en": "A finite-volume hydrophobic/aromatic pocket tolerates scaffold chemical variation while imposing limits on scaffold size, serving as a biomimetic size window for chain-length/size-dependent selectivity.",
     "verification_quote": "both PAH and probenecid bind to a large substrate pocket that measures approximately 15 Å in width, 7 Å in depth, and 13 Å in height"
    },
    "source_doi": "10.1038/s41594-023-01123-3",

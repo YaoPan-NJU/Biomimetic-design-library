@@ -4,6 +4,7 @@
  "name_en": "Lectin Glycan Hydroxyl-Pattern Recognition Protein (Concanavalin A)",
  "organism": {
   "scientific": "Canavalia ensiformis（刀豆 凝集素 Concanavalin A / ConA）",
+  "scientific_en": "Canavalia ensiformis (jack bean) Concanavalin A (ConA)",
   "category": "植物"
  },
  "biomimetic_dimension": "分子仿生",
@@ -30,7 +31,9 @@
   {
    "mechanism_id": "LEC-001",
    "name": "多点氢键阵列对糖链表面羟基模式的识别",
+   "name_en": "Recognition of hydroxyl patterns on the glycan surface by a multi-point hydrogen-bond array",
    "description": "刀豆球蛋白 A（ConA）以预组织的残基核心识别甘露糖型单糖表面的羟基空间模式：PDB 5CNA（2.0 Å，链 A）坐标直测，甲基 α-D-甘露吡喃糖苷（配体 MMA）的四个羟基与结合位点形成方向性氢键网络，Asp208 OD2→O4（2.63 Å）、Asp208 OD1→O6（2.88 Å）、Arg228 骨架酰胺 NH→O3（2.88 Å）、Asn14 ND2→O4（2.99 Å），另有 Leu99、Tyr100 骨架 NH 近 O6；同一结合位点以保守几何读取甘露糖的 O3/O4 顺式二醇与 O6 羟基",
+   "description_en": "Concanavalin A (ConA) recognizes the spatial hydroxyl pattern on the surface of mannose-type monosaccharides through a preorganized residue core. As directly measured from the PDB 5CNA (2.0 Å, chain A) coordinates, the four hydroxyl groups of methyl alpha-D-mannopyranoside (ligand MMA) form a directional hydrogen-bond network with the binding site: Asp208 OD2 to O4 (2.63 Å), Asp208 OD1 to O6 (2.88 Å), Arg228 backbone amide NH to O3 (2.88 Å), and Asn14 ND2 to O4 (2.99 Å), with the Leu99 and Tyr100 backbone NH groups also near O6. The same binding site reads the O3/O4 cis-diol and the O6 hydroxyl of mannose with conserved geometry.",
    "基本原理": "与目标羟基模式几何互补的多点氢键供体/受体阵列（保守残基核心）提供方向性相互作用，结合位点形状（保守核心加可变环）决定单糖特异性；甘露糖与半乳糖仅 C2 羟基轴向/平伏取向不同，氢键阵列即借此区分单糖立体化学",
    "source": "literature",
    "ref_doi": "10.1107/s0907444994005287",
@@ -105,6 +108,7 @@
      }
     ],
     "transferable_principle": "与目标分子羟基模式几何互补的多点氢键供体/受体阵列，配合决定结合位点形状的保守核心与可变环，可通过氢键数目与方向性区分立体化学相近的含羟基分子",
+    "transferable_principle_en": "A multi-point hydrogen-bond donor/acceptor array that is geometrically complementary to the hydroxyl pattern of the target molecule, combined with a conserved core and variable loops that define the binding-site shape, can distinguish stereochemically similar hydroxyl-bearing molecules by the number and directionality of the hydrogen bonds.",
     "verification_quote": "Each sugar is bound to the protein by hydrogen bonds and van der Waals contacts."
    },
    "source_doi": "10.1107/s0907444994005287",
@@ -122,7 +126,9 @@
   {
    "mechanism_id": "LEC-002",
    "name": "Mn/Ca 金属辅因子对糖识别环的结构预组织",
+   "name_en": "Structural preorganization of the sugar-recognition loop by the Mn/Ca metal cofactors",
    "description": "ConA 糖结合能力依赖两个紧邻金属辅因子（Mn²⁺ 与 Ca²⁺，相距 4.22 Å）；PDB 5CNA（链 A）坐标直测，Ca²⁺ 由 Tyr12 骨架羰基（2.27 Å）、Asn14 OD1（2.47 Å）、Asp19 OD2（2.34 Å）、Asp10 OD1（2.44 Å）配位，Mn²⁺ 由 Glu8 OE2（2.30 Å）、Asp10 OD2（1.97 Å）、Asp19 OD1（2.15 Å）、His24 NE2（2.51 Å）配位。桥联残基 Asn14 以 OD1 配位 Ca²⁺、同时以 ND2 氢键结合糖 O4，将金属位点与糖识别位点直接耦合",
+   "description_en": "ConA sugar-binding ability depends on two adjacent metal cofactors (Mn2+ and Ca2+, 4.22 Å apart). As measured directly from the PDB 5CNA (chain A) coordinates, Ca2+ is coordinated by the Tyr12 backbone carbonyl (2.27 Å), Asn14 OD1 (2.47 Å), Asp19 OD2 (2.34 Å), and Asp10 OD1 (2.44 Å), while Mn2+ is coordinated by Glu8 OE2 (2.30 Å), Asp10 OD2 (1.97 Å), Asp19 OD1 (2.15 Å), and His24 NE2 (2.51 Å). The bridging residue Asn14 coordinates Ca2+ via its OD1 while simultaneously hydrogen-bonding the sugar O4 via its ND2, directly coupling the metal site to the sugar recognition site.",
    "基本原理": "两个紧邻金属离子经配位保守酸性残基与骨架羰基预组织离子结合环的构象；金属配位预先支付识别环的构象熵代价并维持氢键阵列几何，桥联残基（Asn14）把金属位点与识别位点连为一体；去金属化使离子结合环构象紊乱而丧失糖结合",
    "source": "literature",
    "ref_doi": "10.1529/biophysj.108.134601",
@@ -197,6 +203,7 @@
      }
     ],
     "transferable_principle": "两个紧邻金属离子经配位保守酸性残基与骨架羰基预组织识别环构象，桥联残基把金属位点与识别位点耦合；金属配位预组织降低结合熵代价并维持氢键阵列几何，该'金属辅因子预组织'原理可独立于蛋白骨架移植到人工识别位点",
+    "transferable_principle_en": "Two adjacent metal ions preorganize the recognition-loop conformation through coordination of conserved acidic residues and backbone carbonyls, while a bridging residue couples the metal site to the recognition site. Metal-coordination preorganization lowers the binding entropy cost and maintains hydrogen-bond array geometry; this 'metal cofactor preorganization' principle can be transplanted to artificial recognition sites independently of the protein scaffold.",
     "verification_quote": "metal ions are known to control the sugar binding ability of legume lectins"
    },
    "source_doi": "10.1529/biophysj.108.134601",

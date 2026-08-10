@@ -4,6 +4,7 @@
   "name_en": "Bug-Family Carboxylate-Pincer Solute-Binding Protein",
   "organism": {
     "scientific": "Bordetella pertussis",
+    "scientific_en": "Bordetella pertussis (whooping cough bacterium)",
     "category": "微生物"
   },
   "biomimetic_dimension": "分子仿生",
@@ -31,7 +32,9 @@
     {
       "mechanism_id": "BUG-001",
       "name": "羧酸夹钳初始锚定与第二结构域生产性占位判别",
+      "name_en": "Initial carboxylate-pincer anchoring and productive-site occupancy discrimination by the second domain",
       "description": "Bug 家族底物结合蛋白采用 Venus flytrap 双域折叠。来自两结构域的保守 β-strand–β-turn–α-helix 模体通过直接和水介导氢键形成羧酸夹钳。Bug27 的开态结构表明，配体羧酸可先由第一结构域的一半夹钳锚定；只有与第二结构域形成合适接触时，闭合构象才被稳定，从而区分生产性与非生产性结合。",
+      "description_en": "Bug-family solute-binding proteins adopt a Venus flytrap two-domain fold. A conserved beta-strand-beta-turn-alpha-helix motif contributed by both domains forms the carboxylate pincer through direct and water-mediated hydrogen bonds. The open-state structure of Bug27 shows that the ligand carboxylate can first be anchored by the half-pincer from domain I; the closed conformation is stabilized only when suitable contacts with the second domain are formed, thereby distinguishing productive from non-productive binding.",
       "基本原理": "把头基锚定与整体占位判别分成串联的两个检查：第一位点识别羧酸头基，第二结构域只有在配体其余部分的形状和接触满足要求时才稳定闭合。",
       "source": "literature",
       "ref_doi": "10.1016/j.jmb.2007.08.006",
@@ -107,7 +110,8 @@
             "source_asset": null
           }
         ],
-        "transferable_principle": "用串联的头基锚定和第二位点整体占位检查实现选择性；合成转译必须以第二位点相对头基单点受体的选择性增量作为判据。"
+        "transferable_principle": "用串联的头基锚定和第二位点整体占位检查实现选择性；合成转译必须以第二位点相对头基单点受体的选择性增量作为判据。",
+        "transferable_principle_en": "Selectivity is achieved through sequential head-group anchoring combined with a whole-site occupancy check at the second site; synthetic translation must use the selectivity increment of the second site relative to a single-point head-group receptor as the criterion."
       },
       "source_doi": "10.1016/j.jmb.2007.08.006",
       "source_page": 954,

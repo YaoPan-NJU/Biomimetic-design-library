@@ -4,6 +4,7 @@
   "name_en": "ArsR Arsenic-Sensing Trithiol (AsS3) Disorder-to-Order Capture",
   "organism": {
     "scientific": "Acidithiobacillus ferrooxidans 等细菌的 ArsR/SmtB 家族 As(III) 感应转录抑制蛋白（AfArsR）",
+    "scientific_en": "ArsR/SmtB family As(III)-sensing transcriptional repressor protein (AfArsR) from bacteria such as Acidithiobacillus ferrooxidans",
     "category": "微生物"
   },
   "biomimetic_dimension": "分子仿生",
@@ -30,7 +31,9 @@
     {
       "mechanism_id": "ARSR-001",
       "name": "As(III) 三半胱氨酸三配位(AsS3)与无序到有序折叠捕获",
+      "name_en": "As(III) three-cysteine tricoordination (AsS3) with disorder-to-order folding capture",
       "description": "ArsR/SmtB 家族 As(III) 感应抑制蛋白以 3 个半胱氨酸的硫醇对亚砷酸 As(III) 形成三角锥三配位(AsS3)；AfArsR 中 As(III) 结合诱导一段无序区折叠为有序结构(disorder-to-order)，实现对 As(III)/Sb(III) 的选择性感应(Shi 1996；Prabaharan 2019；Zhu 2023 JACS)",
+      "description_en": "ArsR/SmtB family As(III)-sensing repressor proteins coordinate arsenite As(III) through the thiol groups of three cysteines in a trigonal-pyramidal tricoordinate geometry (AsS3); in AfArsR, As(III) binding induces a disordered region to fold into an ordered structure (disorder-to-order), achieving selective sensing of As(III)/Sb(III) (Shi 1996; Prabaharan 2019; Zhu 2023 JACS).",
       "基本原理": "As(III) 为软路易斯酸、强亲硫，3 个软硫配体(半胱氨酸)以三角锥几何选择性锚定亚砷酸；配位同时驱动局部构象由无序变有序，把‘识别’与‘构象响应’耦合，区别于硬阴离子(磷酸/硫酸)结合",
       "source": "literature",
       "ref_doi": "10.1021/jacs.3c11665",
@@ -86,6 +89,7 @@
           }
         ],
         "transferable_principle": "把 ArsR 的‘3 个半胱氨酸硫醇三角锥三配位(AsS3)+配位诱导折叠’迁移为 As(III) 选择性捕获层：以三硫醇预组织位点(或 As(III) 诱导折叠的肽段)锚定亚砷酸，软-软匹配区别于硬含氧阴离子(磷酸/硫酸)；须防硫醇氧化并锁定 As(III) 形态",
+        "transferable_principle_en": "Transfer ArsR's three-cysteine thiol trigonal-pyramidal tricoordination (AsS3) plus coordination-induced folding into an As(III)-selective capture layer: anchor arsenite with a pre-organized trithiol site (or an As(III)-induced folding peptide segment), with soft-soft matching distinguishing it from hard oxyanions (phosphate/sulfate); oxidation of the thiols must be prevented and the As(III) speciation locked.",
         "verification_quote": "AsIII Selectively Induces a Disorder-to-Order Transition"
       },
       "source_doi": "10.1021/jacs.3c11665",

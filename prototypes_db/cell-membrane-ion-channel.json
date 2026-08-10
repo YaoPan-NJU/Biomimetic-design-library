@@ -4,6 +4,7 @@
   "name_en": "Cell Membrane Ion Channel",
   "organism": {
     "scientific": "Aquaporin (水通道蛋白)",
+    "scientific_en": "Aquaporin (water channel protein)",
     "category": "仿生材料"
   },
   "biomimetic_dimension": "功能仿生",
@@ -321,7 +322,9 @@
   "mechanisms": [
     {
       "name": "脂质双层酰基链密度调控水渗透选择性",
+      "name_en": "Lipid bilayer acyl chain density regulating water permeation selectivity",
       "description": "C14lyso脂质体：单酰基链→更多自由体积→松散结构→高水渗透率(Pf=5.84×10⁻⁴ m/s); DOPC脂质体：双疏水酰基链→致密结构→低水渗透率(Pf=7.28×10⁻⁵ m/s)",
+      "description_en": "C14lyso liposomes: single acyl chain provides more free volume and a looser structure, giving high water permeability (Pf = 5.84x10^-4 m/s); DOPC liposomes: dual hydrophobic acyl chains form a dense structure, giving low water permeability (Pf = 7.28x10^-5 m/s).",
       "functional_groups": [
         "-S-（硫醚键）",
         "-O-（醚键）"
@@ -333,6 +336,7 @@
       "verification_quote": "mg/mL DOPC liposomes with denser microstructure into the aqueous                  rejection of TFC-C14lyso-2 during the 120 h operation in Fig. 12b.",
       "causal_chain": {
         "transferable_principle": "基于机制: C14lyso脂质体vs DOPC脂质体结构差异 Structure difference C14l",
+        "transferable_principle_en": "Based on mechanism: structural difference between C14lyso liposomes and DOPC liposomes.",
         "pollutant_feature": {
           "text": "C14lyso脂质体：单酰基链→更多自由体积→松散结构→高水渗透率(Pf=5.84×10⁻⁴ m/s); DOPC脂质体：双疏水酰基链→致密结构→低水渗透率(Pf=7.28×10⁻⁵ m/s)",
           "basis": "from_source",
@@ -392,7 +396,9 @@
     },
     {
       "name": "Aquaporin(AQP)结构与水传输机制 AQP structure and water transport mechanism",
+      "name_en": "Aquaporin (AQP) structure and water transport mechanism",
       "description": "AQP具有6个跨膜结构域和独特的沙漏结构，形成~2.8Å孔道，实现~3×10⁹水分子/秒的快速水传输，同时有效排斥单价离子",
+      "description_en": "AQP has six transmembrane domains and a unique hourglass structure, forming a ~2.8 Å pore that achieves rapid water transport of ~3x10^9 water molecules per second while effectively rejecting monovalent ions.",
       "functional_groups": [
         "-S-（硫醚键）",
         "-O-（醚键）"
@@ -404,6 +410,7 @@
       "verification_quote": "water transportability and the effect of C14lyso liposomes on the intrinsic structure of the polyamide selective",
       "causal_chain": {
         "transferable_principle": "基于机制: Aquaporin(AQP)结构与水传输机制 AQP structure and water tra",
+        "transferable_principle_en": "Based on mechanism: Aquaporin (AQP) structure and water transport mechanism.",
         "pollutant_feature": {
           "text": "AQP具有6个跨膜结构域和独特的沙漏结构，形成~2.8Å孔道，实现~3×10⁹水分子/秒的快速水传输，同时有效排斥单价离子",
           "basis": "from_source",
@@ -463,7 +470,9 @@
     },
     {
       "name": "水传输机制 Water transport mechanism",
+      "name_en": "Water transport mechanism",
       "description": "两种机制协同增强水渗透性：(1) PA选择层本征结构变化(更薄、更粗糙、更亲水、更高DC)；(2) C14lyso脂质体作为AWC加速水传输(缩短水分子传递路径、降低传质阻力)",
+      "description_en": "Two mechanisms synergistically enhance water permeability: (1) intrinsic structural changes in the PA selective layer (thinner, rougher, more hydrophilic, higher DC); (2) C14lyso liposomes serving as AWC accelerate water transport (shortening the water transfer path and reducing mass transfer resistance).",
       "functional_groups": [
         "-S-（硫醚键）",
         "-O-（醚键）"
@@ -475,6 +484,7 @@
       "verification_quote": "selective layer. As a result, introducing a certain amount of C14lyso          through TFC-C14lyso. The water transport mechanism across the RO",
       "causal_chain": {
         "transferable_principle": "基于机制: 水传输机制 Water transport mechanism",
+        "transferable_principle_en": "Based on mechanism: water transport mechanism.",
         "pollutant_feature": {
           "text": "两种机制协同增强水渗透性：(1) PA选择层本征结构变化(更薄、更粗糙、更亲水、更高DC)；(2) C14lyso脂质体作为AWC加速水传输(缩短水分子传递路径、降低传质阻力)",
           "basis": "llm_inferred"
@@ -526,7 +536,9 @@
     },
     {
       "name": "细胞膜仿生设计概念",
+      "name_en": "Cell membrane biomimetic design concept",
       "description": "双功能仿生：(1)水通道蛋白→疏水通道+最小水结合位点→快速选择性水传输→对应GNM疏水石墨烯纳米孔；(2)细胞膜外侧亲水聚合物刷→空间位阻+水合层→污染物排斥→对应壳聚糖修饰",
+      "description_en": "Dual-function biomimicry: (1) aquaporin provides a hydrophobic channel plus minimal water-binding sites for fast selective water transport, corresponding to GNM hydrophobic graphene nanopores; (2) the hydrophilic polymer brush on the outer cell membrane provides steric hindrance and a hydration layer for pollutant rejection, corresponding to chitosan modification.",
       "functional_groups": [
         "壳聚糖氨基/羟基",
         "石墨烯表面基团",
@@ -603,6 +615,7 @@
           }
         ],
         "transferable_principle": "生物离子通道的选择性过滤机制（尺寸排斥+化学配位）可启发高选择性分离膜设计",
+        "transferable_principle_en": "The selective filtration mechanism of biological ion channels (size exclusion plus chemical coordination) can inspire the design of highly selective separation membranes.",
         "verification_quote": "aquaporin-based biomimetic membranes for water filtration"
       },
       "evidence_type": "partial_source",
@@ -615,7 +628,9 @@
     },
     {
       "name": "生物离子通道仿生设计原则",
+      "name_en": "Biomimetic design principle of biological ion channels",
       "description": "三类生物离子精确滤器(离子泵/离子交换器/离子通道)→核心选择性机制：(1)高精度孔径(水合自由能差异→脱水选择性)；(2)部分电荷氧配位(羰基/羟基)→捕获脱水离子+补偿脱水能量损失→快速跳跃传输",
+      "description_en": "Three types of precision biological ion filters (ion pumps, ion exchangers, ion channels) share core selectivity mechanisms: (1) high-precision pore size (hydration free energy difference leads to dehydration-based selectivity); (2) partial-charge oxygen coordination (carbonyl/hydroxyl groups) captures dehydrated ions and compensates the dehydration energy loss, enabling fast hopping transport.",
       "functional_groups": [
         "离子交换位点",
         "-OH（羟基）",
@@ -628,6 +643,7 @@
       "基本原理": "细胞膜的脂质双分子层和膜蛋白可通过静电作用、配位作用或分子识别选择性结合污染物",
       "causal_chain": {
         "transferable_principle": "基于机制: 生物离子通道仿生设计原则",
+        "transferable_principle_en": "Based on mechanism: biomimetic design principle of biological ion channels.",
         "pollutant_feature": {
           "text": "三类生物离子精确滤器(离子泵/离子交换器/离子通道)→核心选择性机制：(1)高精度孔径(水合自由能差异→脱水选择性)；(2)部分电荷氧配位(羰基/羟基)→捕获脱水离子+补偿脱水能量损失→快速跳跃传输",
           "basis": "from_source",
@@ -686,7 +702,9 @@
     },
     {
       "name": "冠醚仿生离子通道——12-crown-4 Li⁺选择性",
+      "name_en": "Crown ether biomimetic ion channel - 12-crown-4 Li+ selectivity",
       "description": "12-crown-4掺入聚降冰片烯网络→Li⁺/Mg²⁺渗透选择性10.1(反向选择)、Li⁺/Na⁺选择性2.3→冠醚腔径匹配+氧配位→人工离子通道",
+      "description_en": "12-crown-4 incorporated into a polynorbornene network gives Li+/Mg2+ permeation selectivity of 10.1 (reverse selectivity) and Li+/Na+ selectivity of 2.3; pore-cavity size matching of the crown ether plus oxygen coordination forms an artificial ion channel.",
       "functional_groups": [
         "-O-（醚键）",
         "配位/螯合位点"
@@ -698,6 +716,7 @@
       "verification_quote": "target ion size. As for the common crown ethers compounds, 12-crown-4",
       "causal_chain": {
         "transferable_principle": "基于机制: 冠醚仿生离子通道——12-crown-4 Li⁺选择性",
+        "transferable_principle_en": "Based on mechanism: crown ether biomimetic ion channel - 12-crown-4 Li+ selectivity.",
         "pollutant_feature": {
           "text": "12-crown-4掺入聚降冰片烯网络→Li⁺/Mg²⁺渗透选择性10.1(反向选择)、Li⁺/Na⁺选择性2.3→冠醚腔径匹配+氧配位→人工离子通道",
           "basis": "from_source",
@@ -756,7 +775,9 @@
     },
     {
       "name": "功能化石墨烯纳米孔——模拟Na⁺通道",
+      "name_en": "Functionalized graphene nanopore - mimicking Na+ channel",
       "description": "穿孔石墨烯(porous graphene)→晶格缺陷模拟离子配位能力→氧原子锚定在刚性孔边缘→比柔性冠醚更大的结合能(受限分子构象旋转)→单离子选择性",
+      "description_en": "Porous graphene uses lattice defects to mimic ion coordination ability; oxygen atoms anchored at the rigid pore rim give a larger binding energy than flexible crown ethers (restricted conformational rotation of the bound molecule), enabling single-ion selectivity.",
       "functional_groups": [
         "-S-（硫醚键）",
         "石墨烯表面基团",
@@ -770,6 +791,7 @@
       "verification_quote": "[283] Y.S. Yu, L.Y. Huang, X. Lu, H.M. Ding, Ion transport through a nanoporous C2N                     in graphene-embedded 18-crown-6 ether pores, ACS Nano 12 (2018) 6677–6684.",
       "causal_chain": {
         "transferable_principle": "基于机制: 功能化石墨烯纳米孔——模拟Na⁺通道",
+        "transferable_principle_en": "Based on mechanism: functionalized graphene nanopore - mimicking Na+ channel.",
         "pollutant_feature": {
           "text": "穿孔石墨烯(porous graphene)→晶格缺陷模拟离子配位能力→氧原子锚定在刚性孔边缘→比柔性冠醚更大的结合能(受限分子构象旋转)→单离子选择性",
           "basis": "from_source",
@@ -826,7 +848,9 @@
     },
     {
       "name": "MOF纳米晶体——离子选择性膜",
+      "name_en": "MOF nanocrystals - ion-selective membranes",
       "description": "MOF孔径0.3-10nm可调→亚纳米通道(MIL-121/ZIF-8/UiO-66-X)→笼型窗口尺寸筛分+有机配体与目标离子配位效应→协同选择性",
+      "description_en": "MOF pore sizes are tunable from 0.3 to 10 nm; subnanometer channels (MIL-121/ZIF-8/UiO-66-X) achieve synergistic selectivity through cage-window size sieving combined with coordination effects between organic ligands and target ions.",
       "functional_groups": [
         "-O-（醚键）",
         "配位/螯合位点"
@@ -838,6 +862,7 @@
       "verification_quote": "structures including MIL-121 with 1D channels, Al-TCPP with 2D interlayers, and 3D MOFs ZIF-8, HKUST-1 and UiO-66-X with window-cavity channels (Reproduced",
       "causal_chain": {
         "transferable_principle": "基于机制: MOF纳米晶体——离子选择性膜",
+        "transferable_principle_en": "Based on mechanism: MOF nanocrystals - ion-selective membrane.",
         "pollutant_feature": {
           "text": "MOF孔径0.3-10nm可调→亚纳米通道(MIL-121/ZIF-8/UiO-66-X)→笼型窗口尺寸筛分+有机配体与目标离子配位效应→协同选择性",
           "basis": "from_source",
@@ -900,7 +925,9 @@
     },
     {
       "name": "液晶膜——反常Cl⁻/SO₄²⁻选择性",
+      "name_en": "Liquid crystal membrane - anomalous Cl-/SO4 2- selectivity",
       "description": "柱状/双连续立方LC膜→SO₄²⁻(更大离子半径)渗透速率>Cl⁻(更小离子半径)→反常选择性→非单一尺寸筛分→尺寸+静电+氢键协同",
+      "description_en": "In columnar/bicontinuous cubic LC membranes, the permeation rate of SO4 2- (larger ionic radius) exceeds that of Cl- (smaller ionic radius), showing anomalous selectivity that cannot be explained by a single size-sieving mechanism; it arises from the synergy of size, electrostatic and hydrogen-bonding effects.",
       "functional_groups": [
         "-S-（硫醚键）",
         "-O-（醚键）",
@@ -912,6 +939,7 @@
       "基本原理": "needs_review",
       "causal_chain": {
         "transferable_principle": "基于机制: 液晶膜——反常Cl⁻/SO₄²⁻选择性",
+        "transferable_principle_en": "Based on mechanism: liquid crystal membrane - anomalous Cl-/SO4 2- selectivity.",
         "pollutant_feature": {
           "text": "柱状/双连续立方LC膜→SO₄²⁻(更大离子半径)渗透速率>Cl⁻(更小离子半径)→反常选择性→非单一尺寸筛分→尺寸+静电+氢键协同",
           "basis": "from_source",
@@ -970,7 +998,9 @@
     },
     {
       "name": "扩散速率调控——PVA减缓PIP扩散一个数量级",
+      "name_en": "Diffusion rate regulation - PVA slows PIP diffusion by an order of magnitude",
       "description": "PVA引入水相→氢键+增粘→PIP扩散速率降低一个数量级→界面浓度分布均匀→孔径均匀化；无机盐→静电作用限制胺单体扩散；两性离子共聚物→调控扩散",
+      "description_en": "Introducing PVA into the aqueous phase provides hydrogen bonding and increased viscosity, reducing the PIP diffusion rate by an order of magnitude, which homogenizes the interfacial concentration distribution and thus the pore size; inorganic salts restrict amine monomer diffusion through electrostatic effects; zwitterionic copolymers also regulate diffusion.",
       "functional_groups": [
         "静电作用位点",
         "PVA羟基",
@@ -982,6 +1012,7 @@
       "基本原理": "needs_review",
       "causal_chain": {
         "transferable_principle": "基于机制: 扩散速率调控——PVA减缓PIP扩散一个数量级",
+        "transferable_principle_en": "Based on mechanism: diffusion rate regulation - PVA slows PIP diffusion by an order of magnitude.",
         "pollutant_feature": {
           "text": "PVA引入水相→氢键+增粘→PIP扩散速率降低一个数量级→界面浓度分布均匀→孔径均匀化；无机盐→静电作用限制胺单体扩散；两性离子共聚物→调控扩散",
           "basis": "from_source",
@@ -1038,7 +1069,9 @@
     },
     {
       "name": "界面单体分布调控——表面活性剂",
+      "name_en": "Interfacial monomer distribution regulation - surfactants",
       "description": "SARIP(SDS调控界面聚合)→表面活性剂自组装促进胺单体在界面扩散均匀化→均匀亚纳米孔；阴离子表面活性剂→加速扩散(静电吸引PIP)；阳离子→抑制(排斥PIP)；非离子→乳液聚集体→窄孔径分布",
+      "description_en": "SARIP (SDS-regulated interfacial polymerization): surfactant self-assembly promotes uniform diffusion of amine monomers at the interface, yielding uniform subnanometer pores; anionic surfactants accelerate diffusion (electrostatic attraction of PIP); cationic surfactants suppress it (rejection of PIP); nonionic surfactants form emulsion aggregates giving a narrow pore size distribution.",
       "functional_groups": [
         "-S-（硫醚键）",
         "静电作用位点"
@@ -1050,6 +1083,7 @@
       "verification_quote": "cylsulfate (SDS) regulated interfacial polymerization (SARIP) to regulate           propyltriethoxysilane (APTES) as the modifying agent to narrow the pore",
       "causal_chain": {
         "transferable_principle": "基于机制: 界面单体分布调控——表面活性剂",
+        "transferable_principle_en": "Based on mechanism: interfacial monomer distribution regulation - surfactant.",
         "pollutant_feature": {
           "text": "SARIP(SDS调控界面聚合)→表面活性剂自组装促进胺单体在界面扩散均匀化→均匀亚纳米孔；阴离子表面活性剂→加速扩散(静电吸引PIP)；阳离子→抑制(排斥PIP)；非离子→乳液聚集体→窄孔径分布",
           "basis": "from_source",
@@ -1106,7 +1140,9 @@
     },
     {
       "name": "GO基2D层状膜——层间距调控",
+      "name_en": "GO-based 2D lamellar membrane - interlayer spacing regulation",
       "description": "GO功能化(亲水-COOH/-OH/-环氧基)→分子插入层间调控间距：共价键/小功能团(0.3-0.7nm)、聚电解质静电(0.7-1nm)、纳米粒子/纳米纤维(>1nm)→尺寸选择性；离子选择性也可通过电荷增强实现",
+      "description_en": "GO functionalization (hydrophilic -COOH/-OH/epoxy groups) allows molecules to intercalate between layers to regulate spacing: covalent bonds/small functional groups (0.3-0.7 nm), polyelectrolyte electrostatic interactions (0.7-1 nm), and nanoparticles/nanofibers (>1 nm), providing size selectivity; ion selectivity can also be achieved through charge enhancement.",
       "functional_groups": [
         "carboxylic, hydroxy, epoxy groups",
         "-COOH（羧基）",
@@ -1121,6 +1157,7 @@
       "verification_quote": "chloride monomers, the reaction is more likely to occur at the interface of       reversed the surface charge by consuming negative sites (-COOH) on the",
       "causal_chain": {
         "transferable_principle": "基于机制: GO基2D层状膜——层间距调控",
+        "transferable_principle_en": "Based on mechanism: GO-based 2D lamellar membrane - interlayer spacing regulation.",
         "pollutant_feature": {
           "text": "GO功能化(亲水-COOH/-OH/-环氧基)→分子插入层间调控间距：共价键/小功能团(0.3-0.7nm)、聚电解质静电(0.7-1nm)、纳米粒子/纳米纤维(>1nm)→尺寸选择性；离子选择性也可",
           "basis": "from_source",
@@ -1182,7 +1219,9 @@
     },
     {
       "name": "水通道蛋白仿生膜制备挑战",
+      "name_en": "Challenges in fabricating aquaporin biomimetic membranes",
       "description": "水通道蛋白产量低、不稳定、疏水性；蛋白质变性；宿主膜兼容性；无缺陷规模化生产困难",
+      "description_en": "Aquaporin has low yield, instability and hydrophobicity; protein denaturation occurs; host membrane compatibility is an issue; and defect-free scale-up production is difficult.",
       "functional_groups": [],
       "source": "literature",
       "ref_doi": "10.1039/d4va00378k",
@@ -1190,6 +1229,7 @@
       "基本原理": "needs_review",
       "causal_chain": {
         "transferable_principle": "基于机制: 水通道蛋白仿生膜制备挑战",
+        "transferable_principle_en": "Based on mechanism: challenges in fabricating aquaporin biomimetic membranes.",
         "pollutant_feature": {
           "text": "水通道蛋白产量低、不稳定、疏水性；蛋白质变性；宿主膜兼容性；无缺陷规模化生产困难",
           "basis": "from_source",

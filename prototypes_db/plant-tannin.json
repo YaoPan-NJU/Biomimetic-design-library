@@ -4,6 +4,7 @@
   "name_en": "Plant Tannin",
   "organism": {
     "scientific": "Plant sources (单宁酸)",
+    "scientific_en": "Plant sources (tannic acid)",
     "category": "植物"
   },
   "biomimetic_dimension": "分子仿生",
@@ -341,7 +342,9 @@
   "mechanisms": [
     {
       "name": "植物单宁芳香环π-π堆积与酚羟基氢键静电吸附",
+      "name_en": "π-π stacking of plant tannin aromatic rings and hydrogen-bonding/electrostatic adsorption of phenolic hydroxyl groups",
       "description": "π-π堆积（TA-rGO芳香环与MB芳香环）、氢键（MB氮原子与-COOH/-SO₃H）、静电作用（-COO⁻/-SO₃⁻与阳离子MB）",
+      "description_en": "π-π stacking (between the aromatic rings of TA-rGO and MB), hydrogen bonding (MB nitrogen atoms with -COOH/-SO₃H), and electrostatic interactions (-COO⁻/-SO₃⁻ with cationic MB).",
       "functional_groups": [
         "-COOH（羧基）",
         "静电作用位点",
@@ -360,6 +363,7 @@
       "verification_quote": "The fairly high adsorption capacity of TRGAA hydrogel toward MB should be attributed to the synergistic effect of distinctive chemical composition and porous layered structure.",
       "causal_chain": {
         "transferable_principle": "基于机制: 吸附机制",
+        "transferable_principle_en": "Based on mechanism: adsorption mechanism",
         "pollutant_feature": {
           "text": "π-π堆积（TA-rGO芳香环与MB芳香环）、氢键（MB氮原子与-COOH/-SO₃H）、静电作用（-COO⁻/-SO₃⁻与阳离子MB）",
           "basis": "from_source",
@@ -414,7 +418,9 @@
     },
     {
       "name": "吸附机理",
+      "name_en": "Adsorption mechanism",
       "description": "单宁的邻苯二酚基团通过螯合作用与重金属离子形成五元环螯合物；石墨烯提供π共轭结构和三维多孔传质通道；含氧官能团（—OH、—C=O）作为吸附活性位点",
+      "description_en": "The catechol groups of tannins chelate heavy metal ions to form five-membered ring chelates. Graphene provides a π-conjugated structure and three-dimensional porous mass-transfer channels, and oxygen-containing functional groups (-OH, -C=O) serve as adsorption active sites.",
       "functional_groups": [
         "石墨烯表面基团",
         "配位/螯合位点",
@@ -504,6 +510,7 @@
           }
         ],
         "transferable_principle": "含邻苯二酚/邻三酚的天然多酚（如单宁酸）可作为廉价、绿色的金属配位吸附剂，可固定在各种基底上使用",
+        "transferable_principle_en": "Natural polyphenols bearing catechol/pyrogallol groups (e.g., tannic acid) can serve as inexpensive, green metal-coordinating adsorbents and can be immobilized on various substrates for use.",
         "verification_quote": "The adsorption behaviors of the hydrogel conformed to Langmuir isothermal model and pseudo-second-order model. The adsorption capacity of TRGAA hydrogel to methylene blue was significant, with the maximum adsorption capacity of 1000 mg/g. The high adsorption capacity of TRGAA hydrogel might be attributed to the synergistic effect of distinctive chemical composition and porous layered structure.",
         "source_doi": "10.1016/j.colsurfa.2021.126972",
         "source_locator": "Abstract"
@@ -518,7 +525,9 @@
     },
     {
       "name": "缓蚀机理",
+      "name_en": "Corrosion inhibition mechanism",
       "description": "DOLE分子通过羟基、羰基和共轭环上的孤对电子与Fe空d轨道配位形成化学吸附，同时范德华力和静电作用贡献物理吸附，在X70钢表面形成保护性吸附膜，同时阻滞阴极（H+还原）和阳极（Fe溶解）反应",
+      "description_en": "DOLE molecules form chemical adsorption by coordinating lone-pair electrons on hydroxyl, carbonyl, and conjugated ring groups with the empty d-orbitals of Fe, while van der Waals forces and electrostatic interactions contribute physical adsorption. A protective adsorption film forms on the X70 steel surface, simultaneously retarding both the cathodic (H+ reduction) and anodic (Fe dissolution) reactions.",
       "functional_groups": [
         "范德华力",
         "静电作用位点",
@@ -533,6 +542,7 @@
       "verification_quote": "FTIR test data show that DOLE contains a large number of hydroxyl groups, carbonyl groups and unsaturated functional groups, and a large number of lone electron pairs can coordinate with the empty d orbital of Fe, which leads to the formation of chemical adsorption of DOLE at X70 steel.",
       "causal_chain": {
         "transferable_principle": "基于机制: 缓蚀机理",
+        "transferable_principle_en": "Based on mechanism: corrosion inhibition mechanism",
         "pollutant_feature": {
           "text": "DOLE分子通过羟基、羰基和共轭环上的孤对电子与Fe空d轨道配位形成化学吸附，同时范德华力和静电作用贡献物理吸附，在X70钢表面形成保护性吸附膜，同时阻滞阴极（H+还原）和阳极（Fe溶解）反应",
           "basis": "from_source",
@@ -589,7 +599,9 @@
     },
     {
       "name": "BPA吸附机理",
+      "name_en": "BPA adsorption mechanism",
       "description": "Pore filling, hydrogen bonding, π-π interactions",
+      "description_en": "Pore filling, hydrogen bonding, π-π interactions.",
       "functional_groups": [
         "-S-（硫醚键）",
         "-O-（醚键）",
@@ -601,6 +613,7 @@
       "verification_quote": "The adsorption of BPA was best fitted with the pseudo-second-order kinetic and Freundlich models.",
       "causal_chain": {
         "transferable_principle": "基于机制: BPA吸附机理",
+        "transferable_principle_en": "Based on mechanism: BPA adsorption mechanism",
         "pollutant_feature": {
           "text": "Pore filling, hydrogen bonding, π-π interactions",
           "basis": "from_source",
@@ -665,7 +678,9 @@
     },
     {
       "name": "Cr(VI)吸附机制总结",
+      "name_en": "Summary of Cr(VI) adsorption mechanism",
       "description": "静电吸引 + 还原(Cr(VI)→Cr(III)) + 螯合",
+      "description_en": "Electrostatic attraction + reduction (Cr(VI)→Cr(III)) + chelation",
       "functional_groups": [
         "静电作用位点",
         "配位/螯合位点"
@@ -676,6 +691,7 @@
       "verification_quote": "The adsorption mechanism for Cr(VI) involved electrostatic interactions, reduction, and chelation.",
       "causal_chain": {
         "transferable_principle": "基于机制: Cr(VI)吸附机制总结",
+        "transferable_principle_en": "Based on mechanism: summary of Cr(VI) adsorption mechanism",
         "pollutant_feature": {
           "text": "静电吸引 + 还原(Cr(VI)→Cr(III)) + 螯合",
           "basis": "from_source",
@@ -740,7 +756,9 @@
     },
     {
       "name": "Cu(II)吸附机制总结",
+      "name_en": "Summary of Cu(II) adsorption mechanism",
       "description": "螯合(-OH, -NH2) + 离子交换",
+      "description_en": "Chelation (-OH, -NH2) + ion exchange",
       "functional_groups": [
         "离子交换位点",
         "配位/螯合位点",
@@ -754,6 +772,7 @@
       "verification_quote": "For Cu(II), including chelation. FTIR, XPS and DFT calculations revealed the amine group of the PEI and the phenolic hydroxyl group on TA are the main adsorption sites.",
       "causal_chain": {
         "transferable_principle": "基于机制: Cu(II)吸附机制总结",
+        "transferable_principle_en": "Based on mechanism: summary of Cu(II) adsorption mechanism",
         "pollutant_feature": {
           "text": "螯合(-OH, -NH2) + 离子交换",
           "basis": "from_source",
@@ -818,7 +837,9 @@
     },
     {
       "name": "CR吸附机制总结",
+      "name_en": "Summary of CR adsorption mechanism",
       "description": "静电吸引 + π-π堆叠 + 席夫碱反应 + 氢键",
+      "description_en": "Electrostatic attraction + π-π stacking + Schiff base reaction + hydrogen bonding",
       "functional_groups": [
         "静电作用位点",
         "氢键位点"
@@ -829,6 +850,7 @@
       "verification_quote": "For CR, adsorption through electrostatic attraction, π-π interactions, and Schiff base formation.",
       "causal_chain": {
         "transferable_principle": "基于机制: CR吸附机制总结",
+        "transferable_principle_en": "Based on mechanism: summary of CR adsorption mechanism",
         "pollutant_feature": {
           "text": "静电吸引 + π-π堆叠 + 席夫碱反应 + 氢键",
           "basis": "llm_inferred",

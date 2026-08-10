@@ -4,6 +4,7 @@
  "name_en": "UGT Glucuronidation / Plant Glycosylation Regioselective Binding and Two-stage Sequestration Prototype",
  "organism": {
   "scientific": "多物种 UDP 糖基转移酶比较原型",
+  "scientific_en": "Multi-species UDP glycosyltransferase comparative prototype",
   "category": "植物"
  },
  "biomimetic_dimension": "分子仿生",
@@ -30,7 +31,9 @@
   {
    "mechanism_id": "UGT-001",
    "name": "GT-B 折叠植物 UGT 受体口袋对酚羟基的区域选择性糖苷化架构",
+   "name_en": "GT-B fold plant UGT acceptor pocket architecture for regioselective glycosylation of phenolic hydroxyl groups",
    "description": "植物 UDP-糖基转移酶（UGT）采 GT-B 折叠：UDP-糖供体结合于 C 端 Rossmann 域（PDB 2ACW UGT71G1 与 UDP-葡萄糖配体 UPG 共晶），酚类受体底物结合于结构域间区域受限的受体口袋；His-22 为推定催化碱，Asp-121 经电子传递链协助受体酚羟基去质子化（残基编号按 PDB 2ACW auth 编号）。PDB 2C1Z VvGT1 Michaelis 复合物共结合 UDP-葡萄糖衍生供体类似物 U2F（UDP-2-脱氧-2-氟-α-D-葡萄糖）与黄酮受体山柰酚 KMP；PDB 5U6M UGT74F2 中水杨酸 SAL（2-羟基苯甲酸）以两种构象结合。区域选择性与产物特异性由受体口袋尺寸形状与单残基决定元控制",
+   "description_en": "Plant UDP-glycosyltransferases (UGTs) adopt the GT-B fold: the UDP-sugar donor binds in the C-terminal Rossmann domain (PDB 2ACW UGT71G1 co-crystallized with the UDP-glucose ligand UPG), and phenolic acceptor substrates bind in a restricted acceptor pocket in the interdomain region; His-22 is the putative catalytic base, and Asp-121 assists deprotonation of the acceptor phenolic hydroxyl via an electron transfer chain (residue numbering per PDB 2ACW auth numbering). In PDB 2C1Z, the VvGT1 Michaelis complex co-binds the UDP-glucose-derived donor analog U2F (UDP-2-deoxy-2-fluoro-α-D-glucose) with the flavone acceptor kaempferol KMP; in PDB 5U6M UGT74F2, salicylic acid SAL (2-hydroxybenzoic acid) binds in two conformations. Regioselectivity and product specificity are governed by acceptor pocket size/shape and single-residue determinants.",
    "基本原理": "预组织受体口袋的尺寸、形状与单残基位阻/氢键决定元读取酚羟基头基的可及性与取向，产生区域选择性糖苷化；口袋几何与单残基差异单独即可切换区域选择性与产物形态，该「位阻受限位点读取酚羟基可及性」原理可独立于酶骨架提取",
    "source": "literature",
    "ref_doi": "10.1105/tpc.105.035055",
@@ -135,6 +138,7 @@
      }
     ],
     "transferable_principle": "由口袋尺寸形状与单残基位阻/氢键决定元定义的预组织受体口袋读取酚羟基头基的可及性与取向，产生区域选择性糖苷化；「位阻受限位点读取酚羟基可及性」原理可独立于酶骨架提取（原理层）",
+    "transferable_principle_en": "A pre-organized acceptor pocket defined by pocket size/shape and single-residue steric/hydrogen-bond determinants reads the accessibility and orientation of the phenolic hydroxyl head group, producing regioselective glycosylation; the principle that a sterically restricted site reads phenolic hydroxyl accessibility can be abstracted independently of the enzyme scaffold (principle layer).",
     "verification_quote": "Our results provide an initial structural basis for understanding the complex substrate specificity and regiospecificity underlying the glycosylation of plant natural products"
    },
    "source_doi": "10.1105/tpc.105.035055",
@@ -153,7 +157,9 @@
   {
    "mechanism_id": "UGT-002",
    "name": "二相结合封存链：酚羟基糖苷/葡萄糖醛酸共价接合、活性衰减与区室化封存",
+   "name_en": "Two-stage conjugation-and-sequestration chain: covalent conjugation of glycoside/glucuronide to phenolic hydroxyl, activity attenuation, and compartmentalized sequestration",
    "description": "UGT/植物糖基转移酶催化葡萄糖醛酸/糖基共价接合到底物酚羟基（二相结合）：人肝 BPA 葡萄糖醛酸化由 UGT1A1、UGT1A3、UGT1A9、UGT2B4、UGT2B7、UGT2B15 催化，UGT2B15 为主同工酶（汇合人肝微粒体 Km 约 6.4 μM，重组 UGT2B15 约 8.7 μM）；结合后底物雌激素活性下降（Elsby 2001 人肝微粒体观测 3 倍下降，无 DOI，未入四件套），植物糖苷结合物转为失活形态并转运入液泡封存。构成「结合 → 失活 → 区室化封存/排泄」的两段链",
+   "description_en": "UGTs/plant glycosyltransferases catalyze covalent conjugation of glucuronic acid/glycosyl moieties to the phenolic hydroxyl of substrates (phase II conjugation): human liver BPA glucuronidation is catalyzed by UGT1A1, UGT1A3, UGT1A9, UGT2B4, UGT2B7, and UGT2B15, with UGT2B15 as the major isoform (pooled human liver microsomes Km approx. 6.4 μM; recombinant UGT2B15 approx. 8.7 μM); after conjugation the estrogenic activity of the substrate declines (Elsby 2001, 3-fold decrease observed in human liver microsomes, no DOI, not included in the four-article set), and plant glycoside conjugates are converted to inactive forms and transported into vacuoles for sequestration. This constitutes a two-stage chain of conjugation to inactivation to compartmentalized sequestration/excretion.",
    "基本原理": "酚羟基共价接合亲水性糖/葡萄糖醛酸使结合物水溶性提高且生物活性衰减，结合物被导向区室化封存（植物液泡）或排泄（动物），完成解毒式去除",
    "source": "literature",
    "ref_doi": "10.1016/j.chemosphere.2008.09.053",
@@ -242,6 +248,7 @@
      }
     ],
     "transferable_principle": "酚羟基的亲水性糖/葡萄糖醛酸共价接合同时提高结合物水溶性并衰减生物活性，导向区室化封存或排泄；「识别加结合封存」两段逻辑可在原理层转译为「头基识别加可逆共价/强结合封存」",
+    "transferable_principle_en": "Covalent conjugation of a hydrophilic sugar/glucuronide to a phenolic hydroxyl simultaneously increases the conjugate water solubility and attenuates biological activity, directing compartmentalized sequestration or excretion; the two-stage logic of recognition plus conjugation-and-sequestration can be translated at the principle layer into head-group recognition plus reversible covalent/strong-binding sequestration.",
     "verification_quote": "this UGT isoform plays important roles in the detoxification and elimination of BPA"
    },
    "source_doi": "10.1016/j.chemosphere.2008.09.053",

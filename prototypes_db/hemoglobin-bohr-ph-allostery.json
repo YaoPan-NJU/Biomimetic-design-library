@@ -4,6 +4,7 @@
  "name_en": "Hemoglobin Bohr Effect pH-Proton Allosteric Switch",
  "organism": {
   "scientific": "Homo sapiens（人成人血红蛋白 HbA，α2β2 四聚体；碱性 Bohr 效应）",
+  "scientific_en": "Human adult hemoglobin HbA (Homo sapiens), alpha2beta2 tetramer; alkaline Bohr effect",
   "category": "动物"
  },
  "biomimetic_dimension": "分子仿生",
@@ -31,7 +32,9 @@
   {
    "mechanism_id": "HBB-001",
    "name": "碱性 Bohr 效应：His146β（HC3）质子化耦联 T/R 四级开关",
+   "name_en": "Alkaline Bohr effect: His146beta (HC3) protonation coupled to the T/R quaternary switch",
    "description": "人血红蛋白氧亲和力随 pH 降低而下降（碱性 Bohr 效应）；约 40% 的 Bohr 效应归于 β 亚基 C 端 His146（HC3 组氨酸）的质子化。脱氧 T 态（PDB 2HHB，链 B/D 为 β 链，沉积坐标直测确认 HIS 146 与 ASP 94 存在）中，质子化 His(β)146 经亚基内盐桥 D(β)94-H(β)146 与 Asp94、Glu90 紧密结合，稳定于 T 晶体结构位点附近，并形成亚基间盐桥 K(α)40-H(β)146；His(β)146 去质子化则断裂盐桥、去稳定 T 态，使四级布居移向高亲和 R 态。多个可滴定组氨酸遂作为质子传感器，将氧亲和力随 pH 可逆切换",
+   "description_en": "The oxygen affinity of human hemoglobin decreases as pH drops (alkaline Bohr effect); about 40% of the Bohr effect is attributed to protonation of His146 at the beta-subunit C-terminus (HC3 histidine). In the deoxygenated T state (PDB 2HHB, chains B/D are beta chains; the deposited coordinates directly confirm the presence of HIS 146 and ASP 94), protonated His(beta)146 binds tightly to Asp94 and Glu90 via the intrasubunit salt bridge D(beta)94-H(beta)146, stabilizing near its T crystal structure site, and forms the intersubunit salt bridge K(alpha)40-H(beta)146. Deprotonation of His(beta)146 breaks the salt bridges and destabilizes the T state, shifting the quaternary population toward the high-affinity R state. Multiple titratable histidines thus serve as proton sensors that reversibly switch oxygen affinity with pH.",
    "基本原理": "可滴定组氨酸（咪唑基）的质子化与盐桥网络的形成/断裂及 T/R 四级平衡相耦合，使配体亲和力随环境 pH 可逆反转；质子占有与配体占有竞争性地决定四级态布居，构成天然的 pH 别构开关",
    "source": "literature",
    "ref_doi": "10.1371/journal.pcbi.1000774",
@@ -120,6 +123,7 @@
      }
     ],
     "transferable_principle": "多个 pKa 匹配的可滴定基团阵列，其质子化/去质子化与结合位点的可逆稳定化相互作用（盐桥/氢键/离子对）形成/断裂相耦联，使位点亲和状态随环境 pH 可逆切换；若目标物形态或位点结合能力亦随 pH 变化，即可构筑 pH 摆动吸附-释放循环",
+    "transferable_principle_en": "An array of titratable groups with matched pKa values couples protonation/deprotonation to the formation and breakage of reversible stabilizing interactions (salt bridges/hydrogen bonds/ion pairs) at the binding site, enabling the affinity state of the site to switch reversibly with environmental pH. If the form of the target or the binding capacity of the site also varies with pH, a pH-swing adsorption-release cycle can be constructed.",
     "verification_quote": "Approximately 40% of the Bohr effect has been attributed to the protonation of the terminal His146 residues of the β subunits, which are also denoted as ‘HC3 histidines’"
    },
    "source_doi": "10.1371/journal.pcbi.1000774",
@@ -138,7 +142,9 @@
   {
    "mechanism_id": "HBB-002",
    "name": "T/R 别构开关的结构端点与协同框架",
+   "name_en": "Structural endpoints and cooperative framework of the T/R allosteric switch",
    "description": "人血红蛋白四级转变的结构端点为脱氧 T 态（PDB 2HHB，1.74 Å）与氧合 R 态（PDB 1HHO，2.1 Å），分别具低、高氧亲和力；配体结合协同性源于四级态布居对联结亚基数目的依赖；Perutz 1970 将血红蛋白协同效应的立体化学基础置于别构框架，T 态特异盐桥网络（含 HBB-001 的质子化组氨酸盐桥）稳定脱氧结构，构成 Bohr 效应的结构基础",
+   "description_en": "The structural endpoints of the human hemoglobin quaternary transition are the deoxygenated T state (PDB 2HHB, 1.74 Å) and the oxygenated R state (PDB 1HHO, 2.1 Å), which have low and high oxygen affinity, respectively. The cooperativity of ligand binding arises from the dependence of the quaternary-state population on the number of linked subunits. Perutz 1970 placed the stereochemical basis of hemoglobin cooperativity in the allosteric framework, where the T-state-specific salt bridge network (including the protonated-histidine salt bridge of HBB-001) stabilizes the deoxygenated structure and constitutes the structural basis of the Bohr effect.",
    "基本原理": "两个预组织四级态（T/R）之间的布居转换，叠加质子与配体对态稳定性的差异耦合，产生协同且可被 pH 逆转的亲和力响应",
    "source": "literature",
    "ref_doi": "10.1038/228726a0",
@@ -213,6 +219,7 @@
      }
     ],
     "transferable_principle": "在两个预组织状态间构筑布居型开关，并令环境信号（质子/配体）差异性地稳定其中一态，可获得协同、可逆且信号门控的亲和力切换；该框架独立于蛋白骨架，可转译为人工位点的态切换设计",
+    "transferable_principle_en": "Constructing a population-type switch between two pre-organized states and letting an environmental signal (proton/ligand) differentially stabilize one of them yields cooperative, reversible, signal-gated affinity switching. This framework is independent of the protein backbone and can be translated into state-switching designs for artificial sites.",
     "verification_quote": "The end points of the quaternary transition of Hb are referred to as deoxy T state and oxy R state of Hb, which are characterized by low and high oxygen affinity, respectively"
    },
    "source_doi": "10.1038/228726a0",

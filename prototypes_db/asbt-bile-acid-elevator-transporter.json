@@ -4,6 +4,7 @@
  "name_en": "ASBT Bile-Acid Elevator Sulfonate-Cavity Transporter",
  "organism": {
   "scientific": "Neisseria meningitidis（ASBT_NM 细菌同源物，PDB 3ZUY，基因 NMB0705，菌株 MC58）/ 顶端钠依赖胆汁酸转运体 ASBT（SLC10A2）家族",
+  "scientific_en": "Neisseria meningitidis (ASBT_NM bacterial homolog, PDB 3ZUY, gene NMB0705, strain MC58) / apical sodium-dependent bile acid transporter ASBT (SLC10A2) family",
   "category": "微生物"
  },
  "biomimetic_dimension": "分子仿生",
@@ -32,7 +33,9 @@
   {
    "mechanism_id": "ASBT-001",
    "name": "预组织两亲阴离子腔对牛磺胆酸盐磺酸根头基的识别",
+   "name_en": "Pre-organized amphipathic anion cavity recognizing the sulfonate head group of taurocholate",
    "description": "ASBT_NM（PDB 3ZUY）以核心域与板域间的大型内向疏水腔结合天然底物牛磺胆酸盐（taurocholate，牛磺酸共轭胆汁酸，其牛磺酸末端为磺酸根头基 -SO3⁻）；腔的极性/钠端（两个 Na⁺ 位点 AC1：Ser114/Asn115/Ser128/Thr132/Glu260，AC2：Gln77/Gly110/Glu260/Val261/Met263/Gln264）识别阴离子头基，疏水壁（SITE AC3 记 Gly12/Lys13/Phe15/Phe28/Ile47/Thr112/Ala113/Val116/Leu120/Ser199/Val200/Ile203/Asn295 等）容纳甾体骨架，对两亲阴离子实现头基与骨架的同时识别",
+   "description_en": "ASBT_NM (PDB 3ZUY) binds the natural substrate taurocholate (a taurine-conjugated bile acid whose taurine terminus carries the sulfonate head group -SO3-) in a large inward-facing hydrophobic cavity between the core and panel domains; the polar/sodium end of the cavity (two Na+ sites AC1: Ser114/Asn115/Ser128/Thr132/Glu260, AC2: Gln77/Gly110/Glu260/Val261/Met263/Gln264) recognizes the anionic head group, while the hydrophobic wall (SITE AC3 listing Gly12/Lys13/Phe15/Phe28/Ile47/Thr112/Ala113/Val116/Leu120/Ser199/Val200/Ile203/Asn295, etc.) accommodates the steroidal skeleton, achieving simultaneous recognition of both the head group and the skeleton of the amphipathic anion.",
    "基本原理": "预组织的两亲腔以极性/带电端（Na⁺ 位点与极性残基）锚定阴离子头基、以疏水壁容纳疏水骨架，对两亲阴离子底物实现头基与骨架的同时识别，天然区分两亲阴离子与背景离子",
    "source": "literature",
    "ref_doi": "10.1038/nature10450",
@@ -122,6 +125,7 @@
      }
     ],
     "transferable_principle": "预组织的两亲阴离子腔——极性/钠端识别阴离子头基、疏水壁容纳疏水骨架，并具链长容纳几何——可在电梯型交替通道中天然区分两亲阴离子底物与背景离子；该头基 + 链长双重读取原理可外推至结构类似的两亲阴离子（如全氟烷基磺酸盐），但 ASBT 自身对短链 PFBS 无天然转运（由 NTCP 承担），家族链长偏好须在转译时正视",
+    "transferable_principle_en": "A pre-organized amphipathic anion cavity - whose polar/sodium end recognizes the anionic head group, whose hydrophobic wall accommodates the hydrophobic skeleton, and which possesses chain-length accommodation geometry - can naturally discriminate amphipathic anionic substrates from background ions in the elevator-type alternating-access mechanism; this dual head-group plus chain-length readout principle can be extrapolated to structurally similar amphipathic anions (e.g., perfluoroalkyl sulfonates), but ASBT itself does not naturally transport short-chain PFBS (a role taken by NTCP), so the family chain-length preference must be acknowledged when translating the principle.",
     "verification_quote": "The ASBT(NM) structure was captured with the substrate taurocholate present, bound between the core and panel domains in a large, inward-facing, hydrophobic cavity."
    },
    "source_doi": "10.1038/nature10450",
@@ -142,7 +146,9 @@
   {
    "mechanism_id": "ASBT-002",
    "name": "双钠协同驱动的电梯型交替通道（构象循环原理）",
+   "name_en": "Elevator-type alternating access driven by dual-sodium co-transport (conformational cycle principle)",
    "description": "ASBT_NM 含两组反向五跨膜螺旋重复；核心域（六螺旋，含两个 Na⁺ 位点 AC1/AC2）承载底物，板域（四螺旋平板）作支架；底物牛磺胆酸盐结合于核心域与板域间内向腔。Hu 2011 由底物位置与分子构架提出转运机制雏形，后续 ASBT/SLC10 工作将其归为电梯型——核心域携底物与两个 Na⁺ 相对板域/支架移动，实现内向↔外向交替通道",
+   "description_en": "ASBT_NM contains two inverted five-transmembrane-helix repeats; the core domain (six helices, containing the two Na+ sites AC1/AC2) carries the substrate, while the panel domain (four-helix plate) serves as the scaffold, and the substrate taurocholate binds in the inward-facing cavity between the core and panel domains. Hu 2011 proposed a preliminary transport mechanism from substrate position and molecular architecture, and later ASBT/SLC10 work classified it as elevator-type, in which the core domain, together with the substrate and two Na+ ions, moves relative to the panel domain/scaffold to achieve inward-to-outward alternating access.",
    "基本原理": "钠离子协同结合稳定底物结合态的核心域构象，底物与两个 Na⁺ 共转运；核心域相对板域的电梯型位移实现内向↔外向交替通道，使两亲阴离子底物跨膜易位",
    "source": "literature",
    "ref_doi": "10.1038/nature10450",
@@ -217,6 +223,7 @@
      }
     ],
     "transferable_principle": "钠协同稳定底物结合态、核心域相对板域电梯型位移实现交替通道，是两亲阴离子跨膜转运的构象循环原理；转译为吸附材料时，完整转运循环不可移植，可移植的是'预组织两亲阴离子腔 + 链长容纳几何'的识别原理",
+    "transferable_principle_en": "Sodium co-transport stabilizing the substrate-bound state and the elevator-type displacement of the core domain relative to the panel domain achieve alternating access, constituting the conformational cycle principle for transmembrane transport of amphipathic anions; when translated to adsorption materials, the complete transport cycle is not transferable, and what is transferable is the recognition principle of a pre-organized amphipathic anion cavity plus chain-length accommodation geometry.",
     "verification_quote": "The position of the taurocholate molecule, together with the molecular architecture, suggests the rudiments of a possible transport mechanism."
    },
    "source_doi": "10.1038/nature10450",

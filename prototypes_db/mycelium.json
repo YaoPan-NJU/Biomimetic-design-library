@@ -4,6 +4,7 @@
   "name_en": "Mycelium",
   "organism": {
     "scientific": "Beauveria bassiana / Botrytis cinerea (丝状真菌菌丝体)",
+    "scientific_en": "Beauveria bassiana / Botrytis cinerea (filamentous fungal mycelium)",
     "category": "微生物"
   },
   "biomimetic_dimension": "结构仿生",
@@ -43,10 +44,13 @@
   "mechanisms": [
     {
       "name": "菌丝体几丁质/葡聚糖生物吸附",
+      "name_en": "Chitin/glucan biosorption by fungal mycelium",
       "description": "真菌菌丝体的几丁质和葡聚糖含-NH₂/-OH官能团，通过螯合和静电吸引吸附重金属。",
+      "description_en": "The chitin and glucan in fungal mycelium contain -NH2/-OH functional groups, which adsorb heavy metals through chelation and electrostatic attraction.",
       "source": "llm_inference",
       "causal_chain": {
         "transferable_principle": "菌丝体的几丁质(含-NH₂)和葡聚糖(含-OH)提供天然吸附官能团，可用于重金属生物吸附",
+        "transferable_principle_en": "The chitin (containing -NH2) and glucan (containing -OH) of mycelium provide natural adsorption functional groups that can be used for heavy metal biosorption.",
         "pollutant_feature": {
           "text": "重金属阳离子（Cu²⁺、Pb²⁺、Cd²⁺等）",
           "basis": "llm_inferred"

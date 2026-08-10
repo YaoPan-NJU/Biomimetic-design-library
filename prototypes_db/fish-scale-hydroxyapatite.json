@@ -4,6 +4,7 @@
   "name_en": "Fish Scale Hydroxyapatite",
   "organism": {
     "scientific": "Fish scales (鱼鳞)",
+    "scientific_en": "Fish scales",
     "category": "动物"
   },
   "biomimetic_dimension": "过程仿生",
@@ -486,7 +487,9 @@
   "mechanisms": [
     {
       "name": "鱼鳞羟基磷灰石纳米晶钙离子交换与磷酸盐共沉淀",
+      "name_en": "Calcium ion exchange and phosphate co-precipitation by fish-scale hydroxyapatite nanocrystals",
       "description": "疏水+π-π+π-π EDA+阳离子交换+氢键+孔填充+静电+阳阳-π",
+      "description_en": "The adsorption involves a combination of interactions: hydrophobic interaction, pi-pi interaction, pi-pi electron donor-acceptor (EDA) interaction, cation exchange, hydrogen bonding, pore filling, electrostatic interaction, and cation-cation-pi interaction.",
       "functional_groups": [
         "离子交换位点",
         "羟基 -OH",
@@ -546,6 +549,7 @@
           }
         ],
         "transferable_principle": "鱼鳞HAp与骨HAp机制相同，但纳米级晶体提供更高的比表面积和吸附容量",
+        "transferable_principle_en": "Fish scale HAp and bone HAp share the same mechanisms, but the nanoscale crystals provide higher specific surface area and adsorption capacity.",
         "verification_quote": "hydroxyapatite as adsorbent for heavy metal removal review",
         "source_doi": "10.1016/j.chemosphere.2021.131962",
         "source_locator": "p.8 / 3.8节"
@@ -567,7 +571,9 @@
     },
     {
       "name": "疏水相互作用证据",
+      "name_en": "Evidence of hydrophobic interaction",
       "description": "CIP溶解度最低在pH 7→最大吸附在pH 5-8→负相关→疏水作用主导",
+      "description_en": "CIP solubility is lowest at pH 7, while maximum adsorption occurs at pH 5-8; this negative correlation indicates that hydrophobic interaction is the dominant mechanism.",
       "functional_groups": [
         "疏水相互作用"
       ],
@@ -577,6 +583,7 @@
       "基本原理": "材料表面的活性基团与污染物之间通过物理或化学作用力结合，实现从液相到固相的转移",
       "causal_chain": {
         "transferable_principle": "基于机制: 疏水相互作用证据",
+        "transferable_principle_en": "Based on the mechanism: evidence of hydrophobic interaction.",
         "pollutant_feature": {
           "text": "CIP溶解度最低在pH 7→最大吸附在pH 5-8→负相关→疏水作用主导",
           "basis": "llm_inferred"
@@ -633,7 +640,9 @@
     },
     {
       "name": "MICP化学反应机理",
+      "name_en": "Chemical reaction mechanism of MICP",
       "description": "脲酶水解尿素: CO(NH₂)₂+H₂O→NH₂COOH+NH₃; NH₂COOH+H₂O→NH₃+H₂CO₃; 最终产生CO₃²⁻+Ca²⁺→CaCO₃↓",
+      "description_en": "Urease hydrolyzes urea: CO(NH₂)₂ + H₂O → NH₂COOH + NH₃; NH₂COOH + H₂O → NH₃ + H₂CO₃; ultimately producing CO₃²⁻ + Ca²⁺ → CaCO₃↓.",
       "functional_groups": [
         "-NH-（亚氨基）",
         "-O-（醚键）",
@@ -645,6 +654,7 @@
       "verification": "knowledge_gap",
       "causal_chain": {
         "transferable_principle": "基于机制: MICP化学反应机理",
+        "transferable_principle_en": "Based on the mechanism: chemical reaction mechanism of MICP.",
         "pollutant_feature": {
           "text": "脲酶水解尿素: CO(NH₂)₂+H₂O→NH₂COOH+NH₃; NH₂COOH+H₂O→NH₃+H₂CO₃; 最终产生CO₃²⁻+Ca²⁺→CaCO₃↓",
           "basis": "llm_inferred",

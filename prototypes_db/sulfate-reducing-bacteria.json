@@ -4,6 +4,7 @@
   "name_en": "Sulfate Reducing Bacteria",
   "organism": {
     "scientific": "Sulfate-Reducing Bacteria (SRB)",
+    "scientific_en": "Sulfate-Reducing Bacteria (SRB)",
     "category": "微生物"
   },
   "biomimetic_dimension": "过程仿生",
@@ -20,7 +21,9 @@
   "mechanisms": [
     {
       "name": "SRB硫酸盐还原三步酶促机理",
+      "name_en": "Three-step enzymatic mechanism of sulfate reduction in SRB",
       "description": "SO₄²⁻ →(sat, ATP) APS →(APS还原酶, 2e⁻) SO₃²⁻ →(CBS, 6e⁻) H₂S；消耗大量H⁺→提升水体pH",
+      "description_en": "SO₄²⁻ goes to APS via sat with ATP, then APS is reduced to SO₃²⁻ by APS reductase with 2e⁻, and finally SO₃²⁻ is reduced to H₂S via CBS with 6e⁻; the process consumes large amounts of H⁺, thereby raising the pH of the water body",
       "functional_groups": [
         "-S-（硫醚键）",
         "-O-（醚键）"
@@ -106,6 +109,7 @@
           }
         ],
         "transferable_principle": "利用微生物硫酸盐还原产生S²⁻进行金属硫化物沉淀，是厌氧条件下去除软酸金属的高效生物策略",
+        "transferable_principle_en": "Using microbial sulfate reduction to generate S2- for metal sulfide precipitation is an efficient biological strategy for removing soft-acid heavy metals under anaerobic conditions.",
         "verification_quote": "SRB consume SO42- as terminal electron acceptor and convert it to different sulfur forms (H2S, HS-, S2-). These sulfide products are responsible for metal precipitation",
         "source_doi": "10.16581/j.cnki.issn1671-3206.20230927.002",
         "source_locator": "p.2 / Fig.2; Section 2.1"

@@ -4,6 +4,7 @@
   "name_en": "Biomineralization Template",
   "organism": {
     "scientific": "Biomineralization organisms (生物矿化生物)",
+    "scientific_en": "Biomineralization organisms",
     "category": "仿生材料"
   },
   "biomimetic_dimension": "过程仿生",
@@ -18,10 +19,13 @@
   "mechanisms": [
     {
       "name": "生物矿化模板控制无机相成核生长",
+      "name_en": "Biomineralization template controlling nucleation and growth of inorganic phases",
       "description": "有机基质（蛋白质、多糖）通过官能团（羧基、磷酸基）控制无机晶体的成核、取向和形貌",
+      "description_en": "Organic matrices (proteins, polysaccharides) control the nucleation, orientation, and morphology of inorganic crystals through functional groups such as carboxyl and phosphate groups.",
       "source": "llm_inference",
       "causal_chain": {
         "transferable_principle": "生物矿化模板控制无机相成核生长（placeholder — 无验证数据）",
+        "transferable_principle_en": "Biomineralization templates control the nucleation and growth of inorganic phases (placeholder - no validation data).",
         "pollutant_feature": {
           "text": "未验证 — 需补充生物矿化吸附文献",
           "basis": "llm_inferred"

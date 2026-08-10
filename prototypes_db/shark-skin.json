@@ -5,6 +5,7 @@
   "organism": {
     "common": "鲨鱼皮",
     "scientific": "Selachimorpha",
+    "scientific_en": "Selachimorpha (shark)",
     "category": "动物"
   },
   "biomimetic_dimension": "结构仿生",
@@ -21,7 +22,9 @@
   "mechanisms": [
     {
       "name": "鲨鱼皮盾鳞riblet微结构减阻抗污",
+      "name_en": "Riblet microstructures on shark skin dermal denticles reduce drag and fouling",
       "description": "WCA 40°-70°或54°-130°最利于细菌粘附；超疏水和超亲水均抵抗粘附",
+      "description_en": "WCAs of 40-70 deg or 54-130 deg are most favorable for bacterial adhesion; both superhydrophobic and superhydrophilic surfaces resist adhesion.",
       "functional_groups": [],
       "source": "literature",
       "ref_doi": "10.1002/admi.202201425",
@@ -67,7 +70,8 @@
             "verification_method": "unverifiable_generic_text"
           }
         ],
-        "transferable_principle": "鲨鱼皮盾鳞微结构（riblet）"
+        "transferable_principle": "鲨鱼皮盾鳞微结构（riblet）",
+        "transferable_principle_en": "Riblet microstructures of shark skin dermal denticles."
       },
       "brief_visibility": "hidden",
       "reclassification": "background_only_surface_physics",
@@ -80,7 +84,9 @@
     },
     {
       "name": "细菌粘附的长程和短程相互作用距离阈值",
+      "name_en": "Long-range and short-range interaction distance thresholds for bacterial adhesion",
       "description": "长程>150 nm(van der Waals等)，短程<3 nm(氢键、静电、疏水等)",
+      "description_en": "Long-range interactions act beyond 150 nm (e.g., van der Waals), while short-range interactions act below 3 nm (e.g., hydrogen bonding, electrostatic, hydrophobic).",
       "functional_groups": [
         "范德华力",
         "静电作用位点",
@@ -93,6 +99,7 @@
       "verification": "unverified",
       "causal_chain": {
         "transferable_principle": "基于机制: 细菌粘附的长程和短程相互作用距离阈值",
+        "transferable_principle_en": "Based on the mechanism: long-range and short-range interaction distance thresholds for bacterial adhesion.",
         "pollutant_feature": {
           "text": "长程>150 nm(van der Waals等)，短程<3 nm(氢键、静电、疏水等)",
           "basis": "from_source",
@@ -143,7 +150,9 @@
     },
     {
       "name": "超疏水表面接触角阈值 Superhydrophobic contact angle threshold",
+      "name_en": "Superhydrophobic surface contact angle threshold",
       "description": "接触角>150°表现为超疏水行为；接触角<10°为超亲水",
+      "description_en": "A contact angle greater than 150 deg exhibits superhydrophobic behavior; a contact angle below 10 deg is superhydrophilic.",
       "functional_groups": [
         "-S-（硫醚键）",
         "-O-（醚键）",
@@ -154,6 +163,7 @@
       "verification": "unverified",
       "causal_chain": {
         "transferable_principle": "基于机制: 超疏水表面接触角阈值 Superhydrophobic contact angle threshol",
+        "transferable_principle_en": "Based on the mechanism: superhydrophobic surface contact angle threshold.",
         "pollutant_feature": {
           "text": "接触角>150°表现为超疏水行为；接触角<10°为超亲水",
           "basis": "llm_inferred"
@@ -210,7 +220,9 @@
     },
     {
       "name": "微生物表面润湿性偏好 Microorganism surface wettability preference",
+      "name_en": "Microorganism surface wettability preference",
       "description": "Ulva linza偏好疏水表面，Balanus Amphitrite偏好亲水表面",
+      "description_en": "Ulva linza prefers hydrophobic surfaces, while Balanus amphitrite prefers hydrophilic surfaces.",
       "functional_groups": [
         "-S-（硫醚键）",
         "-O-（醚键）"
@@ -220,6 +232,7 @@
       "verification": "unverified",
       "causal_chain": {
         "transferable_principle": "基于机制: 微生物表面润湿性偏好 Microorganism surface wettability prefe",
+        "transferable_principle_en": "Based on the mechanism: microorganism surface wettability preference.",
         "pollutant_feature": {
           "text": "Ulva linza偏好疏水表面，Balanus Amphitrite偏好亲水表面",
           "basis": "from_source",
@@ -284,7 +297,9 @@
     },
     {
       "name": "超疏水表面防污机制 Superhydrophobic surface antifouling mechanism",
+      "name_en": "Superhydrophobic surface antifouling mechanism",
       "description": "超疏水表面的抗污性能归因于截留的空气泡层，减少了细菌与表面之间的接触",
+      "description_en": "The antifouling performance of superhydrophobic surfaces is attributed to a trapped air bubble layer, which reduces contact between bacteria and the surface.",
       "functional_groups": [
         "-S-（硫醚键）",
         "-O-（醚键）"
@@ -294,6 +309,7 @@
       "verification": "unverified",
       "causal_chain": {
         "transferable_principle": "基于机制: 超疏水表面防污机制 Superhydrophobic surface antifouling mec",
+        "transferable_principle_en": "Based on the mechanism: superhydrophobic surface antifouling mechanism.",
         "pollutant_feature": {
           "text": "超疏水表面的抗污性能归因于截留的空气泡层，减少了细菌与表面之间的接触",
           "basis": "llm_inferred"
@@ -347,7 +363,9 @@
     },
     {
       "name": "超疏水表面防污短暂性 Superhydrophobic surface antifouling short-lived",
+      "name_en": "Short-lived antifouling of superhydrophobic surfaces",
       "description": "超疏水表面的抗污性能是短暂的（short-lived）",
+      "description_en": "The antifouling performance of superhydrophobic surfaces is short-lived.",
       "functional_groups": [
         "-S-（硫醚键）",
         "-O-（醚键）",
@@ -358,6 +376,7 @@
       "verification": "unverified",
       "causal_chain": {
         "transferable_principle": "基于机制: 超疏水表面防污短暂性 Superhydrophobic surface antifouling sh",
+        "transferable_principle_en": "Based on the mechanism: short-lived antifouling of superhydrophobic surfaces.",
         "pollutant_feature": {
           "text": "超疏水表面的抗污性能是短暂的（short-lived）",
           "basis": "from_source",
@@ -421,13 +440,16 @@
     },
     {
       "name": "超疏水性定义阈值",
+      "name_en": "Threshold for defining superhydrophobicity",
       "description": "接触角>150°且滚动角<10°",
+      "description_en": "A contact angle greater than 150 deg and a sliding angle below 10 deg.",
       "functional_groups": [],
       "source": "literature",
       "ref_doi": "10.3390/polym15030543",
       "verification": "unverified",
       "causal_chain": {
         "transferable_principle": "基于机制: 超疏水性定义阈值",
+        "transferable_principle_en": "Based on the mechanism: threshold for defining superhydrophobicity.",
         "pollutant_feature": {
           "text": "接触角>150°且滚动角<10°",
           "basis": "from_source",
@@ -482,7 +504,9 @@
     },
     {
       "name": "PDMS '胶+粉'法通用性",
+      "name_en": "Generality of the PDMS glue + powder method",
       "description": "17种以上颗粒均可制备超疏水表面",
+      "description_en": "More than 17 types of particles can be used to fabricate superhydrophobic surfaces.",
       "functional_groups": [
         "-S-（硫醚键）",
         "PDMS硅氧烷"
@@ -492,6 +516,7 @@
       "verification": "unverified",
       "causal_chain": {
         "transferable_principle": "基于机制: PDMS '胶+粉'法通用性",
+        "transferable_principle_en": "Based on the mechanism: generality of the PDMS glue + powder method.",
         "pollutant_feature": {
           "text": "17种以上颗粒均可制备超疏水表面",
           "basis": "llm_inferred"
@@ -546,13 +571,16 @@
     },
     {
       "name": "无氟透明超疏水涂层接触角",
+      "name_en": "Contact angle of fluorine-free transparent superhydrophobic coating",
       "description": "163°±2.1°",
+      "description_en": "163 deg +/- 2.1 deg.",
       "functional_groups": [],
       "source": "literature",
       "ref_doi": "10.3390/polym15030543",
       "verification": "unverified",
       "causal_chain": {
         "transferable_principle": "基于机制: 无氟透明超疏水涂层接触角",
+        "transferable_principle_en": "Based on the mechanism: contact angle of fluorine-free transparent superhydrophobic coating.",
         "pollutant_feature": {
           "text": "163°±2.1°",
           "basis": "llm_inferred"
@@ -597,7 +625,9 @@
     },
     {
       "name": "巯基硅烷改性棉纤维超疏水纺织品接触角和滚动角",
+      "name_en": "Contact angle and sliding angle of mercaptosilane-modified superhydrophobic cotton textiles",
       "description": "接触角159°，滚动角4°",
+      "description_en": "Contact angle of 159 deg and sliding angle of 4 deg.",
       "functional_groups": [
         "硅烷偶联剂",
         "-SH（巯基）"
@@ -607,6 +637,7 @@
       "verification": "unverified",
       "causal_chain": {
         "transferable_principle": "基于机制: 巯基硅烷改性棉纤维超疏水纺织品接触角和滚动角",
+        "transferable_principle_en": "Based on the mechanism: contact angle and sliding angle of mercaptosilane-modified superhydrophobic cotton textiles.",
         "pollutant_feature": {
           "text": "接触角159°，滚动角4°",
           "basis": "from_source",
@@ -662,7 +693,9 @@
     },
     {
       "name": "PDMS微柱阵列防冰性能",
+      "name_en": "Anti-icing performance of PDMS micropillar arrays",
       "description": "微柱间距与疏水性正相关，间距25μm时WCA达161.1°",
+      "description_en": "Micropillar spacing is positively correlated with hydrophobicity; at 25 um spacing the WCA reaches 161.1 deg.",
       "functional_groups": [
         "-S-（硫醚键）",
         "PDMS硅氧烷"
@@ -672,6 +705,7 @@
       "verification": "unverified",
       "causal_chain": {
         "transferable_principle": "基于机制: PDMS微柱阵列防冰性能",
+        "transferable_principle_en": "Based on the mechanism: anti-icing performance of PDMS micropillar arrays.",
         "pollutant_feature": {
           "text": "微柱间距与疏水性正相关，间距25μm时WCA达161.1°",
           "basis": "from_source",
@@ -734,13 +768,16 @@
     },
     {
       "name": "超疏水防冰最佳延迟结冰时间",
+      "name_en": "Optimal delayed icing time of superhydrophobic anti-icing",
       "description": "98±2.3 min",
+      "description_en": "98 +/- 2.3 min.",
       "functional_groups": [],
       "source": "literature",
       "ref_doi": "10.3390/polym15030543",
       "verification": "unverified",
       "causal_chain": {
         "transferable_principle": "基于机制: 超疏水防冰最佳延迟结冰时间",
+        "transferable_principle_en": "Based on the mechanism: optimal delayed icing time of superhydrophobic anti-icing.",
         "pollutant_feature": {
           "text": "98±2.3 min",
           "basis": "from_source",
@@ -793,7 +830,9 @@
     },
     {
       "name": "透明无氟超疏水涂层防冰时间",
+      "name_en": "Anti-icing time of transparent fluorine-free superhydrophobic coating",
       "description": "483 s（空白对照15 s）",
+      "description_en": "483 s (blank control: 15 s).",
       "functional_groups": [
         "-S-（硫醚键）"
       ],
@@ -802,6 +841,7 @@
       "verification": "unverified",
       "causal_chain": {
         "transferable_principle": "基于机制: 透明无氟超疏水涂层防冰时间",
+        "transferable_principle_en": "Based on the mechanism: anti-icing time of transparent fluorine-free superhydrophobic coating.",
         "pollutant_feature": {
           "text": "483 s（空白对照15 s）",
           "basis": "llm_inferred"
@@ -845,13 +885,16 @@
     },
     {
       "name": "超疏水表面自清洁原理",
+      "name_en": "Self-cleaning principle of superhydrophobic surfaces",
       "description": "粗糙低能表面上水滴可携带走污染物颗粒",
+      "description_en": "On rough low-energy surfaces, water droplets can carry away contaminant particles.",
       "functional_groups": [],
       "source": "literature",
       "ref_doi": "10.3390/polym15030543",
       "verification": "unverified",
       "causal_chain": {
         "transferable_principle": "基于机制: 超疏水表面自清洁原理",
+        "transferable_principle_en": "Based on the mechanism: self-cleaning principle of superhydrophobic surfaces.",
         "pollutant_feature": {
           "text": "粗糙低能表面上水滴可携带走污染物颗粒",
           "basis": "llm_inferred"
@@ -907,13 +950,16 @@
     },
     {
       "name": "超疏水防腐蚀机制",
+      "name_en": "Superhydrophobic anticorrosion mechanism",
       "description": "微纳结构中空气膜隔离金属与腐蚀液，阻碍电化学反应",
+      "description_en": "An air film within the micro-/nanostructure isolates the metal from the corrosive liquid, impeding electrochemical reactions.",
       "functional_groups": [],
       "source": "literature",
       "ref_doi": "10.3390/polym15030543",
       "verification": "unverified",
       "causal_chain": {
         "transferable_principle": "基于机制: 超疏水防腐蚀机制",
+        "transferable_principle_en": "Based on the mechanism: superhydrophobic anticorrosion mechanism.",
         "pollutant_feature": {
           "text": "微纳结构中空气膜隔离金属与腐蚀液，阻碍电化学反应",
           "basis": "llm_inferred"
@@ -957,13 +1003,16 @@
     },
     {
       "name": "硅基超疏水材料五项核心优势",
+      "name_en": "Five core advantages of silicon-based superhydrophobic materials",
       "description": "疏水基团丰富、可构建微纳结构、反应条件温和、UV/热抗性、低毒性",
+      "description_en": "Rich hydrophobic groups, ability to construct micro-/nanostructures, mild reaction conditions, UV/thermal resistance, and low toxicity.",
       "functional_groups": [],
       "source": "literature",
       "ref_doi": "10.3390/polym15030543",
       "verification": "unverified",
       "causal_chain": {
         "transferable_principle": "基于机制: 硅基超疏水材料五项核心优势",
+        "transferable_principle_en": "Based on the mechanism: five core advantages of silicon-based superhydrophobic materials.",
         "pollutant_feature": {
           "text": "疏水基团丰富、可构建微纳结构、反应条件温和、UV/热抗性、低毒性",
           "basis": "llm_inferred"
@@ -1006,13 +1055,16 @@
     },
     {
       "name": "硅基超疏水材料机械稳定性挑战",
+      "name_en": "Mechanical stability challenges of silicon-based superhydrophobic materials",
       "description": "纳米级结构强度有限，耐磨性不足是工业化主要障碍",
+      "description_en": "The limited strength of nanoscale structures and insufficient abrasion resistance are the main obstacles to industrialization.",
       "functional_groups": [],
       "source": "literature",
       "ref_doi": "10.3390/polym15030543",
       "verification": "unverified",
       "causal_chain": {
         "transferable_principle": "基于机制: 硅基超疏水材料机械稳定性挑战",
+        "transferable_principle_en": "Based on the mechanism: mechanical stability challenges of silicon-based superhydrophobic materials.",
         "pollutant_feature": {
           "text": "纳米级结构强度有限，耐磨性不足是工业化主要障碍",
           "basis": "llm_inferred"
@@ -1056,13 +1108,16 @@
     },
     {
       "name": "自然界九种超疏水生物原型",
+      "name_en": "Nine natural superhydrophobic biological archetypes",
       "description": "荷叶、水鳖叶、蝴蝶翅膀、蝇眼、蝉翼、壁虎脚、鲨鱼皮、水黾腿、玫瑰花瓣",
+      "description_en": "Lotus leaf, Hydrocharis (frogbit) leaf, butterfly wing, fly eye, cicada wing, gecko foot, shark skin, water strider leg, and rose petal.",
       "functional_groups": [],
       "source": "literature",
       "ref_doi": "10.3390/polym15030543",
       "verification": "unverified",
       "causal_chain": {
         "transferable_principle": "基于机制: 自然界九种超疏水生物原型",
+        "transferable_principle_en": "Based on the mechanism: nine natural superhydrophobic biological archetypes.",
         "pollutant_feature": {
           "text": "荷叶、水鳖叶、蝴蝶翅膀、蝇眼、蝉翼、壁虎脚、鲨鱼皮、水黾腿、玫瑰花瓣",
           "basis": "from_source",

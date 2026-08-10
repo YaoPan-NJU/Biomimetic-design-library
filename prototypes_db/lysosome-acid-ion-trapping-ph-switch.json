@@ -4,6 +4,7 @@
  "name_en": "Lysosomal Acid Ion Trapping (pH Protonation-State-Dependent Trapping)",
  "organism": {
   "scientific": "Rattus norvegicus / Mus musculus（溶酶体，细胞器级；经典模型为大鼠肝溶酶体与小鼠腹膜巨噬细胞，无单一蛋白结构）",
+  "scientific_en": "Rattus norvegicus / Mus musculus (lysosome, organelle level; classic models are rat liver lysosomes and mouse peritoneal macrophages, with no single protein structure)",
   "category": "动物"
  },
  "biomimetic_dimension": "功能仿生",
@@ -31,7 +32,9 @@
   {
    "mechanism_id": "LYST-001",
    "name": "弱电解质质子化态依赖的跨膜离子陷获（lysosomotropism，酸性陷获）",
+   "name_en": "Protonation-state-dependent transmembrane ion trapping of weak electrolytes (lysosomotropism, acidic trapping)",
    "description": "溶酶体腔经 V-ATPase 维持 pH 4.5–5.0；弱碱（溶酶体向性胺类，天然陷获底物）以中性未质子化形态透过溶酶体膜，在酸性腔内质子化带电荷后不能自由回渗而累积，即质子陷获（proton trapping）/离子陷获；Ohkuma 1981 证明弱碱的活性形态为中性未质子化形式，其累积使腔内 pH 浓度依赖性升高，可诠释为质子以质子化弱碱形式漏出溶酶体。该机制是自然界 pH 梯度驱动捕获/释放的原型",
+   "description_en": "The lysosomal lumen is maintained at pH 4.5-5.0 by the V-ATPase. Weak bases (lysosomotropic amines, natural trapping substrates) cross the lysosomal membrane in their neutral unprotonated form; once protonated and charged in the acidic lumen they cannot freely diffuse back and therefore accumulate, i.e., proton trapping / ion trapping. Ohkuma 1981 showed that the active form of weak bases is the neutral unprotonated form, and their accumulation raises the luminal pH in a concentration-dependent manner, which can be interpreted as protons leaking out of the lysosome in the form of protonated weak bases. This mechanism is a prototype of pH-gradient-driven capture/release in nature.",
    "基本原理": "弱电解质的中性形态与质子化形态膜透性差异显著；酸性腔室使弱碱质子化平衡移向带电形态，带电形态不能跨膜回渗，溶质即在腔内累积直至两室 Henderson-Hasselbalch 分布平衡。质子化态依赖的跨膜分配是离子陷获的物理化学本质",
    "source": "literature",
    "ref_doi": "10.1073/pnas.75.7.3327",
@@ -137,6 +140,7 @@
      }
     ],
     "transferable_principle": "弱电解质质子化态依赖的跨膜/跨界面分配：pKa 落于摆动两 pH 之间的可电离化合物，其两形态在电荷与界面亲和上差异显著，可在捕获 pH 被选择性截留、在再生 pH 释放，实现 pH 梯度驱动的可逆捕获-释放",
+    "transferable_principle_en": "Protonation-state-dependent transmembrane/trans-interface partitioning: for ionizable compounds whose pKa lies between two alternating pH values, the two forms differ significantly in charge and interfacial affinity, allowing selective retention at the capture pH and release at the regeneration pH, thereby achieving pH-gradient-driven reversible capture-release.",
     "verification_quote": "support the theory of lysosomal accumulation of weak bases by proton trapping"
    },
    "source_doi": "10.1073/pnas.75.7.3327",
@@ -155,7 +159,9 @@
   {
    "mechanism_id": "LYST-002",
    "name": "溶酶体酸性腔室的建立与维持（V-ATPase 质子泵，pH 4.5–5.0）",
+   "name_en": "Establishment and maintenance of the acidic lysosomal lumen (V-ATPase proton pump, pH 4.5-5.0)",
    "description": "溶酶体为内吞途径末端细胞器；膜上 V 型 ATPase 以 ATP 代谢能泵质子入腔，反离子流动耗散跨膜电压（ClC-7 Cl⁻/H⁺ 反向转运体可能参与），建立并维持稳态腔内 pH 4.5–5.0；该酸性腔室激活水解酶并为质子化态依赖的离子陷获（LYST-001）提供梯度驱动力。Ohkuma 1978 以荧光素异硫氰酸酯标记葡聚糖探针在活细胞中直接测得腔内 pH 4.7–4.8",
+   "description_en": "The lysosome is the terminal organelle of the endocytic pathway. A V-type ATPase on the membrane pumps protons into the lumen using ATP metabolic energy, while counterion flow dissipates the transmembrane voltage (the ClC-7 Cl-/H+ antiporter may participate), establishing and maintaining a steady-state luminal pH of 4.5-5.0. This acidic lumen activates hydrolases and provides the gradient driving force for protonation-state-dependent ion trapping (LYST-001). Ohkuma 1978 directly measured a luminal pH of 4.7-4.8 in living cells using fluorescein isothiocyanate-labeled dextran probes.",
    "基本原理": "主动质子转运建立并维持跨膜 pH 梯度，为质子化态依赖的弱电解质分配与截留提供可持续驱动力；该梯度依赖代谢能供给，并可被弱碱与能量抑制剂扰动",
    "source": "literature",
    "ref_doi": "10.1146/annurev-physiol-012110-142317",
@@ -226,6 +232,7 @@
      }
     ],
     "transferable_principle": "主动建立并维持跨膜/跨界面 pH 梯度，可为质子化态依赖的分配提供可持续驱动力；体外可以外部施加的 pH 摆动替代该梯度功能，同样驱动弱电解质的可逆捕获-释放",
+    "transferable_principle_en": "Actively establishing and maintaining a transmembrane/trans-interface pH gradient can provide a sustained driving force for protonation-state-dependent partitioning; in vitro, an externally applied pH swing can substitute for this gradient and likewise drive the reversible capture-release of weak electrolytes.",
     "verification_quote": "Lysosomes generate and maintain their pH gradients by using the activity of a proton-pumping V-type ATPase"
    },
    "source_doi": "10.1146/annurev-physiol-012110-142317",

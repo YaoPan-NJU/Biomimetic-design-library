@@ -4,6 +4,7 @@
   "name_en": "Oyster Shell",
   "organism": {
     "scientific": "Ostreidae",
+    "scientific_en": "Ostreidae (true oysters)",
     "category": "动物"
   },
   "biomimetic_dimension": "过程仿生",
@@ -153,7 +154,9 @@
   "mechanisms": [
     {
       "name": "牡蛎壳文石碳酸钙离子交换与煅烧钙氧化物碱性沉淀",
+      "name_en": "Ion exchange of aragonite calcium carbonate in oyster shell and alkaline precipitation by calcined calcium oxide",
       "description": "CaCO₃在800℃缺氧条件下分解为CaO→CaO负载在花生壳生物炭上→CaO在含磷废水中释放Ca²⁺和OH⁻→OH⁻使水体呈弱碱性→Ca²⁺与磷酸盐在碱性条件下生成羟基磷灰石沉淀",
+      "description_en": "CaCO₃ decomposes into CaO under oxygen-deficient conditions at 800 ℃. CaO is loaded onto peanut-shell biochar. In phosphorus-containing wastewater, CaO releases Ca²⁺ and OH⁻, and OH⁻ makes the water weakly alkaline. Under alkaline conditions, Ca²⁺ combines with phosphate to form a hydroxyapatite precipitate.",
       "functional_groups": [
         "离子交换位点",
         "CaO/Ca(OH)₂",
@@ -230,6 +233,7 @@
           }
         ],
         "transferable_principle": "贝壳类CaCO₃经煅烧生成CaO后，可同时通过碱性沉淀和离子交换去除重金属和磷酸盐",
+        "transferable_principle_en": "After calcination, shell-derived CaCO₃ forms CaO, which can remove heavy metals and phosphate simultaneously through alkaline precipitation and ion exchange.",
         "verification_quote": "oyster shell biochar for heavy metal adsorption",
         "source_doi": "10.16663/j.cnki.lskj.2021.02.025",
         "source_locator": "p.2 / 3节 结果与讨论"
@@ -254,7 +258,9 @@
     },
     {
       "name": "钝化机理",
+      "name_en": "Passivation mechanism",
       "description": "石灰效应, 沉淀效应, 物理吸附, 离子交换",
+      "description_en": "Lime effect, precipitation effect, physical adsorption, and ion exchange.",
       "functional_groups": [
         "离子交换位点",
         "Ca²⁺/Mg²⁺位点",
@@ -267,6 +273,7 @@
       "verification_quote": "The remediation mechanisms predominantly include liming effects, precipitation and adsorption effects, but the molecular mechanisms underlying the microscopic solidification are still unclear",
       "causal_chain": {
         "transferable_principle": "基于机制: 钝化机理",
+        "transferable_principle_en": "Based on the mechanism: passivation.",
         "pollutant_feature": {
           "text": "石灰效应, 沉淀效应, 物理吸附, 离子交换",
           "basis": "from_source",

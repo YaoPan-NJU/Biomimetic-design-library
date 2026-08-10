@@ -4,6 +4,7 @@
   "name_en": "DDT-Dehydrochlorinase (Glutathione S-Transferase, GST)",
   "organism": {
     "scientific": "Anopheles funestus / Musca domestica（冈比亚按蚊近缘种 GSTe2 抗性结构体系与家蝇 DDT-脱氯化氢酶酶学体系）",
+    "scientific_en": "Anopheles funestus / Musca domestica (GSTe2 resistance structural system of a species closely related to Anopheles gambiae, and the DDT-dehydrochlorinase enzymatic system of the housefly)",
     "category": "动物"
   },
   "biomimetic_dimension": "分子仿生",
@@ -31,7 +32,9 @@
     {
       "mechanism_id": "DDTG-001",
       "name": "GSTe2 双分区活性位点（G 位/H 位）与 DDT 脱氯化氢代谢（降解/转化）",
+      "name_en": "GSTe2 bipartite active site (G site/H site) and DDT dehydrochlorination metabolism (degradation/transformation)",
       "description": "双翅目按蚊 epsilon 类谷胱甘肽 S-转移酶 GSTe2 代谢 DDT（1,1,1-三氯-2,2-双(对氯苯基)乙烷），产物为 DDE（1,1-二氯-2,2-双(对氯苯基)乙烯）。活性位点分两个子位点：G 位结合 GSH 辅因子（PDB 3ZML 中一分子 GSH 结合于 G 位），H 位为邻接 G 位的大而略开放的疏水底物口袋；DDT 以对接模型容纳于 H 位，二氯苯环被稳定、桥碳 Cα 指向谷胱甘肽硫醇盐。L119F 突变使 H4 螺旋 N 端弯折、扩大 H 位腔，抗性（119 F）等位基因对 DDT 的催化效率显著高于敏感（L119）等位基因（kcat/Km 316.3 对 92.0 µM−1·s−1）。Li 2014 QM/MM 计算（agGSTe2）支持脱毒经质子转移机制：其指数平均能垒 15.2 kcal/mol，较 GS-DDT 共轭机制低 27.6 kcal/mol，GSH 作辅因子（碱）而非共轭底物。家蝇 DDT-脱氯化氢酶活性经 Clark & Shamaan 1984 证明属于谷胱甘肽 S-转移酶。本条按天然机制如实标记为降解/转化。",
+      "description_en": "The dipteran Anopheles epsilon-class glutathione S-transferase GSTe2 metabolizes DDT (1,1,1-trichloro-2,2-bis(p-chlorophenyl)ethane), producing DDE (1,1-dichloro-2,2-bis(p-chlorophenyl)ethylene). The active site comprises two subsites: the G site binds the GSH cofactor (one GSH molecule bound at the G site in PDB 3ZML), and the H site is a large, slightly open hydrophobic substrate pocket adjacent to the G site; in a docking model DDT is accommodated in the H site, with the dichlorophenyl rings stabilized and the bridge carbon C(alpha) oriented toward the glutathione thiolate. The L119F mutation bends the N-terminus of helix H4 and enlarges the H-site cavity, and the resistant (119F) allele catalyzes DDT significantly more efficiently than the susceptible (L119) allele (kcat/Km 316.3 vs 92.0 uM-1.s-1). Li 2014 QM/MM calculations (agGSTe2) support detoxification via a proton-transfer mechanism: its exponential average energy barrier is 15.2 kcal/mol, 27.6 kcal/mol lower than the GS-DDT conjugation mechanism, with GSH acting as a cofactor (base) rather than a conjugation substrate. Housefly DDT-dehydrochlorinase activity was shown by Clark & Shamaan 1984 to belong to glutathione S-transferase. This entry is truthfully marked as degradation/transformation according to the natural mechanism.",
       "基本原理": "疏水底物口袋（H 位）与辅因子结合位点（G 位）的组合使大体积疏水有机氯分子以近反应姿态被容纳；腔的形状与尺寸决定底物可及性与代谢效率，抗性突变经扩大 H 位腔提高 DDT 可及与代谢，构成双翅目代谢抗性的结构基础",
       "source": "literature",
       "ref_doi": "10.1186/gb-2014-15-2-r27",
@@ -151,6 +154,7 @@
           }
         ],
         "transferable_principle": "「疏水底物口袋（H 位）邻接辅因子极性位点（G 位）」的双分区活性位点架构，使大体积疏水有机氯底物以近反应姿态被容纳；腔的形状与尺寸决定底物可及与转化效率，腔体几何可独立于催化化学而作为分子识别原理移植",
+        "transferable_principle_en": "The bipartite active-site architecture, in which a hydrophobic substrate pocket (H site) is adjacent to a polar cofactor site (G site), allows bulky hydrophobic organochlorine substrates to be accommodated in a near-reactive pose; the shape and size of the cavity determine substrate accessibility and transformation efficiency, and the cavity geometry can be transferred as a molecular recognition principle independently of the catalytic chemistry.",
         "verification_quote": "The active site of GSTe2 can be divided into two sub-sites. Firstly, there is the glutathione binding site, called the G-site, where one GSH molecule is bound."
       },
       "source_doi": "10.1186/gb-2014-15-2-r27",
@@ -169,7 +173,9 @@
     {
       "mechanism_id": "DDTG-002",
       "name": "DDT-脱氯化氢酶的底物桥基序读出（p,p'-取代双苯环与桥连叔碳 β-氢）",
+      "name_en": "Substrate bridge-motif readout by DDT-dehydrochlorinase (p,p'-disubstituted diphenyl rings and bridged tertiary-carbon beta-hydrogen)",
       "description": "Lipke & Kearns 1959 系统测定家蝇 DDT-脱氯化氢酶对 DDT 类似物的底物特异性：酶读出双重基序，其一为 p,p'-取代双苯环（未取代双苯环类似物完全不反应），其二为桥连叔碳（C-2）质子（β-消除必需；烯烃产物 DDE 无此氢而为终端产物）。环取代类似物活性序：p-Br 与 p-Cl 相当，p-F、CH3、CH3O、I 取代依次降低；烷取代类似物 TDE（即 DDD，1,1-二氯-2,2-双(对氯苯基)乙烷）降解约为 DDT 的 4 倍，表明读出基于桥基序而非 DDT 独有。该酶经 Clark & Shamaan 1984 证明为谷胱甘肽 S-转移酶，为 DDT 型分子识别提供结构基序读出原型。",
+      "description_en": "Lipke & Kearns 1959 systematically determined the substrate specificity of housefly DDT-dehydrochlorinase toward DDT analogs: the enzyme reads a dual motif, the first being the p,p'-disubstituted diphenyl rings (unsubstituted diphenyl-ring analogs did not react at all), and the second being the bridged tertiary-carbon (C-2) proton (required for beta-elimination; the alkene product DDE lacks this hydrogen and is a terminal product). The activity order of ring-substituted analogs was: p-Br and p-Cl comparable, with p-F, CH3, CH3O, and I substitutions decreasing sequentially; the alkyl-substituted analog TDE (i.e., DDD, 1,1-dichloro-2,2-bis(p-chlorophenyl)ethane) was degraded at about 4 times the rate of DDT, indicating that the readout is based on the bridge motif rather than being DDT-specific. The enzyme was shown by Clark & Shamaan 1984 to be a glutathione S-transferase, providing a structural motif-readout prototype for DDT-type molecular recognition.",
       "基本原理": "酶活性位点对底物施加几何与电子约束：p,p'-取代双苯环提供结合互补，桥连叔碳 β-氢提供消除反应把手；缺失任一基序的类似物活性显著降低或消失；基序读出泛于 DDT 单一分子（DDD 反应更快），故选择性源于基序组合而非分子全等",
       "source": "literature",
       "ref_doi": "10.1016/S0021-9258(18)69878-3",
@@ -259,6 +265,7 @@
           }
         ],
         "transferable_principle": "活性位点对 DDT 型分子施加双重基序读出：p,p'-取代双苯环决定结合，桥连叔碳 β-氢决定化学步骤；该「双基序识别」可独立于消除催化而作为 DDT 型污染物选择性捕获的识别原理",
+        "transferable_principle_en": "The active site imposes a dual motif readout on DDT-type molecules: the p,p'-disubstituted diphenyl rings determine binding, and the bridged tertiary-carbon beta-hydrogen determines the chemical step; this dual-motif recognition can serve, independently of the elimination catalysis, as a recognition principle for selective capture of DDT-type pollutants.",
         "verification_quote": "Of the other p,p'-substituents tested, p-F-, CH3-, CH3O-, and I- react at lesser rates and the unsubstituted rings not at all."
       },
       "source_doi": "10.1016/S0021-9258(18)69878-3",

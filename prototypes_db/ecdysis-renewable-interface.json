@@ -4,6 +4,7 @@
  "name_en": "Ecdysis Renewable Interface",
  "organism": {
   "scientific": "Arthropoda：Manduca sexta（烟草天蛾，蜕皮内分泌生理模型）/ Ostrinia furnacalis（亚洲玉米螟，表皮蛋白 OfLCP30-C 结构，PDB 9L0P）",
+  "scientific_en": "Arthropoda: Manduca sexta (tobacco hornworm, ecdysis endocrine physiology model) / Ostrinia furnacalis (Asian corn borer, cuticular protein OfLCP30-C structure, PDB 9L0P)",
   "category": "动物"
  },
  "biomimetic_dimension": "结构仿生",
@@ -31,7 +32,9 @@
   {
    "mechanism_id": "ECD-001",
    "name": "蜕皮（ecdysis）：周期性整体蜕除表皮以物理更新界面",
+   "name_en": "Ecdysis: periodic wholesale shedding of the cuticle to physically renew the interface",
    "description": "发育中的昆虫通过名为蜕皮的刻板行为周期性蜕除旧表皮并以新表皮替代（Zitnan 1996 摘要逐字：repeatedly shed their cuticle by means of a stereotyped behavior called ecdysis）。蜕除行为由 ETH/EH 内分泌正反馈级联触发：Manduca sexta 上表皮腺（epitracheal glands/Inka 细胞）释放蜕皮触发激素 Mas-ETH，中枢 VM 神经元释放羽化激素 EH，两组内分泌细胞相互激发，条件满足后血淋巴 EH/ETH 激增，触发 preecdysis 与 ecdysis 运动程序（Ewer & Truman 1997）；行为与蜕皮后期的发育变化（新表皮预成）精确协调。蜕除物为整张旧表皮（exuvia），旧界面上的附着物随旧层整体丢弃，暴露其下预成的新表皮界面",
+   "description_en": "Developing insects periodically shed their old cuticle and replace it with a new one through a stereotyped behavior called ecdysis (Zitnan 1996, verbatim from the abstract: repeatedly shed their cuticle by means of a stereotyped behavior called ecdysis). The shedding behavior is triggered by an ETH/EH endocrine positive-feedback cascade: the epitracheal glands (Inka cells) of Manduca sexta release the ecdysis-triggering hormone Mas-ETH, and central VM neurons release the eclosion hormone EH, the two endocrine cell populations exciting each other; when conditions are met, a surge of hemolymph EH/ETH triggers the preecdysis and ecdysis motor programs (Ewer & Truman 1997). The behavior is precisely coordinated with the developmental changes of late ecdysis (pre-formation of the new cuticle). The shed product is the entire old cuticle (exuvia), and attached material on the old interface is discarded together with the whole old layer, exposing the pre-formed new cuticle interface beneath.",
    "基本原理": "体表外层以离散事件方式周期性整体丢弃并由新合成材料替代，使界面在不经化学清洗或再生的情况下获得物理更新；更新为离散事件（preecdysis→ecdysis），在蜕间期之间反复发生",
    "source": "literature",
    "ref_doi": "10.1126/science.271.5245.88",
@@ -115,6 +118,7 @@
      }
     ],
     "transferable_principle": "将界面外层构建为可周期性整体蜕除并由预成新层替代的离散可更换单元（整层蜕除 + 新层预成 + 阈值信号触发），即可在不经化学再生的情况下物理更新界面",
+    "transferable_principle_en": "Build the outer layer of the interface as a discrete replaceable unit that can be periodically shed wholesale and replaced by a pre-formed new layer (whole-layer shedding + pre-formed new layer + threshold-signal triggering). The interface can thus be physically renewed without chemical regeneration.",
     "verification_quote": "Developing insects repeatedly shed their cuticle by means of a stereotyped behavior called ecdysis, thought to be initiated by the brain peptide eclosion hormone."
    },
    "source_doi": "10.1126/science.271.5245.88",
@@ -133,7 +137,9 @@
   {
    "mechanism_id": "ECD-002",
    "name": "几丁质-表皮蛋白复合表皮：离散可重建的结构单元",
+   "name_en": "Chitin-cuticular-protein composite cuticle: a discrete, rebuildable structural unit",
    "description": "蜕皮蜕除与重建的结构单元是节肢动物表皮：几丁质（β-1,4-N-乙酰氨基葡聚糖）纳米原纤嵌入表皮蛋白基质的复合材料。表皮蛋白（CPR 家族）以保守 R&R 结构域（Rebers-Riddiford 结构域，RR-1/RR-2 型）结合几丁质（Rebers & Willis 2001 标题：A conserved domain in arthropod cuticular proteins binds chitin）。PDB 9L0P（Hu 2025，固体核磁结构）显示亚洲玉米螟幼虫表皮蛋白 OfLCP30-C 的 R&R 结构域在水溶液中本征无序、结合几丁质时发生去折叠→折叠转变，以平面结构同一侧的芳香族氨基酸黏附片（adhesive patches）贴附几丁质表面。表皮组织在每个蜕皮周期从头重建该复合体，使表层成为离散、可按需合成、可更换的结构单元",
+   "description_en": "The structural unit shed and rebuilt during ecdysis is the arthropod cuticle, a composite material of chitin (beta-1,4-N-acetylglucosamine) nanofibrils embedded in a matrix of cuticular proteins. Cuticular proteins (CPR family) bind chitin through the conserved R&R domain (Rebers-Riddiford domain, RR-1/RR-2 types) (Rebers & Willis 2001; paper title: \"A conserved domain in arthropod cuticular proteins binds chitin\"). PDB 9L0P (Hu 2025, solid-state NMR structure) shows that the R&R domain of the Asian corn borer larval cuticular protein OfLCP30-C is intrinsically disordered in aqueous solution and undergoes an unfolded-to-folded transition upon chitin binding, attaching to the chitin surface via aromatic adhesive patches located on the same side of the planar structure. The cuticular tissue rebuilds this composite from scratch in each ecdysis cycle, making the surface layer a discrete, on-demand-synthesizable, replaceable structural unit.",
    "基本原理": "可更新界面由离散结构单元（几丁质原纤骨架 + 按需分泌并原位折叠黏附的表皮蛋白）复合而成；组分按需分泌、原位组装，使整个表层可被其下组织（或人工模拟工艺）反复重建",
    "source": "literature",
    "ref_doi": "10.1021/jacs.5c05099",
@@ -217,6 +223,7 @@
      }
     ],
     "transferable_principle": "将界面功能层构建为骨架层加按需组装结合组分的离散复合单元，单元可整体移除并由新组装的单元替代，界面即可反复更新",
+    "transferable_principle_en": "Build the functional layer of the interface as a discrete composite unit consisting of a scaffold layer plus binding components assembled on demand. The unit can be removed wholesale and replaced by a newly assembled unit, allowing the interface to be renewed repeatedly.",
     "verification_quote": "Aromatic amino acids located on the same side of the planar-shaped structure act as adhesive patches, adhering to the chitin surface"
    },
    "source_doi": "10.1021/jacs.5c05099",

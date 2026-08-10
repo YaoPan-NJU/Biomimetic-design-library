@@ -4,6 +4,7 @@
  "name_en": "Natural Nucleic-Acid Secondary-Structure Conformational Switch (i-motif / G-quadruplex)",
  "organism": {
   "scientific": "Homo sapiens（人端粒 C 富集链 i-motif 与 (TTAGGG)n G 富集重复 G-四链体；端粒/启动子区天然存在的核酸二级结构，非 SELEX 体外筛选适配体）",
+  "scientific_en": "Homo sapiens (human telomeric C-rich strand i-motif and (TTAGGG)n G-rich repeat G-quadruplex; naturally occurring nucleic acid secondary structures in telomeric/promoter regions, not SELEX in vitro-selected aptamers)",
   "category": "动物"
  },
  "biomimetic_dimension": "分子仿生",
@@ -31,7 +32,9 @@
   {
    "mechanism_id": "NDNA-001",
    "name": "i-motif 酸性触发的半质子化 C·C⁺ 折叠（构象开关折叠态）",
+   "name_en": "Acid-triggered hemiprotonated C·C⁺ i-motif folding (conformational-switch folded state)",
    "description": "人端粒 C 富集链 d(CCCTA2CCCTA2CCCTA2CCCT) 在酸性条件下经胞嘧啶 N3 半质子化形成 intercalated C·C⁺ 配对，分子内折叠为 i-motif：四段胞嘧啶 stretches 构成六重交替插入的 C·C⁺ 配对（PDB 1ELN NMR 结构）。折叠态（紧凑）与去折叠态（伸展）之间的 pH 可逆切换构成构象开关",
+   "description_en": "Under acidic conditions, the human telomeric C-rich strand d(CCCTA2CCCTA2CCCTA2CCCT) is hemiprotonated at cytosine N3 to form intercalated C·C⁺ base pairs and folds intramolecularly into an i-motif: four cytosine stretches form six intercalated C·C⁺ pairs alternating in the core (PDB 1ELN NMR structure). The pH-reversible transition between the folded (compact) and unfolded (extended) states constitutes a conformational switch.",
    "基本原理": "胞嘧啶 N3 半质子化使两条平行 C 富集链以 C·C⁺ 配对交替插入堆叠，酸性条件驱动该 intercalated 拓扑组装为紧凑 i-motif；去质子化（升 pH）则解折叠，构成 pH 门控的可逆构象开闭",
    "source": "literature",
    "ref_doi": "10.1006/jmbi.2000.3613",
@@ -101,6 +104,7 @@
      }
     ],
     "transferable_principle": "依赖胞嘧啶半质子化的 pH 门控可逆折叠/去折叠（intercalated C·C⁺ 拓扑）可作为固定化核酸构象致动器，切换结合位点几何或孔道可及性，提供动态吸附-再生维度",
+    "transferable_principle_en": "pH-gated reversible folding/unfolding that relies on cytosine hemiprotonation (intercalated C·C⁺ topology) can serve as an immobilized nucleic-acid conformational actuator, switching binding-site geometry or channel/pore accessibility to provide a dynamic adsorption-regeneration dimension.",
     "verification_quote": "The four cytidine stretches form an i-motif which includes six intercalated C.C+ pairs and terminates with the cytidines at the 5' extremity of each stretch."
    },
    "source_doi": "10.1006/jmbi.2000.3613",
@@ -118,7 +122,9 @@
   {
    "mechanism_id": "NDNA-002",
    "name": "G-四链体 Hoogsteen G-四分体堆叠与 K⁺ 稳定（构象开关折叠态）",
+   "name_en": "G-quadruplex Hoogsteen G-tetrad stacking stabilized by K⁺ (conformational-switch folded state)",
    "description": "人端粒 G 富集重复 (TTAGGG)n 在 K⁺ 溶液中分子内折叠为 G-四链体：三层 G-四分体（G-tetrad）经 Hoogsteen 氢键连接的鸟嘌呤四联体堆叠而成，中心通道由 K⁺ 占据稳定（PDB 2HY9 NMR hybrid-1 型）。K⁺ 依赖的折叠/去折叠构成离子门控构象开关，与 i-motif 的 pH 门控互补",
+   "description_en": "In K⁺ solution, the human telomeric G-rich repeat (TTAGGG)n folds intramolecularly into a G-quadruplex: three layers of G-tetrads stacked from Hoogsteen hydrogen-bonded guanine quartets, with the central channel occupied and stabilized by K⁺ (PDB 2HY9 NMR hybrid-1 type). The K⁺-dependent folding/unfolding constitutes an ion-gated conformational switch, complementary to the pH gating of the i-motif.",
    "基本原理": "四个鸟嘌呤以 Hoogsteen 氢键形成平面 G-四分体，多层四分体堆叠并由单价阳离子（K⁺）居中配位稳定；阳离子依赖的四级堆叠使 G 富集链在折叠（紧凑）与去折叠态间可逆切换",
    "source": "literature",
    "ref_doi": "10.1093/nar/gkm009",
@@ -188,6 +194,7 @@
      }
     ],
     "transferable_principle": "阳离子（K⁺）门控的可逆 G-tetrad 折叠/去折叠可作为固定化 G 富集核酸构象致动器，与 pH 门控 i-motif 互补，共同提供 pH/离子双动态响应维度",
+    "transferable_principle_en": "Cation (K⁺)-gated reversible G-tetrad folding/unfolding can serve as an immobilized G-rich nucleic-acid conformational actuator; complementary to the pH-gated i-motif, together they provide a dual pH/ion dynamic-response dimension.",
     "verification_quote": "The hybrid-type telomeric G-quadruplex consists of three G-tetrads linked with mixed parallel-antiparallel G-strands"
    },
    "source_doi": "10.1093/nar/gkm009",

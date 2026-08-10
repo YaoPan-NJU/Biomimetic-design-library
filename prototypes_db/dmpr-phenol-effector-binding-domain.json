@@ -4,6 +4,7 @@
   "name_en": "DmpR Phenol Effector-Binding Domain (A domain / sensory domain)",
   "organism": {
     "scientific": "Pseudomonas putida KCTC 1452（DmpR 苯酚响应转录调控蛋白，又称 CapR）",
+    "scientific_en": "Pseudomonas putida KCTC 1452 (DmpR phenol-responsive transcriptional regulatory protein, also known as CapR)",
     "category": "微生物"
   },
   "biomimetic_dimension": "分子仿生",
@@ -31,7 +32,9 @@
     {
       "mechanism_id": "DMPR-001",
       "name": "疏水腔与 His100/Trp128 酚羟基定位对芳香效应物的识别",
+      "name_en": "Recognition of aromatic effectors by a hydrophobic cavity with His100/Trp128 positioning of the phenolic hydroxyl group",
       "description": "DmpR 的 A 域（感觉域）以 vinyl-4-reductase（V4R）支架的（β/α）4 桶构成反平行发夹基序围成的封闭疏水腔（约 24–36 Å³）；苯酚芳环入腔，腔壁主要为 Phe93、Trp128、Tyr155、Tyr170、Tyr159 等疏水残基，酚羟基定位于 His100 与 Trp128 之间（氢键/定位功能）。PDB 6IY8（chain A）SITE AC1 记录的苯酚结合位点残基为 Pro97、His100、Val108、Met126、Trp128、Ala156、Ser160，与正文 His100/Trp128 描述一致。苯酚与 DmpR 的结合亲和力为低微摩尔级（DmpRΔD Kd 约 12 μM，全长约 16 μM）",
+      "description_en": "The A domain (sensory domain) of DmpR adopts a (beta/alpha)4 barrel on a vinyl-4-reductase (V4R) scaffold, whose antiparallel hairpin motifs enclose a closed hydrophobic cavity (about 24-36 Angstrom cubed). The phenol aromatic ring enters the cavity, whose walls are mainly hydrophobic residues such as Phe93, Trp128, Tyr155, Tyr170, and Tyr159; the phenolic hydroxyl group is positioned between His100 and Trp128 (hydrogen bonding/positioning function). The phenol-binding-site residues recorded at SITE AC1 of PDB 6IY8 (chain A) are Pro97, His100, Val108, Met126, Trp128, Ala156, and Ser160, consistent with the His100/Trp128 description in the text. The binding affinity of phenol to DmpR is in the low micromolar range (Kd about 12 uM for DmpRDeltaD, about 16 uM for the full-length protein).",
       "基本原理": "疏水腔按尺寸/形状容纳芳环（范德华/疏水效应），保守 His100 与 Trp128 方向性定位酚羟基；'疏水腔形状读出 + 酚羟基头基锚定'的组合使 A 域在无金属参与下选择性识别苯酚与烷基取代酚等芳香效应物，并区别于无羟基的甲苯/二甲苯类效应物",
       "source": "literature",
       "ref_doi": "10.1038/s41467-020-16562-5",
@@ -120,6 +123,7 @@
           }
         ],
         "transferable_principle": "预组织封闭疏水腔（与芳环尺寸/形状互补）+ 保守极性残基（His100/Trp128 型氢键给体/受体）对酚羟基的方向性定位，二者组合可在无金属参与下选择性识别'芳环 + 酚羟基头基'型分子，并区别于无羟基芳烃",
+        "transferable_principle_en": "A preorganized closed hydrophobic cavity (complementary to the size/shape of the aromatic ring) combined with directional positioning of the phenolic hydroxyl group by conserved polar residues (His100/Trp128-type hydrogen-bond donors/acceptors) can selectively recognize molecules of the 'aromatic ring + phenolic hydroxyl head group' type without metal participation, and distinguishes them from hydroxyl-free arenes.",
         "verification_quote": "The hydroxyl group of the phenol is located between His100 and Trp128, indicating a ligand-positioning function of these residues."
       },
       "source_doi": "10.1038/s41467-020-16562-5",
@@ -138,7 +142,9 @@
     {
       "mechanism_id": "DMPR-002",
       "name": "效应物结合诱导感觉域构象变化与下游信号传递",
+      "name_en": "Effector binding induces conformational change of the sensory domain and downstream signal transduction",
       "description": "苯酚结合 A 域诱导配体结合口袋构象变化，继而使感觉域 C 端柔性 α6 螺旋位移，经卷曲螺旋 B-linker 将效应物结合信号传递至下游 AAA+ ATPase 域，促进头对头二聚体进一步组装为活性四聚体并与 σ54-RNAP 相互作用，激活苯酚降解操纵子的 σ54 依赖转录",
+      "description_en": "Phenol binding to the A domain induces a conformational change of the ligand-binding pocket, which in turn displaces the flexible C-terminal alpha6 helix of the sensory domain. The effector-binding signal is transmitted through the coiled-coil B-linker to the downstream AAA+ ATPase domain, promoting further assembly of head-to-head dimers into active tetramers that interact with sigma54-RNAP, thereby activating sigma54-dependent transcription of the phenol degradation operon.",
       "基本原理": "A 域的效应物识别与下游结构域激活经构象传播变构偶联：配体结合重塑口袋与感觉域 C 端，B-linker 传递该变化；此'识别-转录'偶联是 DmpR 作为单组分 bEBP 的工作方式，其识别部分（A 域）可作为酚类分子识别元件独立提取用于仿生设计",
       "source": "literature",
       "ref_doi": "10.1038/s41467-020-16562-5",
@@ -198,6 +204,7 @@
           }
         ],
         "transferable_principle": "感觉域的效应物识别可经构象传播变构偶联至下游功能输出；用于吸附设计时可独立提取识别元件的口袋几何，变构输出为可选项（可转译为刺激响应开关）",
+        "transferable_principle_en": "Effector recognition by the sensory domain can be allosterically coupled to downstream functional output via conformational propagation. When applied to adsorption design, the pocket geometry of the recognition element can be extracted independently, with the allosteric output being optional (translatable into a stimulus-responsive switch).",
         "verification_quote": "The structural changes within the phenol binding sites and the downstream ATPase domains suggest that the effector binding signal is propagated through the coiled-coil helixes"
       },
       "source_doi": "10.1038/s41467-020-16562-5",

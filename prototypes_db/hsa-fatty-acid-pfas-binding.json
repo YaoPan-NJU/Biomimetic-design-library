@@ -4,6 +4,7 @@
  "name_en": "Human Serum Albumin Fatty Acid Binding Sites (FA1-FA7)",
  "organism": {
   "scientific": "Homo sapiens（人血清白蛋白 HSA，血浆脂肪酸转运蛋白）",
+  "scientific_en": "Homo sapiens (human serum albumin HSA, plasma fatty acid transport protein)",
   "category": "动物"
  },
  "biomimetic_dimension": "分子仿生",
@@ -31,7 +32,9 @@
   {
    "mechanism_id": "HSA-001",
    "name": "长链脂肪酸的羧酸头基阳离子/氢键锚定与烃链疏水容纳",
+   "name_en": "Cationic/hydrogen-bond anchoring of the carboxyl head group of long-chain fatty acids and hydrophobic accommodation of the hydrocarbon chain",
    "description": "人血清白蛋白以分布于三个结构域的脂肪酸结合位点（FA1-FA7）结合长链脂肪酸；各位点以 Arg/Lys/Tyr 型阳离子与氢键残基锚定羧酸头基（如 FA2 位点 Arg410 与 Tyr411、FA1 位点 Lys199 与 Arg218，PDB 链 A 编号），侧壁 Leu/Phe 等疏水残基容纳长烃链；PDB 1E7G 为 HSA 与肉豆蔻酸（十四烷酸）复合物，链 A 含 8 个 MYR 配体分子",
+   "description_en": "Human serum albumin binds long-chain fatty acids via fatty acid binding sites (FA1-FA7) distributed across three domains. Each site anchors the carboxyl head group with Arg/Lys/Tyr-type cationic and hydrogen-bonding residues (e.g., Arg410 and Tyr411 at the FA2 site, Lys199 and Arg218 at the FA1 site, PDB chain A numbering), while side-wall Leu/Phe hydrophobic residues accommodate the long hydrocarbon chain. PDB 1E7G is the HSA/myristate (tetradecanoic acid) complex, with 8 MYR ligand molecules in chain A.",
    "基本原理": "预组织的 Arg/Lys/Tyr 型阳离子与氢键给体方向性锚定脂肪酸羧酸头基，疏水侧壁经范德华接触容纳长烃链；头基锚定与尾链疏水容纳的组合使两亲性脂肪酸在血浆水相中被可逆结合与转运，无金属参与",
    "source": "literature",
    "ref_doi": "10.1006/jmbi.2000.4158",
@@ -106,6 +109,7 @@
      }
     ],
     "transferable_principle": "预组织的 Arg/Lys/Tyr 型阳离子与氢键给体方向性锚定两亲性阴离子的羧酸头基，配合疏水侧壁对长烃链的范德华容纳，可在水相中可逆结合极性头基加疏水尾链型配体；该化学对羧酸型两亲阴离子广谱，不提供单一配体的特异选择性",
+    "transferable_principle_en": "Pre-organized Arg/Lys/Tyr-type cationic and hydrogen-bond donors directionally anchor the carboxyl head group of amphiphilic anions; combined with van der Waals accommodation of the long hydrocarbon chain by the hydrophobic side wall, this enables reversible binding in aqueous phase of ligands with a polar head group and a hydrophobic tail. This chemistry is broad-spectrum toward carboxylic amphiphilic anions and does not provide specific selectivity for a single ligand.",
     "verification_quote": "Crystallographic Analysis Reveals Common Modes of Binding of Medium and Long-Chain Fatty Acids to Human Serum Albumin"
    },
    "source_doi": "10.1006/jmbi.2000.4158",
@@ -124,7 +128,9 @@
   {
    "mechanism_id": "HSA-002",
    "name": "脂肪酸结合位点 FA1-FA7 的多位点不对称分布与跨位点保守头基锚",
+   "name_en": "Asymmetric multi-site distribution of fatty acid binding sites FA1-FA7 with conserved cross-site head-group anchoring",
    "description": "HSA 含 7 个主要脂肪酸结合位点（FA1-FA7），不对称分布于 I、II、III 三个结构域（PDB 1BKE 中 5 个肉豆蔻酸分子同时占据不同位点）；跨位点头基锚化学保守为 Arg/Lys/Tyr 型极性残基（如 PDB 1E7G 位点 AC1 的 Arg117/Tyr138/Tyr161、位点 AC4 的 Arg410/Tyr411、位点 AC7 的 Lys199/Arg218）",
+   "description_en": "HSA contains 7 major fatty acid binding sites (FA1-FA7) asymmetrically distributed across the three domains I, II, and III (in PDB 1BKE, 5 myristate molecules simultaneously occupy different sites). The head-group anchoring chemistry is conserved across sites as Arg/Lys/Tyr-type polar residues (e.g., Arg117/Tyr138/Tyr161 at site AC1, Arg410/Tyr411 at site AC4, and Lys199/Arg218 at site AC7 in PDB 1E7G).",
    "基本原理": "多位点架构使单个白蛋白分子高容量、可逆地转运血浆脂肪酸；跨位点保守的阳离子/氢键头基锚意味着该识别化学本质上是广谱的羧酸/两亲阴离子结合，而非对某一配体的特异识别",
    "source": "literature",
    "ref_doi": "10.1038/1869",
@@ -199,6 +205,7 @@
      }
     ],
     "transferable_principle": "多位点架构加跨位点保守的 Arg/Lys/Tyr 头基锚意味着对该类位点的仿生只能复制广谱羧酸/两亲阴离子结合，无法获得对单一污染物的特异选择性；PFAS 对该类位点的结合是脂肪酸类似物的碰巧占据，特异性须在材料设计层面另行构建",
+    "transferable_principle_en": "The multi-site architecture with cross-site conserved Arg/Lys/Tyr head-group anchors means that biomimicry of such sites can only replicate broad-spectrum carboxylate/amphiphilic anion binding and cannot achieve specific selectivity for a single contaminant. PFAS binding to such sites is incidental occupation as fatty acid analogs, and specificity must be separately engineered at the material design level.",
     "verification_quote": "Crystal structure of human serum albumin complexed with fatty acid reveals an asymmetric distribution of binding sites"
    },
    "source_doi": "10.1038/1869",

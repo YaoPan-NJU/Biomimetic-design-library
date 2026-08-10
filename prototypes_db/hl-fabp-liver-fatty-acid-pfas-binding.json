@@ -4,6 +4,7 @@
   "name_en": "hL-FABP (FABP1) Liver Fatty Acid / PFAS Binding Protein",
   "organism": {
     "scientific": "Homo sapiens（人肝脂肪酸结合蛋白 FABP1 / L-FABP，具异常大结合腔、可同时容纳两个配体）",
+    "scientific_en": "Homo sapiens (human liver fatty acid binding protein FABP1 / L-FABP, with an unusually large binding cavity that can accommodate two ligands simultaneously)",
     "category": "动物"
   },
   "biomimetic_dimension": "分子仿生",
@@ -31,7 +32,9 @@
     {
       "mechanism_id": "HLFABP-001",
       "name": "羧酸头基定点识别 + 有限低极性链段容纳对长链全氟羧酸的结合",
+      "name_en": "Site-specific carboxylate head group recognition plus accommodation of a limited low-polarity segment for binding long-chain perfluorocarboxylic acids",
       "description": "人肝 FABP 以其大疏水腔容纳长链全氟羧酸（PFOA/PFNA）的全氟碳链，并以极性残基（Asn111、Arg122 等）与羧酸头基作用；结合呈链长依赖，短链亲和显著弱于长链。此为'羧酸头基定向识别 + 有限低极性链段容纳'的分子识别范式。",
+      "description_en": "Human liver FABP accommodates the perfluorocarbon chain of long-chain perfluorocarboxylic acids (PFOA/PFNA) in its large hydrophobic cavity and interacts with the carboxylate head group through polar residues (Asn111, Arg122, etc.); binding is chain-length dependent, with markedly weaker affinity for short chains than for long chains. This constitutes a molecular recognition paradigm of 'site-specific carboxylate head group recognition plus accommodation of a limited low-polarity segment'.",
       "基本原理": "极性残基对阴离子羧酸头基的定向作用提供选择性锚定，疏水大腔对有限长度低极性（全氟碳）链段的容纳提供亲和与链长选择；二者组合区分长链羧酸与短链/非羧酸竞争物。",
       "source": "literature",
       "ref_doi": "10.1007/s00204-014-1391-7",
@@ -106,6 +109,7 @@
           }
         ],
         "transferable_principle": "阴离子羧酸头基的定向极性锚定 + 有限长度低极性链段的疏水腔容纳，可组合出对长链全氟羧酸的链长选择性识别；选择性来自头基极性作用与链段体积匹配，而非定向 C–F 或氟亲和。",
+        "transferable_principle_en": "Directional polar anchoring of the anionic carboxylate head group combined with hydrophobic-cavity accommodation of a finite-length low-polarity segment can create chain-length-selective recognition of long-chain perfluorocarboxylic acids; the selectivity arises from head-group polar interactions and volume matching of the segment, not from directional C-F or fluorine affinity.",
         "verification_quote": "Interaction of perfluoroalkyl acids with human liver fatty acid-binding protein"
       },
       "source_doi": "10.1007/s00204-014-1391-7",
@@ -123,7 +127,9 @@
     {
       "mechanism_id": "HLFABP-002",
       "name": "portal/gap 区骨架动态（动态对应边界，勿过度主张）",
+      "name_en": "Portal/gap region backbone dynamics (bounds of dynamic correspondence; avoid over-claiming)",
       "description": "hL-FABP 的 portal/gap 区存在骨架运动（Cai 2012）；但 NMR 研究指出其本征慢（毫秒）动力学不太可能是配体进入所需的关键构象重排（Long & Yang），故本原型不作'目标诱导门控'的动态硬对应主张。",
+      "description_en": "The portal/gap region of hL-FABP exhibits backbone motion (Cai 2012); however, NMR studies indicate that its intrinsically slow (millisecond) dynamics are unlikely to be the key conformational rearrangement required for ligand entry (Long & Yang), so this prototype does not make a hard dynamic-correspondence claim of 'target-induced gating'.",
       "基本原理": "portal 区柔性为脂肪酸结合蛋白家族共性，可能利于配体进出，但无 PFOA 诱导门户构象的直接测量，动态对应仅为边界记录而非承重机制。",
       "source": "literature",
       "ref_doi": "10.1016/j.bpj.2012.04.039",
@@ -179,6 +185,7 @@
           }
         ],
         "transferable_principle": "刚性预组织的静态识别（头基锚定 + 链段容纳）已足以支撑材料转译；portal 动态不作承重对应，避免把蛋白构象动力学强行转入人工材料。",
+        "transferable_principle_en": "Rigid, pre-organized static recognition (head-group anchoring plus segment accommodation) is sufficient to support material translation; portal dynamics are not treated as a load-bearing correspondence, avoiding the forced transfer of protein conformational dynamics into artificial materials.",
         "verification_quote": "Solution Structure and Backbone Dynamics of Human Liver Fatty Acid Binding Protein"
       },
       "source_doi": "10.1016/j.bpj.2012.04.039",

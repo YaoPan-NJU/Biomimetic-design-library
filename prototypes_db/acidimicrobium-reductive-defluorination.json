@@ -4,6 +4,7 @@
  "name_en": "Acidimicrobium sp. Strain A6 Reductive Defluorination Prototype",
  "organism": {
   "scientific": "Acidimicrobium sp. strain A6（铁还原偶联铵氧化自养菌，Feammox；可还原脱氟）；结构先例还原脱卤酶来自 Nitratireductor pacificus pht-3B（PDB 4RAS）",
+  "scientific_en": "Acidimicrobium sp. strain A6 (an iron-reducing, ammonium-oxidizing chemoautotroph, Feammox, capable of reductive defluorination); structural precedent reductive dehalogenase from Nitratireductor pacificus pht-3B (PDB 4RAS)",
   "category": "微生物"
  },
  "biomimetic_dimension": "分子仿生",
@@ -30,7 +31,9 @@
   {
    "mechanism_id": "ACDM-001",
    "name": "厌氧还原条件下 Acidimicrobium sp. A6 对 PFOA/PFOS 的还原脱氟",
+   "name_en": "Reductive defluorination of PFOA/PFOS by Acidimicrobium sp. A6 under anaerobic reducing conditions",
    "description": "Acidimicrobium sp. strain A6（一种以铁还原偶联铵氧化的化能自养菌，可营 Feammox）在厌氧还原条件下可将 PFOA 与 PFOS 还原脱氟：孵育体系中观察到氟离子累积、更短链全氟化产物与乙酸的生成，以及单位铵氧化所还原 Fe(III) 的下降；以氢为唯一电子供体时同样发生脱氟。该过程与铁还原偶联，以铵或氢为电子供体。执行 C-F 键断裂的具体酶在 A6 中尚未被鉴定/表征",
+   "description_en": "Acidimicrobium sp. strain A6, a chemoautotroph that couples iron reduction with ammonium oxidation (Feammox), can reductively defluorinate PFOA and PFOS under anaerobic reducing conditions. Fluoride accumulation, generation of shorter-chain perfluorinated products and acetate, and a decrease in Fe(III) reduced per unit of ammonium oxidized were observed in the incubation system; defluorination also occurred with hydrogen as the sole electron donor. The process is coupled to iron reduction, with ammonium or hydrogen serving as electron donors. The specific enzyme carrying out C-F bond cleavage has not yet been identified or characterized in strain A6.",
    "基本原理": "在厌氧低氧化还原电位条件下，以末端电子受体（Fe(III)）为电子汇、以电子供体（铵经 Feammox 或氢）提供还原当量，可向全氟烷基 C-F 键提供电子并使其还原断裂、以氟离子形式释放氟；这是自然界少数能攻击全氟烷基 C-F 键的微生物过程之一，但其分子机制（具体酶与电子传递链）尚未阐明",
    "source": "literature",
    "ref_doi": "10.1021/acs.est.9b04047",
@@ -120,6 +123,7 @@
      }
     ],
     "transferable_principle": "在厌氧低氧化还原电位下，以末端电子受体（如 Fe(III)）为电子汇、以电子供体（铵或氢）驱动还原当量，可使全氟烷基 C-F 键还原断裂并以氟离子释放氟；该还原脱氟原理原则上可迁移到人工还原体系，但天然体系效率低、酶未表征，C-F 键断裂属高能垒过程",
+    "transferable_principle_en": "Under anaerobic conditions with low redox potential, using a terminal electron acceptor (e.g., Fe(III)) as an electron sink and an electron donor (ammonium or hydrogen) to drive reducing equivalents can reductively cleave perfluoroalkyl C-F bonds and release fluorine as fluoride ions. This reductive defluorination principle can in principle be transferred to artificial reductive systems, but the native system has low efficiency and an uncharacterized enzyme, and C-F bond cleavage is a high-energy-barrier process.",
     "verification_quote": "Buildup of fluoride, shorter-chain perfluorinated products, and acetate was observed"
    },
    "source_doi": "10.1021/acs.est.9b04047",
@@ -138,7 +142,9 @@
   {
    "mechanism_id": "ACDM-002",
    "name": "B12（咕啉）依赖型还原脱卤酶作为还原性碳-卤键断裂的结构先例",
+   "name_en": "B12 (cobalamin)-dependent reductive dehalogenase as a structural precedent for reductive carbon-halogen bond cleavage",
    "description": "Nitratireductor pacificus pht-3B 来源的还原脱卤酶（PDB 4RAS，Payne 2015 Nature）含咕啉（维生素 B12）辅因子与铁硫簇，其结构提示 B12 依赖型脱卤的机制，为还原性碳-卤键断裂提供了结构生物学先例。该酶属有机卤化物呼吸的还原脱卤酶（作用对象为卤代烃，非全氟烷基 C-F 键脱氟酶），在此仅作为还原脱卤化学原理的结构先例，并非 Acidimicrobium sp. A6 自身的脱氟酶",
+   "description_en": "The reductive dehalogenase from Nitratireductor pacificus pht-3B (PDB 4RAS; Payne 2015 Nature) contains a cobalamin (vitamin B12) cofactor and iron-sulfur clusters; its structure suggests a B12-dependent dehalogenation mechanism and provides a structural biology precedent for reductive carbon-halogen bond cleavage. This enzyme is an organohalide-respiring reductive dehalogenase acting on organohalides, not a defluorinating enzyme for perfluoroalkyl C-F bonds; it serves here only as a structural precedent for reductive dehalogenation chemistry and is not the defluorinating enzyme of Acidimicrobium sp. strain A6 itself.",
    "基本原理": "低电位的咕啉（Co-咕啉）辅基配合铁硫电子中继，可在还原条件下介导碳-卤键的还原断裂；这一还原脱卤化学为理解 A6 等微生物还原脱氟可能涉及的辅因子化学提供结构先例，但 C-F 键键能远高于 C-Cl，向全氟烷基 C-F 键的外推属原理层",
    "source": "literature",
    "ref_doi": "10.1038/nature13901",
@@ -193,6 +199,7 @@
      }
     ],
     "transferable_principle": "低电位咕啉（B12）辅基配合铁硫电子中继可介导还原性碳-卤键断裂；该还原脱卤化学为还原脱氟的辅因子化学提供结构先例，但向高键能 C-F 键的外推属原理层，须实验验证",
+    "transferable_principle_en": "A low-potential cobalamin (B12) prosthetic group combined with an iron-sulfur electron relay can mediate reductive carbon-halogen bond cleavage. This reductive dehalogenation chemistry provides a structural precedent for the cofactor chemistry of reductive defluorination, but the extrapolation to high-binding-energy C-F bonds remains at the principle level and must be verified experimentally.",
     "verification_quote": "Reductive dehalogenase structure suggests a mechanism for B12-dependent dehalogenation"
    },
    "source_doi": "10.1038/nature13901",

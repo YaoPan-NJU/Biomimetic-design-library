@@ -4,6 +4,7 @@
  "name_en": "Siderophore Two-Phase High-Affinity Capture and Receptor-Mediated Recovery Architecture",
  "organism": {
   "scientific": "Escherichia coli（铁载体系统：肠杆菌素/ferrichrome 型；周质铁载体结合蛋白 FhuD（1EFD）与 FepB（3TLK））",
+  "scientific_en": "Escherichia coli (siderophore systems: enterobactin/ferrichrome type; periplasmic siderophore-binding proteins FhuD (PDB 1EFD) and FepB (PDB 3TLK))",
   "category": "微生物"
  },
  "biomimetic_dimension": "系统仿生",
@@ -31,7 +32,9 @@
   {
    "mechanism_id": "SIDER-001",
    "name": "分泌型铁载体对超低浓度三价铁的高亲和螯合捕获（捕获级）",
+   "name_en": "High-affinity chelation capture of ultra-low-concentration ferric iron by secreted siderophores (capture stage)",
    "description": "微生物合成并分泌高亲和铁载体（如大肠杆菌肠杆菌素 enterobactin，三邻苯二酚型；ferrichrome/gallichrome，羟肟酸型），以多齿螯合剂在体相水中螯合超低浓度（fM 级）三价铁 Fe3+，形成铁载体-铁复合物并将铁扫集浓缩。PDB 3TLK 中 FepB 与 Fe(III) 及肠杆菌素共结晶，直接显示该捕获化学的对象为阳离子三价铁",
+   "description_en": "Microorganisms synthesize and secrete high-affinity siderophores (e.g., enterobactin of Escherichia coli, a triscatecholate type; ferrichrome/gallichrome, hydroxamate type) that, as multidentate chelators, chelate ultra-low-concentration (fM-level) ferric iron Fe3+ in bulk water, forming siderophore-iron complexes and sweeping and concentrating iron. In PDB 3TLK, FepB is co-crystallized with Fe(III) and enterobactin, directly showing that the target of this capture chemistry is cationic ferric iron.",
    "基本原理": "可分泌/可分散的高亲和螯合捕获单元进入体相，在底物浓度极低、竞争离子大量存在的条件下扫集并浓缩目标底物，将「向固定表面扩散受限」的捕获转变为「捕获单元主动接触底物」，是自然界对超低浓度底物传质难题的捕获级方案",
    "source": "literature",
    "ref_doi": "10.1128/MMBR.00012-07",
@@ -106,6 +109,7 @@
      }
     ],
     "transferable_principle": "可分泌/可分散的高亲和捕获单元进入体相扫集并浓缩超低浓度底物，将扩散受限的捕获转为捕获单元主动接触底物（架构层；具体螯合化学随目标底物而变）",
+    "transferable_principle_en": "Secretable or dispersible high-affinity capture units sweep the bulk phase and concentrate ultra-low-concentration substrates, converting diffusion-limited capture into active contact of the capture unit with the substrate (architecture level; the specific chelation chemistry varies with the target substrate).",
     "verification_quote": "High-affinity iron acquisition is mediated by siderophore-dependent pathways in the majority of pathogenic and nonpathogenic bacteria and fungi."
    },
    "source_doi": "10.1128/MMBR.00012-07",
@@ -123,7 +127,9 @@
   {
    "mechanism_id": "SIDER-002",
    "name": "专一受体/周质结合蛋白介导的铁载体-铁复合物回收与再生（回收级）",
+   "name_en": "Specific receptor/periplasmic-binding-protein-mediated recovery and regeneration of siderophore-iron complexes (recovery stage)",
    "description": "铁载体-铁复合物经外膜专一受体（FhuA 识别 ferrichrome 类、FepA 识别肠杆菌素）识别，由周质铁载体结合蛋白（FhuD/FepB）转运回收；回收对完整铁载体-铁复合物（holo/载附形式）具选择性，随后铁被释放、铁载体循环再利用。PDB 1EFD 为 FhuD 与 gallichrome 复合物，PDB 3TLK 为 holo FepB（结合铁-肠杆菌素）",
+   "description_en": "Siderophore-iron complexes are recognized by specific outer-membrane receptors (FhuA recognizes ferrichrome-type siderophores, FepA recognizes enterobactin) and transported and recovered by periplasmic siderophore-binding proteins (FhuD/FepB); recovery is selective for the intact holo (loaded) siderophore-iron complex, after which iron is released and the siderophore is recycled. PDB 1EFD is the FhuD-gallichrome complex, and PDB 3TLK is holo FepB (bound to iron-enterobactin).",
    "基本原理": "专一回收界面只识别「已载附底物的捕获单元」（holo 形式），使捕获与回收两级解耦：捕获级负责体相高亲和扫集，回收级负责选择性提取与捕获单元再生循环，二者各自优化而互不拖累，构成完整的捕获-回收传质闭环",
    "source": "literature",
    "ref_doi": "10.1128/MMBR.00012-07",
@@ -198,6 +204,7 @@
      }
     ],
     "transferable_principle": "对「已载附底物的捕获单元」具选择性的专一回收界面 + 捕获单元释放再生循环，使捕获与回收两级解耦、各自优化（架构层；回收的化学识别须按目标底物独立设计）",
+    "transferable_principle_en": "A specific recovery interface selective for capture units that have already bound their substrate, together with a release-and-recycle loop for the capture unit, decouples capture from recovery so the two stages can be independently optimized (architecture level; the chemical recognition for recovery must be designed independently for the target substrate).",
     "verification_quote": "PERIPLASMIC FERRIC SIDEROPHORE BINDING PROTEIN FHUD COMPLEXED WITH GALLICHROME"
    },
    "source_doi": "10.1128/MMBR.00012-07",

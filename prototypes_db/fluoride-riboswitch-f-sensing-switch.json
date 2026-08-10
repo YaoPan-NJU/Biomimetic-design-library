@@ -4,6 +4,7 @@
  "name_en": "Fluoride Riboswitch Fluoride-Sensing Conformational Switch",
  "organism": {
   "scientific": "Thermotoga petrophila 氟化物核糖开关适体域",
+  "scientific_en": "Thermotoga petrophila fluoride riboswitch aptamer domain",
   "category": "微生物"
  },
  "biomimetic_dimension": "分子仿生",
@@ -32,7 +33,9 @@
   {
    "mechanism_id": "FRS-001",
    "name": "金属离子与磷酸骨架对氟离子的选择性封装识别",
+   "name_en": "Selective encapsulation recognition of fluoride by metal ions and phosphate backbone groups",
    "description": "氟核糖开关适体域折叠为由假结（pseudoknot）稳定的高阶 RNA 结构，在连接区（junctional architecture）构筑封装腔：F− 经直接配位三个 Mg2+ 离子而被封装，Mg2+ 又以八面体几何配位水分子与五个向内指的主链磷酸基团；该口袋对 F− 特异，区分更大的卤离子（如 Cl−）。PDB 3VRS（Mn2+ 浸渍，2.603 Å）与 4ENA（Cs+ 浸渍，2.85 Å）均为 T. petrophila 氟核糖开关，非聚合物组分含 F− 与相应金属离子",
+   "description_en": "The fluoride riboswitch aptamer domain folds into a higher-order RNA structure stabilized by a pseudoknot, forming an encapsulation cavity at the junctional architecture: F- is encapsulated by directly coordinating three Mg2+ ions, which in turn coordinate water molecules and five inwardly oriented backbone phosphate groups in octahedral geometry. The pocket is specific for F-, discriminating against larger halides such as Cl-. PDB 3VRS (Mn2+-soaked, 2.603 Å) and 4ENA (Cs+-soaked, 2.85 Å) are both T. petrophila fluoride riboswitches, and their non-polymer components contain F- and the corresponding metal ions.",
    "基本原理": "预组织的金属离子（Mg2+）阵列与向内指的主链磷酸/氢键给体共同围成尺寸与电荷密度匹配 F−（最小卤离子、电荷密度最高）的封装腔；F− 的高电荷密度使其能被该多极静电/氢键阵列强稳定，而更大的 Cl− 等因尺寸失配与电荷密度较低被排斥，从而在无蛋白侧链参与下实现 F− 对卤离子的特异识别",
    "source": "literature",
    "ref_doi": "10.1038/nature11152",
@@ -107,6 +110,7 @@
      }
     ],
     "transferable_principle": "由预组织金属离子阵列与向内指的磷酸/氢键给体围成、尺寸与电荷密度匹配最小高电荷密度阴离子（F−）的封装腔，可在无蛋白侧链参与下选择性封装该阴离子并排斥更大卤离子；此识别可与下游构象响应耦合",
+    "transferable_principle_en": "An encapsulation cavity lined by a pre-organized array of metal ions and inwardly oriented phosphate/hydrogen-bond donor groups, whose size and charge density match the smallest high-charge-density anion (F-), can selectively encapsulate that anion and exclude larger halides without any protein side-chain involvement. This recognition can be coupled to downstream conformational responses.",
     "verification_quote": "how RNA can form a binding pocket selective for fluoride, while discriminating against larger halide ions"
    },
    "source_doi": "10.1038/nature11152",
@@ -126,7 +130,9 @@
   {
    "mechanism_id": "FRS-002",
    "name": "氟离子触发的适体域构象开关与阈值化基因响应（动态响应）",
+   "name_en": "Fluoride-triggered aptamer domain conformational switch with thresholded gene response (dynamic response)",
    "description": "氟核糖开关为基因组自然编码的构象开关：在 Bacillus cereus 氟核糖开关中，无配体适体域在溶液中基态三级结构与结合态相同，但瞬时访问一个低布居（约 1%）、短寿命（约 3 ms）的激发构象态，解开一个保守 'linchpin' 碱基对以发出转录终止信号；F− 结合别构抑制该激发态过程，从而激活下游基因转录（调控 crcB/Fluc 型氟输出蛋白表达）。这是分析物特异的阈值触发构象开关，区别于 SELEX 体外筛选适配体",
+   "description_en": "The fluoride riboswitch is a genomically encoded conformational switch: in the Bacillus cereus fluoride riboswitch, the ligand-free aptamer domain adopts the same ground-state tertiary structure in solution as the bound state, but transiently samples a low-populated (about 1%), short-lived (about 3 ms) excited conformational state that unzips a conserved 'linchpin' base pair to emit a transcription termination signal. F- binding allosterically suppresses this excited-state process, thereby activating downstream gene transcription (regulating expression of crcB/Fluc-type fluoride export proteins). This is an analyte-specific, threshold-triggered conformational switch, distinct from aptamers selected in vitro by SELEX.",
    "基本原理": "识别（F− 特异封装）与响应（构象态布居的别构调控）在同一 RNA 分子内耦合：F− 结合改变适体域激发态的布居，进而经表达平台（转录终止/通读）把分子识别转译为二元基因表达输出，实现阈值化、可逆、分析物特异的动态响应",
    "source": "literature",
    "ref_doi": "10.1038/nchembio.2427",
@@ -216,6 +222,7 @@
      }
     ],
     "transferable_principle": "分析物特异、阈值触发的构象开关：目标阴离子的结合抑制/诱导一处确定的结构转变（如保守碱基对/识别元件的解离），并据此门控下游输出，可把分子识别转译为二元、可逆的调控/开关响应",
+    "transferable_principle_en": "An analyte-specific, threshold-triggered conformational switch: binding of the target anion suppresses or induces a defined structural transition (such as dissociation of a conserved base pair or recognition element), and thereby gates the downstream output, translating molecular recognition into a binary, reversible regulatory/switch response.",
     "verification_quote": "Upon fluoride binding, this highly localized, fleeting process is allosterically suppressed, which activates transcription"
    },
    "source_doi": "10.1038/nchembio.2427",

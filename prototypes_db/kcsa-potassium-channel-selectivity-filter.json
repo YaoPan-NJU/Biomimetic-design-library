@@ -4,6 +4,7 @@
  "name_en": "KcsA Potassium Channel Selectivity Filter",
  "organism": {
   "scientific": "Streptomyces lividans（KcsA 钾离子通道，链霉菌源四聚体膜蛋白）",
+  "scientific_en": "Streptomyces lividans (KcsA potassium channel, a Streptomyces-derived tetrameric membrane protein)",
   "category": "微生物"
  },
  "biomimetic_dimension": "分子仿生",
@@ -31,7 +32,9 @@
   {
    "mechanism_id": "KCSA-001",
    "name": "选择性过滤器主链羰基氧笼对脱水 K⁺ 的几何配位（脱水选择性核心机制）",
+   "name_en": "Geometric coordination of dehydrated K+ by the main-chain carbonyl oxygen cage in the selectivity filter (core mechanism of dehydration selectivity)",
    "description": "KcsA 选择性过滤器以主链羰基氧原子围成的方反棱柱配位笼识别脱水 K⁺：羰基氧笼在每个 K⁺ 结合位点形成与水合水极为相似的方反棱柱配位，等效替代水合壳，使 K⁺ 在脱水后被几何与能量匹配地稳定配位",
+   "description_en": "The KcsA selectivity filter recognizes dehydrated K+ through a square antiprism coordination cage formed by main-chain carbonyl oxygen atoms. The carbonyl oxygen cage forms a square antiprism coordination at each K+ binding site that closely resembles the hydrated shell of ligated water, effectively replacing the hydration shell, so that K+ is stably coordinated with geometric and energetic matching after dehydration.",
    "基本原理": "离子须先脱去水合壳方可被选择性配位；预组织的主链羰基氧笼以与水合水几何相似的方反棱柱替代水合壳，对尺寸匹配的 K⁺ 提供等效配位稳定化，是'脱水选择性 + 几何配位'的核心",
    "source": "literature",
    "ref_doi": "10.1038/35102009",
@@ -121,6 +124,7 @@
      }
     ],
     "transferable_principle": "预组织、刚性且几何精确的配位笼可通过'先脱水、再以与水合水几何相似的配位替代水合壳'的方式，按尺寸与配位能匹配选择性识别目标离子",
+    "transferable_principle_en": "A preorganized, rigid, and geometrically precise coordination cage can selectively recognize target ions by size and coordination-energy matching, through a strategy of first dehydrating the ion and then replacing the hydration shell with coordination geometrically similar to ligated water.",
     "verification_quote": "Carbonyl oxygen atoms within the selectivity filter form a very similar square antiprism around each K+ binding site, as if to mimic the waters of hydration."
    },
    "source_doi": "10.1038/35102009",
@@ -138,7 +142,9 @@
   {
    "mechanism_id": "KCSA-002",
    "name": "刚性预组织选择性过滤器按尺寸-脱水能区分 K⁺ 与 Na⁺（结构基础先例）",
+   "name_en": "Size-dehydration-energy discrimination of K+ versus Na+ by the rigid preorganized selectivity filter (structural basis precedent)",
    "description": "KcsA 四聚体在孔外端托举一条仅约 12 Å 长的窄选择性过滤器，由签名序列主链羰基氧排列而成；该过滤器被结构约束保持张开，配位 K⁺ 但不配位更小的 Na⁺，是裸离子尺寸-脱水能选择性的经典结构生物学先例",
+   "description_en": "The KcsA tetramer carries a narrow selectivity filter only about 12 Å long at the extracellular end of the pore, formed by the main-chain carbonyl oxygen atoms of the signature sequence. The filter is held open by structural constraints, coordinating K+ but not the smaller Na+, and serves as a classic structural biology precedent of naked-ion size-dehydration-energy selectivity.",
    "基本原理": "窄而刚性的过滤器由结构约束预组织为张开构象，其羰基氧配位几何匹配 K⁺ 而不匹配更小的 Na⁺，从而在裸离子层面实现 K⁺/Na⁺ 选择",
    "source": "literature",
    "ref_doi": "10.1126/science.280.5360.69",
@@ -208,6 +214,7 @@
      }
     ],
     "transferable_principle": "刚性、由结构约束预组织张开的窄配位孔道可按离子尺寸与配位几何匹配区分目标离子与更小/失配离子，实现尺寸-脱水能选择",
+    "transferable_principle_en": "A rigid, structurally constrained and preorganized narrow coordination pore can distinguish target ions from smaller or mismatched ions by ion size and coordination geometry matching, thereby achieving size-dehydration-energy selectivity.",
     "verification_quote": "Main chain carbonyl oxygen atoms from the K+ channel signature sequence line the selectivity filter, which is held open by structural constraints to coordinate K+ ions but not smaller Na+ ions."
    },
    "source_doi": "10.1126/science.280.5360.69",

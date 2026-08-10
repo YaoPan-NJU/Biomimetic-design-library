@@ -4,6 +4,7 @@
   "name_en": "FABP4 Fatty Acid / PFAS Binding Protein",
   "organism": {
     "scientific": "Homo sapiens（人源 FABP4，脂肪细胞型脂肪酸结合蛋白）",
+    "scientific_en": "Homo sapiens (human FABP4, adipocyte-type fatty acid binding protein)",
     "category": "动物"
   },
   "biomimetic_dimension": "分子仿生",
@@ -31,7 +32,9 @@
     {
       "mechanism_id": "FABP4-001",
       "name": "埋藏疏水腔与羧酸根极性锚对全氟辛酸的双位点结合",
+      "name_en": "Two-site binding of perfluorooctanoic acid via a buried hydrophobic cavity and a carboxylate polar anchor",
       "description": "人源 FABP4 以β桶围成的埋藏疏水腔结合 PFOA；PFOA 在腔内占据主、次两个分离位点：主位点羧酸根由 Arg126 与 Tyr128 氢键（并有 Arg106 水介导氢键）锚定，Ala75、Thr29、Ala33、Phe16 经烃基侧链提供疏水接触；次位点羧酸根与 Thr29 氢键。配体结合诱导 Phe57 由 apo 闭合转为开放构象以扩大疏水腔",
+      "description_en": "Human FABP4 binds PFOA through a buried hydrophobic cavity enclosed by a beta-barrel. PFOA occupies two distinct sites in the cavity: at the primary site the carboxylate is anchored by hydrogen bonds to Arg126 and Tyr128 (with an additional water-mediated hydrogen bond to Arg106), while Ala75, Thr29, Ala33, and Phe16 provide hydrophobic contacts via their hydrocarbon side chains; at the secondary site the carboxylate hydrogen bonds to Thr29. Ligand binding induces Phe57 to switch from the closed apo conformation to an open conformation, expanding the hydrophobic cavity.",
       "基本原理": "埋藏疏水腔容纳全氟碳尾链（范德华/疏水效应），预组织的阳离子与氢键给体（Arg/Tyr 侧链）方向性锚定羧酸根头基；头基锚定与尾链疏水容纳的组合使两亲性全氟羧酸在无金属参与下获得低微摩尔级结合",
       "source": "literature",
       "ref_doi": "10.1021/jacsau.5c00504",
@@ -106,6 +109,7 @@
           }
         ],
         "transferable_principle": "埋藏疏水腔 + 与羧酸根几何互补的预组织阳离子/氢键给体锚 + 与尾链长度匹配的腔体几何，三者组合可在无金属参与下高亲和结合'极性头基 + 疏水/氟化尾链'型两亲性阴离子",
+        "transferable_principle_en": "The combination of a buried hydrophobic cavity, a pre-organized cationic/hydrogen-bond donor anchor geometrically complementary to the carboxylate, and a cavity geometry matched to the tail length enables high-affinity binding. This design can bind amphiphilic anions of the 'polar head group plus hydrophobic/fluorinated tail' type without metal participation.",
         "verification_quote": "At the “primary site”, the carboxylate group is stabilized through hydrogen bonding with Arg 126 and Tyr 128"
       },
       "source_doi": "10.1021/jacsau.5c00504",
@@ -124,7 +128,9 @@
     {
       "mechanism_id": "FABP4-002",
       "name": "全氟羧酸结合的链长单调依赖与腔体几何容纳",
+      "name_en": "Monotonic chain-length dependence of perfluorocarboxylic acid binding and geometric accommodation in the cavity",
       "description": "全氟羧酸（PFCA）与 FABP4 的亲和力随全氟碳链链长单调增加：长链 PFTeDA/PFTrDA/PFDoA（C12-C14）的解离常数低于 1 μM，短链 PFCA 显著更弱但仍可测且强于非氟化类似物；长链在腔内需弯折容纳。结合增强源于更大疏水表面积与范德华接触，与血清白蛋白及肝型 FABP 的既有报道一致",
+      "description_en": "The affinity of perfluorocarboxylic acids (PFCAs) for FABP4 increases monotonically with perfluorocarbon chain length: long-chain PFTeDA/PFTrDA/PFDoA (C12-C14) show dissociation constants below 1 uM, while short-chain PFCAs bind significantly more weakly yet remain measurable and stronger than their non-fluorinated analogs. Long chains must bend to be accommodated in the cavity. The enhanced binding stems from a larger hydrophobic surface area and van der Waals contacts, consistent with previous reports on serum albumin and liver-type FABP.",
       "基本原理": "腔体结合器对两亲性阴离子的亲和力随疏水/氟化尾链的表面积单调放大（范德华接触与疏水效应）；链长分辨来自腔体几何匹配而非头基化学特异性，故该机制本身不提供对某一链长的特异选择性",
       "source": "literature",
       "ref_doi": "10.1021/jacsau.5c00504",
@@ -199,6 +205,7 @@
           }
         ],
         "transferable_principle": "腔体结合器中两亲性阴离子的亲和力随疏水/氟化尾链表面积单调增加（范德华接触），链长分辨本质是腔体几何匹配问题而非头基特异识别",
+        "transferable_principle_en": "In cavity-based binders, the affinity of amphiphilic anions increases monotonically with the surface area of the hydrophobic/fluorinated tail (van der Waals contacts). Chain-length discrimination is essentially a matter of cavity geometric matching rather than specific head-group recognition.",
         "verification_quote": "the binding affinities of PFCAs are markedly dependent on chain length"
       },
       "source_doi": "10.1021/jacsau.5c00504",

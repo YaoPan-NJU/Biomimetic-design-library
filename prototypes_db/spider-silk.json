@@ -4,6 +4,7 @@
   "name_en": "Spider Silk",
   "organism": {
     "scientific": "Araneus diadematus",
+    "scientific_en": "Araneus diadematus",
     "category": "节肢动物"
   },
   "biomimetic_dimension": "结构仿生",
@@ -114,7 +115,9 @@
   "mechanisms": [
     {
       "name": "蜘蛛丝蛋白β-折叠与氨基酸残基配位吸附",
+      "name_en": "Spider silk protein beta-sheet and coordination adsorption by amino acid residues",
       "description": "ALD金属掺杂：通过金属配位键/共价键增强强度和韧性；f-CNTs机械剪切加载：韧性提高≈300%；SWCNTs/PEDOT-PSS涂层：韧性420 MJ/m³+导电率1077 S/cm；喂食石墨烯/CNT：蜘蛛产出增强力学性能的牵引丝",
+      "description_en": "ALD metal doping: strength and toughness are enhanced through metal coordination/covalent bonds; f-CNTs mechanical shear loading: toughness increased by ~300%; SWCNTs/PEDOT-PSS coating: toughness 420 MJ/m3 and conductivity 1077 S/cm; feeding graphene/CNT: spiders produce dragline silk with enhanced mechanical properties",
       "functional_groups": [
         "石墨烯表面基团",
         "配位/螯合位点",
@@ -159,7 +162,8 @@
             "source": "10.1002/advs.202103965"
           }
         ],
-        "transferable_principle": "蜘蛛丝蛋白β-折叠结构和氨基酸序列"
+        "transferable_principle": "蜘蛛丝蛋白β-折叠结构和氨基酸序列",
+        "transferable_principle_en": "Spider silk protein beta-sheet structure and amino acid sequence"
       },
       "source_page": 1,
       "source_doi": "10.1002/advs.202103965",
@@ -174,13 +178,16 @@
     },
     {
       "name": "静电纺丝纤维形貌调控因素",
+      "name_en": "Factors controlling electrospun fiber morphology",
       "description": "溶液粘度、表面张力、溶剂、电导率、介电性能；电压、喂料速度、接收距离、喷丝头直径；温度、湿度、气体介质",
+      "description_en": "Solution viscosity, surface tension, solvent, conductivity and dielectric properties; voltage, feed rate, collection distance and spinneret diameter; temperature, humidity and gas medium",
       "functional_groups": [],
       "source": "10.1016/j.cej.2021.128670",
       "ref_doi": "10.1007/s40242-021-0010-4",
       "verification": "partial",
       "causal_chain": {
         "transferable_principle": "基于机制: 静电纺丝纤维形貌调控因素",
+        "transferable_principle_en": "Based on mechanism: factors controlling electrospun fiber morphology",
         "pollutant_feature": {
           "text": "溶液粘度、表面张力、溶剂、电导率、介电性能；电压、喂料速度、接收距离、喷丝头直径；温度、湿度、气体介质",
           "basis": "llm_inferred"
@@ -230,7 +237,9 @@
     },
     {
       "name": "PAN/热解PAN Janus织物润湿性",
+      "name_en": "Wettability of PAN/pyrolyzed PAN Janus fabric",
       "description": "PAN侧超疏水，热解PAN侧超亲水",
+      "description_en": "The PAN side is superhydrophobic, while the pyrolyzed PAN side is superhydrophilic",
       "functional_groups": [
         "-S-（硫醚键）"
       ],
@@ -239,6 +248,7 @@
       "verification": "partial",
       "causal_chain": {
         "transferable_principle": "基于机制: PAN/热解PAN Janus织物润湿性",
+        "transferable_principle_en": "Based on mechanism: wettability of PAN/pyrolyzed PAN Janus fabric",
         "pollutant_feature": {
           "text": "PAN侧超疏水，热解PAN侧超亲水",
           "basis": "from_source",
@@ -310,13 +320,16 @@
     },
     {
       "name": "单向渗透三力竞争机制",
+      "name_en": "Three-force competition mechanism for unidirectional permeation",
       "description": "静水压(HP)+毛细力(CF)+疏水力(HF)共同决定液滴渗透行为",
+      "description_en": "Hydrostatic pressure (HP), capillary force (CF) and hydrophobic force (HF) jointly determine the droplet permeation behavior",
       "functional_groups": [],
       "source": "10.1016/j.cej.2021.128670",
       "ref_doi": "10.1007/s40242-021-0010-4",
       "verification": "partial",
       "causal_chain": {
         "transferable_principle": "基于机制: 单向渗透三力竞争机制",
+        "transferable_principle_en": "Based on mechanism: three-force competition mechanism for unidirectional permeation",
         "pollutant_feature": {
           "text": "静水压(HP)+毛细力(CF)+疏水力(HF)共同决定液滴渗透行为",
           "basis": "llm_inferred"
@@ -363,7 +376,9 @@
     },
     {
       "name": "PCL/Teflon AF核壳纤维超疏水/超疏油",
+      "name_en": "Superhydrophobic/superoleophobic PCL/Teflon AF core-shell fibers",
       "description": "超疏水且超疏油",
+      "description_en": "The fibers are both superhydrophobic and superoleophobic",
       "functional_groups": [
         "-O-（醚键）"
       ],
@@ -372,6 +387,7 @@
       "verification": "partial",
       "causal_chain": {
         "transferable_principle": "基于机制: PCL/Teflon AF核壳纤维超疏水/超疏油",
+        "transferable_principle_en": "Based on mechanism: superhydrophobic/superoleophobic PCL/Teflon AF core-shell fibers",
         "pollutant_feature": {
           "text": "超疏水且超疏油",
           "basis": "llm_inferred"
@@ -431,7 +447,9 @@
     },
     {
       "name": "Janus膜在膜蒸馏中的抗污染性能",
+      "name_en": "Antifouling performance of Janus membranes in membrane distillation",
       "description": "全疏水Janus膜同时具备抗油污染和抗表面活性剂润湿能力",
+      "description_en": "The all-hydrophobic Janus membrane simultaneously resists oil fouling and surfactant-induced wetting",
       "functional_groups": [
         "-S-（硫醚键）"
       ],
@@ -440,6 +458,7 @@
       "verification": "partial",
       "causal_chain": {
         "transferable_principle": "基于机制: Janus膜在膜蒸馏中的抗污染性能",
+        "transferable_principle_en": "Based on mechanism: antifouling performance of Janus membranes in membrane distillation",
         "pollutant_feature": {
           "text": "全疏水Janus膜同时具备抗油污染和抗表面活性剂润湿能力",
           "basis": "from_source",
@@ -511,7 +530,9 @@
     },
     {
       "name": "Janus膜水下气泡单向传输",
+      "name_en": "Unidirectional underwater bubble transport through Janus membranes",
       "description": "气泡从亲水向超疏水方向单向渗透",
+      "description_en": "Bubbles permeate unidirectionally from the hydrophilic side toward the superhydrophobic side",
       "functional_groups": [
         "-S-（硫醚键）"
       ],
@@ -520,6 +541,7 @@
       "verification": "partial",
       "causal_chain": {
         "transferable_principle": "基于机制: Janus膜水下气泡单向传输",
+        "transferable_principle_en": "Based on mechanism: unidirectional underwater bubble transport through Janus membranes",
         "pollutant_feature": {
           "text": "气泡从亲水向超疏水方向单向渗透",
           "basis": "llm_inferred"
@@ -580,7 +602,9 @@
     },
     {
       "name": "Janus膜油水分离性能优势",
+      "name_en": "Advantages of Janus membranes in oil-water separation",
       "description": "双层Janus材料油水分离效率优于单层疏水/亲油膜",
+      "description_en": "Bilayer Janus materials achieve higher oil-water separation efficiency than single-layer hydrophobic/oleophilic membranes",
       "functional_groups": [
         "-S-（硫醚键）"
       ],
@@ -589,6 +613,7 @@
       "verification": "partial",
       "causal_chain": {
         "transferable_principle": "基于机制: Janus膜油水分离性能优势",
+        "transferable_principle_en": "Based on mechanism: advantages of Janus membranes in oil-water separation",
         "pollutant_feature": {
           "text": "双层Janus材料油水分离效率优于单层疏水/亲油膜",
           "basis": "from_source",
@@ -659,7 +684,9 @@
     },
     {
       "name": "抗污染机制 Antifouling mechanism",
+      "name_en": "Antifouling mechanism",
       "description": "超亲水/水下超疏油→Cassie态→油滴不粘附→浮力上升→简单水冲洗恢复",
+      "description_en": "A superhydrophilic/underwater superoleophobic surface creates a Cassie state, so oil droplets do not adhere and rise by buoyancy; the surface is restored by simple water rinsing",
       "functional_groups": [
         "-S-（硫醚键）",
         "-O-（醚键）"
@@ -731,6 +758,7 @@
           }
         ],
         "transferable_principle": "蜘蛛丝的亲水+弹性组合是天然的抗污策略，可启发抗污涂层设计",
+        "transferable_principle_en": "The combination of hydrophilicity and elasticity in spider silk is a natural antifouling strategy that can inspire antifouling coating design",
         "verification_quote": "following successful oil coalescence, larger oil droplets were efficiently rejected by the pores of skin layer; these rejected droplets then directly detached from the superhydrophilic surface without deposition or adhesion due to combined effects of size-sieving and superwetting",
         "source_doi": "10.1016/j.seppur.2021.119824",
         "source_locator": "p.9 / Section 3.3.2"
@@ -744,7 +772,9 @@
     },
     {
       "name": "纳米乳液分离挑战——粘度+表面活性剂",
+      "name_en": "Challenges in nanoemulsion separation: viscosity and surfactants",
       "description": "高粘度油→粘附膜面→增加污染; 高表面活性剂→油水界面坚实层→静电排斥→阻止聚并",
+      "description_en": "High-viscosity oil adheres to the membrane surface and increases fouling; a high surfactant concentration forms a rigid oil-water interfacial layer whose electrostatic repulsion prevents coalescence",
       "functional_groups": [],
       "source": "literature",
       "ref_doi": "10.1016/j.seppur.2021.119824",
@@ -759,6 +789,7 @@
       "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
       "causal_chain": {
         "transferable_principle": "基于机制: 纳米乳液分离挑战——粘度+表面活性剂",
+        "transferable_principle_en": "Based on mechanism: challenges in nanoemulsion separation: viscosity and surfactants",
         "pollutant_feature": {
           "text": "高粘度油→粘附膜面→增加污染; 高表面活性剂→油水界面坚实层→静电排斥→阻止聚并",
           "basis": "llm_inferred"
@@ -799,7 +830,9 @@
     },
     {
       "name": "Cr(VI) XPS吸附机制",
+      "name_en": "Cr(VI) XPS adsorption mechanism",
       "description": "Cr-N(III) 575.46+585.03eV; Cr-O(VI) 576.27+586.31eV; Cr=O(VI) 577.72+587.59eV; 氨基质子化-NH₃⁺(401.2eV)",
+      "description_en": "Cr-N(III) 575.46+585.03 eV; Cr-O(VI) 576.27+586.31 eV; Cr=O(VI) 577.72+587.59 eV; protonated amino groups -NH3+ (401.2 eV)",
       "functional_groups": [
         "-S-（硫醚键）",
         "-NH-（亚氨基）",
@@ -812,6 +845,7 @@
       "verification_quote": "CNF/PEI@GOA had a utilization rate of 100% within 40 min. The excellent porosity of the structure and specific surface area resulted in its ability to rapidly adsorb heavy metal ions",
       "causal_chain": {
         "transferable_principle": "基于机制: Cr(VI) XPS吸附机制",
+        "transferable_principle_en": "Based on mechanism: Cr(VI) XPS adsorption mechanism",
         "pollutant_feature": {
           "text": "Cr-N(III) 575.46+585.03eV; Cr-O(VI) 576.27+586.31eV; Cr=O(VI) 577.72+587.59eV; 氨基质子化-NH₃⁺(401.2eV)",
           "basis": "from_source",
@@ -869,7 +903,9 @@
     },
     {
       "name": "Cd(II) XPS吸附机制",
+      "name_en": "Cd(II) XPS adsorption mechanism",
       "description": "Cd-N 411.36eV(42.95%)+404.50eV(37.72%); Cd-O 404.65eV(57.05%)+531.28eV(39.15%)",
+      "description_en": "Cd-N 411.36 eV (42.95%) + 404.50 eV (37.72%); Cd-O 404.65 eV (57.05%) + 531.28 eV (39.15%)",
       "functional_groups": [
         "-S-（硫醚键）",
         "-O-（醚键）"
@@ -880,6 +916,7 @@
       "verification_quote": "CNF/PEI@GOA was noted to have rich balanced amphoteric functional groups with a 6.93 mmol g-1 amino density and a 5.81 mmol g-1 carboxyl density",
       "causal_chain": {
         "transferable_principle": "基于机制: Cd(II) XPS吸附机制",
+        "transferable_principle_en": "Based on mechanism: Cd(II) XPS adsorption mechanism",
         "pollutant_feature": {
           "text": "Cd-N 411.36eV(42.95%)+404.50eV(37.72%); Cd-O 404.65eV(57.05%)+531.28eV(39.15%)",
           "basis": "llm_inferred"
@@ -927,7 +964,9 @@
     },
     {
       "name": "纤维形成——疏水基底",
+      "name_en": "Fiber formation on a hydrophobic substrate",
       "description": "CNF/PEI在PTFE板接触角118.5°; GO接触角121.7°; 液-液界面接触吸引但不混合",
+      "description_en": "CNF/PEI on a PTFE plate gives a contact angle of 118.5 degrees; GO gives a contact angle of 121.7 degrees; at the liquid-liquid interface the liquids contact and attract but do not mix",
       "functional_groups": [
         "PTFE氟碳基团",
         "-O-（醚键）",
@@ -947,6 +986,7 @@
       "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
       "causal_chain": {
         "transferable_principle": "基于机制: 纤维形成——疏水基底",
+        "transferable_principle_en": "Based on mechanism: fiber formation on a hydrophobic substrate",
         "pollutant_feature": {
           "text": "CNF/PEI在PTFE板接触角118.5°; GO接触角121.7°; 液-液界面接触吸引但不混合",
           "basis": "from_source",
@@ -998,7 +1038,9 @@
     },
     {
       "name": "专化-协同机制 Specialization and cooperation mechanism",
+      "name_en": "Specialization and cooperation mechanism",
       "description": "Cd(II): 协同(氨基+羧基); Cr(VI): 专化(氨基主导); Cu/Pb: 专化(羧基主导)",
+      "description_en": "Cd(II): cooperation (amino + carboxyl groups); Cr(VI): specialization (amino-dominated); Cu/Pb: specialization (carboxyl-dominated)",
       "functional_groups": [
         "-S-（硫醚键）",
         "-O-（醚键）",
@@ -1011,6 +1053,7 @@
       "verification_quote": "the large amount of carboxyl groups (4.96 and 5.81 mmol g-1, respectively) in GO ensured efficient removal of cationic heavy metal ions (Cd(II), Cu(II), and Pb(II)), while the PEI with amino groups ensured removal of anionic heavy metal ions (Cr(VI))",
       "causal_chain": {
         "transferable_principle": "基于机制: 专化-协同机制 Specialization and cooperation mechanism",
+        "transferable_principle_en": "Based on mechanism: specialization and cooperation mechanism",
         "pollutant_feature": {
           "text": "Cd(II): 协同(氨基+羧基); Cr(VI): 专化(氨基主导); Cu/Pb: 专化(羧基主导)",
           "basis": "from_source",
@@ -1076,7 +1119,9 @@
     },
     {
       "name": "蜘蛛丝仿生灵感来源 Spider silk biomimetic inspiration",
+      "name_en": "Spider silk biomimetic inspiration",
       "description": "spidroin两亲性(疏水丙氨酸+亲水甘氨酸/谷氨酰胺/脯氨酸/丝氨酸)→超分子自组装→纤维形成",
+      "description_en": "Spidroin amphiphilicity (hydrophobic alanine plus hydrophilic glycine/glutamine/proline/serine) drives supramolecular self-assembly and fiber formation",
       "functional_groups": [
         "-CONH-（酰胺键）",
         "-O-（醚键）",
@@ -1088,6 +1133,7 @@
       "verification_quote": "Spider silk is a typical natural example of the production of fibers from macromolecules in aqueous solution, which is possible mainly due to the amphiphilicity of spidroin (hydrophobicity of alanine and hydrophilicity of other amino acids",
       "causal_chain": {
         "transferable_principle": "基于机制: 蜘蛛丝仿生灵感来源 Spider silk biomimetic inspiration",
+        "transferable_principle_en": "Based on mechanism: spider silk biomimetic inspiration",
         "pollutant_feature": {
           "text": "spidroin两亲性(疏水丙氨酸+亲水甘氨酸/谷氨酰胺/脯氨酸/丝氨酸)→超分子自组装→纤维形成",
           "basis": "from_source",
@@ -1156,7 +1202,9 @@
     },
     {
       "name": "纳米布沙漠甲虫雾水收集机制",
+      "name_en": "Fog water collection mechanism of the Namib Desert beetle",
       "description": "亲水凸起捕获雾滴，疏水凹槽定向运输",
+      "description_en": "Hydrophilic bumps capture fog droplets, while hydrophobic grooves transport them directionally",
       "functional_groups": [],
       "source": "literature",
       "ref_doi": "10.1002/adfm.202200359",
@@ -1171,6 +1219,7 @@
       "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
       "causal_chain": {
         "transferable_principle": "基于机制: 纳米布沙漠甲虫雾水收集机制",
+        "transferable_principle_en": "Based on mechanism: fog water collection mechanism of the Namib Desert beetle",
         "pollutant_feature": {
           "text": "亲水凸起捕获雾滴，疏水凹槽定向运输",
           "basis": "llm_inferred"
@@ -1209,7 +1258,9 @@
     },
     {
       "name": "铀酰离子配位化学",
+      "name_en": "Coordination chemistry of uranyl ions",
       "description": "UO2^2+线性对称[O=U=O]^2+, U-O键长1.76 Å, 4-6个配体在赤道面配位, 四方/五方/六方双锥",
+      "description_en": "UO2 2+ is a linear symmetric [O=U=O] 2+ ion with a U-O bond length of 1.76 Å; 4-6 ligands coordinate in the equatorial plane, forming square, pentagonal and hexagonal bipyramids",
       "functional_groups": [
         "-O-（醚键）",
         "配位/螯合位点"
@@ -1219,6 +1270,7 @@
       "verification": "partial",
       "causal_chain": {
         "transferable_principle": "基于机制: 铀酰离子配位化学",
+        "transferable_principle_en": "Based on mechanism: coordination chemistry of uranyl ions",
         "pollutant_feature": {
           "text": "UO2^2+线性对称[O=U=O]^2+, U-O键长1.76 Å, 4-6个配体在赤道面配位, 四方/五方/六方双锥",
           "basis": "llm_inferred",
@@ -1275,7 +1327,9 @@
     },
     {
       "name": "酰胺肟配位模式",
+      "name_en": "Amidoxime coordination modes",
       "description": "四种结合模式：单齿(单氧配位)/三齿(环状酰亚胺二肟)/侧向η2(开链酰胺肟)/螯合",
+      "description_en": "Four binding modes: monodentate (single-oxygen coordination), tridentate (cyclic imide dioxime), side-on eta2 (open-chain amidoxime), and chelating",
       "functional_groups": [
         "-CONH-（酰胺键）",
         "配位/螯合位点"
@@ -1293,6 +1347,7 @@
       "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
       "causal_chain": {
         "transferable_principle": "基于机制: 酰胺肟配位模式",
+        "transferable_principle_en": "Based on mechanism: amidoxime coordination modes",
         "pollutant_feature": {
           "text": "四种结合模式：单齿(单氧配位)/三齿(环状酰亚胺二肟)/侧向η2(开链酰胺肟)/螯合",
           "basis": "from_source",
@@ -1341,7 +1396,9 @@
     },
     {
       "name": "配体优化六大策略",
+      "name_en": "Six strategies for ligand optimization",
       "description": "(1)高含量开链AO (2)增加AO亲水性 (3)高柔性配体链 (4)合适PAO链长 (5)引入给电子取代基 (6)空间协同螯合",
+      "description_en": "(1) high content of open-chain AO; (2) increase AO hydrophilicity; (3) highly flexible ligand chains; (4) appropriate PAO chain length; (5) introducing electron-donating substituents; (6) sterically cooperative chelation",
       "functional_groups": [
         "-O-（醚键）",
         "配位/螯合位点"
@@ -1351,6 +1408,7 @@
       "verification": "partial",
       "causal_chain": {
         "transferable_principle": "基于机制: 配体优化六大策略",
+        "transferable_principle_en": "Based on mechanism: six strategies for ligand optimization",
         "pollutant_feature": {
           "text": "(1)高含量开链AO (2)增加AO亲水性 (3)高柔性配体链 (4)合适PAO链长 (5)引入给电子取代基 (6)空间协同螯合",
           "basis": "from_source",
@@ -1402,7 +1460,9 @@
     },
     {
       "name": "双功能协同策略",
+      "name_en": "Bifunctional synergistic strategy",
       "description": "三种机制：(1)第二配体提供额外配位位点 (2)增强AO碱性→更强U(VI)络合 (3)酸性基团解离碳酸盐→释放UO2^2+",
+      "description_en": "Three mechanisms: (1) a second ligand provides additional coordination sites; (2) enhanced AO basicity strengthens U(VI) complexation; (3) acidic groups dissociate carbonate and release UO2 2+",
       "functional_groups": [
         "-O-（醚键）",
         "配位/螯合位点"
@@ -1412,6 +1472,7 @@
       "verification": "partial",
       "causal_chain": {
         "transferable_principle": "基于机制: 双功能协同策略",
+        "transferable_principle_en": "Based on mechanism: bifunctional synergistic strategy",
         "pollutant_feature": {
           "text": "三种机制：(1)第二配体提供额外配位位点 (2)增强AO碱性→更强U(VI)络合 (3)酸性基团解离碳酸盐→释放UO2^2+",
           "basis": "from_source",
@@ -1468,7 +1529,9 @@
     },
     {
       "name": "离子印迹策略——三种改进方向",
+      "name_en": "Ion imprinting strategy: three improvement directions",
       "description": "(1)高孔隙材料增加可及位点 (2)2D/表面印迹提高可及性 (3)强化功能基-铀酰配位",
+      "description_en": "(1) highly porous materials increase accessible sites; (2) 2D/surface imprinting improves accessibility; (3) strengthening functional group-uranyl coordination",
       "functional_groups": [
         "配位/螯合位点"
       ],
@@ -1485,6 +1548,7 @@
       "evidence_note": "V1-A: llm_inferred mechanism, not yet source-verified",
       "causal_chain": {
         "transferable_principle": "基于机制: 离子印迹策略——三种改进方向",
+        "transferable_principle_en": "Based on mechanism: ion imprinting strategy: three improvement directions",
         "pollutant_feature": {
           "text": "(1)高孔隙材料增加可及位点 (2)2D/表面印迹提高可及性 (3)强化功能基-铀酰配位",
           "basis": "llm_inferred"
@@ -1523,7 +1587,9 @@
     },
     {
       "name": "电化学提取三阶段机理",
+      "name_en": "Three-stage mechanism of electrochemical extraction",
       "description": "电迁移→电吸附→电化学沉积; UO2^2+→U(IV)还原沉淀→突破热力学平衡",
+      "description_en": "Electromigration, then electrosorption, then electrochemical deposition; UO2 2+ is reduced and precipitated as U(IV), breaking the thermodynamic equilibrium",
       "functional_groups": [
         "-O-（醚键）"
       ],
@@ -1532,6 +1598,7 @@
       "verification": "partial",
       "causal_chain": {
         "transferable_principle": "基于机制: 电化学提取三阶段机理",
+        "transferable_principle_en": "Based on mechanism: three-stage mechanism of electrochemical extraction",
         "pollutant_feature": {
           "text": "电迁移→电吸附→电化学沉积; UO2^2+→U(IV)还原沉淀→突破热力学平衡",
           "basis": "from_source",
@@ -1590,7 +1657,9 @@
     },
     {
       "name": "MOF光催化协同机制",
+      "name_en": "MOF photocatalytic synergistic mechanism",
       "description": "MOF SCU-19(POM+MOF)：三重机制——配体配位+光催化还原+部分化学还原",
+      "description_en": "MOF SCU-19 (POM + MOF) operates through a triple mechanism: ligand coordination, photocatalytic reduction and partial chemical reduction",
       "functional_groups": [
         "-S-（硫醚键）",
         "-O-（醚键）",
@@ -1602,6 +1671,7 @@
       "verification_quote": "ogether to substantially increase \nthe uranium extraction efficiency [133]. As shown in Fig. 8a, this new \nmaterial MOF SCU-19 presented three distinct mechanisms involving \nthe ligand coordination originating its exposed oxoatoms, the photo­\ncatalytic reduction caused by the low-valent Mo atoms in the POM, and \nthe partial chemical reduction. The combined actions resulted in a \nhigher U(VI) uptak",
       "causal_chain": {
         "transferable_principle": "基于机制: MOF光催化协同机制",
+        "transferable_principle_en": "Based on mechanism: MOF photocatalytic synergistic mechanism",
         "pollutant_feature": {
           "text": "MOF SCU-19(POM+MOF)：三重机制——配体配位+光催化还原+部分化学还原",
           "basis": "from_source",

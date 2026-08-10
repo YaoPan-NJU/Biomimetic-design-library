@@ -4,6 +4,7 @@
  "name_en": "Lignin Peroxidase (White-Rot Fungi, EC 1.11.1.14)",
  "organism": {
   "scientific": "Phanerochaete chrysosporium（木质素过氧化物酶 LiP，同工酶 H2/H8；白腐真菌，PDB 1B85 SOURCE 记 ORGANISM_COMMON: WHITE-ROT FUNGUS）",
+  "scientific_en": "Phanerochaete chrysosporium (lignin peroxidase LiP, isozymes H2/H8; white-rot fungus, PDB 1B85 SOURCE records ORGANISM_COMMON: WHITE-ROT FUNGUS)",
   "category": "微生物"
  },
  "biomimetic_dimension": "分子仿生",
@@ -31,7 +32,9 @@
   {
    "mechanism_id": "LIP-001",
    "name": "藜芦醇氧化还原介体对非酚型芳香底物的一电子自由基氧化",
+   "name_en": "One-electron radical oxidation of non-phenolic aromatic substrates via the veratryl alcohol redox mediator",
    "description": "LiP（白腐真菌 P. chrysosporium 分泌的胞外血红素糖蛋白过氧化物酶，PDB KEYWDS: HEME PROTEIN, GLYCO PROTEIN, OXIDOREDUCTASE）以 H2O2 为共底物激活血红素铁，生成高价血红素中间体（化合物 I，机理层命名），经一电子转移氧化内源小分子介体藜芦醇（veratryl alcohol, 3,4-二甲氧基苄醇）；介体自由基再经扩散或表面 relay 将一电子氧化传递给难以进入埋藏血红素口袋的非酚型（单甲氧基化）芳香底物与木质素聚合物，完成非特异自由基氧化降解",
+   "description_en": "LiP (an extracellular heme glycoprotein peroxidase secreted by the white-rot fungus P. chrysosporium; PDB KEYWDS: HEME PROTEIN, GLYCO PROTEIN, OXIDOREDUCTASE) uses H2O2 as a co-substrate to activate the heme iron, generating a high-valent heme intermediate (compound I, named at the mechanism level). Via one-electron transfer, it oxidizes the endogenous small-molecule mediator veratryl alcohol (3,4-dimethoxybenzyl alcohol). The resulting mediator radical then transfers one-electron oxidation to non-phenolic (monomethoxy-substituted) aromatic substrates and lignin polymers that cannot easily access the buried heme pocket, either by diffusion or via a surface relay, completing non-specific radical oxidative degradation.",
    "基本原理": "埋藏的高氧化电位血红素中心与表面可及的小分子氧化还原介体、一电子转移自由基化学耦合：酶只需氧化小分子介体，介体自由基再 relay 氧化大分子/难进入底物，从而以介体 relay 扩展氧化可达范围，实现温和条件下对顽固芳香聚合物的非特异氧化降解",
    "source": "literature",
    "ref_doi": "10.1021/bi00489a005",
@@ -152,6 +155,7 @@
      }
     ],
     "transferable_principle": "埋藏高氧化电位血红素氧化还原中心 + 表面可及小分子氧化还原介体 + 一电子转移自由基化学，构成'介体 relay 非特异自由基氧化'体系：酶只需氧化小分子介体，介体自由基经扩散或表面 relay 氧化大分子/难溶底物；该'氧化还原中心—介体 relay'组合是可迁移的降解催化原理",
+    "transferable_principle_en": "A buried high-redox-potential heme redox center, a surface-accessible small-molecule redox mediator, and one-electron transfer radical chemistry together form a 'mediator relay non-specific radical oxidation' system: the enzyme only needs to oxidize the small-molecule mediator, and the mediator radical oxidizes large or poorly soluble substrates by diffusion or surface relay. This 'redox center-mediator relay' combination is a transferable principle for degradative catalysis.",
     "verification_quote": "Oxidation of monomethoxylated aromatic compounds by lignin peroxidase: role of veratryl alcohol in lignin biodegradation"
    },
    "source_doi": "10.1021/bi00489a005",
@@ -170,7 +174,9 @@
   {
    "mechanism_id": "LIP-002",
    "name": "表面色氨酸 171 自由基 relay 位点（W171 氧化还原活性位点）",
+   "name_en": "Surface tryptophan 171 radical relay site (W171 redox-active site)",
    "description": "PDB 1LLP（同工酶 H2，1.70 Å）在表面色氨酸 171 的 Cβ 上解析出羟基，提示该色氨酸在氧化还原循环中形成自由基（Choinowski 1999 JMB 标题：a novel radical site formed during the redox cycle）；W171F 突变消除该氧化还原活性色氨酸并改变反应机制（Blodig 2001 JMB 标题）。Trp171 受高价血红素中间体氧化后在蛋白表面 relay 电子，使难以进入埋藏活性口袋的大分子底物经表面途径完成一电子氧化",
+   "description_en": "In PDB 1LLP (isozyme H2, 1.70 Å), a hydroxyl group was resolved at the C-beta of surface tryptophan 171, suggesting that this tryptophan forms a radical during the redox cycle (Choinowski 1999, JMB title: a novel radical site formed during the redox cycle). The W171F mutation abolishes this redox-active tryptophan and alters the reaction mechanism (Blodig 2001, JMB title). After being oxidized by the high-valent heme intermediate, Trp171 relays electrons on the protein surface, enabling large-molecular-mass substrates that cannot easily enter the buried active pocket to undergo one-electron oxidation via the surface pathway.",
    "基本原理": "表面氧化还原活性色氨酸构成自由基 relay 位点，将埋藏血红素中心的氧化当量经蛋白表面 relay 至吸附于表面的大分子底物，扩展氧化可达范围；表面 relay 与介体 relay 互补，共同支撑对大分子/不溶性底物的氧化",
    "source": "literature",
    "ref_doi": "10.1006/jmbi.1998.2507",
@@ -246,6 +252,7 @@
      }
     ],
     "transferable_principle": "将氧化还原活性芳香氨基酸（色氨酸/酪氨酸）或其仿生类似物置于催化剂表面作为自由基 relay 位点，可把埋藏/束缚氧化还原中心的氧化当量 relay 至表面吸附的大分子底物；'表面自由基 relay 位点'是可迁移的界面催化原理",
+    "transferable_principle_en": "Placing a redox-active aromatic amino acid (tryptophan/tyrosine) or its biomimetic analog on the catalyst surface as a radical relay site allows the oxidizing equivalents of a buried or confined redox center to be relayed to large-molecular-mass substrates adsorbed on the surface. A 'surface radical relay site' is a transferable principle for interfacial catalysis.",
     "verification_quote": "reveals a hydroxy group on the C β of tryptophan 171: A novel radical site formed during the redox cycle"
    },
    "source_doi": "10.1006/jmbi.1998.2507",

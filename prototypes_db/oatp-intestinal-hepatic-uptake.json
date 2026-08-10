@@ -4,6 +4,7 @@
  "name_en": "OATP Organic Anion Transporting Polypeptides (Enterohepatic Vectorial Uptake)",
  "organism": {
   "scientific": "Homo sapiens OATP1B 转运体家族",
+  "scientific_en": "Homo sapiens OATP1B transporter family",
   "category": "动物"
  },
  "biomimetic_dimension": "分子仿生",
@@ -31,7 +32,9 @@
   {
    "mechanism_id": "OATP-001",
    "name": "MFS 折叠两亲阴离子识别与抗衡离子交换向量摄取机制",
+   "name_en": "MFS-fold amphipathic anion recognition and counterion-exchange vectorial uptake mechanism",
    "description": "人源 OATP1B1/1B3 为肝窦摄取转运体，采 MFS 折叠（12 条跨膜螺旋组成伪对称 N-bundle TM1-6 与 C-bundle TM7-12），两束间为大型中央底物结合腔；OATP1B1–E1S（雌酮-3-硫酸酯）复合物（PDB 8PHW）显示两亲有机阴离子结合于 C-bundle 约跨膜中部的漏斗形腔：硫酸根头基位于腔顶，与 Tyr422、Tyr425、Gln541、Asn544 形成氢键，并经 Arg633 与 Tyr422 的阳离子-π 作用间接稳定，甾体骨架由芳香/疏水口袋壁以范德华接触容纳；OATP1B3（PDB 8PG0）于保守签名基序结合碳酸氢根并含普遍存在于 pH 依赖型 OATP 的组氨酸残基，OATP 以胞内碳酸氢根为抗衡离子按交换模式（电中性或可能生电）经 rocker-switch 交替接入完成向量摄取，活性受酸性胞外 pH 增强",
+   "description_en": "Human OATP1B1/1B3 are hepatic sinusoidal uptake transporters that adopt the MFS fold (12 transmembrane helices forming a pseudo-symmetric N-bundle TM1-6 and a C-bundle TM7-12), with a large central substrate-binding cavity between the two bundles. The OATP1B1-E1S (estrone-3-sulfate) complex (PDB 8PHW) shows the amphipathic organic anion bound in a funnel-shaped cavity at approximately the transmembrane middle of the C-bundle: the sulfate head group sits at the top of the cavity, forming hydrogen bonds with Tyr422, Tyr425, Gln541, and Asn544, and is further stabilized indirectly by cation-pi interactions between Arg633 and Tyr422, while the steroid scaffold is accommodated by the aromatic/hydrophobic pocket walls via van der Waals contacts. OATP1B3 (PDB 8PG0) binds bicarbonate at a conserved signature motif and contains histidine residues commonly present in pH-dependent OATPs. OATPs use intracellular bicarbonate as the counterion in an exchange mode (electroneutral or possibly electrogenic), completing vectorial uptake via rocker-switch alternating access, with activity enhanced by acidic extracellular pH.",
    "基本原理": "阴离子头基方向性锚定（氢键阵列 + 阳离子辅助稳定）与疏水口袋壁尾链容纳的双要素识别两亲有机阴离子；抗衡离子交换驱动的交替接入耦合极化膜定位的向量梯度，使底物可逆浓度梯度被摄入，构成细胞膜域层面的分子识别与传质一体化",
    "source": "literature",
    "ref_doi": "10.1038/s41467-023-41552-8",
@@ -106,6 +109,7 @@
      }
     ],
     "transferable_principle": "两亲阴离子双要素识别（阴离子头基氢键锚定辅以阳离子稳定 + 疏水口袋壁尾链容纳）组合抗衡离子交换驱动的交替接入与极化定位，可逆浓度梯度在特定膜域高效摄取两亲有机阴离子；识别基序与梯度驱动释放-再生的逻辑可分离移植",
+    "transferable_principle_en": "The two-element recognition of amphipathic anions (anionic head group anchored by hydrogen bonding with additional cation stabilization, plus tail-chain accommodation by hydrophobic pocket walls) combined with counterion-exchange-driven alternating access and polarized localization enables efficient uptake of amphipathic organic anions against a concentration gradient in specific membrane domains; the recognition motif and the gradient-driven release-regeneration logic can be separated and transferred independently.",
     "verification_quote": "The OATP1B1 structure revealed an inward-open conformation with a large, central cavity exposed to the hepatocyte cytosol"
    },
    "source_doi": "10.1038/s41467-023-41552-8",
@@ -126,7 +130,9 @@
   {
    "mechanism_id": "OATP-002",
    "name": "文献记载的 OATP1B1/1B3 介导全氟烷基酸（含 C8 PFCA/PFOA）转运与肠肝循环贡献",
+   "name_en": "Literature-documented OATP1B1/1B3-mediated transport of perfluoroalkyl acids (including C8 PFCA/PFOA) and contribution to the enterohepatic circulation",
    "description": "Zhao 等（2017）以 CHO 与 HEK293 表达系统证明人源 OATP1B1、OATP1B3 与 OATP2B1 可转运 PFBS、PFHxS、PFOS 与 8-9 碳全氟烷基羧酸（C8 即 PFOA、C9 即 PFNA）；PFAS 以钠依赖（NTCP）与钠非依赖（OATP）双路进入肝细胞；8-9 碳 PFCA 优先分布于啮齿类肝脏；OATP 与 NTCP、肠道 ASBT 共同构成这些全氟烷基酸的肠肝循环，贡献于人血清消除半衰期的延长",
+   "description_en": "Zhao et al. (2017) demonstrated using CHO and HEK293 expression systems that human OATP1B1, OATP1B3, and OATP2B1 can transport PFBS, PFHxS, PFOS, and C8-C9 perfluoroalkyl carboxylic acids (C8 being PFOA, C9 being PFNA). PFAS enter hepatocytes via both sodium-dependent (NTCP) and sodium-independent (OATP) routes. C8-C9 PFCAs are preferentially distributed to the rodent liver. OATP together with NTCP and intestinal ASBT constitutes the enterohepatic circulation of these perfluoroalkyl acids, contributing to the prolongation of their elimination half-lives in human serum.",
    "基本原理": "全氟烷基阴离子属两亲有机阴离子，肝窦摄取转运体（OATP1B1/1B3）识别其'阴离子头基 + 疏水/全氟尾链'双要素而介导肝摄取；肝摄取→胆汁排泄→肠道重吸收→门静脉回肝的循环环流使已排泄部分被反复回收，是长半衰期与肝优先分布的转运基础",
    "source": "literature",
    "ref_doi": "10.1093/toxsci/kfw236",
@@ -196,6 +202,7 @@
      }
     ],
     "transferable_principle": "含 C8 PFCA（PFOA）在内的全氟烷基阴离子为 OATP1B1/1B3 底物的文献证据，表明'阴离子头基锚定 + 疏水腔'基序可在转运体层面捕获全氟烷基阴离子；肠肝循环环流进一步提供系统级'多级向量富集与释放-回输'参考架构",
+    "transferable_principle_en": "Literature evidence that perfluoroalkyl anions, including C8 PFCA (PFOA), are substrates of OATP1B1/1B3 indicates that the 'anionic head-group anchoring + hydrophobic cavity' motif can capture perfluoroalkyl anions at the transporter level. The enterohepatic circulation further provides a system-level 'multi-stage vectorial enrichment and release-recirculation' reference architecture.",
     "verification_quote": "We used CHO and HEK293 cells to demonstrate that human OATP1B1, OATP1B3, and OATP2B1 can transport PFBS, PFHxS, PFOS, and the 2 PFCAs (C8 and C9)."
    },
    "source_doi": "10.1093/toxsci/kfw236",

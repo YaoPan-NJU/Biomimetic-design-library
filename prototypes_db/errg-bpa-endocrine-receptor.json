@@ -4,6 +4,7 @@
  "name_en": "Estrogen-Related Receptor Gamma ERRγ (Bisphenol A Recognition)",
  "organism": {
   "scientific": "Homo sapiens（人源雌激素相关受体 γ ERRγ, NR3B3）",
+  "scientific_en": "Homo sapiens estrogen-related receptor gamma (ERRgamma, NR3B3)",
   "category": "动物"
  },
  "biomimetic_dimension": "分子仿生",
@@ -31,7 +32,9 @@
   {
    "mechanism_id": "ERRG-001",
    "name": "双酚 A 的双酚羟基氢键锚定与狭长疏水口袋接触",
+   "name_en": "Hydrogen-bond anchoring of the two bisphenol A phenolic hydroxyls and elongated hydrophobic pocket contacts",
    "description": "人源 ERRγ LBD（PDB 2E2R，分辨率 1.60 Å，Rfree 0.197，chain A）结合 BPA（配体 2OH，即 4,4'-propane-2,2-diyldiphenol，chain A 残基 1401）：BPA 两个酚羟基中一个同时与 Glu275 和 Arg316 氢键，另一个与 Asn346 氢键，周围疏水接触（尤其 Tyr326）完成强结合；结合位点 AC1 含 11 个残基（Leu268、Ala272、Glu275、Met306、Leu309、Arg316、Tyr326、Leu345、Asn346、Ile349、Phe435）。异丙叉桥与两苯环占据狭长疏水口袋。残基编号与 UniProt P62508（ERR3_HUMAN，chain A 222-458）一一对应，无偏移",
+   "description_en": "The human ERRgamma LBD (PDB 2E2R, 1.60 Å resolution, Rfree 0.197, chain A) binds BPA (ligand 2OH, i.e., 4,4'-propane-2,2-diyldiphenol, chain A residue 1401): of the two BPA phenolic hydroxyls, one forms hydrogen bonds simultaneously with Glu275 and Arg316 while the other hydrogen-bonds Asn346, and surrounding hydrophobic contacts (especially Tyr326) complete the strong binding. Binding site AC1 contains 11 residues (Leu268, Ala272, Glu275, Met306, Leu309, Arg316, Tyr326, Leu345, Asn346, Ile349, Phe435). The isopropylidene bridge and the two phenyl rings occupy the elongated hydrophobic pocket. Residue numbering corresponds one-to-one to UniProt P62508 (ERR3_HUMAN, chain A 222-458) with no offset.",
    "基本原理": "预组织极性锚（Glu/Arg 羧酸根-胍基型与 Asn 酰胺型）方向性识别两个酚羟基，疏水口袋与双酚骨架（两苯环加异丙叉桥）几何互补容纳，二者的组合使 ERRγ 在无金属参与下对 BPA 获得纳摩尔级亲和力",
    "source": "literature",
    "ref_doi": "10.1093/jb/mvm158",
@@ -107,6 +110,7 @@
      }
     ],
     "transferable_principle": "与两酚羟基几何互补的预组织成对极性锚（羧酸根/胍基型与酰胺型氢键基序）加上与双酚骨架形状互补的预组织疏水腔，可在无金属参与下方向性强结合双酚类分子",
+    "transferable_principle_en": "A preorganized pair of polar anchors geometrically complementary to the two phenolic hydroxyls (carboxylate/guanidinium-type and amide-type hydrogen-bonding motifs) combined with a preorganized hydrophobic cavity complementary to the bisphenol backbone shape can achieve directional, strong binding of bisphenol compounds without metal participation.",
     "verification_quote": "The hydrogen bonds of two phenol-hydroxyl groups, one with both Glu275 and Arg316, the other with Asn346, anchor BPA in the pocket"
    },
    "source_doi": "10.1093/jb/mvm158",
@@ -124,7 +128,9 @@
   {
    "mechanism_id": "ERRG-002",
    "name": "组成型激活孤儿受体的预组织口袋与双酚骨架形状读出",
+   "name_en": "Preorganized pocket and bisphenol-backbone shape readout of a constitutively active orphan receptor",
    "description": "ERRγ 是孤儿核受体（内源配体未知）与组成型转录激活因子；其 LBD 疏水口袋在 apo 形式即为预组织构象。BPA 结合受体腔而口袋内部结构与 apo 形式相比无任何改变，并维持激活螺旋（helix 12）活性构象从而保留组成型活性（Matsushima 2007 摘要），故 ERRγ 对 BPA 的识别以预组织口袋形状读出为主。亲和力与选择性具定量窗口：BPA 结合 ERRγ 的 IC50 为 13.1 nM（[3H]4-OHT 示踪竞争实验），4-壬基酚与己烯雌酚弱 5-50 倍（Takayanagi 2006 摘要）。对类似物 4-α-枯基酚报道有诱导契合结合成分（Matsushima 2008 BBRC），显示形状读出并非绝对刚性锁钥",
+   "description_en": "ERRgamma is an orphan nuclear receptor (endogenous ligand unknown) and a constitutive transcriptional activator; its LBD hydrophobic pocket is preorganized in the apo form. Upon BPA binding to the receptor cavity, the internal pocket structure is unchanged relative to the apo form, and the active conformation of the activation helix (helix 12) is maintained, preserving constitutive activity (Matsushima 2007 abstract). Thus ERRgamma recognition of BPA is dominated by preorganized-pocket shape readout. Affinity and selectivity have a quantitative window: BPA binds ERRgamma with an IC50 of 13.1 nM ([3H]4-OHT displacement competition assay), while 4-nonylphenol and diethylstilbestrol are 5-50-fold weaker (Takayanagi 2006 abstract). For the analog 4-alpha-cumylphenol, an induced-fit binding component has been reported (Matsushima 2008 BBRC), indicating that shape readout is not an absolutely rigid lock-and-key.",
    "基本原理": "组成型孤儿受体的口袋天然预组织以接纳配体，BPA 双酚骨架与口袋固有形状互补即可获得高亲和结合；选择性来自口袋固有形状对配体骨架的读出，而非受体整体重塑",
    "source": "literature",
    "ref_doi": "10.1093/jb/mvm158",
@@ -200,6 +206,7 @@
      }
     ],
     "transferable_principle": "组成型孤儿受体的预组织刚性口袋通过形状读出实现对特定双酚分子的高亲和识别；口袋预组织与腔形互补原则可独立于蛋白骨架移植到人工孔腔",
+    "transferable_principle_en": "The preorganized rigid pocket of a constitutively active orphan receptor achieves high-affinity recognition of specific bisphenol molecules via shape readout; the principle of pocket preorganization and cavity-shape complementarity can be transplanted to artificial cavities independently of the protein scaffold.",
     "verification_quote": "BPA binds to the receptor cavity without changing any internal structures of the pocket of the ERR gamma-LBD apo form"
    },
    "source_doi": "10.1093/jb/mvm158",

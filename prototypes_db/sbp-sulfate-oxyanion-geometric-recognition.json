@@ -4,6 +4,7 @@
  "name_en": "Sulfate-Binding Protein (SBP) Oxyanion Geometric Recognition Protein",
  "organism": {
   "scientific": "Salmonella typhimurium（硫酸根结合蛋白 SBP）",
+  "scientific_en": "Salmonella typhimurium sulfate-binding protein (SBP)",
   "category": "微生物"
  },
  "biomimetic_dimension": "分子仿生",
@@ -30,7 +31,9 @@
   {
    "mechanism_id": "SBP-001",
    "name": "预组织中性氢键给体阵列对四面体硫酸根的几何识别（纯氢键、无阳离子）",
+   "name_en": "Geometric recognition of tetrahedral sulfate by a preorganized neutral hydrogen-bond donor array (pure hydrogen bonds, no cations)",
    "description": "鼠伤寒沙门氏菌硫酸根结合蛋白（SBP）在两个相似球状结构域间的深裂隙中完全包埋四面体硫酸根 SO4²⁻；硫酸根主要由七个氢键固定，其中五个由主链肽 NH 给出，一个由丝氨酸羟基给出，一个由 Trp192 吲哚 NH 给出（PDB 1SBP，SITE AC1 位点残基 Tyr10、Asp11、Pro12、Gly44、Ser45、Ser130、Gly131、Gly132、Gly172、Ala173、Trp192，chain A）；硫酸根二价阴离子范德华距离内无带正电残基、无阳离子、无水分子",
+   "description_en": "The sulfate-binding protein (SBP) of Salmonella typhimurium completely buries tetrahedral sulfate SO4 2- in a deep cleft between two similar globular domains. Sulfate is mainly fixed by seven hydrogen bonds, five donated by backbone peptide NH groups, one by a serine hydroxyl, and one by the indole NH of Trp192 (PDB 1SBP, SITE AC1 residues Tyr10, Asp11, Pro12, Gly44, Ser45, Ser130, Gly131, Gly132, Gly172, Ala173, Trp192, chain A). Within van der Waals distance of the sulfate dianion there is no positively charged residue, no cation, and no water molecule.",
    "基本原理": "以主链酰胺 NH 为主的预组织中性氢键给体阵列与四面体氧阴离子几何互补，完全埋藏的裂隙强化静电并排除溶剂竞争，二价氧阴离子在无盐桥、无金属或阳离子参与下即可被高选择性识别",
    "source": "literature",
    "ref_doi": "10.1016/0022-2836(88)90341-5",
@@ -119,6 +122,7 @@
      }
     ],
     "transferable_principle": "以主链酰胺型中性氢键给体为主、与四面体氧阴离子几何互补的预组织阵列，配合完全埋藏的低介电裂隙，可在无金属、无阳离子、无盐桥参与下通过方向性与几何匹配选择性识别该氧阴离子",
+    "transferable_principle_en": "A preorganized array dominated by backbone amide-type neutral hydrogen-bond donors that is geometrically complementary to tetrahedral oxyanions, combined with a fully buried low-dielectric cleft, can selectively recognize such an oxyanion through directionality and geometric matching without any metal, cation, or salt bridge involvement.",
     "verification_quote": "Sulphate sequestered in the sulphate-binding protein of Salmonella typhimurium is bound solely by hydrogen bonds"
    },
    "source_doi": "10.1016/0022-2836(88)90341-5",
@@ -136,7 +140,9 @@
   {
    "mechanism_id": "SBP-002",
    "name": "硫酸根完全埋藏与局部偶极对无补偿电荷的稳定化",
+   "name_en": "Stabilization of uncompensated charge by complete sulfate burial and local dipoles",
    "description": "硫酸根带电氧原子埋藏且与溶剂完全隔绝，其稳定化无盐桥参与，由蛋白特定位基的氢键完成；这些氢键又经肽单元与多个共振氢键体系耦合。1.7 Å 结构与定点突变表明：无补偿的埋藏二价电荷的稳定化是高度局域化过程，依赖肽单元与螺旋首圈局部偶极的集合；带正电 His 与两个 Arg 突变为 Asn 后硫酸根结合活性不受影响，螺旋宏偶极贡献可忽略",
+   "description_en": "The charged oxygen atoms of sulfate are buried and completely isolated from solvent; their stabilization involves no salt bridges and is achieved by hydrogen bonds from specific protein groups, which are in turn coupled through peptide units to multiple resonance hydrogen-bond systems. The 1.7 Å structure and site-directed mutagenesis show that stabilization of the uncompensated buried divalent charge is a highly localized process that relies on a collection of local dipoles from peptide units and the first turns of helices. After mutating the positively charged His and two Args to Asn, sulfate binding activity is unaffected, and the helix macrodipole contribution is negligible.",
    "基本原理": "埋藏二价阴离子的电荷补偿可由局域偶极（肽单元、螺旋首圈）集合完成，无需荷电基团或长程静电；共振氢键网络将给体与远端结构耦合，强化预组织与方向性",
    "source": "literature",
    "ref_doi": "10.1002/pro.5560021010",
@@ -211,6 +217,7 @@
      }
     ],
     "transferable_principle": "完全埋藏的低介电裂隙内，局域偶极集合（主链酰胺肽单元、螺旋首圈）与共振氢键网络可稳定无补偿的二价氧阴离子电荷，无需荷电基团或长程静电",
+    "transferable_principle_en": "Within a fully buried low-dielectric cleft, a collection of local dipoles (backbone amide peptide units, first turns of helices) together with resonance hydrogen-bond networks can stabilize uncompensated divalent oxyanion charge without charged groups or long-range electrostatics.",
     "verification_quote": "Dominant role of local dipoles in stabilizing uncompensated charges on a sulfate sequestered in a periplasmic active transport protein."
    },
    "source_doi": "10.1002/pro.5560021010",

@@ -4,6 +4,7 @@
  "name_en": "Nephron Capture-Then-Separate Filtration-Reabsorption Architecture",
  "organism": {
   "scientific": "Homo sapiens（人体肾单位，PDB 5ZYS 为 Mus musculus 源 nephrin-MAGI1 复合物）",
+  "scientific_en": "Homo sapiens (human nephron; PDB 5ZYS is the nephrin-MAGI1 complex from Mus musculus)",
   "category": "动物"
  },
  "biomimetic_dimension": "系统仿生",
@@ -30,7 +31,9 @@
   {
    "mechanism_id": "NEPH-001",
    "name": "尺寸/电荷选择性肾小球滤过屏障（第一级非特异捕获）",
+   "name_en": "Size/charge-selective glomerular filtration barrier (first-level non-specific capture)",
    "description": "肾小球毛细血管壁由窗孔内皮、肾小球基底膜（GBM）与足细胞裂隙膜（nephrin 为其核心结构蛋白）三层构成，对溶质呈高度尺寸与电荷选择性：水与小分子溶质高通量通过形成原尿，白蛋白等蛋白大分子与有形成分被阻留，完成肾单位先捕后分架构的第一级非特异捕获与尺寸分级",
+   "description_en": "The glomerular capillary wall consists of three layers: fenestrated endothelium, glomerular basement membrane (GBM), and podocyte slit membrane (with nephrin as its core structural protein), and is highly size- and charge-selective toward solutes. Water and small-molecular solutes pass through with high flux to form primary urine, while protein macromolecules such as albumin and formed elements are retained, accomplishing the first-level non-specific capture and size fractionation of the nephron capture-then-separate architecture.",
    "基本原理": "具有尺寸与电荷选择性的多层选择性屏障，可在不依赖分子特异识别的前提下实现小分子溶质的高通量非特异捕获与蛋白大分子干扰物的截留；细胞成分主导溶质阻留、GBM 主导水流阻力，二者的分工使通量与截留同时实现",
    "source": "literature",
    "ref_doi": "10.1152/physrev.00055.2006",
@@ -106,6 +109,7 @@
      }
     ],
     "transferable_principle": "具有尺寸/电荷选择性的多层结构选择性屏障，可在不依赖分子特异识别的前提下，实现小分子溶质的高通量非特异捕获与蛋白大分子干扰物的截留（尺寸分级）；其工程核心是在维持尺寸/电荷选择性的同时保证高通量",
+    "transferable_principle_en": "A multilayer structural selective barrier with size/charge selectivity can achieve high-flux non-specific capture of small-molecular solutes and retention (size fractionation) of protein macromolecular interferents without relying on molecular-specific recognition. Its engineering core is to guarantee high flux while maintaining size/charge selectivity.",
     "verification_quote": "The glomerular barrier is highly size and charge selective, in qualitative agreement with the classical studies performed 30 years ago."
    },
    "source_doi": "10.1152/physrev.00055.2006",
@@ -123,7 +127,9 @@
   {
    "mechanism_id": "NEPH-002",
    "name": "近端小管 megalin/cubilin 受体介导选择性重吸收（第二级特异回收）",
+   "name_en": "Megalin/cubilin receptor-mediated selective reabsorption in the proximal tubule (second-level specific recovery)",
    "description": "近端小管上皮顶端内吞装置共定位的多配体内吞受体 megalin（LRP2）与 cubilin，以受体介导内吞回收原尿中滤过的白蛋白等蛋白与维生素结合蛋白类配体（内化、溶酶体处置、受体回用）；肾小球滤过与肾小管重吸收两级耦合，共同决定溶质的净排泄，构成先捕后分架构的第二级特异选择性回收",
+   "description_en": "The multiligand endocytic receptors megalin (LRP2) and cubilin, co-localized in the apical endocytic apparatus of proximal tubule epithelium, recover albumin and other filtered proteins and vitamin-binding protein ligands from primary urine via receptor-mediated endocytosis (internalization, lysosomal processing, and receptor recycling). Glomerular filtration and tubular reabsorption are coupled at two levels and jointly determine net solute excretion, constituting the second-level specific selective recovery of the capture-then-separate architecture.",
    "基本原理": "基于配体识别的特异回收单元置于非特异捕获下游，使捕获通量与选择性解耦；受体内吞兼具特异性与容量限制，净排泄为滤过与重吸收两级之差",
    "source": "literature",
    "ref_doi": "10.1038/nrm778",
@@ -199,6 +205,7 @@
      }
     ],
     "transferable_principle": "将具有配体选择性的特异回收单元（受体/转运体介导）置于非特异捕获级下游，可使捕获通量与选择性解耦：前级保障处理量与分级，后级保障净回收的特异性，净输出为两级之差",
+    "transferable_principle_en": "Placing a specific recovery unit with ligand selectivity (receptor/transporter mediated) downstream of the non-specific capture stage decouples capture flux from selectivity: the upstream stage guarantees throughput and fractionation, while the downstream stage guarantees the specificity of net recovery, and the net output is the difference between the two stages.",
     "verification_quote": "Megalin and cubilin: multifunctional endocytic receptors"
    },
    "source_doi": "10.1038/nrm778",

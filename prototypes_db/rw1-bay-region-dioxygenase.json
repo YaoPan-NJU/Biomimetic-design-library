@@ -4,6 +4,7 @@
   "name_en": "Sphingomonas RW1 Angular Dioxygenation of Diaryl Ethers",
   "organism": {
     "scientific": "Sphingomonas wittichii RW1",
+    "scientific_en": "Sphingomonas wittichii RW1",
     "category": "微生物"
   },
   "biomimetic_dimension": "过程仿生",
@@ -29,7 +30,9 @@
     {
       "mechanism_id": "RW1-001",
       "name": "芳醚桥邻位的角位双加氧",
+      "name_en": "Angular dioxygenation at the position adjacent to the bridging atom of aryl ethers",
       "description": "RW1 的多组分双加氧酶在二苯并二噁英或二苯并呋喃的桥连原子邻位引入两个氧原子，启动后续开环代谢。",
+      "description_en": "The multicomponent dioxygenase of RW1 introduces two oxygen atoms at the position adjacent to the bridging atom of dibenzo-p-dioxin or dibenzofuran, initiating the subsequent ring-cleavage metabolism.",
       "基本原理": "酶系统识别可接近的芳醚角位并进行反应性活化，而不是依靠可逆醚氧吸附。",
       "source": "literature",
       "ref_doi": "10.1128/jb.180.15.3954-3966.1998",
@@ -77,7 +80,8 @@
             "source_asset": null
           }
         ],
-        "transferable_principle": "把桥连原子邻位的可接近性作为反应入口判据，可用于设计芳醚选择性氧化路径。"
+        "transferable_principle": "把桥连原子邻位的可接近性作为反应入口判据，可用于设计芳醚选择性氧化路径。",
+        "transferable_principle_en": "The accessibility of the position adjacent to the bridging atom can serve as a criterion for the reaction entry point. This can be used to design selective oxidation pathways for aryl ethers."
       },
       "functional_groups": ["芳醚桥", "非血红素铁双加氧中心"],
       "key_structures": ["角位反应几何", "多组分电子传递系统"]
@@ -85,7 +89,9 @@
     {
       "mechanism_id": "RW1-002",
       "name": "取代模式限制角位氧化适用范围",
+      "name_en": "Substitution pattern limiting the applicable scope of angular oxidation",
       "description": "氯取代会减少可接近的初始攻击位置并改变代谢产物；较高氯代程度不能从未取代或低氯代底物结果直接外推。",
+      "description_en": "Chlorine substitution reduces the accessible initial attack positions and alters the metabolites; the outcomes at higher chlorination levels cannot be directly extrapolated from results for unsubstituted or lightly chlorinated substrates.",
       "基本原理": "底物是否保留可反应角位决定路径能否启动，骨架相似不等于具有相同降解性。",
       "source": "literature",
       "ref_doi": "10.1128/aem.72.1.112-116.2006",
@@ -133,7 +139,8 @@
             "source_asset": null
           }
         ],
-        "transferable_principle": "用反应位点可接近性为同系物适用范围设边界，避免把低取代底物结果外推到高度取代目标。"
+        "transferable_principle": "用反应位点可接近性为同系物适用范围设边界，避免把低取代底物结果外推到高度取代目标。",
+        "transferable_principle_en": "The accessibility of the reaction site can be used to set boundaries for the applicable range across congeners. This avoids extrapolating results from low-substituted substrates to highly substituted targets."
       },
       "functional_groups": ["芳醚桥", "氯取代芳环"],
       "key_structures": ["可接近角位", "同系物取代模式"]

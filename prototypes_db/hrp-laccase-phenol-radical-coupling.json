@@ -4,6 +4,7 @@
  "name_en": "Peroxidase/Laccase Phenoxy Radical Coupling Sequestration (HRP EC 1.11.1.7 / Laccase EC 1.10.3.2)",
  "organism": {
   "scientific": "Armoracia rusticana（辣根；辣根过氧化物酶 C，HRP C，EC 1.11.1.7）；并列酶源为 Trametes versicolor（变色栓菌，担子菌；漆酶 EC 1.10.3.2）",
+  "scientific_en": "Armoracia rusticana (horseradish; horseradish peroxidase C, HRP C, EC 1.11.1.7); parallel enzyme source Trametes versicolor (turkey tail, basidiomycete; laccase EC 1.10.3.2)",
   "category": "植物"
  },
  "biomimetic_dimension": "分子仿生",
@@ -31,7 +32,9 @@
   {
    "mechanism_id": "HRP-001",
    "name": "HRP 血红素化合物 I 一电子氧化酚类生成酚氧自由基并经 C-C/C-O 偶联聚合沉淀封存",
+   "name_en": "HRP heme compound I one-electron oxidation of phenols to phenoxy radicals, followed by C-C/C-O coupling polymerization and precipitation sequestration",
    "description": "HRP C（辣根过氧化物酶 C1A，EC 1.11.1.7）为含铁原卟啉 IX（HEM）的分泌型糖蛋白过氧化物酶；PDB 1HCH（重组 HRP C1A 化合物 I 结构）记录血红素 Fe 与 His170 NE2 轴向配位（chain A，2.14 Å，LINK 记录）并解析催化中间体化合物 I 的高价铁氧键（FE-O，LINK 1.71 Å）。H2O2 激活血红素生成化合物 I 后，对酚类底物执行一电子氧化生成共振稳定酚氧自由基；酚氧自由基经非酶 C-C/C-O 偶联低聚/聚合为不溶性酚类聚合物而沉淀封存（Klibanov 1983：HRP 与 H2O2 处理在宽 pH 与酚浓度范围内沉淀 97 至 99% 的酚，并可酶促共沉淀多氯联苯等其他污染物）",
+   "description_en": "HRP C (horseradish peroxidase C1A, EC 1.11.1.7) is a secreted glycoprotein peroxidase containing iron protoporphyrin IX (HEM); PDB 1HCH (recombinant HRP C1A compound I structure) records heme Fe axially coordinated by His170 NE2 (chain A, 2.14 Å, LINK record) and resolves the high-valent ferryl-oxo bond (FE-O, LINK 1.71 Å) of the catalytic intermediate compound I. After H2O2 activates the heme to form compound I, phenolic substrates undergo one-electron oxidation to resonance-stabilized phenoxy radicals. The radicals then oligomerize/polymerize via non-enzymatic C-C/C-O coupling into insoluble phenolic polymers that precipitate and are sequestered (Klibanov 1983: HRP with H2O2 precipitated 97-99% of phenols across a wide pH and phenol concentration range, and could also co-precipitate other pollutants such as PCBs).",
    "基本原理": "高价血红素中间体对酚的一电子氧化生成共振稳定酚氧自由基，自由基经 C-C/C-O 偶联生成高分子量不溶性聚合物，把溶解态酚转化为固相偶联聚合物而固定；共沉淀效应使该固定化聚合物可裹挟其他污染物，构成破坏性封存而非可逆吸附",
    "source": "literature",
    "ref_doi": "10.1126/science.221.4607.259",
@@ -152,6 +155,7 @@
      }
     ],
     "transferable_principle": "血红素高氧化电位中心经 H2O2 激活生成化合物 I，对酚类底物一电子氧化生成酚氧自由基，自由基经 C-C/C-O 偶联聚合为不溶性固相聚合物并共沉淀裹挟其他污染物；'氧化中心生成酚氧自由基 + 自由基偶联聚合封存'是可迁移的反应性捕获封存原理，其破坏性固定化区别于可逆吸附",
+    "transferable_principle_en": "A high-redox-potential heme center is activated by H2O2 to form compound I, which one-electron-oxidizes phenolic substrates to phenoxy radicals; the radicals couple via C-C/C-O reactions to polymerize into insoluble solid-phase polymers that co-precipitate and entrap other contaminants. 'Oxidation center generates phenoxy radicals + radical coupling polymerization sequestration' is a transferable reactive-capture sequestration principle whose destructive immobilization differs from reversible adsorption.",
     "verification_quote": "Peroxidase-Catalyzed Removal of Phenols from Coal-Conversion Waste Waters"
    },
    "source_doi": "10.1126/science.221.4607.259",
@@ -169,7 +173,9 @@
   {
    "mechanism_id": "HRP-002",
    "name": "漆酶多铜中心以 O2 为电子受体氧化二酚生成酚氧自由基的偶联封存途径",
+   "name_en": "Laccase multicopper center oxidation of diphenols to phenoxy radicals with O2 as electron acceptor, via a coupling sequestration pathway",
    "description": "漆酶（Trametes versicolor 漆酶 2，EC 1.10.3.2，benzenediol:oxygen oxidoreductase）为含四铜的多铜氧化酶：PDB 1GYC（氧化态全铜结构）解析 T1 型 1 铜位（CU A1503，Cys453 SG 2.19 Å、His395 ND1 2.02 Å、His458 ND1 2.04 Å，chain A LINK 记录）与 T2/T3 三核铜簇（CU A1500/1501/1502，8 个 His 配位：His64/His66/His109/His111/His398/His400/His452/His454）。T1 位（蓝铜，特征性 Cys 硫醇配位）从酚类/二酚底物接受一个电子生成酚氧自由基，电子经 Cys-His 途径传至三核铜簇将 O2 还原为水（电子传递细节为机理层通识）；PDB 1KYA 显示小分子底物类似物（2,5-二甲基苯胺）结合于 T1 铜附近（Bertrand 2002 标题：Four-Copper Laccase Complexed with an Arylamine: Insights into Substrate Recognition）。沉积记录 KEYWDS 标注 DIPHENOL OXIDASE 与 LIGNIN DEGRADATION，COMPND 同义名含 URISHIOL OXIDASE（漆酚氧化酶）：漆酚类邻二酚的氧化偶联成膜是漆酶在自然中的自由基偶联封存实例。功能层证据：Cabana 2007 将漆酶交联为 CLEA 并用于去除内分泌干扰物（标题直陈），Cabana 2008 将 CLEA 装于渗滤篮反应器连续运行",
+   "description_en": "Laccase (Trametes versicolor laccase 2, EC 1.10.3.2, benzenediol:oxygen oxidoreductase) is a multicopper oxidase containing four copper ions: PDB 1GYC (oxidized fully-copper structure) resolves the T1 mononuclear copper site (CU A1503, Cys453 SG 2.19 Å, His395 ND1 2.02 Å, His458 ND1 2.04 Å, chain A LINK record) and the T2/T3 trinuclear copper cluster (CU A1500/1501/1502, coordinated by 8 His: His64/His66/His109/His111/His398/His400/His452/His454). The T1 site (blue copper, characteristic Cys thiolate coordination) accepts one electron from phenolic/diphenolic substrates to generate phenoxy radicals, and the electron is transferred via the Cys-His pathway to the trinuclear cluster where O2 is reduced to water (electron-transfer details are general mechanistic knowledge). PDB 1KYA shows a small-molecule substrate analog (2,5-dimethylaniline) bound near the T1 copper (Bertrand 2002 title: Four-Copper Laccase Complexed with an Arylamine: Insights into Substrate Recognition). The deposition record KEYWDS notes DIPHENOL OXIDASE and LIGNIN DEGRADATION, and the COMPND synonyms include URISHIOL OXIDASE (urushiol oxidase): oxidative coupling film formation of urushiol-type ortho-diphenols is a natural radical-coupling sequestration instance of laccase. Functional evidence: Cabana 2007 crosslinked laccase into CLEA and used it to remove endocrine-disrupting compounds (as stated in the title), and Cabana 2008 ran the CLEA continuously in a basket reactor.",
    "基本原理": "多铜氧化酶以 O2 为终端电子受体（无需 H2O2 共底物），T1 铜单点氧化酚类底物生成酚氧自由基，自由基偶联聚合化学与过氧化物酶途径收敛于同一封存机制；以空气氧为氧化剂使连续操作更简便",
    "source": "literature",
    "ref_doi": "10.1074/jbc.M204571200",
@@ -260,6 +266,7 @@
      }
     ],
     "transferable_principle": "以 O2 为终端电子受体的多铜氧化中心（T1 蓝铜单点氧化 + 三核铜簇 O2 还原）对酚类/二酚底物单电子氧化生成酚氧自由基，经 C-C/C-O 偶联聚合封存；'空气驱动的多铜酚氧自由基偶联'与 HRP 途径收敛，可迁移为以空气为氧化剂的反应性捕获封存体系",
+    "transferable_principle_en": "A multicopper oxidation center using O2 as the terminal electron acceptor (T1 blue copper single-point oxidation + trinuclear copper cluster O2 reduction) one-electron-oxidizes phenol/diphenol substrates to phenoxy radicals, which are sequestered via C-C/C-O coupling polymerization. 'Air-driven multicopper phenoxy radical coupling' converges with the HRP pathway and is transferable as a reactive-capture sequestration system using air as the oxidant.",
     "verification_quote": "SYNONYM: BENZENEDIOL:OXYGEN OXIDOREDUCTASE, URISHIOL OXIDASE, DIPHENOL OXIDASE, LACCASE I"
    },
    "source_doi": "10.1074/jbc.M204571200",

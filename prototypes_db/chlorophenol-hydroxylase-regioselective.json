@@ -4,6 +4,7 @@
  "name_en": "Chlorophenol Hydroxylase Regioselective Aromatic Hydroxylation",
  "organism": {
   "scientific": "多物种细菌酚与氯酚羟化酶比较原型",
+  "scientific_en": "Comparative archetype of phenol and chlorophenol hydroxylases from multiple bacterial species",
   "category": "微生物"
  },
  "biomimetic_dimension": "分子仿生",
@@ -31,7 +32,9 @@
   {
    "mechanism_id": "CHRH-001",
    "name": "氯酚/酚羟化酶区域选择性芳香羟基化的活性位基础",
+   "name_en": "Active-site basis of regioselective aromatic hydroxylation by chlorophenol/phenol hydroxylases",
    "description": "氯酚降解菌进化出区域选择性芳香羟化酶以降解氯酚：Pseudomonas sp. CF600 酚羟化酶（含双铁中心的多组分加氧酶）催化酚及其甲基取代衍生物转化为儿茶酚（PDB 1HQI 以 NMR 解析其 90 氨基酸组分 P2）；Cupriavidus necator JMP134 的 TcpA 为 2,4,6-三氯酚 4-单加氧酶（PDB 4G5E），对 2,4,6-TCP 行 C-4 位区域选择性单加氧；Ralstonia pickettii 的 HadA 为黄素依赖氯酚单加氧酶（PDB 6JHM）。不同氯酚取代模式由结构与催化上可区分的单加氧酶分别处理（TftD 处理 2,4,5-TCP，TcpA 处理 2,4,6-TCP），说明活性位空间轮廓与底物取代模式互补是区域选择性的结构基础",
+   "description_en": "Chlorophenol-degrading bacteria evolved regioselective aromatic hydroxylases to degrade chlorophenols: the phenol hydroxylase of Pseudomonas sp. CF600 (a multicomponent oxygenase containing a diiron center) catalyzes conversion of phenol and its methyl-substituted derivatives to catechol (its 90-amino-acid component P2 solved by NMR, PDB 1HQI); TcpA of Cupriavidus necator JMP134 is a 2,4,6-trichlorophenol 4-monooxygenase (PDB 4G5E) that regioselectively monooxygenates 2,4,6-TCP at the C-4 position; HadA of Ralstonia pickettii is a flavin-dependent chlorophenol monooxygenase (PDB 6JHM). Different chlorophenol substitution patterns are handled by structurally and catalytically distinguishable monooxygenases (TftD processes 2,4,5-TCP, TcpA processes 2,4,6-TCP), indicating that complementarity between the active-site spatial contour and the substrate substitution pattern is the structural basis of regioselectivity.",
    "基本原理": "羟化酶活性位的空间轮廓与底物氯酚的取代模式（氯原子在酚环上的位置）几何互补，决定羟基化的位置（区域选择性）与可及性；取代模式改变即需不同活性位结构，故活性位轮廓对取代模式的几何读取是区域选择性的来源",
    "source": "literature",
    "ref_doi": "10.1021/bi9619233",
@@ -106,6 +109,7 @@
      }
     ],
     "transferable_principle": "氯酚羟化酶以与底物取代模式互补的活性位空间轮廓实现区域选择性芳香羟基化；该活性位轮廓对取代模式（氯原子位置）的几何读取能力，可在原理层转译为对氯酚异构体取代模式（如 2,6-二氯取代）的形状选择性识别。转译限原理层：仅活性位几何/轮廓可迁移，双铁中心/FADH2 氧化还原催化机制不可复制",
+    "transferable_principle_en": "Chlorophenol hydroxylases achieve regioselective aromatic hydroxylation through an active-site spatial contour complementary to the substrate substitution pattern; this geometric readout of substitution patterns (chlorine atom positions) by the active-site contour can be translated at the principle level into shape-selective recognition of chlorophenol isomer substitution patterns (e.g., 2,6-dichloro substitution). Translation is limited to the principle level: only the active-site geometry/contour is transferable; the diiron center/FADH2 redox catalytic mechanism is not reproducible.",
     "verification_quote": "catalyzes the conversion of phenol and some of its methyl-substituted derivatives to catechol"
    },
    "source_doi": "10.1021/bi9619233",
@@ -125,7 +129,9 @@
   {
    "mechanism_id": "CHRH-002",
    "name": "2,6-双邻位氯空间阻碍羟基化与 2,6-DCP 专一羟化酶结构缺口",
+   "name_en": "Steric hindrance of hydroxylation by 2,6-di-ortho chlorines and the structural gap of a 2,6-DCP-specific hydroxylase",
    "description": "2,6-DCP 的酚羟基两侧（C-2、C-6）均被氯占据，常见的邻位/对位芳香羟基化位点受空间阻碍，故 2,6-DCP 在氯酚降解途径中趋于难羟基化、难降解。这是自然界氯酚羟化酶区域选择性的真实事实，但本库经 RCSB 检索未获 2,6-DCP 专一羟化酶的晶体结构（结构缺口；4G5E 为 TcpA/2,4,6-TCP 4-单加氧酶，5MA1 经核验为 PceA 还原脱卤酶而非羟化酶、已排除）；该阻碍机制为文献一致但本条未做全文 PDF 审计的推断",
+   "description_en": "In 2,6-DCP, both sides of the phenolic hydroxyl (C-2 and C-6) are occupied by chlorines, so the common ortho/para aromatic hydroxylation sites are sterically hindered, making 2,6-DCP difficult to hydroxylate and degrade in chlorophenol degradation pathways. This is a genuine fact of the regioselectivity of natural chlorophenol hydroxylases, but a search of RCSB by this library yielded no crystal structure of a 2,6-DCP-specific hydroxylase (a structural gap; 4G5E is the TcpA/2,4,6-TCP 4-monooxygenase, and 5MA1 was verified to be the PceA reductive dehalogenase rather than a hydroxylase and was therefore excluded). This hindrance mechanism is a conclusion consistent with the literature but not audited against the full-text PDF in this entry.",
    "基本原理": "当酚羟基邻位被体积较大的氯原子双占据，羟化酶活性位难以在受阻的邻/对位完成羟基化，取代模式由此成为决定可降解性的几何门控；这为'活性位轮廓读取区分 2,6-二氯取代'提供天然依据",
    "source": "literature",
    "ref_doi": "10.3390/ijms13089769",
@@ -175,6 +181,7 @@
      }
     ],
     "transferable_principle": "氯酚可降解性受酚羟基邻/对位取代模式的几何门控；2,6-双邻位氯使羟基化受阻，使'2,6-二氯取代模式'成为可被活性位轮廓读取区分的特征。转译为吸附识别时仅取此轮廓读取原理，不复制羟化催化",
+    "transferable_principle_en": "Chlorophenol degradability is geometrically gated by the ortho/para substitution pattern of the phenolic hydroxyl; 2,6-di-ortho chlorines block hydroxylation, making the 2,6-dichloro substitution pattern a feature distinguishable by active-site contour readout. When translated into adsorption recognition, only this contour-readout principle is taken; hydroxylation catalysis is not replicated.",
     "verification_quote": "2,4,5-TCP 4-Monooxygenase (TftD) from Burkholderia cepacia AC1100 and 2,4,6-TCP 4-Monooxygenase (TcpA) from Cupriavidus necator JMP134"
    },
    "source_doi": "10.3390/ijms13089769",

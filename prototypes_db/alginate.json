@@ -3,6 +3,7 @@
   "organism": {
     "common": "海藻酸钠",
     "scientific": "Phaeophyceae",
+    "scientific_en": "Phaeophyceae (brown algae)",
     "category": "植物"
   },
   "category": "biopolymer",
@@ -1103,11 +1104,14 @@
   "mechanisms": [
     {
       "name": "海藻酸盐羧基/羟基螯合吸附",
+      "name_en": "Chelation adsorption by carboxyl/hydroxyl groups of alginate",
       "description": "海藻酸盐骨架富含-COOH和-OH官能团，通过离子交换、静电吸引和螯合配位去除重金属离子。蛋盒凝胶结构可与二价阳离子（Ca²⁺、Pb²⁺等）形成稳定凝胶。",
+      "description_en": "The alginate backbone is rich in -COOH and -OH functional groups, which remove heavy metal ions through ion exchange, electrostatic attraction, and chelate coordination. The egg-box gel structure can form stable gels with divalent cations (Ca2+, Pb2+, etc.).",
       "source": "literature",
       "ref_doi": "10.1016/j.ijbiomac.2025.140801",
       "causal_chain": {
         "transferable_principle": "海藻酸盐的-COOH/-OH通过螯合+离子交换双重机制吸附重金属，蛋盒结构增强凝胶稳定性",
+        "transferable_principle_en": "The -COOH/-OH groups of alginate adsorb heavy metals through a dual mechanism of chelation and ion exchange, and the egg-box structure enhances gel stability.",
         "pollutant_feature": {
           "text": "重金属阳离子（Pb²⁺、Cu²⁺、Cd²⁺等）和染料分子",
           "basis": "llm_inferred"

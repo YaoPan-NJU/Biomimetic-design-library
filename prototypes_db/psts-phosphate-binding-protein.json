@@ -4,6 +4,7 @@
   "name_en": "PstS Phosphate-Binding Protein",
   "organism": {
     "scientific": "Escherichia coli（PstS 磷酸盐结合蛋白）",
+    "scientific_en": "Escherichia coli (PstS phosphate-binding protein)",
     "category": "微生物"
   },
   "biomimetic_dimension": "分子仿生",
@@ -31,7 +32,9 @@
     {
       "mechanism_id": "PSTS-001",
       "name": "预组织氢键给体阵列对四面体磷酸根的几何识别",
+      "name_en": "Geometric recognition of tetrahedral phosphate by a preorganized hydrogen-bond donor array",
       "description": "大肠杆菌 PstS/PBP 以预组织中性氢键给体阵列（Thr10、Ser38、Ser139 侧链羟基与骨架酰胺 NH，Asp56 起关键定位作用）识别四面体磷酸根 PO4；磷酸根埋藏于两结构域间裂隙，无金属离子直接配位氧阴离子（PDB 1PBP 非水配体仅 PO4）。1PBP 为 T141D 定点突变体，沉积记录第 141 位为工程化 Asp141，野生型该位为 Thr141",
+      "description_en": "Escherichia coli PstS/PBP recognizes the tetrahedral phosphate anion PO4 via a preorganized array of neutral hydrogen-bond donors, including the side-chain hydroxyls of Thr10, Ser38, and Ser139 and backbone amide NH groups, with Asp56 playing a key positioning role. The phosphate is buried in the cleft between the two domains, and no metal ion directly coordinates the oxyanion (in PDB 1PBP, PO4 is the only non-water ligand). 1PBP is a T141D site-directed mutant whose deposited structure records position 141 as the engineered Asp141, whereas the wild-type residue at this position is Thr141.",
       "基本原理": "预组织的中性氢键给体阵列与四面体磷酸根几何互补，埋藏于两结构域间低介电裂隙以强化静电并排除水竞争，使磷酸根氧阴离子在无金属参与下被高特异性识别；给体阵列的电荷/质子化状态微调对磷酸根质子化形态的识别",
       "source": "literature",
       "ref_doi": "10.1038/347402a0",
@@ -106,6 +109,7 @@
           }
         ],
         "transferable_principle": "预组织且与四面体氧阴离子几何互补的中性氢键给体阵列，配合埋藏低介电结构域裂隙，可在无金属或阳离子参与下通过方向性与几何匹配选择性识别该氧阴离子头基；给体阵列的电荷/质子化状态可微调对底物质子化形态的识别",
+        "transferable_principle_en": "A preorganized array of neutral hydrogen-bond donors that is geometrically complementary to a tetrahedral oxyanion, combined with a buried low-dielectric domain cleft, can selectively recognize the oxyanion head group through directional and geometric matching without the participation of metals or cations. The charge/protonation state of the donor array can fine-tune recognition of the substrate's protonation form.",
         "verification_quote": "High specificity of a phosphate transport protein determined by hydrogen bonds"
       },
       "source_doi": "10.1038/347402a0",
@@ -124,7 +128,9 @@
     {
       "mechanism_id": "PSTS-002",
       "name": "四面体磷酸根识别的跨物种保守（原理先例）",
+      "name_en": "Cross-species conservation of tetrahedral phosphate recognition (principle precedent)",
       "description": "产气荚膜梭菌磷酸盐结合蛋白 PBP-1 以保守 Ser/Thr 氢键给体阵列识别四面体磷酸根（PDB 4Q8R SITE AC1：Ser11、Thr12、Ser13、Ser41、Ser59、Ser129 等），与大肠杆菌 PBP 几何保守，为预组织氢键给体阵列识别四面体氧阴离子在 PstS/PBP 家族内保守提供结构生物学先例",
+      "description_en": "The phosphate-binding protein PBP-1 from Clostridium perfringens recognizes tetrahedral phosphate via a conserved Ser/Thr hydrogen-bond donor array (PDB 4Q8R SITE AC1: Ser11, Thr12, Ser13, Ser41, Ser59, Ser129, etc.) and is geometrically conserved with the Escherichia coli PBP. This provides a structural-biology precedent for the conservation of preorganized hydrogen-bond donor array recognition of tetrahedral oxyanions within the PstS/PBP family.",
       "基本原理": "保守的中性氢键给体阵列识别四面体磷酸根，表明该几何识别原理在周质磷酸盐结合蛋白家族中普适，不依赖特定物种骨架",
       "source": "literature",
       "ref_doi": "10.1038/srep06636",
@@ -174,6 +180,7 @@
           }
         ],
         "transferable_principle": "预组织中性氢键给体阵列选择性识别四面体氧阴离子的原理在周质磷酸盐结合蛋白家族内保守，可脱离特定蛋白骨架移植",
+        "transferable_principle_en": "The principle that a preorganized neutral hydrogen-bond donor array selectively recognizes tetrahedral oxyanions is conserved within the periplasmic phosphate-binding protein family, and can be transplanted independently of a specific protein scaffold.",
         "verification_quote": "Crystal structure of the phosphate-binding protein (PBP-1) of an ABC-type phosphate transporter from Clostridium perfringens"
       },
       "source_doi": "10.1038/srep06636",

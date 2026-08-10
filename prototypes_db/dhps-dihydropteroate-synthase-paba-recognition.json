@@ -4,6 +4,7 @@
   "name_en": "Dihydropteroate Synthase (DHPS) PABA/Sulfonamide Recognition Site",
   "organism": {
     "scientific": "Bacillus anthracis / Escherichia coli 等细菌的二氢蝶酸合酶（DHPS，叶酸合成关键酶）",
+    "scientific_en": "Dihydropteroate synthase (DHPS, a key enzyme in folate synthesis) from bacteria such as Bacillus anthracis / Escherichia coli",
     "category": "微生物"
   },
   "biomimetic_dimension": "分子仿生",
@@ -31,7 +32,9 @@
     {
       "mechanism_id": "DHPS-001",
       "name": "DHPP 先行结合后形成的 pABA/磺胺条件性识别位点",
+      "name_en": "Conditional pABA/sulfonamide recognition site formed after prior DHPP binding",
       "description": "DHPS 催化 DHPP 与 pABA 缩合。现有结构与动力学表明 pterin/DHPP 侧先结合并组织柔性 loop，随后才形成 pABA/磺胺可进入的条件性位点；磺胺类是 pABA 类似物，但当前所引 Hevener 2010 主要研究 pterin 抑制剂，不能作为 SMX 占据 pABA 位点的直接结构证据。",
+      "description_en": "DHPS catalyzes the condensation of DHPP with pABA. Structural and kinetic data indicate that the pterin/DHPP side binds first and organizes a flexible loop, after which a conditional site accessible to pABA/sulfonamides forms. Sulfonamides are pABA analogs, but the cited Hevener 2010 study mainly investigated pterin inhibitors and cannot serve as direct structural evidence that SMX occupies the pABA site.",
       "基本原理": "可迁移的生物启发不是预成型刚性 pABA 模板，而是‘辅助底物先行组织柔性 loop，再读取 pABA 类似物’的有序结合与诱导契合；SMX 专属残基和构象仍需直接来源。",
       "source": "literature",
       "ref_doi": "10.1021/jm900861d",
@@ -101,6 +104,7 @@
           }
         ],
         "transferable_principle": "把 DHPS 的‘辅助底物先行组织柔性 loop，随后形成 pABA 类似物识别位点’迁移为条件性吸附门：以共因子/环境触发位点成形，再读取磺胺骨架；SMX 专属几何须待直接结构证据，不得宣称为已验证刚性模板。",
+        "transferable_principle_en": "Transfer DHPS's principle that the auxiliary substrate first organizes a flexible loop and only then forms a recognition site for pABA analogs into a conditional adsorption gate: the site takes shape upon a cofactor/environment trigger and then reads the sulfonamide skeleton; SMX-specific geometry must await direct structural evidence and must not be claimed as a validated rigid template.",
         "verification_quote": "Structural Studies of Pterin-Based Inhibitors of Dihydropteroate Synthase"
       },
       "source_doi": "10.1021/jm900861d",

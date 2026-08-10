@@ -4,6 +4,7 @@
   "name_en": "NTCP Bile Acid Transporter (Sodium/Taurocholate Cotransporting Polypeptide, SLC10A1)",
   "organism": {
     "scientific": "Homo sapiens（人源钠-牛磺胆酸共转运多肽 NTCP，基因 SLC10A1）",
+    "scientific_en": "Homo sapiens sodium/taurocholate cotransporting polypeptide NTCP (gene SLC10A1)",
     "category": "动物"
   },
   "biomimetic_dimension": "分子仿生",
@@ -31,7 +32,9 @@
     {
       "mechanism_id": "NTCP-001",
       "name": "钠梯度驱动的胆汁酸交替接近摄取",
+      "name_en": "Sodium-gradient-driven alternating-access uptake of bile acids",
       "description": "NTCP（SLC10A1）是肝脏胆汁酸的主要主动摄取系统，表达于肝细胞基底侧膜，属 SLC10 家族 10 跨膜螺旋转运体，具 core/panel 双结构域交替接近架构；两个保守钠位点 Na1（S105、N106、T123、E257）与 Na2（Q68、Q261）驱动次级主动转运（实验测定化学计量为 2 Na⁺ 对 1 胆汁酸）；内向态在胞质侧打开两亲性大腔（分子表面体积大于 1500 Å³，腔由 core 域保守极性残基 N103、N262、Q264、Q293 衬里，panel 域以疏水残基为主），构成底物通路的胞质侧部分",
+      "description_en": "NTCP (SLC10A1) is the major active uptake system for bile acids in the liver, expressed on the basolateral membrane of hepatocytes. It belongs to the SLC10 family of transporters with 10 transmembrane helices and a core/panel two-domain alternating-access architecture. Two conserved sodium sites, Na1 (S105, N106, T123, E257) and Na2 (Q68, Q261), drive secondary active transport (experimentally determined stoichiometry of 2 Na+ per bile acid). In the inward-facing state, a large amphipathic cavity opens on the cytoplasmic side (molecular surface volume greater than 1500 A3), lined by conserved polar residues N103, N262, Q264, and Q293 of the core domain, while the panel domain is predominantly hydrophobic, forming the cytoplasmic portion of the substrate pathway.",
       "基本原理": "core 与 panel 双结构域的相对运动使底物与钠结合位点交替暴露于膜两侧；Na⁺ 沿电化学梯度下坡转运提供驱动力，经 S_out 至 S_in 的底物位移实现胆汁酸自门脉血入肝的上坡摄取（次级主动转运）",
       "source": "literature",
       "ref_doi": "10.1038/s41586-022-04723-z",
@@ -107,6 +110,7 @@
           }
         ],
         "transferable_principle": "两亲性底物通道加保守钠位点加双结构域交替接近的组合，可由钠梯度驱动两亲性阴离子底物的上坡摄取；静态吸附材料仅能借鉴两亲性通道识别原理，不可复制主动转运驱动力",
+        "transferable_principle_en": "The combination of an amphipathic substrate channel, conserved sodium sites, and a two-domain alternating-access architecture can drive uphill uptake of amphipathic anionic substrates by a sodium gradient. Static adsorption materials can only borrow the amphipathic channel recognition principle; the active transport driving force cannot be replicated.",
         "verification_quote": "Amino acid conservation, mutagenesis studies and the large volume of the cavity suggest that it is part of the substrate pathway on the cytoplasmic side."
       },
       "source_doi": "10.1038/s41586-022-04723-z",
@@ -125,7 +129,9 @@
     {
       "mechanism_id": "NTCP-002",
       "name": "两亲性胆汁酸盐识别腔（甾核疏水夹持与阴离子头基极性识别）",
+      "name_en": "Amphipathic bile-salt recognition cavity (hydrophobic clamping of the steroidal core and polar recognition of the anionic head group)",
       "description": "人源野生型 NTCP 在跨膜通道内以 S_out 与 S_in 两个平行位点结合甘氨鹅脱氧胆酸 GCDC（报道 KM 约 0.6 μM，PDB 7ZYI，2.88 Å，共结合两个钠离子）：甾体多环骨架被 TM1、TM3b、TM6、TM9 的疏水壁夹持，甘氨共轭羧酸根亲水尾伸入通道水相亲水区；通道胞外侧以亲水残基为主，胞质侧腔由脂肪族与芳香族侧链衬里呈疏水表面，形成沿转运方向的显著表面极性梯度",
+      "description_en": "Human wild-type NTCP binds glycochenodeoxycholic acid (GCDC) at two parallel sites, S_out and S_in, within the transmembrane channel (reported KM of about 0.6 uM, PDB 7ZYI, 2.88 Å, binding two sodium ions together). The steroidal polycyclic skeleton is clamped by the hydrophobic walls of TM1, TM3b, TM6, and TM9, while the glycine-conjugated carboxylate hydrophilic tail extends into the aqueous hydrophilic region of the channel. The extracellular side of the channel is predominantly hydrophilic, whereas the cytoplasmic cavity is lined by aliphatic and aromatic side chains forming a hydrophobic surface, creating a pronounced surface polarity gradient along the transport direction.",
       "基本原理": "底物的两亲架构（疏水多环骨架加亲水阴离子头基）与通道极性梯度匹配：疏水壁夹持骨架提供范德华容纳，极性残基方向性识别头基；亲水头基在前的进入取向使底物以正确朝向到达 S_out",
       "source": "literature",
       "ref_doi": "10.1038/s41422-022-00680-4",
@@ -216,6 +222,7 @@
           }
         ],
         "transferable_principle": "疏水壁夹持疏水骨架的通道腔加与阴离子头基几何互补的预组织极性锚（Ser267/Gln264/Asn262 型）加沿转运方向的亲水/疏水表面梯度，实现对两亲性阴离子的识别与取向；该原理可转译于疏水尾链加阴离子头基型两亲污染物的吸附位点设计",
+        "transferable_principle_en": "A channel cavity whose hydrophobic walls clamp the hydrophobic skeleton, combined with pre-organized polar anchors geometrically complementary to the anionic head group (of the Ser267/Gln264/Asn262 type) and a hydrophilic/hydrophobic surface gradient along the transport direction, achieves recognition and orientation of amphipathic anions. This principle can be translated into the design of adsorption sites for amphipathic pollutants bearing a hydrophobic tail chain and an anionic head group.",
         "verification_quote": "The bound substrate molecules are oriented in parallel and clamped between TM1, TM3b, TM6 and TM9"
       },
       "source_doi": "10.1038/s41422-022-00680-4",
@@ -235,7 +242,9 @@
     {
       "mechanism_id": "NTCP-003",
       "name": "人源 NTCP 胆汁酸底物谱与头基共轭化学依赖",
+      "name_en": "Human NTCP bile-acid substrate spectrum and dependence on head-group conjugation chemistry",
       "description": "人源 NTCP（349 氨基酸，计算分子量约 38 kD，与大鼠 Ntcp 同源约七成，基因定位 14 号染色体）介导钠依赖性牛磺胆酸摄取（表观 Km 约 6 μM），可被所有主要胆汁酸衍生物抑制；NTCP 同时转运非胆汁酸有机阴离子雌酮硫酸盐，且胆汁酸特异识别与非胆汁酸底物转运可由单点突变分离（S267F 特异丧失胆汁酸摄取）",
+      "description_en": "Human NTCP (349 amino acids, calculated molecular weight of about 38 kD, about 70% homology with rat Ntcp, gene located on chromosome 14) mediates sodium-dependent taurocholate uptake (apparent Km of about 6 uM) and is inhibited by all major bile-acid derivatives. NTCP also transports the non-bile-acid organic anion estrone sulfate, and bile-acid-specific recognition can be separated from non-bile-acid substrate transport by a single-point mutation (S267F specifically abolishes bile-acid uptake).",
       "基本原理": "NTCP 底物特异性为广谱胆汁酸盐型：识别依赖两亲骨架加阴离子头基架构而非单一胆汁酸分子；头基共轭化学（甘氨酸/牛磺酸共轭）与 267 位区域共同决定胆汁酸特异识别",
       "source": "literature",
       "ref_doi": "10.1172/JCI117091",
@@ -296,6 +305,7 @@
           }
         ],
         "transferable_principle": "两亲性底物阴离子转运体呈广谱骨架识别加可分离的头基特异性：骨架疏水容纳赋予广谱性，头基锚定区域（如 267 位区域）赋予头基类别的化学特异性；吸附选择性设计可独立调节头基锚几何以区分磺酸根、羧酸根与硫酸酯共轭头基",
+        "transferable_principle_en": "Amphipathic anionic substrate transporters exhibit broad-spectrum skeleton recognition plus separable head-group specificity: hydrophobic accommodation of the skeleton confers broad-spectrum behavior, while the head-group anchoring region (e.g., the region around residue 267) confers chemical specificity for the head-group class. Adsorption selectivity design can independently tune the head-group anchor geometry to distinguish sulfonate, carboxylate, and sulfate-ester conjugated head groups.",
         "verification_quote": "Saturation kinetics indicated that the human NTCP has a higher affinity for taurocholate (apparent Km = 6 microM) than the previously cloned rat protein (apparent Km = 25 microM)"
       },
       "source_doi": "10.1172/JCI117091",

@@ -4,6 +4,7 @@
  "name_en": "Bile Salt Mixed Micelle Intestinal Lipid Solubilization Mass Transfer",
  "organism": {
   "scientific": "哺乳动物胆汁混合胶束系统",
+  "scientific_en": "Mammalian bile mixed micelle system",
   "category": "动物"
  },
  "biomimetic_dimension": "系统仿生",
@@ -31,7 +32,9 @@
   {
    "mechanism_id": "BILE-001",
    "name": "胆盐混合胶束疏水核对超疏水溶质的增溶",
+   "name_en": "Solubilization of superhydrophobic solutes by the hydrophobic core of bile salt mixed micelles",
    "description": "胆盐（代表性为牛磺胆酸钠）为面部两亲分子，在生理离子强度下于临界胶束浓度以上自组装为小胶束，并与脂质水解产物（单甘油酯、脂肪酸）及卵磷脂形成混合胶束；混合胶束的疏水核可容纳并增溶膳食脂质（含胆固醇）与超疏水分子，使原本几乎不水的溶质表观溶解度大幅提升。功能证据：胆盐提升超疏水难溶药地西泮（diazepam）的溶解度；增溶容量在胆盐-卵磷脂-胆固醇体系中被定量测定",
+   "description_en": "Bile salts (represented by sodium taurocholate) are facial amphiphiles that self-assemble into small micelles above the critical micelle concentration at physiological ionic strength, and form mixed micelles with lipid hydrolysis products (monoglycerides, fatty acids) and lecithin. The hydrophobic core of the mixed micelles can accommodate and solubilize dietary lipids (including cholesterol) and superhydrophobic molecules, greatly increasing the apparent solubility of solutes that are otherwise nearly insoluble in water. Functional evidence: bile salts increase the solubility of the superhydrophobic poorly soluble drug diazepam, and the solubilization capacity was quantitatively determined in bile salt-lecithin-cholesterol systems.",
    "基本原理": "两亲分子自组装形成疏水核-亲水壳的胶束/混合胶束，超疏水溶质按疏水分配进入胶束疏水核，绕过其极低本征水溶度的限制，宏观表现为表观溶解度提升数个量级",
    "source": "literature",
    "ref_doi": "10.1023/A:1016312827680",
@@ -106,6 +109,7 @@
      }
     ],
     "transferable_principle": "两亲分子在 CMC 以上自组装为具疏水核的胶束/混合胶束，超疏水溶质按疏水分配进入疏水核而获大幅表观增溶；增溶容量由胶束组成与总两亲浓度决定，可移植为对超疏水溶质的水相增溶-预富集手段",
+    "transferable_principle_en": "Amphiphiles self-assemble above the CMC into micelles/mixed micelles with a hydrophobic core, into which superhydrophobic solutes partition hydrophobically and gain greatly enhanced apparent solubility. The solubilization capacity is determined by the micelle composition and the total amphiphile concentration, providing a transferable water-phase solubilization and preconcentration approach for superhydrophobic solutes.",
     "verification_quote": "the bile salt increased the solubility of diazepam"
    },
    "source_doi": "10.1023/A:1016312827680",
@@ -123,7 +127,9 @@
   {
    "mechanism_id": "BILE-002",
    "name": "混合胶束载体的增溶-传质增强与胶束截留权衡",
+   "name_en": "Solubilization-mass transfer enhancement versus micellar retention trade-off of mixed micelle carriers",
    "description": "肠道中混合胶束作为胶体载体将增溶的疏水溶质经非搅动水层输运至刷状缘吸收面。但溶质在胶束相与游离相之间分配平衡：胶束增溶在提升表观溶解度的同时可降低游离溶质的吸收动力学（胶束截留）。功能证据：纯胆盐胶束提升地西泮溶解度却降低其吸收速率常数（净表观吸收下降）；含脂质水解产物的混合胶束提升溶解度而不影响吸收速率常数，净表观吸收增加",
+   "description_en": "In the intestine, mixed micelles act as colloidal carriers that transport solubilized hydrophobic solutes through the unstirred water layer to the brush border absorption surface. However, solutes partition in equilibrium between the micellar and free phases: while micellar solubilization raises the apparent solubility, it can decrease the absorption kinetics of the free solute (micellar retention). Functional evidence: pure bile salt micelles increase diazepam solubility but decrease its absorption rate constant (net apparent absorption decreases), whereas mixed micelles containing lipid hydrolysis products increase solubility without affecting the absorption rate constant, resulting in increased net apparent absorption.",
    "基本原理": "胶束载体提升表观溶解度并以胶体扩散输运溶质，但跨界面传质驱动力来自游离溶质活度（而非总溶解度）；只有不显著降低游离分数吸收动力学的混合胶束组成才能实现净增溶-传质增强，否则胶束截留抵消增溶收益",
    "source": "literature",
    "ref_doi": "10.1023/A:1016312827680",
@@ -198,6 +204,7 @@
      }
     ],
     "transferable_principle": "胶束/载体增溶提升超疏水溶质的表观溶解度，但跨界面传质由游离溶质活度驱动；须调控载体组成与载体-溶质结合强度以兼顾增溶与游离分数，避免胶束截留抵消传质收益",
+    "transferable_principle_en": "Micelle/carrier solubilization raises the apparent solubility of superhydrophobic solutes, but cross-interface mass transfer is driven by the free solute activity. The carrier composition and carrier-solute binding strength must be tuned to balance solubilization against the free fraction, so that micellar retention does not cancel out the mass transfer gains.",
     "verification_quote": "the lipolysis products incorporated in the bile salt micelles increased the solubility of diazepam without affecting the absorption rate constant"
    },
    "source_doi": "10.1023/A:1016312827680",

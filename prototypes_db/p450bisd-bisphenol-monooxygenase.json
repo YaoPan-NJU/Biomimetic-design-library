@@ -4,6 +4,7 @@
  "name_en": "P450bisd Bisphenol Monooxygenase",
  "organism": {
   "scientific": "Sphingobium (原 Sphingomonas) sp. strain AO1（P450bisd 双酚 A 降解细胞色素 P450 单加氧酶）",
+  "scientific_en": "Sphingobium (formerly Sphingomonas) sp. strain AO1 (P450bisd bisphenol A-degrading cytochrome P450 monooxygenase)",
   "category": "微生物"
  },
  "biomimetic_dimension": "分子仿生",
@@ -30,7 +31,9 @@
   {
    "mechanism_id": "PBISD-001",
    "name": "P450bisd 单加氧酶对双酚 A 的催化转化（酶学机制）",
+   "name_en": "Catalytic transformation of bisphenol A by the P450bisd monooxygenase (enzymatic mechanism)",
    "description": "Sphingobium (原 Sphingomonas) sp. strain AO1 的细胞色素 P450 单加氧酶系统参与双酚 A（BPA）降解：纯化的组分包括细胞色素 P450（P450bisd）、铁氧还蛋白（Fd(bisd)，含 putidaredoxin 型 [2Fe-2S] 簇）与铁氧还蛋白还原酶（Red(bisd)）；P450bisd 在 Fd(bisd)、Red(bisd) 与 NADH 存在下转化 BPA，Km 约 85 μM、kcat 约 3.9 min⁻¹；检出两个羟基化降解产物（1,2-bis(4-hydroxyphenyl)-2-propanol 与 2,2-bis(4-hydroxyphenyl)-1-propanol），属 ipso-羟基化转化路线",
+   "description_en": "The cytochrome P450 monooxygenase system of Sphingobium (formerly Sphingomonas) sp. strain AO1 is involved in bisphenol A (BPA) degradation: the purified components include cytochrome P450 (P450bisd), ferredoxin (Fd(bisd), containing a putidaredoxin-type [2Fe-2S] cluster) and ferredoxin reductase (Red(bisd)). P450bisd transforms BPA in the presence of Fd(bisd), Red(bisd) and NADH, with a Km of approximately 85 uM and a kcat of approximately 3.9 min-1. Two hydroxylated degradation products were detected (1,2-bis(4-hydroxyphenyl)-2-propanol and 2,2-bis(4-hydroxyphenyl)-1-propanol), consistent with an ipso-hydroxylation transformation route.",
    "基本原理": "细菌细胞色素 P450 单加氧酶经电子传递链（铁氧还蛋白/还原酶/NADH）活化血红素氧，对双酚底物执行氧化转化；该酶是自然界处理 BPA 的真实生物降解方案，将双酚骨架转化为羟基化产物",
    "source": "literature",
    "ref_doi": "10.1128/AEM.71.12.8024-8030.2005",
@@ -120,6 +123,7 @@
      }
     ],
     "transferable_principle": "细胞色素 P450 单加氧酶以活化血红素氧在底物口袋内对双酚桥键执行位点特异性氧化转化（ipso-羟基化），其底物识别本质是口袋几何对双酚骨架的夹持定位与活化氧几何的匹配；该催化转化原理中仅底物口袋几何可转译为人工识别位点",
+    "transferable_principle_en": "The cytochrome P450 monooxygenase performs site-specific oxidative transformation (ipso-hydroxylation) of the bisphenol bridging bond within the substrate pocket using activated heme-bound oxygen, and its substrate recognition is essentially the positioning of the bisphenol skeleton by pocket geometry matched with the activated-oxygen geometry. Among this catalytic transformation principle, only the substrate pocket geometry can be translated into an artificial recognition site.",
     "verification_quote": "the cytochrome P450 monooxygenase system was shown to be involved in bisphenol A (BPA) degradation by Sphingomonas sp. strain AO1"
    },
    "source_doi": "10.1128/AEM.71.12.8024-8030.2005",
@@ -138,7 +142,9 @@
   {
    "mechanism_id": "PBISD-002",
    "name": "保守 P450 折叠的底物口袋与活化氧几何（P450cam 同源结构代理）",
+   "name_en": "Substrate pocket and activated-oxygen geometry of the conserved P450 fold (P450cam homologous structure proxy)",
    "description": "P450bisd 本身无已解析晶体结构（RCSB 检索未直接命中）；以 CYP101 家族同源 P450cam（恶臭假单胞菌 Pseudomonas putida 高铁细胞色素 P450cam，PDB 1DZ4，Schlichting 2000 Science 287:1615）作底物口袋几何接地代理。P450cam 为氧化还原酶/单加氧酶，含血红素辅基与三价铁活性中心，代表细菌细胞色素 P450 的保守折叠：埋藏底物口袋位于血红素铁上方，活化氧几何朝向底物，构成底物定位与氧化转化的结构框架",
+   "description_en": "P450bisd itself has no resolved crystal structure (RCSB search returned no direct hit); the CYP101 family homolog P450cam (ferric cytochrome P450cam from Pseudomonas putida, PDB 1DZ4, Schlichting 2000 Science 287:1615) is used as a grounded proxy for the substrate pocket geometry. P450cam is an oxidoreductase/monooxygenase containing a heme prosthetic group and a ferric iron active center, representing the conserved bacterial cytochrome P450 fold: a buried substrate pocket located above the heme iron, with the activated-oxygen geometry oriented toward the substrate, constituting the structural framework for substrate positioning and oxidative transformation.",
    "基本原理": "细菌细胞色素 P450 共享保守折叠：血红素辅基埋于蛋白内部，底物口袋位于血红素铁上方，活化氧物种以受控几何朝向底物；P450bisd 作为 CYP 家族成员继承该口袋-血红素-活化氧几何框架，底物在口袋内的定位决定氧化转化的位点选择性",
    "source": "literature",
    "ref_doi": "10.1128/AEM.71.12.8024-8030.2005",
@@ -189,6 +195,7 @@
      }
     ],
     "transferable_principle": "细胞色素 P450 的保守折叠（埋藏底物口袋 + 血红素活化氧几何）说明位点特异性氧化转化依赖底物在口袋内相对活化氧的精确定位；该'口袋几何定位底物 + 活化氧几何'框架是可转译的结构原理（活化氧催化本身不可直接转译为吸附，仅口袋几何可转译）",
+    "transferable_principle_en": "The conserved cytochrome P450 fold (buried substrate pocket plus heme activated-oxygen geometry) demonstrates that site-specific oxidative transformation depends on precise positioning of the substrate in the pocket relative to the activated oxygen. This 'pocket-geometry positioning of substrate plus activated-oxygen geometry' framework is a translatable structural principle (activated-oxygen catalysis itself cannot be directly translated into adsorption; only the pocket geometry is translatable).",
     "verification_quote": "OXIDOREDUCTASE, MONO-OXYGENASE, HEME, FERRIC"
    },
    "source_doi": "10.1126/science.287.5458.1615",
