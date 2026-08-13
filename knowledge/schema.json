@@ -1,0 +1,133 @@
+{
+  "version": "2.0",
+  "description": "仿生设计知识图谱的最小类型、关系与受控词表。graph.jsonl 是事实源，本文件由校验器读取。",
+  "entity_types": {
+    "DesignNeed": {
+      "required_properties": ["name", "consumer", "description"]
+    },
+    "ProcessContext": {
+      "required_properties": ["name", "processes", "problems", "description"]
+    },
+    "TargetMetric": {
+      "required_properties": ["name", "description"]
+    },
+    "BiologicalPrototype": {
+      "required_properties": ["name", "category", "description", "verification_status"]
+    },
+    "BiologicalMechanism": {
+      "required_properties": ["name", "description", "verification_status"]
+    },
+    "DesignMapping": {
+      "required_properties": ["name", "summary", "applicable_scales", "verification_status"]
+    },
+    "DesignModule": {
+      "required_properties": ["name", "layer", "summary", "editable_variables", "verification_status"]
+    },
+    "AssemblyPattern": {
+      "required_properties": ["name", "summary", "verification_status"]
+    },
+    "EngineeringLever": {
+      "required_properties": ["name", "retrofit_level", "description"]
+    },
+    "DesignParameter": {
+      "required_properties": ["name", "symbol", "value_status", "verification_status", "description"]
+    },
+    "EngineeringConstraint": {
+      "required_properties": ["name", "severity", "description"]
+    },
+    "EvidenceClaim": {
+      "required_properties": ["name", "claim", "status", "evidence_type"]
+    },
+    "EvidenceSource": {
+      "required_properties": ["name", "source_type", "locator"]
+    },
+    "ValidationPlan": {
+      "required_properties": ["name", "status", "method", "description"]
+    }
+  },
+  "relation_types": {
+    "addresses": {
+      "from": ["DesignMapping", "AssemblyPattern"],
+      "to": ["DesignNeed"]
+    },
+    "for_context": {
+      "from": ["DesignMapping", "AssemblyPattern"],
+      "to": ["ProcessContext"]
+    },
+    "optimizes": {
+      "from": ["DesignMapping", "AssemblyPattern"],
+      "to": ["TargetMetric"]
+    },
+    "inspired_by": {
+      "from": ["DesignMapping", "DesignModule"],
+      "to": ["BiologicalPrototype"]
+    },
+    "derives_from": {
+      "from": ["DesignMapping", "DesignModule"],
+      "to": ["BiologicalMechanism"]
+    },
+    "realized_by": {
+      "from": ["DesignMapping"],
+      "to": ["DesignModule"]
+    },
+    "composes": {
+      "from": ["AssemblyPattern"],
+      "to": ["DesignModule"]
+    },
+    "implements": {
+      "from": ["AssemblyPattern"],
+      "to": ["DesignMapping"]
+    },
+    "uses_lever": {
+      "from": ["DesignMapping", "DesignModule"],
+      "to": ["EngineeringLever"]
+    },
+    "parameterized_by": {
+      "from": ["DesignMapping", "DesignModule"],
+      "to": ["DesignParameter"]
+    },
+    "constrained_by": {
+      "from": ["DesignMapping", "DesignModule", "AssemblyPattern"],
+      "to": ["EngineeringConstraint"]
+    },
+    "supported_by": {
+      "from": ["BiologicalPrototype", "BiologicalMechanism", "DesignMapping", "DesignModule", "AssemblyPattern"],
+      "to": ["EvidenceClaim"]
+    },
+    "cites": {
+      "from": ["EvidenceClaim"],
+      "to": ["EvidenceSource"]
+    },
+    "evaluated_by": {
+      "from": ["DesignMapping", "DesignModule", "AssemblyPattern"],
+      "to": ["ValidationPlan"]
+    },
+    "compatible_with": {
+      "from": ["DesignModule"],
+      "to": ["DesignModule"]
+    }
+  },
+  "controlled_values": {
+    "consumer": [
+      "material_design",
+      "microbial_design",
+      "reactor_design",
+      "operation_optimization"
+    ],
+    "module_layer": [
+      "material",
+      "microbial",
+      "component",
+      "reactor",
+      "system",
+      "control"
+    ],
+    "scale": ["material", "component", "reactor", "system"],
+    "verification_status": ["unverified", "partially_verified", "verified", "rejected"],
+    "claim_status": ["hypothesis", "supported", "verified", "refuted"],
+    "value_status": ["unknown", "literature_range", "simulated", "measured", "verified"],
+    "validation_status": ["planned", "running", "passed", "failed"],
+    "retrofit_level": ["near_zero", "minor", "major"],
+    "constraint_severity": ["required", "exclude_if_violated", "preference"]
+  }
+}

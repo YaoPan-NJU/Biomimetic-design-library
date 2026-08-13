@@ -1,0 +1,44 @@
+{
+  "description": "由知识图自动生成的内容覆盖与成熟度报告。",
+  "entity_counts": {
+    "AssemblyPattern": 1,
+    "BiologicalMechanism": 2,
+    "BiologicalPrototype": 1,
+    "DesignMapping": 1,
+    "DesignModule": 3,
+    "DesignNeed": 4,
+    "DesignParameter": 4,
+    "EngineeringConstraint": 3,
+    "EngineeringLever": 3,
+    "EvidenceClaim": 1,
+    "EvidenceSource": 2,
+    "ProcessContext": 1,
+    "TargetMetric": 3,
+    "ValidationPlan": 1
+  },
+  "relation_count": 54,
+  "verification_status_counts": {
+    "unverified": 12
+  },
+  "module_layer_counts": {
+    "control": 1,
+    "microbial": 1,
+    "reactor": 1
+  },
+  "consumers_covered_by_designs": [
+    "operation_optimization",
+    "reactor_design"
+  ],
+  "known_gaps": {
+    "consumers_without_designs": [
+      "material_design",
+      "microbial_design"
+    ],
+    "module_layers_without_examples": [
+      "component",
+      "material",
+      "system"
+    ],
+    "verified_design_count": 0
+  }
+}

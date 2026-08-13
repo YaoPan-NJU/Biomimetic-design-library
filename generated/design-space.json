@@ -1,0 +1,133 @@
+{
+  "description": "由 knowledge/graph.jsonl 自动生成的多维设计视图；请勿手工编辑。",
+  "designs": [
+    {
+      "id": "mapping_adaptive_redox_front",
+      "type": "DesignMapping",
+      "name": "移动氧化还原锋面的 A²/O 分区自适应映射",
+      "summary": "将微生物席的分层与锋面迁移机制转译为 A²/O 可重配分区、曝气和回流控制变量。",
+      "consumers": [
+        "reactor_design",
+        "operation_optimization"
+      ],
+      "processes": [
+        "A2O"
+      ],
+      "problems": [
+        "influent_load_variability",
+        "low_cn",
+        "tn_instability"
+      ],
+      "targets": [
+        "出水 TN 稳定性",
+        "除磷不劣性",
+        "曝气能耗"
+      ],
+      "biological_prototypes": [
+        "微生物席"
+      ],
+      "biological_mechanisms": [
+        "反应锋面自适应迁移",
+        "氧化还原分层"
+      ],
+      "modules_by_layer": {
+        "control": [
+          "自适应氧化还原锋面控制模块"
+        ],
+        "microbial": [
+          "氧化还原分层微生物群落模块"
+        ],
+        "reactor": [
+          "可独立曝气的串联分区 A²/O 反应器模块"
+        ]
+      },
+      "engineering_levers": [
+        "内回流路由",
+        "曝气空间分配",
+        "碳源投加位置"
+      ],
+      "parameters": [
+        "过渡带厚度",
+        "重配响应时间常数",
+        "锋面位置",
+        "锋面最大迁移速度"
+      ],
+      "constraints": [
+        "保持真正厌氧接触",
+        "保持硝化菌所需 SRT 与稳定好氧环境",
+        "避免硝酸盐回流至厌氧区"
+      ],
+      "evidence_statuses": [
+        "hypothesis"
+      ],
+      "verification_status": "unverified",
+      "validation_plans": [
+        "A²/O 动态 ASM 对照与消融验证"
+      ]
+    },
+    {
+      "id": "assembly_adaptive_a2o_reactor",
+      "type": "AssemblyPattern",
+      "name": "自适应分区仿生 A²/O 反应器装配模式",
+      "summary": "把功能分层群落、可重配串联反应区和受约束控制器组合为整机候选；当前是待仿真验证的设计模式，不是成熟方案。",
+      "consumers": [
+        "reactor_design",
+        "operation_optimization"
+      ],
+      "processes": [
+        "A2O"
+      ],
+      "problems": [
+        "influent_load_variability",
+        "low_cn",
+        "tn_instability"
+      ],
+      "targets": [
+        "出水 TN 稳定性",
+        "除磷不劣性",
+        "曝气能耗"
+      ],
+      "biological_prototypes": [
+        "微生物席"
+      ],
+      "biological_mechanisms": [
+        "反应锋面自适应迁移",
+        "氧化还原分层"
+      ],
+      "modules_by_layer": {
+        "control": [
+          "自适应氧化还原锋面控制模块"
+        ],
+        "microbial": [
+          "氧化还原分层微生物群落模块"
+        ],
+        "reactor": [
+          "可独立曝气的串联分区 A²/O 反应器模块"
+        ]
+      },
+      "engineering_levers": [
+        "内回流路由",
+        "曝气空间分配",
+        "碳源投加位置"
+      ],
+      "parameters": [
+        "过渡带厚度",
+        "重配响应时间常数",
+        "锋面位置",
+        "锋面最大迁移速度"
+      ],
+      "constraints": [
+        "保持真正厌氧接触",
+        "保持硝化菌所需 SRT 与稳定好氧环境",
+        "避免硝酸盐回流至厌氧区"
+      ],
+      "evidence_statuses": [
+        "hypothesis"
+      ],
+      "verification_status": "unverified",
+      "validation_plans": [
+        "A²/O 动态 ASM 对照与消融验证"
+      ]
+    }
+  ]
+}
